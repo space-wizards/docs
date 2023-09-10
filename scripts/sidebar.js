@@ -33,6 +33,11 @@ var updateFunction = function() {
 window.addEventListener('load', function() {
     var pagetoc = document.getElementsByClassName("pagetoc")[0];
     var elements = document.getElementsByClassName("header");
+
+    // don't show sidebar with only 1 header (or less)
+    if (elements.length <= 1)
+        return;
+
     Array.prototype.forEach.call(elements, function(el) {
         var link = document.createElement("a");
 
