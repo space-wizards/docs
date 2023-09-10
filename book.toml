@@ -21,7 +21,7 @@ default-theme = "navy"
 preferred-dark-theme = "navy"
 
 git-repository-url = "https://github.com/space-wizards/space-station-14"
-edit-url-template = "https://github.com/space-wizards/docs/master/{path}"
+edit-url-template = "https://github.com/space-wizards/docs/blobl/master/{path}"
 
 mathjax-support = true
 curly-quotes = true
