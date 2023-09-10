@@ -12,8 +12,8 @@ General Development
 
 - [Setup]()
   - [How do I code?](./general-development/setup/howdoicode.md)
-  - [Dev Setup](./general-development/setup/dev-setup.md)
-  - [Git Tutorial](./general-development/setup/git-tutorial.md)
+  - [Setting up a Development Environment](./general-development/setup/setting-up-a-development-environment.md)
+  - [Git for the SS14 Developer](./general-development/setup/git-for-the-ss14-developer.md)
 - [Codebase Info]()
   - [Conventions](./general-development/codebase-info/conventions.md)
   - [Pull Request Guidelines](./general-development/codebase-info/pull-request-guidelines.md)
