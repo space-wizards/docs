@@ -24,14 +24,6 @@ graph TD;
     C-->D;
 ```
 
-## indexes
-
-{{i:test index}}
-
-{{i:test index 2?}}
-
-{{hi:hindex 1!}}
-
 ### hi4 subheading
 
 #### hi5 subsubheading
