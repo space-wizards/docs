@@ -20,7 +20,7 @@ assets_version = "2.0.2" # do not edit: managed by `mdbook-admonish install`
 [output.html]
 additional-js = ['.\scripts\mermaid.min.js', '.\scripts\mermaid-init.js', '.\scripts\sidebar.js']
 git-repository-url = "https://github.com/space-wizards/space-station-14"
-edit-url-template = "https://github.com/space-wizards/documentation/master/{path}"
+edit-url-template = "https://github.com/mirrorcult/ss14-documentation/master/{path}"
 
 additional-css = ['.\theme\mdbook-admonish.css', '.\theme\ss14.css', '.\theme\sidebar-style.css']
 default-theme = "coal"
