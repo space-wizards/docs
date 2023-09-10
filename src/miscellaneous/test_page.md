@@ -1,36 +1,12 @@
 # Test Page
 
-<!-- toc -->
+## admonishes &  templates
 
-## admonishes
+{{#template ../templates/outdated.md}}
 
-```admonish info
-test
-```
+{{#template ../templates/wip.md}}
 
-```admonish warning
-test
-```
-
-```admonish
-test
-```
-
-```admonish example
-test
-```
-
-```admonish danger
-test
-```
-
-## templates
-
-{{#template templates/outdated.md}}
-
-{{#template templates/wip.md}}
-
-{{#template templates/stub.md}}
+{{#template ../templates/stub.md}}
 
 ### hi2 subheading
 

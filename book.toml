@@ -1,30 +1,28 @@
 [book]
-authors = ["Space Station 14 Contributors"]
+authors = ["Space Wizards Contributors"]
 language = "en"
 multilingual = false
 src = "src"
-title = "SS14 & Robust Toolbox Documentation"
-description = "Tutorial & reference for the Robust Toolbox engine and its flagship open source game, Space Station 14."
+title = "Space Wizards Development Wiki"
+description = "Tutorial & reference for all Space Wizards Federation projects, including the Robust Toolbox engine and its flagship open source game, Space Station 14."
 
 [preprocessor.mermaid]
-renderer = "html"
-
-[preprocessor.template]
 
 [preprocessor.admonish]
-after = ["template"] # templates can include admonishes so we run this after
 assets_version = "2.0.2" # do not edit: managed by `mdbook-admonish install`
 
-[preprocessor.indexing]
+[preprocessor.template]
+before = ["mermaid", "template"] # templates can include these so we run this first
 
 [output.html]
 additional-js = ['.\scripts\mermaid.min.js', '.\scripts\mermaid-init.js', '.\scripts\sidebar.js']
-git-repository-url = "https://github.com/space-wizards/space-station-14"
-edit-url-template = "https://github.com/mirrorcult/ss14-documentation/master/{path}"
-
 additional-css = ['.\theme\mdbook-admonish.css', '.\theme\ss14.css', '.\theme\sidebar-style.css']
 default-theme = "coal"
 preferred-dark-theme = "coal"
+
+git-repository-url = "https://github.com/space-wizards/space-station-14"
+edit-url-template = "https://github.com/mirrorcult/ss14-documentation/master/{path}"
+
 mathjax-support = true
 curly-quotes = true
 no-section-label = true
