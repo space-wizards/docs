@@ -18,6 +18,11 @@
     font-variant-caps: small-caps;
 }
 
+/* lets get a little more compact */
+.chapter li.chapter-item {
+    margin-top: 0.45em;
+}
+
 .chapter>.chapter-item {
     padding-left: 10px;
 }
