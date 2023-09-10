@@ -1,0 +1,36 @@
+/* Custom styles for SS14 docs
+   Mostly stolen from the Rhai book (rhai.rs) theme */
+
+.part-title {
+    font-size: 150%;
+    font-variant-caps: small-caps;
+}
+
+.chapter li {
+    color: inherit;
+}
+
+.chapter>.chapter-item {
+    font-size: 110%;
+}
+
+.chapter>.chapter-item:first-child {
+    font-weight: bold;
+    font-size: 200%;
+    font-variant-caps: small-caps;
+}
+
+td>ol,
+td>ul {
+    margin: 0;
+    padding: 0;
+    padding-left: inherit;
+}
+
+main>section,
+main>pre,
+main h1,
+main h2,
+main h3 {
+    clear: both;
+}
