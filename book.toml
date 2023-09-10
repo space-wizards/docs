@@ -29,6 +29,9 @@ mathjax-support = true
 curly-quotes = true
 no-section-label = true
 
+[output.html.print]
+enable = false
+
 [output.html.fold]
 enable = true
 level = 1
