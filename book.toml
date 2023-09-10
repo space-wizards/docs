@@ -12,7 +12,7 @@ description = "Tutorial & reference for all Space Wizards Federation projects, i
 assets_version = "2.0.2" # do not edit: managed by `mdbook-admonish install`
 
 [preprocessor.template]
-before = ["mermaid", "template"] # templates can include these so we run this first
+before = ["mermaid", "admonish"] # templates can include these so we run this first
 
 [output.html]
 additional-js = ['.\scripts\mermaid.min.js', '.\scripts\mermaid-init.js', '.\scripts\sidebar.js']
