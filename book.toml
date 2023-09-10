@@ -17,8 +17,8 @@ before = ["mermaid", "admonish"] # templates can include these so we run this fi
 [output.html]
 additional-js = ['.\scripts\mermaid.min.js', '.\scripts\mermaid-init.js', '.\scripts\sidebar.js']
 additional-css = ['.\theme\mdbook-admonish.css', '.\theme\ss14.css', '.\theme\sidebar-style.css']
-default-theme = "coal"
-preferred-dark-theme = "coal"
+default-theme = "navy"
+preferred-dark-theme = "navy"
 
 git-repository-url = "https://github.com/space-wizards/space-station-14"
 edit-url-template = "https://github.com/space-wizards/docs/master/{path}"
