@@ -40,3 +40,9 @@ runnable = false # sorry we arent rustpilled :(
 [output.linkcheck]
 traverse-parent-directories = false
 warning-policy = "ignore" # false-positives like hell with absolute links & latex, so.. cant do
+
+# Redirects
+[output.html.redirect]
+"/en/getting-started/how-do-i-code" = "en/general-development/setup/howdoicode.md"
+"/en/getting-started/dev-setup" = "en/general-development/setup/setting-up-a-development-environment.md"
+"/en/getting-started/git" = "en/general-development/setup/git-for-the-ss14-developer.md"

@@ -1,0 +1,58 @@
+# Space Wizards Development Wiki
+
+This is a port of the old SS14 Wiki.js documentation to `mdbook`, for the following benefits:
+- First-class git support, open source and actually editable by everyone
+- No webshit bloat, much faster in general
+- More familiar & comfortable for developers since `mdbook` use is very widespread
+- No sign-on infrastructure or hosting necessary (besides GH pages)
+- More customizable
+- Friction to editing reduced significantly
+- Eventual localization support
+
+The following `mdbook` features & plugins are available and in use:
+- `MathJax` support 
+- Sidebar ToC (integrated directly into `index.hbs` etc)
+- `mdbook-mermaid`
+- `mdbook-linkcheck`
+- `mdbook-template`
+- `mdbook-admonish`
+
+Eventually this will be hosted on GitHub pages but not right now im lazy
+
+## Building
+
+Necessary dependencies are Rust, as well as `mdbook` and the plugins listed above, installed using cargo.
+
+Call `mdbook serve` to build and locally host the documentation from the `book` directory.
+
+## Contributing & porting pages
+
+To port a page, you'll need write access to `docs.spacestation14.io` (old wiki.js), or find some way to view MD source idk.
+
+1. Find a page with the `Porting` template on the top
+2. Find the corresponding page in Wiki.js -- it should just have the same name 
+3. Copy over the Wiki.js markdown
+4. Change any relative links to point to their correct corresponding
+5. Change any self-hosted or imgur images to be hosted in `src/en/assets` instead
+6. Adjust any admonishments as follows:
+    ``````
+    > etc text example
+    {.is-(danger/warning/info/example)}
+    ``````
+    to
+    ``````
+    ```admonish danger/warning/info/example "Title Text Or Leave blank etc"
+    etc text example
+    ```
+    ``````
+7. Add a redirect for the original wiki.js link to the new `src/SUMMARY.md` link in `book.toml`--follow the example
+
+## Screenshots
+
+![](src/en/assets/images/readme-example-1.png)
+
+![](src/en/assets/images/readme-example-2.png)
+
+## License
+
+The Space Wizards Development Wiki is released under the Mozilla Public License v2.0.
