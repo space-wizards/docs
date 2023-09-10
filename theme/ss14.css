@@ -4,6 +4,7 @@
 /* allow wider content since no navvybar buttons */
 :root {
     --content-max-width: 850px;
+    --sidebar-active: #e23229;
 }
 
 .content>main {
