@@ -1,0 +1,1 @@
+# Space Wizards Hub Rules

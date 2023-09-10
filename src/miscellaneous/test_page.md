@@ -1,6 +1,10 @@
-# Test Page
+# Example Page
+
+This page is used for showing off plugins available in this `mdbook` instance.
 
 ## admonishes &  templates
+
+`\{\}#template ../templates/(file)\}\}`
 
 {{#template ../templates/outdated.md}}
 
