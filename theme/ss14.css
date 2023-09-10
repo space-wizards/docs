@@ -61,3 +61,7 @@ main h2,
 main h3 {
     clear: both;
 }
+
+.navy code {
+    background: #0f0f12 !important;
+}
