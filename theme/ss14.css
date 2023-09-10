@@ -50,6 +50,10 @@ td>ul {
     padding-left: inherit;
 }
 
+main h2, h3 {
+    margin-top: 1.25em;
+}
+
 main>section,
 main>pre,
 main h1,
