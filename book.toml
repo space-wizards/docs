@@ -23,8 +23,8 @@ git-repository-url = "https://github.com/space-wizards/space-station-14"
 edit-url-template = "https://github.com/space-wizards/documentation/master/{path}"
 
 additional-css = ['.\theme\mdbook-admonish.css', '.\theme\ss14.css', '.\theme\sidebar-style.css']
-default-theme = "ayu"
-preferred-dark-theme = "ayu"
+default-theme = "coal"
+preferred-dark-theme = "coal"
 mathjax-support = true
 curly-quotes = true
 no-section-label = true
