@@ -15,8 +15,8 @@ assets_version = "2.0.2" # do not edit: managed by `mdbook-admonish install`
 before = ["mermaid", "admonish"] # templates can include these so we run this first
 
 [output.html]
-additional-js = ['.\scripts\mermaid.min.js', '.\scripts\mermaid-init.js', '.\scripts\sidebar.js']
-additional-css = ['.\theme\mdbook-admonish.css', '.\theme\ss14.css', '.\theme\sidebar-style.css']
+additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js', 'scripts/sidebar.js']
+additional-css = ['theme/mdbook-admonish.css', 'theme/ss14.css', 'theme/sidebar-style.css']
 default-theme = "navy"
 preferred-dark-theme = "navy"
 
