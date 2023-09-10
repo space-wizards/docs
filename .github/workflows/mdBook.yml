@@ -1,4 +1,4 @@
-name: Deploy mdBook site to Pages
+name: Build mdBook Site & Deploy if Necessary
 
 on:
   # Run on all pushes -- we check for only running on deploy later
@@ -30,15 +30,30 @@ jobs:
       MDBOOK_TEMPLATE_VERSION: 1.1.0
     steps:
       - uses: actions/checkout@v3
-      - name: Install mdBook
+      - name: Install Rust
         run: |
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
-          cargo install --version ${MDBOOK_VERSION} mdbook
-          cargo install --version ${MDBOOK_ADMONISH_VERSION} mdbook-admonish
-          cargo install --version ${MDBOOK_LINKCHECK_VERSION} mdbook-linkcheck
-          cargo install --version ${MDBOOK_MERMAID_VERSION} mdbook-mermaid
-          cargo install --version ${MDBOOK_TEMPLATE_VERSION} mdbook-template
+      - name: Install mdbook
+        uses: taiki-e/cache-cargo-install-action@v1.2.1
+        with:
+          tool: mdbook@${MDBOOK_VERSION}
+      - name: Install mdbook-admonish
+        uses: taiki-e/cache-cargo-install-action@v1.2.1
+        with:
+          tool: mdbook-admonish@${MDBOOK_ADMONISH_VERSION}
+      - name: Install mdbook-linkcache
+        uses: taiki-e/cache-cargo-install-action@v1.2.1
+        with:
+          tool: mdbook-linkcheck@${MDBOOK_LINKCHECK_VERSION}
+      - name: Install mdbook-mermaid
+        uses: taiki-e/cache-cargo-install-action@v1.2.1
+        with:
+          tool: mdbook-mermaid@${MDBOOK_MERMAID_VERSION}
+      - name: Install mdbook-template
+        uses: taiki-e/cache-cargo-install-action@v1.2.1
+        with:
+          tool: mdbook-template@${MDBOOK_TEMPLATE_VERSION}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
