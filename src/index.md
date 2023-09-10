@@ -8,11 +8,11 @@ This wiki is written in [Markdown](https://docs.requarks.io/en/editors/markdown)
 
 ## Getting Started
 
-- [:question: How do I code?](en/general-development/setup/howdoicode.md)
-- [:package: Setting up the Dev Environment](en/general-development/setup/setting-up-a-development-environment.md)
-- [:world_map: Mapping](en/space-station-14/mapping.md)
-- [:chart_with_upwards_trend: Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
-- [:hammer_and_wrench: Debugging](en/general-development/tips/debugging.md)
+- [❓ How do I code?](en/general-development/setup/howdoicode.md)
+- [📦 Setting up the Dev Environment](en/general-development/setup/setting-up-a-development-environment.md)
+- [🗺 Mapping](en/space-station-14/mapping.md)
+- [📈 Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
+- [🛠 Debugging](en/general-development/tips/debugging.md)
 
 ### What should I work on?
 
