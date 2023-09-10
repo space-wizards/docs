@@ -1,5 +1,5 @@
 /* Custom styles for SS14 docs
-   Mostly stolen from the Rhai book (rhai.rs) theme */
+
 
 /* allow wider content since no navvybar buttons */
 :root {
@@ -11,23 +11,30 @@
     margin-left: 200px;
 }
 
+/*   Mostly stolen from the Rhai book (rhai.rs) theme */
 .part-title {
     font-size: 150%;
     font-variant-caps: small-caps;
 }
 
-.chapter li {
-    color: inherit;
-}
-
 .chapter>.chapter-item {
-    font-size: 110%;
+    padding-left: 10px;
 }
 
 .chapter>.chapter-item:first-child {
     font-weight: bold;
     font-size: 200%;
     font-variant-caps: small-caps;
+    padding-left: 0px;
+}
+
+/* bigger buttons for discoverability */ 
+.right-buttons > a > i {
+    font-size: 200%;
+}
+
+.left-buttons > button > i {
+    font-size: 200%;
 }
 
 td>ol,
