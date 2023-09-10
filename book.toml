@@ -35,7 +35,8 @@ enable = true
 level = 1
 
 [output.html.playground]
-runnable = false
+runnable = false # sorry we arent rustpilled :(
 
 [output.linkcheck]
 traverse-parent-directories = false
+warning-policy = "ignore" # false-positives like hell with absolute links & latex, so.. cant do
