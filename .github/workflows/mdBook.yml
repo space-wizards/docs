@@ -43,11 +43,11 @@ jobs:
       - name: Install mdbook-mermaid
         uses: taiki-e/cache-cargo-install-action@v1.2.1
         with:
-          tool: mdbook-mermaid@$0.12.6
+          tool: mdbook-mermaid@0.12.6
       - name: Install mdbook-template
         uses: taiki-e/cache-cargo-install-action@v1.2.1
         with:
-          tool: mdbook-template@$1.1.0
+          tool: mdbook-template@1.1.0
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
