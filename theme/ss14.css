@@ -1,6 +1,11 @@
 /* Custom styles for SS14 docs
    Mostly stolen from the Rhai book (rhai.rs) theme */
 
+/* allow wider content since no navvybar buttons */
+:root {
+    --content-max-width: 850px;
+}
+
 .part-title {
     font-size: 150%;
     font-variant-caps: small-caps;

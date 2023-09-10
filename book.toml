@@ -9,9 +9,6 @@ description = "Tutorial & reference for the Robust Toolbox engine and its flagsh
 [preprocessor.mermaid]
 renderer = "html"
 
-[preprocessor.toc]
-renderer = "html"
-
 [preprocessor.template]
 
 [preprocessor.admonish]
@@ -21,11 +18,11 @@ assets_version = "2.0.2" # do not edit: managed by `mdbook-admonish install`
 [preprocessor.indexing]
 
 [output.html]
-additional-js = ['.\scripts\mermaid.min.js', '.\scripts\mermaid-init.js']
+additional-js = ['.\scripts\mermaid.min.js', '.\scripts\mermaid-init.js', '.\scripts\sidebar.js']
 git-repository-url = "https://github.com/space-wizards/space-station-14"
 edit-url-template = "https://github.com/space-wizards/documentation/master/{path}"
 
-additional-css = ['.\theme\mdbook-admonish.css', '.\theme\ss14.css']
+additional-css = ['.\theme\mdbook-admonish.css', '.\theme\ss14.css', '.\theme\sidebar-style.css']
 default-theme = "ayu"
 preferred-dark-theme = "ayu"
 mathjax-support = true
