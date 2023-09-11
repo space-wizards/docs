@@ -34,6 +34,10 @@ window.addEventListener('load', function() {
     var pagetoc = document.getElementsByClassName("pagetoc")[0];
     var elements = document.getElementsByClassName("header");
 
+    /* Scroll the page index on the left to the current active page */
+    var active = document.querySelector(".chapter li a.active");
+    active.scrollIntoView({ behavior: "instant", block: "center", inline: "nearest" });
+
     // don't show sidebar with only 1 header (or less)
     if (elements.length <= 1)
         return;
