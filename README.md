@@ -1,6 +1,6 @@
 # Space Wizards Development Wiki
 
-This is a port of the old SS14 Wiki.js documentation to `mdbook`, for the following benefits:
+This is a work-in-progress port of the old SS14 Wiki.js documentation to `mdbook`, for the following benefits:
 - First-class git support, open source and actually editable by everyone
 - No webshit bloat, much faster in general
 - More familiar & comfortable for developers since `mdbook` use is very widespread
@@ -17,7 +17,7 @@ The following `mdbook` features & plugins are available and in use:
 - `mdbook-template`
 - `mdbook-admonish`
 
-Eventually this will be hosted on GitHub pages but not right now im lazy
+The site is currently hosted at [https://spacestation14.io/docs/](https://spacestation14.io/docs/). This will likely change in the future, so links here should not be relied on.
 
 ## Building
 
