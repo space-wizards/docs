@@ -425,4 +425,4 @@ Type `./Robust.Server` then hit enter. If you see a bunch of stuff being printed
 
 ### Additional Troubleshooting
 
-[Troubleshooting](../tips/troubleshooting.md#server)
+[Troubleshooting](../tips/troubleshooting-faq.md#server)

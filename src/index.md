@@ -21,7 +21,7 @@ If you would like to make contributions to this documentation site, it's hosted 
 - [📦 Setting up the Dev Environment](en/general-development/setup/setting-up-a-development-environment.md)
 - [🗺 Mapping](en/space-station-14/mapping.md)
 - [📈 Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
-- [🛠 Debugging](en/general-development/tips/debugging.md)
+- [🛠 Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
 
 ### What should I work on?
 
