@@ -131,7 +131,7 @@ This is simply a unique prototype Id. Just make sure it roughly corresponds to y
 ### name
 This is a the name which appears in the file view sidebar of the guidebook. Importantly, it's a locale string, which is used for translation. It's also the only part of a guide entry that needs to have a locale string. 
 
-You can learn more about localization [here](../../tutorials/super-simple-14/fluent-and-localization.md).
+You can learn more about localization [here](../../ss14-by-example/fluent-and-localization.md).
 
 ### text
 This is just a file path to the entry, starting from the `/Resources/` directory.

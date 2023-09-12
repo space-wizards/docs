@@ -34,24 +34,17 @@ General Development
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
 
 
-Tutorials
-================
+SS14 By Example
+===============
 
 ----------------------
 
-- [Server Hosting](en/tutorials/server-hosting.md)
-  - [Port Forwarding](en/tutorials/server-hosting/port-forwarding.md)
-  - [Server Replay Recording](en/tutorials/server-hosting/server-replay-recording.md)
-  - [Setting up Robust.Cdn](en/tutorials/server-hosting/setting-up-robust-cdn.md)
-  - [Setting up SS14.Admin](en/tutorials/server-hosting/setting-up-ss14-admin.md)
-  - [Setting up SS14.Changelog](en/tutorials/server-hosting/setting-up-ss14-changelog.md)
-- [Super Simple 14](en/tutorials/super-simple-14.md)
-  - [Adding a Simple Bikehorn](en/tutorials/super-simple-14/adding-a-simple-bikehorn.md)
-  - [Making a Sprite Dynamic](en/tutorials/super-simple-14/making-a-sprite-dynamic.md)
-    - [Porting Appearance Visualizers](en/tutorials/super-simple-14/making-a-sprite-dynamic/porting-appearance-visualizers.md)
-  - [Basic Networking and You](en/tutorials/super-simple-14/basic-networking-and-you.md)
-  - [Fluent and Localization](en/tutorials/super-simple-14/fluent-and-localization.md)
-  - [UI Survival Guide](en/tutorials/super-simple-14/ui-survival-guide.md) 
+- [Adding a Simple Bikehorn](en/ss14-by-example/adding-a-simple-bikehorn.md)
+- [Making a Sprite Dynamic](en/ss14-by-example/making-a-sprite-dynamic.md)
+  - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
+- [Basic Networking and You](en/ss14-by-example/basic-networking-and-you.md)
+- [Fluent and Localization](en/ss14-by-example/fluent-and-localization.md)
+- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md) 
 
 
 Robust Toolbox
@@ -111,6 +104,17 @@ Space Station 14
 - [Dungeons](en/space-station-14/dungeons.md)
 - [NPCs](en/space-station-14/npcs.md)
 
+Server Hosting
+==============
+
+----------------------
+
+- [Port Forwarding](en/server-hosting/port-forwarding.md)
+- [Server Replay Recording](en/server-hosting/server-replay-recording.md)
+- [Setting up Robust.Cdn](en/server-hosting/setting-up-robust-cdn.md)
+- [Setting up SS14.Admin](en/server-hosting/setting-up-ss14-admin.md)
+- [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
+
 Other Projects
 ==============
 
@@ -119,6 +123,7 @@ Other Projects
 - [Launcher]()
   - [Content Bundles](en/other-projects/launcher/content-bundles.md)
   - [Delta Updates & Manifests](en/other-projects/launcher/delta-updates-and-manifests.md)
+- [SpaceWizards Lidgren]()
 
 Specifications
 ==============
