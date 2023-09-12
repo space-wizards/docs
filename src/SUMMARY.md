@@ -145,3 +145,8 @@ Community
 - [Space Wizards Hub Rules](en/community/space-wizards-hub-rules.md)
 - [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
+- [Admin](en/community/admin.md)
+  - [Admin Tooling](en/community/admin/admin-tooling.md)
+    - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
+  - [Wizards Den Admin Policy](en/community/admin/wizards-den-admin-policy.md)
+  - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
