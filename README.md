@@ -47,6 +47,18 @@ To port a page, you'll need write access to `docs.spacestation14.io` (old wiki.j
     ``````
 7. Add a redirect for the original wiki.js link to the new `src/SUMMARY.md` link in `book.toml`--follow the example. You'll need to add `/index.html` after the wiki.js link for it to redirect properly.
 
+## Testing changes
+
+If you've made a PR, the easiest way to test your changes, since they're just markdown, is to view them in GitHub's own markdown viewer in the `Files changed` tab. You can also use a local markdown previewer extension for something like [VSCode](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced). 
+
+If you want a slightly more authentic experience, every PR will have the `Test mdBook Build & Upload Artifact` action run, and you can download the built site like so:
+
+![](src/en/assets/images/readme-artifact-download.png)
+
+Then, just unzip it and open `index.html`. Our custom CSS and stuff won't work super well but it'll look good enough.
+
+For an authentic-authentic experience, just follow the build instructions above and run `mdbook serve` like normal.
+
 ## Screenshots
 
 ![](src/en/assets/images/readme-example-1.png)
