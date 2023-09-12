@@ -76,3 +76,6 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/getting-started/troubleshooting/index.html" = "/en/general-development/tips/troubleshooting-faq.html"
 "/en/config-reference/index.html" = "/en/general-development/tips/config-file-reference.html"
 "/en/technical-docs/codebase-organization/index.html" = "/en/general-development/codebase-info/codebase-organization.html"
+"/en/content/mapping/index.html" = "/en/space-station-14/mapping.html"
+"/en/content/mapping-sins/index.html" = "/en/space-station-14/mapping/mapping-sins.html"
+"/en/content/mapping-checklist/index.html" = "/en/space-station-14/mapping/mapping-checklist.html"

@@ -131,14 +131,15 @@ Specifications
 
 ----------------------
 
-- [RSI](en/specifications/rsi.md)
+- [Robust Station Image](en/specifications/robust-station-image.md)
+- [Robust Generic Attribution](en/specifications/robust-generic-attribution.md)
 
 Community
 ========================
 
 ----------------------
 
-- [Infrastructure References]()
+- [Infrastructure References](en/community/infrastructure-references.md)
   - [Wizards Den Infrastructure](en/community/infrastructure-reference/wizards-den-infrastructure.md)
   - [Publishing Scripts](en/community/infrastructure-reference/publishing-scripts.md)
   - [Grafana Dashboards](en/community/infrastructure-reference/grafana-dashboards.md)
