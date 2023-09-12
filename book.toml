@@ -43,6 +43,10 @@ traverse-parent-directories = false
 warning-policy = "ignore" # false-positives like hell with absolute links & latex, so.. cant do
 
 # Redirects
+# These are used to map between old Wiki.js links and current docs site links,
+# so we can avoid the hell that was dead links with the old hackmd transfer.
+# Wiki.js doesn't have `.html` endings on files, so we hack it by putting /index.html
+# and just letting the browser look there, then get redirected
 [output.html.redirect]
 "/en/getting-started/how-do-i-code/index.html" = "en/general-development/setup/howdoicode.html"
 "/en/getting-started/dev-setup/index.html" = "en/general-development/setup/setting-up-a-development-environment.html"
@@ -64,5 +68,11 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/getting-started/hosting/index.html" = "/en/general-development/setup/server-hosting-tutorial.html"
 "/en/hosting/replays/index.html" = "/en/server-hosting/server-replay-recording.html"
 "/en/hosting/changelogs/index.html" = "/en/server-hosting/setting-up-ss14-changelog.html"
-"/en/hosting/SS14-Adminindex.html" = "/en/server-hosting/setting-up-ss14-admin.html"
+"/en/hosting/SS14-Admin/index.html" = "/en/server-hosting/setting-up-ss14-admin.html"
 "/en/hosting/robust-cdn/index.html" = "/en/server-hosting/setting-up-robust-cdn.html"
+"/en/technical-docs/acronyms-and-nomenclature/index.html" = "/en/general-development/codebase-info/acronyms-and-nomenclature.html"
+"/en/getting-started/engine-changes/index.html" = "/en/general-developmnet/codebase-info/prs-with-engine-changes.html"
+"/en/getting-started/debugging-tools/index.html" = "/en/general-development/tips/debugging-tools.html"
+"/en/getting-started/troubleshooting/index.html" = "/en/general-development/tips/troubleshooting-faq.html"
+"/en/config-reference/index.html" = "/en/general-development/tips/config-file-reference.html"
+"/en/technical-docs/codebase-organization/index.html" = "/en/general-development/codebase-info/codebase-organization.html"
