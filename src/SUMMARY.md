@@ -16,18 +16,19 @@ General Development
 
 ----------------------
 
-- [Setup]()
+- [Setup](en/general-development/setup.md)
   - [How do I code?](en/general-development/setup/howdoicode.md)
   - [Setting up a Development Environment](en/general-development/setup/setting-up-a-development-environment.md)
   - [Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
   - [Server Hosting Tutorial](en/general-development/setup/server-hosting-tutorial.md)
-- [Codebase Info]()
+- [Codebase Info](en/general-development/codebase-info.md)
   - [Conventions](en/general-development/codebase-info/conventions.md)
   - [Pull Request Guidelines](en/general-development/codebase-info/pull-request-guidelines.md)
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
+  - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
   - [Writing Guidebook Entries](en/general-development/tips/writing-guidebook-entries.md)
   - [Config File Reference](en/general-development/tips/config-file-reference.md)
