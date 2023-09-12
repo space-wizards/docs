@@ -77,18 +77,6 @@
             } catch (e) { }
         </script>
 
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
-            var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
-            html.classList.remove('{{ default_theme }}')
-            html.classList.add(theme);
-            html.classList.add('js');
-        </script>
-
         <!-- Hide / unhide sidebar before it is displayed -->
         <script type="text/javascript">
             var html = document.querySelector('html');
@@ -311,5 +299,16 @@
         {{/if}}
         {{/if}}
 
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('{{ default_theme }}')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
     </body>
 </html>
