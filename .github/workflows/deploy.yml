@@ -1,4 +1,4 @@
-name: Build mdBook Site & Deploy if Necessary
+name: Build & Deploy mdBook Site
 
 on:
   # Run on all pushes -- we check for only running on deploy later
