@@ -20,6 +20,7 @@ General Development
   - [How do I code?](en/general-development/setup/howdoicode.md)
   - [Setting up a Development Environment](en/general-development/setup/setting-up-a-development-environment.md)
   - [Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
+  - [Server Hosting Tutorial](en/general-development/setup/server-hosting-tutorial.md)
 - [Codebase Info]()
   - [Conventions](en/general-development/codebase-info/conventions.md)
   - [Pull Request Guidelines](en/general-development/codebase-info/pull-request-guidelines.md)

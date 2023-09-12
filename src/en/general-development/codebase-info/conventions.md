@@ -8,8 +8,9 @@ See [Codebase Organization](./codebase-organization.md) for guidelines on how fi
 
 Read the [Pull Request guidelines](./pull-request-guidelines.md) to learn how to make your code more reviewable by maintainers.
 
-> Keep in mind that some older areas of the codebase might not follow these conventions. These should be refactored in the future to follow them. All new code should try to follow these conventions as closely as possible.
-{.is-info}
+```admonish info
+Keep in mind that some older areas of the codebase might not follow these conventions. These should be refactored in the future to follow them. All new code should try to follow these conventions as closely as possible.
+```
 
 ## File Layout
 
