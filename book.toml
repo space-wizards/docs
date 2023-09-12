@@ -79,3 +79,7 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/content/mapping/index.html" = "/en/space-station-14/mapping.html"
 "/en/content/mapping-sins/index.html" = "/en/space-station-14/mapping/mapping-sins.html"
 "/en/content/mapping-checklist/index.html" = "/en/space-station-14/mapping/mapping-checklist.html"
+"/en/content/dungeons/index.html" = "/en/space-station-14/dungeons.html"
+"/en/content/node-networks/index.html" = "/en/space-station-14/node-networks.html"
+"/en/content/NPCs/index.html" = "/en/space-station-14/npcs.html"
+"/en/content/cartridge-loader/index.html" = "/en/space-station-14/cartridge-loaders.html"
