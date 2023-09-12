@@ -45,7 +45,7 @@ To port a page, you'll need write access to `docs.spacestation14.io` (old wiki.j
     etc text example
     ```
     ``````
-7. Add a redirect for the original wiki.js link to the new `src/SUMMARY.md` link in `book.toml`--follow the example
+7. Add a redirect for the original wiki.js link to the new `src/SUMMARY.md` link in `book.toml`--follow the example. You'll need to add `/index.html` after the wiki.js link for it to redirect properly.
 
 ## Screenshots
 

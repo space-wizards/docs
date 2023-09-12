@@ -44,6 +44,9 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 
 # Redirects
 [output.html.redirect]
-"/en/getting-started/how-do-i-code" = "en/general-development/setup/howdoicode.md"
-"/en/getting-started/dev-setup" = "en/general-development/setup/setting-up-a-development-environment.md"
-"/en/getting-started/git" = "en/general-development/setup/git-for-the-ss14-developer.md"
+"/en/getting-started/how-do-i-code/index.html" = "en/general-development/setup/howdoicode.html"
+"/en/getting-started/dev-setup/index.html" = "en/general-development/setup/setting-up-a-development-environment.html"
+"/en/getting-started/git/index.html" = "en/general-development/setup/git-for-the-ss14-developer.html"
+"/en/content/yaml/index.html" = "en/general-development/tips/yaml-crash-course.html"
+"/en/getting-started/pr-guideline/index.html" = "en/general-development/codebase-info/pull-request-guidelines.html"
+"/en/getting-started/conventions/index.html" = "/en/general-development/codebase-info/conventions.html"
