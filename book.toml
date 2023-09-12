@@ -57,3 +57,12 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 # yes this one is correct
 "/en/content/construction/index/index.html" = "/en/space-station-14/construction.html"
 "/en/content/destructible/index.html" = "/en/space-station-14/destructible.html"
+"/en/administration/commands/index.html" = "/en/community/admin/admin-tooling/admin-command-cookbook.html"
+"/en/administration/tooling/index.html" = "/en/community/admin/admin-tooling.html"
+"/en/administration/policy/index.html" = "/en/community/admin/wizards-den-admin-policy.html"
+"/en/administration/banning-policy/index.html" = "/en/community/admin/wizards-den-banning-policy.html"
+"/en/getting-started/hosting/index.html" = "/en/general-development/setup/server-hosting-tutorial.html"
+"/en/hosting/replays/index.html" = "/en/server-hosting/server-replay-recording.html"
+"/en/hosting/changelogs/index.html" = "/en/server-hosting/setting-up-ss14-changelog.html"
+"/en/hosting/SS14-Adminindex.html" = "/en/server-hosting/setting-up-ss14-admin.html"
+"/en/hosting/robust-cdn/index.html" = "/en/server-hosting/setting-up-robust-cdn.html"
