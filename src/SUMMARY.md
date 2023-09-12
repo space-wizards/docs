@@ -3,7 +3,13 @@ Space Wizards Development Wiki
 
 [The Robust Book](index.md)
 
-- [Links](en/links.md)
+Meta
+====
+
+----------------------
+
+- [Guide to Editing Docs](en/meta/guide-to-editing-docs.md)
+- [Docs Example Page](en/meta/docs-example-page.md)
 
 General Development
 ===================
@@ -133,10 +139,3 @@ Community
 - [Space Wizards Hub Rules](en/community/space-wizards-hub-rules.md)
 - [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
-
-Miscellaneous
-=============
-
-----------------------
-
-- [Test Page](en/miscellaneous/test_page.md)

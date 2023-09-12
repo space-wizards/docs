@@ -9,7 +9,11 @@ Do not rely on any links to this site (spacestation14.io/docs) to remain alive
 This is the developer's wiki. If you are a player, you are looking for [the player wiki](https://wiki.spacestation14.io/wiki/Main_Page).
 ```
 
-This wiki is written in [Markdown](https://docs.requarks.io/en/editors/markdown). If you would like to make contributions to this wiki, it's hosted fully open source on GitHub and you can make a webedit PR to any page using the button in the top right.
+This wiki is written in [Markdown](https://docs.requarks.io/en/editors/markdown) using `mdbook`. You can view our README.md for the docs site [here](https://github.com/space-wizards/docs/blob/master/README.md), which has useful information.
+
+```admonish info "Making contributions"
+If you would like to make contributions to this documentation site, it's hosted fully open source on GitHub and you can make a webedit PR to any page using the button in the top right. Check out our [Guide to Editing Docs](en/meta/guide-to-editing-docs.md) page for more information.
+```
 
 ## Getting Started
 
