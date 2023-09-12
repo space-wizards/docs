@@ -50,3 +50,5 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/content/yaml/index.html" = "en/general-development/tips/yaml-crash-course.html"
 "/en/getting-started/pr-guideline/index.html" = "en/general-development/codebase-info/pull-request-guidelines.html"
 "/en/getting-started/conventions/index.html" = "/en/general-development/codebase-info/conventions.html"
+"/en/content/chemistry/index.html" = "/en/space-station-14/chemistry.html"
+"/en/content/writing-guidebook-entries/index.html" = "/en/general-development/tips/writing-guidebook-entries.html"
