@@ -32,17 +32,37 @@ var updateFunction = function() {
     });
 };
 
-// Populate sidebar on load
 window.addEventListener('load', function() {
-    var pagetoc = document.getElementsByClassName("pagetoc")[0];
-    var elements = document.getElementsByClassName("header");
 
     /* Scroll the page index on the left to the current active page */
     var active = document.querySelector(".chapter li a.active");
     active.scrollIntoView({ behavior: "instant", block: "center", inline: "nearest" });
 
-    // don't show sidebar with only 1 header (or less)
-    if (elements.length <= 1)
+    /* Populate subpage footer */
+
+    /* Get next sibling of active list element
+       then check if it has a nested ol
+       if so, this implies our current active element has nested subpages */
+    var nextListEl = active.parentElement.nextElementSibling;
+    var footer = document.getElementById("subpage-footer");
+    footer.style.display = "none";
+    if (nextListEl != null)
+    {
+        console.log(nextListEl);
+        var list = nextListEl.querySelector(".section")
+        if (list != null)
+        {
+            footer.style.display = "block";
+            footer.appendChild(list.cloneNode(true));
+        }
+    }
+
+    /* Populate pagetoc sidebar */
+
+    var pagetoc = document.getElementsByClassName("pagetoc")[0];
+    var elements = document.getElementsByClassName("header");
+    // don't show pagetoc sidebar with less than 2 headers
+    if (elements.length < 2)
         return;
 
     Array.prototype.forEach.call(elements, function(el) {
