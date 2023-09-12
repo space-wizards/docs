@@ -22,6 +22,9 @@ var updateFunction = function() {
         el.classList.remove("active");
     });
 
+    if (id == undefined)
+        return;
+
     Array.prototype.forEach.call(document.getElementsByClassName("pagetoc")[0].children, function(el) {
         if (id.href.localeCompare(el.href) == 0) {
             el.classList.add("active");
