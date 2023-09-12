@@ -80,6 +80,8 @@ window.addEventListener('load', function() {
             case "H4":
                 indent = "60px";
                 break;
+            case "H5":
+                indent = "80px";
             default:
                 break;
         }

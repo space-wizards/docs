@@ -52,3 +52,8 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/getting-started/conventions/index.html" = "/en/general-development/codebase-info/conventions.html"
 "/en/content/chemistry/index.html" = "/en/space-station-14/chemistry.html"
 "/en/content/writing-guidebook-entries/index.html" = "/en/general-development/tips/writing-guidebook-entries.html"
+"/en/content/device-network/index.html" = "/en/space-station-14/device-network.html"
+"/en/content/pow3r/index.html" = "/en/spcae-station-14/pow3r.html"
+# yes this one is correct
+"/en/content/construction/index/index.html" = "/en/space-station-14/construction.html"
+"/en/content/destructible/index.html" = "/en/space-station-14/destructible.html"
