@@ -59,7 +59,7 @@
     list-style: none outside none;
     padding-left: 20px;
     line-height: 1.6em;
-    border-top: 1px solid var(--sidebar-bg);
+    border-top: 1px solid var(--sidebar-spacer);
     padding-top: 10px;
 }
 

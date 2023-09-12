@@ -59,6 +59,13 @@ td>ul {
 
 main h2, h3 {
     margin-top: 1.25em;
+    border-bottom: 1px solid var(--sidebar-spacer);
+    padding-bottom: 5px;
+}
+
+main h1 {
+    border-bottom: 3px solid var(--sidebar-spacer);
+    padding-bottom: 7px;
 }
 
 main>section,
