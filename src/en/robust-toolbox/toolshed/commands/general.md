@@ -1,7 +1,6 @@
 # General
 
 ## Sources
----
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=iota
@@ -17,7 +16,6 @@ Returns <code>1..N</code>
 Returns <code>N..M</code>
 
 ## Filters
----
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=where &lt;block (T -> bool)&gt;
@@ -93,7 +91,6 @@ Sorts the input from greatest to least using the given ordering value.
 Sorts the input from greatest to least using the given ordering value, returning the ordering values.
 
 ## Transforms
----
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=isempty
@@ -133,8 +130,6 @@ Returns the first value in the input, or errors if there isn't one.
 
 
 ## Mutators
----
-
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=rep &lt;amount&gt;

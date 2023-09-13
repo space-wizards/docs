@@ -2,7 +2,6 @@
 {{#title Entity commands}}
 
 ## Sources
----
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=entities
@@ -39,7 +38,6 @@ Spawns a new entity on the other given entity.
 Spawns a new entity attached to the other given entity.
 
 ## Filters
----
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=with &lt;component type&gt;
@@ -79,7 +77,6 @@ Filters for entities nearby the inputs, returning all entities within range of i
 Filters the input for entities with a name matching the regex `$regex^`.
 
 ## Transforms
----
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=comp:has &lt;component type&gt;
@@ -102,7 +99,6 @@ Returns the coordinates of the input entities, relative to their parent.
 Returns the coordinates of the input entities, relative to the map.
 
 ## Mutators
----
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=delete
