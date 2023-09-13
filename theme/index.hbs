@@ -77,18 +77,6 @@
             } catch (e) { }
         </script>
 
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
-            var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
-            html.classList.remove('{{ default_theme }}')
-            html.classList.add(theme);
-            html.classList.add('js');
-        </script>
-
         <!-- Hide / unhide sidebar before it is displayed -->
         <script type="text/javascript">
             var html = document.querySelector('html');
@@ -149,7 +137,7 @@
                         </a>
                         {{/if}}
                         {{#if git_repository_edit_url}}
-                        <a href="{{git_repository_edit_url}}" title="Make an edit" aria-label="Make an edit">
+                        <a href="{{git_repository_edit_url}}" title="View & edit page on GitHub" aria-label="View & edit page on GitHub">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
                         {{/if}}
@@ -203,6 +191,10 @@
 
                         <div style="clear: both"></div>
                     </nav> -->
+
+                    <footer id="subpage-footer">
+                        <p>Subpages</p>
+                    </footer>
                 </div>
             </div>
 
@@ -311,5 +303,16 @@
         {{/if}}
         {{/if}}
 
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('{{ default_theme }}')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
     </body>
 </html>

@@ -7,10 +7,17 @@
     --sidebar-active: #e23229;
 }
 
-.content>main {
-    /* navbar button was basically a margin left but dont have that no more so */
-    margin-left: 200px;
+/* title text on top of every page */
+.menu-title {
+    color: #e23229;
 }
+
+@media only screen and (min-width: 1366px) {
+    .content>main {
+        /* navbar button was basically a margin left but dont have that no more so */
+        margin-left: 200px;
+    }
+} 
 
 /*   Mostly stolen from the Rhai book (rhai.rs) theme */
 .part-title {
@@ -52,6 +59,13 @@ td>ul {
 
 main h2, h3 {
     margin-top: 1.25em;
+    border-bottom: 1px solid var(--sidebar-spacer);
+    padding-bottom: 5px;
+}
+
+main h1 {
+    border-bottom: 3px solid var(--sidebar-spacer);
+    padding-bottom: 7px;
 }
 
 main>section,

@@ -15,13 +15,14 @@ assets_version = "2.0.2" # do not edit: managed by `mdbook-admonish install`
 before = ["mermaid", "admonish"] # templates can include these so we run this first
 
 [output.html]
-additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js', 'scripts/sidebar.js']
-additional-css = ['theme/mdbook-admonish.css', 'theme/ss14.css', 'theme/sidebar-style.css']
+additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js', 'scripts/nav-additions.js']
+additional-css = ['theme/mdbook-admonish.css', 'theme/ss14.css', 'theme/nav-style.css']
 default-theme = "navy"
 preferred-dark-theme = "navy"
 
 git-repository-url = "https://github.com/space-wizards/space-station-14"
 edit-url-template = "https://github.com/space-wizards/docs/blob/master/{path}"
+site-url = "/docs/" # remove when we move to docs.ss14.io -- needed for 404 pages to render properly in subdirectories
 
 mathjax-support = true
 curly-quotes = true
@@ -42,7 +43,43 @@ traverse-parent-directories = false
 warning-policy = "ignore" # false-positives like hell with absolute links & latex, so.. cant do
 
 # Redirects
+# These are used to map between old Wiki.js links and current docs site links,
+# so we can avoid the hell that was dead links with the old hackmd transfer.
+# Wiki.js doesn't have `.html` endings on files, so we hack it by putting /index.html
+# and just letting the browser look there, then get redirected
 [output.html.redirect]
-"/en/getting-started/how-do-i-code" = "en/general-development/setup/howdoicode.md"
-"/en/getting-started/dev-setup" = "en/general-development/setup/setting-up-a-development-environment.md"
-"/en/getting-started/git" = "en/general-development/setup/git-for-the-ss14-developer.md"
+"/en/getting-started/how-do-i-code/index.html" = "en/general-development/setup/howdoicode.html"
+"/en/getting-started/dev-setup/index.html" = "en/general-development/setup/setting-up-a-development-environment.html"
+"/en/getting-started/git/index.html" = "en/general-development/setup/git-for-the-ss14-developer.html"
+"/en/content/yaml/index.html" = "en/general-development/tips/yaml-crash-course.html"
+"/en/getting-started/pr-guideline/index.html" = "en/general-development/codebase-info/pull-request-guidelines.html"
+"/en/getting-started/conventions/index.html" = "/en/general-development/codebase-info/conventions.html"
+"/en/content/chemistry/index.html" = "/en/space-station-14/chemistry.html"
+"/en/content/writing-guidebook-entries/index.html" = "/en/general-development/tips/writing-guidebook-entries.html"
+"/en/content/device-network/index.html" = "/en/space-station-14/device-network.html"
+"/en/content/pow3r/index.html" = "/en/spcae-station-14/pow3r.html"
+# yes this one is correct
+"/en/content/construction/index/index.html" = "/en/space-station-14/construction.html"
+"/en/content/destructible/index.html" = "/en/space-station-14/destructible.html"
+"/en/administration/commands/index.html" = "/en/community/admin/admin-tooling/admin-command-cookbook.html"
+"/en/administration/tooling/index.html" = "/en/community/admin/admin-tooling.html"
+"/en/administration/policy/index.html" = "/en/community/admin/wizards-den-admin-policy.html"
+"/en/administration/banning-policy/index.html" = "/en/community/admin/wizards-den-banning-policy.html"
+"/en/getting-started/hosting/index.html" = "/en/general-development/setup/server-hosting-tutorial.html"
+"/en/hosting/replays/index.html" = "/en/server-hosting/server-replay-recording.html"
+"/en/hosting/changelogs/index.html" = "/en/server-hosting/setting-up-ss14-changelog.html"
+"/en/hosting/SS14-Admin/index.html" = "/en/server-hosting/setting-up-ss14-admin.html"
+"/en/hosting/robust-cdn/index.html" = "/en/server-hosting/setting-up-robust-cdn.html"
+"/en/technical-docs/acronyms-and-nomenclature/index.html" = "/en/general-development/codebase-info/acronyms-and-nomenclature.html"
+"/en/getting-started/engine-changes/index.html" = "/en/general-developmnet/codebase-info/prs-with-engine-changes.html"
+"/en/getting-started/debugging-tools/index.html" = "/en/general-development/tips/debugging-tools.html"
+"/en/getting-started/troubleshooting/index.html" = "/en/general-development/tips/troubleshooting-faq.html"
+"/en/config-reference/index.html" = "/en/general-development/tips/config-file-reference.html"
+"/en/technical-docs/codebase-organization/index.html" = "/en/general-development/codebase-info/codebase-organization.html"
+"/en/content/mapping/index.html" = "/en/space-station-14/mapping.html"
+"/en/content/mapping-sins/index.html" = "/en/space-station-14/mapping/mapping-sins.html"
+"/en/content/mapping-checklist/index.html" = "/en/space-station-14/mapping/mapping-checklist.html"
+"/en/content/dungeons/index.html" = "/en/space-station-14/dungeons.html"
+"/en/content/node-networks/index.html" = "/en/space-station-14/node-networks.html"
+"/en/content/NPCs/index.html" = "/en/space-station-14/npcs.html"
+"/en/content/cartridge-loader/index.html" = "/en/space-station-14/cartridge-loaders.html"
