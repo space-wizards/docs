@@ -4,6 +4,4 @@
 </div>
 <div style="text-align: right;">
 
-`[[#typesig]]`
-</div>
-</div>
+`[[#typesig]]`</div></div>

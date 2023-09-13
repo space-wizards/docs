@@ -1,6 +1,8 @@
 # Entity commands
 {{#title Entity commands}}
+
 ## Sources
+---
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=entities
@@ -15,7 +17,29 @@ Returns a list of all entities in the simulation.
 }}
 Returns the given entity.
 
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=spawn:at &lt;entity prototype&gt;
+    typesig=IEnumerable?<EntityCoordinates> -> IEnumerable?<EntityUid>
+}}
+Spawns a new entity at the given coordinates.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=spawn:on &lt;entity prototype&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Spawns a new entity on the other given entity.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=spawn:attached &lt;entity prototype&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Spawns a new entity attached to the other given entity.
+
 ## Filters
+---
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=with &lt;component type&gt;
@@ -42,12 +66,20 @@ This command can be inverted with `not`.
 
 {{#template 
     ../../../templates/toolshed-command-head.md
+    name=nearby &lt;range&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable<EntityUid>
+}}
+Filters for entities nearby the inputs, returning all entities within range of it.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
     name=named &lt;name&gt;
     typesig=IEnumerable<EntityUid> -> IEnumerable<EntityUid>
 }}
 Filters the input for entities with a name matching the regex `$regex^`.
 
 ## Transforms
+---
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=comp:has &lt;component type&gt;
@@ -70,9 +102,59 @@ Returns the coordinates of the input entities, relative to their parent.
 Returns the coordinates of the input entities, relative to the map.
 
 ## Mutators
+---
 {{#template 
     ../../../templates/toolshed-command-head.md
     name=delete
     typesig=IEnumerable<EntityUid> -> [none]
 }}
 Deletes the inputs from the simulation. Gone. Poof.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=replace &lt;entity prototype&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Replaces the given entities with another of some prototype, preserving only it's position and rotation.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=tp:coords &lt;entity coordinates&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Teleports the input to the given coordinates.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=tp:to &lt;entity&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Teleports the input to the given entity.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=tp:into &lt;entity&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Teleports the input into the given entity.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=comp:add &lt;component type&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Adds the given component to the entity.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=comp:ensure &lt;component type&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Ensures the input has the given component.
+
+{{#template 
+    ../../../templates/toolshed-command-head.md
+    name=comp:rm &lt;component type&gt;
+    typesig=IEnumerable?<EntityUid> -> IEnumerable?<EntityUid>
+}}
+Removes the given component from the entity.
