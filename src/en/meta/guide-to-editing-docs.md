@@ -72,3 +72,12 @@ If you want a slightly more authentic experience, every PR will have the `Test m
 Then, just unzip it and open `index.html`. Our custom CSS and stuff won't work super well but it'll look good enough.
 
 For an authentic-authentic experience, just follow the build instructions above and run `mdbook serve` like normal.
+
+### Note to self
+
+Unported pages that need a better place to stay than wikijs:
+- Secret pages
+- Maintainer meeting notes
+- Admin draft notes
+- Old design docs (technically done since they should all be on hackmd)
+- 20kdc's hosting rewrite

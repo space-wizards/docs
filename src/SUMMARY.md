@@ -120,6 +120,7 @@ Server Hosting
 - [Setting up Robust.Cdn](en/server-hosting/setting-up-robust-cdn.md)
 - [Setting up SS14.Admin](en/server-hosting/setting-up-ss14-admin.md)
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
+- [OAuth](en/server-hosting/oauth.md)
 
 Other Projects
 ==============
