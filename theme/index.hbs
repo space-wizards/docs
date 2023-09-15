@@ -16,14 +16,9 @@
         {{> head}}
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-        <meta name="title" content=""{{ title }}""/>
         <meta name="description" content="{{ description }}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="theme-color" content="#e23229" />
-        
-        {{#if favicon_png}}
-        <meta property="og:image" content="{{ path_to_root }}favicon.png"/>
-        {{/if}}
 
         {{#if favicon_svg}}
         <link rel="icon" href="{{ path_to_root }}favicon.svg">
