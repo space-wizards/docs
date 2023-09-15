@@ -41,6 +41,7 @@ SS14 By Example
 
 ----------------------
 
+- [Introduction to SS14 By Example](en/ss14-by-example/introduction-to-ss14-by-example.md)
 - [Adding a Simple Bikehorn](en/ss14-by-example/adding-a-simple-bikehorn.md)
 - [Making a Sprite Dynamic](en/ss14-by-example/making-a-sprite-dynamic.md)
   - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
