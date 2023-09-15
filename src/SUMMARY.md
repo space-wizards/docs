@@ -82,7 +82,7 @@ Robust Toolbox
   - [Sprites and Icons](en/robust-toolbox/rendering/sprites-and-icons.md)
 - [Serialization](en/robust-toolbox/serialization.md)
 - [Sandboxing](en/robust-toolbox/sandboxing.md)
-- [Content Manifest](en/robust-toolbox/content-manifest.md)
+- [Content Manifests](en/robust-toolbox/content-manifests.md)
 - [User Data Directory](en/robust-toolbox/user-data-directory.md)
 - [Robust Modules](en/robust-toolbox/robust-modules.md)
 - [Server HTTP API](en/robust-toolbox/server-http-api.md)
