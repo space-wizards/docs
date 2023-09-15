@@ -72,7 +72,7 @@ Robust Toolbox
   - [Commands](en/robust-toolbox/toolshed/commands.md)
     - [Entities](en/robust-toolbox/toolshed/commands/entity-control.md)
     - [General](en/robust-toolbox/toolshed/commands/general.md)
-    - [Miscellanious](en/robust-toolbox/toolshed/commands/misc.md)
+    - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
 - [IoC](en/robust-toolbox/ioc.md)
 - [Rendering]()
