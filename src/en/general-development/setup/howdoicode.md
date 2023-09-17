@@ -13,7 +13,7 @@ If you want to do anything more complicated, I recommend you read the rest of [*
 The programming language you'll be using to contribute to SS14. If you've never programmed before, C# is a solid pick for a first language!
 
 **[C# A Player's Guide 5th Edition](https://www.amazon.com/dp/0985580151)**
-A very engaging book for beginner's to C#. Very modern, making use of C#10 and .NET 6 with tons of projects and challenges to actually make use of your coding skills. Highly recommended. Buy whatever the newest edition is (regardless of what this says), as we always stay up to date.
+A very engaging book for beginners to C#. Very modern, making use of C#10 and .NET 6 with tons of projects and challenges to actually make use of your coding skills. Highly recommended. Buy whatever the newest edition is (regardless of what this says), as we always stay up to date.
 
 **[CSharp Fundamentals for Absolute Beginners | Channel 9](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners)**
 A video series covering the absolute basics of programming, C# style. Also walks you through installing an IDE (a program that makes it much easier for you to write code).
@@ -22,7 +22,7 @@ A video series covering the absolute basics of programming, C# style. Also walks
 The videos are so-so (skimming over terms like "variable", "string", and "interpolation"), but the tutorials themselves are solid. If you prefer interactive written tutorials over watching videos, they're completable in your web browser [here](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/hello-world).
 
 **Microsoft's various C# guides**
-For those who already have some experience (read: knows what "modern, object-oriented, and type-safe programming language" is, since that's the first line), the [getting started guide](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/) gives some basic examples on how to use C# and shows how to use visual studio for writing C#. The [programming guide](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) gives more specific examples of C# language features.
+For those who already have some experience (read: knows what "modern, object-oriented, and type-safe programming language" is, since that's the first line), the [getting started guide](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/) gives some basic examples on how to use C# and shows how to use Visual Studio for writing C#. The [programming guide](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) gives more specific examples of C# language features.
 
 **[Learn C# in Y minutes](https://learnxinyminutes.com/docs/csharp/)**
 Reference sheet presented through a massive C# file. Again, this is more useful for those who already understand how to program and just need a quick reference for what the syntax is. 
