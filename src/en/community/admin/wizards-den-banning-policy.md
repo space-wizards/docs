@@ -6,7 +6,7 @@ This is the ban policy for Wizard's Den servers. It applies only to our first-pa
 
 # Definitions
 - **Indefinite:** Refers to a ban with no defined end time. This type of ban generally requires a successful appeal for it to be removed. Indefinite bans which have no extra requirements may be called *appeal bans*.
-- **Voucher:** Confirmation from a member of the admin team of another well known SS14 or SS13 server that you have played on that server for a significant amount of time without any recent major issues. A voucher is required when appealing a *voucher ban*.
+- **Voucher:** Confirmation from a member of the admin team of another well known SS14 or SS13 server that you have played on for a significant amount of time without any recent major issues. A voucher is required when appealing a *voucher ban*.
 - **Voucher ban:** A ban which requires a *voucher* to appeal. These bans can also typically only be appealed after at least 6 months from the date of the ban. They are often used as an alternative to a *permanent ban* that allows players to return if they can demonstrate an ability to follow a server's rules.
 - **Warning:** A warning is a clear communication from an admin that some behavior is not acceptable. Warnings should always be paired with an account note making note of the warning and behavior.
 - **Permanent ban:** A ban which cannot be appealed. These bans are sometimes called *perma bans*.
@@ -39,7 +39,7 @@ Administrators who place bans outside of the guidelines are required to be able 
 ```
 
 ```admonish info
-Consulting the admin team via discord, or multiple (2 or more) other game admins in-game through admin chat or ahelp does not result in those bans being presumed to be of an appropriate length, but is sufficient justification for straying from the guidelines.
+Consulting the admin team via Discord, or multiple (2 or more) other game admins in-game through admin chat or ahelp does not result in those bans being presumed to be of an appropriate length, but is sufficient justification for straying from the guidelines.
 ```
 
 ```admonish info
@@ -208,7 +208,7 @@ An offense which lists W - 12h GB as a suggestion that is affected by a 2x multi
 	- the offenses are in the same grouping category.
 - Grouped offenses should use the guideline for the most specific offense.
 
-[^ahelpDelimited]: This means that if two otherwise grouped offenses occur within the same round, but there player is ahelped between the two offenses occurring about the first offense, the second offense does not need to be grouped with the first. The second offense may also be considered as a prior offense for determining suggested ban times.
+[^ahelpDelimited]: This means that if two otherwise grouped offenses occur within the same round, but the player is ahelped between the two offenses occurring about the first offense, the second offense does not need to be grouped with the first. The second offense may also be considered as a prior offense for determining suggested ban times.
 
 ## Role Ban Rounding
 
