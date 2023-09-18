@@ -19,23 +19,23 @@ Ban appeals are covered by the [Banning Policy](./wizards-den-banning-policy.md)
 ## 2. Game-adminning
 Rules specific to adminning a round of SS14.
 #### 2.1 **Do not ever process a case you are/were a part of.**
-Even if you've started adminning after dying, do not process a case you were involved in. You may ask badmins/wizards for permission to do this if there is no other staff online. Otherwise, ahelp yourself and get the other staff to handle it.
+Even if you've started adminning after dying, do not process a case you were involved in. You may ask badmins/wizards for permission to do this if there are no other staff online. Otherwise, ahelp yourself and get the other staff to handle it.
 #### 2.2 **Superseded by banning policy**
 Bans and ban appeals are covered by the [Banning Policy](./wizards-den-banning-policy.md).
 #### 2.3 **Superseded by banning policy**
 Bans and ban appeals are covered by the [Banning Policy](./wizards-den-banning-policy.md).
 #### 2.4 **Deadmin when you play the game.**
 Don't misuse your game admin tools to metagame, this is pretty self-explanatory.
-Do not use your admin powers to message players whilst IC, if something happens that breaks the rules or such you should engage with admins as a normal player via the regular ahelp command.
+Do not use your admin powers to message players whilst IC. If something happens that breaks the rules, you should engage with admins as a normal player via the regular ahelp command.
 Exceptions to this are:
 - You may start adminning a round after you have died. Do note that policy 2.1 still applies!
 - You may use admintools when running adminevents if necessary, even if you are playing a character for it.
 #### 2.5 **Admin events should be done in moderation without heavily altering the flow of the round.**
+An "*event*" here is generally meant to be any admin intervention in the round that affects more than a handful of people: spawning a cookie for a prayer *no*, spawning a sentient monkey that runs around and messes with people *yes*.
+
 Heavily round-altering admin events (e.g. powerful wizard invasion, nations) should be voted for by the playerbase with `customvote` and only done on Extended (that means forcing the preset before the round starts!).
 
 Events overall should not be something that occur every round. Log what events you've done in Discord (just when & what, and no need to log very minor stuff), and try not to overwhelm players. That said, a lot of lenience is given towards what kinds of events can be run.
-
-An "*event*" here is generally meant to be any admin intervention in the round that affects more than a handful of people: spawning a cookie for a prayer *no*, spawning a sentient monkey that runs around and messes with people *yes*.
 
 #### 2.6 **Do not interfere unless you are needed.**
 If it looks like the situation will be able to resolve itself, or escalated naturally; and nothing actually actionable has happened, then there is no reason to interfere. **Reminder: The official servers are LRP, outside of Salamander.**
