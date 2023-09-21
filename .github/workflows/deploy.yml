@@ -1,8 +1,8 @@
 name: Build & Deploy mdBook Site
 
 on:
-  # Run on all pushes -- we check for only running on deploy later
   push:
+    branches: [ master ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
