@@ -49,11 +49,11 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 # Wiki.js doesn't have `.html` endings on files, so we hack it by putting /index.html
 # and just letting the browser look there, then get redirected
 [output.html.redirect]
-"/en/getting-started/how-do-i-code/index.html" = "en/general-development/setup/howdoicode.html"
-"/en/getting-started/dev-setup/index.html" = "en/general-development/setup/setting-up-a-development-environment.html"
-"/en/getting-started/git/index.html" = "en/general-development/setup/git-for-the-ss14-developer.html"
-"/en/content/yaml/index.html" = "en/general-development/tips/yaml-crash-course.html"
-"/en/getting-started/pr-guideline/index.html" = "en/general-development/codebase-info/pull-request-guidelines.html"
+"/en/getting-started/how-do-i-code/index.html" = "/en/general-development/setup/howdoicode.html"
+"/en/getting-started/dev-setup/index.html" = "/en/general-development/setup/setting-up-a-development-environment.html"
+"/en/getting-started/git/index.html" = "/en/general-development/setup/git-for-the-ss14-developer.html"
+"/en/content/yaml/index.html" = "/en/general-development/tips/yaml-crash-course.html"
+"/en/getting-started/pr-guideline/index.html" = "/en/general-development/codebase-info/pull-request-guidelines.html"
 "/en/getting-started/conventions/index.html" = "/en/general-development/codebase-info/conventions.html"
 "/en/content/chemistry/index.html" = "/en/space-station-14/chemistry.html"
 "/en/content/writing-guidebook-entries/index.html" = "/en/general-development/tips/writing-guidebook-entries.html"
