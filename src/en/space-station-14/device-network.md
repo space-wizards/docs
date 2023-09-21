@@ -1,12 +1,12 @@
 # Device Network
 
-Device networking allows machines and devices to communicate with each other while adhering to restrictions like range or being connected to the same powernet. Players will also have the abillity to interact with the device network in multiple ways. For example one could use a packet sniffer in his pda *(Not yet implemented)* to listen to messages sent over the wireless device network.
+Device networking allows machines and devices to communicate with each other while adhering to restrictions like range or being connected to the same powernet. Players will also have the abillity to interact with the device network in multiple ways. For example one could use a packet sniffer in their pda *(Not yet implemented)* to listen to messages sent over the wireless device network.
 
 ## Quick Overview
 Entities can join a network and will be assigned a network address. These entities can then optionally choose to listen on some frequency. Any device on a network can send packets on any frequency (not just one it's listening on). The packets can either be broadcast, or directed at a specific address. The actual packets take the form of ECS events. A system just needs to listen for a `DeviceNetworkPacketEvent`. This event contains information about the sender and a `NetworkPayload`, which is basically just a `Dictionary<string, object>`. The contents of the payload and how to interpret them is just hard coded in each system. Some commonly used string keys are defined in `DeviceNetworkConstants.cs`.
 
 ### Network ids:
-Device Net Ids are used to segregate devices into different sub networks that **can't** interact with eachother. This is done for performance and organisational reasons and to prevent players from interacting with packets that are not supposed to be interacted with.
+Device Net Ids are used to segregate devices into different sub networks. This is done for performance and organisational reasons and to prevent players from interacting with packets that are not supposed to be interacted with.
 
 ```admonish warning
 Device net ids **do not** specify how a device connects to other devices (e.g wireless). Use the components for that.
@@ -24,10 +24,13 @@ Device net ids **do not** specify how a device connects to other devices (e.g wi
  **3 - ApcNet `netId: Apc`**
     Used for wired networks that are limited to apc extension cables. E.g. light switches. This is supposed to be used with the `ApcNetworkComponent` if the device doesn't use a custom device net id.
 
+ **4 - AtmosDevices `netId: AtmosDevices`**
+   Used for atmospherics devices like scrubbers to segregate them from other networks 
+
 
 ## Network Connection Components
 To use the device network you need to add the DeviceNetworkComponent and the component for the type of connection you want. You can also not use one of the connection components when you want the device to always be able to send and receive messages.
-Currently there are three types of network connections: Wired, APC and Wireless.
+There are different types of connection components.
 ### Device Network Component
 This is the required component for sending and receiving device network messages.
 
@@ -152,6 +155,42 @@ components:
 ```
 
 </details>
+
+### Station Limited Network Component
+
+Allows devices that belong to the same station to send and receive packets to each other.
+
+<details>
+<summary>YAML</summary>
+  
+```yaml=
+components:
+    - type: DeviceNetworkComponent
+    ...
+    - type: StationLimitedNetwork
+      allowNonStationPackets: <bool>
+```
+
+**allowNonStationPackets**
+Allows the device to receive packets from devices that don't have a `StationLimitedNetwork` component.
+
+</details>
+
+### Device Network Requires Power Component
+
+Prevents any packets from being received if the device doesn't have power.
+
+<details>
+<summary>YAML</summary>
+  
+```yaml=
+components:
+    - type: DeviceNetworkComponent
+    ...
+    - type: DeviceNetworkRequiresPower
+```
+
+</details>
   
 ## The device network system
 
@@ -225,7 +264,7 @@ This event is raised before a device network message is sent. Subscribed to by o
   <details>
 <summary>DETAILS</summary>
   
- ``QueuePacket(EntityUid uid, string? address, NetworkPayload data, uint? frequency = null)``
+ ``QueuePacket(EntityUid uid, string? address, NetworkPayload data, uint? frequency = null, int? network = null, DeviceNetworkComponent? device = null)``
  
   **uid**
     The EntityUid of the sending entity.
@@ -238,6 +277,9 @@ This event is raised before a device network message is sent. Subscribed to by o
       
   **frequency**
   	The frequency on which to send the data. If null, will default to the devices current transmit frequency.
+
+  **network**
+  	The network id to send on. 
 </details>
   
 The device network system contains more public methods for things like setting the listening frequency of a device.
@@ -262,15 +304,12 @@ The class DeviceNetworkConstants contains common network ids and string constant
 
 When creating network payloads you should try to use constants for keys and values that are always the same.
 
-One example of a command and message is the mailing units `NET_CMD_REQUEST` for querying other units and its `NET_TAG` message for responding with its tag. *(currently not implemented)*
+One example of a command and message is the mailing units `get_mailer_tag` for querying other units and its `mailer_tag` message for responding with its tag.
 
 ### Standard payload constants:
 
  **COMMAND**
-    The key used for specifying the command/type of payload e.g. PDA_MAIL.
-
-## Device Network Configuration
-*TODO: Explain device network configuration and device lists*
+    The key used for specifying the command/type of payload e.g. pda_mail.
   
 ## Examples:
 ### Sending a network Message
@@ -279,19 +318,19 @@ One example of a command and message is the mailing units `NET_CMD_REQUEST` for 
 //This is somewhere at the top of your entity system
 [Dependency] private readonly DeviceNetworkSystem _deviceNetworkSystem = default!;
 
-public const string NET_CMD_PDA_MAIL = "pda_mail";
-public const string NET_TARGET_MAIL = "target_mail_address";
-public const string NET_SENDER_MAIL = "sender_mail_address";
-public const string NET_MESSAGE = "message";
+public const string NetCmdPdaMail = "pda_mail";
+public const string NetTargetMail = "target_mail_address";
+public const string NetSenderMail = "sender_mail_address";
+public const string NetMessage = "message";
 ...
-//When you want to send a network message you need to construct a network payload and send it using theDeviceNetworkSystems QueuePacket method.
+//When you want to send a network message you need to construct a network payload and send it using the DeviceNetworkSystems QueuePacket method.
 var payload = new NetworkPayload
 {
-    [DeviceNetworkConstants.COMMAND] = NET_CMD_PDA_MAIL,
+    [DeviceNetworkConstants.COMMAND] = NetCmdPdaMail,
     //You're not restricted to using DeviceNetworkConstants.COMMAND
-    [NET_MESSAGE] = "Hi Bob, bla bla bla...",
-    [NET_TARGET_MAIL] = "5525bob@nanotrasen.com",
-    [NET_SENDER_MAIL] = "7361joe.genero@nanotrasen.com"
+    [NetMessage] = "Hi Bob, bla bla bla...",
+    [NetTargetMail] = "5525bob@nanotrasen.com",
+    [NetSenderMail] = "7361joe.genero@nanotrasen.com"
 };
 
 _deviceNetworkSystem.QueuePacket(uuidOfCurrentEntity, addressOfMailserverOrSomething, payload);
@@ -304,8 +343,8 @@ The sending entity should either be pre-configured to send on the mailing freque
 ...
 [Dependency] private readonly DeviceNetworkSystem _deviceNetworkSystem = default!;
 
-public const string NET_CMD_PING = "ping"
-public const string NET_MESSAGE = "message";
+public const string NetCmdPing = "ping"
+public const string NetMessage = "message";
 
 public override void Initialize()
 {
@@ -319,18 +358,18 @@ public override void Initialize()
 
 private void OnPacketReceived(EntityUid uid, DeviceNetworkComponent component, DeviceNetworkPacketEvent args)
 {
-    //Since we are doing it the recomendet way of using the command constant we try to get it from the payload
+    //Since we are doing it the recommended way of using the command constant we try to get it from the payload
     if (args.Data.TryGetValue(DeviceNetworkConstants.COMMAND, out String command))
     {
         //If that command is the PING command (you can check for your own command here)
-        if (command == NET_CMD_PING)
+        if (command == NetCmdPing)
         {
             //We create a payload containing the ping_response command and "Hello World" as a message. 
             //(For this example I just passed the command name as a string instead of creating a constant.)
             var payload = new NetworkPayload
             {
                 [DeviceNetworkConstants.COMMAND] "ping_response",
-                [NET_MESSAGE] = "Hello World"
+                [NetMessage] = "Hello World"
             };
             
             //And send the response to that ping
