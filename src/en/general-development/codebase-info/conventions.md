@@ -32,13 +32,13 @@ Some folks blindly adhere to "comment the why, not the what" and think that "cod
 
 #### Example 1
 
-```C#
+```csharp
    float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 All of the variables are named in a self-documenting way (*R* gets a pass because that is the ideal gas constant, and physics conventions existed long before computers, so this is following convention). Obviously, the comment should *not* be:
 
-```C#
+```csharp
 	 // Take R and multiply it by the ratio of outlet temperature divided by outlet air volume and add it to ...
    float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
@@ -48,7 +48,7 @@ Because this only explains what the code is literally doing, which you could hav
 You don't know where this magic formula came from, what it's trying to accomplish, or even if the formula is correct. Therefore, this needs to be documented:
 
 
-```C#
+```csharp
         // We want moles transferred to be proportional to the pressure difference, i.e.
         // dn/dt = G*P
 
@@ -60,7 +60,7 @@ You don't know where this magic formula came from, what it's trying to accomplis
 
 #### Example 2
 
-```C#
+```csharp
         if (HasComp<MindContainerComponent>(uid))
         {
             return;
@@ -72,7 +72,7 @@ You don't know where this magic formula came from, what it's trying to accomplis
 Obviously, this code skips "more stuff" if the entity represented by *uid* already has a MindContainerComponent. This code is as self-documenting as it gets, it literally just returns early if there is a MindContainer. What needs to be documented is *why* this code needs to skip *uid*s that already have a MindContainerComponent:
 
 
-```C#
+```csharp
 				// Don't let players who drink cognizine be eligible for a ghost takeover
         if (HasComp<MindContainerComponent>(uid))
 ```
