@@ -24,7 +24,6 @@ preferred-dark-theme = "navy"
 
 git-repository-url = "https://github.com/space-wizards/space-station-14"
 edit-url-template = "https://github.com/space-wizards/docs/blob/master/{path}"
-site-url = "/docs/" # remove when we move to docs.ss14.io -- needed for 404 pages to render properly in subdirectories
 
 mathjax-support = true
 curly-quotes = true
