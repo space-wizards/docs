@@ -36,6 +36,7 @@ From cargo, install:
 - `mdbook-template`
 - `mdbook-linkcheck`
 - `mdbook-admonish`
+- `mdbook-emoji`
 
 Call `mdbook serve` to build and locally host the documentation from the `book` directory at `localhost:3000`.
 

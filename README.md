@@ -16,6 +16,7 @@ The following `mdbook` features & plugins are available and in use:
 - `mdbook-linkcheck`
 - `mdbook-template`
 - `mdbook-admonish`
+- `mdbook-emojicodes`
 
 The site is currently hosted at [https://spacestation14.io/docs/](https://spacestation14.io/docs/). This will likely change in the future, so links here should not be relied on.
 

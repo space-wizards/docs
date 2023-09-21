@@ -17,11 +17,10 @@ If you would like to make contributions to this documentation site, it's hosted 
 
 ## Getting Started
 
-- [❓ How do I code?](en/general-development/setup/howdoicode.md)
-- [📦 Setting up the Dev Environment](en/general-development/setup/setting-up-a-development-environment.md)
-- [🗺 Mapping](en/space-station-14/mapping.md)
-- [📈 Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
-- [🛠 Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
+- [:question: How do I code?](en/general-development/setup/howdoicode.md)
+- [:package: Setting up the Dev Environment](en/general-development/setup/setting-up-a-development-environment.md)
+- [:world_map: Mapping](en/space-station-14/mapping.md)
+- [:chart_with_upwards_trend: Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
 
 ### What should I work on?
 
