@@ -75,7 +75,6 @@ System:
     }
 ```
 
-
 ## 2. ECS-ify data
 
 Now we need to convert the component into the proper ECS state!

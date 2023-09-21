@@ -52,7 +52,7 @@ Making new rooms requires a saved map file and prototypes created specifying the
 
 There is a template that can be used below. **Note that there is no limit to size or rooms.**
 
-[dungeon_template.yml](../assets/yml/dungeon_template.yml)
+[dungeon_template.yml](../assets/misc/dungeon_template.yml)
 
 ## Mapping suggestions
 

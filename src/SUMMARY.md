@@ -57,7 +57,6 @@ Robust Toolbox
 
 - [ECS](en/robust-toolbox/ecs.md)
 - [Netcode](en/robust-toolbox/netcode.md)
-  - [Entity and Component Netcode](en/robust-toolbox/netcode/entity-and-component-netcode.md)
   - [Net Entities](en/robust-toolbox/netcode/net-entities.md)
   - [Potentially Visible Set](en/robust-toolbox/netcode/potentially-visible-set.md)
 - [Coordinate Systems](en/robust-toolbox/coordinate-systems.md)
