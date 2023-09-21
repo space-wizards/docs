@@ -1,4 +1,4 @@
-# Space Wizards Developer's Wiki
+<img src="en/assets/misc/icon-trans.svg" width=128 style="margin-left:auto;margin-right:auto;display:block"/>
 
 ```admonish danger "Subject to change"
 This site is in the process of being ported from the old Wiki.js docs and domain name or relative links may change at any time!
