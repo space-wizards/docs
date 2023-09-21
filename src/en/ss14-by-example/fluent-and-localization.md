@@ -29,6 +29,7 @@ Will return the string `"Stack is already full."` which you can then use for pop
 
 
 #### Example 2 (A message with variables):
+
 ```
 traitor-user-was-a-traitor = {$user} was a traitor.
 ```
@@ -37,8 +38,9 @@ Not all text is as straight forward as `"Stack is already full."`, often you'll 
 var text = "Bob" + Loc.GetString("traitor-user-was-a-traitor");
 ```
 
-> Remember, the above is what *not* to do!
-{.is-warning}
+```admonish warning
+Remember, the above is what *not* to do!
+```
 
 and hope to get `"Bob was a traitor."`, this might work for english (an SVO language), but it won't work for many others (including other SVO languages!)
 
@@ -149,9 +151,10 @@ You should seek to use these functions whenever possible to make dynamic and 100
 
 ## Localizing Prototypes
 
-> This is not for use upstream. If you're making upstream content please use the name/description fields.
-> This is to make it easier for translations to override things without editing the main game's data.
-{.is-warning}
+```admonish warning
+This is not for use upstream. If you're making upstream content please use the name/description fields.
+This is to make it easier for translations to override things without editing the main game's data.
+```
 
 ```yaml
 - type: entity
@@ -159,9 +162,10 @@ You should seek to use these functions whenever possible to make dynamic and 100
   name: oxygen tank
   description: A tank of oxygen. This one is red.
 ```
+
 So you know how to localize C# code, but how do you localize YAML?
 In general, it's going to be as simple as:
-```yaml=
+```yaml
   someYaml: some-message-id
 ```
 
@@ -173,6 +177,7 @@ But for entities we have code in place to allow localizations to be easier to re
   name: red-oxygen-tank-name
   description: red-oxygen-tank-desc
 ```
+
 ```
 red-oxygen-tank-name = oxygen tank
 red-oxygen-tank-desc = A tank of oxygen. This one is red.

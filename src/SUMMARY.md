@@ -56,9 +56,9 @@ Robust Toolbox
 ----------------------
 
 - [ECS](en/robust-toolbox/ecs.md)
-- [Netcode](en/robust-toolbox/netcode.md)
+- [Netcode]()
   - [Net Entities](en/robust-toolbox/netcode/net-entities.md)
-  - [Potentially Visible Set](en/robust-toolbox/netcode/potentially-visible-set.md)
+  - [Potentially Visible Set]()
 - [Coordinate Systems](en/robust-toolbox/coordinate-systems.md)
 - [Transform]()
   - [Entity Coordinates](en/robust-toolbox/transform/entity-coordinates.md)
@@ -86,6 +86,7 @@ Robust Toolbox
 - [Robust Modules](en/robust-toolbox/robust-modules.md)
 - [Server HTTP API](en/robust-toolbox/server-http-api.md)
 - [Build Configurations](en/robust-toolbox/build-configurations.md)
+- [Preprocessor Defines](en/robust-toolbox/preprocessor-defines.md)
 - [MIDI](en/robust-toolbox/midi.md)
 
 Space Station 14
@@ -120,6 +121,7 @@ Server Hosting
 - [Setting up Robust.Cdn](en/server-hosting/setting-up-robust-cdn.md)
 - [Setting up SS14.Admin](en/server-hosting/setting-up-ss14-admin.md)
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
+- [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
 
 Other Projects
