@@ -221,7 +221,7 @@ Generally, branches are named for whatever you're going to be working on in them
 
 You can make as many branches as you like. When you create a branch, it 'branches out' (no shit, really?) from the current branch you're on and becomes its own independent thing you can add commits to. 
 
-![](https://i.imgur.com/ByMugxu.png =500x300)
+![](https://i.imgur.com/ByMugxu.png=500x300)
 
 In this diagram, each little node is a different commit, and each color is a different branch.
 
