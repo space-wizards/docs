@@ -491,14 +491,6 @@ public sealed class ActionUIController : UIController, IOnSystemChanged<ActionsS
 
     public void OnStateEntered(GameplayState state)
     {
-        if (_actions != null)
-        {
-            _actions.OnActionAdded += OnActionAdded;
-            _actions.OnActionRemoved += OnActionRemoved;
-            _actions.ActionReplaced += OnActionReplaced;
-            _actions.ActionsUpdated += OnActionsUpdated;
-        }
-
         // Bind hotkeys once we enter the gameplay state (start a round and join it as the client)
         CommandBinds.Builder
             .Bind(ContentKeyFunctions.OpenActionsMenu, InputCmdHandler.FromDelegate(_ => ToggleWindow()))
