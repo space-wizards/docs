@@ -74,7 +74,7 @@ The SS14 client and server are independent projects, but both can launch with a 
 
 ### Visual Studio 2022
 
-In Visual Studio 2022, you can configure the build button to run both the server and client by right clicking the solution, then selecting `Set StartUp Projects...`. Once the menu pops up, then select `Multiple startup projects:` and set the action for `Content.Client` and `Content.Server` to `Start`. Once you apply the changes, hitting the big `Start` button with a green arrow next to it should launch both client and server at the same time.
+In Visual Studio 2022, you can configure the build button to run both the server and client by right clicking the solution, then selecting `Configure StartUp Projects...`. Once the menu pops up, then select `Multiple startup projects:` and set the action for `Content.Client` and `Content.Server` to `Start`. Once you apply the changes, hitting the big `Start` button with a green arrow next to it should launch both client and server at the same time.
 
 Note: If you're having problems with the program not getting built right, you may need to set always build before run. Go to Options `Projects and Solutions/Build and Run` and change `On Run, when projects are out of date` to `Always build`.
 
