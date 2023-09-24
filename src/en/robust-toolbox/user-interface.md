@@ -404,14 +404,14 @@ The XAML code is automatically compiled to IL so it can be efficiently construct
 ```
 
 ## UI Controllers
-UI controllers are responsible for creating, updating and removing controls. Entity systems must not do this themselves.
-Any data that they use must be obtained by binding their methods to system events (see example below) or by calling methods on IoC services, such as IPlayerManager.
-To create one, make a new class that inherits `UIController`. This type will then be instantiated automatically as a singleton by the `UserInterfaceManager`.
+UI controllers are responsible for creating, updating and removing controls. Entity systems must not do this themselves.  
+Any data that they use must be obtained by binding their methods to system events (see example below) or by calling methods on IoC services, such as IPlayerManager.  
+To create one, make a new class that inherits `UIController`. This type will then be instantiated automatically as a singleton by the `UserInterfaceManager`.  
 Widgets are retrieved within UI controllers by calling `UIManager.GetActiveUIWidgetOrNull<T>()`, where T is a widget such as `ActionsBar`.
 
 ### Dependencies
-An UI controller may have dependencies to other IoC services and controllers using the \[Dependency\] syntax.
-For systems, \[UISystemDependency\] must be used instead.
+An UI controller may have dependencies to other IoC services and controllers using the \[Dependency\] syntax.  
+For systems, \[UISystemDependency\] must be used instead.  
 Once systems are loaded, UI controller methods may be bound to events declared on them.
 
 ```cs
@@ -514,11 +514,11 @@ public sealed class ActionUIController : UIController, IOnSystemChanged<ActionsS
 
 UI controllers may also implement the following interfaces:
 ### IOnStateChanged<T>
-Implements two methods: `OnStateEntered(T state)` and `OnStateExited(T state)`.
-These methods are automatically called when the respective state is entered and exited, for example GameplayState.
+Implements two methods: `OnStateEntered(T state)` and `OnStateExited(T state)`.  
+These methods are automatically called when the respective state is entered and exited, for example GameplayState.  
 If only the entering or exiting logic is needed, `IOnStateEntered<T>` and `IOnStateExited<T>` may be implemented instead.
 
 ### IOnSystemChanged<T>
-Implements two methods: `OnSystemLoaded(T system)` and `OnSystemUnloaded(T system)`.
-These methods are automatically called when the respective system is loaded and unloaded, for example ActionsSystem.
+Implements two methods: `OnSystemLoaded(T system)` and `OnSystemUnloaded(T system)`.  
+These methods are automatically called when the respective system is loaded and unloaded, for example ActionsSystem.  
 If only the loaded or unloaded logic is needed, `IOnSystemLoaded<T>` and `IOnStateUnloaded<T>` may be implemented instead.
