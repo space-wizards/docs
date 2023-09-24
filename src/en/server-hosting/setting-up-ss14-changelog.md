@@ -47,7 +47,7 @@ Match Group sftp-only
     ForceCommand internal-sftp
 ```
 
-You'll still need to make sure the changelog file is exposed through a web server somwhere. I'll leave that up to you.
+You'll still need to make sure the changelog file is exposed through a web server somwhere. I'll leave that up to you. Whatever you do, make sure that your web server reports the file's `Content-Type` as `application/rss+xml`.
 
 ```admonish warning
 The SSH key MUST be ed25519. I couldn't be bothered to make the script more flexible.
@@ -76,6 +76,7 @@ FEED_LINK        = "https://github.com/space-wizards/space-station-14/"
 FEED_DESCRIPTION = "Changelog for the official Wizard's Den branch of Space Station 14."
 FEED_LANGUAGE    = "en-US"
 FEED_GUID_PREFIX = "ss14-changelog-wizards-"
+FEED_URL         = "https://central.spacestation14.io/changelog.xml"
 ```
 
 * You should set the `SSH_` parameters to whatever connection parameters you need to connect via SSH.
