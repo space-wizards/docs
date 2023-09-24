@@ -536,7 +536,7 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
     - type: Physics 
     - type: Anchorable # Content, but generalized
     - type: Emitter # A component for a specific type of item
-    ``
+    ```
 
 ### YAML and data-field naming
 `PascalCase` is used for IDs and component names.
