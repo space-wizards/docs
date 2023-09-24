@@ -406,8 +406,9 @@ The XAML code is automatically compiled to IL so it can be efficiently construct
 ## UI Controllers
 UI controllers are responsible for creating, updating and removing controls. Entity systems must not do this themselves.  
 Any data that they use must be obtained by binding their methods to system events (see example below) or by calling methods on IoC services, such as IPlayerManager.  
-To create one, make a new class that inherits `UIController`. This type will then be instantiated automatically as a singleton by the `UserInterfaceManager`.  
-Widgets are retrieved within UI controllers by calling `UIManager.GetActiveUIWidgetOrNull<T>()`, where T is a widget such as `ActionsBar`.
+To create a new UI controller, make a new class that inherits `UIController`. This type will then be instantiated automatically as a singleton by the `UserInterfaceManager`.  
+Widgets are retrieved within UI controllers by calling `UIManager.GetActiveUIWidgetOrNull<T>()`, where T is a widget such as `ActionsBar`.  
+The lifecycle of an UI controller is longer than that of entity systems; an UI controller may exist before entity systems are loaded, and stay alive after they are unloaded.
 
 ### Dependencies
 An UI controller may have dependencies to other IoC services and controllers using the \[Dependency\] syntax.  
