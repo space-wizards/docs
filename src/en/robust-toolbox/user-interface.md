@@ -403,3 +403,122 @@ The XAML code is automatically compiled to IL so it can be efficiently construct
 </Control>
 ```
 
+## UI Controllers
+UI controllers are reponsible for creating, updating and removing controls. Entity systems must not do this themselves.
+Any data that they use must be obtained through binding their methods to system events (see example below).
+To create one, make a new class that inherits `UIController`. This type will then be instantiated automatically as a singleton by the `UserInterfaceManager`.
+Widgets are retrieved within UI controllers by calling `UIManager.GetActiveUIWidgetOrNull<T>()`, where T is a widget such as `ActionsBar`.
+
+### Dependencies
+An UI controller may have dependencies to other IoC services and controllers using the \[Dependency\] syntax.
+For systems, \[UISystemDependency\] must be used instead.
+Once systems are loaded, UI controller methods may be bound to events declared on them.
+
+```cs
+public sealed class ActionUIController : UIController, IOnSystemChanged<ActionsSystem>, IOnStateEntered<GameplayState>
+{
+    // Dependency is used for IoC services and other controllers
+    [Dependency] private readonly GameplayStateLoadController _gameplayStateLoad = default!;
+
+    // For entity systems, UISystemDependency is used instead
+    [UISystemDependency] private readonly ActionsSystem? _actions = default!;
+
+    private ActionsWindow? _window;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        // We can bind methods to event fields on other UI controllers during initialize
+        _gameplayStateLoad.OnScreenLoad += LoadGui;
+        _gameplayStateLoad.OnScreenUnload += UnloadGui;
+
+        // UI controllers can also subscribe to local and network entity events
+        // Local events are events raised on the client using RaiseLocalEvent
+        // SubscribeLocalEvent<PlayerAttachedEvent>(ev => {});
+
+        // Network events are events raised by the server and sent to the client
+        // SubscribeNetworkEvent<PlayerAttachedEvent>(ev => {});
+    }
+
+    private void LoadGui()
+    {
+        DebugTools.Assert(_window == null);
+        _window = UIManager.CreateWindow<ActionsWindow>();
+        LayoutContainer.SetAnchorPreset(_window, LayoutContainer.LayoutPreset.CenterTop);
+    }
+
+    private void UnloadGui()
+    {
+        if (_window != null)
+        {
+            _window.Dispose();
+            _window = null;
+        }
+    }
+
+    private void ToggleWindow()
+    {
+        if (_window == null)
+            return;
+
+        if (_window.IsOpen)
+        {
+            _window.Close();
+            return;
+        }
+
+        _window.Open();
+    }
+
+    public void OnSystemLoaded(ActionsSystem system)
+    {
+        // We can bind to event fields on entity systems when that entity system is loaded
+        system.LinkActions += OnComponentLinked;
+    }
+
+    public void OnSystemUnloaded(ActionsSystem system)
+    {
+        // And unbind when the system is unloaded 
+        system.LinkActions -= OnComponentLinked;
+    }
+
+    // This will be called when ActionsSystem raises an event on its LinkActions event field
+    private void OnComponentLinked(ActionsComponent component)
+    {
+    }
+
+    public void OnStateEntered(GameplayState state)
+    {
+        if (_actions != null)
+        {
+            _actions.OnActionAdded += OnActionAdded;
+            _actions.OnActionRemoved += OnActionRemoved;
+            _actions.ActionReplaced += OnActionReplaced;
+            _actions.ActionsUpdated += OnActionsUpdated;
+        }
+
+        // Bind hotkeys once we enter the gameplay state (start a round and join it as the client)
+        CommandBinds.Builder
+            .Bind(ContentKeyFunctions.OpenActionsMenu, InputCmdHandler.FromDelegate(_ => ToggleWindow()))
+            .Register<ActionUIController>();
+    }
+
+    public void OnStateExited(GameplayState state)
+    {
+        // Unbind hotkeys after we exit the round (we enter the lobby or disconnect)
+        CommandBinds.Unregister<ActionUIController>();
+    }
+}
+```
+
+UI controllers may also implement the following interfaces:
+### IOnStateChanged<T>
+Implements two methods: `OnStateEntered(T state)` and `OnStateExited(T state)`.
+These methods are automatically called when the respective state is entered and exited, for example GameplayState.
+If only the entering or exiting logic is needed, `IOnStateEntered<T>` and `IOnStateExited<T>` may be implemented instead.
+
+### IOnSystemChanged<T>
+Implements two methods: `OnSystemLoaded(T system)` and `OnSystemUnloaded(T system)`.
+These methods are automatically called when the respective system is loaded and unloaded, for example ActionsSystem.
+If only the loaded or unloaded logic is needed, `IOnSystemLoaded<T>` and `IOnStateUnloaded<T>` may be implemented instead.
