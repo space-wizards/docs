@@ -36,9 +36,11 @@ Broken down by department and then by individual area, this contains what items 
 Required
 - Communications Console
 - ID Card Computer
+- Station Records Computer
 
 Optional
 - Fireaxe
+- Recharger
 - Power Monitoring Computer
 - Crew Monitor
 - First Aid Kits + Fire & Emergency Locker
@@ -53,19 +55,18 @@ Required
 
 Optional
 - Credits (Not excessive, 10k maybe, cargo will want to steal this)
-- Rare Drip
-- Camera [command]
 - Camera Router [command] (if no tcoms room)
+- Premium Cigars
 
 #### Captain’s Quarters
 Required
 - Captain’s Locker [filled]
-- Communications Console (spare)
 - Captain’s Spare ID
 - Renault Spawner (and dog bed)
 
 Optional
 - ID Card Computer
+- Communications Console (spare)
 - Extra drip / Captains Items / Oxygen Tank for hardsuit.
 - Bed + Captains Bedsheet
 - A bathroom / shower room (with duck and soap)
@@ -96,6 +97,7 @@ Required
 - Security Officer Lockers [filled]
 - SecTech Vending Machine
 - Handcuff Boxes / Ziptie Boxes
+- Brig Timers
 
 Optional
 - Interrogation Room
@@ -113,6 +115,7 @@ Optional
 Required
 - Warden’s Locker [filled]
 - Criminal Records Computer
+- Station Records Computer
 
 Optional
 - Extra Charger and Batons
@@ -120,6 +123,7 @@ Optional
 - A button for securing any blast doors
 - First Aid Kit
 - Camera Monitor / Telescreen
+- McGriff Spawner
 
 #### Head of Security’s Room
 Required
@@ -127,11 +131,10 @@ Required
 
 Optional
 - Bed + HoS Bedsheets
-- A NT Weapon such as the WT
-- Cigar
-- A pet spawner + bed
+- Shiva Spawner
 - Telescreen / Camera Monitor
 - Button for security lethal armory
+- WT550
 
 #### Armory
 Required
@@ -152,6 +155,7 @@ Optional
 #### Perma Brig
 Required
 - sustainable food system (hydro trays, fruit seeds, seed extractor, mini hoe , water source, buckets or cups)
+- Sustenance Vendor
 - Beds
 
 Optional
@@ -162,6 +166,7 @@ Optional
 #### Detective’s Room
 Required
 - Detective’s Cabinet
+- Station records computer
 
 Optional
 - DetDrobe
@@ -203,6 +208,7 @@ Required
 
 Optional
 - Rollerbeds
+- Paramedic Job and Locker
 - crew monitor
 - Medical Records Console
 - Medical lockers
@@ -211,6 +217,7 @@ Optional
 #### Chemistry
 Required
 - chem dispenser and chem master
+- chem vend
 - grinder
 - chemical locker
 
@@ -266,13 +273,18 @@ Required
 - Protolathe
 - Circuit Imprinter
 - Isolated testing chamber (for xeno archeology)
+- Artifact Analyzer and Analysis Console (linked)
+- Artifact Spawner
 - Limited starting materials (Steel, Glass, Plastic only)
 - Scientist Locker
 - Autolathe
-- Scidrobe
+- Anomaly Generator
+- 2-3 Anomaly Vessels
+- 2-3 APES
 
 Optional
 - Grinder
+- Smile Spawner
 - Beaker boxes
 - Syringe boxes
 - Fire Safety Closets
@@ -280,6 +292,8 @@ Optional
 - Empty Gas Canisters
 - Signs for specific areas
 - Filing Cabinets
+- Scidrobe
+- Vendomat
 
 #### Server Room
 Required
@@ -293,18 +307,26 @@ Required
 
 Optional
 - bed/RD bedsheet
+- Bandito Spawner
+- Power Drill
+- Spare Eva Suit
 - RD’s potted plant
 - Lamarr poster
 
 #### Robotics
 Required:
 - Exosuit Fabricator
+- Cyborg Recharging Stations
+- Operating Table & Body Scanner Computer
+- Morgue
+- Robotech Deluxe
 
 ## Supply
 #### Cargo Reception
 Required
 - Cargo Request Computer (either public or behind a counter)
 - Counter for orders and or conveyor with flaps
+- Cargo Bounty Computer
 
 Optional
 - Waiting area for placing orders
@@ -314,16 +336,17 @@ Optional
 #### Cargo Bay
 Required
 - Space for crates to sit for import / export
-- Cargo Ordering Computer
-- Telepad (low pop only)
-- CargoShuttleComputer
-- CargoShuttleConsole
+- Cargo Shuttle Console
+- Cargo Shuttle Computer
 
 Optional
 - Starting materials (Glass, Steel, Plastic only, 1 stack max)
 - First Aid Kit / Oxy Deprevation Kit
 - Toolbox
 - Filing Cabinet
+- Material Reclaimer
+- Filled Crate Spawner [Low Value]
+- Empty Crate Spawner
 
 #### Quartermaster’s Room
 Required
@@ -339,8 +362,10 @@ Required
 - Salvage Specialist’s Locker
 - Salvage Magnet
 - Airlock to space
-- Salvage Vending Machine (when avaialble)
-- Ore Redemption Machine
+- Salvage Vending Machine
+- Ore Processor
+- Salvage Expeditions Computer
+- Salvage Shuttle Console
 
 Optional
 - Tank Dispenser [EVA]
@@ -357,13 +382,17 @@ Required
 - Engivend
 - Protolathe
 - Autolathe
-- Steel, Plasteel, Glass, Metal rods (limiged)
+- Steel, Plasteel, Glass, Metal rods (limited)
+- Pacman and Super Pacman
+- Plasma Gas Tank Dispenser
 
 Optional
 - Bulk Cable Crate
+- Handheld Radios
+- Flashlights
 - Fuel Tanks
 - Solar Control Computer
-- Power Monitoring Computer (HV cablw under it)
+- Power Monitoring Computer (HV cable under it)
 - Tool Boxes
 - Cell Rechargers
 - Engidrobe
@@ -398,9 +427,9 @@ Required
 
 #### Singularity Engine
 Required
-- 8 containment field generators
+- 4 containment field generators
 - 1 gravitational singularity generator
-- radiation collectors around the singularity
+- 4-8 radiation collectors in line of sight of singularity (depends on stations power needs)
 - enough emitters for each containment field generator
 - particle accelerator (preferably partially or completely unassembled)
 - HV to SMES cable terminal input
@@ -409,6 +438,10 @@ Required
 Required
 - Power gen going into SMES cable terminals as input
 - Outgoing power to station from under SMES to station substations
+
+#### Telecomms
+Required
+- Telecommunications Servers
 
 ##### Atmospherics
 Required
@@ -427,6 +460,7 @@ Optional
 - atmosia declaration of independence
 - fire safety closets
 - fireaxe cabinet
+- TEG Setup (look at other maps for examples)
 
 ## Service
 
@@ -448,6 +482,7 @@ Optional
 - Chefdrobe
 - Spare universal enzymes
 - Cow crate/monkey cubes
+- Cold/Hot food carts
 
 #### Botany
 Required
@@ -476,6 +511,7 @@ Required
 
 Optional
 - Bardrobe
+- Pun Spawners
 - Extra Shakers
 - Box of Beanbag shells
 - Monkey Painting
@@ -489,10 +525,13 @@ Required
 - Mop & Bucket
 - Drain
 - Janidrobe
+- Janitor Trolley
 - Janicart spawner + keys
 
 Optional
 - Janitor biohazard closet
+- Restock Box Spawner
+- Janitorial Trash Cart
 - Extra light boxes and light replacers
 - Custodial closets
 - Wet floor signs
@@ -500,7 +539,7 @@ Optional
 ## Misc
 #### EVA Storage
 Required
-- EVA Suits
+- EVA Suit Storages
 - Masks
 
 Optional
@@ -522,6 +561,7 @@ Optional
 Required
 - Roleplay friendly area for chaplain
 - Pietyvend
+- Altar Spawner
 
 Optional
 - Chaplain’s wardrobe
@@ -533,11 +573,16 @@ Optional
 #### Library
 Required
 - Roleplay friendly area for librarian
+- Fun & Games Machines
+- Books Bag
 
 Optional
 - Lots of bookcases
+- Fax Machine
+- Paperwork Spawner
+- Figuring Spawner
 - Games table
-- Board games / fun vendor
+- Board games
 - Fun toy spawns or instrument spawns
 - Paper for librarian to write books
 - Lantern
@@ -565,6 +610,7 @@ Required
 - A working disposals system (conveyors and toggled blast doors or recycler)
 - Recycler
 - Airlock to eject trash to space or disposals into space
+- Material Reclaimer
 
 #### Theater Room
 Required
@@ -579,6 +625,7 @@ Optional
 #### Tool Room
 Required
 - Youtool machine
+- Vendomat
 
 Optional
 - Extra tools & tool boxes
