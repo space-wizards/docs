@@ -1,0 +1,184 @@
+# Nuclear Fission Reactor Concept [ashtronaut, unapproved]
+
+> **This is still a work in progress document**
+
+## Goal
+The main goal is to create an engine that is more interactive and interesting than existing engines. One that has multiple points of failure, but also not having a failure *always* result in an immediate round end.
+
+
+## Loop overview
+![](https://i.imgur.com/VOfBFAr.png)
+Potential example of a full engine setup
+* Reactor vessel (green)
+    * Pipe input and output (one way). The contents interact with the reactor vessel, hopefully carrying the heat away from the vessel.
+    * Fuel/Control rods primarily drive the reaction
+* Turbine
+    * Converts kinetic energy stored in gas into electrical energy for the grid
+* Cooling source
+    * Something to cool down the gas before re-entering the reactor vessel
+    * Optionally the cooling source is not directly tied to the turbine output, but instead uses a heat exchanger. This would enable the use of different gases for each loop.
+:::info
+Note: Heat exchangers and pipe radiators for space cooling will be added before the reactor, permitting usage of those devices for a full engine setup.
+:::
+## The Reactor Vessel
+Different kinds of reactors could be implemented, but to start the reactor would be loosely based off of Gas-cooled reactors. The entity itself should be a large (5x5, maybe 6x6?) device. It will have a pipe input and a pipe output for the gas that interacts with the reactor vessel itself. Fuel is provided by inserting nuclear fuel rods. Fuel can only be inserted or removed when the reactor is in a low power state. This is also the only time a reactor vessel can be repaired. Control rods are also inserted the same way and these are used to control the reaction speed through the control console.
+
+:::info
+While a Pressurized Water Reactor or Boiling Water Reactor, i.e. using water->steam, would be nifty, until phase changes are really properly implemented that would be harder to model hence the decision to focus on purely gas based designs. The goal is not to perfectly model real world reactors / nuclear physics.
+:::
+
+### Atmospherics Interactions (Including making the Funny Stuff)
+The gas that is input into the reactor directly interacts with the vessel environment. As the fuel rods generate heat, the gas gets heated and expands. Additionally, the neutrons / radiation within the vessel could have interactions with specific gases in the existing form of Reactions (in the atmospherics sense), which would enable the creation of gases using this unique environment.
+
+This interaction should be coupled with the primary coolant mechanisms, to create a trade-off and require fiddling to extract any gases created that should not remain within the system. I.E. there shouldn't be a separate input/output for gases for the sole purpose of atmospheric reactions.
+
+Different gases would affect the reaction differently. Some may be quite good at reducing neutron flux creating a safer reactor, but as a result this will produce less heat and thus less power. Others might drastically increase flux and push the reactor into super-criticality, generating a lot of heat but risking an unstoppable chain reaction that results in failure.
+
+Similarly, different gases have different thermal conductivity values that also vary based on pressure and temperature. This makes some gases better at carrying away the heat than others. The primary goal of the gas coolant is to keep the reactor cool enough to not fail, but also hot enough to generate enough energy.
+
+"Fun" gases that can be created should be very dangerous for the reactor.
+
+:::info
+Reminder: The nuclear reactor *does not generate power directly*, it simply provides a source of heat/pressure for the working/coolant gas!
+:::
+
+### Fuel Rods
+Fuel rods contain fissile material that will deplete over time and require replacement. The fuel amount should be balanced such that assuming a standard round time of 2 hours, with typical station power demands, the reactor needs to be refueled once or twice. This could be more frequent on larger, power hungry maps and less frequent on smaller, power sipping maps.
+
+Different fuels are better than others, generating more neutron flux. Potential examples:
+* 0.5x  - Depleted fuel rods, result when a plutonium fuel rod is fully used up
+* 0.75x - Low-enrichment uranium rods, produced from mined uranium 
+* 1x    - Enriched Uranium-238 fuel rods, can be ordered from cargo
+* 2x    - Plutonium fuel rod, what uranium fuel rods slowly turn into as they are used up
+
+There could also be fuel rods with funky characteristics, like a Plasma-uranium fuel rod that is unstable but results in something unique when depleted.
+
+Plutonium fuel rods could be considered valuable and/or high risk items. If selling them to ~~the highest bidder~~ NT were desired, this would require more frequent fuel rod replacement. Turns out weapons proliferation is profitable!
+
+Fuel rods cannot be inserted when the reactor power level is above a certain amount (10-20%). This means the reactor must be temporarily shut off for refueling. 
+
+### Control Rods
+Control rods moderate the reaction by absorbing neutrons. Different control rod materials are better at absorbing neutrons than others. These would be changeable to alter reaction dynamics.
+
+Control rod replacement would require the reactor to be in a low power state similar to fuel rod replacement.
+
+:::info 
+Control rod "depletion" could be added, but it might not be interesting/meaningful enough. Could be playtested.
+:::
+
+### Control Console
+The control console is how engineers monitor and manage the operation of the reactor. This console provides vital statistics on the environment of the vessel and provide control over how inserted the control rods are. The more the control rods are inserted, the lower neutron flux and thus lower power output.
+
+### Failures, Damage and Repair
+The reactor vessel is not indestructible and can fail in various ways, due to various causes.
+
+###### High Pressure/Temperature
+Fuel rods can only withstand a certain pressure/temperature. Once that threshold is reached, the rods will start to crack. They are still usable, but they will leak considerable amounts of radiation. Cracked rods cannot be repaired, they must be disposed of or fully depleted to reduce their radioactivity/danger. This excess radiation is mostly contained while within an undamaged, intact reactor vessel.
+
+Fuel rods will likely crack on the way towards a worse failure.
+
+> *Audio cue: something like glass shattering probably*
+
+###### Overpressurization
+If the pressure builds to a high enough level within the reactor, the vessel takes damage and can start to leak. This will cause the coolant gas to slowly leak into the room. This also greatly increases the radiation spit out into the environment. This damage can be repaired (after fixing the pressure issue). This is a 'soft/minor' failure by itself as the immediate danger to the crew is the increased radiation exposure. Left alone long enough however and the loss of coolant may result in a meltdown.
+
+> *Audio cue: loud clunky noises*
+
+###### Meltdown
+If the temperature gets too hot, the fuel rods will melt and compromise the reactor vessel. This will create Corium that will spill out of where the reactor vessel used to be. This is *very* bad. The extent/spread of the corium will depend on how bad the meltdown was (how quickly it overheated). Corium is **highly** radioactive and extremely dangerous. This is a major failure.
+
+Ideally it will be harder to make quick/really bad meltdowns, and easier to make slow/recoverable meltdowns.
+
+> *Audio cue: loud alarms (heard in/within engineering)*
+
+:::info 
+While this could be recovered from by clearing the corium, repairing the damaged room(s), and rebuilding the reactor, I anticipate this would be an immediate round ender in terms of the crew immediately calling the shuttle. 
+:::
+
+
+#### General radiation hazard
+The reactor in general will emit low levels of radiation while at high power levels. These levels are such that using radiation protective equipment is advisable. Under normal operation and nominal power levels, radiation exposure/levels are low. Unprotected exposure will eventually lead to radiation buildup, so if you don't wear a suit you'll eventually succumb to radiation sickness/die.
+
+The hazard can be made worse if the vessel itself is cracked (especially if there are cracked fuel rods within), or if you are sitting around a bunch of cracked fuel rods.
+
+
+### During Round Variation
+The reactor is not a "Set and forget forever^tm^" device. The Reactivity is impacted by multiple factors that can/will change. The speed at which these factors change depends on how the reactor is operating. A safe fuel, safe coolant reactor will likely change very slowly and would need less active monitoring. Add in any ~~fun~~ dangerous elements into the mix and the reactor will need to be monitored more closely!
+
+Prolonged grid demand changes will also necessitate a rebalance of the reactor's power output levels to ensure the turbine doesn't destroy itself.
+
+Example factors that impact Reactivity:
+* Fuel state in the reactor (plutonium, depleted uranium, etc)
+* Temperature of the reactor vessel
+* Gas(es) contained within the reactor vessel
+* Gas flow rate (too fast/slow can mean not enough heat is carried away)
+
+
+### Round-to-round Variation
+Every reactor, even of the same type/model is a little different. What this practically means is the K~eff~**\*** "sweet spot" will be a little different every round. Effectively in game play terms this means the reactor wiki/guide will not say "Set the control rods to exactly 45%" but rather something like "Adjust the control rods until K~eff~ is 1"
+
+While not a huge source of variation, this will at least mean the engineer needs to play with the reactor controls for a little bit to find the sweet spot during operation. ~~before ignoring it the rest of the game, or deciding to use the reactor to make the funny stuff of course~~
+
+> (**\***) K~eff~ is the effective neutron multiplication factor which measures the change in the fission neutron population from one neutron generation to the subsequent generation.
+> * K~eff~ < 1, the number of neutrons decreases in time and the chain reaction will never be self-sustaining. This condition is known as the subcritical state. The reaction will eventually stop on it's own.
+> * K~eff~ = 1, there is no change in neutron population in time, and the chain reaction will be self-sustaining. This condition is known as the critical state. This is where you want your reactor to hover around.
+> * K~eff~ > 1, more neutrons than are needed are being generated to be self-sustaining. The number of neutrons exponentially increases in time. This condition is known as the supercritical state. The reaction goes faster and faster, getting hotter and hotter, and left unchecked this would lead to a meltdown.
+
+:::warning
+:warning:**Nerd Shit**:warning:
+
+Actual reactor/nuclear physics is more complicated than this. There are two groups of neutrons generated in a nuclear reaction: Prompt and Delayed.
+![](https://i.imgur.com/g83Vrl4.png)
+Prompt neutrons are released immediately, delayed neutrons are generated seconds or minutes after.
+
+An ideal reactor operating scenario is when the reaction is in a prompt subcritical and delayed critical state. This means the production of prompt neutrons alone is insufficient to continue the reaction, but the delayed neutron production balances it out. This is a net reactivity of zero.
+
+A reaction that reaches prompt critical state has sufficient neutrons to promote a chain reaction without delayed neutron production. At this point, a run-away reactor is a certainty and you've made a nuclear bomb.
+
+For gameplay purposes though, this all will be abstracted/simplified.
+
+:::
+
+---
+## The Turbine
+The turbine is another large entity that takes a gas input that is hot and high pressure and uses it to spin a rotor that generates electricity. The output gas is slightly cooler (and lower pressure) once it is done. Turbines can be chained together to increase efficiency, i.e. more power created compared to multiple parallel turbines from the same starting gas.
+:::danger
+Note: This will need to be balanced very carefully, it should not be possible to use a thermomachine / volume pump to drive the turbine. This means either a special pipe is required (lame solution) or the minimum temperature / pressure is such that it just becomes infeasible to operate using the thermomachine / pump combo (the ideal solution I will aim for).
+:::
+### Grid Demand - Reactor Balancing Act
+
+The turbine will be able to fairly easily react and cover short-term, lower wattage demand fluctuations such as a microwave or cloning pod being turned on for a few minutes. 
+
+Long term grid demand changes require a manual change in the reactor, either to produce more or less heat depending on the grid demand state. The idea behind this is that the turbine should be able to handle smaller, temporary grid changes, but if a big new power hungry machine starts getting used (probably science's fault or something) or if the station suddenly requires less power due to something like a large bomb going off splitting the power grid (definitely science's fault) then engineering will need to adjust the reactor's output to compensate to prevent failure. 
+
+### Variable Electrical Output
+
+Much like turbines in real life, the turbine should be reactive to grid demand fluctuations. Turbines have a rated speed in RPM (rotations per minute) and a safe range of operation. 
+
+As the grid demand increases, the rotor slows in speed. The turbine will automatically attempt to input more gas to bring it back up to speed and produce enough power to cover the demand changes. If not enough input gas can be used, or the max input flow rate is hit, the turbine will begin to slow down and enter an underspeed state. 
+
+Similarly, if the grid demand becomes very low, the turbine will speed up. It will automatically consume less input gas to try to maintain a speed range. There is a minimum flow rate and once that is hit the turbine will enter an overspeed
+
+### Underspeed / Overspeed Failures
+
+If the RPM gets too low (underspeed) for too long, the turbine grid connection breakers will trip, disconnecting it from the grid. The turbine will attempt reconnection once the input pressure is high enough. This is a minor failure causing light damage to the turbine overtime, but mostly causing brown/blackouts as the turbine continuously switches on/off.
+
+If the reactor is running while an underspeed occurs, it may overheat as the turbine output coolant is not as cool as expected, and if the cooling system cannot handle this extra load the hot coolant will re-enter the reactor potentially leading to reactor failure.
+
+> *Audio cue: low whine sound, electrical breaker tripping sounds*
+
+If the RPM gets too high (overspeed) for too long, the stress will result in a very destructive failure of the turbine. This is a major failure, as it is effectively an explosion of the turbine that would cause damage/harm to the room and require construction of a new turbine.
+
+> *Audio cue: faster turbine 'swooping' sound coupled with metallic straining noises  until it goes kablooey*
+
+If the reactor is running while an overspeed occurs, that would be quite bad as the flow of coolant will stop entirely which would definitely lead to a meltdown in short time.
+
+### Turbine Blades
+Turbines could have different types of blades to affect the rated RPM and safe operating range
+
+Example:
+* 0.5x - Steel blades
+* 1x   - Plasteel blades
+* 1.5x - Plasma-tipped blades
+
+This would allow an upgrade path for turbines.
