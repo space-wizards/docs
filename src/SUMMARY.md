@@ -111,6 +111,15 @@ Space Station 14
 - [Dungeons](en/space-station-14/dungeons.md)
 - [NPCs](en/space-station-14/npcs.md)
 
+Design Proposals
+================
+
+----------------------
+
+- [Proposals](en/proposals/proposals.md)
+- [Expected Team Decorum & Usage](en/proposals/decorum.md)
+- [Fundamental SS14 Design Principles](en/proposals/design-principles.md)
+
 Server Hosting
 ==============
 
