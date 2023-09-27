@@ -8,7 +8,7 @@ Expected Team Decorum & Usage
 
 Any documents posted:
 
-- Should conform to the basic [SS14 Game Design Principles](design-principles.md) as well as this document obviously.
+- Should conform to the basic [SS14 Game Design Principles](./design-principles.md) as well as this document obviously.
 - Should contain sufficient justification for their existence,
 - Can be removed by consensus or at admin discretion.
 - Are a reflection of SS14 to others that may be interested in how the game is designed. Take note of that.

@@ -34,6 +34,9 @@ General Development
   - [Writing Guidebook Entries](en/general-development/tips/writing-guidebook-entries.md)
   - [Config File Reference](en/general-development/tips/config-file-reference.md)
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
+  - [Feature Proposals](en/general-development/tips/proposal-guidelines.md)
+  - [Expected Team Decorum & Usage](en/general-development/tips/decorum.md)
+  - [Fundamental Design Principles](en/general-development/tips/design-principles.md)
 
 
 SS14 By Example
@@ -115,10 +118,6 @@ Design Proposals
 ================
 
 ----------------------
-
-- [Proposals](en/proposals/proposals.md)
-- [Expected Team Decorum & Usage](en/proposals/decorum.md)
-- [Fundamental SS14 Design Principles](en/proposals/design-principles.md)
 
 Server Hosting
 ==============
