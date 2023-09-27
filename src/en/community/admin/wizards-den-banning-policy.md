@@ -271,12 +271,12 @@ If an appeal is currently being processed by someone, it is generally best to le
 			- [ ] the ban was placed because the player was offline or evaded an ahelp, and
 			- [ ] you are accepting the appeal by either removing the ban or reducing it to be less than or equal to 14 days from the start of the ban being appealed.
 5. Collect information
-	2. Check player's history of appeals.
-	3. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
-	4. Check the player's note and ban history.
-	5. Reading the ahelp that led to the ban is highly recommended.
-	6. Ask the player questions that are important for the processing of the appeal.
-	7. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
+	1. Check the player's history of appeals.
+	2. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
+	3. Check the player's note and ban history.
+	4. Reading the ahelp that led to the ban is highly recommended.
+	5. Ask the player questions that are important for the processing of the appeal.
+	6. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
 6. If any of the following criteria are met, you may skip to step 8 and process the appeal using the speedy appeal process:
 	- the ban length is less than or equal to 14 days,
 	- this appeal is older than 7 days and no other admin is handling the appeal, or
