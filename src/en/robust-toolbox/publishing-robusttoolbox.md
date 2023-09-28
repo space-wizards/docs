@@ -20,5 +20,5 @@ These instructions are a step-by-step guide for engine maintainers to follow.
 
 ```admonish warning
 It is always a good idea to run the game with the new engine version before publishing it and merging the PR, to check that everything still works.
-You can also run tests locally as that will be faster than waiting for them to run on the GitHub workflows.
+You can also run tests locally with "dotnet test" as that will be faster than waiting for them to run on the GitHub workflows.
 ```
