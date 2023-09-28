@@ -1,4 +1,4 @@
-# Cartridge Loaders
+# Завантажувачі картриджів
 
 Cartridge loaders are things like PDAs and PCs.
 
