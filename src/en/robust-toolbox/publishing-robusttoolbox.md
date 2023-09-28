@@ -5,8 +5,9 @@ These instructions are a step-by-step guide for engine maintainers to follow.
 ```
 
 1. Open a terminal in the RobustToolbox directory (`cd RobustToolbox` if you are in the space-station-14 directory)
-2. Checkout the master branch (`git checkout master`)
-3. Update your master branch (`git pull https://github.com/space-wizards/RobustToolbox.git master`)
+2. Fetch latest master (`git fetch https://github.com/space-wizards/RobustToolbox.git`)
+3. Checkout the remote master branch (`git checkout -B master upstream/master`)
+   - This step will overwrite your local `master` branch with the remote one.
 4. Run version.py (`python ./Tools/version.py 0.1.0`, where 0.1.0 is the version number you want, WITHOUT 'v')
    - If you use `py` instead on Windows it might not work due to the python microsoft store alias.
 5. Push your commit and tag to RobustToolbox (`git push` and `git push https://github.com/space-wizards/RobustToolbox.git v0.1.0`, WITH 'v')
