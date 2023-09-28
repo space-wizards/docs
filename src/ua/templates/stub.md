@@ -1,3 +1,3 @@
 ```admonish warning "Stub"
-This page is a stub and likely doesn't include enough useful information. You can help us by expanding it.
+Ця сторінка є заглушкою і, ймовірно, не містить достатньо корисної інформації. Ви можете допомогти нам, доповнивши її.
 ```

@@ -1,3 +1,3 @@
 ```admonish warning "Work in Progress"
-This page is a work in progress! Some information may be incomplete or outdated.
+Ця сторінка знаходиться в процесі створення! Деяка інформація може бути неповною або застарілою.
 ```
