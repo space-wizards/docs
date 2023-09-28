@@ -8,7 +8,7 @@ Just follow [our guide](../../meta/guide-to-editing-docs.md) on editing any part
 
 Proposals that get approved by a maintainer will be merged to this site, which is basically the green light for you or someone else to go ahead and implement it.
 
-``` admonish tip title="Unfinished Proposals"
+``` admonish tip "Unfinished Proposals"
 If you don't think that your proposal is ready for maintainer scrutiny, but still want feedback on it you can PR it as a draft. Drafts are less likely to attract people looking to get down to brass tacks, but still let people comment and give advice.
 ```
 
@@ -22,7 +22,7 @@ A design document is a high level summary of whatever you're proposing to add to
 
 These don't have to be discrete sections and shouldn't be. When you're detailing the mechanics it's probably a good idea to detail how the players will interact with those mechanics and how the way the players interact with those mechanics benefits the game. If you want to see examples of successful design documents all of the accepted, but unimplemented, design docs can be found in the "Design Proposals" section below. Design documents that actually got implemented eventually transmute into the feature docs in the "Space Station 14" section.
 
-``` admonish warning title="Don't"
+``` admonish warning "Don't"
 - Include pseudocode level descriptions of how your feature works. That's for after the proposal has been accepted and you're actually implementing the thing.
 - Specify numerical amounts for every item, field, or mechanic. That's for eventual balance bikeshedding; for example it's enough to say that a disease will have one, several, or many symptoms.
 - Forget to include how players should interact with your features. SS14 is a multiplayer game and how the players engage with your mechanics is more important than the specific mechanics they engage with.
@@ -39,7 +39,7 @@ A good rule of thumb if the new feature or rework you have in mind would require
 
 No idea! What design proposals do or do not get in is determined by maintainer approval like normal PRs. If you can get at least one maint to decide that it sounds like a good idea then there's a good chance that it will get accepted. Pretty much any idea is going to need at least some critiquing before it gets merged so don't get discouraged!
 
-``` admonish tip title="Design Principles"
+``` admonish tip "Design Principles"
 If you want to improve your chances, it's recommended that you read the [SS14 Fundamental Design Principles](./design-principles.md) document to get a high-level overview before you start writing, as it'll provide context for why things are the way they are.
 
 PR'd design documents should also follow the [Decorum Guidelines](./decorum.md).
