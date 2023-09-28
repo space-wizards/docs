@@ -30,15 +30,23 @@ If you just want to make a basic edit of a page, simply follow these steps--you 
 
 If you want to locally build the docs, the necessary dependencies are Rust and some binaries installed using `cargo`. It's recommended that you use `cargo binstall` or `cargo quickinstall`, as building can take a while.
 
+You will need our fork of `mdbook`, called `mdbook-spacewizards`. You can install it like this:
+
+```
+cargo install --git https://github.com/space-wizards/mdBook-spacewizards
+```
+
+Binaries are also available on the releases page on GitHub.
+
 From cargo, install:
-- `mdbook`
 - `mdbook-mermaid`
 - `mdbook-template`
 - `mdbook-linkcheck`
 - `mdbook-admonish`
 - `mdbook-emojicodes`
 
-Call `mdbook serve` to build and locally host the documentation from the `book` directory at `localhost:3000`.
+
+Call `mdbook-spacewizards serve` to build and locally host the documentation from the `book` directory at `localhost:3000`.
 
 ## Porting pages from Wiki.js
 
