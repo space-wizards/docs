@@ -6,7 +6,7 @@ This is the ban policy for Wizard's Den servers. It applies only to our first-pa
 
 # Definitions
 - **Indefinite:** Refers to a ban with no defined end time. This type of ban generally requires a successful appeal for it to be removed. Indefinite bans which have no extra requirements may be called *appeal bans*.
-- **Voucher:** Confirmation from a member of the admin team of another well known SS14 or SS13 server that you have played on for a significant amount of time without any recent major issues. A voucher is required when appealing a *voucher ban*.
+- **Voucher:** Confirmation from a member of the admin team of another well known SS14 or SS13 server that you have played on that server for a significant amount of time without any recent major issues. A voucher is required when appealing a *voucher ban*.
 - **Voucher ban:** A ban which requires a *voucher* to appeal. These bans can also typically only be appealed after at least 6 months from the date of the ban. They are often used as an alternative to a *permanent ban* that allows players to return if they can demonstrate an ability to follow a server's rules.
 - **Warning:** A warning is a clear communication from an admin that some behavior is not acceptable. Warnings should always be paired with an account note making note of the warning and behavior.
 - **Permanent ban:** A ban which cannot be appealed. These bans are sometimes called *perma bans*.
