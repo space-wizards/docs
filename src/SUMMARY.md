@@ -34,6 +34,9 @@ General Development
   - [Writing Guidebook Entries](en/general-development/tips/writing-guidebook-entries.md)
   - [Config File Reference](en/general-development/tips/config-file-reference.md)
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
+  - [Feature Proposals](en/general-development/tips/proposal-guidelines.md)
+  - [Expected Team Decorum & Usage](en/general-development/tips/decorum.md)
+  - [Fundamental Design Principles](en/general-development/tips/design-principles.md)
 
 
 SS14 By Example
@@ -110,6 +113,11 @@ Space Station 14
 - [Node Networks](en/space-station-14/node-networks.md)
 - [Dungeons](en/space-station-14/dungeons.md)
 - [NPCs](en/space-station-14/npcs.md)
+
+Design Proposals
+================
+
+----------------------
 
 Server Hosting
 ==============
