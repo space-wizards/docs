@@ -13,8 +13,9 @@ These instructions are a step-by-step guide for engine maintainers to follow.
    - Do NOT run `git push --tags` as that will push every tag you have locally, even those that have been deleted.
 6. Go back into the content directory (`cd ..`)
 7. Checkout a new branch (`git checkout -b update/robust-0.1.0`)
-8. Push your branch (`git push`)
-9. Open a PR to the content repository and merge it.
+8. Commit the engine change (`git commit RobustToolbox -m "Update RobustToolbox"`)
+9. Push your branch (`git push`)
+10. Open a PR to the content repository and merge it.
 
 ```admonish warning
 It is always a good idea to run the game with the new engine version before publishing it and merging the PR, to check that everything still works.
