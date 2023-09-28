@@ -1,6 +1,5 @@
 # Инструменты администрирования
 
-The admin tooling in SS14 is hopefully not too complicated, but some things could do with some explanation.
 Инструментарий администрирования в SS14 не слишком сложен, но некоторые вещи не помешало бы объяснить.
 
 ## Меню администрирования
