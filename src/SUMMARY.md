@@ -34,9 +34,9 @@ General Development
   - [Writing Guidebook Entries](en/general-development/tips/writing-guidebook-entries.md)
   - [Config File Reference](en/general-development/tips/config-file-reference.md)
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
-  - [Feature Proposals](en/general-development/tips/proposal-guidelines.md)
-  - [Expected Team Decorum & Usage](en/general-development/tips/decorum.md)
-  - [Fundamental Design Principles](en/general-development/tips/design-principles.md)
+- [Feature Proposals](en/general-development/feature-proposals.md)
+  - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
+  - [Fundamental Design Principles](en/general-development/feature-proposals/ss14-fundamental-design-principles.md)
 
 
 SS14 By Example

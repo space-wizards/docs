@@ -1,10 +1,10 @@
-# So you want to X where X is large
+# Feature Proposals
 
 If you are considering adding or reworking some major component of the game it's recommended that you submit a proposal before you actually start coding whatever it is you want to do. Pinning down exactly how your feature should work to mesh well with the rest of the game will save you a lot of headaches rewriting your PR for the ~~1st2nd4th~~ 7th time before it gets merged.
 
 ## How do I make a proposal?
 
-Just follow [our guide](../../meta/guide-to-editing-docs.md) on editing any part of this site and PR your proposal as a page under the "Design Proposals" section found in the sidebar between "Space Station 14" and "Server Hosting".
+Just follow [our guide](../meta/guide-to-editing-docs.md) on editing any part of this site and PR your proposal as a page under the "Design Proposals" section found in the sidebar between "Space Station 14" and "Server Hosting".
 
 Proposals that get approved by a maintainer will be merged to this site, which is basically the green light for you or someone else to go ahead and implement it.
 
@@ -40,7 +40,7 @@ A good rule of thumb if the new feature or rework you have in mind would require
 No idea! What design proposals do or do not get in is determined by maintainer approval like normal PRs. If you can get at least one maint to decide that it sounds like a good idea then there's a good chance that it will get accepted. Pretty much any idea is going to need at least some critiquing before it gets merged so don't get discouraged!
 
 ``` admonish tip "Design Principles"
-If you want to improve your chances, it's recommended that you read the [SS14 Fundamental Design Principles](./design-principles.md) document to get a high-level overview before you start writing, as it'll provide context for why things are the way they are.
+If you want to improve your chances, it's recommended that you read the [SS14 Fundamental Design Principles](./feature-proposals/ss14-fundamental-design-principles.md) document to get a high-level overview before you start writing, as it'll provide context for why things are the way they are.
 
-PR'd design documents should also follow the [Decorum Guidelines](./decorum.md).
+PR'd design documents should also follow the [Decorum Guidelines](./feature-proposals/expected-feature-proposal-decorum.md).
 ```

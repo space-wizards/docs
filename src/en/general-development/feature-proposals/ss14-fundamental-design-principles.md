@@ -1,5 +1,7 @@
 # SS14 Fundamental Design Principles
 
+{{#template ../../templates/wip.md}}
+
 The purpose of this document is to outline the basics of how Space Station 14 upstream design is approached, taking into consideration its status as a greenfield project and taking care to build a foundation for the future fork ecosystem.
 
 ## Social Gameplay
@@ -14,19 +16,7 @@ Parts of a whole gameplay loop or mechanic may be achievable by a single player.
 
 An addendum to this principle is that, if a mechanic involves perceived NPCs or AI mobs, you should always try to find ways to put real humans in their place. For example, offering ghost roles to hostile mobs, or crafting an economy system that is player-motivated rather than externally-motivated.
 
-Negative examples of this principle in Space Station 13:
-
-- Lavaland mining
-- Virology
-
-Positive examples of this principle in Space Station 14:
-
-- Diseases
-- Salvage
-
 ## Intuitive Simulation
-
-Space Station 13/14
 
 ## Discoverable Interactions
 
