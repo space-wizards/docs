@@ -1,23 +1,23 @@
-# Mapping sins
-Don't do any of these. They make for bad looking/feeling maps.
+# Гріхи Мапінгу
+Не робіть нічого з цього. Вони будуть виглядати/відчуватись погано.
 
-## Ultra-wide hallways
-So the thing about hallways is that they're empty.
+## Ультрадовгі коридори
+Отож, фішка у тому, що вони порожні.
 ![oversized-hallway.png](../../assets/images/mapping/oversized-hallway.png)
-This looks and feels bad to play in, with a very large amount of blank space visually.
+Це виглядає і грається погано, з дуже великою кількістю візуального порожнього простору.
 
-### Ways to fix
+### Шляхи для вирішення
 
-#### Convert to a parkway
-Filling the visual emptiness with plantlife or other decoratives helps significantly. This shouldn't be overdone, though, and it's preferrable to simply use smaller hallways.
+#### Перетворення на паркову доріжку
+Заповнення візуальної порожнечі за допомогою рослинності, або інших декорацій значно допомагає. Але варто не переборщити, і краще просто створювати менші коридори.
 ![parkway-example.png](../../assets/images/mapping/parkway-example.png)
 
-## Abdundance of silver/gold tiles
-To put it simply they look terrible, especially combined with decals, and should be used only in extremely specific situations.
+## Надлишок срібних/золотих плиток
+Вони плитки виглядають жахливо, особливо в поєднання з наклейками, і вони можуть використовуватись лише у дуже специфічних ситуаціях.
 ![silver-tiles-hell.png](../../assets/images/mapping/silver-tiles-hell.png)
 
-### Ways to fix
+### Шляхи до вирішення
 
-#### Just change the theme
-If you're using them to line a "rich feeling" room, say, the HoP's office, opt for instead focusing on a home-y feeling, with woods/etc. Most of the station simply does not have this feel and it'll make them seem exceptional.
+#### Просто змініть тематику
+Якщо ви використовуєте їх для позначення кімнати з "багатим відчуттям", скажімо, офіс Голови Персоналу, замість цього зосередьтесь на домашніх відчуттях, з деревом і так далі. Більшість станцій просто не мають цього відчуття, і воно робить їхній вигляд винятковим.
 ![silver-tiles-hell-except-good.png](../../assets/images/mapping/silver-tiles-hell-except-good.png)
