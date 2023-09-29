@@ -91,6 +91,7 @@ Robust Toolbox
 - [Build Configurations](en/robust-toolbox/build-configurations.md)
 - [Preprocessor Defines](en/robust-toolbox/preprocessor-defines.md)
 - [MIDI](en/robust-toolbox/midi.md)
+- [Publishing a new version](en/robust-toolbox/publishing-robusttoolbox.md)
 
 Space Station 14
 ================
