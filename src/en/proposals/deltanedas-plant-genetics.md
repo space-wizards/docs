@@ -45,7 +45,7 @@ Promote interdepartment stuff by requiring biomass for gene editing:
 
 # Gameplay:
 The gene editing would primarily be a window like a hex editor, set a position to seek to and then itll show up to X bases.
-You can modify a base by just typing A C T or G. they map to 00 01 10 and 11 respectively in binary, so for every 2 bits you get a single base.
+You can modify a base by just typing A C G or T. they map to 00 01 10 and 11 respectively in binary, so for every 2 bits you get a single base.
 From there the player can feed it biomass and print out a fancy new seed with a cost of say 1 biomass per bit modified.
 
 Unstable mutagen would randomly flip bits so you could get an increase of 8 to yield or a decrease of 1 to potency, depends on which bit it flips in an int.
