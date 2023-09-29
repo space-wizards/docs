@@ -1,25 +1,25 @@
 # Robust Generic Attribution
 
-The **RGA** (Robust Generic Attribution) standard is intended to be a flexible, open, and readable way <!--Insert more marketing bull that sounds good here!--> to define various metadata such as licensing and attribution for an arbitrary collection of files of many types such as sound effects or prototypes. An RGA file contains metadata for all of the files in the same directory as the RGA file (not including subdirectories). The entries in an RGA file contain specific metadata such as the author of the file(s) or a description of any modifications made to them (in compliance with many Creative Commons licenses).
+Стандарт **RGA** (Robust Generic Attribution) призначений для гнучкого, відкритого і зрозумілого способу <!--Додайте ще кілька вихвалянь, бо в мене фантазія всьо.--> призначення різних метаданих, таких як ліцензування і атрибуція, для довільної кількості файлів різних типів, наприклад, звукових ефектів або прототипів. Файл RGA містить метадані для всіх файлів у тій самій директорії, що й файл RGA (не враховуючи субдиректорії). Записи в RGA-файлі містять специфічні метадані, такі як автор файлу(ів) або опис будь-яких модифікацій, зроблених до них (відповідно до більшості ліцензій Creative Commons).
 
-An RGA is a YAML file with the name `attributions.yml`, and contains an arbitrary number of entries as defined below.
+RGA являє собою YAML-файл з ім'ям `attributions.yml` і містить довільну кількість записів, як зазначено нижче.
 
-Typically whenever new files are being added, a new entry will be added as it likely won't contain the same metadata as existing entries. However, one may append files to an existing entry if the metadata is otherwise identical.
+Зазвичай, щоразу, з додаванням нових файлів, додається новий запис, оскільки він, ймовірно, не міститиме тих самих метаданих, що є в існуючих записах. Однак, можна додавати файли до вже існуючого запису, якщо метадані в обох ідентичні.
 
 ## YAML
 
-An RGA file must be named `attributions.yml`. All values within entries are wrapped in double-quotes (`""`).
+Файл RGA повинен мати ім'я `attributions.yml`. Усі значення записів беруться у подвійні лапки (`""`).
 
-The YAML contains an arbitrary number of entries, covering all files in the same directory as the RGA file. An entry is defined as follows:
+YAML може містити довільну кількість записів, що охоплюють усі файли у тій самій директорії, що й RGA файл. Доступні наступні варіанти записів:
 
-Key | Meaning
+Ключ | Що означає
 --- | -------
-`files` | An array of filenames (with extensions) that this entry applies to. The filename order is arbitrary. The `*` wildcard glob is supported (i.e. `*.ogg` denotes all OGG files in the directory).
+`files` | Масив імен файлів (з розширеннями), до яких застосовується цей запис. Порядок назв файлів є довільним. Підтримується шаблонний запис `*` (тобто `*.ogg` означатиме всі OGG-файли у директорії).
 `copyright` | The copyright holder and other relevant info. Any disclosure of modifications to comply with certain licenses should also go in this field.
 `license` | A valid [SPDX License Identifier](https://spdx.org/licenses/) applying to all files within an entry. If a license does not have a valid SPDX identifier, `Custom` may be used but a link to the license should be provided in the `copyright` field.
 `source` |  A valid URL pointing to a location where the file can be downloaded. If you are the creator of the work and don't have an alternate download location (e.g. bandcamp), provide the link to the pull request that added the file to the game. If this is a derivative work, this should be mentioned in the copyright field. If the file has only been lightly modified, just link to the original file. If the file has been heavily modified, link the modified version but provide links to any original files in the copyright field.
 
-### Example YAML
+### Приклад YAML
 
 ```yaml
 - files: ["thunderdome.ogg"]
