@@ -1,44 +1,44 @@
 # Robust Station Image
 
-The **RSI** (Robust Station Image) format is intended to be a flexible, open, and readable way <!--Insert more marketing bull that sounds good here!--> to define icons inside sprite sheets in the same vein as the BYOND `.dmi` format. An RSI is considered an "icon", and it can contain "states" which are sub sections of said master icon. These states can define custom flags, animations, and directional icons out of the box.
+Формат **RSI** (Robust Station Image) призначено для гнучкого, відкритого і зрозумілого способу <!--Додайте ще одне вихваляння, яке би тут підійшло! --> окреслення піктограм всередині листів спрайтів, подібно до формату `.dmi` в BYOND. RSI вважається "пікторамою" і може містити "стани", які є додатковими частинами цієї піктограми. Ці стани можуть визначати користувацькі прапори, кадри анімації та піктограми різних боків спрайту, що може обертатися.
 
-An RSI is a folder with a name that ends in `.rsi`, and contains a `meta.json` and one or more PNG files according to the names of states.
+RSI - це папка з назвою, що закінчується на `.rsi`, яка містить файл `meta.json` та один або декілька PNG-файлів відповідно до назв станів.
 
-The image metadata (what defines states, animations, etc...) is stored in the `meta.json` file as JSON. The actual sprites are stored in sprite sheets as PNG files in the folder. Each unique state corresponds to a sprite sheet with the same name.
+Метадані зображення (що визначають стани, анімації тощо) зберігаються у форматі JSON, у файлі `meta.json`. Власне спрайти зберігаються на листах спрайтів у вигляді PNG файлів в цій директорії. Кожному унікальному стану відповідає однойменний лист спрайтів.
 
 ## JSON
 
-The root of the JSON file contains the following values:
+Корінь файлу JSON містить наступні значення:
 
-Key | Meaning
+Ключ | Що означає
 --- | -------
-`version` | A simple integer corresponding to the RSI format version. This can be used to identify what version an RSI is and allow the implementation to correctly enable backwards compatibility modes when needed.
-`size` | The dimensions of the sprites inside the RSI, stored as an associative list of `{x: ?, y: ?}`. This is _not_ the size of the PNG files that store the sprite sheet. It is used to correctly crop the individual sprites out of the sprite sheet files.
-`states` | A list of _states_ that store the actual meat of the RSI, see below.
-`license` | Can be left out. A valid [SPDX License Identifier](https://spdx.org/licenses/) applying to this work.
-`copyright` | Can be left out. Other arbitrary copyright info such as name, source, ...
+`version` | Число типу integer, що відповідає версії формату RSI. Це може бути використано для ідентифікації версії RSI і дозволить коректно використовувати режими зворотної сумісності, коли це необхідно.
+`size` | Розміри спрайтів всередині RSI, що зберігаються у вигляді асоціативного списку `{x: ?, y: ?}`. Це _не_ розмір PNG файлів, у яких зберігається лист зі спрайтами. Він використовується для коректного обрізання окремих спрайтів з цілого листа спрайтів.
+`states` | Список _станів_, які є безумовно, найважливішою частиною RSI. Подробиці дивіться нижче.
+`license` | Можна не вказувати. Дійсний [Ідентифікатор ліцензії SPDX](https://spdx.org/licenses/), що застосовується до цієї роботи.
+`copyright` | Можна не вказувати. Інша довільна інформація про авторські права, така як автор, джерело, ...
 
-### States
+### Стани
 
-A state is a container for metadata for a specific sprite sheet. They store data related to their sprite sheet like delays of animations and directions. A state has an accompanying sprite sheet.
+Стан - це контейнер для метаданих певного листа спрайту. У ньому зберігаються дані, пов'язані зі спрайтом, такі як затримки анімації та напрямки. Стан має відповідний лист зі спрайтами.
 
-States have one field that can be used to distinguish them:
+Стани мають поле, за яким їх можна розрізняти:
 
-Key | Meaning
+Ключ | Що означає
 --- | -------
-`name` | The name of the state. Can only contain lowercase alphabetic, numerical, and some special (`_-`) characters.
+`name` | Назва стану. Може містити лише малі літери, цифри та деякі спеціальні символи (`_-`).
 
-States cannot have the same identifying value. Two states with the same name may not exist.
+Різні стани не мають мати однаковий ідентифікатор. Два стани з однаковою назвою не можуть існувати.
 
-Other than the identifier, a state has three other fields in relation to the actual sprites as seen in game:
+Окрім ідентифікатора, стан має ще три інші поля, що пов'язані з різними елементами спрайта:
 
-Key | Meaning
+Ключ | Що означає
 --- | -------
-`flags` | An associative list of `key: object` for defining extra data. There is currently no usage yet. Optional.
-`directions` | A number corresponding to the amount of directions a state has. This should be a `1`, a `4` or an `8`.
-`delays` | Can be left out. If defined, a list of lists of delays for an animated icon state. Each list in the list corresponds to a direction. The delays are floats and represent seconds.
+`flags` | Асоціативний список типу `key: object`, призначений для визначення додаткових даних. Наразі не використовується. Можна не вказувати.
+`directions` | Число, що відповідає кількості напрямків, які має стан. Це має бути `1`, `4` або `8`.
+`delays` | Можна не вказувати. Якщо визначено, це список зі списків затримок для анімованого стану піктограми. Кожен список у списку відповідає напрямку стану. Затримка є числам типу float і позначає секунди.
 
-States are always ordered alphabetically by their corresponding file name.
+Стани завжди впорядковані в алфавітному порядку відповідно до назви їхнього файлу.
 
 #### Directions
 
