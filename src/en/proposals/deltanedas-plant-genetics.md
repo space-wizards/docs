@@ -54,6 +54,9 @@ Pollen swabbing, if it still exists, would swap entire gene values rather than o
 
 This might have botanists split up between growing plants for chef and focusing on mapping the genome to get gamer seeds which is cool.
 
+Additionally, instead of the current mutation of a viable bool, a system would be in place where there are bits that set unreasonable pressure temperature or light requirements to grow.
+If a plant suddenly requires being grown in space or a fire you are unlikely to try, but it's still possible if you are extremely determined.
+
 # Components:
 Plant entities would both have GenomeComponent and its own component for handling swabbing/crossbreeding along with copying genes from parent when clipping.
 
