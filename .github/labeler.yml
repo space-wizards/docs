@@ -1,0 +1,8 @@
+"English":
+- 'src/en/**'
+
+"Russian":
+- 'src/ru/**'
+
+"Scripts":
+- 'scripts/**'

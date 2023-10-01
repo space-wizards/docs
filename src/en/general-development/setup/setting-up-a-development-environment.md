@@ -104,7 +104,7 @@ In Rider you can create a "compound configuration" to run or debug both client a
 ## JetBrains Rider
 In Rider you can attach the resources directory to the solution so that you can more easily navigate to resource files like prototypes.
 
-![](../../assets/images/setup-rider-configurations.png)
+![](../../assets/images/setup-rider-attach-existing-folder.png)
 
 
 # Troubleshooting

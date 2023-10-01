@@ -91,6 +91,7 @@ Robust Toolbox
 - [Build Configurations](en/robust-toolbox/build-configurations.md)
 - [Preprocessor Defines](en/robust-toolbox/preprocessor-defines.md)
 - [MIDI](en/robust-toolbox/midi.md)
+- [Publishing a new version](en/robust-toolbox/publishing-robusttoolbox.md)
 
 Space Station 14
 ================
@@ -167,3 +168,4 @@ Community
     - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
   - [Wizards Den Admin Policy](en/community/admin/wizards-den-admin-policy.md)
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
+- [Progress Report Creation](en/community/progress-report-creation.md)

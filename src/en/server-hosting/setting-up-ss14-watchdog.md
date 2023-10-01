@@ -31,8 +31,8 @@ Both of these can be found at the [.NET 6 download page](https://dotnet.microsof
 
 The following set of commands should build the Watchdog on a Linux system. You'll have to adjust it according to your actual system, of course.
 ```
-# Download the SS14.Watchdog repository and any submodules/etc (but not their history).
-git clone --recursive --depth=1 https://github.com/space-wizards/SS14.Watchdog
+# Download the SS14.Watchdog repository and any submodules/etc.
+git clone --recursive https://github.com/space-wizards/SS14.Watchdog
 
 # Switch into the SS14.Watchdog directory.
 cd SS14.Watchdog
