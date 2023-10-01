@@ -27,3 +27,15 @@ The main objective is obviously survival, but otherwise gameplay would be open e
 ## Difficulty
 The abandoned station should obviously be a rather harsh environment.
 I think it should, in principle, be 'beatable' solo, but it would be very punishing and difficult as one single mistake could end your 'run'. Therefore, waiting for more survivors to awaken and braving the station you used to call home together would be a much more viable strategy, as you could do more tasks at once and help get anyone who falls to one of the many threats back on their feet.
+
+# Proposed role: Ghost bar
+(Suggested by brainfood, mostly inspired by the one from Goon)
+
+Conceptually there isn't much to say about this one.
+In my vision, it wouldn't be much more than a couple rooms floating out in space on a reserved map (about the size of the arrivals spawn), with some amenities to allow ghosted players to socialize and pass the time in a more 'immersive' manner than simply spectating and talking in ghost chat, and to interact with each other physically.
+
+Features would include:
+* Ability for ghost players to temporarily respawn/become corporeal (might be a bit hard to implement)
+* This kind of character would be unkillable, but would still take stamina damage (to allow for bar brawls) and despawn if the player `/ghost`s
+* Ideally, spawning at the ghost bar would *not* render a player DNR, allowing them to return to their original body if they do get revived.
+* Things like a bar (duh), maybe a kitchen, and optionally things like a boxing ring or a small laser tag arena.
