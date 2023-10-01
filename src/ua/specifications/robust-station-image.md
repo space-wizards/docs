@@ -1,70 +1,70 @@
 # Robust Station Image
 
-The **RSI** (Robust Station Image) format is intended to be a flexible, open, and readable way <!--Insert more marketing bull that sounds good here!--> to define icons inside sprite sheets in the same vein as the BYOND `.dmi` format. An RSI is considered an "icon", and it can contain "states" which are sub sections of said master icon. These states can define custom flags, animations, and directional icons out of the box.
+Формат **RSI** (Robust Station Image) призначено для гнучкого, відкритого і зрозумілого способу <!--Додайте ще одне вихваляння, яке би тут підійшло! --> окреслення піктограм всередині аркушів спрайтів, подібно до формату `.dmi` в BYOND. RSI вважається "пікторамою" і може містити "стани", які є додатковими частинами цієї піктограми. Ці стани можуть визначати користувацькі прапори, кадри анімації та піктограми різних боків спрайту, що може обертатися.
 
-An RSI is a folder with a name that ends in `.rsi`, and contains a `meta.json` and one or more PNG files according to the names of states.
+RSI - це папка з назвою, що закінчується на `.rsi`, яка містить файл `meta.json` та один або декілька PNG-файлів відповідно до назв станів.
 
-The image metadata (what defines states, animations, etc...) is stored in the `meta.json` file as JSON. The actual sprites are stored in sprite sheets as PNG files in the folder. Each unique state corresponds to a sprite sheet with the same name.
+Метадані зображення (що визначають стани, анімації тощо) зберігаються у форматі JSON, у файлі `meta.json`. Власне спрайти зберігаються на аркушах спрайтів у вигляді PNG файлів в цій директорії. Кожному унікальному стану відповідає однойменний аркуш спрайту.
 
 ## JSON
 
-The root of the JSON file contains the following values:
+Корінь файлу JSON містить наступні значення:
 
-Key | Meaning
+Ключ | Що означає
 --- | -------
-`version` | A simple integer corresponding to the RSI format version. This can be used to identify what version an RSI is and allow the implementation to correctly enable backwards compatibility modes when needed.
-`size` | The dimensions of the sprites inside the RSI, stored as an associative list of `{x: ?, y: ?}`. This is _not_ the size of the PNG files that store the sprite sheet. It is used to correctly crop the individual sprites out of the sprite sheet files.
-`states` | A list of _states_ that store the actual meat of the RSI, see below.
-`license` | Can be left out. A valid [SPDX License Identifier](https://spdx.org/licenses/) applying to this work.
-`copyright` | Can be left out. Other arbitrary copyright info such as name, source, ...
+`version` | Число типу integer, що відповідає версії формату RSI. Це може бути використано для ідентифікації версії RSI і дозволить коректно використовувати режими зворотної сумісності, коли це необхідно.
+`size` | Розміри спрайтів всередині RSI, що зберігаються у вигляді асоціативного списку `{x: ?, y: ?}`. Це _не_ розмір PNG файлів, у яких зберігається аркуш спрайту. Він використовується для коректного обрізання окремих спрайтів з цілого аркуша спрайту.
+`states` | Список _станів_, які є безумовно, найважливішою частиною RSI. Подробиці дивіться нижче.
+`license` | Можна не вказувати. Дійсний [Ідентифікатор ліцензії SPDX](https://spdx.org/licenses/), що застосовується до цієї роботи.
+`copyright` | Можна не вказувати. Інша довільна інформація про авторські права, така як автор, джерело, ...
 
-### States
+### Стани
 
-A state is a container for metadata for a specific sprite sheet. They store data related to their sprite sheet like delays of animations and directions. A state has an accompanying sprite sheet.
+Стан - це контейнер для метаданих певного аркуша спрайтів. У ньому зберігаються дані, пов'язані зі спрайтом, такі як затримки анімації та напрямки. Стан має відповідний аркуш спрайтів.
 
-States have one field that can be used to distinguish them:
+Стани мають поле, за яким їх можна розрізняти:
 
-Key | Meaning
+Ключ | Що означає
 --- | -------
-`name` | The name of the state. Can only contain lowercase alphabetic, numerical, and some special (`_-`) characters.
+`name` | Назва стану. Може містити лише малі літери, цифри та деякі спеціальні символи (`_-`).
 
-States cannot have the same identifying value. Two states with the same name may not exist.
+Різні стани не мають мати однаковий ідентифікатор. Два стани з однаковою назвою не можуть існувати.
 
-Other than the identifier, a state has three other fields in relation to the actual sprites as seen in game:
+Окрім ідентифікатора, стан має ще три інші поля, що пов'язані з різними елементами спрайта:
 
-Key | Meaning
+Ключ | Що означає
 --- | -------
-`flags` | An associative list of `key: object` for defining extra data. There is currently no usage yet. Optional.
-`directions` | A number corresponding to the amount of directions a state has. This should be a `1`, a `4` or an `8`.
-`delays` | Can be left out. If defined, a list of lists of delays for an animated icon state. Each list in the list corresponds to a direction. The delays are floats and represent seconds.
+`flags` | Асоціативний список типу `key: object`, призначений для визначення додаткових даних. Наразі не використовується. Можна не вказувати.
+`directions` | Число, що відповідає кількості напрямків, які має стан. Це має бути `1`, `4` або `8`.
+`delays` | Можна не вказувати. Якщо визначено, це список зі списків затримок для анімованого стану піктограми. Кожен список у списку відповідає напрямку стану. Затримка є числам типу float і позначає секунди.
 
-States are always ordered alphabetically by their corresponding file name.
+Стани завжди впорядковані в алфавітному порядку відповідно до назви їхнього файлу.
 
-#### Directions
+#### Напрямки
 
-There are currently three supported direction types: `1` (no directions), `4` (North South East West), and `8` (North South East West plus diagonals).
-These directions are ordered (for layout in the `delays` field and ordering in the sprite sheet) in the following order:
+Наразі підтримується три типи напрямків: `1` (без напрямків), `4` (Північ Південь Схід Захід) та `8` (Північ Південь Схід Захід плюс діагоналі).
+Ці напрямки вказуються (щоб відповідати записам у полі `delays` і порядку піктограм на аркуші спрайтів) у наступному порядку:
 
-* South
-* North
-* East
-* West
-* South East
-* South West
-* North East
-* North West
+* Південь
+* Північ
+* Схід
+* Захід
+* Південний схід
+* Південний захід
+* Північний схід
+* Північний захід
 
-#### Sprite sheet
+#### Аркуш спрайтів
 
-The PNG file accompanying a state is always the name of the state. For example, a state with name "hello" would be `hello.png` on disk.
+PNG-файл, що супроводжує стан, завжди має таку саму назву, як і відоповідний йому стану. Наприклад, стан з назвою "hello" буде відповідати файлу з назвою `hello.png`.
 
-The file contains the individual states resolved with the directions and delays of the state. The size of the file is always a multiple of the RSI's `size`. Sprites are ordered from the top left to the bottom right, always going horizontally first. The amount of sprites per row or column is always made to be as equal as possible, favoring rows to be longer than columns if the amount of states is not able to be divided perfectly.
+Файл містить окремі спрайти, що відповідають станам, таким як напрямки та кадри анімації. Розмір файлу завжди кратний розміру, зазначеному в полі `size`. Спрайти впорядковано від лівого верхнього кута до правого нижнього, при цьому спочатку йдуть по горизонталі. Кількість спрайтів у рядку та стовпці завжди має бути максимально однаковою, віддаючи перевагу тому, щоб рядки були довшими за стовпці, якщо стани не можуть бути розподілені ідеально.
 
-Sprites are written grouped by direction, then writing each icon in a direction in order, so with 4 directions, ALL south states get written first, then north states, etc...
+Спрайти в аркуші спрайтів групуються за напрямками, і кожна піктограма розміщується в цих групах так, що при 4 напрямках спочатку йдуть ВСІ стани, що відповідають півдню, потім півночі і т.д...
 
-### Example JSON
+### Приклад JSON
 
-Note that in practice the JSON writer probably writes the most compact JSON possible to reduce file size.
+Зауважте, що на практиці функція запису JSON, ймовірно, створить якомога компактніший JSON, щоб зменшити розмір файлу. 
 
 ```json
 {
@@ -93,9 +93,9 @@ Note that in practice the JSON writer probably writes the most compact JSON poss
 }
 ```
 
-## Design Goals
+## Мета цього дизайну
 
-* Editing an RSI must be possible without proper tooling. This means no binary metadata or metadata inside PNG files.
-* It must be easily diffable on GitHub.
-* It must not bloat Git history too much when changes are made (prevent large file rewrites).
-* One PNG One Image
+* Редагування RSI повинно бути можливим без належного інструментарію. Це означає відсутність двійкових метаданих або метаданих всередині PNG файлів.
+* Він має легко сприйматись інструментами, що показують різницю версій файлу на GitHub.
+* Він не повинен занадто сильно роздувати історію Git'a при внесенні великих змін (запобігає перезапису великих файлів).
+* Один PNG файл - Одне Зображення
