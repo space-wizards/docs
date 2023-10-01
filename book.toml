@@ -116,4 +116,4 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/engine/porting-visualizers/index.html" = "/en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.html"
 "/en/engine/lighting-fov/index.html" = "/en/robust-toolbox/rendering/lighting-and-fov.html"
 "/en/engine/sprites-icons/index.html" = "/en/robust-toolbox/rendering/sprites-and-icons.html"
-"/en/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
+"/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
