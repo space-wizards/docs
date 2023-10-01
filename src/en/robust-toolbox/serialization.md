@@ -1,6 +1,4 @@
 # Serialization
-For everything in this article: If you dont understand a certain topic, if you have suggestions for improvements, if you have any questions/inquiries at all, ping Paul#7955 (me) on discord. I'm happy to help :)
-
 ## The API
 Each API-Surface (excluding Composition) of the SerializationManager has a generic variant, as well as a boxing variant.
 Additionally, each has two more generic methods for directly invoking TypeInterfaces, one where you can provide the instance used, and another where you'll just need to provide the type and the manager will take care of fetching an instance to use.
@@ -22,7 +20,6 @@ Can be used to provide a context instance if you so wish to. See [SerializationC
 All APIs also provide you with a `bool` parameter called `skipHook`, which can be used to skip invoking methods implemented using the `ISerializationHook` interface. **Take note however, this parameter is due to be deprecated.** This parameter is not available in Write,Validate and Composition-APIs!
 
 ### Read
-
 When reading, you will have to provide:
 - A type, either as generic type argument T or as the type parameter in the boxing variant
 - A DataNode to read (duh)
@@ -53,13 +50,11 @@ If CopyTo fails to copy into the target object, it will override it using a call
 Here, composition is pushed across nodes using definitions associated to the type passed. This means that the type you pass determines how the datanodes you provide will be merged together. Currently, there is only a very limited amount of methods to customize this behaviour, especially on DataFields. However, we are working on it!
 
 ## Data Definitions
-
 DataDefinitions are Structs or Classes with Field/Properties annotated to be DataFields. These DataFields are written and read to and from yaml, but are also used for copy, validation & composition operations. Going forward, i will simply refer to structs & classes as a "type".
 
 Data definitions must have a parameterless constructor in order to be valid. (With the exception of [DataRecords](#dataRecords))
 
 ### Declaring a DataDefinition
-
 ```admonish note
 There exists no risk in declaring a DataDefinition with multiple of these options at once. The duplicate registrations will simply be reduced so a single one.
 ```
@@ -67,7 +62,6 @@ There exists no risk in declaring a DataDefinition with multiple of these option
 `DataDefinition`s must be declared `partial` in order to work with our source generator for copying.
 
 #### Directly
-
 To make a class become a DataDefinition, you can add a [DataDefinition] attribute to the type like so.
 ```csharp
 [DataDefinition]
@@ -110,18 +104,32 @@ public sealed class PrototypeAttribute : Attribute {
 ### DataFields
 #### Types of DataFields
 ##### Regular
-Any property or field or property on a data definition can be annotated with a [DataField] attribute. In the following, both properties and fields will simply be referred to as "field".
-This attribute accepts a string key which will be used to define the key in YAML.
+Any field or property on a data definition can be annotated with a [DataField] attribute.  
+In the following, both properties and fields will simply be referred to as "field".  
 
 ```csharp
-[DataField("color")]
+[DataField]
 protected Color Color { get; set; } = Color.White;
 ```
 
-The examples above would translate into YAML like this:
+The example above would translate into YAML like this:
 
 ```yaml
 color: White
+```
+
+This attribute accepts an optional string key which can be used to define the key in YAML, instead of the camel-case version of the field name.  
+**If one is not needed, it is preferred to not specify one.**
+
+```csharp
+[DataField("colorValue")]
+protected Color Color { get; set; } = Color.White;
+```
+
+The example above would translate into YAML like this:
+
+```yaml
+colorValue: White
 ```
 
 ##### Include DataField
@@ -132,13 +140,8 @@ This has specific implications on writing specifically: IncludeDataFields get se
 This behaviour might become configurable in the future.
 ```
 
-#### Custom Type Handler
-
-```admonish info
-Don't be confused by the type handlers sometimes being called type serializers. This is an artifact from the old times and will soon be removed/renamed.
-```
-
-A custom type handler can be specified if one doesn't exist by default or custom behavior is needed to serialize a specific type. To use one, pass it through the customTypeSerializer argument.
+#### Custom Type Serializer
+A custom type serializer can be specified if one doesn't exist by default or custom behavior is needed to serialize a specific type. To use one, pass it through the customTypeSerializer argument.
 Both the DataField and IncludeDataField support custom type interfaces, but only the DataFieldAttribute is used in the following examples to make them a tad less bloaty.
 
 ```admonish warning
@@ -147,7 +150,7 @@ Any other behaviour that wont differ from the normal one does not need to be red
 ```
 
 ```csharp
-[DataField("drawdepth", customTypeSerializer: typeof(ConstantSerializer<DrawDepthTag>))]
+[DataField(customTypeSerializer: typeof(ConstantSerializer<DrawDepthTag>))]
 private int DrawDepth { get; set; } = DrawDepthTag.Default;
 ```
 
@@ -171,7 +174,7 @@ public sealed class DrawDepth
 
 public sealed partial class SpriteComponent
 {
-    [DataField("drawdepth", customTypeSerializer: typeof(ConstantSerializer<DrawDepthTag>))]
+    [DataField(customTypeSerializer: typeof(ConstantSerializer<DrawDepthTag>))]
     private int DrawDepth { get; set; } = DrawDepthTag.Default;
 }
 ```
@@ -189,7 +192,7 @@ public sealed class CollisionLayer {}
 
 public sealed partial class PhysShapeRect
 {
-    [DataField("layer", customTypeSerializer: typeof(FlagSerializer<CollisionLayer>))]
+    [DataField(customTypeSerializer: typeof(FlagSerializer<CollisionLayer>))]
     private int CollisionLayer { get; set; }
 }
 ```
@@ -205,14 +208,9 @@ Two additional attributes may be used on a datafield to define how it is inherit
 
 TODO
 
-## Type handler
-
-```admonish info
-Don't be confused by the type handlers sometimes being called type serializers. This is an artifact from the old times and will soon be removed/renamed.
-```
-
-The type handler interfaces are a collection of interfaces for defining custom logic for actions on specific types. Sometimes, the expected node type will also be specified.
-A class implementing at least one of these type handler interfaces is referred to as a type handler. If you want your type handler to *always* be used, you can annotated it with the `[TypeSerializer]` attribute. Otherwise, the type can be used as a [custom type handler](#custom-type-handler).
+## Type serializer
+The type serializer interfaces are a collection of interfaces for defining custom logic for actions on specific types. Sometimes, the expected node type will also be specified.
+A class implementing at least one of these type serializer interfaces is referred to as a type serializer. If you want your type serializer to *always* be used, you can annotated it with the `[TypeSerializer]` attribute. Otherwise, the type can be used as a [custom type serializer](#custom-type-serializer).
 
 **The static IoCManager.Resolve should not be used as the serializer might be running on a separate thread without an initialized IoC context.**
 
