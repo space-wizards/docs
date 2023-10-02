@@ -4,5 +4,8 @@
 "Russian":
 - 'src/ru/**'
 
+"Ukrainian":
+- 'src/ua/**'
+
 "Scripts":
 - 'scripts/**'
