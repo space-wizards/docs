@@ -4,7 +4,7 @@ The intention of this proposal is not to expand the anomaly gameplay system thro
 
 ## Anomaly Cores
 
-<img src="https://tgstation13.org/wiki/images/b/b4/Flux_core.gif" width=128 height=128/>
+<img src="https://tgstation13.org/wiki/images/b/b4/Flux_core.gif" width=64 height=64 style="image-rendering: pixelated"/>
 
 **Anomaly cores** are generated when an anomaly dissipates in some way. An *inert* core is spawned when an anomaly is fully contained and fizzles out, and a *decaying* core is spawned when an anomaly goes supercritical.
 
@@ -26,7 +26,7 @@ Decaying anomaly cores being time-limited is very important. This introduces mor
 or, Gauntlets Orchestrating Relocation of Interloping and Ludicrously Livid Anomalies
 ```
 
-<img src="https://tgstation13.org/wiki/images/a/a3/Powerfist.png" width=128 height=128/>
+<img src="https://tgstation13.org/wiki/images/a/a3/Powerfist.png" width=64 height=64 style="image-rendering: pixelated"/>
 
 The G.O.R.I.L.L.A Gauntlets are an item obtainable through Tier 2 experimental research (subject to change). It functions as a set of wieldable power fists that can deal strong brute damage. However, they're not very strong on their own. To take full effect, they need to be **with an anomaly core**.
 
