@@ -9,3 +9,6 @@
 
 "Scripts":
 - 'scripts/**'
+
+"Design":
+- 'src/en/proposals/**
