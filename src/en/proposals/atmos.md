@@ -44,6 +44,8 @@ In no particular order, specific mechanical changes that I think will accomplish
 
 - **Make station air flow-based.** Currently, air vents release air when the pressure is too low, and by default scrubbers only scrub waste gases. So if for some reason the station gets cold, there's no easy way to cycle the air out and heat it up. Of course, you could set all the scrubbers to siphon, heat your distro, and then set the air alarm to fill. But that would just be describing a bad way of doing what real life HVAC systems have always been doing: keep the air flowing.
 
+- **Globally increase MaxTransferRate** for devices that are not flow-based, e.g. pumps.
+
 - **Make heaters and freezers thermodynamically sound.** Keeping a station properly heated or cooled is actually a substantial real-life problem. Why deprive atmos techs an actual challenge that keeps gameplay interesting? Because of the existence of generators like the TEG, keeping things thermodynamically balanced is also a great way to prevent infinite power hacks.
 
 - **Make heaters and freezers binary.** Just like your central heating and air conditioning circulate air through heat/cold coils, gases should flow across heaters and freezers in order to exchange temperature.
