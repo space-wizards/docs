@@ -132,3 +132,8 @@ Unhandled exception. Robust.Shared.IoC.Exceptions.ImplementationConstructorExcep
 ```
 
 Uninstall .NET Core SDK x86. Install .NET Core SDK x64.
+
+
+## The client and server aren't available in Visual Studio to configure in Multiple startup projects
+
+This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file. 
