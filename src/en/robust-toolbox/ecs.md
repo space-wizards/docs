@@ -110,26 +110,25 @@ As you can see, by using composition all our problems from before are solved nea
 - Humans and borgs share the `PlayerControllable` (also known as `Mind` in SS14 code) component, which allows them to be controlled by a player...
 - And most of the game objects above share `Damageable`, which allows them to have "health" and be damaged.
 
-TODO: finish this
+What's wrong with OOP?
 ----
+Object Oriented Programming (OOP) is merely a programming paradigm, or model. In this section, we'll take a very brief view of what motivates our project to dissent from object-oriented data modeling. 
 
-Edit all this text into something proper for a doc... Sigh
+Let's first take a look at inheritance. There are many problems and inflexibility that come with complex inheritance trees. Refer to the tree diagram above, and imagine we had no components. Instead, we have large inheritance tree. In this tree, we have a "machine" base class that has power consumption. We also have a different "mob" base class that has various player-controlled mechanics. Notice that both of these objects are on two separate branches of our component hierarchy. This poses our first design dilemma; what if we want some machines to have mob qualities, or some mobs to have machine qualities? Our system is designed in such a manner where you cannot make a mob have machine qualities or vice versa without making ugly hacks, or a common base for both "machine" and "mob". 
 
-Okay so we usually mean a bunch of things by "OOP bad", and I'm not sure how to condense it all into a simple explanation but here I go.
-1. First of all, inheritance. There are many problems and inflexibility that come with complex inheritance trees... Imagine we had no components and instead had a big-ass inheritance tree: If you had a "machine" base class that has power consumption, and a different "mob" base class that has funny player-controlling mechanics, now you essentially cannot make a mob have machine qualities or vice versa without making ugly hacks, or a common base for both "machine" and "mob". But at the same time, that wouldn't make much sense either! Most mobs aren't gonna need "power consumption features", and few machines are gonna be player-controlled at all... So to solve this awful, gnarly problem we use "composition" (components!) instead of inheritance. You know this stuff already, if you want an entity to have hands, add `HandsComponent`. If you want to make it consume power, `PowerConsumerComponent` will help! If you want to make it player-controllable, add `MindComponent` and control the entity and-- oh hey we made a "cyborg mob" out of reusable, generic components! This, of course, is hard to do with a big-ass inheritance tree alone... Of course, inheritance can be good and fine for small things, or when you have a very small and self-contained inheritance tree (see something like `SoundSpecifier` for example, it's tiny but inheritance helps a ton there) but when you have a big complex game like ss14, inheritance just makes things way more painful.
-2. Also, encapsulation is another one. OOP likes to put both data and methods/logic on the same class, as a bundle, and only expose certain things to the outside of that class. You know, the funny access modifiers like `public`, `private` and such? So encapsulation is good for something like the engine, which specifically needs to obscure/prohibit access to some data or methods. But it doesn't make thaaaat much sense for game data and logic, for example. `StackComponent` in SS14 have no private fields or properties in 'em, anyone is free to go and read/write the values as they please. However, this is not the recommended way to interact with stacks, at all!
-`StackSystem` has a few methods to operate on `StackComponent`, and change its values. So to use a certain amount of things on the stack, you use `StackSystem.Use`, to split it you use `StackSystem.Split`, etc, and `StackSystem` will take care of everything for you. Because turns out that changing the stack amount value isn't enough. You also need to do funny stuff such as: dirtying the component for network syncing purposes, setting the appearance value, raise a `StackCountChanged` event, etc.
-The way you would do this in E/C would be to put all of that logic in the "amount" property on `StackComponent`, or maybe a method. Then you could `private` the actual "amount" number away. However the E/C architecture will not be accepted in this codebase, we will only use the ECS architecture going forward.
+But perhaps that's the solution? Mobs can have machine bits, and machines can have mob bits, so just create an abstract machine mob class! But at the same time, that wouldn't make much sense either! Most mobs will not need "power consumption features", and few machines will be player-controlled at all.
 
-See, putting any kind of logic in a component class doesn't make sense at all. If we think about how stuff in ECS is structured, it's like this:
-1. Our game world has a bunch of entities, the entities have components
-2. There are systems that operate on components
+To solve this difficult design decision, we would humbly propose an alternative design perspective. Instead of inheriting features, what if we composed them? Think of it as building legos instead of branching trees, but how would this work? Suppose you want an entity to have hands, add a `HandsComponent`. If you want to make it consume power, `PowerConsumerComponent` will help! If you want to make it player-controllable, add `MindComponent`. What have we created? An entity with hands, power, and can be controlled by a player. We've made a "cyborg mob" out of reusable, generic components! 
 
-Therefore, components should only have data in them, and no logic whatsoever. Systems should give the entities their behavior, when they have the appropriate components.
-I'm more saying like... Rather than have logic in components change stuff, we want entity systems to operate and modify components. So instead of having:
-`HandsComponent.Pickup(ItemComponent)`, you would have:
-`HandsSystem.Pickup(UserEntity, ItemEntity)`.
+Inheritance may be perfectly fine in nuanced circumstances, such as small, self-contained inheritance trees (see something like `SoundSpecifier` for example). However, at scale its benefits become detriments quickly. Especially when you have a game as large and complex as ss14.
 
+Now let's take a look at encapsulation. OOP associates data and behavior in the same class. Such classes only expose certain properties or methods to external parties via access modifiers. That is, fields such as `public`, `private` and `protected`. Encapsulation is good for cases such as our toolbax engine; which specifically needs to obscure/prohibit access to some data or methods. But for game and data logic, it doesn't make that much sense. For example, the `StackComponent` in SS14 has no private fields or properties and any owner is free to read or write the values as they please. However, this is not the recommended way to interact with stacks! 
+
+`StackSystem` has a few methods to operate on `StackComponent` and change its values. To use a certain amount of things on the stack, you use `StackSystem.Use`. To split the stack, `StackSystem.Split`; and so on. `StackSystem` acts as the orchestrator, and is responsible for acting on this component to express behavior. For something as simple as splitting a stack, this may seem like overkill. That is until you consider that as our features grow in complexity, changing the stack amount value isn't enough. As requirements expand, we will also need to accomplish additional tasks. For example, dirtying the component for network syncing purposes, setting the appearance value, raise a `StackCountChanged` event, and more.
+
+The way to accomplish this in E/C (a similar, alternative architecture) would be to put all of that logic in an "amount" property on `StackComponent` with an access method. Then you could `private` the actual "amount" number away. However, putting logic of any kind in a component class brings us back to the troubles of OOP as was mentioned prior. Take a step back for a moment to think about what it is, exactly, that we're bulding. Our game system is built on two principle concepts: entities and systems. Entities are composed of components. Systems transform components. As such, systems transform entities. If we need to express a *change* in the state of our game, that's what our systems are for. Components should only have data in them, and no logic whatsoever. It is our systems that should give the entities their behavior, when they have the appropriate components. 
+
+Think of it like this. Instead of having: `HandsComponent.Pickup(ItemComponent)`, you would have: `HandsSystem.Pickup(UserEntity, ItemEntity)`. As such, going forward the E/C architecture will not be accepted in this codebase; we will only use the ECS architecture.
 
 ## Components, revisited
 Ah, components. For a long time, they have been the heart of the game's simulation: a mix of data and logic akin to a bowl full of soggy noodles.
@@ -427,7 +426,9 @@ Systems are supposed to do the behavior/logic.
 **A**: Yes and no. The ideal system doesn't know about the entity at all, it only knows the components it acts on.
 
 **Q**: So when you need an interaction between two components what looks at both of those components and goes "oh these need to work together"?
+
 **A**: #1 It's best to avoid these kinds of relationships in the first place.
+
 #2 You have a 3rd system (so you have A and ASystem, B and BSystem, you'd have an ABSystem that gets a list of tuples of (A,B) to act on).
 For example, a player rendering system might need access to 3-4 components, but that's valid for its use case (in, e.g., a roguelike).
 
