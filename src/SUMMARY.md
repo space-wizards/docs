@@ -175,6 +175,7 @@ Maintainer Meetings
 
 ----------------------
 - [2023-09-23](en/maintainer-meetings/maintainer-meeting-2023-09-23.md)
+- [2023-09-09](en/maintainer-meetings/maintainer-meeting-2023-09-09.md)
 - [2023-09-02](en/maintainer-meetings/maintainer-meeting-2023-09-02.md)
 - [2023-08-19](en/maintainer-meetings/maintainer-meeting-2023-08-19.md)
 - [2023-07-29](en/maintainer-meetings/maintainer-meeting-2023-07-29.md)
