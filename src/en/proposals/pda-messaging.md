@@ -66,3 +66,6 @@ Department channels can't be joined, left or deleted.
 ### Optional: RDs messager admin management console
 The research director and potencially Captain get a console which connects to the message server via device net that can be used to view and manage all messages and groups.
 It uses device net with an `AccessComponent` on the message server so the management functions can be hijacked by traitors that got their hands on an ID card with the right access. (This requires [device net access restrictions](https://hackmd.io/gPjP95_zRUiT-bX4hKxE6w) to be implemented.
+
+### Optional: pAI as a chat assistant.
+This will add new gameplay for the pAI ghost role. Allowing the pAI to chat as their master on their behalf. Could have a little pAI icon in the chatbox to show it was sent by the pAI and not the actual player. pAI's for a while have been kinda boring and may deserve their own design doc of ideas but this is one of my ideas that come to mind.
