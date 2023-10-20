@@ -7,6 +7,12 @@
 *(This is mostly taken from how PDA messages work in ss13)*
 Allows sending messages to others using PDAs
 
+### What this adds and why
+Simple, Messaging via the PDA!
+Messaging someone via the PDA should be made when you need to get the attention of a special someone. Example as HoS you want to ask detective to come over to investigate an item. It's easier to get their attention cause of their PDA vibrating then hoping they are monitoring their channel. Another usage is the heads planning Captain a suprise birthday party. Something like that would require all heads getting together in one place.
+
+This is **not** a replacement to the radio channel. Theres no "common" channel, it would be easier to spoof being someone (just need their id), past messages on that same id can easily be exposed and its far more cumbersome to message someone over PDA then just using the radio.
+
 ### Message storage
 Messages are stored on a server most likely will be stored in telecoms. There can be one server per station, others on the same station won't be used unless the first one loses power or gets destroyed.
 
@@ -22,13 +28,19 @@ The messaging client system will use the `GetActiveServer` method of the message
 
 ### Sending and receiving messages
 
-When sending a message to someone via the program the PDA sends the message together with an 'user id' to the server and the server will send the message to the target device. 
+When sending a message to someone via the program the PDA sends the message together with an 'user id' to the server and the server will send the message to the target device. Of course there will be a character limit (say... 100 characters?)
 
 When a PDA recieves a message it plays the PDAs ringtone and vibrates, showing the sent message on the chat. This message can also be viewed on the PDA via a program.
 
 Notifications can be disabled if desired.
 
-This user id could be generated into the ID card so that if you get a new PDA your messages are kept as long as you are using the same ID card. Potencially HoP can move your 'user account' to the new ID card rendering the old ID card useless. This can also prevent powergaming.
+This user id could be generated into the ID card so that if you get a new PDA your messages are kept as long as you are using the same ID card. Late joiners will get assigned a uid when they arrive on the station. Potencially HoP or RD can move your UID to the a new ID card with the ID comnputer rendering the old ID card useless. This can also prevent powergaming by someone changing their UID to see others messages.
+
+This UID will receive messages for as long as it is in the station and in a PDA.
+
+If its not in station the messages can either fail to send or be added in a queue to be sent when it reenters the station.
+
+Since the UID is stored on the ID. That means that if you manage to get your hands on someones ID you can chat as them and potencially (if added) read their messages.
 
 ### Users list
 
@@ -69,3 +81,29 @@ It uses device net with an `AccessComponent` on the message server so the manage
 
 ### Optional: pAI as a chat assistant.
 This will add new gameplay for the pAI ghost role. Allowing the pAI to chat as their master on their behalf. Could have a little pAI icon in the chatbox to show it was sent by the pAI and not the actual player. pAI's for a while have been kinda boring and may deserve their own design doc of ideas but this is one of my ideas that come to mind.
+
+
+### Concerns
+When initially asked about this I was met with some concerns. This section is to address them
+
+Discord discussion start: https://discord.com/channels/310555209753690112/310555209753690112/1160244698112327830
+
+##### Why PDA messaging over plain radio? Would this upset radio balance and reduce coms over radio?
+First of all why:
+If you play the game you can quickly realise how getting someone's attention god forbid multiple, can be... not an easy task to say the least. You either are lucky and the person you want is just so happening to be monitoring the chatbox or they are busy and not paying attention. In the end missing your message until you resend it or try to look with them. This is just not fun and is just annoying. PDA messaging can solve this.
+
+As to if it will upset radio balance: Highly unlikely it will be. Mostly cause:
+1. PDA messaging wont let you get the attention of multiple people at once (common). PDA messaging can reach one person at the time (unless we get department groups but even then). You will have to jump through a lot of hoops if you JUST wanna use messaging. Radio is easier and faster to talk into and gets to multiple people at once.
+2. Sending a PDA message is more of a chore then just using the radio channel, PDA messaging will at least need a minimum of 6 steps to open the PDA, go to the app section, start the app, find the person, write the message and send. And if you keep the chatbox on it would just take up a good chunk of your screen. Or you could just do ":c Captain hamlet ate uranium"
+3. Messages are stored and logged. Someone steals caps PDA? Well now all of their messages are up on display. With radio unless they had command channel already they would never learn of any past messages. If two syndies decide to use PDA messaging rd can just grab their chatlogs. Same with syndies using it to communite with others.
+4. PDA messaging has a pretty small character limit, if you wanna say something long radio is the place.
+
+May be the wrong section but admins can also use this to act as "Central Command" so instead of having to subtile message someone they can just send a message to their PDA.
+
+##### It reduces everyone else's situational awareness since people can't see all radio messages anymore.
+I highly disagree, I doupt it will reduce situational awareness more then it already is. I have already went over how someone monitoring the radio channel for messages directed to them is already a chore. PDA messaging names can easily be changed by using someone elses ID therefore its a good idea to not go to maints like they told you to and instead show the message to security.
+
+##### Why not use fax?
+Is this really a question? First of all not everyone has a fax, second you have to be close to hear it go off printing. And unless you check your fax periodicly for new faxes messages can be missed. And even if you do check it its probably boykisser ASCII spammed 10 times. Also why are we using *faxes* in 2563 or whatever year SS14 takes year in.
+
+These were all the conserns I could find from discord.
