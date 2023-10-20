@@ -53,6 +53,12 @@ SS14 By Example
 - [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md) 
 
 
+Testing
+==============
+- [Introduction to Testing](en/testing/introduction/explanation.md)
+- [Maps](en/testing/maps/introduction.md)
+  - [Basics](en/testing/maps/basics.md)
+
 Robust Toolbox
 ==============
 
