@@ -58,6 +58,8 @@ Testing
 - [Introduction to Testing](en/testing/introduction/explanation.md)
 - [Maps](en/testing/maps/introduction.md)
   - [Basics](en/testing/maps/basics.md)
+- [Antagonists](en/testing/antags/introduction.md)
+  - [Basics](en/testing/antags/basics.md)
 
 Robust Toolbox
 ==============
