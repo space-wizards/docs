@@ -1,54 +1,71 @@
 # Pull Request Guidelines
 
-Following these guidelines will make contributing much easier, and will help your PRs be merged much faster by making them easy to review.
+Thank you for contributing to Space Station 14. When submitting pull requests (PRs), please follow these guidelines to make your pull requests easier to review and merge. Pull requests that do not follow these guidelines may be closed at a maintainer's discretion.
 
-- If you're unfamiliar with the Git workflow, please read [our git guide](../setup/git-for-the-ss14-developer.md) and ask as many questions as you need in #howdoicode.
-- Do not use the GitHub web editor to make pull requests. You are required to make sure your code compiles and you've tested your changes in-game before making the PR. **PRs created through the Github web editor are liable to be closed at a maintainer's discretion, as they have not been tested locally and cannot meet these requirements.** Repeated submission of PRs made through the web editor may result in a repository ban.
-- Please **re-read your code preview on GitHub** before submitting a PR. If it's obvious to a reviewer it includes your last PR (i.e. PR2 includes PR1's changes), or that there are accidental changes, then it should be obvious to you.
-- If your PR adds a new feature, you should provide a screenshot or video of it functioning properly ingame. This not only makes reviewing easier, but also makes writing the progress report easier.
-- Avoid adding miscellaneous additional changes to a PR, e.g. changing the heat resistance of a pair of gloves alongside your PR adding a new gun.
-- Avoid making lots of formatting changes in a file if you change very few lines in it. It makes the review significantly more difficult to parse what actually changed and can generate conflicts for other PRs.
-- If you do make refactoring/formatting changes, make them separate commits from actual content/feature/functionality changes so that they are easier to review.
-- Large refactors that touch a lot of other systems belong in a separate refactor-only PR with no content changes
-- If you move a file to a different folder and/or namespace, put that in its own commit when possible to make it easier to tell what got changed in a file and what was just moved.
+## Before You Begin
+
+- If you're unfamiliar with the Git workflow, please read our [Git guide](../setup/git-for-the-ss14-developer.md) and ask as many questions as you need in #howdoicode.
+
 - Please have some familiarity with [C# conventions](https://docs.microsoft.com/en-us/dotnet/csharp/) (if working with C#) and [our own conventions](./conventions.md). Try to read how other parts of the codebase are formatted for a general idea.
-- Try to split your PR into smaller ones where it makes sense to do so. This makes it significantly easier to read and can lead to faster reviews. It's also usually easier for you, and means you will receive earlier feedback and can avoid spending time making changes that have to be reworked.
+
 - Large new features and comprehensive reworks to existing large features (ie antags or anything that could be considered a subdepartment unto itself), should first be [proposed and accepted in abstract](../feature-proposals.md) before you start working on actually implementing it.
-- Avoid force-pushing to your branch. This makes all reviews show as 'outdated', even if they have not been addressed yet, which makes it much harder for us.
+
+## Content
+
+- **Make separate PRs for feature changes, bug fixes, and cleanup/refactors.** This makes changes easier to review, reduces conflicts, and also easier to revert if something goes wrong.
+
+    - Feature changes and bug fixes should be in their own PR.
+    - Cleanups and "refactoring", including variable renaming and indentation changes (for example, due to file-scoped namespacing) must be in their own PR. 
+    - **Refactors must be in a separate PR.** This includes changes that impact a significant number of public APIs (fields, methods, etc.) that require changes across multiple systems. These must be made in a separate PR from any content changes or bug fixes.
+    - If you move a file to a different folder and/or namespace, put that in its own commit when possible to make it easier to tell what got changed in a file and what was just moved.
+
+- **Do not make multiple unrelated changes in one PR.** For example, do not make miscellaneous additional changes to a PR, e.g. changing the heat resistance of a pair of gloves alongside your PR adding a new gun.
+
+    - Try to split your PR into smaller ones where it makes sense to do so. This makes it significantly easier to read and can lead to faster reviews. It's also usually easier for you, and means you will receive earlier feedback and can avoid spending time making changes that have to be reworked.
+
+## Testing
+
+- **Test all of your changes in-game.** All bug fixes and features must be tested in-game. You should also test other features that may be indirectly impacted by your changes.
+
+    - For the above reason, **do not use the GitHub web editor to make PRs.** Web edits are liable to be closed at a maintainer's discretion. Repeated submission of PRs made through the web editor may result in a repository ban.
+
+- **Provide screenshots or videos** that demonstrate testing done. This also makes it easier to write progress reports.
+
+## Before Submitting
+
+- **Review your diff** using the code preview tab on GitHub.
+
+    - Check for changes that you did not intend to commit.
+    - Check for accidental whitespace additions or line end changes.
+
+## After Submitting
+
+You are free to make changes to your PR after submitting, for example, if you make improvements or fix bugs that you discover after submitting.
+
+- **Do not force push to your branch** after receiving a review unless a maintainer requests it. Doing so makes all reviews show as 'outdated', even if they have not been addressed yet.
+
+# Reviews
+
+Reviews are an important part of the pull request process. Reviews help us obtain feedback from the community and maintain a high quality of code in the codebase. Since maintainers are volunteers, we ask for your patience. The review process for large changes can take up to several weeks.
+
+## Getting Reviews
+
+- Anyone is welcome to review PRs. Reviews from other contributors can be just as valuable as reviews from maintainers, and often mean that PRs can be merged faster and can help relieve the workload for maintainers. If you are waiting for a review it might be a good idea to find another contributor in a similar position so that you can mutually review each other's PRs. Reading other people's PRs and thinking critically about how you would have written the code can also be a useful learning tool. 
+
+- Maintainers periodically review open PRs.
+
+- If it is taking several days to get an initial review, it is appropriate to ask for a review in #pr-review-request.
+
+## Addressing Reviews
+
 - When you're addressing reviews, click 'Resolve conversation' on GitHub once your revised code has been pushed.
-- If you have questions about reviews that were submitted on your PR (or code questions in general, of course), feel free to ask for clarification on GitHub or Discord in #howdoicode.
 
-## Reviews
+- If you have questions about reviews that were submitted on your PR (or code questions in general, of course), feel free to ask for clarification on GitHub or Discord from the reviewer or in #howdoicode.
 
-We get around 700 PRs a month and only have a small number of active maintainers. All maintainers are volunteers and maintainer availability is very variable. Depending on the size and importance of your PR, it could take up to a few weeks before someone gets around to reviewing it. Responding to any changes may also take some time. Please be patient.
-
-Anyone is welcome to review PRs. Reviews from other contributors can be just as valuable as reviews from maintainers, and often mean that PRs can be merged faster and can help relieve the worload for maintainers. If you are waiting for a review it might be a good idea to find another contributor in a similar position so that you can mutually review each other's PRs. Reading other people's PRs and thinking critically about how you would have written the code can also be a useful learning tool. 
-
-### Asking for reviews
-Please do not simply post your PR in our discord channels without context simply to ask for reviews. However, if your PR hasn't been reviewed by anyone and it has been a month, feel free to ping those listed here on GitHub or Discord. These aren't all of our maintainers, but they're currently the most active when it comes to reviews.
-
-**For content reviews:**
-- mirrorcult#9528, @mirrorcult on GitHub
-- metalgearsloth#7697, @metalgearsloth
-- ElectroSR#9529, @ElectroJr
-- /tmp/moony#0029, @moonheart08
-
-**For engine reviews:**
-- metalgearsloth#7697, @metalgearsloth
-- PJB#3005, @PJB3005
-- ElectroSR#9529, @ElectroJr
-- mirrorcult#9528, @mirrorcult
-
-## Adding screenshots/videos to your PR
-PRs which make ingame changes (adding clothing, items, new features, etc) are required to have media attached that showcase the changes or the PR will not be merged, in accordance with our PR guidelines. Small fixes/refactors are exempt. If you include media in your pull request, we may potentially use it in the SS14 progress reports, with clear credit given.
-
-Use screenshot software like Window's built in snipping tool, ShareX, Lightshot, or recording software like ShareX (gif), ScreenToGif, or OBS (cross platform).
-If you're unsure whether your PR will require media, ask a maintainer.
-
-## Changelog
+# Changelog
 Changelog entries help make players aware of new features or changes to existing features.
 
-### Changelog Template
+## Changelog Template
 The Github PR template contains the following changelog that you can use to format your changelog entry so that it is automatically updated in-game:
 
 ```
@@ -65,7 +82,7 @@ Each entry is either an `add`, `remove`, `tweak`, or `fix`. There can be multipl
 
 Maintainers may, at their discretion, add, modify, or remove a change log entry that you suggest.
 
-### Writing An Effective Changelog
+## Writing An Effective Changelog
 The Changelog is for *players* to be aware of new features and changes that could affect how they play the game. It is *not* designed for maintainers, admins, or server operators (these should be in the PR description).
 
 When writing your changelog entries, please follow these guidelines:

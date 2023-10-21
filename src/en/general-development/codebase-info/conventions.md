@@ -316,10 +316,10 @@ Transform(uid).Coordinates;
 ### Public API Method Signature
 All public Entity System API Methods that deal with entities and game logic should *always* follow a very specific structure.
 
-All relevant `EntityUid` should come first.
+All relevant `Entity<T?>` and `EntityUid` should come first.
+The `T?` in `Entity<T?>` stands for the component type you need from the entity.
+The question mark `?` must be present at the end to mark the component type as nullable.
 Next, any arguments you want should come afterwards.
-And finally, all the components you need from the entity or entities should come last.
-The component arguments shall be nullable, and default to `null`.
 
 The first thing you should do in your method's body should then be calling `Resolve` for the entity UID and components.
 
@@ -327,11 +327,11 @@ The first thing you should do in your method's body should then be calling `Reso
   <summary>Example (click to expand)</summary>
 
 ```csharp=
-public void SetCount(EntityUid uid, int count, StackComponent? stack = null)
+public void SetCount(Entity<StackComponent?> stack, int count)
 {
-    // This call below will set "stack" to the correct instance if it's null.
+    // This call below will set "Comp" to the correct instance if it's null.
     // If all components were resolved to an instance or were non-null, it returns true.
-    if(!Resolve(uid, ref stack))
+    if(!Resolve(stack, ref stack.Comp))
         return; // If the component wasn't found, this will log an error by default.
     
     // Logic here!
