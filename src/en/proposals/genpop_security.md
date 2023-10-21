@@ -30,7 +30,7 @@ Here's an example from OracleStation. Note the turnstiles, the prisoner processi
 
 ![genpop](https://user-images.githubusercontent.com/202160/35178888-91bb7eb6-fd87-11e7-9040-15a6ef93602c.png)
 
-I highly recommend taking a look at the [OracleStation pull request](https://github.com/OracleStation/OracleStation/pull/419) as it has gifs for most of the things I've about to describe with words.
+I highly recommend taking a look at the [OracleStation pull request](https://github.com/OracleStation/OracleStation/pull/419) as it has gifs for most of the things I'm about to describe with words.
 
 This is what the new experience for brigging criminals would look like:
 
