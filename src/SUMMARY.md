@@ -117,6 +117,9 @@ Space Station 14
 
 Design Proposals
 ================
+- [Anomaly cores](en/proposals/anomaly-cores.md)
+- [PDA messaging](en/proposals/pda-messaging.md)
+- [Plant genetics](en/proposals/deltanedas-plant-genetics.md)
 
 ----------------------
 
