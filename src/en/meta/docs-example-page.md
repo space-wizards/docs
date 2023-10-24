@@ -32,7 +32,7 @@ All available admonishment types.
 
 To use an admonishment:
 ``````
-```admonishment {type} "{text you want as title, or leave blank}"
+```admonish {type} "{text you want as title, or leave blank}"
 description
 ```
 ``````
