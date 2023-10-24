@@ -135,6 +135,8 @@ Server Hosting
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
+- [Maintenance]()
+  - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
 Other Projects
 ==============
