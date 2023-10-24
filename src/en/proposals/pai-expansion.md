@@ -9,7 +9,7 @@ This will give pAI's more options of stuff they can do. Thus making them a more 
 These are ideas taken from TG
 
 ### (Optional) Hologram
-pAI's can choose to manifest themselves as a hologram in the world. They will be unable to intaract with the world in any way and can only go a certain small tile radius away. Could be nice to intaract with their owner or attract attention on to their dead owner. They will slightly
+pAI's can choose to manifest themselves as a hologram in the world. They will be unable to intaract with the world in any way and can only go a certain small tile radius away. Could be nice to intaract with their owner or attract attention on to their dead owner.
 
 ### Able to use right click, inspect id's and health
 They will be able to see id's and use right click to see items like anyone else... their camera should allow em.
