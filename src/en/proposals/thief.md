@@ -21,7 +21,6 @@ Suggested equipment sets for bluespace talons:
 | Thief Pinpointer | Includes: A pinpointer that shows the direction to an object of interest to the owner thief. When switched on or off, it selects a random object for which the thief has not yet completed the target. |
 | Chameleon's Set | Includes: A set of chameleon clothes. |
 | Syndie Set | A kit with tools and personal items, kindly borrowed from an unlucky agent. Includes: Agent ID, syndie-toolbox, syndie-cigarettes, syndie-ball, syndie-soap, syndicate agent's clothes. |
-| Bear Set | A great choice for those who like to make a lot of noise. Includes: C-4 set, Jaws of Life Syndicate, clown mask. |
 | Sleeper Set | A set for those who like to do things VERY quietly. Includes: a hippo pen, a set of nocturine vials, a nitrous oxide cylinder, a set of syndicate pajamas. |
 | Implanter Set | Includes: Subcutaneous storage implant |
 | Coward's Set | Includes: 2x Bluespace Emergency Beacon: Usable item: after a 5 second delay, teleports the target to a random locker at the station. |
@@ -30,7 +29,7 @@ Suggested equipment sets for bluespace talons:
 ## Thief goals
 A thief always has 3 goals. The first two are chosen from the categories below. The last goal is to always return to the Centcomm alive and free.
 
-### Theft of an object
+### Steal the item
 The goal is to steal a certain item from the station, and keep it with you by the end of the round.
 The target list consists of random objects whose abduction can lead to interesting scenarios. This list can include both easy and extremely difficult targets.
 This list should not include items that Traitors require: if they are successfully stolen by a thief, the goal becomes too difficult for the Traitor to accomplish.
@@ -40,29 +39,81 @@ This list should not include items that Traitors require: if they are successful
 | The cape of a random department head |
 | The seal of a random department head |
 | HoP Ian backpack |
-| random job PDA |
-| warden's cap | 
-| forensic scanner |
-| security segway key |
-| security officer hardsuit |
-| defibrillator |
-| portable crew monitor |
-| paramedic hardsuit |
-| chemical glasses |
-| positronic brain |
+| Random job PDA |
+| Warden's cap | 
+| Forensic scanner |
+| Security segway key |
+| Security officer hardsuit |
+| Defibrillator |
+| Portable crew monitor |
+| Paramedic hardsuit |
+| Chemical glasses |
+| Positronic brain |
 | C.H.I.M.P. |
-| research server circuit |
-| fire axe |
-| jaws of life |
-| gas analyzer |
-| engineer hardsuit |
-| kinetic gun |
-| spationaut suit |
-| evaluation tool |
-| quartermaster's cap |
-| butcher knife |
-| cannabis |
-| bartender's shotgun |
-| priest's bible |
-| mime crayon |
-| clown bananaphone |
+| Research server circuit |
+| Fire axe |
+| Jaws of life |
+| Gas analyzer |
+| Engineer hardsuit |
+| Kinetic gun |
+| Spationaut suit |
+| Evaluation tool |
+| Quartermaster's cap |
+| Butcher knife |
+| Cannabis |
+| Bartender's shotgun |
+| Priest's bible |
+| Mime crayon |
+| Clown bananaphone |
+
+## Steal the structure
+the goal is to steal a large object that doesn't fit in your inventory. For the goal to be fulfilled, the structure must be near the thief at the end of the round. 
+
+| Structure |
+|-----------|
+| The fax of a random departament head |
+| Security Segway |
+| Chemmaster |
+| Artefact analyzer |
+| Alien artifact |
+| Heater |
+| Segway cargo |
+| Butcher's hook |
+| Microwave |
+| Hydroponic tray |
+| Alcohol dispenser |
+| Altar |
+| Clown statue |
+
+## Steal the animal
+The goal is to steal and have said animal next to you by the end of the round. The animal must be alive.
+
+| Animal |
+|--------|
+| any animal with a name |
+
+## Collecting
+the goal is to accumulate a large number of specific items and have them with you by the end of the round. 
+
+| Item |
+|------|
+| Toy figures |
+| id cards |
+| encryption keys |
+| Stun batons |
+| Handcuffs |
+| Syringes |
+| Body bags |
+| Anomaly analyzers |
+| Borg parts |
+| Insulating gloves |
+| Engineering glasses |
+| Any type of rare resoures (gold, silver, plasma) |
+| Credits |
+| Botanical hatchers |
+| ? |
+
+## Expected gameplay
+Given the restriction on violence, gameplay as a thief involves maximum stealth. The thief evaluates the quests he has received, and chooses 2 sets of items to choose from that can help him best. The thief tries to steal the specified targets stealthily, trying not to get caught. If caught, the thief may not fight. But even the specified list of targets does not allow the security service to execute him or put him permanently in a cell. 
+
+This means that a thief, once released, can always try again.
