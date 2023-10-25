@@ -90,7 +90,7 @@ The goal is to steal and have said animal next to you by the end of the round. T
 
 | Animal |
 |--------|
-| any animal with a name |
+| any animal with a name (except Ian) |
 
 ## Collecting
 the goal is to accumulate a large number of specific items and have them with you by the end of the round. 
