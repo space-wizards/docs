@@ -22,6 +22,11 @@ Something like
 1: Serve your owner (name).
 2: Follow your directives.
 
+or just default
+
+### Intelli-cards
+This will allow arteficial lifeforms to be taken out and uploaded to another machine, for now this will just be a synthetic borg mind. But in the future when we have AI you should be able to upload your pai as the brand new AI.
+
 ### pAI apps
 And the reason I made this design document. pAI application will allow the pAI to access new features! The idea is that the pAI (or the owner) can choose the apps to download to suit their owner. Every app they download will consume space on their limited memory. Which can't be removed after until the pAI is wiped.
 
