@@ -30,6 +30,7 @@ You need to have:
 + ASP .NET Core 6 Runtime
 
 Both of these can be found at the [.NET 6 download page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+
 On Linux/MacOS use your favourite package manager (apt, dnf, pacman, brew etc)
 
 ### 2. Build
