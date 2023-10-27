@@ -169,43 +169,7 @@ This is for people running their own codebase and server and/or those who want a
 [`SS14.Watchdog`](https://github.com/space-wizards/SS14.Watchdog/) (codename Ian) is our server-hosting wrapper thing, similar to TGS for BYOND (but much simpler for the time being). It handles auto updates, monitoring, automatic restarts, and administration. We recommend you use this for proper deployments.
 
 ### Installation
-1. Download or clone the latest `SS14.Watchdog` source code (linked above)
-2. Run `dotnet publish -c Release -r linux-x64 --no-self-contained`, replacing `linux-x64` with an identifier for your platform
-3. Copy the `SS14.Watchdog/bin/Release/net6.0/linux-x64/publish` directory (check this path for your platform as necessary) to where you want to store your SS14 server files.
-
-### Configuration
-Configure the watchdog to add servers. Edit `appsettings.yml` inside the installed watchdog directory.
-
-1. Uncomment and set `BaseURL`. This is the address that your game servers will use to communicate with the watchdog. The default value is fine for small setups. For example:
-    ```yml
-    BaseUrl: https://builds.spacestation14.io/watchdog/
-    ```
-
-2. At the bottom of the config file, add a `Servers` YAML block, and then a `Instances` block inside of that. Inside the `Instances` block, add a block for each server that you plan to serve from this watchdog. For example:
-
-    ```yml
-
-    Servers:
-      Instances:
-        wizards_den: # ID of your server.
-          Name: "Wizard's Den" # Name of the server - Note that this is NOT the name of the server on the hub, that is set for each server under game.hostname in their respective config.toml files.
-          ApiToken: "foobar" # A secret password that you make up (API token) for the watchdog to control this server (e.g. update, restart)
-          ApiPort: 1212 # API port OF THE GAME SERVER. This has to match the 1212 HTTP status API (described below). Otherwise the watchdog can't contact the game server for stuff.
-
-          # Auto update configuration. This can be left out if you do not need auto updates. Example is for our officially hosted builds.
-          # See below for alternatives.
-          UpdateType: "Manifest"
-          Updates:
-            ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
-
-          # Any environment variables you may want to specify.
-          EnvironmentVariables:
-            Foo: bar
-        wizards_den_two:
-          # Name of the second server
-          Name: "Wizard's Den 2"
-          # etc...
-    ```
+[`Refeer to this`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for intructions on building and configuring Watchdog.
 
 ### Server Instance Folder
 
