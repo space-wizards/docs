@@ -123,6 +123,8 @@ Design Proposals
 
 ----------------------
 
+- [Security Genpop Rework](en/proposals/genpop_security.md)
+
 Server Hosting
 ==============
 
