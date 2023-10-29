@@ -336,6 +336,35 @@ nowish = datetime.datetime.now().isoformat()
 print(json.dumps({"builds":{nowish: {"time": nowish, "client": {"url": "", "sha256": ""}, "server": {"linux-x64": {"url": "http://localhost:9283/SS14.Server_linux-x64.zip", "sha256": ""}}}}}))
 ```
 
+## Systemd service
+
+To allow the service to automatically start up with the server, you can make a service file. It will look something like this.
+
+Of course, change it to the actual directory of your watchdog.
+
+```/etc/systemd/system/SS14.Watchdog.service```
+```toml
+[Unit]
+Description=SS14 Watchdog
+After=network.target
+
+[Service]
+ExecStart=/path/to/SS14.Watchdog
+WorkingDirectory=/path/to
+Restart=always
+# This is used for git method to not fail instantly.
+Environment="DOTNET_CLI_HOME=/tmp"
+
+[Install]
+WantedBy=default.target
+```
+Now reload your systemd daemon and enable the service as you normally would.
+
+```
+systemctl daemon-reload
+systemctl enable --now SS14.Watchdog
+```
+
 ## General Troubleshooting
 
 ### Server keeps restarting every 30 seconds
