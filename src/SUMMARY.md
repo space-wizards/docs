@@ -117,14 +117,15 @@ Space Station 14
 
 Design Proposals
 ================
+
+----------------------
+
 - [Anomaly cores](en/proposals/anomaly-cores.md)
 - [PDA messaging](en/proposals/pda-messaging.md)
 - [Plant genetics](en/proposals/deltanedas-plant-genetics.md)
+- [Security Genpop Rework](en/proposals/genpop_security.md)
 - [Game Director](en/proposals/game-director.md)
 
-
-
-----------------------
 
 Server Hosting
 ==============
