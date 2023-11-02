@@ -38,9 +38,9 @@ Now that you have Git installed, I recommend you read up a bit on the basics of 
 
 Now that you're feeling a bit more comfortable with the basics of Git, let's talk about utilizing it here. We're going to run through the process of setting up a Git environment for Space Station 14 so that you can **contribute code through pull requests, create your own codebase**, or just **check out the history of the project.**
 
-### 1.1 Why are we even using Git?
+### 1.1 Why are we using Git?
 
-Git is **version-control software**--basically, it's an easy way to track changes to the code, and manage those changes without headaches. It's an invaluable tool for software development, because it easily lets you make new changes, view different changes, see who made changes, etc. without having to coordinate and tabulate everything yourself.
+Git is **version-control software**--basically, it's an easy way to track changes to the code, and manage those changes without giving yourself and others headaches. It's an invaluable tool for software development, because it easily lets you make new changes, view different changes, see who made changes, etc. without having to coordinate and tabulate everything yourself.
 
 GitHub is an online service that hosts Git **repositories** (codebases) for easy collaboration. It's perfect for a codebase like SS14, with lots of contributors and lots of history. It also means that we're *open-source*--anyone can go to our GitHub and download the code!
 
@@ -48,23 +48,23 @@ GitHub is an online service that hosts Git **repositories** (codebases) for easy
 
 Like I said before, a repository is just a codebase. Repositories contain some **branches**, and those branches contain different **commits**. You might have heard of both of these--I'll talk more about them in depth later.
 
-A **remote** repository is just a repository's that's on GitHub. A **local** repository is one that's actually on your computer.
+A **remote** repository is just a repository's that's on GitHub. A **local** repository is one that's actually stored on your computer.
 
 ### 2.1 Creating your remote repository
 
-First, let's make our own remote repository fork of Space Station 14. You'll need a GitHub account for this, of course. 'Forking' it like this just means you're copying all of the repository's history and changes into your own remote repository so that you can do stuff freely to the code.
+First, let's make our own remote repository fork of Space Station 14. You'll need a GitHub account for this, so feel free to make an account [GitHub](https://github.com/). 'Forking' it like this just means you're copying all of the repository's history and changes into your own remote repository so that you can do stuff freely to the code.
 
-Your remote repository doesn't automatically update with changes from the original SS14 repo--you'll have to do that yourself, which I'll talk about later.
+Your remote repository doesn't automatically update with changes made to the original SS14 repo--you'll have to do that yourself, which I'll talk about later.
 
 Navigate to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) and click here:
 
 ![](https://i.imgur.com/lAHNHdD.png)
 
-From there, it'll ask you where to fork it and what to name it--just to your regular account, and name it whatever you please! I'd stick with `space-station-14` if you just want to help out with development, though.
+From there, it'll ask you where to fork it and what to name it--just to your regular account, and name it whatever you please! For the sake of keeping things organized though I'd stick with `space-station-14` if you're looking to help out with development, though.
 
 ### 2.2 Creating your local repository
 
-Now, we'll need to download our remote repository onto our computer (**cloning**) so we can add ~~20 pairs of clown shoes to every locker~~ some changes to it. You *can* technically change your remote repository (GitHub has some nice tools), but having it on your computer means you use IDEs like Visual Studio or Rider to build the game and run tests, as well as handle Git stuff easily.
+Now, we'll need to download our remote repository onto our computer (**cloning**) so we can start adding some changes to it. You *can* technically change your remote repository (GitHub has some nice tools), but having it on your computer means you use IDEs like Visual Studio or Rider to build the game and run tests, as well as handle Git stuff easily.
 
 For every step, there will be screenshots and instructions for Git Bash, SmartGit, and TortoiseGit on Windows.
 
