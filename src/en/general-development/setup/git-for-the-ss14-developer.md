@@ -16,7 +16,7 @@ For the best results, please avoid using GitKraken or GitHub Desktop. While GitK
 
 If you were previously following our **"Setting up a Development Environment"** guide, you probably already have Git installed. If not, go to [their website](https://git-scm.org) and install it now. This will install the Git backend, as well as Git Bash (a command line interface or CLI for interacting with Git) if you select that option-- it's one of the many ways you can actually use Git. 
 
-If you're on Linux, you'll probably just be using Git through your terminal or whichever IDE you've chosen, and chances are you have it installed already. If not, feel free to head to (https://git-scm.com/download/linux) and find your distribution's instructions for installation. 
+If you're on Linux, you'll probably just be using Git through your terminal or whichever IDE you've chosen, and chances are you have it installed already. If not, feel free to head to [Git for Linux](https://git-scm.com/download/linux) and find your distribution's instructions for installation. 
 
 I highly recommend at least trying Git Bash (as will a lot of our developers), but there are friendlier alternatives many use that I'll be showing steps for here as well:
 
@@ -28,15 +28,15 @@ I won't have steps for these (I'm recommending these after I initially wrote thi
 - [Fork](https://git-fork.com/) -- fast and extremely ergonomic GUI, my personal favorite. "Non-free", but it's WinRAR-level non-free, so it's basically free. Has support for partial staging of
 - [Sublime Merge](https://www.sublimemerge.com/) -- very similar to Fork, looks and feels great and I've gotten a lot of recommendations for it, though I haven't used it much. Also has support for partial staging.
 
-Most IDEs have some form of Git integration aswell. [Jetbrains Rider](https://www.jetbrains.com/rider/)'s Git integration is really good (and I personally recommend Rider for everything SS14-development related). Visual Studio has an integration as well, more info on it can be found at (https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022). 
+Most IDEs have some form of Git integration aswell. [Jetbrains Rider](https://www.jetbrains.com/rider/)'s Git integration is really good (and I personally recommend Rider for everything SS14-development related). Visual Studio has an integration as well, more info on it can be found at [Visual Studio Git](https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022). 
 
-While you're here, install `Python 3.7+` as well if you don't have it already. You can do that [here](https://www.python.org/) for Windows and Mac, and if you're on Linux you almost certainly have Python installed already. If you don't, figure it out yourself, dork!
+While you're here, install `Python 3.7+` as well if you don't have it already. You can do that [here](https://www.python.org/) for Windows and Mac, and if you're on Linux you almost certainly have Python installed already. If you don't or you're not quite sure, a guide to installing Python on Linux can be found here [Python Linux Guide] (https://docs.python-guide.org/starting/install3/linux/).
 
 <hr>
 
-Now that you have Git installed, I recommend you read up a bit on the basics of it first and get acquainted with whatever git client you're working with, whether its just command-line (Git Bash) or anything else.
+Now that you have Git installed, I recommend you read up a bit on the basics of it first and get acquainted with whatever git client you're working with, whether its just command-line (Git Bash) or anything else. For instance, a guide to GitBash can be found here [Git Bash Guide](https://www.atlassian.com/git/tutorials/git-bash).
 
-We're going to run through the process of setting up a Git environment for Space Station 14 so that you can **contribute code through pull requests, create your own codebase**, or just **check out the history of the project.**
+Now that you're feeling a bit more comfortable with the basics of Git, let's talk about utilizing it here. We're going to run through the process of setting up a Git environment for Space Station 14 so that you can **contribute code through pull requests, create your own codebase**, or just **check out the history of the project.**
 
 ### 1.1 Why are we even using Git?
 
