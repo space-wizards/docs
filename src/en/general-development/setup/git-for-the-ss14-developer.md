@@ -1,22 +1,22 @@
 # Git for the SS14 Developer
 
-If you've ever followed a hackily written guide to Git or opened up one of the many incredibly bloated modern git GUIs like GitKraken, you probably recognize that Git can be *really confusing*. The purpose of this guide is to give you just the information you need to develop properly for SS14 and give you the resources to learn more if necessary.
+If you've ever attempted to follow a written guide to Git or opened up one of the many modern git GUIs like GitKraken that often suffers from bloat, you probably recognize that Git can be *really confusing*. The purpose of this guide is to give you just the information you need to develop properly for SS14 and give you the resources to learn more if necessary.
 
 Here are some more resources for learning about Git:
 - [The Git-SCM online book](https://git-scm.com/book/en/v2)
-- [Atlassian's git guides](https://www.atlassian.com/git/tutorials/setting-up-a-repository). Good guides for some more advanced stuff
-- [Oh shit, Git?!](https://ohshitgit.com/), a list of solutions to common git problems. This one will come in handy.
+- [Atlassian's git guides](https://www.atlassian.com/git/tutorials/setting-up-a-repository). Good guides for some more advanced aspects of Git.
+- [Oh shit, Git?!](https://ohshitgit.com/), A list of solutions to common git problems, very handy to have available.
 - [Learn Git Branching](https://learngitbranching.js.org/). This one is interactive, and very in-depth, but you **will have learned Git by the end of it**. Recommended for intermediate Git users.
 
 ## 1. Setting up Git itself
 
 ```admonish danger "DO NOT USE GITKRAKEN"
-For the love of god do not install GitKraken or GitHub Desktop. I have felt nothing but endless CBT trying to help people using either of them. I know GitKraken looks all professional and GH Desktop is nice and simple but please do not use either of them unless you know what you are doing.
+For the best results, please avoid using GitKraken or GitHub Desktop. While GitKraken certainly comes across as a very polished product, both it and GitHub Desktop have a series of confusing aspects. These should be left alone unless you're already comfortable with GitHub. This guide will not cover their use. 
 ```
 
-If you were following our **"Setting up a Development Environment"** guide, you probably already have Git installed. If not, go to [their website](https://git-scm.org) and install it now. This will install the Git backend, as well as Git Bash (if you select that option)--one of the many ways you can actually use Git. 
+If you were previously following our **"Setting up a Development Environment"** guide, you probably already have Git installed. If not, go to [their website](https://git-scm.org) and install it now. This will install the Git backend, as well as Git Bash (a command line interface or CLI for interacting with Git) if you select that option-- it's one of the many ways you can actually use Git. 
 
-If you're on Linux, you'll probably just be using Git through your terminal or whichever IDE you've chosen, and chances are you have it installed already.
+If you're on Linux, you'll probably just be using Git through your terminal or whichever IDE you've chosen, and chances are you have it installed already. If not, feel free to head to (https://git-scm.com/download/linux) and find your distribution's instructions for installation. 
 
 I highly recommend at least trying Git Bash (as will a lot of our developers), but there are friendlier alternatives many use that I'll be showing steps for here as well:
 
@@ -28,7 +28,7 @@ I won't have steps for these (I'm recommending these after I initially wrote thi
 - [Fork](https://git-fork.com/) -- fast and extremely ergonomic GUI, my personal favorite. "Non-free", but it's WinRAR-level non-free, so it's basically free. Has support for partial staging of
 - [Sublime Merge](https://www.sublimemerge.com/) -- very similar to Fork, looks and feels great and I've gotten a lot of recommendations for it, though I haven't used it much. Also has support for partial staging.
 
-Most IDEs have some form of Git integration aswell. [Jetbrains Rider](https://www.jetbrains.com/rider/)'s Git integration is really good (and I personally recommend Rider for everything SS14-development related). I don't recommend Visual Studio's Git integration, because it's.. not very good.
+Most IDEs have some form of Git integration aswell. [Jetbrains Rider](https://www.jetbrains.com/rider/)'s Git integration is really good (and I personally recommend Rider for everything SS14-development related). Visual Studio has an integration as well, more info on it can be found at (https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022). 
 
 While you're here, install `Python 3.7+` as well if you don't have it already. You can do that [here](https://www.python.org/) for Windows and Mac, and if you're on Linux you almost certainly have Python installed already. If you don't, figure it out yourself, dork!
 
