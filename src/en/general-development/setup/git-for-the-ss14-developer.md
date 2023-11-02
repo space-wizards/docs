@@ -770,3 +770,7 @@ git checkout [username]/[branch name]
 ```
 
 This also lets you make PRs to their remote branch, if you so desired.
+
+# Conclusion
+
+All in all, that should provide you with a solid starting foundation for Git so that you can start to make your own contributions to SS14! Feel free to to take a look at some of the linked resources for more advanced Git when you feel ready. Beyond that, feel free to reach out to the community for more help with Git and getting started coding in general. Good luck and have fun!
