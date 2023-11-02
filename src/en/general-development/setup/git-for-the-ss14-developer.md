@@ -73,7 +73,7 @@ Navigate to somewhere on your computer where you want to put the local repositor
 <details><summary>TortoiseGit</summary>
 <p>
 
-Right click to see TortoiseGit's context menu stuff:
+Right click to see TortoiseGit's context menu:
 
 ![](https://i.imgur.com/QGmrQmH.png)
 
@@ -135,27 +135,27 @@ Every Git command will look something like this--`git` and then a keyword like `
 
 <hr>
 
-After this completes, you have a local repository that you can now modify! There's still some more setup to go through, though.
+After this completes, you have a local repository that you can now modify! There's still some more setup to go through though.
 
 ### 2.3 Submodule woes
 
-**Pay attention to this!** If you don't do this, you'll get a lot of weird errors about stuff not being available when you actually try to build the game.
+**Very important, please pay attention to this!** If you don't do this, you'll get a lot of undesireable errors about things not being available when you actually try to build the game.
 
 Space Station 14 has a *lot* of submodules--most notably our engine, RobustToolbox. Submodules are just repositories inside a repository, and they need to be updated manually by you. Or do they?
 
 We have an automatic submodule updater so you don’t have to worry about running `git submodule update --init --recursive` (the command for manually updating submodules) all the time.
 
-Run `RUN_THIS.py` inside the repo you downloaded with Python. Preferably from a terminal too (`python RUN_THIS.py` or `python3 RUN_THIS.py`). This should take a few seconds so if it instantly stops you probably aren’t using Python 3.7+ or something.
+Run `RUN_THIS.py` inside the repo you downloaded with Python. Preferably from a terminal too (`python RUN_THIS.py` or `python3 RUN_THIS.py`). This should take a few seconds so if it instantly stops there's a reasonable chance you aren’t using Python 3.7 or greater.
 
 If you are on Windows and get redirected to the Microsoft Store or encounter a message in your terminal claiming that Python is not installed when you attempt to run the above command, you will need to disable the Microsoft shortcut that might be causing this issue. You can do this by searching for `Manage App Execution Aliases` in the Windows search and then turning off the two Python references.
 
 If you do want to modify the engine directly however, or you want to update the submodule manually (the auto updating can be a pain occasionally), make a file called DISABLE_SUBMODULE_AUTOUPDATE inside the BuildChecker/ directory.
 
-If you ever need to manually update RobustToolbox for whatever reason you can use `cd RobustToolbox; git checkout v0.4.87`(replace `v0.4.87` with the latest RobustToolbox release) then you can use `cd..\` to get back into your SS14 repo. This is also an example of using `cd` to navigate files from the comfort of your command line.
+If you ever find yourself needing to manually update RobustToolbox you can use `cd RobustToolbox; git checkout v0.4.87`(replace `v0.4.87` with the latest RobustToolbox release) then you can use `cd..\` to get back into your SS14 repo. Note that this is also an example of using `cd` to navigate files from the comfort of your command line.
 
 ## 3. Setting up remotes
 
-When you cloned your remote repository, a **remote** was automatically added to your local repository. **Remotes** are just named URLs to remote repositories that Git keeps track of so you can do stuff like download (pull) new changes to the code or upload (push) code to your forked repository. 
+When you cloned your remote repository, a **remote** was automatically added to your local repository. **Remotes** are just named URLs to remote repositories that Git keeps track of so you can download (pull) new changes to the code or upload (push) code to your forked repository. 
 
 In this case, the remote automatically added is called`origin` and it points to `https://github.com/[username-here]/space-station-14` (or whatever you named the remote repository).
 
@@ -193,19 +193,19 @@ One issue: we don't have a reference to the original `space-wizards/space-statio
 
 All this does is add a new remote named `upstream` that points to the original `space-wizards/space-station-14` repository. Now we can receive updates from the main repository whenever we want! (see below on how to do that). 
 
-The convention is to call the remote pointing to the original repository `upstream` but you can technically call it whatever you like. I'll be referring to it as 'the upstream', though, and it's terminology Git guides use as well.
+The convention is to call the remote pointing to the original repository `upstream` but you can technically call it whatever you like. From here on out we'll be referring to it as 'the upstream', as it's terminology Git guides often use as well.
 
 ## 4. Branching & Commits
 
-Branches and commits are two of the most important concepts in Git, and most of the work you do will revolve around them.
+Branches and commits are two of the most important concepts in Git, and the majority of the work you do will revolve around them.
 
 ### 4.1 Whats a commit?
 
-Like I mentioned before, **commits** are just packaged up changes to the code. As the developer, you choose which changes go into a commit and when to commit those changes. **Committing** refers to creating a commit, and it essentially makes a save point that you can go back to at any time.
+Like I mentioned before, **commits** are just packaged up changes to the code. As the developer, you choose which changes go into a commit and when to commit those changes. **Committing** refers to creating a commit, and the core idea behind it is that it makes a save point that you can go back to at any time.
 
 Commits have an author, timestamp, a message, and some code changes attached to them. They also have a really long 'commit hash', a unique identifier used to refer to different commits.
 
-Commits are how history is built up--you can actually view the history of every single commit made to the SS14 repository from the beginning, which is pretty cool:
+Commits are how history is built up--you can actually view the history of every single commit made to the SS14 repository from the beginning, which can give you an intersting timeline into the game:
 
 ![](https://i.imgur.com/HQDdw6h.png)
 
@@ -213,17 +213,17 @@ Commits are how history is built up--you can actually view the history of every 
 
 ### 4.2 What's a branch?
 
-**Branches** are very, very important. They're basically just a list of changes to the code (commits). The default branch is 'master', and all of our servers use that branch to compile the code. 
+**Branches** are an absolutely vital concept. At their core, branches are separate copies/versions of the code (commits) that branch off of the main code. The default branch is 'master', and all of our servers use that branch to compile the code. 
 
 You're pretty much always 'on a branch' when you're working with your code, and you can switch which branch you're working on easily.
 
 Generally, branches are named for whatever you're going to be working on in them, but it doesn't *really* matter what they're named.
 
-You can make as many branches as you like. When you create a branch, it 'branches out' (no shit, really?) from the current branch you're on and becomes its own independent thing you can add commits to. 
+You can make as many branches as you like. When you create a branch, it 'branches out' from the current branch you're on and becomes its own independent thing you can add commits to. 
 
 ![](https://i.imgur.com/ByMugxu.png=500x300)
 
-In this diagram, each little node is a different commit, and each color is a different branch.
+In this diagram, each little node is a different commit, and each color is a different branch. As you can see, enough branches and you start to get a proper code tree!
 
 #### Branch merging
 
@@ -240,15 +240,15 @@ Pull requests show all this info very well:
 
 In this pull request, Swept started out by creating a new branch. Since he now had a fresh branch free of interference to work with, he started working on the feature and created commits to 'save his progress' whenever he felt it was necessary. These commits were added to the branch sequentially, and you can see the evolution of the branch as more code was written. We'll talk more about pull requests later.
 
-#### But whyyy?
+#### But why branch?
 
-Okay, technically, sure, you can just do all of your work on the `master` branch and pull request from there. But, creating different branches makes it easy to understand where you are, how many changes you've made, and it makes it possible to work on multiple features at once.
+Sure, you can just do all of your work on the `master` branch and pull request from there. But, creating different branches makes it easy to understand where you are, how many changes you've made, and it makes it possible to work on multiple features at once.
 
-Also we'll close your PR if it's from your `master` branch (it can very easily cause issues) so don't do it.
+Also, as a note, we'll close your PR if it's from your `master` branch (it can very easily cause issues) so avoid doing it.
 
 ### 4.3 Making and working with branches
 
-Making branches is pretty easy. Let's make a new branch called `funny-feature`:
+Making branches is quite simple. Let's make a new branch called `funny-feature`:
 
 <details><summary>TortoiseGit</summary>
 <p>
@@ -284,7 +284,7 @@ The `-b` in `git checkout` here means 'checkout this branch, and create it if it
 
 Now, you can work freely with this branch as you please without fear of messing up your all-important master branch.
 
-Switching between branches is pretty easy: it's called **checking out** a branch. When you do this, your files and folders locally will be changed to match the branch, so Git will yell at you if you have local changes and you try to check out.
+Switching between branches is also quite easy: it's called **checking out** a branch. When you do this, your files and folders locally will be changed to match the branch, so Git will warn you if you have local changes and you try to check out.
 
 Checking out a branch:
 
@@ -314,13 +314,13 @@ Checking out a branch:
 
 <hr>
 
-Then, make whatever local changes you want! It doesn't really matter. Make a new file, delete everything, change one line in a file, etc. It won't affect your `master` branch, because this is`funny-feature` land now!
+Then, feel free to make whatever local changes you want! It won't have a direct impact on your `master` branch. Make a new file, delete everything, change one line in a file, etc. It won't affect your `master` branch, because we're in the `funny-feature` branch!
 
 ### 4.4 Staging and committing changes to your branch
 
 One more important thing: Before you can `commit` your changes, you have to `add` your changes to the **staging area**. All this means is that you're specifying which files you want to commit. This is helpful, because you *almost never* want to commit submodule changes, so you avoid that by not adding them to the staging area. 
 
-As mentioned before, commits always come with a message, which is just a short, imperative description of what's being done in that commit. Or you can be a chad and name every commit "changes stuff", up to you.
+As mentioned before, commits always come with a message, which is just a short, imperative description of what's being done in that commit.
 
 If you want to see what you've currently changed, and what's in the staging area, it's pretty easy:
 
@@ -329,7 +329,7 @@ If you want to see what you've currently changed, and what's in the staging area
 
 ![](https://i.imgur.com/xmZKKWJ.png)
 
-TortoiseGit also shows changed files/folders (a red icon in the bottom right) in the Windows Explorer which is really nice and why I have it installed in the first place.
+TortoiseGit also shows changed files/folders (a red icon in the bottom right) in the Windows Explorer which is very user friendly and why I have it installed in the first place.
 
 </p>
 </details>
@@ -339,7 +339,7 @@ TortoiseGit also shows changed files/folders (a red icon in the bottom right) in
 
 ![](https://i.imgur.com/ROsurs1.png)
 
-This is assuming you installed SmartGit with the option that the main window shows diffs and status. If you didn't, I don't really know where it is.
+This is assuming you installed SmartGit with the option that the main window shows diffs and status.
 
 </p>
 </details>
@@ -384,11 +384,11 @@ Now that you've verified that all of these changes look good, we'll add them to 
 
 <hr>
 
-Woo, we've committed our changes to a branch! Now that they're committed, they're in the history of the branch forever (sort of). We can do a lot of things now: merge our `funny-feature` into our local `master` branch (if we wanted, for some reason), upload (push) our `funny-feature` branch to our remote repository, or nuke the branch entirely (among other things). We'll opt for pushing the branch and making a pull request now.
+Great news, we've committed our changes to a branch! Now that they're committed, they're in the history of the branch forever (sort of). We can do a lot of things now: merge our `funny-feature` into our local `master` branch (if we wanted), upload (push) our `funny-feature` branch to our remote repository, or delete the branch entirely (among other things). We'll opt for pushing the branch and making a pull request now.
 
 ## 5. Pushing and making a PR
 
-A **pull request** is a GitHub-specific thing. It just means that you want a codebase to merge your changes on one of your branches into one of their branches--usually to their `master` branch. Before we can do this, our remote GitHub repository (origin) needs to know about the beautiful branches and commits we've created locally, so we upload or **push** those changes to the remote.
+A **pull request (PR)** is specific to GitHub. It just means that you want a codebase to merge your changes on one of your branches into one of their branches--usually to their `master` branch. Before we can do this, our remote GitHub repository (origin) needs to know about the branches and commits we've created locally, so we upload or **push** those changes to the remote.
 
 ### 5.1 Pushing commits
 
@@ -428,7 +428,7 @@ Selecting 'push all branches' does what it says on the tin. Can be useful.
 
 ### 5.2 Making a pull request
 
-Now, the fun part. We'll go to GitHub now and make a pull request for our funny feature.
+Now, the fun part. We'll go to GitHub now and make a pull request for our funny feature branch.
 
 ![](https://i.imgur.com/YNmEMtG.png)
 
@@ -438,9 +438,9 @@ Add a description, a nice title, some screenshots, and hopefully it gets merged.
 
 Maybe it's been a while, a week or two, since your last pull request, and you'd like to make another. Before you do anything, you need to download (**pull**) the code changes from the main SS14 repository into your local repository. If you don't, you'll have out-of-date code and your local changes may not be accurate to how the game will actually run--you might even get **merge conflicts** when you try to PR.
 
-There are two ways to update your repository. Both methods assume you have the `upstream` remote set up properly--if not, go back to earlier in the guide.
+There are two ways to update your repository. Both methods assume you have the `upstream` remote set up properly--if not, go back to earlier in the guide in order to get that set up.
 
-The first method, **fetch+merge**, gives you more control but can be confusing. The second method, **pulling**, is simple and easy but doesn't give you much control. However, pulling is usually all you need.
+The first method, **fetch+merge**, gives you more control but can be confusing. The second method, **pulling**, is simple and easy but doesn't give you much control. However, pulling is usually all you need. 
 
 ### 6.1 Fetch + merge method
 
@@ -467,7 +467,7 @@ Make sure you select `upstream` and not origin!
 
 ![](https://i.imgur.com/CNFFJJ8.png)
 
-I think smartgit fetches from all remotes when you click this?????
+I believe smartgit fetches from all remotes when you click this.
 
 If it doesn't and it just fetches from origin, go to the bottom left and do this:
 
@@ -559,20 +559,20 @@ First, checkout your `master` branch. We covered this earlier. Then,
 
 <hr>
 
-If either method went well, you've successfully updated your master branch (or whichever branch you chose to update)! Do this regularly, and always before you start work on a new branch.
+If either method went well, you've successfully updated your master branch (or whichever branch you chose to update)! Do this regularly, and always before you start work on a new branch. For a bit of a deeper dive into pulling versus fetching, see here [fetch/pull](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-pull-vs-fetch-Whats-the-difference). 
 
 # Addendums
 
 ## 1. Things to keep in mind
 
-You've more or less learned the workflow for developing features for SS14 Git-wise, but here's some things I'd really like to hammer into your mind:
-- When creating a new feature, *always always always* create a new branch off of `master` before committing anything. If you accidentally commit your physics changes to your bike horn branch, you're not in for a fun time, but it is fixable (see Oh Shit, Git?! above)
-- **Never, ever commit RobustToolbox or any submodules like Lidgren.Network** unless you know what you're doing. In the top-level local repository, these submodules are considered 'files', so it's easy to accidentally stage and commit them. Do not do this. See below for how to fix your fuckups if it happens.
+You've more or less learned the workflow for developing features for SS14 Git-wise, but here's are key points I'd really like to hammer home:
+- When creating a new feature, *always* create a new branch off of `master` before committing anything. If you accidentally commit your physics changes to your bike horn branch, you're not in for a fun time, but it is fixable.
+- **Never, ever commit RobustToolbox or any submodules like Lidgren.Network** unless you have absolute confidence you know what you're doing. In the top-level local repository, these submodules are considered 'files', so it's easy to accidentally stage and commit them. Do not do this. See below for how to fix your mistakes if it happens.
 - If you need further help with Git, feel free to ask in the SS14 Discord in #howdoicode.
 
 ## 2. A quick example workflow
 
-To get everything in your head and to summarize it all, here's an example workflow for making several pull requests using Git Bash commands.
+To get everything nicely lined up and to summarize it all, here's an example workflow for making several pull requests using Git Bash commands.
 
 ```python
 git checkout master # Before we create a new branch, we should be on master.
@@ -647,7 +647,7 @@ Just for reference, here's a little glossary of Git concepts and terms explained
 - **'Pull requests'** are a GitHub-specific action that allow you to request that your local branch and all of its changes is merged into another repository's branch.
 - **'Pushing'** is the act of integrating your local changes into a remote repository.
 
-There are way more commands and concepts than this, but this is all you *really* need to know for basic development work.
+There are way more commands and concepts than this, but this will serve as the core you need to know for basic development work.
 
 
 # Appendix A: Helpful tips and tricks
@@ -656,18 +656,16 @@ There's some stuff I didn't cover, but you'll almost inevitably have to do at so
 
 One note since it comes up a lot here: **`HEAD` is a fancy name for the commit that you're currently on**. Nothing more than that. Branches are also technically fancy names for commits, but you don't need to know that yet.
 
-A lot of these can be found probably more eloquently in Oh Shit, Git?! (see resources above)
+A lot of these can be found probably more eloquently in the resources at the top of the page.
 
 
 ## Resolving merge conflicts
 
-*WIP i'll write a better guide for this later because it's important*
-
-A nasty little maintainer has told you to 'resolve conflicts' or your PR 'wont be merged'. What an asshole! Thankfully, it's not too hard.
+A nasty little maintainer has told you to 'resolve conflicts' or your PR 'wont be merged'. Uh oh! Thankfully, it's not too hard.
 
 First, you're going to want to update your local `master branch`. See above for how to do that.
 
-When you run `git merge master [local branch]`, it'll either do it cleanly (woohoo) or tell you you have to resolve conflicts (wahhhh). 
+When you run `git merge master [local branch]`, it'll either do it cleanly or tell you you have to resolve conflicts. 
 
 All you need to do to resolve conflicts manually is go into the files that are conflicting, remove all the `>>>>HEAD` and `===== <<<<master` nonsense (just notates where the changes originated) and then edit the file so that it properly integrates both sets of changes. Sometimes this is easy, sometimes it's hard. If it's hard, you probably know what you're doing. After that, just `git commit`.
 
@@ -689,7 +687,7 @@ This just means 'change the working tree to the current commit, before any local
 
 ## Unstaging changes
 
-Ah shit, I just staged RobustToolbox by accident. No fear!
+Oh no, I just staged RobustToolbox by accident. No fear!
 
 ```
 git reset HEAD [file]
@@ -703,13 +701,13 @@ git reset HEAD
 
 ## Reverting a commit you made
 
-Oh shit, your xenomorph erotica made its way into a commit/you accidentally committed a submodule! What now? Well, there's two solutions:
+Oh no, your xenomorph poetry made its way into a commit/you accidentally committed a submodule! What now? Well, there's two solutions:
 
 ```
 git revert HEAD
 ```
 
-This makes a new commit undoing the current commit, and then commits it. Hehe commit. 
+This makes a new commit undoing the current commit, and then commits it. 
 
 If you want to undo a different commit, you can check its hash in `git log --oneline` and then call `git revert [commit hash]`. Git has a more robust system for doing this; you can do `git revert HEAD~1` to undo the commit before your current one or `git revert HEAD~2` to revert the one before that. The `~1` just means '1 commit before HEAD'.
 
@@ -721,7 +719,7 @@ git reset --hard HEAD~1
 
 **I don't recommend doing this unless you're fully aware of what you're doing.**
 
-For when you REALLY don't want anyone to know about that xenomorph erotica you just made. This method rewrites history, so it isn't the best for a collaborative environment. If you do this, you'll need to force push (`git push origin [branch] --force`) or else it won't work. Force pushing can be dangerous, so again, be sure you know what you're doing.
+For when you REALLY don't want anyone to know about that xenomorph poetry you just made. This method rewrites history, so it isn't the best for a collaborative environment. If you do this, you'll need to force push (`git push origin [branch] --force`) or else it won't work. Force pushing can be dangerous, so again, be sure you know what you're doing.
 
 
 ## Checking out a PR's changes locally
@@ -761,7 +759,7 @@ Now, `git fetch upstream`. This method is great if you're a maintainer, but it a
 
 ### Adding a new remote
 
-This method kinda sucks because it takes a while but if you want to check out someone else's fork of the game and their branches it's pretty nice.
+This method is somewhat poor because it takes a while but if you want to check out someone else's fork of the game and their branches it's pretty nice.
 
 Not actually that hard but its confusing if you don't know Git very well. Set up a remote to the user's remote repository, fetch their branches, and then checkout their branch:
 
