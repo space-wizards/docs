@@ -6,7 +6,7 @@ This is the developer's wiki. If you are a player, you are looking for [the play
 
 ```admonish question "Technical Issues"
 If you are having difficulties with logging into the game or building it, please try the following resources:
-[🔊 Discord](https://discord.com/invite/rGvu9hKffJ). This is the most active community of developers for Space Station 14. Ask a question on the General or Help channel.
+[🔊 Discord](https://discord.gg/ss14). This is the most active community of developers for Space Station 14. Ask a question on the General or Help channel.
 [📲 FAQ](https://spacestation14.io/about/faq/)
 [🎮 Forums](https://forum.spacestation14.io/)
 ```
@@ -31,10 +31,8 @@ If you would like to make contributions to this documentation site, it's hosted 
 * Reading through [Acronyms & Common Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md) as well as the other articles on this wiki in `Tips` or `Setup` will likely help you understand what is happening.
 
 ### What repositories are part of Space Station 14?
-* [Space Station 14](https://github.com/space-wizards/space-station-14/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) is the main codebase. It has the most priority issues. 
-* [Robust Toolbox](https://github.com/space-wizards/RobustToolbox/issues) is the custom game engine.
+* [Space Station 14](https://github.com/space-wizards/space-station-14) is the main codebase. It has the most priority issues. [Space Station 14 Issues](https://github.com/space-wizards/space-station-14/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+* [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) is the custom game engine. [Robust Toolbox Issues](https://github.com/space-wizards/RobustToolbox/issues)
 
-There are other repositories that do not have as many priority issues to work on. If you are still curious about them, they are:
-- [Network](https://github.com/space-wizards/SpaceWizards.Lidgren.Network/issues)
-- [Server Launcher](https://github.com/space-wizards/SS14.Launcher/issues) 
-- [Other](https://github.com/space-wizards) 
+There are other repositories that do not have as many priority issues to work on. If you are still curious about them, they are here:
+- [Space-Wizards](https://github.com/space-wizards) 
