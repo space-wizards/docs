@@ -25,9 +25,9 @@ If you're **unfamiliar with Git**, or just don't know how to proceed, follow the
 
 We have an automatic submodule updater so you don't have to worry about running `git submodule update --init --recursive` all the time. 
 
-Run `RUN_THIS.py` inside the repo you downloaded with Python. Preferably from a terminal too. This should take a few seconds so if it instantly stops you probably aren't using Python 3.7+ or something. Try checking out the troubleshooting at the bottom of this page.
+Run `RUN_THIS.py` inside the repo you downloaded with Python. Preferably from a terminal too. This should take a few seconds so if it instantly stops then check if you are running Python 3.7+ otherwise keep reading.
 
-**If running `RUN_THIS.py` immediately opens and closes a window: do not worry.** This does not mean that it failed. The script closes automatically upon completion, so if you want to verify that it worked properly, check the submodule `/RobustToolbox/` and verify that all the files are there.
+**If running `RUN_THIS.py` immediately opens and closes a window: do not worry.** This does not mean that it failed. The script closes automatically upon completion, so if you want to verify that it worked properly, check the submodule `/RobustToolbox/` and verify that all the files are there. If not try checking out the troubleshooting at the bottom of this page.
 
 Note: If you have any issues when getting started with missing files it's recommended you run `git submodule update --init --recursive` by hand once in case something went wrong with python.
 
@@ -132,3 +132,8 @@ Unhandled exception. Robust.Shared.IoC.Exceptions.ImplementationConstructorExcep
 ```
 
 Uninstall .NET Core SDK x86. Install .NET Core SDK x64.
+
+
+## The client and server aren't available in Visual Studio to configure in Multiple startup projects
+
+This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file. 

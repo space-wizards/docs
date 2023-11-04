@@ -120,6 +120,13 @@ Design Proposals
 
 ----------------------
 
+- [Anomaly cores](en/proposals/anomaly-cores.md)
+- [PDA messaging](en/proposals/pda-messaging.md)
+- [Plant genetics](en/proposals/deltanedas-plant-genetics.md)
+- [Security Genpop Rework](en/proposals/genpop_security.md)
+- [Game Director](en/proposals/game-director.md)
+
+
 Server Hosting
 ==============
 
@@ -132,6 +139,8 @@ Server Hosting
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
+- [Maintenance]()
+  - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
 Other Projects
 ==============
@@ -175,6 +184,7 @@ Maintainer Meetings
 
 ----------------------
 - [2023-09-23](en/maintainer-meetings/maintainer-meeting-2023-09-23.md)
+- [2023-09-09](en/maintainer-meetings/maintainer-meeting-2023-09-09.md)
 - [2023-09-02](en/maintainer-meetings/maintainer-meeting-2023-09-02.md)
 - [2023-08-19](en/maintainer-meetings/maintainer-meeting-2023-08-19.md)
 - [2023-07-29](en/maintainer-meetings/maintainer-meeting-2023-07-29.md)
