@@ -36,7 +36,7 @@ Most of these are ported from TG:
 
 **Encryption Slot**: Allows the pAI to access into other encrypted channels. By default they have access to common and binery like now. 
 
-**Headset connection**: (replacement to above) Allows the pAI to access into other encrypted channels that their owners headset has access to. This will be ranged so if the owner leaves the pai will eventually lose connection to their headset. (the bluetooth device is ready to pair)
+**Headset connection**: (replacement to above) Allows the pAI to access into other encrypted channels that their owners headset has access to. This will be ranged so if the owner leaves the pai will eventually lose connection to their headset. [(da bluetooth davice is ready to pear)](https://www.youtube.com/watch?v=EHLyacdlrvA)
 
 **Crew Manifest**: Access to the crew manifest (probably preinstalled)
 
@@ -45,5 +45,7 @@ Most of these are ported from TG:
 **Digital Messenger**: (Needs PDA Messaging) Allows the pAI to access and talk as their owner to the PDA messaging network. Now you can be a personal secretary! Potencially shows a little pAI icon to show to the other person its a pAI talking.
 
 **Internal GPS**: Shows the pAI their cordinates, they will need to relay this information to their owner.
+
+**Chem Scanner**: Similar to the chem googles, useful for chemists.
 
 **More!**: I don't have ideas that are not ported from TG.
