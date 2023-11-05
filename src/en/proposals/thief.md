@@ -3,7 +3,7 @@ the purpose of this proposal is to add a new minor antagonist to the game, the T
 This antagonist's specialty is stealing various items, structures and animals from the station, without resorting to violence or killing. 
 
 ## Appearance
-Thieves is a small addition to the other game modes. At the moment, thieves can only appear in 2 modes: Traitors and Expanded. There can be only 2 thieves in total, and they are chosen among random players at the beginning of the round. The exceptions are Command and Security players. 
+Thieves is a small addition to the other game modes. At the moment, thieves can only appear in Traitors mode. There can be only 2 thieves in total, and they are chosen among random players at the beginning of the round. The exceptions are Command and Security players. 
 
 When appear, the Thief gains 1 new item, "Pickpocket's Bag", which allows you to choose your play style by giving you starter gear.
 
