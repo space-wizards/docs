@@ -39,35 +39,24 @@ This list should not include items that Traitors require: if they are successful
 
 | Item |
 |------|
-| The cape of a random department head |
-| The seal of a random department head |
-| HoP Ian backpack |
-| Random job PDA |
-| Warden's cap | 
-| Forensic scanner |
-| Security segway key |
-| Security officer hardsuit |
-| Defibrillator |
-| Portable crew monitor |
-| Paramedic hardsuit |
-| Chemical glasses |
-| Positronic brain |
-| C.H.I.M.P. |
-| Research server circuit |
-| Fire axe |
-| Jaws of life |
-| Gas analyzer |
-| Engineer hardsuit |
-| Kinetic gun |
-| Spationaut suit |
-| Evaluation tool |
-| Quartermaster's cap |
-| Butcher knife |
-| Cannabis |
-| Bartender's shotgun |
-| Priest's bible |
-| Mime crayon |
-| Clown bananaphone |
+| Forensic Scanner |
+| AmmoTechFabCircuitboard |
+| ClothingHeadHatWarden |
+| ClothingOuterHardsuitVoidParamed |
+| MedicalTechFabCircuitboard |
+| ClothingHeadsetAltMedical |
+| RnDServerMachineCircuitboard |
+| FireAxe |
+| RCD |
+| AmePart |
+| ExpeditionsCircuitboard |
+| CargoShuttleCircuitboard |
+| SalvageShuttleCircuitboard |
+| ClothingEyesHudBeer |
+| Bible |
+| ClothingNeckGoldmedal |
+| ClothingNeckClownmedal |
+
 
 ## Steal the structure
 the goal is to steal a large object that doesn't fit in your inventory. For the goal to be fulfilled, the structure must be near the thief at the end of the round. 
@@ -100,21 +89,14 @@ the goal is to accumulate a large number of specific items and have them with yo
 
 | Item |
 |------|
-| Toy figures |
-| id cards |
-| encryption keys |
-| Stun batons |
-| Handcuffs |
-| Syringes |
-| Body bags |
-| Anomaly analyzers |
-| Borg parts |
-| Insulating gloves |
-| Engineering glasses |
-| Any type of rare resoures (gold, silver, plasma) |
-| Credits |
-| Botanical hatchers |
-| ? |
+| Head's Cloaks |
+| Head's Bedsheets |
+| Stamps |
+| Door Remotes |
+| Research Disks |
+| Figurines |
+| ID Cards |
+| Cannabis |
 
 ## Expected gameplay
 Given the restriction on violence, gameplay as a thief involves maximum stealth. The thief evaluates the quests he has received, and chooses 2 sets of items to choose from that can help him best. The thief tries to steal the specified targets stealthily, trying not to get caught. If caught, the thief may not fight. But even the specified list of targets does not allow the security service to execute him or put him permanently in a cell. 
