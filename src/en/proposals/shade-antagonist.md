@@ -25,3 +25,5 @@ It creates many roleplay opportunities such as pretending to be schizophrenic or
 ## Potential other additions
 
 There could also be medications that restrict the most powerful of the shade's abilities for short periods (to prevent the player from consuming too many, it could have a low OD rate and a slow metabolism). The abilities that would be restricted would likely be controlling the player's body/forcing them to speak random words.
+
+Idea produced by ubaser on discord, UbaserB on github.
