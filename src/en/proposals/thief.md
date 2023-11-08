@@ -3,7 +3,7 @@ the purpose of this proposal is to add a new minor antagonist to the game, the T
 This antagonist's specialty is stealing various items, structures and animals from the station, without resorting to violence or killing. 
 
 ## Appearance
-Thieves is a small addition to the other game modes. At the moment, thieves can only appear in Traitors mode. There can be only 2 thieves in total, and they are chosen among random players at the beginning of the round. The exceptions are Command and Security players. 
+Thieves is a small addition to the other game modes. At the moment, thieves can only appear in Traitors and Revolution modes. There can be only 2 thieves in total, and they are chosen among random players at the beginning of the round. The exceptions are Command and Security players. 
 
 When appear, the Thief gains 1 new item, "Pickpocket's Bag", which allows you to choose your play style by giving you starter gear.
 
@@ -63,19 +63,17 @@ the goal is to steal a large object that doesn't fit in your inventory. For the 
 
 | Structure |
 |-----------|
-| The fax of a random departament head |
+| Nucler Bomb |
+| The captain fax |
 | Security Segway |
-| Chemmaster |
-| Artefact analyzer |
+| Chemical Dispencer |
 | Alien artifact |
-| Heater |
-| Segway cargo |
-| Butcher's hook |
-| Microwave |
+| Heater or Freezer |
+| Teg part |
+| Meat Spike |
 | Hydroponic tray |
-| Alcohol dispenser |
+| Booze dispencer |
 | Altar |
-| Clown statue |
 
 ## Steal the animal
 The goal is to steal and have said animal next to you by the end of the round. The animal must be alive.
