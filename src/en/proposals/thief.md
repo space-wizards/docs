@@ -30,7 +30,8 @@ Suggested equipment sets for bluespace talons:
 | ? | Open to new ideas. |
 
 ## Thief goals
-A thief always has 3 goals. The first two are chosen from the categories below. The last goal is to always return to the Centcomm alive and free.
+The thief's targets are chosen according to the following pattern:
+With a 50% chance, a difficult target is added to steal a structure or animal. The remaining targets are selected from a pool of small item theft or collection targets until the total difficulty is sufficient. The final goal is always to escape the station alive and unarrested.
 
 ### Steal the item
 The goal is to steal a certain item from the station, and keep it with you by the end of the round.
