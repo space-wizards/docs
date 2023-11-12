@@ -23,11 +23,12 @@ Suggested equipment sets for bluespace talons:
 |----------|:-------------|
 | Thief Pinpointer | Includes: A pinpointer that shows the direction to an object of interest to the owner thief. When switched on or off, it selects a random object for which the thief has not yet completed the target. |
 | Chameleon's Set | Includes: A set of chameleon clothes. |
-| Syndie Set | A kit with tools and personal items, kindly borrowed from an unlucky agent. Includes: Agent ID, syndie-toolbox, syndie-cigarettes, syndie-ball, syndie-soap, syndicate agent's clothes. |
-| Sleeper Set | A set for those who like to do things VERY quietly. Includes: a hippo pen, a set of nocturine vials, a nitrous oxide cylinder, a set of syndicate pajamas. |
-| Implanter Set | Includes: Subcutaneous storage implant |
-| Coward's Set | Includes: 2x Bluespace Emergency Beacon: Usable item: after a 5 second delay, teleports the target to a random locker at the station. |
-| ? | Open to new ideas. |
+| Bearcatcher's kit | Includes 2 C4s, multitool, jaws of life, advanced welder meson glasses and insulated gloves.|
+| Chemistry kit | It includes a storage implanter, a dna scrambler implanter, and ephedrine bottle, omnizine bottle.|
+| Syndie Set | Includes: Agent ID, syndie-cigarettes, syndie pAI, 10 TC (usless for thief, needed for traitor. Communication?)|
+| Sleeper Set | Includes: a hipopen, a set of 3 nocturine vials, a nitrous oxide cylinder, a set of syndicate pajamas. |
+| Communicator's kit | Includes master key for all station channels, radio jammer, portable crew monitor and lots of money for business deals. |
+| Shadows's kit | Includes Invisibility Crate, and something else (WIP) |
 
 ## Thief goals
 The thief's targets are chosen according to the following pattern:
