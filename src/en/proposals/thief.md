@@ -27,8 +27,8 @@ Suggested equipment sets for bluespace talons:
 | Chemistry kit | It includes a storage implanter, a dna scrambler implanter, and ephedrine bottle, omnizine bottle.|
 | Syndie Set | Includes: Agent ID, syndie-cigarettes, syndie pAI, 10 TC (usless for thief, needed for traitor. Communication?)|
 | Sleeper Set | Includes: a hipopen, a set of 3 nocturine vials, a nitrous oxide cylinder, a set of syndicate pajamas. |
-| Communicator's kit | Includes master key for all station channels, radio jammer, portable crew monitor and lots of money for business deals. |
-| Shadows's kit | Includes Invisibility Crate, and something else (WIP) |
+| Communicator's kit | Includes master key for all station channels, radio jammer, voice mask, portable crew monitor and lots of money for business deals. |
+| Smuggler's kit |  Includes a fulton beacon, 10 fultons and invisible crate. |
 
 ## Thief goals
 The thief's targets are chosen according to the following pattern:
