@@ -7,9 +7,6 @@ Thieves is a small addition to the other game modes. At the moment, thieves can 
 
 When appear, the Thief gains 1 new item, "Pickpocket's Bag", which allows you to choose your play style by giving you starter gear.
 
-## Pacifism
-The thief has the pacifism perk, which prevents him from using weapons.
-
 ## Customizable play style
 Inside the Thief's backpack, there are 3 things by default: 
 1) Thief's Gloves, which allow you to steal things from people unnoticed
