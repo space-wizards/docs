@@ -5,17 +5,14 @@ This antagonist's specialty is stealing various items, structures and animals fr
 ## Appearance
 Thieves is a small addition to the other game modes. At the moment, thieves can only appear in Traitors and Revolution modes with 50% chance. There can be from 1 to 3 thieves in total, and they are chosen among random players at the beginning of the round. The exceptions are Command and Security players. 
 
-When appear, the Thief gains 1 new item, "Pickpocket's Bag", which allows you to choose your play style by giving you starter gear.
+When appear, the Thief gains 1 new item, "undetermined toolbox", which allows you to choose your play style by giving you starter gear.
 
 ## Customizable play style
 Inside the Thief's backpack, there are 3 things by default: 
 1) Thief's Gloves, which allow you to steal things from people unnoticed
-2) x2 Bluespace coupon, which can be converted into certain useful items
+2) Undetermined toolbox, allows you select up to 2 starter equipment kit
 
-When using the bluespace coupon, an interface opens up with the ability to choose from a variety of gear sets. 
-One coupon can be spent on one set of equipment. Having the thief have two coupons allows the player to customize their own play style by combining 2 different sets.
-
-Suggested equipment sets for bluespace talons:
+Suggested equipment sets for toolbox:
 | Name   |      Content      |
 |----------|:-------------|
 | Thief Pinpointer | Includes: A pinpointer that shows the direction to an object of interest to the owner thief. When switched on or off, it selects a random object for which the thief has not yet completed the target. |
