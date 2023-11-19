@@ -1,7 +1,7 @@
 # Mapping
 
 ```admonish warning
-Use a release build of the game. If anything goes wrong, a release build is less likely to crash and lose the work up to your last autosave.
+Use a Tools build of the game. If anything goes wrong, a Tools or Release build is less likely to crash and lose the work up to your last autosave.
 ```
 
 Please refer to the page contents menu on the right to get to the section that best suits your needs.
