@@ -23,27 +23,25 @@ So, **to make a dependency**, you're gonna want two things: an interface, and an
 
 ```cs
 // Content.Server/Example/MyDependency.cs
-namespace Content.Server.Example
+namespace Content.Server.Example;
+
+public class MyDependency : IMyDependency
 {
-    public class MyDependency : IMyDependency
+    public void Foo()
     {
-        public void Foo()
-        {
-            Console.WriteLine("Hello World!");
-        }
+        Console.WriteLine("Hello World!");
     }
 }
 
 // Content.Server/Interfaces/Example/IMyDependency.cs
-namespace Content.Server.Interfaces.Example
+namespace Content.Server.Interfaces.Example;
+
+public interface IMyDependency
 {
-    public interface IMyDependency
-    {
-        /// <summary>
-        /// Writes a message to the console.
-        /// </summary>
-        void Foo();
-    }
+    /// <summary>
+    /// Writes a message to the console.
+    /// </summary>
+    void Foo();
 }
 
 // ServerContentIoC.cs

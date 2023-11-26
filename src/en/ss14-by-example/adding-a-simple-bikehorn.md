@@ -152,12 +152,11 @@ Now let's just make the most basic component possible:
 ```csharp
 // Content.Server/Sound/PlaySoundOnUseComponent.cs
 
-namespace Content.Server.Sound
+namespace Content.Server.Sound;
+
+[RegisterComponent]
+public sealed partial class PlaySoundOnUseComponent : Component
 {
-    [RegisterComponent]
-    public sealed partial class PlaySoundOnUseComponent : Component
-    {
-    }
 }
 ```
 
@@ -189,15 +188,15 @@ In our case, we'll probably want a field called `sound` on our component, which 
 ```csharp
 // Content.Server/Sound/PlaySoundOnUseComponent.cs
 
-namespace Content.Server.Sound
+namespace Content.Server.Sound;
+
+[RegisterComponent]
+public sealed partial class PlaySoundOnUseComponent : Component
 {
-    [RegisterComponent]
-    public sealed partial class PlaySoundOnUseComponent : Component
-    {
-        [DataField]
-        public string Sound = string.Empty;
-    }
+    [DataField]
+    public string Sound = string.Empty;
 }
+
 ```
 
 All you need to do to create a field that can be modified in YAML is to add the `[DataField]` attribute, which holds the name of the field, and give it a default value, in this case `string.Empty`. Now, we can add our sound to our bike horn prototype:
