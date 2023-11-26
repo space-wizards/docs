@@ -125,6 +125,7 @@ Design Proposals
 - [Plant genetics](en/proposals/deltanedas-plant-genetics.md)
 - [Security Genpop Rework](en/proposals/genpop_security.md)
 - [Game Director](en/proposals/game-director.md)
+- [Grid Inventory](en/proposals/grid-inventory.md)
 
 
 Server Hosting
