@@ -200,10 +200,14 @@ public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
   <summary>YAML prototype example (click to expand)</summary>
   
 ```yml=
-# You can specify a specific texture file like this
+# You can specify a specific texture file like this, /Textures/ is optional
 - type: MyComponent
   icon: /Textures/path/to/my/texture.png
-    
+
+# /Textures/ is optional and will be automatically inferred, however make sure that you don't start the path with a slash if you don't specify it
+- type: MyComponent
+  icon: path/to/my/texture.png
+
 # You can specify an rsi sprite like this
 - type: MyOtherComponent
   icon:
