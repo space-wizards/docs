@@ -1,7 +1,7 @@
 # Mapping
 
 ```admonish warning
-Use a release build of the game. If anything goes wrong, a release build is less likely to crash and lose the work up to your last autosave.
+Use a Tools build of the game. If anything goes wrong, a Tools or Release build is less likely to crash and lose the work up to your last autosave.
 ```
 
 Please refer to the page contents menu on the right to get to the section that best suits your needs.
@@ -35,13 +35,14 @@ To test the map:
 ## With Development Environment
 A [development environment](../general-development/setup/setting-up-a-development-environment.md) and [Git installation](../general-development/setup/git-for-the-ss14-developer.md) are strongly recommended, so that you can keep your local mapping server up to date and submit [pull requests](../general-development/codebase-info/pull-request-guidelines.md).
 
-### Release Build
-If you are using a development enviroment instead of just hosting a local server, make sure to use RELEASE instead of DEBUG mode. This is because DEBUG adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
+### Tools Build
+If you are using a development enviroment instead of just hosting a local server, make sure to use Tools instead of Debug/DebugOpt mode. This is because Debug adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
+Additionally be careful to not use Release, which disables development environment tooling and configuration and causes the game to act like a standard server instead of a development environment.
 
 If you are launching via a console, you can just use:
 ```
-dotnet run --project Content.Server --configuration RELEASE
-dotnet run --project Content.Client --configuration RELEASE
+dotnet run --project Content.Server --configuration Tools
+dotnet run --project Content.Client --configuration Tools
 ```
 
 If you are using an IDE, there will be some other way of setting the configuration. For example, in VS there is simply a dropdown menu:

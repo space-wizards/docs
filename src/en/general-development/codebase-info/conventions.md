@@ -133,10 +133,10 @@ This is so it is clear to others what it is. This is especially true if the same
 ## Prototypes
 
 ### Prototype data-fields
-Don't cache prototypes, use prototypeManager to index them when they are needed. You can store them by their ID. When using data-fields that involve prototype ID strings, use custom type serializers. For example, a data-field for a list of prototype IDs should use something like: 
+Don't cache prototypes, use prototypeManager to index them when they are needed. You can store them by their ID. When using data-fields that involve prototype ID strings, use ProtoId<T>. For example, a data-field for a list of prototype IDs should use something like: 
 ```csharp=
-[DataField("exampleTypes", customTypeSerializer: typeof(PrototypeIdListSerializer<ExamplePrototype>))]
-public List<string> ExampleTypes = new();
+[DataField]
+public List<ProtoId<ExamplePrototype>> ExampleTypes = new();
 ```
 
 ### Enums vs Prototypes
@@ -155,7 +155,7 @@ When specifying sound data fields, use `SoundSpecifier`.
   <summary>C# code example (click to expand)</summary>
 
 ```csharp=
-[DataField("sound", required: true)]
+[DataField(required: true)]
 public SoundSpecifier Sound { get; } = default!;
 ```
   
@@ -190,7 +190,7 @@ When specifying sprite or texture data fields, use `SpriteSpecifier`.
   <summary>C# code example (click to expand)</summary>
   
 ```csharp=
-[DataField("icon")]
+[DataField]
 public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
 ```
   
@@ -200,10 +200,14 @@ public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
   <summary>YAML prototype example (click to expand)</summary>
   
 ```yml=
-# You can specify a specific texture file like this
+# You can specify a specific texture file like this, /Textures/ is optional
 - type: MyComponent
   icon: /Textures/path/to/my/texture.png
-    
+
+# /Textures/ is optional and will be automatically inferred, however make sure that you don't start the path with a slash if you don't specify it
+- type: MyComponent
+  icon: path/to/my/texture.png
+
 # You can specify an rsi sprite like this
 - type: MyOtherComponent
   icon:
@@ -316,10 +320,10 @@ Transform(uid).Coordinates;
 ### Public API Method Signature
 All public Entity System API Methods that deal with entities and game logic should *always* follow a very specific structure.
 
-All relevant `EntityUid` should come first.
+All relevant `Entity<T?>` and `EntityUid` should come first.
+The `T?` in `Entity<T?>` stands for the component type you need from the entity.
+The question mark `?` must be present at the end to mark the component type as nullable.
 Next, any arguments you want should come afterwards.
-And finally, all the components you need from the entity or entities should come last.
-The component arguments shall be nullable, and default to `null`.
 
 The first thing you should do in your method's body should then be calling `Resolve` for the entity UID and components.
 
@@ -327,11 +331,11 @@ The first thing you should do in your method's body should then be calling `Reso
   <summary>Example (click to expand)</summary>
 
 ```csharp=
-public void SetCount(EntityUid uid, int count, StackComponent? stack = null)
+public void SetCount(Entity<StackComponent?> stack, int count)
 {
-    // This call below will set "stack" to the correct instance if it's null.
+    // This call below will set "Comp" to the correct instance if it's null.
     // If all components were resolved to an instance or were non-null, it returns true.
-    if(!Resolve(uid, ref stack))
+    if(!Resolve(stack, ref stack.Comp))
         return; // If the component wasn't found, this will log an error by default.
     
     // Logic here!

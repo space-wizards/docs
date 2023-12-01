@@ -1,0 +1,14 @@
+"English":
+- 'src/en/**'
+
+"Russian":
+- 'src/ru/**'
+
+"Ukrainian":
+- 'src/ua/**'
+
+"Scripts":
+- 'scripts/**'
+
+"Design":
+- 'src/en/proposals/**'
