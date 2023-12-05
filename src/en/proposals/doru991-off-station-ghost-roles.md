@@ -11,6 +11,8 @@ Off-station ghost roles deal with the possibility of metagaming and metagrudging
 
 Ideally, off-station ghost roles would take place on a different map than the one the station is placed on, in order to prevent them from interacting with each other via various shenanigans.
 
+As a suggestion for how it would work, one or two maps designated for off-station ghost roles could be picked every round from a pool, and stay paused until someone takes one of the available ghost roles to prevent unnecessary performance impact.
+
 # Proposed role: Derelict with cryostasis pods
 This would basically be a remake of SS13's Charlie Station ghost roles.
 Players would find themselves awakening from stasis in an abandoned, depowered and rundown station. Gameplay would be drastically different from what you'd expect on a still-maintained station, some examples being:
