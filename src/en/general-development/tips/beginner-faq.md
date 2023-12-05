@@ -10,21 +10,26 @@ Go to [Issues in Space Station 14](https://github.com/space-wizards/space-statio
 2. [Difficulty: 1 - Easy](https://github.com/space-wizards/space-station-14/labels/Difficulty%3A%201-Easy)
 3. [No C#](https://github.com/space-wizards/space-station-14/labels/No%20C%23) to work on issues that require no code. 
 
-Follow the steps here to start making and testing code changes on your own copy of the Space Station 14 code: 
+After you have chosen an issue to fix, follow the steps here to start making and testing code changes on your own copy of the Space Station 14 code: 
 - [Setting up a Development Environment](https://docs.spacestation14.com/en/general-development/setup/setting-up-a-development-environment.html) 
    - This will let you play a local copy of the game so you can see your changes in gameplay.
 - [Git for the SS14 Developer](https://docs.spacestation14.com/en/general-development/setup/git-for-the-ss14-developer.html)
    - This will let you work on code that you can transfer from your computer to your Github repository and eventually to Space Station 14.
 
+
+
 ### How does code get transferred between my computer & the main Space-Station-14 repository? 
 
+```admonish danger "Make a new branch so you are not working on the master branch!"
 This is important to know so you do not accidentally delete all of your code changes when you update your copy of Space Station 14.
 - [Git for the SS14 Developer](https://docs.spacestation14.com/en/general-development/setup/git-for-the-ss14-developer.html#3-setting-up-remotes)
+```
 
-**3 Code Locations:**
+**3 Code Locations to know:**
 1) Your Computer code (Your copy)
 2) Your Github Repository (Local Github)
 3) Space Station 14 Github
+
 
 **How the code is transferred.**
 1. **Space Station 14 Github => Local Github**. You make a fork of the Space Station 14 repository so you have a Local Github copy of the code yourself.
@@ -58,6 +63,8 @@ You may need to merge changes if you are trying to change files that got changed
    - Once you discard your commits, your code changes will be deleted & your pull request will be closed. Which is not fun.
 11. Wait for Code Reviewers to let you know if your code is good to go for merging. 
 
+
+
 ### I have an idea for a new feature or to fix an issue that I have not seen on Github.
 
 1. Try playing the game first so you know what features are already implemented.
@@ -65,6 +72,8 @@ You may need to merge changes if you are trying to change files that got changed
    - For example, allowing a specific action to toggle by pressing "4" when it already can be toggled by pressing "z".
 2. Propose the Feature before you start making it. [Feature Proposals](https://docs.spacestation14.com/en/general-development/feature-proposals.html)
 3. Open a New Issue on Space Station 14: [New Issue](https://github.com/space-wizards/space-station-14/issues/new/choose)
+
+
 
 ## Coding Space Station 14
 
@@ -75,11 +84,13 @@ Have you completed step 2.3 of [Git for the SS14 Developer](https://docs.spacest
 Make sure you use the command `cd` to navigate to your space-station-14 repository before running `RUN_THIS.py`.
 ![image](https://github.com/alwinnocom/docs/assets/63136288/1750eb6a-20e3-4d3c-9b4c-d7272787aaf2)
 
+
+
 ## Researching Space Station 14
 
 ### I am looking for text that I saw in gameplay but I am not sure where to look.
 
-1. Lots of the in-game text can be found in XAML files & YML files.
+1. Lots of the in-game text can be found in XAML files & YML files. You can search through XAML files to find the parts of the user interface that you want to work on.
 ![image](https://github.com/alwinnocom/docs/assets/63136288/2a4aef1b-2839-455d-a867-b9c457f9d3a2)
 2. If YML files are not showing up, you can find them on Github by going to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14?search=1) & searching for .yml files.
 3. Use your code editor to search for the exact text (for text that is not based on Project Fluent). For example, Visual Studio lets you use Ctrl + Shift + F to find certain text in all of the files.
