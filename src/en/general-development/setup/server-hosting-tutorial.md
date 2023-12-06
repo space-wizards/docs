@@ -51,7 +51,7 @@ You can slap the HTTP status API behind a reverse proxy if you want. This is rec
 ### Custom Code
 You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
 
-`dotnet build Content.Packaging --configuration Release --no-restore`
+`dotnet build Content.Packaging --configuration Release`
 `dotnet run --project Content.Packaging server --hybrid-acz`
 
 ```admonish info
