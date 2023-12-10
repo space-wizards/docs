@@ -51,7 +51,13 @@ You can slap the HTTP status API behind a reverse proxy if you want. This is rec
 ### Custom Code
 You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
 
+`dotnet build Content.Packaging --configuration Release`
+`dotnet run --project Content.Packaging server --hybrid-acz`
+
+```admonish info
+Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this
 `python Tools/package_server_build.py --hybrid-acz`
+```
 
 Check the `release/` folder for a packaged server for your custom codebase.
 
