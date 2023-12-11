@@ -15,6 +15,10 @@ It is also worth going through the custom codebases section, especially if you i
   Some of it's sort of altered slightly.
 -->
 
+<!--
+  Thanks I hate it
+-->
+
 [`SS14.Watchdog`](https://github.com/space-wizards/SS14.Watchdog/) (codename Ian) is our server-hosting wrapper thing, similar to TGS for BYOND (but much simpler for the time being). It handles auto updates, monitoring, automatic restarts, and administration. We recommend you use this for proper deployments.
 
 ## Setup Process
@@ -26,6 +30,8 @@ You need to have:
 + ASP .NET Core 6 Runtime
 
 Both of these can be found at the [.NET 6 download page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+
+On Linux/MacOS use your favourite package manager (apt, dnf, pacman, brew etc)
 
 ### 2. Build
 
@@ -44,24 +50,8 @@ dotnet publish -c Release -r linux-x64 --no-self-contained
 
 The contents of `SS14.Watchdog/bin/Release/net6.0/linux-x64/publish` can then be copied to some other place.
 
-### 3. Configure
 
-Before continuing, it is worth mentioning that the `SS14.Watchdog` executable assumes all configuration (such as `appsettings.yml`) and data is located in the current directory, not the directory the executable is in.
-
-As such, for simplicity in updating the Watchdog, you should arrange a directory as so:
-
-```
-bin/ : This is the /publish/ directory previously created.
-instances/ : This directory contains one subdirectory for each instance you have defined, i.e.:
-instances/ERZ2/ : Directory for game instance ID `ERZ2`.
-                  See "Server Instance Folder" below for details on the insides of one of these.
-appsettings.yml : The configuration for the Watchdog.
-                  This should initially be copied from `bin/appsettings.yml`.
-```
-
-The different aspects to the configuration are listed in the following sections.
-
-### 4. Run
+### 3. Run
 
 Assuming you've followed the structure laid out above, you simply need to have a terminal at the "main directory", and run `bin/SS14.Watchdog`.
 
@@ -177,15 +167,13 @@ Secondly, you may want to simply force a server to be restarted.
 
 These tasks can be achieved with the following commands:
 
-`curl -v -X POST -u myInstance:spooky http://localhost:5000/instances/myInstance/restart`
+`curl -v -X POST -u myInstance:ApiToken http://localhost:5000/instances/myInstance/restart`
 
-`curl -v -X POST -u myInstance:spooky http://localhost:5000/instances/myInstance/update`
-
-Here, `spooky` is the `ApiToken` of the instance `myInstance`.
+`curl -v -X POST -u myInstance:ApiToken http://localhost:5000/instances/myInstance/update`
 
 ## Update Types
 
-### For Vanilla Servers
+### Manifest Update
 
 ```admonish info
 The server still won't automatically be notified of updates, so see above for instructions.
@@ -203,35 +191,15 @@ Servers:
         ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
 ```
 
-### "Dummy" Update Provider
-
-<!-- Nobody needs to know.
-```admonish info
-The "Local" update provider is the originally intended way to do what this update provider does.
-However, since it's creation the game server itself has taken over what independent functionality the update provider had, and there are other disadvantages making Local more complicated to setup - so basically it's just worse.
-```
--->
-
-The "Dummy" update provider will fake an update whenever it is queried, and otherwise simply assume that a server has already been extracted to `bin/`.
-
-As the Watchdog does not automatically periodically check for updates, the fake updates shouldn't get in the way.
-
-To configure this, use the following update configuration in your `appsettings.yml`, in the entry for your server instance:
-
-```yml
-Servers:
-  Instances:
-    example:
-      # (skipped...)
-      UpdateType: "Dummy"
-```
-
 You will have to manually move files around and extract the server binaries.
 
 Note that you should not move around or attempt to delete the files of a running server.
 
-<!-- They keep breaking.
 ### Git-based Updates
+
+```admonish danger "Here be dragons!"
+Git-based update method is unmaintained. While it's the easiest to get started we can't really help you if it breaks. You are mostly on your own.
+```
 
 ```admonish warning
 Using Git-based updates in the intended manner may be in various states of "broken" because of various ways in which the repository can get into a state best described as, well, *broken*.
@@ -262,7 +230,6 @@ Servers:
         # As of the introduction of delta updating this is now the better way to handle this.
         HybridACZ: true
 ```
--->
 
 ### Jenkins Updates
 
@@ -277,6 +244,29 @@ Servers:
       Updates:
         BaseUrl: "http://localhost:9938"
         JobName: "Star"
+```
+
+### "Dummy" Update Provider
+
+<!-- Nobody needs to know.
+```admonish info
+The "Local" update provider is the originally intended way to do what this update provider does.
+However, since it's creation the game server itself has taken over what independent functionality the update provider had, and there are other disadvantages making Local more complicated to setup - so basically it's just worse.
+```
+-->
+
+The "Dummy" update provider will fake an update whenever it is queried, and otherwise simply assume that a server has already been extracted to `bin/`.
+
+As the Watchdog does not automatically periodically check for updates, the fake updates shouldn't get in the way.
+
+To configure this, use the following update configuration in your `appsettings.yml`, in the entry for your server instance:
+
+```yml
+Servers:
+  Instances:
+    example:
+      # (skipped...)
+      UpdateType: "Dummy"
 ```
 
 ### Custom Auto Updates
@@ -344,6 +334,35 @@ It assumes you have some arbitrary static HTTP server, and you just need a scrip
 import json, datetime
 nowish = datetime.datetime.now().isoformat()
 print(json.dumps({"builds":{nowish: {"time": nowish, "client": {"url": "", "sha256": ""}, "server": {"linux-x64": {"url": "http://localhost:9283/SS14.Server_linux-x64.zip", "sha256": ""}}}}}))
+```
+
+## Systemd service
+
+To allow the service to automatically start up with the server, you can make a service file. It will look something like this.
+
+Of course, change it to the actual directory of your watchdog.
+
+```/etc/systemd/system/SS14.Watchdog.service```
+```toml
+[Unit]
+Description=SS14 Watchdog
+After=network.target
+
+[Service]
+ExecStart=/path/to/SS14.Watchdog
+WorkingDirectory=/path/to
+Restart=always
+# This is used for git method to not fail instantly.
+Environment="DOTNET_CLI_HOME=/tmp"
+
+[Install]
+WantedBy=default.target
+```
+Now reload your systemd daemon and enable the service as you normally would.
+
+```
+systemctl daemon-reload
+systemctl enable --now SS14.Watchdog
 ```
 
 ## General Troubleshooting
