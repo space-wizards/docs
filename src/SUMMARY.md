@@ -28,6 +28,7 @@ General Development
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
