@@ -9,8 +9,8 @@ If you have any questions, ask on Discord and/or ping PJB if you really don't ge
 ## Useful Links
 All of the important links on this page in one convenient place.
 * [Config Reference](../tips/config-file-reference.md)
-* [.NET 7 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 7 SDK)
-* [ASP.NET Core 7 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (Also included in full .NET 7 SDK)
+* [.NET 8 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 8 SDK)
+* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Also included in full .NET 8 SDK)
 * [SS14.Watchdog](https://github.com/space-wizards/SS14.Watchdog/)
 * [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
 * [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)
@@ -18,9 +18,9 @@ All of the important links on this page in one convenient place.
 
 ## Install Dependencies
 
-Regardless of the hosting method you choose, the server is not self-contained (and neither are client builds) and therefore needs a [.NET 7 Runtime](https://dotnet.microsoft.com/download) installed. You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
+Regardless of the hosting method you choose, the server is not self-contained (and neither are client builds) and therefore needs a [.NET 8 Runtime](https://dotnet.microsoft.com/download) installed. You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
 
-For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 7 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) (included in .NET 7 SDK).
+For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
 
 ## Set Up Server
 
