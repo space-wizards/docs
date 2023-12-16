@@ -26,12 +26,12 @@ It is also worth going through the custom codebases section, especially if you i
 ### 1. Check Prerequisites
 
 You need to have:
-+ .NET 6 SDK
-+ ASP .NET Core 6 Runtime
++ .NET 8 SDK
++ ASP .NET Core 8 Runtime
 
-Both of these can be found at the [.NET 6 download page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Both of these can be found at the [.NET 8 download page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
-On Linux/MacOS use your favourite package manager (apt, dnf, pacman, brew etc)
+On Linux/MacOS use your favourite package manager (apt, dnf, pacman, brew etc) according to [Microsoft's installation instructions](https://learn.microsoft.com/en-us/dotnet/core/install/linux).
 
 ### 2. Build
 
@@ -44,11 +44,11 @@ git clone --recursive https://github.com/space-wizards/SS14.Watchdog
 cd SS14.Watchdog
 
 # Build the Watchdog.
-# The result is placed into: SS14.Watchdog/bin/Release/net6.0/linux-x64/publish
+# The result is placed into: SS14.Watchdog/bin/Release/net8.0/linux-x64/publish
 dotnet publish -c Release -r linux-x64 --no-self-contained
 ```
 
-The contents of `SS14.Watchdog/bin/Release/net6.0/linux-x64/publish` can then be copied to some other place.
+The contents of `SS14.Watchdog/bin/Release/net8.0/linux-x64/publish` can then be copied to some other place.
 
 
 ### 3. Run
@@ -85,7 +85,7 @@ In particular, this can be used to expose the Watchdog outside of localhost with
 Urls: "http://*:5000"
 ```
 
-See the relevant documentation for more details: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-6.0#server-urls
+See the relevant documentation for more details: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-8.0#server-urls
 
 Be sure to adjust BaseUrl accordingly!
 
