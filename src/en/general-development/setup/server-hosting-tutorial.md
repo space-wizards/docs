@@ -1,40 +1,18 @@
 # Server Hosting Tutorial
 
-This is a tutorial/brain dump of how to set up an SS14 server. This guide will cover everything you need, from private servers to play with your friends, to production servers for proper server hosts.
+Hosting a local sandbox server for playing around is easy, but setting up a large production server supporting hundreds of players is a bit harder. This guide is organized into "levels" corresponding to difficulty.
 
-There are two methods you can use. A "bare" server that just runs the game server directly, or `SS14.Watchdog` which handles updates and runs the game server for you. We recommend the latter for more proper deployments and also if you want to be listed on the hub in the launcher.
+## Level 0: Local Sandbox Server
 
-If you have any questions, ask on Discord and/or ping PJB if you really don't get an answer.
+1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download) installed. You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
+2. Download the latest version of the server from [our builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
+3. Extract that to a directory somewhere.
+4. Run `Robust.Server.exe` (or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
 
-## Useful Links
-All of the important links on this page in one convenient place.
-* [Config Reference](../tips/config-file-reference.md)
-* [.NET 8 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 8 SDK)
-* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Also included in full .NET 8 SDK)
-* [SS14.Watchdog](https://github.com/space-wizards/SS14.Watchdog/)
-* [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
-* [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)
-* [Public Hub Server Rules](../../community/space-wizards-hub-rules.md)
 
-## Install Dependencies
+## Level 1: Invite Your Friends
 
-Regardless of the hosting method you choose, the server is not self-contained (and neither are client builds) and therefore needs a [.NET 8 Runtime](https://dotnet.microsoft.com/download) installed. You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
-
-For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
-
-## Set Up Server
-
-1. Download the latest version of the server from [our builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
-2. Extract that to a directory somewhere.
-3. Run `Robust.Server.exe` (or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
-4. [Forward your network ports](#port-forwarding)
-5. Give your friends and yourself your IP address and have them paste it into the "direct connect" dialog in the launcher.
-
-This will not, of course, handle automatic restarts (in case of a crash) or updates like the watchdog would. This also won't list your server publicly on the hub as advertising defaults to off. If you wish to have your server listed on the hub please read `Bare Server Configuration` below.
-
-```admonish info
-Note that when you run a server like this, the build information that the launcher needs (so it has a version of the client to download) points to our central server. **We do not keep those builds around forever** so eventually people will no longer be able to connect to the server. Obviously this is not a problem if you want to set up a quick and dirty private server for your friends. Just make sure to download a new version of the server at least every week.
-```
+You will need to do some extra steps if you want other people to be able to connect and play.
 
 ### Port Forwarding
 
@@ -44,24 +22,12 @@ The server needs network ports to be forwarded so that people can connect. By de
 
 For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-#### Advanced Port Forwarding
-
-You can slap the HTTP status API behind a reverse proxy if you want. This is recommended for production servers since then you can do HTTPS (slap it behind nginx and turn on HTTPS). Note that if you do this you have to set the `status.connectaddress` config variable to specify the UDP address the main netcode should connect to. This has to look like this: `udp://server.spacestation14.io:1212` (for our server, obviously substitute with your params). 
-
-### Custom Code
-You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
-
-`dotnet build Content.Packaging --configuration Release`
-`dotnet run --project Content.Packaging server --hybrid-acz`
 
 ```admonish info
-Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this
-`python Tools/package_server_build.py --hybrid-acz`
+Note that when you run a server like this, the build information that the launcher needs (so it has a version of the client to download) points to our central server. **We do not keep those builds around forever** so eventually people will no longer be able to connect to the server. Obviously this is not a problem if you want to set up a quick and dirty private server for your friends. Just make sure to download a new version of the server at least every week.
 ```
 
-Check the `release/` folder for a packaged server for your custom codebase.
-
-## Configure Your Server
+### Configure Your Server
 
 You can configure settings in the server by editing the config file, `server_config.toml`. The config file is TOML which is basically INI ~~except better specified, somewhat more powerful, easier to misuse, and more annoyingly opinionated (comments NEED their own line)~~.
 
@@ -100,6 +66,41 @@ mode = 1
 
 See [Config File Reference](../tips/config-file-reference.md) for a somewhat more thorough guide on server configuration.
 
+### Admin Privileges
+
+By default, no admin privileges are set. A privileged administrator can give out permissions to other admins with the `permissions` console command in-game, but that has a chicken-and-egg problem. To get initial `+HOST` administrator permissions to your server, you can use one of the following three methods:
+
+```admonish danger
+`+HOST` privileges are **extremely dangerous** to give and should only be given to people who already have access to your computer or server.
+
+**Giving somebody `+HOST` allows them to completely take over your server and/or computer.** 
+```
+
+* If you connect to the game server over localhost (IP `127.0.0.1` or `::1`), the game will automatically give you full host privileges. This can be disabled with the `console.loginlocal` CVar.
+* If you set the `console.login_host_user` CVar to your user name, you will be given host when you connect.
+* You can use `promotehost` command from the server console (e.g. `promotehost PJB`) to temporarily give a connected client host.
+
+
+## Level 2: Server With Custom Code
+You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
+
+`dotnet build Content.Packaging --configuration Release`
+`dotnet run --project Content.Packaging server --hybrid-acz`
+
+```admonish info
+Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this
+`python Tools/package_server_build.py --hybrid-acz`
+```
+
+Check the `release/` folder for a packaged server for your custom codebase.
+
+
+## Level 3: A "Production" Server
+
+This will not, of course, handle automatic restarts (in case of a crash) or updates like the watchdog would. This also won't list your server publicly on the hub as advertising defaults to off. If you wish to have your server listed on the hub please read `Bare Server Configuration` below.
+
+For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
+
 ### Setting Rules
 By default, the server ships with the rules that are used on Wizard's Den servers. To set custom rules for your own server:
 
@@ -136,21 +137,7 @@ You will want to edit the server config file (`server_config.toml`) to add the f
 download_url = ""
 ```
 
-### Admin Privileges
-
-By default, no admin privileges are set. A privileged administrator can give out permissions to other admins with the `permissions` console command in-game, but that has a chicken-and-egg problem. To get initial `+HOST` administrator permissions to your server, you can use one of the following three methods:
-
-```admonish danger
-`+HOST` privileges are **extremely dangerous** to give and should only be given to people who already have access to your computer or server.
-
-**Giving somebody `+HOST` allows them to completely take over your server and/or computer.** 
-```
-
-* If you connect to the game server over localhost (IP `127.0.0.1` or `::1`), the game will automatically give you full host privileges. This can be disabled with the `console.loginlocal` CVar.
-* If you set the `console.login_host_user` CVar to your user name, you will be given host when you connect.
-* You can use `promotehost` command from the server console (e.g. `promotehost PJB`) to temporarily give a connected client host.
-
-## Performance Tweaks
+### Performance Tweaks
 
 Here are some settings you probably want to enable on your server to improve performance:
 
@@ -168,7 +155,7 @@ ROBUST_NUMERICS_AVX: true
 
 You can set environment variables from the watchdog, see below.
 
-## Watchdog
+## Level 4: Production Watchdog Server
 
 This is for people running their own codebase and server and/or those who want a more robust hosting solution.
 
@@ -273,8 +260,13 @@ hash = ""
 
 Note that `SS14.Watchdog` specifies *most* of it for you if you have configured it with auto updates (depending on update provider). It notably cannot provide `engine_version` or `fork_id` version, so you're best off specifying the former in build.json (your build system should be non garbage for this) and the latter in a config file.
 
-## Optional Infrastructure
+## Level 5: Big Production Server
 Things that aren't necessary for small/private servers, but strongly recommended for forks or larger production servers.
+
+### Advanced Port Forwarding
+
+You can slap the HTTP status API behind a reverse proxy if you want. This is recommended for production servers since then you can do HTTPS (slap it behind nginx and turn on HTTPS). Note that if you do this you have to set the `status.connectaddress` config variable to specify the UDP address the main netcode should connect to. This has to look like this: `udp://server.spacestation14.io:1212` (for our server, obviously substitute with your params). 
+
 
 ### PostgreSQL Setup
 
@@ -396,3 +388,13 @@ Type `./Robust.Server` then hit enter. If you see a bunch of stuff being printed
 ### Additional Troubleshooting
 
 [Troubleshooting](../tips/troubleshooting-faq.md#server)
+
+## Useful Links
+All of the important links on this page in one convenient place.
+* [Config Reference](../tips/config-file-reference.md)
+* [.NET 8 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 8 SDK)
+* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Also included in full .NET 8 SDK)
+* [SS14.Watchdog](https://github.com/space-wizards/SS14.Watchdog/)
+* [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
+* [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)
+* [Public Hub Server Rules](../../community/space-wizards-hub-rules.md)
