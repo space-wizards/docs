@@ -28,6 +28,7 @@ General Development
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
@@ -117,12 +118,17 @@ Space Station 14
 
 Design Proposals
 ================
+
+----------------------
+
 - [Anomaly cores](en/proposals/anomaly-cores.md)
 - [PDA messaging](en/proposals/pda-messaging.md)
 - [Plant genetics](en/proposals/deltanedas-plant-genetics.md)
+- [Security Genpop Rework](en/proposals/genpop_security.md)
+- [Game Director](en/proposals/game-director.md)
+- [Grid Inventory](en/proposals/grid-inventory.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 
-----------------------
 
 Server Hosting
 ==============
@@ -136,6 +142,8 @@ Server Hosting
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
+- [Maintenance]()
+  - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
 Other Projects
 ==============
@@ -178,6 +186,9 @@ Maintainer Meetings
 ==============
 
 ----------------------
+- [2023-12-16](en/maintainer-meetings/maintainer-meeting-2023-12-16.md)
+- [2023-11-25](en/maintainer-meetings/maintainer-meeting-2023-11-25.md)
+- [2023-10-21](en/maintainer-meetings/maintainer-meeting-2023-10-21.md)
 - [2023-09-23](en/maintainer-meetings/maintainer-meeting-2023-09-23.md)
 - [2023-09-09](en/maintainer-meetings/maintainer-meeting-2023-09-09.md)
 - [2023-09-02](en/maintainer-meetings/maintainer-meeting-2023-09-02.md)

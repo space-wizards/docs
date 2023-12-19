@@ -34,13 +34,13 @@ An example of all of the networking code required for IDCardComponent now, from 
 [Access(typeof(SharedIdCardSystem), typeof(SharedPDASystem), typeof(SharedAgentIdCardSystem))]
 public sealed partial class IdCardComponent : Component
 {
-    [DataField("fullName")]
+    [DataField]
     [AutoNetworkedField]
     [Access(typeof(SharedIdCardSystem), typeof(SharedPDASystem), typeof(SharedAgentIdCardSystem),
         Other = AccessPermissions.ReadWrite)] // FIXME Friends
     public string? FullName;
 
-    [DataField("jobTitle")]
+    [DataField]
     [AutoNetworkedField]
     public string? JobTitle;
 }

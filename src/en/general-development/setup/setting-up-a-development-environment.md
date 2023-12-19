@@ -4,10 +4,10 @@ First you're gonna need some software:
 
 * [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](https://cdn.discordapp.com/attachments/560845886263918612/861267188971470898/unknown.png).
 * [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](https://cdn.discordapp.com/attachments/560845886263918612/1147634791148179457/image.png). You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
-* [.NET 7.0 SDK or greater](https://dotnet.microsoft.com/download). Visual Studio also installs this if you're on Windows.
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio also installs this if you're on Windows.
   * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
-  * For **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 7 SDK or something along those lines.
+  * For **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 8 SDK or something along those lines.
   * For **macOS**, [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/).
   * For **all platforms**, (NOT FREE) [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 devs prefer it over Visual Studio. College/University students can get a free education license, even if they're not a computer science major.
   * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
