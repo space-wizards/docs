@@ -8,6 +8,11 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 2. Download the latest version of the server from [our builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
 3. Extract that to a directory somewhere.
 4. Run `Robust.Server.exe` (or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
+5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
+
+```admonish info
+If you ever wish to develop for the game. You will need a [proper development environment](./setting-up-a-development-environment.md). You cannot use the premade server for this use case.
+```
 
 
 ## Level 1: Invite Your Friends
