@@ -1,38 +1,38 @@
 # Setting up your own discord bot for your server
 
-You may have noticed in the offical Wizards Den discord server that we have a bot that provides some nice features such as linking github issues/pull requests, OOC & Discord bridge and a status command. 
+You may have noticed in the official Wizards Den discord server that we have a bot that provides some nice features such as linking GitHub issues/pull requests, OOC & Discord bridge and a status command. 
 
-Luckily for you this is easy to setup with the help of the [Red Discord Bot](https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop). A modular selfhosted Python discord bot. You do not need to know anything about programming to setup this bot. And this guide will help you with how to install and use our cogs onto the bot.
+Luckily for you, this is easy to set up with the help of the [Red Discord Bot](https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop). A modular self-hosted Python discord bot. You do not need to know anything about programming to set up this bot. And this guide will help you with how to install and use our cogs on the bot.
 
 ```admonish note
-We only provide support for the offical wizard-cogs in the #hosting channel on the discord, Support for Red itself or other cogs is not provided by us, please get support in the offical RedBot Discord or the approriate cog developer.
+We only provide support for the official wizard-cogs in the #hosting channel on the discord, Support for Red itself or other cogs is not provided by us, please get support in the official RedBot Discord or the appropriate cog developer.
 ```
 
 ## Setup
-1. Follow the [Red Documenation](https://docs.discord.red/en/stable/install_guides/index.html) on how to install and start the Base Red bot. Note that like a SS14 server. You need a computer that will stay turned on for your bot to function.
+1. Follow the [Red Documenation](https://docs.discord.red/en/stable/install_guides/index.html) on how to install and start the Base Red bot. Note that like an SS14 server. You need a computer that will stay turned on for your bot to function.
 2. If you have not already, give [Red's Getting started](https://docs.discord.red/en/stable/getting_started.html#getting-started) page a read.
-3. After you got your bot setup and invited to your server, you can now install the wizard-cogs repository to your bot. [p] in this case is your bots prefix you chose during redbot setup.
+3. After you get your bot set up and invited to your server, you can now install the wizard-cogs repository to your bot. [p] in this case is your bots prefix you chose during redbot setup.
 ```
-Enable the built in downloader cog
+Enable the built-in downloader cog
 [p]load downloader
 
-Add the wizard cogs repository
+Add the wizard-cogs repository
 [p]repo add wizard-cogs https://github.com/space-wizards/wizard-cogs
 
-Install the cog of choice, checkout the github link to see your options
+Install the cog of choice, check out the GitHub link to see your options
 [p]cog install wizard-cogs <cog_name>
 ```
 
 ```admonish note title="Psss"
-Looking for other intresting cogs? Check out the [Redbot Cog index](https://index.discord.red/). Like stated above we dont provide support for these cogs.
+Looking for other interesting cogs? Check out the [Redbot Cog index](https://index.discord.red/). Like stated above we don't provide support for these cogs.
 ```
 ```admonish note title="Psss Combo 2"
-Not an english server? Some cogs have transalations, You can change this with ```[p]set locale <language_code>```. Our cogs dont support other languages then english currently.
+Not an English server? Some cogs have translations, You can change this with ```[p]set locale <language_code>```. Our cogs don't support other languages than English currently.
 ```
 Now you are ready, please be sure to check the [Wizard-Cogs Github](https://github.com/space-wizards/wizard-cogs) in case any new cogs have been added.
 
 
-Otherwise I will list talk about the most intresting ones here with setup intructions
+Otherwise, I will list the most interesting ones here with setup instructions
 
 ### Game server status
 ![SS14 Status](https://github.com/space-wizards/wizard-cogs/raw/master/media/SS14-game-status-example.png)
@@ -45,18 +45,18 @@ Otherwise I will list talk about the most intresting ones here with setup intruc
 ![Poweractions](https://github.com/space-wizards/wizard-cogs/raw/master/media/poweractions-example.png)
 Currently only has the functionality to restart servers as of writing
 1. Install ```[p]cog install wizard-cogs poweractions```
-2. Setup your server by running ```[p]poweractionscfg add``` and pressing the green add button. Only admins can run this command. Otherwise the bot wont respond.
-You will get a form you will be asked to fill in (**Notice**: Neither us nor the RedBot developers will receive this information. This information will only be stored by the bot and wont be shown publicly.)
+2. Setup your server by running ```[p]poweractionscfg add``` and pressing the green add button. Only admins can run this command. Otherwise, the bot won't respond.
+You will get a form you will be asked to fill in (**Notice**: Neither us nor the RedBot developers will receive this information. This information will only be stored by the bot and won't be shown publicly.)
 ![Input field](../assets/images/redbot-poweactions-form.png)
-- Name: The servers name, you will be providing this to the bot when restarting the server.
-- URL: The URL to the watchdog instance, make sure to provide a url accesible by the bot. Example: If you are exposing watchdog's api at "https://example.com/watchdog" then whats that you wanna write. You can probably use "http://localhost:5000" if the bot is hosted on the same machine as watchdog
-- Server ID: The name of your server in your watchdog's appsettings.yml that stores your server config. *Not* the "Name" config
-- API token: The ApiToken in your watchdogs configuration
-3. After clicking submit if the bot reported success then you are done! Repeat for your other servers or give it a shot. ```[p]restartserver <name>```
+- Name: The server's name, you will be providing this to the bot when restarting the server.
+- URL: The URL to the watchdog instance, make sure to provide a URL accessible by the bot. Example: If you are exposing the watchdog's API at "https://example.com/watchdog" then what's that you wanna input. You can use "http://localhost:5000" if the bot is hosted on the same machine as the watchdog.
+- Server ID: The name of your server in your watchdog's appsettings.yml that stores your server config. *Not* the "Name" config.
+- API token: The ApiToken in your watchdogs configuration.
+3. After clicking submit if the bot reported success then you are done! Repeat for your other servers or give it a shot with ```[p]restartserver <name>```.
 
 ### New round pinging & Ahelp relay
-While it's not a redbot feature, I thought I may as well throw it in here since theres no other documentation on it and its related to discord.
-1. Make a discord webhook in your channel you want the pings to arrive in. You can make one by clicking on the cogwheel in the channel > Integrations > Webhooks. Once done copy the URL
+While it's not a redbot feature, I thought I might as well throw it in here since there's no other documentation on it and it's related to Discord.
+1. Make a discord webhook in the channel you want the pings to arrive in. You can make one by clicking on the cogwheel in the channel > Integrations > Webhooks. Once done copy the URL
 2. Set the following [CCVars](https://docs.spacestation14.com/en/general-development/tips/config-file-reference.html) in your config
 ```
 discord.ahelp = <Webhook for ahelps>
@@ -67,7 +67,7 @@ discord.round_end_role = <Role ID to ping>
 ### OOC Bridge
 This is to be coded into the server itself. Please await it.
 
-### Github Integration
+### GitHub Integration
 To be ported to redbot
 
 
