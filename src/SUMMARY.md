@@ -182,6 +182,14 @@ Community
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
 - [Progress Report Creation](en/community/progress-report-creation.md)
 
+Engine Development
+========================
+
+------------------
+
+- [Testing against launcher](en/engine-development/testing-against-launcher.md)
+- [Updating CEF](en/engine-development/updating-cef.md)
+
 Maintainer Meetings
 ==============
 
