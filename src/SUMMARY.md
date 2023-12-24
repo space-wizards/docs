@@ -127,6 +127,7 @@ Design Proposals
 - [Security Genpop Rework](en/proposals/genpop_security.md)
 - [Game Director](en/proposals/game-director.md)
 - [Grid Inventory](en/proposals/grid-inventory.md)
+- [Exterminator](en/proposals/deltanedas-exterminator.md)
 
 
 Server Hosting
