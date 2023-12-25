@@ -28,6 +28,7 @@ General Development
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
@@ -120,6 +121,19 @@ Design Proposals
 
 ----------------------
 
+- [Feature Proposal Template](en/proposals/proposal-template.md)
+
+----------------------
+
+- [Anomaly Cores](en/proposals/mirrorcult-anomaly-cores.md)
+- [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
+- [Plant Genetics](en/proposals/deltanedas-plant-genetics.md)
+- [Security Genpop Rework](en/proposals/ike709-genpop-security.md)
+- [Game Director](en/proposals/tomleys-game-director.md)
+- [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
+- [Atmos Roadmap](en/proposals/notafet-atmos.md)
+- [Exterminator](en/proposals/deltanedas-exterminator.md)
+
 Server Hosting
 ==============
 
@@ -132,6 +146,8 @@ Server Hosting
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
+- [Maintenance]()
+  - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
 Other Projects
 ==============
@@ -170,10 +186,21 @@ Community
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
 - [Progress Report Creation](en/community/progress-report-creation.md)
 
+Engine Development
+========================
+
+------------------
+
+- [Testing against launcher](en/engine-development/testing-against-launcher.md)
+- [Updating CEF](en/engine-development/updating-cef.md)
+
 Maintainer Meetings
 ==============
 
 ----------------------
+- [2023-12-16](en/maintainer-meetings/maintainer-meeting-2023-12-16.md)
+- [2023-11-25](en/maintainer-meetings/maintainer-meeting-2023-11-25.md)
+- [2023-10-21](en/maintainer-meetings/maintainer-meeting-2023-10-21.md)
 - [2023-09-23](en/maintainer-meetings/maintainer-meeting-2023-09-23.md)
 - [2023-09-09](en/maintainer-meetings/maintainer-meeting-2023-09-09.md)
 - [2023-09-02](en/maintainer-meetings/maintainer-meeting-2023-09-02.md)

@@ -96,7 +96,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph Cofee Maker Machine
+    subgraph Coffee Maker Machine
     Damageable;
     PowerReceiver;
     SolutionContainer;

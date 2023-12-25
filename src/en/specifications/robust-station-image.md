@@ -15,8 +15,8 @@ Key | Meaning
 `version` | A simple integer corresponding to the RSI format version. This can be used to identify what version an RSI is and allow the implementation to correctly enable backwards compatibility modes when needed.
 `size` | The dimensions of the sprites inside the RSI, stored as an associative list of `{x: ?, y: ?}`. This is _not_ the size of the PNG files that store the sprite sheet. It is used to correctly crop the individual sprites out of the sprite sheet files.
 `states` | A list of _states_ that store the actual meat of the RSI, see below.
-`license` | Can be left out. A valid [SPDX License Identifier](https://spdx.org/licenses/) applying to this work.
-`copyright` | Can be left out. Other arbitrary copyright info such as name, source, ...
+`license` | Required. A valid [SPDX License Identifier](https://spdx.org/licenses/) applying to this work.
+`copyright` | Required. Other arbitrary copyright info such as name, source, ...
 
 ### States
 

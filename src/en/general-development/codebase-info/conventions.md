@@ -133,10 +133,10 @@ This is so it is clear to others what it is. This is especially true if the same
 ## Prototypes
 
 ### Prototype data-fields
-Don't cache prototypes, use prototypeManager to index them when they are needed. You can store them by their ID. When using data-fields that involve prototype ID strings, use custom type serializers. For example, a data-field for a list of prototype IDs should use something like: 
+Don't cache prototypes, use prototypeManager to index them when they are needed. You can store them by their ID. When using data-fields that involve prototype ID strings, use ProtoId<T>. For example, a data-field for a list of prototype IDs should use something like: 
 ```csharp=
-[DataField("exampleTypes", customTypeSerializer: typeof(PrototypeIdListSerializer<ExamplePrototype>))]
-public List<string> ExampleTypes = new();
+[DataField]
+public List<ProtoId<ExamplePrototype>> ExampleTypes = new();
 ```
 
 ### Enums vs Prototypes
@@ -155,7 +155,7 @@ When specifying sound data fields, use `SoundSpecifier`.
   <summary>C# code example (click to expand)</summary>
 
 ```csharp=
-[DataField("sound", required: true)]
+[DataField(required: true)]
 public SoundSpecifier Sound { get; } = default!;
 ```
   
@@ -190,7 +190,7 @@ When specifying sprite or texture data fields, use `SpriteSpecifier`.
   <summary>C# code example (click to expand)</summary>
   
 ```csharp=
-[DataField("icon")]
+[DataField]
 public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
 ```
   
@@ -200,10 +200,14 @@ public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
   <summary>YAML prototype example (click to expand)</summary>
   
 ```yml=
-# You can specify a specific texture file like this
+# You can specify a specific texture file like this, /Textures/ is optional
 - type: MyComponent
   icon: /Textures/path/to/my/texture.png
-    
+
+# /Textures/ is optional and will be automatically inferred, however make sure that you don't start the path with a slash if you don't specify it
+- type: MyComponent
+  icon: path/to/my/texture.png
+
 # You can specify an rsi sprite like this
 - type: MyOtherComponent
   icon:
