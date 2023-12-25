@@ -133,6 +133,7 @@ Design Proposals
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
+- [pAI Expansion](en/proposals/vasilis-pai-expansion.md)
 
 Server Hosting
 ==============

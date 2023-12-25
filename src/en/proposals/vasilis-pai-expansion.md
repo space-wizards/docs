@@ -1,12 +1,22 @@
 ## pAI expansion propsal
 
-[VasilisThePikachu, Unapproved]
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| VasilisThePikachu | :x: No | TBD |
 
-This design doc will outline some new ideas for the pAI item and ghost role. As of now they are just chatbots that can play music and quickly can become boring for both the pAI and to their owner. Especially if one or both of them does not rp.
 
-This will give pAI's more options of stuff they can do. Thus making them a more convincing option for players.
+## Overview
+
+This design doc will outline some new ideas for the pAI item and ghost role. Making them more fun for a player to take them over.
+
+## Background
+
+pAI as of now they are just chatbots that can play music and quickly can become boring for both the pAI and to their owner. Especially if one or both of them does not rp.
+
+This will give pAI's more options of stuff they can do. Thus making them a more convincing option for players to pickup and ghost players to take over.
 
 These are ideas taken from TG
+
 
 ### (Optional) Hologram
 pAI's can choose to manifest themselves as a hologram in the world. They will be unable to intaract with the world in any way and can only go a certain small tile radius away. Could be nice to intaract with their owner or attract attention on to their dead owner.
