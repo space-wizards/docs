@@ -1,9 +1,12 @@
 # Grid Inventory
-**Authors:** EmoGarbage
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| EmoGarbage | :white_check_mark: Yes | https://github.com/space-wizards/space-station-14/pull/21931 |
 
 Credit to the SS13 server Fields of Fire, whose inventory overhaul served as inspiration for the UI.
 
-## Abstract
+## Overview
 
 Grid inventory is intended to be a replacement for the current inventory backend and UI. 
 It encompasses both an internal rewriting of storages, wherein they are classified by geometric shapes, as well as a redesign of the UI, aiming to translate the internal logistics of the system in an immediately understandable way. 

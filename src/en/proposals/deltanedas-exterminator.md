@@ -1,6 +1,8 @@
-# The Exterminator
+# Exterminator
 
-**Author:** deltanedas
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| deltanedas | :white_check_mark: Yes | https://github.com/space-wizards/space-station-14/pull/19946 |
 
 ## Abstract
 
