@@ -1,6 +1,8 @@
-## PDA messaging program and server
+## PDA Messaging
 
-[Julian, VasilisThePikachu, Unapproved]
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| Julian & VasilisThePikachu |  :x: No | TBD |
 
 *(Taken by [Julian doc](https://hackmd.io/iu2yK9bcQb-veuCOLl-FYw?both#Optional-Channels-and-Department-based-Channels) in hackmd and modified a lil. Mostly replacing "email" to "message", "Email address" to "user/user id" and adding some of my own twists. Julian was fine with this if i understood correctly (i was in vc with em))*
 

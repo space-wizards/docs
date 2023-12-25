@@ -1,5 +1,10 @@
 # Genpop Security
-By ike709 with heavy inspiration from [AndrewMontagne & OracleStation 13](https://github.com/OracleStation/OracleStation/pull/419)
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| ike709 | :x: No | TBD |
+
+with heavy inspiration from [AndrewMontagne & OracleStation 13](https://github.com/OracleStation/OracleStation/pull/419) 
 
 ## Design Goal
 
