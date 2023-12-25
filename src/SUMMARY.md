@@ -121,6 +121,10 @@ Design Proposals
 
 ----------------------
 
+- [Feature Proposal Template](en/proposals/proposal-template.md)
+
+----------------------
+
 - [Anomaly Cores](en/proposals/mirrorcult-anomaly-cores.md)
 - [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
 - [Plant Genetics](en/proposals/deltanedas-plant-genetics.md)
