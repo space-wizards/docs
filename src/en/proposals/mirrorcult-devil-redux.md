@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| mirrorcult, with help from Emisse / freeman | :x: No | TBD |
+| mirrorcult, with help from Emisse & freeman | :x: No | TBD |
 
 <center>
 <img src="../assets/images/proposals/devil-sprite.png"/>
@@ -20,7 +20,7 @@ This antagonist was eventually removed, though the concept was still well-liked,
 
 - will no longer start as a regular crewmember. It will be a proper middle manager of hell looking to rise up the ranks, as shown in the sprite above.
 - will be immortal. It cannot be killed by any means, but can be inconvenienced through religious means, like holy water or salt circles.
-- will have minimal interactions with the world around them besides contracts.** It cannot attack people (no access to combat mode at all), or interact with most machines, but can pick up and interact with items (e.g. for contracts, or to steal a precious item as part of a contract)
+- will have minimal interactions with the world around them besides contracts. **It cannot attack people (no access to combat mode at all)**, or interact with most machines, but can pick up and interact with items (e.g. for contracts, or to steal a precious item as part of a contract)
 - starts immediately with several powers, notably the ability to spawn a contract of some type as well as jaunt with very few restrictions (and probably a few more for flavor).
 - does not gain attacking powers and become an 'archdevil' with more contracts. They may gain some new powers or contract types, but their main goal is simply to fulfill their objectives however they like and have fun.
 
