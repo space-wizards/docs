@@ -133,6 +133,7 @@ Design Proposals
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
+- [Devil Redux](en/proposals/mirrorcult-devil-redux.md)
 
 Server Hosting
 ==============
