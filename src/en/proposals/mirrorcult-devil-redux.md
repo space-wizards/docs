@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| mirrorcult | :x: No | TBD |
+| mirrorcult, with help from Emisse / freeman | :x: No | TBD |
 
 <center>
 <img src="../assets/images/proposals/devil-sprite.png"/>
