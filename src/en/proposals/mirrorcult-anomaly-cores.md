@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| mirrorcult | :warning: Partially | https://github.com/space-wizards/space-station-14/pull/21306 |
+| mirrorcult | :information_source: Open PR | https://github.com/space-wizards/space-station-14/pull/21306 https://github.com/space-wizards/space-station-14/pull/23012 |
 
 The intention of this proposal is not to expand the anomaly gameplay system through breadth (i.e. more stuff) but to add new dimensions of gameplay and new incentives entirely. This will be done through two main additions: **inert & decaying anomaly cores**, and the **G.O.R.I.L.L.A Gauntlets**.
 
