@@ -11,9 +11,11 @@ TODO
 
 ## Mechanics
 ### Spawning
-The Controller Brain can spawn as a random event, similar to space dragons or revenants. They only spawn in secluded areas like maintenance where people are not likely to frequent to prevent people stumbling across them while they're starting out.
+The Controller Brain can spawn as a random event, similar to space dragons or revenants. They only spawn in secluded areas like maintenance where people are not likely to frequent to prevent people stumbling across them while they're starting out. The Controller Brain is immobile. Wherever you spawn is where you're going to be.
 
-It can also spawn (incredibly low chance) when you give cognizine to a humanoid that already has a soul. They will then become an antagonist with the objective of finding somewhere secluded to 'gestate', where they will become a Controller Brain.
+When the Controller Brain spawns, one or two non-mindshielded characters immediately become thralls.
+
+**TODO: What happens if the initial thralls die or something?**
 
 ### Biomass
 The Controller Brain can collect biomass from corpses and non-sentient beings to gain additional abilities from a store, like revenants.
@@ -21,7 +23,7 @@ The Controller Brain can collect biomass from corpses and non-sentient beings to
 See the Abilities section for more.
 
 ### Enthrallment
-The Controller Brain can enthrall (convert) crew, making them act in the Controller Brain's interests. This can happen over any distance, but happens faster the closer the target is.
+The Controller Brain can enthrall (convert) crew, making them act in the Controller Brain's interests. This can happen in proximity to the Brain (not pylons) or through the Enthrall ability. The process of enthrallment takes time, and the victim will be aware of it, with their vision tightening, being covered by a purplish vignette. If it reaches its completion, they become a thrall. If the victim can escape the Brain's influence, this effect will slowly reverse itself.
 
 Enthralled crew get a unique radio channel, letting them communicate secretly with the Controller Brain and other thralls. Controller Brain-aligned characters can also see whether a person is enthralled or not.
 
