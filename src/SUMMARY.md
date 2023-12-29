@@ -142,6 +142,7 @@ Design Proposals
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
 - [Thief antagonist](en/proposals/theshued-thief.md)
+- [Genetics](en/proposals/yathxyz-genetics.md)
 
 Server Hosting
 ==============
