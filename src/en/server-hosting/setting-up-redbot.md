@@ -49,7 +49,7 @@ Currently only has the functionality to restart servers as of writing
 You will get a form you will be asked to fill in (**Notice**: Neither us nor the RedBot developers will receive this information. This information will only be stored by the bot and won't be shown publicly.)
 ![Input field](../assets/images/redbot-poweactions-form.png)
 - Name: The server's name, you will be providing this to the bot when restarting the server.
-- URL: The URL to the watchdog instance, make sure to provide a URL accessible by the bot. Example: If you are exposing the watchdog's API at "https://example.com/watchdog" then what's that you wanna input. You can use "http://localhost:5000" if the bot is hosted on the same machine as the watchdog.
+- URL: The URL to the watchdog instance, make sure to provide a URL accessible by the bot. Example: If you are exposing the watchdog's API at 'https://example.com/watchdog' then what's that you wanna input. You can probably use 'localhost' too if the bot is hosted on the same machine as the watchdog.
 - Server ID: The name of your server in your watchdog's appsettings.yml that stores your server config. *Not* the "Name" config.
 - API token: The ApiToken in your watchdogs configuration.
 3. After clicking submit if the bot reported success then you are done! Repeat for your other servers or give it a shot with ```[p]restartserver <name>```.
