@@ -13,7 +13,7 @@ This would bring the order to:
 flowchart LR
     rootod>Launch OD Launcher]
     root14>Launch SS14 Launcher]
-    game(["`**Select Game**`"])
+    game(["Select Game])
     style game stroke:#800
     server([Select Server])
 
