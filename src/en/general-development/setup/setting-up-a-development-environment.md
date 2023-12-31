@@ -161,6 +161,9 @@ Check that python is installed from the website and not the Microsoft Store. If 
 
 If you are on Windows and get redirected to the Microsoft Store or encounter a message in your terminal claiming that Python is not installed. This issue may be caused by a stupid Microsoft shortcut. Which you can disable by searching for `Manage App Execution Aliases` and disabling the two python references
 
+### py not found
+If python was installed from the website and the `python` command works, but you still get the error 'py is not installed', then check if `C:\WINDOWS\py.exe` works. If so, then add `C:\WINDOWS` to your path.
+
 ## System.DllNotFoundException: Unable to load DLL 'freetype6' or one of its dependencies: The specified module could not be found.
 
 ```PS C:\Users\Larme\Downloads\space-station-14> dotnet run --project Content.Client
