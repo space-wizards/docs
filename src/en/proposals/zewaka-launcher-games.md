@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| ZeWaka | :x: No | WYCI |
+| ZeWaka, ike709 | :x: No | WYCI |
 
 ## Overview
 
