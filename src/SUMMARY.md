@@ -188,11 +188,20 @@ Community
   - [Wizards Den Admin Policy](en/community/admin/wizards-den-admin-policy.md)
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
 - [Progress Report Creation](en/community/progress-report-creation.md)
+  
+Engine Development
+========================
+
+------------------
+
+- [Testing against launcher](en/engine-development/testing-against-launcher.md)
+- [Updating CEF](en/engine-development/updating-cef.md)
 
 Maintainer Meetings
 ==============
 
 ----------------------
+- [2023-12-30](en/maintainer-meetings/maintainer-meeting-2023-12-30.md)
 - [2023-12-16](en/maintainer-meetings/maintainer-meeting-2023-12-16.md)
 - [2023-11-25](en/maintainer-meetings/maintainer-meeting-2023-11-25.md)
 - [2023-10-21](en/maintainer-meetings/maintainer-meeting-2023-10-21.md)
