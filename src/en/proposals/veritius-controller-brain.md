@@ -4,75 +4,54 @@
 | Veritius  | :x: No      | TBD          |
 
 ## Overview
-The Controller Brain is a mid-round conversion antagonist. Mechanically, it's a mix of blood cult, AI, and revenants. Thematically, it's a body horror twisted flesh sort of thing combined with a psychic apex predator beyond comprehension. 
-
-## Background
-TODO
+The Controller Brain is a minor mid-round conversion antagonist focused on converting the crew and taking over the station.
 
 ## Mechanics
 ### Spawning
 The Controller Brain can spawn as a random event, similar to space dragons or revenants. They only spawn in secluded areas like maintenance where people are not likely to frequent to prevent people stumbling across them while they're starting out. The Controller Brain is immobile. Wherever you spawn is where you're going to be.
 
-When the Controller Brain spawns, one or two non-mindshielded characters immediately become thralls.
+When the Controller Brain spawns, one or two (or more, depending on population) non-mindshielded characters immediately become thralls.
 
 **TODO: What happens if the initial thralls die or something?**
 
-### Biomass
-The Controller Brain can collect biomass from corpses and non-sentient beings to gain additional abilities from a store, like revenants.
-
-See the Abilities section for more.
-
 ### Enthrallment
-The Controller Brain can enthrall (convert) crew, making them act in the Controller Brain's interests. This can happen in proximity to the Brain (not pylons) or through the Enthrall ability. The process of enthrallment takes time, and the victim will be aware of it, with their vision tightening, being covered by a purplish vignette. If it reaches its completion, they become a thrall. If the victim can escape the Brain's influence, this effect will slowly reverse itself.
+The Controller Brain can enthrall (convert) crew, making them act in the Controller Brain's interests. This can happen through the Enthrall ability.
+
+The goal of thralls is to abduct people and bring them back to the Brain for conversion.
 
 Enthralled crew get a unique radio channel, letting them communicate secretly with the Controller Brain and other thralls. Controller Brain-aligned characters can also see whether a person is enthralled or not.
 
 Thralls can be "cured" with a mindshield implant. This also makes Command and Security start out immune to conversion, though this can change (see the Overpower ability). Thralls are cured if the Controller Brain is destroyed.
 
-### Vision
-The Controller Brain can see through its thralls and pylons, much like AIs and cameras.
-
-### Structures
-The Controller Brain can create static objects to spread its object and enforce its will.
-
-#### Flesh Pylon
-When targeted abilities are used (like the Enthrall ability), distance calculations take the minimum distance between the target, the Brain, and its pylons.
-
 ## Abilities
 The Controller Brain gets a number of abilities to influence the world.
+These abilities can be purchased through Brain Points™ (don't call it that) which are gained by enthralling crew.
+Your average crewmember gives 40 Brain Points™ (may change this)
 
 ### Enthrall
-The Controller Brain starts with this ability. On use, makes a sentient being your ally. This does not work on creatures with mindshields. This works over any distance, but takes some time, working faster the closer the target is.
-
+The Controller Brain starts with this ability. On use, makes a sentient being your ally. This does not work on creatures with mindshields.
 See the Enthrallment section to see how thralls work.
 
 ### Influence
-Costs 10 biomass to unlock. Allows you to send a subtle message to any crew member on board. Mindshielded people are immune.
+Costs 30 points to unlock. Allows you to send a subtle message to any crew member on board. Mindshielded people are immune.
 
 This ability is RP-focused. I don't imagine it being remotely useful in LRP, but it could be pretty fun in higher role-play levels.
 
-### Translocate
-Costs 70 biomass to unlock, and 20 per use. Creates a temporary two-way portal between any two points in the Brain's vision.
-
 ### Mutate
-Costs 70 biomass to unlock, and 15 per use. This makes the target Thrall tougher and faster, but they will show outward symptoms of being a thrall.
+Costs 70 points to unlock, and 30 per use. This makes the target Thrall tougher and faster, but they will show outward symptoms of being a thrall. (TODO: What symptoms?)
+Mutated thralls also get a 'venom gland' action that injects nocturine into a target.
 
 If they cease to be a thrall, they will no longer have the buffs granted to them.
 
-This ability is for when you're discovered and you need a few guys to defend you.
-
-### Divide
-Costs 100 biomass to unlock, and 30 biomass per use. Spawns a small flesh bud that your thralls can take and plant somewhere to spread your influence, creating a flesh pylon. See the Pylons section in Mechanics for more.
-
 ### Overpower
-Costs 100 biomass to unlock, and 30 biomass per use. Only works when the target is in close proximity to the Brain. Breaks a mindshield, but does not convert the person. The person will be made aware that their mindshield is broken.
+Costs 100 points to unlock, and 30 points per use. Only works when the target is in close proximity to the Brain. Breaks a mindshield, but does not convert the person. The person will be made aware that their mindshield is broken.
 
 This ability is for converting "trustworthy" personnel and installing them as your sleeper agents. It's especially good if you get someone like the Captain as one of your agents.
 
 See the Gameplay Implications section for a bit more on this.
 
 ### Ascend
-Costs 1000 biomass to unlock, and using it is free. Begins a countdown to enthrall **the entire crew.** The entire crew is given a persistent marker on their HUD pointing to the Brain.
+Costs 1000 points to unlock, and using it is free. Begins a countdown to enthrall **the entire crew.** The entire crew is given a persistent marker on their HUD pointing to the Brain.
 
 The intended goal of this ability is for when you think you're too powerful to stop and want to convert the rest of the crew in one fell swoop. Alternatively, if you've been stealthy this entire time, this is a pretty good way to catch the crew unattended, as long as you can defend yourself.
 
