@@ -11,11 +11,14 @@ OpenDream needs the ability to display multiple games, another abstraction level
 This would bring the order to:
 ```mermaid
 flowchart LR
-    root([Launch Launcher])
-    game([Select Game])
+    rootod>Launch OD Launcher]
+    root14>Launch SS14 Launcher]
+    game(["`**Select Game**`"])
     style game stroke:#800
     server([Select Server])
-    root --> game
+
+    rootod --> game
+    root14 --> server
     game --> server
     server --> Connect
 ```
