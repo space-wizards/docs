@@ -16,6 +16,8 @@ It is intended to be a small bit of fun seen in some rounds, but not completely 
 
 Turf taggers may or may not be selected from other antagonists in the round (could be exclusive with traitor, or maybe you can have a traitor that gets to tag up turf too. Depends on if it would be good or not).
 
+Unlike most gamemodes, players selected can be from any department. Captain wants command doors, secoffs want sec doors, etc.
+
 ## Gameplay
 
 Players are not antagonists (unless they are from another role) so they should not immediately start killing everyone, following escallation rules.
