@@ -26,6 +26,8 @@ Naturally there will be skirmishes but it won't be as bloody as traitor assassin
 
 Each turf tagger has an objective to spray the most doors, which is either 100% (you are winning) or a % of whoever is winning.
 
+(An objective may not be desired for the reasons of taggets psychically knowing how many doors are theirs, and being potentially costly to run)
+
 On round end the number of doors each turf tagger has is shown, in order of who got the most.
 
 Only one tagger is selected from each department at most, but they may recruit coworkers IC (not a flash) to join the turf war. Spray painters are available in YouTools so nobody is left out.
