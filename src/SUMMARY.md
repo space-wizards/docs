@@ -122,6 +122,7 @@ Design Proposals
 ----------------------
 
 - [Anomaly cores](en/proposals/anomaly-cores.md)
+- [Machine upgrading rework](en/proposals/machine-upgrading-rework.md)
 - [PDA messaging](en/proposals/pda-messaging.md)
 - [Plant genetics](en/proposals/deltanedas-plant-genetics.md)
 - [Security Genpop Rework](en/proposals/genpop_security.md)
