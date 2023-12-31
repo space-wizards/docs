@@ -1,4 +1,11 @@
 # Machine Upgrading Rework
+
+| Designers | Implemented           | GitHub Links                                                                                                                                   |
+|---|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| EmoGarbage | :warning: Partially | [#23202](https://github.com/space-wizards/space-station-14/pull/23202), [#22233](https://github.com/space-wizards/space-station-14/pull/22233) |
+
+## Overview
+
 Upgrades as a whole are somewhat integral to science as a department. 
 They basically exist to produce upgraded versions of various items and tools.
 However, when it comes to upgrading the machines around the station, there are some issues.

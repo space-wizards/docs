@@ -8,6 +8,12 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 2. Download the latest version of the server from [our builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
 3. Extract that to a directory somewhere.
 4. Run `Robust.Server.exe` (or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
+5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
+6. When there is a new update. Go back to the second step and just overwrite the files to update your server.
+
+```admonish info
+If you ever wish to develop for the game. You will need a [proper development environment](./setting-up-a-development-environment.md). You cannot use the premade server for this use case.
+```
 
 
 ## Level 1: Invite Your Friends
@@ -21,11 +27,6 @@ The server needs network ports to be forwarded so that people can connect. By de
 * TCP `1212` is a HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
 
 For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
-
-
-```admonish info
-Note that when you run a server like this, the build information that the launcher needs (so it has a version of the client to download) points to our central server. **We do not keep those builds around forever** so eventually people will no longer be able to connect to the server. Obviously this is not a problem if you want to set up a quick and dirty private server for your friends. Just make sure to download a new version of the server at least every week.
-```
 
 ### Configure Your Server
 
