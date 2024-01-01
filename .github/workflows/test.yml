@@ -17,7 +17,7 @@ jobs:
       - name: Install mdbook & plugins
         uses: taiki-e/install-action@v2.18.6
         with:
-          tool: mdbook@0.4.34,mdbook-admonish@1.11.1,mdbook-linkcheck@0.7.7,mdbook-mermaid@0.12.6,mdbook-template@1.1.0,mdbook-emojicodes@0.3.0
+          tool: mdbook@0.4.36,mdbook-admonish@1.14.0,mdbook-linkcheck@0.7.7,mdbook-mermaid@0.12.6,mdbook-template@1.1.0,mdbook-emojicodes@0.3.0
       - name: Build with mdBook
         run: mdbook build
       - name: Upload artifact

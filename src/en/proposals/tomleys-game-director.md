@@ -1,8 +1,10 @@
-# Game Director / Dynamic Event Scheduler
+# Game Director
 
-**Authors:** tom-leys (RecallSingularity)
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| tom-leys (RecallSingularity) | :information_source: Open PR | https://github.com/space-wizards/space-station-14/pull/16548 |
 
-## Abstract
+## Overview
 
 Triggers game events to attain a chaos goal. Goal varies during each round to create variety. 
 By measuring and varying chaos, the director keeps the challenge each round within a fun band. It reacts to player success

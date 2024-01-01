@@ -1,27 +1,8 @@
-# Feature Design: plant genetics
+# Plant Genetics
 
-<table>
-  <tr>
-   <td>Designer
-   </td>
-   <td>deltanedas
-   </td>
-  </tr>
-  <tr>
-   <td>Discord/Forum Thread
-   </td>
-      <td>TBD
-   </td>
-  </tr>
-  <tr>
-   <td>Github PR/Draft
-   </td>
-      <td>TBD
-   </td>
-  </tr>
-</table>
-
-
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| deltanedas | :x: No | TBD |
 
 # Overview:
 

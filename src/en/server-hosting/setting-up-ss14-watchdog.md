@@ -29,7 +29,7 @@ You need to have:
 + .NET 8 SDK
 + ASP .NET Core 8 Runtime
 
-Both of these can be found at the [.NET 8 download page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+Both of these can be found at the [.NET 8 download page](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
 On Linux/MacOS use your favourite package manager (apt, dnf, pacman, brew etc) according to [Microsoft's installation instructions](https://learn.microsoft.com/en-us/dotnet/core/install/linux).
 

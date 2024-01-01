@@ -92,6 +92,8 @@ Robust Toolbox
 - [Build Configurations](en/robust-toolbox/build-configurations.md)
 - [Preprocessor Defines](en/robust-toolbox/preprocessor-defines.md)
 - [MIDI](en/robust-toolbox/midi.md)
+- [Automatic Client Zip (ACZ)](en/robust-toolbox/acz.md)
+- [Asset Packaging](en/robust-toolbox/asset-packaging.md)
 - [Publishing a new version](en/robust-toolbox/publishing-robusttoolbox.md)
 
 Space Station 14
@@ -121,13 +123,19 @@ Design Proposals
 
 ----------------------
 
-- [Anomaly cores](en/proposals/anomaly-cores.md)
-- [PDA messaging](en/proposals/pda-messaging.md)
-- [Plant genetics](en/proposals/deltanedas-plant-genetics.md)
-- [Security Genpop Rework](en/proposals/genpop_security.md)
-- [Game Director](en/proposals/game-director.md)
-- [Grid Inventory](en/proposals/grid-inventory.md)
+- [Feature Proposal Template](en/proposals/proposal-template.md)
 
+----------------------
+
+- [Anomaly Cores](en/proposals/mirrorcult-anomaly-cores.md)
+- [Machine Upgrading Rework](en/proposals/emogarbage-machine-upgrading-rework.md)
+- [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
+- [Plant Genetics](en/proposals/deltanedas-plant-genetics.md)
+- [Security Genpop Rework](en/proposals/ike709-genpop-security.md)
+- [Game Director](en/proposals/tomleys-game-director.md)
+- [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
+- [Atmos Roadmap](en/proposals/notafet-atmos.md)
+- [Exterminator](en/proposals/deltanedas-exterminator.md)
 
 Server Hosting
 ==============
@@ -181,10 +189,19 @@ Community
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
 - [Progress Report Creation](en/community/progress-report-creation.md)
 
+Engine Development
+========================
+
+------------------
+
+- [Testing against launcher](en/engine-development/testing-against-launcher.md)
+- [Updating CEF](en/engine-development/updating-cef.md)
+
 Maintainer Meetings
 ==============
 
 ----------------------
+- [2023-12-30](en/maintainer-meetings/maintainer-meeting-2023-12-30.md)
 - [2023-12-16](en/maintainer-meetings/maintainer-meeting-2023-12-16.md)
 - [2023-11-25](en/maintainer-meetings/maintainer-meeting-2023-11-25.md)
 - [2023-10-21](en/maintainer-meetings/maintainer-meeting-2023-10-21.md)
