@@ -128,6 +128,7 @@ Design Proposals
 ----------------------
 
 - [Anomaly Cores](en/proposals/mirrorcult-anomaly-cores.md)
+- [Machine Upgrading Rework](en/proposals/emogarbage-machine-upgrading-rework.md)
 - [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
 - [Plant Genetics](en/proposals/deltanedas-plant-genetics.md)
 - [Security Genpop Rework](en/proposals/ike709-genpop-security.md)
