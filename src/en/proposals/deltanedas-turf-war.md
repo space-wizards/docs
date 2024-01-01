@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| deltanedas | :x: No | TBD |
+| deltanedas | :warning: partially | [#23290](https://github.com/space-wizards/space-station-14/pull/23290) |
 
 ## Abstract
 
