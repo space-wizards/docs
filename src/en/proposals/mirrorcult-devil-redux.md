@@ -23,6 +23,7 @@ This antagonist was eventually removed, though the concept was still well-liked,
 - will have minimal interactions with the world around them besides contracts. **It cannot attack people (no access to combat mode at all)**, or interact with most machines, but can pick up and interact with items (e.g. for contracts, or to steal a precious item as part of a contract)
 - starts immediately with several powers, notably the ability to spawn a contract of some type as well as jaunt with very few restrictions (and probably a few more for flavor).
 - does not gain attacking powers and become an 'archdevil' with more contracts. They may gain some new powers or contract types, but their main goal is simply to fulfill their objectives however they like and have fun.
+- has contracts which are more prone to lawyering, negotiation & have better modularity in general
 
 ### Reasoning
 
@@ -36,31 +37,47 @@ Making the devil not a crewmember, but just a separate antagonist, gives it more
 
 ## Contracts
 
-Beyond the worth expounding on the contract system, how it's intended to work, what type of gameplay it should foster, and possible counterplay. These are the bread and butter of devil gameplay.
+Beyond the worth expounding on the *unique* contract system, how it's intended to work, what type of gameplay it should foster, and possible counterplay. These are the bread and butter of devil gameplay.
 
-Each contract has a variable upside, one fixed downside, and a number of variable downsides. A devil can spawn a contract, but **anyone can edit a contract**, including the person signing it. The crewmember must sign it first, after which the devil can no longer edit the contract without voiding their signature. When the devil signs the contract, it goes into effect.
+Contracts are **simply fancy pieces of paper** which can be written on. However, they do have some fixed areas--a header, bullet point list, and footer. Since it's just text, you can use font changes/size changes, color changes, etc (to a certain degree).
 
-Upsides are things such as:
+A devil can spawn and create a contract, but **anyone can edit a contract**, including the person signing it. The crewmember must sign it first, after which the devil can no longer edit the contract without voiding their signature. When the devil signs the contract, it goes into effect.
+
+Each contract has a fixed downside that, when the crewmember signs it, **they sign away their soul** and will **go to hell when they die** (not able to be revived, forced into a hell dimension).
+
+Each contract has a number of **clauses** which are listed in bullet points. Clauses are **written in natural language** and use an extremely rudimentary parsing system to determine their effect. Each clause has a limited number of characters, and they have three different ways of changing their behavior: *triggers*, *positive/negative effects*, and *modifiers*.
+
+**Triggers** are how the clause will be triggered. A clause may have as many triggers as you can fit. Normally, it's simply "on signing the contract", however some other triggers are available:
+- "after X minutes/seconds", simply delaying the
+- "randomly" will pick a random trigger (& time if a time trigger was selected)
+- "on death/crit" does what you think.
+- "on hearing/speaking word" also does what you think.
+
+**Modifiers** are fun language tricks that subtly change how the contract works or who it affects:
+- "not", "can't", "won't" etc. simply negates the effect! These can stack, i.e. "not won't can't not" (four negations) means the effect **will** occur.
+- by default, effects will apply to the non-devil who signed the contract, but "the devil/contracter", "the human/contractee/crewmember" etc will either add a degree of specificity to who it applies to, or to change who it applies to.
+
+**Positive effects** are things such as:
 - A specific item requested by the crewmember
 - Vitality--healing, revival, stun resistance, etc
 - Increased view range
 - Innate pinpointer to any player
-- A random spell
+- A random or specific spell
 - Darkvision / xray vision
 - Gaining a hand or other body part
 
-Each contract may only have one.
+Each contract may only have one positive effect in total.
 
-The fixed downside of each contract is that, when the crewmember signs it, **they sign away their soul** and will **go to hell when they die** (not able to be revived, forced into a hell dimension).
-
-The variable downsides are things such as:
-- Die in X minutes
+**Negative effects** are things such as:
+- Die (to be used with certain modifiers)
+- Explode
 - Remove X hands
 - Get kill smited
 - Blindness, forced pacifism, clumsy, etc
-- Hearing a specific word instantly kills you
+- Polymorphing into another creature
+- Spawn a hostile creature nearby
 
-Each contract must pick one variable downside, in addition to the fixed downside.
+Each contract must have one variable downside, in addition to the fixed downside.
 
 ## Imagine the fun
 
@@ -70,3 +87,4 @@ Simply imagine it!!
 - A headrev makes a contract with a devil to be able to seek out the hiding captain, but the captain made a deal with the devil to have increased vitality
 - A crewmember negotiates a roleplay contract with a devil--they will sign a contract IF the devil gets someone else to sign a contract, or if the devil does something else for their amusement (such as a fiddle battle)!
 - The chaplain lures a devil into their office under the pretense of making a contract, but traps it forever in a circle with a salt grenade! However, some wily crewmates still seek out contracts with the devil by entering the salt circle themselves, or even destroying it to free it.
+- A wily lawyer inserts the words "devil in 30 seconds not not becomes monkey" into another clause in small font, and the devil actually falls for it!
