@@ -14,9 +14,9 @@ Players must use spray painters to tag up turf for their respective departments.
 
 It is intended to be a small bit of fun seen in some rounds, but not completely taking it over the round like revolution.
 
-Turf taggers may or may not be selected from other antagonists in the round (could be exclusive with traitor, or maybe you can have a traitor that gets to tag up turf too. Depends on if it would be good or not).
+Turf taggers must **not** be selected from other antagonists in the round (could be exclusive with traitor, to keep it as a nonantag side fun gamemode.
 
-Unlike most gamemodes, players selected can be from any department. Captain wants command doors, secoffs want sec doors, etc.
+Like most gamemodes, players selected can't be from command or sec departments.
 
 ## Gameplay
 
@@ -25,8 +25,6 @@ Players are not antagonists (unless they are from another role) so they should n
 Naturally there will be skirmishes but it won't be as bloody as traitor assassinations or revolutions.
 
 Each turf tagger has an objective to spray the most doors, which is either 100% (you are winning) or a % of whoever is winning.
-
-(An objective may not be desired for the reasons of taggets psychically knowing how many doors are theirs, and being potentially costly to run)
 
 On round end the number of doors each turf tagger has is shown, in order of who got the most.
 
