@@ -16,7 +16,9 @@ It is intended to be a small bit of fun seen in some rounds, but not completely 
 
 Turf taggers must **not** be selected from other antagonists in the round (could be exclusive with traitor, to keep it as a nonantag side fun gamemode.
 
-Like most gamemodes, players selected can't be from command or sec departments.
+Unlike most gamemodes, players selected can be in command and sec (since they aren't antagonists).
+
+However, command staff will tag for their respective departments **and not command doors**. Since cap and hop don't govern individual departments, they can't be picked.
 
 ## Gameplay
 
