@@ -23,7 +23,7 @@ Worm movement is audible in a low to moderate range. Silent if moving slowly.
 Damaging the worm directly or the walls the worm is in damages the segment hit.
 Sufficiently damaged segments are disabled.
 Damaging a disabled segment leaks damage to neighbouring segments.
-If all segments are destroyed, or the head is destroyed, the worm dies.
+If the head is disabled, the worm dies and the segments may be pulled out of the wall as a trophy.
 The head has high health.
 It may, through the usage of an ability, temporarily go out of walls to grab people, after which it must go back into a wall.
 Being outside of walls rapidly asphyxiates the worm, so it must go back in as soon as it can.
