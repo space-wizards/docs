@@ -18,6 +18,7 @@ Relevant Discord discussion: https://discord.com/channels/310555209753690112/100
 
 Initially, the wall worm spawns in any non-transparent wall on the station as a ghost role.
 It may only move through walls, airlocks, and full windows, using smooth tile movement.
+The worm has no FOV and can see everything regardless of sight blockers.
 Worm movement is audible in a low to moderate range. Silent if moving slowly.
 Damaging walls the worm is in damages the worm, perhaps at a percentage of the damage dealt to the wall.
 It may, through the usage of an ability, temporarily go out of walls to grab people, after which it must go back into a wall.
