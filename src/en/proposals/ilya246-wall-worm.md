@@ -20,7 +20,9 @@ Initially, the wall worm spawns in any non-transparent wall on the station as a 
 It may only move through walls, airlocks, and full windows, using smooth tile movement.
 The worm has no FOV and can see everything regardless of sight blockers.
 Worm movement is audible in a low to moderate range. Silent if moving slowly.
-Damaging walls the worm is in damages the segment hit. Damaging a disabled segment leaks damage to neighbouring segments.
+Damaging the worm directly or the walls the worm is in damages the segment hit.
+Sufficiently damaged segments are disabled.
+Damaging a disabled segment leaks damage to neighbouring segments.
 If all segments are destroyed, or the head is destroyed, the worm dies.
 The head has high health.
 It may, through the usage of an ability, temporarily go out of walls to grab people, after which it must go back into a wall.
