@@ -20,7 +20,9 @@ Initially, the wall worm spawns in any non-transparent wall on the station as a 
 It may only move through walls, airlocks, and full windows, using smooth tile movement.
 The worm has no FOV and can see everything regardless of sight blockers.
 Worm movement is audible in a low to moderate range. Silent if moving slowly.
-Damaging walls the worm is in damages the worm, perhaps at a percentage of the damage dealt to the wall.
+Damaging walls the worm is in damages the segment hit. Damaging a disabled segment leaks damage to neighbouring segments.
+If all segments are destroyed, or the head is destroyed, the worm dies.
+The head has high health.
 It may, through the usage of an ability, temporarily go out of walls to grab people, after which it must go back into a wall.
 Being outside of walls rapidly asphyxiates the worm, so it must go back in as soon as it can.
 Dragging people inside walls deals damage to them. If the person is dead or dies, they get eaten by the worm.
@@ -40,6 +42,7 @@ Eating people lets the worm gain additional body segments.
 As a downside, additional segments make the worm's movement slower and louder and give the crew more area to hurt it.
 As an upside, they grant it additional health and make Grab deal more damage and incur less slowdown.
 The worm may choose to specialise new segments.
+Disabled segments do not provide their function.
 
 #### Segment specialisation
 
@@ -54,3 +57,7 @@ Liver - Makes the worm slowly regenerate health.
 Acid gland - Makes Grab deal considerably more damage.
 
 Wing - Increases the range of Charge and makes it faster.
+
+Armor - High health. Aborbs damage taken by neighbouring segments.
+
+Brain - Low health. Prevents death by head destruction. May sacrifice its health to slightly repair a disabled head.
