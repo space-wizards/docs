@@ -1,7 +1,5 @@
 # Wall Worm
 
-Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
-
 | Designers | Implemented | GitHub Links |
 |---|---|---|
 | Ilya246 | :x: No | TBD |
