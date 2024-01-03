@@ -132,6 +132,7 @@ Design Proposals
 - [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
 - [Plant Genetics](en/proposals/deltanedas-plant-genetics.md)
 - [Security Genpop Rework](en/proposals/ike709-genpop-security.md)
+- [Rogue Drones](en/proposals/mirrorcult-rogue-drones.md)
 - [Game Director](en/proposals/tomleys-game-director.md)
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
