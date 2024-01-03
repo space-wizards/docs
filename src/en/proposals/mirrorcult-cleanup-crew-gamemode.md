@@ -6,7 +6,7 @@
 
 ## Overview
 
-Cleanup Crew is a lowpop (0-20 players) gamemode built around the concept of repairing destroyed stations from previous rounds. The goal is to provide a fun, relatively chill experience that differs from the base game but still interacts with all of its systems (especially construction, power, atmos, etc), acting as an educational experience.
+Cleanup Crew is a lowpop (0-20 players) gamemode built around the concept of repairing destroyed stations from previous rounds. The goal is to provide a fun, relatively chill experience that differs from the base game but still interacts with all of its systems (especially construction, power, atmos, etc), acting as an educational experience, while also being very atmospheric.
 
 The NanoTrasen Emergency Cleanup Crew, one spacemonth after the sudden abandonment of their finest new station, will start the game on a medium-large ERT shuttle near the disheveled station. The shuttle is stocked with everything you could need--lots of materials & RCDs, medical supplies, atmospheric supplies, generators, janitorial equipment, etc.
 
