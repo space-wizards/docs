@@ -137,6 +137,7 @@ Design Proposals
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
+- [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 
 Server Hosting
 ==============
