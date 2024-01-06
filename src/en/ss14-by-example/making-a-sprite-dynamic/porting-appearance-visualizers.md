@@ -147,14 +147,14 @@ This doesn't use `InitializeEntity` but if it did the full class would look like
             SubscribeLocalEvent<ItemCabinetVisualsComponent, ComponentInit>(OnComponentInit);
         }
 
-        private void OnComponentInit(EntityUid uid, ItemCabinetVisualsComponent component, ComponentInit args)
+        private void OnComponentInit(Entity<ItemCabinetVisualsComponent> ent, ref ComponentInit args)
         {
             // behavior!
-    		}
+        }
 
         protected override void OnChangeData(EntityUid uid, ItemCabinetVisualsComponent component, ref AppearanceChangeEvent args)
         {
-            if (args.Sprite != null)
+            if (args.Sprite != null
                 && component.TryGetData(ItemCabinetVisuals.IsOpen, out bool isOpen)
                 && component.TryGetData(ItemCabinetVisuals.ContainsItem, out bool contains))
             {
