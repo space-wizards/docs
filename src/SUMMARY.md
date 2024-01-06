@@ -138,6 +138,7 @@ Design Proposals
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
+- [Turf War](en/proposals/deltanedas-turf-war.md)
 
 Server Hosting
 ==============
