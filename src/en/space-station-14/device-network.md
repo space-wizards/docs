@@ -356,7 +356,7 @@ public override void Initialize()
 }
 ...
 
-private void OnPacketReceived(EntityUid uid, DeviceNetworkComponent component, DeviceNetworkPacketEvent args)
+private void OnPacketReceived(Entity<DeviceNetworkComponent> ent, ref DeviceNetworkPacketEvent args)
 {
     //Since we are doing it the recommended way of using the command constant we try to get it from the payload
     if (args.Data.TryGetValue(DeviceNetworkConstants.COMMAND, out String command))
@@ -373,7 +373,7 @@ private void OnPacketReceived(EntityUid uid, DeviceNetworkComponent component, D
             };
             
             //And send the response to that ping
-            _deviceNetworkSystem.QueuePacket(uid, args.SenderAddress, payload, args.Frequency);
+            _deviceNetworkSystem.QueuePacket(ent, args.SenderAddress, payload, args.Frequency);
         }
     }
 }

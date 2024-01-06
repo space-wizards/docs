@@ -24,15 +24,13 @@ Data is sent and received using the `AppearanceComponent`, specifically the func
 Here's a really simple server-side setting of appearance data, in `ItemCabinetSystem`:
 
 ```csharp=
-        private void UpdateAppearance(EntityUid uid,
-            ItemCabinetComponent? cabinet = null,
-            AppearanceComponent? appearance = null)
+        private void UpdateAppearance(Entity<ItemCabinetComponent?, AppearanceComponent?> ent)
         {
-            if (!Resolve(uid, ref cabinet, ref appearance, false))
+            if (!Resolve(ent, ref ent.Comp1, ref ref ent.Comp2, logMissing: false))
                 return;
 
-            appearance.SetData(ItemCabinetVisuals.IsOpen, cabinet.Opened);
-            appearance.SetData(ItemCabinetVisuals.ContainsItem, cabinet.CabinetSlot.HasItem);
+            _appearanceSystem.SetData(ent, ItemCabinetVisuals.IsOpen, ent.Comp1.Opened, ent.Comp2);
+            _appearanceSystem.SetData(ent, ItemCabinetVisuals.ContainsItem, ent.Comp1.CabinetSlot.HasItem, ent.Comp2);
         }
 ```
 
@@ -47,9 +45,9 @@ Let's look at the client-side `ItemCabinetSystem` to see how it retrieves and us
 ```csharp=
 public sealed class ItemCabinetSystem : VisualizerSystem<ItemCabinetVisualsComponent>
 {
-    protected override void OnAppearanceChange(EntityUid uid, ItemCabinetVisualsComponent component, ref AppearanceChangeEvent args)
+    protected override void OnAppearanceChange(Entity<ItemCabinetVisualsComponent> ent, ref AppearanceChangeEvent args)
     {
-        if (TryComp(uid, out SpriteComponent? sprite)
+        if (TryComp(ent, out SpriteComponent? sprite)
             && args.Component.TryGetData(ItemCabinetVisuals.IsOpen, out bool isOpen)
             && args.Component.TryGetData(ItemCabinetVisuals.ContainsItem, out bool contains))
         {
