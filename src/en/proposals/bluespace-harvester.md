@@ -1,7 +1,11 @@
 # New machine of fun and destruction: Bluespace harvester
-Assembles like a normal car, takes up 3x3 tiles,
+Assembles like a normal machine, takes up 3x3 tiles,
 and draws a large amount of electricity directly from the generator via HV wires.
 It can produce useful items and is also an item of sabotage.
+
+## Expected Gameplay
+Bluespace Harvester is the new REAL way to spend a large amount with benefits.
+It can provide useful items that can help any department, but it can also become a source of danger if departments are shoddy.
 
 ## Research and creation
 Her board is available in production after learning the T2 technology "Bluespace Mining",
