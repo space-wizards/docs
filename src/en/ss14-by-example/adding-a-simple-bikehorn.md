@@ -196,7 +196,6 @@ public sealed partial class PlaySoundOnUseComponent : Component
     [DataField]
     public string Sound = string.Empty;
 }
-
 ```
 
 All you need to do to create a field that can be modified in YAML is to add the `[DataField]` attribute, which holds the name of the field, and give it a default value, in this case `string.Empty`. Now, we can add our sound to our bike horn prototype:
