@@ -20,7 +20,7 @@ These pillars serve as the guiding concepts for designing features for SS14. Whe
 ## Chaotic
 - No two rounds should play alike. The combination of antagonists, incompetence, and disasters should create situations where players have to deal with rapidly changing unpredictable situations.
 ## Seriously Silly
-- aka "The clown has put space lube all over the halls, armed the station nuke and is throwing cream-pies filled with acid at security officers", a situation like this on its face is completely ludicrous but is taken seriously by players.
+- aka "The clown has put space lube all over the halls, armed the station nuke and is throwing cream-pies filled with acid at security officers", a situation like this on its face is completely ludicrous but should be taken seriously by players.
 ## Dynamic Environment
 - The gameworld should be malleable, letting players build, deconstruct, or modify anything. It should be *possible* to build an entire separate station and continue the round there if players put in the effort.
 ## Intuitive and Inter-Connected Simulation
