@@ -36,6 +36,7 @@ Otherwise, I will list the most interesting ones here with setup instructions
 
 ### Game server status
 ![SS14 Status](https://github.com/space-wizards/wizard-cogs/raw/master/media/SS14-game-status-example.png)
+
 #### Setup
 1. Install ```[p]cog install wizard-cogs gameserverstatus```
 2. Add your server ```[p]statuscfg addserver ss14 <server-name> <address to your server>```
@@ -43,11 +44,14 @@ Otherwise, I will list the most interesting ones here with setup instructions
 
 ### SS14.Watchdog Power actions
 ![Poweractions](https://github.com/space-wizards/wizard-cogs/raw/master/media/poweractions-example.png)
+
 Currently only has the functionality to restart servers as of writing
 1. Install ```[p]cog install wizard-cogs poweractions```
 2. Setup your server by running ```[p]poweractionscfg add``` and pressing the green add button. Only admins can run this command. Otherwise, the bot won't respond.
 You will get a form you will be asked to fill in (**Notice**: Neither us nor the RedBot developers will receive this information. This information will only be stored by the bot and won't be shown publicly.)
+
 ![Input field](../assets/images/redbot-poweactions-form.png)
+
 - Name: The server's name, you will be providing this to the bot when restarting the server.
 - URL: The URL to the watchdog instance, make sure to provide a URL accessible by the bot. Example: If you are exposing the watchdog's API at 'https://example.com/watchdog' then what's that you wanna input. You can probably use 'localhost' too if the bot is hosted on the same machine as the watchdog.
 - Server ID: The name of your server in your watchdog's appsettings.yml that stores your server config. *Not* the "Name" config.
@@ -55,7 +59,7 @@ You will get a form you will be asked to fill in (**Notice**: Neither us nor the
 3. After clicking submit if the bot reported success then you are done! Repeat for your other servers or give it a shot with ```[p]restartserver <name>```.
 
 ### New round pinging & Ahelp relay
-While it's not a redbot feature, I thought I might as well throw it in here since there's no other documentation on it and it's related to Discord.
+While it's not specificly a bot feature, I thought I might as well throw it in here since there's no other documentation on it and it's related to Discord.
 1. Make a discord webhook in the channel you want the pings to arrive in. You can make one by clicking on the cogwheel in the channel > Integrations > Webhooks. Once done copy the URL
 2. Set the following [CCVars](https://docs.spacestation14.com/en/general-development/tips/config-file-reference.html) in your config
 ```
@@ -65,13 +69,17 @@ discord.round_end_role = <Role ID to ping>
 ```
 
 ### OOC Bridge
-This is to be coded into the server itself. Please await it.
+This is to be coded into the game server itself. Please await it.
+Check on the status of [This PR](https://github.com/space-wizards/space-station-14/pull/23458)
+
+Once it's merged and confirmed stable I will update this documentation with all the cool stuff it adds.
 
 ### GitHub Integration
-To be ported to redbot
+Yet to be ported to redbot. You can use a [github webhook](https://gist.github.com/jagrosh/5b1761213e33fc5b54ec7f6379034a22) in the meantime.
 
-
-### Autoresponder
+### Autoresponder (WYCI, Nanotrashen Block Game, Based)
 ![why](https://github.com/space-wizards/wizard-cogs/raw/master/media/media/autoresponder-example.png)
+
 ```[p]cog install wizard-cogs autoresponder```
-Why...
+
+Why... (Responds to users saying "Something when" with "When you code it", "Tetris" with "Nanotrashen Block Game" and "Based" with "Based on what". This is an inside joke inside Space Station 14 communities)
