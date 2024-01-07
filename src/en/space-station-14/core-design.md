@@ -26,4 +26,4 @@ These pillars serve as the guiding concepts for designing features for SS14. Whe
 ## Intuitive and Inter-Connected Simulation
 - Simulated systems should be complex enough to create engaging gameplay/decisions while still being intuitive enough to learn without wiki-diving. Systems should interact with each other as much as feasible to create new emergent gameplay opportunities.
 ## Player Interaction/Agency
-- Players should be encouraged to interact with each other as much as possible to create opertunties for conflict or cooperation. Mechanics should reinforce the player's ability to make impactful decisions while mitigating those decisions' effects on the agency of other players.
+- Players should be encouraged to interact with each other as much as possible to create opportunities for conflict or cooperation. Mechanics should reinforce the player's ability to make impactful decisions while mitigating those decisions' effects on the agency of other players.
