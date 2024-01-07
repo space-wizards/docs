@@ -100,7 +100,7 @@ Space Station 14
 ================
 
 ----------------------
-
+- [Core Game Design](en/space-station-14/core-design.md)
 - [Mapping](en/space-station-14/mapping.md)
   - [Mapping Checklist](en/space-station-14/mapping/mapping-checklist.md)
   - [Mapping Sins](en/space-station-14/mapping/mapping-sins.md)
