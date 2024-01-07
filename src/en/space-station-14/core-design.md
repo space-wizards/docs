@@ -2,7 +2,7 @@
 This document contains the Core Game Design Principles of SS14 and its Gameplay Pillars.
 These principles and pillars should be used to inform the design of any new designs or large balance changes. 
 
-Questions around Core Game Design should be directed towards the Design Committee Group on the Official SS14 Discord (Prefered) or if you do not use Discord by making a thread on the SS14 Forums.
+Questions around Core Game Design should be directed towards the Design Group on the Official SS14 Discord (Prefered) or if you do not use Discord by making a thread on the SS14 Forums.
 
 ### Caveats
 - This document is a living document and will change overtime as the design of SS14 evolves.
