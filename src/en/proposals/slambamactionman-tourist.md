@@ -48,6 +48,10 @@ The Camera is also a cosmetic item, in that it can be equipped in the tie slot t
 
 The Camera could also become rare maintenance loot and/or have a Syndicate version, to ensure that it can not be used as a way to verify someone is a normal Tourist.
 
+## Additional Changes
+
+HoP will have a new job role available to them: Visitor. The Visitor has the same access rights as a Passenger (Maintenance), but with a different job icon. This keeps them distinct from Passengers (useful for Command and crew). The Visitor job role can also be used by admins for events.
+
 ## Possible Expansions
 
 The Tourist could in the future be split into multiple different kinds of Tourists that have more specificity/theme to their objectives; food bloggers, station inspectors, springbreak groups, veterans. For now, the ClothesMate/AutoDrobe allow the player to choose their flavor of roleplay instead.
