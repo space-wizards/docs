@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Rainfey/Rainfall | :information_source: Open Draft PR | https://github.com/space-wizards/space-station-14/pull/24040 |
+| Rainfall | :information_source: Open Draft PR | https://github.com/space-wizards/space-station-14/pull/24040 |
 
 ## Overview
 
@@ -15,16 +15,18 @@ Drink as much blood as possible, become more powerful, reach your full potential
 
 ## Gameplay
 
-- Vampires are indistinguishable from normal crew, provided their fangs are retracted - extending their fangs exposes them when examined
-- The vampire gains access to a list of powers that are unlocked by drinking enough blood
-- Vampires cannot eat normal food - only liquids and pills
-- Vampires have unnatural strength and claws, dealing 10 slash damage
-- They cannot rot, freeze, are immunue to pressure
-- They cannot leave the station, as being exposed to the stars will burn them
+Vampires get no equipment, instead they get access to a list of abilities with progression tied to how much blood they have drank (cumulative) along with many benefits over their more mortal crewmates:
+
+- They are indistinguishable from normal crew, provided their fangs are retracted - extending their fangs exposes them when examined
+- They cannot eat normal food - only liquids and pills, and only Blood will nourish them.
+- They have unnatural strength and claws, dealing 10 slash damage
+- They cannot rot or freeze and are immunue to pressure
+- They cannot leave the station even with protective equipment, as being exposed to the stars will burn them
 - Chaplains are immune to their abilities
 - Being hit by, or attempting to pickup a bible will burn the vampire
 - Drinking chaplain blood, or being splashed/injected/consuming holy water will burn the vampire
-- Entering a coffin will bind the vampire to it. While inside a coffin vampires are healed (even from death) requiring their bodies to be destroyed to ensure death
+- Entering a coffin will bind the vampire to it.
+- While inside a coffin vampires are healed (even from death) requiring their bodies to be destroyed to ensure death
 - Upon death if the relevant ability is unlocked and with enough blood remaining - the vampire will be teleported to the coffin they are bound to
 
 ## Background
