@@ -139,6 +139,7 @@ Design Proposals
 - [Cleanup Crew](en/proposals/mirrorcult-repair-crew-gamemode.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
+- [Changelings](en/proposals/dutch-vanderlinde-changelings.md)
 
 Server Hosting
 ==============
