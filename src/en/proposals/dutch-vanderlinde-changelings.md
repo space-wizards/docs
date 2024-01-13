@@ -20,7 +20,7 @@ Changelings are not a team antagonist and are not required to work together, but
 While playing as a changeling, your primary focus should be stealth since most abilities support this option, but they do have loud options if need be.
 Changelings should be quite hard to permanently get rid of. If you want to get rid of a changeling for good, you'll need to gib or cremate it.
 
-When the round starts, the game selects around 3-7 crewmembers to be a changeling, depending on the population. They are given random objectives.
+When the round starts, the game selects around 3-8 crewmembers to be a changeling, depending on the population. They are given random objectives.
 
 ## Evolution Menu
 This menu allows you to 'evolve' to unlock certain abilities, which costs evolution points. Changelings start with 10 evolution points and cannot get more, but if they absorb another changeling they will get 5 more evolution points to spend.
