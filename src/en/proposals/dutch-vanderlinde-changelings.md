@@ -9,10 +9,14 @@
 They get a set of objectives like traitors:
 
 -- Kill or maroon a random crewmember. This can be anyone, except for other changelings.
+
 -- Escape alive to central command
+
 -- Escape with identity || An alternative option to the escape alive objective, this requires you to escape alive to central command, be transformed as that person, and have an ID that matches their name.
+
 -- Extract DNA. Requires you to have stolen the DNA of atleast 4-5 crewmembers.
--- Absorb a changeling. You will have to absorb ANY other changeling.
+
+-- Absorb another changeling. You will have to absorb ANY other changeling.
 
 Changelings are not a team antagonist and are not required to work together, but may if they want to.
 
