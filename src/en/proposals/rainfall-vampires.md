@@ -28,6 +28,7 @@ Vampires get no equipment, instead they get access to a list of abilities with p
 - Entering a coffin will bind the vampire to it.
 - While inside a coffin vampires are healed (even from death) requiring their bodies to be destroyed to ensure death
 - Upon death if the relevant ability is unlocked and with enough blood remaining - the vampire will be teleported to the coffin they are bound to
+- Being inside the chapel will block their abilities, unless they have reached their full potential
 
 ## Background
 
