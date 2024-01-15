@@ -100,7 +100,7 @@ Space Station 14
 ================
 
 ----------------------
-
+- [Core Game Design](en/space-station-14/core-design.md)
 - [Mapping](en/space-station-14/mapping.md)
   - [Mapping Checklist](en/space-station-14/mapping/mapping-checklist.md)
   - [Mapping Sins](en/space-station-14/mapping/mapping-sins.md)
@@ -132,11 +132,14 @@ Design Proposals
 - [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
 - [Plant Genetics](en/proposals/deltanedas-plant-genetics.md)
 - [Security Genpop Rework](en/proposals/ike709-genpop-security.md)
+- [Rogue Drones](en/proposals/mirrorcult-rogue-drones.md)
 - [Game Director](en/proposals/tomleys-game-director.md)
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
+- [Cleanup Crew](en/proposals/mirrorcult-repair-crew-gamemode.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Wall Worm](en/proposals/ilya246-wall-worm.md)
+- [Turf War](en/proposals/deltanedas-turf-war.md)
 
 Server Hosting
 ==============

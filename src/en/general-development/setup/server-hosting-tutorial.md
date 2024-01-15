@@ -4,7 +4,7 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ## Level 0: Local Sandbox Server
 
-1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download) installed. You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
+1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
 2. Download the latest version of the server from [our builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
 3. Extract that to a directory somewhere.
 4. Run `Robust.Server.exe` (or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))

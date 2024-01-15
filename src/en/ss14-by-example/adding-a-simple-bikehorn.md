@@ -152,12 +152,11 @@ Now let's just make the most basic component possible:
 ```csharp
 // Content.Server/Sound/PlaySoundOnUseComponent.cs
 
-namespace Content.Server.Sound
+namespace Content.Server.Sound;
+
+[RegisterComponent]
+public sealed partial class PlaySoundOnUseComponent : Component
 {
-    [RegisterComponent]
-    public sealed partial class PlaySoundOnUseComponent : Component
-    {
-    }
 }
 ```
 
@@ -189,14 +188,13 @@ In our case, we'll probably want a field called `sound` on our component, which 
 ```csharp
 // Content.Server/Sound/PlaySoundOnUseComponent.cs
 
-namespace Content.Server.Sound
+namespace Content.Server.Sound;
+
+[RegisterComponent]
+public sealed partial class PlaySoundOnUseComponent : Component
 {
-    [RegisterComponent]
-    public sealed partial class PlaySoundOnUseComponent : Component
-    {
-        [DataField]
-        public string Sound = string.Empty;
-    }
+    [DataField]
+    public string Sound = string.Empty;
 }
 ```
 
@@ -280,7 +278,7 @@ public sealed class PlaySoundOnUseSystem : EntitySystem
         SubscribeLocalEvent<PlaySoundOnUseComponent, UseInHandEvent>(OnUseInHand);
     }
 
-    private void OnUseInHand(EntityUid uid, PlaySoundOnUseComponent component, UseInHandEvent args)
+    private void OnUseInHand(Entity<PlaySoundOnUseComponent> ent, ref UseInHandEvent args)
     {
 
     }
@@ -293,9 +291,9 @@ We're almost there. Now, the method `OnUseInHand` will be called when we activat
 Also, we've added `[Dependency] private readonly SharedAudioSystem` to class. It will allow us to play audio in modern way (instead of using obsolete `SoundSystem.Play`) further.
 
 ```csharp
-private void OnUseInHand(EntityUid uid, PlaySoundOnUseComponent component, UseInHandEvent args)
+private void OnUseInHand(Entity<PlaySoundOnUseComponent> ent, ref UseInHandEvent args)
 {
-    _audio.PlayPvs(component.Sound, uid);
+    _audio.PlayPvs(ent.Comp.Sound, uid);
 }
 ```
 
