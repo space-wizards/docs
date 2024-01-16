@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| SlamBamActionman* | :x: No | TBD |
+| SlamBamActionman* | :x: No | Travel Camera: space-wizards/space-station-14#24085<br>Visitor Job: space-wizards/space-station-14#23972<br>Tourist Role: TBA|
 
 *Based on a [Discord thread](https://discord.com/channels/310555209753690112/1193309894879744151) by yourpaldeebs
 
@@ -22,12 +22,13 @@ For the Tourist player themself, the role is meant to provide excellent opportun
 
 The Tourist spawns with a randomly generated name and appearance in a small pod in a random location in orbit around the station. 
 This pod contains the following:
-- A ClothesMate and AutoDrobe for cosmetic/roleplay options
-- An emergency EVA suit with a small jetpack for traversal to the station
+- A ClothesMate and AutoDrobe for cosmetic/roleplay options.
+- An emergency EVA suit with a small jetpack for traversal to the station.
 - A map/station tracker to let the Tourist know which way to travel to reach the station.
 - A Camera, a Tourist-exclusive objective item described further below.
+- A pair of Sunglasses.
 
-The Tourist does not spawn with an ID and does not start with a headset. The pod is unable to travel on its own and should only act as an initial spawn location that neither the Tourist or Crew has any reason visit again.
+The Tourist does not spawn with an ID/PDA and does not start with a headset. The pod is unable to travel on its own and should only act as an initial spawn location that neither the Tourist or Crew has any reason visit again.
 
 The Tourist gets assigned some amount of objectives from the list below, some of them with multiple targets:
 
@@ -38,15 +39,15 @@ The Tourist gets assigned some amount of objectives from the list below, some of
 - **Stamp Collecting:** The Tourist must end the round with a paper in their inventory with X different stamps.
 - **Eat:** The Tourist must have eaten a specific kind of dish. This dish should not rely on too exotic/unreliable ingredients (Carps/Spiders/Xeno/Amanita) but still require effort from the Chef (certain burgers, pies, pancakes and cakes).
 
-### Camera
+### Travel Camera
 
-The Camera is a Tourist-exclusive item that they spawn with. Its main functionality is to help fulfill the Photograph objective, however it can also be used as a minor defensive tool should the Tourist be at risk of harm. 
+The Travel Camera is a Tourist-exclusive item that they spawn with. Its main functionality is to help fulfill the Photograph objective, however it can also be used as a minor defensive tool should the Tourist be at risk of harm. 
 
-The Camera acts very similar to a Flash, having 5 charges and being able to temporarily disorient its target when used. If used on a single person (Harm + LeftClick) the target also drops to the floor for a second, mimicing the behavior of a HeadRev converting a crew member. The Camera can not be refilled (you only brought a single roll!), so Tourists are discouraged from spamming it and to instead use it to fulfill their objective, with any leftover uses being free for roleplay/defense.
+The Travel Camera acts very similar to a Flash, having 4 charges and being able to temporarily disorient its target when used. If used on a single person (Harm + LeftClick) the target also drops to the floor for a second, mimicing the behavior of a HeadRev converting a crew member. The Travel Camera can not be refilled (you only brought a single roll!), so Tourists are discouraged from spamming it and to instead use it to fulfill their objective, with any leftover uses being free for roleplay/defense.
 
-The Camera is also a cosmetic item, in that it can be equipped in the tie slot to hang around the Tourist's neck.
+The Travel Camera is also a cosmetic item, in that it can be equipped in the tie slot to hang around the Tourist's neck.
 
-The Camera could also become rare maintenance loot and/or have a Syndicate version, to ensure that it can not be used as a way to verify someone is a normal Tourist.
+The Travel Camera is also rare maintenance loot and available in the Syndicate Uplink, to ensure that it can not be used as a way to verify whether someone is a normal Tourist or not.
 
 ## Additional Changes
 
