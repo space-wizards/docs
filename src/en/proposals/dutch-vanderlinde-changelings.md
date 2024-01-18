@@ -18,6 +18,13 @@ They get a set of objectives like traitors:
 
 -- Absorb another changeling. You will have to absorb ANY other changeling.
 
+-- Steal a specific object. Some of the items will be shared with syndicate agents, but there will be unique theft objectives such as:
+Steal any head of staff's ID (except captain)
+Steal a Telecrystal
+Steal smile extract
+
+-- Absorb a random crewmember. This can be anyone, except for other changelings.
+
 Changelings are not a team antagonist and are not required to work together, but may if they want to.
 
 ## Gameplay
