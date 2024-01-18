@@ -61,9 +61,6 @@ I don't expect it to look exactly the same; for example, we may have a separate 
 #### Adding Alternate Server Hubs
 On the page for a specific game, there will be a button to configure the Server Hubs for that game (assuming the game allows alternate hubs in the RobustHub metadata).
 
-#### What About Other Game Hubs?
-Whether or not other Game Hubs should be addable to Robust Launcher is at the discretion of RT project managers. If they opt not to allow this functionality, other Game Hubs will ship their own launcher forks pointed at their hub instead of RobustHub.
-
 #### Optional: Steam Release
 I'm of the opinion that Robust Toolbox should have its own dedicated Steam page which ships Robust Launcher directly, to reduce confusion when people want to play other RT projects like OpenDream via Steam. I'm not saying we should do this *immediately*, but I think it's worth serious consideration if any not-SS14-adjacent projects are created in Robust Toolbox.
 
