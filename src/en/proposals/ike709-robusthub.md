@@ -76,6 +76,10 @@ When operating in this mode, the RobustHub page is not accessible by default, in
 
 However, buried deep in the launcher settings would be a setting for "Other Games Browser" or similar, which gives the whole explanation that the launcher is able to play other games made in the same game engine. Enabling this setting would still keep the game in Game-specific Mode and open straight into SS14 by default, but now the "RobustHub" page (which would normally be the default page outside of Game Mode) will be unlocked as an additional tab that they can easily navigate to. The purpose of this is so users whom are aware of this functionality don't need to have a duplicate Robust Launcher installation on their PC.
 
+Let's expand upon the hub diagram to incorporate launcher examples ([direct link](https://i.imgur.com/Kz5KM6Y.png)):
+
+<img src="https://i.imgur.com/Kz5KM6Y.png" />
+
 ### Example UX
 Here's the process of joining an OpenDream server depending on whether you're using Robust Launcher or the redesigned SS14 Launcher (which is just Robust Launcher in Game-specific Mode for SS14).
 
