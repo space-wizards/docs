@@ -27,7 +27,7 @@ A higher-level hub dubbed "Game Hubs" will fill a similar role to server hubs, b
 
 The list of games available on a Game Hub is under the purview of the hub's operators. The official Robust Toolbox Game Hub (RobustHub) will be managed by the Space Wizards Federation. The system now looks something like this ([direct link](https://i.imgur.com/lyRfy8t.png)):
 
-![[Pasted image 20240117195400.png]]
+<img src="https://i.imgur.com/lyRfy8t.png" />
 
 ### RobustHub Repository
 A new Space Wizards repo will be created called RobustHub (or similar). This repository will provide the "official" Game Hub that will easily be accessible with any official build of the launcher.
@@ -54,7 +54,7 @@ The process of who will be permitted to update a game's hub entry and how will b
 ### Robust Launcher
 The SS14 launcher as it exists currently will no longer be maintained as a project. Instead the launcher will be stripped of all SS14 branding in favor of Robust Toolbox branding. The "Servers" tab will be nuked in favor of an interface similar to the BYOND pager, except with RobustHub games instead ([direct link](https://i.imgur.com/DSXdzyP.png)):
 
-![[Pasted image 20240117200532.png]]
+<img src="https://i.imgur.com/DSXdzyP.png" />
 
 I don't expect it to look exactly the same; for example, we may have a separate page for singleplayer games. But players will be able to download, play, or browse the server list for any RobustHub game from Robust Launcher.
 
