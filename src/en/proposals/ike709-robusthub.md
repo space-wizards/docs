@@ -23,7 +23,7 @@ The current concept of a hub is essentially just a list of servers. Under this n
 When a player adds an additional Server Hub, they will be adding it to a specific game. More on this later in the launcher section.
 
 ### Game Hubs
-A higher-level hub dubbed "Game Hubs" will fill a similar role to server hubs, but instead of providing a list of servers they will provide a list of *games* and their associated metadata that the launcher needs in order to play them and/or browse their Server Hub.
+A higher-level hub dubbed "Game Hub" will fill a similar role to server hubs, but instead of providing a list of servers they will provide a list of *games* and their associated metadata that the launcher needs in order to play them and/or browse their Server Hub. **Note:** The launcher is only intended to support a singular "Game Hub", and the concept exists to provide examples of how Robust Toolbox can be utilized separately from Space Wizards Federation infrastructure, such as games developed independently of SS14 or communities who wish to "hard fork" their own infrastructure.
 
 The list of games available on a Game Hub is under the purview of the hub's operators. The official Robust Toolbox Game Hub (RobustHub) will be managed by the Space Wizards Federation. The system now looks something like this ([direct link](https://i.imgur.com/lyRfy8t.png)):
 
