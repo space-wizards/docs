@@ -31,52 +31,39 @@ The current Revolutionaries game mode ("Revs") as implemented is a problematic g
 
 Revs is badly in need of a refactor to encourage a more dynamic round that encourages paranoia from Security and smart play from the Revolutionaries.
 
+## Table Of Contents
+
+- [The Rules](#the-rules)
+- [Refactors](#refactors)
+  - [Mindshields Removed From Cargo](#removal-of-mindshield-implants-being-orderable-from-cargo)
+  - [Flashes don't convert people to Revs](#removal-of-flashes-being-able-to-convert-people)
+  - [Revs win by storming the bridge](#killing-the-heads-is-now-not-required-for-the-revs-to-win)
+- [New Content](#new-content)
+  - [Head Revolutionaries get an implant](#revolutionary-implant-given-to-all-head-revolutionaries)
+  - [Add an Influence stat](#add-an-influence-stat)
+  - [Head Revs convert via Influence](#head-revolutionaries-can-covertly-convert-high-influence-people)
+  - [Propaganda Posters](#propaganda-posters)
+  - [Loyalty Loudspeakers](#loyalty-loudspeakers)
+  - [Interrogator](#the-interrogator)
+  - [Centcomm Uplink Terminal](#centcomm-uplink-terminal)
+- [Role Outlines](#role-outlines)
+  - [Head Revolutionary](#head-revolutionary)
+  - [Revolutionary](#revolutionary)
+  - [Security][#security]
+
 ## The Rules
 
 One or more Head Revolutionaries are spawned from the usual pool of players who have opted-in. These Head Revolutionaries have one specific goal: deliver the station, mostly-whole, into Syndicate hands.
 
-- To deliver the station into Syndie hands, the Bridge must be taken over with the **CentComm Uplink Console** given all Head security IDs. This triggers a countdown until the uplink is severed and the Revs win. Doing so results in a major syndicate victory and the round ending.
+- To deliver the station into Syndie hands, the Bridge must be taken over with the **CentComm Uplink Console** given at least one Head ID. This triggers a countdown until the uplink is severed and the Revs win. Doing so results in a major syndicate victory and the round ending. Each Head ID input after the first reduces the countdown.
 
-- A draw is achieved if the station is somehow nuked, or if a Head Rev escapes to fight another day.
+- A draw is achieved if the round ends with no Heads escaping to Centcomm
 
-- A minor crew victory is achieved if a Head escapes to CentComm.
+- A minor crew victory is achieved if the round ends with an evac and at least one Head escapes to Centcomm.
 
 - A major crew victory if all Head Revs are neutralized, either by death, implant extraction or being imprisoned. If this occurs, all Rev members of staff de-convert and Centcomm (belatedly) detects the mind control rays being blasted at the station, sending an evacuation shuttle and allowing the round to end. (If the surviving chain of command wants a longer round, the shuttle can be recalled).
 
-## Why this is fun for the bad guys
-
-**As Head Rev:** You’re the underbelly of justice seeking to overthrow the mighty - the heroes of your own story. Target any department, any group of staff, and bend them to your will. Being a Head Rev means you get to pick your team and boss them around to cause specific, targeted acts of violence. There’s loads of role-play opportunities, and your directive to deliver a working station means you have to work around your horde’s desire for carnage.
-
-**As a Rev**: Suddenly plucked from your normal life, you now need to continue your job keeping the station running and overthrow the horrible bosses who’ve been stepping on your neck for years. Work with a secret team, meaning RP opportunities with players you may normally never interact with. Turn your profession into a tool of destruction. Being a regular rev gives normal players a safe opportunity to learn to be an antagonist.
-
-## Why this is fun for the good guys
-
-**As Heads:** You are suddenly the mouse in a station filled with cats, but you have to keep the station running. Can you trust your team? Can you trust anyone? Do you have a weapon close at hand? All the fun kinds of stress. Most department heads suddenly need to become best friends with Sec.
-
-**As Security:** You have multiple departments to defend, and a requirement to temporarily lock up anyone who looks at all shifty. An active competent security team is required to win a Revs round for the crew, and that means the HoS and friends are the stars of the drama.
-
-**As the crew:** Maybe you’ve always wanted to beat your boss senseless. Now you can! But for the strongly-loyal crew, running the station without getting turned is a game of risk-versus-reward. After all, Nanotransen isn’t going to just feed you into a wall of bullets and lasers, but the Head Revs totally might. Pity the medbay; if the round turns into a storming of the palace scenario, they are suddenly going to be very busy.
-
-## Why this is fun for the admins
-
-Revs is a mode where things ramp up in drama over the course of the round, but the regular operation of the station probably isn’t directly at risk. Both sides have specific win conditions (the elimination of the other), with the station being pulled between them. This means it’s different from the normal violence-and-gibbing approach that traitors and operatives cause. This also means no more having multiple layers of anti-metagame legislation to control round flow.
-
-## Important Refactors and New Content
-
-### Head Revolutionary abilities are tied to a Revolutionary Implant.
-
-This implant does three things:
-
-1. Gives the HR innate access to talk on the Syndicate radio.
-2. Grants them a Influence conversion aura around themselves.
-3. Grants them a conversion ability that allows them to covertly flip people to Rev.
-
-Conversion works as follows:
-
-1. The Revolutionary Implant grants the owner the ability to see the Influence level of those around them.
-2. If the Head Revolutionary sees a crew member with a high enough Influence level, they can activate their implant's ability and click on the target.
-3. If successful, the target is silently converted to a Revolutionary.
-4. The ability enters a cooldown.
+## Refactors
 
 ### Removal of MindShield implants being orderable from Cargo
 
@@ -88,71 +75,7 @@ A small number of MindShields could be kept on-station to allow staff promotions
 
 Flashes are metagameable, confusing for newbies, hard to balance, and enforce too much reliance on manufacture by Science by the Revs for effective round flow. They also have no narrative justification beyond it being an Ur-mode from the dawn of SS13. There are people playing SS14 that are younger than the only good _Men In Black_ movie.
 
-### Addition of Influence as a tracked player stat, and associated gameplay features
-
-Influence is a value that each player carries. MindShielded players are always value 0. Influence is raised by a few routes (exposure to Head Revs, propaganda and one or two restricted drugs like Mindbreaker Toxin).
-
-Players gain Influence by:
-
-- Standing near a Head Rev they can see.
-
-- Being near Propaganda they can see.
-
-- Being injected with Mindbreaker Toxin. This is a very big bump and is intended for kidnap scenarios.
-
-Players lose influence by:
-
-- Not being near any source of Influence. This is quite slow, and is reduced to nil if the player has been converted.
-
-- Influence degrades reasonably quickly if placed in the Sec cells and exposed to calming jazz music.
-
-### Influence ticks up when exposed to sources and slowly ticks down when not. There is a max Influence level.
-
-Addition of NT and Revolutionary posters and propaganda, that both sides, and traitors, can put up and take down across the station.
-
-These posters can be printed across the station by both sides and gives Security Cadets, Lawyers and bored Passengers something to do, even on non-Rev rounds, and a reason for Sec to patrol (imagine!). They’re an DOT effect with a max cap per item, and add or subtract Influence from those who see them.
-
-Putting up pro-Revolution posters is added as a Traitor goal to make them have a reason to appear outside Revs.
-
-Clowns get the ability to put up annoying "Visit Clown Planet" tourism posters.
-
-Posters can be be destroyed by spraying them with paint or tearing them down.
-
-### Addition of Loyalty Loudspeakers in Sec
-
-These Loyalty Loudspeakers are audio emitters that reduce a player’s Influence level, even if they’re converted. If a player who is converted de-converts, their Influence immediately drops to zero. This is a new machine that requires quite a bit of power to run. A button is added to the Warden’s office to disable and enable all loudspeakers. The loudspeakers play calming, smooth jazz.
-
-These Loudspeakers cannot be made on the station. One of the key jobs of Sec is to ensure Sec remains safe; if it's been bombed and the Loudspeakers are inoperable, the Revolution is succeeding.
-
-### Head Revs can use an implant ability to silently convert characters with high enough Influence to being a Rev.
-
-This replaces flashing outright, and makes conversion a stealthy game. Revs do not know who the Head Revs are unless the Head Rev outs themselves.
-
-### Add the Interrogator, an electric chair that tests Influence levels
-
-The Interrogator is a high-power-draw device that lives in Sec. This machine does three things:
-
-1. Minorly fries the person placed inside it. `Your hair stands on end!` If you're a Diona, you are set on fire. `The lightning ignites your limbs!` It does no damage to Slimes. `You feel tingly`.
-2. Reads their Influence level.
-3. Causes the lights to flicker station-wide.
-
-This allows Sec to ensure anyone they're releasing from prison has a low influence level.
-
-It can be emagged to dramatically increase the power draw, EMPing the station for a period of time, and instantly frying any poor sod put inside it.
-
-### Add the Centcomm Uplink Terminal as an indestructable core console on the Bridge.
-
-This terminal is the core security uplink between the space station and the rest of the universe (in fiction). It can send announcements and notifies who is the current chain-of-command.
-
-This console is indestructable, protected by military-grade force fields, immovable and powered by a nuclear engine that will outlast the star it's anchored to.
-
-This is the end-game objective that Revs want to compromise.
-
-### Denote the IDs that Heads Of Staff spawn with as Head Of Staff IDs
-
-These are the mid-game objectives that Revs want to obtain. Because these are stealable objects, this gives Rev Thiefs a unique role.
-
-### Killing the Heads is now not required for the Revs to win, instead requiring taking the Bridge and compromising the Centcomm Uplink Terminal and defending the Terminal for a period of time.
+### Revs win by stealing some Head ID cards and storming the bridge
 
 This removes one half of the round-removal problem and gives the Revs a clear final target that works a bit like the Nukie bomb.
 
@@ -172,43 +95,124 @@ If this is a Rev round, the Head Revolutionary passes are renamed "Consul" and a
 
 _If this **isn't** a Revs round and this has happened, this would be an excellent time for CentComm to send an ERT._
 
-### Head Revolutionaries can be de-converted by removing their Revolutionary Implant. Revolutionaries can be de-converted by spending a bit of time locked up in Sec listening to smooth jazz music.
+### Deconversion of Head Revolutionaries and Revolutionaries
 
-This removes the other half of the round-removal problem.
+Head Revs are de-antagged by having their Revolutionary Implant removed.
 
-# Role Outline: Head Revolutionary
+Revs are de-antagged by being exposed to Loyalty Loudspeakers for a bit of time.
 
-## How It Should Feel
+## New Content
+
+### Revolutionary Implant given to all Head Revolutionaries
+
+This implant does three things:
+
+1. Gives the HR innate access to talk on the Syndicate radio.
+2. Grants them a Influence conversion aura around themselves.
+3. Grants them a conversion ability that allows them to covertly flip people to Rev.
+
+### Add an Influence stat
+
+Influence is a value that each player carries. Influence ticks up when exposed to sources and slowly ticks down when not. There is a max Influence value. MindShielded players are always value 0. Influence is raised by a few routes (exposure to Head Revs, propaganda and one or two restricted drugs like Mindbreaker Toxin).
+
+Players gain Influence by:
+
+- Standing near a Head Rev they can see.
+
+- Being near Propaganda they can see.
+
+- Being injected with Mindbreaker Toxin. This is a very big bump and is intended for kidnap scenarios.
+
+Players lose influence by:
+
+- Not being near any source of Influence. This is quite slow, and is reduced to nil if the player has been converted.
+
+- Influence degrades reasonably quickly if placed in the Sec cells and exposed to calming jazz music.
+
+### Head Revolutionaries can covertly convert high-Influence people
+
+This replaces flashing outright, and makes conversion a stealthy game. Revs do not know who the Head Revs are unless the Head Rev outs themselves.
+
+Conversion works as follows:
+
+1. The Revolutionary Implant grants the owner the ability to see the Influence level of those around them.
+2. If the Head Revolutionary sees a crew member with a high enough Influence level, they can activate their implant's ability and click on the target.
+3. If successful, the target is silently converted to a Revolutionary.
+4. The ability enters a cooldown.
+
+### Propaganda Posters
+
+Addition of NT and Revolutionary posters and propaganda, that both sides, and traitors, can put up and take down across the station.
+
+These posters can be printed across the station by both sides and gives Security Cadets, Lawyers and bored Passengers something to do, even on non-Rev rounds, and a reason for Sec to patrol (imagine!). They’re an DOT effect with a max cap per item, and add or subtract Influence from those who see them.
+
+Putting up pro-Revolution posters is added as a Traitor goal to make them have a reason to appear outside Revs.
+
+Clowns get the ability to put up annoying "Visit Clown Planet" tourism posters.
+
+Posters can be be destroyed by spraying them with paint or tearing them down.
+
+### Loyalty Loudspeakers
+
+These Loyalty Loudspeakers are audio emitters that reduce a player’s Influence level, even if they’re converted. If a player who is converted de-converts, their Influence immediately drops to zero. This is a new machine that requires quite a bit of power to run. A button is added to the Warden’s office to disable and enable all loudspeakers. The loudspeakers play calming, smooth jazz.
+
+These Loudspeakers cannot be made on the station. One of the key jobs of Sec is to ensure Sec remains safe; if it's been bombed and the Loudspeakers are inoperable, the Revolution is succeeding.
+
+### The Interrogator
+
+The Interrogator is a high-power-draw device that lives in Sec. This machine does three things:
+
+1. Minorly fries the person placed inside it. `Your hair stands on end!` If you're a Diona, you are set on fire. `The lightning ignites your limbs!` It does no damage to Slimes. `You feel tingly`.
+2. Reads their Influence level.
+3. Causes the lights to flicker station-wide.
+
+This allows Sec to ensure anyone they're releasing from prison has a low influence level.
+
+It can be emagged to dramatically increase the power draw, EMPing the station for a period of time, and instantly frying any poor sod put inside it.
+
+### Centcomm Uplink Terminal
+
+This terminal is the core security uplink between the space station and the rest of the universe (in fiction). It can send announcements and notifies who is the current chain-of-command.
+
+This console is indestructable, protected by military-grade force fields, immovable and powered by a nuclear engine that will outlast the star it's anchored to.
+
+This is the end-game objective that Revs want to compromise.
+
+# Role Outlines
+
+## Head Revolutionary
+
+### How It Should Feel
 
 You’re the cunning insurgent plotting to overthrow the station. You get to pick your team and plot the stages of your revolution, and then overthrow all order and install yourselves as the leadership!
 
-## Goals
+### Goals
 
-### Build A Team
+#### Build A Team
 
 Convert a few loyal and smart associates for your revolution via exposing them to your mutinous ideas.
 
-### Begin The Revolution
+#### Begin The Revolution
 
 Your associates gather the tools needed to overthrow the station and expose more people to your influence, making your conversion job easier. You sit like a spider in the web and plot.
 
-### Overthrow Centcomm
+#### Overthrow Centcomm
 
 You steal the Head IDs, break into the bridge and switch off the station’s link to Centcomm, winning the round.
 
-## Core Mechanics
+### Core Mechanics
 
-### Revolution Implant
+#### Revolution Implant
 
 You have a Revolution Implant. This is a really powerful and special implant that hooks into Syndicate mind-control rays being blasted at the station. This implant does nothing outside the Rev round type.
 
 This implant is what makes you a Head Rev. It can be removed via an Implanter, and if someone else is injected with it, they become a Head Rev. This probably will never happen (but would be a really robust way to evade Sec figuring out who the HRs are)
 
-### Communications
+#### Communications
 
 Your implant gives you access to the Syndicate radio channel innately. This can be changed to a unique Revolution radio channel, but given Nukies, Traitors and Revs are exclusive to each other, it should be fine to just use the Syndie channel. Head Revs cannot talk to normal Revs on this channel: it's just for planning and collaboration between Head Revs.
 
-### Influence
+#### Influence
 
 All non-head and non-security crew have an internal Influence count.
 
@@ -226,7 +230,7 @@ Players lose influence by:
 
 - Influence degrades reasonably quickly if placed in the Sec cells and exposed to calming jazz music.
 
-### Conversion
+#### Conversion
 
 By standing while conscious near people, you increase their Influence to your control. Once they reach a certain number, you can target them with your innate Convert ability. This mentally dominates a loyal crewmember and hands them their shiny Rev antag token. They are not told who converted them; it’s your choice as Head Rev to communicate this information.
 
@@ -237,7 +241,7 @@ Conversion works as follows:
 3. If successful, the target is silently converted to a Revolutionary.
 4. The ability enters a cooldown.
 
-### Centcomm Uplink Terminal
+#### Centcomm Uplink Terminal
 
 You win by compromising this terminal.
 
@@ -249,7 +253,7 @@ To trigger this:
 
 3. Wait some number of seconds for the uplink to be disabled. This alerts the entire station over comms that the Revs are doing this: I hope you have fortifed the bridge!
 
-# Role Outline: Revolutionary
+## Revolutionary
 
 ## How It Should Feel
 
@@ -281,7 +285,7 @@ Propaganda slowly ticks up an exposed character’s Influence meter and allows H
 
 Mindbreaker Toxin can be manufactured and administered as a bulk Influence dose.
 
-# Role Outline: The Security Team
+# Security
 
 ## How It Should Feel
 
@@ -331,3 +335,23 @@ There are no other mechanical ways to fully identify a mutiny. **Paranoia is the
 ### Reclaiming The Bridge
 
 If the Revs decide to launch their mutiny, it’s time for the Warden to hand out guns to Security, and recruited loyalist crew, to take back the bridge before the uplink is disconnected. In this way the round functions a little like Nukies, except with a (probably) less well-armed opponent who is defending one specific point.
+
+# Design Notes
+
+## Why this is fun for the bad guys
+
+**As Head Rev:** You’re the underbelly of justice seeking to overthrow the mighty - the heroes of your own story. Target any department, any group of staff, and bend them to your will. Being a Head Rev means you get to pick your team and boss them around to cause specific, targeted acts of violence. There’s loads of role-play opportunities, and your directive to deliver a working station means you have to work around your horde’s desire for carnage.
+
+**As a Rev**: Suddenly plucked from your normal life, you now need to continue your job keeping the station running and overthrow the horrible bosses who’ve been stepping on your neck for years. Work with a secret team, meaning RP opportunities with players you may normally never interact with. Turn your profession into a tool of destruction. Being a regular rev gives normal players a safe opportunity to learn to be an antagonist.
+
+## Why this is fun for the good guys
+
+**As Heads:** You are suddenly the mouse in a station filled with cats, but you have to keep the station running. Can you trust your team? Can you trust anyone? Do you have a weapon close at hand? All the fun kinds of stress. Most department heads suddenly need to become best friends with Sec.
+
+**As Security:** You have multiple departments to defend, and a requirement to temporarily lock up anyone who looks at all shifty. An active competent security team is required to win a Revs round for the crew, and that means the HoS and friends are the stars of the drama.
+
+**As the crew:** Maybe you’ve always wanted to beat your boss senseless. Now you can! But for the strongly-loyal crew, running the station without getting turned is a game of risk-versus-reward. After all, Nanotransen isn’t going to just feed you into a wall of bullets and lasers, but the Head Revs totally might. Pity the medbay; if the round turns into a storming of the palace scenario, they are suddenly going to be very busy.
+
+## Why this is fun for the admins
+
+Revs is a mode where things ramp up in drama over the course of the round, but the regular operation of the station probably isn’t directly at risk. Both sides have specific win conditions (the elimination of the other), with the station being pulled between them. This means it’s different from the normal violence-and-gibbing approach that traitors and operatives cause. This also means no more having multiple layers of anti-metagame legislation to control round flow.
