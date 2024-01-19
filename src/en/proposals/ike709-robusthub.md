@@ -102,3 +102,9 @@ Here's the process of joining an OpenDream server depending on whether you're us
 7. Pick a server and join it
 
 Quality-of-life enhancements like being able to pin/favorite certain games is subject to further design and bikeshedding.
+
+### Optional: RobustHub Game Jam
+
+Once RobustHub is fully implemented, we should advertise and then run a game jam (1-2 weeks) to develop new games (singleplayer or multiplayer) for RobustHub, unrelated to SS14. In addition to adding some variety to the games list, this will give us a chance to dogfood the system and also identify pain points in creating new Robust Toolbox projects.
+
+Depending on the level of interest, we could potentially offer prizes for the best submissions like a fancy Discord role and/or a $20 Steam gift card.
