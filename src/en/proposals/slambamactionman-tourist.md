@@ -32,22 +32,22 @@ The Tourist does not spawn with an ID/PDA and does not start with a headset. The
 
 The Tourist gets assigned some amount of objectives from the list below, some of them with multiple targets:
 
-- **Visit:** The Tourist must have visited certain locations on the station. This could be departments (Cargo/Atmos/Science), or specific locations like (Vault/Bridge/Armory). The Space Ninja Spider Charge already implements a system that could be used for this objective.
-- **Hold:** The Tourist must have held a certain high-value item. This item could be shared with Thief/Syndicate objectives (Captain's laser/Security Secret Orders), or be otherwise important to the station/crew (Captain's Sword/Clown's Horn).
+- **Visit:** The Tourist must have visited certain locations on the station. This could be certain departments (Security, Engineering) or specific sub-areas in low-security deparments (Morgue, Cargo Bay, Robotics).
 - **Get Drunk in Bar:** The Tourist must have gotten drunk in the bar. Like Visit but with an extra objective.
-- **Photograph:** The Tourist must have used their Camera item on a random crewmember. Camera described further below.
-- **Stamp Collecting:** The Tourist must end the round with a paper in their inventory with X different stamps.
-- **Eat:** The Tourist must have eaten a specific kind of dish. This dish should not rely on too exotic/unreliable ingredients (Carps/Spiders/Xeno/Amanita) but still require effort from the Chef (certain burgers, pies, pancakes and cakes).
+- **Photograph:** The Tourist must have used their Camera item on a randomly selected crewmember. Camera described further below.
+- **Photograph Holding:** The Tourist must have used their Camera item on a specific Command job member while they're holding an item. This is tied to the job listed on the ID to avoid issues where a certain Command member goes SSD or is killed. An example is "Captain holding their Hat" or "Research Director holding an Anamoly Scanner".
+- **Stamp Collecting:** The Tourist must end the round with a paper in their inventory that has X different job stamps. Generic stamps such as Approved/Denied do not count, but non-Command jobs such as Chaplain, Clown or Syndicate do.
+- **Eat:** The Tourist must have eaten a specific kind of dish. This dish should not rely on too exotic/unreliable ingredients (Carps/Spiders/Xeno/Amanita) but still require effort from the Chef (certain burgers, pies, pancakes and cakes). Only available if a Chef is on the station.
 
 ### Travel Camera
 
 The Travel Camera is a Tourist-exclusive item that they spawn with. Its main functionality is to help fulfill the Photograph objective, however it can also be used as a minor defensive tool should the Tourist be at risk of harm. 
 
-The Travel Camera acts very similar to a Flash, having 4 charges and being able to temporarily disorient its target when used. If used on a single person (Harm + LeftClick) the target also drops to the floor for a second, mimicing the behavior of a HeadRev converting a crew member. The Travel Camera can not be refilled (you only brought a single roll!), so Tourists are discouraged from spamming it and to instead use it to fulfill their objective, with any leftover uses being free for roleplay/defense.
+The Travel Camera acts very similar to a Flash, however it does not have an AoE mode and contains 10 charges. The Travel Camera can not be refilled (you only brought a single roll!), so Tourists are discouraged from spamming it and to instead use it to fulfill their objective, with any leftover uses being free for roleplay/defense.
 
 The Travel Camera is also a cosmetic item, in that it can be equipped in the tie slot to hang around the Tourist's neck.
 
-The Travel Camera is also rare maintenance loot and available in the Syndicate Uplink, to ensure that it can not be used as a way to verify whether someone is a normal Tourist or not.
+The Travel Camera is also rare maintenance loot and available in the Syndicate Uplink, to ensure that it can not be used as a way to verify whether someone is a normal Tourist or not. The uplink Camera is the same as a maintenance/Tourist camera, unlike the Flash Lantern which can be identified and confiscated. The Camera can NOT be used by Head Revs to convert crew.
 
 ## Additional Changes
 
@@ -56,3 +56,5 @@ HoP will have a new job role available to them: Visitor. The Visitor has the sam
 ## Possible Expansions
 
 The Tourist could in the future be split into multiple different kinds of Tourists that have more specificity/theme to their objectives; food bloggers, station inspectors, springbreak groups, veterans. For now, the ClothesMate/AutoDrobe allow the player to choose their flavor of roleplay instead.
+
+The Camera item could also be made to print out photos when one is taken. 
