@@ -1,4 +1,7 @@
 ﻿# Maintainer Meeting (30 Dec 2023)
+```admonish info
+Any decisions taken in these notes may no longer be applicable.
+```
 
 **Time:** 30 Dec 2023 18:00 UTC
 
