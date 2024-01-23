@@ -130,6 +130,7 @@ The following department heads have a Head ID Card:
 - The Research Director
 - The Chief Medical Officer
 - The Quartermaster
+- The Chief Engineer
 
 # Important Patches To The Rev Gamemode That Should Go Alongside This Refactor
 
