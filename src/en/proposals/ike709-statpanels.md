@@ -41,7 +41,7 @@ Like in SS13, we could simply allow people to resize chat and shrink the statpan
 
 I personally think this is a non-issue since you can't interact with the game window and PDA window simultaneously, but I can see how others would disagree so I came up with some potential solutions anyways. These are all optional and in no particular order:
 
-- **Lockscreen**
+- **Lockscreen** - 
 	The PDA is "locked" by default, and the lockscreen is simply the Home tab. To access Programs, the player must do something such as:
 	- Wait for arbitrary short doafter to represent typing in a passcode or biometric scanning
 	- Actually needing to know and enter a 4-character PIN code each time it locks (it locks after brief periods of inactivity)
