@@ -43,8 +43,8 @@ I personally think this is a non-issue since you can't interact with the game wi
 
 - **Lockscreen**
 	The PDA is "locked" by default, and the lockscreen is simply the Home tab. To access Programs, the player must do something such as:
-		- Wait for arbitrary short doafter to represent typing in a passcode or biometric scanning
-		- Actually needing to know and enter a 4-character PIN code each time it locks (it locks after brief periods of inactivity)
+	- Wait for arbitrary short doafter to represent typing in a passcode or biometric scanning
+	- Actually needing to know and enter a 4-character PIN code each time it locks (it locks after brief periods of inactivity)
 - **Require In-Hand**
 	  Require having the PDA in the player's active hand to use programs. This is my least favorite option.
 - **Require Empty Hand**
