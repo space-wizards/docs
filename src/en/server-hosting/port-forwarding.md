@@ -67,7 +67,7 @@ If it succeeds and your server is accessible from the outside world, great! If i
 ```admonish info
 It is extremely common for your ISP to install a router for you. Because of this, "check your router's manual" may instead involve "check your ISP's help site or ask their support".
 
-If you do have your own router, there should be already somebody in your house that knows how to do this, so ask them.
+If you do have your own router, there may be somebody in your house that knows how to do this, so ask them.
 ```
 
 You will have to open your router's settings interface, and port forward from there. **Instructions may vary heavily based on router model.** We'll try to provide a general outline that might work for a lot of routers, but if it's not applicable you will need to check with your router's manual or check with your ISP.
