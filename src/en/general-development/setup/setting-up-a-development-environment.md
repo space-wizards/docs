@@ -3,7 +3,7 @@
 First you're gonna need some software:
 
 * [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](https://cdn.discordapp.com/attachments/560845886263918612/861267188971470898/unknown.png).
-* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](https://cdn.discordapp.com/attachments/560845886263918612/1147634791148179457/image.png). You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
+* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](https://cdn.discordapp.com/attachments/560845886263918612/1147634791148179457/image.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio also installs this if you're on Windows.
   * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
