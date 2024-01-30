@@ -22,7 +22,7 @@ This not only makes it a pretty unbalanced & simplistic interaction for antagoni
 
 In SS13, instead of being a "make the singularity break containment" button, higher particle strengths meant that the singularity would sustain itself at a certain stage. There's not really much value in this, though - you're practically just choosing between "do I want more power or do I want less power," as the added danger of a bigger singularity is incredibly negligible.
 
-This includes the emag behavior being gone. If you want to loose the engine, you should have to put in a real effort.
+This includes the emag behavior being gone. If you want to loose the engine, you're going to have to put in real effort.
 
 - **Wire Power Monitoring Thingamaob**
 
