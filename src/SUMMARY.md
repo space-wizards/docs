@@ -136,6 +136,7 @@ Design Proposals
 - [Game Director](en/proposals/tomleys-game-director.md)
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
+- [Courier Job](en/proposals/hanzdegloker-courier-job)
 - [Cleanup Crew](en/proposals/mirrorcult-repair-crew-gamemode.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
