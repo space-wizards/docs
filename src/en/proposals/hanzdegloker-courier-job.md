@@ -1,30 +1,30 @@
-# Short, Properly Capitalized Title
-
-Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
+# Courier Job
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Your Names Here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
-
-`Designers` should be the names that you use on GitHub and/or Discord. This is optional but strongly recommended, since:
-
-- This acknowledges credit where it is due
-- People who are confused about the written intent can use this information to contact the authors
-
-`Implemented` is the status of the feature.
-
-Github links can include multiple PRs, if relevant.
+| Hanzdegloker | :x: No | TBD |
 
 ## Overview
 
-A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds".
+There is a constant need, as in real life, for thing to be transported around the station from A to B. Whether that be precious materials from cargo
+to science. Transporting the new mop sci made with the materials from cargo to the jani. Perhaps even the simplest of things, bringing an overworked
+warden a bottle of whiskey from the bar. The courier would fufill the need of transporting important goods to the right place/person as well as being
+a general helper to the station.
 
 ## Background
 
-Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game.
+I have had cargotechs becoming discount couriers for me as a QM since sometimes A. people are too busy to pickup their orders or B. they forget and 
+do not hear me over comms. Not to mention certain roles can be very busy and they themselves send out discount couriers! I have had borgs fufill this 
+role for the RD, a security cadet was the steel boy for Sec. Now imagine if there was someone who's entire job was transportation of goods who could also
+fufill a social role and be a general help to all departments? This is where I put foward the courier.
 
-Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
+## Who is the courier?
 
-## The rest?
+I would like to touch on whom the courier is firstly, they are the kind of player that loves to help and interacting with people. The job necessitates 
+talking to many people and of course helping allot of people. Perhaps while delivering the mail you come upon a crime scene! Perhaps while giving Sci 
+their third stack of plasma this shift you help them choose a name for the Borg. Everybody loves a friendly neighborhood mailman, so how about a friendly
+station-based courier?
 
-Is entirely up to you.
+## The meat and potatoes
+
+Alright so what exactly is the fundamental purpose of the courier as a job?
