@@ -123,7 +123,7 @@ Design Proposals
 
 ----------------------
 
-- [Feature Proposal Template](en/proposals/proposal-template.md)
+- [Feature Proposal Template](en/templates/proposal.md)
 
 ----------------------
 
