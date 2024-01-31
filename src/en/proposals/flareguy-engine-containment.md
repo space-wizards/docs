@@ -22,7 +22,7 @@ This not only makes it a pretty unbalanced & simplistic interaction for antagoni
 
 In SS13, instead of being a "make the singularity break containment" button, higher particle strengths meant that the singularity would sustain itself at a certain stage. There's not really much value in this, though - you're practically just choosing between "do I want more power or do I want less power," as the added danger of a bigger singularity is incredibly negligible.
 
-This includes the emag behavior being gone. If you want to loose the engine, you're going to have to put in real effort.
+This includes the emag behaviors's removal. If you want to loose the engine, you're going to have to put in real effort.
 
 - **Wire Power Monitoring Thingamaob**
 
@@ -30,7 +30,7 @@ A device that mounts to a power network, and monitors if it loses power or is ot
 
 This also helps curb mass-wirecutting (another very easy-to-abuse mechanic.) Engineering can install these in other places and try to cooperate with security to catch a criminal, or just respond to the alarm and repair it when it happens.
 
-People looking to mess with wire nets with the monitor installed will need to get creative - either by using explosives to directly detonate the wire monitor, stopping power from being generated entirely as a coverup, or just by stealing the monitor itself and getting the hell out of there before you can be found.
+People looking to mess with wire nets with the monitor installed will need to get creative - either by using explosives to detonate the wire monitor to prevent it from sending a signal, stopping power from being generated entirely as a coverup, or just by stealing the monitor itself and getting the hell out of there before you can be found.
 
 - **Containment Field Alarms**
 
@@ -40,8 +40,10 @@ To reiterate further, this is a feature that not all containment fields will hav
 
 - **The Generators Themselves**
 
-This wasn't discussed in the inital discord conversation, but is probably nessecarry, since you can trivially just move a generator in front of the PA and have it instantly loose without having to deal with any containment proceedures. The only reason this isn't utilized more often is because raising the PA strength is easier.
+This wasn't discussed in the inital discord conversation, but is probably nessecarry, since you can trivially just move a generator in front of the PA and have it instantly loose without having to deal with any containment proceedures. The only reason this probably isn't utilized more often is because raising the PA strength is easier.
 
 When being fired at with a particle accelerator, the generators will broadcast a message over engineering communications:
+
 `A (singularity/tesla) generator is being initalized at (coordinates!)`
+
 Initializing the generators should take approximately 40 seconds or so, to give people time to respond.
