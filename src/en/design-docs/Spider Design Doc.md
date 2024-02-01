@@ -1,8 +1,19 @@
-Spiders(specifically tarantulas) in their current are boring: They pop
-out of vents, fight people, and are eventually wiped out.
+# Spider Rework
 
-\# Overview: Ports old /tg/ style spiders, a much loved antagonist.
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| HerCoyote23 | :x: No | TBA |
 
+## Overview: 
+
+Ports old /tg/ style spiders, a much loved antagonist. They make a nest, lay eggs, and grow the brood. If all the broodmothers are killed, then the brood is unable to reproduce and eventually dies out.
+
+## Background: 
+
+Spiders(specifically tarantulas) in their current state are boring: They pop
+out of vents, fight people, and are eventually wiped out. /tg/ has a very fun version of spiders as a low-threat swarm antagonist, so this is adapting that.
+
+## Details:
 The spider gamerule spawns 2 Broodmothers in maints. These broodmothers
 lay eggs and place webs, making a home for themselves. After a few
 minutes, the eggs start to hatch, being offered to ghost roles.
