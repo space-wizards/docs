@@ -20,7 +20,7 @@ chutes!) existing on maps connected right to Cargo. Only accessible by Cargotech
 we truly fleshed out these mail rooms and mail in general to allow for rp opportunities, more varied rounds and for a lack of a better term more 
 work for the Cargo techs outside of their usual schtick.
 
-## New items / events
+## New items / Events
 
 Envelope / Letters: An Envelope is a small storage item with a L grid of single boxes meaning up to 3 papers can be contained. Paper and small items 
 within reason can be stored within letters ie. a screwdriver, a pen, some money, etc. They can be sealed which prompts writing a "To" and a "From". 
@@ -59,7 +59,7 @@ The Cargotech after such an update will not be entrusted with
 
 - Knowing their way around the station to make deliveries
 
-- Delivering player made mail to other players
+- Delivering player-made mail to other players
 
 This will add some spice and variety to job of a cargotech and the gambling of randomized packages / letters will surely excited people to want their mail / care at all.
 
