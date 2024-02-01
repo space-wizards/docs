@@ -18,6 +18,7 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
     - Cleanups and "refactoring", including variable renaming and indentation changes (for example, due to file-scoped namespacing) must be in their own PR. 
     - **Refactors must be in a separate PR.** This includes changes that impact a significant number of public APIs (fields, methods, etc.) that require changes across multiple systems. These must be made in a separate PR from any content changes or bug fixes.
     - If you move a file to a different folder and/or namespace, put that in its own commit when possible to make it easier to tell what got changed in a file and what was just moved.
+    - Mapping changes should be given a separate PR for each map changed. This includes even minor changes. 
 
 - **Do not make multiple unrelated changes in one PR.** For example, do not make miscellaneous additional changes to a PR, e.g. changing the heat resistance of a pair of gloves alongside your PR adding a new gun.
 
@@ -104,8 +105,8 @@ When writing your changelog entries, please follow these guidelines:
    - Not so good: "Adjusted pickaxe inhand sprites and added sprites for wielded pickaxes." You would see the changes when you decided to wield a pickaxe. Knowing that the pickaxes look different wouldn't change your traitor strategy.
   
    - Not so good: "Changed the plating sprite to be a little less blue." Same reason as above.
-   
-   - Not so good: "Changed sprites for some medipens."
+
+   - Not so good: "Updated Security on Meta Station." Mapping changes often fill the changelog and shouldn't be included. 
 
 3. **Use the present, active voice.**
 
