@@ -140,6 +140,8 @@ Design Proposals
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
+- [Gun Balance](en/proposals/notafet-gun-balance.md)
+
 
 Server Hosting
 ==============
