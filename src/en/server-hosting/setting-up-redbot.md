@@ -78,7 +78,7 @@ Once it's merged and confirmed stable I will update this documentation with all 
 Yet to be ported to redbot. You can use a [github webhook](https://gist.github.com/jagrosh/5b1761213e33fc5b54ec7f6379034a22) in the meantime.
 
 ### Autoresponder (WYCI, Nanotrashen Block Game, Based)
-![why](https://github.com/space-wizards/wizard-cogs/raw/master/media/media/autoresponder-example.png)
+![why](https://github.com/space-wizards/wizard-cogs/raw/master/media/autoresponder-example.png)
 
 ```[p]cog install wizard-cogs autoresponder```
 
