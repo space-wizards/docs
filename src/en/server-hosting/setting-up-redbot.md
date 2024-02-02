@@ -35,7 +35,7 @@ Now you are ready, please be sure to check the [Wizard-Cogs Github](https://gith
 Otherwise, I will list the most interesting ones here with setup instructions
 
 ### Game server status
-![SS14 Status](https://github.com/space-wizards/wizard-cogs/raw/master/media/SS14-game-status-example.png)
+![SS14 Status](../assets/images/discord/SS14-game-status-example.png)
 
 #### Setup
 1. Install ```[p]cog install wizard-cogs gameserverstatus```
@@ -43,14 +43,14 @@ Otherwise, I will list the most interesting ones here with setup instructions
 3. Done! View your work with ```[p]status <server-name>``` (Of course your server needs to be online)
 
 ### SS14.Watchdog Power actions
-![Poweractions](https://github.com/space-wizards/wizard-cogs/raw/master/media/poweractions-example.png)
+![Poweractions](../assets/images/discord/poweractions-example.png)
 
 Currently only has the functionality to restart servers as of writing
 1. Install ```[p]cog install wizard-cogs poweractions```
 2. Setup your server by running ```[p]poweractionscfg add``` and pressing the green add button. Only admins can run this command. Otherwise, the bot won't respond.
 You will get a form you will be asked to fill in (**Notice**: Neither us nor the RedBot developers will receive this information. This information will only be stored by the bot and won't be shown publicly.)
 
-![Input field](../assets/images/redbot-poweactions-form.png)
+![Input field](../assets/images/discord/redbot-poweactions-form.png)
 
 - Name: The server's name, you will be providing this to the bot when restarting the server.
 - URL: The URL to the watchdog instance, make sure to provide a URL accessible by the bot. Example: If you are exposing the watchdog's API at 'https://example.com/watchdog' then what's that you wanna input. You can probably use 'localhost' too if the bot is hosted on the same machine as the watchdog.
@@ -78,7 +78,7 @@ Once it's merged and confirmed stable I will update this documentation with all 
 Yet to be ported to redbot. You can use a [github webhook](https://gist.github.com/jagrosh/5b1761213e33fc5b54ec7f6379034a22) in the meantime.
 
 ### Autoresponder (WYCI, Nanotrashen Block Game, Based)
-![why](https://github.com/space-wizards/wizard-cogs/raw/master/media/autoresponder-example.png)
+![why](../assets/images/discord/autoresponder-example.png)
 
 ```[p]cog install wizard-cogs autoresponder```
 
