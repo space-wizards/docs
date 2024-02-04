@@ -51,6 +51,9 @@ This was the hardest pillar to phrase and will be the hardest to come up with id
 
 ## Specific Features and Ideas 
 (All subject to further review during the actual implementation, of course. Especially towards the end of the list. They are mostly just intended as a showcase of ideas to start out with)
+
+  - There should be some sort of warning or confirmation when selecting them, so players, especially new players, don't end up unwittingly picking a choice that will kill their character for the wrong click. 
+
   - They breathe nitrogen, but oxygen hurts them badly (tentative number is, they crit in 2 minutes in normal air. Afaik this is actually more lenient than in Spess13)  - they will start with a large nitrogen tank and breathing mask equipped
     - because taking their mask off is BAD, eating and drinking is challenging. They need a nitrogen room, and someone needs to have made that room
     - possible alternative to a nitrogen room is the as-yet uncoded feature to hold their breath, taking asphyxiation damage instead of poison (at an even faster rate). They can regenerate that automatically (assuming they don't miscalculate and go crit)
