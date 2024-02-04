@@ -6,21 +6,21 @@
 
 ## Overview
 
-Who Vox?
+Vox are a species of superficially bird/raptor-like creatures who are highly allergic to oxygen.
+I propose that their ongoing design direction be based on three core points: they are weird, they offer a more difficult gameplay experience, and their hardship is intended to encourage cooperation.
 
-Add Vox as a roundstart species. They are an uncommon species of superficially bird/raptor-like creatures who dwell in the far reaches of space and typically do their own thing, but some of them end up working for NT.  The most well known thing about them is that they die if they breathe what we call air. That this is about the only thing known about them is the reason this document exists.
+(More specific details at the end)
 
 
 ## Background
 
-Why Vox?
+They are from Space Station 13 and there has always been some interest to bring them over. This is evidenced by the fact that our codebase had vox assets ported more than two years ago. They also come up on Discord every now and then ~~when I start talking about them~~. While there are some unresolved technical issues with implementing them right now, I think the lack of a clear design target is similarly in the way of getting closer to implementing them.
 
-#### "I know for a fact that one of the things keeping a lot of the vox players on 13 is that we dont have any"
+"*I know for a fact that one of the things keeping a lot of the vox players on 13 is that we dont have any*"
 
-They are from Space Station 13 and there has always been some interest to bring them over. This is evidenced by the fact that our codebase had vox assets ported more than two years ago. They also come up on Discord every now and then ~~when I start talking about them~~. The way I see it, there are two main reasons they are still just assets lying in the depths of the Entity Spawn panel: code limitations (aka wyci) and lack of a design goal.
+"*I would absolutely play vox in SS14 lol*"
 
-The only thing I'll say about code limitations here is that great improvements are currently being made, but even so it will eventually be stalled by the other issue: there is no clear idea or common agreement what they should be as a playable species apart from "they should scream and die from oxygen". So this is my idea to improve on that front.
-
+"*i think i have been voxpilled*"
 
 [A vox discussion that I did not start I swear ](https://discord.com/channels/310555209753690112/310555209753690112/1200361375856332830)
 
@@ -29,99 +29,63 @@ The only thing I'll say about code limitations here is that great improvements a
 [Discord thread where we are attempting to contain the vox talk](https://discord.com/channels/310555209753690112/1200498334587179018)
 
 
-## Why Roundstart Vox?
-There are three options they could be playable: Admin Spawn Only, Midround Event, and Round Start
+## Design Pillars
 
-##### Admin Spawn Only
-Let's say that they are already playable (technically they even are). At that point, getting them greenlit to be a midround event or roundstart would just be a matter of agreeing what features and themes they should have. So let's do that now and ignore this option even exists.
+Disclaimer, all my info is secondhand. If you have any input, feel free to nitpick about the details.
 
-##### Midround Event
-I could be wrong but afaik it's more common for them to be a midround presence in 13. As far as I know they usually spawn as "traders wink wink" who are a type of minor antagonist? 
-
-While "space scoundrels" is a well-established sci-fi trope, that does not automatically make it a good idea, and even then, directly tying that idea to a specific species is the sort of detail we should leave to rot in the past. 
-
-Even if space scoundrels are an idea we want in the game, it would be both less chafing against the intentions of our server rules and more interesting to play/face if they were a mix of the available species. That way when a player spots a vox on the station they won't automatically think "Oh great, it's here to steal". They will have to somehow realise that this vox is not a member of the crew.
-
-##### Round Start
-Yes.
-
-## What Vox?
-Before we proceed, a quick disclaimer (that I randomly put in the middle instead of at the beginning. Thank you for reading this far!). Naturally, everything here is just my interpretation and obviously subject to change especially before, but even after this design is finalized. I don't have much of a history with Spess13 and have never played or seen vox. All I know is secondhand information. So in that respect, I should perhaps not be the one trying to establish what they should be like? And yet, I haven't seen anyone else really try to do so, or at least not where it would be accessible. So if you think I'm off the mark, or you can do a better job, great! That's exactly the kind of input needed here. There is a persistent place for it now.
-
-## What Vox? (But actually)
-So. My best attempt to boil down (or am I re-interpreting?) what the vox are about, is these three pillars: Weird, Difficult, and Flock.
-
+My best attempt to boil down (or am I re-interpreting?) what the vox are about, are these three pillars: Weird, Difficult, and Cooperative.
 Everything designed about/for them should aim to channel or at the very least not contradict these three ideas.
 
 
-#### Weird Birds
-They are a weird species, which is perhaps a strange thing to specify in a scifi setting with moth people and space carps, but even so. They are probably cybernetic and their biology is particularly alien I mean who dies from oxygen?! They scream, dammit why do they scream?? Why are they drinking the welder fluid??? While care should be taken that they are not specifically encouraged to just be annoying, it's fine if they are a little Weird.
+#### Weird
+They are a weird species, which is perhaps a strange thing to specify in a scifi setting with moth people and space carps, but even so. They are probably cybernetic and their biology is particularly alien I mean who dies from oxygen?! They scream, dammit why do they scream?? Why are they drinking the welder fluid??? While care should be taken that their features are not (encouraging to be) annoying, it's fine if they are a little Weird.
 
-#### A Difficult Life
+#### Difficult
 They are not intended to be perfectly balanced, or even necessarily what you might call "on par". Their main "feature" is in itself very punishing. If they overall fall towards the weaker side of the meta, that's just the cost of being vox. While they can and should have some positives, they should not be given big buffs just to "balance out" their shortcomings. They should not be prohibitively difficult, but if they are a less popular choice, that fits just fine into Difficult.
 
-#### Flock Together
-Historically, due to the difficulty of getting through a round as a vox, they had a tendency to rely on each other to get by in a world that was just not built for them. When no one else "got it", you turned to those who did. Or so I'm told.
-
-I feel it necessary to say that how they were is not necessarily something to directly emulate. I'm not sure it would be a good long-term plan to encourage them to be insular (if it were even actually possible to just "design" how people will play in this roleplaying game). Nevertheless I think it's an interesting idea that they should be designed with some features that specifically encourage relying on each other, if that's somehow possible? Whether that each other is other players in general or just other vox will be something to be decided by the individual players. If we find that our implementation of vox aren't flocking maybe we didn't make it hard enough >_>
-
-This was the hardest pillar to phrase and will be the hardest to come up with ideas for, assuming it stays as a pillar. But if a feature works better with other players, does something for other players rather than you, or is a flaw that is more easily counteracted with external help than just having the right piece of gear, that feature encourages Flock.
+#### Cooperative
+Historically, due to the difficulty of surviving a round as a vox, they had a tendency to rely on each other to get by in a world that was just not built for them. When no one else "got it", vox players turned for support to those who did. (Or so I'm told). It is the position of this design that this cooperative aspect of them is something to be preserved, and it being species specific is not something that should either be encouraged or discouraged mechanically, leaving it to the players to decide.
+Obviously, "just designating" how a species is supposed to play like is an impossible, lofty goal, but nevertheless their features could be designed in a way to help with that
+This was the hardest pillar to phrase and will be the hardest to come up with ideas for. But if a feature works better with other players, does something for other players rather than you, or is a flaw that is more easily counteracted with external help rather than just having the right tool in your pocket, then that feature is Cooperative.
 
 
-## What Vox? (But specifically)
-WIP:
-This will be the list of features. We can then go and make them a reality
-Only somewhat important for this discussion is "what is currently possible". Let's settle on what we want, what's good, and what's allowed. and work out afterwards how to make it happen
-They do not need to be exactly finalised or perfectly specific, we can settle on the exact numbers on the Vox PR once we get there, but when we are done here this should be the concrete list of coding goals (at least for kicking it off. I'm sure things will change down the line, but first the line needs to start somewhere)
+## Specific Features and Ideas 
+(All subject to further review during the actual implementation, of course. Especially towards the end of the list. They are mostly just intended as a showcase of ideas to start out with)
+  - They breathe nitrogen, but oxygen hurts them badly (tentative number is, they crit in 2 minutes in normal air. Afaik this is actually more lenient than in Spess13)  - they will start with a large nitrogen tank and breathing mask equipped
+    - because taking their mask off is BAD, eating and drinking is challenging. They need a nitrogen room, and someone needs to have made that room
+    - possible alternative to a nitrogen room is the as-yet uncoded feature to hold their breath, taking asphyxiation damage instead of poison (at an even faster rate). They can regenerate that automatically (assuming they don't miscalculate and go crit)
+    - their emergency food and water could be replaced with injectable reagents
+  
+ - They can't be cloned
+ - They take longer to rot (2x? 3x?)
+ - They have 50% poison resistance (oxygen bypasses this. poison is generally not a very common damage type/not a very useful resistance to have, so I feel 50 is fine)
+ 
+ - They have their own blood type, and when that system is expanded, it should be incompatible with "normal blood"
+ - Possibly their brain, (it actually being a piece of tech), is automatically ready to be placed into a borg chassis
 
-
-#### Fairly Well Established:
-
-- They breathe nitrogen, but oxygen hurts them badly (tentative number is, they crit in 2 minutes in normal air. Afaik this is actually more lenient than in Spess13)
-  - their time to die from crit is the same as for other species, since you don't breathe while in crit
-  - they start with a large nitrogen tank equipped and their mask should turn itself on at spawn
-  - because taking their mask off is BAD, eating and drinking is challenging. You need a nitrogen room, and someone needs to have made that room
-  - possibly a feature to hold their breath, taking asphyxiation damage instead of poison. You can regenerate that automatically (assuming you don't make a mistake and black out)
-  - emergency food and water could be replaced with injectable reagents
-  - MAYBE they should be able to get nutrients in general via injection?
-- They can't be cloned
-- They rot much more slowly
-- They have their own blood type, and when that system is expanded, it should be incompatible with "normal blood"
-- Possibly their brain, (it actually being a piece of tech), is automatically ready to be put into a borg chassis
-
-#### Possible Ideas:
-This is the part where things deteriorate and why this is a draft
-
-- They should have some actual mechanic involving screams
-  - their scream indicates their direction to other players in range? Maybe just other vox?
-    - ((this is intended to both encourage and discourage screaming on their part. If you constantly scream, no other vox will eventually care?))
-      - Or maybe have this on a specific cooldown?
-    - caution: this does not encourage mixed-species flocking
-  - their screams heal a small (symbolic) amount of damage. Something something positive resonance or whatever
-    - only heals other nearby players, but not them?
-
-
-- They are small/unassuming/fragile.
-  - Possibly a dwarf-sized sprite? (when you sprite it)
-  - More vulnerable to all brute damage
-  - Maybe they are worse at pulling things?
-  - They are easier to shove
-  - Maybe they deal subpar unarmed damage?
-
-- They are more resistant to poison damage (oxygen will bypass resistance)
-  - 50%? It's not unprecedented to have that level of resistance and poison is often not a hugely useful resistance to have
-  - If they can eat lots of poisonous stuff, this will dampen the damage
-    - should it, though?
+  - They are small/unassuming/fragile.
+    - Possibly a dwarf-sized sprite? (when you sprite it)
+    - They take ~ +25% damage from all Bruise
+    - They get drunk more easily
+    - Maybe they are worse at pulling things?
+    - They are easier to shove
+    - I thought they would deal sub-par damage but there have been some fairly strong feelings on Discord that their claws should be vicious claws. Maybe an exception can be made here, if they take more brute damage they won't really have an advantage in a brawl anyway. Unarmed damage probably isn't really all that important in a real fight anyway)
+  
+- They should have some actual mechanic involving screams (any such ability should consider that the hotbar cooldown does not apply to emoted screams. They might need to be an actual ability that also does a scream, rather than apply on any scream)
+  - they could have the ability to discern the positions of screams within a range, even through walls
+  - they could discern some information from screams, such as the coarse Health state of the person? (Good, Okay, Poor, Bad, Danger)
+  - their screams could apply a ! popup on nearby people with no additional effect?
 
 - They have a weird dietary range.
-  - Can drink welding fuel with no ill effects?
-  - They should get drunk from said welding fuel, or maybe from just plain water. It's funny.
-  - Can eat some inorganic items?
-  - In general they should be able to eat and drink a very wide range, and at worst be poisoned a bit (which they are resistant against)
-  - Maybe "normal food" is less satiating to them though
-
-- They get drunk more easily? I think crew trying to keep the water away from vox to prevent drunkness-induced screamsinging is perfection.
-
+  - It has been suggested that they be able to butcher without any tools. Very messily.
+  - Their thirst can only be satiated with welding fuel?
+  - Water makes them drunk
+  - Maybe "normal food" is less satiating to them than the weird stuff (if that can be categorized in some way)
+  
+- This was just an idea I toyed around with but they could have a mechanic based on hugs. However we want to explain it, from a deep psychological need based on their pack hunter ancestry, to them actually sapping small amounts of bioelectrical energy from others with surface contact (and reducing the other person's life expectancy by 1 to 3 seconds. Don't worry you'll be fiiiine it hardly matters.). The point is that they can't hug themselves and this will make them either hug every single crewmember they see (in hopes of reciprocation) and become known as having no concept of personal space, or threaten you with a fireaxe for hugs. Both of these outcomes are weird which is good.
+  - They get a sad vox face debuff on the alert HUD after going X minutes without getting a hug. What a terrible fate 
+  - Their bruise regeneration (that all organics have at low damage levels) could stop?
+  - Maybe their hunger meter depletes faster when debuffed
 
 # When Vox?
-Once this doc is settled we can create a specific roadmap of things that need to be coded or specified, on the way to roundstart vox.
+I have every intention to work on the actual implementation of the species and will create a roadmap for getting to roundstart vox once the design direction is settled
