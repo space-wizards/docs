@@ -1,5 +1,5 @@
 # How do I code? (I don't know how to program.)
-Below are some useful links for learning programming. If you get stuck, don't be afraid to ask us questions in the `#howdoicode` channel on our [discord](https://discord.gg/ujWSuN). If you can't find what you're looking for in one of these links, try googling "how to do X in csharp". You'll usually find several examples.
+Below are some useful links for learning programming. If you get stuck, don't be afraid to ask us questions in the `#howdoicode` channel on our [discord](https://discord.gg/ss14). If you can't find what you're looking for in one of these links, try googling "how to do X in csharp". You'll usually find several examples.
 
 If you have some experience (read: understand things like "classes" and "control flow") and would rather learn by doing, try looking at the Issues marked as [Beginner Friendly](https://github.com/space-wizards/space-station-14/labels/Beginner%20Friendly) on the Github repo. They are usually pretty simple and someone can always help you out on the discord. 
 
