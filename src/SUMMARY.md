@@ -140,6 +140,7 @@ Design Proposals
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
+- [Departmental Economy](en/proposals/mirrorcult-departmental-economy.md)
 
 Server Hosting
 ==============
