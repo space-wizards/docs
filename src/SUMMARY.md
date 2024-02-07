@@ -136,7 +136,7 @@ Design Proposals
 - [Game Director](en/proposals/tomleys-game-director.md)
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
-- [Cleanup Crew](en/proposals/mirrorcult-repair-crew-gamemode.md)
+- [Cleanup Crew](en/proposals/mirrorcult-cleanup-crew-gamemode.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
