@@ -2,19 +2,19 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| SlamBamActionman* | :x: No | Travel Camera: space-wizards/space-station-14#24085<br>Visitor Job: space-wizards/space-station-14#23972<br>Tourist Role: TBA|
+| SlamBamActionman* | ⚠️ Partially | Travel Camera: space-wizards/space-station-14#24085<br> Visitor Job: space-wizards/space-station-14#23972<br>Tourist Role: TBA|
 
 *Based on a [Discord thread](https://discord.com/channels/310555209753690112/1193309894879744151) by yourpaldeebs
 
 ## Overview
 
-**The Tourist** is a mid-round ghost role with benign, non-antagonistic objectives, visiting the station on a holiday trip. To fulfill their objectives, the Tourist will require crew/departments to do things that could be exploited by other antagonists; being let into secure areas, hold important items, and flash photography crew with their camera. The Tourist essentially provides a low-risk passenger role that is harmless to the station and enables roleplay, but its mere existence enables antags to use the role as a cover story.
+**The Tourist** is a mid-round ghost role with benign, non-antagonistic objectives, visiting the station on a holiday trip. To fulfill their objectives, the Tourist will require crew/departments to do things that could be exploited by other antagonists; being let into department areas, see certain items, and take photos of specific crew members with their camera. The Tourist essentially provides a low-risk passenger role that is harmless to the station and enables roleplay, but its mere existence enables antags to use the role as a cover story.
 
 ## Background
 
 This proposal originates from this [Discord thread](https://discord.com/channels/310555209753690112/1193309894879744151) by yourpaldeebs.
 
-In the current state of the game, many antag roles can be identified by metagame aspects that can only be explained by them being an antag. Examples of this are Terminators appearing in the station without ID & job, StealthOps Nukies/infiltrator Syndicates not appearing on the crew manifest, and hearing a flash basically anywhere that is not right next to Security. This can make these playstyles very difficult against powergaming players and thus quite limiting; the Tourist role is meant to remedy that.
+In the current state of the game, many antag roles can be identified by metagame aspects that can only be explained by them being an antag. Examples of this are Terminators appearing in the station without ID & job and StealthOps Nukies/infiltrator Syndicates not appearing on the crew manifest. This can make these playstyles very difficult against powergaming players and thus quite limiting; the Tourist role is meant to remedy that.
 
 For the Tourist player themself, the role is meant to provide excellent opportunities for roleplay and also add a bit of cheeky yet ultimately harmless spice to the station. The Tourist is *not* an antag. Instead their goals are meant to push for social interactions with crew in a low-stakes environment for the player. The Tourist also appropriately fits into the Standard Operating Procedure that visitors to the station are meant to be welcome.
 
@@ -28,16 +28,18 @@ This pod contains the following:
 - A Camera, a Tourist-exclusive objective item described further below.
 - A pair of Sunglasses.
 
-The Tourist does not spawn with an ID/PDA and does not start with a headset. The pod is unable to travel on its own and should only act as an initial spawn location that neither the Tourist or Crew has any reason visit again.
+The Tourist does not spawn with an ID/PDA and does not start with a headset. The pod is unable to travel on its own and should only act as an initial spawn location that neither the Tourist or Crew has any reason visit again. 
 
 The Tourist gets assigned some amount of objectives from the list below, some of them with multiple targets:
 
-- **Visit:** The Tourist must have visited certain locations on the station. This could be certain departments (Security, Engineering) or specific sub-areas in low-security deparments (Morgue, Cargo Bay, Robotics).
+- **Visit:** The Tourist must have visited certain locations on the station. This could be certain departments (Security, Engineering) or specific sub-areas in low-security deparments (Morgue, Cargo Bay, Robotics). Areas should not be high-security areas; Vault, Armory or Head Offices are examples of these.
 - **Get Drunk in Bar:** The Tourist must have gotten drunk in the bar. Like Visit but with an extra objective.
-- **Photograph:** The Tourist must have used their Camera item on a randomly selected crewmember. Camera described further below.
+- **Photograph Crew:** The Tourist must have used their Camera item on a randomly selected crewmember. Camera described further below.
 - **Photograph Holding:** The Tourist must have used their Camera item on a specific Command job member while they're holding an item. This is tied to the job listed on the ID to avoid issues where a certain Command member goes SSD or is killed. An example is "Captain holding their Hat" or "Research Director holding an Anamoly Scanner".
 - **Stamp Collecting:** The Tourist must end the round with a paper in their inventory that has X different job stamps. Generic stamps such as Approved/Denied do not count, but non-Command jobs such as Chaplain, Clown or Syndicate do.
 - **Eat:** The Tourist must have eaten a specific kind of dish. This dish should not rely on too exotic/unreliable ingredients (Carps/Spiders/Xeno/Amanita) but still require effort from the Chef (certain burgers, pies, pancakes and cakes). Only available if a Chef is on the station.
+- **Pet:** The Tourist must have given a specific station pet a pet. Functionally quite similar to Visit, but less static.
+  
 
 ### Travel Camera
 
@@ -51,7 +53,7 @@ The Travel Camera is also rare maintenance loot and available in the Syndicate U
 
 ## Additional Changes
 
-HoP will have a new job role available to them: Visitor. The Visitor has the same access rights as a Passenger (Maintenance), but with a different job icon. This keeps them distinct from Passengers (useful for Command and crew). The Visitor job role can also be used by admins for events.
+HoP will have a new job role available to them: Visitor. The Visitor has the same access rights as a Passenger (Maintenance), but with a different job icon. This keeps them distinct from Passengers (useful for Command and crew). The Visitor job role can also be used by admins for events. (2024-02-07: This has now been implemented and merged into the game)
 
 ## Possible Expansions
 
