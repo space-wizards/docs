@@ -6,7 +6,7 @@ If you are considering adding or reworking some major component of the game it's
 
 1. Make a copy of the design proposal template located at `src/en/proposals/proposal-template.md`.
    
-3. Read through [SS14's Core Design Documentation](src/en/space-station-14/core-design.md) (for gameplay-related proposals).
+3. Read through [SS14's Core Design Documentation](../space-station-14/core-design.md) (for gameplay-related proposals).
 
 4. Write your proposal (see [guide to editing docs](../meta/guide-to-editing-docs.md)).
 
