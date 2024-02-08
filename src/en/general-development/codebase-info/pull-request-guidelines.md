@@ -129,3 +129,9 @@ When writing your changelog entries, please follow these guidelines:
    - Not so good: "Can you believe it? Arachnid re-rework just dropped! Check the PR for more details"
    
    - Not so good: "Arachnids have new sprites for being creampied." *crampied* has another, unfortunate meaning that undermines the professional tone of a Changelog entry.
+
+7. **Do not use RP speak**
+   - Not so good: "Due to budget cuts, detective's revolver has been replaced with something more appropriate." What is more appropriate? By "Budget cuts" do we mean we removed something? Have something less powerful?
+   - Not so good: "The Syndicate has changed around their stock prices and gotten rid of some old dusty headsets" What dusty headsets? Got rid of them from where?
+   - Good: "The Detectives Revolver now contains cap bullets instead of lethals" Explains what changed without roleplay speak.
+   - Good: "The syndicate headset has been removed from the uplink" Explains what changed without roleplay speak. 
