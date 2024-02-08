@@ -101,7 +101,7 @@ Space Station 14
 
 ----------------------
 - [Core Game Design](en/space-station-14/core-design.md)
-  - [Gameplay Principles](en/space-station-14/core-design/principles.md)
+  - [Design Principles](en/space-station-14/core-design/principles.md)
   - [Antagonists](en/space-station-14/core-design/antagonists.md)
 - [Mapping](en/space-station-14/mapping.md)
   - [Mapping Checklist](en/space-station-14/mapping/mapping-checklist.md)
