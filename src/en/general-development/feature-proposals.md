@@ -44,7 +44,7 @@ A good rule of thumb if the new feature or rework you have in mind would require
 No idea! What design proposals do or do not get in is determined by maintainer approval like normal PRs. If you can get at least one maint to decide that it sounds like a good idea then there's a good chance that it will get accepted. Pretty much any idea is going to need at least some critiquing before it gets merged so don't get discouraged!
 
 ``` admonish tip "Design Principles"
-If you want to improve your chances, it's recommended that you read the [SS14 Core Game Design](en/space-station-14/core-design.md) document to get a high-level overview before you start writing, as it'll provide context for why things are the way they are.
+If you want to improve your chances, it's recommended that you read the [SS14 Core Design Documentation](/src/en/space-station-14/core-design.md) document to get a high-level overview before you start writing, as it'll provide context for why things are the way they are.
 
 PR'd design documents should also follow the [Decorum Guidelines](./feature-proposals/expected-feature-proposal-decorum.md).
 ```
