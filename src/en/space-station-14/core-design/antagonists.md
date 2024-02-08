@@ -1,7 +1,7 @@
 ```admonish warning "Attention: WIP!"
 This doc is actively under development and is not fully complete. Things may change!
 ```
-# Antagonist (Antags) Design
+# Antagonist Design
 Antagonists are one of the fundamental pillars of Spacestation 14, serving as a way to inject chaos into a round. Historically the implementation of different antags have been very hit or miss, ranging from wildly successful (space wizard) 
 to contensious and disliked (Revolutionaries). The goal of this document is to lay out core design principles for creating antagonists that players enjoy playing as *and* against, in addition to categorizing the possible types of antagonists.
 This document is not a strict list of requirements, but intends to serve as a foundation for what antagonists should feel and play like. In some cases a particular antag may deviate from the princples in this doc, and that's fine as long as the design 
