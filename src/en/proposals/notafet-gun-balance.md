@@ -18,7 +18,6 @@ This table shows the current balance of weapons available from the syndicate upl
 | Viper         | 16          | 11    | 176          | 6         | 96    | 7                   | 1             | 10                   | 1              |
 | Cobra         | 19          | 11    | 209          | 4         | 76    | 6                   | 1             | 9                    | 1              |
 | Python        | 35          | 6     | 210          | 2         | 70    | 3                   | 2             | 5                    | 1              |
-| Sniper Bundle | 40          | 5     | 200          | 0.75      | 30    | 3                   | 1             | 3                    | 1              |
 | C-20r Bundle  | 16          | 31    | 496          | 8         | 128   | 7                   | 4             |                      |                |
 | L6 Saw Bundle | 19          | 101   | 1919         | 8         | 152   | 6                   | 16            |                      |                |
 
@@ -38,12 +37,10 @@ On the other hand, it's also important to maintain more or less the current stat
 
 ## Proposal
 
-1. Make pistols and machine guns take separate ammo, so that their damage values can be balanced separately.
+1. Change SMG ammo (e.g. c-20r to .30, WT to .20) to separate balance for SMGs from balance for pistols.
 
    - Other mechanisms like increasing damage depending on the gun were considered, but that probably leads to the "too many variables to balance" problem.
 
 2. Increase pistol damage across the board to crit in 3-ish shots.
 
 3. Reduce pistol fire rate to maintain same or less DPS.
-
-4. Increase sniper damage to crit in 1-2 shots.
