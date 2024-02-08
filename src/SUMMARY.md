@@ -128,7 +128,7 @@ Design Proposals
 - [Feature Proposal Template](en/templates/proposal.md)
 
 ----------------------
-
+- [Anomaly Cores](en/proposals/jezithyr-expanding-rt-modularity.md)
 - [Anomaly Cores](en/proposals/mirrorcult-anomaly-cores.md)
 - [Machine Upgrading Rework](en/proposals/emogarbage-machine-upgrading-rework.md)
 - [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
