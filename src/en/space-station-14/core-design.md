@@ -13,6 +13,6 @@ Questions around Core Game Design should be directed towards the Design Group on
 - Forks and other communities may have different ideas and directions which they want to take the game, which is fine and something we want to encourage!
 - This is primarily intended to serve as a direction for upstream Spacestation 14 development, but forks can use these design documents as a base if they so choose.
 
- ## Categories:
- - [Gameplay Pillars](core-design/pillars.md)
- - [Antagonists](core-design/antagonists.md)
+ ##Categories:
+ - [Gameplay Pillars](en/space-station-14/core-design/principles-pillars.md)
+ - [Antagonists](en/space-station-14/core-design/antagonists.md)
