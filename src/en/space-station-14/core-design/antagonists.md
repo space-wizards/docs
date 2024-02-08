@@ -1,6 +1,7 @@
 ```admonish warning "Attention: WIP!"
 This doc is actively under development and is not fully complete. Things may change!
 ```
+
 # Antagonist Design
 Antagonists are one of the fundamental pillars of Spacestation 14, serving as a way to inject chaos into a round. Historically the implementation of different antags have been very hit or miss, ranging from wildly successful (space wizard) to contensious and disliked (Revolutionaries). 
 
