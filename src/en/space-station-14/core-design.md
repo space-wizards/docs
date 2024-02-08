@@ -32,6 +32,6 @@ The pillars serve as guideposts for creating a cohesive design for SS14. Further
 ## Player Interaction/Agency
 - Players should be encouraged to interact with each other as much as possible to create opportunities for conflict or cooperation. Mechanics should reinforce the player's ability to make impactful decisions while mitigating those decisions' effects on the agency of other players.
 
- ##Categories:
+ ## Categories:
  - [Gameplay Principles](core-design/principles.md)
  - [Antagonists](core-design/antagonists.md)
