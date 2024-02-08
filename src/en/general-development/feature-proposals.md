@@ -5,12 +5,14 @@ If you are considering adding or reworking some major component of the game it's
 ## How do I make a proposal?
 
 1. Make a copy of the design proposal template located at `src/en/proposals/proposal-template.md`.
+   
+3. Read through [SS14's Core Design Documentation](src/en/space-station-14/core-design.md) (for gameplay-related proposals).
 
-2. Write your proposal (see [guide to editing docs](../meta/guide-to-editing-docs.md)).
+4. Write your proposal (see [guide to editing docs](../meta/guide-to-editing-docs.md)).
 
-3. When you are ready for your proposal to be reviewed, make a pull request.
+5. When you are ready for your proposal to be reviewed, make a pull request.
 
-4. Your proposal is approved when a maintainer merges it. This is a green light for you or someone else to go ahead and implement it. A maintainer will then link your proposal to the side bar. *Note to maintainers: edit `src/SUMMARY.md`*
+6. Your proposal is approved when a maintainer merges it. This is a green light for you or someone else to go ahead and implement it. A maintainer will then link your proposal to the side bar. *Note to maintainers: edit `src/SUMMARY.md`*
 
 ``` admonish tip "Unfinished Proposals"
 If you don't think that your proposal is ready for maintainer scrutiny, but still want feedback on it you can PR it as a draft. Drafts are less likely to attract people looking to get down to brass tacks, but still let people comment and give advice.
