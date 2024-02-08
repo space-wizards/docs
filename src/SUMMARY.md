@@ -37,7 +37,7 @@ General Development
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
 - [Feature Proposals](en/general-development/feature-proposals.md)
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
-  - [Fundamental Design Principles](en/general-development/feature-proposals/ss14-fundamental-design-principles.md)
+  - [Core Game Design](en/space-station-14/core-design.md)
 
 
 SS14 By Example
@@ -100,8 +100,8 @@ Space Station 14
 ================
 
 ----------------------
-- [Core Design](en/space-station-14/core-design.md)
-  - [Gameplay Pillars](en/space-station-14/core-design/pillars.md)
+- [Core Game Design](en/space-station-14/core-design.md)
+  - [Gameplay Principles/Pillars](en/space-station-14/core-design/principles-pillars.md)
   - [Antagonists](en/space-station-14/core-design/antagonists.md)
 - [Mapping](en/space-station-14/mapping.md)
   - [Mapping Checklist](en/space-station-14/mapping/mapping-checklist.md)

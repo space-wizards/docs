@@ -5,12 +5,14 @@ If you are considering adding or reworking some major component of the game it's
 ## How do I make a proposal?
 
 1. Make a copy of the design proposal template located at `src/en/proposals/proposal-template.md`.
+   
+3. Read through [SS14's Core Design Documentation](src/en/space-station-14/core-design.md) (for gameplay-related proposals).
 
-2. Write your proposal (see [guide to editing docs](../meta/guide-to-editing-docs.md)).
+4. Write your proposal (see [guide to editing docs](../meta/guide-to-editing-docs.md)).
 
-3. When you are ready for your proposal to be reviewed, make a pull request.
+5. When you are ready for your proposal to be reviewed, make a pull request.
 
-4. Your proposal is approved when a maintainer merges it. This is a green light for you or someone else to go ahead and implement it. A maintainer will then link your proposal to the side bar. *Note to maintainers: edit `src/SUMMARY.md`*
+6. Your proposal is approved when a maintainer merges it. This is a green light for you or someone else to go ahead and implement it. A maintainer will then link your proposal to the side bar. *Note to maintainers: edit `src/SUMMARY.md`*
 
 ``` admonish tip "Unfinished Proposals"
 If you don't think that your proposal is ready for maintainer scrutiny, but still want feedback on it you can PR it as a draft. Drafts are less likely to attract people looking to get down to brass tacks, but still let people comment and give advice.
@@ -44,7 +46,7 @@ A good rule of thumb if the new feature or rework you have in mind would require
 No idea! What design proposals do or do not get in is determined by maintainer approval like normal PRs. If you can get at least one maint to decide that it sounds like a good idea then there's a good chance that it will get accepted. Pretty much any idea is going to need at least some critiquing before it gets merged so don't get discouraged!
 
 ``` admonish tip "Design Principles"
-If you want to improve your chances, it's recommended that you read the [SS14 Fundamental Design Principles](./feature-proposals/ss14-fundamental-design-principles.md) document to get a high-level overview before you start writing, as it'll provide context for why things are the way they are.
+If you want to improve your chances, it's recommended that you read the [SS14 Core Design Documentation](/src/en/space-station-14/core-design.md) document to get a high-level overview before you start writing, as it'll provide context for why things are the way they are.
 
 PR'd design documents should also follow the [Decorum Guidelines](./feature-proposals/expected-feature-proposal-decorum.md).
 ```
