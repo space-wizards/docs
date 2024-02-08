@@ -131,7 +131,9 @@ When writing your changelog entries, please follow these guidelines:
    - Not so good: "Arachnids have new sprites for being creampied." *crampied* has another, unfortunate meaning that undermines the professional tone of a Changelog entry.
 
 7. **Do not use RP speak**
-   - Not so good: "Due to budget cuts, detective's revolver has been replaced with something more appropriate." What is more appropriate? By "Budget cuts" do we mean we removed something? Have something less powerful?
+   - Not so good: "Due to budget cuts, detective's revolver has been replaced with something more appropriate." What is more appropriate? "Budget cuts" is rp speak, What is something less powerful?
    - Not so good: "The Syndicate has changed around their stock prices and gotten rid of some old dusty headsets" What dusty headsets? Got rid of them from where?
+   - Not so good: "Due to Nanotrashen's budget cuts, Space pens are no longer supplied on the station." The problem here is saying "Due to budget cuts"
    - Good: "The Detectives Revolver now contains cap bullets instead of lethals" Explains what changed without roleplay speak.
-   - Good: "The syndicate headset has been removed from the uplink" Explains what changed without roleplay speak. 
+   - Good: "The syndicate headset has been removed from the uplink" Explains what changed without roleplay speak.
+   - Good: "Space pens are no longer provided in survival boxes or on the station"
