@@ -4,9 +4,9 @@
 |---|---|---|
 | SpeltIncorrectyl | :x: No | TBD |
 ## Terminology
-Loyalists - Sec, command and other mindshielded crew
-Telecrate - A crate teleported onto the station by Centcom to help the loyalists.
-Telecrate Drop - The process by which telecrates are announced and then spawned.
+* Loyalists - Sec, command and other mindshielded crew
+* Telecrate - A crate teleported onto the station by Centcom to help the loyalists.
+* Telecrate Drop - The process by which telecrates are announced and then spawned.
 ## Background
 I enjoyed the revs gamemode to an extent, but there were always some issues.
 * **The success or failure of the revolution depended very heavily on how early/late the revolution was discovered.** An incompetent headrev could flash someone with sunglasses and give away the revolution very early, giving the loyalists a swift victory.
@@ -41,6 +41,7 @@ A telecrate drop contains the following contents:
 | Amoury Resupply Crate | Ammo (.20 rifle, .35 auto, buckshot) | Used to replace ammo lost defending the teledrop. | Used to arm the revolution. |
 | Emergency Triage Crate | Defibrillators<br>Advanced Meds (medicated suture and regenerative mesh) | Used to revive any revs so they can then be mindshielded. Doesn't make medbay obsolete, as the supplies are limited and no chemicals are included. | Extra medicine for healing comrades. |
 | Head of Staff Tracking Crate | Two pinpointers which point to the location of two random living heads of staff. | Can find kidnapped heads of staff. | Can track heads of staff in hiding. |
+
 A telecrate drop is very valuable to both the loyalists and the revolution. The loyalists have an advantage in that they start off better armed and know where the teledrop is happening before the revs do. The revs need to buy guns (a lot easier now that the loyalists have no reason to control cargo) and convert the crew to gather enough firepower to take the teledrop. The revs can also kill a secoff and get security radio to be alerted of the teledrop earlier.
 
 Neither side needs the teledrop to win. 
