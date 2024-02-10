@@ -1,4 +1,4 @@
-Space Wizards Development Wiki
+﻿Space Wizards Development Wiki
 =====================
 
 [The Robust Book](index.md)
@@ -142,6 +142,7 @@ Design Proposals
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
+- [Station AI](en/proposals/poltertzi-station-ai.md)
 
 Server Hosting
 ==============
