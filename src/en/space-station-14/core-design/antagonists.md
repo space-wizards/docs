@@ -43,7 +43,7 @@ These are the core design pillars for antagonists. The design of all antagonists
   
 ## Fun to lose against (or as)
 
-- Losing/dying to an antag should not feel unfair to a player. Player’s should always have some option in terms of counterplay. Same goes for antags, they should always feel like they have options and are not hard countered.
+- Losing/dying to an antag should not feel unfair to a player. Players should always have some option in terms of counterplay. Same goes for antags, they should always feel like they have options and are not hard countered.
 
 ---
 
