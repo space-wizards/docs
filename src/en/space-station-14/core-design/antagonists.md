@@ -110,7 +110,7 @@ Blob is a Major Conversion Antagonist with the goal of self-replicating and over
 
 - They are a conversion-based antag because the intial starting blob core is very weak and vulnerable, however as the blob expands across the station it gains more power. Additionally, blobs can convert crew members into blob zombies to help protect the core.
 
-- They are a major antagonist because their goal is to expand and completely overtake the station and turn it into one giant blob organsim. Their abilities are initially very wealk however, they scale exponentially with time and the amount of space inhabited by the blob.
+- They are a major antagonist because their goal is to expand and completely overtake the station and turn it into one giant blob organsim. Their abilities are initially very weak however, they scale exponentially with time and the amount of space inhabited by the blob.
 
 ## Thief: Neutral Solo
 
