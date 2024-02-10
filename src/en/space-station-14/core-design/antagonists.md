@@ -3,11 +3,11 @@ This doc is actively under development and is not fully complete. Things may cha
 ```
 
 # Antagonist Design
-Antagonists are one of the fundamental pillars of Spacestation 14, serving as a way to inject chaos into a round. Historically the implementation of different antags have been very hit or miss, ranging from wildly successful (space wizard) to contensious and disliked (Revolutionaries). 
+Antagonists are one of the fundamental pillars of Spacestation 14, serving as a way to inject chaos into a round. Historically the implementation of different antags has been very hit or miss, ranging from wildly successful (space wizard) to contentious and disliked (Revolutionaries).
 
-The goal of this document is to lay out core design principles for creating antagonists that players enjoy playing as *and* against, in addition to categorizing the possible types of antagonists.
+The goal of this document is to lay out core design principles for creating antagonists that players enjoy playing as and against, in addition to categorizing the possible types of antagonists.
 
-This document is not a strict list of requirements, but intends to serve as a foundation for what antagonists should feel and play like. In some cases a particular antag may deviate from the princples in this doc, and that's fine as long as the design still works and provides  quality gameplay.
+This document is not a strict list of requirements but intends to serve as a foundation for what antagonists should feel and play like. In some cases a particular antag may deviate from the principles in this doc, and that’s fine as long as the design still works and provides quality gameplay.
 
 This document focuses mainly on the high-level concept of antagonists and how to categorize them. Other documents will go into the specific goals/guidelines for creating a particular type of antagonist.
 
@@ -39,11 +39,11 @@ These are the core design pillars for antagonists. The design of all antagonists
   
 ## Accessibility
 
-- Antags should be provided all the information required to perform their role, along with what they are allowed and not allowed to do to achieve their objectives. Mechanics/identification should not rely solely on colors for differentiation or functionality.
+- Antags should be provided with all the information required to perform their role, along with what they are allowed and not allowed to do to achieve their objectives. Mechanics/identification should not rely solely on colors for differentiation or functionality.
   
 ## Fun to lose against (or as)
 
-- Losing/dying to an antag should not feel unfair to a player. Players should always have some option in terms of counterplay. Same goes for antags, they should always feel like they have options and are not hard countered.
+- Losing/dying to an antag should not feel unfair to a player. Players should always have some option in terms of counterplay. The same goes for antags, they should always feel like they have options and are not hard countered.
 
 ---
 
@@ -53,7 +53,7 @@ These are the categories that an antagonist must fall into. Categories define ho
 
 ## Lone Antagonist
 
-- Solitary in nature. Either there is only one of its type present or each of them act independently with their own objectives. Lone antagonists may team up if their objectives align.
+- Solitary in nature. Either there is only one of its type present or each of them acts independently with their own objectives. Lone antagonists may team up if their objectives align.
 
 ## Team Antagonist
 
@@ -67,7 +67,7 @@ These are the categories that an antagonist must fall into. Categories define ho
 
 # Antagonist Alignments
 
-These serve as a guide to how much impact an antag should have on a particular round or station from their abilities/items. Additionaly, alignments also quantify how impactful the particular antags objectives are on the rest of the station. Antagonists can only have one alignment.
+These serve as a guide to how much impact an antag should have on a particular round or station from their abilities/items. Additionally, alignments also quantify how impactful the particular antags objectives are on the rest of the station. Antagonists can only have one alignment.
 
 ## Major
 
@@ -75,7 +75,7 @@ These serve as a guide to how much impact an antag should have on a particular r
 
 ## Minor
 
-- Typically prevented from mass sabotage or murder through mechanics or objectives. Usually completing self-serving short term goals using their limited tools/abilities. May join up with major antags if their goals align.
+- Typically prevented from mass sabotage or murder through mechanics or objectives. Usually completing self-serving short-term goals using their limited tools/abilities. May join up with major antags if their goals align.
 
 ## Neutral
 
@@ -83,10 +83,10 @@ These serve as a guide to how much impact an antag should have on a particular r
 
 ## Assisting
 
-- Typically the result of another antag's actions. Assisting antagonists goals are aligned with their creator/converter. May assist other antagonists if it benefits their creator.
+- Typically the result of another antags actions. Assisting antagonist's goals are aligned with their creator/converter. May assist other antagonists if it benefits their creator.
 
 ## Pest
-- Can either be a minor threat or non-issue external or internal to the station, usually lacks the ability to communicate with crew in any significant way, and has very limited abilities at their disposal with an extremely simple self-serving direct objective.
+- Can either be a minor threat or non-issue external or internal to the station, cannot usually communicate with crew in any significant way, and has very limited abilities at their disposal with an extremely simple self-serving direct objective.
 
 ---
 
@@ -96,26 +96,26 @@ These are some examples of how to use categories/alignments when creating antago
 
 ## Nukies: Major Team
 
-Nukies are a Major Team Antagonist with the goal of getting to and setting off the station's nuclear self-destruct warhead. 
+Nukies are a Major Team Antagonist with the goal of getting to and setting off the station’s nuclear self-destruct warhead.
 
-- They are a team-based antagonist because they start with a small limited team of players and they don't have an effective means of converting crew en-mass. They have reinforcements and borging but those are secondary mechanics and don't really qualify them as a conversion antagonist.
+- They are a team-based antagonist because they start with a small limited team of players and they don’t have an effective means of converting crew en-mass. They have reinforcements and borging but those are secondary mechanics and don’t really qualify them as a conversion antagonist.
 
-- They are a major antag because achieving their objective will result in the complete destruction of the station and they have access to very powerful weapons and tools to achieve their goals. They are also incentivized to engage in direct combat as their objective is in one of the most secure areas on the station and their equipment is primarily combat focused.
+- They are a major antag because achieving their objective will result in the complete destruction of the station and they have access to very powerful weapons and tools to achieve their goals. They are also incentivized to engage in direct combat as their objective is in one of the most secure areas on the station and their equipment is primarily combat-focused.
 
-- The tendency for them to engage directly in combat, their very identifiable equiptment and round-ending objective, very clearly solidifies them into the category of major antag.
+- The tendency for them to engage directly in combat, their very identifiable equipment and round-ending objective, very clearly solidify them into the category of major antag.
 
 ## Blob: Major Conversion
 
 Blob is a Major Conversion Antagonist with the goal of self-replicating and overtaking the entire station.
 
-- They are a conversion-based antag because the intial starting blob core is very weak and vulnerable, however as the blob expands across the station it gains more power. Additionally, blobs can convert crew members into blob zombies to help protect the core.
+- They are a conversion-based antag because the initial starting blob core is very weak and vulnerable, however as the blob expands across the station it gains more power. Additionally, blobs can convert crew members into blob zombies to help protect the core.
 
-- They are a major antagonist because their goal is to expand and completely overtake the station and turn it into one giant blob organsim. Their abilities are initially very weak however, they scale exponentially with time and the amount of space inhabited by the blob.
+- They are a major antagonist because their goal is to expand and completely overtake the station and turn it into one giant blob organism. Their abilities are initially very weak however, they scale exponentially with time and the amount of space inhabited by the blob.
 
 ## Thief: Neutral Solo
 
 Thief is a Neutral Solo Antagonist with the goal of stealing objective items to satisfy their kleptomania.
 
-- The thief being a solo antagonist is self-explanitory.
+- The thief being a solo antagonist is self-explanatory.
 
-- A thief's objective is to simply steal their objective items and not get caught. The objective itself isn't in conflict with the objectives of the crew, but stealing certain items may result in chaos ensuing on the station. This clearly makes the thief a neutral antagonist as they aren't directly in conflict with the crew.
+- A thief’s objective is to simply steal their objective items and not get caught. The objective itself isn’t in conflict with the objectives of the crew, but stealing certain items may result in chaos ensuing at the station. This clearly makes the thief a neutral antagonist as they aren’t directly in conflict with the crew.
