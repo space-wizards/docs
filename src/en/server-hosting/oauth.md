@@ -31,3 +31,41 @@ We can change this manually through the hub-admin panel (see note about dials ab
 
 See the following issue: https://github.com/space-wizards/SS14.Web/issues/11
 ```
+
+## Example Configuration
+
+### MediaWiki
+
+```admonish bug
+Using MediaWiki currently requires some manual back-end configuration you can't do yourself. Please ask in `#hosting` to have this set up.
+```
+
+You first need to make sure you have the [`PluggableAuth`](https://www.mediawiki.org/wiki/Extension:PluggableAuth) and [`OpenIDConnect`](https://www.mediawiki.org/wiki/Extension:OpenID_Connect) extensions installed. Please refer to MediaWiki's documentation for installing extensions.
+
+Create an OAuth application on our website with the following parameters:
+
+* Application name: Something meaningful for users to recognize.
+* Authorization callback URL: The "`Special:PluggableAuthLogin`" page on your wiki. For example, since the official wiki's main page is `https://wiki.spacestation14.io/wiki/Main_Page`, this would be `https://wiki.spacestation14.io/wiki/Special:PluggableAuthLogin`.
+* Homepage URL: The main page of your wiki. For example `https://wiki.spacestation14.io/wiki/Main_Page`
+* Untick "Require PKCE"
+
+Also generate a client secret and copy it.
+
+Enter the following into your `LocalSettings.php` in your MediaWiki installation and replace the required values:
+
+```php
+wfLoadExtension( 'PluggableAuth' );
+wfLoadExtension( 'OpenIDConnect' );
+
+$wgPluggableAuth_Config[] = [
+        'plugin' => 'OpenIDConnect',
+        'data' => [
+                'providerURL' => 'https://central.spacestation14.io/web/',
+                'clientID' => 'e584f64f-d0f9-4b15-9714-1233bc4c55a4', // Replace with your client ID.
+                'clientsecret' => 'foobar', // Replace with your client secret.
+                'scope' => [ 'profile', 'email' ]
+        ]
+];
+
+$wgOpenIDConnect_MigrateUsersByUserName=true;
+```
