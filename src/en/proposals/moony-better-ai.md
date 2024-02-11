@@ -59,3 +59,16 @@ Actions (tasks) include:
 - **Many** I didn't think of (it's late, sue me)
 
 These function as the AI's primary way of reducing their own workload, allowing the AI to feel or be allseeing and omnipresent while still having a very human mind behind it. Think of the player of the AI as the AI Personality (a director with a brain), while compute tasks are the actual AI.
+Additionally, I can already hear the "but isnt this programming" concerns, and thankfully the answer is "no". The AI is a live environment, and tasks they set up are often extremely situational to the exact circumstances of the round.
+
+## The machine network.
+Remember an age ago where I mentioned the AI can offload it's compute? This is that part! The AI is a mobile pile of independent processes, not a singular machine, which allows it to use existing station equipment and small terminals located throughout as both insurance and extra compute in times of need. When the AI "shunts into" a piece of equipment, the equipment will bluescreen, becoming inoperable but providing computational power to the AI. The AI is considered alive as long as it has enough compute power to meet its baseline requirements. If it drops below this, it has about 30 seconds to recover itself before it is considered dead for good and cannot be revived.
+
+The AI has additional baseline cost from the following fundamentals:
+- The overmap (and each enabled overmap layer) costs compute to view.
+- Cameras cost significant compute to view. (While you can look at more than one at a time, doing so is very expensive.)
+- Listening to radio channels costs compute per channel.
+- Viewing the binary bulletin costs compute.
+- etc.
+
+The AI can disable fundamentals if it wants, functioning as one means for it to get itself back into the green so to speak if it drops below the minimum compute required to live. 
