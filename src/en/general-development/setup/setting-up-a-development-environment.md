@@ -154,7 +154,7 @@ And voila! You have robustly set up your development environment in a way that d
 
 # Troubleshooting
 
-Make sure the first three items on top are downloaded.
+Make sure [the first three items](#setting-up-a-development-environment) on top are downloaded.
 
 ## `RUN_THIS.py` not running
 Check that python is installed from the website and not the Microsoft Store. If it's installed from the Microsoft Store, uninstall it then download and install from the python website.
@@ -184,4 +184,8 @@ Uninstall .NET Core SDK x86. Install .NET Core SDK x64.
 
 ## The client and server aren't available in Visual Studio to configure in Multiple startup projects
 
-This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file. 
+This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file.
+
+## The system cannot find the specified file RUN_THIS.py
+
+`The system cannot find the specified file` error usually means that OneDrive is conflicting with the git repository. Clone the git repo outside of OneDrive or disable syncing for the cloned folder.
