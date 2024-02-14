@@ -96,7 +96,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph Cofee Maker Machine
+    subgraph Coffee Maker Machine
     Damageable;
     PowerReceiver;
     SolutionContainer;
@@ -157,6 +157,8 @@ Systems can also have public methods that other entity systems can call, and the
 // Other Entity Systems can interact with FooComponent using the public API here.
 public sealed class FooSystem : EntitySystem
 {
+    [Dependency] protected readonly SharedAppearanceSystem _appearanceSystem = default!;
+
     // Always subscribe to events here, on initialize
     public override void Initialize()
     {    
@@ -172,59 +174,54 @@ public sealed class FooSystem : EntitySystem
     }
     
     // This is called when a FooComponent is initialized. 
-    private void OnFooInit(EntityUid uid, FooComponent foo, ComponentInit _)
+    private void OnFooInit(Entity<FooComponent> ent, ref ComponentInit _)
     {
          // Initialize your FooComponent here
     }
     
     // Example handler for when FooComponent is interacted with by an user.
-    private void Handle(EntityUid uid, FooComponent foo, InteractUsingEvent args)
+    private void Handle(Entity<FooComponent> ent, ref InteractUsingEvent args)
     {
         // Increase interact counter by one
         // We call this method as it handles everything for us.
-        SetInteractCounter(uid, foo, foo.InteractCounter + 1);
+        SetInteractCounter((ent, ent.Comp), ent.Comp.InteractCounter + 1);
     }
     
     // This is called whenever an entity moves.
-    private void OnEntityMove(MoveEvent ev)
+    private void OnEntityMove(ref MoveEvent ev)
     {
         // Do something here! Although we do nothing because this is an example...
     }
 
     // Public method that other systems can call to interact with FooComponent
-    public void ResetInteractCounter(EntityUid uid, FooComponent? foo = null)
+    public void ResetInteractCounter(Entity<FooComponent?> ent)
     {
-        // Try to resolve the component...
-        if(!Resolve(uid, ref foo))
-            return;
-    
         // We just call our other method, which handles everything for us.
-        SetInteractCounter(uid, 0, foo);
+        SetInteractCounter(ent, 0);
     }
 
     // Public method that other systems can call to interact with FooComponent
-    public void SetInteractCounter(EntityUid uid, int count, FooComponent? foo = null)
+    public void SetInteractCounter(Entity<FooComponent?> ent, int count)
     {
         // Try to resolve the component...
-        if(!Resolve(uid, ref foo))
+        if (!Resolve(ent, ref ent.Comp))
             return;
     
         // Store the old counter, for later...
-        var oldCounter = foo.InteractCounter;
+        var oldCounter = ent.Comp.InteractCounter;
         
         // Set the new interact counter
-        foo.InteractCounter = count;
+        ent.Comp.InteractCounter = count;
     
         // Now we set some appearance data, if the entity has an appearance comp
-        if(TryComp(uid, out AppearanceComponent? appear))
-            appear.SetData(FooVisualData.InteractCounter, count);
+        if (TryComp(ent, out AppearanceComponent? appearance))
+            _appearanceSystem.SetData(ent, FooVisualData.InteractCounter, count, appearance);
             
         // Now, we raise an event to let everyone know InteractCounter changed
         // Because the third argument is false, this event will not be broadcast.
         // This is raised as a directed event only! 
-        RaiseLocalEvent(uid, new FooInteractCounterChangedEvent(oldCounter, foo.InteractCounter));
+        RaiseLocalEvent(ent, new FooInteractCounterChangedEvent(oldCounter, ent.Comp.InteractCounter));
     }
-
 }
 
 [RegisterComponent]
@@ -232,6 +229,7 @@ public sealed partial class FooComponent : Component
 {    
     // This will be increased every time an user interacts with us.
     // Notice how the logic for this is not in this component, but in the system.
+    [DataField]
     public int InteractCounter = 0;
 }
 
@@ -248,6 +246,12 @@ public sealed class FooInteractCounterChangedEvent : EntityEventArgs
         OldCounter = oldCounter;
         NewCounter = newCounter;
     }
+}
+
+[Serializable, NetSerializable]
+public enum FooVisualData
+{
+    InteractCounter,
 }
 ```
 

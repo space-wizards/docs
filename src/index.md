@@ -21,8 +21,10 @@ If you would like to make contributions to this documentation site, it's hosted 
 
 - [:question: How do I code?](en/general-development/setup/howdoicode.md)
 - [:package: Setting up the Dev Environment](en/general-development/setup/setting-up-a-development-environment.md)
+- [:page_with_curl: Core Game Design](en/space-station-14/core-design.md)
 - [:world_map: Mapping](en/space-station-14/mapping.md)
 - [:chart_with_upwards_trend: Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
+
 
 ### What should I work on?
 
@@ -36,3 +38,4 @@ If you would like to make contributions to this documentation site, it's hosted 
 
 There are other repositories that do not have as many priority issues to work on. If you are still curious about them, they are here:
 - [Space-Wizards](https://github.com/space-wizards) 
+

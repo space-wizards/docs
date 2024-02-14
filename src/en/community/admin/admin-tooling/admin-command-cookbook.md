@@ -1,10 +1,12 @@
-# Admin Command Cookbook
+# Admin Cookbook
 
 ## Delete PA & Singularity Generator
 ```
     entities named "PA .*" do delete $ID
     deleteewi SingularityGenerator
 ```
+## Add power to the station permanently
+`Admin menu -> objects -> select grids in dropdown -> right click the station -> tricks -> click the battery with the ∞`
 ## Uncurse all lockers
 `entities with CursedEntityStorage do rmcomp $ID CursedEntityStorage; addcomp $ID EntityStorage`
 ## Remove all ghostroles
