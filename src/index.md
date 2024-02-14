@@ -31,7 +31,7 @@ If you would like to make contributions to this documentation site, it's hosted 
 * Reading through [Acronyms & Common Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md) as well as the other articles on this wiki in `Tips` or `Setup` will likely help you understand what is happening.
 
 ### What repositories are part of Space Station 14?
-* [Space Station 14](https://github.com/space-wizards/space-station-14) is the main codebase. It has the most priority issues. [Space Station 14 Issues](https://github.com/space-wizards/space-station-14/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+* [Space Station 14](https://github.com/space-wizards/space-station-14) is the main codebase. It has the most priority issues. [Space Station 14 Issues](https://github.com/space-wizards/space-station-14/issues)
 * [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) is the custom game engine. [Robust Toolbox Issues](https://github.com/space-wizards/RobustToolbox/issues)
 
 There are other repositories that do not have as many priority issues to work on. If you are still curious about them, they are here:
