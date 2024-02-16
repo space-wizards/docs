@@ -28,14 +28,14 @@ The Station AI is a common and prominent role in the original Space Station 13, 
 
 ## The Basics
 
-The most basic idea for the AI body is a single immobile core located in a secure location, such as the vault or the AI facilities already present on multiple maps. Due to the main body being immobile, the AI should have the ability to move its viewpoint between the core itself and various cameras across the station to be able to observe the events on it (and not be bored staring at the same room the entire shift).
+The most basic idea for the AI body is a single immobile core located in a secure location, the AI facilities already present on multiple maps, protected by the AI itself (turret and borg). Due to the main body being immobile, the AI should have the ability to move its viewpoint between the core itself and various cameras across the station to be able to observe the events on it (and not be bored staring at the same room the entire shift).
 
-The AI is only able to leave its body and access the station element with all his power if it is connected to an important power source and wrenched.
+The AI is only able to leave its body and access the station element with all its power if it is connected to an important power source and wrenched.
 The external vision should be like a ghost, but only being able to see the elements from camera or of the controllable station when a camera cannot see it. (Hard to implement, questionable)
 
 A new AI core should be buy at cargo to offer a new ghost role. A fresh AI would appear in station as a job, when the game start.
 
-In the future, we will be able to add the syndicat AI, an AI in the uplink which is already emag and can be placed anywhere, it will be able to take control of some machine to take communications, camera servers or other, and thus prevent the crew from using it. It may be destroyed by the crew. (Will be implemented later)
+In the future, we will be able to add the syndicate AI, an AI in the uplink which is already emag and can be placed anywhere, it will be able to take control of some machine to take communications, camera servers or other, and thus prevent the crew from using it. It may be destroyed by the crew. (Will be implemented later)
 
 
 
