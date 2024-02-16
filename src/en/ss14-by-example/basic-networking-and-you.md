@@ -34,13 +34,13 @@ An example of all of the networking code required for IDCardComponent now, from 
 [Access(typeof(SharedIdCardSystem), typeof(SharedPDASystem), typeof(SharedAgentIdCardSystem))]
 public sealed partial class IdCardComponent : Component
 {
-    [DataField("fullName")]
+    [DataField]
     [AutoNetworkedField]
     [Access(typeof(SharedIdCardSystem), typeof(SharedPDASystem), typeof(SharedAgentIdCardSystem),
         Other = AccessPermissions.ReadWrite)] // FIXME Friends
     public string? FullName;
 
-    [DataField("jobTitle")]
+    [DataField]
     [AutoNetworkedField]
     public string? JobTitle;
 }
@@ -79,13 +79,13 @@ Let's see how this state is constructed on the server:
         ...
 
 // In the event handlers..
-        private void GetCompState(EntityUid uid, AmbientSoundComponent component, ref ComponentGetState args)
+        private void GetCompState(Entity<AmbientSoundComponent> ent, ref ComponentGetState args)
         {
             args.State = new AmbientSoundComponentState
             {
-                Enabled = component.Enabled,
-                Range = component.Range,
-                Volume = component.Volume,
+                Enabled = ent.Comp.Enabled,
+                Range = ent.Comp.Range,
+                Volume = ent.Comp.Volume,
             };
         }
 ```
@@ -102,12 +102,14 @@ And on the client (technically still in shared, but this code is only run on the
 /// SharedAmbientSoundSystem.cs
         ...
 
-        private void HandleCompState(EntityUid uid, AmbientSoundComponent component, ref ComponentHandleState args)
+        private void HandleCompState(Entity<AmbientSoundComponent> ent, ref ComponentHandleState args)
         {
-            if (args.Current is not AmbientSoundComponentState state) return;
-            component.Enabled = state.Enabled;
-            component.Range = state.Range;
-            component.Volume = state.Volume;
+            if (args.Current is not AmbientSoundComponentState state)
+                return;
+
+            ent.Comp.Enabled = state.Enabled;
+            ent.Comp.Range = state.Range;
+            ent.Comp.Volume = state.Volume;
         }
 ```
 

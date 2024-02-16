@@ -9,7 +9,8 @@ description = "Tutorial & reference for all Space Wizards Federation projects, i
 [preprocessor.mermaid]
 
 [preprocessor.admonish]
-assets_version = "2.0.2" # do not edit: managed by `mdbook-admonish install`
+assets_version = "3.0.1" # do not edit: managed by `mdbook-admonish install`
+command = "mdbook-admonish"
 
 [preprocessor.emojicodes]
 
@@ -72,6 +73,7 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/hosting/SS14-Admin/index.html" = "/en/server-hosting/setting-up-ss14-admin.html"
 "/en/hosting/robust-cdn/index.html" = "/en/server-hosting/setting-up-robust-cdn.html"
 "/en/hosting/oauth/index.html" = "/en/server-hosting/oauth.html"
+"/en/hosting/port-forwarding/index.html" = "/en/server-hosting/port-forwarding.html"
 "/en/technical-docs/acronyms-and-nomenclature/index.html" = "/en/general-development/codebase-info/acronyms-and-nomenclature.html"
 "/en/getting-started/engine-changes/index.html" = "/en/general-developmnet/codebase-info/prs-with-engine-changes.html"
 "/en/getting-started/debugging-tools/index.html" = "/en/general-development/tips/debugging-tools.html"
@@ -117,3 +119,4 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/engine/lighting-fov/index.html" = "/en/robust-toolbox/rendering/lighting-and-fov.html"
 "/en/engine/sprites-icons/index.html" = "/en/robust-toolbox/rendering/sprites-and-icons.html"
 "/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
+"/en/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"

@@ -7,7 +7,6 @@ Meta
 ====
 
 ----------------------
-
 - [Guide to Editing Docs](en/meta/guide-to-editing-docs.md)
 - [Docs Example Page](en/meta/docs-example-page.md)
 - [Docs are for Discoverability](en/meta/docs-are-for-discoverability.md)
@@ -28,6 +27,7 @@ General Development
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
@@ -36,7 +36,7 @@ General Development
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
 - [Feature Proposals](en/general-development/feature-proposals.md)
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
-  - [Fundamental Design Principles](en/general-development/feature-proposals/ss14-fundamental-design-principles.md)
+  - [Core Game Design](en/space-station-14/core-design.md)
 
 
 SS14 By Example
@@ -91,13 +91,17 @@ Robust Toolbox
 - [Build Configurations](en/robust-toolbox/build-configurations.md)
 - [Preprocessor Defines](en/robust-toolbox/preprocessor-defines.md)
 - [MIDI](en/robust-toolbox/midi.md)
+- [Automatic Client Zip (ACZ)](en/robust-toolbox/acz.md)
+- [Asset Packaging](en/robust-toolbox/asset-packaging.md)
 - [Publishing a new version](en/robust-toolbox/publishing-robusttoolbox.md)
 
 Space Station 14
 ================
 
 ----------------------
-
+- [Core Game Design](en/space-station-14/core-design.md)
+  - [Design Principles](en/space-station-14/core-design/principles.md)
+  - [Antagonists](en/space-station-14/core-design/antagonists.md)
 - [Mapping](en/space-station-14/mapping.md)
   - [Mapping Checklist](en/space-station-14/mapping/mapping-checklist.md)
   - [Mapping Sins](en/space-station-14/mapping/mapping-sins.md)
@@ -117,11 +121,26 @@ Space Station 14
 
 Design Proposals
 ================
-- [Anomaly cores](en/proposals/anomaly-cores.md)
-- [PDA messaging](en/proposals/pda-messaging.md)
-- [Plant genetics](en/proposals/deltanedas-plant-genetics.md)
 
 ----------------------
+
+- [Feature Proposal Template](en/templates/proposal.md)
+
+----------------------
+
+- [Anomaly Cores](en/proposals/mirrorcult-anomaly-cores.md)
+- [Machine Upgrading Rework](en/proposals/emogarbage-machine-upgrading-rework.md)
+- [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
+- [Plant Genetics](en/proposals/deltanedas-plant-genetics.md)
+- [Security Genpop Rework](en/proposals/ike709-genpop-security.md)
+- [Rogue Drones](en/proposals/mirrorcult-rogue-drones.md)
+- [Game Director](en/proposals/tomleys-game-director.md)
+- [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
+- [Atmos Roadmap](en/proposals/notafet-atmos.md)
+- [Cleanup Crew](en/proposals/mirrorcult-cleanup-crew-gamemode.md)
+- [Exterminator](en/proposals/deltanedas-exterminator.md)
+- [Power Generation Pattern](en/proposals/tday93-power-generation.md)
+- [Turf War](en/proposals/deltanedas-turf-war.md)
 
 Server Hosting
 ==============
@@ -135,6 +154,7 @@ Server Hosting
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
+- [Setting up a Discord Bot](en/server-hosting/setting-up-redbot.md)
 - [Maintenance]()
   - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
@@ -175,10 +195,23 @@ Community
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
 - [Progress Report Creation](en/community/progress-report-creation.md)
 
+Engine Development
+========================
+
+------------------
+
+- [Testing against launcher](en/engine-development/testing-against-launcher.md)
+- [Updating CEF](en/engine-development/updating-cef.md)
+
 Maintainer Meetings
 ==============
 
 ----------------------
+- [2024-01-20](en/maintainer-meetings/maintainer-meeting-2024-01-20.md)
+- [2023-12-30](en/maintainer-meetings/maintainer-meeting-2023-12-30.md)
+- [2023-12-16](en/maintainer-meetings/maintainer-meeting-2023-12-16.md)
+- [2023-11-25](en/maintainer-meetings/maintainer-meeting-2023-11-25.md)
+- [2023-10-21](en/maintainer-meetings/maintainer-meeting-2023-10-21.md)
 - [2023-09-23](en/maintainer-meetings/maintainer-meeting-2023-09-23.md)
 - [2023-09-09](en/maintainer-meetings/maintainer-meeting-2023-09-09.md)
 - [2023-09-02](en/maintainer-meetings/maintainer-meeting-2023-09-02.md)
@@ -212,3 +245,10 @@ Maintainer Meetings
 - [2021-10-16](en/maintainer-meetings/maintainer-meeting-2021-10-16.md)
 - [2021-10-02](en/maintainer-meetings/maintainer-meeting-2021-10-02.md)
 - [2021-09-19](en/maintainer-meetings/maintainer-meeting-2021-09-19.md)
+
+
+Admin Meetings
+==============
+
+----------------------
+- [2024-02-03](en/admin-meetings/admin-meeting-2024-02-03.md)

@@ -39,7 +39,7 @@ public partial class DamageTrigger : IThresholdTrigger
     /// <summary>
     ///     The amount of damage at which this threshold will trigger.
     /// </summary>
-    [DataField("damage")]
+    [DataField]
     public int Damage { get; set; }
 
     public bool Reached(IDamageableComponent damageable, DestructibleSystem system)
@@ -60,7 +60,7 @@ public partial class PlaySoundBehavior : IThresholdBehavior
     /// <summary>
     ///     Sound played upon destruction.
     /// </summary>
-    [DataField("sound")]
+    [DataField]
     public string Sound { get; set; } = string.Empty;
 
     public void Execute(IEntity owner, DestructibleSystem system)

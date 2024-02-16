@@ -12,10 +12,10 @@ Here's the full visualizer we're porting:
     [UsedImplicitly]
     public class ItemCabinetVisualizer : AppearanceVisualizer
     {
-        [DataField("openState", required: true)]
+        [DataField(required: true)]
         private string _openState = default!;
 
-        [DataField("closedState", required: true)]
+        [DataField(required: true)]
         private string _closedState = default!;
 
         public override void OnChangeData(AppearanceComponent component)
@@ -45,10 +45,10 @@ Component:
     [RegisterComponent]
     public sealed class ItemCabinetVisualsComponent : Component
     {
-        [DataField("openState", required: true)]
+        [DataField(required: true)]
         private string _openState = default!;
 
-        [DataField("closedState", required: true)]
+        [DataField(required: true)]
         private string _closedState = default!;
     }
 ```
@@ -91,10 +91,10 @@ So it'll look like this now:
     [RegisterComponent]
     public sealed class ItemCabinetVisualsComponent : Component
     {
-        [DataField("openState", required: true)]
+        [DataField(required: true)]
         public string OpenState = default!;
 
-        [DataField("closedState", required: true)]
+        [DataField(required: true)]
         public string ClosedState = default!;
     }
 ```
@@ -147,14 +147,14 @@ This doesn't use `InitializeEntity` but if it did the full class would look like
             SubscribeLocalEvent<ItemCabinetVisualsComponent, ComponentInit>(OnComponentInit);
         }
 
-        private void OnComponentInit(EntityUid uid, ItemCabinetVisualsComponent component, ComponentInit args)
+        private void OnComponentInit(Entity<ItemCabinetVisualsComponent> ent, ref ComponentInit args)
         {
             // behavior!
-    		}
+        }
 
         protected override void OnChangeData(EntityUid uid, ItemCabinetVisualsComponent component, ref AppearanceChangeEvent args)
         {
-            if (args.Sprite != null)
+            if (args.Sprite != null
                 && component.TryGetData(ItemCabinetVisuals.IsOpen, out bool isOpen)
                 && component.TryGetData(ItemCabinetVisuals.ContainsItem, out bool contains))
             {
