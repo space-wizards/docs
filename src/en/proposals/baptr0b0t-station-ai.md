@@ -30,8 +30,8 @@ The Station AI is a common and prominent role in the original Space Station 13, 
 
 The most basic idea for the AI body is a single immobile core located in a secure location, the AI facilities already present on multiple maps, protected by the AI itself (turret and borg). Due to the main body being immobile, the AI should have the ability to move its viewpoint between the core itself and various cameras across the station to be able to observe the events on it (and not be bored staring at the same room the entire shift).
 
-The AI is only able to access camera and other the station element if it is connected to an important power source and wrenched.
-The AI has a map of the station with all active cameras, it can then connect and even see the station in this position
+The AI is only able to access camera and other station element if it is connected to an important power source and wrenched (exemple: Computer, Machine, APC, Aircontroler and other).
+The AI has a map of the station with all active cameras, it can then connect and see the station threw the camera eye.
 
 A new AI core should be buy at cargo to offer a new ghost role. A fresh AI would appear in station as a job, when the game start.
 
@@ -41,13 +41,15 @@ In the future, we will be able to add the syndicate AI, an AI in the uplink whic
 
 ## Abilities
 
-The AI should have access to all powered doors on the station, being able to operate them with functionality equivalent to the heads’ door remotes, so to counter the AI, the best is to cut wires.
+The AI should have access to all powered doors on the station, being able to operate them with functionality equivalent to the heads’ door remotes, so to counter the AI, the best is to cut wires of the door or unpower the machine.
 
 The AI should also have access to all official channels of radio communication (and PDA messages) and equivalent functionality to all computer boards but it should be able to know the station records and be able to monitor crew sensors without a computer.
 
 The AI would be able to use a ping that only the Borg would be able to see
 
 The AI may also be able to interface with various machines on the station, like atmos pumps and such. Some machines could not be used because are manual (Valve pipe, open-close container (can lock-unlock), ...).
+
+The AI is the only one to have control of the NT turrets. He can through an UI, activate or deactivate the turret and select individualy (and temporarily) people that will attack.
 
 The use of door, computer, communication or other will use a peak of energy, depending on the difficulty of the action and the distance of it from the AI.
 The AI is then advised to pay attention to the energy level so as not to take all of the available energy, and by mistake kill everyone by deactivating a vital element and temporarily shut down.
@@ -62,7 +64,9 @@ This law can be EMAG when the wire panel is open. It also has a probability that
 However, the not-Emag Borgs have a law 0: "Obey the station's AI in all circumstances".
 AI is therefore an important objective with high risk (turret, alert the crew) but high reward.
 
+## Counter
 
+In the event that the AI becomes a threat to the passenger, the authorized crew such as the Captain, HOP or RD, have the access to enter the room protecting the AI and deactivate it. However, the turrets will probably be active.
 
 ## Disclaimer
 
