@@ -99,12 +99,35 @@ In Rider you can create a "compound configuration" to run or debug both client a
 
 ![](../../assets/images/setup-rider-configurations.png)
 
-# Miscellaneous IDE setup
+## 6. Configuring IDE directories
 
-## JetBrains Rider
-In Rider you can attach the resources directory to the solution so that you can more easily navigate to resource files like prototypes.
+C# IDEs like Visual Studio and Rider do not automatically show the `Resources` folder in the project. This folder contains all non-C# files such as sprites, audio, and most importantly, YAML prototypes. These instructions will explain how to get this folder to show up in your IDE, so you can easily work with it.
 
-![](../../assets/images/setup-rider-attach-existing-folder.png)
+### Visual Studio 2022
+
+In Visual Studio, you can switch the **Solution Explorer** from "solution" view (only showing the C# projects) to "folder" view (showing all the files in the project). Press the button to switch views as follows, then select the folder view:
+
+![](../../assets/images/setup/vs-solution-explorer-switch-view-1.png)
+![](../../assets/images/setup/vs-solution-explorer-switch-view-2.png)
+
+After this, the Solution Explorer should look something like this, and you should be able to easily access the `Resources` folder:
+
+![](../../assets/images/setup/vs-solution-explorer-switch-view-3.png)
+
+### JetBrains Rider
+
+In Rider, you can "attach" the resources directory to the solution. Do this by right clicking the solution in the explorer, then doing "Add" -> "Existing Folder...". Select the "Resources" directory in the file picker.
+
+![asdfs](../../assets/images/setup/rider-attach-folder-1.png)
+![](../../assets/images/setup/rider-attach-folder-2.png)
+
+After this, your solution view should look something like this, and you should be able to easily access the `Resources` folder:
+
+![](../../assets/images/setup/rider-attach-folder-3.png)
+
+### Visual Studio Code
+
+Visual Studio Code shows all files by default, so no extra setup is needed here.
 
 # Reproducible Development Environment with Nix/NixOS
 
