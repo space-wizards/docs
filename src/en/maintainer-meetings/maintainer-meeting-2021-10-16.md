@@ -61,13 +61,20 @@ Spawning the station rotated to better spot obvious rotation bugs
     - confirm right
 
 Windows:
-![](https://cdn.discordapp.com/attachments/811718327579443230/898977474027864154/unknown.png)
+
+![](../assets/images/maintainer-meeting/2021-10-16-windows-confirm-prompt.png)
+
 MacOS:
 ![](https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/Art/dialog_simple_2x.png)
+
 Ubuntu:
+
 ![](https://i.stack.imgur.com/tj9Fm.png)
+
 KDE:
+
 ![](https://develop.kde.org/deploy/kdialog/yesnowarning.png)
+
 - have a simplified way to create them
     - pjb hates em. "really does not like them" extreme hatred "input dialogs everywhere"
     - pjb made a spooky sound... she scares me
