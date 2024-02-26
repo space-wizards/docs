@@ -135,6 +135,7 @@ Design Proposals
 - [Security Genpop Rework](en/proposals/ike709-genpop-security.md)
 - [Rogue Drones](en/proposals/mirrorcult-rogue-drones.md)
 - [Game Director](en/proposals/tomleys-game-director.md)
+- [Gods Gamemode](en/proposals/emogarbage-gods-gamemode.md)
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
 - [Cleanup Crew](en/proposals/mirrorcult-cleanup-crew-gamemode.md)
