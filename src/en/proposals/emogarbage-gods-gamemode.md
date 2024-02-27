@@ -21,7 +21,7 @@ This mode takes **_loose_** inspiration from Hand of God as well as more liberal
 
 ## Round Flow
 
-At the start of the round, all of the gods spawn together in a circle in the center of the station. 
+At the start of the round, 3-6 gods spawn together in a circle in the center of the station. 
 The gods, by default, are invisible to all regular players but are able to speak with each other.
 They cannot directly attack each other: the only purpose of spawning together is so they can immediately start talking shit and being mean, in good competitive spirit.
 
