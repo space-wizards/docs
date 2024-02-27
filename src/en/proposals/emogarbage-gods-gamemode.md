@@ -64,8 +64,7 @@ Prophets are additionally able to create altars, which serve as temples except w
 Both of these structures, when blessed with a god's tome (spawned on every prophet and able to be created by a prophet blessing a book) become activated and tied to the tome's god.
 All temples and altars give a small increase to a god's ascension level as well as a small buff (non-stacking) to disciples nearby.
 
-Altars additionally permit sacrifices, which grant **Divinity**. One exception is the sacrifice of other gods' prophet or a chaplain. 
-These sacrifices instead give a permanent increase to a god's **ascension level**.
+Altars additionally permit sacrifices, which grant **Divinity**. Some sacrifices grant permanent increases to **ascension levels** instead, such as the sacrifice of other gods' prophet or disciples or the station chaplain.
 
 Although, be careful with your placement, as other sects can use their god's tome to steal your temples and altars.
 
