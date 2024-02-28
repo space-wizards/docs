@@ -103,6 +103,9 @@ Breaking one of these rules will lead to your community receiving at most one st
 ### Section 3 (low severity)
 Breaking these rules will not lead your community to receiving any strikes, unless they are repeatedly broken or not resolved within a reasonable timeframe.
 
-**3.1. Your server name must not have any advertisements.**
-- For example, "Hosted by XXX".
-- You are allowed to put these in the server description (inside the foldout).
+**3.1. No advertising in the server name.**
+Server names are for describing a game, server, or community, and *not* for advertising unrelated services, causes, or other information.
+- For example:
+  - A name consisting of only "Hosted by XXX" is not allowed, because it is advertising a hosting service.
+  - A name such as "Foo Station | Now with new and improved X and Y | Running map Z" is allowed, because it describes Foo Station.
+- "Advertisements" as described in this rule *are* permitted in the server description (inside the foldout).
