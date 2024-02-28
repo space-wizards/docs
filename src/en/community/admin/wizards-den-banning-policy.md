@@ -281,7 +281,7 @@ Trial admins may only process appeals if each action they take, excluding intern
 	- Votes must be made in one of the designated internal appeals discussion channels.
 	- Votes should present as much relevant information as possible.
 	- Votes should indicate if the ban is within guidelines, preferably by presenting the guideline range for the ban.
-8  If the result is to upgrade the ban, deny the appeal and inform the player of the upgrade on the appeal's thread. The player must be told how and when they can appeal again, or explicitly that they cannot appeal again.
+8. If the result is to upgrade the ban, deny the appeal and inform the player of the upgrade on the appeal's thread. The player must be told how and when they can appeal again, or explicitly that they cannot appeal again.
 9. If the result is to deny the appeal, deny the appeal.
 	- The player should be told when they can re-appeal. This should typically be double the time they were given for the last appeal for the same ban, or two weeks if there was no prior appeal for the same ban.
 10. Check for ban evasion and deny the appeal if it is found.
