@@ -1,2 +1,6 @@
 book
 .idea/
+
+# editor files
+.*~
+*.swp
