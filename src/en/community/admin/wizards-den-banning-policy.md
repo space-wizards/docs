@@ -312,12 +312,12 @@ In these examples, the vote numbers are remove/reduce/voucher.
 ### Speedy Appeal Procedure
 
 This is an optional alternate procedure that can be used at the discretion of the processing admin if at least one of the criteria are met:
-	- the ban is a temporary ban and the player indicated on the appeal that they are ok with it being processed without a vote,
- 	- the ban length is less than or equal to 14 days,
-	- this appeal is older than 7 days and no other admin is handling the appeal, or
-	- the result of the appeal is obvious.
-		- Similar appeals of bans for similar situations are almost always accepted.
-		- So little effort was made in the appeal, that it is improbable it would be accepted.
+- the ban is a temporary ban and the player indicated on the appeal that they are ok with it being processed without a vote,
+- the ban length is less than or equal to 14 days,
+- this appeal is older than 7 days and no other admin is handling the appeal, or
+- the result of the appeal is obvious.
+	- Similar appeals of bans for similar situations are almost always accepted.
+	- So little effort was made in the appeal, that it is improbable it would be accepted.
 
 The speedy appeal procedure does not allow upgrades to voucher or permanent bans due to the voting requirement those bans have.
 
