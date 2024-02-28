@@ -246,7 +246,7 @@ No modifiers apply. Only the prior RDM offense is relevant because it is the onl
 
 ## Appeals of Mistaken Bans
 
-If the appeal disputes the events which were used to justify the ban, the first appeal of a voucher or permanent ban may only be declined after it has been verified that it was appropriately placed.
+Unless the ban was an upgrade resulting from an unsucessful appeal, if an appeal disputes the events which were used to justify the ban, the first appeal of a voucher or permanent ban may only be declined after it has been verified that it was appropriately placed.
 
 ## Appeal Hijacking
 
@@ -294,7 +294,7 @@ This is an optional expedition to votes done under the standard procedure that c
 
 Net votes cannot result in an upgrade to a voucher ban or to a permanent ban.
 
-If an appeal is being processed using the standard procedure, votes can be processed earlier than 24 hours, even if discussion is ongoing. To do this, the vote must have at least 10 "net votes" for the winning option. Net votes are only possible when all vote options which affect the outcome of the appeal are distinct rather than on a spectrum. Distinct options are ones where voters are unlikely to be equally in favor of multiple options. Remove/reduce/deny and Remove/reduce/voucher votes are both considered to have only distinct options. A vote with multiple options for how long to reduce a ban to is not considered distict, even if each option is split into its own yes/no vote. This means that a Remove/reduce/deny vote cannot be processed early if there is also an ongoing vote for the reduction time, even if they are separate votes, unless the net vote is to remove the ban or deny the appeal.
+If an appeal is being processed using the standard procedure, votes can be processed earlier than 24 hours, even if discussion is ongoing. To do this, the vote must have at least 10 "net votes" for the winning option. Net votes are only possible when all vote options which affect the outcome of the appeal are distinct rather than on a spectrum. Distinct options are ones where voters are unlikely to be equally in favor of multiple options. Remove/reduce/deny and Remove/reduce/voucher votes are both considered to have only distinct options. A vote with multiple options for how long to reduce a ban to is not considered distinct, even if each option is split into its own yes/no vote. This means that a Remove/reduce/deny vote cannot be processed early if there is also an ongoing vote for the reduction time, even if they are separate votes, unless the net vote is to remove the ban or deny the appeal.
 
 To calculate the number of net votes, subtract the total number of votes for all other options from the winning option. The processing admin's vote can be included. Staging votes, votes made to make an option easily available for voters, can not be included.
 
@@ -309,17 +309,17 @@ In these examples, the vote numbers are remove/reduce/voucher.
 - 10/0/15 = 5 net votes for voucher, can not process based on net votes because the threshold has not been met and the winning option is to voucher
 - 14/0/3 = 11 net votes for remove, qualifies for expedited processing due to net votes
 
-### Speedy Appeal Prodecure
+### Speedy Appeal Procedure
 
-The speedy appeal procedure does not allow upgrades to voucher or permanent bans due to the voting requirement those bans have.
-
-The ban must meet any one of the following criteria to qualify for the speedy appeal procedure:
+This is an optional alternate procedure that can be used at the discretion of the processing admin if at least one of the criteria are met:
 	- the ban is a temporary ban and the player indicated on the appeal that they are ok with it being processed without a vote,
  	- the ban length is less than or equal to 14 days,
 	- this appeal is older than 7 days and no other admin is handling the appeal, or
 	- the result of the appeal is obvious.
 		- Similar appeals of bans for similar situations are almost always accepted.
 		- So little effort was made in the appeal, that it is improbable it would be accepted.
+
+The speedy appeal procedure does not allow upgrades to voucher or permanent bans due to the voting requirement those bans have.
 
 1. Check appeal format.
 3. Checking for ban evasion and denying the appeal if it is found is highly recommended, but not required.
