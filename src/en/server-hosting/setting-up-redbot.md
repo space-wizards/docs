@@ -42,6 +42,13 @@ Otherwise, I will list the most interesting ones here with setup instructions
 2. Add your server ```[p]statuscfg addserver ss14 <server-name> <address to your server>```
 3. Done! View your work with ```[p]status <server-name>``` (Of course your server needs to be online)
 
+#### Setting up automated watching
+![SS14 Status Watches](../assets/images/discord/SS14-game-status-watches.png)
+
+If you like to have a channel where the status message is automaticly updated. Then watch is the feature you want.
+1. After adding a server, use the following command ```[p]statuscfg addwatch <server> <#channel>```
+2. As long as the bot has permissions to post in that channel. You will see the server status automaticly update in the message about every 2 seconds.
+
 ### SS14.Watchdog Power actions
 ![Poweractions](../assets/images/discord/poweractions-example.png)
 
