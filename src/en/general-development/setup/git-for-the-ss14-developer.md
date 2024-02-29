@@ -440,7 +440,7 @@ Add a description, a nice title, some screenshots, and hopefully it gets merged.
 
 Maybe it's been a while, a week or two, since your last pull request, and you'd like to make another. Before you do anything, you need to download (**pull**) the code changes from the main SS14 repository into your local repository. If you don't, you'll have out-of-date code and your local changes may not be accurate to how the game will actually run--you might even get **merge conflicts** when you try to PR.
 
-There are two ways to update your repository. Both methods assume you have the `upstream` remote set up properly--if not, go back to earlier in the guide. And of course, if you're developing for a downstream, then you'll want to substitute `upstream` for whatever you named the downstream repo in step 4, to make sure that you're working with that downstream's files instead of upstream's.
+There are two ways to update your repository. Both methods assume you have the `upstream` remote set up properly--if not, go back to earlier in the guide. And of course, if you're developing for a downstream, then you'll want to substitute `upstream` for whatever you named the downstream repo in step 4, to make sure that you're working with that downstream's files instead of upstream's. Additionally, make sure you *always* go through the update process when switching between contributing to a fork, and contributing to upstream.
 
 The first method, **fetch+merge**, gives you more control but can be confusing. The second method, **pulling**, is simple and easy but doesn't give you much control. However, pulling is usually all you need.
 
@@ -448,7 +448,7 @@ The first method, **fetch+merge**, gives you more control but can be confusing. 
 
 **Fetching** refers to downloading the new branches and commits from a remote repository--but not doing anything with them just yet (nothing locally will be changed). After we fetch changes from our `upstream` remote (the main SS14 repository), we'll merge them into our local `master` branch.
 
-When you fetch a remote, it downloads those branches to your local repository and prepends them with the remotes name and a slash. So, when you fetch `upstream`, it'll make a branch called `upstream/master`.
+When you fetch a remote, it downloads those branches to your local repository and prepends them with the remotes name and a slash. So, when you fetch `upstream`, it'll make a branch called `upstream/master`. As a bonus, you can checkout this remote branch directly if you'd like, and even create a local branch based off it, which is especially useful if you're working with more than just upstream.
 
 
 First, let's fetch from our `upstream` remote. It'll take a little bit to complete.
