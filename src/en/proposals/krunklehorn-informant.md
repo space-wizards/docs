@@ -73,8 +73,8 @@ Do not risk your identity or the identities of your package recipients. "_
 
 #### "This is just a regular syndie with less TC locked behind Guess Who."
 - Teamwork is incredibly powerful and way more interesting to balance than raw TC count.
-- Couriers get the benefit of knowing how many antags are in play and might even get an advance on who they are.
-- Couriers choose to cooperate with recipients at their own risk: initial infected, lone ops and greedy syndies can be terrifying.
+- Informants get the benefit of knowing how many antags are in play and might even get an advance on who they are.
+- Informants choose to cooperate with recipients at their own risk: initial infected, lone ops and greedy syndies can be terrifying.
 
 #### "What if your recipient dies / goes to perma?"
 - Your goal is to deliver, not open.
@@ -93,12 +93,12 @@ _" Work in progress, up for debate, subject to change! " - The procrastinator's 
   - For the same reason, Informants should not spawn during nukies.
   - The author admits they have no experience with pirates so...that's still up in the air.
 - Recipients should outnumber Informants at least 3 to 1.
-- Couriers are rolled after major antagonists, but should be rolled after thieves too.
-- Couriers will never be multi-antagonists.
-- Couriers may late-join.
+- Informants are rolled after major antagonists, but should be rolled after thieves too.
+- Informants will never be multi-antagonists.
+- Informants may late-join.
 - Multiple Informants may have packages for the same recipient, but an individual Informant will not.
-- Couriers can share their clues with other Informants, but will never be recipients of another Informant's package.
-- Couriers should never get packages with a total potential TC above 24.
+- Informants can share their clues with other Informants, but will never be recipients of another Informant's package.
+- Informants should never get packages with a total potential TC above 24.
   - 1 regular + 3 extra
   - 2 regular + 2 extra
   - 3 regular + 1 extra
