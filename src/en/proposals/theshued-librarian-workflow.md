@@ -174,3 +174,6 @@ at 66%, the player learns the title and description of the book, which allows hi
 
 #### Using
 
+What to do with a fully studied book and the information in it is entirely the librarian's will. You can spread illegal knowledge around the station, you can give it to the command. If the crafting recipes are quite complex and require serious resources, give them to engineers for construction.
+
+As a result of the librarian's work, access to special subjects and knowledge appears at the station, and it is the librarian who decides who and how to receive them.
