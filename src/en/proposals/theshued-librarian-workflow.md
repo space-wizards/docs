@@ -93,6 +93,7 @@ At this stage, the librarian is busy searching for these encrypted books. The se
 1) Research of all available public places. 
 2) Ask people to search in their departments 
 3) Request access to departments to search for books
+4) Salvage find ones on expeditions
 
 People can also bring books to the librarian on their own. As you can understand, this stage is completely tied to socialization.
 
