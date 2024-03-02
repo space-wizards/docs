@@ -44,7 +44,7 @@ But under the encrypted appearance is one of the specific books that have the fo
 |---|---|---|
 | Discipline | Enum | All books belong to one of the strictly defined disciplines. This affects which department can help you study this book.  (For more information, see the research section)
 | Legality | Bool | Illegal books carry dangerous knowledge, and the security service needs to control what exactly is being studied in order to prevent the leakage of dangerous knowledge to ordinary personnel. |
-| Difficulty | Int | Determines how difficult it is to study this book. It directly affects the number of hash codes required. The higher the difficulty, the more time it takes to study, the more difficult it is to hide the fact of studying, and the more valuable the reward should be. |
+| Difficulty | Int | Determines how difficult it is to study this book. It directly affects the number of hash codes required (Easy - 2, Medium -4, Hard - 8). The higher the difficulty, the more time it takes to study, the more difficult it is to hide the fact of studying, and the more valuable the reward should be. |
 
 #### Crafting recipes books
 This category consists of a recipe for items that have randomized crafting each round. The successful decoding of the book is a literary story with a description of the crafting sequence of the item.
@@ -127,7 +127,6 @@ HH-Codes reference:
 | 2983.12.23 | 2455.08.12 |
 | 1644.04.12 | 1982.11.01 |
 ```
-The number of dates depends on the complexity of the study. Easy - 2 dates. Meduum is 4 dates. Difficult - 8 dates.
 Next, the player needs to find certain items on the station that store these hash dates. The following tool will help him to do this.
 
 "Analyser of history echoes"
