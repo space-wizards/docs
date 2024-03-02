@@ -44,7 +44,7 @@ But under the encrypted appearance is one of the specific books that have the fo
 |---|---|---|
 | Discipline | Enum | All books belong to one of the strictly defined disciplines. This affects which department can help you study this book.  (For more information, see the research section)
 | Legality | Bool | Illegal books carry dangerous knowledge, and the security service needs to control what exactly is being studied in order to prevent the leakage of dangerous knowledge to ordinary personnel. |
-| Difficulty | Int | Determines how difficult it is to study this book. The higher the difficulty, the more time it takes to study, the more difficult it is to hide the fact of studying, and the more valuable the reward should be. |
+| Difficulty | Int | Determines how difficult it is to study this book. It directly affects the number of hash codes required. The higher the difficulty, the more time it takes to study, the more difficult it is to hide the fact of studying, and the more valuable the reward should be. |
 
 #### Crafting recipes books
 This category consists of a recipe for items that have randomized crafting each round. The successful decoding of the book is a literary story with a description of the crafting sequence of the item.
@@ -101,16 +101,42 @@ People can also bring books to the librarian on their own. As you can understand
 The librarian has a new **"Book Decryptor"** structure, located in the library.
 This decryptor has 2 slots for books, as well as an interface that allows you to enter hash codes, a "decrypt" button and all information about the copy being created.
 To get started, the librarian must put the book he wants to decrypt into the decryptor, and then put the empty book in the second slot.
-After clicking "Decrypt", after a 30-second delay, the decoder turns an empty book into a "[book name] research project"
+After clicking "Decrypt", after a 30-second delay, the decoder turns an empty book into a "[source book name] research project", with 0% decrypting status
 
+The process of decrypting a book is a value from 0 to 100%. The higher this value, the more decrypted information about the source book can be found out.
 
-The librarian's main tool is the "Analyser of history echoes"
-With this object, you can scan various objects, and it will store information about the last scanned object in itself. The player can open the decryptor at any time and see what information is recorded in it.
+|%|Unlocked book data|
+|--|----|
+|0%| Discipline and list of hash dates |
+|33%| Legality |
+|66%| True name and description |
+|100%| The ability to learn a skill is unlocked or an unlocked crafting sequence is fully available |
+
+at 0%, the player immediately receives information about the discipline and part of the HHcode, in the form of dates. It looks like this:
+
+```
+-- "Ngaad-trec book" research project --
+Decrypt status: [0%]
+Discipline: Biology
+Name: Unknown
+Description: Unknown
+Legality: Unknown
+HH-Codes reference:
+| 2984.12.14 | 1923.07.21 |
+| 2981.11.04 | 3001.04.21 |
+| 2983.12.23 | 2455.08.12 |
+| 1644.04.12 | 1982.11.01 |
+```
+The number of dates depends on the complexity of the study. Easy - 2 dates. Meduum is 4 dates. Difficult - 8 dates.
+Next, the player needs to find certain items on the station that store these hash dates. The following tool will help him to do this.
+
+"Analyser of history echoes"
+With this object, you can scan various objects, and it will store information about the last scanned object in itself. The player can open the analyser at any time and see what information is recorded in it.
 
 Some items of historical value located in each department will present special information: Historical Hash code. 
 
 The HH-Code is a valuable piece of information that consists of 2 parts: Dates, and sequences of characters.
-This code is randomly generated at the beginning of each round for all special objects. And it can't be repeated on several objects.
+This code is randomly generated at the beginning of each round for all special objects. Different instances of the same ProtoId contain same HH-Code. But these objects must be easily reproducible, and not unique, so as not to block the possibility of further study of the book.
 ``` 
 Last scanning: 
 Name: artifact container
@@ -118,10 +144,33 @@ Description: Used to safely contain and move artifacts.
 HH-Code: 2984.12.14:HSGA-FEF3
 ```
 
+The librarian's goal is to find items with the desired hash date in order to learn the second part of the HH-Code in the form of a sequence of characters.
 
-The process of decrypting a book is conceptually the creation of a decrypted copy by a librarian. 
-The original book always remains visually incomprehensible, so it makes sense for the librarian to label them with stickers.
+Considering that the station will have a huge number of items with these codes in literally all departments, this looks like an extremely difficult task. But, the book has a "discipline", which is a clue in which department to look for the necessary data.
+There are the following disciplines in total:
+| Discipline | HH-Code items location | Research themes |
+|---|-----|--|
+| Mysticism | items related to cults, priest, and libraries. Things like altars, books, priest's clothes, the Bible and the like. | Magic things |
+| Alien | alien artifacts, anomalyes, the corpses of xenomorphs and various xenofauna. | Alien strange technologies |
+| Biology | organs, syringes, liquids, plants, products of botanists, some med stuff | body management skills, biological improvements. |
+| Technology | various tools of the engineering and science department. | unusual technologies |
+| ? | ? |
+| WIP |  There are many subjects in other departments that need to be classified. |
 
-(Mysticism - Chapel, Social - Service , Tech - RnD and Eng, Biology - Med and Botany, Alien )
+this means that the librarian will need to interact with the department and study its "background" by scanning various objects in search of suitable codes.
+Among other things, it provides a logical reason why the librarian is in very different places of the station (which is an interesting position if the librarian is an antagonist)
 
+When the player finds an item with the desired first part of the HH-Code, he must return to the decryptor and enter the second part of the Hcode in the field. Pressing "Decrypt" and waiting for 30 seconds can lead to the following two results:
+1) The HH-Code was entered correctly. The required field turns green in the book research, and the percentage of book research increases.
+2) The HH-Code was entered incorrectly. The player has made a mistake, or is trying to brutalize. No fines.
+
+The player's goal is to enter all the required hhcodes, finding all the necessary items accordingly.
+
+33% of the information about the legality of this book is revealed to the player. If the book is illegal and the player is an antagonist, he will want to explore this book even more, as it can be useful. But the Head of Staff should check how the librarian's work is going to prevent the final study of a dangerous book.
+
+at 66%, the player learns the title and description of the book, which allows him to understand exactly what result he will get if he studies this book to the end.
+
+100%, after the last correctly entered HH-Code by the player, completely decrypts the book. This turns the study into a separate ProtoEntity, with its own properties. This book can be read by getting information about current recipes, or studied by getting a new ability. It would be useful to be able to copy books on a special machine in order to distribute copies at the station.
+
+#### Using
 
