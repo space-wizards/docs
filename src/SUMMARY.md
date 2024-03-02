@@ -142,6 +142,7 @@ Design Proposals
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
 - [Thief antagonist](en/proposals/theshued-thief.md)
+- [Librarian Gameplay](en/proposals/theshued-librarian-workflow.md)
 
 Server Hosting
 ==============
