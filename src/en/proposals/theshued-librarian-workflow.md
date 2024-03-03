@@ -115,7 +115,7 @@ After clicking "Decrypt", after a 30-second delay, the decoder turns an empty bo
 
 The process of decrypting a book is a value from 0 to 100%. The higher this value, the more decrypted information about the source book can be found out.
 
-|%|Unlocked book data|
+|percentage of decryption|Unlocked book data|
 |--|----|
 |0%| Discipline |
 |33%| Legality |
