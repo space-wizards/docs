@@ -4,7 +4,7 @@
 |---|---|---|
 | TheShuEd | :x: No | TBD |
 
-``` WIP ```
+> WIP
 
 ## Overview
 
@@ -102,13 +102,14 @@ When the librarian finds the meaning of the desired word, he can start work on t
 
 The librarian has a new **"Book Decryptor"** structure, located in the library. It looks like an old dusty computer with a analog keyboard.
 
-This decryptor has 1 slots for books, and an interface with the following elements:
-1) 
+This decryptor has 2 slots for books, and an interface with the following elements:
+1) The text of the first book
+2) The text of the second book
+3) A field for entering gibberish
+4) A field for entering keywords
+5) Button "Encrypt"
+6) The percentage of decryption of the book and known information
 
-
-<><><><> WIP WIP WIP <><><><>
-
-as well as an interface that allows you to enter hash codes, a "decrypt" button and all information about the copy being created.
 To get started, the librarian must put the book he wants to decrypt into the decryptor, and then put the empty book in the second slot.
 After clicking "Decrypt", after a 30-second delay, the decoder turns an empty book into a "[source book name] research project", with 0% decrypting status
 
@@ -116,7 +117,7 @@ The process of decrypting a book is a value from 0 to 100%. The higher this valu
 
 |%|Unlocked book data|
 |--|----|
-|0%| Discipline and list of hash dates |
+|0%| Discipline |
 |33%| Legality |
 |66%| True name and description |
 |100%| The ability to learn a skill is unlocked or an unlocked crafting sequence is fully available |
@@ -130,41 +131,13 @@ Discipline: Biology and Mysticism
 Name: Unknown
 Description: Unknown
 Legality: Unknown
-HH-Codes reference:
-| 2984.12.14 | 1923.07.21 |
-| 2981.11.04 | 3001.04.21 |
-| 2983.12.23 | 2455.08.12 |
-| 1644.04.12 | 1982.11.01 |
 ```
 
-Next, the player needs to find certain items on the station that store these hash dates. The following tool will help him to do this.
+The librarian enters a pair of "Gibberish / keyword", click "Decrypt" and after a 30-second delay, the following may happen:
+1) The pair was decoded correctly. If this pair is used in the current encrypted book, then the decryption of this word is recorded in its examined copy. This increases the decryption scale, and can open up new data about the book according to the table above.
+2) The pair is incorrect, or is not used in the current workbook. Nothing happens
 
-"Analyser of history echoes"
-With this object, you can scan various objects, and it will store information about the last scanned object in itself. The player can open the analyser at any time and see what information is recorded in it.
-
-Some items of historical value located in each department will present special information: Historical Hash code. 
-
-
-Last scanning: 
-Name: artifact container
-Description: Used to safely contain and move artifacts.
-
-The librarian's goal is to find items with the desired hash date in order to learn the second part of the HH-Code in the form of a sequence of characters.
-
-this means that the librarian will need to interact with the department and study its "background" by scanning various objects in search of suitable codes.
-Among other things, it provides a logical reason why the librarian is in very different places of the station (which is an interesting position if the librarian is an antagonist)
-
-When the player finds an item with the desired first part of the HH-Code, he must return to the decryptor and enter the second part of the Hcode in the field. Pressing "Decrypt" and waiting for 30 seconds can lead to the following two results:
-1) The HH-Code was entered correctly. The required field turns green in the book research, and the percentage of book research increases.
-2) The HH-Code was entered incorrectly. The player has made a mistake, or is trying to brutalize. No fines.
-
-The player's goal is to enter all the required hhcodes, finding all the necessary items accordingly.
-
-33% of the information about the legality of this book is revealed to the player. If the book is illegal and the player is an antagonist, he will want to explore this book even more, as it can be useful. But the Head of Staff should check how the librarian's work is going to prevent the final study of a dangerous book.
-
-at 66%, the player learns the title and description of the book, which allows him to understand exactly what result he will get if he studies this book to the end.
-
-100%, after the last correctly entered HH-Code by the player, completely decrypts the book. This turns the study into a separate ProtoEntity, with its own properties. This book can be read by getting information about current recipes, or studied by getting a new ability. It would be useful to be able to copy books on a special machine in order to distribute copies at the station.
+Thus, the librarian needs to find all N keywords, and correctly enter them into the decryptor, which will lead to a complete decryption of the book and the ability to use random crafting written in it.
 
 #### Using
 
