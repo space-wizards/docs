@@ -53,11 +53,11 @@ The book can contain recipes for crafting 1 or many item, or complex structures.
 Also, this category should be a good source of references to existing fantasy or sci-fi books.
 To begin with, the following items are proposal:
 
-| Book | Description | Discipline | Legality |
+| Book | Description | Discipline keywords | Legality |
 |---|---|---|---|
-| The legend of the Dagger of Withering | A special melee weapon that sprays Plant-B-Gone during attacks. It is extremely effective for fighting kudzu. | Biology | ✔️
-| The story of wizards with silly magic wands and owls | A reference to Harry Potter, a self-loading ranged weapon that shoots rainbow projectiles with minor damage. | Mysticism | :x:
-| The Stargate | Unlocks a complex crafting sequence that allows engineers to create gates for teleportation to planets (Current Gateways) | Engineering | ✔️
+| The legend of the Dagger of Withering | A special melee weapon that sprays Plant-B-Gone during attacks. It is extremely effective for fighting kudzu. | 3 Biology + 2 Military + 1 Mysticism| ✔️
+| The story of wizards with silly magic wands and owls | A reference to Harry Potter, a self-loading ranged weapon that shoots rainbow projectiles with minor damage. | 7 Mysticism + 3 Military | :x:
+| The Stargate | Unlocks a complex crafting sequence that allows engineers to create gates for teleportation to planets (Current Gateways) | 18 Engineering + 2 Musticism | ✔️
 
 ### Gameplay cycle
 
