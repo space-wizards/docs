@@ -94,7 +94,7 @@ Disciplines are categories of knowledge. Different categories of knowledge allow
 | Discipline | Methods of obtaining | Application topics |
 |--|-----|---|
 | Mysticism | Librarian, Priest, Reporter. Folklore reference books that can be found at the pietyvend, bought in cargo or found on expeditions. | crafting mystical and occult items. |
-| Techinc | all kinds of engineers, all scientists. Reference books about ancient technologies that can rarely be found in the lockers of scientists and engineers. Buy in cargo or find it on expeditions. | crafting of technological homemade devices. |
+| Technology | all kinds of engineers, all scientists. Reference books about ancient technologies that can rarely be found in the lockers of scientists and engineers. Buy in cargo or find it on expeditions. | crafting of technological homemade devices. |
 | Biology | The cook, the botanist, all the doctors. | Biology reference books that can be found in the medical department, bought in cargo or found on expeditions. | living beings, implants, biomechanics. |
 | Military | The entire security service. Reference books on military technologies that CANNOT be bought, only found in the armory or on expeditions, or bought in traitor uplink. | weapons, and other dangerous things. |
 | Social | All roles. It can be found randomly everywhere. | Funny things |
