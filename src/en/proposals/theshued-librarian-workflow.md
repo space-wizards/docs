@@ -42,17 +42,13 @@ All books initially have encrypted titles and a random appearance, which does no
 But under the encrypted appearance is one of the specific books that have the following parameters:
 | Parameter | Type | Description |
 |---|---|---|
-| Discipline | List<Enum> | All books relate to specific well-defined disciplines. Books can be related disciplines. This affects which department can help you study this book.  (For more information, see the research section)
+| Discipline | List<Enum> | All books relate to specific well-defined disciplines. Books can be related disciplines. This affects which department can help you study this book. |
 | Legality | Bool | Illegal books carry dangerous knowledge, and the security service needs to control what exactly is being studied in order to prevent the leakage of dangerous knowledge to ordinary personnel. |
-| Difficulty | Int | Determines how difficult it is to study this book. It directly affects the number of hash codes required (Easy - 2, Medium -4, Hard - 8). The higher the difficulty, the more time it takes to study, the more difficult it is to hide the fact of studying, and the more valuable the reward should be. |
-| Result book | EntProtoId | The final decrypted book, which the decrypted copy will turn into after studying. |
-
-#### Crafting recipes books
-This category consists of a recipe for items that have randomized crafting each round. The successful decoding of the book is a literary story with a description of the crafting sequence of the item.
+| Result recipe | ProtoId | Books consists of a recipe for items that have randomized crafting each round. The successful decoding of the book is a literary story with a description of the crafting sequence of the item. |
 
 This is an alternative way to explore powerful equipment that does not concern the scientists department.
-The items in this category are thematically more related to "mystical" "alien" and "homemade" than to "high-tech"
-The book can contain recipes for crafting 1 or mane item, or complex structures.
+The items unlocked by books are thematically more related to "mystical" "alien" and "homemade" than to "high-tech"
+The book can contain recipes for crafting 1 or many item, or complex structures.
 
 Also, this category should be a good source of references to existing fantasy or sci-fi books.
 To begin with, the following items are proposal:
@@ -62,21 +58,6 @@ To begin with, the following items are proposal:
 | The legend of the Dagger of Withering | A special melee weapon that sprays Plant-B-Gone during attacks. It is extremely effective for fighting kudzu. | Biology | ✔️
 | The story of wizards with silly magic wands and owls | A reference to Harry Potter, a self-loading ranged weapon that shoots rainbow projectiles with minor damage. | Mysticism | :x:
 | The Stargate | Unlocks a complex crafting sequence that allows engineers to create gates for teleportation to planets (Current Gateways) | Engineering | ✔️
-
-#### Books of skills
-This category of books teaches the reader special new abilities (Mind actions from Keron). Successful decoding of the book allows anyone to read it to learn new skills.
-The study is a fairly long doAfter, during which the player can actually read any decoded story.
-
-There may be weak magic spells, various melee techniques, or theft without gloves techniques and much more.
-
-To begin with, I suggest some of the following ideas. Each idea, of course, requires its own c# scripts, and is difficult to replenish.
-
-| Book | Description | Discipline | Legality |
-|---|---|---|---|
-| The art of pickpocketing | Allows the player to steal items as if he were wearing thief gloves. | Social | :x:
-| Advanced Botany Manual | Allows you to inspect hydroponic trays and get more information about plants and mutations | Biology | ✔️
-| Necronomicon | Allows you to summon Cerberus | Mysticism | :x:
-| 1001 ways to succeed in life | allows you to receive 10% more money when selling items in cargo | Social | ✔️
 
 ### Gameplay cycle
 
@@ -98,36 +79,36 @@ At this stage, the librarian is busy searching for these encrypted books. The se
 
 People can also bring books to the librarian on their own. As you can understand, this stage is completely tied to socialization.
 
-
-
-
-
 #### Researching
 
+At the beginning of the round, 2 tables are taken: Keywords, and gibberish. additionally, keywords are grouped by discipline, for better theming. Each keyword is assigned a specific gibberish word. Example:
+| Keyword | Discipline | Gibberish |
+|---|---|---|
+| Legacy | Social | Grauugha |
+| Bluespace | Technic | Pupilo |
+| Clown | Social | Filurgha |
+| Tesla | Technic | Hiiski |
+| Revenant | Mysticism | Jubaijin |
 
-The whole researching is based on the search for information presented in the form of abstract "History Hash Code", or briefly - HH-Code
+Each book with secret information is made up of N keywords. Keywords are replaced with gibberish, and when you look at the book, you can only see this gibberish text.
 
-The HH-Code is a valuable piece of information that consists of 2 parts: Dates, and sequences of characters.
-These codes are randomly generated each round, and knowing half of them, the player must find information about the second half of the code in the round.
-``` 
-HH-Code example: 2984.12.14:HSGA-FEF3
-```
+The librarian's task is to find which gibberish words which keywords mean.
+The following 2 ways can help him in this:
+1) Special reference books-dictionaries. These are special books that explain the meaning of a series of 3-6 random keywords. These books are grouped by discipline, for example, "History of Biology, Volume 1". Such books can be: bought in cargo, found on an expedition, accidentally found in maints.
+2) Communication with the players. All players at the beginning of the round receive "knowledge" about some keywords. It depends on the discipline: For example, an engineer will know 10 words from the discipline "Technic" at the beginning of the round, and a scientist 5 words from "Technic" and 5 words from "Mysticism". These players, having encountered gibberish in the text in conversation or when reading, will automatically understand what this word means.
 
-Considering that the station will have a huge number of items with these codes in literally all departments, this looks like an extremely difficult task. But, the book has a "discipline", which is a clue in which department to look for the necessary data.
-There are the following disciplines in total:
-| Discipline | HH-Code items location | Research themes |
-|---|-----|--|
-| Mysticism | items related to cults, priest, and libraries. Things like altars, books, priest's clothes, the Bible and the like. Alien artifacts, anomalyes.| Magic things |
-| Biology | organs, syringes, liquids, plants, products of botanists, some med stuff, the corpses of xenomorphs and various xenofauna. | body management skills, biological improvements. |
-| Technic | various tools of the engineering and science department. | unusual technologies |
-| ? | ? |
-| WIP |  There are many subjects in other departments that need to be classified. |
+As a result, a librarian needs to either communicate with people with requests to read books and share crumbs of information, or dig through dozens of reference books in search of the right meanings of incomprehensible words.
+When the librarian finds the meaning of the desired word, he can start work on translating the book.
 
-Each of the disciplines generates 20-30 unique codes at the beginning of the round, which are then distributed among random thematic types of objects. (tools, clothes, machines, people)
+The librarian has a new **"Book Decryptor"** structure, located in the library. It looks like an old dusty computer with a analog keyboard.
+
+This decryptor has 1 slots for books, and an interface with the following elements:
+1) 
 
 
-The librarian has a new **"Book Decryptor"** structure, located in the library.
-This decryptor has 2 slots for books, as well as an interface that allows you to enter hash codes, a "decrypt" button and all information about the copy being created.
+<><><><> WIP WIP WIP <><><><>
+
+as well as an interface that allows you to enter hash codes, a "decrypt" button and all information about the copy being created.
 To get started, the librarian must put the book he wants to decrypt into the decryptor, and then put the empty book in the second slot.
 After clicking "Decrypt", after a 30-second delay, the decoder turns an empty book into a "[source book name] research project", with 0% decrypting status
 
