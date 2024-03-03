@@ -90,11 +90,21 @@ At the beginning of the round, 2 tables are taken: Keywords, and gibberish. addi
 | Tesla | Technic | Hiiski |
 | Revenant | Mysticism | Jubaijin |
 
+Disciplines are categories of knowledge. Different categories of knowledge allow you to study different crafts, and also differ in the complexity of obtaining this knowledge.
+| Discipline | Methods of obtaining | Application topics |
+|--|-----|---|
+| Mysticism | Librarian, Priest, Reporter. Folklore reference books that can be found at the pietyvend, bought in cargo or found on expeditions. | crafting mystical and occult items. |
+| Techinc | all kinds of engineers, all scientists. Reference books about ancient technologies that can rarely be found in the lockers of scientists and engineers. Buy in cargo or find it on expeditions. | crafting of technological homemade devices. |
+| Biology | The cook, the botanist, all the doctors. | Biology reference books that can be found in the medical department, bought in cargo or found on expeditions. | living beings, implants, biomechanics. |
+| Military | The entire security service. Reference books on military technologies that CANNOT be bought, only found in the armory or on expeditions, or bought in traitor uplink. | weapons, and other dangerous things. |
+| Social | All roles. It can be found randomly everywhere. | Funny things |
+
 Each book with secret information is made up of N keywords. Keywords are replaced with gibberish, and when you look at the book, you can only see this gibberish text.
+The book can consist of keywords from different categories. For example: the pie thrower is studied for 1 Military and 7 Social keywords.
 
 The librarian's task is to find which gibberish words which keywords mean.
 The following 2 ways can help him in this:
-1) Special reference books-dictionaries. These are special books that explain the meaning of a series of 3-6 random keywords. These books are grouped by discipline, for example, "History of Biology, Volume 1". Such books can be: bought in cargo, found on an expedition, accidentally found in maints.
+1) Special reference books-dictionaries. These are special books that explain the meaning of a series of 3-6 random keywords. These books are grouped by discipline, for example, "History of Biology, Volume 1". 
 2) Communication with the players. All players at the beginning of the round receive "knowledge" about some keywords. It depends on the discipline: For example, an engineer will know 10 words from the discipline "Technic" at the beginning of the round, and a scientist 5 words from "Technic" and 5 words from "Mysticism". These players, having encountered gibberish in the text in conversation or when reading, will automatically understand what this word means.
 
 As a result, a librarian needs to either communicate with people with requests to read books and share crumbs of information, or dig through dozens of reference books in search of the right meanings of incomprehensible words.
