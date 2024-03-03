@@ -104,10 +104,11 @@ People can also bring books to the librarian on their own. As you can understand
 
 #### Researching
 
+
 The whole researching is based on the search for information presented in the form of abstract "History Hash Code", or briefly - HH-Code
 
 The HH-Code is a valuable piece of information that consists of 2 parts: Dates, and sequences of characters.
-This code is randomly generated at the beginning of each round for all special objects. Different instances of the same ProtoId contain same HH-Code. But these objects must be easily reproducible, and not unique, so as not to block the possibility of further study of the book.
+These codes are randomly generated each round, and knowing half of them, the player must find information about the second half of the code in the round.
 ``` 
 HH-Code example: 2984.12.14:HSGA-FEF3
 ```
