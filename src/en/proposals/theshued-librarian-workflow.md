@@ -125,7 +125,7 @@ This decryptor has 2 slots for books, and an interface with the following elemen
 6) The percentage of decryption of the book and known information
 
 To get started, the librarian must put the book he wants to decrypt into the decryptor, and then put the empty book in the second slot.
-After clicking "Decrypt", after a 30-second delay, the decoder turns an empty book into a "[source book name] research project", with 0% decrypting status
+After clicking "Decrypt", after a 5-second delay, the decoder turns an empty book into a "[source book name] research project", with 0% decrypting status
 
 The process of decrypting a book is a value from 0 to 100%. The higher this value, the more decrypted information about the source book can be found out.
 
