@@ -7,7 +7,6 @@ Meta
 ====
 
 ----------------------
-
 - [Guide to Editing Docs](en/meta/guide-to-editing-docs.md)
 - [Docs Example Page](en/meta/docs-example-page.md)
 - [Docs are for Discoverability](en/meta/docs-are-for-discoverability.md)
@@ -37,7 +36,7 @@ General Development
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
 - [Feature Proposals](en/general-development/feature-proposals.md)
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
-  - [Fundamental Design Principles](en/general-development/feature-proposals/ss14-fundamental-design-principles.md)
+  - [Core Game Design](en/space-station-14/core-design.md)
 
 
 SS14 By Example
@@ -101,6 +100,8 @@ Space Station 14
 
 ----------------------
 - [Core Game Design](en/space-station-14/core-design.md)
+  - [Design Principles](en/space-station-14/core-design/principles.md)
+  - [Antagonists](en/space-station-14/core-design/antagonists.md)
 - [Mapping](en/space-station-14/mapping.md)
   - [Mapping Checklist](en/space-station-14/mapping/mapping-checklist.md)
   - [Mapping Sins](en/space-station-14/mapping/mapping-sins.md)
@@ -123,7 +124,7 @@ Design Proposals
 
 ----------------------
 
-- [Feature Proposal Template](en/proposals/proposal-template.md)
+- [Feature Proposal Template](en/templates/proposal.md)
 
 ----------------------
 
@@ -136,11 +137,12 @@ Design Proposals
 - [Game Director](en/proposals/tomleys-game-director.md)
 - [Grid Inventory](en/proposals/emogarbage-grid-inventory.md)
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
-- [Cleanup Crew](en/proposals/mirrorcult-repair-crew-gamemode.md)
+- [Cleanup Crew](en/proposals/mirrorcult-cleanup-crew-gamemode.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
 - [Signaller Rework](en/proposals/deltanedas-signaller-rework.md)
+- [Thief antagonist](en/proposals/theshued-thief.md)
 
 Server Hosting
 ==============
@@ -154,6 +156,7 @@ Server Hosting
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
+- [Setting up a Discord Bot](en/server-hosting/setting-up-redbot.md)
 - [Maintenance]()
   - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
@@ -244,3 +247,11 @@ Maintainer Meetings
 - [2021-10-16](en/maintainer-meetings/maintainer-meeting-2021-10-16.md)
 - [2021-10-02](en/maintainer-meetings/maintainer-meeting-2021-10-02.md)
 - [2021-09-19](en/maintainer-meetings/maintainer-meeting-2021-09-19.md)
+
+
+Admin Meetings
+==============
+
+----------------------
+- [2024-02-03](en/admin-meetings/admin-meeting-2024-02-03.md)
+- [2024-02-17](en/admin-meetings/admin-meeting-2024-02-17.md)

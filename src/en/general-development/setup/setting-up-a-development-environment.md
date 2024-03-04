@@ -2,8 +2,8 @@
 
 First you're gonna need some software:
 
-* [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](https://cdn.discordapp.com/attachments/560845886263918612/861267188971470898/unknown.png).
-* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](https://cdn.discordapp.com/attachments/560845886263918612/1147634791148179457/image.png). You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
+* [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
+* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio also installs this if you're on Windows.
   * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
@@ -99,12 +99,35 @@ In Rider you can create a "compound configuration" to run or debug both client a
 
 ![](../../assets/images/setup-rider-configurations.png)
 
-# Miscellaneous IDE setup
+## 6. Configuring IDE directories
 
-## JetBrains Rider
-In Rider you can attach the resources directory to the solution so that you can more easily navigate to resource files like prototypes.
+C# IDEs like Visual Studio and Rider do not automatically show the `Resources` folder in the project. This folder contains all non-C# files such as sprites, audio, and most importantly, YAML prototypes. These instructions will explain how to get this folder to show up in your IDE, so you can easily work with it.
 
-![](../../assets/images/setup-rider-attach-existing-folder.png)
+### Visual Studio 2022
+
+In Visual Studio, you can switch the **Solution Explorer** from "solution" view (only showing the C# projects) to "folder" view (showing all the files in the project). Press the button to switch views as follows, then select the folder view:
+
+![](../../assets/images/setup/vs-solution-explorer-switch-view-1.png)
+![](../../assets/images/setup/vs-solution-explorer-switch-view-2.png)
+
+After this, the Solution Explorer should look something like this, and you should be able to easily access the `Resources` folder:
+
+![](../../assets/images/setup/vs-solution-explorer-switch-view-3.png)
+
+### JetBrains Rider
+
+In Rider, you can "attach" the resources directory to the solution. Do this by right clicking the solution in the explorer, then doing "Add" -> "Existing Folder...". Select the "Resources" directory in the file picker.
+
+![asdfs](../../assets/images/setup/rider-attach-folder-1.png)
+![](../../assets/images/setup/rider-attach-folder-2.png)
+
+After this, your solution view should look something like this, and you should be able to easily access the `Resources` folder:
+
+![](../../assets/images/setup/rider-attach-folder-3.png)
+
+### Visual Studio Code
+
+Visual Studio Code shows all files by default, so no extra setup is needed here.
 
 # Reproducible Development Environment with Nix/NixOS
 
@@ -154,12 +177,15 @@ And voila! You have robustly set up your development environment in a way that d
 
 # Troubleshooting
 
-Make sure the first three items on top are downloaded.
+Make sure [the first three items](#setting-up-a-development-environment) on top are downloaded.
 
 ## `RUN_THIS.py` not running
 Check that python is installed from the website and not the Microsoft Store. If it's installed from the Microsoft Store, uninstall it then download and install from the python website.
 
 If you are on Windows and get redirected to the Microsoft Store or encounter a message in your terminal claiming that Python is not installed. This issue may be caused by a stupid Microsoft shortcut. Which you can disable by searching for `Manage App Execution Aliases` and disabling the two python references
+
+### py not found
+If python was installed from the website and the `python` command works, but you still get the error 'py is not installed', then check if `C:\WINDOWS\py.exe` works. If so, then add `C:\WINDOWS` to your path.
 
 ## System.DllNotFoundException: Unable to load DLL 'freetype6' or one of its dependencies: The specified module could not be found.
 
@@ -181,4 +207,8 @@ Uninstall .NET Core SDK x86. Install .NET Core SDK x64.
 
 ## The client and server aren't available in Visual Studio to configure in Multiple startup projects
 
-This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file. 
+This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file.
+
+## The system cannot find the specified file RUN_THIS.py
+
+`The system cannot find the specified file` error usually means that OneDrive is conflicting with the git repository. Clone the git repo outside of OneDrive or disable syncing for the cloned folder.

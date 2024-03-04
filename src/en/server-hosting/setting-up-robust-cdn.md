@@ -102,6 +102,7 @@ curl -X POST -d "" -H 'Authorization: Bearer <token from the config file, change
 
 ```json
 // (example from Wizard's Den servers)
+// Robust.Cdn is available at /cdn and nginx serves static builds on /builds
 {
     "download": "https://cdn.centcomm.spacestation14.com/builds/wizards/builds/{FORK_VERSION}/SS14.Client.zip",
     "hash": "49a7f54eb7e848c0a438bcfd3a198454d862e7d58d3e11c7ce60e281ddbd205d",

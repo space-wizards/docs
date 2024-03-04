@@ -116,9 +116,18 @@ When writing your changelog entries, please follow these guidelines:
    - Not so good: "Added candy bowls for waiting lines." Who is doing the adding?
    - Good: "Candy bowls can now be found near waiting lines." The subject is now "candy bowls". Each sentence has a subject and a verb.
 
-4. **Be concise.** Players should be able to understand the jist of the changes by skimming the Changelog. If they need more information, they can consult the guidebook. Avoid spamming multiple related changes across several different lines. If several security weapons were rebalanced, just say that to make players aware.
+4. **Be concise and avoid wordy, "IC" changes.** Players should be able to understand the jist of the changes by skimming the Changelog. "IC" changes are harder for players to read and understand what the change was. Make changes concise and to the point. If they need more information, they can consult the guidebook. Avoid spamming multiple related changes across several different lines. If several security weapons were rebalanced, just say that to make players aware.
 
    - Not so good: "Central has distributed a new subversion of the standard particle accelerators. Nothing exciting, but they have brought back the old wiring layout. Apparently some of the newer versions were having firmware issues and it was more reliable. Keep on eye on it while it''s running will you? We don''t want an intern disabling the safeties and frying their face off." Do you understand what changed? Even the author thinks the change is "nothing exciting."
+
+   - Not so good: "Due to budget cuts, detective's revolver has been replaced with something more appropriate." What is more appropriate?
+   - Good: "The detective's revolver now contains cap bullets instead of lethals."
+   
+   - Not so good: "The Syndicate has changed around their stock prices and gotten rid of some old dusty headsets" It is unclear what changed and what this has to do with "stock prices" and "dusty old headsets".
+   - Good: "The syndicate headset has been removed from the uplink." Clearly explains what was changed.
+   
+   - Not so good: "Due to Nanotrashen's budget cuts, Space pens are no longer supplied on the station."
+   - Good: "Space pens are no longer available."
 
 5. **Avoid technical jargon.**
 

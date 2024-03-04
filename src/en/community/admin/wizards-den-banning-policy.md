@@ -103,7 +103,8 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Non-grouping | [Slurs, excluding "retard" and variants](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.) | Indef GB | | | |
 | Non-grouping | ["Retard" and variants](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.) | W | 1d - 3d GB | Indef GB | |
 | Non-grouping | [Bigotry/discrimination](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.)[^discrimination] | Indef GB | | | |
-| Non-grouping | [ERP/Sexual content](https://wiki.spacestation14.io/wiki/Server_Rules#No_erotic_roleplay_(ERP)_or_sexual_content/themes) | Indef GB | | | |
+| Non-grouping | [ERP](https://wiki.spacestation14.io/wiki/Server_Rules#No_erotic_roleplay_(ERP)_or_sexual_content/themes) | Indef GB | | | |
+| Non-grouping | [Sexual content](https://wiki.spacestation14.io/wiki/Server_Rules#No_erotic_roleplay_(ERP)_or_sexual_content/themes) | W - 3d GB | 7d GB | Indef GB | |
 | Non-grouping | [Ban Evasion](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_attempt_to_evade_bans) | Voucher Ban | If after an accepted voucher ban, permanent ban.<br/>Otherwise, extend voucher ban to 6 months from evasion attempt. | | |
 | Language | [Non-english chat](https://wiki.spacestation14.io/wiki/Server_Rules#English_only) | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
 | Language | [Solely non-english chat](https://wiki.spacestation14.io/wiki/Server_Rules#English_only) | W | Indef GB | | |
