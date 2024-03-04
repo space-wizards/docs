@@ -68,9 +68,8 @@ The whole gameplay of Librarian can be roughly divided into 3 parts, which form 
 
 #### Searching
 
-Every round, encrypted books appear at random points on the station (bookshelves, lockers, bedside tables). Their number is limited, they are not repeated, and not all of them may appear in the round.
-These books have a random cover, and an unremarkable title and description. If you open them, you can only see encrypted text and encrypted key.
-
+Every round, encrypted books appear at random points on the station (bookshelves, lockers, bedside tables).
+Their number is limited, they are not repeated, and not all of them may appear in the round.These books have a random cover, and an unremarkable title and description. If you open them, you can only see gibberish text.
 
 At this stage, the librarian is busy searching for these encrypted books. The search process may include:
 1) Research of all available public places. 
@@ -81,8 +80,6 @@ At this stage, the librarian is busy searching for these encrypted books. The se
 People can also bring books to the librarian on their own. As you can understand, this stage is completely tied to socialization.
 
 #### Researching
-The encrypted text is the real text of the recipe, encrypted with a Vigener cipher for a specific key.
-An encrypted key is a set of words hidden behind an "unknown language"
 
 At the beginning of the round, 2 tables are taken: Keywords, and gibberish. additionally, keywords are grouped by discipline, for better theming. Each keyword is assigned a specific gibberish word. Example:
 | Keyword | Discipline | Gibberish |
@@ -95,7 +92,6 @@ At the beginning of the round, 2 tables are taken: Keywords, and gibberish. addi
 
 For each book, a unique key is made up of these words:
 `Legacy Revenant Tesla`
-The rest of the text is encrypted with this key using the Vigener cipher
 and the key elements are replaced with gibberish words from the table.
 
 Disciplines are categories of knowledge. Different categories of knowledge allow you to study different crafts, and also differ in the complexity of obtaining this knowledge.
@@ -110,7 +106,7 @@ Disciplines are categories of knowledge. Different categories of knowledge allow
 Each book with secret information is made up of N keywords. Keywords are replaced with gibberish, and when you look at the book, you can only see this gibberish text.
 The book can consist of keywords from different categories. For example: the pie thrower is studied for 1 Military and 7 Social keywords.
 
-The librarian's task is to find which gibberish words which keywords mean. to find the real key to decrypt Vigener chiphered text
+The librarian's task is to find which gibberish words which keywords mean.
 The following 2 ways can help him in this:
 1) Special reference books-dictionaries. These are special books that explain the meaning of a series of 3-6 random keywords. These books are grouped by discipline, for example, "History of Biology, Volume 1". 
 2) Communication with the players. All players at the beginning of the round receive "knowledge" about some keywords. It depends on the discipline: For example, an engineer will know 10 words from the discipline "Technic" at the beginning of the round, and a scientist 5 words from "Technic" and 5 words from "Mysticism". These players, having encountered gibberish in the text in conversation or when reading, will automatically understand what this word means.
@@ -120,16 +116,42 @@ When the librarian finds the meaning of the desired word, he can start work on t
 
 The librarian has a new **"Book Decryptor"** structure, located in the library. It looks like an old dusty computer with a analog keyboard.
 
-This decryptor has 1 slots for books, and an interface with the following elements:
-1) The text of the book
-2) Keyword input field
-3) Button "Encrypt"
-4) Button "Decrypt"
+This decryptor has 2 slots for books, and an interface with the following elements:
+1) The text of the first book
+2) The text of the second book
+3) A field for entering gibberish
+4) A field for entering keywords
+5) Button "Encrypt"
+6) The percentage of decryption of the book and known information
 
-To get started, the librarian must put the book he wants to decrypt into the decryptor,
-clicking on the button starts a 10-second process editing the book. Based on the specified keyword, the machine either encrypts or decrypts the text. If the key is chosen incorrectly, it can ruin the book, encrypting it even more. Therefore, it is worth working with copies of books.
+To get started, the librarian must put the book he wants to decrypt into the decryptor, and then put the empty book in the second slot.
+After clicking "Decrypt", after a 30-second delay, the decoder turns an empty book into a "[source book name] research project", with 0% decrypting status
 
-if the key is chosen correctly, then the text of the book is decrypted, and anyone can read the knowledge written in it.
+The process of decrypting a book is a value from 0 to 100%. The higher this value, the more decrypted information about the source book can be found out.
+
+|percentage of decryption|Unlocked book data|
+|--|----|
+|0%| Discipline |
+|33%| Legality |
+|66%| True name and description |
+|100%| The ability to learn a skill is unlocked or an unlocked crafting sequence is fully available |
+
+at 0%, the player immediately receives information about the discipline and part of the HHcode, in the form of dates. It looks like this:
+
+```
+-- "Ngaad-trec book" research project --
+Decrypt status: [0%]
+Discipline: Biology and Mysticism
+Name: Unknown
+Description: Unknown
+Legality: Unknown
+```
+
+The librarian enters a pair of "Gibberish / keyword", click "Decrypt" and after a 30-second delay, the following may happen:
+1) The pair was decoded correctly. If this pair is used in the current encrypted book, then the decryption of this word is recorded in its examined copy. This increases the decryption scale, and can open up new data about the book according to the table above.
+2) The pair is incorrect, or is not used in the current workbook. Nothing happens
+
+Thus, the librarian needs to find all N keywords, and correctly enter them into the decryptor, which will lead to a complete decryption of the book and the ability to use random crafting written in it.
 
 
 #### Using
