@@ -87,7 +87,6 @@ Do not risk your identity or the identities of your package recipients. "_
 
 
 ## Details / Playtesting / Bikeshedding
-_" Work in progress, up for debate, subject to change! " - The procrastinator's calling card._
 - "Recipients" may be traitors, thieves, initial infected or head revolutionaries.
   - Lone ops are never recipients because a recipient's intentions to kill should not be obvious.
   - For the same reason, Informants should not spawn during nukies.
@@ -137,16 +136,20 @@ _" Work in progress, up for debate, subject to change! " - The procrastinator's 
   - The timer beings ticking the next time the document is read.
   - Once the time runs out, the paper crumbles into ash.
 
-## Implementation / Code
-- Current TODO:
-  - Package reward spawn list
-  - Courier's gloves, reuse thief glove code with a bool check somewhere
-  - Author needs to go learn how examine text works
-- Frozen TODO:
-  - All the boilerplate for rule and game mode stuff (need antag rework)
-  - Clue strength tuning needs maint confirm or cut entirely (need antag rework)
-- New antagonist boilerplate:
-  - TODO, details pending antagonist refactor
+## Implementation / Outline
+#### Current Unknowns
+  - Need maint overall temperature check
+  - Rule code and gamemode code are FROZEN, pending antagonist refactor
+  - Package reward spawn lists
+  - Examine text and description handling
+
+#### Code Plans
+- [ ] Changes to Thief gloves:
+	- [x] BaseBeforeStripEvent: add Insert bool
+	- [x] ThievingComponent: split fields into ...Insert and ...Remove
+	- [x] ThievingSystem: branch OnBeforeStrip
+  - [ ] Allow insertion directly into worn containers, somehow...
+- [ ] New antagonist boilerplate: FROZEN
     - Should check for ratio
     - Should prevent multi-antag
     - Should fail during nukeops (and maybe pirates)
@@ -157,7 +160,7 @@ _" Work in progress, up for debate, subject to change! " - The procrastinator's 
     - Should include equipment slots and hands
     - Transform hierarchy maybe?
     - Future edge cases
-- New condition component & system: InformantCondition
+- [ ] New condition component & system: InformantCondition
   - Component defines and stores a new enum: PackageState
     - Undelivered: failure
     - Emagged: failure
@@ -181,14 +184,14 @@ _" Work in progress, up for debate, subject to change! " - The procrastinator's 
     - Query for <ItemComponent, RewardInformantOnUse>
     - Checks for ExtraSusPack tag
     - Calls the same function as the check for individual conditions
-- New component & system: CheckDNAOnUse
+- [x] New component & system: CheckDNAOnUse
   - Component contains a DNA string
   - System subscribes to <CheckDNAOnUse, UseInHandEvent>
   - Before SpawnItemsOnUseSystem
   - System checks for a DNAComponent
   - System handles the event if a match was not found, or no DNA present
-- New event InformantRewardEvent
-- New component & system: RewardInformantOnUse
+- [ ] New event InformantRewardEvent
+- [ ] New component & system: RewardInformantOnUse
   - Component contains a reference to an InformantConditionComponent
   - System subscribes to <RewardInformantOnUse, MapInitEvent>
     - Verify HasComp<ItemComponent>
@@ -202,8 +205,7 @@ _" Work in progress, up for debate, subject to change! " - The procrastinator's 
     - Spawns random item from list
     - Deletes and replaces self
     - Raises InformantRewardEvent on self
-- New tags: SusPack and ExtraSusPack
-- New item: BaseSuspiciousPackage
+- [ ] New item: BaseSuspiciousPackage
   - name: Suspicious Package
   - description: some-loc-string? varies? (TODO)
   - abstract: true
@@ -211,19 +213,19 @@ _" Work in progress, up for debate, subject to change! " - The procrastinator's 
   - item: small, 1x2
   - CheckDNAOnUse
   - SpawnItemsOnUse
-- New item: SuspiciousPackage
+- [ ] New item: SuspiciousPackage
   - RewardInformantOnUse
-  - tag: SusPack
-- New item: SuspiciousPackageNoRecipient
+  - tag: SusPack (New)
+- [ ] New item: SuspiciousPackageNoRecipient
   - prefix: Extra
-  - tag: ExtraSusPack
-- New abstract prototype: BaseCluePrototype
+  - tag: ExtraSusPack (New)
+- [ ] New abstract prototype: BaseCluePrototype
   - Defines a bool for weak vs. strong, required
-- New clue prototypes: XCluePrototype
+- [ ] New clue prototypes: XCluePrototype
   - Inherit from BaseCluePrototype
   - Name varies
   - One for each of the weak and strong clues
-- New component and system: InformantCluesSystem
+- [ ] New component and system: InformantCluesSystem
   - Component contains ProtoId<BaseCluePrototype> list for weak and strong clue prototypes
   - System contains entity query for all InformantRoleComponent owners (OLD, needs antag rework)
   - System contains a list of BaseCluePrototype
