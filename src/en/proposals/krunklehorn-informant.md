@@ -155,28 +155,27 @@ Do not risk your identity or the identities of your package recipients. "_
     - Should fail during nukeops (and maybe pirates)
     - Should handle examine text for suspicious packages (see bikeshedding)
   - System subscribes to MapInitEvent for RewardInformantOnUse components
-    - Adds a new InformantConditionComponent reference (see below)
+    - Adds a new Entity<InformantConditionComponent> (see below)
   - System implements a helper function for whatever rules are required for an item to be considered "in a mob's inventory"
     - Should include equipment slots and hands
     - Transform hierarchy maybe?
     - Future edge cases
 - [ ] New condition component & system: InformantCondition
-  - Component defines and stores a new enum: PackageState
+  - [x] Component defines and stores a new enum: PackageState
     - Undelivered: failure
     - Emagged: failure
     - Delivered: greentext
-  - System contains a list of references to the component
-    - Wrap with a TryAdd, outputs the reference on success
+  - [x] System contains a list of Entity<InformantConditionComponent>
     - Softcap to the ratio
     - Admin spawns should force
-  - System subscribes to <RewardInformantOnUse, InformantRewardEvent> (see below)
-    - Looks for matching InformantConditionComponent reference
+  - [x] System subscribes to <RewardInformantOnUse, InformantRewardEvent> (see below)
+    - Looks for matching Entity<InformantConditionComponent>
     - PackageState.Delivered if match
-  - System subscribes to <GotEmaggedEvent, RewardInformantOnUse>
+  - [x] System subscribes to <GotEmaggedEvent, RewardInformantOnUse>
     - Checks for a match on the user's DNA, to prevent trolling
     - PackageState.Emagged if a match was not found, or no DNA present
   - System implements some method to handle the delivery conditions
-    - Foreach entry in reference list, call antagonist boilerplate helper function
+    - Foreach entry in list, call antagonist boilerplate helper function
     - PackageState.Delivered if success
   - System implements some method to handle the final, two-fold condition
     - Same alive, unrestrained code as EscapeShuttleCondition
@@ -184,34 +183,34 @@ Do not risk your identity or the identities of your package recipients. "_
     - Query for <ItemComponent, RewardInformantOnUse>
     - Checks for ExtraSusPack tag
     - Calls the same function as the check for individual conditions
-- [x] New component & system: CheckDNAOnUse
+- [x] New component & system: CheckDnaOnUse
   - Component contains a DNA string
-  - System subscribes to <CheckDNAOnUse, UseInHandEvent>
+  - System subscribes to <CheckDnaOnUse, UseInHandEvent>
   - Before SpawnItemsOnUseSystem
-  - System checks for a DNAComponent
+  - System checks for a DnaComponent
   - System handles the event if a match was not found, or no DNA present
-- [ ] New event InformantRewardEvent
+- [x] New event InformantRewardEvent
 - [ ] New component & system: RewardInformantOnUse
-  - Component contains a reference to an InformantConditionComponent
-  - System subscribes to <RewardInformantOnUse, MapInitEvent>
+  - [x] Component contains a nullable Entity<InformantConditionComponent>
+  - [x] System subscribes to <RewardInformantOnUse, MapInitEvent>
     - Verify HasComp<ItemComponent>
     - Calls InformantConditionSystem.TryAdd()
-    - Assigns reference on success
-  - System subscribes to <RewardInformantOnUse, UseInHandEvent>
-    - Before SpawnItemsOnUseSystem
-    - After CheckDNAOnUseSystem
-    - Gets a list of syndie shop item prototypes or whatever (TODO)
-    - Checks user job, adds job specific prototypes
-    - Spawns random item from list
-    - Deletes and replaces self
-    - Raises InformantRewardEvent on self
+    - Assigns Entity<InformantConditionComponent> on success
+  - [ ] System subscribes to <RewardInformantOnUse, UseInHandEvent>
+    - [x] Before SpawnItemsOnUseSystem
+    - [x] After CheckDnaOnUseSystem
+    - [ ] Gets a list of syndie shop item prototypes or whatever (TODO)
+    - [ ] Checks user job, adds job specific prototypes
+    - [ ] Spawns random item from list
+    - [ ] Deletes and replaces self
+    - [x] Raises InformantRewardEvent on self
 - [ ] New item: BaseSuspiciousPackage
   - name: Suspicious Package
   - description: some-loc-string? varies? (TODO)
   - abstract: true
   - sprite: valid looking
   - item: small, 1x2
-  - CheckDNAOnUse
+  - CheckDnaOnUse
   - SpawnItemsOnUse
 - [ ] New item: SuspiciousPackage
   - RewardInformantOnUse
