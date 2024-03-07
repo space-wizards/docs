@@ -159,21 +159,21 @@ Do not risk your identity or the identities of your package recipients. "_
 - [x] New component & system: CheckDna
   - [x] Component contains a DNA string
   - [x] System defines private bool DnaMatch(entity, user)
-    - Succeeds on matching dna or HasComp<EmaggedComponent>
-  - [x] System subscribes to <CheckDnaComponent, UseInHandEvent>
+    - Succeeds on matching dna or HasComp&lt;EmaggedComponent&gt;
+  - [x] System subscribes to &lt;CheckDnaComponent, UseInHandEvent&gt;
     - Before SpawnItemsOnUseSystem
     - ev.Handled = !DnaMatch()
 - [x] New event: InformantPackageDeliveredEvent
-  - Event contains an Entity<InformantPackageComponent>
+  - Event contains an Entity&lt;InformantPackageComponent&gt;
 - [x] New component & system: InformantPackage
   - [x] Component defines and stores a new enum: InformantPackageState
     - Unresolved: failure
     - Compromised: failure
     - Delivered: greentext
-  - [x] System subscribes to <InformantPackageComponent, EntGotInsertedIntoContainerMessage>
+  - [x] System subscribes to &lt;InformantPackageComponent, EntGotInsertedIntoContainerMessage&gt;
     - Sets package as Delivered if container owner has matching dna
     - Raises InformantPackageDeliveredEvent on self
-  - [x] System subscribes to <InformantPackageComponent, UseInHandEvent>
+  - [x] System subscribes to &lt;InformantPackageComponent, UseInHandEvent&gt;
     - Before SpawnItemsOnUseSystem
     - After CheckDnaSystem
     - Sets package as Compromised if event wasn't handled
@@ -200,7 +200,7 @@ Do not risk your identity or the identities of your package recipients. "_
   - Name varies
   - One for each of the weak and strong clues
 - [ ] New component and system: InformantCluesSystem __(OLD, needs antag rework)__
-  - Component contains ProtoId<BaseCluePrototype> list for weak and strong clue prototypes
+  - Component contains ProtoId&lt;BaseCluePrototype&gt; list for weak and strong clue prototypes
   - System contains entity query for all InformantRoleComponent owners
   - System contains a list of BaseCluePrototype
   - System handles all XCluePrototype data (OLD, also vague as hell, needs antag rework)
