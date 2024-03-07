@@ -139,7 +139,11 @@ Do not risk your identity or the identities of your package recipients. "_
 ## Implementation / Outline
 #### Current Unknowns
   - Need maint overall temperature check
-  - Rule code and gamemode code are FROZEN, pending antagonist refactor
+  - Rule code and gamemode code are __FROZEN__, pending antagonist refactor
+    - Enforce ratio
+    - Prevent multi-antag
+    - Fail during nukeops (and maybe pirates)
+    - Handle examine text for suspicious packages (see bikeshedding)  
   - Package reward spawn lists
   - Examine text and description handling
 
@@ -149,84 +153,55 @@ Do not risk your identity or the identities of your package recipients. "_
 	- [x] ThievingComponent: split fields into ...Insert and ...Remove
 	- [x] ThievingSystem: branch OnBeforeStrip
   - [ ] Allow insertion directly into worn containers, somehow...
-- [ ] New antagonist boilerplate: FROZEN
-    - Should check for ratio
-    - Should prevent multi-antag
-    - Should fail during nukeops (and maybe pirates)
-    - Should handle examine text for suspicious packages (see bikeshedding)
-  - System subscribes to MapInitEvent for RewardInformantOnUse components
-    - Adds a new Entity<InformantConditionComponent> (see below)
-  - System implements a helper function for whatever rules are required for an item to be considered "in a mob's inventory"
-    - Should include equipment slots and hands
-    - Transform hierarchy maybe?
-    - Future edge cases
-- [ ] New condition component & system: InformantCondition
-  - [x] Component defines and stores a new enum: PackageState
-    - Undelivered: failure
-    - Emagged: failure
+- [ ] Changes to trash wrappers:
+  - [ ] Refactor all trash related items under one BaseTrash
+  - [ ] Use BaseTrash to define new item: PackageTrash
+- [x] New component & system: CheckDna
+  - [x] Component contains a DNA string
+  - [x] System defines private bool DnaMatch(entity, user)
+    - Succeeds on matching dna or HasComp<EmaggedComponent>
+  - [x] System subscribes to <CheckDnaComponent, UseInHandEvent>
+    - Before SpawnItemsOnUseSystem
+    - ev.Handled = !DnaMatch()
+- [x] New event: InformantPackageDeliveredEvent
+  - Event contains an Entity<InformantPackageComponent>
+- [x] New component & system: InformantPackage
+  - [x] Component defines and stores a new enum: InformantPackageState
+    - Unresolved: failure
+    - Compromised: failure
     - Delivered: greentext
-  - [x] System contains a list of Entity<InformantConditionComponent>
-    - Softcap to the ratio
-    - Admin spawns should force
-  - [x] System subscribes to <RewardInformantOnUse, InformantRewardEvent> (see below)
-    - Looks for matching Entity<InformantConditionComponent>
-    - PackageState.Delivered if match
-  - [x] System subscribes to <GotEmaggedEvent, RewardInformantOnUse>
-    - Checks for a match on the user's DNA, to prevent trolling
-    - PackageState.Emagged if a match was not found, or no DNA present
-  - System implements some method to handle the delivery conditions
-    - Foreach entry in list, call antagonist boilerplate helper function
-    - PackageState.Delivered if success
-  - System implements some method to handle the final, two-fold condition
-    - Same alive, unrestrained code as EscapeShuttleCondition
-    - Make function, do not copy paste (did the refactor cover this?)
-    - Query for <ItemComponent, RewardInformantOnUse>
-    - Checks for ExtraSusPack tag
-    - Calls the same function as the check for individual conditions
-- [x] New component & system: CheckDnaOnUse
-  - Component contains a DNA string
-  - System subscribes to <CheckDnaOnUse, UseInHandEvent>
-  - Before SpawnItemsOnUseSystem
-  - System checks for a DnaComponent
-  - System handles the event if a match was not found, or no DNA present
-- [x] New event InformantRewardEvent
-- [ ] New component & system: RewardInformantOnUse
-  - [x] Component contains a nullable Entity<InformantConditionComponent>
-  - [x] System subscribes to <RewardInformantOnUse, MapInitEvent>
-    - Verify HasComp<ItemComponent>
-    - Calls InformantConditionSystem.TryAdd()
-    - Assigns Entity<InformantConditionComponent> on success
-  - [ ] System subscribes to <RewardInformantOnUse, UseInHandEvent>
-    - [x] Before SpawnItemsOnUseSystem
-    - [x] After CheckDnaOnUseSystem
-    - [ ] Gets a list of syndie shop item prototypes or whatever (TODO)
-    - [ ] Checks user job, adds job specific prototypes
-    - [ ] Spawns random item from list
-    - [ ] Deletes and replaces self
-    - [x] Raises InformantRewardEvent on self
-- [ ] New item: BaseSuspiciousPackage
-  - name: Suspicious Package
-  - description: some-loc-string? varies? (TODO)
-  - abstract: true
-  - sprite: valid looking
+  - [x] System subscribes to <InformantPackageComponent, EntGotInsertedIntoContainerMessage>
+    - Sets package as Delivered if container owner has matching dna
+    - Raises InformantPackageDeliveredEvent on self
+  - [x] System subscribes to <InformantPackageComponent, UseInHandEvent>
+    - Before SpawnItemsOnUseSystem
+    - After CheckDnaSystem
+    - Sets package as Compromised if event wasn't handled
+- [x] New item: BasePackage
+  - sprite: basic looking
   - item: small, 1x2
-  - CheckDnaOnUse
-  - SpawnItemsOnUse
-- [ ] New item: SuspiciousPackage
-  - RewardInformantOnUse
-  - tag: SusPack (New)
-- [ ] New item: SuspiciousPackageNoRecipient
-  - prefix: Extra
-  - tag: ExtraSusPack (New)
+  - SpawnItemsOnUse: PackageTrash
+- [x] New item: PackageSuspicious
+  - parent: BasePackage
+  - sprite: valid looking
+  - tags: SusPack
+  - CheckDna
+  - SpawnItemsOnUse: PackageTrashSuspicious
+  - InformantPackage
+- [x] New item: PackageSuspiciousExtra
+  - parent: PackageSuspicious
+  - tags: ExtraSusPack
+  - SpawnItemsOnUse: PackageTrashSuspiciousExtra
+#### (OLD, needs antag rework)
 - [ ] New abstract prototype: BaseCluePrototype
   - Defines a bool for weak vs. strong, required
 - [ ] New clue prototypes: XCluePrototype
   - Inherit from BaseCluePrototype
   - Name varies
   - One for each of the weak and strong clues
-- [ ] New component and system: InformantCluesSystem
+- [ ] New component and system: InformantCluesSystem __(OLD, needs antag rework)__
   - Component contains ProtoId<BaseCluePrototype> list for weak and strong clue prototypes
-  - System contains entity query for all InformantRoleComponent owners (OLD, needs antag rework)
+  - System contains entity query for all InformantRoleComponent owners
   - System contains a list of BaseCluePrototype
   - System handles all XCluePrototype data (OLD, also vague as hell, needs antag rework)
   - System responds to InformantRewardEvent by adding clues to InformantCluesComponent
