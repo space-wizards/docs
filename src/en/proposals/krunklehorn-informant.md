@@ -136,6 +136,7 @@ Do not risk your identity or the identities of your package recipients. "_
   - The timer beings ticking the next time the document is read.
   - Once the time runs out, the paper crumbles into ash.
 
+
 ## Implementation / Outline
 #### Current Unknowns
   - Need maint overall temperature check
@@ -147,6 +148,7 @@ Do not risk your identity or the identities of your package recipients. "_
   - Package reward spawn lists
   - Examine text and description handling
 
+
 #### Code Plans
 - [ ] Changes to Thief gloves:
 	- [x] BaseBeforeStripEvent: add Insert bool
@@ -156,13 +158,18 @@ Do not risk your identity or the identities of your package recipients. "_
 - [ ] Changes to trash wrappers:
   - [ ] Refactor all trash related items under one BaseTrash
   - [ ] Use BaseTrash to define new item: PackageTrash
+- [x] New cancellable event: CheckDnaMatchEvent
+  - Event contains an EntityUid for the user
+  - Event contains a bool for whether EmaggedComponent should influence the result
 - [x] New component & system: CheckDna
   - [x] Component contains a DNA string
-  - [x] System defines private bool DnaMatch(entity, user)
-    - Succeeds on matching dna or HasComp&lt;EmaggedComponent&gt;
-  - [x] System subscribes to &lt;CheckDnaComponent, UseInHandEvent&gt;
-    - Before SpawnItemsOnUseSystem
-    - ev.Handled = !DnaMatch()
+  - [x] Component contains a bool for whether it can be emagged
+  - [x] System defines private bool DnaMatch()
+    - Succeeds on matching dna or emagged
+  - [x] System subscribes to &lt;CheckDnaComponent, CheckDnaMatchEvent&gt;
+    - Calls CheckDnaMatch, cancels on failure
+  - [x] System subscribes to &lt;CheckDnaComponent, OnGotEmagged&gt;
+    - [x] Handles the event if emaggable
 - [x] New event: InformantPackageDeliveredEvent
   - Event contains an Entity&lt;InformantPackageComponent&gt;
 - [x] New component & system: InformantPackage
@@ -171,12 +178,18 @@ Do not risk your identity or the identities of your package recipients. "_
     - Compromised: failure
     - Delivered: greentext
   - [x] System subscribes to &lt;InformantPackageComponent, EntGotInsertedIntoContainerMessage&gt;
-    - Sets package as Delivered if container owner has matching dna
+    - Returns if package is not Unresolved
+    - Raises CheckDnaMatchEvent
+      - Disregards emag
+      - Returns if cancelled
+    - Sets package as Delivered
     - Raises InformantPackageDeliveredEvent on self
   - [x] System subscribes to &lt;InformantPackageComponent, UseInHandEvent&gt;
     - Before SpawnItemsOnUseSystem
-    - After CheckDnaSystem
-    - Sets package as Compromised if event wasn't handled
+    - Returns if package is not Unresolved
+    - Raises CheckDnaMatchEvent
+      - Handles the event and returns if cancelled
+    - Sets package as Compromised
 - [x] New item: BasePackage
   - sprite: basic looking
   - item: small, 1x2
@@ -192,6 +205,8 @@ Do not risk your identity or the identities of your package recipients. "_
   - parent: PackageSuspicious
   - tags: ExtraSusPack
   - SpawnItemsOnUse: PackageTrashSuspiciousExtra
+
+
 #### (OLD, needs antag rework)
 - [ ] New abstract prototype: BaseCluePrototype
   - Defines a bool for weak vs. strong, required
