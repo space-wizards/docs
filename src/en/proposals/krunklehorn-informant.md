@@ -25,32 +25,32 @@ Do not risk your identity or the identities of your package recipients. "_
 - Optional: Remain covert. Escape alive and unrestrained. Keep your extra packages sealed and on you.
 
 ### Locate
-- Begin with one clue for each recipient
-- After each delivery, gain clues for remaining recipients
-- Use deduction and vigilance to succeed
+- Begin with one clue for each recipient.
+- After each delivery, gain clues for remaining recipients.
+- Use deduction and vigilance to succeed.
 
 ### Deliver
-- Packages must make their way into their recipients inventory, that's all
-- Primary packages are sealed to their recipient's DNA
-- Extra packages are sealed to any recipient DNA, even recipients of other Informants
-- All packages can be opened by a cryptographic sequencer
-- All packages contain a single piece of minor syndicate loot
+- Packages must make their way into their recipients inventory, that's all.
+- Primary packages are sealed to their recipient's DNA.
+- Extra packages are sealed to any recipient DNA, even recipients of other Informants.
+- All packages can be opened by a cryptographic sequencer.
+- All packages contain a single piece of minor syndicate loot.
 
 ### Escape
-- Packages do not identify their recipients, but are obvious and will make you Valid™
-- Your packages and gear are valuable, reveal yourself at your own risk
-- Extra packages do not have recipients, you must escape with these
+- Packages do not identify their recipients, but are obvious and will make you Valid™.
+- Your packages and gear are valuable, reveal yourself at your own risk.
+- Extra packages do not have recipients, you must escape with these.
 
 ### Starting Gear
 - Standard job equipment
 - 4 packages
-  - 1-3 suspicious packages, each destined for a unique, current-round recipient
-  - 1-3 extra suspicious packages, open these if you wish, or keep them hidden
+  - 1-3 suspicious packages, each destined for a unique, current-round recipient.
+  - 1-3 extra suspicious packages, open these if you wish, or keep them hidden.
 - Courier's Gloves
-  - Chameleon technology
-  - Wearer may discretely insert into worn containers, pockets or equipment slots
-  - Full containers drop the item on the ground, oops!
-  - Not useful for thieving
+  - Chameleon technology.
+  - Wearer may discretely insert into equipment slots, pockets, hands and even worn containers!
+  - Full containers drop the item beneath the recipient, oops!
+  - Not useful for thieving.
 
 
 ## FAQ
@@ -150,11 +150,27 @@ Do not risk your identity or the identities of your package recipients. "_
 
 
 #### Code Plans
-- [ ] Changes to Thief gloves:
-	- [x] BaseBeforeStripEvent: add Insert bool
-	- [x] ThievingComponent: split fields into ...Insert and ...Remove
-	- [x] ThievingSystem: branch OnBeforeStrip
-  - [ ] Allow insertion directly into worn containers, somehow...
+- [x] Changes to Thief gloves:
+	- [x] Changes to ThievingComponent:
+    - Split both StripTimeReduction and Stealthy fields to differentiate between insertion and removal
+    - Made Stealthy fields true by default
+    - Add new bool WornStorageInsert
+  - [x] New event: WornStorageInsertAttemptEvent
+    - Event contains information on the user, target and worn entity
+    - Event must be allowed by at least one subscriber
+  - [x] Changes to Strippable component & system:
+    - Component contains new bool AllowWornStorageInsert
+    - BaseBeforeStripEvent contains new bool Insert
+    - OnStripButtonPressed branch modified
+    - System defines private bool CanInsertWornStorage
+      - Fails if not allowed or the entity isn't a storage container
+      - Calls WornStorageInsertAttemptEvent
+      - Allows stealthy insertions to fail if the reason is not obvious to the user
+      - PlaceActiveHandItemInInventory calls this during Check()
+	- [x] Changes to ThievingSystem:
+    - Branch during OnBeforeStrip
+    - Subscribes to &lt;WornStorageInsertAttemptEvent&gt;
+      - Requires the user be wearing thieving gloves that allow worn storage insertion
 - [ ] Changes to trash wrappers:
   - [ ] Refactor all trash related items under one BaseTrash
   - [ ] Use BaseTrash to define new item: PackageTrash
@@ -188,7 +204,7 @@ Do not risk your identity or the identities of your package recipients. "_
     - Before SpawnItemsOnUseSystem
     - Returns if package is not Unresolved
     - Raises CheckDnaMatchEvent
-      - Handles the event and returns if cancelled
+      - Handles and returns if cancelled
     - Sets package as Compromised
 - [x] New item: BasePackage
   - sprite: basic looking
@@ -214,7 +230,7 @@ Do not risk your identity or the identities of your package recipients. "_
   - Inherit from BaseCluePrototype
   - Name varies
   - One for each of the weak and strong clues
-- [ ] New component and system: InformantCluesSystem __(OLD, needs antag rework)__
+- [ ] New component and system: InformantCluesSystem
   - Component contains ProtoId&lt;BaseCluePrototype&gt; list for weak and strong clue prototypes
   - System contains entity query for all InformantRoleComponent owners
   - System contains a list of BaseCluePrototype
