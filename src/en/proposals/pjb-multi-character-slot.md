@@ -16,7 +16,7 @@ Currently, a player can have one character slot selected. This controls their ch
 
 It should be possible to have multiple character slots active at once. When selecting jobs, a job is picked for all your characters at once, after which the actual character slot is picked.
 
-All the regular properties of a character slot apply. 
+All the regular properties of a character slot apply. You can have separate names, appearances, and with the loadouts PR separate loadouts too.
 
 As an example: if you have two character slots, one engineer, one medical doctor, the game will try to give you a job for either. The actual character slot then gets picked based on what job you got.
 
@@ -50,3 +50,7 @@ To make this not confusing for existing players, we probably want to make the jo
 ### Character Slot count
 
 Especially if we make dedicated character slot types for silicons/antags, we'll probably need to increase the max character slot count a bit.
+
+### DB changes
+
+Changes to the database would be minimal. Instead of having an "active character slot" index we'd just change each character slot to have a bool.
