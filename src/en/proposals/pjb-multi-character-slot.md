@@ -54,3 +54,7 @@ Especially if we make dedicated character slot types for silicons/antags, we'll 
 ### DB changes
 
 Changes to the database would be minimal. Instead of having an "active character slot" index we'd just change each character slot to have a bool.
+
+### Late Joins
+
+In the late join menu, selecting a job would not immediately spawn you in. Instead you'll get an option for which character slot you want to spawn as. If any character slot has the job preference set they'll be somehow highlit to make it easier to select them.
