@@ -10,7 +10,7 @@ Currently, a player can have one character slot selected. This controls their ch
 
 * Some people prefer having different characters per job or department, for roleplay reasons.
 * The work on [loadouts](https://github.com/space-wizards/space-station-14/pull/25715) makes it so that loadouts are assigned per-job, which is kind of clunky.
-* Allows people to set names for special roles such as clown or borg, without needing to have separate fields for that like some SS13 servers do.
+* Some "jobs" like clown or borg shouldn't use your normal character name. In SS14 this is currently suffering, in SS13 there's either a popup box when you spawn to pick your name OR multiple extra fields in the character info for "character name as clown" and such. Both suck.
 
 ## Proposal
 
