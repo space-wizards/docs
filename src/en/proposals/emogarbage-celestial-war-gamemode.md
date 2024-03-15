@@ -264,7 +264,7 @@ Additionally spawns violent tendrils that move through the underbrush and attack
 _A long, floating cloak with only an upper torso. The base of their torso simply ends in a long spinal cord._
 
 Safrinni is the god of thievery and of rogues.
-Their divinity is raised through theft, like items off of unsuspecting players 
+Their divinity is raised through stealing items off of unsuspecting players.
 They also accept sacrifices of valuable thief steal objectives.
 
 They have the following artifacts:
@@ -282,7 +282,7 @@ They have the following abilities:
 All followers in the zone are also coated in invisibility and spew small amounts of blinding smoke.
 
 ### Yoth-Soggoth of Neptune
-_A skeleton standing in an exuberant pose with its arms raised upwards. An opulent robe covers its ._
+_A skeleton standing in an exuberant pose with its arms raised upwards. An opulent robe of gold and purple is draped around its shoulders._
 
 Yoth-Soggoth is a merciless and apathetic God of chaos.
 They care for nothing but sacrifices.
