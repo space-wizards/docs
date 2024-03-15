@@ -38,7 +38,7 @@ The generated power can then be used for various abilities as well as inducting 
 The God can use their limited communication to inform their prophet of incoming threats or possible vulnerabilities in other churches.
 Churches are encouraged to battle and fight each other, in order to interrupt the other's progress and waste their resources.
 
-a the church has grown large enough, they can begin the **ascension ritual**. 
+Once a the church has grown large enough, they can begin the **ascension ritual**. 
 This requires a monument to be constructed out of steel and an appropriate grimoire be used to bless it.
 Once enough disciples have gathered around the monument, the ritual can begin.
 This serves as a final stand, requiring the disciples to pray in radius of the monument in order to ascend their god out of its weakened state.
