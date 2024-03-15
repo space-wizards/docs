@@ -246,7 +246,7 @@ No modifiers apply. Only the prior RDM offense is relevant because it is the onl
 
 ## Appeals of Mistaken Bans
 
-If the appeal disputes the events which were used to justify the ban, the first appeal of a voucher or permanent ban may only be declined after it has been verified that it was appropriately placed.
+Unless the ban was an upgrade resulting from an unsucessful appeal, if an appeal disputes the events which were used to justify the ban, the first appeal of a voucher or permanent ban may only be declined after it has been verified that it was appropriately placed.
 
 ## Appeal Hijacking
 
@@ -255,44 +255,92 @@ If an appeal is currently being processed by someone, it is generally best to le
 - the processor has somehow indicated that they are not going to process the appeal, or
 - a head game admin has told you that you can process the appeal.
 
+## Processing by Trial Admins
+
+Trial admins may only process appeals if each action they take, excluding internal discussions, is checked and approved by a supervising propermin before being taken. Supervising propermins are responsible for ensuring that the appeals are processed appropriately, including ensuring that the trialmin performs appropriate investigation of the ban if they are also performing that part of the processing.
+
 ## Appeal Procedure
 
-1. If you are a trial admin, you cannot process the appeal.
-2. Check appeal format.
-3. Checking for ban evasion is highly recommended, but not required.
-4. If you placed the ban, you must meet the following criteria to continue:
-	- [ ] the player does not dispute the facts that led to the ban,
-	- [ ] the player does not claim bias,
-	- [ ] the ban is within ban guidelines, and
-	- [ ] any of the following are true:
-		- [ ] the ban is less than or equal to 7 days long,
-		- [ ] the appeal is older than 7 days with no post on it by another admin in the last 7 days, or
-		- [ ] all of the following are true:
-			- [ ] this is the first valid appeal of the ban,
-			- [ ] the ban was placed because the player was offline or evaded an ahelp, and
-			- [ ] you are accepting the appeal by either removing the ban or reducing it to be less than or equal to 14 days from the start of the ban being appealed.
+### Standard Procedure
+
+1. Check appeal format.
+3. Checking for ban evasion and denying the appeal if it is found is highly recommended, but not required.
+4. If you placed the ban, you can not continue processing the appeal.
 5. Collect information
 	1. Check the player's history of appeals.
 	2. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
 	3. Check the player's note and ban history.
 	4. Reading the ahelp that led to the ban is highly recommended.
-	5. Ask the player questions that are important for the processing of the appeal.
-	6. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
-6. If any of the following criteria are met, you may skip to step 8 and process the appeal using the speedy appeal process:
-	- the ban length is less than or equal to 14 days,
-	- this appeal is older than 7 days and no other admin is handling the appeal, or
-	- the result of the appeal is obvious.
-		- Similar appeals of bans for similar situations are almost always accepted.
-		- So little effort was made in the appeal, that it is improbable it would be accepted.
+	5. Attempt to contact the banning admin.
+	6. Ask the player questions that are important for the processing of the appeal.
+	7. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
 7. Run a vote
-	- Votes must run at least 24 hours.
-	- Votes must not be closed if there is ongoing discussion.
+	- An attempt to contact the banning admin must have been made prior to starting a vote. A ping in #game-admin-appeals-meta notifying them about the appeal and 24 hours of time to respond is considered to be a sufficient attempt.
+ 	- Votes must run at least 24 hours unless the net vote criteria is met.
+	- Votes must not be closed if there is ongoing discussion unless the net vote criteria is met.
 	- Votes must be made in one of the designated internal appeals discussion channels.
 	- Votes should present as much relevant information as possible.
 	- Votes should indicate if the ban is within guidelines, preferably by presenting the guideline range for the ban.
+8. If the result is to upgrade the ban, deny the appeal and inform the player of the upgrade on the appeal's thread. The player must be told how and when they can appeal again, or explicitly that they cannot appeal again.
+9. If the result is to deny the appeal, deny the appeal.
+	- The player should be told when they can re-appeal. This should typically be double the time they were given for the last appeal for the same ban, or two weeks if there was no prior appeal for the same ban.
+10. Check for ban evasion and deny the appeal if it is found.
+11. If the result is to reduce the ban, replace the ban with a ban with the reduced length, tell the player the details of the reduction, and mark the appeal as accepted.
+12. If the result is to remove the ban, tell the player that the appeal has been accepted and accept the appeal.
+
+### Net Vote Expedited Processing
+
+This is an optional expedition to votes done under the standard procedure that can be used at the discretion of the processing admin.
+
+Net votes cannot result in an upgrade to a voucher ban or to a permanent ban.
+
+If an appeal is being processed using the standard procedure, votes can be processed earlier than 24 hours, even if discussion is ongoing. To do this, the vote must have at least 10 "net votes" for the winning option. Net votes are only possible when all vote options which affect the outcome of the appeal are distinct rather than on a spectrum. Distinct options are ones where voters are unlikely to be equally in favor of multiple options. Remove/reduce/deny and Remove/reduce/voucher votes are both considered to have only distinct options. A vote with multiple options for how long to reduce a ban to is not considered distinct, even if each option is split into its own yes/no vote. This means that a Remove/reduce/deny vote cannot be processed early if there is also an ongoing vote for the reduction time, even if they are separate votes, unless the net vote is to remove the ban or deny the appeal.
+
+To calculate the number of net votes, subtract the total number of votes for all other options from the winning option. The processing admin's vote can be included. Staging votes, votes made to make an option easily available for voters, can not be included.
+
+#### Net Vote Examples
+
+In these examples, the vote numbers are remove/reduce/voucher.
+
+- 4/5/2 = no positive net votes, can not process based on net votes
+- 2/6/2 = 2 net votes for reduce, can not process based on net votes because the threshold has not been met
+- 3/1/1 = 1 net vote for remove, can not process based on net votes because the threshold has not been met
+- 0/0/5 = 5 net votes for voucher, can not process based on net votes because the threshold has not been met and the winning option is to voucher
+- 10/0/15 = 5 net votes for voucher, can not process based on net votes because the threshold has not been met and the winning option is to voucher
+- 14/0/3 = 11 net votes for remove, qualifies for expedited processing due to net votes
+
+### Speedy Appeal Procedure
+
+This is an optional alternate procedure that can be used at the discretion of the processing admin if at least one of the criteria are met:
+- the ban is a temporary ban and the player indicated on the appeal that they are ok with it being processed without a vote,
+- the ban length is less than or equal to 14 days,
+- this appeal is older than 7 days and no other admin is handling the appeal, or
+- the result of the appeal is obvious.
+	- Similar appeals of bans for similar situations are almost always accepted.
+	- So little effort was made in the appeal, that it is improbable it would be accepted.
+
+The speedy appeal procedure does not allow upgrades to voucher or permanent bans due to the voting requirement those bans have.
+
+1. Check appeal format.
+3. Checking for ban evasion and denying the appeal if it is found is highly recommended, but not required.
+4. If you placed the ban, you can not continue processing the appeal.
+5. Collect information
+	1. Check the player's history of appeals.
+	2. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
+	3. Check the player's note and ban history.
+	4. Reading the ahelp that led to the ban is highly recommended.
+	5. Attempt to contact the banning admin.
+	6. Ask the player questions that are important for the processing of the appeal.
+	7. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
+7. Make a determination on the desired outcome, then use #game-admin-appeals-meta to find another admin that agrees with processing it using that speedy outcome.
+   	- The second admin must not be the banning admin.
+   	- The second admin must agree with both the outcome of the appeal and with the decision to use the speedy appeal procedure.
+   	- If you are aware of any admin who disagrees with your proposed outcome or with the decision to use the speedy appeal procedure, a hidden post must be made on the appeal itself indicating that speedy processing is contested, and the appeal must be processed using the standard procedure.
 8. If the result is to deny the appeal, deny the appeal.
 	- The player should be told when they can re-appeal. This should typically be double the time they were given for the last appeal for the same ban, or two weeks if there was no prior appeal for the same ban.
-	- If the appeal was processed using the speedy appeal process, use the "Speedy Appeal" saved action to notify the player.
+	- Use the "Speedy Appeal" saved action to notify the player of the process that was used.
 9. Check for ban evasion and deny the appeal if it is found.
-10. Accept the appeal.
+10. If the result is to reduce the ban, replace the ban with a ban with the reduced length, tell the player the details of the reduction, and mark the appeal as accepted.
+	- Use the "Speedy Appeal" saved action to notify the player of the process that was used.
+11. If the result is to remove the ban, tell the player that the appeal has been accepted and accept the appeal.
 	- If the appeal was processed using the speedy appeal process and the ban time was within guidelines, you must be able to articulate why the appeal was accepted and should do this on the appeal itself.
