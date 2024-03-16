@@ -27,7 +27,7 @@ It's also worth considering revolution as a major mode rather than a minor mode.
 ### Concept Abstracts
 - unique scoring system
 - voluntary entry into the revolution
-- rev icon replacement
+- rev icon delete
 - additional avenues for recruitment
 - rev uplink 
 - various rebel paraphernalia
@@ -50,13 +50,13 @@ Soviet-made pistols, Mosinky, PPSh, Kalashnikovs, RGDs, various body armor, clot
 
 **FOR WHAT:** These things will make the headrev stand out from the crowd or help him in some minor actions for later climax (like raiding an security patrol).
 
-### 1.2 Holographic Armband
-- In exchange for the icons, the revolutionary will be given the **ability "make intentions known"** which will create a red or blue-red **armband** on his shoulder for the headrevs.
-- The **ability is one-time** and there is no way to remove this bandage once activated.
-- To know the player's affiliation before activation requires examining the character - it will answer it in examine window (being a revolutionary).
-- Once alerted _(1.6)_, all armbands automatically appear on the shoulders of the rebels.
+### 1.2 Definition Of Revolutionary
+- Completely **delete icons**.
+- **Only headrev can identify a revolutionary**.
+- In addition, **add armbands** to the game, which **can be found in vending machines or made manually**.
+- Following this, **add the ability to colour clothes** (with crayons, sprays or other device).
 
-**FOR WHAT:** To get rid of stealthy revolutions, add "rebel entourage" and replace trivial meta icons.
+**FOR WHAT:** to get rid of pointless carnage (because you'll need to make sure the person is not a revolutionary), add "rebel entourage" and replace trivial meta icons. 
 
 ### 1.3 Mindshield
 Has no effect on revolutionaries, but prevents further recruitment _(1.8)_.
@@ -85,7 +85,6 @@ We ask the station heads to take measures according to the SOP and common sense.
 
 #### This announcement comes after the fact:
 - **over 40%** of the crew have been turned to the revolutionary side 
-- **over 80%** of the rebels have exposed their holographic armband
 - **more than 2 heads or 50%** of the loyal crew are in a neutralized state within 5 minutes
 - **more than 30%** of the crew has dangerous items (homemade, contraband, explosives) in their inventory
 - **there are 3 or more rebel flags** on the station
