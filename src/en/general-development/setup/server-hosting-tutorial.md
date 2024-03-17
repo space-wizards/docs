@@ -85,9 +85,11 @@ By default, no admin privileges are set. A privileged administrator can give out
 ## Level 2: Server With Custom Code
 You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
 
+You first build the packaging tool using:
 `dotnet build Content.Packaging --configuration Release`
 
-`dotnet run --project Content.Packaging server --hybrid-acz`
+Then you can use Content.Packaging to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``
+`dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
 
 ```admonish info
 Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this
