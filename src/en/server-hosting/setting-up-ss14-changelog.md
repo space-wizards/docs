@@ -1,10 +1,94 @@
 # Setting up SS14.Changelog
 
-## Main setup
+## Setup
 
-See the repo: https://github.com/space-wizards/SS14.Changelog
+1. Clone the git repo for SS14.Changelog:
+```
+git clone https://github.com/space-wizards/SS14.Changelog
+```
+
+2. Build the project
+
+```
+dotnet publish -c Release --no-self-contained -r linux-x64
+```
+
+Output files will be in `SS14.Changelog/bin/Release/net8.0/linux-x64/publish/` (or something like that). Put them on your server somewhere.
+
+3. After you will want to git clone your SS14 repository somewhere. I would recommend the same folder as SS14.Changelog
+
+4. Setup your config
+
+Here is what you'll want to put in `appsettings.yml`. Please read every comment:
+
+```yml
+Serilog:
+  Using: [ "Serilog.Sinks.Console", "Serilog.Sinks.Loki" ]
+  MinimumLevel:
+    Default: Information
+    Override:
+      SS14: Verbose
+      Microsoft: "Warning"
+      Microsoft.Hosting.Lifetime: "Information"
+      Microsoft.AspNetCore: Warning
+
+  WriteTo:
+    - Name: Console
+      Args:
+        OutputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3} {SourceContext}] {Message:lj}{NewLine}{Exception}"
+
+  Enrich: [ "FromLogContext" ]
+
+  # If you want Loki logging.
+  #Loki:
+  #  Address: "http://localhost:3101"
+  #  Name: "centcomm"
+
+# Change URL/port to bind to here.
+urls: "http://localhost:45896"
+
+Changelog:
+  # Secret configured in the github webhook, to ensure authenticity.
+  GitHubSecret: "<SECRET>"
+  # The branch to look at for generating changelogs.
+  ChangelogBranchName: "master"
+  # The SSH Key to use to push/pull changes.
+  SshKey: '/opt/ss14_changelog/ssh_key'
+  # The on-disk repo to keep up to date and to generate changelogs in.
+  # You need to initialize this manually with git clone.
+  ChangelogRepo: '/var/lib/changelog/repo/'
+  # How long to wait after a changelog-change has been merged/pushed before we generate changelogs and push a commit.
+  DelaySeconds: 60
+  # The filename of the changelog file. I suggest you set this to something else so that upstream and your fork changelogs are seperated
+  # Note you will have to create this file on your repo ahead of time with at least one entry written manually right now otherwise it will explode
+  ChangelogFilename: "Fork.yml"
+
+AllowedHosts: "*"
+```
+
+Then you will want to create a github webhook on your repo. You should find it under repo settings.
+
+Click on add webhook and fill it in. Payload url being the url/ip of your server you will be hosting SS14.Changelog on and ```/hook```. Set the content type to ```application/json```. Set the secret to the same secret you put in the appsettings.yml. And click "Let me select individual events" and select "Pull requests" and "Pushes".
+
+![changelogs-setup-webhook1.png](../assets/images/hosting/changelogs-setup-webhook1.png)
+
+![changelogs-setup-webhook2.png](../assets/images/hosting/changelogs-setup-webhook2.png)
+
+URL for example would be: "https://yourserver.com/hook"
+
+You will need this url to be accessible from the internet, you are free to reverse proxy this. Or github can send it directly to the port if you wire it up with the port you provided in urls.
+
+Of course if you do the latter. Make sure to change it to http
+
+You will also mostly likely want a systemd service to run this in the background.
+
+## Discord webhook Setup
+
+To be written
 
 ## RSS feed
+
+If you would like to setup an rss feed for your changelogs then you can do this too.
 
 The publishing system can automatically publish the changelog to an RSS feed. This is done from [`actions_changelog_rss.py`](https://github.com/space-wizards/space-station-14/blob/master/Tools/actions_changelog_rss.py) which is ran from the [publishing workflow](https://github.com/space-wizards/space-station-14/blob/master/.github/workflows/publish.yml).
 
