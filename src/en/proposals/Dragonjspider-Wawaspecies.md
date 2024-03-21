@@ -17,7 +17,7 @@ Feel free to read all of that, but this doc will also summurize what is agreed t
 
 ## Copyright permissions
 Currently we have permission from a dev of Downpour, expeditions specifically, and we realise this isn't 100% confirmation, but this at least covers a few bases.
-![image](https://github.com/Dragonjspider/Wawa-Player-Species-/assets/140023808/ae7437cf-f4d3-42c1-8798-b8ce24a2725f
+![image](https://github.com/Dragonjspider/Wawa-Player-Species-/assets/140023808/ae7437cf-f4d3-42c1-8798-b8ce24a2725f)
 
 
 ## Species
