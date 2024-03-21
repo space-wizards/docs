@@ -143,6 +143,7 @@ Design Proposals
 - [Turf War](en/proposals/deltanedas-turf-war.md)
 - [Signaller Rework](en/proposals/deltanedas-signaller-rework.md)
 - [Thief antagonist](en/proposals/theshued-thief.md)
+- [PAI Expansion Slots](en/proposals/deltanedas-pai-expansion.md)
 
 Server Hosting
 ==============
