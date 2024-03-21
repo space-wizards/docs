@@ -13,7 +13,7 @@ Feedback would be greatly appreciated; as there are also some experimental ideas
 
 ## Background
 We have discussed this a lot on the discord, leading to this proposal (starting from https://discord.com/channels/310555209753690112/1212937078153805844/1220355368228618310). There have been a lot of ideas behind this, and there may be more that were overlooked.
-Feel free to read all of it, but this doc will also summarise what were agreed to be good ideas, as well as the more experimental/system effecting changes. We also understand that there may be some copyright issues with this, so I will attatch any permissions to this as well, If and when any are given.
+Feel free to read all of it, but this doc will also summarise what were agreed to be good ideas, as well as the more experimental/system effecting changes. We also understand that there may be some copyright issues with this, so I will attach any permissions to this as well, If and when any are given.
 
 ## Copyright permissions
 Currently we have permission from a dev of Downpour, expeditions specifically. Whilst this isn't "proper" approval, more of a semi-approval, we believe it allows us to continue with a project of making a "Scug Inspired" species. The following screenshots are provided courtesy of fairlysadpanda.
