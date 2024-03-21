@@ -15,8 +15,10 @@ Feedback would be greatly appreciated, as there are also some experimental ideas
 We have discussed this a lot on the discord, leading to this preposal (starting from https://discord.com/channels/310555209753690112/1212937078153805844/1220355368228618310), there has been a lot of ideas behind this, and there may be some that was looked over.
 Feel free to read all of that, but this doc will also summurize what is agreed to be good ideas, as well as the more experimental/system effecting changes. We also understand that there may be some copyright issues with this, so I will attatch any permissions to this as well. If any are given.
 
-We got permission from a downpour dev (![image](https://github.com/Dragonjspider/Wawa-Player-Species-/assets/140023808/ae7437cf-f4d3-42c1-8798-b8ce24a2725f)
-)
+## Copyright permissions
+Currently we have permission from a dev of Downpour, expeditions specifically, and we realise this isn't 100% confirmation, but this at least covers a few bases.
+![image](https://github.com/Dragonjspider/Wawa-Player-Species-/assets/140023808/ae7437cf-f4d3-42c1-8798-b8ce24a2725f
+
 
 ## Species
 Our Official name for the species would be Wawa (proposed by fairlysadpanda), I realise this isn't exactly "creative" for them, so this is more filler than anything. We're not going to be naming them Scug(s), or Slugcat(s), because of more specific issues with copyright and such.
