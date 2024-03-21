@@ -33,17 +33,16 @@ Alternatively, they could use a single word describing their character, similar 
 Or finally, it could be pet names, which may be too far off what would normally be acceptable, but may be considered for names. (because of course people would name these things silly names and stuff)
 
 ## Abilities
-They will deal additional piercing damage with spears (+4 damage with spears) (suggested by thecatbastard, cornerdogs, dragonjspider)
-The following is the time it would take to crit a human with no resists: 
+- They will deal additional piercing damage with spears (+4 damage with spears) (suggested by thecatbastard, cornerdogs, dragonjspider)The following is the time it would take to crit a human with no resists: 
+  - 1h spear: 12 > 16 : Crits in 9 vs 7 
+  - 2h spear: 16 > 20 : Crits in 7 vs 5 
+  - 1h Reinforced spear: 15 > 19 : Crits in 7 vs 6
+  - 2h Reinforced spear: 19 > 23 : Crits in 6 vs 5 
+  - 1h Plasma spear: 18 > 22 : Crits in 6 vs 5
+  - 2h Plasma spear: 22 > 26 : Crits in 5 vs 4 
+  - 1h Uranium spear: 18 > 22 : Crits in 6 vs 5
+  - 2h Uranium spear: 22 > 26 : Crits in 5 vs 4
 
-* 1h spear: 12 > 16 : Crits in 9 vs 7 
-* 2h spear: 16 > 20 : Crits in 7 vs 5 
-* 1h Reinforced spear: 15 > 19 : Crits in 7 vs 6
-* 2h Reinforced spear: 19 > 23 : Crits in 6 vs 5 
-* 1h Plasma spear: 18 > 22 : Crits in 6 vs 5
-* 2h Plasma spear: 22 > 26 : Crits in 5 vs 4 
-* 1h Uranium spear: 18 > 22 : Crits in 6 vs 5
-* 2h Uranium spear: 22 > 26 : Crits in 5 vs 4
 
 * They will be small in size, similar to dwarfs, making them easier to shove down than other species.
 * They will take 20% additional damage from pierce, making Scug vs Scug combat even more lethal, and encourages a nimble playstyle rather than running face first into a gunfight.
