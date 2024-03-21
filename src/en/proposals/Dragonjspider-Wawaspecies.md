@@ -36,29 +36,30 @@ Or finally, it could be pet names, which may be too far off what would normally 
 They will deal additional piercing damage with spears (+4 damage with spears) (suggested by thecatbastard, cornerdogs, dragonjspider)
 The following is the time it would take to crit a human with no resists: 
 
-1h spear: 12 > 16 : Crits in 9 vs 7 
-2h spear: 16 > 20 : Crits in 7 vs 5 
-1h Reinforced spear: 15 > 19 : Crits in 7 vs 6
-2h Reinforced spear: 19 > 23 : Crits in 6 vs 5 
-1h Plasma spear: 18 > 22 : Crits in 6 vs 5
-2h Plasma spear: 22 > 26 : Crits in 5 vs 4 
-1h Uranium spear: 18 > 22 : Crits in 6 vs 5
-2h Uranium spear: 22 > 26 : Crits in 5 vs 4
+* 1h spear: 12 > 16 : Crits in 9 vs 7 
+* 2h spear: 16 > 20 : Crits in 7 vs 5 
+* 1h Reinforced spear: 15 > 19 : Crits in 7 vs 6
+* 2h Reinforced spear: 19 > 23 : Crits in 6 vs 5 
+* 1h Plasma spear: 18 > 22 : Crits in 6 vs 5
+* 2h Plasma spear: 22 > 26 : Crits in 5 vs 4 
+* 1h Uranium spear: 18 > 22 : Crits in 6 vs 5
+* 2h Uranium spear: 22 > 26 : Crits in 5 vs 4
 
-They will be small in size, similar to dwarfs, making them easier to shove down than other species.
-They will take 20% additional damage from pierce, making Scug vs Scug combat even more lethal, and encourages a nimble playstyle rather than running face first into a gunfight.
-They will have 10% resist to either blunt or slash, undecided. (suggested by piksqu, vytian, thecatbastard, dragonjspider)
-They will be able to run under tables freely, but not under doors, windoors, or plastic flaps. (suggested by thecatbastard, piksqu, vytian)
+* They will be small in size, similar to dwarfs, making them easier to shove down than other species.
+* They will take 20% additional damage from pierce, making Scug vs Scug combat even more lethal, and encourages a nimble playstyle rather than running face first into a gunfight.
+* They will have 10% resist to either blunt or slash, undecided. (suggested by piksqu, vytian, thecatbastard, dragonjspider)
+* They will be able to run under tables freely, but not under doors, windoors, or plastic flaps. (suggested by thecatbastard, piksqu, vytian)
 
 
 # Optional/experimental abilities
 This section will go over ideas that may be too strong, difficult to code, or other various reasons.
 
-Once dead, they will have a 30 minute respawn time, respawning at the last bed they slept in. (suggested by erisws)
-They can have the ability to freely move around in disposals. (suggested by erisws) This would require massive changes to how the disposals work, and may be too far out of scope for a single species.
-They can deal additional damage from thrown items. (suggested by thecatbastard, cornerdogs)
-They can climb into disposals faster. (suggested by cornerdogs)
-They can have some changes in diet, the same potentially not being able to eat meat, but fruit and vegitables. (suggested by dragonjspider)
-They can probably take more damage from caustic. (suggested by cornerdogs) but this was considered too niche, and possibly feature bloat.
-They could have a storage implant Esque ability, limited to small or tiny items. (suggested by dragonjspider)
-They could also take damage from mouse traps, dealing 30 brute damage to them, this way you can try to keep them from going under tables you don't want them under. (suggested by piksqu)
+* Once dead, they will have a 30 minute respawn time, respawning at the last bed they slept in. (suggested by erisws)
+* Maybe during crit, they could have a very small amount of asphyx, but slowly regenerate brute naturally. (suggested by vytian) Something like "reverse slimes"
+* They can have the ability to freely move around in disposals. (suggested by erisws) This would require massive changes to how the disposals work, and may be too far out of scope for a single species.
+* They can deal additional damage from thrown items. (suggested by thecatbastard, cornerdogs)
+* They can climb into disposals faster. (suggested by cornerdogs)
+* They can have some changes in diet, the same potentially not being able to eat meat, but fruit and vegitables. (suggested by dragonjspider)
+* They can probably take more damage from caustic. (suggested by cornerdogs) but this was considered too niche, and possibly feature bloat.
+* They could have a storage implant Esque ability, limited to small or tiny items. (suggested by dragonjspider)
+* They could also take damage from mouse traps, dealing 30 brute damage to them, this way you can try to keep them from going under tables you don't want them under. (suggested by piksqu)
