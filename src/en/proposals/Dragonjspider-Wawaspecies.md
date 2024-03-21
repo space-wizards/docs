@@ -50,7 +50,7 @@ Or finally, it could be pet names, which may be too far off what would normally 
 * They will be able to run under tables freely, but not under doors, windoors, or plastic flaps. (suggested by thecatbastard, piksqu, vytian)
 
 
-# Optional/experimental abilities
+## Optional/experimental abilities
 This section will go over ideas that may be too strong, difficult to code, or other various reasons.
 
 * Once dead, they will have a 30 minute respawn time, respawning at the last bed they slept in. (suggested by erisws)
