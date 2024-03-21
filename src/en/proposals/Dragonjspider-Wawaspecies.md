@@ -7,16 +7,16 @@
 
 
 ## Overview
-This proposal's plan is to add Scugs as a playable roundstart species, like lizards or humans. While that is our main goal, if the option is presented instead, a ghost role for them would be nice as well.
+This proposal's plan is to add "Wawa" (Inspired by Scugs) as a playable roundstart species, like lizards or humans. While that is our main goal, if the option is presented instead, a ghost role for them would be nice as well.
 This doc will go into detail about their stats and abilities, and discussing the possible impacts some of these may have in different scenarios.
-Feedback would be greatly appreciated, as there are also some experimental ideas that may be unbalanced, or unfun to play around.
+Feedback would be greatly appreciated; as there are also some experimental ideas that may be unbalanced, or unfun to play around.
 
 ## Background
-We have discussed this a lot on the discord, leading to this preposal (starting from https://discord.com/channels/310555209753690112/1212937078153805844/1220355368228618310), there has been a lot of ideas behind this, and there may be some that was looked over.
-Feel free to read all of that, but this doc will also summurize what is agreed to be good ideas, as well as the more experimental/system effecting changes. We also understand that there may be some copyright issues with this, so I will attatch any permissions to this as well. If any are given.
+We have discussed this a lot on the discord, leading to this proposal (starting from https://discord.com/channels/310555209753690112/1212937078153805844/1220355368228618310). There have been a lot of ideas behind this, and there may be more that were overlooked.
+Feel free to read all of it, but this doc will also summarise what were agreed to be good ideas, as well as the more experimental/system effecting changes. We also understand that there may be some copyright issues with this, so I will attatch any permissions to this as well, If and when any are given.
 
 ## Copyright permissions
-Currently we have permission from a dev of Downpour, expeditions specifically, and we realise this isn't proper approval, more of a semi-approval, but these at least cover a few bases and gives a bit more context.
+Currently we have permission from a dev of Downpour, expeditions specifically. Whilst this isn't "proper" approval, more of a semi-approval, we believe it allows us to continue with a project of making a "Scug Inspired" species. The following screenshots are provided courtesy of fairlysadpanda.
 
 ![image](https://github.com/Dragonjspider/Wawa-Player-Species-/assets/140023808/ae7437cf-f4d3-42c1-8798-b8ce24a2725f)
 ![image](https://github.com/Dragonjspider/Wawa-Player-Species-/assets/140023808/69d00309-faae-41e0-a6aa-9e2916052de3)
@@ -24,8 +24,8 @@ Currently we have permission from a dev of Downpour, expeditions specifically, a
 
 
 ## Species
-Our Official name for the species would be Wawa (proposed by fairlysadpanda), I realise this isn't exactly "creative" for them, so this is more filler than anything. We're not going to be naming them Scug(s), or Slugcat(s), because of more specific issues with copyright and such.
-For personalization, they will be able to have any color for skin, similar to lizards or moths.
+Our Official name for the species would be Wawa (proposed by fairlysadpanda). Whilst this isn't exactly "creative" for them, we believe a distinct but still related name suits them. We're not going to be naming them Scug(s), or Slugcat(s), because of more specific issues with copyright and such, and lack of explicit written permission.
+For personalization they will be able to have most colors for skin, similar to lizards or moths.
 Anything unmentioned will be similar to humans, like having two hands or a backpack slot.
 
 The conventional naming scheme for them, while mostly a suggestion, would be as follows: Number, Object. E.G: Seven-Hundred Nukies, Twenty-Eight Wounds, Seventy-Three Bombs. (suggested by kiterny)
@@ -61,4 +61,4 @@ This section will go over ideas that may be too strong, difficult to code, or ot
 * They can have some changes in diet, the same potentially not being able to eat meat, but fruit and vegitables. (suggested by dragonjspider)
 * They can probably take more damage from caustic. (suggested by cornerdogs) but this was considered too niche, and possibly feature bloat.
 * They could have a storage implant Esque ability, limited to small or tiny items. (suggested by dragonjspider)
-* They could also take damage from mouse traps, dealing 30 brute damage to them, this way you can try to keep them from going under tables you don't want them under. (suggested by piksqu)
+* They could also take damage from mouse traps, dealing an unspecified amount of brute damage to them, this way you can try to keep them from going under tables you don't want them under. (suggested by piksqu)
