@@ -87,7 +87,7 @@ If true, this device will receive all packets sent on the `receiveFrequency`, in
 Determines whether a device should attempt to join a network on map init. Usually true, unless a device was explicitly disconnected from a network, in which case it should not re-connect when a map is re-loaded.
 
 **sendBroadcastAttemptEvent**
-Sends the broadcast recipients list to the sender before breadcasting a packet so it can be filtered if set to `true`.
+Sends the broadcast recipients list to the sender before broadcasting a packet so it can be filtered if set to `true`.
 Defaults to `false`.
   
 </details>
@@ -198,7 +198,7 @@ components:
 There are three events used by the system to send messages to devices:
 
 **BeforeBroadcastAttemptEvent**
-This event is sent to an entity that is about to breadcast a packet if `sendBroadcastAttemptEvent` is set to true on the sending device. This event can be used to modify the recipients of that broadcast or to cancel it.
+This event is sent to an entity that is about to broadcast a packet if `sendBroadcastAttemptEvent` is set to true on the sending device. This event can be used to modify the recipients of that broadcast or to cancel it.
 
 <details>
 <summary>DETAILS</summary>
@@ -209,7 +209,7 @@ This event is sent to an entity that is about to breadcast a packet if `sendBroa
    The list of recipients the broadcast is about to send packets to.
  **Property: ModifiedRecipients**
    This is a property on the event that can to be set to the new list of recipients.
-	 If this property is null the breadcast will be canceled.
+	 If this property is null the broadcast will be canceled.
 
 </details>  
   
