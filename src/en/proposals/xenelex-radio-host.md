@@ -6,7 +6,7 @@
 
 ## Overview
 
-This document proposes transitioning the Musician role and to a Radio Host role and potentially merging it with the Reporter role.The change aims to enhance player interaction and media engagement within the game. By elevating the Musician role to a Radio Host, it will expandg responsibilities to include broadcasting music, talk shows, and news. Also, considers merging the Reporter role into the Radio Host, centralizing media functions and simplifying mapping requirements.
+This document proposes transitioning the Musician role and to a Radio Host role and potentially merging it with the Reporter role.The change aims to enhance player interaction and media engagement within the game. By elevating the Musician role to a Radio Host, it will expand responsibilities to include broadcasting music, talk shows, and news. Also, considers merging the Reporter role into the Radio Host, centralizing media functions and simplifying mapping requirements.
 
 ## Role Transition and Potential Merger
 Radio Host Role:
@@ -16,13 +16,13 @@ Reporter Merger:
 Potentially merge the Reporter role into the Radio Host, centralizing media functions and simplifying mapping requirements.
 
 ## Features
-**PDA Cartridge Transcription**: A new PDA cartridge will be introduced, capable of transcribing the Radio Host’s spoken words in real-time, allowing players to read broadcasts if they cannot listen to them. Te design of it would be like teleprompter showing the spoken words and the person who said it, there sohuld also be a topic on the upper left of the message transcription that could be changed by the radio host using the Radio Console (more on that later), and the pda will only transcribe spoken words to a linked extended microphone that is connected to a server or the radio console.
+**PDA Cartridge Transcription**: A new PDA cartridge will be introduced, capable of transcribing the Radio Host’s spoken words in real-time, allowing players to read broadcasts if they cannot listen to them. The design of it would be like teleprompter showing the spoken words and the person who said it, there should also be a topic on the upper left of the message transcription that could be changed by the radio host using the Radio Console (more on that later), and the pda will only transcribe spoken words to a linked extended microphone that is connected to a server or the radio console.
 
-**Headset Music Integration**: Headsets will now have the functionality to tune into the Radio Host’s channel and play music directly from their broadcasts, providing a more immersive experience. the headset can also now turn up or turn down the music playing from the radio station.
+**Headset Music Integration**: Headsets will now have the functionality to tune into the Radio Host’s channel and play music directly from their broadcasts, providing a more immersive experience. The headset can also now turn up or turn down the music playing from the radio station.
 
 **Radio Host Room Camera**: A camera will be installed in the Radio Host’s room to have visual broadcasting. This will enable players to engage in debates and see live reactions from the Radio Host.
 
- **Unique Radio Host Identifiers**: By using a new custom Headset called the Radio Headset, radio hosts will have unique names or call signs in radio communications. For example, a Radio Host might use “SS14 News" as their identifier when delivering urgent updates in common comms.
+ **Unique Radio Host Identifiers**: By using a new custom Headset called the Radio Headset, radio hosts will have unique names or call signs in radio communications. For example, a Radio Host might use "SS14 News" as their identifier when delivering urgent updates in common comms.
 
  **Music Queue**: Allow the Radio Host to set up a playlist or queue of music that can be broadcasted through the station’s headsets.
 
