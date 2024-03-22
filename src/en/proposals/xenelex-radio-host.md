@@ -51,7 +51,7 @@ Unique Feature: The headset will allow Radio Hosts to broadcast using their radi
 ### Syndicate Unique Items
 The Syndicate Radio Host items should be primarily Auxiliary or Support equipment. This classification will position them as pivotal components of an intelligence network, offering strategic advantages. Other syndicates can leverage this network for enhanced communication and coordination, thereby reinforcing teamwork.
 
-Electric Extended Microphone
+**Electric Extended Microphone**
 
  A modified microphone that delivers an electric shock, causing Shock and stamina damage to the target.
 
@@ -59,7 +59,7 @@ Damage: Deals about 8 shock. Capable of causing stamina critical condition in ap
 
 Cost: The price for this item is to be determined.
 
-Sonic Grenade
+**Sonic Grenade**
 
 Functionality: A throwable device that emits a powerful sonic blast, stunning anyone in its vicinity.
 
@@ -73,14 +73,16 @@ Direct Hit (0 tiles away): Stuns for 5 seconds.
 
 Cost: Priced between 6 to 8 telecrystals.
 
-Fake Radio Station Cartridge: 
+**Fake Radio Station Cartridge**
+
 A deceptive device that appears identical to Radio Station Cartridge but contains embedded Syndicate code.
 
 Functionality: When installed in a PDA, the fake cartridge scrambles the ID name when logged by a door, rendering the user anonymous and complicating identification efforts by security, using the fake cartridge can save Syndicate members telecrystals without the need for multiple, costly agent id cards.
 
 Cost: priced between 2-4 Telecrystals.
 
-Comms Interceptor Module:
+**Comms Interceptor Module**
+
 The Comms Interceptor Module is a sophisticated device designed for a Syndicate Radio Host it will come in a pair. One big module to install onto the antenna and the other a small one inserted into the Radio Headset
 
 Interception: The module grants the ability to receive all comms messages from various departments when installed onto the antenna can be removed after a long doafter. The intercepted message will be sent to the receiving headset.
@@ -93,7 +95,7 @@ Downside: the inability to broadcast music and inactivty in the pda app will rai
 
 
 ## Examples
-Music Show
+**Music Show**
 
 Title: “Galactic Grooves”
 
@@ -103,7 +105,7 @@ Players can submit song requests via comms.
 
 Interaction: Collaborate with Passengers for live performances, and allow listeners to vote for their favorite tracks.
 
-Talk Show
+**Talk Show**
 
 Title: “Space Station Speak”
 
@@ -111,7 +113,7 @@ Concept: A talk show featuring interviews with prominent station characters, dis
 
 Interaction: Use the camera in the Radio Host room to stream video interviews, enhancing viewer engagement.
 
-Quiz Show
+**Quiz Show**
 
 Title: “Astro-Quiz Hour”
 
@@ -119,7 +121,7 @@ Concept: A game show where contestants answer trivia questions about the game un
 
 Interaction: Integrate with the Reporter (IF not merged) role to provide real-time updates and questions based on current events in the game.
 
-Collaboration with Reporter (IF not merged)
+**Collaboration with Reporter** (IF not merged)
 
 Title: “SS14 Live News”
 
