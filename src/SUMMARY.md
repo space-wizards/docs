@@ -129,6 +129,7 @@ Design Proposals
 ----------------------
 
 - [Anomaly Cores](en/proposals/mirrorcult-anomaly-cores.md)
+- [Xenobiology](en/proposals/emogarbage-xenobio.md)
 - [Machine Upgrading Rework](en/proposals/emogarbage-machine-upgrading-rework.md)
 - [PDA Messaging](en/proposals/julian-vasilis-pda-messaging.md)
 - [Plant Genetics](en/proposals/deltanedas-plant-genetics.md)
