@@ -54,6 +54,31 @@ These principles suggest changes to devices:
 
 - ~~**Make heaters and freezers thermodynamically sound.** Keeping a station properly heated or cooled is actually a substantial real-life problem. Because of the existence of generators like the TEG, keeping things thermodynamically balanced is also a great way to prevent infinite power hacks.~~ (implemented as a part of [atmos speedup](https://github.com/space-wizards/space-station-14/pull/22372))
 
+### Fast(er) Spacing
+
+**Spacing should be fast(er).** For purposes of this design doc, "fast(er) spacing" means `0.05 < atmos.mmos_spacing_speed < 1.0`.
+
+At the time of writing, the current "slow" spacing has `atmos.mmos_spacing_speed = 0.05`. A `atmos.mmos_spacing_speed = 1.0` corresponds to the old "instant spacing behavior". This design doc advocates for spacing that is faster than what it is now, but not as fast as it used to be.
+
+This should come with the necessary bits to make it work well in a balanced way, for example:
+
+- Single tile double firelocks for special zones on the station that should be isolated from each other
+- Mitigations for mass spacing like hardsuit puncturing (see below)
+
+#### Arguments For (Pros)
+
+- **Makes more intuitive sense.** Recent events has taught us that a door plug blowout even in Earth's atmosphere is quite serious. In space spacing should be fast because that's what makes more intuitive sense. It ruins your immersion if somebody can just casually waltz into space and surive just fine for two minutes.
+
+- **Is better for [Intuitive and Inter-Connected Simulation](https://docs.spacestation14.com/en/space-station-14/core-design.html#intuitive-and-inter-connected-simulation).** Spacing should have serious consequences that that create engaging gameplay/decisions while still being intuitive enough to learn and create new emergent gameplay opportunities, e.g. "I can't go through this hallway because it's spaced, so I have to think of a way to survive by taking a detour through these maints." Spacing should be treated as a serious problem.
+
+- **Is [more fun](https://docs.spacestation14.com/en/space-station-14/core-design.html#seriously-silly).** You should be able to be ejected out of the station at high speed due to the atmos canon effect.
+
+- **Is better for [agency](https://docs.spacestation14.com/en/space-station-14/core-design.html#player-interactionagency).** Antagonists will have better ways to control how players deal with problems by creating opportunities for spacing. Engineers will have more agency to actually fix problems because the result of their actions (or inaction standing around not fixing anything) will have real consequences for the station. Problems with mass spacing can be mitigated by strategies such as making hardsuits lose pressure protection if they take damage. For example, this would motivate nukies to not space because their own hardsuits would be ineffective after taking damage, while still enabling engineers who stay out of the combat zone to be able to effectively fix problems.
+
+- **Is easier for players to troubleshoot.** It is much easier to identify and fix a big leak than it is to quietly have air leak away and you can't even tell.
+
+- **Doesn't break distro.** See [Areas are spaced too slowly for vents to ever stop](https://github.com/space-wizards/space-station-14/issues/20293)
+
 ## New Stuff
 
 This list isn't meant to be exhaustive. Some of the ideas discussed here aren't fully fleshed out. Some of these call for porting mechanics from SS13 with changes as needed/appropriate.
