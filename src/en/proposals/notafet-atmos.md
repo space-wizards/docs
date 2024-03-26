@@ -24,7 +24,7 @@ Make atmos more fun and intuitive to play by adding more devices, engines, and p
 
 Using just the devices that already exist, there are some tweaks that can significantly improve gameplay in atmos by making it possible to effectively respond to events like fires or hull breaches.
 
-- **Globally increase MaxTransferRate** for devices that are not flow-based, e.g. pumps.
+- ~~**Globally increase MaxTransferRate** for devices that are not flow-based, e.g. pumps.~~ (implemented in [atmos speedup](https://github.com/space-wizards/space-station-14/pull/22372))
 
   - This solves problem (2). Among other things, it would make scrubbers and other devices actually useful for combating atmospheric problems. Currently players prefer to just space everything. Increasing this would provide a feasible alternative.
 
@@ -52,7 +52,7 @@ These principles suggest changes to devices:
 
     - Heaters and freezers are the only "true" unary devices. Even vents/scrubbers which appear unary actually operate on flow from the tile atmosphere into the pipe net.
 
-- **Make heaters and freezers thermodynamically sound.** Keeping a station properly heated or cooled is actually a substantial real-life problem. Because of the existence of generators like the TEG, keeping things thermodynamically balanced is also a great way to prevent infinite power hacks.
+- ~~**Make heaters and freezers thermodynamically sound.** Keeping a station properly heated or cooled is actually a substantial real-life problem. Because of the existence of generators like the TEG, keeping things thermodynamically balanced is also a great way to prevent infinite power hacks.~~ (implemented as a part of [atmos speedup](https://github.com/space-wizards/space-station-14/pull/22372))
 
 ## New Stuff
 
@@ -60,9 +60,9 @@ This list isn't meant to be exhaustive. Some of the ideas discussed here aren't 
 
 - **A "substation" but for gas,** "gas manifold", distribution station, or whatever you want to call it. This would encourage distro to be at high pressure (for higher transfer rates) but then gas distribution stations scattered around the station would bring it down to a normal pressure that is released to vents. Adds antag complexity and gives atmos techs more control.
 
-- **Add gas condensation.** This would enable fractional distillation and permit conversion between gas and the equivalent reagent.
+- ~~**Add gas condensation.** This would enable fractional distillation and permit conversion between gas and the equivalent reagent.~~ (implemented in [#22436](https://github.com/space-wizards/space-station-14/pull/22436))
 
-- **Space heaters** to correct local temperature problems.
+- ~~**Space heaters** to correct local temperature problems.~~ (implemented in [#25250](https://github.com/space-wizards/space-station-14/pull/25250))
 
 - **Make station air flow-based.** Currently, air vents release air when the pressure is too low, and by default scrubbers only scrub waste gases. So if for some reason the station gets cold, there's no easy way to cycle the air out and heat it up. Of course, one could set all the scrubbers to siphon, heat their distro, and then set the air alarm to fill. But that would just be describing a bad way of doing what real life HVAC systems have always been doing: keep the air flowing.
 
