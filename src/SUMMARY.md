@@ -142,7 +142,8 @@ Design Proposals
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
 - [Signaller Rework](en/proposals/deltanedas-signaller-rework.md)
-- [Thief antagonist](en/proposals/theshued-thief.md)
+- [Thief Antagonist](en/proposals/theshued-thief.md)
+- [Informant Antagonist](en/proposals/krunklehorn-informant.md)
 
 Server Hosting
 ==============
