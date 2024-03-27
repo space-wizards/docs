@@ -139,6 +139,7 @@ Design Proposals
 - [Atmos Roadmap](en/proposals/notafet-atmos.md)
 - [Cleanup Crew](en/proposals/mirrorcult-cleanup-crew-gamemode.md)
 - [Exterminator](en/proposals/deltanedas-exterminator.md)
+- [Wall Worm](en/proposals/ilya246-wall-worm.md)
 - [Power Generation Pattern](en/proposals/tday93-power-generation.md)
 - [Turf War](en/proposals/deltanedas-turf-war.md)
 - [Signaller Rework](en/proposals/deltanedas-signaller-rework.md)
