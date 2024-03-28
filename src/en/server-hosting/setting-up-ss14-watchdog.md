@@ -365,6 +365,13 @@ systemctl daemon-reload
 systemctl enable --now SS14.Watchdog
 ```
 
+```admonish info
+If you are unable to launch the Watchdog with systemd but you can manually. Run ``journalctl -xe | grep SS14.Watchdog``. 
+If you get SELinux errors then you can disable SELinux by setting ```SELINUX=permissive```` into ```/etc/selinux/config``` to change SELinux to warn only (permissive).
+If you wanna keep it on then figure out yourself how to add policies.
+For any other errors you should have a good hint there too.
+```
+
 ## General Troubleshooting
 
 ### Server keeps restarting every 30 seconds

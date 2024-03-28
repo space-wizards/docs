@@ -157,6 +157,7 @@ Server Hosting
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
 - [Setting up a Discord Bot](en/server-hosting/setting-up-redbot.md)
+- [Zero to full production guide](en/server-hosting/the-full-fool-server-guide-0toprod.md)
 - [Maintenance]()
   - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 

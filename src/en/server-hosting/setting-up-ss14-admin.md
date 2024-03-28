@@ -15,7 +15,7 @@ Clone the code, then recursive the latest SS14 which can be easily done with `gi
 
 After that you can compile it with `dotnet publish -c Release -r linux-x64 --no-self-contained`.
 
-The files will be dropped in `SS14.Admin/bin/Release/net7.0/linux-x64/publish`. 
+The files will be dropped in `SS14.Admin/bin/Release/net8.0/linux-x64/publish`. 
 
 `SS14.Admin` is the executable to run, I would recommend copying those files somewhere else like `/opt/SS14.Admin`.
 
@@ -75,7 +75,7 @@ authServer: "https://central.spacestation14.io/auth"
 ```
 
 ```admonish warning
-I will STRONGLY recommend you put this behind a reverse proxy if you are not already with SSL.
+You WILL need to secure your server with SSL (Https) otherwise you won't be able to authenticate your account due to browser security stuff.
 ```
 
 ## Authentication config
@@ -90,6 +90,10 @@ Once you pass all that you should get a **Client ID**, that value will go into `
 
 ```admonish warning
 Your client secret will only be shown once, if you lose it make a new one.
+```
+```admonish info
+If you are seeing a screen saying "An error occured while proccessing your request" with an ID from central.spacestation14.io. It probably means you somehow messed up the above.
+Double check your OAuth in your config and in the OAuth app. Otherwise you can request for logs in #hosting
 ```
 
 ## Finishing up
@@ -115,11 +119,23 @@ WantedBy=multi-user.target
 ```
 Of course modify it to your needs first and use `systemctl` to start it up.
 
+## Caddy config
+The superior option (im bias)
+```
+example.com 
+{
+
+	handle /admin* {
+        reverse_proxy localhost:27689
+    }
+}
+```
+
 ## Nginx config
 If you want to use nginx, to save your sanity I have provided a config
 ```json
     location /admin/ {
-        proxy_pass          http://localhost:<CHANGE TO YOUR PORT>;
+        proxy_pass          http://127.0.0.1:27689;
         proxy_http_version  1.1;
         proxy_set_header    Upgrade $http_upgrade;
         proxy_set_header    Connection keep-alive;
