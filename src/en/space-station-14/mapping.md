@@ -258,6 +258,9 @@ To enable the cargo shuttle for testing on a local server, run the following in 
 
 	sudo cvar shuttle.cargo true
 
+## Escape Pods
+To map escape pods, simply map the docking airlock with the suffix `escape 3x4`. Make sure to leave a 3x4 gap of space outside the dock for it to spawn when the map is initialised, plus at least a tile of space around that gap for logical reasons.
+
 # Planets
 This is a space station simulator, after all, but if for some reason you need maps that function like planets that have a breathable atmosphere and gravity that can't be turned off (see the Nukie Planet):
 
