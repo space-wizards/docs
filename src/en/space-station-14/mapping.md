@@ -105,6 +105,21 @@ To screenshot your station you need both a map prototype, stored on Resources/Ma
 
 After this, run the command `dotnet run --project Content.MapRenderer {your_map_id_here}`, with the game map prototype ID. You can also set command line arguments through your IDE and run it that way. The image should be inside Resources/MapImages once completed.
 
+If you get an error referencing UID "0", you likely have an invalid configured component somewhere. Open your map file in a text editor and search for `- invalid`. Delete the whole component it's attached to on that entity but not the whole entity. 
+For example I have an entity here with a `DeviceNetwork` component with an invalid configuration. In this example directly below, I'd delete everything from `- type: DeviceNetwork` down, leaving the UID and transform component untouched. Save your mape file after removing all invalids then retry rendering your map. I suggest undoing these changes after you render your map as you likely just removed some machine linking or useful components.
+```
+  - uid: 21918
+    components:
+    - type: Transform
+      pos: 41.5,5.5
+      parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 22081
+```
+
 ## Running your map for the first time
 Now that you've completed your map, you'll want to test it in game to ensure you can spawn correctly and there are no issues with doors, access, atmos, power etc etc. To do this:
 1. Copy your newly saved mapping file from "space-station-14/bin/Content.Server/data/" to "space-station-14/resources/maps/"
