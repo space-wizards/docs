@@ -105,7 +105,7 @@ To screenshot your station you need both a map prototype, stored on Resources/Ma
 
 After this, run the command `dotnet run --project Content.MapRenderer {your_map_id_here}`, with the game map prototype ID. You can also set command line arguments through your IDE and run it that way. The image should be inside Resources/MapImages once completed.
 
-If you get an error referencing UID "0", you likely have an invalid configured component somewhere. Open your map file in a text editor and search for `- invalid`. Delete the whole component it's attached to on that entity but not the whole entity. 
+If you get an error referencing UID "0" such as `[ERRO] map: Error in map file: found local entity UID '0' which does not exist.`, you likely have an invalid configured component somewhere. Open your map file in a text editor and search for `- invalid`. Delete the whole component it's attached to on that entity but not the whole entity. 
 For example I have an entity here with a `DeviceNetwork` component with an invalid configuration. In this example directly below, I'd delete everything from `- type: DeviceNetwork` down, leaving the UID and transform component untouched. Save your mape file after removing all invalids then retry rendering your map. I suggest undoing these changes after you render your map as you likely just removed some machine linking or useful components.
 ```
   - uid: 21918
