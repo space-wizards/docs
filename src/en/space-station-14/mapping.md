@@ -56,7 +56,7 @@ If you choose not to do this, you will need to download a [recent server build](
 ## Start Mapping
 
 Now to start creating maps follow the below steps:
-1. Start both the client and server. On Windows, this can be done by launching both the "runclient.bat" and "runserver.bat" files in your cloned repository directory.
+1. Start both the client and server. On Windows, this can be done by launching both the "runclient.bat" and "runserver.bat" files in your cloned repository directory, after building the project / solution at least once.
 2. Once the game client loads up, connect to the server.
 3. Press the backtick/tilde key <kbd>`</kbd> to open the debug console, which allows you to run console commands.
 4. Run the `mapping [MapID] [MapFile]` command to either create a new map or edit an existing one.
@@ -89,7 +89,7 @@ The actions toolbar allows you to assign entity, tile, and decal placement actio
 
 To assign an entity to a slot, you can just open the entity placement window and click on an entity to start placing it. Clicking on an empty toolbar slot instead of somewhere in the game world will save that entity to that slot. If you are currently in the entity-eraser mode, clicking on an empty slot will instead create a shortcut to the erase-mode. You can assign tile-placement actions in a similar way. Note that tile deletion is simply the same as placing down space-tiles. Finally, to assign decal actions you need to open the decal menu and configure your decal selection. Once again, clicking on an empty slot will add that decal to the toolbar. You can't save a decal-erasing shortcut to the toolbar, as this requires the decal placement window to be open. To remove an action from a slot, simply right click that slot (assuming the action toolbar has not been locked/frozen).
 
-A preset collection of mapping actions can be loaded to the toolbar by using the loadmapacts command. Note that as actions are unique to the currently controlled entity, if you use ghost or possession commands you will lose these actions and will have to re-run the command.
+A preset collection of mapping actions can be loaded to the toolbar by using the `loadmapacts` command. Note that as actions are unique to the currently controlled entity, if you use ghost or possession commands you will lose these actions and will have to re-run the command.
 
 ## Multi-Grid and Multi-Station Maps
 A station and a grid are not the same thing. For example, each asteroid is not it's own station, while a station may consist of multiple grids (e.g. escape shuttles). Most maps only have one grid, though you do still have to set up stations regardless. However, since you can use savemap and loadmap to save/load maps with multiple grids, there is support for overriding this behaviour.
@@ -149,7 +149,7 @@ If your map is now complete, follow the attached checklist [here](https://hackmd
 - To remove tiles use the "Space" tile.
 - You do not need to place plating down first then tiles, you can just place any tile and it will pry up to show the below tile in game (usually plating).
 - Similary you can overwrite tiles by placing a new one in its place - no need to remove them first.
-- Be careful when placing new tiles that they are part of the correct grid - place them from on top of an existing tile if bulk placing or making sure it snaps to an existing tile.
+- Be careful when placing new tiles that they are part of the correct grid - place them from on top of an existing tile if bulk placing or making sure it snaps to an existing tile. Run `lsgrid` in console periodically to check you haven't created more grids.
 
 ## Entity Spawner and Placement
 - Search for entities using their ID in the search bar, then you can add it to your action bar on the left side for later use by clicking with ig selected into a slot.
@@ -158,12 +158,12 @@ If your map is now complete, follow the attached checklist [here](https://hackmd
 
 
 ## Atmospherics
-If you added new rooms or changed layouts, you need to fix roundstart atmos after making those changes. Use the fixgridatmos [Grid euID] command to do this. (Press F3 or run lsgrid to find your grid euID)
+If you added new rooms or changed layouts, you need to fix roundstart atmos after making those changes. Use the `fixgridatmos [Grid euID]` command to do this. (Press F3 or run lsgrid to find your grid euID)
 
 If you're creating a new map from scratch instead of editing an existing map, then you might want to add an atmosphere to it. There are two commands for this, depending on your needs.
 
-* If you want your map to have a working atmosphere simulation. (gasses spread, etc), use addatmos 2 Where "2" is the grid ID.
-* If you want your map to have a static atmosphere. (gasses don't spread no matter what), use addunsimulatedatmos 2 Where "2" is the grid ID.
+* If you want your map to have a working atmosphere simulation. (gasses spread, etc), use `addatmos 2` Where "2" is the grid ID.
+* If you want your map to have a static atmosphere. (gasses don't spread no matter what), use `addunsimulatedatmos 2` Where "2" is the grid ID.
 
 ### Mapping Atmospherics Components
 In order to create a life support system aboard your map you'll need to create a pipe network or two - one for **distributing** air, and one for pulling **waste** gasses out of the air. Use the following devices in your pipe networks (pipe net):
@@ -175,12 +175,17 @@ In order to create a life support system aboard your map you'll need to create a
 * **Valves** - Used to manually close off sections of your pipe net. Useful to be placed before a passive vent to space.
 * **Pumps** - Used after a passive vent to control the amount of gas pumping into a network. Use these after your gas storage tanks.
 * **Atmos Markers** - If you're mapping gas storage tanks, be sure to use the "Atmos Fix (gas) Marker" in the entity spawner to set the tanks to the correct gas. This ensures when you run the fixgridatmos command it puts the correct gas in the tanks.
+* **Air Sensor** - Used to connect logic and sensing to other devices to trigger them. Used specifically for Air Alarms and Fire Alarms.
+* **Air Alarm** - Used with Air Sensors in order to detect harmful atmospheric conditions on areas and feed alerts to Engineering / Atmospherics. Use machine linking to connect air sensors in **adjacent** rooms to the air alarm, as well as vents and scrubbers in the **current room** to the air alarm. Also connect the firelocks between rooms to the air alarm so that it can trigger them to block off sections.
+* **Fire Alarm** - Used to trigger firelocks in the current area. Use machine linking to link it directly to firelocks in it's room or section.
+* **Gas Recycler** - Converts carbon dioxide to oxygen and nitrous oxide to nitrogen when the input gas is pressurized to 3 MPa and heated to at least 300 C.
+* **Gas Condenser** - Converts gasses into reagents. Probably more important to chemistry or science than atmospherics.
 
 ### Standard Pipe Colors
-Prefer using standard pipe colors for your atmospherics layout so that players and other mappers can understand it better.
+Prefer using standard pipe colors for your atmospherics layout so that players and other mappers can understand it better. Consider an in service ship or station won't often have vibrant colors.
 
-- Waste loop: #990000 (pleasing dull red)
-- Distro loop: #0055cc (popping subdued blue)
+- Waste loop: #990000 (dull red)
+- Distro loop: #0055cc (subdued blue)
 - Air: #03fcd3 (cyan)
 - Mix: #947507 (brownish)
 
@@ -217,10 +222,12 @@ Palettes can be selected in the decal menu. These are commonly used colors like 
 
 You can add your own palettes very easily. Simply go to Resources/Prototypes/Palettes, copy one of the templates into a new file, and change the ID/name as well as the colors you'd like to use. The colors are in the hex format RRGGBBAA.
 
-## Warp Points
+## Warp Points, Station Beacons and Station Maps
 All maps need warp points so observers can get around quicker.
 
-Find the warp point in the entity spawner, place it, then right click, debug,  view variable, navigate to serverside components, search for the warp component, then alter the name in that component to reflect what you want in the warp menu.
+Most maps now will use **Station Beacon**s instead of warp point as they already include the named warp point component on them. Place these in the relevant rooms of your station **instead** of warp points. This will allow them to populate station maps correctly.
+
+If you want to allow people to ghost warp to a location but don't want it to show up on a station map, or it's not suitable for a station beacon (planets, player griefing by moving the warp point, other reasons) then use the classic purple warp point marker. Place it, then right click, view variable, navigate to serverside components, search for the warp component, then alter the name in that component to reflect what you want in the warp menu.
 
 ## Naming Doors and Editing Signs
 View variable (VV) is your friend. Right click an entity such as a door or sign and navigate to the server variables tab. In here you can edit the name and description of any entity on your map.
@@ -229,7 +236,6 @@ Use this to name specific doors on your map or give flavor to warning signs and 
 
 ## Vehicle Spawners
 - To map vehicles, similar to animals, you need to use the spawner and not the actual entity.
-
 - Once mapped make sure to also map a set of keys.
 
 ## Cameras
@@ -238,6 +244,9 @@ Use this to name specific doors on your map or give flavor to warning signs and 
 - Place a Camera Monitor, ideally somewhere more secure so anyone can't check in on it.
 - If you want to test your cameras view, save your map then run mapinit. You can then view the camera monitor and check their view, make sure to run togglelight in console to get the actual view.
 - For entertainment cameras, follow the same process as above but with cameras marked (entertainment).
+
+## Telecoms
+Stations require a telecommunication server in order for headsets and radios to work correctly. Make sure to place a `TelecomServerFilled` somewhere on your map and sign post it and put a station beacon in there.
 
 ## Machine Linking (Multitool, Blast Doors, Conveyors etc)
 Machine linking works exactly how it does in game. Spawn yourself a multitool from the entity spawner and with it in hands, click on your entity you want to link (conveyors, blast doors, shutters etc) then click on a suitable input such as a button, switch or lever. Then select the way you want to link it, in most cases, default linking is best.
@@ -248,6 +257,9 @@ The default range of inputs like buttons is 30 tiles. If your button is further 
 To enable the cargo shuttle for testing on a local server, run the following in the server console:
 
 	sudo cvar shuttle.cargo true
+
+## Escape Pods
+To map escape pods, simply map the docking airlock with the suffix `escape 3x4`. Make sure to leave a 3x4 gap of space outside the dock for it to spawn when the map is initialised, plus at least a tile of space around that gap for logical reasons.
 
 # Planets
 This is a space station simulator, after all, but if for some reason you need maps that function like planets that have a breathable atmosphere and gravity that can't be turned off (see the Nukie Planet):
