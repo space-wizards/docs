@@ -118,6 +118,7 @@ Space Station 14
 - [Node Networks](en/space-station-14/node-networks.md)
 - [Dungeons](en/space-station-14/dungeons.md)
 - [NPCs](en/space-station-14/npcs.md)
+- [Displacement Maps](en/space-station-14/displacement-maps.md)
 
 Design Proposals
 ================
