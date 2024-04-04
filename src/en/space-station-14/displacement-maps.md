@@ -14,6 +14,10 @@ The red channel controls horizontal deviation, the green channels controls verti
 
 The actual displacement value can be changed with a "size" parameter on the shader. Basically this size parameter is "how many pixels are shifted at the maximal pixel value". With a "size" of 4, a value of 255 would shift by 4 pixels. With a size of 127, each value on the channel is a one pixel shift (129 -> +1, 130 -> +2).
 
+Oh yeah btw I decided to make it so that the alpha channel of the image is a simple mask. That means you can set alpha to 0 to completely cut out a pixel.
+
+The blue channel is ignored, I personally used it to mark off "modified" pixels to make it easier to see what a displacement map is doing in an image editor.
+
 ## Actual shader
 
 The actual displacement map shader in SS14 is located at `/Textures/Shaders/displacement.swsl`. It has three parameters: `displacementSize` is the size described above, and `displacementMap` and `displacementUV` are intended to be filled out with the `CopyToShaderParameters` system of a sprite component. See the PR I linked above as example.
