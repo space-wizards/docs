@@ -45,14 +45,13 @@ Building on positive player feedback from the April Fools Legally Distinct Space
 - The critter the player plays at has the following abilities:
   - Small creature hitboxes, allowing it to slide underneath most doors. Arnold's Pizza has extensive experience dealing with NT stations and has engineered its delivery critters to be able to actually have a chance of delivering to Urist McScientist who is sitting behind three secure airlocks.
   - The following item slots:
-    - Hat
+    - Hat (containing a branded red Arnold's Pizza cap that itself contains a tiny item storage slot, containing a pen)
     - Mask
-    - Belt
-    - Pocket (with a pen)
+    - Belt (containing a branded o2 canister)
+    - Pocket (with a branded gas mask)
     - PDA/ID Card
     - One hand slot
-  - The critter spawns with no items other than a cute hat.
-  - The critter is not especially vulnerable to any damage type, breathes oxygen, but has no capacity at all to wear a spacesuit. Their mask, belt and pocket slots allow them to get O2
+  - The critter is not especially vulnerable to any damage type, breathes oxygen, but has no capacity at all to wear a spacesuit. They are provided with the means to survive atmos failure, though, preventing frustrating spawns.
     in the event the station is spaced, but they will die to barotrauma somewhat quickly.
   - The critter has the same amount of health as a monkey.
   - The critter nyooms - that is, they have a higher-than-average base and running speed, appropriate for a frantic delivery vehicle.
@@ -71,6 +70,9 @@ Building on positive player feedback from the April Fools Legally Distinct Space
 - The pizza types have clear labels on their boxes and unique descriptions, but do not overtly say what they do. The positive-effect pizzas are weighted more likely to appear than the negative ones, with the Classic pizza being a rare chance.
 - If the critter fails to deliver the pizza in the time limit, it explodes. This explosion is faked - it gibs the critter but convers no damage to anyone else standing nearby, even on the same tile, to prevent this feature being abused to suicide bomb people.
 - It is possible for a member of the crew with bomb disposal knowledge to disable the KeepWarm heater, thus saving the critter's life. If this occurs, the critter cannot greentext.
+- If the target is in crit or cuffed, using the printed receipt on them whilst the critter has a pen in their pocket allows the critter to forge the signature, greentexting.
+- If the critter has delivered its pizza, it can become eligible to deliver another pizza again later in the round provided the pizza delivery event is rolled again (or if an admin is feeling cruel).
+- The critter always has the option of aborting the mission and teleporting back off the station, to avoid feel-bad moments where the objective is undeliverable, the station is in too bad a state to attempt a delivery, etc.
 
 ## Traitor/Nukeops Gameplay
 
@@ -78,3 +80,5 @@ Building on positive player feedback from the April Fools Legally Distinct Space
 - A traitor or nukie can order a pizza delivery for themselves or a member of NanoTrasen crew. If they do this, they can specify what exactly the critter is going to deliver. This includes a new, exciting flavour: a bomb with a fuse that looks like it fell out of a Looney Tunes cartoon. The bomb is much too heavy for the critter to hold, and they drop it immediately.
 - This bomb detonates a few seconds after the critter has retrieved it from its KeepWarm heater, doing moderate damage to the station in the process.
   - This is a reference both to Looney Tunes and the famous "sometimes you just can't get rid of a bomb" sketch from the Adam West Batman TV series.
+- The critter is not told they are delivering a bomb or that they're working for the Syndicate, and there's no metagameable way to know if a pizza delivery is legitimate or a trap.
+- This mechanic makes sure that there's a theoretical reason that a player may refuse a delivery.
