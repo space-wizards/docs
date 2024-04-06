@@ -422,6 +422,9 @@ Serilog:
 
 AllowedHosts: "*"
 
+Notification:
+  DiscordWebhook: "https://discord.com/api/webhooks/..."
+
 # API URL that your watchdog is accessible from.
 # This HAS to be set so the game servers can communicate with the watchdog.
 # If you don't want the watchdog to be publically accessible, do `http://localhost:5000/` here.
