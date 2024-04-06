@@ -210,6 +210,7 @@ Maintainer Meetings
 ==============
 
 ----------------------
+- [2024-04-06](en/maintainer-meetings/maintainer-meeting-2024-04-06.md)
 - [2024-03-23](en/maintainer-meetings/maintainer-meeting-2024-03-23.md)
 - [2024-02-03](en/maintainer-meetings/maintainer-meeting-2024-02-03.md)
 - [2024-01-20](en/maintainer-meetings/maintainer-meeting-2024-01-20.md)
