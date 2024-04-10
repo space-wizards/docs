@@ -144,6 +144,7 @@ Design Proposals
 - [Turf War](en/proposals/deltanedas-turf-war.md)
 - [Signaller Rework](en/proposals/deltanedas-signaller-rework.md)
 - [Thief antagonist](en/proposals/theshued-thief.md)
+- [Pizza Delivery Critter](en/proposals/fairlysadpanda-pizzadelivery.md)
 
 Server Hosting
 ==============
