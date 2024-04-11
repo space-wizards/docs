@@ -145,7 +145,8 @@ Design Proposals
 - [Signaller Rework](en/proposals/deltanedas-signaller-rework.md)
 - [Thief antagonist](en/proposals/theshued-thief.md)
 - [Pizza Delivery Critter](en/proposals/fairlysadpanda-pizzadelivery.md)
-
+- [Botany Helper Gnomes](en/proposals/bitterlynx-gnomes.md)
+  
 Server Hosting
 ==============
 
