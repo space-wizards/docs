@@ -36,6 +36,7 @@ This design document adds a crafty and fragile ghost role tied to botany.
  - has a gnome accent that replaces all g letters at the start of words to GN and certain past tence words to GNOMED eg: killed > GNOMED (The captain is GNOMED)
  - weak to blunt, slightly resistant to slash and peircing, and very resistant to burns
  - rooms can be "Gnome proofed" with mouse traps
+ - Gnomes act like a normal garden gnome untill possesed by a ghost player
 
 ## Gnome Design And intent 
  
