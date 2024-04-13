@@ -141,7 +141,10 @@ Space Station 14
 		- [PR Guidelines](en/space-station-14/areas/departments/command/guidelines.md)
 	- [Engineering](en/space-station-14/areas/departments/engineering.md)
 		- [PR Guidelines](en/space-station-14/areas/departments/engineering/guidelines.md)
-		- [Construction](en/space-station-14/areas/departments/engineering/construction.md)
+		- [Construction](en/space-station-14/areas/departments/engineering/construction.md)\
+		- [Node Networks](en/space-station-14/areas/departments/engineering/node-networks.md)
+		- [Device Network](en/space-station-14/areas/departments/engineering/device-network.md)
+		- [Pow3r](en/space-station-14/areas/departments/engineering/pow3r.md)
 	- [Medical](en/space-station-14/areas/departments/medical.md)
 		- [PR Guidelines](en/space-station-14/areas/departments/medical/guidelines.md)
 	- [Science](en/space-station-14/areas/departments/science.md)
