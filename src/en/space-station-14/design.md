@@ -33,5 +33,5 @@ The pillars serve as guideposts for creating a cohesive design for SS14. Further
 - Players should be encouraged to interact with each other as much as possible to create opportunities for conflict or cooperation. Mechanics should reinforce the player's ability to make impactful decisions while mitigating those decisions' effects on the agency of other players.
 
  ## Categories:
- - [Design Principles](design/design-principles.md)
- - [Antagonists](design/areas/round-flow/antagonists.md)
+ - [Design Principles](design-principles.md)
+ - [Antagonists](areas/core/round-flow/antagonists.md)
