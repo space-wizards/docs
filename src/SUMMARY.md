@@ -117,6 +117,10 @@ Space Station 14
 		- [Destructible](en/space-station-14/areas/core/combat/destructible.md)
 	- [Mapping](en/space-station-14/areas/core/mapping.md)
 		- [PR Guidelines](en/space-station-14/areas/core/mapping/guidelines.md)
+		- [Dungeons](en/space-station-14/areas/core/mapping/dungeons.md)
+		- [Guides]()
+			- [General Guide](en/space-station-14/areas/core/mapping/guides/general-guide.md)
+
 	- [Player Interaction](en/space-station-14/areas/core/player-interaction.md)
 		- [PR Guidelines](en/space-station-14/areas/core/player-interaction/guidelines.md)
     - [Roleplay/Lore](en/space-station-14/areas/core/roleplay-lore.md)
@@ -126,6 +130,8 @@ Space Station 14
 		- [Antagonists](en/space-station-14/areas/core/round-flow/antagonists.md)
 	- [User Interface](en/space-station-14/areas/core/user-interface.md)
 		- [PR Guidelines](en/space-station-14/areas/core/user-interface/guidelines.md)
+
+
   - [Departments](en/space-station-14/areas/departments.md)
     - [Atmos](en/space-station-14/areas/departments/atmos.md)
 		- [PR Guidelines](en/space-station-14/areas/departments/atmos/guidelines.md)
