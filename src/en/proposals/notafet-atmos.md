@@ -12,7 +12,7 @@ Most atmos players currently agree that atmos is not very fun to play, for some 
 
 2. Atmos can't actually rectify atmos problems in a reasonable amount of time. For example, if there actually is a plasma leak, scrubbers typically work too slowly resulting in the plasma inevitably being lit before it can be cleaned up.
 
-3. Atmos techs don't play with the rest of the station, preferring to isolate themselves to produce a funny green gas that is only particularly useful for shuttle bombing. Mechanics like this violate the [fundamental design principles](../space-station-14/core-design.md). While these mechanics shouldn't be removed per-se, more focus should be given to mechanics that increase interactions with the station, like making sure the air is breathable and well-heated.
+3. Atmos techs don't play with the rest of the station, preferring to isolate themselves to produce a funny green gas that is only particularly useful for shuttle bombing. Mechanics like this violate the [fundamental design principles](../space-station-14/design.md). While these mechanics shouldn't be removed per-se, more focus should be given to mechanics that increase interactions with the station, like making sure the air is breathable and well-heated.
 
 ## Proposal
 
