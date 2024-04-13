@@ -1,13 +1,13 @@
 # Space Wizard Maintainer List
-This document shows all current Maintainer on the project. Along with their github and discord contact.
+This document shows all current Maintainers on the project. Along with their GitHub and Discord contacts.
 
-I will do my best to keep this up to date as maints come and leave.
+I will do my best to keep this up to date as Maintainers come and leave.
 
 The format is as follows
 
 **Github - Discord (ID)**
 
-Both engine and content Maintainers:
+Both Engine and Content Maintainers:
 - [Jezithyr](https://github.com/Jezithyr) - @jezithyr (107689319396831232)
 - [ZoldorfTheWizard](https://github.com/ZoldorfTheWizard) - @zoldorf (140921734109855744)
 - [PJB3005](https://github.com/PJB3005) - @pjb (97089048065097728)
@@ -21,7 +21,7 @@ Both engine and content Maintainers:
 - [ElectroJr](https://github.com/ElectroJr) - @electrosr (348118974497816577)
 - [vulppine](https://github.com/vulppine) - @vulppine (102244617314914304)
 
-Content maitainers:
+Content Maintainers:
 - [Partmedia](https://github.com/Partmedia) - @notafet (774744999379599360)
 - [Emisse](https://github.com/Emisse) - @emisse (109430489684705280)
 - [Chief-Engineer](https://github.com/Chief-Engineer) - @am.ghost (267392122179682307)
