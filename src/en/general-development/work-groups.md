@@ -6,36 +6,47 @@ Each work group is responsible for maintaining corresponding design and pr guide
 
 
 ## Maintainer work groups:
-This list is less up to date than discord/github, for a more accurate list look at the github work-group teams or discord roles.
+This list is updated less than discord/github, for a more accurate list look at the github work-group teams or discord roles.
 
 ### Game-Wide
-[Accessibility:](../space-station-14/areas/core/accessibility.md) 
-[Admin Tooling:](../space-station-14/areas/core/admin-tools.md) 
-Jezithyr
-[Art:](../space-station-14/areas/core/art.md)
-[Character/Species:](../space-station-14/areas/core/characters-species.md) 
-Jezithyr
-[Combat:](../space-station-14/areas/core/combat.md) 
-Jezithyr
-[Player Interaction:](../space-station-14/areas/core/player-interaction.md)
-[Mapping:](../space-station-14/areas/core/mapping.md)
-[Roleplay/Lore:](../space-station-14/areas/core/roleplay-lore.md)
-[Round Flow:](../space-station-14/areas/core/round-flow.md)
-[User Interface:](../space-station-14/areas/core/user-interface.md) 
-Jezithyr
+- [Accessibility:](../space-station-14/areas/core/accessibility.md)\
+ Bhijn & Myr(deathride58), AJCM
+- [Admin Tooling:](../space-station-14/areas/core/admin-tools.md)\
+ Jezithyr, Chief-Engineer, Vasilis, Julian, Bhijn & Myr(deathride58)
+- [Art:](../space-station-14/areas/core/art.md)\
+ EmoGarbage, Flareguy
+- [Character/Species:](../space-station-14/areas/core/characters-species.md)\
+ Jezithyr, Lank, Vasilis, KeronSHB, Bhijn & Myr(deathride58), AJCM
+- [Combat:](../space-station-14/areas/core/combat.md)\
+ Jezithyr, EmoGarbage, AJCM, KeronSHB, Bhijn & Myr(deathride58)
+- [Player Interaction:](../space-station-14/areas/core/player-interaction.md)\
+ 
+- [Mapping:](../space-station-14/areas/core/mapping.md)\
+ Emmise
+- [Roleplay/Lore:](../space-station-14/areas/core/roleplay-lore.md)\
+ Lank, KeronSHB, Vasilis
+- [Round Flow:](../space-station-14/areas/core/round-flow.md)\
+ Jezithyr, EmoGarbage, Tayrthan, KeronSHB, Bhijn & Myr(deathride58), AJCM
+- [User Interface:](../space-station-14/areas/core/user-interface.md)\
+ Jezithyr, EmoGarbage, AJCM, Julian, Bhijn & Myr(deathride58)
+
 ### Departments
-[Atmos:](../space-station-14/areas/departments/atmos.md) 
-Jezithyr
-[Cargo/Salvage:](../space-station-14/areas/departments/cargo-salvage.md)
-[Command:](../space-station-14/areas/departments/command.md)
-[Engineering:](../space-station-14/areas/departments/engineering.md) 
-Jezithyr
-[Medical:](../space-station-14/areas/departments/medical.md) 
-Jezithyr
-[Science:](../space-station-14/areas/departments/science.md) 
-Jezithyr
-[Security:](../space-station-14/areas/departments/security.md)
-[Service:](../space-station-14/areas/departments/service.md)
+- [Atmos:](../space-station-14/areas/departments/atmos.md)\
+ Jezithyr, KeronSHB, NotAFet(PartMedia)
+- [Cargo/Salvage:](../space-station-14/areas/departments/cargo-salvage.md)\
+ 
+- [Command:](../space-station-14/areas/departments/command.md)\
+ KeronSHB, EmoGarbage, Vasilis
+- [Engineering:](../space-station-14/areas/departments/engineering.md)\
+ Jezithyr, Julian, AJCM, KeronSHB
+- [Medical:](../space-station-14/areas/departments/medical.md)\
+ Jezithyr, Vasilis, AJCM, 
+- [Science:](../space-station-14/areas/departments/science.md)\
+ Jezithyr, EmoGarbage, AJCM, Tayrtahn
+- [Security:](../space-station-14/areas/departments/security.md)\
+ Lank(LankLTE), KeronSHB
+- [Service:](../space-station-14/areas/departments/service.md)\
+ AJCM, Tayrtahn, NotAFet(PartMedia)
 
 ## For maintainers:
 
