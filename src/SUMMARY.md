@@ -191,6 +191,7 @@ Community
   - [Grafana Dashboards](en/community/infrastructure-reference/grafana-dashboards.md)
 - [Space Wizards Hub Rules](en/community/space-wizards-hub-rules.md)
 - [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)
+- [Space Wizards Maintainer List](en/community/space-wizards-maintainer-list.md)
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
 - [Admin](en/community/admin.md)
   - [Admin Tooling](en/community/admin/admin-tooling.md)
