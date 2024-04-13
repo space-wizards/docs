@@ -101,7 +101,8 @@ Space Station 14
 
 - [Design](en/space-station-14/design.md)
   - [Design Principles](en/space-station-14/design-principles.md)
-  - [Game-wide]()
+- [Game Areas]()
+  - [Global]()
     - [Accessibility](en/space-station-14/areas/core/accessibility.md)
 		- [PR Guidelines](en/space-station-14/areas/core/accessibility/guidelines.md)
 	- [Admin Tooling](en/space-station-14/areas/core/admin-tools.md)

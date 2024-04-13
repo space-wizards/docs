@@ -54,4 +54,4 @@ Work-groups are non exclusive, you can be in as many or as few as you want, howe
 
 If you are not in a pr's associated work-group you can still review the PR, however you should make sure to read the relevant design documentation and PR guidelines before doing a review. Ideally, you should leave associated PRs to be reviewed by their work-group members, but it's fine to merge something as long as it fits the design and meets the guidelines.
 
-If you plan on being involved with a workgroup for a long time, please add yourself to the above list. Likewise, if you are on the list and leave the workgroup with no intention of returning, you should remove yourself from the list.
+If you plan on being involved with a workgroup for a long time, please add yourself to the above list. Likewise, if you are on the list and leave the workgroup with no intention of returning to it, you should remove yourself from the list.
