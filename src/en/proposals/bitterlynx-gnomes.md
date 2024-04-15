@@ -50,13 +50,12 @@ Gnomes while intended to be happy go lucky helpers have a very large potential f
 Gnomes also may get annoying and demand server resourses if there are enough of them. currently 6 gnomes is the ideal normal max, although if botany tries very very 
 hard they may make more than six. the idea is one Gnome per hat. being this limited however it would be simple for a greytide to round remove all of the gnomes. 
 gnomes spawning a plantable gnome shard on death helps prevent gnomes from being removed from the round entirely.
-The gnome hat will spawn in rare seed crates and have a low chance to spawn as maints loot. 
-Gnomes also may give a larger insentive to lock lockers so gnomes do not pilfer items (more important with synicate gnomes as gnomes should NOT have an antag pass, 
-petty crime is fine but sneaking into atmos and plasma floding is NOT)
+The gnome hat will spawn as maints loot. 
+Gnomes also may give a larger insentive to lock lockers so gnomes do not pilfer items (more important with syndicate gnomes as gnomes should NOT have an antag pass, 
+petty crime is fine but sneaking into atmos and plasma flooding is NOT)
 Gnomes are also grouned in humor, the limitations on them (low health and one hand with no inventory) would inspire ways to work around things. 
 They have oportunities for strange gimmics but not much for anything actively harmfull. some examples of this Gremlin embracing idea are: 
 hoarding, trading, stealing, fort construction, gnome maints bar, and so on. 
-If Gnomes need to be more rare they can be banished to maints loot with a low spawn chance. 
 
 Idealy gnomes are useful helpers at best and crafty pests at worst
 
