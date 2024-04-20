@@ -15,8 +15,15 @@ XenoArch should feel like unlocking the sprawling secrets of an artifact while a
 _This redesign lends partial inspiration to Goon's artlab as well as Noita's customizable wands._
 
 ## Background
-Artifacts in their current iteration have a few shortcomings that drastically reduce the potential complexity of the system.
-While the core concept is interesting and they have decent integration with things like salvage and collecting tools for activations, there are also many situations where players feel as if they lose the ability to meaningfully interact with them.
+As it is now, artifacts consist of interconnected nodes, each one carrying an effect and a trigger. 
+The effect is just some crazy behavior that happens in response to the trigger, which is just some kind of generic action taken upon the artifact.
+
+These nodes form a tree, wherein each individual node's depth within this tree determines the craziness of the its effect and trigger.
+An artifact has a single node which is active, which is what determines the current effect and trigger which must be done.
+
+Moving to another node requires the completion of the current node's trigger and is semi-random in nature.
+
+While the core concept of XenoArch is interesting and has decent integration with salvage and cooperation for collecting tools for triggers, there are also many situations where players feel as if they lose the ability to meaningfully interact with them.
 
 I'll outline some of the core issues here:
 
@@ -42,90 +49,86 @@ This is a good start for a system like this, but the unfortunate reality of it i
 Especially when taken in with randomization of artifacts, you can oftentimes just get subpar generation that flounders in weak effects that don't feel like a progression in research.
 
 ## Artifacts
-The primary changes to generation are fairly simple. 
-While all the nodes still generate in an interconnected structure, they will have more connections to lower depths, resembling a tech web more than a basic tree.
+I'll use the element of a [tech tree](https://en.wikipedia.org/wiki/Technology_tree) as a reference to explain the new generation.
 
-All nodes can have one of 3 basic states:
-- Active
-- Latent
-- Locked
+Each node is essentially an upgrade in a tech tree.
+The structure can be described as a typical tech tree structure (a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)) but without the presence of the first element in the graph.
 
-**Locked** nodes are the basic state of all nodes on an artifact.
-All nodes start as locked and they have no effects.
-The primary goal is to unlock these nodes.
+Just like the current system, all of these nodes have a trigger and an effect associated with them.
+However, you do not 'move' to a node like the current system, but you instead permanently unlock it like a tech tree.
 
-Once all of the necessary triggers are activated (will be elaborated on later), a locked node can become a **latent** node.
-Latent nodes do not inherently have any effects when the artifact is activated but they do increase the research value of an artifact.
+And just like a tech tree, unlocking a node has a cost associated with it.
+The 'cost' is the activation of all of the triggers of the nodes in that path--that is, all of the nodes that needed to be unlocked in order for the current node to become available.
 
-Any latent node at the end of it's path is an **active** node. The effects of active nodes are what is seen when an artifact is activated.
+In this situation, the 'active' nodes are the nodes in each path that have the highest tier.
+These are the nodes that will produce effects when they are activated.
+The remaining nodes are classified as 'latent'--unlocked but not creating any effects when the artifact is activated.
 
-```admonish info "Paths"
-A "path" can be conceived of as a string of connected nodes that is increasing in depths.
-A path would be formed from a depth 1 node that leads to depth 2 to depth 3 and so on.
+All remaining nodes are simply locked and have no behavior.
 
-The end of a path is the node with the highest depth.
-This means that node either has no connections to higher depth nodes or the higher depth nodes are still locked.
+### Activation and Unlocking Nodes
+The activation of an artifact is now something that is distinct from simply triggering a node in the old system.
 
-The end of a path is variable and can change when higher depth nodes are activated.
+Activating an artifact is simply achieved by using it in hand, clicking on something, or other context interactions.
+Doing this simply causes all the effects of the active nodes simultaneously.
+
+By making many effects happen at once, they can combine in novel ways and increase the utility and chaos of the artifact, greatly improving on the current system where lackluster nodes can seem to have 0 effect at all.
+
+As a balancing factor, each node of the artifact now has a durability.
+Activating an artifact degrades the durability of all of the active nodes.
+When the node is fully degraded, it no longer produces any effect when activated.
+
+The durability can be repaired using special equipment (which will be elaborated on further later).
+
+In exchange easier activation, unlocking nodes is now more complex.
+To unlock a node, you must provide the stimulus for that node as well as the the stimuli for every node below it in its path (the path being all of the nodes that had to be unlocked in order to reach the current node).
+
+Once the first stimulus is provided, an activation period (roughly 10 seconds) begins wherein all the stimuli activations will be recorded. 
+At the end of that period, if the stimuli recorded _exactly match_ a node's required stimuli, it will be unlocked.
+
+```admonish info
+Note that if you need stimuli A, B, and C but you instead provide A, B, C, and X, the node will not be unlocked.
+It must be an exact match and not simply a superset.
 ```
 
-### Activation and Triggering Nodes
-A distinct departure from the previous version of artifacts, the activation of an artifact is now something that is distinct from simply triggering a node.
+Once unlocked, the node's effect will occur while a small animation and sound effect playing, giving feedback to the players that something has occured.
 
-Activating an artifact is simply achieved by using it in hand, clicking on something, or other context interactions based on the active nodes.
-This simply does all the effects of the active nodes all at once.
-By stacking the effects and allowing them to happen on queue, artifacts are given much more utility than they have prior but the simultaneous activation of multiple nodes makes them even more chaotic and interesting.
+## Equipment
 
-As a balancing factor, artifacts now have a durability, with over-use of direct activation potentially "breaking" nodes and preventing them from being used.
-They can be repaired using specialized equipment (which will be elaborated on further later).
+### Analysis Console
+The artifact analyzer and analysis console will be improved to no longer have any kind of delay and to show significantly more information
 
-In exchange for this much easier activation, triggering nodes is now significantly more complex.
-To trigger a locked node and make it become latent, you must not only provide the stimulus for that node, but for every node underneath it in the structure.
+The console UI will now visually draw all the nodes in the structure, using lines to connect them.
+All unlocked nodes will have basic information such as stimuli, effects, depth, research value, durability, and whether or not the node is active.
+This info can be accessed by clicking on the node in the UI, which will show a small window.
 
-```admonish info "Node Children"
-The nodes 'underneath' a given node can be thought of conceptually as every node attached to the current node with a lower depth.
-This is the extended recursively to every additional node.
+Locked nodes that are connected to unlocked nodes will be given a limited information display, showing only the stimuli and the effect.
+This allows players to have a limited strategy for the nodes they want to unlock. 
 
-For example, if Node A has 2 lower nodes connected--called Node B and C--and node B has 1 lower node connected called Node D, then to activate Node A, you need to have the combined stimuli of Nodes A, B, C, and D.
-```
+### Handheld Scanner
+The handheld node scanner will be used to check information on the current active nodes of the artifact.
 
-Once the first stimuli is provided, an "activation period" (roughly 10 seconds) will begin wherein all the stimuli activations will be recorded. 
-At the end of the period, if the stimuli recorded _exactly match_ the locked node, it will become a latent node.
+Clicking on an artifact with the handheld scanner will take a "snapshot" of it which can be viewed in a UI.
+This gives similar info as the analysis console but is limited to the active nodes of the artifact.
 
-Note that if you need stimuli A, B, and C but you instead provide A, B, C, and X, the node will not become latent.
-It must be the exact match and not simply a superset.
+The scanner now gains a lot of utility as being able to quickly assess the state of an artifact without needing to bring it to science.
+Being able to check the durability also helps when actively using the effects on the go.
 
-When a node is unlocked via this method, its effect will occur once.
-Future activations of the effect will only happen through the regular activation method highlighted above.
+The scanner also has the ability to view the node structure of artifact fragments, which can be useful for sifting through them when trying to splice artifacts.
 
-## Artifact Equipment
-With these new mechanics, existing artifact equipment will be reimagined and new equipment will be added to fill in the existing niches.
-
-The artifact analyzer and analysis console gets the most immediate and useful changes.
-It will now visually show all nodes in the correct structure, using lines to connect nodes.
-All latent and activated nodes will have basic information such as stimuli, effects, depth, and the latent/activated state.
-Clicking on a node in the UI will bring up a small window with additional information.
-
-Locked nodes that are connected to latent or activated nodes will be given a limited information display, showing only the stimuli and the effect.
-
-The handheld node scanner will be used to harvest more precise information on any active nodes.
-This will give info such as the research value and the current durability.
-Using the scanner to check up on the status of an artifact is an important factor in using their active abilities to make sure you don't accidentally break it.
-
+### Artifexium
 Artifexium, which previously activated artifacts, will now serve as a "dummy" stimuli when applied during an activation period.
-For example, if stimuli A, B, and C are needed, but only A and B are provided, spraying artifexium will substitute the non-existent C stimuli and cause the activation.
 
-The traversal distorter will be plainly removed since it is fucking esoteric garbage that no one knows how to use and has no place in the new system.
+For example, if stimuli A, B, and C are needed, but only A and B are provided, spraying artifexium will substitute the non-existent C stimulus and unlock the node.
+
+If there are multiple nodes which could be unlocked by a the artifexium (say, a node needing stimuli ABC and one needing stimuli ABD), one will simply be unlocked at random.
 
 ### Artifact Fragments
-Fragments are gonna work almost completely differently in this iteration. 
-They are kinda neat in their current existence, but they are pretty boring and could serve to be a lot more interesting.
+Artifact fragments will no longer simply just be a random chunk that's spit out after an artifact is crushed.
+Instead, each distinct path of the artifact's structure will be turned into a fragment which stores the nodes and connections from that path.
 
-Artifact fragments will no longer simply just be a random collection that's spit out after an artifact is crushed.
-Instead, each distinct path of the artifact's structure will be turned into a fragment.
-
-These fragments, instead of being crafted into a new artifact, will be combined with existing artifacts at an **Splicer**, which will combine the nodes of the fragment into the existing artifact.
-This provides interesting gameplay where you can combine artifacts in order to make more useful equipment which allows for something interesting min-maxing.
+These fragments, instead of being crafted into a new artifact, will be combined with existing artifacts at a **Splicer**.
+This provides interesting gameplay where you can combine artifacts to create more tactically useful artifacts with beneficial or dangerous effects.
 
 The fragments will also scale their artifexium values in relation to the amount research they provide. 
 
@@ -137,35 +140,34 @@ This provides additional uses for artifexium and ways to extend an artifact's li
 
 The **Resequencer** simply takes the existing nodes and shuffles them, creating new connections.
 This can completely flip the effects of an artifact and enable new wacky combinations.
-It can also help reach particularly hard to get nodes and allow science to 100% complete and artifact.
+It can also help reach particularly hard to get nodes and allow science to fully unlock the artifact.
 
 The **Arti-nUKer** is a special device that obliterates all active nodes on an artifact. 
 The severed connections are automatically merged, fixing any holes created in the structure.
 This is basically a free re-roll of effects paired with easier to activate high-depth nodes.
 
-The Resequencer and Arti-nUKer can both serve as mid-tier research to provide optional depth for the truly engaged archeologists.
+The Resequencer and Arti-nUKer both serve as mid-tier research to provide optional depth for the truly engaged archeologists, without the boring technical complexity of the traversal distorter.
 
-## Artifact Reports
-The original version of research generation from artifacts simply came from destroying the artifact in exchange for points.
-This has been gutted significantly and now it is basically just a risk-free button you press.
-This proposal aims to reintroduce that interest.
+## Research Generation
+The analysis console UI will show the current research value of the artifact as well as the value it needs to exceed to generate more research.
 
-Research is generated at the new **reliquary console** through **artifact reports**.
-The data for the reliquary console can be sent via the analysis console, which sends a copy of the current state of the artifact.
-Players can then choose which copy of the artifact to use for a report, allowing for backups to be made if someone horrifically obliterates an artifact.
+This will also show the calculation for how the research value is achieved, providing more info and transparency to players.
 
 The research value for an artifact is calculated similarly to how it is now:
-- Latent nodes give value based on the effect/trigger/depth of a node.
-- Nodes that have been scanned via the handheld node scanner give additional research.
-- An artifact with no locked nodes has an additional bonus.
+- Unlocked nodes give research based on their effect, stimulus, and depth.
+- Artifacts with no locked nodes grant an additional bonus.
 
 However, there are factors which can damage the research value of an artifact:
-- Missing nodes, such as those from the effect of the Arti-nUKer
-- Nodes with destroyed durability, such as from the effects of the repeated activation. Glued artifacts do not suffer from this loss in value.
-- Extra/non-original nodes, such as from the effects of the Splicer or any future machines.
+- Nodes with completely degraded durability (gluing the artifact to repair it does not incur this penalty)
+- Missing nodes, such as those from the effect of the Arti-nUKer.
+- Additional nodes, such as from the effects of the Splicer. 
 
-When a report is submitted, players will receive research based on all these factors.
-A single artifact can have multiple reports submitted, however, more research points are only given for the increase in value between the two reports (100 value report -> 250 value report yields only 150 points).
+Note that the calculation for the last two points is based on the total number of nodes in the original vs. the current artifact.
+If you destroy 2 nodes and then repair it by splicing 2 nodes onto it, you incur 0 penalty.
 
-The combination of these mechanics provides a risk-reward for modifying artifacts, introducing strategy around whether or not the modifications are worth the loss in value.
-Perhaps you can make a epic exploding teleport gun artifact, but it isn't worth much to the scientific community.
+To actually gain research from the artifact, you must place it on an analyzer and begin the 'research' task in the analysis console UI.
+This begins a 30 second countdown where the artifact must remain on the analyzer, cannot be activated, cannot have any stimuli trigger, and the analyzer must remain powered.
+
+This provides an interesting window wherein sabotage and other such measures can be taken to steal the artifact or otherwise interrupt science.
+
+At the end of this countdown, the research is added into the server and a glorious sound effect plays.
