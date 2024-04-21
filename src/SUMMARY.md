@@ -187,7 +187,7 @@ Space Station 14
 	- [Engineering](en/space-station-14/areas/departments/engineering.md)
 		- [PR Guidelines](en/space-station-14/areas/departments/engineering/guidelines.md)
 		- [Machine Upgrading Rework](en/space-station-14/areas/departments/engineering/proposals/emogarbage-machine-upgrading-rework.md)
-		- [Construction](en/space-station-14/areas/departments/engineering/construction.md)\
+		- [Construction](en/space-station-14/areas/departments/engineering/construction.md)
 		- [Node Networks](en/space-station-14/areas/departments/engineering/node-networks.md)
 		- [Device Network](en/space-station-14/areas/departments/engineering/device-network.md)
 		- [Pow3r](en/space-station-14/areas/departments/engineering/pow3r.md)
@@ -213,6 +213,7 @@ Space Station 14
 		- [Anomaly Cores](en/space-station-14/areas/departments/science/anomaly-cores.md)
 
 		- [Proposals]()
+			- [XenoArch Redux (3MOArch)](en/space-station-14/areas/departments/science/proposals/xenoarch-redux.md)
 	
 	- [Security](en/space-station-14/areas/departments/security.md)
 		- [PR Guidelines](en/space-station-14/areas/departments/security/guidelines.md)
