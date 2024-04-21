@@ -33,7 +33,7 @@ To test the map:
 
 # Setup
 ## With Development Environment
-A [development environment](../general-development/setup/setting-up-a-development-environment.md) and [Git installation](../general-development/setup/git-for-the-ss14-developer.md) are strongly recommended, so that you can keep your local mapping server up to date and submit [pull requests](../general-development/codebase-info/pull-request-guidelines.md).
+A [development environment](../../../../../general-development/setup/setting-up-a-development-environment.md) and [Git installation](../../../../../general-development/setup/git-for-the-ss14-developer.md) are strongly recommended, so that you can keep your local mapping server up to date and submit [pull requests](../../../../../general-development/codebase-info/pull-request-guidelines.md).
 
 ### Tools Build
 If you are using a development enviroment instead of just hosting a local server, make sure to use Tools instead of Debug/DebugOpt mode. This is because Debug adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
@@ -46,7 +46,7 @@ dotnet run --project Content.Client --configuration Tools
 ```
 
 If you are using an IDE, there will be some other way of setting the configuration. For example, in VS there is simply a dropdown menu:
-![mapping-release-dropdown.png](../assets/images/mapping/mapping-release-dropdown.png)
+![mapping-release-dropdown.png](../../../../../assets/images/mapping/mapping-release-dropdown.png)
 
 ## Without Development Environment
 If you choose not to do this, you will need to download a [recent server build](https://central.spacestation14.io/builds/wizards/builds.html).
@@ -140,7 +140,7 @@ Open the project in Visual Studio Community or your preferred IDE and Build the 
 # Content
 ## Map Checklists
 
-To ensure you have all the required items for each area of your map please refer to the attached checklist [here](../space-station-14/mapping/mapping-checklist.md) as a guide.
+To ensure you have all the required items for each area of your map please refer to the PR review Guidelines [here](../guidelines.md) as a guide.
 
 If your map is now complete, follow the attached checklist [here](https://hackmd.io/@Peptide90/MapPublishChecklist) for a quality control checklist to ensure your map is fully functioning. To run your map for the first time refer to the next section.
 
