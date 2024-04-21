@@ -1,5 +1,4 @@
 Space Wizards Development Wiki
-
 =====================
 
 [The Robust Book](index.md)
