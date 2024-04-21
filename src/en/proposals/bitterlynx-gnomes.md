@@ -33,7 +33,7 @@ This design document adds a crafty and fragile ghost role tied to botany.
  - they are very fragile (10 health) but dont need air and are resistant to tempature damage 
  - being hollow they are weak to pressure changes that cause them to break quickly, space is an instant death.
  - can be gibbed into a gnome shard and glass to plant another gnome plant
- - has a gnome accent that replaces all g letters at the start of words to GN and certain past tence words to GNOMED eg: killed > GNOMED (The captain is GNOMED)
+ - has a gnome accent that replaces all "no" at the start of words to "GNO" and certain past tence words to GNOMED eg: killed > GNOMED (The captain is GNOMED)
  - weak to blunt, slightly resistant to slash and peircing, and very resistant to burns
  - rooms can be "Gnome proofed" with mouse traps
  - Gnomes act like a normal garden gnome untill possesed by a ghost player
