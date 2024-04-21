@@ -114,7 +114,6 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Non-grouping | [Ahelp misuse in bad faith](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_abuse/ignore_the_admin-help_relay)[^badFaith] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Non-grouping | [Bad character name](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being)[^requiresIntent] | **W** - 12hr GB | **12hr** - 3d GB | **7d** - 7.5d GB | |
 | Metacomms | [Metacommunications](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_external_means_to_communicate_with_other_players_[Metacomming]) | Indef GB | | | |
-| Metacomms | [IC in OOC](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_outside_information_to_gain_an_advantage_[Metagaming]) | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
 | Immersion | [Text speak](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being) | W | W | **W** - 12hr GB | W - 12hr GB |
 | Immersion | [OOC terms IC](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being)[^teachingException] | W | **W** - 12hr GB | **12hr** - 3d GB | 3d - 7.5d GB |
 | Immersion | [Bypassing chat restrictions](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being) | W | W - **4hr** - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB |
@@ -132,6 +131,7 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Metagaming | [Metagaming round type](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_outside_information_to_gain_an_advantage_[Metagaming]) | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
 | Metagaming | [Preemptive PDA swapping](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_outside_information_to_gain_an_advantage_[Metagaming]) | W | 3d - 7d RB | 7d - 15d RB | |
 | Metagaming | [Preparing items not needed IC](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_pre-emptively_rush_for_weapons_and_equipment_[Powergaming]) | W | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB |
+| Metagaming | [IC in OOC](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_outside_information_to_gain_an_advantage_[Metagaming]) | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
 | Competence | [Unreasonable incompetence in role](https://wiki.spacestation14.io/wiki/Server_Rules#Department_Specific_Behavior_Issues) | W - **3d** - 7d RB | 7d - 15d RB | Indef RB | |
 | Competence | [Unreasonable failure of security/command to maintain order](https://wiki.spacestation14.io/wiki/Server_Rules#Command_&_Security_are_held_to_a_higher_standard) | 3d - 7d RB | 7d - 15d RB | Indef RB | |
 | Competence | [Abuse of a position of authority](https://wiki.spacestation14.io/wiki/Server_Rules#Command_&_Security_are_held_to_a_higher_standard) | 3d - 7d RB | 7d - 15d RB | Indef RB | |
