@@ -1,4 +1,3 @@
-Space Wizards Development Wiki
 =====================
 
 [The Robust Book](index.md)
@@ -142,10 +141,10 @@ Space Station 14
 	- [Player Interaction](en/space-station-14/areas/core/player-interaction.md)
 		- [PR Guidelines](en/space-station-14/areas/core/player-interaction/guidelines.md)
 			- [PDA Messaging](en/space-station-14/areas/core/player-interaction/proposals/pda-messaging.md)
+            - [PAI Expansion Slots](en/space-station-14/areas/core/player-interaction/proposals/pai-expansion-slots.md)
 		- [Grid Inventory](en/space-station-14/areas/core/player-interaction/grid-inventory.md)
 
 		- [Proposals]()
-      - [PAI Expansion Slots](en/space-station-14/areas/core/proposals/pai-expansion.md)
 
     - [Roleplay/Lore](en/space-station-14/areas/core/roleplay-lore.md)
 		- [PR Guidelines](en/space-station-14/areas/core/roleplay-lore/guidelines.md)
