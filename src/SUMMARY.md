@@ -11,8 +11,6 @@ Meta
 - [Docs Example Page](en/meta/docs-example-page.md)
 - [Docs are for Discoverability](en/meta/docs-are-for-discoverability.md)
 
-- [Feature Proposal Template](en/templates/proposal.md)
-
 General Development
 ===================
 
@@ -37,6 +35,7 @@ General Development
   - [Config File Reference](en/general-development/tips/config-file-reference.md)
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
 - [Feature Proposals](en/general-development/feature-proposals.md)
+  - [Feature Proposal Template](en/templates/proposal.md)
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
 - [Work Groups](en/general-development/work-groups.md)
 
