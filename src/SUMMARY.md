@@ -27,7 +27,7 @@ General Development
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
-  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md)
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
@@ -50,7 +50,7 @@ SS14 By Example
   - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
 - [Basic Networking and You](en/ss14-by-example/basic-networking-and-you.md)
 - [Fluent and Localization](en/ss14-by-example/fluent-and-localization.md)
-- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md) 
+- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
 
 
 Robust Toolbox
@@ -105,127 +105,127 @@ Space Station 14
 - [Game Areas]()
   - [Global]()
     - [Accessibility](en/space-station-14/areas/core/accessibility.md)
-		- [PR Guidelines](en/space-station-14/areas/core/accessibility/guidelines.md)
-		
-		- [Proposals]()
+        - [PR Guidelines](en/space-station-14/areas/core/accessibility/guidelines.md)
 
-	- [Admin Tooling](en/space-station-14/areas/core/admin-tools.md)
-		- [PR Guidelines](en/space-station-14/areas/core/admin-tools/guidelines.md)
-		
-		- [Proposals]()
+        - [Proposals]()
+
+    - [Admin Tooling](en/space-station-14/areas/core/admin-tools.md)
+        - [PR Guidelines](en/space-station-14/areas/core/admin-tools/guidelines.md)
+
+        - [Proposals]()
 
     - [Art](en/space-station-14/areas/core/art.md)
-		- [PR Guidelines](en/space-station-14/areas/core/art/guidelines.md)
-		- [Displacement Maps](en/space-station-14/areas/core/art/displacement-maps.md)
+        - [PR Guidelines](en/space-station-14/areas/core/art/guidelines.md)
+        - [Displacement Maps](en/space-station-14/areas/core/art/displacement-maps.md)
 
-		- [Proposals]()
+        - [Proposals]()
 
-	- [Character/Species](en/space-station-14/areas/core/characters-species.md)
-		- [PR Guidelines](en/space-station-14/areas/core/character-species/guidelines.md)
-		
-		- [Proposals]()
+    - [Character/Species](en/space-station-14/areas/core/characters-species.md)
+        - [PR Guidelines](en/space-station-14/areas/core/character-species/guidelines.md)
 
-	- [Combat](en/space-station-14/areas/core/combat.md)
-		- [PR Guidelines](en/space-station-14/areas/core/combat/guidelines.md)
-		- [Destructible](en/space-station-14/areas/core/combat/destructible.md)
+        - [Proposals]()
 
-		- [Proposals]()
+    - [Combat](en/space-station-14/areas/core/combat.md)
+        - [PR Guidelines](en/space-station-14/areas/core/combat/guidelines.md)
+        - [Destructible](en/space-station-14/areas/core/combat/destructible.md)
 
-	- [Mapping](en/space-station-14/areas/core/mapping.md)
-		- [PR Guidelines](en/space-station-14/areas/core/mapping/guidelines.md)
-		- [Dungeons](en/space-station-14/areas/core/mapping/dungeons.md)
-		- [Guides]()
-			- [General Guide](en/space-station-14/areas/core/mapping/guides/general-guide.md)
+        - [Proposals]()
 
-		- [Proposals]()
+    - [Mapping](en/space-station-14/areas/core/mapping.md)
+        - [PR Guidelines](en/space-station-14/areas/core/mapping/guidelines.md)
+        - [Dungeons](en/space-station-14/areas/core/mapping/dungeons.md)
+        - [Guides]()
+            - [General Guide](en/space-station-14/areas/core/mapping/guides/general-guide.md)
 
-	- [Player Interaction](en/space-station-14/areas/core/player-interaction.md)
-		- [PR Guidelines](en/space-station-14/areas/core/player-interaction/guidelines.md)
-			- [PDA Messaging](en/space-station-14/areas/core/player-interaction/proposals/pda-messaging.md)
-  	- [PAI Expansion Slots](en/space-station-14/areas/core/player-interaction/proposals/pai-expansion-slots.md)
-		- [Grid Inventory](en/space-station-14/areas/core/player-interaction/grid-inventory.md)
+        - [Proposals]()
 
-		- [Proposals]()
+    - [Player Interaction](en/space-station-14/areas/core/player-interaction.md)
+        - [PR Guidelines](en/space-station-14/areas/core/player-interaction/guidelines.md)
+            - [PDA Messaging](en/space-station-14/areas/core/player-interaction/proposals/pda-messaging.md)
+      - [PAI Expansion Slots](en/space-station-14/areas/core/player-interaction/proposals/pai-expansion-slots.md)
+        - [Grid Inventory](en/space-station-14/areas/core/player-interaction/grid-inventory.md)
+
+        - [Proposals]()
 
     - [Roleplay/Lore](en/space-station-14/areas/core/roleplay-lore.md)
-		- [PR Guidelines](en/space-station-14/areas/core/roleplay-lore/guidelines.md)
-		
-		- [Proposals]()
+        - [PR Guidelines](en/space-station-14/areas/core/roleplay-lore/guidelines.md)
 
-	- [Roundflow](en/space-station-14/areas/core/round-flow.md)
-		- [PR Guidelines](en/space-station-14/areas/core/round-flow/guidelines.md)
-		- [Antagonists](en/space-station-14/areas/core/round-flow/antagonists.md)
-			- [Exterimator](en/space-station-14/areas/core/round-flow/antagonists/exterminator.md)
-			- [Thief](en/space-station-14/areas/core/round-flow/antagonists/thief.md)
+        - [Proposals]()
 
-		- [Proposals]()
-			- [Cleanup Crew Gamemode](en/space-station-14/areas/core/round-flow/proposals/cleanup-crew-gamemode.md)
-			- [Game Director](en/space-station-14/areas/core/round-flow/proposals/game-director.md)
-			- [Pizza Delivery Critter](en/space-station-14/areas/core/round-flow/proposals/pizza-delivery-critter.md)
-			- [Rogue Drones](en/space-station-14/areas/core/round-flow/proposals/rogue-drones.md)
-			- [Turf War](en/space-station-14/areas/core/round-flow/proposals/turf-war.md)
-		
-	- [User Interface](en/space-station-14/areas/core/user-interface.md)
-		- [PR Guidelines](en/space-station-14/areas/core/user-interface/guidelines.md)
-		
-		- [Proposals]()
-			- [Stat Panels](en/space-station-14/areas/core/user-interface/proposals/statpanels.md)
+    - [Roundflow](en/space-station-14/areas/core/round-flow.md)
+        - [PR Guidelines](en/space-station-14/areas/core/round-flow/guidelines.md)
+        - [Antagonists](en/space-station-14/areas/core/round-flow/antagonists.md)
+            - [Exterimator](en/space-station-14/areas/core/round-flow/antagonists/exterminator.md)
+            - [Thief](en/space-station-14/areas/core/round-flow/antagonists/thief.md)
+
+        - [Proposals]()
+            - [Cleanup Crew Gamemode](en/space-station-14/areas/core/round-flow/proposals/cleanup-crew-gamemode.md)
+            - [Game Director](en/space-station-14/areas/core/round-flow/proposals/game-director.md)
+            - [Pizza Delivery Critter](en/space-station-14/areas/core/round-flow/proposals/pizza-delivery-critter.md)
+            - [Rogue Drones](en/space-station-14/areas/core/round-flow/proposals/rogue-drones.md)
+            - [Turf War](en/space-station-14/areas/core/round-flow/proposals/turf-war.md)
+
+    - [User Interface](en/space-station-14/areas/core/user-interface.md)
+        - [PR Guidelines](en/space-station-14/areas/core/user-interface/guidelines.md)
+
+        - [Proposals]()
+            - [Stat Panels](en/space-station-14/areas/core/user-interface/proposals/statpanels.md)
 
   - [Departments](en/space-station-14/areas/departments.md)
     - [Atmos](en/space-station-14/areas/departments/atmos.md)
-		- [PR Guidelines](en/space-station-14/areas/departments/atmos/guidelines.md)
-		- [Proposals]()
-			- [Atmos Rework](en/space-station-14/areas/departments/atmos/proposals/atmos-rework.md)
+        - [PR Guidelines](en/space-station-14/areas/departments/atmos/guidelines.md)
+        - [Proposals]()
+            - [Atmos Rework](en/space-station-14/areas/departments/atmos/proposals/atmos-rework.md)
 
-	- [Cargo/Salvage](en/space-station-14/areas/departments/cargo-salvage.md)
-		- [PR Guidelines](en/space-station-14/areas/departments/cargo-salvage/guidelines.md)
-		- [Proposals]()
+    - [Cargo/Salvage](en/space-station-14/areas/departments/cargo-salvage.md)
+        - [PR Guidelines](en/space-station-14/areas/departments/cargo-salvage/guidelines.md)
+        - [Proposals]()
 
-	- [Command](en/space-station-14/areas/departments/command.md)
-		- [PR Guidelines](en/space-station-14/areas/departments/command/guidelines.md)
-		- [Proposals]()
+    - [Command](en/space-station-14/areas/departments/command.md)
+        - [PR Guidelines](en/space-station-14/areas/departments/command/guidelines.md)
+        - [Proposals]()
 
-	- [Engineering](en/space-station-14/areas/departments/engineering.md)
-		- [PR Guidelines](en/space-station-14/areas/departments/engineering/guidelines.md)
-		- [Machine Upgrading Rework](en/space-station-14/areas/departments/engineering/proposals/emogarbage-machine-upgrading-rework.md)
-		- [Construction](en/space-station-14/areas/departments/engineering/construction.md)
-		- [Node Networks](en/space-station-14/areas/departments/engineering/node-networks.md)
-		- [Device Network](en/space-station-14/areas/departments/engineering/device-network.md)
-		- [Pow3r](en/space-station-14/areas/departments/engineering/pow3r.md)
+    - [Engineering](en/space-station-14/areas/departments/engineering.md)
+        - [PR Guidelines](en/space-station-14/areas/departments/engineering/guidelines.md)
+        - [Machine Upgrading Rework](en/space-station-14/areas/departments/engineering/proposals/emogarbage-machine-upgrading-rework.md)
+        - [Construction](en/space-station-14/areas/departments/engineering/construction.md)
+        - [Node Networks](en/space-station-14/areas/departments/engineering/node-networks.md)
+        - [Device Network](en/space-station-14/areas/departments/engineering/device-network.md)
+        - [Pow3r](en/space-station-14/areas/departments/engineering/pow3r.md)
 
-		- [Proposals]()
-			- [Engine Containment](en/space-station-14/areas/departments/engineering/proposals/engine-containment.md)
-			- [Machine Upgrading Rework](en/space-station-14/areas/departments/engineering/proposals/machine-upgrading-rework.md)
-			- [Power Generation Rework](en/space-station-14/areas/departments/engineering/proposals/power-generation.md)
-			- [Signaller Rework](en/space-station-14/areas/departments/engineering/proposals/signaller-rework.md)
+        - [Proposals]()
+            - [Engine Containment](en/space-station-14/areas/departments/engineering/proposals/engine-containment.md)
+            - [Machine Upgrading Rework](en/space-station-14/areas/departments/engineering/proposals/machine-upgrading-rework.md)
+            - [Power Generation Rework](en/space-station-14/areas/departments/engineering/proposals/power-generation.md)
+            - [Signaller Rework](en/space-station-14/areas/departments/engineering/proposals/signaller-rework.md)
 
-	- [Medical](en/space-station-14/areas/departments/medical.md)
-		- [PR Guidelines](en/space-station-14/areas/departments/medical/guidelines.md)
-		- [Chemistry](en/space-station-14/areas/departments/medical/chemistry.md)
-			- [Metabolism](en/space-station-14/areas/departments/medical/chemistry/metabolism.md)
-			- [Reactions](en/space-station-14/areas/departments/medical/chemistry/reactions.md)
-			- [Reagents](en/space-station-14/areas/departments/medical/chemistry/reagents.md)
-			- [Solution Containers](en/space-station-14/areas/departments/medical/chemistry/solution-containers.md)
+    - [Medical](en/space-station-14/areas/departments/medical.md)
+        - [PR Guidelines](en/space-station-14/areas/departments/medical/guidelines.md)
+        - [Chemistry](en/space-station-14/areas/departments/medical/chemistry.md)
+            - [Metabolism](en/space-station-14/areas/departments/medical/chemistry/metabolism.md)
+            - [Reactions](en/space-station-14/areas/departments/medical/chemistry/reactions.md)
+            - [Reagents](en/space-station-14/areas/departments/medical/chemistry/reagents.md)
+            - [Solution Containers](en/space-station-14/areas/departments/medical/chemistry/solution-containers.md)
 
-		- [Proposals]()
-	
-	- [Science](en/space-station-14/areas/departments/science.md)
-		- [PR Guidelines](en/space-station-14/areas/departments/science/guidelines.md)
-		- [Anomaly Cores](en/space-station-14/areas/departments/science/anomaly-cores.md)
+        - [Proposals]()
 
-		- [Proposals]()
-			- [XenoArch Redux (3MOArch)](en/space-station-14/areas/departments/science/proposals/xenoarch-redux.md)
-	
-	- [Security](en/space-station-14/areas/departments/security.md)
-		- [PR Guidelines](en/space-station-14/areas/departments/security/guidelines.md)
+    - [Science](en/space-station-14/areas/departments/science.md)
+        - [PR Guidelines](en/space-station-14/areas/departments/science/guidelines.md)
+        - [Anomaly Cores](en/space-station-14/areas/departments/science/anomaly-cores.md)
 
-		- [Proposals]()
-			- [GenPop Prisoners](en/space-station-14/areas/departments/security/proposals/genpop-prisoners.md)
-	- [Service](en/space-station-14/areas/departments/service.md)
-		- [PR Guidelines](en/space-station-14/areas/departments/service/guidelines.md)
+        - [Proposals]()
+            - [XenoArch Redux (3MOArch)](en/space-station-14/areas/departments/science/proposals/xenoarch-redux.md)
 
-		- [Proposals]()
-			- [Plant Genetics](en/space-station-14/areas/departments/service/proposals/plant-genetics.md)
+    - [Security](en/space-station-14/areas/departments/security.md)
+        - [PR Guidelines](en/space-station-14/areas/departments/security/guidelines.md)
+
+        - [Proposals]()
+            - [GenPop Prisoners](en/space-station-14/areas/departments/security/proposals/genpop-prisoners.md)
+    - [Service](en/space-station-14/areas/departments/service.md)
+        - [PR Guidelines](en/space-station-14/areas/departments/service/guidelines.md)
+
+        - [Proposals]()
+            - [Plant Genetics](en/space-station-14/areas/departments/service/proposals/plant-genetics.md)
 
 General Proposals
 ================
