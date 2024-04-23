@@ -17,7 +17,7 @@ Each work group is responsible for maintaining corresponding design and pr guide
 | [Character/Species](../space-station-14/areas/core/characters-species.md) | Jezithyr, Lank, Vasilis, KeronSHB, Bhijn & Myr(deathride58), AJCM |
 | [Combat](../space-station-14/areas/core/combat.md) | Jezithyr, EmoGarbage, AJCM, KeronSHB, Bhijn & Myr(deathride58) |
 | [Player Interaction](../space-station-14/areas/core/player-interaction.md) | |
-| [Mapping](../space-station-14/areas/core/mapping.md) | Emmise |
+| [Mapping](../space-station-14/areas/core/mapping.md) | Emisse |
 | [Roleplay/Lore](../space-station-14/areas/core/roleplay-lore.md) | Lank, KeronSHB, Vasilis |
 | [Round Flow](../space-station-14/areas/core/round-flow.md) | Jezithyr, EmoGarbage, Tayrthan, KeronSHB, Bhijn & Myr(deathride58), AJCM |
 | [User Interface](../space-station-14/areas/core/user-interface.md) | Jezithyr, EmoGarbage, AJCM, Julian, Bhijn & Myr(deathride58) |
