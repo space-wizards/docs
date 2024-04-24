@@ -8,7 +8,7 @@
 
 Any documents proposed:
 
-- Should conform to the basic [Core Game Design](../../space-station-14/design.md) as well as this document obviously.
+- Should conform to the basic [Core Game Design](../../space-station-14/core-design.md) as well as this document obviously.
 - Should contain sufficient justification for their existence,
 - Can be closed or drafted at maintainer discretion,
 - Are a reflection of SS14 to others that may be interested in how the game is designed. Take note of that.
