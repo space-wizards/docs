@@ -121,9 +121,7 @@ I need help with formatting this stuff, this is an info dump of all my ideas.
 
 - Entire laser guns can no longer be placed in rechargers, power cells need to be stripped to be recharged/replaced.
 
-- Double the fire rate and halve the damage of laser rifles to improve their suppression ability.
-
-- Change the laser rifle's firing sound, and the beam colour to green.
+- Double the fire rate and capacity and halve the damage of laser rifles to improve their suppression ability.
 
 
 
