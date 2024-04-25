@@ -95,6 +95,8 @@ I need help with formatting this stuff, this is an info dump of all my ideas.
 
 - Implement the concept of deviation, which is inaccuracy separate from a gun's mechanical spread.
 
+- Investigate the gridventoy space guns take up (Why does a Kammerer take up less volume than a WT550? Why can you fit a Lecter in a satchel?)
+
 
 
 ## Ballistic Weapon changes
