@@ -17,7 +17,7 @@ Some changes fall under different categories, so the overhaul shouldn't be done 
 
 ### backend
 
-this section is a stub, BallisticAmmoProvider, MagazineAmmoProvider and ChamberMagazineAmmoProvider all feed bullets into guns and would probably be better separated as Chamber, MagazineSlot and Ballistic
+this section is a stub, BallisticAmmoProvider, MagazineAmmoProvider and ChamberMagazineAmmoProvider all feed bullets into guns and would probably be better separated as Chamber, MagazineSlot and Ballistic which use eachother.
 
 ### Mechanical Guns
 
