@@ -15,6 +15,10 @@ Some changes fall under different categories, so the overhaul shouldn't be done 
 
 ## Overview
 
+### backend
+
+this section is a stub, BallisticAmmoProvider, MagazineAmmoProvider and ChamberMagazineAmmoProvider all feed bullets into guns and would probably be better separated for ECS.
+
 ### Mechanical Guns
 
 Right now, both ballistic and energy weapons point at enemies and do damage. There *are* some implications that differentiate ballistic and energy weapons like projectile speed and ignoring windows, but these differences aren't very significant.
