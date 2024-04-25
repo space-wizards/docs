@@ -48,7 +48,7 @@ I need help with formatting this stuff, this is an info dump of all my ideas.
 
 ## Mechanical Guns
 
-- Separate a 'ChamberAmmoProvider' component from 'ChamberMagazineAmmoProvider' component. Replace 'BallisticAmmoProvider' component on pump action shotguns with 'ChamberAmmoProvider' and 'Magazine' components.
+- Provide support for 'ChamberMagazineAmmoProvider' component to recognise 'BallisticAmmoProvider' component on pump action shotguns.
 
 - Implement gun modification by allowing players to deconstruct and swap parts in slots (barrel, stock, power cell etc) on guns which then modifies its properties, like how players can wear clothes with components.
 
