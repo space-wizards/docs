@@ -64,8 +64,6 @@ I need help with formatting this stuff, this is an info dump of all my ideas.
 
 - Implement the concept of gun safety and accidental discharges, which are incurred when taking damage or exposed to explosions while a gun is in your inventory.
 
-- Implement the concept of deviation, which is inaccuracy separate from a gun's mechanical spread.
-
 - Disable the ammo UI for all guns (except the WT550) to encourage mechanically diagnosing your gun.
 
 - Add configuration for condition and jamming mechanics.
@@ -94,6 +92,8 @@ I need help with formatting this stuff, this is an info dump of all my ideas.
 - Improve gun accuracy and incur a movement penalty while wielding a gun. Movement penalties do not apply to space combat.
 
 - Shoving a gun wielder will immediately unwield their gun.
+
+- Implement the concept of deviation, which is inaccuracy separate from a gun's mechanical spread.
 
 
 
