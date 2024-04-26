@@ -2,7 +2,7 @@
 
 | Designers      | Implemented | GitHub Links | Sprites |
 | -------------- | ----------- | ------------ |---------
-| BITTERLYNX     | :x: No      | TBD          | DanOftheE |
+| BITTERLYNX     | :x: No      | https://github.com/space-wizards/space-station-14/pull/26941  | DanOftheE |
 
 # Botany helper gnomes
 
