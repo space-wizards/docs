@@ -237,6 +237,7 @@ Space Station 14
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
+                        - [Plant Genetics](en/space-station-14/departments/service/proposals/gnome-ghost-role.md)
 
 General Proposals
 ================
