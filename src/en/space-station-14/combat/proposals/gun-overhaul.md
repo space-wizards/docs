@@ -19,11 +19,11 @@ Some changes fall under different categories, so the overhaul shouldn't be done 
 
 When it comes to reloading guns, there are multiple components that are responsible; `BallisticAmmoProvider`, `RevolverAmmoProvider`, `MagazineAmmoProvider` and `ChamberMagazineAmmoProvider` all share the function of somehow loading bullets from a source into `Gun`. However, all of these components are relatively hard set in their different functions such that you can't mix and match them together. 
 
-![Untitled Diagram(1)](https://github.com/WarMechanic/gunnery/assets/69510347/1914583e-83e8-45b4-b729-fd5657d77937)
-
 Out of these components `BallisticAmmoProvider` is arguably the most extensible as its cycling behaviour is also used for magazines fed into guns, while every other component is used solely to feed `Gun`. The only functional difference between `MagazineAmmoProvider` and `ChamberMagazineAmmoProvider` is that one has a chamber, the other doesn't.
 
 What if I wanted to implement a shotgun with a chamber? I am encouraged to code a `ChamberBallisticAmmoProvider` component that has a chamber much like `ChamberMagazineAmmoProvider`, except that it takes bullets from an internal magazine instead of an external one. How about a Remington 1858 revolver with a detaching cylinder? You would have to code a `MagazineRevolverAmmoProvider` too. What if you wanted a railgun that fired rails and simultaneously drew from a Battery without firing a laser?
+
+![Untitled Diagram(1)](https://github.com/WarMechanic/gunnery/assets/69510347/1914583e-83e8-45b4-b729-fd5657d77937)
 
 Instead AmmoProviders can be redesigned to be hierarchical, where a `Gun` checks for a `Chamber`, `Magazine` and then `BallisticAmmoProvider` or `RevolverAmmoProvider`. A `Chamber` would then check for everything lower down the list etc, and use existing cycling behaviours to load a bullet into the chamber. This would simplify the number of components `Gun` uses to load itself, and chamber behaviours can be extended to future AmmoProvider component types.
 
