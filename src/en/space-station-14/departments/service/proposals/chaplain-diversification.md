@@ -3,15 +3,15 @@ AKA. The Quran update
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Terraspark4941 | :x: No | TBD |
+| Terraspark4941 | :information_source: Open PR | [#27400](https://github.com/space-wizards/space-station-14/pull/27400) |
 
 ## Overview
 
-Adds an API for intergrating new varients of the bible via radial menus (like in TG station) and a new item; jacketed religious books. 
+Adds a backbone for intergrating new varients of the bible via radial menus (like in TG station) and a new item; jacketed religious books. 
 
 Every instance of the bible in-game should be replaced by these jacketed books (with potential exception for loadouts) to allow for chaplains to "unwrap" their book of choice.
 
-To implement this API, a new religious book, the Clear Quran, will be implemented with a different AoE healing mechanic to boot.
+To implement this, a new religious book, the Clear Quran, will be implemented with a different AoE healing mechanic to boot.
 
 ## Okay, but why?
 
@@ -34,4 +34,4 @@ As previously stated, every instance of the bible to-date will be rplaced by the
 
 After selecting their mechanic of choice via the first radial menu, they can choose skins as they prefer (I'd still prefer the Quran be locked to recitational skins only, but not so with bibles and non-recitational skins!), also via nested radial menu.
 
-A new sprite for the Clear Quran has already been developed and should be present at [Resources/Textures/Objects/Specific/Chapel/quran.rsi](https://github.com/space-wizards/space-station-14/tree/master/Resources/Textures/Objects/Specific/Chapel/quran.rsi) in the near future.
+A new sprite for the Clear Quran has already been developed and should be present at [Resources/Textures/Objects/Specific/Chapel/quran.rsi](https://github.com/space-wizards/space-station-14/tree/master/Resources/Textures/Objects/Specific/Chapel/quran.rsi) in the linked PR [#27400](https://github.com/space-wizards/space-station-14/pull/27400).
