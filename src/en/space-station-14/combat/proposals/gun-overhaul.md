@@ -9,7 +9,7 @@
 Started a thread of gun discussion on DeltaV Discord because I didn't like how I couldn't cycle shotguns like I could rifles. 
 Proposed a series of changes in relation to making guns modular and more mechanical, encouraging gun maintenance and mastery, and rebalancing combat to be slower and more tactical - which in turn provides more room for text chat and RP.
 
-However, DeltaV has no maintainers at the moment which means I need to bring my ideas upstream. Given that LRP and MRP are different contexts, some of these ideas may be incompatible but I wish for everything to be configurable, and it'll help with compatibility too.
+However, DeltaV has no maintainers at the moment which means I need to bring my ideas upstream. Given that LRP and MRP are different contexts, some of these ideas may be incompatible but I wish for everything to be configurable, and it'll help with compatibility too. Anything that can't or shouldn't be implemented can be moved downstream.
 
 Some changes fall under different categories, so the overhaul shouldn't be done in a single pull request.
 
@@ -29,6 +29,9 @@ Instead AmmoProviders can be redesigned to be hierarchical, where a `Gun` checks
 
 ![Untitled Diagram(2)](https://github.com/WarMechanic/gunnery/assets/69510347/61c13709-87a4-4cf7-a03a-3af3d9bbfd99)
 
+Such a change to gun components would not change the current functionality of guns in the game. Guns using `ChamberMagazineAmmoProvider` could be replicated by using `Chamber` and `Magazine` components. The Bulldog which is open-bolt could be replicated by using only a `Magazine` component. All shotguns in their current implementation would maintain `BallisticAmmoProvider` components.
+
+Alongside cleaning up gun code and making it more extensible, a refactor would allow me to lay the groundwork for realistic gun jamming mechanics.
 
 ### Mechanical Guns
 
