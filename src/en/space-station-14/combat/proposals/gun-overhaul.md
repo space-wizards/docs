@@ -25,7 +25,7 @@ Out of these components `BallisticAmmoProvider` is arguably the most extensible 
 
 What if I wanted to implement a shotgun with a chamber? I am encouraged to code a `ChamberBallisticAmmoProvider` component that has a chamber much like `ChamberMagazineAmmoProvider`, except that it takes bullets from an internal magazine instead of an external one. How about a Remington 1858 revolver with a detaching cylinder? You would have to code a `MagazineRevolverAmmoProvider` too.
 
-Instead AmmoProviders can be redesigned to be hierarchical, where a `Gun` checks for a `Chamber`, `Magazine` and then `BallisticAmmoProvider` or `RevolverAmmoProvider`. A `Chamber` would then check for everything lower down the list etc. This would simplify the number of components `Gun` uses to load itself, and chamber behaviours can be extended to future AmmoProvider component types.
+Instead AmmoProviders can be redesigned to be hierarchical, where a `Gun` checks for a `Chamber`, `Magazine` and then `BallisticAmmoProvider` or `RevolverAmmoProvider`. A `Chamber` would then check for everything lower down the list etc, and use existing cycling behaviours to load a bullet into the chamber. This would simplify the number of components `Gun` uses to load itself, and chamber behaviours can be extended to future AmmoProvider component types.
 
 ![Untitled Diagram(2)](https://github.com/WarMechanic/gunnery/assets/69510347/61c13709-87a4-4cf7-a03a-3af3d9bbfd99)
 
