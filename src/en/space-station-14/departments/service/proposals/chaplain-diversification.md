@@ -3,7 +3,7 @@ AKA. The Quran update
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Terraspark4941 | :information_source: Open PR | [#27400](https://github.com/space-wizards/space-station-14/pull/27400) |
+| Terraspark4941 | ⚠️ Partially | [#27400](https://github.com/space-wizards/space-station-14/pull/27400) [Sprite] |
 
 ## Overview
 
@@ -34,4 +34,4 @@ As previously stated, every instance of the bible to-date will be rplaced by the
 
 After selecting their mechanic of choice via the first radial menu, they can choose skins as they prefer (I'd still prefer the Quran be locked to recitational skins only, but not so with bibles and non-recitational skins!), also via nested radial menu.
 
-A new sprite for the Clear Quran has already been developed and should be present at [Resources/Textures/Objects/Specific/Chapel/quran.rsi](https://github.com/space-wizards/space-station-14/tree/master/Resources/Textures/Objects/Specific/Chapel/quran.rsi) in the linked PR [#27400](https://github.com/space-wizards/space-station-14/pull/27400).
+A new sprite for the Clear Quran has already been developed and should be present at [Resources/Textures/Objects/Specific/Chapel/quran.rsi](https://github.com/space-wizards/space-station-14/tree/master/Resources/Textures/Objects/Specific/Chapel/quran.rsi), implemented by the linked PR [#27400](https://github.com/space-wizards/space-station-14/pull/27400).
