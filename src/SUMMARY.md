@@ -237,6 +237,7 @@ Space Station 14
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
+   			- [Chaplain Diversification](en/space-station-14/departments/service/proposals/chaplain-diversification.md) 
 
 General Proposals
 ================
