@@ -59,7 +59,7 @@ These principles suggest changes to devices:
 
 ### Fast(er) Spacing
 
-**Spacing should be fast(er).** For purposes of this design doc, "fast(er) spacing" means `0.05 < atmos.mmos_spacing_speed < 1.0`.
+**Spacing should be fast(er).** Here, "fast(er) spacing" means `0.05 < atmos.mmos_spacing_speed < 1.0`.
 
 At the time of writing, the current "slow" spacing has `atmos.mmos_spacing_speed = 0.05`. A `atmos.mmos_spacing_speed = 1.0` corresponds to the old "instant spacing behavior". This design doc advocates for spacing that is faster than what it is now, but not as fast as it used to be.
 
