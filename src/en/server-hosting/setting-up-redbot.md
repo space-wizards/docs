@@ -8,6 +8,10 @@ Luckily for you, this is easy to set up with the help of the [Red Discord Bot](h
 We only provide support for the official wizard-cogs in the #hosting channel on the discord, Support for Red itself or other cogs is not provided by us, please get support in the official RedBot Discord or the appropriate cog developer.
 ```
 
+```admonish warning
+Most of our cogs require a minimum of python 3.11, please ensure you have this version before asking for support.
+```
+
 ## Setup
 1. Follow the [Red Documenation](https://docs.discord.red/en/stable/install_guides/index.html) on how to install and start the Base Red bot. Note that like an SS14 server. You need a computer that will stay turned on for your bot to function.
 2. If you have not already, give [Red's Getting started](https://docs.discord.red/en/stable/getting_started.html#getting-started) page a read.
@@ -21,14 +25,17 @@ Add the wizard-cogs repository
 
 Install the cog of choice, check out the GitHub link to see your options
 [p]cog install wizard-cogs <cog_name>
+
+Load the cog
+[p]load <cog_name>
 ```
 
-```admonish note title="Psss"
+```admonish note title="Hints"
 Looking for other interesting cogs? Check out the [Redbot Cog index](https://index.discord.red/). Like stated above we don't provide support for these cogs.
-```
-```admonish note title="Psss Combo 2"
+
 Not an English server? Some cogs have translations, You can change this with ```[p]set locale <language_code>```. Our cogs don't support other languages than English currently.
 ```
+
 Now you are ready, please be sure to check the [Wizard-Cogs Github](https://github.com/space-wizards/wizard-cogs) in case any new cogs have been added.
 
 
@@ -99,9 +106,9 @@ Once it's merged and confirmed stable I will update this documentation with all 
 ### GitHub Integration
 Yet to be ported to redbot. You can use a [github webhook](https://gist.github.com/jagrosh/5b1761213e33fc5b54ec7f6379034a22) in the meantime.
 
-### Autoresponder (WYCI, Nanotrashen Block Game, Based)
+### Autoresponder (WYCI, Nanotrasen Block Game, Based)
 ![why](../assets/images/discord/autoresponder-example.png)
 
 ```[p]cog install wizard-cogs autoresponder```
 
-Why... (Responds to users saying "Something when" with "When you code it", "Tetris" with "Nanotrashen Block Game" and "Based" with "Based on what". This is an inside joke inside Space Station 14 communities)
+Why... (Responds to users saying "Something when" with "When you code it", "Tetris" with "Nanotrasen Block Game" and "Based" with "Based on what". This is an inside joke inside Space Station 14 communities)
