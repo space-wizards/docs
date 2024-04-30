@@ -106,9 +106,9 @@ Once it's merged and confirmed stable I will update this documentation with all 
 ### GitHub Integration
 Yet to be ported to redbot. You can use a [github webhook](https://gist.github.com/jagrosh/5b1761213e33fc5b54ec7f6379034a22) in the meantime.
 
-### Autoresponder (WYCI, Nanotrashen Block Game, Based)
+### Autoresponder (WYCI, Nanotrasen Block Game, Based)
 ![why](../assets/images/discord/autoresponder-example.png)
 
 ```[p]cog install wizard-cogs autoresponder```
 
-Why... (Responds to users saying "Something when" with "When you code it", "Tetris" with "Nanotrashen Block Game" and "Based" with "Based on what". This is an inside joke inside Space Station 14 communities)
+Why... (Responds to users saying "Something when" with "When you code it", "Tetris" with "Nanotrasen Block Game" and "Based" with "Based on what". This is an inside joke inside Space Station 14 communities)
