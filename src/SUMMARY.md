@@ -162,6 +162,7 @@ Space Station 14
 	- [Grid Inventory](en/space-station-14/player-interaction/grid-inventory.md)
 
 	- [Proposals]()
+	  - [PAI Expansion Slots](en/space-station-14/areas/core/player-interaction/proposals/pai-expansion-slots.md)
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
