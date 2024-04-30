@@ -52,7 +52,7 @@ If you like to have a channel where the status message is automaticly updated. T
 ### SS14.Watchdog Power actions
 ![Poweractions](../assets/images/discord/poweractions-example.png)
 
-Currently only has the functionality to restart servers as of writing
+Allows you to communicate with SS14.Watchdog to perform certain actions.
 1. Install ```[p]cog install wizard-cogs poweractions```
 2. Setup your server by running ```[p]poweractionscfg add``` and pressing the green add button. Only admins can run this command. Otherwise, the bot won't respond.
 You will get a form you will be asked to fill in (**Notice**: Neither us nor the RedBot developers will receive this information. This information will only be stored by the bot and won't be shown publicly.)
@@ -63,7 +63,22 @@ You will get a form you will be asked to fill in (**Notice**: Neither us nor the
 - URL: The URL to the watchdog instance, make sure to provide a URL accessible by the bot. Example: If you are exposing the watchdog's API at 'https://example.com/watchdog' then what's that you wanna input. You can probably use 'localhost' too if the bot is hosted on the same machine as the watchdog.
 - Server ID: The name of your server in your watchdog's appsettings.yml that stores your server config. *Not* the "Name" config.
 - API token: The ApiToken in your watchdogs configuration.
-3. After clicking submit if the bot reported success then you are done! Repeat for your other servers or give it a shot with ```[p]restartserver <name>```.
+3. After clicking submit if the bot reported success then you are done! Repeat for your other server.
+
+#### Commands available
+Make a server restart now:
+
+```[p]restartserver <name>```
+
+Restart all servers the bot has configured:
+
+```[p]restartnetwork```
+
+*This will ask for confirmation before working*
+
+Instruct the server to shutdown after the current round ends:
+
+```[p]stopserver <name>```
 
 ### New round pinging & Ahelp relay
 While it's not specificly a bot feature, I thought I might as well throw it in here since there's no other documentation on it and it's related to Discord.

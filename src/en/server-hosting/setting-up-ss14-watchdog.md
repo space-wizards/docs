@@ -208,10 +208,10 @@ This shouldn't apply if you're just shipping precompiled updates to the server u
 
 SS14.Watchdog can compile and update the server when commits are pushed to a branch of the Git repository that contains the source to your fork.
 
-```
+```admonish info
 This requires the server to have the necessary parts of the developer environment.
 Also, you still need to write a Git hook or somesuch to ensure that the Watchdog is notified of the updates, or otherwise cause it to periodically check for updates.
-```admonish info
+```
 
 
 ```yml
@@ -421,6 +421,9 @@ Serilog:
   #  password: "{{ loki_pass }}"
 
 AllowedHosts: "*"
+
+Notification:
+  DiscordWebhook: "https://discord.com/api/webhooks/..."
 
 # API URL that your watchdog is accessible from.
 # This HAS to be set so the game servers can communicate with the watchdog.

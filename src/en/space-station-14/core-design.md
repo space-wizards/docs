@@ -1,7 +1,3 @@
-```admonish warning "Attention: WIP!"
-This section is actively under development and is not fully complete. Things may change!
-```
-
 # Core Game Design
 These documents contains the Spacestation 14's Core Game Design Princples and should be used to inform the design of any new designs or large balance changes. 
 
@@ -19,7 +15,7 @@ Questions around Core Game Design should be directed towards the Design Group on
 
 # Core Pillars
 These pillars serve as the guiding concepts for designing features for SS14. When creating features or changing balance you should be actively thinking about how these concepts relate to your design or change. 
-The pillars serve as guideposts for creating a cohesive design for SS14. Further detail about each can be found in: [Design Principles](core-design/principles.md).
+The pillars serve as guideposts for creating a cohesive design for SS14. Further detail about each can be found in: [Design Principles](core-design/design-principles.md).
 
 ## Chaotic
 - No two rounds should play alike. The combination of antagonists, incompetence, and disasters should create situations where players have to deal with rapidly changing and escalating situations.
@@ -31,7 +27,3 @@ The pillars serve as guideposts for creating a cohesive design for SS14. Further
 - Simulated systems should be complex enough to create engaging gameplay/decisions while still being intuitive enough to learn without wiki-diving. Systems should interact with each other as much as feasible to create new emergent gameplay opportunities.
 ## Player Interaction/Agency
 - Players should be encouraged to interact with each other as much as possible to create opportunities for conflict or cooperation. Mechanics should reinforce the player's ability to make impactful decisions while mitigating those decisions' effects on the agency of other players.
-
- ## Categories:
- - [Design Principles](core-design/principles.md)
- - [Antagonists](core-design/antagonists.md)
