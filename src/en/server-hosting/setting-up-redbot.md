@@ -9,7 +9,7 @@ We only provide support for the official wizard-cogs in the #hosting channel on 
 ```
 
 ```admonish warning
-Our most our cogs require a minimum of python 3.11, please ensure you have this version before asking for support.
+Most of our cogs require a minimum of python 3.11, please ensure you have this version before asking for support.
 ```
 
 ## Setup
