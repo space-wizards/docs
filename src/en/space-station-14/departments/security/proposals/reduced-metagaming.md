@@ -32,6 +32,30 @@ Information helps mitigate these losses; knowing who to search, what materials t
 
 ## The Implant Problem
 
+```admonish quote
+Implant checking someone "just in case" after being arrested for some unrelated crime.
+```
+
+Implants are very useful to Syndicates since they allow direct access to certain functionality and are hidden by default. Security is unable to detect an implant unless it has been used, though it may be suspected through circumstantial evidence. The DNA Scrambler is a great example of this; if it's not witnessed being used, Security will first have to a) find the user, b) detect they are not on the manifest, c) make a determination whether a DNA implanter was used and/or find the used implanter. 
+
+There is a big weakness to implants however. SecOffs can use an implanter to extract implants, and the mechanical limitation to this is relatively minor. Acquiring an implanter can be easily done via Medical, and while the doafter to use one is pretty long it's nothing compared to the brig times a suspected antag may have. This means they can be very easily taken away from the antag by any SecOff who wishes to do the procedure.
+
+Strangely, implant searches are much more restrictive on MRP. To check, Security must have witnessed an implant being used, or any other explanation must be *extremely* unlikely. This requirement is held up to an almost absurd amount; you can't check for a Storage or Uplink implant if someone suddenly has a weapon in perma, because someone could have broken in, given them the gun and then left after repairing the hole. This means subtle implants or one-time use implants like the Storage Implant and DNA Scrambler are much more valuable on MRP since a suspicion is nowhere near enough to be allowed to implant check. 
+
+### Proposed Solution
+
+Security should not have any rule limitations on checking implants, but instead Security should be mechanically discouraged from performing random implant checks. I propose the following:
+- Security has knowledge of implants; that they exist, and what types the Syndicate have access to.
+- Security has no limitations on performing implant checks.
+- Checks can only be performed with the `Implant Extractor`, a device that can be printed in the Medfab.
+- To extract, the Implant Extractor must be set to the specific type of implant to be extracted. A doafter is then performed.
+   - If successful, the chosen implant gets extracted into the Implant Extractor similar to how an Implanter is done now.
+   - If unsuccessful, no implant is extracted. The user that tried to use the Implant Extractor takes 45 Cellular damage, ignoring resistances, as the device backfires.
+ 
+The main point is the damage taken by the Implant Extractor. Performing an implant check without sufficient suspicion and being wrong becomes a very high price to pay, encouraging Security to be sure of their search. Even a single failed search essentially requires the user to be sent to the medbay, and two puts them out of commission for a long time.
+
+Note: The particulars of this suggestion may change as Newmed/Surgery gets implemented. The important part is that implant searching someone without being correct should punish Security by temporarily taking away a resource, in this case in the form of personnel.
+
 ## The PDA / Uplink Problem
 
 ```admonish quote
@@ -44,6 +68,6 @@ Uplinks are in a kind of weird situation where it's one of the most powerful too
 
 Right now the rules are the main way of preventing overzealous Security confiscating PDAs. Traitors do have a gameplay option as well: The Uplink Implant. This implant does have the benefit of making PDA confiscating a non-issue, but the tradeoff is 2 less TC and with the stringent rules on PDA confiscating it's unlikely to get any benefit from it. There's no reason to keep the uplink open after the implant is used, so you only get value if another uplink has been found. Additionally it suffers from the vulnerability of implant checks.
 
-### Proposal
+### Proposed Solution
 
 The PDA is very easily the single point of failure with this problem, but it's also unique in its ringtone lock. 
