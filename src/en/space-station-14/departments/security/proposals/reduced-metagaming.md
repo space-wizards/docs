@@ -83,6 +83,13 @@ The Uplink Patch would turn any object into a possible Uplink, making the permut
 
 ## The Thief Gloves Problem
 
+```admonish quote
+Checking black gloves without proper evidence leading to them
+```
+```admonish quote
+Checking for Chameleon gear when there is no reason to suspect it feels kinda metagaming, yeah? Especially since you now have to put the items on to even check.
+```
+
 Thief gloves come in two varieties, each with their own problem. 
 
 1. Normal Thief Gloves are indistuingishable from black gloves. The only way to know they have been used is if someone finds out an item on their person has been stolen, and even then Security are not allowed to know they must search for black gloves unless an uplink has been previously found. They also stand out for crew who don't normally wear black gloves, making overzealous SecOffs search and possibly even confiscate them.
@@ -101,9 +108,33 @@ Thief gloves come in two varieties, each with their own problem.
 
 This means that a thief is safe from having their gloves lost before committing a crime. Detectives can no longer use holofibers to confirm a Thief antag, but must instead rely on the fibers of the gloves around the crime scene. The addition of additional insuls colors means selecting yellow insulated gloves is no longer a safe option to blend in with all the other yellow gloves.
 
-## The Thief Sets Problem
+## The Thief Kit Problem
+
+```admonish quote
+Seeing someone having an omega soap and assuming they therefore have a storage and DNA scramble implant
+```
+```admonish quote
+Seeing someone with a briefcase and concluding they are a thief
+```
+```admonish quote
+Knowing what thieves have in each kit
+```
+
+This issue is quite apparent and probably one of the easier ones to catch, but that doesn't mean it's any less annoying for Security who have to pretend that the Thief they caught don't have certain items. This is mostly only relevant to some sets; finding out someone has a Chameleon jumpsuit makes it only natural to further investigate and find the other Chameleon clothing.
+
+The kits that suffer the most from this issue are the following:
+- Chemistry Set
+  - Contains Omega Soap, Syringe, Ephedrine bottle. These could betray the Storage and DNA Scrambler Implants.
+- Syndie Set
+  - Contains Master At Arms hat and Interdyne Cigarettes. These could betray the Agent ID and Emag.
+- Sleeper Set
+  - Contains a Pyjama hat and Nitrous Oxide tank. These could betray the Hypopen. The jumpsuit isn't as big of an issue since it can be cut into cloth.
+- Communicator Set
+  - Contains a briefcase filled with a thief figurine, neck gater, tacticool jumpsuit and jensen coat. These could betray the Master Comms Key, CyberPen and Voicemask.
 
 ### Proposed Solution
+
+Cull the unnecessary fluff items from the set and make them the same level of discoverability. If it's desirable to have the thief hide stuff, include that in the items being recieved; implants require the thief to hide the implanter for example. If the Communicator Set should require the thief to hide a fluff thief figurine, instead make the the Master Comms Key come in a box that needs to be hid. 
 
 ## The Disguised Items Problem
 
