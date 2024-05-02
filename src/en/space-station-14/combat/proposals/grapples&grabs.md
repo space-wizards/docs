@@ -139,6 +139,7 @@ This is pretty obviously just murder tool, though I suppose you could put someon
 I'm a big fan of iterative design and spitballing, so feedback is super good and I enjoy the process, there's a lot here and I'm not expecting it all to be liked by everyone. That being said, I want to pre-empt some things I think people are gonna ask with the justifications I have in mind for them:
 
 **Why is there so much RNG? Combat's no fun if it boils down to dice rolls.**
+
 My aim with the chance-based stuff was twofold, and I *strongly* feel like it's the right call on both counts:
 
 Firstly, with a grapple system, and with a *lot* of the other systems in ss13, events come down entirely to inputs; which is to say if you can input the actions quickly, precisely and in the right order or, worse, use macros to do so, situations will virtually always resolve the same way. If the mechanics were based on action bar timers entirely, it would be completely possible to account for all outcomes and while it might sound lame to say, mechanics this powerful shouldn't be something that can be applied 100% of the time in the same way. An easy example is how in SS13, with the right timing, you were able to slip someone, table them, then cuff them without them having any means to change that outcome once they'd slipped shy of having pre-prepared adrenals - that's something I want to avoid and leads into my second reason.
@@ -147,14 +148,17 @@ Secondly, this is a fight, possibly to the death - the vibe *should* be a little
 
 
 **Pins are too strong/weak**
+
 IDK maybe. I think they'll be pretty balanced, they're based on an old mechanic from hippiestation that, IMO, elevated combat a ton. It's the only viable alternative to stun weapon meta for sec to use that I can think of. If it sucks, theres a huge amount of numerical levers that can be adjusted to balance it.
 
 
 **This is really long, it's too complicated, only a small group of people will know how to use grapples and they'll powergame**
+
 There's a lot of words, because I wanted to explain every situation, every interaction, every edge case, but I genuinely believe this system is intuitive. If you paused gameplay and asked a given player what they think will happen if you click X at this moment, I'd wager more often than not they'd guess right. The mechanics are built around existing rules, like 'object in hand, combat mode, hit thing with object' or 'use object in hand, does obvious thing with it'. The only standout from that, I think, is the Lift, but I *feel* like once players figure out its just pulling with two hands, it'll click into place. Fundamentally, this system is simple, it's just flexible with a ton of niche interactions and details that 90% of the time will never come up and when they do, my hope is player will have intuited something might work, then be delighted to learn they can give the mime a swirlie.
 
 
 **This is impossible to implement**
+
 Yeah I defo can't implement this. I feel kinda gross writing a doc for something I'm not able to do. If there's genuine issues with implementing stuff I hope there's ways to work round it, if not oh well.
 
 
