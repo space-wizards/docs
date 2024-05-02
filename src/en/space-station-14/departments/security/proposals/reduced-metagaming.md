@@ -190,10 +190,45 @@ This is probably the most comprehensive change and touches on things outside the
  - The device acts like an airport x-ray scanner, able to find hidden compartments and technologies in otherwise mundane items. 
   - An item can be placed inside the scanner. After six minutes the item comes out; if the item is of Syndicate origin, it is marked as such when examined: "This item is disguised Syndicate contraband".
   - This mark can be cleaned off with soap.
-- Rule change: Security can only confiscate non-contraband items that they can confirm was used in a crime. Security can not keep an item from being returned to a crewmate on suspicion of it being contraband.
+- Rule change: Security can only confiscate non-contraband items that they can confirm was used in a crime. Security can not keep an item from being returned to a crewmate on suspicion of it being contraband. Normal rules on Captain outlawing a specific item still apply.
   - This is to ensure Security does not overextend and confiscate an unscanned stealth item.
+
+These changes do introduce a new rule, however it is also one that is very easy to enforce and check. It also frees up crew to speak plainly about stealth items in the same manner crew are able to talk and discuss Emags. 
+
+Additionally, this change helps new Sec players recognize contraband. Security still have discretion to not confiscate certain contraband such as insulated gloves and some contraband (e.g. drugs) can't be marked; this just assists in informing players and Security alike what counts.
 
 ## Other Problems that have PRs in the works
 
-- Roundtype problem
-- Map loot problem
+###  Roundtype problem
+```admonish quote
+Preparing for Nukies just because no antag activity has happened a while into the round.
+```
+```admonish quote
+"Quiet shift today"
+```
+```admonish quote
+"I found a cobra or some other syndicate tech on station/a syndicate has done something noticable. Main round antag is traitors."
+```
+```admonish quote
+"It's been strangely quiet and nothing has really happened in the first 30 minutes. Probably nukies"
+```
+Can be solved by adding single Traitors to non-Traitor gamemodes: https://github.com/space-wizards/space-station-14/pull/27501
+
+### Map loot problem
+```admonish quote
+Every instance of Gamer Loot in the walls
+```
+```admonish quote
+Powergaming for maints loot
+```
+Can be solved by making map loot spawn randomly: https://github.com/space-wizards/space-station-14/pull/27082
+
+### Overly suspicious players
+```admonish quote
+"I heard a flash somehwe near security, it must be revs! Cargo buy mindshields immediately"
+```
+```admonish quote
+YOOOOOOO YA WANT A STAMP FOR SOMETING NOT THAT IMPORTANT?, YA GONNA USE CYBERSUN PEN FOR EDITING THE PAPER!!, KOS
+```
+Can be solved by having a non-antag role mimicing antag behavior: https://github.com/space-wizards/docs/pull/129
+
