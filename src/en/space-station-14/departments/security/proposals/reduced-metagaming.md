@@ -141,30 +141,30 @@ Cull the unnecessary fluff items from the set and make them the same level of di
 There are many items in the game that are explicitly designed to look like and sometimes even act like another object. The degree of how effective this is depends on the object. They come in the following categories (some job items not listed):
 
 - Items that can't be found unless directly used
- - Conducting Gloves
- - Thieving Gloves
- - Hypodart
- - Decoy Nuclear Disk
- - Explosive Banana
- - Explosive Wet Floor Sign
-
+  - Conducting Gloves
+  - Thieving Gloves
+  - Hypodart
+  - Decoy Nuclear Disk
+  - Explosive Banana
+  - Explosive Wet Floor Sign
+ 
 - Items that can be found if worn
- - Voice Mask
- - Chameleon Kit
- - No-slip Shoes
+  - Voice Mask
+  - Chameleon Kit
+  - No-slip Shoes
 
 - Items that can be found if held
- - Hypopen
- - Stimkit
- - Agent ID Card
- - Lobbying Bundle
- - Energy Dagger
- - Cane Sword
+  - Hypopen
+  - Stimkit
+  - Agent ID Card
+  - Lobbying Bundle
+  - Energy Dagger
+  - Cane Sword
 
 - Items that can be found if examined
- - Extra-Bright Lantern
- - Blue Boxing Gloves
- - Dehydrated Space Carp
+  - Extra-Bright Lantern
+  - Blue Boxing Gloves
+  - Dehydrated Space Carp
 
 There is a question to be made what the intended purpose of these disguises are. Something like the Extra-Bright Lantern can only survive a passing glance from crew, a cane sword may be found if an officer is searching thoroughly and a hypodart can't be determined to be a Syndicate object unless explicitly tested. The problem arises when Security is able to be too thorough with a search and find an item they aren't looking for, or when Security knows for certain an item is contraband but can't prove it.
 
@@ -176,22 +176,22 @@ This is probably the most comprehensive change and touches on things outside the
 
 - Rule change: Crew have knowledge about stealth items.
 - *Non-stealth* items can now be determined to be contraband upon being examined.
- - Improvised contraband (improvised weapons, shivs, makeshift cuffs etc.) have the following text added: "This item is minor contraband."
- - Items restricted to departments (insulated gloves, RCDs, scalpels, Security gear etc.) have the following text added: "This item is departmentally restricted."
- - Command items (HoS' secret orders, Captain's Sabre, Nuke Disk, CE's boots etc.) have the following text added: "This item is restricted to Command."
- - Syndicate items have the following text added: "This item is Syndicate contraband."
+  - Improvised contraband (improvised weapons, shivs, makeshift cuffs etc.) have the following text added: "This item is minor contraband."
+  - Items restricted to departments (insulated gloves, RCDs, scalpels, Security gear etc.) have the following text added: "This item is departmentally restricted."
+  - Command items (HoS' secret orders, Captain's Sabre, Nuke Disk, CE's boots etc.) have the following text added: "This item is restricted to Command."
+  - Syndicate items have the following text added: "This item is Syndicate contraband."
 - Note that the change above does not change the crime definitions in Space Law.
 - Most stealth items can now be locked to hide their functionality, making it act as a normal item. If the wearer/holder speaks a Traitor codeword, the functionality unlocks.
- - While locked, the contraband examine text is not shown. 
- - Thieves get a single codeword, not shared by other thieves or traitors.
- - Nukies get a set codeword "Syndicate".
- - Note that this is not applicable for all items. For example, the Extra-Bright Lantern can not be locked, allowing it to only pass inspection at a glance.
+  - While locked, the contraband examine text is not shown. 
+  - Thieves get a single codeword, not shared by other thieves or traitors.
+  - Nukies get a set codeword "Syndicate".
+  - Note that this is not applicable for all items. For example, the Extra-Bright Lantern can not be locked, allowing it to only pass inspection at a glance.
 - Security has a new machine available roundstart, the **Contraband Scanner**.
  - The device acts like an airport x-ray scanner, able to find hidden compartments and technologies in otherwise mundane items. 
- - An item can be placed inside the scanner. After six minutes the item comes out; if the item is of Syndicate origin, it is marked as such when examined: "This item is disguised Syndicate contraband".
- - This mark can be cleaned off with soap.
+  - An item can be placed inside the scanner. After six minutes the item comes out; if the item is of Syndicate origin, it is marked as such when examined: "This item is disguised Syndicate contraband".
+  - This mark can be cleaned off with soap.
 - Rule change: Security can only confiscate non-contraband items that they can confirm was used in a crime. Security can not keep an item from being returned to a crewmate on suspicion of it being contraband.
- - This is to ensure Security does not overextend and confiscate an unscanned stealth item.
+  - This is to ensure Security does not overextend and confiscate an unscanned stealth item.
 
 ## Other Problems that have PRs in the works
 
