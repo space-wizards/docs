@@ -23,7 +23,7 @@ Plus, some form of more advanced grabbing was inevitable; it's better to go in w
 
 The proposed system will be familiar to anyone who's played SS13. I'll use the term Grapples to refer to any level of ctrl-click player-pulling interaction, and within that there will be multiple types of Grapple. Below is a straightforward albeit ugly flowchart demonstrating how the Grapple types connect; below that, an explanation of each. It's a lot of words, but that's me being thorough more than anything else, if you asked someone 'what do you think doing X would do in this situation', it's likely they'd intuit correctly.
 
-![grapple_flow.png](../../assets/images/grapples/grapple_flow.png)
+![grapple_flow.png](../../../assets/images/grapples/grapple_flow.png)
 
 ## Pull
 
@@ -56,7 +56,7 @@ A mob maintaining a Lift moves at normal speed, but has both hands occupied, ess
 
 On the user interface, a Lift will display an icon in each hand, both derived from the sprite of the object. Dropping a Lift in either hand will transfer the Grapple into a Grab using the other hand; this way, a Grab can change hands if required. As with a Pull, Lift will have a unique right-hand UI icon which, when clicked, drops the entity entirely. Taking attack damage comes with a 50% chance to drop a carried entity, and a third-party disarm will always break it. When an entity if lifted, they lose any existing Grapples on the lifting entity, and are unable to grapple until they escape.
 
-![grapple_ui3.png](../../assets/images/grapples/grapple_ui3.png)
+![grapple_ui3.png](../../../assets/images/grapples/grapple_ui3.png)
 
 *Applications and justifications*
 
@@ -79,7 +79,7 @@ If two mobs are grabbing each other, neither can freely move. The mobs will be f
 
 Grabs will be visually represented on the UI inhand as with a Pull, but with embellishments highlighting the inhand 'object'. On examine, the mobs will show 'they are being grabbed by X' or vice versa, so its clear². The right-hand UI will have a different icon to Pull, which can similarly be clicked to instantly release the Grapple, as would dropping the inhand 'object'. While grabbing, a mob is able to Pull an entity with their other hand, but will be unable to upgrade this into a second Grab.
 
-![grapple_ui2.png](../../assets/images/grapples/grapple_ui2.png)
+![grapple_ui2.png](../../../assets/images/grapples/grapple_ui2.png)
 
 *Applications and justifications*
 
@@ -115,7 +115,7 @@ In cases of a mutual Grab, if either party reinforces to a Pin, both participant
 
 As with other grabs, a Pin can be instantly dropped from the right-hand UI icon, and can be released simply be dropping the inhand object. A third-party disarm only has a 50% chance of breaking a pin, and attack damage has a 25% chance - in both cases a successful break has a 3/4 chance of reverting to a Grab and a 1/4 of releasing the Pin and stunning the pinner on the ground. Only mobs can be pinned, attempts to reinforce a Grab on a non-mob entity will do nothing (or something? maybe reduce it to a pull?²). 
 
-![grapple_ui4.png](../../assets/images/grapples/grapple_ui4.png)
+![grapple_ui4.png](../../../assets/images/grapples/grapple_ui4.png)
 
 *Applications and justifications*
 
