@@ -45,8 +45,8 @@ Strangely, implant searches are much more restrictive on MRP. To check, Security
 ### Proposed Solution
 
 Security should not have any rule limitations on checking implants, but instead Security should be mechanically discouraged from performing random implant checks. I propose the following:
-- Security has knowledge of implants; that they exist, and what types the Syndicate have access to.
-- Security has no limitations on performing implant checks.
+- Rule change: Security has knowledge of implants; that they exist, and what types the Syndicate have access to.
+- Rule change: Security has no limitations on performing implant checks.
 - Checks can only be performed with the `Implant Extractor`, a device that can be printed in the Medfab.
 - To extract, the Implant Extractor must be set to the specific type of implant to be extracted. A doafter is then performed.
    - If successful, the chosen implant gets extracted into the Implant Extractor similar to how an Implanter is done now.
@@ -66,17 +66,46 @@ Uplinks are in a kind of weird situation where it's one of the most powerful too
 - Security finds an open uplink in the PDA.
 - Security has previously found an open uplink in another PDA, and can thus pre-emptively confiscate any PDA they have reasonable suspicion of having an uplink.
 
-Right now the rules are the main way of preventing overzealous Security confiscating PDAs. Traitors do have a gameplay option as well: The Uplink Implant. This implant does have the benefit of making PDA confiscating a non-issue, but the tradeoff is 2 less TC and with the stringent rules on PDA confiscating it's unlikely to get any benefit from it. There's no reason to keep the uplink open after the implant is used, so you only get value if another uplink has been found. Additionally it suffers from the vulnerability of implant checks.
+Right now the rules are the main way of preventing overzealous Security confiscating PDAs. Traitors do have a gameplay option as well: The Uplink Implant. This implant does have the benefit of making PDA confiscating a non-issue, but the tradeoff is 2 less TC and an implanter that must be disposed of, and with the stringent rules on PDA confiscating it's unlikely to get any benefit from it. There's no reason to keep the uplink open after the implant is used, so you only get value if another uplink has been found. Additionally it suffers from the vulnerability of implant checks.
 
 ### Proposed Solution
 
-The PDA is very easily the single point of failure with this problem, but it's also unique in its ringtone lock. 
+The PDA is very easily the single point of failure with this problem, but it's also unique in its ringtone lock. Confiscating a PDA does come with some cost to Security in that they need to secure a replacement; worth it for a confirmed Syndie, but not viable for all arrests. If we were to remove the limitations on Security randomly confiscating PDAs there would need to be an equally effective method of eluding detection. It would also need to incur a cost for Security to confiscate. I propose the following:
+
+- Rule change: Security has knowledge PDAs can contain Uplinks, and may confiscate them if they have a reason to believe it could contain one.
+- Uplink Implanter cost is reduced to 1 TC, and changes proposed in "The Implant Problem" are also included.
+- The Uplink Patch is a new device that can be bought from the Uplink for 1 TC.
+  - The Uplink Patch can be attached to any object and turns it into an Uplink.
+  - The Uplink can be locked and unlocked by saying one of the agent codewords while wearing/holding/carrying the object.
+  - TC must be inserted into the object to purchase anything.
+
+The Uplink Patch would turn any object into a possible Uplink, making the permutations for what to confiscate anything in the Syndie's inventory. Even if a SecOff would be overzealous and try to take everything, the uplink could be an implant as well. With the changes in the Implant Problem, this would require Security to have strong suspicion of where the uplink would be to actually catch it.
 
 ## The Thief Gloves Problem
 
+Thief gloves come in two varieties, each with their own problem. 
+
+1. Normal Thief Gloves are indistuingishable from black gloves. The only way to know they have been used is if someone finds out an item on their person has been stolen, and even then Security are not allowed to know they must search for black gloves unless an uplink has been previously found. They also stand out for crew who don't normally wear black gloves, making overzealous SecOffs search and possibly even confiscate them.
+
+2. Chameleon Thief Gloves mean to remedy this. However, as they leave holographic fibers on everything they touch it becomes very obvious whenever they have been used. It leads to a rather opaque and unintuitive game of trying to not wear the thief gloves except in the most critical of moments, making finding a spare pair of gloves in someone's bag highly suspicious. They're also trivial to check since it's just to put them on and check whether they allow Chameleon properties.
+
 ### Proposed Solution
 
-## Disguised Items Problem
+- Thieving Gloves and Chameleon Thieving Gloves are merged into a single item: The Thief Glovebox.
+  - When purchased/obtained, the user is given a box. Opening this box activates a UI similar to a Chameleon UI.
+  - Once a glove design is chosen, the user is given a pair of thieving gloves with that design.
+  - The gloves give off matching fibers. They are not Chameleon.
+- Non-engineering insulated gloves/budget insulated gloves now come in 3 different colors with corresponding colored fibers. They are still called "Insulated Gloves"/"Budget Insulated Gloves". 
+- Rule change: Security has knowledge of Thieving Gloves and may confiscate the gloves of anyone who has stolen or attempted to steal contraband.
+- Rule change: An additional rule is added: Security may *not* test Thieving Gloves by putting them on and trying to steal an item off someone.
+
+This means that a thief is safe from having their gloves lost before committing a crime. Detectives can no longer use holofibers to confirm a Thief antag, but must instead rely on the fibers of the gloves around the crime scene. The addition of additional insuls colors means selecting yellow insulated gloves is no longer a safe option to blend in with all the other yellow gloves.
+
+## The Thief Sets Problem
+
+### Proposed Solution
+
+## The Disguised Items Problem
 
 ### Proposed Solution
 
