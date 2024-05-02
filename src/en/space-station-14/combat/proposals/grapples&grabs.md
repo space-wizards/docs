@@ -41,7 +41,7 @@ If two mobs are both pulling each other, they will do a little ballroom style da
 
 Pulls will display with an inhand icon based on the pulled entity. For lizards or other tailed species, this may have to be represented with a third 'hand' element that only appears when pulling (resembling a tail wrapping round the box?²). Switching hand or performing other actions will not impact the Pull. If the Pull 'item' is dropped, or the right-hand UI element is clicked (which remains as it is now), the Pull will release. A disarm will break a Pull, if aimed at the pulling mob.
 
-![grapple_ui1.png](src/en/assets/images/grapples/grapple_ui1.png)
+![grapple_ui1.png](../../../assets/images/grapples/grapple_ui1.png)
 
 *Applications and justifications*
 
