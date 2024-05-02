@@ -47,14 +47,14 @@ Strangely, implant searches are much more restrictive on MRP. To check, Security
 Security should not have any rule limitations on checking implants, but instead Security should be mechanically discouraged from performing random implant checks. I propose the following:
 - Rule change: Security has knowledge of implants; that they exist, and what types the Syndicate have access to.
 - Rule change: Security has no limitations on performing implant checks.
-- Checks can only be performed with the `Implant Extractor`, a device that can be printed in the Medfab.
+- Checks can only be performed with the new **Implant Extractor**, a device that can be printed in the Medfab.
 - To extract, the Implant Extractor must be set to the specific type of implant to be extracted. A doafter is then performed.
    - If successful, the chosen implant gets extracted into the Implant Extractor similar to how an Implanter is done now.
    - If unsuccessful, no implant is extracted. The user that tried to use the Implant Extractor takes 45 Cellular damage, ignoring resistances, as the device backfires.
  
 The main point is the damage taken by the Implant Extractor. Performing an implant check without sufficient suspicion and being wrong becomes a very high price to pay, encouraging Security to be sure of their search. Even a single failed search essentially requires the user to be sent to the medbay, and two puts them out of commission for a long time.
 
-Note: The particulars of this suggestion may change as Newmed/Surgery gets implemented. The important part is that implant searching someone without being correct should punish Security by temporarily taking away a resource, in this case in the form of personnel.
+Note: The particulars of this suggestion may change as Newmed/Surgery gets implemented. The important part is that implant searching someone without being correct should punish Security by temporarily taking away a resource, in this case in the form of personnel. The exact nature of the damage and restriction on resources could change.
 
 ## The PDA / Uplink Problem
 
@@ -134,11 +134,64 @@ The kits that suffer the most from this issue are the following:
 
 ### Proposed Solution
 
-Cull the unnecessary fluff items from the set and make them the same level of discoverability. If it's desirable to have the thief hide stuff, include that in the items being recieved; implants require the thief to hide the implanter for example. If the Communicator Set should require the thief to hide a fluff thief figurine, instead make the the Master Comms Key come in a box that needs to be hid. 
+Cull the unnecessary fluff items from the set and make them the same level of discoverability. If it's desirable to have the thief hide stuff, include that in the items being recieved; implants require the thief to hide the implanter for example. If the Communicator Set should require the thief to hide a fluff thief figurine for example, instead make the the Master Comms Key come in a box that needs to be hid. 
 
 ## The Disguised Items Problem
 
+There are many items in the game that are explicitly designed to look like and sometimes even act like another object. The degree of how effective this is depends on the object. They come in the following categories (some job items not listed):
+
+- Items that can't be found unless directly used
+ - Conducting Gloves
+ - Thieving Gloves
+ - Hypodart
+ - Decoy Nuclear Disk
+ - Explosive Banana
+ - Explosive Wet Floor Sign
+
+- Items that can be found if worn
+ - Voice Mask
+ - Chameleon Kit
+ - No-slip Shoes
+
+- Items that can be found if held
+ - Hypopen
+ - Stimkit
+ - Agent ID Card
+ - Lobbying Bundle
+ - Energy Dagger
+ - Cane Sword
+
+- Items that can be found if examined
+ - Extra-Bright Lantern
+ - Blue Boxing Gloves
+ - Dehydrated Space Carp
+
+There is a question to be made what the intended purpose of these disguises are. Something like the Extra-Bright Lantern can only survive a passing glance from crew, a cane sword may be found if an officer is searching thoroughly and a hypodart can't be determined to be a Syndicate object unless explicitly tested. The problem arises when Security is able to be too thorough with a search and find an item they aren't looking for, or when Security knows for certain an item is contraband but can't prove it.
+
+There is also an issue where these disguised items are unknown to crew (until an uplink is found), while the other "obvious" antag items are not. So [crew can have full knowledge](https://forum.spacestation14.com/t/what-is-a-syndicate-item/5363) of emags, webvests, e-swords and northstars, but not about hypopens or thieving gloves. 
+
 ### Proposed Solution
+
+This is probably the most comprehensive change and touches on things outside the stated problem above, in the interest of making a more streamlined system and help onboarding new players into contraband gameplay. My proposal is the following:
+
+- Rule change: Crew have knowledge about stealth items.
+- *Non-stealth* items can now be determined to be contraband upon being examined.
+ - Improvised contraband (improvised weapons, shivs, makeshift cuffs etc.) have the following text added: "This item is minor contraband."
+ - Items restricted to departments (insulated gloves, RCDs, scalpels, Security gear etc.) have the following text added: "This item is departmentally restricted."
+ - Command items (HoS' secret orders, Captain's Sabre, Nuke Disk, CE's boots etc.) have the following text added: "This item is restricted to Command."
+ - Syndicate items have the following text added: "This item is Syndicate contraband."
+- Note that the change above does not change the crime definitions in Space Law.
+- Most stealth items can now be locked to hide their functionality, making it act as a normal item. If the wearer/holder speaks a Traitor codeword, the functionality unlocks.
+ - While locked, the contraband examine text is not shown. 
+ - Thieves get a single codeword, not shared by other thieves or traitors.
+ - Nukies get a set codeword "Syndicate".
+ - Note that this is not applicable for all items. For example, the Extra-Bright Lantern can not be locked, allowing it to only pass inspection at a glance.
+- Security has a new machine available roundstart, the **Contraband Scanner**.
+ - The device acts like an airport x-ray scanner, able to find hidden compartments and technologies in otherwise mundane items. 
+ - An item can be placed inside the scanner. After six minutes the item comes out; if the item is of Syndicate origin, it is marked as such when examined: "This item is disguised Syndicate contraband".
+ - This mark can be cleaned off with soap.
+- Rule change: Security can only confiscate non-contraband items that they can confirm was used in a crime. Security can not keep an item from being returned to a crewmate on suspicion of it being contraband.
+ - This is to ensure Security does not overextend and confiscate an unscanned stealth item.
 
 ## Other Problems that have PRs in the works
 
