@@ -6,7 +6,7 @@
 
 ## Overview
 
-This proposal contains a list of design changes and features aiming to reduce the impact of metaknowledge in the game. 
+This proposal contains a list of design changes and features aiming to reduce the impact of metaknowledge in the game. While the proposal touches on several different issues the changes proposed affect each other and overlap, which is why they're all compiled here. The overarching theme is moving away from rule enforcement to mechanical enforcement, allowing crew players to possess general knowledge about antags but make it harder to apply it in a round without proper reasoning.
 
 ## Background
 
