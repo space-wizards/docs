@@ -144,6 +144,7 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/combat/guidelines.md)
 
 	- [Proposals]()
+		- [Grapples & Grabs](en/space-station-14/combat/proposals/grapples&grabs.md)
 
 - [Mapping](en/space-station-14/mapping.md)
 	- [PR Guidelines](en/space-station-14/mapping/guidelines.md)
