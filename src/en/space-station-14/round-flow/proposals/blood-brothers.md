@@ -1,30 +1,21 @@
-# Short, Properly Capitalized Title
-
-Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
+# Blood brothers
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Your Names Here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
+| whateverusername0 (Github) | :warning: Partially | [PR](https://github.com/space-wizards/space-station-14/pull/27622) |
 
-`Designers` should be the names that you use on GitHub and/or Discord. This is optional but strongly recommended, since:
+Blood Brothers is a variant of Traitor where you are bound to work with another random person on the station. Together you and some random person will work together to pull off any of the regular traitor objectives.
 
-- This acknowledges credit where it is due
-- People who are confused about the written intent can use this information to contact the authors
+## Your average average blood bro
+The average blood brother:
+- Only appears in Traitor rounds
+- Does not have an uplink, but knows codewords
+- Has a _revolutionary-type-of_ special icon to easily identify his BB
 
-`Implemented` is the status of the feature.
+Blood brothers' goal is to complete all their objectives **with no losses** on their side.
 
-Github links can include multiple PRs, if relevant.
+The comedic duo has 3-5 of your average traitor objectives. They are shared, thus, for example, if you have a "steal captain's ID card" objective, if you or your blood bro has it in his bag, you both get a greentext. Besides their regular traitor deeds, they also have a special objective to ensure that both are alive and unrestrained. You will also be tasked more often to execute a fellow syndie, so snatch that contraband of his!
 
-## Overview
+Team play is not just optional but mandatory to achieve that sweet greentext. Common/shared objectives give a lot of freedom for executing your evil deeds. ~~heck i can imagine like 6.. no 7... a LOT of ways to hide items already~~
 
-A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds".
-
-## Background
-
-Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game.
-
-Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
-
-## The rest?
-
-Is entirely up to you.
+You can consider it a 0TC antag that is focred to keep out on his "friend" and do team play. ~~feelsbadman if your bro is catatonic or ssd~~
