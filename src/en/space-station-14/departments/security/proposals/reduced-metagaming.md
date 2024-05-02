@@ -71,3 +71,16 @@ Right now the rules are the main way of preventing overzealous Security confisca
 ### Proposed Solution
 
 The PDA is very easily the single point of failure with this problem, but it's also unique in its ringtone lock. 
+
+## The Thief Gloves Problem
+
+### Proposed Solution
+
+## Disguised Items Problem
+
+### Proposed Solution
+
+## Other Problems that have PRs in the works
+
+- Roundtype problem
+- Map loot problem
