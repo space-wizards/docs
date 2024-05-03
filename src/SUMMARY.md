@@ -158,11 +158,12 @@ Space Station 14
 - [Player Interaction](en/space-station-14/player-interaction.md)
 	- [PR Guidelines](en/space-station-14/player-interaction/guidelines.md)
 	
-	- [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
-	- [Grid Inventory](en/space-station-14/player-interaction/grid-inventory.md)
+	- [Cartridge loaders](en/space-station-14/player-interaction/cartridge-loaders.md)
 
 	- [Proposals]()
-	  - [PAI Expansion Slots](en/space-station-14/areas/core/player-interaction/proposals/pai-expansion-slots.md)
+	  - [PAI Expansion Slots](en/space-station-14/player-interaction/proposals/pai-expansion-slots.md)
+	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
+	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md) 
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
