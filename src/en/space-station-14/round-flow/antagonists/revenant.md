@@ -49,7 +49,7 @@ An ultimatum that completely changes the gameplay of Revenant. You come back to 
 You are completely naked. You are not on the manifest. You are an intruder to those around you. You remember everything. Who killed you, what you became and how you were reborn. What drives you? A desire for revenge? Do you want to kill the one who took your life, or are you beyond that now?
 You have all the attributes of a humanoid. Hunger, health, the need for water. But you are still a Revenant, you remember all the abilities you learned in your past form (except for changing your voice, as your vessel is incapable of such acts), you have a stockpile of souls, but you are now confined to human form. 
 ```
-```adminish tip "Base"
+```admonish tip "Base"
 **You can no longer see through walls, you can no longer fly through walls, and so on.**
 In humanoid form, all of your revenant abilities can only be used in "active" form. Your body will glow purple, your speed will increase slightly, as will your body's water and hunger consumption. 
 Bible thumping will make you fall into a stunned stupor
