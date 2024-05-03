@@ -251,7 +251,7 @@ There is currently a problem with the rp status on salamander. For now we will s
 ### Discussion outside Agenda Items
 <!-- Minutes for discussions that occur which aren't part of any topic -->
 - There is a general problem with RP standards on all servers, not just mrp.
-- We could a deathmatch server to suck away the people that just want to fight.
+- We could have a deathmatch server to suck away the people that just want to fight.
 
 ## Overall Conclusion
 <!-- Overall summary of each meeting topic -->
