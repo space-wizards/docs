@@ -10,14 +10,7 @@
 "Scripts":
 - 'scripts/**'
 
-# My goodness gracious.
 "Design":
-- 'src/en/general-proposals/**'
-- 'src/en/space-station-14/departments/atmos/proposals/**'
-- 'src/en/space-station-14/departments/cargo-salvage/proposals/**'
-- 'src/en/space-station-14/departments/command/proposals/**'
-- 'src/en/space-station-14/departments/engineering/proposals/**'
-- 'src/en/space-station-14/departments/medical/proposals/**'
-- 'src/en/space-station-14/departments/science/proposals/**'
-- 'src/en/space-station-14/departments/security/proposals/**'
-- 'src/en/space-station-14/departments/service/proposals/**'
+- changed-files:
+  - any-glob-to-any-file: '**/proposals/**'
+  - 'src/en/general-proposals/**'
