@@ -104,7 +104,7 @@ Thief gloves come in two varieties, each with their own problem.
   - The gloves give off matching fibers. They are not Chameleon.
 - Non-engineering insulated gloves/budget insulated gloves now come in 3 different colors with corresponding colored fibers. They are still called "Insulated Gloves"/"Budget Insulated Gloves". 
 - Rule change: Security has knowledge of Thieving Gloves and may confiscate the gloves of anyone who has stolen or attempted to steal contraband.
-- Rule change: An additional rule is added: Security may *not* test Thieving Gloves by putting them on and trying to steal an item off someone.
+- Rule change: An additional rule is added: Security may *not* test Thieving Gloves by putting them on and trying to steal an item off someone, as this would count as Security using antag items. *Note that this rule would not be necessary if the changes proposed in The Disguised Items Problem are implemented.*
 
 This means that a thief is safe from having their gloves lost before committing a crime. Detectives can no longer use holofibers to confirm a Thief antag, but must instead rely on the fibers of the gloves around the crime scene. The addition of additional insuls colors means selecting yellow insulated gloves is no longer a safe option to blend in with all the other yellow gloves.
 
