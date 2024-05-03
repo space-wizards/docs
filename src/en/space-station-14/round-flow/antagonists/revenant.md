@@ -37,13 +37,13 @@ Next up.
 
 Speaking for the dead is fun. It will also make for more interesting situations.
 
-Everyone wants to ask their friends for soul food for their resurrection, right?
+You might want to ask your friends to bring souls?
 
 | Ability | Activation price | Purchase price |
 |---|---|---|
 | Resurrection | 0 | ~250 stolen essences |
 
-An ultimatum that completely changes the Revenant's gameplay. You come back to life as the character you entered the role on (character choice when someone figures out how to code it :trollface:).
+An ultimatum that completely changes the gameplay of Revenant. You come back to life as the character you entered Revenant as(character choice when someone figures out how to code it :trollface:).
 ### Humanoid?
 ```admonish abstract "After"
 You are completely naked. You are not on the manifest. You are an intruder to those around you. You remember everything. Who killed you, what you became and how you were reborn. What drives you? A desire for revenge? Do you want to kill the one who took your life, or are you beyond that now?
@@ -64,12 +64,12 @@ Bible thumping will make you fall into a stunned stupor
 
 | Ability | Activation Price | Purchase Price |
 |---|---|---|
-| Pumping | ~5 p/s | ~30 |
+| Pumping | ~5 p/s | ~30 stolen essences |
 
 - When activated, regenerates your body using revenant essences
 
 | Skill | Activation Price | Purchase Price |
 |---|---|---|
-| Skeletonizing | 0 | 80 stolen essences | 
+| Skeletonizing | 0 | ~80 stolen essences | 
 
 - Do you feel like you're not up to the task? Spend your stolen essences on what your body-- A little-- will lose its skin and become a skeleton that burns purple forever. Yes, everyone will know your nature, but you don't want to leave the world of the living, do you?
