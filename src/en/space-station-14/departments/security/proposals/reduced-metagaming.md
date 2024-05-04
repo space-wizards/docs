@@ -197,6 +197,32 @@ These changes do introduce a new rule, however it is also one that is very easy 
 
 Additionally, this change helps new Sec players recognize contraband. Security still have discretion to not confiscate certain contraband such as insulated gloves and some contraband (e.g. drugs) can't be marked; this just assists in informing players and Security alike what counts.
 
+## The Contraband Usage Problem
+
+While not a metaknowledge issue and more a balancing question, this issue was raised in discussion around this PR and heavily ties into the proposed changes. 
+
+Security and Command are restricted from using Syndicate equipment via admin ruling. This is due to the strength Syndicate items has and the use of them would give Security/Command too much of an advantage when engaging with other antags. There are exceptions to this rule: most notably is the use of Syndicate comms keys, but only if the use is to listen in Syndicate communication (e.g. you wouldn't be able to use the Syndicate channel to have a private "exclusive Sec channel"). There is also an exception made for when the use of a Syndicate item is a necessity for survival and no other options are available, though where that line is drawn is highly contextual. That means any Security/Command use of a Syndicate item should be scrutinized by an admin, which adds to the workload and may lead well-intentioned players to be punished for misjudging what constitutes valid use.
+
+It's important to note that this limitation is only applied to Security and Command. Normal crew are allowed to use Syndicate items with no restrictions (self-antag rules still apply; having a C-20 does not mean you get to shoot your fellow crew with it). 
+
+### Proposed Solution
+
+To reduce admin burden and make this balance design mechanically enforced rather than via rules, I propose the following:
+
+- Rule change: There is no rule limitation for Security/Command utilizing Syndicate equipment.
+- If a character has a **Mindshield implant**, some Syndicate items no longer become usable or have decreased functionality. The specifics depend on the item:
+  - Minor impact equipment like a Syndicate EVA suit or Jetpack could still be utilized by Mindshielded characters. These restriction-less items should have a crew equivalent or not provide any major benefit.
+  - Restricted items should ideally be able to be turned off by mindshielded characters, but not turned on/utilized. Examples:
+    - Emag: Unable to be used at all, all interactions providing a pop-up that the implant stops your character from using it.
+    - C-20: Unable to be fired, though can still be reloaded/emptied of its mag. Trying to pull the trigger provides a pop-up that the implant stops your character from using it.
+    - PDA Uplink: Can be opened and scrolled through, but all purchase buttons are grayed out. TC can still be removed/inserted.
+    - Radio Jammer: Can be turned off but not turned on. Battery can be removed/replaced.
+    - Stimpack / Combat Syringe: Can not be injected into or by a mindshielded character.
+- Mindshield implants can not be removed from Security / Command crew (e.g. roundstart Mindshielded roles), but can be removed from normal crew/Syndicates who have been Mindshielded during the round. 
+- There may be rules required that Security can not hand out Syndicate items to crew or have a crewmate use a Syndicate item on Security's command. This depends on whether abusing the items like this is feasible in practice.
+
+Not only does this solution tie in to the existing Mindshield system, but also makes Mindshield implants relevant to be used on crew during non-Rev rounds. This does come with the added danger of mindshielded Syndicates being able to pass as Security / Command, but at the same time with the benefit of knowing anyone Mindshielded is limited in using Syndicate items.
+
 ## Other Problems that have PRs in the works
 
 ###  Roundtype problem
