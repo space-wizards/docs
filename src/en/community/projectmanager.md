@@ -8,7 +8,7 @@ The PM team does not appeal bans or get involved in individual player/game dispu
 
 ## Areas of Responsibility
 
-All Project Managers have the same level of authority and autonomy when it comes to addressing issues, however some PMs prefer to or are more experienced in handling particular issues. In an emergency any PM will be able to help you, but generally a PM with the appropriate area will be able to address your issue faster and more accurately.
+All Project Managers have the same level of authority and autonomy when it comes to addressing issues, however some PMs prefer to or are more experienced in handling particular issues. In an emergency any PM will be able to help you, but generally a PM with the appropriate area will be able to address your issue faster and more accurately. Although, if you message the wrong PM don't worry we all talk with each other so they'll be able to help you or forward you along to someone who can, it's just faster to start with a PM from that area!
 
 Here is a list of PM's and their responsiblities. Some responsibilities such as Hub Administration and Sensitive Issue handling are not listed publicly to prevent targeted harassment.
 This page may sometimes be out of date, for the most recent responsibilities check discord (If this page is out of date ping @Jezithyr on discord or let a maintainer know).
