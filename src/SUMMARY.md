@@ -294,6 +294,7 @@ Community
 - [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)
 - [Space Wizards Maintainer List](en/community/space-wizards-maintainer-list.md)
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
+- [Project Manager](en/community/projectmanager.md)
 - [Maintainer](en/community/maintainer.md)
   - [Maintainer Policy](en/community/maintainer/wizards-den-maintainer-policy.md)
   - [Review Policy](en/community/maintainer/wizards-den-review-policy.md)
