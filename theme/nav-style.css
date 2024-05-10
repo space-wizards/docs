@@ -9,7 +9,10 @@
 @media only screen and (min-width:1366px) {
     main {
         position: relative;
-    }
+        margin: auto;
+        padding: 10px;
+        max-width: 100%;
+    }   
     .sidetoc {
         margin-left: auto;
         margin-right: auto;

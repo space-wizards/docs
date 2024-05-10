@@ -3,7 +3,7 @@
 
 /* allow wider content since no navvybar buttons */
 :root {
-    --content-max-width: 850px;
+    --content-max-width: 1450px;
     --sidebar-active: #e23229;
 }
 
