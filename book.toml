@@ -1,10 +1,10 @@
 [book]
-authors = ["Space Wizards Contributors"]
+authors = ["Space Wizards Contributors, Goobstation Maintainers"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Space Wizards Development Wiki"
-description = "Tutorial & reference for all Space Wizards Federation projects, including the Robust Toolbox engine and its flagship open source game, Space Station 14."
+title = "Goob Station Wiki"
+description = "Tutorial & reference for goob station."
 
 [preprocessor.mermaid]
 
@@ -23,8 +23,8 @@ additional-css = ['theme/mdbook-admonish.css', 'theme/ss14.css', 'theme/nav-styl
 default-theme = "navy"
 preferred-dark-theme = "navy"
 
-git-repository-url = "https://github.com/space-wizards/space-station-14"
-edit-url-template = "https://github.com/space-wizards/docs/blob/master/{path}"
+git-repository-url = "https://github.com/Goob-Station/Goob-Station"
+edit-url-template = "https://github.com/Goob-Station/docs/blob/master/{path}"
 
 mathjax-support = true
 curly-quotes = true
