@@ -12,13 +12,6 @@
     color: #e23229;
 }
 
-@media only screen and (min-width: 1366px) {
-    .content>main {
-        /* navbar button was basically a margin left but dont have that no more so */
-        margin-left: 200px;
-    }
-} 
-
 /*   Mostly stolen from the Rhai book (rhai.rs) theme */
 .part-title {
     font-size: 150%;

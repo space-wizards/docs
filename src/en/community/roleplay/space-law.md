@@ -36,6 +36,7 @@ Use common sense and humanity when issuing punishments. You should not always se
 **Stackable Crimes:** Crimes are to be considered 'stackable' in the sense that if you charge someone with two or more different crimes, you should combine the times you would give them for each crime.
 ```admonish warning "YOU MAY NOT EXCEED 10 MINUTES AS A BRIG TIME"
 Any total brig time that adds up to above 10 minutes will be shortened to meet this limit.
+If it goes above 20 minutes, you may perma the person.
 ```
 
 

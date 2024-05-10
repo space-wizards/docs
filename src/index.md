@@ -9,4 +9,4 @@ If you would like to make contributions to this documentation site, it's hosted 
 ## Getting Started
 
 - [:question: What's goob's space law?](en/community/roleplay/space-law.md)
-- [:package: What's Nanotransen Representative?](en/community/roleplay/jobs/ntr.md)
+- [:package: What's Nanotrasen Representative?](en/community/roleplay/jobs/ntr.md)
