@@ -16,3 +16,4 @@ Community
     - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
   - [Goob Station Admin Policy](en/community/admin/admin-policy.md)
   - [Goob Station Banning Policy](en/community/admin/banning-policy.md)
+  - [Role Hierarchy](en/community/admin/role-hierarchy.md)
