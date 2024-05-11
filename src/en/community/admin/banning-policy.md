@@ -1,7 +1,7 @@
-# Wizards Den Banning Policy
+# Goob Station Banning Policy
 
 ```admonish info
-This is the ban policy for Wizard's Den servers. It applies only to our first-party Wizard's Den servers. The admin policy can be found at [Admin Policy](./wizards-den-admin-policy.md)
+This is the ban policy for Goob Station. It applies only to our server. The admin policy can be found at [Admin Policy](./admin-policy.md)
 ```
 
 # Definitions
@@ -101,7 +101,7 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Self-antag | [Cooperating with known antags](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_intentionally_make_everything_worse_[Self-Antagonism]) | 12hr GB | 3d GB | **7d** - 7.5d GB | |
 | Non-grouping | [Harassing staff through the game](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_abuse/ignore_the_admin-help_relay) | Indef GB | | | |
 | Non-grouping | [Slurs, excluding "retard" and variants](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.) | Indef GB | | | |
-| Non-grouping | ["Retard" and variants](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.) | W | 1d - 3d GB | Indef GB | |
+| Non-grouping | ["Retard" and variants](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.) | W | Indef GB | | |
 | Non-grouping | [Bigotry/discrimination](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.)[^discrimination] | Indef GB | | | |
 | Non-grouping | [ERP](https://wiki.spacestation14.io/wiki/Server_Rules#No_erotic_roleplay_(ERP)_or_sexual_content/themes) | Indef GB | | | |
 | Non-grouping | [Sexual content](https://wiki.spacestation14.io/wiki/Server_Rules#No_erotic_roleplay_(ERP)_or_sexual_content/themes) | W - 3d GB | 7d GB | Indef GB | |
@@ -118,6 +118,7 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Immersion | [OOC terms IC](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being)[^teachingException] | W | **W** - 12hr GB | **12hr** - 3d GB | 3d - 7.5d GB |
 | Immersion | [Bypassing chat restrictions](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being) | W | W - **4hr** - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB |
 | Griefing | [Damage/disruption to arrivals/arrivals shuttle](https://wiki.spacestation14.io/wiki/Server_Rules#Don't_be_a_dick) | 12hr - 3d GB | 3d - 7d GB | 7d - 15d GB | |
+| Griefing | [Raiding](https://wiki.spacestation14.io/wiki/Server_Rules#Don't_be_a_dick) | Indef GB| | | |
 | Griefing | [Harassing a player/role/department outside of reasonable conflicts](https://wiki.spacestation14.io/wiki/Server_Rules#Don't_be_a_dick) | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Griefing | [Round stalling](https://wiki.spacestation14.io/wiki/Server_Rules#Don't_be_a_dick) | **W** - 12hr GB | **12hr** - 3d GB | 3d - 7d GB | **7d** - 7.5d GB |
 | Griefing | [Early massive station sabotage](https://wiki.spacestation14.io/wiki/Server_Rules#Antagonist-Specific_Rules:_Traitor)[^antagOnly] | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |

@@ -1,11 +1,11 @@
 # Wizards Den Admin Policy
 
 ```admonish
-This applies only to our first-party Goob Station server.
+This applies only to our Goob Station server.
 ```
 
 ## 1. General Adminning
-General admin-guidelines. These apply to all ranks of admins: Wizard, Badmin, and Game Admins.
+General admin-guidelines. These apply to all ranks of admins: Headmins, Game Admins, and Trial Game Admins.
 #### 1.1 **Administrators will be held responsible for their actions.**
 Administrators are **not unaccountable**, and should be held to higher standards than the playerbase. If you have a problem with an admin's behavior, discuss with the head admin. All administrators are expected to have a solid reason behind their actions.
 #### 1.2 **Be professional, polite and welcoming.**
@@ -19,7 +19,7 @@ Ban appeals are covered by the [Banning Policy](./banning-policy.md).
 ## 2. Game-adminning
 Rules specific to adminning a round of SS14.
 #### 2.1 **Do not ever process a case you are/were a part of.**
-Even if you've started adminning after dying, do not process a case you were involved in. You may ask badmins/wizards for permission to do this if there are no other staff online. Otherwise, ahelp yourself and get the other staff to handle it.
+Even if you've started adminning after dying, do not process a case you were involved in. You may ask headmins for permission to do this if there are no other staff online. Otherwise, ahelp yourself and get the other staff to handle it.
 #### 2.2 **Superseded by banning policy**
 Bans and ban appeals are covered by the [Banning Policy](./banning-policy.md).
 #### 2.3 **Superseded by banning policy**
