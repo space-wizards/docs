@@ -75,13 +75,13 @@ If it goes above 20 minutes, you may perma the person.
 | Mass Destruction | To cause massive damage to an area or major station system. | 10:00 | This is mostly used for deadly bombings or sabotage of major station systems such as power production, cloning, substations, or atmos.|
 | Possession of Restricted Weaponry | To hold or use a weapon that is unlawful or contraband. | 6:00 | Everything from guns without a permit, deadly blades, explosives, syndicate firearms to explosive implants.|
 | Secure Trespass | To enter a secured area without permission. | 6:00 | This covers places like telecomms, head offices, security zones, command areas, the vault and armory.|
+| Breach of Custody | To break out of a cell or custody with the intention of escaping. | 5:00 | This time should be added ontop of a prisoners current brig time. While rare, this charge can be bumped to permanent brig if the suspect has repeatedly attempted to break out of the permanent brig. Includes people breaking others out.|
 
 ### IV Degree
 
 | Offense | Description | Maximum Punishment | Notes  |
 |:---:|:---:|:---:|:---:|
 | Attempted Murder | To make an attempt to use physical force against someone with the clear intent to kill. | 10:00 | Make sure you've got the proof to back up the intention claims.|
-| Breach of Custody | To break out of a cell or custody with the intention of escaping. | Permanent | While rare, this charge can be bumped to an execution if the suspect has repeatedly attempted to break out of the permanent brig. Includes people breaking others out.|
 | Unlawful Control/Kidnapping/Hostage Taking | To unlawfully restrain, transport, control or confine a sapient being against that individual’s will. | 10:00 | A large range of things, used mostly as a catch all when dealing with unlawful control of another being.|
 | Murder | To kill a sapient being with malicious intent. | 10:00 | This only changes from attempted to full on murder if the victim enters a state of being deceased, having to be resurrected.|
 
