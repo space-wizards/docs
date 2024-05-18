@@ -30,6 +30,15 @@ If you want to manipulate the view matrix directly, you can open a VV window for
 ### 1.5 Projection Matrix
 This is a basic orthographic projection like any other top down 2D game. Distance from the camera on the Z axis does not change the size of entities, all parallel lines stay parallel, and the field of view is a rectangular prism.
 
+### 1.6 Coding conventions
+
+`Vector2` are row vectors with an implict $1$ in the third component. These vectors are transformed by `Matrix3x2`, which are row-major matrices with an implicit third column of $\left(0, 0, 1\right)$. Vectors are pre-multiplied with matrices, i.e. $vM$.
+
+Refrain from giving your `Matrix3x2` variables names such as `matrix`, `invMatrix` or `matty`, as this makes your code unnecessarily difficult for others to read. Instead, what transformation the matrix is applying. The suggested way to describe this transformation is to use a naming pattern in the form of "original space - TO - result space"; for example, a matrix named `entityToWorld` converts a vector in entity space into world space. Aside from clarity, this naming convention has several advantages:
+
+- When inverting a matrix, swap the order of the space names - the inverse of `entityToWorld` is `worldToEntity` and is the matrix which transforms a vector in world space into entity space.
+- When multiplying matrices and choosing a name for the result, the space names can be concatonated; for example `var entityToWorld = entityToGrid * gridToWorld` - in general, the space names in the "middle" of the multiplication will match. This allows you to easily see if your transformation makes sense -- `entityToGrid * gridToWorld` sounds good, but `gridToEntity * gridToWorld` would be a very suspicious transformation and might indicate a bug. 
+ 
 ## 2 The Screen
 The screen is the square box that the game is projected onto when rendered. This is what you look at, it's like a *window* that you can look at the World through. Some game effects and the UI are directly drawn onto the screen.
 
@@ -37,4 +46,6 @@ The screen is the square box that the game is projected onto when rendered. This
 The UI uses 2D left-handed coordinates, with the origin at the top left, +X going to the right, and +Y going down. Rotations go clockwise. This is exactly like any other UI library.
 
 ### 2.2 Clyde and OpenGL Coordinates
-You do not need to worry about how Clyde works internally, or how Clyde works with OpenGL.
+Unless you are writing shaders, you do not need to worry about how Clyde works internally, or how Clyde works with OpenGL.
+
+With respect to the above coding conventions, when writing a shader, we need to make considerations for the fact that OpenGL post-multiplies vectors with matrices (i.e. $Mv$). The recommended naming convention is "result space FROM original space"; for example, the matrix `worldFromEntity` converts a vector from entity space into world space. 
