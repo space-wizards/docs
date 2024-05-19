@@ -67,9 +67,3 @@ Bible thumping will make you fall into a stunned stupor
 | Pumping | ~5 p/s | ~30 stolen essences |
 
 - When activated, regenerates your body using revenant essences
-
-| Skill | Activation Price | Purchase Price |
-|---|---|---|
-| Skeletonizing | 0 | ~80 stolen essences | 
-
-- Do you feel like you're not up to the task? Spend your stolen essences on what your body-- A little-- will lose its skin and become a skeleton that burns purple forever. Yes, everyone will know your nature, but you don't want to leave the world of the living, do you?
