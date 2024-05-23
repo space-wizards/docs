@@ -67,11 +67,11 @@ ForwardProxies:
 
 # Your way of authenticating accounts, the docs will set it up with an ss14 account 
 Auth:
-    Authority: "https://central.spacestation14.io/web/"
+    Authority: "https://account.spacestation14.com/"
     ClientId: "9e2ce26f-EDIT-THIS-b4d9-8cc08993b33e"
     ClientSecret: "foobar"
 
-authServer: "https://central.spacestation14.io/auth"
+authServer: "https://auth.spacestation14.com"
 ```
 
 ```admonish warning
@@ -81,7 +81,7 @@ I will STRONGLY recommend you put this behind a reverse proxy if you are not alr
 ## Authentication config
 This is a pretty important one, it will be your way of authenticating with the webpanel. Anyone with administrator permissions on your server automaticly gets access to the webpanel. We will use Space Station 14 Accounts for this.
 
-1. Log in into and go to https://central.spacestation14.io/web/Identity/Account/Manage/Developer and click on "New OAuth App"
+1. Log in into and go to https://account.spacestation14.com/Identity/Account/Manage/Developer and click on "New OAuth App"
 2. Type in an app name, this can be anything
 3. For an Callback url should be `PathBase/signin-oidc`. Should look like this `https://YOURDOMAIN.TLD/admin/signin-oidc`
 4. Homepage url should be wherever your pathbase is. Like `https://YOURDOMAIN.TLD/admin/`
