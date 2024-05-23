@@ -17,7 +17,7 @@ I think the key is novelty; these jobs are often fun to play or interact with on
 
 ## Details
 
-![lil_room.png](../assets/images/jokerroles/lil_room.png)
+![lil_room.png](../../../../assets/images/jokerroles/lil_room.png)
 
 These little rooms right here, the kind that you have in hallways, often near arrivals, would be the mechanical basis of the implementation. Similarly to how tg13's holodeck works, the idea would be to, on roundstart, swap out the contents of the room with one of a number of pre-designed prefabs. The walls should also be included in the prefab, as this way windows, counters etc can be added or removed. If joker roles are disabled by config, or for some reason don't spawn, the room should default to a standard Vacant Office layout. I'd like to specify that I do like these rooms, and dont think this should replace all of them - maybe we could make a few more scattered about.
 
