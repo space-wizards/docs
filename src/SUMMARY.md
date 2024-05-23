@@ -236,6 +236,7 @@ Space Station 14
 			- [GenPop Prisoners](en/space-station-14/departments/security/proposals/genpop-prisoners.md)
 	- [Service](en/space-station-14/departments/service.md)
 		- [PR Guidelines](en/space-station-14/departments/service/guidelines.md)
+		- [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
