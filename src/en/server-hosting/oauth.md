@@ -6,11 +6,11 @@ The SS14 authentication hub implements OAuth2 and OpenID Connect. This allows yo
 
 This is used by the [official forum](https://forum.ss14.io), [official wiki](https://wiki.ss14.io) and SS14.Admin panel to make it easy for people to log into stuff with the same account everywhere. I am very pleased with how well it works.
 
-OAuth apps are tied to an SS14 account and can be created [here](https://central.spacestation14.io/web/Identity/Account/Manage/Developer). 
+OAuth apps are tied to an SS14 account and can be created [here](https://account.spacestation14.com/Identity/Account/Manage/Developer). 
 
 Some information you may want to know (this is repeated on the app management page):
-* Authority: https://central.spacestation14.io/web/
-* OIDC config: https://central.spacestation14.io/web/.well-known/openid-configuration 
+* Authority: https://account.spacestation14.com/
+* OIDC config: https://hub.spacestation14.com/.well-known/openid-configuration 
 * Allowed authorization flow: Authorization code (implicit etc is not allowed)
 * Available scopes: `openid`, `profile`, `email`.
 
@@ -60,7 +60,7 @@ wfLoadExtension( 'OpenIDConnect' );
 $wgPluggableAuth_Config[] = [
         'plugin' => 'OpenIDConnect',
         'data' => [
-                'providerURL' => 'https://central.spacestation14.io/web/',
+                'providerURL' => 'https://account.spacestation14.com/',
                 'clientID' => 'e584f64f-d0f9-4b15-9714-1233bc4c55a4', // Replace with your client ID.
                 'clientsecret' => 'foobar', // Replace with your client secret.
                 'scope' => [ 'profile', 'email' ]
