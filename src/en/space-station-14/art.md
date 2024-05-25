@@ -1,22 +1,5 @@
 # Art
 
-1) General Artstyle:
-   X Camera Angle: is this isometric? Topdown? etc.
-   Resolution: What resolution are we going for items/clothing/characters/items/environments
-   X Color scheming: How "Dark" should the colors be? Are we going bright and cheerful or dark and moody?
-   General design language and style
-2) Specifics:
-   Asset requirements: What shapes are allowed for specific types of clothing. You don't want a "Hat" that covers the entire body
-   In-Game brands: What are some ingame brands and how should they be portrayed? Fonts, colors, design language, etc.
-   Character rendering: How are humanoids put together and drawn? What is required? What limitations are there.
-   Items/clothing: How are items/clothing portrayed, what requirements are there for readability/visibility, etc.
-   Departmental colors/Designs: How are things colored/designed to allow for differentiation in gameplay
-3) Technical:
-   Tech Requirements: Any technical requirements for how specific asset types need to be setup.
-   Licensing: How to handle licensing and attribution with RSI's and what licenses are OK and what are not
-   Standards: How RSI's should be laid out and what should be part of a specific RSI and not in a separate one.
-   File Specifics: What are the correct file formats, and maximum sizes/resolutions permitted for specific asset types
-
 ```admonish warning "Disclaimer"
 Keep in mind, all of these rules are general guidelines. 
 A sprite can look good and fit well even if it doesn't necessarily follow all of these guidelines to the letter.
