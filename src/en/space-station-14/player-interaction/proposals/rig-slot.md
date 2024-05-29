@@ -52,12 +52,12 @@ specific directions to the players total capacity. Besides localizing a certain 
 to present interesting dynamics. Only after something doesnt fit in the bag does it go to players' other options.
 
 As a result of bags, decisions that are intended to be compelling are difficult to justify, like giving up what is nearly your sole
-inventory to carry a weapon on your back. Your backpack is far too spacious, universal, and accessible, holding you personal survival
+inventory to carry a weapon on your back. Your backpack is far too spacious, universal, and accessible, holding your personal survival
 equipment at round start, to match most weapons' value, which in some cases will require additional carried resources like ammo.
 
 With this change to bags, the intended experience is that players will have their most frequently accessed items in their "front inventory",
 like a form of cache. Likewise it's also the intention that in some cases, additional resources from their "back inventory" are brought
-forward into their 'cache'. For a constuction loadout, they may bring additional materials forward into their cache after a set of repairs.
+forward into their cache. For a constuction loadout, they may bring additional materials forward into their cache after a set of repairs.
 For a combat loadout, they may bring additional ammo and gear forward into their cache after an encounter.
 
 It is also intended that the changes to bags be as low friction as possible while being enough to set this clear distinction between a
@@ -72,12 +72,12 @@ like most would in daily work.
 - Most sidearms can no longer fit in pocket slots. (Filed-down pocket-pistols like the cobra would.)
 - Restrict suit storage to space suits and to storing oxygen.
 
-There is a schism in the inventory management of the game's arsenal. Currently if all slots possible were used to carry weapons, assuming
+Currently if all slots possible were used to carry weapons, assuming
 someone had any kind of armor at all, a person could wear 2 long arms and 3 sidearms. Most games follow a rule of "one big one small", and
 standard weapon wearing should resemble this.
 
 "One small" could hang in the belt slot and "one large" could sling over the rig or back slot.
-Combat-specialized task inventories would even allow this holstering while providing some space for ammo and gear.
+Combat-specialized loadouts would even allow this holstering while providing some space for ammo and gear in the holster.
 The decision for using a slot to stow a large weapon then becomes:
 - Do I sacrifice my generic spacious inventory?
 - Do I sacrifice my specialized accessible inventory?
