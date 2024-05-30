@@ -47,18 +47,26 @@ To state it up front, nothing in design can compare to a spacious, completely ge
 every player. These three qualities together complicate any effort to design strong role identity or dynamic inventory-management
 decisions. Bags have far too much value centered in one place. 
 
-As a result of bags, supporting utility inventories lack the utility value that they thematically boast, being only small boosts in
+As a result of bags, 
+- supporting utility inventories lack the utility value that they thematically boast, being only small boosts in
 specific directions to the players total capacity. Besides localizing a certain type of item in one place on a person, they do little
 to present interesting dynamics. Only after something doesnt fit in the bag does it go to players' other options.
 
-As a result of bags, decisions that are intended to be compelling are difficult to justify, like giving up what is nearly your sole
+- decisions that are intended to be compelling are difficult to justify, like giving up what is nearly your sole
 inventory to carry a weapon on your back. Your backpack is far too spacious, universal, and accessible, holding your personal survival
 equipment at round start, to match most weapons' value, which in some cases will require additional carried resources like ammo.
 
 With this change to bags, the intended experience is that players will have their most frequently accessed items in their "front inventory",
-like a form of cache. Likewise it's also the intention that in some cases, additional resources from their "back inventory" are brought
-forward into their cache. For a constuction loadout, they may bring additional materials forward into their cache after a set of repairs.
-For a combat loadout, they may bring additional ammo and gear forward into their cache after an encounter.
+like a form of cache. Likewise it's also the intention that in some jobs, additional resources from their "back inventory" are brought
+forward into their cache between tasks. The intended loop in this regard is that the front inventory defines a character's abilities per task,
+their back inventory defines a character's total capacity to complete tasks, and so players enter a rythm of completing a task, bringing
+resources forward a number of times, and then returning to their department to totally refresh.
+
+For a constuction loadout, they may bring additional materials forward into their cache after a repair. After a certain set of repairs, they would
+go to Engineering or Cargo to restock.
+
+For a combat loadout, they may bring additional ammo and gear forward into their cache after an encounter. After a certain number of violent encounters,
+they would take time away from danger to restock their arsenal.
 
 It is also intended that the changes to bags be as low friction as possible while being enough to set this clear distinction between a
 task-oriented accessible inventory and a spacious universal inventory. Holding a bag in a hand or opening it on the ground is not a
@@ -81,3 +89,5 @@ Combat-specialized loadouts would even allow this holstering while providing som
 The decision for using a slot to stow a large weapon then becomes:
 - Do I sacrifice my generic spacious inventory?
 - Do I sacrifice my specialized accessible inventory?
+
+Said briefly, the above proposal to restrict suit storage is because with this new addition, its old niches would be covered.
