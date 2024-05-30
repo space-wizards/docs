@@ -1,5 +1,4 @@
 # Machine Upgrading Rework
-
 ```admonish warning "Attention: Legacy Documentation!"
 This document is ported from before the game-area reorganization and has not been reviewed or updated.
 It may not fit with the new department design requirements.

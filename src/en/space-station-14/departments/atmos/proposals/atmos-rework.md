@@ -3,6 +3,7 @@
 This document is ported from before the game-area reorganization and has not been reviewed or updated.
 It may not fit with the new design requirements.
 ```
+
 | Designers | Implemented | GitHub Links |
 |---|---|---|
 | notafet | :warning: Partially | https://github.com/space-wizards/space-station-14/pull/21954 https://github.com/space-wizards/space-station-14/pull/22358 https://github.com/space-wizards/space-station-14/pull/22468 |
