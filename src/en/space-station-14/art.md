@@ -84,21 +84,24 @@ This gives you a clear view of the top as well as the front of the object.
 * **Mobs**, **clothing**, and **items** are rendered in a flat perspective. 
 A flat perspective can be thought of as looking at the image straight-on at eye level.
 This maximizes detail while minimizing any perspective-based distortion.
+When perspective is necessary for conveying something properly, use 3/4s.
 
 
 * **Floor tiles** and **ground** textures similarly lack any particular perspective.
 The actual floor itself should be a simple birds-eye perspective but any small detailing like stones or pits can employ a more conventional flat perspective.
 
 
-* **Walls** and wall-like structures (windows, grilles, etc.) are rendered in a exaggerated top-down perspective typically referred to as _classic_.
+* **Walls** and wall-like structures (windows, grilles, etc.) are rendered in a exaggerated top-down style typically referred to as _classic_.
 Walls shouldn't have any kind of 3/4 perspective and, while the sides may be technically visible, the focus is on the "top" of the wall.
+This isn't to say you're seeing inside of the wall into some kind of inner lattice structure, but rather it's more of a flat texture.
+Walls are very difficult and strange in their form so it's best to just look at existing walls for inspiration.
 
 
 * Similarly, **wall-mounted structures** are additionally rendered in a flat perspective.
 This is most visible in things like posters and aids in readability.
 
 ### Color
-* Keep color palettes **limited and distinct**.
+* Avoid many overlapping palettes, or _gradients_ of many similar colors, prefer small, distinct palettes.
 Make sure the individual colors in a sprite have enough contrast to be discerned in game.
 Remember, sprites in game are a lot smaller than your editor: err on the side of high-contrast.
 
@@ -157,8 +160,8 @@ Make sure that the outline is colored according to the section it surrounds, ins
 Using multiple colors in your outline gives a much better result.
 
 
-* Make sure your outlines have shading as well.
-The bottom of an object will have a darker outline than the top of it.
+* Don't include shading on your outlines.
+The value of the outline should be consistent across the entire shape.
 
 
 ### Miscellaneous
