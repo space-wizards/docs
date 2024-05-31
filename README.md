@@ -9,6 +9,7 @@ Benefits of the current docs site infrastructure include:
 - Decently familiar & comfortable for developers since `mdbook` use is very widespread
 - No sign-on infrastructure or hosting necessary (besides GH pages), if forks would like to host their own
 - Very low friction to adding new pages and editing/fixing old ones
+- High level of customizability with styling and easy custom scripting
 - Eventual localization support
 
 The following `mdbook` features & plugins are available and in use:
