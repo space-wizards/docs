@@ -31,13 +31,10 @@ An example of all of the networking code required for IDCardComponent now, from 
 // IDCardComponent.cs
 [RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState]
-[Access(typeof(SharedIdCardSystem), typeof(SharedPDASystem), typeof(SharedAgentIdCardSystem))]
 public sealed partial class IdCardComponent : Component
 {
     [DataField]
     [AutoNetworkedField]
-    [Access(typeof(SharedIdCardSystem), typeof(SharedPDASystem), typeof(SharedAgentIdCardSystem),
-        Other = AccessPermissions.ReadWrite)] // FIXME Friends
     public string? FullName;
 
     [DataField]
