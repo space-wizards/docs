@@ -1,21 +1,21 @@
-# Blood brothers
+# Blood Brothers
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
 | whateverusername0 (Github) | :warning: Partially | [PR](https://github.com/space-wizards/space-station-14/pull/27622) |
 
-Blood Brothers is a variant of Traitor where you are bound to work with another random person on the station. Together you and your new one or two friends will work together to pull off any of the regular traitor objectives. Blood Brothers do not have an uplink and are not related to The Syndicate by any means. They also have a _revolutionary-type-of_ special icon to easily identify his teammates.
-
-Blood brothers' goal is to complete all their objectives and escape to CentCom together.
-
-Team play is not just optional but mandatory to achieve that sweet greentext. Shared objectives give a lot of freedom for executing evil deeds.
-
-Consider it a 0TC antag that is focred to keep an eye on his friends and do team play. ~~feelsbadman if your bro is catatonic or ssd~~
+Blood Brothers is a variant of Traitor with a bit of brotherly love! Instead of getting 20 telecrystals and an uplink to do your deeds, you are given a friend! Together you and your new teammate will crush mountains, do the impossible and complete all the regular traitor tasks there is. They have a revolutionary-type-of special icon and **shared objectives**, making team play not just optional but mandatory to achieve that sweet greentext. _Quick note that blood brothers are not related to The Syndicate by any means._
 
 ## Spawn conditions
-In Traitor gamemode, one to three random crewmembers will become blood brothers when giving out antag roles. If there is only one Blood Brother, he will be given a special one charge flash to convert another person to his side.
+### Traitor gamemode
+There is a 50% chance to spawn a single team of 1-3 blood brothers. If there will be only one, he will be given a special one-charge flash to convert a crewmember of his choice, like a head revolutionary. Late join is not an option, unfortunately.
+### Blood Brothers gamemode
+Blood Brothers are divided into teams and each one is given a one-charge flash. For example, if there are 4 blood brothers, there are 4 individual teams. Late join is possible!
 
 ## Objectives
-The blood brothers have 2-3 of your average traitor tasks. They are shared, thus, for example, if you or your teammate completes an objective, you both get a greentext. Besides their regular traitor deeds, they also have a special objective to ensure that all members of the team are alive and unrestrained, which will 100% be a pain to do.
+Regarding objectives, Blood Brothers have three main differences:
+- You will never get an objective to kill one of your teammates. This also applies to helping with objectives, keeping one alive or whatever objective that is targeted at another BB inside of your team.
+- Your objectives are shared. For example, if you or your teammate completes an objective, you both get a greentext.
+- The last _mandatory_ objective will be to ensure that the whole team has escaped on the evacuation shuttle alive and unrestrained.
 
-Blood Brothers will never get an objective to kill one of their teammates. This also applies to helping with objectives, keeping one alive or whatever objective that is targeted at another BB.
+If there are more than 1 team of blood brothers, you may be tasked with destruction of the other team. If they don't get a greentext - you do.
