@@ -128,6 +128,11 @@ Then, we'll enter the command for cloning **our** remote repository--not the `sp
 
 ![](https://i.imgur.com/Xn4AQLf.png)
 
+Then **c**hange **d**irectory using:
+``cd space-station-14`` 
+
+(This may be diffrent if you cloned another fork, it's almost always being the same as the repository name)
+
 Every Git command will look something like this--`git` and then a keyword like `add`, `commit`, `pull`, etc.
 
 </p>

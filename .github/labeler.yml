@@ -11,4 +11,6 @@
 - 'scripts/**'
 
 "Design":
-- 'src/en/proposals/**'
+- changed-files:
+  - any-glob-to-any-file: '**/proposals/**'
+  - 'src/en/general-proposals/**'

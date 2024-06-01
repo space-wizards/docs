@@ -37,7 +37,7 @@ It should never feel sprawling or overwhelming or like you're scanning your scre
 
 Our solution? A to-scale HUD element that can represent uniquely shaped item's as well as display the size of things in an immersive and immediately understandable way.
 
-![](../../assets/images/grid-inventory/in-game.png)
+![](../../../assets/images/grid-inventory/in-game.png)
 
 ### Items
 
@@ -47,14 +47,14 @@ This is just the shape the item takes up in the grid and it additionally serves 
 Rather than tiny items having a weight value of 1, they simply take up a single square.
 Items would have reasonable default sizes inferred from the current weight values of items with an optional specifier for other custom shapes.
 
-![](../../assets/images/grid-inventory/shape-examples.png)
+![](../../../assets/images/grid-inventory/shape-examples.png)
 
 Inside of the inventory, you'd be able to manually move around and rotate items, allowing gaps to be filled and space optimized with proper planning. 
 You'd also be able to intuit how much of the inventory an item fills from a simple glance, since the volume is of the container is represented visually.
 
 ### Storage
 
-![](../../assets/images/grid-inventory/grid-example.png)
+![](../../../assets/images/grid-inventory/grid-example.png)
 
 For the most part, storages exist as literal translations of the current values. 
 A 28 capacity simply becomes a 7x4 box.

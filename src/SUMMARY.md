@@ -38,6 +38,7 @@ General Development
   - [Feature Proposal Template](en/templates/proposal.md)
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
 - [Work Groups](en/general-development/work-groups.md)
+- [Contributing Translations](en/general-development/contributing-translations.md)
 
 SS14 By Example
 ===============
@@ -158,11 +159,12 @@ Space Station 14
 - [Player Interaction](en/space-station-14/player-interaction.md)
 	- [PR Guidelines](en/space-station-14/player-interaction/guidelines.md)
 	
-	- [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
-	- [Grid Inventory](en/space-station-14/player-interaction/grid-inventory.md)
+	- [Cartridge loaders](en/space-station-14/player-interaction/cartridge-loaders.md)
 
 	- [Proposals]()
-	  - [PAI Expansion Slots](en/space-station-14/areas/core/player-interaction/proposals/pai-expansion-slots.md)
+	  - [PAI Expansion Slots](en/space-station-14/player-interaction/proposals/pai-expansion-slots.md)
+	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
+	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md) 
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
@@ -233,6 +235,7 @@ Space Station 14
 
 		- [Proposals]()
 			- [GenPop Prisoners](en/space-station-14/departments/security/proposals/genpop-prisoners.md)
+                        - [Reduced Metagaming Mechanics](en/space-station-14/departments/security/proposals/reduced-metagaming.md)
 	- [Service](en/space-station-14/departments/service.md)
 		- [PR Guidelines](en/space-station-14/departments/service/guidelines.md)
 
@@ -293,6 +296,7 @@ Community
 - [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)
 - [Space Wizards Maintainer List](en/community/space-wizards-maintainer-list.md)
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
+- [Project Manager](en/community/projectmanager.md)
 - [Maintainer](en/community/maintainer.md)
   - [Maintainer Policy](en/community/maintainer/wizards-den-maintainer-policy.md)
   - [Review Policy](en/community/maintainer/wizards-den-review-policy.md)
@@ -362,7 +366,8 @@ Admin Meetings
 ==============
 
 ----------------------
-- [2024-02-03](en/admin-meetings/admin-meeting-2024-02-03.md)
-- [2024-02-17](en/admin-meetings/admin-meeting-2024-02-17.md)
-- [2024-03-16](en/admin-meetings/admin-meeting-2024-03-16.md)
+- [2024-04-27](en/admin-meetings/admin-meeting-2024-04-27.md)
 - [2024-03-30](en/admin-meetings/admin-meeting-2024-03-30.md)
+- [2024-03-16](en/admin-meetings/admin-meeting-2024-03-16.md)
+- [2024-02-17](en/admin-meetings/admin-meeting-2024-02-17.md)
+- [2024-02-03](en/admin-meetings/admin-meeting-2024-02-03.md)

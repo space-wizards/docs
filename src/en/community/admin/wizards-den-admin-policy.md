@@ -12,7 +12,9 @@ Administrators are **not unaccountable**, and should be held to higher standards
 Professionalism is important, and in general will help reduce the number of issues you run into as staff. We expect you to **deescalate**, rather than escalate situations.
 As staff, you're often the first person that a player with an issue will talk to. No matter your opinion on the player, do your best to be respectful towards them.
 #### 1.3 **Do not leak or share sensitive information without permission.**
-This *does* pertain to any information posted in the game admin Discord chats, information discussed in admin chat in-game, as well as PII (IP, HWID) accessible through the central ban DB. This does *not* pertain to basic ban info (time, reason, count), admin notes, or admin log information.
+This *does* pertain to any information posted in the game admin Discord chats, forum categories, information discussed in admin chat in-game, as well as PII (IP, HWID) accessible through the central ban DB. This does *not* pertain to basic ban info (time, reason, count), admin notes, or admin log information.
+
+This policy also covers and prohibits internal leaks. An example of an internal leak would be an Admin A sharing information about Admin B's application vote/discussion with Admin B, if Admin B doesn't have direct access to all the information that was being shared by Admin A. Generally, "leak" means to share the information in whole or in part with someone who does not have direct access.
 #### 1.4 **Ban Appeals**
 Ban appeals are covered by the [Banning Policy](./wizards-den-banning-policy.md).
 

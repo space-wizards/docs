@@ -3,6 +3,7 @@
 This document is ported from before the game-area reorganization and has not been reviewed or updated.
 It may not fit with the new design requirements.
 ```
+
 | Designers | Implemented | GitHub Links |
 |---|---|---|
 | ike709 | :x: No | TBD |
