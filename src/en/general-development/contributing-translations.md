@@ -14,3 +14,6 @@ As a new user, you only have the ability to submit suggestions. These need to be
 
 If the language you want to translate to doesn't exist yet, also **just ask**. It requires a bit of manual work to set everything up for a new language.
 
+## Working Together
+
+Translation requires teamwork and coordination. If you wanna talk about translation stuff, the best place to do it is the `#translation` channel on our [Discord](https://discord.ss14.io).
