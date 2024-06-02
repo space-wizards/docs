@@ -89,6 +89,13 @@ See the relevant documentation for more details: https://docs.microsoft.com/en-u
 
 Be sure to adjust BaseUrl accordingly!
 
+### Notifications
+You can now set a notification discord webhook to receive notifications whenever a server crashes, the integration is as simple as adding the following to your config.
+```yml
+Notification:
+  DiscordWebhook: "https://discord.com/api/webhooks/..."
+```
+
 ### Instances
 
 Each instance is a separate game server, so the terms "instance" and "server" can be used semi-interchangably.
