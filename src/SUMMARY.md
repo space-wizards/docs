@@ -190,7 +190,7 @@ Space Station 14
 		
 	- [Proposals]()
 		- [Stat Panels](en/space-station-14/user-interface/proposals/statpanels.md)
-- [Departments](en/space-station-14/core-design/departments.md)
+- [Departments](en/space-station-14/departments.md)
 	- [Atmos](en/space-station-14/departments/atmos.md)
 		- [PR Guidelines](en/space-station-14/departments/atmos/guidelines.md)
 
