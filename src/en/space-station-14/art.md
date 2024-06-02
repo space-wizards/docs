@@ -48,7 +48,7 @@ This retro appearance is an important factor of the visual identity of SS14: _em
 
 
 * When creating new assets or features, playing on existing real world technology can create an intuitive understanding.
-Instead of depicting some kind of generic 'credit chit,' using paper bills is immediately recognizable.
+Instead of depicting some kind of generic 'credit chip,' using paper bills is immediately recognizable.
 If you're trying to communicate the purpose of something, creating a visual association with something the player is likely familiar with can help them intuitively understand its function.
 * * If you're make a sci-fi generator, making it look similar to a real-life generator helps people understand it without close examination.
 * * Don't worry about the logistical side of retro technology.
