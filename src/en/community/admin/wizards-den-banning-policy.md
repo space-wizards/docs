@@ -96,54 +96,54 @@ Rule violations not in the offense table can still have bans applied, but have n
 
 | Grouping Category | Offense | First Offense | Second Offense | Third Offense | Fourth Offense |
 |-------------------|------------------------------------------------------------------------------------------------------------|----------------|--------------------------------------------------------------------------------------------------------------------------|---------------|----------------|
-| Non-grouping | [Harassing staff through the game](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_abuse/ignore_the_admin-help_relay) | Indef GB | | | |
-| Non-grouping | [Slurs, excluding "retard" and variants](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.) | Indef GB | | | |
-| Non-grouping | ["Retard" and variants](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.) | W | 1d - 3d GB | Indef GB | |
-| Non-grouping | [Bigotry/discrimination](https://wiki.spacestation14.io/wiki/Server_Rules#No_hate_speech,_slurs,_bigotry,_racism,_specism,_sexism,_etc.)[^discrimination] | Indef GB | | | |
-| Non-grouping | [ERP](https://wiki.spacestation14.io/wiki/Server_Rules#No_erotic_roleplay_(ERP)_or_sexual_content/themes) | Indef GB | | | |
-| Non-grouping | [Sexual content](https://wiki.spacestation14.io/wiki/Server_Rules#No_erotic_roleplay_(ERP)_or_sexual_content/themes) | W - 3d GB | 7d GB | Indef GB | |
-| Non-grouping | [Metacommunications](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_external_means_to_communicate_with_other_players_[Metacomming]) | Indef GB | | | |
-| Non-grouping | [Ban Evasion](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_attempt_to_evade_bans) | Voucher Ban | If after an accepted voucher ban, permanent ban.<br/>Otherwise, extend voucher ban to 6 months from evasion attempt. | | |
-| Language | [Non-english chat](https://wiki.spacestation14.io/wiki/Server_Rules#English_only) | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
-| Language | [Solely non-english chat](https://wiki.spacestation14.io/wiki/Server_Rules#English_only) | W | Indef GB | | |
-| Non-grouping | [Bugs/exploits](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_exploits_or_crash_the_server) | **W** - 7d GB | 12hr - 7d GB | 3d - 15d GB | 7d - 15d GB |
-| Non-grouping | [Use of macros](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_exploits_or_crash_the_server) | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
-| Non-grouping | [Multi-keying](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_multiple_SS14_accounts_[Multi-keying]) | W - **Indef** GB | Indef GB | | |
-| Non-grouping | [Ahelp misuse in bad faith](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_abuse/ignore_the_admin-help_relay)[^badFaith] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
+| Non-grouping | Harassing staff through the game | Indef GB | | | |
+| Non-grouping | Slurs, excluding "retard" and variants | Indef GB | | | |
+| Non-grouping | "Retard" and variants | W | 1d - 3d GB | Indef GB | |
+| Non-grouping | Bigotry/discrimination[^discrimination] | Indef GB | | | |
+| Non-grouping | ERP | Indef GB | | | |
+| Non-grouping | Sexual content | W - 3d GB | 7d GB | Indef GB | |
+| Non-grouping | Metacommunications | Indef GB | | | |
+| Non-grouping | Ban Evasion | Voucher Ban | If after an accepted voucher ban, permanent ban.<br/>Otherwise, extend voucher ban to 6 months from evasion attempt. | | |
+| Language | Non-english chat | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
+| Language | Solely non-english chat | W | Indef GB | | |
+| Exploits | Bugs/exploits | **W** - 7d GB | 12hr - 7d GB | 3d - 15d GB | 7d - 15d GB |
+| Exploits | Use of macros | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
+| Non-grouping | Multi-keying | W - **Indef** GB | Indef GB | | |
+| Non-grouping | Ahelp misuse in bad faith[^badFaith] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Non-grouping | Threats to ahelp | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Non-grouping | Under 16 | Indef GB | | | |
-| Non-grouping | [Bad character name](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being)[^requiresIntent] | **W** - 12hr GB | **12hr** - 3d GB | **7d** - 7.5d GB | |
-| Metagaming | [IC in OOC](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_outside_information_to_gain_an_advantage_[Metagaming]) | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
-| AI Laws | [Major failure to follow silicon laws](https://wiki.spacestation14.io/wiki/Server_Rules#Cyborg,_AI,_and_Silicon_Rules) | W - 3d RB | 3d - 7.5d RB | Indef RB | |
-| AI Laws | [Minor failure to follow silicon laws](https://wiki.spacestation14.io/wiki/Server_Rules#Cyborg,_AI,_and_Silicon_Rules) | W | W - 3d RB | 3d - 7.5d RB | Indef RB |
+| Non-grouping | Bad character name[^requiresIntent] | **W** - 12hr GB | **12hr** - 3d GB | **7d** - 7.5d GB | |
+| Metagaming | IC in OOC[^positiveException] | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
+| AI Laws | Major failure to follow silicon laws | W - 3d RB | 3d - 7.5d RB | Indef RB | |
+| AI Laws | Minor failure to follow silicon laws | W | W - 3d RB | 3d - 7.5d RB | Indef RB |
 | Familiars | Familiar griefing master | 12hr GB | 3d GB | **7d** - 7.5d GB | |
 | Familiars | Familiar unreasonable failure to obey orders | W | 12hr GB | 3d GB | **7d** - 7.5d GB |
-| Immersion | [Text speak](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being) | W | W | **W** - 12hr GB | W - 12hr GB |
-| Immersion | [OOC terms IC](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being)[^teachingException] | W | **W** - 12hr GB | **12hr** - 3d GB | 3d - 7.5d GB |
-| Immersion | [Bypassing chat restrictions](https://wiki.spacestation14.io/wiki/Server_Rules#Act_like_a_human_being) | W | W - **4hr** - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB |
-| Metagaming | [Using info from death](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_outside_information_to_gain_an_advantage_[Metagaming])[^infoFromDeath] | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
-| Metagaming | [Using info from past life](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_outside_information_to_gain_an_advantage_[Metagaming]) | 12hr - 48hr GB | 3d GB | **7d** - 7.5d GB | |
-| Metagaming | [Metagaming round type](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_use_outside_information_to_gain_an_advantage_[Metagaming]) | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
-| Griefing | [Damage/disruption to arrivals/arrivals shuttle](https://wiki.spacestation14.io/wiki/Server_Rules#Don't_be_a_dick) | 12hr - 3d GB | 3d - 7d GB | 7d - 15d GB | |
-| Self-antag | [Self-antag](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_intentionally_make_everything_worse_[Self-Antagonism])[^excludingEscalationIssues] | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
-| Self-antag | [Station sabotage](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_intentionally_make_everything_worse_[Self-Antagonism])[^stationSabotage] | W - 3d GB | 12hr - 7d GB | 14d - 15d GB | |
-| Self-antag | [Cults/riots/revolutions](https://wiki.spacestation14.io/wiki/Server_Rules#Follow_escalation_rules,_don't_make_Cargonia) | **12hr** - 3d GB | 12hr - **3d** - 7d GB | **7d** - 7.5d GB | |
-| Self-antag | [Cooperating with known antags](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_intentionally_make_everything_worse_[Self-Antagonism]) | 12hr GB | 3d GB | **7d** - 7.5d GB | |
-| Griefing | [Round stalling](https://wiki.spacestation14.io/wiki/Server_Rules#Don't_be_a_dick) | **W** - 12hr GB | **12hr** - 3d GB | 3d - 7d GB | **7d** - 7.5d GB |
-| Griefing | [Friendly antag](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_suicide_out_of_or_waste_important_roles,_including_antagonist_roles)[^antagOnly] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
-| Griefing | [Antagonist team sabotage](https://wiki.spacestation14.io/wiki/Server_Rules#Antagonist-Specific_Rules:_Nuclear_Operatives)[^antagOnly] | 12hr - 3d GB | 3d - Indef GB | 7d - Indef GB | |
-| Griefing | [Early massive station sabotage](https://wiki.spacestation14.io/wiki/Server_Rules#Antagonist-Specific_Rules:_Traitor)[^antagOnly] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
+| Immersion | Text speak | W | W | **W** - 12hr GB | W - 12hr GB |
+| Immersion | OOC terms IC[^teachingException] | W | **W** - 12hr GB | **12hr** - 3d GB | 3d - 7.5d GB |
+| Immersion | Bypassing chat restrictions | W | W - **4hr** - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB |
+| Metagaming | Using info from death[^infoFromDeath] | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
+| Metagaming | Using info from past life | 12hr - 48hr GB | 3d GB | **7d** - 7.5d GB | |
+| Metagaming | Metagaming round type | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
+| Griefing | Damage/disruption to arrivals/arrivals shuttle | 12hr - 3d GB | 3d - 7d GB | 7d - 15d GB | |
+| Self-antag | Self-antag[^excludingEscalationIssues] | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
+| Self-antag | Station sabotage[^stationSabotage] | W - 3d GB | 12hr - 7d GB | 14d - 15d GB | |
+| Self-antag | Cults/riots/revolutions | **12hr** - 3d GB | 12hr - **3d** - 7d GB | **7d** - 7.5d GB | |
+| Self-antag | Cooperating with known antags | 12hr GB | 3d GB | **7d** - 7.5d GB | |
+| Griefing | Round stalling | **W** - 12hr GB | **12hr** - 3d GB | 3d - 7d GB | **7d** - 7.5d GB |
+| Griefing | Friendly antag[^antagOnly] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
+| Griefing | Antagonist team sabotage[^antagOnly] | 12hr - 3d GB | 3d - Indef GB | 7d - Indef GB | |
+| Griefing | Early massive station sabotage[^antagOnly] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Griefing | Unreasonable failure to follow an order from a team leader | W - 3d RB | 3d - 7d RB | Indef RB | |
-| Escalation | [Over escalation](https://wiki.spacestation14.io/wiki/Server_Rules#Follow_escalation_rules,_don't_make_Cargonia)[^eachVictim] | W | 12hr GB | 3d GB | **7d** - 7.5d GB |
-| Escalation | [RDM](https://wiki.spacestation14.io/wiki/Server_Rules#Follow_escalation_rules,_don't_make_Cargonia)[^eachVictim] | 12hr GB | 3d GB | **7d** - 7.5d GB | |
-| Escalation | [Over escalation or RDM that is a secondary result of station sabotage](https://wiki.spacestation14.io/wiki/Server_Rules#Follow_escalation_rules,_don't_make_Cargonia)[^stationSabotageRDM] | 12hr GB | 3d GB | **7d** - 7.5d GB | |
-| Escalation | [Harassing a player/role/department outside of reasonable conflicts](https://wiki.spacestation14.io/wiki/Server_Rules#Don't_be_a_dick) | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
-| Griefing | [Abandoning a role](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_suicide_out_of_or_waste_important_roles,_including_antagonist_roles)[^abandoningRole] | W - 3d RB | 3d - 7d RB | Indef RB | |
-| Griefing | [Antag rolling](https://wiki.spacestation14.io/wiki/Server_Rules#Do_not_suicide_out_of_or_waste_important_roles,_including_antagonist_roles) | 12hr - 3d GB | 3d - 7d GB | **7d** - 7.5d GB | |
-| Competence | [Unreasonable incompetence in role](https://wiki.spacestation14.io/wiki/Server_Rules#Department_Specific_Behavior_Issues) | W - **3d** - 7d RB | 7d - 15d RB | Indef RB | |
-| Competence | [Abuse of a position of authority](https://wiki.spacestation14.io/wiki/Server_Rules#Command_&_Security_are_held_to_a_higher_standard) | 3d - 7d RB | 7d - 15d RB | Indef RB | |
-| Competence | [Taking actions a reasonable person would view as to be to the detriment of the station as security/command](https://wiki.spacestation14.io/wiki/Server_Rules#Command_&_Security_are_held_to_a_higher_standard) | 3d - 7d RB | 7d - 15d RB | Indef RB | |
-| Competence | [Unreasonable failure of security/command to follow space law](https://wiki.spacestation14.io/wiki/Server_Rules#Command_&_Security_engagement_rules) | W - **3d** - 7d RB | 7d - 15d RB | Indef RB | |
+| Griefing | Harassing a player/role/department with no IC conflict | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
+| Escalation | Over escalation[^eachVictim] | W | 12hr GB | 3d GB | **7d** - 7.5d GB |
+| Escalation | RDM[^eachVictim] | 12hr GB | 3d GB | **7d** - 7.5d GB | |
+| Escalation | Over escalation or RDM that is a secondary result of station sabotage[^stationSabotageRDM] | 12hr GB | 3d GB | **7d** - 7.5d GB | |
+| Griefing | Abandoning a role[^abandoningRole] | W - 3d RB | 3d - 7d RB | Indef RB | |
+| Griefing | Antag rolling | 12hr - 3d GB | 3d - 7d GB | **7d** - 7.5d GB | |
+| Competence | Unreasonable incompetence in role | W - **3d** - 7d RB | 7d - 15d RB | Indef RB | |
+| Competence | Abuse of a position of authority | 3d - 7d RB | 7d - 15d RB | Indef RB | |
+| Competence | Taking actions a reasonable person would view as to be to the detriment of the station as security/command | 3d - 7d RB | 7d - 15d RB | Indef RB | |
+| Competence | Unreasonable failure of security/command to follow space law | W - **3d** - 7d RB | 7d - 15d RB | Indef RB | |
 
 [^eachVictim]: Guideline is multiplied by the number of victims.
 
@@ -157,13 +157,13 @@ Rule violations not in the offense table can still have bans applied, but have n
 
 [^badFaith]: To qualify as bad faith, there should be no *reasonable* way that something is being done with good intentions. It is not required for the person to *actually* be acting in bad faith, only that it is *unreasonable* for them to think that they are.
 
-[^antagOnly]: Only applies to antagonists.
+[^antagOnly]: Only applies to antagonists and free agents.
 
 [^stackEscalation]: Should be combined with an escalation offense from the perspective of the offender. Typically RDM if an execution occurs for no reason, or over escalation if there is a poor reason.
 
 [^teachingException]: Use of admin discretion to not enact penalties is highly recommended in cases where the offending player only commits an offense after attempting and failing to teach a new player appropriately.
 
-[^applyToChain]: The offense may be applied to anyone in the chain of those who requested or approved the execution up to the executioner.
+[^positiveException]: Use of admin discretion to not enact penalties is highly recommended in cases where the offending player is not negatively impacting players, and is attempting to ensure players have a positive experience. For example, using LOOC to get permission to perform an IC act which would be allowed even without that permission.
 
 [^infoFromDeath]: This includes any information that a character should have not known from the same "life". Depending on server rules, this may include information like the information leading to your death. A "life" ends when a player takes a different role, like a ghost role. For the purposes of banning guidelines, a "life" does not end on cloning.
 
@@ -187,18 +187,28 @@ An offense which lists W - 12h GB as a suggestion that is affected by a 2x multi
 
 --------------------
 
-### Mitigating
+### Mitigating: Required
 
 ```admonish info
-Mitigating modifiers must be applied.
+These mitigating modifiers must be applied if they are applicable.
+```
+
+| Modifier | Modification |
+|----------|--------------|
+| Valid Rule Clarification | No more than a warning should be given to a player that justifies the offense with a reasonably cited active rule clarification, even if it is not up to date with current rules. |
+| Self report | Reduce to warning. Applies to any offense where the player reports themselves as long as the offense was unlikely to be identified otherwise. |
+
+
+### Mitigating: Discretionary
+
+```admonish info
+These mitigating modifiers are applied at the discretion of the admin and may be partially applied. Admins are highly encouraged to consider applying these when they are relevant as they can significantly help to avoid bans which will be accepted on appeal.
 ```
 
 | Modifier | Modification |
 |----------|--------------|
 | New player | If there is no prior warning for the same issue, and if the minimum suggestion is not an indefinite ban, reduce to warning at admin discretion and instruct to read the rules. |
-| Valid Rule Clarification | No more than a warning should be given to a player that justifies the offense with a reasonably cited active rule clarification, even if it is not up to date with current rules. |
 | Caught before round effects | If there are no earlier similar issues, any issue caught before it affects the round and other players can be reduced to a warning at admin discretion. |
-| Self report | Reduce to warning. Applies to any offense where the player reports themselves and where the offense was unlikely to be identified otherwise. |
 | Admin intervention | Any reduction, including to nothing, may be applied for any offense which is plausibly the result of admin intervention. |
 
 ### Aggravating
@@ -236,6 +246,10 @@ The total time of a role ban may be rounded to the nearest available autofill.
 
 ## Examples
 
+```admonish info
+These examples may be outdated due to a banning policy update. Please point out any issues if you notice them.
+```
+
 ### AME Sabotage
 A technical assistant sets the AME to 50. Their offenses are:
 - Self antag
@@ -263,13 +277,13 @@ No modifiers apply. Only the prior RDM offense is relevant because it is the onl
 
 # Appeals
 
-## Appeals of Mistaken Bans
+## Appeals of Incorrect Bans
 
 Unless the ban was an upgrade resulting from an unsucessful appeal, if an appeal disputes the events which were used to justify the ban, the first appeal of a voucher or permanent ban may only be declined after it has been verified that it was appropriately placed.
 
 ## Appeal Hijacking
 
-If an appeal is currently being processed by someone, it is generally best to let them finish processing the it. Cases where it may be acceptable to "hijack" an appeal are:
+If an appeal is currently assigned to someone, it is generally best to let them finish processing the it. Cases where it may be acceptable to "hijack" an appeal are:
 - the processor has not responded to the appeal recently,
 - the processor has somehow indicated that they are not going to process the appeal, or
 - a head game admin has told you that you can process the appeal.
