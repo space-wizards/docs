@@ -241,6 +241,7 @@ Space Station 14
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
+   			- [Librarian Gameplay](en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md)
 
 General Proposals
 ================
