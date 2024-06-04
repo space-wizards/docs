@@ -52,7 +52,9 @@ For a constuction loadout, they may bring additional materials forward into thei
 
 For a combat loadout, they may bring additional ammo and gear forward into their cache after an encounter. After a certain number of violent encounters, they would take time away from danger to restock their arsenal.
 
-It is also intended that the changes to bags be as low friction as possible while being enough to set this clear distinction between a task-oriented accessible inventory and a spacious universal inventory. Holding a bag in a hand or opening it on the ground is not a massive hurdle, and if players wish to bypass it, they have a dedicated inventory option with the satchel. Many players operate in a specific spot for an extended period, it might even become natural that they place their bag down once they get to their workstation, like most would in daily work. If they are instead a job that moves about the station alot, handheld storage options like toolboxes might even get more use, since the experience would be similar to backpacks that you'd already need to put into your hand or place down at your site of work. In this
+It is also intended that the changes to bags be as low friction as possible while being enough to set this clear distinction between a task-oriented accessible inventory and a spacious universal inventory. Holding a bag in a hand or opening it on the ground is not a massive hurdle, and if players wish to bypass it, they have a dedicated inventory option with the satchel. Many players operate in a specific spot for an extended period, it might even become natural that they place their bag down once they get to their workstation, like most would in daily work. 
+
+If they are instead a job that moves about the station alot, handheld storage options like toolboxes might even get more use, since the experience would be similar to backpacks that you'd already need to put into your hand or place down at your site of work. In this
 case, they could tote things and place it down without making their personal belongings 'vulnerable'.
 
 ## Supporting Proposals
@@ -64,6 +66,6 @@ case, they could tote things and place it down without making their personal bel
 
 Currently if all slots possible were used to carry weapons, assuming someone had any kind of armor at all, a person could wear 2 long arms and 3 sidearms. Many games follow a rule of "one big one small", and standard weapon wearing should resemble this.
 
-"One small" could hang in a worn belt and "one large" could sling on a worn rig. Or you could wear a belt holster and a shoulder holster and take two smalls with you, whatever you want dude. Combat-specialized loadouts would allow this holstering while providing some additional space for ammo and gear in the belt/rig. The decision to wear weapons now explicitly leans a character into being a combat loadout, compromising their other abilities.
+"One small" could hang in a worn belt and "one large" could sling on a worn rig. Or you could wear a belt holster and a shoulder holster and take two smalls with you, whatever you want dude! Combat-specialized loadouts would allow this holstering while providing some additional space for ammo and gear in the belt/rig. The decision to wear weapons now explicitly leans a character into being a combat loadout, compromising their other abilities.
 
 Said briefly, the final above proposal to restrict suit storage is because with this new addition, its old niches would be covered, and the slot can focus on a space-faring suit's built-in capacity for an oxygen tank.
