@@ -366,6 +366,7 @@ Admin Meetings
 ==============
 
 ----------------------
+- [2024-05-18](en/admin-meetings/admin-meeting-2024-05-18.md)
 - [2024-04-27](en/admin-meetings/admin-meeting-2024-04-27.md)
 - [2024-03-30](en/admin-meetings/admin-meeting-2024-03-30.md)
 - [2024-03-16](en/admin-meetings/admin-meeting-2024-03-16.md)
