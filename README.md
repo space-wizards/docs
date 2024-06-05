@@ -1,4 +1,4 @@
-# Space Wizards Development Wiki
+# Space Wizards Development Wikii
 
 This is the `mdbook`-based developer documentation for all Space Wizards projects, including Robust Toolbox, Space Station 14, the SS14 launcher, etc. These docs cover many topics and can be potentially very useful for mappers, spriters, active contributors & prospective contributors, people who want to use our engine for their own projects, fork developers, and so on.
 
