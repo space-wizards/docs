@@ -69,7 +69,7 @@ Bans of additional non-username information should typically include the GUID of
 
 ## Dewhitelisting
 
-Game admins may dewhitelist a player at their discretion in any case where an issue would likely have prevented whitelisting. Game admins are encouraged to pair indefinite game bans with dewhitelisting.
+Game admins may dewhitelist a player at their discretion in any case where an issue would likely have prevented whitelisting. Game admins are encouraged to pair bans which are either for a second offense of an issue or which are greater than 3 days with dewhitelisting.
 
 ## Offense Table
 
