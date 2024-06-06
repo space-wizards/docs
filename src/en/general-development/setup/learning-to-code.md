@@ -5,7 +5,7 @@ If you have some experience (read: understand things like "classes" and "control
 
 You may have come here simply wanting to add items. It's possible to do that without learning how to program, though you'll be limited in what kind of functionality you can give them. You'll still probably need to learn Git (read on!)
 
-If you want to do anything more complicated, I recommend you read the rest of [**Getting Started**](./setting-up-a-development-environment.md), and then start reading **SS14 By Example**, which goes through many common activities and how to do them.
+If you want to do anything more complicated, I recommend you read the rest of [**Getting Started**](./development-environment.md), and then start reading **SS14 By Example**, which goes through many common activities and how to do them.
 
 ## Tutorials
 

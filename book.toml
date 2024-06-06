@@ -121,3 +121,7 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/engine/sprites-icons/index.html" = "/en/robust-toolbox/rendering/sprites-and-icons.html"
 "/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
 "/en/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
+
+"/en/general-development/setup.html" = "/en/general-development/setup/index.html"
+"/en/general-development/setup/howdoicode.html" = "/en/general-development/setup/learning-to-code.html"
+"/en/general-development/setup/setting-up-a-development-environment.html" = "/en/general-development/setup/development-environment.html"

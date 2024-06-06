@@ -12,7 +12,7 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 6. When there is a new update. Go back to the second step and just overwrite the files to update your server.
 
 ```admonish info
-If you ever wish to develop for the game. You will need a [proper development environment](./setting-up-a-development-environment.md). You cannot use the premade server for this use case.
+If you ever wish to develop for the game. You will need a [proper development environment](./development-environment.md). You cannot use the premade server for this use case.
 ```
 
 
@@ -83,7 +83,7 @@ By default, no admin privileges are set. A privileged administrator can give out
 
 
 ## Level 2: Server With Custom Code
-You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
+You need to [set up a development environment](./development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
 
 You first build the packaging tool using:
 

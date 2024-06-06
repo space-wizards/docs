@@ -3,7 +3,7 @@
 ```admonish info
 Before jumping in the deep end here, you may want to *at least* go through hosting a vanilla server and learn how to administrate it.
 
-It may also be useful to familiarize yourself with [setting up a developer environment](../general-development/setup/setting-up-a-development-environment.md), as you will need at least `dotnet` installed to compile the Watchdog, and Python installed to run certain server build scripts.
+It may also be useful to familiarize yourself with [setting up a developer environment](../general-development/setup/development-environment.md), as you will need at least `dotnet` installed to compile the Watchdog, and Python installed to run certain server build scripts.
 
 It is also worth going through the custom codebases section, especially if you intend to use any of these with a custom codebase.
 ```
