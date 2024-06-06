@@ -14,7 +14,7 @@
 # Welcome to the mega labeler.
 "Design":
 # General design
-- 'src/en/space-station-14/accessibility/proposals**'
+- 'src/en/space-station-14/accessibility/proposals/**'
 - 'src/en/space-station-14/admin-tools/proposals/**'
 - 'src/en/space-station-14/art/proposals/**'
 - 'src/en/space-station-14/character-species/proposals/**'
