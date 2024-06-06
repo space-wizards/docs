@@ -27,7 +27,7 @@ git-repository-url = "https://github.com/space-wizards/space-station-14"
 edit-url-template = "https://github.com/space-wizards/docs/blob/master/{path}"
 
 mathjax-support = true
-curly-quotes = true
+smart-punctuation = true
 no-section-label = true
 
 [output.html.print]
