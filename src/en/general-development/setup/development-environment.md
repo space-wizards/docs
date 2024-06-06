@@ -1,214 +1,260 @@
-# Setting up a Development Environment
+# Development Environment
 
-First you're gonna need some software:
+A local development environment is required to be able to build and develop on top of Space Station 14.
 
-* [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
-* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio also installs this if you're on Windows.
-  * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
-* Preferably an IDE to make development not painful (all free options unless otherwise noted):
-  * For **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 8 SDK or something along those lines.
-  * For **macOS**, [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/).
-  * For **all platforms**, (NOT FREE) [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 devs prefer it over Visual Studio. College/University students can get a free education license, even if they're not a computer science major.
-  * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
-  * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
+This guide provides step-by-step instructions to configure your development environment, allowing you to contribute to the SS14 codebase and the RobustToolbox Engine.
 
-## 1. Cloning
+```admonish warning
+Please do not skip around this guide, even if you're an experienced programmer. Skipping steps may lead to unforseen bugs and issues.
+```
 
-**Even if you already know Git, scroll down to read the section about submodule setup. Seriously.**
+## Prerequisites
 
-If you're **familiar with Git**, just fork and clone the repository, set up remotes, and then follow the submodule guide below.
+Before you can really set anything up, ensure that you have the following software installed on your system:
 
-If you're **unfamiliar with Git**, or just don't know how to proceed, follow the [Git for the SS14 Developer](./git-for-the-ss14-developer.md) guide, which goes in depth on how to contribute to the game and how to set up your initial repository. It also touches on submodule setup, but that's included here as well because of its importance.
+1. [**Git**](https://git-scm.com)  
+   This is SS14's version control system.
+   Refer to [Git for the SS14 Developer](./git-for-the-ss14-developer.md) on how to set it up and its basics.
+   If you are looking for a Git GUI, you can use the one built-in to your IDE or the [many others](https://git-scm.com/downloads/guis).
+2. [**Python 3.7 or higher**](https://www.python.org/)  
+   This is used for many development scripts.
+   **Only download this from the Python website and not the Microsoft Store.**
+   Make sure `py launcher` option is enabled.
+3. [.**NET 8.0 SDK**](https://dotnet.microsoft.com/download/dotnet/8.0)  
+   This is used for building and developing C#, which is the programming language SS14 is built in. If you have installed Visual Studio, you probably already have this installed.
 
-## 2. Submodule Setup
+```admonish note
+Make sure that all the software you downloaded is added to your `PATH`, otherwise you will not be able to run it.
+- [Git](../../assets/images/setup/git-path.png)
+- [Pyhon](../../assets/images/setup/python-path.png)
+```
 
-We have an automatic submodule updater so you don't have to worry about running `git submodule update --init --recursive` all the time. 
+```admonish tip
+If you are using an M-Series/Arm Mac, make sure you install `x64 .NET`, **not** `Arm64 .NET`.
 
-Run `RUN_THIS.py` inside the repo you downloaded with Python. Preferably from a terminal too. This should take a few seconds so if it instantly stops then check if you are running Python 3.7+ otherwise keep reading.
+RobustToolbox does not currently support Arm64, so using Rosetta 2 emulation is recommended.
+```
 
-**If running `RUN_THIS.py` immediately opens and closes a window: do not worry.** This does not mean that it failed. The script closes automatically upon completion, so if you want to verify that it worked properly, check the submodule `/RobustToolbox/` and verify that all the files are there. If not try checking out the troubleshooting at the bottom of this page.
+## 1. Cloning the Repository
 
-Note: If you have any issues when getting started with missing files it's recommended you run `git submodule update --init --recursive` by hand once in case something went wrong with python.
+To develop [Space Station 14](https://github.com/space-wizards/space-station-14), you first need a local copy of all the code on your machine to develop on.
 
-If you *do* want to modify the engine directly however, or you want to update the submodule manually (the auto updating can be a pain), make a file called `DISABLE_SUBMODULE_AUTOUPDATE` inside the `BuildChecker/` directory. 
+- If you're familiar with Git, follow the standard procedures for forking, cloning, setting up remotes.
+- For those new to Git, refer to the [Git for the SS14 Developer](./git-for-the-ss14-developer.md) for a comprehensive guide on setting up Git and the basics.
 
-And with that, your repo is now properly setup!
+## 2. Setting up Submodules
 
-## 3. Setup an IDE
+Space Station 14 uses Git Submodules to manage its dependancy on the RobustToolbox engine. Without the submodule, you cannot build Space Station 14.
 
-### Visual Studio
+Here are the steps to set them up (using our automated submodule handler):
 
-1. Download Visual Studio Community (if you don't own a paid version) from here https://visualstudio.microsoft.com/vs/community/
-2. Run the installer and choose `.net desktop development`, then install
-3. If the installer asks you for a development environment select `Visual C#`.
-4. Open Visual Studio
-5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.sln`
+1. After you first clone the repository, run `RUN_THIS.py` (idealy run in a terminal like `python3 RUN_THIS.py`) found at the root of the repository using Python. If you have any issues, refer to the [troubleshooting section](#troubleshooting).
 
-### Jetbrains Rider
-* TODO
+2. Verify it has succeeded by checking for `/RobustToolbox` directory with in files in it.
 
-### VSCodium
-1. Download [VSCodium Here](https://vscodium.com/) or more directly [on Github Here](https://github.com/VSCodium/vscodium/releases) (On the latest release, click the assets dropdown then scroll to the ZIP or .exe for your OS).
-2. Run the installer or extract the zip file to a location of your choice and run the .exe once extracted.
-3. Once installed, navigate to the Extensions tab (part way down on the top left corner bar, looks like 4 tiles) and search for "C#". An extension by "Muhammad-Sammy" with over 70K downloads and a green / white logo is the one, install that. Extension ID `muhammad-sammy.csharp`.
-4. Select File > Open Folder, then navigate to your cloned repository from above and open this full folder.
-5. Now you can run and debug your game. Select the icon above "Extensions" from earlier for "Run and Debug" and from the dropdown next to the green play button you can select "Server/Client". This will run both the client and server, opening the game for you to debug. Relevant information will pop up in the debug along the bottom. Select the processes in the call stack on the left to change what you are debugging.
+```admonish tip
+If you actually want to modify the engine code or otherwise want to manually update submodules, create a file called `DISABLE_SUBMODULE_AUTOUPDATE` inside the `/BuildChecker/` directory.
+```
 
-## 4. Starting SS14
+## 3. Setting Up an IDE
 
-Now you can get on to compiling the client and server! Use your flavor of IDE to open the solution file `SpaceStation14.sln` and press the build button.
+An Integrated Development Environment (IDE) is highly recommended for Space Station 14 development.
 
-To compile without an IDE, run `dotnet build` in the Space Station 14 repo directory. Then, call the following commands to run the client and server.
-* `dotnet run --project Content.Server`
-* `dotnet run --project Content.Client`
+Here are the most popular options:
 
-Both these commands use a debug configuration by default. To enable release optimizations, add `--configuration Release` to the dotnet invocation.
- 
-Note: If you're having problems with dotnet not finding libssl (e.g. when using libressl), try setting the `CLR_OPENSSL_VERSION_OVERRIDE` environment variable to the appropriate version. For instance, set it to `48` if your `/usr/lib` contains `libssl.so.48`.
-If that doesn't work you can also try running `ln -s /usr/lib/libssl.so /usr/local/lib/libssl.so.1.0.0` instead.
+- For **Windows**
+  - [Visual Studio 2022 Community](https://visualstudio.microsoft.com/) is a widely used choice. During installation, ensure you select the ".NET desktop development workload" and related C# development components.
+- For **all platforms** (**Paid**)
+  - [Jetbrains Rider](https://www.jetbrains.com/rider/) is the most used outside of Windows. College/University students can obtain [free educational licenses](ttps://www.jetbrains.com/community/education/#students).
+- For **all platforms** (**Free**)
+  - [VSCode](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/) can be used alongisde thier respective C# extensions. However, they will provide a less comprehensive development experience compared to full-fledged IDEs and you won't get as much help.
 
-## 5. Configuring Build Options
+### 3.A. Installing the IDE
 
-The SS14 client and server are independent projects, but both can launch with a single button somewhere in your IDE. This needs to be set up, however. Note: **It is recommended that you run `Content.Client` and `Content.Server` when developing from your IDE.** *Not* `Robust.Client` or `Robust.Server`. The reason is that running `Content.*` will make your IDE aware of dependencies correctly and ensure everything is rebuilt nicely. If you run `Robust.Client` directly you have to make sure the solution is fully built every time which is annoying and easy to forget. If you're unsure what Robust or Content are, check out [this page](../codebase-info/codebase-organization.md) on how the project is organized.
+To actually use an IDE, you must install it. If you already have an IDE of your choice installed, feel free to skip straight to [Configuring Build Options](#3b-configuring-build-options).
 
-### Visual Studio 2022
+#### Visual Studio
 
-In Visual Studio 2022, you can configure the build button to run both the server and client by right clicking the solution, then selecting `Configure StartUp Projects...`. Once the menu pops up, then select `Multiple startup projects:` and set the action for `Content.Client` and `Content.Server` to `Start`. Once you apply the changes, hitting the big `Start` button with a green arrow next to it should launch both client and server at the same time.
+```admonish info title="Visual Studio Directions" collapsible=true
 
-Note: If you're having problems with the program not getting built right, you may need to set always build before run. Go to Options `Projects and Solutions/Build and Run` and change `On Run, when projects are out of date` to `Always build`.
+Follow the [official guide](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022).
 
-In VS you can also use the keys F7 to build the project and F5 to run it.
+```
 
-### Visual Studio Code
+#### Jetbrains Rider
 
-The C# extension provides a `"coreclr"` launch type which can be used to run the `Content.Server` and `Content.Client` executables in their respective `bin/` directories. A [compound launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_compound-launch-configurations) can be used to run the server and client at the same time.
+```admonish info title="Jetbrains Rider Directions" collapsible=true
 
-### Command Line
+Follow the [official guide](https://www.jetbrains.com/help/rider/Installation_guide.html).
 
-Build with `dotnet build` and run the client and server on different command lines with:
+```
 
-* `dotnet run --project Content.Server`
-* `dotnet run --project Content.Client`
+#### VSCode
 
-There's also definitely some way to run two commands at the same time, but you should probably google it.
+```admonish info title="VSCode Directions" collapsible=true
 
-### JetBrains Rider
+Follow the [official guide](https://code.visualstudio.com/docs/csharp/get-started).
 
-In Rider you can create a "compound configuration" to run or debug both client and server at the same time. Quite convenient!
+```
+
+#### VSCodium
+
+```admonish info title="VSCodium Directions" collapsible=true
+
+1. Download [VSCodium](https://vscodium.com/#install).
+2. Run the installer.
+3. Once installed, download the C# extension by Muhammad-Sammy, with the extension ID `muhammad-sammy.csharp` and 70k downloads.
+
+```
+
+### 3.B. Configuring Build Options
+
+What you think of as Space Station 14 is actually 2 (well, the only two we care about here) are `Content.Client` and `Content.Server`. In order for the client to be tested, you must also be running a local server.
+
+Thus, make sure that when your IDE is running SS14 or is trying to debug it, it is running both at the same time.
+
+#### Visual Studio
+
+```admonish info title="Visual Studio Directions" collapsible=true
+1. Right click `Solution`
+2. Select `Configure StartUp Projects...`
+3. Select `Multiple StartUp Projects`
+4. Set the action for `Content.Client` and `Content.Server` to `Start`.
+5. Press `Apply`.
+
+Now, if you click the `Start` button, both the client and the server should both launch at the same time.
+
+If you are having problems with the program not getting build correctly, you may need to set it to always build before run.
+
+1. Go to `Options`
+2. Go to `Projects`
+3. Go to `Solutions/Build and Run`
+4. Change `On Run when projects are out of date` to `Always build`.
+```
+
+#### Jetbrains Rider
+
+```admonish info title="Jetbrains Rider Directions" collapsible=true
+
+In Rider you can create a “compound configuration” to run or debug both client and server at the same time.
 
 ![](../../assets/images/setup-rider-configurations.png)
 
-## 6. Configuring IDE directories
+```
 
-C# IDEs like Visual Studio and Rider do not automatically show the `Resources` folder in the project. This folder contains all non-C# files such as sprites, audio, and most importantly, YAML prototypes. These instructions will explain how to get this folder to show up in your IDE, so you can easily work with it.
+#### VSCode(ium)
 
-### Visual Studio 2022
+```admonish info title="VSCode(ium) Directions" collapsible=true
 
-In Visual Studio, you can switch the **Solution Explorer** from "solution" view (only showing the C# projects) to "folder" view (showing all the files in the project). Press the button to switch views as follows, then select the folder view:
+The C# extension provides a `"coreclr"` launch type which can be used to run the `Content.Server` and `Content.Client` assemblies.
+
+Alternatively, a [compound launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_compound-launch-configurations) can be used to run the server and client at the same time.
+
+```
+
+### 3.C. Configuring IDE Directories
+
+C# IDEs like Visual Studio and Rider do not automatically show the `/Resources/` folder in the project.
+
+This folder contains all the non-C# files such as sprites, audio, and most importantly, YAML prototypes. If you are not able to view or edit the `/Resources/` folder, you will be unable to develop for Space Station 14.
+
+#### Visual Studio
+
+```admonish info title="Visual Studio Directions" collapsible=true
+
+In Visual Studio, you can switch the Solution Explorer from “solution” view (only showing the C# projects) to “folder” view (showing all the files in the project).
+
+1. Press the button to switch views as follows, then select the folder view:
 
 ![](../../assets/images/setup/vs-solution-explorer-switch-view-1.png)
 ![](../../assets/images/setup/vs-solution-explorer-switch-view-2.png)
 
-After this, the Solution Explorer should look something like this, and you should be able to easily access the `Resources` folder:
+2. After this, the Solution Explorer should look something like this, and you should be able to easily access the Resources folder:
 
 ![](../../assets/images/setup/vs-solution-explorer-switch-view-3.png)
 
-### JetBrains Rider
+```
 
-In Rider, you can "attach" the resources directory to the solution. Do this by right clicking the solution in the explorer, then doing "Add" -> "Existing Folder...". Select the "Resources" directory in the file picker.
+#### Jetbrains Rider
 
-![asdfs](../../assets/images/setup/rider-attach-folder-1.png)
+```admonish info title="Jetbrains Rider Directions" collapsible=true
+
+In Rider, you can "attach" the resources directory to the solution.
+
+1. Right click the solution in the explorer
+2. Click doing "Add" -> "Existing Folder...".
+3. Select the "Resources" directory in the file picker.
+
+![](../../assets/images/setup/rider-attach-folder-1.png)
 ![](../../assets/images/setup/rider-attach-folder-2.png)
 
-After this, your solution view should look something like this, and you should be able to easily access the `Resources` folder:
+After this, your solution view should look something like this, and you should be able to easily access the `/Resources` folder:
 
 ![](../../assets/images/setup/rider-attach-folder-3.png)
 
-### Visual Studio Code
+```
 
-Visual Studio Code shows all files by default, so no extra setup is needed here.
+## 4. Starting SS14
 
-# Reproducible Development Environment with Nix/NixOS
+With all of that setup, you can now get on with compiling and running the client and the server!
 
-An easier way to set up your development environment for Linux users is to leverage Nix. Nix is a package manager and a functional domain specific language that allows one to declare anything from development environments to entire systems. In order to prevent the dreaded "it works on my machine" conundrum, we can declare a development environment in Nix that spawns an isolated reproducible shell.
+If you have an IDE and have set it up following this guide, you should just be able to click run and it should work!
 
-## Setting up Nix/NixOS with flakes
+If you are compiling without an IDE, you must:
 
-You can [install Nix](https://nixos.org/download) either through installing the NixOS distribution itself or by using the script that is compatible with all Linux distributions that use systemd (Ubuntu, Fedora, Mint etc). For the sake of simplicity and convenience, it is recommended that you install Nix in a distribution that you are comfortable with instead of making the jump to a different operating system entirely. It is also possible to use Nix with MacOS through `nix-darwin` though this has not been tested as of yet and thus not covered in this article.
+1. Build the project through `dotnet build` in the root of the repository.
+2. To start the server, run `dotnet run --project Content.Server`.
+3. To start the client, run `dotnet run --project Content.client`.
 
-Once Nix is installed, you should enable experimental features such as flakes. If you are on a non-NixOS distribution, you can just add the following to your `~/.config/nix/nix.conf`.
+```admonish tip
+Both these commands use a debug configuration by default.
 
-* `experimental-features = nix-command flakes`
+To enable release optimizations, add `--configuration Release` to the dotnet invocation.
+```
 
-If you're using NixOS, you only need to add these options to your `configuration.nix` file.
+## Troubleshooting
 
-* `nix.settings.experimental-features = [ "nix-command" "flakes" ];`
+### `RUN_THIS.py` Isn't Running
 
-For more information about how to enable Nix flakes, see [here](https://nixos.wiki/wiki/Flakes).
+Make sure that the version of Python that you are using is installed from the website and not the Microsoft store. If you installed it from the Microsoft store, uninstall it and install Python from the website.
 
-## Using Nix flakes for a Robust Development Environment
+If you are on Windows and get redirected to the Microsoft Store or encounter a message in your terminal claiming that Python is not installed, then you need to disable an aweful Microsoft shortcut. You can disable it by searching for `Manage App Execution Aliases` and disabling the two Python references.
 
-NB it is technically required that you already have Git installed but in the case with most Linux distributions it comes preinstalled. In the highly unlikely case that you do not:
+### Missing Submodule Files
 
-* Use your distribution's package manager
+If you ever start missing files from the submodules, it's recommended to run `git submodule update --init --recursive` in a terminal in case something went wrong in the Python.
 
-* Declare it in your `configuration.nix` file if you're using NixOS. It's recommended that you check the [appropriate section in the NixOS manual](https://nixos.org/manual/nixos/stable/#sec-configuration-file) but in short you should add `pkgs.git` into the `environment.systemPackages` attribute.
+### `py` Not Found
 
-Using your terminal you can simply navigate to the root directory of your SS14 repo and run:
+If Python was correctly installed from the website and the `python` command works but still get this error, then check if `C:/WINDOWS/py.exe` works.
 
-* `nix develop`
+If it does work, add `C:/WINDOWS` to your path.
 
-Nix will automatically handle all dependencies as declared by `shell.nix` and called by the `flake.nix` file. You will have a new ephemeral shell (known as a `devShell`) that has everything that you need installed to build SS14 from source.
+### Unable to load DLL "`freetype6`"
 
-This remains the reason as to why flakes are highly recommended despite being considered an experimental feature. We can make sure that everyone has the same versions of dependencies by specifying the nixpkgs collection version in the input attribute of the flake and locking the versions in a `flake.lock` file. In this way, all contributors that use Nix/NixOS get to have the exact same development environment. No pun intended, but that is pretty robust!
+If you get the following error, then you need to uninstall `.NET Core SDK x86` and instead install `.NET Core SDK x64`.
 
-## (Optional) Run JetBrains Rider through Nix
-
-You can then use either use an editor or IDE of your choosing. However within the shell that you already spawned you can just specify that you require JetBrains Rider. Run this command in your devShell.
-
-* `NIXPKGS_ALLOW_UNFREE=1 nix shell nixpkgs#jetbrains.rider --impure`
-
-From your new shell you can start a "detached" JetBrains Rider process by running something like:
-
-* `nohup rider >/dev/null 2>&1 &`
-
-And voila! You have robustly set up your development environment in a way that doesn't result in pesky buildup of "state". You can practically work on SS14 from any Linux distribution (granted that they use systemd) without irreversibly changing your system.
-
-# Troubleshooting
-
-Make sure [the first three items](#setting-up-a-development-environment) on top are downloaded.
-
-## `RUN_THIS.py` not running
-Check that python is installed from the website and not the Microsoft Store. If it's installed from the Microsoft Store, uninstall it then download and install from the python website.
-
-If you are on Windows and get redirected to the Microsoft Store or encounter a message in your terminal claiming that Python is not installed. This issue may be caused by a stupid Microsoft shortcut. Which you can disable by searching for `Manage App Execution Aliases` and disabling the two python references
-
-### py not found
-If python was installed from the website and the `python` command works, but you still get the error 'py is not installed', then check if `C:\WINDOWS\py.exe` works. If so, then add `C:\WINDOWS` to your path.
-
-## System.DllNotFoundException: Unable to load DLL 'freetype6' or one of its dependencies: The specified module could not be found.
-
-```PS C:\Users\Larme\Downloads\space-station-14> dotnet run --project Content.Client
+```
 Unhandled exception. Robust.Shared.IoC.Exceptions.ImplementationConstructorException: Robust.Client.Graphics.FontManager threw an exception inside its constructor.
  ---> System.DllNotFoundException: Unable to load DLL 'freetype6' or one of its dependencies: The specified module could not be found. (0x8007007E)
    at SharpFont.FT.FT_Init_FreeType(IntPtr& alibrary)
    at SharpFont.Library..ctor()
-   at Robust.Client.Graphics.FontManager..ctor(IClyde clyde) in C:\Users\Larme\Downloads\space-station-14\RobustToolbox\Robust.Client\Graphics\FontManager.cs:line 33
-   --- End of inner exception stack trace ---
-   at Robust.Shared.IoC.DependencyCollection.BuildGraph() in C:\Users\Larme\Downloads\space-station-14\RobustToolbox\Robust.Shared\IoC\DependencyCollection.cs:line 348
-   at Robust.Shared.IoC.IoCManager.BuildGraph() in C:\Users\Larme\Downloads\space-station-14\RobustToolbox\Robust.Shared\IoC\IoCManager.cs:line 271
-   at Robust.Client.GameController.InitIoC(DisplayMode mode) in C:\Users\Larme\Downloads\space-station-14\RobustToolbox\Robust.Client\GameController\GameController.IoC.cs:line 16
-   at Robust.Client.GameController.ParsedMain(CommandLineArgs args, Boolean contentStart, IMainArgs loaderArgs, GameControllerOptions options) in C:\Users\Larme\Downloads\space-station-14\RobustToolbox\Robust.Client\GameController\GameController.Standalone.cs:line 49
+   ... Truncated ...
 ```
 
-Uninstall .NET Core SDK x86. Install .NET Core SDK x64.
+### `libssl` Not Found
 
+If you’re having problems with dotnet not finding `libssl` (e.g. when using `libressl`), try setting the `CLR_OPENSSL_VERSION_OVERRIDE` environment variable to the appropriate version.
 
-## The client and server aren't available in Visual Studio to configure in Multiple startup projects
+For instance, set it to 48 if your `/usr/lib` contains `libssl.so.48`. If that doesn’t work you can also try running `ln -s /usr/lib/libssl.so /usr/local/lib/libssl.so.1.0.0` instead.
 
-This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file.
+### Client/Server Aren't Available in Visual Studio
 
-## The system cannot find the specified file RUN_THIS.py
+This may be because you opened the project as a folder rather than a solution.
 
-`The system cannot find the specified file` error usually means that OneDrive is conflicting with the git repository. Clone the git repo outside of OneDrive or disable syncing for the cloned folder.
+Make sure you open it as a solution and click the `SpaceStation14.sln` file.
+
+### System Cannot Find File `RUN_THIS.py`
+
+The system cannot find the specified file error usually means that OneDrive is conflicting with the git repository.
+Clone the git repo outside of OneDrive or disable syncing for the cloned folder.
