@@ -23,7 +23,7 @@ If you're new to contributing or just new to Space Station 14, here is a rough r
 
 - Complete [SS14 By Example](), which brings you from nothing to adding new features and content to Space Station 14.
 
-- Start contributing by working on and solving many of the [basic issues on GitHub](https://github.com/space-wizards/space-station-14/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A"Difficulty%3A+1-Easy") and talk with developers to get an idea for other things to work on.
+- Start contributing by working on and solving many of the [basic issues on GitHub](https://github.com/space-wizards/space-station-14/labels/Beginner%20Friendly) and talk with developers to get an idea for other things to work on.
 
 - [Ask questions]()! Don't be afraid to ask for help.
 
