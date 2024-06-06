@@ -293,7 +293,7 @@ Also, we've added `[Dependency] private readonly SharedAudioSystem` to class. It
 ```csharp
 private void OnUseInHand(Entity<PlaySoundOnUseComponent> ent, ref UseInHandEvent args)
 {
-    _audio.PlayPvs(ent.Comp.Sound, uid);
+    _audio.PlayPvs(ent.Comp.Sound, ent.Owner);
 }
 ```
 
@@ -305,7 +305,7 @@ In this case, we just pass it our `sound` field on our `PlaySoundOnUseComponent`
 
 2. The source entity 
 
-This is an optional argument that is used for positional audio. In our case, we want the sound to come from the horn, so we pass in the horn's Uid. If this arugment is not given, the sound is played globally and will be audible to all players.
+This is an optional argument that is used for positional audio. In our case, we want the sound to come from the horn, so we pass in the horn's Uid (which is the `Owner` of the component). If this arugment is not given, the sound is played globally and will be audible to all players.
 
 If you compile the game and spawn our bike horn using the **F5** Entity Spawn Menu, you can try activating it in hand and--incredible! It plays the sound properly! Hopefully! If not, you might have messed something up in the YAML, or missed a method in the EntitySystem.
 
