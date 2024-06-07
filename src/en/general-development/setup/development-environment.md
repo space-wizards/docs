@@ -35,6 +35,13 @@ If you are using an M-Series/Arm Mac, make sure you install `x64 .NET`, **not** 
 RobustToolbox does not currently support Arm64, so using Rosetta 2 emulation is recommended.
 ```
 
+```admonish note title="NixOS Directions" collapsible=true
+If you're running on Nix/NixOS and have [flakes set up](https://nixos.wiki/wiki/flakes), you can just run `nix develop` and all of the project dependencies will be managed for you.
+
+If you want to use Jetbrains Rider with it, run `NIXPKGS_ALLOW_UNFREE=1 nix shell nixpkgs#jetbrains.rider --impure` which creates a new shell. Then, run `nohup rider >/dev/null 2>&1 &`, and you now have your whole development environment set up (except the submodules, haha).
+
+```
+
 ## 1. Cloning the Repository
 
 To develop [Space Station 14](https://github.com/space-wizards/space-station-14), you first need a local copy of all the code on your machine to develop on.
@@ -210,7 +217,9 @@ If you are compiling without an IDE, you must:
 Both these commands use a debug configuration by default.
 
 To enable release optimizations, add `--configuration Release` to the dotnet invocation.
-``` 
+
+```
+
 
 # Troubleshooting
 
@@ -235,11 +244,13 @@ If it does work, add `C:/WINDOWS` to your path.
 If you get the following error, then you need to uninstall `.NET Core SDK x86` and instead install `.NET Core SDK x64`.
 
 ```
+
 Unhandled exception. Robust.Shared.IoC.Exceptions.ImplementationConstructorException: Robust.Client.Graphics.FontManager threw an exception inside its constructor.
  ---> System.DllNotFoundException: Unable to load DLL 'freetype6' or one of its dependencies: The specified module could not be found. (0x8007007E)
    at SharpFont.FT.FT_Init_FreeType(IntPtr& alibrary)
    at SharpFont.Library..ctor()
    ... Truncated ...
+
 ```
 
 ### `libssl` Not Found
