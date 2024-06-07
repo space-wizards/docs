@@ -1,210 +1,282 @@
 # Conventions
 
-There are nearly infinite ways to program the same thing, but some ways will get your PR rejected.
-
-In this page you'll learn all about the coding conventions we have chosen for the codebase, which you'll need to follow if you want to get your PR merged.
-
-See [Codebase Organization](./codebase-organization.md) for guidelines on how files and folders are organized in the SS14 codebase.
-
-Read the [Pull Request guidelines](./pull-request-guidelines.md) to learn how to make your code more reviewable by maintainers.
+There are nearly infinite ways to program, but as a result, it's near impossible to keep code maintainable without some strict rules about how the code should look at and work. 
 
 ```admonish info
-Keep in mind that some older areas of the codebase might not follow these conventions. These should be refactored in the future to follow them. All new code should try to follow these conventions as closely as possible.
+The last thing we'd want is someone to integrate their F# + ClojureCLR DSL into Space Station 14 because they think that C# isn't "functional" enough.
 ```
+
+As such, this document outlines SS14's style guides, which are to be supplimented with Microsoft's official [C# coding conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions). We'd highly reccomend getting a C# code formatter, which are hidden somewhere in your IDE.
+
+```admonish info
+Keep in mind that some older areas of the codebase might not follow these conventions. These should be refactored in the future to follow them. 
+
+All new code should try to follow these conventions as closely as possible.
+```
+
+# General Coding Conventions
 
 ## File Layout
 
-1. Start with [using directives](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) at the top of the file.
+1. Files should always start with the [using directives](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) at the top of the file.
 
-2. All classes should be explicitly namespaced. Use [file-scoped namespaces](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces), e.g. a single `namespace Content.Server.Atmos.EntitySystems;` before any class definitions instead of `namespace Content.Server.Atmos.EntitySystems { /* class here */ }`.
+2. All classes should be explicitly namespaced.  
+    Use [file-scoped namespaces](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces), e.g. a single `namespace Content.Server.Atmos.EntitySystems;` before any class definitions instead of `namespace Content.Server.Atmos.EntitySystems { /* class here */ }`.
 
 3. Always put all fields and auto-properties before any methods in a class definition.
 
+``````admonish example title="File Layout Example" collapsible=true
+```cs
+// Using directives at the top (truncated)
+using Content.Shared.Administration.Logs;
+
+// Explicitly-namespaced, before any declarations
+namespace Content.Server.Teleportation;
+
+public sealed class PortalSystem : SharedPortalSystem
+{
+    // Fields before methods
+    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+
+    protected override void LogTeleport(EntityUid portal, EntityUid subject, EntityCoordinates source,
+        EntityCoordinates target)
+    {
+        // Truncated
+    }
+}
+```
+Source: [`Content.Server/Teleportation/PortalSystem.cs`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Teleportation/PortalSystem.cs)
+``````
+
+
 ## Comments
 
-- Comment code at a high level to explain *what* the code is doing, and more importantly, *why* code is doing what it is doing. 
+1. Comment code at a high level to explain *what* the code is doing, and more importantly, *why* code is doing what it is doing. 
 
-- When documenting classes, structs, methods, properties/fields, and class members, use [XML docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/)
-
-### Why Not What
-
-Some folks blindly adhere to "comment the why, not the what" and think that "code should be self-documenting and comments a last resort". Below we present a few examples that we hope will change your mind.
-
-#### Example 1
-
-```csharp
-   float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+```admonish info "Why Vs. What"
+It's common for people to blindly adhere to idea that you should only "comment the why, not the what", but you should strive to also explain the what as you are not the only person who is going to be reading and writing code.
 ```
 
-All of the variables are named in a self-documenting way (*R* gets a pass because that is the ideal gas constant, and physics conventions existed long before computers, so this is following convention). Obviously, the comment should *not* be:
+``````admonish example title="Why + What Example" collapsible=true
+You should not just do Why, but also the What. While the variables are technically self-documenting, if you do not know the math behind this, you will not understand what wizardry is happening.
 
-```csharp
-	 // Take R and multiply it by the ratio of outlet temperature divided by outlet air volume and add it to ...
-   float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+Thus, the what should also be documented as well as the why. 
+
+```cs
+// Let n = moles(inlet) - moles(outlet), really a Δn
+var P = inlet.Air.Pressure - outlet.Air.Pressure; // really a ΔP
+// Such that positive P causes flow from the inlet to the outlet.
+
+// We want moles transferred to be proportional to the pressure difference, i.e.
+// dn/dt = G*P
+
+// To solve this we need to write dn in terms of P. Since PV=nRT, dP/dn=RT/V.
+// This assumes that the temperature change from transferring dn moles is negligible.
+// Since we have P=Pi-Po, then dP/dn = dPi/dn-dPo/dn = R(Ti/Vi - To/Vo):
+float dPdn = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+
+// Multiplying both sides of the differential equation by dP/dn:
+// dn/dt * dP/dn = dP/dt = G*P * (dP/dn)
+// Which is a first-order linear differential equation with constant (heh...) coefficients:
+// dP/dt + kP = 0, where k = -G*(dP/dn).
+// This differential equation has a closed-form solution, namely:
+float Pfinal = P * MathF.Exp(-comp.G * dPdn * dt);
+
+// Finally, back out n, the moles transferred in this tick:
+float n = (P - Pfinal) / dPdn;
+```
+Source: [`Content.Server/Atmos/EntitySystems/HeatExchangerSystem.cs#L56-L76`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Atmos/EntitySystems/HeatExchangerSystem.cs#L56-L76)
+``````
+
+2. When documenting classes, structs, methods, properties/fields, and class members, use [XML docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/)
+
+``````admonish example title="XML Doc" collapsible=true
+
+```cs
+// ... truncated ...
+namespace Content.Shared.Communications;
+
+/// <summary>
+/// Only exists in shared to provide API and for access.
+/// All logic is serverside.
+/// </summary>
+public abstract class SharedCommsHackerSystem : EntitySystem
+{
+    /// <summary>
+    /// Set the threats prototype to choose from when hacking a comms console.
+    /// </summary>
+    public void SetThreats(EntityUid uid, string threats, CommsHackerComponent? comp = null)
+    {
+        /// ... truncated ...
+    }
+}
+
+/// <summary>
+/// DoAfter event for comms console terror ability.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed partial class TerrorDoAfterEvent : SimpleDoAfterEvent { }
 ```
 
-Because this only explains what the code is literally doing, which you could have gathered from any cusory reading of the code. **However, you still have absolutely no idea what this code is doing and why**, even though the code is self-documenting.
+Source: [`Content.Shared/Communications/SharedCommsHackerSystem.cs`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Communications/SharedCommsHackerSystem.cs)
 
-You don't know where this magic formula came from, what it's trying to accomplish, or even if the formula is correct. Therefore, this needs to be documented:
-
-
-```csharp
-        // We want moles transferred to be proportional to the pressure difference, i.e.
-        // dn/dt = G*P
-
-        // To solve this we need to write dn in terms of P. Since PV=nRT, dP/dn=RT/V.
-        // This assumes that the temperature change from transferring dn moles is negligible.
-        // Since we have P=Pi-Po, then dP/dn = dPi/dn-dPo/dn = R(Ti/Vi - To/Vo):
-        float dPdn = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
-```
-
-#### Example 2
-
-```csharp
-        if (HasComp<MindContainerComponent>(uid))
-        {
-            return;
-        }
-        
-        // more stuff
-```
-
-Obviously, this code skips "more stuff" if the entity represented by *uid* already has a MindContainerComponent. This code is as self-documenting as it gets, it literally just returns early if there is a MindContainer. What needs to be documented is *why* this code needs to skip *uid*s that already have a MindContainerComponent:
-
-
-```csharp
-				// Don't let players who drink cognizine be eligible for a ghost takeover
-        if (HasComp<MindContainerComponent>(uid))
-```
+``````
 
 ## Methods
 
-### Line breaks of parameter/argument lists
+1. If you have too many paramaters to a function and need to wrap it with a newline, break it apart so each line has **only one paramater**.
 
-If you're defining a function and the parameter declarations are so long they don't fit on a single line, break them apart so you have **one parameter per line**. Some leeway is granted for closely tied parameter pairs like X/Y coordinates and pointer/length in C APIs.
-
-Bad:
+``````admonish example title="Method paramater formatting" collapsible=true
 
 ```cs
-public void CopyTo(ISerializationManager serializationManager, SortedDictionary<TKey, TValue> source, ref SortedDictionary<TKey, TValue> target,
-    SerializationHookContext hookCtx, ISerializationContext? context = null)
+    public void CopyTo(
+        ISerializationManager serializationManager,
+        NPCBlackboard source,
+        ref NPCBlackboard target,
+        IDependencyCollection dependencies,
+        SerializationHookContext hookCtx,
+        ISerializationContext? context = null)
+    {
+        // ... truncated ...
+    }
 ```
-
-Good:
-
-```cs
-public void CopyTo(
-    ISerializationManager serializationManager,
-    SortedDictionary<TKey, TValue> source,
-    ref SortedDictionary<TKey, TValue> target,
-    SerializationHookContext hookCtx,
-    ISerializationContext? context = null)
-```
+Source: [`Content.Server/NPC/NPCBlackboardSerializer.cs#L84-L91`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/NPC/NPCBlackboardSerializer.cs#L84-L91)
+``````
 
 ## Strings and Identifiers
 
-Human-readable text should never be used as an identifier or vice versa. That means no putting human-readable text (result of localization functions) in a dictionary key, comparing with `==`, etc...
+1. Human-readable text should never be used as an identifier or vice versa. That means no putting human-readable text (result of localization functions) in a dictionary key, comparing with `==`, etc...  
+    This avoids spaghetti when these inevitably have to be decoupled for various reasons, and avoids inefficiency and bugs from comparing human-readable strings.
 
-This avoids spaghetti when these inevitably have to be decoupled for various reasons, and avoids inefficiency and bugs from comparing human-readable strings.
+2. If you're doing something like a filter/search dialog, use `CurrentCulture` comparisons over human-readable strings. Do not use invariant cultures.
 
-### Invariant comparisons on human-readable strings
+``````admonish example title="CurrentCulture Comparison Example" collapsible=true
+```cs
+var entitySpriteStates = GroupEntities(entities);
+var orderedStates = entitySpriteStates.ToList();
+orderedStates.Sort((x, y) => string.Compare(
+    Identity.Name(x.First(), _entityManager),
+    Identity.Name(y.First(), _entityManager),
+    StringComparison.CurrentCulture)); // Uses StringComparison.CurrentCulture to sort
+```
+Source: [`Content.Client/ContextMenu/UI/EntityMenuUIController.cs#L93-L98`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Client/ContextMenu/UI/EntityMenuUIController.cs#L93-L98)
 
-If you're doing something like a filter/search dialog, use `CurrentCulture` comparisons over human-readable strings. Do not use invariant cultures.
+``````
 
 ## Properties
 
-In a property setter, the value of the property should always literally become the `value` given. None of this:
+1. In a property setter, the value of the property should always literally become the `value` given. Never try to map a value inside of a setter. Always assume that the caller has done their due dilligence and has converted it _for_ you.
+
+``````admonish example title="Proper Properties Examples" collapsible=true
 
 ```cs
-public string Name
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
+public void SetMoles(int gasId, float quantity)
 {
-    get => _name;
-    private set => _name = Loc.GetString(value);
+    if (!float.IsFinite(quantity) || float.IsNegative(quantity))
+        throw new ArgumentException($"Invalid quantity \"{quantity}\" specified!", nameof(quantity));
+
+
+    if (!Immutable)
+        // Doesn't modify input and instead directly passes it
+        Moles[gasId] = quantity;
 }
 ```
+Source: [`Content.Shared/Atmos/GasMixture.cs#L122-L130`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Atmos/GasMixture.cs#L122-L130)
+``````
 
-## Constants and CVars
-If you have a specific value such as an integer you should generally make it either: 
-* a constant (const) if it's never meant to be changed
-* a CVar if it's meant to be configured
+## Constants & CVars
 
-This is so it is clear to others what it is. This is especially true if the same value is used in multiple places to make the code more maintainable.
+1. If you have a a specific value like an integer, you should generally make it either:
+    - a constant (`const`) if it's never meant to be changed (immutable).
+    - a CVar if it's meant to be configured.  
 
 ## Prototypes
 
-### Prototype data-fields
-Don't cache prototypes, use prototypeManager to index them when they are needed. You can store them by their ID. When using data-fields that involve prototype ID strings, use ProtoId<T>. For example, a data-field for a list of prototype IDs should use something like: 
-```csharp=
-[DataField]
-public List<ProtoId<ExamplePrototype>> ExampleTypes = new();
+1. Don't cache prototypes, instead use the `prototypeManager` to index them when they are needed. You can store them by their ID.  
+    When using data-fields that involve phototype ID strings, use ProtoId<T>.
+
+``````admonish example title="ProtoID Example" collapsible=true
+```cs
+[Serializable, NetSerializable]
+public struct AlertState
+{
+    public short? Severity;
+    public (TimeSpan, TimeSpan)? Cooldown;
+    public bool AutoRemove;
+    public bool ShowCooldown;
+    public ProtoId<AlertPrototype> Type;
+}
+```
+Source: [`Content.Shared/Alert/AlertState.cs#L6-L14`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Alert/AlertState.cs#L6-L14)
+``````
+
+2. You should **always** use prototypes over enums, and enums are _heavily discouraged_.
+
+# Resources
+
+## Sounds
+
+1. When specifying sound data fields, use `SoundSpecifier`.
+
+``````admonish example title="SoundSpecifier Example" collapsible=true
+
+```cs
+[RegisterComponent, NetworkedComponent, Access(typeof(SharedDiceSystem))]
+[AutoGenerateComponentState(true)]
+public sealed partial class DiceComponent : Component
+{
+    [DataField]
+    public SoundSpecifier Sound { get; private set; } = new SoundCollectionSpecifier("Dice");
+
+    // ... truncated ...
+}
 ```
 
-### Enums vs Prototypes
-The usage of enums for in-game types is *heavily discouraged*.
-You should always use prototypes over enums.
-Example: In-game tool "kinds" or "types" should use prototypes instead of enums.
+Source: [`Content.Shared/Dice/DiceComponent.cs#L7-L12`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Dice/DiceComponent.cs#L7-L12)
 
-## Resources
-
-### Sounds
-When specifying sound data fields, use `SoundSpecifier`.
-
-
-
-<details>
-  <summary>C# code example (click to expand)</summary>
-
-```csharp=
-[DataField(required: true)]
-public SoundSpecifier Sound { get; } = default!;
+```yaml
+- type: soundCollection
+  id: Dice
+  files:
+  - /Audio/Items/Dice/dice1.ogg
+  - /Audio/Items/Dice/dice2.ogg
+  - /Audio/Items/Dice/dice3.ogg
+  - /Audio/Items/Dice/dice4.ogg
+  - /Audio/Items/Dice/dice5.ogg
+  - /Audio/Items/Dice/dice6.ogg
+  - /Audio/Items/Dice/dice7.ogg
 ```
-  
-</details>
 
-<details>
-  <summary>YAML prototype example (click to expand)</summary>
-  
-```yml=
-# You can specify a specific sound file like this
-- type: MyComponent
-  sound:
-    path: /Audio/path/to/my/sound.ogg
-  
-# But this works, too!
-- type: MyOtherComponent
-  sound: /Audio/path/to/my/sound.ogg
-    
-# You can only specify a sound collection like this
-- type: AnotherComponent
-  sound:
-    collection: MySoundCollection
- 
-```
-  
-</details>
+Source: [`Resources/Prototypes/SoundColletions/dice.yml`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Resources/Prototypes/SoundCollections/dice.yml)
+
+
+``````
 
 ### Sprites and Textures
-When specifying sprite or texture data fields, use `SpriteSpecifier`.
 
-<details>
-  <summary>C# code example (click to expand)</summary>
-  
-```csharp=
+1. When specifying sprite or texture data fields, use `SpriteSpecifier`.
+
+``````admonish example title="SpriteSpecifier Example" collapsible=true
+
+```cs
+/// <summary>
+/// Texture path used in the CargoConsole GUI.
+/// </summary>
 [DataField]
-public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
+public SpriteSpecifier Icon { get; private set; } = SpriteSpecifier.Invalid;
 ```
-  
-</details>
+Source: [`Content.Shared/Cargo/Prototypes/CargoProductPrototype.cs#L68-L72`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Cargo/Prototypes/CargoProductPrototype.cs#L68-L72)
+``````
 
-<details>
-  <summary>YAML prototype example (click to expand)</summary>
-  
-```yml=
-# You can specify a specific texture file like this, /Textures/ is optional
+2. In the YAML, you do not need to include the `/Textures/` part of the path.
+
+``````admonish example title="Textures Path Example" collapsible=true
+```yml
 - type: MyComponent
   icon: /Textures/path/to/my/texture.png
 
-# /Textures/ is optional and will be automatically inferred, however make sure that you don't start the path with a slash if you don't specify it
+# /Textures/ is inferred here, but make sure that you don't start the path with a slash if you don't specify it
 - type: MyComponent
   icon: path/to/my/texture.png
 
@@ -214,371 +286,654 @@ public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
     sprite: /Textures/path/to/my/sprite.rsi
     state: MySpriteState
 ```
+``````
+
+3. RSI meta.json should have this specific order of fields:
+    1. version
+    2. license
+    3. copyright
+    4. size
+    5. states
+
+4. Make sure not to minify the JSON, and should follow the gnormal JSON quality guidelines (egyptian brackets, etc). You can optionally follow the [Google JSON Style Guide](https://google.github.io/styleguide/jsoncstyleguide.xml).
   
-</details>
-
-<details>
-  <summary>RSI meta.json (click to expand)</summary>
-
-- The order of fields should be `version -> license -> copyright -> size -> states`.
-- JSON should not be minified, and should follow normal JSON quality guideliens (egyptian brackets, etc)
-
-Example:
+``````admonish example title="JSON Formatting Examples" collapsible=true
 
 ```json
 {
     "version": 1,
-    "license": "CC0-1.0",
-    "copyright": "GitHub @PJB3005",
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Modified from https://github.com/discordia-space/CEV-Eris/raw/f7aa28fd4b4d0386c3393d829681ebca526f1d2d/icons/obj/drinks.dmi",
     "size": {
-        "x": 32,
-        "y": 32
+      "x": 32,
+      "y": 32
     },
     "states": [
-        {
-            "name": "hello",
-            "flags": {},
-            "directions": 4,
-            "delays": [
-                [1, 1, 1],
-                [2, 3, 4],
-                [3, 4, 5],
-                [4, 5, 6]
-            ]
-        }
-    ]
+      {
+        "name": "icon",
+        "delays": [
+        [
+            1,
+            1,
+            1,
+            1
+        ]
+      ]
+    }
+  ]
 }
 ```
-</details>
+Source: [`Resources/Textures/Objects/Consumable/Drinks/royrogers.rsi/meta.json](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Resources/Textures/Objects/Consumable/Drinks/royrogers.rsi/meta.json)
 
-### EntityUid in Logs
-When using `EntityUid` in admin logs, use the `IEntityManager.ToPrettyString(EntityUid)` method.
+``````
 
-<details>
-  <summary>Admin log with entities example (click to expand)</summary>
-  
-```csharp=
-// If you're in an entity system...
-_adminLogs.Add(LogType.MyLog, LogImpact.Medium, $"{ToPrettyString(uid)} did something!");
-  
-// If you're not in an entity system...
-_adminLogs.Add(LogType.MyLog, LogImpact.Medium, $"{entityManager.ToPrettyString(uid)} did something!");
+## Entities
+
+1. When using `EntityUid` in admin logs, use the `IEntityManager.ToPrettyString(EntityUid)` method.
+
+``````admonish example title="Pretty EntityUid Example" collapsible=true
+
+```cs
+_adminLogger.Add(LogType.Slip, LogImpact.Low,
+    $"{ToPrettyString(other):mob} slipped on collision with {ToPrettyString(uid):entity}");
 ```
-  
-</details>
 
-### Optional Entities
-If you need to pass "optional" entities around, you should use a nullable `EntityUid` for this.
-Never use `EntityUid.Invalid` to denote the abscence of `EntityUid`, always use `null` and nullability so we have compile-time checks.
-e.g. `EntityUid? uid`
+Source: [`Content.Shared/Slippery/SlipperySystem.cs#L110-L111`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Slippery/SlipperySystem.cs#L110-L111)
+
+``````
+
+2. If you need to pass "optional" entities, you should use a nullable `EntityUid` for this. Never use `EntityUid.Invalid` to denote the abscense of `EntityUid`. Always use `null`.
+
+``````admonish example title="Nullable EntityUid" collapsible=true
+
+```cs
+[ByRefEvent]
+public readonly struct AfterFlashedEvent
+{
+    public readonly EntityUid Target;
+    public readonly EntityUid? User;
+    public readonly EntityUid? Used;
+
+    // ... truncated ...
+}
+```
+Source: [`Content.Server/Flash/FlashSystem.cs#L234-L239](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Flash/FlashSystem.cs#L234-L239)
+
+``````
 
 ## Components
 
-### Component data access modifiers
-All data in components should be public.
+```admonish warning
+There used to be a style guide about using `[Friend(...)]` in components, but as it was absent from the codebase, it was deleted.
+```
 
-### Component property setters
-You may not have setters with any logic whatsoever in properties. Instead, you should create a setter method in your entity system, and apply the `[Friend(...)]` attribute to the component so only that system can modify it.
-Your component may use properties with setter logic for *ViewVariables integration* (until we have a better system for that)
+1. All data in components should be public
 
-### Component access restrictions
-The `[Access(...)]` attribute allows you to specify which types can read or modify data in your class, while prohibiting every other type from modifying it.
+``````admonish example title="Public Data Example" collapsible=true
 
-Components should specify their access restrictions whenever possible, usually only allowing the entity systems that wrap them to modify their data.
+```cs
+[ByRefEvent]
+public readonly struct AfterFlashedEvent
+{
+    public readonly EntityUid Target;
+    public readonly EntityUid? User;
+    public readonly EntityUid? Used;
 
-### Shared Component inheritance
-If a shared component is inherited by server and client-side counterparts, it should be marked as *abstract*.
+    // ... truncated ...
+}
+```
+Source: [`Content.Server/Flash/FlashSystem.cs#L234-L239](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Flash/FlashSystem.cs#L234-L239)
+
+``````
+
+2. If you want to specify which types are allowed to read or modify the data in your class, use `[Access(...)]`. Components should always specify their access restrictions whenever possible, and usually only allow the entity systems that wrap them to modify their data.
+
+``````admonish example title="Access Example" collapsible=true
+
+```cs
+[Access(typeof(ChemMasterSystem))]
+public sealed partial class ChemMasterComponent : Component
+```
+
+Source: [`Content.Server/Chemistry/Components/ChemMasterComponent.cs#L12-L13`](https://github.com/space-wizards/space-station-14/blob/a88e747a0b338a217a8cf97a32fe8b8f8789492d/Content.Server/Chemistry/Components/ChemMasterComponent.cs#L12-L13)
+
+``````
+
+3. If a shared component is inherited by server-side and client-side counterparts, it should be marked as `abstract`.
+
+``````admonish example title="Abstract Component Example" collapsible=true
+
+```cs
+public abstract class SharedAccessSystem : EntitySystem
+```
+
+Source: [`Content.Shared/Access/Systems/SharedAccessSystem.cs#L9`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Access/Systems/SharedAccessSystem.cs#L9)
+``````
 
 ## Entity Systems
 
-### Game logic
-Game logic should *always* go in entity systems, not components.
-Components should *only* hold data.
+1. Game logic should _always_ go in entity systems, not components. Components should _only_ hold data.
 
-### Proxy Methods
-When possible, try using the `EntitySystem` [proxy methods](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/GameObjects/EntitySystem.Proxy.cs) instead of using the `EntityManager` property.
+``````admonish example title="Seperation of Data and Logic example" collapsible=true
 
-<details>
-  <summary>Examples (click to expand)</summary>
+Systems have logic:
 
-```csharp=
-// Without proxy methods...
-EntityManager.GetComponent<MetaDataComponent>(uid).EntityName;
-  
-// With proxy methods
-Name(uid);
-  
-// Without proxy methods...
-EntityManager.GetComponent<TransformComponent>(uid).Coordinates;
-  
-// With proxy methods
-Transform(uid).Coordinates;
-```
-    
-</details>
-
-### Public API Method Signature
-All public Entity System API Methods that deal with entities and game logic should *always* follow a very specific structure.
-
-All relevant `Entity<T?>` and `EntityUid` should come first.
-The `T?` in `Entity<T?>` stands for the component type you need from the entity.
-The question mark `?` must be present at the end to mark the component type as nullable.
-Next, any arguments you want should come afterwards.
-
-The first thing you should do in your method's body should then be calling `Resolve` for the entity UID and components.
-
-<details>
-  <summary>Example (click to expand)</summary>
-
-```csharp=
-public void SetCount(Entity<StackComponent?> stack, int count)
+```cs
+public sealed class PaperSystem : EntitySystem
 {
-    // This call below will set "Comp" to the correct instance if it's null.
-    // If all components were resolved to an instance or were non-null, it returns true.
-    if(!Resolve(stack, ref stack.Comp))
-        return; // If the component wasn't found, this will log an error by default.
-    
-    // Logic here!
-}  
-```
-    
-</details>
+    // ... truncated ...
+    public override void Initialize()
+    {
+        base.Initialize();
 
+
+        SubscribeLocalEvent<PaperComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<PaperComponent, BeforeActivatableUIOpenEvent>(BeforeUIOpen);
+        SubscribeLocalEvent<PaperComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<PaperComponent, InteractUsingEvent>(OnInteractUsing);
+        SubscribeLocalEvent<PaperComponent, PaperInputTextMessage>(OnInputTextMessage);
+
+
+        SubscribeLocalEvent<ActivateOnPaperOpenedComponent, PaperWriteEvent>(OnPaperWrite);
+
+
+        SubscribeLocalEvent<PaperComponent, MapInitEvent>(OnMapInit);
+    }
+}
+```
+
+Source: [`Content.Server/Paper/PaperSystem.cs#L17-L41`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Paper/PaperSystem.cs#L17-L41)
+
+Components have data:
+
+```cs
+public sealed partial class PaperComponent : SharedPaperComponent
+{
+    public PaperAction Mode;
+    [DataField("content")]
+    public string Content { get; set; } = "";
+
+
+    [DataField("contentSize")]
+    public int ContentSize { get; set; } = 6000;
+
+
+    [DataField("stampedBy")]
+    public List<StampDisplayInfo> StampedBy { get; set; } = new();
+
+
+    /// <summary>
+    ///     Stamp to be displayed on the paper, state from beauracracy.rsi
+    /// </summary>
+    [DataField("stampState")]
+    public string? StampState { get; set; }
+}
+```
+
+Source: [`Content.Server/Paper/PaperComponent.cs#L7-L24`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Paper/PaperComponent.cs#L7-L24)
+
+``````
+
+2. When possible, try using the `EntitySystem`'s [proxy methods](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/GameObjects/EntitySystem.Proxy.cs) instead of using the `EntityManager` directly.
+
+``````admonish example title="Proxy Methods Example" collapsible=true
+
+Do:
+```cs
+public bool DoEmagEffect(EntityUid user, EntityUid target)
+{
+    // HasComp<T>() is a Proxy Method
+    if (HasComp<EmaggedComponent>(target))
+        return false;
+
+    // ... truncated ...
+}
+```
+
+Source: [`Content.Shared/Emag/Systems/EmagSystem.cs#L77-L81`](https://github.com/deltanedas/space-station-14/blob/16be126ca1e65ebc94a0d688d7d5eca749fc272d/Content.Shared/Emag/Systems/EmagSystem.cs#L77-L81)
+
+**Do not do:**
+```cs
+        public bool DoEmagEffect(EntityUid user, EntityUid target)
+        {
+            // prevent emagging twice
+            if (IsEmagged(target))
+                return false;
+
+            // ... truncated
+        }
+
+        /// <summary>
+        /// Returns whether an entity has the emagged marker component
+        /// </summary>
+        public bool IsEmagged(EntityUid uid)
+        {
+            // I REPAET! DO NOT DO THIS:
+            return EntityManager.HasComponent<EmaggedComponent>(uid);
+        }
+```
+
+Source: [Outdated `Content.Shared/Emag/Systems/EmagSystem.cs#L154-L178`](https://github.com/deltanedas/space-station-14/blob/8e8bc7d0d31c75518619b280907b45850e1c420f/Content.Shared/Emag/Systems/EmagSystem.cs#L154-L178)
+
+``````
+
+3. All public Entity System API Methods that deal with entities and game logic should *always* follow this very specific structure.
+    1. All relevant `Entity<T?>` and `EntityUid` should come first in the paramaters.
+        - The `T?` stands for the component type that you need from the entity.
+        - The question mark `?` must be present to mark it as nullable.
+    2. Any other paramaters you want should come afterwards.
+    3. The first thing you should call in the body of the ethod should be `Resolve` for the entity UID and components.
+
+``````admonish example title="Entity System API Methods Example" collapsible=true
+
+```cs
+/// <summary>
+/// Sets whether or not the entity's eyelids are closed.
+/// </summary>
+/// <param name="eyelids">The entity that contains an EyeClosingComponent</param>
+/// <param name="value">Set to true to close the entity's eyes. Set to false to open them</param>
+public void SetEyelids(Entity<EyeClosingComponent?> eyelids, bool value)
+{
+    if (!Resolve(eyelids, ref eyelids.Comp))
+        return;
+
+    if (eyelids.Comp.EyesClosed == value)
+        return;
+
+    eyelids.Comp.EyesClosed = value;
+    Dirty(eyelids);
+
+    if (eyelids.Comp.EyeToggleActionEntity != null)
+        _actionsSystem.SetToggled(eyelids.Comp.EyeToggleActionEntity, eyelids.Comp.EyesClosed);
+
+    _blindableSystem.UpdateIsBlind(eyelids.Owner);
+
+    DoAudioFeedback(eyelids, eyelids.Comp.EyesClosed);
+}
+```
+
+Source: [`Content.Shared/Eye/Blinding/Systems/EyeClosingSystem.cs#L74-L96`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Shared/Eye/Blinding/Systems/EyeClosingSystem.cs#L74-L96)
+
+``````
+
+```admonish note
 The `Resolve` helper performs a few useful checks for you. In `DEBUG`, it checks whether the component reference passed (if not null) is actually owned by the entity specified.
 
-This helper will also log an error by default if the entity is missing any of the components that you attempted to resolve.
-This error logging can be disabled by passing `false` to the helper's `logMissing` argument. You may want to disable the error logging for resolving optional components, `TryX` pattern methods, etc. 
+The `Resolve` helper function performs a few useful checks for you:
+- In `DEBUG` mode, it verifies that the component referenced passed (if non-null) is actually owned.
+- It will log an error by default if the entity is missing any components.
+    - This error logging can be disabled by passing `false` to the helper's `logMissing` argument.
+- If you want to disable error logging for optional components, use the `TryX` pattern methods or others.
 
 Please note that the `Resolve` helper also has overloads for resolving 2, 3 or even 4 components at once.
+
 If you want to resolve components for multiple entities, or you want to resolve more than 4 components at once for a given entity, you'll need to perform multiple `Resolve` calls.
-
-### Extension Methods
-
-Extension methods (those with an explicit `this` for the first argument) should never be used on any classes directly related to simulation--that means `EntityUid`, components, or entity systems. Extension methods on `EntityUid` are used throughout the codebase, however this is bad practice and should be replaced with entity system public methods instead.
-  
-### Dependencies On Other Systems
-Inside an entity system, prefer a system dependency instead of resolving the system using the IoCManager. For example, instead of:
-  
-```csharp=
-var random = IoCManager.Resolve<IRobustRandom>();
-random.Prob(0.1f);
 ```
 
-Add an entity system dependency:
+4. Extension methods (methods with an explicit `this` as the first argument) should never be used on any classes directly related to simulation, such as `EntityUid`/components/entity systems.
 
-```csharp=
+```admonish note
+Extension methods on `EntityUid` are used throughout the codebase, however this is bad practice and should be replaced with entity system public methods instead.
+```
+
+5. Prefer system dependencies instead of resolving the system using `IoCManager`.
+
+``````admonish example title="System Dependencies Example" collapsible=true
+
+Use an entity system dependency:
+
+```cs
 [Dependency] private readonly IRobustRandom _random = default!;
 _random.Prob(0.1f);
 ```
 
+**DO NOT DO**:
+
+```cs
+var random = IoCManager.Resolve<IRobustRandom>(); // DO NOT DO THIS
+random.Prob(0.1f);
+```
+``````
+
 ## Events
 
-### Method Events vs Entity System Methods
-Method Events are events that you raise when you want to perform a certain action. Example:
-```csharp=
-// This would change the damage on the entity by 10.
-RaiseLocalEvent(uid, new ChangeDamageEvent(10));
-```
-On the other hand, Entity System Methods are methods you call on systems to perform an action.
-```csharp=
-// This would change the damage on the entity by 10.
+1. Method Events (events that you raise when you want to perform a certain action) are **prohibited**. **Always** use Entity System methods instead.
+    - There is an exception for circumstances that the Entity System wraps the Method Event.
+
+``````admonish example title="Entity Systems Methods Example" collapsible=true
+
+Always use Entity System methods or their appropriate proxy methods on a system to perform an action.
+```cs
 EntitySystem.Get<DamageableSystem>().ChangeDamage(uid, 10);
 ```
 
-Method Events are *prohibited*, always use Entity System Methods instead.
-There's an exception to this, however.
+**Never** use method events.
 
-You may use Method Events as long as they're wrapped by an Entity System Method.
-In the example above, this would mean that `DamageableSystem.ChangeDamage()` would internally raise the `ChangeDamageEvent`, which would then by handled by any subscriptors...
-
-### Event naming
-- Always suffix your events with `Event`.
-Example: `DamagedEvent`, `AnchorAttemptEvent`...
-
-- Always name your event handler like this: `OnXEvent`
-Example: `OnDamagedEvent`, `OnAnchorAttemptEvent`...
-
-### Struct by-ref events
-Events should always be structs, not classes, and should always be raised by ref. If possible it should also be readonly if applicable.
-They should also have the [ByRefEvent] attribute.
-  
-In practice this will look like the following:
 ```cs
-  var ev = new MyEvent();
-  RaiseLocalEvent(ref ev);
+RaiseLocalEvent(uid, new ChangeDamageEvent(10));
 ```
 
-### C\# Events vs EventBus Events
-The EventBus should generally be used over C# events where possible. C# events can leak, especially when used with components which can be created or removed at any time.
+In this example, it would be fine to have a Method Event if internally the implementation of `DamagableSystem.ChangeDamage(...)` raised the `ChangeDamageEvent(...)`.
+``````
 
-C# events should be used for out-of-simulation events, such as UI events.
-Remember to *always* unsubscribe from them, however!
+2. Event names should always be suffixed with `[some]Event`
+3. Event handlers names should always be in the format `On[NamedEvent]`
 
-### Async vs Events
-For things such as DoAfter, always use events instead of async.
+```admonish example title="Event and EventHandler Naming Example" collapsible=true
 
-Async for any game simulation code should be avoided at all costs, as it's generally virulent, cannot be serialized (in the case of DoAfter, for example), and usually causes icky code.
-Events, on the other hand, tie in nicely with the rest of the game's architecture, and although they aren't as convenient to code, they are definitely way more lightweight.
+Events:
+`DamagedEvent`, `AnchorAttemptEvent`, etc
+
+Event Handlers:
+`OnDamagedEvent`, `OnAnchorAttemptEvent`, etc
+
+```
+
+4. Events should be structs (not classes).
+5. Events should always be raised by ref, and should be readonly if applicable.
+
+``````admonish example title="Events Example" collapsible=true
+
+Events should generally look like:
+
+```cs
+[ByRefEvent]
+public record struct EmpPulseEvent(float EnergyConsumption, bool Affected, bool Disabled, TimeSpan Duration);
+```
+Source: [`Content.Server/Emp/EmpSystem.cs#L139-L140`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Server/Emp/EmpSystem.cs#L139-L140)
+
+And using the event should generally look like:
+
+```cs
+public void DoEmpEffects(EntityUid uid, float energyConsumption, float duration)
+{
+    var ev = new EmpPulseEvent(energyConsumption, false, false, TimeSpan.FromSeconds(duration));
+    RaiseLocalEvent(uid, ref ev);
+    // ... truncated ...
+}
+```
+
+Source: [`Content.Server/Emp/EmpSystem.cs#L69-L72`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Server/Emp/EmpSystem.cs#L69-L72)
+
+``````
+
+6. EventBus should be prefered over C# events where possible, as C# events can leak when used with ephemeral components.
+    - C# events should only be used for out-of-simulation events, such as UI events.
+    - Remember to always unsubscribe them.
+
+``````admonish example title="EventBus Example" collapsible=true
+
+```cs
+var entChangeEv = new ConstructionChangeEntityEvent(mech, uid);
+entityManager.EventBus.RaiseLocalEvent(uid, entChangeEv);
+entityManager.EventBus.RaiseLocalEvent(mech, entChangeEv, broadcast: true);
+entityManager.QueueDeleteEntity(uid);
+```
+
+Source: [`Content.Server/Construction/Completions/BuildMech.cs#L68-L71`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Server/Construction/Completions/BuildMech.cs#L68-L71)
+
+``````
+
+7. Use events instead of async for any game simulation.
+    - For things such as DoAfter, always use events instead of async.
+    - Async is generally virulent (meaning if one part is async, suddenly much more of the codebase needs to become async), cannot be serialized (which is why you don't use it for DoAfter), and generally causes bad code.
+    - Events, on the other hand, tie in nicely with the rest of the architecture and are way more lightweight. 
 
 ## UI
 
-### XAML and C#-defined UIs
-You should always use XAML over UIs defined entirely in C# code.
-Extending existing C#-defined UIs is fine, but they should be converted eventually.
+1. You should always prefer using XAML over C#-defined UIs.
+    - It's much easier to deal with XAML than the weird C# UI.
+    - It's fine to extend C#-defined UIs, but they should all be converted at some point.
+
+``````admonish example title="XAML-Defined UI" collapsible=true
+
+Example of a XAML-defined UI:
+
+```xaml
+<Control xmlns="https://spacestation14.io">
+    <BoxContainer Margin="8,8,8,8" Orientation="Vertical">
+        <BoxContainer Orientation="Horizontal">
+            <Label Name="StoreItemName" HorizontalExpand="True" />
+            <Button
+                Name="StoreItemBuyButton"
+                MinWidth="64"
+                HorizontalAlignment="Right"
+                Access="Public" />
+        </BoxContainer>
+        <PanelContainer StyleClasses="HighDivider" />
+        <BoxContainer HorizontalExpand="True" Orientation="Horizontal">
+            <TextureRect
+                Name="StoreItemTexture"
+                Margin="0,0,4,0"
+                MinSize="48 48"
+                Stretch="KeepAspectCentered" />
+            <Control MinWidth="5"/>
+            <RichTextLabel Name="StoreItemDescription" />
+        </BoxContainer>
+    </BoxContainer>
+</Control>
+```
+
+Source: [`Content.Client/Store/Ui/StoreListingControl.xaml`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Client/Store/Ui/StoreListingControl.xaml)
+``````
 
 ## Performance
 
-### Iterator Methods vs returning collections
-Always use [iterator methods](https://docs.microsoft.com/en-us/dotnet/csharp/iterators) over creating a new collection and returning it in your method.
+1. Always use [iterator methods](https://docs.microsoft.com/en-us/dotnet/csharp/iterators) over creating a new collection and returning for performance reasons.
+    - This is a tradeoff as iterators allocate a lot of memory, but are much faster.
+    - If you need to reduce allocations as much as possible, use struct iterators.
 
-Keep in mind, however, that iterator methods allocate a lot of memory. 
-If you need to reduce allocations as much as possible, use struct iterators.
+``````admonish example title="Iterator Methods Example" collapsible=true
 
-### Sealed Classes
-Your class must be marked as either `abstract`, `static`, `sealed` or `[Virtual]`. This is to avoid accidentally making classes inheritable when the shouldn't be and can improve performance slightly when accessing or invoking virtual members.
-  
-Use `sealed` if the class shouldn't be inherited, `[Virtual]` for the normal C# behavior (it mutes the compiler warning), `static` for classes that don't need to be instantiated, or `abstract` if it's meant for being inherited but not meant to be instantiated by itself.
-
-### Events over updates
-Where possible you should always have your system run code in response to an event rather than updating every tick. Your code may only take up 0.5% of CPU time but when 100 systems do this it's unnecessary.
-
-### Variable capture
-When using [lambdas](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions) or [local functions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions) be sure to **avoid variable captures**.
-  
-If you're adding a method that takes in a [Func delegate](https://docs.microsoft.com/en-us/dotnet/api/system.func-2), be sure to have an overload that **allows the caller to pass in custom data** to it.
-  
-<details>
-  <summary>Example of what not to do (click to expand)</summary>
-  
-```csharp=
-void DoSomething(EntityUid otherEntity)
+```cs
+public void UpdateListing()
 {
-    // This is BAD. It will allocate on the heap a lot. 
-    var predicate = (EntityUid uid)
-        => uid == otherEntity; 
+    var sorted = _cachedListings.OrderBy(l => l.Priority).ThenBy(l => l.Cost.Values.Sum());
 
-  	// This method doesn't allow us to pass custom data,
-    // so we're forced to do a costly variable capture.
-    MethodWithPredicate(predicate);
-}
-  
-void MethodWithPredicate(Func<EntityUid, bool> predicate)
-{
-		// We do something with the predicate here...
+
+    // should probably chunk these out instead. to-do if this clogs the internet tubes.
+    // maybe read clients prototypes instead?
+    ClearListings();
+    foreach (var item in sorted)
+    {
+        AddListingGui(item);
+    }
 }
 ```
-  
-</details>
 
-<details>
-  <summary>Example of what to do (click to expand)</summary>
+Source: [`Content.Client/Store/Ui/StoreMenu.xaml.cs#L77-L88`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Client/Store/Ui/StoreMenu.xaml.cs#L77-L88)
 
-```csharp=
+``````
+
+2. All classes should be marked as either `abstract`, `static`, `sealed`, or `[Virtual]`.
+    - It slighlty improves performance when accessing or invoking virtual members
+    - Specifically, use each of them for this specific circumstance:
+        - **`sealed`** is it shouldn't be inherited
+        - **`[Vertual]`** for default C# behavior
+        - **`static`** for non-instantiated classes
+        - **`abstract`** only inherited, never instantiated
+
+3. Always try to run code in response to an event rather than updating every tick.
+
+4. Avoid variable capturing when using [lambas](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions) or [local functions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions)
+    - Variable capture can make the GC work less efficiently and waste allocations.
+
+5. If you're using a [`Func` delgate](https://docs.microsoft.com/en-us/dotnet/api/system.func-2), make sure to overload it so that custom data can be passed in.
+
+``````admonish example title="Func Delegate Example" collapsible=true
+
+Do This:
+```cs
 void DoSomething(EntityUid otherEntity)
 {
-    // This is good and much more performant than the example before.
+    // This is good and much more performant.
     var predicate = (EntityUid uid, EntityUid otherUid)
     		=> uid == otherUid; 
 
   	// Pass our custom data to this method.
     MethodWithPredicate<EntityUid>(predicate, otherEntity);
 }
-  
-// This method allows you to pass custom data into the predicate.
-void MethodWithPredicate<TState>(Func<EntityUid, TState, bool> predicate, TState state)
-{
-		// We do something with the predicate here, making sure to pass "state" to it...
-}
 ```
 
-</details>
-  
-## Naming
+**DO NOT DO THIS**:
 
-### Shared types
-Shared types should only be prefixed with `Shared` if and only if there are server and/or client inherited types with the same name.
+```cs
+void DoSomething(EntityUid otherEntity)
+{
+    // This is BAD. It will allocate on the heap a lot. 
+    var predicate = (EntityUid uid) // DO NOT DO THIS
+        => uid == otherEntity; 
 
-Example:
-- If `FooComponent` only exists in shared, it doesn't need a prefix.
-- If `BarComponent` exists in shared, server and client, the shared type should be prefixed with shared: `SharedBarComponent`.
+  	// This method doesn't allow us to pass custom data,
+    // so we're forced to do a costly variable capture.
+    MethodWithPredicate(predicate);
+}
+
+```
+
+``````
+
+## Shared
+
+1. Shared types should only be prefixed with `Shared` if and only if there is a server and/or client inherited type with the same name.
+
+```admonish example title="Shared Example" collapsible=true
+If `FooComponent` only exists in shared, it doesn't need a prefix.
+
+??? What about only one ???
+
+If `BarComponent` exists in shared, server and client, the shared type should be prefixed with shared: `SharedBarComponent`.
+```
 
 ## Physics
 
-### Anchoring
-
-Always use `TransformComponent` anchoring.
-You may use `PhysicsComponent` static body anchoring but *only* if you know what you're doing and you can defend your choice over transform anchoring.
+1. Always use `TransformComponent` for anchoring.
+    1. You may use the `PhysicsComponent` static body anchoring **only** if you know what you're doing and can defend it.
   
+``````admonish example title="TransformComponent Example" collapsible=true
+```cs
+private void OnExamined(EntityUid uid, GasVolumePumpComponent pump, ExaminedEvent args)
+{
+    if (!EntityManager.GetComponent<TransformComponent>(uid).Anchored || !args.IsInDetailsRange) // Not anchored? Out of range? No status.
+        return;
+
+    // ... truncated ...
+}
+```
+
+Source: [`Content.Server/Atmos/Piping/Binary/EntitySystems/GasVolumePumpSystem.cs#L60-L63`](https://github.com/space-wizards/space-station-14/blob/af7f70bade908658416be91c5571cab1160e18ec/Content.Server/Atmos/Piping/Binary/EntitySystems/GasVolumePumpSystem.cs#L60-L63)
+``````
+
 # YAML Conventions
 
-- Every component `- type` should be together without any empty newlines separating them
-- Separate prototypes with one empty newline.
-- `name:` and `description:` fields should never have quotations unless punctuation in the name/description requires the use of them, then you will use ''. For example:
+1. Every component's `- type` should be together without an empty newline separating them.
+
+``````admonish example title="YAML Component Newline Example" collapsible=true
+
 ```yaml
-  name: 'Spessman's Smokes packet'
-  description: 'A label on the packaging reads, 'Wouldn't a slow death make a change?''
+- type: Fixtures
+    fixtures: {}
+- type: OccluderTree
+- type: SpreaderGrid
+- type: Shuttle
+- type: GridPathfinding
+- type: Gravity
+    gravityShakeSound: !type:SoundPathSpecifier
+    path: /Audio/Effects/alert.ogg
 ```
-- Dont specify textures in abstract prototypes/parents.
-- You should declare the first prototype block in this order: `type` > `abstract` > `parent` > `id`  > `name` > `description` > `components.`
-- New components should not have an indent when added to the `components:` section.
-    This
-    ```yaml=
-    components:
-    - type: Sprite
-      state: 
-    ```
-    Not this
-    ```yaml=
-    components:
-      - type: Sprite
-        state: 
-    ```
-- When it makes sense, place more generalized/engine components near the top of the components list and more specific components near the bottom of the list. For example,
-    ```yaml=
+
+Source: [`Resources/Maps/Salvage/small-chef.yml#L48-L56`](https://github.com/space-wizards/space-station-14/blob/af7f70bade908658416be91c5571cab1160e18ec/Resources/Maps/Salvage/small-chef.yml#L48-L56)
+``````
+
+2. Seperate prototypes with one empty newline
+
+``````admonish example title="YAML Prototype Newline Example" collapsible=true
+
+```yaml
+- type: mixingCategory
+  id: DummyGrind
+  verbText: mixing-verb-default-grind
+  icon:
+    sprite: Structures/Machines/juicer.rsi
+    state: juicer0
+
+
+- type: mixingCategory
+  id: DummyJuice
+  verbText: mixing-verb-default-juice
+  icon:
+    sprite: Structures/Machines/juicer.rsi
+    state: juicer0
+
+
+- type: mixingCategory
+  id: DummyCondense
+  verbText: mixing-verb-default-condense
+  icon:
+    sprite: Structures/Piping/Atmospherics/condenser.rsi
+    state: display
+```
+
+Source: [`Resources/Prototypes/Chemistry/mixing_types.yml#L11-L30`](https://github.com/space-wizards/space-station-14/blob/af7f70bade908658416be91c5571cab1160e18ec/Resources/Prototypes/Chemistry/mixing_types.yml#L11-L30)
+``````
+
+3. The `name:` and `description:` fields should never have quotations unless punctuation requires the use of them.
+
+4. Do not specify textures in abstract prototypes/parents.
+
+5. You should declare the first prototype block in this order:
+    1. `type`
+    2. `abstract`
+    3. `parent`
+    4. `id`
+    5. `name`
+    6. `description`
+    7. `components`
+
+6. New components should not have an indent when added to the `components:` section.
+
+7. When it makes sense, place more generalized/engine components near the top of the components list and more specific components near the bottom.
+
+``````admonish example title="Generalized Components Example" collapsible=true
+
+```yaml
     components:
     - type: Sprite # Engine-specific
     - type: Physics 
     - type: Anchorable # Content, but generalized
     - type: Emitter # A component for a specific type of item
-    ```
-
-### YAML and data-field naming
-`PascalCase` is used for IDs and component names.
-Everything else, even prototype type names, uses `camelCase`.
-`prefix.Something` should NEVER be used for IDs.
-  
-## Entities
-
-Please ensure you structure entities with components as follows for easier YAML readability:
-
 ```
- 	 type: entity
-  parent: Base<nameofparent>
-  id: 
-  name:
-  abstract: 
-  components:
- 		<rest of file>
+
+``````
+
+8. IDs and component names should be in `PascalCase`
+    - `prefix.Something` should **never** be used for IDs.
+
+9. Everything else, even prototype names, use `camelCase`.
+
+10. You can use the `suffix` property in prototypes as a spawn-menu-only suffix to help you distinguish prototypes without modifying the prototype name.
+
+```admonish example title="Suffix Property Example" collapsible=true
+
+One example is for the Water Tank, which provides an empty and full variant.
+
+Instead of having to change the name of the prototype, we can just add a suffix of `Empty` or `Full`.
+
+As a result, it'd look like:
+
+![](../../assets/images/codebase-suffix.png)
 ```
-      
-### Entity Prototype suffixes
-
-Use `suffix` in prototypes, this it's a spawn-menu-only suffix that allows you to distinguish what prototypes are, without modifying the actual prototype name. You can use it like this: 
-![](https://i.imgur.com/epkPR3Y.png)
-
-And results in this: 
-![](https://i.imgur.com/JigMCuu.png)
 
 # Localization
-Every player-facing string ever needs to be localized.
 
-### Localization ID naming
-- Localization IDs are always `kebab-case` and should never contain capital letters.
-- Localization IDs should be specific as possible, to avoid clashing with other IDs.
-    This
-    ```ftl=
-    antag-traitor-user-was-traitor-message = ...
-    ```
-    Not this
-    ```ftl=
-    traitor-message = ...
+1. Every player-facing string needs to be localized.
+
+2. Localization IDs are always in `kebab-case`, and should never contain capital letters.
+
+3. Localization IDs should be as specific as possible to avoid conflicts with other IDs.
+
+``````admonish example title="Localization ID Example" collapsible=true
+```ftl
+antag-traitor-user-was-traitor-message = ...
+```
+``````
