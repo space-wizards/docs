@@ -2,7 +2,7 @@
 
 The guidebook is a powerful tool for communicating more obscure in-game information to players without forcing them to travel to an external wiki. Moving forward, most information should be moved from the wiki to the guidebook in some form.
 
-This guide explains how to write a guidebook entry and set it up in game as well as provides helpful tips for creating good quality entries. Afterwards, if you want to learn how to make a pull request for your new entry, check out [Git for the SS14 Developer](../setting-up/git-for-the-ss14-developer.md).
+This guide explains how to write a guidebook entry and set it up in game as well as provides helpful tips for creating good quality entries. Afterwards, if you want to learn how to make a pull request for your new entry, check out [Git for the SS14 Developer](../setup/git-for-the-ss14-developer.md).
 
 ## Writing Guides
 
@@ -162,7 +162,7 @@ The API is actually pretty simple, and here it is:
 
 - `id`: This is simply a unique prototype Id. Just make sure it roughly corresponds to your guide’s name.
 - `name`: This is a the name which appears in the file view sidebar of the guidebook. Importantly, it’s a locale string, which is used for translation. It’s also the only part of a guide entry that needs to have a locale string.  
-    You can learn more about localization in the [localization guide](../common-tasks/localization.md).
+    You can learn more about localization in the [localization guide](../contributing-translations.md).
 - `text`: This is just a file path to the entry, starting from the `/Resources/` directory.
 - `priority`: This is a numeric value for sorting top-level guides. Higher values will appear first. If they are not a top-level guide, then they are sorted by the order of their children.
 - `children`: This is a list of all other guide entries that appear below this one in the guide sidebar. The items in this list must correspond to the `id`s of other guide entries.
