@@ -210,9 +210,9 @@ If you are compiling without an IDE, you must:
 Both these commands use a debug configuration by default.
 
 To enable release optimizations, add `--configuration Release` to the dotnet invocation.
-```
+``` 
 
-## Troubleshooting
+# Troubleshooting
 
 ### `RUN_THIS.py` Isn't Running
 
