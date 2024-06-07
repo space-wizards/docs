@@ -1,123 +1,216 @@
 # Debugging Tools
 
-## Quick Controls
-`~ (Tilde)` - Toggle the debug console which many commands are run from. Use `list` to see a list of commands. Use `help someCommand` to get info about a command. The `list` command can also be provided with a filter like so: `list show`.
-`F3` - Toggle the debug overlay. Has a lot of useful info on networking, rendering, and other game state. Mouse over entities and areas to see things like entity id, grid id, coordinates and more.
-`F5` - Toggle entity spawn window
-`F6` - Toggle tile spawn window
-`B` - Toggle sandbox window
-`Shift + F4` - Toggle UI
+Now, youe get to the part that every developer loves: tracking down the obscure heisenbug that keeps leaking all of SS14's memory!
 
-## View Variables
+This is a very disorganized guide that tries to touch on everything that you can use at your disposal. If you are trying to figure out a bug, I welcome you to try to follow the guide in order to pare down what could possibly be going wrong. 
 
-**View Variables** or VV for short is a tool to view and modify the variables of things. You can VV an object with the `vv` command or using the right-click verb.
-You can also use the `vvread`, `vvwrite` and `vvinvoke` commands to use VV directly from the console.
+```admonish note
+The lowest hanging fruit for debugging is just running the tests that were already written for you to find out what went wrong. Please test your code!
+```
 
-Parameters the `vv` commands take:
+## In-Game Debugging
 
-`vv /path/to/an/object` will VV the path you entered. Check command auto-completion for all possibilities.
-`vv <IoC Interface>`, eg `vv IPlayerManager`, will VV a client-side IoC thing.
-`vv S<IoC Interface>`, eg `vv SIPlayerManager`, will VV a server-side IoC thing.
-`vv CE<Entity System>`, eg `vv CEPhysicsSystem`, will VV a client-side entity system.
-`vv SE<Entity System>`, eg `vv CSPhysicsSystem`, will VV a server-side entity system.
-`vv <EntityUid>` will VV an entity. Both client and server, at once.
-`vv guihover` will VV the current GUI control under the mouse.
+So, you've thankfully been able to boot into the game but have realized that something is wrong.
 
-## Dev window
+1. To start looking into it, press `~` (tilde) on your keyboard to launch the console (Warning, this might freeze your client for a second or two).
+2. Now you should see a console interface that provides a log and a command-line.
+    1. If you're lucky, you'll see errors pointing directly to what you're looking for in the log.
+3. Now, you can continue on the guide with other methods of debugging.
 
-`devwindow` opens a secondary window that contains a growing number of useful debugging and development tools:
+```admonish tip
+As a quick tip:
 
-* Secondary debug console
-* UI tree view
+- If you are launching either the Server from a TTY/Console, you can just use the stdin and stdout as the console instead of the gui.
+- You can prepend `sudo` to a command that you are running so that it is run as the server instead of as your client. This is required for some commands like `cvar`.
+```
 
-## Running Tests
+```admonish note "Testing the Lobby"
+If you're trying to test the Lobby, you'll need to go through a little more work.
 
-### Server GC
+By default, the server is ran in "no lobby" mode.
 
-I recommend you enable [**server GC**](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/workstation-server-gc) to run SS14 tests, *especially* integration tests (it cuts integration test times in *half*). 
+To enable the lobby you need to set the config variable `game.lobbyenabled` to `true`. There are multiple ways to do this:
+1. If you are just trying to quickly test the lobby, you can run `golobby` in the console which will automatically end the round, enable it, and send you to it. You can then run `forcepreset sandbox` to go back to the sandbox (or any other gamemode you wish).
+2. Edit the server config file in the server’s folder and add `lobbyenabled=true` under the `[game]` section.
+3. Pass `--cvar game.lobbyenabled=true` to the command you’re using to launch the game.
+4. Modify the variable mid-game by running `cvar game.lobbyenabled true` in the server console.  
+    You will have to respawn your character to reach the lobby if you connected before doing this.
 
-To enable this in various editors:
+If you are using an IDE, we would recommend that you make a custom run configuration with `--cvar game.lobbyenabled=true`.
+```
 
-#### Rider
-Unit Testing -> Test Runner and add an environment variable for `COMPlus_gcServer=1`
+### Debug Overlay
 
-![](../../assets/images/debug-gcserver.png)
+A good first step is to start up the Debug Overlay by pressing `F3`.
 
-#### `dotnet test`
+This overlay gives a plethora of information like the amount of allocated memory, the network traffic, the hardware renderer, your operating system, and more.
 
-Pass `-e COMPlus_gcServer=1` to the `dotnet test` command
+This is good at a cursory glance at what might be going wrong. If your game suddenly starts stuttering, you'll be able to pinpoint what went wrong.
 
-#### Visual Studio
+```admonish tip
+If you want to configure the Debug overlay, you can use the `monitor [argument]` command in the console to add or remove parts of the overlay.
+```
 
-Somebody who uses VS please fill this in
+### Viewing Variables
+
+Let's assume that the bug isn't something graphical but is more of a logic bug. You put some items into a machine but the machine doesn't see it. The way to view what it happening with the Entities is by the View Variables interface.
+
+One simple command that you can run is `vv` (which stands for **V**iew **V**ariables). It lets you view and modify the variables of any object. If you wish, there's also the `vvread`, `vvwrite`, and `vvinvoke` commands if you want to stay in the console interface.
+
+You can also use the right click `View Variable` verb.
+
+Now with this interface open, you can edit the client and server variables, which would hopefully let you find what went wrong.
+
+![](../../assets/images/debug/view-variables-ui.png)
+
+### Dev Window
+
+If you're having trouble with UI, the size of main console is too small, or need a profiler, the `devwindow` command can help you greatly.
+
+It provides a full UI tree-view that lets you incrementally view the whole UI that is being rendered on your screen along with all of its properties. 
+
+![](../../assets/images/debug/debug-dev-window-ui.png)
+
+It also provides a nifty profiler if you are trying to pinpoint a performance issue.
+
+![](../../assets/images/debug/debug-dev-window-profiler.png)
+
+### Other Commands
+
+This is just a rapid-fire list of a bunch of debugging commands and what they do.
+
+```admonish example "buildinfo"
+Run `buildinfo` in the client console
+
+This should return:
+1. Game Name
+2. Build Commit
+3. Manifest Hash
+4. Engine Version
+
+This is primarily for finding out who is at fault. If you're making a bug report, it might be useful to include this information and make sure it's actually for Space Station 14 and for the latest version.
+```
+
+```admonish example "netgraph"
+Run `net_graph` in the client console.
+
+This will display an overlay that shows the network traffic.
+
+![](../../assets/images/debug/debug-network-graph.png)
+```
+
+```admonish example "showrays"
+Run `showrays 100` in the client console.
+
+Any rays that are casted from your player (which is usually for interaction) will be shown for 100 seconds (you can provide any number). This helps you verify that the interaction system is working correctly.
+```
+
+```admonish example "physics shapes"
+Run `physics shapes` in the client console.
+
+Shows you the exact collision hulls of objects. Very useful if you are trying to configure a structure with a novel shape.
+```
+
+
+```admonish example "fullstatereset"
+Run `fullstatereset` in the client console.
+
+If there's a weird bug with a client-server desync, this will cause the client to drop all of it's state and get a fresh state from the server. 
+```
+
+
+``````admonish example "guidump"
+Run `guidump` in the client console.
+
+It will save a text dump of the current GUI to:
+- **Windows**: `APPDATA%/Space Station 14/guidump.txt`
+- **macOS**: `~/Library/Application Support/Space Station 14/guidump.txt`
+- **Linux**: `~/.local/share/Space Station 14/guidump.txt` (or whever the XDG-BASE-DIR points)
+
+Here's a truncated example output:
+```
+ROOT: MainWindowRoot (WindowRoot)
+MainWindowRoot (WindowRoot)
+ * AlwaysRender: False
+ * CanKeyboardFocus: False
+ * ChildCount: 8
+ * Children: Robust.Client.UserInterface.Control+OrderedChildCollection
+ * DesiredPixelSize: (1405, 1028)
+ * DesiredSize: <1405, 1028>
+ * GlobalPixelPosition: (0, 0)
+ * GlobalPosition: <0, 0>
+ * HorizontalAlignment: Stretch
+ * HorizontalExpand: False
+ * IsArrangeValid: True
+ * IsInsideTree: True
+ * IsMeasureValid: True
+ * Margin: 0,0,0,0
+ * MaxHeight: ∞
+```
+``````
+
+
+```admonish example "nodevis"
+Run `nodevis` in the client console
+
+This displays all of the node groups, which is power/atmos. It lets you view all of the properties of each node of the graph, letting you highlight any power/atmos-related bugs.
+```
+
+
+```admonish example "showaudio"
+Run `showaudio` in the client console.
+
+This displays all of the audio sources with a box describing their properties.
+```
 
 ## Scripting
 
-Scripting allows you to run a C# Interactive REPL inside the game! You can run scripts on both server and client. Note that scripting is disabled for release client builds due to size and security concerns, and you obviously need host level permissions to do it on the server.
+Scripting is the most powerful tool at your disposal while staying inside of SS14.
 
-To open scripting, there are two commands: `csi` and `scsi`. The former is on the client and the latter on the server. There is also `watch` which shows the output of a list of commands each frame (like your debugger's watch window).
+If you built your server in `Debug` mode and not `Release`, you have access to the `csi` (C-Sharp Intepreter) and `scsi` (Server C-Sharp Interpreter).
 
-See [this link](https://github.com/dotnet/roslyn/wiki/C%23-Interactive-Walkthrough) for an introduction (I guess).
+With these two commands, you can run arbitrary C# on either the client or the server to live debug SS14 without needing to rebuild and rerun the projects.
 
-Default globals you can use are defined in `IScriptGlobals` on both client and server. Useful ones are `vv` on the client, `res<T>()` for quick IoC resolve, etc...
+![](../../assets/images/debug/debug-csi.png)
 
-## Testing the Lobby
+## 3rd Party
 
-By default the server is ran in "no lobby" mode. This means that the lobby is disabled and you're sent straight into the game when you connect to the server. This is convenient for testing of course, but if you want to actually *test* the lobby you can imagine why it's annoying.
+You're not just limited to built-in tools in Space Station 14 when you're trying to debug.
 
-To enable the lobby you need to set the config variable `game.lobbyenabled` to true. There are multiple ways to do this:
-1. Edit the server config file in the server's bin folder and add `lobbyenabled=true` under the `[game]` section.
-2. Pass `--cvar game.lobbyenabled=true` to the command you're using to launch the game.
-3. Modify the variable mid-game by running `cvar game.lobbyenabled true` in the server console. You will have to respawn your character to reach the lobby if you connected before doing this.
+### RenderDoc
 
-If you are using Rider, I would recommend making a separate run configuration (see below) with  `--cvar game.lobbyenabled=true`.
+[RenderDoc](https://renderdoc.org/) is an excellent 3rd party graphics debugger that lets you see what's going on with the underlying graphics shaders.
 
-To quickly check the lobby with a lighter setup, `golobby` will end the round, enable lobby, and dump you in the pregame lobby. You can skip the timer for the next round with `forcepreset sandbox` (or whatever gamemode you wish.)
+With `RenderDoc` installed, in a terminal you can run: (There is also a GUI option that I'm skipping)
 
-## Advanced console usage
-
-* `sudo` allows you to execute commands *as the server console* from your client. Most admin commands (like `ban`) are automatically sent to server if you have permission to use them, but certain server management commands like `cvar` can only be executed from the server console *normally*. That's where you use `sudo`. Of course, this requires `+HOST`.
-* `exec <file>` allows you to execute script files in the user data directory (`%appdata%/space station 14/data` for client or similar depending on OS, `data` folder next to executable for server). You could make a `lobby` script that automatically restarts the round into lobby and then run it like `exec lobby`:
-
-```
-sudo cvar game.lobbyenabled 1
-restartroundnow
+```bash
+renderdoccmd capture -w --opt-hook-children  dotnet run --project Content.Client
 ```
 
-## Misc. Useful Console Commands
-These are a few useful console commands and what they do. This is by no means an extensive list. To see all console commands use `list`.
+And now if you press `F12` while inside the game, it will take a snapshot of the current frame and save it inside the `RenderDoc/` folder.
 
-* `guidump` - dumps a complete dump of the GUI tree to a text file in `%APPDATA%/Space Station 14/guidump.txt` (Windows), `~/Library/Application Support/Space Station 14/guidump.txt` (macOS), or `~/.local/share/Space Station 14/guidump.txt` (Linux, yes it uses XDG base dir env variables).
-* `showrays` - toggles debug drawing of physics rays. It takes a parameter for the lifetime of the rays.
-* `showbb` - Visualizes bounding boxes and grids. Grids are shown as blue volumes, with their bounds being red lines. Bounding boxes are shown as red lines.
-* `physics shapes` - Shows you the exact collision hulls of objects. Very useful if you are trying to configure a structure with a novel shape.
-* `dumpentities` - dumps entity list of UIDs and prototypes.
-* `debugai` - used for the tooltips above mob heads (currently covers thinking as well as pathfinder for that specific mob).
-* `pathfinder` covers off overall pathfinding, which is currently the graph, routes, nodes (especially useful for JPS).
-* `togglelight` - toggles light rendering. Useful for mapping.
-* `net_graph` - Turn on with `net_graph 1`, off with `net_graph 0`. Shows graph of network usage.
-* `tp` - Teleports a player to any location. Usage: `tp <x> <y> [<MapId>]`.
-* `aghost` - Toggles admin ghost mode for quickly exploring map.\
-* `restartroundnow` - Unless you are working on the post game screen, usually what you want to end the round with. Restarts the round without the minute wait.
-* `restartround` - Restarts the round as it normally ends, sending players back to the pre-round lobby.
-* `restart` - Completely restarts the server.
-* `launchauth` - Loads authentication tokens from your launcher settings when ran from the client. You can run this before connecting to a server to easily enable and test authentication from dev builds.
-* `deadmin` - If you are working on anything that behaves differently for admins and non-admins, such as chat, you want to make sure that you manually de-admin to ensure it works for normal players too.
+Now, you can view it in RenderDoc and try to discover why the game isn't rendering properly!
 
-## Use run configurations
+![](../../assets/images/debug/render-doc.png)
 
-If you are using Rider, make the most out of **run configurations** to quickly switch between scenarios you are testing. This is more necessary if you need to alternate between testing various scenarios such as different database backends, but get creative. For example these are the run configurations I have at the time of writing:
+### IDEs
 
-![many-run-configurations.png](../../assets/images/debug-run-configs.png)
+Your IDE most definitely comes with a build-in debugger and stepper so that you can incrementally debug your project.
 
-You can use `--cvar` or `+command` to modify server configuration and automatically execute commands to set up your test environments easily. Look around the rest of this page for some ideas if you want.
+This is just for some IDE-specific changes that you should make to aid your debugging:
 
-## Debug performance
+#### Rider
 
-By default, Rider will disable optimizations on *all* assemblies when running via debugger. This means that even BCL code (`System`) will run much slower than it otherwise would. This can make running things in the debugger quite painful.
+```admonish info title="Rider Directions" collapsible=true
+If you're running Rider, you should add `COMPlus_gcServer=1` to the Test Runner so that all tests run faster.
 
-You can disable this by unticking this checkbox in Settings -> Build, Execution & Deployment -> Debugger:
-![rider_debugger_opts.png](../../assets/images/debug-rider-opts.png)
+![](../../assets/images/debug/debug-gcserver.png)
 
-## External Tools
-* [renderdoc](https://renderdoc.org/) - Perfect for debugging the rendering engine and shaders.
+As well as that, Rider doesn't optomize Debug binaries, so if you want any semblance of performance, you'll need to enable the JIT in the debugger settings.
+
+![](../../assets/images/debug/debug-rider-opts.png)
+
+Finally, if you're looking for a reference on the kinds of run configurations you should have:
+
+![](../../assets/images/debug/debug-run-configs.png)
+```
