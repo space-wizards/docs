@@ -2,7 +2,7 @@
 
 The guide contains information related to the `space-station-14` and other related codebases, making it easier for people to get up to speed and contribute.
 
-This is broken into 3 chapters:
+## Chapters
 
 - [**Coding Conventions**](./conventions.md)  
     Synopsis: Conventions that the codebase follows, mainly the coding style.   
