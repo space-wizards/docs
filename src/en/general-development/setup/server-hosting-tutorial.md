@@ -2,118 +2,113 @@
 
 Hosting a local sandbox server for playing around is easy, but setting up a large production server supporting hundreds of players is a bit harder. This guide is organized into "levels" corresponding to difficulty.
 
-## Level 0: Local Sandbox Server
+## Level 0: Local Premade Server
 
-1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
-2. Download the latest version of the server from [our builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
-3. Extract that to a directory somewhere.
-4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
-5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
-6. When there is a new update. Go back to the second step and just overwrite the files to update your server.
+This is for people who are just testing and bug-hunting the game. This server would have **no custom or modified code** and would merely act as a sandbox allowing you to spawn in things until you track down what an issue is. Or just goof around.
 
-```admonish info
-If you ever wish to develop for the game. You will need a [proper development environment](./development-environment.md). You cannot use the premade server for this use case.
-```
+This assumes that you have not completed the [Development Environment guide](../setting-up/development-environment.md) as that's not required for something as basic as this.
 
+1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download).  
+    Make sure you install the x64 version under "run console apps" and not "hosting bundle".
+2. Download the latest version of the server from our [builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If your operating system isn't listed or you want to run custom code, read [Level 1](#level-1-local-custom-code-server).
+3. Extract the `.zip` file.
+4. In that folder you extracted, depending on your operating system you will run:
+    - **Windows**: `./run_server.bat`
+    - **MacOS/Linux**: `./Robust.Server` (This is an executable)
+5. Open your Space Station 14 client and click `Direct Connect To Server` and type in `localhost` and click `connect`.
+6. If you ever want to update your server, just download the server and repeat the same steps from 2 onward.
 
-## Level 1: Invite Your Friends
+## Level 1: Public Server
 
-You will need to do some extra steps if you want other people to be able to connect and play.
+Lets say you want to have a private community server or a server to run playtests through.
 
-### Port Forwarding
-
-The server needs network ports to be forwarded so that people can connect. By default, the game server uses two ports:
-* UDP `1212` is used for main game netcode. This is necessary for the *client* to be able to connect to the server. This can be configured with the `net.port` configuration variable.
-* TCP `1212` is a HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
-
-For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
-
-### Configure Your Server
-
-You can configure settings in the server by editing the config file, `server_config.toml`. The config file is TOML which is basically INI ~~except better specified, somewhat more powerful, easier to misuse, and more annoyingly opinionated (comments NEED their own line)~~.
-
-Settings have one key they fall under and then the name. So if I say `game.lobbyenabled` it goes under the `[game]` header like so:
-```toml
-[game]
-lobbyenabled = true
-```
-
-Got that? Good.
-
-**Some sane defaults you might want to set for your server if you actually intend to host this properly:**
-
-```admonish warning
-Please read through the comments here so you have a solid grasp of what you're doing.
-```
-
-```toml
-[net]
-# Reducing tickrate to 30 is basically unnoticeable
-# but reduces server, client and network load dramatically.
-tickrate = 30
-
-[game]
-# Changes the name of the server as it appears in the lobby and launcher.
-hostname = "Foo Station"
-# Enables the lobby instead of straight up throwing clients into a game.
-lobbyenabled = true
-
-[auth]
-# Enforces authentication so that ALL connecting clients must have a proper account.
-# Otherwise, guest logins are allowed.
-# Possible values here are: 0 (optional), 1 (required), 2 (disabled)
-mode = 1
-```
-
-See [Config File Reference](../tips/config-file-reference.md) for a somewhat more thorough guide on server configuration.
-
-### Admin Privileges
-
-By default, no admin privileges are set. A privileged administrator can give out permissions to other admins with the `permissions` console command in-game, but that has a chicken-and-egg problem. To get initial `+HOST` administrator permissions to your server, you can use one of the following three methods:
+The purpose of this is to give you the ability to run a playtest, not for you to run a production server. This will skip over everything that isn't strictly needed for a developer to test out their changes or for a small group to have fun playing privately.
 
 ```admonish danger
-`+HOST` privileges are **extremely dangerous** to give and should only be given to people who already have access to your computer or server.
-
-**Giving somebody `+HOST` allows them to completely take over your server and/or computer.** 
+This will be skipping over some stuff that is _very_ important to server administrators, and if you're planning to host a real server that's listed on the hub, you will need to read a lot more. 
 ```
+To get your public custom code server running, do:
 
-* If you connect to the game server over localhost (IP `127.0.0.1` or `::1`), the game will automatically give you full host privileges. This can be disabled with the `console.loginlocal` CVar.
-* If you set the `console.login_host_user` CVar to your user name, you will be given host when you connect.
-* You can use `promotehost` command from the server console (e.g. `promotehost PJB`) to temporarily give a connected client host.
+1. Have a [Local Custom Server](#level-0-local-premade-server) that is deployed and running.
+2. Enable port forwarding on the server/host.  
+    - **UDP `1212`** is used for main game netcode. This is necessary for the _client_ to be able to connect to the server. This can be configured with the net.port configuration variable.
+    - **TCP `1212`** is the HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client, but if you are doing a public playtest, you will need to support the launcher. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
+3. Set some sane configuation variables in `server_config.toml`. Here is the suggested defaults:
+    ```toml
+    [net]
+    # Reducing tickrate to 30 is basically unnoticeable
+    # but reduces server, client and network load dramatically.
+    tickrate = 30
 
+    [game]
+    # Changes the name of the server as it appears in the lobby and launcher.
+    hostname = "Foo Station Public Playtest"
+    # Enables the lobby instead of straight up throwing clients into a game.
+    lobbyenabled = true
+
+    [auth]
+    # Enforces authentication so that ALL connecting clients must have a proper account.
+    # Otherwise, guest logins are allowed.
+    # Possible values here are: 0 (optional), 1 (required), 2 (disabled)
+    mode = 1
+    ```
+4. Give your client administrator permissions through one of these three methods:
+    - Connecting to the server over localhost (ip `127.0.0.1` or `::1`), you will automatically be given `+HOST` privleges.
+    - Set the `console.login_host_user` CVar to your username.
+    - Run `promotehost [username]` on the server to temporarily give `+HOST` permissions to the connected client.
+5. Now, you can share the ip address of the server, and playtesters can connect directly to the server.
+
+```admonish danger
+`+HOST` privleges are **extremely dangerous** and it's equivelent to giving them physical access to the server/computer/host.
+
+This will let them take over your computer.
+```
 
 ## Level 2: Server With Custom Code
-You need to [set up a development environment](./development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
 
-You first build the packaging tool using:
+You will need a local [development environment](../setting-up/development-environment.md) in order to create a server with custom code or for some foreign architecture/operating system.
 
-`dotnet build Content.Packaging --configuration Release`
+If you just want to quickly run and kill the server, you can [follow the development environment guide to start the server and client](../setting-up/development-environment.md#4-starting-ss14).
 
-Then you can use Content.Packaging to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``
+If you want to actually simulate how your code would run in an actual server environment with release optomizations, you can build and package it up like Space Wizards does for the official builds.
 
-`dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
-
-```admonish info
-Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this
-`python Tools/package_server_build.py --hybrid-acz`
+```admonish note
+If you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this: `python3 Tools/package_server_build.py --hybrid-acz`
 ```
 
-Check the `release/` folder for a packaged server for your custom codebase.
+1. Have a [development environment set up](../setting-up/development-environment.md).
+2. In that directory, run the packaging tool to build the repository:
+    ```bash
+    dotnet build Content.Packaging --configuration Release
+    ```
+3. Now, you can build it for your specialized target. (Platforms supported are: `linux-x64`, `linux-arm64`, `win-x64`, `osx-64`)
+    ```bash
+    dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64
+    ```
+3. Now, you can go go into the `/release` directory and it should have a `SS14.Server_[platform].zip` which you can deploy following [Level 0](#level-0-local-premade-debuggingsandbox-server).
 
+```admonish note
+We're intentionally skipping over the `--hybrid-acz` flag, which is explained in a different guide. All you need to know here is that `hybrid-acz` allows the client to download your custom content from the server over-the-wire.  
+```
 
 ## Level 3: A "Production" Server
 
-This will not, of course, handle automatic restarts (in case of a crash) or updates like the watchdog would. This also won't list your server publicly on the hub as advertising defaults to off. If you wish to have your server listed on the hub please read `Bare Server Configuration` below.
+If you're planning to host a public server this is the bare minimum you'll need to do to have a small-to-medium sized public server.
 
-For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
+This is not perfect, as it does not handle automatic restarts (in the case of a crash) or automatic updates, nor will it by default advertise on the hub. This is the manual option, as we would recommend using the next level.
 
 ### Setting Rules
-By default, the server ships with the rules that are used on Wizard's Den servers. To set custom rules for your own server:
+
+By default, the server ships with the rules that are used on Wizard's Den servers. 
+
+To set custom rules for your own server:
 
 1. Add a file with your rules to the `Resources/ServerInfo/` directory.
 2. Set the `server.rules_file` CCVar with the base name of your rules file (just the file name without the leading path).
 
-### Public Hub Server - Getting your server on the launcher's list
+### Getting Your Server on the Hub
+
+By default, your server will not advertise to the hub. To change, this, you need to edit your config.
 
 1. Read  the [hub server rules](../../community/space-wizards-hub-rules.md) before putting your server on the hub. Advertising to the hub constitutes acceptance of the hub rules.
 
@@ -133,42 +128,43 @@ By default, the server ships with the rules that are used on Wizard's Den server
 
 ### Bare Server Build Configuration
 
-If you *do* want to set up a more permanent server, you will have to re-host the client downloads somewhere. Anywhere accessible via a plain URL is fine.
+If you want to set up a more permanent server, you'll need to re-host the client downloads somewhere (such as a CDN). Anywhere accessible via a plain URL is fine.
 
-You will want to edit the server config file (`server_config.toml`) to add the following to it:
+1. You will want to edit the server config file (`server_config.toml`) to add the following to it:
 
-```toml
-[build]
-# Download locations of the entire client build in a zip, as a HTTP (or HTTPS) URL.
-download_url = ""
-```
+  ```toml
+  [build]
+  # Download locations of the entire client build in a zip, as a HTTP (or HTTPS) URL.
+  download_url = ""
+  ```
 
 ### Performance Tweaks
 
-Here are some settings you probably want to enable on your server to improve performance:
+There are also many tweaks that can be made to increase performance.
 
-Environment variable to enable full dynamic PGO, which drastically improves performance at the cost of marginally higher startup time:
-```
-DOTNET_TieredPGO: 1
-DOTNET_TC_QuickJitForLoops: 1
-DOTNET_ReadyToRun: 0
-```
+Here are some settings you probably want to enable on your server to improve performance (at the cost of marginal startup time):
 
-Environment variable to enable AVX operations across the codebase. Depending on your processor, this might hurt performance instead of improving it, otherwise it may improve atmos performance.
-```
-ROBUST_NUMERICS_AVX: true
-```
+Add these to enable full dynamic PGO:
+  ```
+  DOTNET_TieredPGO: 1
+  DOTNET_TC_QuickJitForLoops: 1
+  DOTNET_ReadyToRun: 0
+  ```
 
-You can set environment variables from the watchdog, see below.
+Add these to enable AVX operations, which depending on the processor may help or hinder performance.
+  ```
+  ROBUST_NUMERICS_AVX: true
+  ```
 
 ## Level 4: Production Watchdog Server
 
-This is for people running their own codebase and server and/or those who want a more robust hosting solution.
+[`SS14.Watchdog`](https://github.com/space-wizards/SS14.Watchdog/) is an integrated solution for people who are trying to have a production-ready SS14 server deployment. It's similar to TGF for BYOND, and handles things like auto-updating, monitors, automatic restarts, and administration features.
 
-[`SS14.Watchdog`](https://github.com/space-wizards/SS14.Watchdog/) (codename Ian) is our server-hosting wrapper thing, similar to TGS for BYOND (but much simpler for the time being). It handles auto updates, monitoring, automatic restarts, and administration. We recommend you use this for proper deployments.
+This is highly recommended for production deploymenets.
 
 ### Installation
-[`Refeer to this`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for intructions on building and configuring Watchdog.
+
+[`Refer to this guide`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for intructions on building and configuring Watchdog.
 
 ### Server Instance Folder
 
@@ -176,28 +172,34 @@ The watchdog will automatically create a folder structure for each server instan
 
 Each instance folder has the following files and folders:
 
-* `binaries/`: Is used to store client binaries when using the "Local" update type, see below.
+* `binaries/`: Stores client binaries when using the "Local" update type, see below.
 * `bin/`: Contains the actual extracted server binaries.
 * `data/`: Stores server data like player preferences.
 * `config.toml`: Is the config file the server will load (the watchdog overrides the default location, `server_config.toml` next to the .exe, to avoid it getting deleted when the server resets).
 
 ```admonish info
-Note that although the watchdog handles server updates you may still want to setup the config.toml as per the `Bare Server Configuration` section above.
+Note that although Watchdog handles server updates, you may still want to setup the `config.toml` as per the [Bare Server Configuration](#bare-server-build-configuration) section.
 ```
 
 ### Update types
-The watchdog supports 4 different types of update types:
+
+Watchdog supports 4 different types of update types:
 1. Jenkins
 2. Local
 3. Git
 4. Manifest
 
-If you wish to obtain more information you can browse the SS14.Watchdog repo to see how they work.
+If you wish to obtain more information you can browse the `SS14.Watchdog` repo to see how they work.
 
+```admonish note
 TODO: Explain the update providers better and explain hybrid ACZ.
+```
 
 #### 1. Jenkins Updates
-TBC
+
+```admonish note
+This section is unfinished... Ask in the Discord for help.
+```
 
 #### 2. "Manual" Local Updates
 
