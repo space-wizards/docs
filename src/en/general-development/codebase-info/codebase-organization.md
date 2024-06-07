@@ -1,50 +1,65 @@
 # Codebase Organization
 
+Space Station 14 and it's related projects are _big_. Like, very big.
+
+It's pretty hard to stay organized with hundreds of contributors, so we have made some organizational guidelines to how they are all organized.
+
+## Structure
+
+Up-front, basic code structure is:
+1. All game code will be organized in the project folders `Content.Client/Shared/Server` etc.
+2. These project folders are further split into subsystems to limit their scope (such as `Clothing`/`Atmos`/`Botany`).
+3. These subsystems are them split into their constituent parts through `Components`, `EntitySystems`, `Visualizers`, `UIs`, `Prototypes`, etc.
+
+The basic resources structure is:
+1. All resources/assets will be organized inside the `Resources` directory.
+2. The resources directory is then split between all of the different kinds of assets (`Audio`/`Textures`/`Entities`etc).
+3. The directories for all the different kinds of assets are then further split into their own respective subsystem (`Clothing`/`Atmos`/`Botany`)
+
+If you are creating a new folder or file, you should keep in mind:
+1. If there would only be one file in a folder, it doesn't need a folder.
+2. Do not create a "misc" folder, as it makes organization completely arbitrary.
+
+The rest of this guide goes over the history of how it got this way and the methadology behind it.
+
+## History
+
+In SS13 (SS14's predecessor), all game code was thrown into a `code/` directory with things being organized by abstract things. This made the codebase very messy and made it a pain to get anything done.
+
+In SS14, we have decided to group things by their relevance to certain systems, such as Atmos/Botany/etc, as well as the classes that are required for it.
+
+# Game Code
+
 ## Projects
 
-SS14 and RobustToolbox are split into several different projects. The main ones you'll care about are the `Client`, `Shared`, and `Server` projects. Other projects are for smaller things like integration tests, benchmarks, or database-specific code. 
+First, Space Station 14 and RobustToolkit are split into two seperate Git repositories.
 
-`Client`, `Shared`, and `Server` are each packaged into different 'assemblies', which is basically .NET talk for executables or shared libraries.
+In each of these Git repositories, they are further split into 3 "projects", which are:
 
-The `Client` project in both Robust and SS14 contains client-specific code, like UI. This assembly is only sent to the client, the person actually playing the game.
+1. `Server`  
+    The server is meant to hold server-specific code that the client should never interact with, like atmospherics or botany. This assembly is only located on the game server. 
+2. `Shared`  
+    Shared holds code that is shared between the Server and the Client. This assembly itself is not executable and relies on Server and Client to call methods from it. Shared is primarily for code-sharing and network prediction (which is when the client and server run code simultaniously to reduce latency).  
+    Importantly, Shared code cannot rely on any code that isn't itself in shared. 
+3. `Client`
+    Client, like the Server, contains the client-specific code like the UI. This assembly is only sent to the client/the person actually playing the game.
 
-The `Server` project contains server-specific code that no specific client should be able to interact with, like atmospherics or botany. This assembly is only located on the game server.
+This was done mainly to help do "seperation of concerns". The Server shouldn't have to worry about how the UI is rendered or how the game looks, and the Client shouldn't have to worry how the backend of the game works.
 
-The `Shared` project contains shared code that can be used by the client or the server. This assembly is not executable, and it relies on the client or server to call functions in it or use data classes located within it. The purpose of shared is to allow for network prediction (where the client and server run the same code, to make things smoother) as well as to specify shared data classes, like network messages, so that the client and server can speak to eachother effectively.
+## Subsystems
 
-Shared code is only allowed to access other shared code, not client or server code. However, client and server code are always allowed to access shared code.
+The idea of the subsystems is that we should further abstract how each subsystem works. All subsystems probably need some way to interact with the ECS, so we give them a `Components` and `Systems` folder. This continues until everything's been properly split.
 
-## Game Code
+The whole `Server`/`Shared`/`Client` system already follows this in SS14, and RobustToolkit is currently on the way.
 
-In SS13, all game code is randomly thrown around under `code/`, and instead of grouping by relevance to systems, is grouped by abstract things like whether the file is a list of constants or whether a file pertains to a master controller subsystem. In SS14, we first delineate by which game system we're working with (atmos/botany/buckling, etc) and then by the classes needed for it, which is much easier for anyone actually trying to work within a single system.
+# Resources
 
-`Content.Client`, `Content.Shared`, and `Content.Server` all follow this organization. RobustToolbox's equivalents do not currently, but will in the future.
+Outside of the regular Projects is the Resources directory.
 
-- All game code will be organized in folders directly under Content.Client/Shared/Server etc.
-- Game code folders are split into Components, EntitySystems, Visualizers, UI, Prototypes, etc
-- If there would only be one file in a folder, it doesn't need a folder (unless that file would go directly into the project's top directory, which is undesirable).
-- Do not use 'misc' folders; misc folders are hell for organization and its completely arbitrary what goes inside them and what doesn't. You can encapsulate smaller game systems inside larger game systems if it unambiguously makes sense (Atmos -> Piping), but don't just slap all the smaller game systems into a misc folder.
+The way that this is organized is a slight inversion of the subsystems, as the constituent parts (or, types of assets) and the subsystems switch in order.
 
-This structure should hopefully be very clear after working with it or seeing examples.
+## Prototypes
 
-A real example, under `Content.Server` at `da11cbd8e6bef3373ec1f570df7d7b9155a3890f`
-
-![](../../assets/images/codebase-server-example.png)
-
-- Atmos is a fairly large game system. It has many folders, and many files that do not need to go in these folders.
-- Botany is a smaller game system. However, it only has one folder for Components since that's all that's really there.
-- ItemCabinets are a very small game system. They just have a component and EntitySystem, and thus do not need folders for each.
-
-## Resources
-
-The resources folder is another area where we hope to improve over the organization structure of SS13 codebases.
-
-### Entity Prototypes
-
-New folders should usually only be created for a new parent type. If you find something that can be pulled out into a parent prototype, it should go in its own folder.
-
-Parent prototypes should be contained in `base.yml` in this folder, while other prototypes go in a different file.
-
-Not everywhere is organized like this; however, the `Structures` folder is.
+In the `Prototypes` subtree under `Entities`, it is common code style to create a `base_[name].yml` type that holds all the parent prototypes. All of the other prototypes should go in a different file or folder.
 
 This was chosen to make the directory structure mirror the prototype inheritance tree, making it obvious where to place new prototypes as well as being fairly unambiguous when choosing to create new folders.
