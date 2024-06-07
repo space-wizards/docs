@@ -70,7 +70,7 @@ You may need to merge changes if you are trying to change files that got changed
 1. Try playing the game first so you know what features are already implemented.
 - "Feature bloat" occurs if you make a feature that already exists.
    - For example, allowing a specific action to toggle by pressing "4" when it already can be toggled by pressing "z".
-2. Propose the Feature before you start making it. [Feature Proposals](https://docs.spacestation14.com/en/general-development/feature-proposals.html)
+2. Propose the Feature before you start making it. [Feature Proposals](../feature-proposals.md)
 3. Open a New Issue on Space Station 14: [New Issue](https://github.com/space-wizards/space-station-14/issues/new/choose)
 
 

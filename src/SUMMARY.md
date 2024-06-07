@@ -21,7 +21,7 @@ General Development
 	- [Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
 	- [Development Environment](en/general-development/setup/development-environment.md)
 	- [Server Hosting Tutorial](en/general-development/setup/server-hosting-tutorial.md)
-- [Codebase Info](en/general-development/codebase-info.md)
+- [Codebase Info](en/general-development/codebase-info/index.md)
 	- [Conventions](en/general-development/codebase-info/conventions.md)
 	- [Pull Request Guidelines](en/general-development/codebase-info/pull-request-guidelines.md)
 	- [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)

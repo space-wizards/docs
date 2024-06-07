@@ -6,7 +6,7 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 This is for people who are just testing and bug-hunting the game. This server would have **no custom or modified code** and would merely act as a sandbox allowing you to spawn in things until you track down what an issue is. Or just goof around.
 
-This assumes that you have not completed the [Development Environment guide](../setting-up/development-environment.md) as that's not required for something as basic as this.
+This assumes that you have not completed the [Development Environment guide](../setup/development-environment.md) as that's not required for something as basic as this.
 
 1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download).  
     Make sure you install the x64 version under "run console apps" and not "hosting bundle".
@@ -66,9 +66,9 @@ This will let them take over your computer.
 
 ## Level 2: Server With Custom Code
 
-You will need a local [development environment](../setting-up/development-environment.md) in order to create a server with custom code or for some foreign architecture/operating system.
+You will need a local [development environment](../setup/development-environment.md) in order to create a server with custom code or for some foreign architecture/operating system.
 
-If you just want to quickly run and kill the server, you can [follow the development environment guide to start the server and client](../setting-up/development-environment.md#4-starting-ss14).
+If you just want to quickly run and kill the server, you can [follow the development environment guide to start the server and client](../setup/development-environment.md#4-starting-ss14).
 
 If you want to actually simulate how your code would run in an actual server environment with release optomizations, you can build and package it up like Space Wizards does for the official builds.
 
@@ -76,7 +76,7 @@ If you want to actually simulate how your code would run in an actual server env
 If you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this: `python3 Tools/package_server_build.py --hybrid-acz`
 ```
 
-1. Have a [development environment set up](../setting-up/development-environment.md).
+1. Have a [development environment set up](../setup/development-environment.md).
 2. In that directory, run the packaging tool to build the repository:
     ```bash
     dotnet build Content.Packaging --configuration Release

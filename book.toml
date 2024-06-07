@@ -125,3 +125,4 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/general-development/setup.html" = "/en/general-development/setup/index.html"
 "/en/general-development/setup/howdoicode.html" = "/en/general-development/setup/learning-to-code.html"
 "/en/general-development/setup/setting-up-a-development-environment.html" = "/en/general-development/setup/development-environment.html"
+"/en/general-development/codebase-info.html" = "/en/general-development/codebase-info/index.html"
