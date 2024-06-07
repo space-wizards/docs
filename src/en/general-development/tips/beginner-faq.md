@@ -33,4 +33,4 @@ sequenceDiagram
 1. Before suggesting anything, _please_ verify that we haven't already implemented it.
 2. Next, check if there is an open issue on the [`space-wizards/space-station-14`](https://github.com/space-wizards/space-station-14/issues) that suggests what you want.
 3. Check if there is an open [feature proposal](https://github.com/space-wizards/docs/pulls).
-4. Finally, you can consider creating an issue or [feature proposal](../feature-proposals.md). Or, just complain about it in the Discord.
+4. Finally, you can consider creating an issue or [feature proposal](../feature-proposals/index.md). Or, just complain about it in the Discord.

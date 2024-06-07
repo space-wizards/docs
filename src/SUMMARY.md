@@ -35,7 +35,7 @@ General Development
 	- [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
 	- [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
 	- [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
-- [Feature Proposals](en/general-development/feature-proposals.md)
+- [Feature Proposals](en/general-development/feature-proposals/index.md)
 	- [Feature Proposal Template](en/templates/proposal.md)
 	- [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
 - [Work Groups](en/general-development/work-groups.md)

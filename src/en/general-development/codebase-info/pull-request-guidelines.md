@@ -12,7 +12,7 @@ If you do not follow these guidelines, it is up to the maintainer's discression 
 
 - Please have some familiarity with our [conventions](./conventions.md). If you aren't, try to read how simialr parts of the code are formatted.
 
-- Large reworks and feature additions should first be [proposed in abstract](../feature-proposals.md) and accepted before you start actually implementing it.
+- Large reworks and feature additions should first be [proposed in abstract](../feature-proposals/index.md) and accepted before you start actually implementing it.
 
 ## General Guidelines
 
