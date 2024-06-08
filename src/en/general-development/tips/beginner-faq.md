@@ -13,6 +13,7 @@ There's also other ways to contribute that don't involve you knowing how to code
 See: [Git for SS14 Developers](../setup/git-for-the-ss14-developer.md).
 
 There are three locations relevant:
+
 1. Your local repository (The files/folders on your computer)
 2. Your GitHub fork (`your-username/space-station-14`)
 3. The Upstream/Master repository (`space-wizards/space-station-14`).

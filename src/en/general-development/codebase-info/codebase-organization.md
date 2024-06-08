@@ -7,20 +7,23 @@ It's pretty hard to stay organized with hundreds of contributors, so we have mad
 ## Structure
 
 Up-front, basic code structure is:
+
 1. All game code will be organized in the project folders `Content.Client/Shared/Server` etc.
 2. These project folders are further split into subsystems to limit their scope (such as `Clothing`/`Atmos`/`Botany`).
 3. These subsystems are them split into their constituent parts through `Components`, `EntitySystems`, `Visualizers`, `UIs`, `Prototypes`, etc.
 
 The basic resources structure is:
+
 1. All resources/assets will be organized inside the `Resources` directory.
 2. The resources directory is then split between all of the different kinds of assets (`Audio`/`Textures`/`Entities`etc).
 3. The directories for all the different kinds of assets are then further split into their own respective subsystem (`Clothing`/`Atmos`/`Botany`)
 
 If you are creating a new folder or file, you should keep in mind:
+
 1. If there would only be one file in a folder, it doesn't need a folder.
 2. Do not create a "misc" folder, as it makes organization completely arbitrary.
 
-The rest of this guide goes over the history of how it got this way and the methadology behind it.
+The rest of this guide goes over the history of how it got this way and the methodology behind it.
 
 ## History
 
@@ -32,19 +35,19 @@ In SS14, we have decided to group things by their relevance to certain systems, 
 
 ## Projects
 
-First, Space Station 14 and RobustToolkit are split into two seperate Git repositories.
+First, Space Station 14 and RobustToolkit are split into two separate Git repositories.
 
 In each of these Git repositories, they are further split into 3 "projects", which are:
 
 1. `Server`  
-    The server is meant to hold server-specific code that the client should never interact with, like atmospherics or botany. This assembly is only located on the game server. 
+   The server is meant to hold server-specific code that the client should never interact with, like atmospherics or botany. This assembly is only located on the game server.
 2. `Shared`  
-    Shared holds code that is shared between the Server and the Client. This assembly itself is not executable and relies on Server and Client to call methods from it. Shared is primarily for code-sharing and network prediction (which is when the client and server run code simultaniously to reduce latency).  
-    Importantly, Shared code cannot rely on any code that isn't itself in shared. 
+   Shared holds code that is shared between the Server and the Client. This assembly itself is not executable and relies on Server and Client to call methods from it. Shared is primarily for code-sharing and network prediction (which is when the client and server run code simultaneously to reduce latency).  
+   Importantly, Shared code cannot rely on any code that isn't itself in shared.
 3. `Client`
-    Client, like the Server, contains the client-specific code like the UI. This assembly is only sent to the client/the person actually playing the game.
+   Client, like the Server, contains the client-specific code like the UI. This assembly is only sent to the client/the person actually playing the game.
 
-This was done mainly to help do "seperation of concerns". The Server shouldn't have to worry about how the UI is rendered or how the game looks, and the Client shouldn't have to worry how the backend of the game works.
+This was done mainly to help do "separation of concerns". The Server shouldn't have to worry about how the UI is rendered or how the game looks, and the Client shouldn't have to worry how the backend of the game works.
 
 ## Subsystems
 
@@ -60,6 +63,6 @@ The way that this is organized is a slight inversion of the subsystems, as the c
 
 ## Prototypes
 
-In the `Prototypes` subtree under `Entities`, it is common code style to create a `base_[name].yml` type that holds all the parent prototypes. All of the other prototypes should go in a different file or folder.
+In the `Prototypes` sub-tree under `Entities`, it is common code style to create a `base_[name].yml` type that holds all the parent prototypes. All of the other prototypes should go in a different file or folder.
 
 This was chosen to make the directory structure mirror the prototype inheritance tree, making it obvious where to place new prototypes as well as being fairly unambiguous when choosing to create new folders.

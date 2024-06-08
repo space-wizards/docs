@@ -1,8 +1,8 @@
 # Config File Reference
 
-Config files are [TOML](https://toml.io/), a relatively modern and simple config file format. 
+Config files are [TOML](https://toml.io/), a relatively modern and simple config file format.
 
-By default, the server loads the config file from `server_config.toml` in the same directory as the executable. 
+By default, the server loads the config file from `server_config.toml` in the same directory as the executable.
 
 The client loads their config file from `GameControllerOptions.ConfigFileName` (defaults to `client_config.toml`) in the User Data Directory (which can vary by operating system).
 
@@ -14,7 +14,7 @@ TOML is basically just `INI` but somewhat more well-specified.
 
 You put headings in square brackets and keys below that. This is as complicated as it gets:
 
-``````admonish example
+````admonish example
 
 ```toml
 # This is a comment
@@ -28,7 +28,7 @@ maxplayers = 64
 [log]
 enabled = true
 ```
-``````
+````
 
 When a `CVar` is referred to as `net.port`, that means put `port = foo` under the `[net]` header.
 

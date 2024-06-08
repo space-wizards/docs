@@ -7,7 +7,7 @@ This guide isn't a one-stop shop for Git (nor should you think it is). This is j
 We're obliged to give you some alternative (and probably better) resources:
 
 - [Atlassian's Git Guides](https://www.atlassian.com/git/tutorials/setting-up-a-repository). Excellent short Git tutorials.
-- [The Git Book](https://git-scm.com/book/en/v2). The free official book endorced by the Git developers.
+- [The Git Book](https://git-scm.com/book/en/v2). The free official book endorsed by the Git developers.
 - [Oh shit, Git?!](https://ohshitgit.com/). A Git cookbook.
 - [Learn Git Branching](https://learngitbranching.js.org/). A very comprehensive interactive Git tutorial. It goes way beyond the scope of this guide, but you'll be very experienced.
 
@@ -54,7 +54,7 @@ Note that this guide will only provide examples for TortoiseGit, SmartGit, and G
 
 Git is a _version control system_ that tracks changes made to files over time. This allows you to:
 
-- Maintain a consistant history of all changes.
+- Maintain a consistent history of all changes.
 - Collaborate with other developers by interweaving changes.
 - Easily revert and correct changes.
 
@@ -152,7 +152,7 @@ Space Station 14 utilizes submodules, which are essentially other Git repositori
 
 To manage this, we provide a an automatic submodule updater script (`RUN_THIS.py`) root of the repository.
 
-1. After you first clone the repository, run `RUN_THIS.py` (idealy run in a terminal like `python3 RUN_THIS.py`) found at the root of the repository using Python. If you have any issues, refer to the [troubleshooting section](#troubleshooting).
+1. After you first clone the repository, run `RUN_THIS.py` (ideally run in a terminal like `python3 RUN_THIS.py`) found at the root of the repository using Python. If you have any issues, refer to the [troubleshooting section](#troubleshooting).
 
 2. Verify it has succeeded by checking for `/RobustToolbox` directory with in files in it.
 
@@ -365,9 +365,9 @@ This is assuming you installed SmartGit with the option that the main window sho
 
 Now that you've verified that all of these changes look good, you must _stage_ your changed in Git. The staging area acts as a holding area for changes to make sure that what we are commiting is what we want to commit.
 
-This helps you catch mistakes like acidentally committing submodules, which doesn't end well.
+This helps you catch mistakes like accidentally committing submodules, which doesn't end well.
 
-Once you've _staged_ your changes, it's time to make a commit. It's highly recommended to be detailed in the message that you are providing with the commit as reviewers and others reading your code can gain guideance from it.
+Once you've _staged_ your changes, it's time to make a commit. It's highly recommended to be detailed in the message that you are providing with the commit as reviewers and others reading your code can gain guidance from it.
 
 ```admonish info title="TortoiseGit Directions" collapsible=true
 1. Right click on the directory that holds your repository.
@@ -423,7 +423,7 @@ If you intend to upstream, you will create a Pull Request upstream to pull your 
 
 A _pull request_ just means that you want a codebase to merge your changes from one of your branches onto one of their branches. In the context of the `funny-feature` example, this means you would be asking the main Space Station 14 repository to pull your code and integrate it there.
 
-GitHub only allows pull requests from repositories that are hosted on their servers, so you must update your GitHub fork (the `origin` remote) to be consistant with your local repository. To do this, we push our local branch to the `origin` remote.
+GitHub only allows pull requests from repositories that are hosted on their servers, so you must update your GitHub fork (the `origin` remote) to be consistent with your local repository. To do this, we push our local branch to the `origin` remote.
 
 ### 5.A Pushing Commits
 
@@ -480,7 +480,7 @@ Over time, other developers will make changes and create commits onto the upstre
 To achieve this, there are two methods: _fetching and merging_, and _pulling_.
 
 - _Pulling_ downloads the changes and automatically tries to merge them locally. This is a very simple tool but can sometimes get confusing or do incorrect things.
-- _Fetching & Merging_ downloads the changes without merging them, giving you the fine-grained ability to selectivly downlod and merge upstream changes locally. This is the more powerful but also more confusing tool.
+- _Fetching & Merging_ downloads the changes without merging them, giving you the fine-grained ability to selectively download and merge upstream changes locally. This is the more powerful but also more confusing tool.
 
 ### 6.A The Fetch + Merge Method
 
@@ -557,9 +557,9 @@ You can also just directly run `git merge upstream/master [branch-to-merge-into]
 
 _Pulling_ in Git is just an abstraction for fetching and then automatically merging.
 
-Git will attempt to automatically reconsile what is being pulled and your local copy into a singular history. Pulling is often simpler as you're unlikely to run into a situation that truly requires you to fetch then merge.
+Git will attempt to automatically reconcile what is being pulled and your local copy into a singular history. Pulling is often simpler as you're unlikely to run into a situation that truly requires you to fetch then merge.
 
-We'll fetch from our `upstream` remote (the main SS14 repo) and tell it to merge into our local `master` branch automatically.
+We'll fetch from our `upstream` remote (the main SS14 repository) and tell it to merge into our local `master` branch automatically.
 
 ```admonish info title="TortoiseGit Directions" collapsible=true
 1. Right click on the directory that holds your repository.
@@ -597,7 +597,7 @@ We'll fetch from our `upstream` remote (the main SS14 repo) and tell it to merge
 
 Now the local `master` branch is updated to the upstream one. Do this regularly as it helps make sure your changes still work against the latest version and makes it easier for your changes to integrate during merges.
 
-# Addendums
+# Addendum
 
 ## 1. Things to keep in mind
 
@@ -673,7 +673,7 @@ Here's a little glossary of Git concepts and terms explained in a little more de
 - **Repositories** are essentially just folders where you can use Git to make changes and keep track of changes made. Local repositories are repositories you have on your computer, and remote repositories are repositories that live on websites like [GitHub](https://github.com/space-wizards/space-station-14). Repositories are made up of a lot of branches.
 - **Remotes** are names for and links to remote repositories that your local repository can use.
 - **Submodules** are repositories that are located inside another repository.
-- **Forks** are repositories that are based on another repository. If you're going to make a pull request to the SS14 repo, you need to fork it first.
+- **Forks** are repositories that are based on another repository. If you're going to make a pull request to the SS14 repository, you need to fork it first.
 - **The working tree** is just every file and folder and what not that's in the repository.
 - **Staging** means adding (with `git add`) changes from your working tree into the "staging area", where some actions can be performed on it
 - **Commits** are snapshots of the repository's working tree at a given time. Basically a save point. A "commit" is just a list of files that have been changed from the last commit, and the changes that are "committed" are the changes that you've "staged".
@@ -707,7 +707,7 @@ To deal with merge conflicts, read [this handy guide by Atlassian](https://www.a
 
 ### 4.B Checking History
 
-Git's history is integral to how many developers interact with code. It helps you you frame the current implementation in how it was built up, letting you better reason about the choice.
+Git's history is integral to how many developers interact with code. It helps you frame the current implementation in how it was built up, letting you better reason about the choice.
 
 Sometimes you wanna find out what has recently changed so you know what things you can work on.
 
@@ -745,7 +745,7 @@ git reset HEAD
 
 ### 4.E Reverting a Commit
 
-Uh oh, you accidentally committed up your fanfictions into one of the submodules!
+Uh oh, you accidentally committed something priavte into one of the repositories!
 
 Well, you can do:
 
@@ -791,13 +791,13 @@ If you ever need to review someone else's PR or work on it with them, you'll nee
 
 There's a couple of ways, each with their own downsides and upsides.
 
-- [**Github CLI**](https://cli.github.com/). (Highly Reccomended). This is the official integration allowing you to pull down GitHub PRs.
+- [**GitHub CLI**](https://cli.github.com/). (Highly recommended). This is the official integration allowing you to pull down GitHub PRs.
 - **Changing .git/config**. This involves telling Git to also pull all PRs instead of just regular branches. Can waste a lot of storage.
 - **Adding a New Remote**. This is the most time-consuming as you manually pull from their fork/feature branch.
 
-#### 4.G.1 Github CLI
+#### 4.G.1 GitHub CLI
 
-After installing and setting up the [Github CLI](https://cli.github.com), you can just do a simple oneliner to pull it:
+After installing and setting up the [GitHub CLI](https://cli.github.com), you can just do a simple one-liner to pull it:
 
 ```bash
 gh pr checkout [pr number]
@@ -837,4 +837,4 @@ git fetch [username]
 git checkout [username]/[branch name]
 ```
 
-Importantly, this also lets you make PRs against thier fork instead of just the upstream Space Station 14 repository.
+Importantly, this also lets you make PRs against their fork instead of just the upstream Space Station 14 repository.

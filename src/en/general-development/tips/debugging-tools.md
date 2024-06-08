@@ -1,8 +1,8 @@
 # Debugging Tools
 
-Now, youe get to the part that every developer loves: tracking down the obscure heisenbug that keeps leaking all of SS14's memory!
+Now, you get to the part that every developer loves: tracking down the obscure Heisenbug that keeps leaking all of SS14's memory!
 
-This is a very disorganized guide that tries to touch on everything that you can use at your disposal. If you are trying to figure out a bug, I welcome you to try to follow the guide in order to pare down what could possibly be going wrong. 
+This is a very disorganized guide that tries to touch on everything that you can use at your disposal. If you are trying to figure out a bug, I welcome you to try to follow the guide in order to pare down what could possibly be going wrong.
 
 ```admonish note
 The lowest hanging fruit for debugging is just running the tests that were already written for you to find out what went wrong. Please test your code!
@@ -14,7 +14,7 @@ So, you've thankfully been able to boot into the game but have realized that som
 
 1. To start looking into it, press `~` (tilde) on your keyboard to launch the console (Warning, this might freeze your client for a second or two).
 2. Now you should see a console interface that provides a log and a command-line.
-    1. If you're lucky, you'll see errors pointing directly to what you're looking for in the log.
+   1. If you're lucky, you'll see errors pointing directly to what you're looking for in the log.
 3. Now, you can continue on the guide with other methods of debugging.
 
 ```admonish tip
@@ -33,7 +33,7 @@ To enable the lobby you need to set the config variable `game.lobbyenabled` to `
 1. If you are just trying to quickly test the lobby, you can run `golobby` in the console which will automatically end the round, enable it, and send you to it. You can then run `forcepreset sandbox` to go back to the sandbox (or any other gamemode you wish).
 2. Edit the server config file in the server’s folder and add `lobbyenabled=true` under the `[game]` section.
 3. Pass `--cvar game.lobbyenabled=true` to the command you’re using to launch the game.
-4. Modify the variable mid-game by running `cvar game.lobbyenabled true` in the server console.  
+4. Modify the variable mid-game by running `cvar game.lobbyenabled true` in the server console.
     You will have to respawn your character to reach the lobby if you connected before doing this.
 
 If you are using an IDE, we would recommend that you make a custom run configuration with `--cvar game.lobbyenabled=true`.
@@ -67,7 +67,7 @@ Now with this interface open, you can edit the client and server variables, whic
 
 If you're having trouble with UI, the size of main console is too small, or need a profiler, the `devwindow` command can help you greatly.
 
-It provides a full UI tree-view that lets you incrementally view the whole UI that is being rendered on your screen along with all of its properties. 
+It provides a full UI tree-view that lets you incrementally view the whole UI that is being rendered on your screen along with all of its properties.
 
 ![](../../assets/images/debug/debug-dev-window-ui.png)
 
@@ -111,15 +111,13 @@ Run `physics shapes` in the client console.
 Shows you the exact collision hulls of objects. Very useful if you are trying to configure a structure with a novel shape.
 ```
 
-
 ```admonish example "fullstatereset"
 Run `fullstatereset` in the client console.
 
-If there's a weird bug with a client-server desync, this will cause the client to drop all of it's state and get a fresh state from the server. 
+If there's a weird bug with a client-server desync, this will cause the client to drop all of it's state and get a fresh state from the server.
 ```
 
-
-``````admonish example "guidump"
+````admonish example "guidump"
 Run `guidump` in the client console.
 
 It will save a text dump of the current GUI to:
@@ -147,15 +145,13 @@ MainWindowRoot (WindowRoot)
  * Margin: 0,0,0,0
  * MaxHeight: ∞
 ```
-``````
-
+````
 
 ```admonish example "nodevis"
 Run `nodevis` in the client console
 
 This displays all of the node groups, which is power/atmos. It lets you view all of the properties of each node of the graph, letting you highlight any power/atmos-related bugs.
 ```
-
 
 ```admonish example "showaudio"
 Run `showaudio` in the client console.

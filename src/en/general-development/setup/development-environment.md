@@ -51,11 +51,11 @@ To develop [Space Station 14](https://github.com/space-wizards/space-station-14)
 
 ## 2. Setting up Submodules
 
-Space Station 14 uses Git Submodules to manage its dependancy on the RobustToolbox engine. Without the submodule, you cannot build Space Station 14.
+Space Station 14 uses Git Submodules to manage its dependency on the RobustToolbox engine. Without the submodule, you cannot build Space Station 14.
 
 Here are the steps to set them up (using our automated submodule handler):
 
-1. After you first clone the repository, run `RUN_THIS.py` (idealy run in a terminal like `python3 RUN_THIS.py`) found at the root of the repository using Python. If you have any issues, refer to the [troubleshooting section](#troubleshooting).
+1. After you first clone the repository, run `RUN_THIS.py` (ideally ran in a terminal like `python3 RUN_THIS.py`) found at the root of the repository using Python. If you have any issues, refer to the [troubleshooting section](#troubleshooting).
 
 2. Verify it has succeeded by checking for `/RobustToolbox` directory with in files in it.
 
@@ -74,7 +74,7 @@ Here are the most popular options:
 - For **all platforms** (**Paid**)
   - [Jetbrains Rider](https://www.jetbrains.com/rider/) is the most used outside of Windows. College/University students can obtain [free educational licenses](ttps://www.jetbrains.com/community/education/#students).
 - For **all platforms** (**Free**)
-  - [VSCode](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/) can be used alongisde thier respective C# extensions. However, they will provide a less comprehensive development experience compared to full-fledged IDEs and you won't get as much help.
+  - [VSCode](https://code.visualstudio.com/) or [VSCodium](https://vscodium.com/) can be used alongisde their respective C# extensions. However, they will provide a less comprehensive development experience compared to full-fledged IDEs and you won't get as much help.
 
 ### 3.A. Installing the IDE
 
@@ -220,14 +220,13 @@ To enable release optimizations, add `--configuration Release` to the dotnet inv
 
 ```
 
-
 # Troubleshooting
 
 ### `RUN_THIS.py` Isn't Running
 
 Make sure that the version of Python that you are using is installed from the website and not the Microsoft store. If you installed it from the Microsoft store, uninstall it and install Python from the website.
 
-If you are on Windows and get redirected to the Microsoft Store or encounter a message in your terminal claiming that Python is not installed, then you need to disable an aweful Microsoft shortcut. You can disable it by searching for `Manage App Execution Aliases` and disabling the two Python references.
+If you are on Windows and get redirected to the Microsoft Store or encounter a message in your terminal claiming that Python is not installed, then you need to disable an awful Microsoft shortcut. You can disable it by searching for `Manage App Execution Aliases` and disabling the two Python references.
 
 ### Missing Submodule Files
 
@@ -255,7 +254,7 @@ Unhandled exception. Robust.Shared.IoC.Exceptions.ImplementationConstructorExcep
 
 ### `libssl` Not Found
 
-If you’re having problems with dotnet not finding `libssl` (e.g. when using `libressl`), try setting the `CLR_OPENSSL_VERSION_OVERRIDE` environment variable to the appropriate version.
+If you’re having problems with `dotnet` not finding `libssl` (e.g. when using `libressl`), try setting the `CLR_OPENSSL_VERSION_OVERRIDE` environment variable to the appropriate version.
 
 For instance, set it to 48 if your `/usr/lib` contains `libssl.so.48`. If that doesn’t work you can also try running `ln -s /usr/lib/libssl.so /usr/local/lib/libssl.so.1.0.0` instead.
 
@@ -268,4 +267,4 @@ Make sure you open it as a solution and click the `SpaceStation14.sln` file.
 ### System Cannot Find File `RUN_THIS.py`
 
 The system cannot find the specified file error usually means that OneDrive is conflicting with the git repository.
-Clone the git repo outside of OneDrive or disable syncing for the cloned folder.
+Clone the Git repository outside of OneDrive or disable syncing for the cloned folder.

@@ -1,15 +1,15 @@
 # Conventions
 
-There are nearly infinite ways to program, but as a result, it's near impossible to keep code maintainable without some strict rules about how the code should look at and work. 
+There are nearly infinite ways to program, but as a result, it's near impossible to keep code maintainable without some strict rules about how the code should look at and work.
 
 ```admonish info
 The last thing we'd want is someone to integrate their F# + ClojureCLR DSL into Space Station 14 because they think that C# isn't "functional" enough.
 ```
 
-As such, this document outlines SS14's style guides, which are to be supplimented with Microsoft's official [C# coding conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions). We'd highly reccomend getting a C# code formatter, which are hidden somewhere in your IDE.
+As such, this document outlines SS14's style guides, which are to be supplemented with Microsoft's official [C# coding conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions). We'd highly recommend getting a C# code formatter, which are hidden somewhere in your IDE.
 
 ```admonish info
-Keep in mind that some older areas of the codebase might not follow these conventions. These should be refactored in the future to follow them. 
+Keep in mind that some older areas of the codebase might not follow these conventions. These should be refactored in the future to follow them.
 
 All new code should try to follow these conventions as closely as possible.
 ```
@@ -21,11 +21,11 @@ All new code should try to follow these conventions as closely as possible.
 1. Files should always start with the [using directives](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) at the top of the file.
 
 2. All classes should be explicitly namespaced.  
-    Use [file-scoped namespaces](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces), e.g. a single `namespace Content.Server.Atmos.EntitySystems;` before any class definitions instead of `namespace Content.Server.Atmos.EntitySystems { /* class here */ }`.
+   Use [file-scoped namespaces](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces), e.g. a single `namespace Content.Server.Atmos.EntitySystems;` before any class definitions instead of `namespace Content.Server.Atmos.EntitySystems { /* class here */ }`.
 
 3. Always put all fields and auto-properties before any methods in a class definition.
 
-``````admonish example title="File Layout Example" collapsible=true
+````admonish example title="File Layout Example" collapsible=true
 ```cs
 // Using directives at the top (truncated)
 using Content.Shared.Administration.Logs;
@@ -46,21 +46,20 @@ public sealed class PortalSystem : SharedPortalSystem
 }
 ```
 Source: [`Content.Server/Teleportation/PortalSystem.cs`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Teleportation/PortalSystem.cs)
-``````
-
+````
 
 ## Comments
 
-1. Comment code at a high level to explain *what* the code is doing, and more importantly, *why* code is doing what it is doing. 
+1. Comment code at a high level to explain _what_ the code is doing, and more importantly, _why_ code is doing what it is doing.
 
 ```admonish info "Why Vs. What"
 It's common for people to blindly adhere to idea that you should only "comment the why, not the what", but you should strive to also explain the what as you are not the only person who is going to be reading and writing code.
 ```
 
-``````admonish example title="Why + What Example" collapsible=true
+````admonish example title="Why + What Example" collapsible=true
 You should not just do Why, but also the What. While the variables are technically self-documenting, if you do not know the math behind this, you will not understand what wizardry is happening.
 
-Thus, the what should also be documented as well as the why. 
+Thus, the what should also be documented as well as the why.
 
 ```cs
 // Let n = moles(inlet) - moles(outlet), really a Δn
@@ -86,11 +85,11 @@ float Pfinal = P * MathF.Exp(-comp.G * dPdn * dt);
 float n = (P - Pfinal) / dPdn;
 ```
 Source: [`Content.Server/Atmos/EntitySystems/HeatExchangerSystem.cs#L56-L76`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Atmos/EntitySystems/HeatExchangerSystem.cs#L56-L76)
-``````
+````
 
 2. When documenting classes, structs, methods, properties/fields, and class members, use [XML docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/)
 
-``````admonish example title="XML Doc" collapsible=true
+````admonish example title="XML Doc" collapsible=true
 
 ```cs
 // ... truncated ...
@@ -120,13 +119,13 @@ public sealed partial class TerrorDoAfterEvent : SimpleDoAfterEvent { }
 
 Source: [`Content.Shared/Communications/SharedCommsHackerSystem.cs`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Communications/SharedCommsHackerSystem.cs)
 
-``````
+````
 
 ## Methods
 
-1. If you have too many paramaters to a function and need to wrap it with a newline, break it apart so each line has **only one paramater**.
+1. If you have too many parameters to a function and need to wrap it with a newline, break it apart so each line has **only one parameter**.
 
-``````admonish example title="Method paramater formatting" collapsible=true
+````admonish example title="Method paramater formatting" collapsible=true
 
 ```cs
     public void CopyTo(
@@ -141,16 +140,16 @@ Source: [`Content.Shared/Communications/SharedCommsHackerSystem.cs`](https://git
     }
 ```
 Source: [`Content.Server/NPC/NPCBlackboardSerializer.cs#L84-L91`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/NPC/NPCBlackboardSerializer.cs#L84-L91)
-``````
+````
 
 ## Strings and Identifiers
 
 1. Human-readable text should never be used as an identifier or vice versa. That means no putting human-readable text (result of localization functions) in a dictionary key, comparing with `==`, etc...  
-    This avoids spaghetti when these inevitably have to be decoupled for various reasons, and avoids inefficiency and bugs from comparing human-readable strings.
+   This avoids spaghetti when these inevitably have to be decoupled for various reasons, and avoids inefficiency and bugs from comparing human-readable strings.
 
 2. If you're doing something like a filter/search dialog, use `CurrentCulture` comparisons over human-readable strings. Do not use invariant cultures.
 
-``````admonish example title="CurrentCulture Comparison Example" collapsible=true
+````admonish example title="CurrentCulture Comparison Example" collapsible=true
 ```cs
 var entitySpriteStates = GroupEntities(entities);
 var orderedStates = entitySpriteStates.ToList();
@@ -161,13 +160,13 @@ orderedStates.Sort((x, y) => string.Compare(
 ```
 Source: [`Content.Client/ContextMenu/UI/EntityMenuUIController.cs#L93-L98`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Client/ContextMenu/UI/EntityMenuUIController.cs#L93-L98)
 
-``````
+````
 
 ## Properties
 
-1. In a property setter, the value of the property should always literally become the `value` given. Never try to map a value inside of a setter. Always assume that the caller has done their due dilligence and has converted it _for_ you.
+1. In a property setter, the value of the property should always literally become the `value` given. Never try to map a value inside of a setter. Always assume that the caller has done their due diligence and has converted it _for_ you.
 
-``````admonish example title="Proper Properties Examples" collapsible=true
+````admonish example title="Proper Properties Examples" collapsible=true
 
 ```cs
 [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -183,20 +182,20 @@ public void SetMoles(int gasId, float quantity)
 }
 ```
 Source: [`Content.Shared/Atmos/GasMixture.cs#L122-L130`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Atmos/GasMixture.cs#L122-L130)
-``````
+````
 
 ## Constants & CVars
 
-1. If you have a a specific value like an integer, you should generally make it either:
-    - a constant (`const`) if it's never meant to be changed (immutable).
-    - a CVar if it's meant to be configured.  
+1. If you have a specific value like an integer, you should generally make it either:
+   - a constant (`const`) if it's never meant to be changed (immutable).
+   - a CVar if it's meant to be configured.
 
 ## Prototypes
 
 1. Don't cache prototypes, instead use the `prototypeManager` to index them when they are needed. You can store them by their ID.  
-    When using data-fields that involve phototype ID strings, use ProtoId<T>.
+   When using data-fields that involve phototype ID strings, use ProtoId<T>.
 
-``````admonish example title="ProtoID Example" collapsible=true
+````admonish example title="ProtoID Example" collapsible=true
 ```cs
 [Serializable, NetSerializable]
 public struct AlertState
@@ -209,7 +208,7 @@ public struct AlertState
 }
 ```
 Source: [`Content.Shared/Alert/AlertState.cs#L6-L14`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Alert/AlertState.cs#L6-L14)
-``````
+````
 
 2. You should **always** use prototypes over enums, and enums are _heavily discouraged_.
 
@@ -219,7 +218,7 @@ Source: [`Content.Shared/Alert/AlertState.cs#L6-L14`](https://github.com/space-w
 
 1. When specifying sound data fields, use `SoundSpecifier`.
 
-``````admonish example title="SoundSpecifier Example" collapsible=true
+````admonish example title="SoundSpecifier Example" collapsible=true
 
 ```cs
 [RegisterComponent, NetworkedComponent, Access(typeof(SharedDiceSystem))]
@@ -251,13 +250,13 @@ Source: [`Content.Shared/Dice/DiceComponent.cs#L7-L12`](https://github.com/space
 Source: [`Resources/Prototypes/SoundColletions/dice.yml`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Resources/Prototypes/SoundCollections/dice.yml)
 
 
-``````
+````
 
 ### Sprites and Textures
 
 1. When specifying sprite or texture data fields, use `SpriteSpecifier`.
 
-``````admonish example title="SpriteSpecifier Example" collapsible=true
+````admonish example title="SpriteSpecifier Example" collapsible=true
 
 ```cs
 /// <summary>
@@ -267,11 +266,11 @@ Source: [`Resources/Prototypes/SoundColletions/dice.yml`](https://github.com/spa
 public SpriteSpecifier Icon { get; private set; } = SpriteSpecifier.Invalid;
 ```
 Source: [`Content.Shared/Cargo/Prototypes/CargoProductPrototype.cs#L68-L72`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Cargo/Prototypes/CargoProductPrototype.cs#L68-L72)
-``````
+````
 
 2. In the YAML, you do not need to include the `/Textures/` part of the path.
 
-``````admonish example title="Textures Path Example" collapsible=true
+````admonish example title="Textures Path Example" collapsible=true
 ```yml
 - type: MyComponent
   icon: /Textures/path/to/my/texture.png
@@ -286,18 +285,19 @@ Source: [`Content.Shared/Cargo/Prototypes/CargoProductPrototype.cs#L68-L72`](htt
     sprite: /Textures/path/to/my/sprite.rsi
     state: MySpriteState
 ```
-``````
+````
 
 3. RSI meta.json should have this specific order of fields:
-    1. version
-    2. license
-    3. copyright
-    4. size
-    5. states
 
-4. Make sure not to minify the JSON, and should follow the gnormal JSON quality guidelines (egyptian brackets, etc). You can optionally follow the [Google JSON Style Guide](https://google.github.io/styleguide/jsoncstyleguide.xml).
-  
-``````admonish example title="JSON Formatting Examples" collapsible=true
+   1. version
+   2. license
+   3. copyright
+   4. size
+   5. states
+
+4. Make sure not to minify the JSON, and should follow the normal JSON quality guidelines (Egyptian brackets, etc). You can optionally follow the [Google JSON Style Guide](https://google.github.io/styleguide/jsoncstyleguide.xml).
+
+````admonish example title="JSON Formatting Examples" collapsible=true
 
 ```json
 {
@@ -325,13 +325,13 @@ Source: [`Content.Shared/Cargo/Prototypes/CargoProductPrototype.cs#L68-L72`](htt
 ```
 Source: [`Resources/Textures/Objects/Consumable/Drinks/royrogers.rsi/meta.json](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Resources/Textures/Objects/Consumable/Drinks/royrogers.rsi/meta.json)
 
-``````
+````
 
 ## Entities
 
 1. When using `EntityUid` in admin logs, use the `IEntityManager.ToPrettyString(EntityUid)` method.
 
-``````admonish example title="Pretty EntityUid Example" collapsible=true
+````admonish example title="Pretty EntityUid Example" collapsible=true
 
 ```cs
 _adminLogger.Add(LogType.Slip, LogImpact.Low,
@@ -340,11 +340,11 @@ _adminLogger.Add(LogType.Slip, LogImpact.Low,
 
 Source: [`Content.Shared/Slippery/SlipperySystem.cs#L110-L111`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Slippery/SlipperySystem.cs#L110-L111)
 
-``````
+````
 
-2. If you need to pass "optional" entities, you should use a nullable `EntityUid` for this. Never use `EntityUid.Invalid` to denote the abscense of `EntityUid`. Always use `null`.
+2. If you need to pass "optional" entities, you should use a nullable `EntityUid` for this. Never use `EntityUid.Invalid` to denote the absence of `EntityUid`. Always use `null`.
 
-``````admonish example title="Nullable EntityUid" collapsible=true
+````admonish example title="Nullable EntityUid" collapsible=true
 
 ```cs
 [ByRefEvent]
@@ -359,7 +359,7 @@ public readonly struct AfterFlashedEvent
 ```
 Source: [`Content.Server/Flash/FlashSystem.cs#L234-L239](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Flash/FlashSystem.cs#L234-L239)
 
-``````
+````
 
 ## Components
 
@@ -369,7 +369,7 @@ There used to be a style guide about using `[Friend(...)]` in components, but as
 
 1. All data in components should be public
 
-``````admonish example title="Public Data Example" collapsible=true
+````admonish example title="Public Data Example" collapsible=true
 
 ```cs
 [ByRefEvent]
@@ -384,11 +384,11 @@ public readonly struct AfterFlashedEvent
 ```
 Source: [`Content.Server/Flash/FlashSystem.cs#L234-L239](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Flash/FlashSystem.cs#L234-L239)
 
-``````
+````
 
 2. If you want to specify which types are allowed to read or modify the data in your class, use `[Access(...)]`. Components should always specify their access restrictions whenever possible, and usually only allow the entity systems that wrap them to modify their data.
 
-``````admonish example title="Access Example" collapsible=true
+````admonish example title="Access Example" collapsible=true
 
 ```cs
 [Access(typeof(ChemMasterSystem))]
@@ -397,24 +397,24 @@ public sealed partial class ChemMasterComponent : Component
 
 Source: [`Content.Server/Chemistry/Components/ChemMasterComponent.cs#L12-L13`](https://github.com/space-wizards/space-station-14/blob/a88e747a0b338a217a8cf97a32fe8b8f8789492d/Content.Server/Chemistry/Components/ChemMasterComponent.cs#L12-L13)
 
-``````
+````
 
 3. If a shared component is inherited by server-side and client-side counterparts, it should be marked as `abstract`.
 
-``````admonish example title="Abstract Component Example" collapsible=true
+````admonish example title="Abstract Component Example" collapsible=true
 
 ```cs
 public abstract class SharedAccessSystem : EntitySystem
 ```
 
 Source: [`Content.Shared/Access/Systems/SharedAccessSystem.cs#L9`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Shared/Access/Systems/SharedAccessSystem.cs#L9)
-``````
+````
 
 ## Entity Systems
 
 1. Game logic should _always_ go in entity systems, not components. Components should _only_ hold data.
 
-``````admonish example title="Seperation of Data and Logic example" collapsible=true
+````admonish example title="Separation of Data and Logic example" collapsible=true
 
 Systems have logic:
 
@@ -472,11 +472,11 @@ public sealed partial class PaperComponent : SharedPaperComponent
 
 Source: [`Content.Server/Paper/PaperComponent.cs#L7-L24`](https://github.com/space-wizards/space-station-14/blob/ee8224bce22c5d5ca76faaa43b2fc8441f356610/Content.Server/Paper/PaperComponent.cs#L7-L24)
 
-``````
+````
 
 2. When possible, try using the `EntitySystem`'s [proxy methods](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/GameObjects/EntitySystem.Proxy.cs) instead of using the `EntityManager` directly.
 
-``````admonish example title="Proxy Methods Example" collapsible=true
+````admonish example title="Proxy Methods Example" collapsible=true
 
 Do:
 ```cs
@@ -515,16 +515,16 @@ Source: [`Content.Shared/Emag/Systems/EmagSystem.cs#L77-L81`](https://github.com
 
 Source: [Outdated `Content.Shared/Emag/Systems/EmagSystem.cs#L154-L178`](https://github.com/deltanedas/space-station-14/blob/8e8bc7d0d31c75518619b280907b45850e1c420f/Content.Shared/Emag/Systems/EmagSystem.cs#L154-L178)
 
-``````
+````
 
-3. All public Entity System API Methods that deal with entities and game logic should *always* follow this very specific structure.
-    1. All relevant `Entity<T?>` and `EntityUid` should come first in the paramaters.
-        - The `T?` stands for the component type that you need from the entity.
-        - The question mark `?` must be present to mark it as nullable.
-    2. Any other paramaters you want should come afterwards.
-    3. The first thing you should call in the body of the ethod should be `Resolve` for the entity UID and components.
+3. All public Entity System API Methods that deal with entities and game logic should _always_ follow this very specific structure.
+   1. All relevant `Entity<T?>` and `EntityUid` should come first in the parameters.
+      - The `T?` stands for the component type that you need from the entity.
+      - The question mark `?` must be present to mark it as nullable.
+   2. Any other parameters you want should come afterwards.
+   3. The first thing you should call in the body of the method should be `Resolve` for the entity UID and components.
 
-``````admonish example title="Entity System API Methods Example" collapsible=true
+````admonish example title="Entity System API Methods Example" collapsible=true
 
 ```cs
 /// <summary>
@@ -554,7 +554,7 @@ public void SetEyelids(Entity<EyeClosingComponent?> eyelids, bool value)
 
 Source: [`Content.Shared/Eye/Blinding/Systems/EyeClosingSystem.cs#L74-L96`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Shared/Eye/Blinding/Systems/EyeClosingSystem.cs#L74-L96)
 
-``````
+````
 
 ```admonish note
 The `Resolve` helper performs a few useful checks for you. In `DEBUG`, it checks whether the component reference passed (if not null) is actually owned by the entity specified.
@@ -578,7 +578,7 @@ Extension methods on `EntityUid` are used throughout the codebase, however this 
 
 5. Prefer system dependencies instead of resolving the system using `IoCManager`.
 
-``````admonish example title="System Dependencies Example" collapsible=true
+````admonish example title="System Dependencies Example" collapsible=true
 
 Use an entity system dependency:
 
@@ -593,14 +593,14 @@ _random.Prob(0.1f);
 var random = IoCManager.Resolve<IRobustRandom>(); // DO NOT DO THIS
 random.Prob(0.1f);
 ```
-``````
+````
 
 ## Events
 
 1. Method Events (events that you raise when you want to perform a certain action) are **prohibited**. **Always** use Entity System methods instead.
-    - There is an exception for circumstances that the Entity System wraps the Method Event.
+   - There is an exception for circumstances that the Entity System wraps the Method Event.
 
-``````admonish example title="Entity Systems Methods Example" collapsible=true
+````admonish example title="Entity Systems Methods Example" collapsible=true
 
 Always use Entity System methods or their appropriate proxy methods on a system to perform an action.
 ```cs
@@ -614,7 +614,7 @@ RaiseLocalEvent(uid, new ChangeDamageEvent(10));
 ```
 
 In this example, it would be fine to have a Method Event if internally the implementation of `DamagableSystem.ChangeDamage(...)` raised the `ChangeDamageEvent(...)`.
-``````
+````
 
 2. Event names should always be suffixed with `[some]Event`
 3. Event handlers names should always be in the format `On[NamedEvent]`
@@ -630,9 +630,9 @@ Event Handlers:
 ```
 
 4. Events should be structs (not classes).
-5. Events should always be raised by ref, and should be readonly if applicable.
+5. Events should always be raised by ref, and should be read-only if applicable.
 
-``````admonish example title="Events Example" collapsible=true
+````admonish example title="Events Example" collapsible=true
 
 Events should generally look like:
 
@@ -655,13 +655,13 @@ public void DoEmpEffects(EntityUid uid, float energyConsumption, float duration)
 
 Source: [`Content.Server/Emp/EmpSystem.cs#L69-L72`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Server/Emp/EmpSystem.cs#L69-L72)
 
-``````
+````
 
-6. EventBus should be prefered over C# events where possible, as C# events can leak when used with ephemeral components.
-    - C# events should only be used for out-of-simulation events, such as UI events.
-    - Remember to always unsubscribe them.
+6. EventBus should be preferred over C# events where possible, as C# events can leak when used with ephemeral components.
+   - C# events should only be used for out-of-simulation events, such as UI events.
+   - Remember to always unsubscribe them.
 
-``````admonish example title="EventBus Example" collapsible=true
+````admonish example title="EventBus Example" collapsible=true
 
 ```cs
 var entChangeEv = new ConstructionChangeEntityEvent(mech, uid);
@@ -672,20 +672,20 @@ entityManager.QueueDeleteEntity(uid);
 
 Source: [`Content.Server/Construction/Completions/BuildMech.cs#L68-L71`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Server/Construction/Completions/BuildMech.cs#L68-L71)
 
-``````
+````
 
 7. Use events instead of async for any game simulation.
-    - For things such as DoAfter, always use events instead of async.
-    - Async is generally virulent (meaning if one part is async, suddenly much more of the codebase needs to become async), cannot be serialized (which is why you don't use it for DoAfter), and generally causes bad code.
-    - Events, on the other hand, tie in nicely with the rest of the architecture and are way more lightweight. 
+   - For things such as DoAfter, always use events instead of async.
+   - Async is generally virulent (meaning if one part is async, suddenly much more of the codebase needs to become async), cannot be serialized (which is why you don't use it for DoAfter), and generally causes bad code.
+   - Events, on the other hand, tie in nicely with the rest of the architecture and are way more lightweight.
 
 ## UI
 
 1. You should always prefer using XAML over C#-defined UIs.
-    - It's much easier to deal with XAML than the weird C# UI.
-    - It's fine to extend C#-defined UIs, but they should all be converted at some point.
+   - It's much easier to deal with XAML than the weird C# UI.
+   - It's fine to extend C#-defined UIs, but they should all be converted at some point.
 
-``````admonish example title="XAML-Defined UI" collapsible=true
+````admonish example title="XAML-Defined UI" collapsible=true
 
 Example of a XAML-defined UI:
 
@@ -715,15 +715,15 @@ Example of a XAML-defined UI:
 ```
 
 Source: [`Content.Client/Store/Ui/StoreListingControl.xaml`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Client/Store/Ui/StoreListingControl.xaml)
-``````
+````
 
 ## Performance
 
 1. Always use [iterator methods](https://docs.microsoft.com/en-us/dotnet/csharp/iterators) over creating a new collection and returning for performance reasons.
-    - This is a tradeoff as iterators allocate a lot of memory, but are much faster.
-    - If you need to reduce allocations as much as possible, use struct iterators.
+   - This is a tradeoff as iterators allocate a lot of memory, but are much faster.
+   - If you need to reduce allocations as much as possible, use struct iterators.
 
-``````admonish example title="Iterator Methods Example" collapsible=true
+````admonish example title="Iterator Methods Example" collapsible=true
 
 ```cs
 public void UpdateListing()
@@ -743,24 +743,26 @@ public void UpdateListing()
 
 Source: [`Content.Client/Store/Ui/StoreMenu.xaml.cs#L77-L88`](https://github.com/space-wizards/space-station-14/blob/b1c123efae5fdcc1ba8d968c32ef85321afb939c/Content.Client/Store/Ui/StoreMenu.xaml.cs#L77-L88)
 
-``````
+````
 
 2. All classes should be marked as either `abstract`, `static`, `sealed`, or `[Virtual]`.
-    - It slighlty improves performance when accessing or invoking virtual members
-    - Specifically, use each of them for this specific circumstance:
-        - **`sealed`** is it shouldn't be inherited
-        - **`[Vertual]`** for default C# behavior
-        - **`static`** for non-instantiated classes
-        - **`abstract`** only inherited, never instantiated
+
+   - It slightly improves performance when accessing or invoking virtual members
+   - Specifically, use each of them for this specific circumstance:
+     - **`sealed`** is it shouldn't be inherited
+     - **`[Vertual]`** for default C# behavior
+     - **`static`** for non-instantiated classes
+     - **`abstract`** only inherited, never instantiated
 
 3. Always try to run code in response to an event rather than updating every tick.
 
-4. Avoid variable capturing when using [lambas](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions) or [local functions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions)
-    - Variable capture can make the GC work less efficiently and waste allocations.
+4. Avoid variable capturing when using [lambdas](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions) or [local functions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions)
 
-5. If you're using a [`Func` delgate](https://docs.microsoft.com/en-us/dotnet/api/system.func-2), make sure to overload it so that custom data can be passed in.
+   - Variable capture can make the GC work less efficiently and waste allocations.
 
-``````admonish example title="Func Delegate Example" collapsible=true
+5. If you're using a [`Func` delegate](https://docs.microsoft.com/en-us/dotnet/api/system.func-2), make sure to overload it so that custom data can be passed in.
+
+````admonish example title="Func Delegate Example" collapsible=true
 
 Do This:
 ```cs
@@ -768,7 +770,7 @@ void DoSomething(EntityUid otherEntity)
 {
     // This is good and much more performant.
     var predicate = (EntityUid uid, EntityUid otherUid)
-    		=> uid == otherUid; 
+    		=> uid == otherUid;
 
   	// Pass our custom data to this method.
     MethodWithPredicate<EntityUid>(predicate, otherEntity);
@@ -780,9 +782,9 @@ void DoSomething(EntityUid otherEntity)
 ```cs
 void DoSomething(EntityUid otherEntity)
 {
-    // This is BAD. It will allocate on the heap a lot. 
+    // This is BAD. It will allocate on the heap a lot.
     var predicate = (EntityUid uid) // DO NOT DO THIS
-        => uid == otherEntity; 
+        => uid == otherEntity;
 
   	// This method doesn't allow us to pass custom data,
     // so we're forced to do a costly variable capture.
@@ -791,7 +793,7 @@ void DoSomething(EntityUid otherEntity)
 
 ```
 
-``````
+````
 
 ## Shared
 
@@ -808,9 +810,9 @@ If `BarComponent` exists in shared, server and client, the shared type should be
 ## Physics
 
 1. Always use `TransformComponent` for anchoring.
-    1. You may use the `PhysicsComponent` static body anchoring **only** if you know what you're doing and can defend it.
-  
-``````admonish example title="TransformComponent Example" collapsible=true
+   1. You may use the `PhysicsComponent` static body anchoring **only** if you know what you're doing and can defend it.
+
+````admonish example title="TransformComponent Example" collapsible=true
 ```cs
 private void OnExamined(EntityUid uid, GasVolumePumpComponent pump, ExaminedEvent args)
 {
@@ -822,13 +824,13 @@ private void OnExamined(EntityUid uid, GasVolumePumpComponent pump, ExaminedEven
 ```
 
 Source: [`Content.Server/Atmos/Piping/Binary/EntitySystems/GasVolumePumpSystem.cs#L60-L63`](https://github.com/space-wizards/space-station-14/blob/af7f70bade908658416be91c5571cab1160e18ec/Content.Server/Atmos/Piping/Binary/EntitySystems/GasVolumePumpSystem.cs#L60-L63)
-``````
+````
 
 # YAML Conventions
 
 1. Every component's `- type` should be together without an empty newline separating them.
 
-``````admonish example title="YAML Component Newline Example" collapsible=true
+````admonish example title="YAML Component Newline Example" collapsible=true
 
 ```yaml
 - type: Fixtures
@@ -843,11 +845,11 @@ Source: [`Content.Server/Atmos/Piping/Binary/EntitySystems/GasVolumePumpSystem.c
 ```
 
 Source: [`Resources/Maps/Salvage/small-chef.yml#L48-L56`](https://github.com/space-wizards/space-station-14/blob/af7f70bade908658416be91c5571cab1160e18ec/Resources/Maps/Salvage/small-chef.yml#L48-L56)
-``````
+````
 
-2. Seperate prototypes with one empty newline
+2. Separate prototypes with one empty newline
 
-``````admonish example title="YAML Prototype Newline Example" collapsible=true
+````admonish example title="YAML Prototype Newline Example" collapsible=true
 
 ```yaml
 - type: mixingCategory
@@ -875,39 +877,41 @@ Source: [`Resources/Maps/Salvage/small-chef.yml#L48-L56`](https://github.com/spa
 ```
 
 Source: [`Resources/Prototypes/Chemistry/mixing_types.yml#L11-L30`](https://github.com/space-wizards/space-station-14/blob/af7f70bade908658416be91c5571cab1160e18ec/Resources/Prototypes/Chemistry/mixing_types.yml#L11-L30)
-``````
+````
 
 3. The `name:` and `description:` fields should never have quotations unless punctuation requires the use of them.
 
 4. Do not specify textures in abstract prototypes/parents.
 
 5. You should declare the first prototype block in this order:
-    1. `type`
-    2. `abstract`
-    3. `parent`
-    4. `id`
-    5. `name`
-    6. `description`
-    7. `components`
+
+   1. `type`
+   2. `abstract`
+   3. `parent`
+   4. `id`
+   5. `name`
+   6. `description`
+   7. `components`
 
 6. New components should not have an indent when added to the `components:` section.
 
 7. When it makes sense, place more generalized/engine components near the top of the components list and more specific components near the bottom.
 
-``````admonish example title="Generalized Components Example" collapsible=true
+````admonish example title="Generalized Components Example" collapsible=true
 
 ```yaml
     components:
     - type: Sprite # Engine-specific
-    - type: Physics 
+    - type: Physics
     - type: Anchorable # Content, but generalized
     - type: Emitter # A component for a specific type of item
 ```
 
-``````
+````
 
 8. IDs and component names should be in `PascalCase`
-    - `prefix.Something` should **never** be used for IDs.
+
+   - `prefix.Something` should **never** be used for IDs.
 
 9. Everything else, even prototype names, use `camelCase`.
 
@@ -932,8 +936,8 @@ As a result, it'd look like:
 
 3. Localization IDs should be as specific as possible to avoid conflicts with other IDs.
 
-``````admonish example title="Localization ID Example" collapsible=true
+````admonish example title="Localization ID Example" collapsible=true
 ```ftl
 antag-traitor-user-was-traitor-message = ...
 ```
-``````
+````

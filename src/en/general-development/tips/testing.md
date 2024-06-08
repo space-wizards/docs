@@ -12,7 +12,7 @@ To deal with this, there are three types of tests that are implemented through S
 
 ## Unit Tests
 
-Unit Tests are tests that are made to test a specific method or subsystem. 
+Unit Tests are tests that are made to test a specific method or subsystem.
 
 To execute the tests, run:
 
@@ -21,12 +21,13 @@ dotnet test --configuration DebugOpt Content.Tests -- NUnit.ConsoleOut=0
 ```
 
 The flags explained are:
+
 - `--no-build`: Don't build the game because we don't need to.
 - `--configuration DebugOpt`: This tells the test runner to build the project as DebugOpt.
 - `Content.Tests/Content.Tests.csproj`: Tells it to run the unit tests.
-- `-- NUnit.ConsoleOut=0`: Tells NUnit to throw away all of the stdout instead of putting it in your face.  
+- `-- NUnit.ConsoleOut=0`: Tells NUnit to throw away all of the stdout instead of putting it in your face.
 
-To write an integration test, you follow the [Microsoft NUnit guide](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit#creating-the-first-test). 
+To write an integration test, you follow the [Microsoft NUnit guide](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit#creating-the-first-test).
 
 ## Integration Tests
 
@@ -39,6 +40,7 @@ dotnet test -e COMPlus_gcServer=1 --configuration DebugOpt Content.IntegrationTe
 ```
 
 The new flags are:
+
 - `-e COMPlus_gcServer=1`: This tells .NET to use the [Server GC](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/workstation-server-gc) and thus greatly increases the speed of integration tests.
 - `NUnit.MapWarningTo=Failed`: Turns all warnings into test failures
 
@@ -46,14 +48,14 @@ The new flags are:
 
 Now, to actually write an Integration Test, you first have to understand the directory structure of the project:
 
-1. `Content.IntegrationTests` is broken into two parts: 
-    - `Tests` (where tests are stored) 
-    - `Pairs` (where the backend for server + client testing is implemented).
+1. `Content.IntegrationTests` is broken into two parts:
+   - `Tests` (where tests are stored)
+   - `Pairs` (where the backend for server + client testing is implemented).
 2. Now inside of `Tests`, there's a bunch of subdirectories and folders for testing specific subsystems.
 
 Now to actually write an integration test, you follow the [Microsoft NUnit guide](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit#creating-the-first-test).
 
-``````admonish example title="Example Integration Test" collapsible=true
+````admonish example title="Example Integration Test" collapsible=true
 
 ```cs
 using Content.Client.Chemistry.UI;
@@ -107,7 +109,7 @@ public sealed class DispenserTest : InteractionTest
 
 Source: [`Content.IntegrationTests/Tests/Chemistry/DispenserTest.cs`](https://github.com/space-wizards/space-station-14/blob/5e51a1d73c3a90438969b8100a32e43e44a5a5fb/Content.IntegrationTests/Tests/Chemistry/DispenserTest.cs)
 
-``````
+````
 
 ## Linter
 
@@ -122,14 +124,14 @@ There's actually many different linters that SS14 uses, some of which are:
 
 To verify that all of the RSI is good, you need to:
 
-1. Install of the dependencies 
-    ```bash
-    pip3 install jsonschema
-    ```
-2. Run the script  
-    ```bash
-    python3 RobustToolbox/Schemas/validate_rsis.py Resources
-    ```
+1. Install of the dependencies
+   ```bash
+   pip3 install jsonschema
+   ```
+2. Run the script
+   ```bash
+   python3 RobustToolbox/Schemas/validate_rsis.py Resources
+   ```
 
 ### YAML Linter
 
