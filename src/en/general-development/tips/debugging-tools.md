@@ -197,7 +197,7 @@ This is just for some IDE-specific changes that you should make to aid your debu
 
 #### Rider
 
-```admonish info title="Rider Directions" collapsible=true
+```admonish example "Rider Directions"
 If you're running Rider, you should add `COMPlus_gcServer=1` to the Test Runner so that all tests run faster.
 
 ![](../../assets/images/debug/debug-gcserver.png)

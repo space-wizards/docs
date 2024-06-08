@@ -78,7 +78,7 @@ To contribute changes to the Space Station 14 project, you'll need to create you
 
 Forking is similar to copying a folder, except that is all done on GitHub's server. The forked repository becomes your own, allowing you to make and test changes without affecting the main repository.
 
-```admonish info title="How to Create a GitHub Fork" collapsible=true
+```admonish example "How to Create a GitHub Fork"
 
 1. Navigate to the [`Space-Wizards/Space-Station-14`](https://github.com/space-wizards/space-station-14) repository.
 2. Press the "Fork" button at the top right.
@@ -91,7 +91,7 @@ From there, it’ll ask you where to fork it and what to name it. You can choose
 
 After creating your fork, you'll need a _clone_, or copy, on your local machine. This creates a working directory on your computer where you can modify the project files.
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 Right click to see TortoiseGit's context menu stuff:
 
 1. Right click the of the directory you want to clone it into.
@@ -106,7 +106,7 @@ Right click to see TortoiseGit's context menu stuff:
 4. Click "Ok"
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 
 1. Launch SmartGit and and click "clone".
 
@@ -126,7 +126,7 @@ Right click to see TortoiseGit's context menu stuff:
 
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 
 1. Open Git Bash in the directory that you want to clone it into.
 
@@ -174,7 +174,7 @@ We create the `upstream` remote for this purpose, as it will point and track the
 The convention is to call the remote pointing to the original repository `upstream` but you can technically call it whatever you like. I'll be referring to it as 'the upstream', though, and it's terminology Git guides use as well.
 ```
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 
 1. Right click on the directory that holds your repository.
 2. Under "TortoiseGit", click "Settings".
@@ -190,7 +190,7 @@ The convention is to call the remote pointing to the original repository `upstre
    ![](../../assets/images/setup/git/remote-tortoise2.png)
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 
 1. With the repository open in SmartGit, under "Remote", click "Add...".
 
@@ -203,7 +203,7 @@ The convention is to call the remote pointing to the original repository `upstre
    ![](../../assets/images/setup/git/remote-smart2.png)
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git remote add upstream https://github.com/space-wizards/space-station-14`.
 ```
 
@@ -268,7 +268,7 @@ If you try to create a pull request from your fork's `master` branch, it will be
 
 Make a new branch called `funny-feature`:
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 1. Right click on the directory that holds your repository.
 2. Under "TortoiseGit", click "Create Branch".
 
@@ -280,7 +280,7 @@ Make a new branch called `funny-feature`:
    ![](../../assets/images/setup/git/branch-tortoise2.png)
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 1. With the repository open in SmartGit, under "Branch", click "Add Branch...".
 
    ![](../../assets/images/setup/git/branch-smart.png)
@@ -291,7 +291,7 @@ Make a new branch called `funny-feature`:
    ![](../../assets/images/setup/git/branch-smart2.png)
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git switch -c funny-branch`.
 ```
 
@@ -305,7 +305,7 @@ When you do this, your files and folders locally will be changed to match the br
 
 Switch to your new branch.
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 1. Right click on the directory that holds your repository.
 2. Under "TortoiseGit", click "Switch/Checkout".
 
@@ -315,7 +315,7 @@ Switch to your new branch.
 4. Then click "Ok".
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 1. With the repository open in SmartGit, under "Branch", click "Check Out...".
 
    ![](../../assets/images/setup/git/branch-smart.png)
@@ -324,7 +324,7 @@ Switch to your new branch.
 3. Then click "Ok".
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git switch funny-branch`.
 ```
 
@@ -338,7 +338,7 @@ Before doing anything, it's good to know what has changed in your codebase since
 
 To see what's going on the repository, just check its status or diff.
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 1. Right click on the directory that holds your repository.
 2. Under "TortoiseGit", click "Diff".
 
@@ -347,7 +347,7 @@ To see what's going on the repository, just check its status or diff.
 TortoiseGit also shows all of the changed files and folders in the Windows Explorer through a red icon in the bottom right, which is really convenient.
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 1. Open the repository in SmartGit.
 
    ![](../../assets/images/setup/git/staging-smart.png)
@@ -357,7 +357,7 @@ Your main screen shows the status and diffs by default.
 This is assuming you installed SmartGit with the option that the main window shows diffs and status. If you didn’t, I don’t really know where it is.
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git diff`.
 ```
 
@@ -369,7 +369,7 @@ This helps you catch mistakes like accidentally committing submodules, which doe
 
 Once you've _staged_ your changes, it's time to make a commit. It's highly recommended to be detailed in the message that you are providing with the commit as reviewers and others reading your code can gain guidance from it.
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 1. Right click on the directory that holds your repository.
 2. Select "Git Commit -> 'funny-feature'"
 
@@ -384,7 +384,7 @@ Once you've _staged_ your changes, it's time to make a commit. It's highly recom
 TortoiseGit also shows all of the changed files and folders in the Windows Explorer through a red icon in the bottom right, which is really convenient.
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 1. With the repository open in SmartGit, select all the files you want to commit.
 2. Click "Stage".
 
@@ -401,7 +401,7 @@ You main screen by default shows the status and the diffs.
 This is assuming you installed SmartGit with the option that the main window shows diffs and status. If you didn’t, I don’t really know where it is.
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git status`.
 
 2. Now, run `git add [path-to-files-to-stage]`
@@ -437,7 +437,7 @@ If you know how to use SSH, just use SSH authentication instead.
 
 When pushing changes, you need specify the remote repository that you’re pushing to and the local branch that you’re pushing from.
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 1. Right click on the directory that holds your repository.
 2. Under "TortoiseGit", click "Push...".
 
@@ -449,7 +449,7 @@ When pushing changes, you need specify the remote repository that you’re pushi
    ![](../../assets/images/setup/git/push-tortoise2.png)
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 1. Open the repository in SmartGit.
 2. Click the "Push" button
 
@@ -461,7 +461,7 @@ When pushing changes, you need specify the remote repository that you’re pushi
 
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git push origin funny-feature`.
 ```
 
@@ -488,7 +488,7 @@ _Fetching_ refers to downloading the new branches and commits from a remote repo
 
 When you fetch a remote, it downloads the branches to your local repository and prepends their with the remotes name and a slash (As an example, `upstream` becomes `upstream/master`).
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 1. Right click on the directory that holds your repository.
 2. Under "TortoiseGit", click "Fetch...".
 
@@ -500,7 +500,7 @@ When you fetch a remote, it downloads the branches to your local repository and 
    ![](../../assets/images/setup/git/fetch-tortoise2.png)
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 1. Open the repository in SmartGit.
 2. Under "Remote", select "fetch".
 
@@ -514,13 +514,13 @@ This should fetch from all remotes. If it doesn't:
 
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git fetch upstream`.
 ```
 
 Now, you need to merge those changes we just downloaded into our `master` branch. Git will usually manage merging for you, and if not, it will provide you the tools to resolve any [merge conflicts](#4a-resolving-merge-conflicts).
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 1. Right click on the directory that holds your repository.
 2. Under "TortoiseGit", click "Merge...".
 
@@ -532,7 +532,7 @@ Now, you need to merge those changes we just downloaded into our `master` branch
    ![](../../assets/images/setup/git/merge-tortoise2.png)
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 1. Open the repository in SmartGit.
 2. Under "Branch", select "Merge".
 
@@ -545,7 +545,7 @@ Now, you need to merge those changes we just downloaded into our `master` branch
 
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git switch [branch-to-merge-into]`.
 
 2. Run `git merge upstream/master`
@@ -561,7 +561,7 @@ Git will attempt to automatically reconcile what is being pulled and your local 
 
 We'll fetch from our `upstream` remote (the main SS14 repository) and tell it to merge into our local `master` branch automatically.
 
-```admonish info title="TortoiseGit Directions" collapsible=true
+```admonish example "TortoiseGit Directions"
 1. Right click on the directory that holds your repository.
 2. Under "TortoiseGit", click "Pull...".
 
@@ -573,7 +573,7 @@ We'll fetch from our `upstream` remote (the main SS14 repository) and tell it to
    ![](../../assets/images/setup/git/pull-tortoise2.png)
 ```
 
-```admonish info title="SmartGit Directions" collapsible=true
+```admonish example "SmartGit Directions"
 1. Open the repository in SmartGit.
 2. Click the "Pull" button.
 
@@ -589,7 +589,7 @@ We'll fetch from our `upstream` remote (the main SS14 repository) and tell it to
 
 ```
 
-```admonish info title="Git Bash Directions" collapsible=true
+```admonish example "Git Bash Directions"
 1. In your terminal inside of the repository directory, run `git switch [branch-to-merge-into]`.
 
 2. Run `git pull upstream/master`

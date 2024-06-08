@@ -82,7 +82,7 @@ To actually use an IDE, you must install it. If you already have an IDE of your 
 
 #### Visual Studio
 
-```admonish info title="Visual Studio Directions" collapsible=true
+```admonish example "Visual Studio Directions"
 
 Follow the [official guide](https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022).
 
@@ -90,7 +90,7 @@ Follow the [official guide](https://learn.microsoft.com/en-us/visualstudio/insta
 
 #### Jetbrains Rider
 
-```admonish info title="Jetbrains Rider Directions" collapsible=true
+```admonish example "Jetbrains Rider Directions"
 
 Follow the [official guide](https://www.jetbrains.com/help/rider/Installation_guide.html).
 
@@ -98,7 +98,7 @@ Follow the [official guide](https://www.jetbrains.com/help/rider/Installation_gu
 
 #### VSCode
 
-```admonish info title="VSCode Directions" collapsible=true
+```admonish example "VSCode Directions"
 
 Follow the [official guide](https://code.visualstudio.com/docs/csharp/get-started).
 
@@ -106,7 +106,7 @@ Follow the [official guide](https://code.visualstudio.com/docs/csharp/get-starte
 
 #### VSCodium
 
-```admonish info title="VSCodium Directions" collapsible=true
+```admonish example "VSCodium Directions"
 
 1. Download [VSCodium](https://vscodium.com/#install).
 2. Run the installer.
@@ -122,7 +122,7 @@ Thus, make sure that when your IDE is running SS14 or is trying to debug it, it 
 
 #### Visual Studio
 
-```admonish info title="Visual Studio Directions" collapsible=true
+```admonish example "Visual Studio Directions"
 1. Right click `Solution`
 2. Select `Configure StartUp Projects...`
 3. Select `Multiple StartUp Projects`
@@ -141,7 +141,7 @@ If you are having problems with the program not getting build correctly, you may
 
 #### Jetbrains Rider
 
-```admonish info title="Jetbrains Rider Directions" collapsible=true
+```admonish example "Jetbrains Rider Directions"
 
 In Rider you can create a “compound configuration” to run or debug both client and server at the same time.
 
@@ -151,7 +151,7 @@ In Rider you can create a “compound configuration” to run or debug both clie
 
 #### VSCode(ium)
 
-```admonish info title="VSCode(ium) Directions" collapsible=true
+```admonish example "VSCode(ium) Directions" 
 
 The C# extension provides a `"coreclr"` launch type which can be used to run the `Content.Server` and `Content.Client` assemblies.
 
@@ -167,7 +167,7 @@ This folder contains all the non-C# files such as sprites, audio, and most impor
 
 #### Visual Studio
 
-```admonish info title="Visual Studio Directions" collapsible=true
+```admonish example "Visual Studio Directions" 
 
 In Visual Studio, you can switch the Solution Explorer from “solution” view (only showing the C# projects) to “folder” view (showing all the files in the project).
 
@@ -184,7 +184,7 @@ In Visual Studio, you can switch the Solution Explorer from “solution” view 
 
 #### Jetbrains Rider
 
-```admonish info title="Jetbrains Rider Directions" collapsible=true
+```admonish example "Jetbrains Rider Directions" 
 
 In Rider, you can "attach" the resources directory to the solution.
 

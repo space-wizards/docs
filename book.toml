@@ -12,6 +12,9 @@ description = "Tutorial & reference for all Space Wizards Federation projects, i
 assets_version = "3.0.1" # do not edit: managed by `mdbook-admonish install`
 command = "mdbook-admonish"
 
+[preprocessor.admonish.directive.builtin.example]
+collapsible = true
+
 [preprocessor.emojicodes]
 
 [preprocessor.template]

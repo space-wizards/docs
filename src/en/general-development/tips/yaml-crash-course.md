@@ -12,7 +12,7 @@ Space Station 14 only implements the core subset of YAML with some extensions to
 
 First of all, you can make a single line comment by putting a `#` somewhere, everything after that character on the same line is ignored.
 
-````admonish example title="Comment Example" collapsible=true
+````admonish example "Comment Example"
 ```yml
 foo: bar # Look a comment.
 ```
@@ -26,7 +26,7 @@ For our purposes, YAML has like 3 data types: strings, lists and dictionaries. I
 
 In YAML, strings do not need to have quotes around them by default. You just write like it was a normal text file.
 
-````admonish example title="String Example" collapsible=true
+````admonish example "String Example"
 ```yml
 hello
 ```
@@ -36,7 +36,7 @@ Well done you're a YAML master you defined a string with the contents `hello`.
 
 In a lot of cases you want to use special characters that YAML might get confused about, such as `:`. In that case you should wrap your string in quotes:
 
-````admonish example title="String Quotes Example" collapsible=true
+````admonish example "String Quotes Example"
 ```yml
 "hello: hi"
 ```
@@ -50,7 +50,7 @@ There's also a difference between double (`"`) and single (`'`) quotes in YAML. 
 
 Defining a list is done by putting a `-` at the start of a line in front of something else, such as a string.
 
-````admonish example title="List Example" collapsible=true
+````admonish example "List Example"
 ```yml
 - A
 - B
@@ -63,7 +63,7 @@ The values are just regular strings and you can pull whatever shenanigans you wa
 
 While heavily discouraged, you can also define YAML inline by surrounding the items in square bracket (`[` & `]`).
 
-````admonish example title="Inline List Example" collapsible=true
+````admonish example "Inline List Example"
  ```yml
     [A, B, C]
  ```
@@ -80,7 +80,7 @@ The last datatype in YAML is a dictionary, also known as a key/value mapping.
 
 If you want to describe the relation that `A` means `B`, then you'd put a semicolon between them to create the mapping.
 
-````admonish example title="Dictionary Example" collapsible=true
+````admonish example "Dictionary Example"
 ```yml
 A: B
 C: D
@@ -89,7 +89,7 @@ C: D
 
 The fact that regular text is a string also means that both the keys and values are strings. If desired, you can wrap them individually with quotes and they are functionally equivalent.
 
-````admonish example title="Quoted Dictionary List Example" collapsible=true
+````admonish example "Quoted Dictionary List Example"
 ```yml
 "A": "B"
 "C": "D"
@@ -114,7 +114,7 @@ YAML then uses its three building blocks to define more structure.
 
 To nest a dictionary inside of a list, you put a `-` before the first pair in the dictionary, and then indent each pair after that so that all of the keys are left-aligned.
 
-````admonish example title="Dictionary Nesting Example" collapsible=true
+````admonish example "Dictionary Nesting Example"
 ```yml
 # Like this, first key on the same line.
 - A: B
@@ -124,7 +124,7 @@ To nest a dictionary inside of a list, you put a `-` before the first pair in th
 
 Likewise, list can go inside dictionaries. In this case the list starts on the line after the key is defined.
 
-````admonish example title="List Nesting Example" collapsible=true
+````admonish example "List Nesting Example"
 ```yml
 A:
 - "X"
@@ -140,7 +140,7 @@ B:
 
 All of these together lets you create a complete prototype.
 
-````admonish example title="Complete Prototype Example" collapsible=true
+````admonish example "Complete Prototype Example"
 ```yml
 # First, all prototype files are a massive list of all of the prototypes under it.
 # This is one entry, which is itself a dictionary.
@@ -171,7 +171,7 @@ To make it easier to reference C# classes directly from YAML, there is a `!type`
 
 This will likely trip up any auto-formatter or alternative syntax linters.
 
-````admonish example title="!type Example" collapsible=true
+````admonish example "!type Example"
 
 ```yml
 - type: loadoutEffectGroup

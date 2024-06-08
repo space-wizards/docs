@@ -10,7 +10,7 @@ Each work group is responsible for maintaining corresponding design and pr guide
 
 | Group                                                           |  Members                                                                  |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| [Accessibility](../space-station-14/accessibility.md)           |  Bhijn & Myr(deathride58), AJCM                                           |
+| [Accessibility](../space-station-14/accessibility.md)           |  Bhijn & Myr(deathride58), mdAJCM                                           |
 | [Admin Tooling](../space-station-14/admin-tools.md)             |  Jezithyr, Chief-Engineer, Vasilis, Julian, Bhijn & Myr(deathride58)      |
 | [Art](../space-station-14/art.md)                               |  EmoGarbage, Flareguy                                                     |
 | [Character/Species](../space-station-14/characters-species.md)  |  Jezithyr, Lank, Vasilis, KeronSHB, Bhijn & Myr(deathride58), AJCM        |

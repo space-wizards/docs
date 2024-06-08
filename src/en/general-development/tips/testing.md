@@ -55,7 +55,7 @@ Now, to actually write an Integration Test, you first have to understand the dir
 
 Now to actually write an integration test, you follow the [Microsoft NUnit guide](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit#creating-the-first-test).
 
-````admonish example title="Example Integration Test" collapsible=true
+````admonish example "Example Integration Test"
 
 ```cs
 using Content.Client.Chemistry.UI;

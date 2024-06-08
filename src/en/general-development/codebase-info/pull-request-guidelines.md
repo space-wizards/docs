@@ -84,7 +84,7 @@ When writing a Changelog entry, please follow these guidelines:
 
 1. **Log entries should be complete, grammatically-correct sentences.** They should begin with a capital letter and end in a period.
 
-   ```admonish example title="Grammar Example" collapsible=true
+   ```admonish example "Grammar Example"
    **Do**:
    `Fixed reflected projectiles dealing stamina damage.`
 
@@ -100,7 +100,7 @@ When writing a Changelog entry, please follow these guidelines:
 
 2. **Log only changes with significant in-game impact.** This may include new features or changes or tweaks to existing features that affect balance. Minor changes to object appearances and descriptions typically do not affect how you would play the game.
 
-   ```admonish example title="Significant Changes Example" collapsible=true
+   ```admonish example "Significant Changes Example"
    **Do**:
    `The R&D server can be deconstructed. Be warned: this resets all unlocked technology, points, and the current discipline.`
 
@@ -119,7 +119,7 @@ When writing a Changelog entry, please follow these guidelines:
 
 3. **Use the present, active voice.** Subject Action Verb.
 
-   ```admonish example title="Present Voice Example" collapsible=true
+   ```admonish example "Present Voice Example"
    **Do**:
    `The roboticist can now build the HAMTR mech.`
 
@@ -135,7 +135,7 @@ When writing a Changelog entry, please follow these guidelines:
 
 4. **Be concise and avoid wordy, “IC” (In-Character) changes**. Players should be able to immediately understand the gist of the change by reading the changelog entry. If they need more information, they can always consult the guidebook.
 
-   ```admonish example title="Non-IC Examples" collapsible=true
+   ```admonish example "Non-IC Examples"
    **Do**:
    `The detective’s revolver now contains cap bullets instead of lethals.`
 
@@ -151,7 +151,7 @@ When writing a Changelog entry, please follow these guidelines:
 
 5. **Avoid technical jargon**.
 
-   ```admonish example title="No Technical Jargon Example" collapsible=true
+   ```admonish example "No Technical Jargon Example"
    **Do**:
    `Microwave now defaults to the displayed time.`
 

@@ -16,7 +16,7 @@ The file structure of the guides themselves should roughly correspond to the str
 
 The entries themselves are essentially plain text files with some additional tags that are used for styling. The only part of an entry that is required is the `<Document>` tag.
 
-````admonish example title="Minimal Entry Example" collapsible=true
+````admonish example "Minimal Entry Example"
 Thus, the simplest Guidebook Entry would be:
 
 ```xml
@@ -36,7 +36,7 @@ Thus, the simplest Guidebook Entry would be:
 6. **Encourage interacting with the guide**.
    - If your embedded entities support it, suggesting that the player examines the entity to learn more is a helpful way of communicating information and teaching players.
 
-````admonish example title="Completed Entry Example" collapsible=true
+````admonish example "Completed Entry Example"
 
 A completed Guidebook entry should look something like this:
 
@@ -123,7 +123,7 @@ Entries are prototypes found in the `/Resources/Prototypes/Guidebook/` directory
 
 Each entry consists of a single prototype with a few different variables you can set.
 
-````admonish example title="YAML Prototype Example" collapsible=true
+````admonish example "YAML Prototype Example"
 
 Here is the respective YAML prototype for the previous example:
 ```yaml
@@ -176,7 +176,7 @@ One such way that we can force it into the faces of people is through the `?` (q
 
 This is done via the `GuideHelp` component, which you can include in your entity to reference the guidebook.
 
-````admonish example title="GuideHelp Example" collapsible=true
+````admonish example "GuideHelp Example"
 
 An example with the `GuideHelp` component:
 
