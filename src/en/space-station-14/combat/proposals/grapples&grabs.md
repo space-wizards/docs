@@ -27,7 +27,7 @@ The proposed system will be familiar to anyone who's played SS13. I'll use the t
 
 ## Pull
 
-The initial result of ctrl+click on any draggable mob or entity will behave similarly to how it does currently. The target will move with the puller unless they walk out of the range or the puller is knocked down and/or disabled somehow. Attack damage will have a 50% chance to break a Pull. Initiating a Pull will have a very brief doafter bar of 0.5 seconds, largely to prevent instant combos. 
+The initial result of ctrl+click on any draggable mob or entity will behave similarly to how it does currently. The target will move with the puller unless they walk out of the range or the puller is knocked down and/or disabled somehow. Attack damage will have a 50% chance to break a Pull. Initiating a Pull will have a very brief doafter bar of 0.5 seconds, largely to prevent instant combos. Initiating a pull on an object will have a visible indicator everyone can see the same as attacking - possibly just a ghost-looking hand going from the pulled entity to the pulling entity - a similar indicator should occur for all grapple upgrades.
 
 As is the case currently, ctrl+rightclick while pulling will move the entity to the position clicked.
 
