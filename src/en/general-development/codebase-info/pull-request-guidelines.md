@@ -79,7 +79,7 @@ The Github PR template contains the following changelog that you can use to form
 
 By default, changes are credited to your Github username. If you would like your name to appear differently in-game, add a string on the same line as the `:cl:` with the name that you would like to use.
 
-Each entry is either an `add`, `remove`, `tweak`, or `fix`. There can be multiple entires in each category. These set the change log icon and do not show up in the change log text.
+Each entry is either an `add`, `remove`, `tweak`, or `fix`. There can be multiple entries in each category. These set the change log icon and do not show up in the change log text.
 
 Maintainers may, at their discretion, add, modify, or remove a change log entry that you suggest.
 
