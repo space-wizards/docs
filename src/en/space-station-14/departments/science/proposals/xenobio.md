@@ -7,7 +7,7 @@
 ## Overview
 
 **Xenobiology** is a """new""" Science subdepartment. 
-The subdepartment comes with no roles but instead a variety of machinery that allows scientists to harvest and splice genomes from various flora both on and off station.
+The subdepartment comes with no roles but instead a variety of machinery that allows scientists to harvest and fuse cell samples from various flora both on and off station.
 These splices can then be grown into living mutants, who must be contained, cared for, and grown until they can be dissected and studied in order to gain research.
 
 ## Background
@@ -20,51 +20,54 @@ Anomalies are the opposite: they require very little input from outside of scien
 
 This iteration of Xenobio serves to fill the gap between these two while also introducing some generally well liked thematic ideas--aliens and gene modification--in a way that integrates well with the current design of the science department.
 
-## Genome Collection
+## Cell Collection
 
-Collecting DNA samples from creatures across the station is the primary 'resource' of Xenobio.
+Collecting cell samples from creatures across the station is the primary 'resource' of Xenobio.
 This concept takes loose inspiration from /tg/'s cytology.
 Scientists are equipped with a set **biopsy punches**, which are single use tools that deal a small amount of damage to the mob they're used on and produce a **biopsy sample**.
 
-Biopsy samples can then be taken to science, where the **DNA Sequencer** can be used to collect the genome from the biopsy, automatically adding them into the **Genetic Database**.
+Biopsy samples can then be taken to science, where the **Cellular Sequencer** can be used to collect add the sample into the **Cellular Database**.
+Cell samples from the database can be printed at the cost of biomatter (scaling with rarity of the cell sample).
 
-Not all genomes are created equal, however. 
-For the purpose of Xenobio, the part of genomes that matter is their instability.
+Not all xells are created equal, however. 
+For the purpose of Xenobio, the part of cells that matter is their instability.
 This is essentially a scaling factor that affects the extent of mutations.
 
-Common genomes, like rats, dogs, or other on-station animals, have a low instability and will only have one or two mutations associated with the genome.
+Common creatures, like rats, dogs, or other on-station animals, have a low instability and will only have one or two mutations associated with the cells.
 More rare creatures, like space animals, have a higher instability which results in more mutations of more serious degrees.
-Even still, finding something exceptionally rare, like a blob or a xenomorph, can yield extremely unstable DNA that contains lots of mutations.
+Even still, finding something exceptionally rare, like a blob or a xenomorph, can yield extremely unstable cells that can cause lots of mutations.
 
-This basically means that while you can have a basic set of genes from just looting animals from the station, any more exotic combinations will require collaboration with cargo, botany, or other jobs in order to get access to rarer creatures or the closely-guarded head pets.
-Ian makes a fine DNA source.
+This basically means that while you can have a basic set of cell samples from just looting animals from the station, any more exotic combinations will require collaboration with cargo, botany, or other jobs in order to get access to rarer creatures or the closely-guarded head pets (Ian makes a fine DNA source).
 
-## DNA Splicing
-Once you've collected a reasonable stockpile of genomes in the Genetic Database, you can use the **Mutagen Synthesizer** to combine genomes and create a **mutation injector**.
-DNA splicing is a relatively simple procedure that mostly just involves selecting two distinct genomes and combining them. 
-
-This splice can then be further combined with more individual genomes or simply turned into a mutation injector.
-Splicing genomes carries a small plasma cost as well as a failure chance.
+## Cellular Fusion
+Once you've collected a reasonable stockpile of cell samples, you can use the **Cellular Fusion Chamber** to fuse cell samples.
+Cell fusion is a relatively simple procedure that mostly just involves selecting two distinct samples and fusing them.
+Fusing samples carries a small plasma cost as well as a failure chance.
 
 The chance to fail as well as the cost is dependent on a few factors:
-- The amount of times the genome has already been spliced
-- The instability of the genome (uses the higher value)
-- The difference in stability between two genomes
+- The amount of times the current sample has already been spliced
+- The instability of the cells used (uses the higher value)
+- The difference in stability between two samples
+
+This sample can then be further fused with more samples, creating a more and more complex and unstable sample.
+One completely finished, the sample is loaded into a **Mutagenic Cell Injector** (MCI) and is ready to be used.
 
 This overall encourages people to try a variety of simple combinations and not tacking on endless small modifications to create super beasts.
-It can still theoretically be done, but it's much more expensive and resource intensive.
+It can still theoretically be done, but it's much more resource intensive.
 
 ## Mutant Creation
-Once you have finished splicing a satisfactory genome, you can create a mutation injector at the mutagen synthesizer.
-This is how you're going to deliver your payload to your lucky test subject.
+Once you have acquired a loaded MCI, you're now ready to deliver your payload to your lucky test subject.
 
-By default, you'll be supplied with a crate of monkeys and some N2O. Knock a monkey out, inject it with the cocktail, and then stick it inside one of the various **Growing Vats** scattered inside of the xenobio lab.
-Once inside, you simply need to wait for the mutant to grow, watching from afar.
+By default, you'll be supplied with a box of monkey cubes and some N2O. 
+Knock a monkey out, inject it with the MCI, and then stick it inside one of the various **Growing Vats** scattered inside of the xenobio lab.
+Once inside, you simply need to wait for the mutant to grow.
 When finished growing, use a plunger to pull it out.
 
-If you pull it out prematurely, you may simply get an unmutated monkey or just a pile of slop. If you leave it in too long, the mutant may wake up and become angry, destroying the vat as it escapes.
+If you pull it out prematurely, you may simply get a regular monkey or (in an unfortunate case) just a pile of bloody slop and goo. 
+If you leave it in too long, the mutant may wake up and become angry, destroying the vat as it escapes.
 
 Growing Vats must be stocked with a decent level of nutriment and saline in order to facilitate the mutation process. 
+You'll need to monitor the levels and replenish it as they deplete.
 Failure to do so may lead to your mutant coming out dead.
 
 Whatever the case may be: you've now grown a mutant.
@@ -103,6 +106,8 @@ Then the corpse can be taken to the autopsy station and a post-mortem analysis c
 This is simply done with a large scanner machine while surgery isn't implemented. 
 After the machine finishes the post-mortem, research will be added to the server and the corpse can be disposed of.
 
-Research is awarded based on the instability of the creature as well as the number of splices in the genome.
-However, the research is only rewarded for a unique genome.
-Attempting to perform autopsies on a creature with the same genome multiple times will not result in additional points.
+Research is awarded based on the instability of the creature as well as the number of fusions in the original sample.
+However, sequences with minimal variation compared to previous ones will be penalized and give reduced research.
+
+The goal is to encourage experimentation with different base cell combinations, pushing players to find lots of different creatures to experiment.
+This lends a huge cooperation and discovery factor to the subdepartment.
