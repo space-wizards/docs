@@ -3,7 +3,7 @@ This doc is actively under development and is not fully complete. Things may cha
 ```
 
 # Design Principles
-Here we go into more detail about each of SS14's Core Desgin Pillars breaking them down further into design principles. Once again these are not hard requirements, but expect to recieve heavy scruitiny on your design if you aren't following these. 
+Here we go into more detail about each of SS14's Core Design Pillars breaking them down further into design principles. Once again these are not hard requirements, but expect to recieve heavy scruitiny on your design if you aren't following these. 
 
 ## Chaos
 

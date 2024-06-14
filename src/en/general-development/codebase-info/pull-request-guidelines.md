@@ -65,7 +65,7 @@ If you correctly followed the PR template, you should have a section to format h
 ```
 ````
 
-By default, all changelog changes are credited to your GitHub username. If you would like your name to appear as something else, add a string to the `:cl:` line with the name you wish to be used.
+By default, all changelog changes are credited to your GitHub username. If you would like your name to appear as something else, add a string to the `:cl:` line with the name you wish to be used. These set the change log icon and do not show up in the change log text.
 
 There are 4 types of entries, and you may have as many entries as you wish in your changelog:
 

@@ -87,6 +87,10 @@ Instruct the server to shutdown after the current round ends:
 
 ```[p]stopserver <name>```
 
+Tell watchdog to prepare to update a server:
+
+```[p]updateserver <name>```
+
 ### New round pinging & Ahelp relay
 While it's not specificly a bot feature, I thought I might as well throw it in here since there's no other documentation on it and it's related to Discord.
 1. Make a discord webhook in the channel you want the pings to arrive in. You can make one by clicking on the cogwheel in the channel > Integrations > Webhooks. Once done copy the URL
