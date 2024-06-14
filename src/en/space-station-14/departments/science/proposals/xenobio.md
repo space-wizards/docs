@@ -26,10 +26,10 @@ Collecting cell samples from creatures across the station is the primary 'resour
 This concept takes loose inspiration from /tg/'s cytology.
 Scientists are equipped with a set **biopsy punches**, which are single use tools that deal a small amount of damage to the mob they're used on and produce a **biopsy sample**.
 
-Biopsy samples can then be taken to science, where the **Cellular Sequencer** can be used to collect add the sample into the **Cellular Database**.
+Biopsy samples can then be taken to science, where the **Cellular Sequencer** can be used to add the sample into the **Cellular Database**.
 Cell samples from the database can be printed at the cost of biomatter (scaling with rarity of the cell sample).
 
-Not all xells are created equal, however. 
+Not all cells are created equal, however. 
 For the purpose of Xenobio, the part of cells that matter is their instability.
 This is essentially a scaling factor that affects the extent of mutations.
 
@@ -102,11 +102,11 @@ First, the scientists must figure out how to kill the mutant.
 Gassing the chamber with N2O is a smart bet but it may come down to lasers or even good ol' fashioned hand-to-hand combat.
 Whatever the case, it must be dead.
 
-Then the corpse can be taken to the autopsy station and a post-mortem analysis can be done.
-This is simply done with a large scanner machine while surgery isn't implemented. 
-After the machine finishes the post-mortem, research will be added to the server and the corpse can be disposed of.
+The corpse can then be taken to a surgery bay, either in medical or a local one in science, and an autopsy can be performed.
+Once the autopsy is complete, a biopsy tool can be used to take a sample.
+While this sample cannot be fused or replicated like normal samples, adding it into the database will reward you with research.  
 
-Research is awarded based on the instability of the creature as well as the number of fusions in the original sample.
+Research is awarded based on the growth of the creature as well as the number of fusions in the original sample.
 However, sequences with minimal variation compared to previous ones will be penalized and give reduced research.
 
 The goal is to encourage experimentation with different base cell combinations, pushing players to find lots of different creatures to experiment.
