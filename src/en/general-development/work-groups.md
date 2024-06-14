@@ -11,25 +11,25 @@ Each work group is responsible for maintaining corresponding design and pr guide
 
 | Group | Members |
 |-------|---------|
-| [Accessibility](../space-station-14/accessibility.md) | Bhijn & Myr(deathride58), AJCM |
-| [Admin Tooling](../space-station-14/admin-tools.md) |  Jezithyr, Chief-Engineer, Vasilis, Julian, Bhijn & Myr(deathride58) |
+| [Accessibility](../space-station-14/accessibility.md) | Bhijn & Myr(deathride58), AJCM, PJB |
+| [Admin Tooling](../space-station-14/admin-tools.md) |  Jezithyr, Chief-Engineer, Vasilis, Julian, Bhijn & Myr(deathride58), PJB |
 | [Art](../space-station-14/art.md) | EmoGarbage, Flareguy |
 | [Character/Species](../space-station-14/characters-species.md) | Jezithyr, Lank, Vasilis, KeronSHB, Bhijn & Myr(deathride58), AJCM |
 | [Combat](../space-station-14/combat.md) | Jezithyr, EmoGarbage, AJCM, KeronSHB, Bhijn & Myr(deathride58), mirrorcult |
-| [Player Interaction](../space-station-14/player-interaction.md) | mirrorcult |
-| [Mapping](../space-station-14/mapping.md) | Emisse  |
+| [Player Interaction](../space-station-14/player-interaction.md) | mirrorcult, PJB |
+| [Mapping](../space-station-14/mapping.md) | Emisse, PJB |
 | [Roleplay/Lore](../space-station-14/roleplay-lore.md) | Lank, KeronSHB, Vasilis, mirrorcult |
 | [Round Flow](../space-station-14/round-flow.md) | Jezithyr, EmoGarbage, Tayrthan, KeronSHB, Bhijn & Myr(deathride58), AJCM, mirrorcult |
-| [User Interface](../space-station-14/user-interface.md) | Jezithyr, EmoGarbage, AJCM, Julian, Bhijn & Myr(deathride58) |
+| [User Interface](../space-station-14/user-interface.md) | Jezithyr, EmoGarbage, AJCM, Julian, Bhijn & Myr(deathride58), PJB |
 
 ### Departments
 | Group | Members |
 |-------|---------|
-| [Atmos](../space-station-14/departments/atmos.md) | Jezithyr, KeronSHB, notafet(Partmedia), mirrorcult |
+| [Atmos](../space-station-14/departments/atmos.md) | Jezithyr, KeronSHB, notafet(Partmedia), mirrorcult, PJB |
 | [Cargo/Salvage](../space-station-14/departments/cargo-salvage.md) | mirrorcult | 
 | [Command](../space-station-14/departments/command.md) | KeronSHB, EmoGarbage, Vasilis, mirrorcult |
-| [Engineering](../space-station-14/departments/engineering.md) | Jezithyr, Julian, AJCM, KeronSHB, mirrorcult |
-| [Medical](../space-station-14/departments/medical.md) | Jezithyr, Vasilis, AJCM |
+| [Engineering](../space-station-14/departments/engineering.md) | Jezithyr, Julian, AJCM, KeronSHB, mirrorcult, PJB |
+| [Medical](../space-station-14/departments/medical.md) | Jezithyr, Vasilis, AJCM, PJB |
 | [Science](../space-station-14/departments/science.md) | Jezithyr, EmoGarbage, AJCM, Tayrtahn, mirrorcult |
 | [Security](../space-station-14/departments/security.md) | Lank(LankLTE), KeronSHB, mirrorcult |
 | [Service](../space-station-14/departments/service.md) | AJCM, Tayrtahn, notafet(Partmedia) |
