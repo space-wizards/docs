@@ -7,7 +7,7 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
 2. Download the latest version of the server from [our builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
 3. Extract that to a directory somewhere.
-4. Run `Robust.Server.exe` (or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
+4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
 5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
 6. When there is a new update. Go back to the second step and just overwrite the files to update your server.
 
@@ -85,9 +85,13 @@ By default, no admin privileges are set. A privileged administrator can give out
 ## Level 2: Server With Custom Code
 You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
 
+You first build the packaging tool using:
+
 `dotnet build Content.Packaging --configuration Release`
 
-`dotnet run --project Content.Packaging server --hybrid-acz`
+Then you can use Content.Packaging to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``
+
+`dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
 
 ```admonish info
 Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this
