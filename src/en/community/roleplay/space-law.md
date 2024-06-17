@@ -4,7 +4,7 @@ Goob Station operates under abbreviated space law. All crew, passengers, and vis
 
 Prisoners still have certain rights that must be upheld by law enforcement:
 
-* Prisoners must be granted adequate medical care. They should also be provided psychiatric and spiritual counselling if requested.
+* Prisoners must be granted adequate medical care. They should also be provided psychiatric and spiritual counselling if requested and avaliable.
 * Prisoners must be allowed access to communications equipment (Radios) so long as they are not abused.
 * Prisoners must be granted clothing, food, water, shelter and safety. If the brig is no longer safe, confinement must be established in another location.
 * Prisoners must be given access to legal counsel during an interrogation if requested and available.
@@ -36,7 +36,7 @@ Use common sense and humanity when issuing punishments. You should not always se
 **Stackable Crimes:** Crimes are to be considered 'stackable' in the sense that if you charge someone with two or more different crimes, you should combine the times you would give them for each crime.
 ```admonish warning "YOU MAY NOT EXCEED 10 MINUTES AS A BRIG TIME"
 Any total brig time that adds up to above 10 minutes will be shortened to meet this limit.
-If it goes above 20 minutes, you may perma the person.
+If the sentence exceeds or is exactly 20 minutes, you may perma the person.
 ```
 
 
@@ -59,7 +59,7 @@ If it goes above 20 minutes, you may perma the person.
 |:---:|:---:|:---:|:---:|
 | Animal Cruelty | To inflict unnecessary suffering or harm on a non-sapient being with malicious intent. | 3:00 | This doesn’t include legitimate and authorized animal testing and usually doesn't extend to vermin or creatures that could pose a threat to the station.|
 | Damage/Destruction of Property | To maliciously damage or deface public or private property or equipment | 4:00 | Step up from vandalism but a step down from mass destruction. |
-| Endangerment | To recklessly put yourself or others in danger, either through direct action, or failure to act. | 4:00 | Covers industrial accidents, industrial negligence, self-experimentation, or even medical malpractice. |
+| Endangerment | To recklessly or maliciously put yourself or others in danger, either through direct action, or failure to act. | 4:00 | Covers industrial accidents, industrial negligence, industrial sabotage, self-experimentation, or even medical malpractice. |
 | Failure to Comply | To resist reasonable orders given by an authority. This extends to warrants and authorized searches. | 2:00 | The order has to be reasonable and the person has to receive a good amount of warning before the arrest is issued. |
 | Possession of Restricted Gear | To hold or use non-lethal items or objects that are restricted or illegal. | 5:00 | This is mostly for syndicate contraband; EMAGs, syndicate gas masks, bloodred hardsuits, hijacked PDAs, or implants, however can sometimes extend to things the individual shouldn't possess like kevlar vests and security gear.|
 | Rioting | To take part in a large group of personnel creating an unlawful public disturbance. | 4:00 | Crimes like damage of property or battery are expected to be thrown on top of this charge. Leaders of a riot can be charged with all crimes that happen under their lead.|
