@@ -42,6 +42,8 @@ The proposal for changes to back bags is that they can no longer be opened while
 
 To state it up front, nothing in design can compare to a spacious, completely generic, effortlessy accessible inventory granted to every player. These three qualities together complicate any effort to design strong role identity or dynamic inventory-management decisions. Bags have far too much value centered in one place. 
 
+In many games, in my experience, the game stops you in some way when you go to access the complete gallery of your entire inventory. It might open a menu that spans the whole screen, it might restrict some of your controls, etc. For some helpful example, think about what a high-value manuever weapon-swapping in a Dark Souls game is, and how appropriately restricted it is by its equipment menu. We have no such obstacles (besides the hilariously large bluespace bag grids), and you remain full actionable, so effortlessly actionable that you could leave your center inventory open at all times. In a hand-based game, I think involving the hands in this proposed 'obstacle' is very appropriate.
+
 As a result of bags,
 
 - supporting utility inventories lack the utility value that they thematically boast, being only small boosts in specific directions to the players total capacity. Besides localizing a certain type of item in one place on a person, they do little to present interesting dynamics. Only after something doesnt fit in the bag does it go to players' other options, including seldom used storage like coats.
