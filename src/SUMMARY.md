@@ -190,7 +190,7 @@ Space Station 14
 		
 	- [Proposals]()
 		- [Stat Panels](en/space-station-14/user-interface/proposals/statpanels.md)
-- [Departments](en/space-station-14/core-design/departments.md)
+- [Departments](en/space-station-14/departments.md)
 	- [Atmos](en/space-station-14/departments/atmos.md)
 		- [PR Guidelines](en/space-station-14/departments/atmos/guidelines.md)
 
@@ -229,7 +229,8 @@ Space Station 14
 
 		- [Proposals]()
 			- [XenoArch Redux (3MOArch)](en/space-station-14/departments/science/proposals/xenoarch-redux.md)
-	
+			- [Xenobio](en/space-station-14/departments/science/proposals/xenobio.md)
+
 	- [Security](en/space-station-14/departments/security.md)
 		- [PR Guidelines](en/space-station-14/departments/security/guidelines.md)
 
@@ -241,6 +242,7 @@ Space Station 14
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
+                        - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
 
 General Proposals
 ================
@@ -366,6 +368,7 @@ Admin Meetings
 ==============
 
 ----------------------
+- [2024-05-18](en/admin-meetings/admin-meeting-2024-05-18.md)
 - [2024-04-27](en/admin-meetings/admin-meeting-2024-04-27.md)
 - [2024-03-30](en/admin-meetings/admin-meeting-2024-03-30.md)
 - [2024-03-16](en/admin-meetings/admin-meeting-2024-03-16.md)

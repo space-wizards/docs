@@ -10,7 +10,30 @@
 "Scripts":
 - 'scripts/**'
 
+# I have tried making this robust (tm) using wildcards so many times but github docs for the labeler SUUUUCK. If you got time to figure it out please do it I give up.
+# Welcome to the mega labeler.
 "Design":
-- changed-files:
-  - any-glob-to-any-file: '**/proposals/**'
-  - 'src/en/general-proposals/**'
+# General design
+- 'src/en/space-station-14/accessibility/proposals/**'
+- 'src/en/space-station-14/admin-tools/proposals/**'
+- 'src/en/space-station-14/art/proposals/**'
+- 'src/en/space-station-14/character-species/proposals/**'
+- 'src/en/space-station-14/combat/proposals/**'
+- 'src/en/space-station-14/mapping/proposals/**'
+- 'src/en/space-station-14/player-interaction/proposals/**'
+- 'src/en/space-station-14/roleplay-lore/proposals/**'
+- 'src/en/space-station-14/round-flow/proposals/**'
+- 'src/en/space-station-14/user-interface/proposals/**'
+
+# Department design
+- 'src/en/space-station-14/departments/atmos/proposals/**'
+- 'src/en/space-station-14/departments/cargo-salvage/proposals/**'
+- 'src/en/space-station-14/departments/command/proposals/**'
+- 'src/en/space-station-14/departments/engineering/proposals/**'
+- 'src/en/space-station-14/departments/medical/proposals/**'
+- 'src/en/space-station-14/departments/science/proposals/**'
+- 'src/en/space-station-14/departments/security/proposals/**'
+- 'src/en/space-station-14/departments/service/proposals/**'
+
+# General proposals
+- 'src/en/general-proposals/**'
