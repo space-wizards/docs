@@ -30,7 +30,7 @@ As an example of the second, engineer toolbets can fit pretty much every single 
 
 As an example of the third, a combat medic could wear a belt full of medical supplies and stims and a rig to store their weapon of choice. They are not as combat oriented as their allies, but they have both medical and combat powers.
 
-A primary factor of defining role identity right now is access to equipment, and in some cases it ends there. With a greater value in these loadout pieces, role identity can also be about the capacity for the equipment. There are no character skills in the game, so access and ease of handling represents a character's 'proficiency' with gear. To this effect, combat loadouts may possess exclusive access to belts and rigs that can carry their weapons.
+A primary factor of defining role identity right now is access to equipment, and in some cases it ends there. With a greater value in these loadout pieces, role identity can also be about the capacity for the equipment. There are no character skills in the game, so access and ease of handling represents a character's 'proficiency' with gear. For example, combat loadouts could possess exclusive access to belts and rigs that can carry their weapons.
 
 It comes up sometimes in discussion, what separates a job from another job besides the items they use. For some small example I can think of, sometimes when people talk about more-open expeditions and the concept of gathering a varied team of crew members to fill different roles, it's suggested "why wouldnt the salvagers (the current monopolizers on expeditions) just take the equipment and do the role themselves?" In this case it would be because their task inventory is oriented towards a different set of goals.
 
@@ -40,19 +40,27 @@ Because of the general opinion that carrying weapons is a very powerful ability,
 
 ## Back Bag Changes
 
-The proposal for changes to back bags is that they can no longer be opened while worn. This excludes the satchel, which now has a small capacity fitting of its form and can be opened while worn.
-
 To state it up front, nothing in design can compare to a spacious, completely generic, effortlessy accessible inventory granted to every player. These three qualities together complicate any effort to design strong role identity or dynamic inventory-management decisions. Bags have far too much value centered in one place. 
-
-In many games, in my experience, the game stops you in some way when you go to access the complete gallery of your entire inventory. It might open a menu that spans the whole screen, it might restrict some of your controls, etc. For some helpful example, think about what a high-value manuever weapon-swapping in a Dark Souls game is, and how appropriately restricted it is by its equipment menu. We have no such obstacles (besides the hilariously large bluespace bag grids), and you remain full actionable, so effortlessly actionable that you could leave your center inventory open at all times. In a hand-based game, I think involving the hands in this proposed 'obstacle' is very appropriate.
 
 As a result of bags,
 
-- supporting utility inventories lack the utility value that they thematically boast, being only small boosts in specific directions to the players total capacity. Besides localizing a certain type of item in one place on a person, they do little to present interesting dynamics. Only after something doesnt fit in the bag does it go to players' other options, including seldom used storage like coats.
+- supporting utility inventories lack the utility value that they thematically boast, being only small boosts in specific directions to the player's total capacity. Besides localizing a certain type of item in one place on a person, they do little to present interesting dynamics. Only after something doesnt fit in the bag does it go to players' other options, including seldom used storage like coats.
+
+- players cannot gain informed expectations about interacting with others. Bags are spacious and universal, as stated before. Belts are specialized and declare a role, an intention. Using an example of a security search, currently a suspect being stopped has perfect access to anything in their backpack, which might include a firearm. It is a consistent interest in SS14 design to mitigate the demand for high reflexes in a game where many other players can act on you at any time. Not being able to understand what a character is capable of is a clarity issue and can create a paranoia in common character interactions.
 
 - decisions that are intended to be compelling are difficult to justify, like giving up what is nearly your sole inventory to carry a weapon on your back. Your backpack is far too spacious, universal, and accessible, holding your personal survival equipment at round start, to match most weapons' value, which in some cases will require additional carried resources like ammo.
 
-With this change to bags, the intended experience is that players will have their most frequently accessed items in their "front inventory", like a form of cache. Likewise it's also the intention that in some jobs, additional resources from their "back inventory" are brought forward into their cache between tasks. The intended loop in this regard is that the front inventory defines a character's abilities per task, their back inventory defines a character's total capacity to complete tasks, and so players enter a rythm of completing a task, bringing resources forward a number of times, and then returning to their department to totally refresh.
+There are two alternative proposals for changes to back spaces:
+
+The first proposal is that back bags can no longer be opened while worn, instead being opened in-hand or on the ground. This excludes the satchel, which now has a small capacity fitting of its form and can be opened while worn.
+
+In many games, the game stops you in some way when you go to access the complete gallery of your entire inventory. It might open a menu that spans the whole screen, it might restrict some of your controls, etc. For some helpful example, think about what a high-value manuever weapon-swapping in a Dark Souls game is, and how appropriately restricted it is by its equipment menu. We have no such obstacles (besides the hilariously large bluespace bag grids), and you remain full actionable, so effortlessly actionable that you could leave your center inventory open at all times. In a hand-based game, I think involving the hands in this proposed 'obstacle' is appropriate.
+
+The second proposal is that back bags have a do-after for transferring items in and out, again specifically while worn. This also excludes the satchel, which would have no do-after while worn. In this proposal's case, the inventory can infact be opened and viewed while worn.
+
+This is a friendlier version of the first proposal. It preserves its intention and loosens its limitations. For one, it retains clarity, since a player can still see into their bag and remind themselves of its contents like they currently can. It also retains ease of controls, not having to remove the bag and move between hands to open it and interface with the contents, but still being able to.
+
+With either of these changes to bags, the intended experience is that players will have their most frequently accessed and important items in their "front inventory", like a form of cache. Likewise it's also the intention that in some jobs, additional resources from their "back inventory" are brought forward into their cache between tasks. The intended loop in this regard is that the front inventory defines a character's abilities per task, their back inventory defines a character's total capacity to complete tasks, and so players enter a rythm of completing a task, bringing resources forward a number of times, and then returning to their department to totally refresh.
 
 For a constuction loadout, they may bring additional materials forward into their cache after a repair. After a certain set of repairs, they would go to Engineering or Cargo to restock.
 
@@ -60,14 +68,13 @@ For a combat loadout, they may bring additional ammo and gear forward into their
 
 It is also intended that the changes to bags be as low friction as possible while being enough to set this clear distinction between a task-oriented accessible inventory and a spacious universal inventory. Holding a bag in a hand or opening it on the ground is not a massive hurdle, and if players wish to bypass it, they have a dedicated inventory option with the satchel. Many players operate in a specific spot for an extended period, it might even become natural that they place their bag down once they get to their workstation, like most would in daily work. 
 
-If they are instead a job that moves about the station alot, handheld storage options like toolboxes might even get more use, since the experience would be similar to backpacks that you'd already need to put into your hand or place down at your site of work. In this
-case, they could tote things and place it down without making their personal belongings 'vulnerable'.
+If they are instead a job that moves about the station alot, handheld storage options like toolboxes might even get more use, since they can easily be opened in your hand or placed down at your site of work. In this case, you could tote around a small work station and place it down without needing to mix those work tools with your personal belongings, and not having to make your belongings vulnerable when you place your storage down. The difference in ease of access highlights and motivates this distinction.
 
 ## Supporting Proposals
 
 - Most longarms can no longer fit in back bags at all.
-- Most sidearms can no longer fit in pocket slots. (Filed-down pocket-pistols like the cobra would.)
-- Remove weapons' ability to be worn like clothes and grant that capacity to combat oriented belts and rigs. (If compensation for loss of crew power is needed, civilian options for slings and holster, with bare minimum capacity, can be added.)
+- Most sidearms can no longer fit in pocket slots. (Filed-down pocket-pistols like the cobra could.)
+- Remove weapons' ability to be worn like clothes and grant that capacity to combat oriented belts and rigs. (If compensation for loss of crew power is needed, civilian options for slings and holsters, with bare minimum capacity, can be added.)
 - Restrict suit storage to space suits and to storing oxygen.
 
 Currently if all slots possible were used to carry weapons, assuming someone had any kind of armor at all, a person could wear 2 long arms and 3 sidearms. Many games follow a rule of "one big one small", and standard weapon wearing should resemble this.
