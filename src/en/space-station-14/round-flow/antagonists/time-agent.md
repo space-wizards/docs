@@ -65,17 +65,17 @@ Objectives that can be optional also generate spontaneously similarly to *Goonst
 
 ## Expected Gameplay
 The agent, at the start, is expected to act like a Traitor: blend in with the crew, avoid inventory searches and collect items that might be helpful later on. Unlike a Traitor, though, the agent isn't able to spawn in contraband to use for their goals - they must instead imagine possible circumstances and prepare themselves for them via **Assist the Future**.
-```admonish example "Examples are as follows:"
-* Using handcuffs on the featureless target during **Assist the Future**, and then using **Summon Past Assistance** at a later date to cuff the targeted, freshly restrained individual while the present self of the agent is aggressive-grabbing them.
-* Using a medipen on the featureless target during **Assist the Future**, and then using **Summon Past Assistance** at a later date to save a targeted, bleeding out individual in a room the agent can't access on their own.
-* Using an explosive before dropping it on the floor during **Assist the Future**, and then using **Summon Past Assistance** at a later date to have the explosive be dropped in some important location.
-```
+``````admonish example "Examples:"
+Using handcuffs on the featureless target during **Assist the Future**, and then using **Summon Past Assistance** at a later date to cuff the targeted, freshly restrained individual while the present self of the agent is aggressive-grabbing them.
+Using a medipen on the featureless target during **Assist the Future**, and then using **Summon Past Assistance** at a later date to save a targeted, bleeding out individual in a room the agent can't access on their own.
+Using an explosive before dropping it on the floor during **Assist the Future**, and then using **Summon Past Assistance** at a later date to have the explosive be dropped in some important location.
+``````
 Of course, there might be times when the agent gets into some trouble - a room they were in was bombed, a Security Officer succeeded in detaining them, or there's just a heavy need for a distraction - and they were caught with their proverbial pants down, with no instances of the agent's past self applicable for the job. This usually means that they must resort to getting help from their future self via **Summon Future Assistance**.
-```admonish example "Examples are as follows:"
-* Seeing a wall partially breached by a meteor in an area the agent cannot reach, and then using **Summon Future Assistance** to have the benevolent future iteration of the agent - clad in proper protective gear - repair the wall and thus halt the loss of air.
-* Seeing a Clown running away from a pissed-off crowd, and then using **Summon Future Assistance** to have a miscellanously-inclined future iteration of the agent stun the Clown, preventing their escape.
-* Getting caught off-guard by a Space Ninja and placed into crit, and then using **Summon Future Assistance** to have an aggressive future iteration of the agent attack the enemy to distract them while also using **Summon Future Assistance** again - this time benevolently - to have the second future iteration of the agent stabilize and heal the agent's present self.
-```
+``````admonish example "Examples:"
+Seeing a wall partially breached by a meteor in an area the agent cannot reach, and then using **Summon Future Assistance** to have the benevolent future iteration of the agent - clad in proper protective gear - repair the wall and thus halt the loss of air.
+Seeing a Clown running away from a pissed-off crowd, and then using **Summon Future Assistance** to have a miscellanously-inclined future iteration of the agent stun the Clown, preventing their escape.
+Getting caught off-guard by a Space Ninja and placed into crit, and then using **Summon Future Assistance** to have an aggressive future iteration of the agent attack the enemy to distract them while also using **Summon Future Assistance** again - this time benevolently - to have the second future iteration of the agent stabilize and heal the agent's present self.
+``````
 The usage of **Summon Future Assistance**, if the agent resorts to it, prompts a race against time to close the loop created by the ability. If the agent collects the necessary items - listed by using **Temporal Loop Memories** - and successfully closes the loop by using **Assist the Past** while performing the necessary string of actions listed by, yet again, using **Temporal Loop Memories**, they remain safe from being doomed. If they take too long, though, or perform the required string of actions within **Assist the Past** incorrectly... their minutes are numbered. Hubris had signed the agent's death warrant.
 
 Either due to having plenty of possibilities left to spare, or deciding to sacrifice themselves in a blaze of (delayed) glory, the agent might consider adjusting their **United Synchronization** ability or creating a **Rewind Bubble**, depending on what they're dealing with. Both options are very risky, but risk and drawbacks are embedded in this role's DNA - it's up to the agent in question to choose to stray away from a safer path.
