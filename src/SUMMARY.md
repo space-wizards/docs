@@ -177,13 +177,13 @@ Space Station 14
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
-		- [Time Agent](en/space-station-14/round-flow/antagonists/time-agent.md)
 
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
 		- [Game Director](en/space-station-14/round-flow/proposals/game-director.md)
 		- [Pizza Delivery Critter](en/space-station-14/round-flow/proposals/pizza-delivery-critter.md)
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
+		- [Time Agent](en/space-station-14/round-flow/proposals/time-agent.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
