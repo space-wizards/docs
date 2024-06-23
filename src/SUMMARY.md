@@ -200,7 +200,8 @@ Space Station 14
 	- [Cargo/Salvage](en/space-station-14/departments/cargo-salvage.md)
 		- [PR Guidelines](en/space-station-14/departments/cargo-salvage/guidelines.md)
 	
-		- [Proposals]()
+          - [Proposals]()
+            - [Salvage Proposal](en/space-station-14/departments/cargo-salvage/proposals/salvage-proposal.md)
 
 	- [Command](en/space-station-14/departments/command.md)
 		- [PR Guidelines](en/space-station-14/departments/command/guidelines.md)
@@ -229,7 +230,8 @@ Space Station 14
 
 		- [Proposals]()
 			- [XenoArch Redux (3MOArch)](en/space-station-14/departments/science/proposals/xenoarch-redux.md)
-	
+			- [Xenobio](en/space-station-14/departments/science/proposals/xenobio.md)
+
 	- [Security](en/space-station-14/departments/security.md)
 		- [PR Guidelines](en/space-station-14/departments/security/guidelines.md)
 
