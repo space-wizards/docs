@@ -183,6 +183,7 @@ Space Station 14
 		- [Game Director](en/space-station-14/round-flow/proposals/game-director.md)
 		- [Pizza Delivery Critter](en/space-station-14/round-flow/proposals/pizza-delivery-critter.md)
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
+		- [Time Agent](en/space-station-14/round-flow/proposals/time-agent.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
