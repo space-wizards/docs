@@ -243,7 +243,9 @@ Space Station 14
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
-                        - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
+   		- [Chaplain Diversification](en/space-station-14/departments/service/proposals/chaplain-diversification.md) 
+      - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
+
 
 General Proposals
 ================
