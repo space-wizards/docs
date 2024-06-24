@@ -30,7 +30,7 @@ Instead of whacking someone with the Quran, chaplains will instead recite from t
 
 ## Implementation
 
-As previously stated, every instance of the bible to-date will be rplaced by the jacketed religious book; the first time a chaplain interacts with this book, they can pick whether they want to select a recitaional skin (with an AoE of healing *on use*) or a non-recitational skin (see: current bibles).
+As previously stated, every instance of the bible to-date will be replaced by the jacketed religious book; the first time a chaplain interacts with this book, they can pick whether they want to select a recitaional skin (with an AoE of healing *on use*) or a non-recitational skin (see: current bibles).
 
 After selecting their mechanic of choice via the first radial menu, they can choose skins as they prefer (I'd still prefer the Quran be locked to recitational skins only, but not so with bibles and non-recitational skins!), also via nested radial menu.
 
