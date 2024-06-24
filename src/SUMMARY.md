@@ -38,6 +38,7 @@ General Development
   - [Feature Proposal Template](en/templates/proposal.md)
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
 - [Work Groups](en/general-development/work-groups.md)
+- [Contributing Translations](en/general-development/contributing-translations.md)
 
 SS14 By Example
 ===============
@@ -93,7 +94,7 @@ Robust Toolbox
 - [MIDI](en/robust-toolbox/midi.md)
 - [Automatic Client Zip (ACZ)](en/robust-toolbox/acz.md)
 - [Asset Packaging](en/robust-toolbox/asset-packaging.md)
-- [Publishing a new version](en/robust-toolbox/publishing-robusttoolbox.md)
+- [Publishing a new Robust Toolbox Version](en/robust-toolbox/publishing-robusttoolbox.md)
 
 Space Station 14
 ================
@@ -158,10 +159,12 @@ Space Station 14
 - [Player Interaction](en/space-station-14/player-interaction.md)
 	- [PR Guidelines](en/space-station-14/player-interaction/guidelines.md)
 	
-	- [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
-	- [Grid Inventory](en/space-station-14/player-interaction/grid-inventory.md)
+	- [Cartridge loaders](en/space-station-14/player-interaction/cartridge-loaders.md)
 
 	- [Proposals]()
+	  - [PAI Expansion Slots](en/space-station-14/player-interaction/proposals/pai-expansion-slots.md)
+	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
+	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md) 
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
@@ -187,7 +190,7 @@ Space Station 14
 		
 	- [Proposals]()
 		- [Stat Panels](en/space-station-14/user-interface/proposals/statpanels.md)
-- [Departments](en/space-station-14/core-design/departments.md)
+- [Departments](en/space-station-14/departments.md)
 	- [Atmos](en/space-station-14/departments/atmos.md)
 		- [PR Guidelines](en/space-station-14/departments/atmos/guidelines.md)
 
@@ -197,7 +200,8 @@ Space Station 14
 	- [Cargo/Salvage](en/space-station-14/departments/cargo-salvage.md)
 		- [PR Guidelines](en/space-station-14/departments/cargo-salvage/guidelines.md)
 	
-		- [Proposals]()
+          - [Proposals]()
+            - [Salvage Proposal](en/space-station-14/departments/cargo-salvage/proposals/salvage-proposal.md)
 
 	- [Command](en/space-station-14/departments/command.md)
 		- [PR Guidelines](en/space-station-14/departments/command/guidelines.md)
@@ -226,18 +230,22 @@ Space Station 14
 
 		- [Proposals]()
 			- [XenoArch Redux (3MOArch)](en/space-station-14/departments/science/proposals/xenoarch-redux.md)
-	
+			- [Xenobio](en/space-station-14/departments/science/proposals/xenobio.md)
+
 	- [Security](en/space-station-14/departments/security.md)
 		- [PR Guidelines](en/space-station-14/departments/security/guidelines.md)
 
 		- [Proposals]()
 			- [GenPop Prisoners](en/space-station-14/departments/security/proposals/genpop-prisoners.md)
+                        - [Reduced Metagaming Mechanics](en/space-station-14/departments/security/proposals/reduced-metagaming.md)
 	- [Service](en/space-station-14/departments/service.md)
 		- [PR Guidelines](en/space-station-14/departments/service/guidelines.md)
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
-   			- [Chaplain Diversification](en/space-station-14/departments/service/proposals/chaplain-diversification.md) 
+   		- [Chaplain Diversification](en/space-station-14/departments/service/proposals/chaplain-diversification.md) 
+      - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
+
 
 General Proposals
 ================
@@ -293,6 +301,7 @@ Community
 - [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)
 - [Space Wizards Maintainer List](en/community/space-wizards-maintainer-list.md)
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
+- [Project Manager](en/community/projectmanager.md)
 - [Maintainer](en/community/maintainer.md)
   - [Maintainer Policy](en/community/maintainer/wizards-den-maintainer-policy.md)
   - [Review Policy](en/community/maintainer/wizards-den-review-policy.md)
@@ -362,7 +371,9 @@ Admin Meetings
 ==============
 
 ----------------------
-- [2024-02-03](en/admin-meetings/admin-meeting-2024-02-03.md)
-- [2024-02-17](en/admin-meetings/admin-meeting-2024-02-17.md)
-- [2024-03-16](en/admin-meetings/admin-meeting-2024-03-16.md)
+- [2024-05-18](en/admin-meetings/admin-meeting-2024-05-18.md)
+- [2024-04-27](en/admin-meetings/admin-meeting-2024-04-27.md)
 - [2024-03-30](en/admin-meetings/admin-meeting-2024-03-30.md)
+- [2024-03-16](en/admin-meetings/admin-meeting-2024-03-16.md)
+- [2024-02-17](en/admin-meetings/admin-meeting-2024-02-17.md)
+- [2024-02-03](en/admin-meetings/admin-meeting-2024-02-03.md)
