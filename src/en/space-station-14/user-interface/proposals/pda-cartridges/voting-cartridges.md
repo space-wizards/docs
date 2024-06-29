@@ -29,7 +29,7 @@ That is all the votes do. They do not mechanically force anything to happen. The
 The democracy+ cartridge is much like the democracy cartridge. It differs in that it has the ability to create new referenda.
 Though a cartridge may exist for adding this software to your PDA, it should be unavailable by normal means. Instead, democracy+ is loaded by default on all Head PDAs. This adds some more interesting reasons to steal a PDA, and also adds some extra agency to command members.
 There should be a character limit on the text of the referendum, intended to force them to be short and to the point.
-When a referndum is made, it should include the name on the ID loaded in the PDA. It does not however require any particular access to do so. It should fail to create a referendum without an ID and alter the player to this.
+When a referndum is made, it should include the name on the ID loaded in the PDA. It does not however require any particular access to do so. It should fail to create a referendum without an ID and alert the player to this.
 There should be a hefty per-PDA or cartridge cooldown on creating referendums, but no such restriction on voting on open referendums in the case more than one is active at the same time. This is to prevent spamming the feature and diluting its utility.
 Once referendums are created they should not be able to be changed or canceled.
 
@@ -41,7 +41,7 @@ For every command member on the station, whether round start or late join, a ref
 The votes are "anonymous" in that each of the 7 command positions share their vote with all PDAs of the same command type. I.E. if there are 3 QM PDAs for any reason, they all share the same "cargo department" vote.
 If there are more than one PDA of a given command, then if ANY of that PDA type have voted on a referendum to fire a member of command, then the associated department vote is cast.
 These referendums differ from others in that the votes may be un-cast at any time BEFORE a command member is fired. This allows politicing and negotiation.
-To facilitate the firing, should it be necessary, each command member starts with an unremovable implant that is set to explode them into crit, fry their ID or other access items on their person, and remove any Internal Affairs or Democracy+ cartridges from any PDA on their person.
+To facilitate the firing, should it be necessary, each command member starts with an unremovable implant that is set to explode them into crit, fry their ID or other access items on their person, and remove any Internal Affairs or Democracy+ cartridges from any PDA on their person. (An alternative may be to require the relevant access on an inserted id for the Internal Affairs cartridge to allow voting.)
 fried ID cards should be visbly charred, still count for steal objectives, but otherwise be as functional as a passenger IDs with only maintenance access.
 If a command member is fired, it should automatically vote to fire all other command members UNLESS there is an existing PDA of the same type as the fired command member which is still capable of voting of Internal Affairs referenda.
 The HOP should be granted a single extra implanter, help under as secure a guard as possible, for the purpose of promoting another crew member to a command role. They do not however get any more PDAs or PDA cartridges capable of voting on Internal Affairs.
