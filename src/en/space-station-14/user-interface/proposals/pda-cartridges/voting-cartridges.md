@@ -42,14 +42,15 @@ The votes are "anonymous" in that each of the 7 command positions share their vo
 If there are more than one PDA of a given command, then if ANY of that PDA type have voted on a referendum to fire a member of command, then the associated department vote is cast.
 These referendums differ from others in that the votes may be un-cast at any time BEFORE a command member is fired. This allows politicing and negotiation.
 To facilitate the firing, should it be necessary, each command member starts with an unremovable implant that is set to explode them into crit, fry their ID or other access items on their person, and remove any Internal Affairs or Democracy+ cartridges from any PDA on their person. (An alternative may be to require the relevant access on an inserted id for the Internal Affairs cartridge to allow voting.)
-fried ID cards should be visbly charred, still count for steal objectives, but otherwise be as functional as a passenger IDs with only maintenance access.
-If a command member is fired, it should automatically vote to fire all other command members UNLESS there is an existing PDA of the same type as the fired command member which is still capable of voting of Internal Affairs referenda.
+fried ID cards should be visbly charred, still count for steal objectives, but otherwise be as functional as a passenger ID with only maintenance access, as well as changing their job icon.
+If a command member is fired, it should automatically vote to fire all other command members UNLESS there is an existing PDA of the same type as the fired command member which is still capable of voting on Internal Affairs referenda.
 The HOP should be granted a single extra implanter, help under as secure a guard as possible, for the purpose of promoting another crew member to a command role. They do not however get any more PDAs or PDA cartridges capable of voting on Internal Affairs.
 Different PDA votes should be displayed on the referenda as the associated color of the department from which the vote came. Red for sec, yellow for eng, light blue for medical, etc.
 The HoP and Captain version of the software should have extra weight to their votes. The HoP can cast a double-vote, and the captain can cast a tripple-vote.
 Ignoring the possibility of undercover-agents or admin PDAs voting, this would give us 5 normal department votes, 2 service (or command) votes, and 3 Command votes for a total of a possible 10 votes to fire any given player.
 Should any player recieve 5 or more votes the vote should succeed. This means that in a normal round the Captain and HoP could choose to fire a command member, or the five department heads could choose to fire the captain, or any number of such combinations.
 
+For balance reasons, it might be fun to make this a function of the MindShield implant, but that should come with more deliberation. Ther functionality should be possibly however if desired.
 
 ## The rest?
 
