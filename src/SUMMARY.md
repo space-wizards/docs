@@ -187,8 +187,6 @@ Space Station 14
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
-	- [pda-cartridges]
-	    - [voting-cartridges](en/space-station-14/user-interface/proposals/pda-cartridges/voting-cartridges.md)
 		
 	- [Proposals]()
 		- [Stat Panels](en/space-station-14/user-interface/proposals/statpanels.md)
