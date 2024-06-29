@@ -50,7 +50,7 @@ The HoP and Captain version of the software should have extra weight to their vo
 Ignoring the possibility of undercover-agents or admin PDAs voting, this would give us 5 normal department votes, 2 service (or command) votes, and 3 Command votes for a total of a possible 10 votes to fire any given player.
 Should any player recieve 5 or more votes the vote should succeed. This means that in a normal round the Captain and HoP could choose to fire a command member, or the five department heads could choose to fire the captain, or any number of such combinations.
 
-For balance reasons, it might be fun to make this a function of the MindShield implant, but that should come with more deliberation. The functionality should be possibly however if desired.
+For balance reasons, it might be fun to make this a function of the MindShield implant, but that should come with more deliberation. The functionality should be possible however if desired.
 
 ## The rest?
 
