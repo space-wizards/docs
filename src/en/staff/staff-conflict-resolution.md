@@ -7,6 +7,9 @@ If a conversation makes one or more Staff members uncomfortable to the point tha
 - DM one or multiple Community Moderators and Project Managers, linking them to the ongoing fight and saying that it needs conflict resolution.
 - If you are involved in the fight or argument, immediately disconnect, do not engage further, and do not even open or read the channel.
   - Do not go to another channel on the SS14 discord to vent your frustration.
+  - You only need to remain disengaged for the duration of the conflict. Once it is resolved, you may engage again.
+  - If an important discussion was being had before the conflict that someone involved in the conflict wanted to have input on, the conflict resolvers and anyone still involved in the conversation afterwards must make sure to include them back into the conversation when things calm down.
+    - This is to avoid people feeling left out or feeling the need to not disengage in order to not miss an important conversation.
 - **It is completely prohibited to time out, kick or ban any Staff member as a form of initial conflict resolution. See below for the only cases where this may be done.**
 - Warn everyone involved that they need to immediately disengage and close the channel.
 - If after **three warnings** someone continues to do so, **DM then with another warning**.
