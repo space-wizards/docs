@@ -1,9 +1,18 @@
 ﻿# Maintainer Policy
 ## Reviews and merging PRs
-Before merging any PR that is not a simple bug-fix you **MUST**:
+This does not apply to rule change PRs from the Head Game Admins.
+
+**Before merging any PR that is NOT:**
+- A simple bug-fix.
+- A small to medium refactor.
+- **If in doubt, continue with the procedure and ping anyways.**
+
+You **MUST**:
 - Link the PR in [#maint-review-pings](https://discord.com/channels/310555209753690112/1258585578618884167) AND ping Maintainers and any relevant Design Work Groups for review.
 If this PR may affect game admins too (rules, rule clarifications, round flow, etc) **all Head Game Admins must be pinged as well.**
   - **If you are not sure, ping Head Game Admins anyways.**
+  - It is up to anyone organizing work groups to create a new one if relevant.
+    - **If a new work group is created due to this, a further 24 hours are added to this process.**
 - The PR must have at least one **Maintainer** approving it, and at least 24 hours must have passed since you pinged Maintainers, the relevant Design Groups, and Game Admins if applicable in that channel, with no one dissenting to merging said PR.
 - Once those 24 hours are up:
   - If no one dissents, the PR can be merged.
