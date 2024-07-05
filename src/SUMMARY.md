@@ -205,6 +205,14 @@ Engine Development
 - [Testing against launcher](en/engine-development/testing-against-launcher.md)
 - [Updating CEF](en/engine-development/updating-cef.md)
 
+Staff
+==============
+
+----------------------
+
+- [Maintainer Policy](en/staff/maintainer-policy.md)
+- [Staff Conflict Resolution](en/staff/staff-conflict-resolution.md)
+
 Maintainer Meetings
 ==============
 
