@@ -7,7 +7,7 @@ If a conversation makes one or more Staff members uncomfortable to the point tha
 - DM one or multiple Community Moderators and Project Managers, linking them to the ongoing fight and saying that it needs conflict resolution.
 - If you are involved in the fight or argument, immediately disconnect, do not engage further, and do not even open or read the channel.
   - Do not go to another channel on the SS14 discord to vent your frustration.
-- **It is completely prohibited to time out, kick or ban any Staff member.**
+- **It is completely prohibited to time out, kick or ban any Staff member as a form of initial conflict resolution. See below for the only cases where this may be done.**
 - Warn everyone involved that they need to immediately disengage and close the channel.
 - If after **three warnings** someone continues to do so, **DM then with another warning**.
 - **If they further refuse to disengage and two Project Managers (who are not personally involved in the fight) agree to do so**, only then may a Project Manager or Community Moderator time them out for only ten (10) minutes while the Project Managers come to a collective decision on how to resolve the situation.
