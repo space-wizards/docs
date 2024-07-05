@@ -19,6 +19,7 @@ If this PR may affect game admins too (rules, rule clarifications, round flow, e
   - If there is dissent, the PR author must be notified on GitHub of people's requests for changes and/or arguments against it. You do not need to put a ton of effort in summarizing people's points, simply list opinions as "Maintainer opinion" and "Game Admin opinion".
     - **These opinions must be communicated in a neutral manner, even if you disagree with them.**
   - This is the case even if only one person dissents.
+  - Once addressed by the PR author, the process may be started again.
   - If a deadlock is reached where one or more people's dissents cannot be resolved, **a 24-hour-long poll** must be made in the channel with **another Maintainer + Work Groups + Head Game Admin (if relevant) ping**.
   - At least **75% or more of voters** must agree to it being merged before it does.
     - There is no veto power from any role in the project.
