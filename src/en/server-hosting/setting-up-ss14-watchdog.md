@@ -31,7 +31,7 @@ You need to have:
 
 Both of these can be found at the [.NET 8 download page](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
-On Linux/MacOS use your favourite package manager (apt, dnf, pacman, brew etc) according to [Microsoft's installation instructions](https://learn.microsoft.com/en-us/dotnet/core/install/linux).
+On Linux use your favourite package manager (apt, dnf, pacman, brew etc) according to [Microsoft's installation instructions](https://learn.microsoft.com/en-us/dotnet/core/install/linux).
 
 ### 2. Build
 
@@ -48,12 +48,12 @@ cd SS14.Watchdog
 dotnet publish -c Release -r linux-x64 --no-self-contained
 ```
 
-The contents of `SS14.Watchdog/bin/Release/net8.0/linux-x64/publish` can then be copied to some other place.
+The contents of `SS14.Watchdog/bin/Release/net8.0/linux-x64/publish` can then be copied to some other place. You will continue your work here.
 
 
 ### 3. Run
 
-Assuming you've followed the structure laid out above, you simply need to have a terminal at the "main directory", and run `bin/SS14.Watchdog`.
+Assuming you've followed the structure laid out above, you simply need to have a terminal in the folder you copied above, and run the `SS14.Watchdog` executable.
 
 ## Watchdog Configuration
 
@@ -85,9 +85,16 @@ In particular, this can be used to expose the Watchdog outside of localhost with
 Urls: "http://*:5000"
 ```
 
-See the relevant documentation for more details: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-8.0#server-urls
+See the relevant documentation for more details: [docs.microsoft.com](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host?view=aspnetcore-8.0#server-urls)
 
 Be sure to adjust BaseUrl accordingly!
+
+### Notifications
+You can now set a notification discord webhook to receive notifications whenever a server crashes, the integration is as simple as adding the following to your config.
+```yml
+Notification:
+  DiscordWebhook: "https://discord.com/api/webhooks/..."
+```
 
 ### Instances
 
@@ -142,14 +149,14 @@ Servers:
 ### Server Instance Folder
 
 <!-- Mirrored Sloth's July 7th 2022 change (but added backticks around example directories) -->
-The watchdog will automatically create a folder structure for each server instance. This is at `instances/<instanceId>`, e.g. `instances/wizards_den` / `instances/wizards_den_two`, relative to the current working directory when executing the watchdog.
+The watchdog will automatically create a folder structure for each server instance. This is at `instances/<instanceId>`, e.g. `instances/wizards_den` / `instances/wizards_den_two`, relative to the current working directory when executing the watchdog. In the example config above this would be `instances/example`
 
 Each instance folder has the following files and folders:
 
 * `binaries/`: Is used to store client binaries when using the "Local" update type, see below.
 * `bin/`: Contains the actual extracted server binaries.
 * `data/`: Stores server data like player preferences.
-* `config.toml`: Is the config file the server will load (the watchdog overrides the default location, `server_config.toml` next to the .exe, to avoid it getting deleted when the server resets).
+* `config.toml`: Is the config file the server will load (the watchdog overrides the default location, `server_config.toml` next to the .exe, to avoid it getting deleted when the server resets). You may have to create this file manually the first time.
 * `data.json`: Contains watchdog information. If you changed the update type and are getting errors, delete this.
 
 <!-- Mirrored Sloth's July 7th 2022 change (but adjusted cross-reference) -->
@@ -165,11 +172,15 @@ Firstly, the watchdog will only update when it is either explicitly notified to 
 
 Secondly, you may want to simply force a server to be restarted.
 
+Lastly, you may want to shutdown the server when the round ends. Example for maintenance.
+
 These tasks can be achieved with the following commands:
 
 `curl -v -X POST -u myInstance:ApiToken http://localhost:5000/instances/myInstance/restart`
 
 `curl -v -X POST -u myInstance:ApiToken http://localhost:5000/instances/myInstance/update`
+
+`curl -v -X POST -u myInstance:ApiToken http://localhost:5000/instances/myInstance/stop`
 
 ## Update Types
 
@@ -179,21 +190,17 @@ These tasks can be achieved with the following commands:
 The server still won't automatically be notified of updates, so see above for instructions.
 ```
 
-For vanilla servers, the "Manifest" update type and the standard manifest URL is enough.
+Manifest type is the method all Wizard's Den servers use and we recommend using. Manifest is required to be able to record [replays](../server-hosting/server-replay-recording.md)
 
 ```yml
 Servers:
   Instances:
     example:
-      # (skipped...)
+      # (This is an example, do NOT blindly copy paste this. Or you may end up with an unfinished configuration)
       UpdateType: "Manifest"
       Updates:
         ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
 ```
-
-You will have to manually move files around and extract the server binaries.
-
-Note that you should not move around or attempt to delete the files of a running server.
 
 ### Git-based Updates
 
@@ -208,17 +215,17 @@ This shouldn't apply if you're just shipping precompiled updates to the server u
 
 SS14.Watchdog can compile and update the server when commits are pushed to a branch of the Git repository that contains the source to your fork.
 
-```
+```admonish info
 This requires the server to have the necessary parts of the developer environment.
 Also, you still need to write a Git hook or somesuch to ensure that the Watchdog is notified of the updates, or otherwise cause it to periodically check for updates.
-```admonish info
+```
 
 
 ```yml
 Servers:
   Instances:
     example:
-      # (skipped...)
+      # (This is an example, do NOT blindly copy paste this. Or you may end up with an unfinished configuration)
       UpdateType: "Git"
       Updates:
         # BaseUrl: The URL of the Git repository to watch.
@@ -239,7 +246,7 @@ This is an ancient method, but it should still work.
 Servers:
   Instances:
     example:
-      # (skipped...)
+      # (This is an example, do NOT blindly copy paste this. Or you may end up with an unfinished configuration)
       UpdateType: "Jenkins"
       Updates:
         BaseUrl: "http://localhost:9938"
@@ -265,7 +272,7 @@ To configure this, use the following update configuration in your `appsettings.y
 Servers:
   Instances:
     example:
-      # (skipped...)
+      # (This is an example, do NOT blindly copy paste this. Or you may end up with an unfinished configuration)
       UpdateType: "Dummy"
 ```
 
@@ -288,7 +295,7 @@ Start with configuring as so:
 Servers:
   Instances:
     example:
-      # (skipped...)
+      # (This is an example, do NOT blindly copy paste this. Or you may end up with an unfinished configuration)
       UpdateType: "Dummy"
       RunCommand: "./currentServer"
 ```
@@ -303,7 +310,7 @@ As such, three scripts, `switchTo`, `switchTo1` and `switchTo2`, are needed:
 rm currentServer switch inactiveBin ; mkdir -p $1
 ln -s $1/Robust.Server currentServer ; ln -s $2 switch ; ln -s $3 inactiveBin
 echo Switching to $1
-curl -v -X POST -u myInstance:spooky http://localhost:5000/instances/myInstance/update
+curl -v -X POST -u myInstance:ApiToken http://localhost:5000/instances/myInstance/update
 ```
 
 `switchTo1`:
@@ -326,7 +333,7 @@ Before clearing and extracting a new server build to `inactiveBin`, be sure to m
 
 ### DIY Manifest Server
 
-This is a quick script useful in setting up a DIY server for the Manifest update type described in the "For Vanilla Servers" section.
+This is a quick script useful in setting up a DIY server for the Manifest update type described in the manifest section.
 
 It assumes you have some arbitrary static HTTP server, and you just need a script to output the JSON with an updated date (so you can just transfer two files to said static HTTP server and trigger an update).
 
@@ -336,11 +343,19 @@ nowish = datetime.datetime.now().isoformat()
 print(json.dumps({"builds":{nowish: {"time": nowish, "client": {"url": "", "sha256": ""}, "server": {"linux-x64": {"url": "http://localhost:9283/SS14.Server_linux-x64.zip", "sha256": ""}}}}}))
 ```
 
+You can also checkout our publishing script [here](../community/infrastructure-reference/publishing-scripts.md)
+
 ## Systemd service
 
-To allow the service to automatically start up with the server, you can make a service file. It will look something like this.
+To allow watchdog to run in the background and automatically start up with the server, you can make a service file. It will look something like this.
 
-Of course, change it to the actual directory of your watchdog.
+Of course, configure it to the actual directory of your watchdog.
+
+If your distro does not use systemd as it's init then you will have to convert this to your relevent init.
+
+```admonish info
+Due to how services work you wont be able to use the SS14 server console directly from your terminal if need be. Ensure you have given yourself permissions on your server so you can use the `sudo` or `>` commands to run commands on the server.
+```
 
 ```/etc/systemd/system/SS14.Watchdog.service```
 ```toml
@@ -361,9 +376,19 @@ WantedBy=default.target
 Now reload your systemd daemon and enable the service as you normally would.
 
 ```
+# Reload the systemd daemon (required when making a new service file)
 systemctl daemon-reload
-systemctl enable --now SS14.Watchdog
+
+# Start Watchdog service in the background
+systemctl start SS14.Watchdog
+
+# Enable the Watchdog service so it will start on system startup.
+systemctl enable SS14.Watchdog
 ```
+
+If you are not already aware of how to use systemctl [now would be a good time.](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
+
+To view logs you can use [journalctl](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs) from now on.
 
 ## General Troubleshooting
 
@@ -421,6 +446,9 @@ Serilog:
   #  password: "{{ loki_pass }}"
 
 AllowedHosts: "*"
+
+Notification:
+  DiscordWebhook: "https://discord.com/api/webhooks/..."
 
 # API URL that your watchdog is accessible from.
 # This HAS to be set so the game servers can communicate with the watchdog.
