@@ -46,7 +46,7 @@ And with that, your repo is now properly setup!
 4. Open Visual Studio
 5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.sln`
 
-### Jetbrains Rider
+### JetBrains Rider
 * TODO
 
 ### VSCodium

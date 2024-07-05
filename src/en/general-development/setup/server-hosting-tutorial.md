@@ -168,7 +168,7 @@ This is for people running their own codebase and server and/or those who want a
 [`SS14.Watchdog`](https://github.com/space-wizards/SS14.Watchdog/) (codename Ian) is our server-hosting wrapper thing, similar to TGS for BYOND (but much simpler for the time being). It handles auto updates, monitoring, automatic restarts, and administration. We recommend you use this for proper deployments.
 
 ### Installation
-[`Refeer to this`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for intructions on building and configuring Watchdog.
+[`Refer to this`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for instructions on building and configuring Watchdog.
 
 ### Server Instance Folder
 
@@ -211,7 +211,7 @@ Updates:
   Version: "foobar" # Version string to use.
 ```
 
-The watchdog will automatically host client binaries. Where does it pull them from? The `binaries/` folder in your server instance folder! Note that for this to work, the watchdog HAS to be publically accessible via `BaseUrl` in the config file.
+The watchdog will automatically host client binaries. Where does it pull them from? The `binaries/` folder in your server instance folder! Note that for this to work, the watchdog HAS to be publicly accessible via `BaseUrl` in the config file.
 
 You can edit the `Version:` specified in the config to tell the launcher that it should update the game next time you connect.
 

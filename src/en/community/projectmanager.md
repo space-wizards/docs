@@ -4,18 +4,18 @@
 
 Project Managers handle a variety of responsibilities when it comes to the SS14 game and community. If there is policy or a high-level decision being made, the project management team will be involved. PM is less of a defined role and more of a higher responsibility with different PMs handling different elements of the game and community. In general if a situation needs escalating then short of involving a Wizard, PMs are where the buck stops so to speak.
 
-The PM team does not appeal bans or get involved in individual player/game disputes unless said dispute is creating an issue of safety or harassment (However some PMs are also game admins and may act in this capacity). The admin team should be your first point of contact for these sorts of issues, with PM's being the nuclear option in an emergency situation where you have fears for your, or another community memeber's safety.
+The PM team does not appeal bans or get involved in individual player/game disputes unless said dispute is creating an issue of safety or harassment (However some PMs are also game admins and may act in this capacity). The admin team should be your first point of contact for these sorts of issues, with PM's being the nuclear option in an emergency situation where you have fears for your, or another community member's safety.
 
 ## Areas of Responsibility
 
 All Project Managers have the same level of authority and autonomy when it comes to addressing issues, however some PMs prefer to or are more experienced in handling particular issues. In an emergency any PM will be able to help you, but generally a PM with the appropriate area will be able to address your issue faster and more accurately. *Although, if you message the wrong PM don't worry we all talk with each other so they'll be able to help you or forward you along to someone who can, it's just faster to start with a PM from that area!*
 
-Here is a list of PM's and their responsiblities. Some responsibilities such as Hub Administration and Sensitive Issue handling are not listed publicly to prevent targeted harassment.
+Here is a list of PM's and their responsibilities. Some responsibilities such as Hub Administration and Sensitive Issue handling are not listed publicly to prevent targeted harassment.
 This page may sometimes be out of date, for the most recent responsibilities check discord (If this page is out of date ping @Jezithyr on discord or let a maintainer know).
 
 | Responsibility | Description | Members |
 |---|---|---|
-| Wizards | Highest level of staff in SS14. They are responsibly for handling business-to-business, fincanical, and legal matters. If you think you need to ping a wizard you don't, just talk to a PM instead. | PJB, Zoldorf, Bobda, DrSmugleaf |
+| Wizards | Highest level of staff in SS14. They are responsibly for handling business-to-business, financial, and legal matters. If you think you need to ping a wizard you don't, just talk to a PM instead. | PJB, Zoldorf, Bobda, DrSmugleaf |
 | Project Lead | The GOAT. The supreme nerd overlord. Also someone who is very busy and unless you need help with something very niche and specific, you're better off asking another PM/Maintainer. | PJB |
 | PM Team Lead | The ~~Queen~~ benevolent leader of the PM team. She manages internal disputes and helps the PM team stay on track! | DrSmugleaf |
 | Head Admins | The triumverate in-charge of the admin team. These are the people who *write the rules/policy for the admins* not the people to ask to appeal your ban. | Skarlet, Nairod, Chief_Engineer |
