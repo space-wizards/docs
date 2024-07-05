@@ -14,11 +14,11 @@ We do not currently support running SS14/Robust natively on ARM macs. Install x6
 
 Some written out error codes you may have, for ctrl+f'ing: "An attempt was made to access a socket in a way forbidden by its access permissions.", "Only one usage of each socket address (protocol/network address/port) is normally permitted."
 
-By default, the game server needs ports 1212/UDP and 1212/TCP to start. Common occurence here can be *already running an SS14 server which uses the ports*.
+By default, the game server needs ports 1212/UDP and 1212/TCP to start. Common occurrence here can be *already running an SS14 server which uses the ports*.
 
 #### Windows users
 
-Installing **Docker for Windows** or something related seems to completely screw up the default dynamic port range on your system, and on top of that reserve a ton of ports via an always-running service. This means that *even when Docker isn't running* it, or *any app on your system* can randomely decide to register port 1212 for general purpose stuff. 
+Installing **Docker for Windows** or something related seems to completely screw up the default dynamic port range on your system, and on top of that reserve a ton of ports via an always-running service. This means that *even when Docker isn't running* it, or *any app on your system* can randomly decide to register port 1212 for general purpose stuff. 
 
 If you want to verify this is the case, run `netsh int ipv4 show dynamicportrange tcp`. This *should* default to the following:
 

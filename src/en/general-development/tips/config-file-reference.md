@@ -32,5 +32,5 @@ if you want to find a reference of all CVars available in the game/engine, your 
 * You can put them in the server or client config file and have it be loaded automatically.
 * You can use the `cvar` command to view and set CVars at runtime. Note that not all CVars support changing them live: effects may include it working fine, server exploding, or nothing happening.
 * You can pass `--cvar foo.bar=123` as command line argument to the client or server to override a CVar at start time. This also overrides any values set in config files.
-* You can use the `ROBUST_CVARS` environment variable, which is semicolon-sepated like so: `ROBUST_CVARS=foo.bar=1234;foo.baz=hello there`. You probably don't want to accept any insecure input into this, since it's pretty basic and can't be escaped properly.
+* You can use the `ROBUST_CVARS` environment variable, which is semicolon-separated like so: `ROBUST_CVARS=foo.bar=1234;foo.baz=hello there`. You probably don't want to accept any insecure input into this, since it's pretty basic and can't be escaped properly.
 * You can specify CVars via multiple environment variables with the `ROBUST_CVAR_` prefix (note the lack of plural from above). For example `ROBUST_CVAR_game__hostname=foobar`. A double underscore (`__`) is replaced with a `.`.
