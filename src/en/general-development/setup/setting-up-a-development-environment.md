@@ -40,14 +40,18 @@ And with that, your repo is now properly setup!
 
 ### Visual Studio
 
-1. Download Visual Studio Community (if you don't own a paid version) from here https://visualstudio.microsoft.com/vs/community/
+1. Download Visual Studio Community (if you don't own a paid version) from [here](https://visualstudio.microsoft.com/vs/community/)
 2. Run the installer and choose `.net desktop development`, then install
 3. If the installer asks you for a development environment select `Visual C#`.
 4. Open Visual Studio
 5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.sln`
 
 ### JetBrains Rider
-* TODO
+1. Install Rider, We suggest using [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) so it can also automaticly update.
+2. Go through the setup
+3. Press "Open" and open `SpaceStation14.sln`
+4. If plan to do engine development we suggest adding Robust Toolbox to the Directory Mappings so that Riders VCS can detect changes to Robust.
+   Open Riders settings and go to the Version Control section > Directory Mappings and press the plus (+) button. For Directory point it to the `RobustToolbox` folder in the project and Git as the VCS
 
 ### VSCodium
 1. Download [VSCodium Here](https://vscodium.com/) or more directly [on Github Here](https://github.com/VSCodium/vscodium/releases) (On the latest release, click the assets dropdown then scroll to the ZIP or .exe for your OS).
