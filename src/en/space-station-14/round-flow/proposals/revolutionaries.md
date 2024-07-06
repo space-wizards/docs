@@ -25,7 +25,7 @@ As we have discussed in the [Discord](https://discord.com/channels/3105552097536
   - *Ensure that [head of department] is eliminated.*
   - *Convert at least [%] of [department that isn't Security].*
   - *Steal the [high-value station item].*
-  - *Ensure that [person, IS mindshielded] is converted.*
+  - *~~Ensure that [person, IS mindshielded] is converted.~~* (Only if mindshield removing is added!)
   - *Ensure that [person, IS NOT mindshielded] is converted.*
   - *Convert at least [%] of the station.*
 - **GLOBAL** examples would be:
