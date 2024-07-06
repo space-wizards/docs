@@ -14,7 +14,8 @@ As we have discussed in the [Discord](https://discord.com/channels/3105552097536
 - Everyone has a hidden **Conversion Bar**. Once this bar is filled, one of two things will happen:
   1. **If the person IS NOT mindshielded**, they will be converted into a **Revolutionary**.
   2. **If the person IS mindshielded**, they will be notified of the spreading of **Revolutionary** propaganda.
-- Posters and/or banners created by these **Head Revolutionaries** may also be used to fill the **Conversion Bar** (this only affects the player the first time it is interacted with).
+- Posters and/or banners created by these **Head Revolutionaries** may also be used to fill the **Conversion Bar**.
+  - Posters and banners created and placed by **Head Revolutionaries** will slowly increase the **Conversion Bar** of any and all players around them to a maximum of 25%.
 - If a **Head Revolutionary** dies, all those who were converted by them will retain their **Revolutionary** status to prevent **Security** from only going after the **Head Revolutionaries**.
 
 ## Revolutionary Objectives:
