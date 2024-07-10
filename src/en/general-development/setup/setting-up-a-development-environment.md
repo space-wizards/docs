@@ -47,10 +47,10 @@ And with that, your repo is now properly setup!
 5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.sln`
 
 ### JetBrains Rider
-1. Install Rider, We suggest using [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) so it can also automaticly update.
-2. Go through the setup
-3. Press "Open" and open `SpaceStation14.sln`
-4. If plan to do engine development we suggest adding Robust Toolbox to the Directory Mappings so that Riders VCS can detect changes to Robust.
+1. Install Rider, we suggest using [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) so it can also automaticly update in the future.
+2. Go through the setup.
+3. Press "Open" and select `SpaceStation14.sln`
+4. If you plan to do engine development you must add Robust Toolbox to the Directory Mappings so that Riders VCS can detect changes to Robust.
    Open Riders settings and go to the Version Control section > Directory Mappings and press the plus (+) button. For Directory point it to the `RobustToolbox` folder in the project and Git as the VCS
 
 ### VSCodium
