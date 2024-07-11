@@ -20,17 +20,18 @@ For the Tourist player themself, the role is meant to push for opportunities to 
 
 ## Gameplay
 
-The Tourist spawns with a randomly generated name and appearance in a small pod in a random location in orbit around the station. 
-This pod contains the following:
-- A ClothesMate and AutoDrobe for cosmetic/roleplay options.
-- A EVA suit with a jetpack for traversal to the station.
-- A mass scanner/pin-pointer/station locator to let the Tourist know which way to travel to reach the station.
-- A Camera, a Tourist-exclusive objective item described further below.
-- A pair of Sunglasses.
+The Tourist spawns with a randomly generated name and appearance in the Arrivals map. 
+They spawn with the following:
+- Hawaiian "tourist" clothes
+- A backpack, containing:
+  - A few randomly selected clothing items (similar to [DresserFilled](https://github.com/space-wizards/space-station-14/blob/03f0257ae9b0c3d2d349bd2bcc4670a7ac92e139/Resources/Prototypes/Entities/Structures/Furniture/dresser.yml#L50)).
+  - A survival box.
+  - A pair of Sunglasses.
+  - A Polaroid Camera, a new Tourist objective item described further below.
 
-The Tourist does not spawn with an ID/PDA and does not start with a headset. The pod is unable to travel on its own and should only act as an initial spawn location that neither the Tourist or Crew has any reason visit again. 
+The Tourist does not spawn with an ID/PDA and does not start with a headset.
 
-It is important that the Tourist does not possess any items that uniquely identify them as a Tourist. Crew should not be able to distinguish a Tourist from someone impersonating one; the tell should be the behavior of the character rather than any verification or metaknowledge.
+It is important that the Tourist does not possess any items that uniquely identify them as a Tourist. Crew should not be able to distinguish a Tourist from someone impersonating one; the tell should be the behavior of the character rather than any verification or metaknowledge. The Camera is a partial verification item as a Tourist always spawns with one, however as described further below there are other ways to obtain the item.
 
 The Tourist gets assigned some amount of objectives from the list below, some of them with multiple targets:
 
@@ -50,7 +51,7 @@ The Travel Camera is an item that the Tourist spawns with and is semi-exclusive 
 
 The Travel Camera acts very similar to a Flash with reduced stun duration, and contains 10 charges. The Travel Camera can not be refilled (you only brought a single roll!), so Tourists are discouraged from spamming it and to instead use it to fulfill their objective, with any leftover uses being free for roleplay/defense.
 
-The Travel Camera is also rare maintenance loot and available in the Syndicate Uplink, to ensure that it can not be used as a way to verify whether someone is a normal Tourist or not. If proper photography functionality is implemented the Camera may find use in other jobs as well. The uplink Camera is the same as a maintenance/Tourist camera. The Camera can NOT be used by Head Revs to convert crew.
+The Travel Camera is also rare maintenance loot and available in the Syndicate Uplink, to ensure that it can not be used as a way to verify whether someone is a normal Tourist or not. If proper photography functionality is implemented the Camera may find use in other jobs as well (e.g. Detective). The uplink Camera is the same as a maintenance/Tourist camera. The Camera can NOT be used by Head Revs to convert crew.
 
 The Travel Camera is also a cosmetic item, in that it can be equipped in the tie slot to hang around the Tourist's neck.
 
