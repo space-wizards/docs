@@ -11,6 +11,7 @@ First you're gonna need some software:
   * For **macOS**, [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/).
   * For **all platforms**, (NOT FREE) [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 devs prefer it over Visual Studio. College/University students can get a free education license, even if they're not a computer science major.
   * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
+    * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
 
 ## 1. Cloning
@@ -45,7 +46,7 @@ And with that, your repo is now properly setup!
 4. Open Visual Studio
 5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.sln`
 
-### Jetbrains Rider
+### JetBrains Rider
 * TODO
 
 ### VSCodium

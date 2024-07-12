@@ -92,7 +92,7 @@ Breaking one of these rules will lead to your community receiving at most one st
 **2.1. Keep your server names and descriptions clean**
 - They are visible to every player who uses the hub.
 - Keep it safe for work and free from vulgarity.
-- No bigotry, hate speech, descrimination, etc...
+- No bigotry, hate speech, discrimination, etc...
 
 **2.2. Do not impersonate other servers, developers, or organizations.**
 - If there is a reasonable way for players to be confused about the affiliations of your server, you're probably breaking this.

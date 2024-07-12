@@ -28,7 +28,7 @@ I won't have steps for these (I'm recommending these after I initially wrote thi
 - [Fork](https://git-fork.com/) -- fast and extremely ergonomic GUI, my personal favorite. "Non-free", but it's WinRAR-level non-free, so it's basically free. Has support for partial staging of
 - [Sublime Merge](https://www.sublimemerge.com/) -- very similar to Fork, looks and feels great and I've gotten a lot of recommendations for it, though I haven't used it much. Also has support for partial staging.
 
-Most IDEs have some form of Git integration aswell. [Jetbrains Rider](https://www.jetbrains.com/rider/)'s Git integration is really good (and I personally recommend Rider for everything SS14-development related). I don't recommend Visual Studio's Git integration, because it's.. not very good.
+Most IDEs have some form of Git integration as well. [JetBrains Rider](https://www.jetbrains.com/rider/)'s Git integration is really good (and I personally recommend Rider for everything SS14-development related). I don't recommend Visual Studio's Git integration, because it's.. not very good.
 
 While you're here, install `Python 3.7+` as well if you don't have it already. You can do that [here](https://www.python.org/) for Windows and Mac, and if you're on Linux you almost certainly have Python installed already. If you don't, figure it out yourself, dork!
 
@@ -127,6 +127,11 @@ Then, we'll enter the command for cloning **our** remote repository--not the `sp
 <p>
 
 ![](https://i.imgur.com/Xn4AQLf.png)
+
+Then **c**hange **d**irectory using:
+``cd space-station-14`` 
+
+(This may be different if you cloned another fork, it's almost always being the same as the repository name)
 
 Every Git command will look something like this--`git` and then a keyword like `add`, `commit`, `pull`, etc.
 

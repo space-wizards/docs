@@ -8,9 +8,9 @@ If you want to get an idea of what features are at your disposal when writing do
 
 ## Making basic edits
 
-If you just want to make a basic edit of a page, simply follow these steps--you dont need any of the fancy stuff talked about later:
+If you just want to make a basic edit of a page, simply follow these steps--you don't need any of the fancy stuff talked about later:
 
-1. Create an accout on GitHub, or log in if you already have one.
+1. Create an account on GitHub, or log in if you already have one.
 
 2. Fork the [space-wizards/docs](https://github.com/space-wizards/docs) repo on GitHub.
 

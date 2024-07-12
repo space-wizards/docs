@@ -39,7 +39,9 @@ A [development environment](../../../general-development/setup/setting-up-a-deve
 If you are using a development enviroment instead of just hosting a local server, make sure to use Tools instead of Debug/DebugOpt mode. This is because Debug adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
 Additionally be careful to not use Release, which disables development environment tooling and configuration and causes the game to act like a standard server instead of a development environment.
 
-If you are launching via a console, you can just use:
+If you have ``runclient-Tools.bat`` and ``runserver-Tools.bat`` you can run those.
+
+If you don't have the above or want to launch via a console yourself, you can just use:
 ```
 dotnet run --project Content.Server --configuration Tools
 dotnet run --project Content.Client --configuration Tools
