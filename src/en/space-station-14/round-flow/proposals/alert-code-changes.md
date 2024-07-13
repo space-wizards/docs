@@ -48,14 +48,25 @@ Different emergencies would unlock different things across the station. In some 
 
 Crew Morale (referred to as CM further on) is a hidden value that serves as a counter-measure to command and security running the station badly (referred to as BadHeading).
 
+CM is supposed to be not metagameable, unless it is very low. This means that unique events should only be occuring when CM is very low.
+
 High CM grants more positive events such as cool supplies from CC. Low CM results in negative stuff happening, up to a revolution.
 
 **WARNING:** all parts of this doc mentioning a revolution imply that Revs were redesigned in a way shifting them to a less round-ending threat.
 
 CM is not caused by crew directly (in most cases); it is caused by badheading/goodheading. Examples:
 
-- Crew death results in CM drop;
-- Good progress with certain job tasks that benefit the station as a whole results in CM boost;
+- Mass crew death results in CM drop;
+- Creating amenities for crew results in CM raise (organising a pizza party or a concert);
 - Prolonged alert codes being active drop CM based on their severity;
 - Apprehending people that did not do things considered as harmful/hostile (slipping, stealing high-value things, harming people) results in CM drop. Important: **under no circumstances** should this be a simple antag check (security should not be punished for dealing with shitters);
-- Lack of any action on things that the station needs causes CM drops (ex. TONS of messes).
+- Lack of any action on things that the station needs causes CM drops (ex. TONS of messes);
+- If CM is lower than default and no CM drops were triggered in a long while, CM will go up to default value.
+- Certain critical events (such as singuloose or nukies) should disable CM system, since at this point station is already overwhelmed.
+
+Some of the triggered event examples:
+
+- Low CM can trigger a random minor negative event (skeleton spawn, vent creatures etc);
+- Very low CM can trigger a head revolutionary spawning (please read the warning above);
+- Very low CM can trigger a termination of a head from their position via CC announcement. Heads of departments that contributed to CM drop are picked when possible (for example, if "tons of messes" contributed to CM hitting "very low" threshold, HoP will be fired). This is not enforceable directly, but is rather aimed to create IC conflict between crew and command, as well as alerting crew of badheading occuring;
+- High CM can trigger a random minor positive event (CC gifts, additional cargo funds etc).
