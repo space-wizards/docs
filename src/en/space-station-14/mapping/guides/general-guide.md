@@ -118,12 +118,16 @@ Now that you've completed your map, you'll want to test it in game to ensure you
 4. Connect to the game and you should now be on your new map. Refer to the troubleshooting section if you're having issues.
     
     
-## Testing and getting it into the game
+## Opening a PR and getting it into the game
 Once you've tested your map by running it in game as shown previously, and you've ran through the quality control checklist as shown here, you're ready to do a pull request to get your map submitted to the game.
+
+### Important
+When submitting a PR, the associated branch will be tested using 'checks' to ensure there are no errors or conflicts. A PR containing a new map will be flagged by the task AllMapsTested within PostMapInitTest.cs unless it is added to the list of test cases within the file.
+To prevent this simply enter the file PostMapInitTest.cs and add the IDs of any new maps to the list named GameMaps.
     
 To pull request:
 1. Create a branch on your cloned respository either through your Github client.
-2. Add your map and map prototype files to your commit. (Stage them)
+2. Add your map and map prototype files to your commit and update PostMapInitTest.cs where applicable. (Stage them)
 4. Commit these two changes to your branch then push them to origin.
 5. Head to the upstream SS14 repository and navigate to the pull requests tab. There should be a banner saying something like "recent changes on your branch, pull request?" Do this to open a pull request for your map. Alternatively you can open a pull request from your repository.
 6. Fill out the pull request page with details like screenshots / map renders, advising you've followed the quality control checklist, max / min players, and any other details and add a changelog entry.
