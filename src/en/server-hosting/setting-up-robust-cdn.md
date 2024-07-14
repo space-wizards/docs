@@ -259,15 +259,19 @@ For example: [Wizard's Den builds](https://wizards.cdn.spacestation14.com/fork/w
 
 ## Private forks
 
-```admonish failure
-This feature is currently not usable as the watchdog lacks Basic auth support.
+A fork can be marked as "private". This prevents Robust.Cdn from giving unauthorized people access to server builds, which is desirable for forks with secret content. Access is restricted via HTTP Basic authentication. Usernames and passwords for this can be configured in the fork configuration.
+
+To give the watchdog access to these builds, you can configure it as such in the instance update configuration:
+
+```yml
+UpdateType: "Manifest"
+Updates:
+  # Replace with your own Robust.Cdn URL and fork ID.
+  ManifestUrl: "https://<robust-cdn-url>/fork/<fork>/manifest"
+  Authentication:
+    Username: foobar
+    Password: baz
 ```
-
-A fork can be marked as "private". This prevents Robust.Cdn from giving unauthorized people access to server builds, which is desirable for forks with secret content.
-
-When enabled, access to server builds is restricted behind HTTP Basic authentication. Usernames and passwords for this can be configured in the fork configuration.
-
-TODO: Watchdog setup guide here.
 
 ## Builds file layout
 
@@ -294,7 +298,7 @@ If you were hosting an existing installation of Robust.Cdn from before multi-for
 As part of multi-fork and manifest support, the following changes will need to be made to your setup, at the bare minimum:
 
 * `Cdn.UpdateToken` in configuration has been moved to fork configuration.
-* `Cdn.VersionDiskPath` has effectively been changed to `Manifest.FileDiskPath`. **Note that the file layout is different, you will need to manually move the builds one folder down to be underneath the folder (see above).**
+* `Cdn.VersionDiskPath` has effectively been changed to `Manifest.FileDiskPath`. **Note that the file layout is different, you will need to manually move the builds one folder down to be underneath the fork folder (see above).**
 
 Robust.Cdn will automatically migrate your existing CDN content database so that all version information stored within gets assigned a fork. You must set `Cdn.DefaultFork` in the configuration so it knows what fork to assign these versions to. Existing URLs (for replays etc) will keep working after this, as configuring `Cdn.DefaultFork` will make the CDN internally map the old `/version/{version}/*` URLs to the new ones under the specified fork.
 
