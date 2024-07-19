@@ -6,14 +6,14 @@
 
 ## Overview
 A rare space creature with absolute control over its biology, mind over the flesh, or something like that. The changeling is the apex predator of all sentient life, feeding on their genomes and biomass to sustain its ever-shifting body. The station is the changeling's hunting ground, and the crew is its prey. It acts as a lone hunter, it doesn't collaborate with anyone, even other changelings, and it wouldn't hesitate to kill and feast on its own kind.
-The changeling is a roundstart opt-in role like traitor, it starts disguised as the player's regular character with the assumption that while off-station the changeling quietly captured and devoured them, posing as them to get onto the station to further its survival. Changelings always have a single objective. **survive** and make it to centcomm. Its restraint status is irrelevant, it just needs to be alive.
+The changeling is a roundstart opt-in role like traitor, it starts disguised as the player's regular character with the assumption that while off-station the changeling quietly captured and devoured them, posing as them to get onto the station to further its survival. Changelings always have a single objective. **survive** and make it to centcom. Its restraint status is irrelevant, it just needs to be alive.
 
 The goal of this version of the changeling is to create a terrifying roundstart antagonist, taking advantage of body horror elements to assimilate the crew into itself. The changeling will regularly round remove people to sustain its murder spree, and its own failure will round remove it as a result.
 
 ## BIOMASS
-The changeling begins the round with around 150 biomass, this biomass depletes by 1 every 12 seconds or so. Biomass is a changeling's way of sustaining its body and abilities, without enough biomass, a changeling will wither and die. The only way to increase the amount of biomass a changeling has is to consume bodies. Consuming one person will grant the changeling 100 biomass, this means a changeling can survive for 20 minutes without using abilities for every person it devours. Rotting corpses cannot be devoured for biomass, and bloated corpses cannot be devoured for DNA.
+The changeling begins the round with an arbitrary amount of biomass, this biomass depletes by 1 every arbitrary time interval. Biomass is a changeling's way of sustaining its body and abilities, without enough biomass, a changeling will wither and die. The only way to increase the amount of biomass a changeling has is to consume bodies. Consuming one person|corpse will grant the changeling a large amount of biomass, which decreases the further into rot the corpse is, with extremely bloated corpses providing hardly any biomass if any at all.
 
-A single changeling without the use of eyeslugs should round-remove somewhere around 4 people purely to survive, even more if it uses abilities. A loud changeling that doesn't die might eat a quarter of the crew by the time the shuttle docks at centcomm.
+A single changeling should round-remove at least 8 people purely to survive, even more if it uses abilities. A loud changeling that doesn't die might eat half the crew by the time the shuttle docks at centcom.
 
 ### HUNGER
 A changeling will always be able to see its biomass count in place of its hunger status on the right side of the screen, and as this number lowers various negative effects occur such as...
@@ -43,7 +43,7 @@ The changeling uses a small amount of biomass to change its outward appearance a
 
 - **Devour | free | free | any**
 
-The changeling scrapes out the insides of a corpse and feasts on it, integrating the bloody chunks into itself and storing the DNA for later use. The corpse will have all organs (including its brain) removed and it will be turned into a "husk" which cannot be revived or identified by examination. This spills blood everywhere in the process and shreds any jumpsuit the victim was wearing, so the changeling must make sure to take it off if it hopes to wear it.
+The changeling scrapes out the insides of a corpse and feasts on it, integrating the bloody chunks into itself and storing the DNA for later use. The corpse will have all organs (including its brain) removed and it will be turned into a "husk" which cannot be revived. This spills blood everywhere in the process and shreds any jumpsuit the corpse was wearing, so the changeling must make sure to take it off if it hopes to wear it.
 If the changeling devours another changeling, it will immediately be made aware of this, it will gain all of the enemy changeling's biomass in addition to the normal amount it would gain, as well as all of the dead changeling's unlocked abilities and DNA strands.
 
 
@@ -63,6 +63,44 @@ Though using this seems cheap, the real cost of using this ability comes when th
 Replaces Shed while in true form. The changeling in its true form disguises itself using one of the DNA strains it has access to for a relatively high amount of biomass. This ability cannot be used while starving.
 
 
+## HIVEMIND
+The changeling can choose to integrate minds into itself instead of simply devouring them. This is useful for retaining personalities or quickly allowing minions to be controlled. All beings including the changeling that are within a hivemind can speak to each other using :h.
+Absorbed minds are forced to follow any orders given by the changeling, and griefing the changeling would be extremely rule-breaking.
+
+- **Hivemind | medium | free | any**
+The changeling warps its mind to allow for multiple beings to be stored within. Using this ability will show a radial menu which allows the changeling to use any of the abilities listed under this HIVEMIND section. Once hivemind is unlocked, all hivemind abilities are unlocked and do not need to be purchased separately.
+
+
+- **Absorption | medium | free | any**
+
+The changeling toggles whether devouring someone will cause them to be absorbed into their hivemind, or simply destroyed. An absorbed mind is only a shadow of its original self, it is at the changeling's mercy, and can no longer feel for the people it once cared for.
+
+
+- **Relinquish** | medium | free | disguised**
+
+The changeling will grant control over its body to one of the minds it has absorbed. The mind will not be able to enter the changeling's true form, and if it somehow manages to, the changeling will immediately regain control.
+
+
+- **Restrict** | medium | free | disguised**
+
+The changeling toggles whether minds can use abilities while in control of the changeling's body. Useful if you suspect the players are salty about dying.
+
+
+- **Retake** | medium | free | disguised**
+
+The changeling instantly retakes control from a mind.
+
+
+- **Purge** | medium | free | disguised**
+
+The changeling erases an absorbed mind from itself, kicking it out into the afterlife.
+
+
+- **Emancipation | medium | free | any**
+
+Opens a radial menu allowing the changeling to select a mind that will instantly inhabit the next minion spawned. Using this ability again before a minion is spawned will cancel it.
+
+
 #### STEALTH
 The changeling in a disguised state shouldn't be entirely under the radar. The crew would know there is SOMETHING among them, picking them off, hunting. The changeling's stealth abilities should allow it to remain out of sight while killing, and allow it to deceive the crew and make them feel safe, or throw them off the trail.
 
@@ -73,7 +111,7 @@ The changeling modifies its voice to that of anyone it so chooses, it does not r
 
 - **Chameleon | medium | low | disguised**
 
-The changeling grows out biological clothing to cover its skin. It can change the appearance of this clothing while wearing it. Anyone can remove or wear the clothing, but only changelings can modify it. The clothing can be tested by cutting it into cloth, which will yield fleshy strips instead of regular material. The clothing cannot transform into any sort of EVA suit.
+The changeling grows out biological clothing to cover its skin. It can change the appearance of this clothing while wearing it. Anyone can remove or wear the clothing, but only changelings can modify it. The clothing can be tested by cutting it into cloth, which will yield fleshy strips instead of regular material. This clothing gives the changeling a jumpsuit, shoes, gloves, a hat, and a mask.
 
 
 - **Lesser | medium | medium | any**
