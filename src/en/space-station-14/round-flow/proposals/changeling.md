@@ -43,7 +43,7 @@ The changeling uses a small amount of biomass to change its outward appearance a
 
 - **Devour | free | free | any**
 
-The changeling scrapes out the insides of a corpse and feasts on it, integrating the bloody chunks into itself and storing the DNA for later use. The corpse will have all organs (including its brain) removed and it will be turned into a "husk" which cannot be revived. This spills blood everywhere in the process and shreds any jumpsuit the corpse was wearing, so the changeling must make sure to take it off if it hopes to wear it.
+The changeling scrapes out the insides of a corpse and feasts on it, integrating the bloody chunks into itself and storing the DNA for later use. The corpse will have all organs (including its brain) removed and it will be turned into a "husk" which cannot be revived or identified by examination. This spills blood everywhere in the process and shreds any jumpsuit the victim was wearing, so the changeling must make sure to take it off if it hopes to wear it.
 If the changeling devours another changeling, it will immediately be made aware of this, it will gain all of the enemy changeling's biomass in addition to the normal amount it would gain, as well as all of the dead changeling's unlocked abilities and DNA strands.
 
 
