@@ -112,7 +112,7 @@ This is the same smoke as used for the shadow anomaly.
 - **Paranoia:** Causes target player to be unable to decrease fear for 1 minute.
 Additionally causes creepy popups.
 - **Animus:** Imbues a target weapon with life for 30 seconds, causing it to try and attack nearby players.
-- **Ghost Lock:** Use on target player. Causes all doors around them to bolt for 10 seconds.
+- **Ghost Lock:** Causes all doors in radius to bolt for 10 seconds and play spooky slamming sounds.
 Afterwards, they will unbolt.
 - **The Station Bleeds:** Nearby vents, drains, and closed doors begin to seep blood, increasing fear in nearby players.
 - **Quiet:** In target radius, temporarily turns off all lights, extinguishes all flames, and mutes players.
@@ -121,7 +121,8 @@ Players caught in the effect will gain fear over time.
 While possessing, they can attack and cause fear to anyone they hit.
 
 #### Tier 2 Abilities
-- **Ruin:** Causes rapid aging and drains stamina over 15 seconds.
+- **Ruin:** Used on target player. 
+Causes rapid aging and drains stamina over 15 seconds.
 - **Necromancy:** Can only be used on target dead bodies.
 Causes an NPC Wandering Spirit to spawn.
 Wandering Spirits are non-aggressive but unkillable.
@@ -146,3 +147,5 @@ Dying while in Take Form kills the Specter.
 This has similar properties to the Specter except it only has the haunt ability.
 Terror generated while it haunts will be transferred to the Specter.
 Poltergeists do not regenerate health from causing fear.
+- **Illusory Form:** Opens a menu for selecting a target player.
+When beginning to haunt, you will take the appearance of that player with glowing eyes instead of appearing a the Specter.
