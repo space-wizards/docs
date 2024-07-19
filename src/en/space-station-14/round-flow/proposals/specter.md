@@ -28,8 +28,8 @@ There are several levels of severity, each having their own effects:
 
 - **Normal:** The default state: No alert and no effect.
 - **Uneasy:** No effect. Serves as a warning to the player.
-- **Scared:** -10% melee damage. 
-- **Terrified:** -20% melee damage, 5% movement speed increase, and 10% increased damage from fear-inducing sources.
+- **Scared:** -25% melee damage to fear-inducing sources. 
+- **Terrified:** -50% melee damage to fear-inducing sources, 5% movement speed increase, and 10% increased damage from fear-inducing sources.
 - **Hysterical:** Inability to use weapons, 10% movement speed increase, and 25% increased damage from fear-inducing sources, susceptible to Specter's "Reap".
 
 Fear can be actively countered by consuming some chemicals.
