@@ -6,14 +6,14 @@
 
 ## Overview
 A rare space creature with absolute control over its biology, mind over the flesh, or something like that. The changeling is the apex predator of all sentient life, feeding on their genomes and biomass to sustain its ever-shifting body. The station is the changeling's hunting ground, and the crew is its prey. It acts as a lone hunter, it doesn't collaborate with anyone, even other changelings, and it wouldn't hesitate to kill and feast on its own kind.
-The changeling is a roundstart opt-in role like traitor, it starts disguised as the player's regular character with the assumption that while off-station the changeling quietly captured and devoured them, posing as them to get onto the station to further its survival. Changelings always have a single objective. **survive** and make it to centcom. Its restraint status is irrelevant, it just needs to be alive.
+The changeling is a roundstart opt-in role like traitor, it starts disguised as the player's regular character with the assumption that while off-station the changeling quietly captured and devoured them, posing as them to get onto the station to further its survival. Changelings always have a single objective. **survive** and make it to centcomm. Its restraint status is irrelevant, it just needs to be alive.
 
 The goal of this version of the changeling is to create a terrifying roundstart antagonist, taking advantage of body horror elements to assimilate the crew into itself. The changeling will regularly round remove people to sustain its murder spree, and its own failure will round remove it as a result.
 
 ## BIOMASS
-The changeling begins the round with an arbitrary amount of biomass, this biomass depletes by 1 every arbitrary time interval. Biomass is a changeling's way of sustaining its body and abilities, without enough biomass, a changeling will wither and die. The only way to increase the amount of biomass a changeling has is to consume bodies. Consuming one person|corpse will grant the changeling a large amount of biomass, which decreases the further into rot the corpse is, with extremely bloated corpses providing hardly any biomass if any at all.
+The changeling begins the round with around 150 biomass, this biomass depletes by 1 every 12 seconds or so. Biomass is a changeling's way of sustaining its body and abilities, without enough biomass, a changeling will wither and die. The only way to increase the amount of biomass a changeling has is to consume bodies. Consuming one person will grant the changeling 100 biomass, this means a changeling can survive for 20 minutes without using abilities for every person it devours. Rotting corpses cannot be devoured for biomass, and bloated corpses cannot be devoured for DNA.
 
-A single changeling should round-remove at least 8 people purely to survive, even more if it uses abilities. A loud changeling that doesn't die might eat half the crew by the time the shuttle docks at centcom.
+A single changeling without the use of eyeslugs should round-remove somewhere around 4 people purely to survive, even more if it uses abilities. A loud changeling that doesn't die might eat a quarter of the crew by the time the shuttle docks at centcomm.
 
 ### HUNGER
 A changeling will always be able to see its biomass count in place of its hunger status on the right side of the screen, and as this number lowers various negative effects occur such as...
