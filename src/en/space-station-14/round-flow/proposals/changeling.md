@@ -223,3 +223,4 @@ The changeling screeches loudly, causing any non-changeling in a radius to insta
 ## REQUIRED CHANGES
 - Salvage corpses now spawn very bloated. They cannot be consumed by the changeling for food.
 - Add ventcrawling for mice, rats, etc.
+- Some implementation of virology for the eyeslug infection and for early starvation symptoms to not be metagamed.
