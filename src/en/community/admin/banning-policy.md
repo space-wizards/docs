@@ -24,7 +24,7 @@ Permanent bans should typically only be placed as the result of an unsuccessful 
 
 ### Soft And Hard Voucher Bans
 
-Voucher Bans usually occur if a player is too problematic and must get a voucher (Prove of good behavior.) from another server in order for their appeal to be accepted. 
+**Voucher Bans** usually occur if a player is too problematic and must get a voucher (Prove of good behavior.) from another server in order for their appeal to be accepted. 
 
 **Soft Voucher Bans** are done if the player receives multiple offenses after an appeal ban. Soft Voucher Bans are only appealable after 2 months and the banned player appeals with a voucher from a well known Space Station 13 or 14 server.
 
