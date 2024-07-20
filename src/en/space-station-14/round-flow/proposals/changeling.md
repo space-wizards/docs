@@ -11,9 +11,9 @@ The changeling is a roundstart opt-in role like traitor, it starts disguised as 
 The goal of this version of the changeling is to create a terrifying roundstart antagonist, taking advantage of body horror elements to assimilate the crew into itself. The changeling will regularly round remove people to sustain its murder spree, and its own failure will round remove it as a result.
 
 ## BIOMASS
-The changeling begins the round with an arbitrary amount of biomass, this biomass depletes by 1 every arbitrary time interval. Biomass is a changeling's way of sustaining its body and abilities, without enough biomass, a changeling will wither and die. The only way to increase the amount of biomass a changeling has is to consume bodies. Consuming one person|corpse will grant the changeling a large amount of biomass, which decreases the further into rot the corpse is, with extremely bloated corpses providing hardly any biomass if any at all.
+The changeling begins the round with around 150 biomass, this biomass depletes by 1 every 12 seconds or so. Biomass is a changeling's way of sustaining its body and abilities, without enough biomass, a changeling will wither and die. The only way to increase the amount of biomass a changeling has is to consume bodies. Consuming one person will grant the changeling 100 biomass, this means a changeling can survive for 20 minutes without using abilities for every person it devours. Rotting corpses cannot be devoured for biomass, and bloated corpses cannot be devoured for DNA.
 
-A single changeling should round-remove at least 8 people purely to survive, even more if it uses abilities. A loud changeling that doesn't die might eat half the crew by the time the shuttle docks at centcom.
+A single changeling without the use of eyeslugs should round-remove somewhere around 4 people purely to survive, even more if it uses abilities. A loud changeling that doesn't die might eat a quarter of the crew by the time the shuttle docks at centcomm.
 
 ### HUNGER
 A changeling will always be able to see its biomass count in place of its hunger status on the right side of the screen, and as this number lowers various negative effects occur such as...
@@ -43,7 +43,7 @@ The changeling uses a small amount of biomass to change its outward appearance a
 
 - **Devour | free | free | any**
 
-The changeling scrapes out the insides of a corpse and feasts on it, integrating the bloody chunks into itself and storing the DNA for later use. The corpse will have all organs (including its brain) removed and it will be turned into a "husk" which cannot be revived. This spills blood everywhere in the process and shreds any jumpsuit the corpse was wearing, so the changeling must make sure to take it off if it hopes to wear it.
+The changeling scrapes out the insides of a corpse and feasts on it, integrating the bloody chunks into itself and storing the DNA for later use. The corpse will have all organs (including its brain) removed and it will be turned into a "husk" which cannot be revived or identified by examination. This spills blood everywhere in the process and shreds any jumpsuit the victim was wearing, so the changeling must make sure to take it off if it hopes to wear it.
 If the changeling devours another changeling, it will immediately be made aware of this, it will gain all of the enemy changeling's biomass in addition to the normal amount it would gain, as well as all of the dead changeling's unlocked abilities and DNA strands.
 
 
@@ -116,7 +116,7 @@ The changeling grows out biological clothing to cover its skin. It can change th
 
 - **Lesser | medium | medium | any**
 
-The changeling shrinks into a monkey or kobold, retaining any clothing that a monkey can wear and dropping anything else as well as freeing itself from cuffs. In this form, the changeling can only use the stasis, shed, and transform abilities.
+The changeling shrinks into a monkey or kobold, retaining any clothing that a monkey can wear and dropping anything else as well as freeing itself from cuffs. In this form, the changeling can ventcrawl, but is only able to use the stasis, shed, and transform abilities.
 
 
 - **Imprint | low | low | disguised**
@@ -177,12 +177,12 @@ The changeling can create all sorts of horrors from its ever-shifting mass of bi
 
 - **Eyeslug | high | low | any**
 
-One of the changeling's eyes falls out and rapidly regrows, creating a bloody eyeslug that can go under doors, be picked up, and only has 5 HP. If the eyeslug ever comes across a stunned or critical humanoid, it can burrow into their face, killing the eyeslug and infecting them with a disease shortly after that causes the humanoid to slowly exhibit symptoms of a starving changeling, but without the changeling's ability to recover from them quickly. The longer the humanoid has this disease, the more biomass a changeling will acquire upon devouring them. A dead humanoid cannot be infected, and a rotting corpse will lose all built-up bonus biomass instantly.
+One of the changeling's eyes falls out and rapidly regrows, creating a bloody eyeslug that can go under doors, ventcrawl, be picked up, and only has 5 HP. If the eyeslug ever comes across a stunned or critical humanoid, it can burrow into their face, killing the eyeslug and infecting them with a disease shortly after that causes the humanoid to slowly exhibit symptoms of a starving changeling, but without the changeling's ability to recover from them quickly. The longer the humanoid has this disease, the more biomass a changeling will acquire upon devouring them. A dead humanoid can be infected but will not progress the infection until they're revived.
 
 
 - **Handspider | low | medium | any**
 
-The changeling's currently active hand falls off and rapidly regrows, dropping their held item and creating a handspider that moves quickly and can go under doors but cannot directly damage people. The handspider can jump onto people's faces to stun them for around 5 seconds, this ability has a long cooldown and leaves the handspider stuck in place for the duration of that stun. The handspider cannot stun people wearing a face-covering helmet or mask unless the mask is cosmetic such as the clown mask.
+The changeling's currently active hand falls off and rapidly regrows, dropping their held item and creating a handspider that moves quickly and can ventcrawl but cannot directly damage people. The handspider can jump onto people's faces to stun them for around 5 seconds, this ability has a long cooldown and leaves the handspider stuck in place for the duration of that stun. The handspider cannot stun people wearing a face-covering helmet or mask unless the mask is cosmetic such as the clown mask.
 
 
 - **Legworm | medium | high | disguised**
@@ -197,7 +197,7 @@ Replaces the Legworm ability when in true form, and does not cost extra to unloc
 
 - **Headcrab | medium | free | any**
 
-An absolute last resort for a changeling that has been incapacitated and cannot rejuvenate itself.  The changeling's head detaches over the course of about 20 seconds, leaving behind its body and turning into an angry crab with a single goal: Survive. The headcrab can go under doors, moves at the same speed as a human, and is quite fragile with around 20 HP. It can stun like the handspider and deals low slashing damage when it attacks. If the headcrab finds or makes a dead|critical person, it can burrow into them and, after around a minute, take control and live again. A changeling will usually be in a dead body by the time they take control, so they'll be forced to use stasis until they can repair their wounds, or until a clueless doctor revives them. Once a changeling takes control of a body, they will lose all their unlocked abilities, and only be left with 50 biomass. This ability cannot be used while starving.
+An absolute last resort for a changeling that has been incapacitated and cannot rejuvenate itself.  The changeling's head detaches over the course of about 20 seconds, leaving behind its body and turning into an angry crab with a single goal: Survive. The headcrab can ventcrawl, moves at the same speed as a human, and is quite fragile with around 20 HP. It can stun like the handspider and deals low slashing damage when it attacks. If the headcrab finds or makes a dead|critical person, it can burrow into them and, after around a minute, take control and live again. A changeling will usually be in a dead body by the time they take control, so they'll be forced to use stasis until they can repair their wounds, or until a clueless doctor revives them. Once a changeling takes control of a body, they will lose all their unlocked abilities, and only be left with 50 biomass. This ability cannot be used while starving.
 If a headcrab dies the changeling is fully dead, regardless of if their body is still intact. A headcrab CAN be revived, but why would anyone do that? A dead headcrab can be picked up and is a medium item, grinding it nets you enough chitizene to use a false armblade for a minute
 
 
@@ -222,3 +222,4 @@ The changeling screeches loudly, causing any non-changeling in a radius to insta
 
 ## REQUIRED CHANGES
 - Salvage corpses now spawn very bloated. They cannot be consumed by the changeling for food.
+- Add ventcrawling for mice, rats, etc.
