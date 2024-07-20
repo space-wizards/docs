@@ -78,6 +78,7 @@ Robust Toolbox
     - [General](en/robust-toolbox/toolshed/commands/general.md)
     - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
+  - [Containers](en/robust-toolbox/user-interface/containers.md)
 - [IoC](en/robust-toolbox/ioc.md)
 - [Rendering]()
   - [Lighting and FoV](en/robust-toolbox/rendering/lighting-and-fov.md)
