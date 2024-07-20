@@ -130,6 +130,7 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Metagaming | Using info from death[^infoFromDeath] | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
 | Metagaming | Using info from past life | 12hr - 48hr GB | 3d GB | **7d** - 7.5d GB | |
 | Metagaming | Metagaming round type | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
+| Metagaming | Preparing items not needed IC | W | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB |
 | Griefing | Damage/disruption to arrivals/arrivals shuttle | 12hr - 3d GB | 3d - 7d GB | 7d - 15d GB | |
 | Self-antag | Self-antag[^excludingEscalationIssues] | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Self-antag | Station sabotage[^stationSabotage] | W - 3d GB | 12hr - 7d GB | 14d - 15d GB | |
