@@ -8,7 +8,7 @@ Your title should convey the basic jist of your proposed changes. It should be s
 
 ## Overview
 
-This change adds a new race that is very different from the standard humanoids. Firstly, resomi are small in stature (just over a meter) and have a completely different body shape. their lore, structure and features, in general, are described on this wiki page https://avali .fandom.com/wiki/The_Official_Avali_Wiki and the mechanics are copied from this build https://github.com/infinitystation/Baystation12
+This change adds a new race that is very different from the standard humanoids. Firstly, resomi are small in stature (just over a meter) and have a completely different body shape. their lore, structure and features, in general, are described on this wiki page https://avali.fandom.com/wiki/The_Official_Avali_Wiki and the mechanics are copied from this build https://github.com/infinitystation/Baystation12
 
 ## Features
 
