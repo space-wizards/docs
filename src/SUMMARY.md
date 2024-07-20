@@ -140,7 +140,7 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/character-species/guidelines.md)
 		
 	- [Proposals]()
-
+		- [Resomi](en\space-station-14\character-species\proposals\resomi.md)
 - [Combat](en/space-station-14/combat.md)
 	- [PR Guidelines](en/space-station-14/combat/guidelines.md)
 
