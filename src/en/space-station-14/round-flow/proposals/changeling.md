@@ -111,7 +111,7 @@ The changeling modifies its voice to that of anyone it so chooses, it does not r
 
 - **Chameleon | medium | low | disguised**
 
-The changeling grows out biological clothing to cover its skin. It can change the appearance of this clothing while wearing it. Anyone can remove or wear the clothing, but only changelings can modify it. The clothing can be tested by cutting it into cloth, which will yield fleshy strips instead of regular material. This clothing gives the changeling a jumpsuit, shoes, gloves, a hat, and a mask.
+The changeling grows out biological clothing to cover its skin. It can change the appearance of this clothing while wearing it. Anyone can remove or wear the clothing, but only changelings can modify it. The clothing can be tested by cutting it into cloth, which will yield fleshy strips instead of regular material. This clothing gives the changeling a jumpsuit, shoes, gloves, a hat, a mask, and a backpack. The backpack can change shape into a duffel back or a satchel, and any items inside that cannot fit once it changes will fall to the ground.
 
 
 - **Lesser | medium | medium | any**
