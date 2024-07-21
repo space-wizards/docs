@@ -204,6 +204,11 @@ You should go over this config file in full to understand what you are setting u
   // This is necessary for correct generation of build metadata.
   "BaseUrl": "https://<robust-cdn-url>/",
 
+  // The base path that Robust.Cdn is exposed under.
+  // You should set this when reverse proxying Robust.Cdn behind a subpath.
+  // See also further notes down below.
+  "PathBase": "/",
+
   // Valid host names for clients to use to connect to Robust.Cdn.
   // You can just leave this as-is.
   "AllowedHosts": "*",
@@ -257,6 +262,20 @@ Robust.Cdn generates a simple HTML web page to allow people to manually download
 
 For example: [Wizard's Den builds](https://wizards.cdn.spacestation14.com/fork/wizards/).
 
+### Custom PathBase
+
+If you can't have subdomains for some reason (seriously, you should use subdomains if you can), you will want to mount multiple services behind the same domain with a reverse proxy such as nginx. When you do this you need to set `PathBase` in the config file to make links in the HTML builds page work. Other API functionality is not affected by this.
+
+**Make sure your reverse proxy is configured correctly**: it should be passing the full path to Robust.Cdn, i.e. not cutting off the path prefix itself. If using **nginx**, this is achieved as such:
+
+```nginx
+# Note the trailing slash!
+# bad
+proxy_pass http://127.0.0.1:8080/;
+# good
+proxy_pass http://127.0.0.1:8080;
+```
+
 ## Private forks
 
 A fork can be marked as "private". This prevents Robust.Cdn from giving unauthorized people access to server builds, which is desirable for forks with secret content. Access is restricted via HTTP Basic authentication. Usernames and passwords for this can be configured in the fork configuration.
@@ -290,6 +309,43 @@ Robust.Cdn stores and expects build zips in the `FileDiskPath` directory (`/buil
 │   │   ├── SS14.Client.zip
 │   │   ├── SS14.Server_linux-arm64.zip
 ```
+
+## Example reverse proxy configs
+
+You likely want to run Robust.Cdn behind a reverse proxy of some kind. Here are some example configurations for your reverse proxy:
+
+### Nginx
+
+This example is intended to go into an existing `server` block of your configuration (TLS termination, server name, etc...)
+
+```nginx
+# gzip JSON responses.
+gzip on;
+gzip_types application/json;
+
+location / {
+    # High body size to avoid buffering of download request bodies.
+    client_body_buffer_size 10M;
+    # Increased read timeout to avoid timeouts on the publish API endpoint.
+    proxy_read_timeout 120s;
+    # Boilerplate reverse proxy config.
+    proxy_set_header   Host $http_host;
+    proxy_set_header   X-Real-IP $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+    # Disable buffering of outgoing requests.
+    proxy_buffering    off;
+
+    # Update port here.
+    proxy_pass         http://localhost:8080;
+}
+```
+
+## Troubleshooting
+
+### 504 gateway timeout during publish
+
+Increase your reverse proxy's response timeout. In nginx this is controlled via `proxy_read_timeout`.
 
 ## Migration from Robust.Cdn 1.x
 
