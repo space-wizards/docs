@@ -27,10 +27,12 @@ First, Scrambling is removed, no more spending 30+ minutes working on the same m
 Monkeys and kobolds will also come with only 2 sequences or dormant mutations, monkeyfied/koboltified and one totally random mutation, these 2 random mutations are the same among every monkeys and every kobolds, 
 once again to reward Geneticist from requesting assistance from people from as many department as possible.
 
-Each Departement will bring something unique to genetic, not only thanks to the ressources they might provide but also because each departement workforce will come with a unique set of dormant mutations,
+alternative from the fully random mutation: Each Departement will bring something unique to genetic, not only thanks to the ressources they might provide but also because each departement workforce will come with a unique set of dormant mutations,
 now each departement have a role to play with Genetic.
 
 Each departement workforce will also not provide useful mutations for their own department, in order to encourage player interaction and limit powergaming.
+
+Or like in SS13, keep the mutation randomly picked
 
 -First idea : Stability
 The Stability system will also be thrown into the trash , this system aim to limit the amount of mutation one's can have active, with negative mutation increasing stability,
@@ -41,10 +43,14 @@ i think a base limit 2 at most it good enough, and mutation being part of their 
 -Second idea : Stability
 Stability is kept, but player will suffer drawbacks as they reach certain threholds of stability.
 
--Third idea : Genetic minigame
+-idea : Genetic minigame
 Having Genetic play a more involving minigame than pairing AT-CG, where it's easy to build up muscle memory in order to complete the sequences it is not really involving the players at some point(also counting cross referencing)
 
+-First idea : Research point printing
 Each researched mutations will give a small amount of research points, and printing an activator or mutator will cost points(activators cost less since they are very limited), activators and mutators will also need to be kept cold in a special container, genetic will get a small one and R&D desk with get a bigger one.
+
+-second idea : fridge storing
+Each mutation injector will be researched and stored in a fridge, R&D and Genetic will bot hhave a mutator fridge keeping the mutator under ice, injector outside cold environment will slowly decay getting more and more dangerous to inject with time spent outside cold storage
 
 Things will most likely go like this, the geneticist will start experiment on their round start monkeys/kobolds and grab a few mutations from them
 (they should be alive and well for artifact research afterward if they didn't kill them) then they should start seeking people from other departements and start gathering mutations and start gathering research material and research mutations.
