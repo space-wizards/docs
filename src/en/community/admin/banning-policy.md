@@ -110,16 +110,15 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Non-grouping | Sexual content | W - 3d GB | 7d GB | Indef GB | |
 | Non-grouping | Metacommunications | W - Indef GB | Indef GB | | |
 | Non-grouping | Ban Evasion | Hard Voucher Ban | If after an accepted hard voucher ban, permanent ban.<br/>Otherwise, extend hard voucher ban to 6 months from evasion attempt. | | |
-| Language | Non-english chat | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
-| Language | Solely non-english chat | W | Indef GB | | |
-| Exploits | Bugs/exploits | **W** - 7d GB | 12hr - 7d GB | 3d - 15d GB | 7d - 15d GB |
-| Exploits | Use of macros | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
 | Non-grouping | Multi-keying | W - **Indef** GB | Indef GB | | |
 | Non-grouping | Ahelp misuse in bad faith[^badFaith] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Non-grouping | Threats to ahelp | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Non-grouping | Under 14 | Indef GB | | | |
 | Non-grouping | Bad character name[^requiresIntent] | **W** - 12hr GB | **12hr** - 3d GB | **7d** - 7.5d GB | |
-| Metagaming | IC in OOC[^positiveException] | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
+| Language | Non-english chat | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
+| Language | Solely non-english chat | W | Indef GB | | |
+| Exploits | Bugs/exploits | **W** - 7d GB | 12hr - 7d GB | 3d - 15d GB | 7d - 15d GB |
+| Exploits | Use of macros | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
 | AI Laws | Major failure to follow silicon laws | W - 5d RB | 3d - 7.5d RB | Indef RB | |
 | AI Laws | Minor failure to follow silicon laws | W | W - 5d RB | 3d - 7.5d RB | Indef RB |
 | Familiars | Familiar griefing master | 12hr GB | 3d GB | **7d** - 7.5d GB | |
@@ -130,8 +129,8 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Metagaming | Using info from death[^infoFromDeath] | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
 | Metagaming | Using info from past life | 12hr - 48hr GB | 3d GB | **7d** - 7.5d GB | |
 | Metagaming | Metagaming round type | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB | |
+| Metagaming | IC in OOC[^positiveException] | W | W - 12hr GB | 3d GB | **7d** - 7.5d GB |
 | Powergaming | Preparing items not needed IC | W | W - 12hr GB | 12hr - 3d GB | 3d - 7.5d GB |
-| Griefing | Damage/disruption to arrivals/arrivals shuttle | 12hr - 3d GB | 3d - 7d GB | 7d - 15d GB | |
 | Self-antag | Self-antag[^excludingEscalationIssues] | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Self-antag | Station sabotage[^stationSabotage] | W - 3d GB | 12hr - 7d GB | 14d - 15d GB | |
 | Self-antag | Cults/riots/revolutions | **12hr** - 3d GB | 12hr - **3d** - 7d GB | **7d** - 7.5d GB | |
@@ -142,11 +141,12 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Griefing | Early massive station sabotage[^antagOnly] | **W** - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
 | Griefing | Unreasonable failure to follow an order from a team leader | W - 5d RB | 3d - 7d RB | Indef RB | |
 | Griefing | Harassing a player/role/department with no IC conflict | W - 12hr GB | 12hr - 3d GB | **7d** - 7.5d GB | |
+| Griefing | Abandoning a role[^abandoningRole] | W - 5d RB | 3d - 7d RB | Indef RB | |
+| Griefing | Antag rolling | 12hr - 3d GB | 3d - 7d GB | **7d** - 7.5d GB | |
+| Griefing | Damage/disruption to arrivals/arrivals shuttle | 12hr - 3d GB | 3d - 7d GB | 7d - 15d GB | |
 | Escalation | Over escalation[^eachVictim] | W | 12hr GB | 3d GB | **7d** - 7.5d GB |
 | Escalation | RDM[^eachVictim] | 12hr GB | 3d GB | **7d** - 7.5d GB | |
 | Escalation | Over escalation or RDM that is a secondary result of station sabotage[^stationSabotageRDM] | 12hr GB | 3d GB | **7d** - 7.5d GB | |
-| Griefing | Abandoning a role[^abandoningRole] | W - 5d RB | 3d - 7d RB | Indef RB | |
-| Griefing | Antag rolling | 12hr - 3d GB | 3d - 7d GB | **7d** - 7.5d GB | |
 | Competence | Unreasonable incompetence in role | W - **3d** - 7d RB | 7d - 15d RB | Indef RB | |
 | Competence | Abuse of a position of authority | 3d - 7d RB | 7d - 15d RB | Indef RB | |
 | Competence | Taking actions a reasonable person would view as to be to the detriment of the station as security/command | 3d - 7d RB | 7d - 15d RB | Indef RB | |
