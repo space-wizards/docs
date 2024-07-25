@@ -5,7 +5,7 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 ## Level 0: Local Sandbox Server
 
 1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
-2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
+2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#custom-code) section below.
 3. Extract that to a directory somewhere.
 4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
 5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
@@ -94,7 +94,7 @@ Then you can use Content.Packaging to do the hard work. The command below will p
 `dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
 
 ```admonish info
-Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this
+Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this instead
 `python Tools/package_server_build.py --hybrid-acz`
 ```
 
@@ -108,10 +108,12 @@ This will not, of course, handle automatic restarts (in case of a crash) or upda
 For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
 
 ### Setting Rules
-By default, the server ships with the rules that are used on Wizard's Den servers. To set custom rules for your own server:
+By default, the server ships with no rules. To set custom rules for your own server:
 
-1. Add a file with your rules to the `Resources/ServerInfo/` directory.
-2. Set the `server.rules_file` CCVar with the base name of your rules file (just the file name without the leading path).
+1. Fork the project if you have not already (which means also [setting up development environment](./setting-up-a-development-environment.md))
+2. Add a guidebook file with your rules in the `Resources/ServerInfo/Guidebook/ServerRules` directory. Follow the format of `DefaultRules.xml`
+3. Add a guidebook prototype entry in `Resources/Prototypes/Guidebook/rules.yml`. Pointing to the newly created guidebook text file file you made.
+4. Set the `server.rules_file` CCVar to the ID you set in the guidebook prototype you made in the previous step.
 
 ### Public Hub Server - Getting your server on the launcher's list
 
@@ -130,6 +132,7 @@ By default, the server ships with the rules that are used on Wizard's Den server
     # server_url = "ss14://..."
     tags = "" # comma separated list of tags
     ```
+If you get an error attempting to advertise please read [the troubleshooting bellow](#Troubleshooting)
 
 ### Bare Server Build Configuration
 
@@ -169,66 +172,6 @@ This is for people running their own codebase and server and/or those who want a
 
 ### Installation
 [`Refer to this`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for instructions on building and configuring Watchdog.
-
-### Server Instance Folder
-
-The watchdog will automatically create a folder structure for each server instance. This is at `instances/<instanceId>`, e.g. instances/wizards_den / instances/wizards_den_two, relative to the current working directory when executing the watchdog.
-
-Each instance folder has the following files and folders:
-
-* `binaries/`: Is used to store client binaries when using the "Local" update type, see below.
-* `bin/`: Contains the actual extracted server binaries.
-* `data/`: Stores server data like player preferences.
-* `config.toml`: Is the config file the server will load (the watchdog overrides the default location, `server_config.toml` next to the .exe, to avoid it getting deleted when the server resets).
-
-```admonish info
-Note that although the watchdog handles server updates you may still want to setup the config.toml as per the `Bare Server Configuration` section above.
-```
-
-### Update types
-The watchdog supports 4 different types of update types:
-1. Jenkins
-2. Local
-3. Git
-4. Manifest
-
-If you wish to obtain more information you can browse the SS14.Watchdog repo to see how they work.
-
-TODO: Explain the update providers better and explain hybrid ACZ.
-
-#### 1. Jenkins Updates
-TBC
-
-#### 2. "Manual" Local Updates
-
-You can use the watchdog with local files, and have it automatically generate the necessary build information. This will also host the client binaries for you.
-
-To configure this, use the following update configuration in your `appsettings.yml`, in the entry for your server instance:
-
-```yml
-UpdateType: "Local"
-Updates:
-  Version: "foobar" # Version string to use.
-```
-
-The watchdog will automatically host client binaries. Where does it pull them from? The `binaries/` folder in your server instance folder! Note that for this to work, the watchdog HAS to be publicly accessible via `BaseUrl` in the config file.
-
-You can edit the `Version:` specified in the config to tell the launcher that it should update the game next time you connect.
-
-You will have to manually move files around and extract the server binaries.
-
-#### 3. Git
-This provider has 3 options available
-- BaseUrl: This is the url for the repo, i.e. https://github.com/space-wizards/space-station-14
-- Branch: The branch to checkout from the repo. This defaults to master
-- HybridACZ: `true` or `false`. You most likely want to keep this `true`
-
-#### 4. Manifest
-TBC
-
-#### Custom Auto Updates
-
-Not supported, but it should be relatively trivial to edit the code for `SS14.Watchdog` to add support for whatever update mechanism you need. See `UpdateProvider.cs`.
 
 ### Server Build Configuration
 
@@ -404,3 +347,4 @@ All of the important links on this page in one convenient place.
 * [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
 * [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)
 * [Public Hub Server Rules](../../community/space-wizards-hub-rules.md)
+* [Port Forwarding](../../server-hosting/port-forwarding.md)
