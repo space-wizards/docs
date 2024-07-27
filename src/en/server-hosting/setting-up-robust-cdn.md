@@ -266,6 +266,13 @@ For example: [Wizard's Den builds](https://wizards.cdn.spacestation14.com/fork/w
 
 If you can't have subdomains for some reason (seriously, you should use subdomains if you can), you will want to mount multiple services behind the same domain with a reverse proxy such as nginx. When you do this you need to set `PathBase` in the config file to make links in the HTML builds page work. Other API functionality is not affected by this.
 
+For example, if you want to host the CDN under `https://example.com/cdn/`, you should configure it as such:
+
+```json
+"BaseUrl": "https://example.com/cdn/",
+"PathBase": "/cdn/",
+```
+
 **Make sure your reverse proxy is configured correctly**: it should be passing the full path to Robust.Cdn, i.e. not cutting off the path prefix itself. If using **nginx**, this is achieved as such:
 
 ```nginx
