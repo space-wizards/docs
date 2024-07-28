@@ -218,6 +218,7 @@ Space Station 14
 			- [Machine Upgrading Rework](en/space-station-14/departments/engineering/proposals/machine-upgrading-rework.md)
 			- [Power Generation Rework](en/space-station-14/departments/engineering/proposals/power-generation.md)
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
+			- [Holodeck](en/space-station-14/departments/engineering/proposals/holodeck.md)
 
 	- [Medical](en/space-station-14/departments/medical.md)
 		- [PR Guidelines](en/space-station-14/departments/medical/guidelines.md)
