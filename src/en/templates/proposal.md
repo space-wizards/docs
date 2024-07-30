@@ -4,27 +4,32 @@ Your title should convey the basic jist of your proposed changes. It should be s
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Your Names Here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
-
-`Designers` should be the names that you use on GitHub and/or Discord. This is optional but strongly recommended, since:
-
-- This acknowledges credit where it is due
-- People who are confused about the written intent can use this information to contact the authors
-
-`Implemented` is the status of the feature.
-
-Github links can include multiple PRs, if relevant.
+| SpiritFoxShikigami | :x: No | TBD |
 
 ## Overview
 
-A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds".
+This proposal describes the addition of a new cat familiar ghost role by re-using cat and syndicat assets.
+In addition to re-using assets, a few mechanics and gameplay features are to be introduced to make the ghost role dynamic, interactive and fun.
 
-## Background
+## Reason for proposal
 
-Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game.
+There are a lot of ghost roles in the game already, but the issue ususally involves how much one can do with those roles to still have fun in the game.
+Many times mice or any station pets that have mostly just the complexity to walk around are available when being round ended early or when starting as an observer.
+To enhance and combat this boredom issue, pet cats are introduced as a familiar to add a bit more complexity to the gameplay than just spectating as an animal about what people are doing.
 
-Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
+## How to include the pet cat in the game
 
-## The rest?
+The mentioned cats can be summoned by using a teleporter item like that of a syndicat's, except that the teleporter becomes an obtainable item by being included in the maint's random loot pool.
+Using the teleporter prompts to name the cat that is about to be summoned.
+The ghost role becomes available after the prompt for someone to take.
 
-Is entirely up to you.
+## Features
+
+- The sprite of the cat is randomized and can be any of the existing ones (excluding syndicat)
+- The player who plays the cat will see an icon on the person who summoned him, so they can be correctly identified as their owner
+- Pet cats have an additional bag slot, which can hold a satchel bag (The sprite will show the satchel being strapped to its tail)
+- The cat is not capable of speech, thus making only cat noises when the player types a message into the in game chat (just like syndicat)
+- An additional "hand" slot is given to the cat for carrying items in its mouth
+- Cats get access to basic (or emergency accessed) doors, so they do not become stuck in one room easily
+- When the owner whistles from within anywhere in the station, the player who plays the cat will hear the whistle sound and get a pin pointer on the screen - The pointer points towards the owner as an indication for the cat to walk to them
+- Cats are familiars and must follow their owner's orders or wishes
