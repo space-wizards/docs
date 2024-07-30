@@ -1,6 +1,4 @@
-# Short, Properly Capitalized Title
-
-Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
+# Pet cat familiar - Ghost role
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
