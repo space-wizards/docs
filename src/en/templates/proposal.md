@@ -13,9 +13,9 @@ In addition to re-using assets, a few mechanics and gameplay features are to be 
 
 ## Reason for proposal
 
-There are a lot of ghost roles in the game already, but the issue ususally involves how much one can do with those roles to still have fun in the game.
-Many times mice or any station pets that have mostly just the complexity to walk around are available when being round ended early or when starting as an observer.
-To enhance and combat this boredom issue, pet cats are introduced as a familiar to add a bit more complexity to the gameplay than just spectating as an animal about what people are doing.
+There are a lot of ghost roles in the game already, but the issues ususally involve how much one can do with those roles to still have fun in the game.
+Many times mice or any station pets only involve walking around and just observing the station as a whole, which may come off as a bit boring when there is not much interactivity given to their circumstances.
+To combat this boredom issue, pet cats are introduced as a familiar to add a bit more complexity to the gameplay than just spectating as an animal with not much purpose given.
 
 ## How to include the pet cat in the game
 
