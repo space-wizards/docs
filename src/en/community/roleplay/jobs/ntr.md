@@ -1,7 +1,7 @@
 # Nanotrasen Representative
 ### Superiors: Central Command
 ### Difficulty: Hard
-### Access: "Command, Security, External, Cryogenics, Maintenance, Engineering, Medical, and Research."
+### Access: Command, Security, External, Cryogenics, Maintenance, Engineering, Medical, and Research.
 ### Duties: Oversee departments, give out orders sent by Central Command, and send regular reports on the station to Central Command.
 ![image](https://github.com/user-attachments/assets/94205237-a1d0-4832-8211-2d8bf262f795)
 
