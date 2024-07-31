@@ -1,7 +1,7 @@
 # Blueshield Officer
 ### Superiors: Nanotrasen Representative, Central Command
 ### Difficulty: Hard
-### Access: "Command, Security, Brig, External, Cryogenics, Maintenance, Engineering, Medical, and Research."
+### Access: Command, Security, Brig, External, Cryogenics, Maintenance, Engineering, Medical, and Research.
 ### Duties: Act as a bodyguard to station command and the Nanotrasen Representative.
 ![image](https://github.com/user-attachments/assets/9a339dd1-28a5-4ab5-92e4-b5bc50348d6d)
 ## Overview
