@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| whateverusername0 and TokenStyle and futuristic_0 (discord) | :white_check_mark: Yes | [PR](https://github.com/space-wizards/space-station-14/pull/30198) |
+| whateverusername0 and TokenStyle and ElPidor and futuristic_0 (discord) | :white_check_mark: Yes | [PR](https://github.com/space-wizards/space-station-14/pull/30198) |
 
 ## Overview
 This proposal aims to dilute the amount of Syndicate agents on the station by adding more variety to it. Instead, bad actors will infiltrate the Space Station 14 from many other places.
