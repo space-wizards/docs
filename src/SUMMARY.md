@@ -164,7 +164,8 @@ Space Station 14
 	- [Proposals]()
 	  - [PAI Expansion Slots](en/space-station-14/player-interaction/proposals/pai-expansion-slots.md)
 	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
-	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md) 
+	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md)
+	  - [Inventory Rig Slot](en/space-station-14/player-interaction/proposals/rig-slot.md) 
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
