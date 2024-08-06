@@ -38,6 +38,7 @@ Content Maintainers:
 - [EmoGarbage404](https://github.com/EmoGarbage404) - @emogarbage (500128901805244436)
 - [LankLTE](https://github.com/LankLTE) - @lanklte (328292818265047041)
 - [Plykiya](https://github.com/Plykiya) - @plykiya (126071710712594432)
+- [slarticodefast](https://github.com/slarticodefast) - @sebseb5071 (578191477839101967)
 
 Engine maintainers:
 No one maintains only engine :p
