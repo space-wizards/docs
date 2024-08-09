@@ -28,6 +28,8 @@ The server needs network ports to be forwarded so that people can connect. By de
 
 For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
+After you have port forwarded, google "What is my ip" and you will get your public IP address. Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be connecting.
+
 ### Configure Your Server
 
 You can configure settings in the server by editing the config file, `server_config.toml`. The config file is TOML which is basically INI ~~except better specified, somewhat more powerful, easier to misuse, and more annoyingly opinionated (comments NEED their own line)~~.
