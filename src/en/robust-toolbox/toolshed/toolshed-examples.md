@@ -170,7 +170,7 @@ vv /entity/ENTID/StationBankAccount
 
 ## Scripts and You
 
-Scripts can be used to automate certain tasks or commands. To create a new script, you will need to create a new file in your Space Station 14 Data directory. On Windows you should be able to find it under `%appdata%`, in `Space Staion 14/data`.
+Scripts can be used to automate certain tasks or commands. To create a new script, you will need to create a new file in your Space Station 14 [client data directory](../user-data-directory.md#Client).
 
 The file name should be whatever you want the script to be called. You can edit it with any text editor, just make sure to save it as a file with no extension.
 
