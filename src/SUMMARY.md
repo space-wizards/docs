@@ -51,7 +51,9 @@ SS14 By Example
   - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
 - [Basic Networking and You](en/ss14-by-example/basic-networking-and-you.md)
 - [Fluent and Localization](en/ss14-by-example/fluent-and-localization.md)
-- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md) 
+- [UI and You](en/ss14-by-example/ui-and-you.md)
+  - [UI Cookbook](en/ss14-by-example/ui-and-you/ui-cookbook.md)
+- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
 
 
 Robust Toolbox
@@ -78,6 +80,7 @@ Robust Toolbox
     - [General](en/robust-toolbox/toolshed/commands/general.md)
     - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
+  - [Containers](en/robust-toolbox/user-interface/containers.md)
 - [IoC](en/robust-toolbox/ioc.md)
 - [Rendering]()
   - [Lighting and FoV](en/robust-toolbox/rendering/lighting-and-fov.md)
