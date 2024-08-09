@@ -1,6 +1,6 @@
 # Toolshed Examples
 
-This guide covers some basic examples of toolshead commands.
+This guide covers some basic examples of Toolshed commands.
 
 ## Interacting with entities
 
@@ -136,7 +136,7 @@ This command can be split into multiple parts for easier understanding:
 - Finally, we rename our bee to "Queen Bee"
 - Then we fetch all nine other bees and also turn them into ghost roles, just like we did with the Queen Bee
 
-Now, a way more efficient way to do this would to have two separate commands, one for the Queen Bee and one for the Angry Bees. This is just a demo of how complex toolshed can get.
+Now, a way more efficient way to do this would be to have two separate commands, one for the Queen Bee and one for the Angry Bees. This is just a demo of how complex toolshed can get.
 
 ### GHOSTULARITY:
 ```
@@ -183,8 +183,8 @@ Admins will often have a script to customize their ghosts. Here is an example of
 > self do "vvwrite entity/$ID/Grammar/Attributes[gender] Male"
 ```
 
-- The first line makes sure you are an admin ovserver
-- Next, we make sure to add any of the components that are helpful for adminning if needed. These show up the job icons, antag icons, mindshields. The `Grammar` and `Identity` components are used later for customizing the aghost
+- The first line makes sure you are an admin observer.
+- Next, we make sure to add any of the components that are helpful for admining if needed. These show up the job icons, antag icons, mindshields. The `Grammar` and `Identity` components are used later for customizing the aghost.
 - The third and fourth line set the ghost color and description using `vvwrite` with a path and a value
 - The last line changes the pronouns to show up as He whenever someone inspects the ghost.
 
