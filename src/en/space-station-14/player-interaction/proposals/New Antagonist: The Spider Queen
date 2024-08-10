@@ -1,0 +1,48 @@
+# New Antagonist: The Spider Queen
+
+Adds a new antagonist: The spider queen
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| FraG/Dmitry777 | :information_source: Open PR | https://github.com/space-wizards/space-station-14/pull/30820 |
+
+## Overview
+
+Adds a new antagonist who looks a bit like the rat king. More details in PR
+
+## Background
+
+You can write your question here or something related to the antagonist - https://github.com/space-wizards/space-station-14/pull/30820
+
+## The rest?
+
+The antagonist will not be very strong, for example, a guard spider can be killed with just a crowbar, but if they are together and in a lair with a web that slows down victims, they are strong.
+They play through base building and constant expansion. The goal of the spider queen is to reproduce and increase the size of the lair.
+
+###Text from PR
+About the PR
+Queen abilities:
+
+— Laying eggs (4 pieces).
+— Summons three small spiders that disappear after 20 seconds.
+— Create a wall of web, the web itself and a blue crystal for lighting.
+
+Spiders:
+
+— Spider Queen (the strongest unit, although it is not difficult to kill, so it relies on its children and laid eggs).
+— Spider Hunter (the main force of the hive, the best bite).
+— Spider Guard (can build walls and webs with crystals).
+— Ghost Spider (has invisibility, deals poison damage and injects a sleeping reagent).
+— Spider Shooter (shoots poison, hits with poison)
+
+You could say that it will be similar to the Rat King, only the servants will be players. They, as a rule, do not attack themselves, but simply create problems in technical rooms. You can kill one spider with a crowbar, their strength is in the web and unity!
+
+Right now it's not 100% ready, at least the description is normal, the names and distribution into folders are necessary, but the gameplay is all there, so you can take a look and say what to change or something like that.
+
+He appears in the ventilation as the king of rats.
+
+Why / Balance
+The new antagonist is fun!
+
+Technical details
+Antagonist on 100% prototypes
