@@ -178,7 +178,7 @@ Admins will often have a script to customize their ghosts. Here is an example of
 
 ```
 > self not prototyped AdminObserver do "aghost"
-> self comp:ensure ShowCriminalRecordIcons comp:ensure ShowJobIcons comp:ensure ShowJobIcons comp:ensure ShowMindShieldIcons comp:ensure ShowSyndicateIcons comp:ensure Grammar comp:ensure Identity
+> self comp:ensure ShowCriminalRecordIcons comp:ensure ShowJobIcons comp:ensure ShowMindShieldIcons comp:ensure ShowSyndicateIcons comp:ensure Grammar comp:ensure Identity
 > self do "vvwrite entity/$ID/Ghost/color '#00D2AD'"
 > self do "vvwrite entity/$ID/Description \"GHOST GANG!!\""
 > self do "vvwrite entity/$ID/Grammar/Attributes[gender] Male"
