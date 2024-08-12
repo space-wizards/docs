@@ -8,26 +8,25 @@ Adds a new antagonist: The spider queen
 
 ## Overview
 
-Adds a new antagonist who looks a bit like the rat king. More details in PR
+Adds a new antagonist who looks a bit like the rat king. 
+
+- The goal of the antagonist is to reproduce and increase the hive!
+The queen must be a complete team player, she herself does not pose a big threat, but she is strengthened by creating eggs from which spiders hatch, which can be used as ghosts. The queen's servants have different types and they should be different enough for variety. (Done)
+
+Possible spiders: builders, melee and ranged warriors, scouts. (Done)
 
 ## Background
+The prototype was made by me for events on the server. Then I offered 2 servers of this antagonist and they approved it.
 
-You can write your question here or something related to the antagonist - https://github.com/space-wizards/space-station-14/pull/30820
+You can write your question here or something related to the antagonist - https://github.com/space-wizards/space-station-14/pull/30820  
+You can also write to me in the discord - mixfix9277
 
-## The rest?
 
+##More details
 The antagonist will not be very strong, for example, a guard spider can be killed with just a crowbar, but if they are together and in a lair with a web that slows down victims, they are strong.
 They play through base building and constant expansion. The goal of the spider queen is to reproduce and increase the size of the lair.
 
-###Text from PR
-About the PR
-Queen abilities:
-
-— Laying eggs (4 pieces).
-— Summons three small spiders that disappear after 20 seconds.
-— Create a wall of web, the web itself and a blue crystal for lighting.
-
-Spiders:
+The spiders that are now:
 
 — Spider Queen (the strongest unit, although it is not difficult to kill, so it relies on its children and laid eggs).
 — Spider Hunter (the main force of the hive, the best bite).
@@ -37,12 +36,33 @@ Spiders:
 
 You could say that it will be similar to the Rat King, only the servants will be players. They, as a rule, do not attack themselves, but simply create problems in technical rooms. You can kill one spider with a crowbar, their strength is in the web and unity!
 
-Right now it's not 100% ready, at least the description is normal, the names and distribution into folders are necessary, but the gameplay is all there, so you can take a look and say what to change or something like that.
+###Why is the spider queen needed?
+The new antagonist is fun! And even now, spiders are boring and we don't have enough antagonists where team play is mandatory if you want to survive. Yes, and she creates a lot of roles for ghosts enough, so if you were killed by spiders, you can go for a spider.
 
-He appears in the ventilation as the king of rats.
+###Balance
+- Spiders should not pose a big threat at least when the queen has just appeared.
+- Over time, if the queen has successfully created a lair and her army, she can successfully eliminate everyone on the station and capture it.
+- Spiders individually are dead spiders. Spiders together are a potential threat.
+- The death of the queen will lead to the slow extinction of the hive with the help of the crew.
+- Spiders will probably capture techs first, but if they are found, they will no longer hide and, if possible, will capture everything including departments and kill department associates (Medical, research, cargo), which can lead to the relocation of the department or its extinction due to spiders.
+- Now 1 officer with some kind of weapon is enough to easily kill a queen who walks alone along the corridors without a web.
+- Now 2-4 officers are able to storm the lair and eliminate the queen with spiders after detecting the queen (Usually no one knows about the queen at the beginning, and then they find her and the assault begins, and at this point the queen has already managed to weave a web and create a small army, at least during tests on other servers this happened almost always).
+- The queen cannot create eggs in space, since they explode from such pressure.
+- The queen and spiders die in space and at high or low pressures.
+- Webs can make a web only in one tile, but the recharge of the web is quite fast. (Why not do it like the tarantula? Because I don't like that the web is in the walls and it merges, and also in spiders in CC13 they also made a web in one tile)
+- The web of the queen, the builder is reinforced, it slows down better, has increased HP. Other spiders have a normal one.
+- You can't get silk from the web, but you can from the walls. This is done so that there won't be millions of silk after the fight with the queen and the destruction of the hive.
+- When cutting up the queen, 3 small spiderlings will spawn from the ability, as well as something dragoned that costs 3k-4k credits. 
+- When spiders make their walls, a structure appears that can be easily broken in 1 hit, then a half-finished wall that is also easy to break, after a while a wall appears.
+- One smart depressurization made by engineers - migration or death of spiders.
 
-Why / Balance
-The new antagonist is fun!
+###Problems
+- Zombie + Spider Queen = Power. She will be able to create eggs and use her other abilities when she is a zombie (As with any antagonist with abilities, the dragon for example can do the same).
+- To create new spiders, the queen does not need human corpses, food or anything at all, but simply a recharge of the ability.
+- The ability that releases 3 spiders is crookedly made. (A spider appeared in the place where the queen clicked. Other spiders can appear on neighboring tiles, above or below, so two spiders can end up in a wall.)
+
+###Technical details
+Antagonist on 100% prototypes
 
 Technical details
 Antagonist on 100% prototypes
