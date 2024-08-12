@@ -79,23 +79,41 @@ The ore density of the mining asteroid is higher than of those pulled in from th
 This entire package offers up a greater reward for preparing and becoming skilled enough to best the challenges on the asteroid and collect the resources on there.
 It provides variety and a bit of dangerous separation from the station while not being wholly disconnected due to the general impossibility of safety on the asteroid.
 
-Structures on the asteroid also have the potential to contain expedition disks, which leads to the final section:
+## Planet Exploration
 
-## Expeditions
+Planet Exploration missions are the final "stage" of salvage.
+These are not intended to be done every frequently, but instead as an uncommon reward for facing the extreme dangers of the vgroid.
 
-Expeditions serve as a capstone salvaging event and are only meant to appear infrequently throughout rounds.
-To gain access to an expedition, you must first locate an expedition disk somewhere on the mining asteroid, most likely gated in a dungeon or by some kind of bossfight.
-Whatever the methodology is, they should be extremely limited in number and difficult to obtain.
+Each exploration will take place on a named planet with a lore behind it.
+The planet will generate unique plants, mobs, and structures that are specifically tailored to it.
+On top of that, it will also have a limited baseline ore generation.
 
-Once the disk is obtained, the salvagers must return to the station and place it inside of the expedition console, enabling the expedition to be ran.
-Expeditions are timed planet-side operations facilitated through a large central gateway near the vault.  
+Planets are primarily focused on caches of rare loot rather than being bountiful.
+Respawning mobs will pose an ever-present threat that players will have to deal with.
+They will serve as a dangerous final challenge for only the best loot, rather than just an obligatory step in the journey. 
 
-This allows non-salvage members and potentially the whole station to participate in the expedition, allowing for a more unique gameplay opportunity than the more solo-oriented salvaging.
+The three planned planets are:
+- "Icemoon": A harsh cold tundra inhabited only by machinery and wild animals
+- "Cleveland": A hellish lava planet where the only relief is stretches of desert
+- "Jungle": A dense rainforest with a sprawling cave network that has become the homeland of some non-native fauna.
 
-The focus on the expedition is on the large dungeon full of goodies as well as threats and enemies.
-You can also mine and harvest from the environment, but not nearly to the same scale as wrecks/asteorids/mining asteroid in order to balance in the infinite size.
+To access a planet, you must first gather a **planetary access disc** and bring it to a _gateway_. 
+Every station will have a gateway added (locked with command access with a blast-door for optional easy entry) in order to facilitate this.
+Once the gateway is opened, it remains open and accessible for the remainder of the round.
+The gateway can be toggled to different destinations if multiple discs are obtained.
 
-Much like current wrecks, after a specified time limit (likely about 15 to 20 minutes) a final track will begin to play and players will need to make their way to the gateway in order to not be marooned on the planet.
+### Obtaining Discs
+Discs can be obtained via **mining casks** located on the mining asteroid. 
+Each cask is a 5x5 structure that contains a large amount of hostile mobs and either a disc or a high-value loot.
+About 1 to 3 casks will spawn on the asteroid, with at least 1 of them guaranteed to have a disc inside.
+
+The walls of the cask are impervious to damage, so in order to access it, you have to unlock the entrance.
+The key to the cask is known as the "mining sigil" and must be created using various materials:
+- 2 sigil halves, obtained from the two dungeons on the mining asteroid
+- A diamond
+- Sharkminnow teeth, requiring one to be killed on a magnet wreck
+- Goliath hide, requiring one to be killed on the mining asteroid
+- Hivelord core, requiring one to be killed on the mining asteroid
 
 ## Loot and Rewards
 
