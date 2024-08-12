@@ -66,3 +66,94 @@ Antagonist on 100% prototypes
 
 Technical details
 Antagonist on 100% prototypes
+
+##Abilities in detail
+A new antagonist is added — the spider queen. The probability of her appearing in the ventilation is 0.005.
+Their healing is passive and fast.
+
+CD measurements will be made in seconds.
+
+###Queen stats:
+
+HP — 300;
+Damage:
+Piercing — 12;
+Poisonous — 4;
+Structural — 15.
+Queen abilities:
+- Creating a strong wall of web (CD — 10);
+- Creating a blue crystal for illumination (CD — 30);
+- Creating a royal web that slows down more than usual (CD — 4);
+- Creating an overhead web that disappears after a while, but slows down more (CD — 25);
+- Releasing three spiderlings that attack the nearest enemy (CD — 40);
+- Ability to shoot poison;
+- Injecting a sleeping reagent into the victim (passive ability);
+- 4 abilities related to eggs (details below) (CD - different).
+- Egg abilities:
+
+The Queen creates eggs that hatch into various spiders after a while.
+
+Guard Egg:
+CD - 200 seconds;
+hatching - 55 seconds.
+Hunter Egg:
+CD - 300 seconds;
+hatching - 80 seconds.
+Gunner Egg:
+CD - 380 seconds;
+hatching - 80 seconds.
+Ghost Egg:
+CD - 350 seconds;
+hatching - 80 seconds.
+
+##Spider stats:
+
+###Guard Spider (Drone):
+HP - 85;
+Damage:
+Piercing - 5;
+Structural - 10.
+Abilities:
+- Create a wall of web (CD - 8);
+- Create a blue crystal for lighting (CD - 30);
+- web creation (CD - 2);
+- creation of false web that disappears after a while, but slows down more (CD - 25).
+
+###Huntsman Spider (defender):
+HP - 110;
+damage:
+piercing - 15;
+structural - 15.
+Abilities:
+- creation of false web that disappears after a while, but slows down more (CD - 25);
+- creation of the weakest web (Normal web).
+
+###Ghost Spider (scout, defender):
+HP - 100;
+damage:
+poisonous - 4;
+structural - 10.
+Abilities:
+- invisibility like a cardboard box of nuclear weapons (passive ability);
+- injection of a sleeping reagent into the victim (passive ability);
+- creation of the weakest web (slows down the worst) (CD - 10);
+- can shoot poison.
+
+###Archer Spider (Ranged Defender):
+HP - 80;
+Damage:
+Poisonous - 5;
+Piercing - 2;
+Structural - 5.
+Abilities:
+- Can shoot poison (best of all);
+- Injection of a sleeping reagent into the victim (passive ability);
+- Creation of a clown web (CD - 30).
+
+###Web:
+- Royal Web - 50 HP, 0.15 slowdown.
+- Drone web - 30 HP, 0.25 slowdown.
+- The disappearing web - normal HP, 0.1 slowdown.
+
+Spiders heal passively, quite well.
+
