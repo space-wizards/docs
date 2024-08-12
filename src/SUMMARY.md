@@ -113,6 +113,7 @@ Space Station 14
 	- [Displacement Maps](en/space-station-14/art/displacement-maps.md)
 	- [Device Network](en/space-station-14/core-tech/device-network.md)
 	- [NPCs](en/space-station-14/core-tech/npcs.md)
+    - [Entity Tables](en/space-station-14/core-tech/entity-tables.md)
 	- [Chemistry](en/space-station-14/core-tech/chemistry.md)
 		- [Metabolism](en/space-station-14/core-tech/chemistry/metabolism.md)
 		- [Reactions](en/space-station-14/core-tech/chemistry/reactions.md)
