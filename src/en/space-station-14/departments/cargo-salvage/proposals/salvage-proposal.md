@@ -90,7 +90,9 @@ On top of that, it will also have a limited baseline ore generation.
 
 Planets are primarily focused on caches of rare loot rather than being bountiful.
 Respawning mobs will pose an ever-present threat that players will have to deal with.
-They will serve as a dangerous final challenge for only the best loot, rather than just an obligatory step in the journey. 
+Additionally, harsh weather makes vast surfaces of the planets completely unlivable at times, putting potential sight-seers at risk of death.
+
+These areas will serve as a dangerous final challenge for only the best loot, rather than just an obligatory step in the journey. 
 
 The three planned planets are:
 - "Icemoon": A harsh cold tundra inhabited only by machinery and wild animals
