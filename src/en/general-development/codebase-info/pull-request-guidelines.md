@@ -89,6 +89,8 @@ Maintainers may, at their discretion, add, modify, or remove a change log entry 
 
 Putting `ADMIN:` in the changelog will place all changelogs below it into the admin changelog category instead of the main changelog category.
 
+Note: The category is case-insensitive, but if it is not alphabetical ending with a colon, it will fail parsing the category and will fall back to placing the changelogs in the previous category or the main changelog category.
+
 ```
 :cl:
 ADMIN:
