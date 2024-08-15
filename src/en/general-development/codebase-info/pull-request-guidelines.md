@@ -87,11 +87,11 @@ Maintainers may, at their discretion, add, modify, or remove a change log entry 
 
 #### Admin changelog
 
-Putting `ADMIN` or `ADMIN:` in the changelog will place all changelogs below it into the admin changelog instead of the standard player changelog.
+Putting `ADMIN:` in the changelog will place all changelogs below it into the admin changelog category instead of the main changelog category.
 
 ```
 :cl:
-ADMIN
+ADMIN:
 - add: Added fun!
 - remove: Removed fun!
 - tweak: Changed fun!
@@ -104,7 +104,7 @@ or
 - remove: Removed fun!
 - tweak: Changed fun!
 - fix: Fixed fun!
-ADMIN
+ADMIN:
 - add: Added fun!
 - remove: Removed fun!
 - tweak: Changed fun!
