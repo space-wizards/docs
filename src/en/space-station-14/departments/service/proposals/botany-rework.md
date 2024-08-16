@@ -6,13 +6,13 @@
 
 ## Overview
 
-This is a proposal to improve Botany (The system involving plants growing in-game) by making it support the ECS code pattern better than it currently does. This is a large task, but can be broken into 5 or so pieces to make this manageable. This is not a proposal to change Hydroponics (The department where people do the growing of plants), though most ideas for reworking Hydroponics require a more flexible Botany system.
+This is a proposal to improve Botany (The system involving plants growing in-game) by making it support the ECS code pattern better than it currently does. This is a large task, but can be broken into 5 or so pieces to make the upgrade manageable. This is not a proposal to change Hydroponics (The department where people do the growing of plants), though most ideas for reworking Hydroponics require a more flexible Botany system.
 
 ## Background
 
-Botany isn't awful, but it's not very expandable. It's locked down to essentially what SS13 Botany was, including being a single function with a lot of checks,  with a few parts of it commented out for reasons. It should get updated to use components as modularly as possible, so that each part of the Botany system becomes extremely flexible and gives us much more room to create interesting plants and scenarios involving them. This requires breaking the current Update() call into several pieces, and making lots of components that can reference systems for those pieces separately per plant. Ideally, this also means that much more can be done to seeds in YAML.
+Botany isn't awful, but it's not very expandable. It's locked down to essentially what SS13 Botany was, including being a single function with a lot of checks, with a few parts of it commented out for reasons. It should get updated to use components as modularly as possible, so that each part of the Botany system becomes extremely flexible and gives us much more room to create interesting plants and scenarios involving them. This requires breaking the current Update() call into several pieces, and making lots of components that can reference systems for those pieces separately per plant. Ideally, this also means that much more can be done to seeds in YAML.
 
-This isn't the first time this idea has been brought up, but this should be the most complete writeup so far. This write-up does not assume any previously discussed PR that was cancelled due to requiring Plant ECS will be implemented after these changes, or be implemented in the same way the original author envisioned. 
+This isn't the first time this idea has been brought up, but this should be the most complete writeup so far. This write-up does not assume any previously discussed PR that was cancelled due to requiring Plant ECS will be implemented after these changes, or be implemented in the same way the original author envisioned. I am also not an expert on RobustToolbox, so some of the expectations below might not be the best way to do things or I may have missed some details.
 
 ## Summarized Proposed Changes:
 
@@ -31,7 +31,7 @@ Seeds and Plants also gain an OnInteract component check, and Harvest actions ar
 * Hydroponics: Department changes will depend on these changes being implemented, and be done after all of these.
 * Additional Mutations: Existing mutations will be ported to the updated system. New ones will be future PRs.
 * Balance: This is a system port. Any numbers that aren't obviously a bug should be ported over as-is. Some math may be simplified for human convenience. Hydroponics shouldn't change in popularity only due to the backend changes proposed.
-* Guidebook: This will be it's own PRs worth of work, if the guidebook should automatically detail out plants they way that Chemistry details out recipes.
+* Guidebook: This will be it's own PRs worth of work, if the guidebook should automatically detail out plants or mutations they way that Chemistry details out recipes. The written behaviors for Botanists should not change.
 
 ## Technical Details 
 
@@ -45,6 +45,7 @@ Seeds and Plants also gain an OnInteract component check, and Harvest actions ar
 * Harvesting gets a component/system that run on harvest. This allows plants to do more than just drop produce when they're picked. The 2 existing behaviors become Components here, for one-shot or repeatable harvests. Worth pointing out that auto-harvest would be a GrowthComponent that fires off the Harvest action, because the plant picks itself when its grown enough.
 * A new component type for onInteract hooks could be added to seeds and plants, to make them responsive to things before planting them and for doing more than just harvesting them. A plant that has utility while it's alive instead of just at harvest time is a thing we cannot currently do, and might motivate people to keep a plant around as long as possible instead of just aiming for maximum Potency.
 * The Plant entity should take the visuals of the plant itself from PlantHolder, and store components for growing on itself. SeedData, if any fields aren't handled after all this, should become a proper component applied to the plant.
+* Seeds may still end up storing some data, like a list of components to be applied to the plant, but it should be significantly smaller than the current set of values on SeedData.
 
 ## Work Split
 
@@ -57,7 +58,7 @@ This should be multiple PRs, so that incremental improvements can be made and wo
 * HarvestComponents rework
     * 2 EventEffects that fire off and create the actual produce. Copies all the mutation components active on the plant to the produce. One destroys the plant, the other reverts it to the previous growth stage.
 * GrowthComponent/System and seed prototype rework.
-    * Most of the current checks in PlantHolder.Update() should get split out into their own component (EntityEffect derived?)
+    * Most of the current checks in PlantHolder.Update() should get split out into their own component (EntityEffect derived? Or new components with a new system that runs on its own?)
     * Auto-harvest becomes one of these, since it runs at Update() and not OnHarvest().
     * I am not sure how much of SeedData remains after this. I suspect it does still exist, but mostly for which prototype the seed creates at harvest and which species it can mutate into.
 * Update Mutation System to include mutations for GrowthComonents and HarvestComponents
