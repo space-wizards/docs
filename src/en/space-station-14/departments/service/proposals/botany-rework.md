@@ -27,11 +27,11 @@ Seeds and Plants also gain an OnInteract component check, and Harvest actions ar
 
 ## Out of Scope:
 
-Kudzu: Not directly relevant to Botany code beyond being a possible mutation. 
-Hydroponics: Department changes will depend on these changes being implemented, and be done after all of these.
-Additional Mutations: Existing mutations will be ported to the updated system. New ones will be future PRs.
-Balance: This is a system port. Any numbers that aren't obviously a bug should be ported over as-is. Some math may be simplified for human convenience. Hydroponics shouldn't change in popularity only due to the backend changes proposed.
-Guidebook: This will be it's own PRs worth of work, if the guidebook should automatically detail out plants they way that Chemistry details out recipes.
+* Kudzu: Not directly relevant to Botany code beyond being a possible mutation. 
+* Hydroponics: Department changes will depend on these changes being implemented, and be done after all of these.
+* Additional Mutations: Existing mutations will be ported to the updated system. New ones will be future PRs.
+* Balance: This is a system port. Any numbers that aren't obviously a bug should be ported over as-is. Some math may be simplified for human convenience. Hydroponics shouldn't change in popularity only due to the backend changes proposed.
+* Guidebook: This will be it's own PRs worth of work, if the guidebook should automatically detail out plants they way that Chemistry details out recipes.
 
 ## Technical Details 
 
