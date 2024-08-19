@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Cerol | No | TBD |
+| Cerol | No | [Pt 1: Mutations](https://github.com/space-wizards/space-station-14/pull/31163) |
 
 ## Overview
 
@@ -38,10 +38,10 @@ Seeds and Plants also gain an OnInteract component check, and Harvest actions ar
 * An earlier proposal said plants should just be entities in a container. This is the ideal goal, but that's probably better done after each other step in the process has been compartmentalized out from PlantHolder.Update(). Step 1 is making all the SeedData values become components and systems, then step 2 is moving those to the new entity.
     * Alternately, step 1 is to make a Plant entity with the SeedData variable info, and work on converting everything to components from there. Seed components should just be copied from the prototype to the plant.
 * BotanySystem should do all the actual checking for plants that's done in PlantHolder right now. PlantHolder should just be the interface used to interact with plants most of the time. In current state, PlantHolder is effectively the 'plant' for interactions with SeedData being the plant's core stats, and we want the plant to be a new entity instead of a component when this is done. 
-* Plantholder should remain, but it will mostly be limited to managing the lights on the grow trays instead of the plant's lifecycle.
+* Plantholder should remain, but it will mostly be limited to managing the lights on the grow trays instead of the plant's lifecycle and holding the resources the Plant consumes.
 * GrowthComponents / GrowthSystems should be added, so that Botany isn't checking a fixed set of values to handle plant growth. This replaces the water/nutrient/gas/light/heat checks currently present, and lets plants do stuff when they would grow besides 'health/age go up'. This also means plants only check for what they care about, and don't process needs they don't have. It also allows the addition or removal of these components to be a mutation.
 * Mutations become components that get checked by their own requirements. This way, some mutations could have specific circumstances to make them show up, and others can remain purely random rolls. On that note, the existing mutation system's bit-gene checks will be replaced with 2 random rolls: 1 to check the odds of the mutation happening this tick (easy to scale to the current odds), and a second check if the first passes to see how much the value changes by for non-boolean mutations. This will help performance and human understanding of mutation odds. I see this as a global list of available mutations, and each plant will check the entries on the global list when it's eligible to mutate. Individual plants could have specific mutation effects added to them that only possibly occur on them, but I think this is a future change. 
-    * Mutations might become EntityEffects that run on the plant. This might be easier than what I was thinking before.
+    * Mutations become EntityEffects that run on the plant. This might be easier than what I was thinking before.
 * Harvesting gets a component/system that run on harvest. This allows plants to do more than just drop produce when they're picked. The 2 existing behaviors become Components here, for one-shot or repeatable harvests. Worth pointing out that auto-harvest would be a GrowthComponent that fires off the Harvest action, because the plant picks itself when its grown enough.
 * A new component type for onInteract hooks could be added to seeds and plants, to make them responsive to things before planting them and for doing more than just harvesting them. A plant that has utility while it's alive instead of just at harvest time is a thing we cannot currently do, and might motivate people to keep a plant around as long as possible instead of just aiming for maximum Potency.
 * The Plant entity should take the visuals of the plant itself from PlantHolder, and store components for growing on itself. SeedData, if any fields aren't handled after all this, should become a proper component applied to the plant.
@@ -54,7 +54,6 @@ This should be multiple PRs, so that incremental improvements can be made and wo
     * This should probably be a bunch of EntityEffects and components to fire them off.
     * Mutations should be defined in YAML similar to how chemicals are. 
     * Simplify this system down to just be low percentage rolls instead of the fake-gene-bit setup it is now. The conversion math for those is (1 / totalBits(275 today) / bitCount), so a 5-bit mutation would just be Prob(0.00072 * severity)
-    * Seedless stands out, in that it requires the Seed Maker to be updated to check for a component instead of a variable.
 * HarvestComponents rework
     * 2 EventEffects that fire off and create the actual produce. Copies all the mutation components active on the plant to the produce. One destroys the plant, the other reverts it to the previous growth stage.
 * GrowthComponent/System and seed prototype rework.
@@ -68,6 +67,7 @@ This should be multiple PRs, so that incremental improvements can be made and wo
     * Update other Botany systems to use Plant instead of Plantholder where appropriate. 
     * Ensure tools work on Plant entities. PlantHolders may redirect clicks to a Plant in them for conveneince.
     * Update ReactPlant() in Chemistry to use Plant instead of PlantHolder
+    * While we're at it, update the SolutionContainerSystem to the new version that doesn't have an Obsolete warning.
 * add OnInteract component hooks for seeds and plants
     * This PR would be optional since its technically not part of the current system code, but it will allow for more options in the future.
 
