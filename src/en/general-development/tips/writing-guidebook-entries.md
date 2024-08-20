@@ -186,7 +186,7 @@ A good way to use each tag is listed here.
 - Text links make the guidebook more interactive and can be done with `[textlink="text" link="guideID"]`.
 - `[color=#a4885c][italic]` is good for actions or text found in the context menu.
 - `[color=yellow][bold][keybind="function"]` is a superb combo to bring attention to keybinds which may be short.
-- And of course, it may become clear that you need to use `[color=red]`.
+- And of course, `[color=red]` adds a lot of impact to your sentences, but remember to use it sparingly! Most of the time, you can use boldface instead.
 
 All of this comes together in this example that may or may not be based on reality:
 ```xml
@@ -208,6 +208,22 @@ If you hate burritos, [color=red]I'll be very very mad at you.[/color] I hope th
 ![image](https://github.com/user-attachments/assets/9327f98f-bd40-44a7-981e-1ac4cf9b7a6b)
 
 Important text is highlighted, it's got visual appeal, and it's easy to read. Success!
+
+### Department Colors (hex)
+Credit to Moomoobeef, who has included these in his user profile on the wiki. https://wiki.spacestation14.com/wiki/User:Moomoobeef
+- `#cb0000` Security
+- `#c96dbf` Science
+- `#5b97bc` Medical
+- `#b18644` Cargo
+- `#f39f27` Engineering
+- `#ff2fff` Clown
+- `#9fed58` Service
+- `#6e6e6e` Passenger
+- `#1b67a5` Command (blue)
+- `#009100` CentCom (green)
+- `#134975` NanoTrasen (blue)
+- `#ff0000` Syndicate
+- `#66ff00` Spider Clan
 
 ## Best Practices
 
