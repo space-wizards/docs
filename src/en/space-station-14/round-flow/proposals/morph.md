@@ -41,22 +41,22 @@ The Morph is able to speak, but their speech is noticibly degenerated which make
 The Morph has a powerful melee attack, but is slow enough to be easily evaded. Along with this, the Morph is not very durable and can be easily defeated by a group of attackers or someone heavily armed.
 
 ### Navigation
-When in its natural form, The Morph can move under door, granting it a large freedom of movement. The need to be untransformed to do so does mean it needs to drop its disguise in order to enter secure areas however.
+When in its natural form, The Morph can move under doors, granting it freedom of movement. The need to be untransformed to do so does mean it needs to drop its disguise in order to enter secure areas however.
 
 ## Abilities
 
 ### Imitation
 The Morph can use the imitation ability at any time to transform. The player can click on any object on screen and change their sprite to match it after a short delay. This includes inanimate objects, structures, and living creatures.
 
-The Morph cannot use any abilities while transformed, and will need to de-transform in order to do so. The Morph is able to move while transformed, even while disguised as inanimate objects which will likely reveal their true nature to any observers.
+The Morph cannot use any abilities while transformed, and will need to de-transform in order to do so. The Morph is able to move while transformed, even while disguised as inanimate objects.
 
 Mimicking an object is purely visual, The Morph does not gain any abilities or properties from the things it imitates, even living creatures with equipment.
 
 ### Immobilizing Spit
-For a small genes cost, The Morph has the ability to spawn a projectile. Anyone hit by the spit will be greatly slower for a short time, allowing The Morph to catch up to them. It has a very long cooldown which means it must be used sparingly and cautiously.
+For a small genes cost, The Morph has the ability to spawn a projectile. Anyone hit by the spit will be greatly slowed for a short time, allowing The Morph to catch up to them. It has a very long cooldown which means it cannot be spammed.
 
 ### Calcify
-For a moderate genes cost, The Morph can harden its body for a short time, greatly reducing incoming piercing damage. This ability is intended as a panic button to stop a Morph from dying immediately when attacked by security or other other armed opponents. The hardening only gives resistance against piercing damage, The Morph can still be easily killed by melee or other damage methods, encouraging creativity on the crew's part in dealing with it.
+For a moderate genes cost, The Morph can harden its body for a short time, greatly reducing incoming piercing and blunt damage. This ability is intended as a panic button to stop a Morph from dying immediately when attacked by people with guns or groups. The hardening only gives resistance against piercing and blunt damage; The Morph can still be easily killed by other damage methods, encouraging creativity on the crew's part in dealing with it.
 
 ### Mitosis
 For a high genes cost, The Morph can create a Morph Cocoon structure. This structure can be occupied by a ghost player who will have the ability to hatch at any time to become another Morph. This Morph will have the exact same abilities as the original.
