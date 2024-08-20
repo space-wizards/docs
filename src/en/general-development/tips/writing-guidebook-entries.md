@@ -21,11 +21,14 @@ Thus, the simplest entry you can make looks like this:
 Any text written in the bounds of the tag will be displayed plainly on the guide. But, if you write a guide with only plain text, eye explosion (and subsequent death) rates will skyrocket globally.
 
 Save hundreds of l-eye-ves and use the (small) variety of markdown tags that are supported:
-- `#` creates a title
-- `##` creates a heading
-- `-` creates a list entry
+- `#` creates a title.
+- `##` creates a heading.
+- `-` creates a list entry.
 - `[color=hex][/color]` colors the text inside the tags with the specified hex color.
 - `[bold][/bold]` and `[italic][/italic]` make text inside the tags bold or italic respectively.
+- `[keybind=""]` will display the user's keybind for the function in the quotation marks.
+	- The list of functions can be found in `keybinds.yml`.
+- `[textlink="text" link="guideID"]` will allow users to jump to the article linked.
 
 ### Example
 Here is an example guidebook entry, `magboots.xml`
@@ -180,7 +183,7 @@ A good way to use each tag is listed here.
 - `[bold]` is good for keywords or phrases of a paragraph (but not necessarily a subheader).
 - `[italic]` is good for emphasis on sentences or clauses that may be important to read.
 - Highlight allegiances, departments or roles with `[color=someotherrelevantcolorthatisn'tcyanprobably]`.
-- Text links make the guidebook more interactive and can be done with `[textlink="text" link="guide.xml"]`.
+- Text links make the guidebook more interactive and can be done with `[textlink="text" link="guideID"]`.
 - `[color=#a4885c][italic]` is good for actions or text found in the context menu.
 - `[color=yellow][bold][keybind="function"]` is a superb combo to bring attention to keybinds which may be short.
 - And of course, it may become clear that you need to use `[color=red]`.
