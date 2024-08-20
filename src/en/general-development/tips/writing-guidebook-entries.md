@@ -211,6 +211,7 @@ Important text is highlighted, it's got visual appeal, and it's easy to read. Su
 
 ### Department Colors (hex)
 Credit to Moomoobeef, who has included these in his user profile on the wiki. https://wiki.spacestation14.com/wiki/User:Moomoobeef
+- `#a4885c` Highlight text (old, use cyan)
 - `#cb0000` Security
 - `#c96dbf` Science
 - `#5b97bc` Medical
