@@ -34,14 +34,14 @@ The rarer/move powerful chemicals currently available on the mutation list can e
 The high-risk mutation path should certainly have better chances of rare/powerful chemicals that that.
 
 And for reference, here's the odds of getting each possible current mutation if you dump 30u of unstable mutagen (6 checks at 5 severity) into one tray:
-69.5% (stat changes, per stat)
-43.2% (tolerance changes, per tolerance)
-19.7% (change species and 'fun' mutations)
-10.3% (consume gasses)
-2.7% (exude gasses)
-1.07% (ligneous, kudzu, screaming, harvest type)
-0.53% (change chemicals)
-0.36% (unviable)
+* 69.5% (stat changes, per stat)
+* 43.2% (tolerance changes, per tolerance)
+* 19.7% (change species and 'fun' mutations)
+* 10.3% (consume gasses)
+* 2.7% (exude gasses)
+* 1.07% (ligneous, kudzu, screaming, harvest type)
+* 0.53% (change chemicals)
+* 0.36% (unviable)
 
 I do not offer a suggestion on the 'correct' odds of what mutations should be on either the normal or high-risk table. But now we can actually discuss the odds since they are no longer hidden behind 2 steps of bit-thermometer logic.
 
@@ -78,8 +78,8 @@ Despite the name, this does not introduce any genetics puzzles or mini-games for
 
 The BGM can save multiple values for a single variable as long as you've analyzed something with each of those values. Binary mutations can also be used to create mutators that remove that mutation. 
 
-EX 1: A normal lemon tree get mutated to glow and consume 0.4 water. You could pull the water consumtion of 0.4 out of that sample, or the Bioluminescent to make other plants glow the same color, or any of the other normal lemon values. You would need a 2nd lemon to save the other.
-EX 2: A apple tree gets a lot of mutations on a lucky streak. It has water consumption of 0.3, and 2u of pax, and it also emits frezon gas. You could add the water consumption 0.3 to the BGM's list besides the 0.4 from the lemon. Or add a mutation that gives any plant 2u of pax on harvest. Or a mutatator that removes frezon from the emitted gas list. You could also make mutators that remove pax from produce or add frezon to the emitted list with these apples, if you really wanted to. 
+* EX 1: A normal lemon tree get mutated to glow and consume 0.4 water. You could pull the water consumtion of 0.4 out of that sample, or the Bioluminescent to make other plants glow the same color, or any of the other normal lemon values. You would need a 2nd lemon to save the other.
+* EX 2: A apple tree gets a lot of mutations on a lucky streak. It has water consumption of 0.3, and 2u of pax, and it also emits frezon gas. You could add the water consumption 0.3 to the BGM's list beside the 0.4 from the lemon. Or add a mutation that gives any plant 2u of pax on harvest. Or a mutatator that removes frezon from the emitted gas list. You could also make mutators that remove pax from produce or add frezon to the emitted list with these apples, if you really wanted to. 
 
 Botany Mutators are one-use items that only work on plants. They set values or add/remove components and are spent. This may require consuming additional biomass or an additional cost to create the mutators. These will normally be made by the BGM, but pre-made ones with particular stuff could be available elsewhere. Traitor items come to mind, allowing an antag to spend a few TC to immediately get a specific high-risk mutation without the time and effort, or grow plants with a specific chemical that helps their goals. 
 
