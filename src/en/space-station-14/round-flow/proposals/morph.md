@@ -12,6 +12,8 @@ The Morph is a failed bioweapons experiment. It is able to mimic the appearance 
 
 Currently, the antagonist variety in SS14 is pretty low, especially non-human ones. The Morph's focus on stealth instead of overwhelming brute force like the Rat King would make it a fun role to both play and play against.
 
+This implementation of The Morph is inspired by, but not directly based on any specific Morph version from SS13.
+
 ## Spawning
 The Morph is a minor antagonist and does not spawn at round start.
 
