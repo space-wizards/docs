@@ -40,6 +40,9 @@ The Morph is able to speak, but their speech is noticibly degenerated which make
 ### Combat
 The Morph has a powerful melee attack, but is slow enough to be easily evaded. Along with this, the Morph is not very durable and can be easily defeated by a group of attackers or someone heavily armed.
 
+### Navigation
+When in its natural form, The Morph can move under door, granting it a large freedom of movement. The need to be untransformed to do so does mean it needs to drop its disguise in order to enter secure areas however.
+
 ## Abilities
 
 ### Imitation
