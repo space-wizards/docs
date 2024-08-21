@@ -304,7 +304,6 @@ Community
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
 - [Project Manager](en/community/projectmanager.md)
 - [Maintainer](en/community/maintainer.md)
-  - [Maintainer Policy](en/community/maintainer/wizards-den-maintainer-policy.md)
   - [Review Policy](en/community/maintainer/wizards-den-review-policy.md)
 - [Admin](en/community/admin.md)
   - [Admin Tooling](en/community/admin/admin-tooling.md)
