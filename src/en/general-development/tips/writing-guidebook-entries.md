@@ -20,7 +20,7 @@ Thus, the simplest entry you can make looks like this:
 
 Any text written in the bounds of the tag will be displayed plainly on the guide. But, if you write a guide with only plain text, eye explosion (and subsequent death) rates will skyrocket globally.
 
-Save hundreds of l-eye-ves and use the (small) variety of markdown tags that are supported:
+Save hundreds of l-eye-ves and use the (small) variety of richtext tags that are supported:
 - `#` creates a title.
 - `##` creates a heading.
 - `-` creates a list entry.
@@ -175,8 +175,8 @@ Here's an example:
       guides:
       - MachineUpgrading #this is the guide that is opened
 ```
-## Using Markdown
-For consistency across the guidebook, it's easier to pick one way to use each markdown tag and stick to it.
+## Using Richtext
+For consistency across the guidebook, it's easier to pick one way to use each richtext tag and stick to it.
 
 A good way to use each tag is listed here.
 - `[color=cyan]` should be used to highlight keywords or phrases directly related to the subheader.
@@ -231,8 +231,8 @@ Credit to Moomoobeef, who has included these in his user profile on the wiki. ht
 Here are some general tips for writing good guides:
 - Keep titles clear and concise. Players don't want to search around for what they need.
 - Keep entries short. You can always add child entries if you want to elaborate more on the topic.
-- Use a healthy amount of boxes, embedded entities, and markdown tags.
-	- Remember not to overdo it, though. If most of the text has a markdown tag, it's too much.
+- Use a healthy amount of boxes, embedded entities, and richtext.
+	- Remember not to overdo it, though. If most of the text is bold or colored, it's too much.
 - Refrain from including specific advice and "meta" strategies. The guide should be an impartial source of information.
 - Articles should be written in a neutral tone. 
 - Encourage interacting with the guide.
