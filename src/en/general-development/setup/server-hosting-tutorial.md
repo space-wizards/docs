@@ -28,7 +28,7 @@ The server needs network ports to be forwarded so that people can connect. By de
 
 For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-After you have port forwarded, google "What is my ip" and you will get your public IP address.
+After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6 try both if one fails.
 
 Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
 
