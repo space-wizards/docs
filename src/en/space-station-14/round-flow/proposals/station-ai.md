@@ -30,3 +30,4 @@ To achieve this several features are implemented:
 - Cameras can be cut / mended / constructed.
 - The AI has access to consoles such as crew monitoring to increase their station awareness (long-term they should also get chat tracking but chat code).
 - AI can be destroyed directly or put into an intellicard to fully remove them from their role.
+- AI upload so their laws can be changed. They're more-or-less bound to the same role as borgs.
