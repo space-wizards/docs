@@ -28,7 +28,13 @@ The server needs network ports to be forwarded so that people can connect. By de
 
 For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-After you have port forwarded, google "What is my ip" and you will get your public IP address. Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be connecting.
+After you have port forwarded, google "What is my ip" and you will get your public IP address.
+
+Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
+
+```admonish info
+If have an IPV6 address (looks kinda like this ``fd11:5ee:bad:c0de::ab3:3d03``) make sure to include square brackets (``[fd11:5ee:bad:c0de::ab3:3d03]``) when in the direct connect menu.
+```
 
 ### Configure Your Server
 
