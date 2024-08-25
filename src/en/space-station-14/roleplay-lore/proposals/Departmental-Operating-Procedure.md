@@ -8,13 +8,24 @@ The DOP is an in-character set of guidelines oriented towards MRP servers. Each 
 
 The DOP will act as a guideline for departments to follow but not rules. This will allow for chaos to still ensue even when everything goes according to plan. 
 
-## How will this look per department?
+## Core Idea
+
+My intention with a DOP is to encourage Roleplay but not to enforce it with server rules, this instead is a set of in-character books and guidebook entries that will push players into a more RP centric enviorment. This proposal is more focused towards MRP servers but these guidelines can still be found and used within LRP servers. 
+
+I will split these procedures between two categories 
+
+* Flavor Text
+  - Nanotrasen themed guides that offer more fun than actual advice, think of things like "Interogation 101" which will feature an interogation guide complete with responses to certain answers, pretty much useless in terms of advice but is a fun bit of lore that is distrubted to security teams across Nanotrasen stations
+* Guidelines
+    - Think of these as the original SOP, a set of straight forward points and guides to explain how a department is to be run, but do not limit roleplay and instead encourage more. With things like medical evaluations and alert procedures. These could be appended with 'guideline' or just left as is such as "Alert Procedure" instead of "Alert Procedure Guidelines". 
+
+## How will this look per department? NOTE: These are examples
 
 ---
 
 ### Command: 
 
-Command will follow the "Command Operating Procedure"(COP), it will feature a "Chain of Command", "Bolting Procedure", "Alert Procedure", and a "Commanding Officers Work Behavior Guideline"
+Command will follow the "Command Operating Procedure"(COP), it will feature things like a "Chain of Command", "Bolting Procedure", "Alert Procedure", and a "Commanding Officers Work Behavior Guideline"
 
 #### Examples for Command: 
 
@@ -59,10 +70,26 @@ graph TD;
 
 ### Security: 
 
-Security will follow the "Security Operating Procedure" (SOP), it will feature "Security Dresscode", "Optimal Proccessing Time Guideline", "Scene Response Guideline", "Evidence Handling and Collection Guideline", and "Interrogations 101" 
+Security will follow the "Security Operating Procedure" (SOP), it will feature things like "Security Dresscode", "Optimal Proccessing Time Guideline", "Scene Response Guideline", "Evidence Handling and Collection Guideline", and "Interrogations 101" 
 
 I plan for these to add not only some interesting guidelines that will hopefully improve roleplay, but to also add lore. You may have noticed at this point but a lot of these are named like guidelines you would see in an office, and that is sort of my intention. I am hoping to add lore friendly Nanotrasen guidebooks for each department. With fun tidbits and interesting insights to the departments. 
 
 ### Engineering: 
 
-Engineering will follow the "Engineering & Atmospherics Operating Procedure" (EAOP), it will feature "Ship Modification Guidelines", "Departmental Repair Guidelines", and "Maintaining Clean Air"
+Engineering will follow the "Engineering & Atmospherics Operating Procedure" (EAOP), it will feature things like "Station Modification Guidelines", "Departmental Repair Guidelines", and "Maintaining Clean Air"
+
+These guidelines will largely be a way to roleplay building things 'to code' as well as some more lore focused documentation like "Maintaining Clean Air" 
+
+### Cargo
+
+Cargo will follow the "Logistical Operating Procedure" (LOP), it will feature things like "Supply and Demand", "Cargo Handling Guidelines", and "Salvage Technician Safety Guide"
+
+These guidelines much like engineering will encourage roleplay within cargo by offering a set of guidelines to follow as well as adding some lore text with things like "Supply and Demand"
+
+### Medical
+
+Medical will follow the "Medical Operating Procedure" (MOP), it will feature things like "Medical Evaluation Guidelines", "Keeping Your Patients Happy", and "Psychology 101"
+
+### Research
+
+Research will follow the "Research Operating Procedure" 
