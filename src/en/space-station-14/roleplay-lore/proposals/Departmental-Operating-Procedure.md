@@ -22,6 +22,7 @@ Command will follow the "Command Operating Procedure"(COP), it will feature a "C
 
 ```mermaid
 graph TD;
+    subgraph Standard Alerts
     idG[Under Green Alert]-->idCC1[Central Command];
     style idG fill:#5ce65c,stroke:#333,stroke-width:4px
     idCC1-->idC1[Captain];
@@ -37,7 +38,21 @@ graph TD;
     idR[Under Red Alert]-->idCC3[Central Command];
     style idR fill:#cd1c18,stroke:#333,stroke-width:4px
     idCC3-->idC3[Captain];
-    idC3-->idHOS1[The Head of Security is in command over security issues under red alert]
+    idC3-->idHOS1[The Head of Security is in command over Security issues during red alert];
+    idHOS1-->idR1[All head of staff are equal below HOS];
+    end
+    subgraph Non-Standard Alerts
 
-    
+    idY[Under Yellow Alert]-->idCC4[Central Command];
+    style idY fill:#ffd32c,stroke:#333,stroke-width:4px
+    idCC4-->idC4[Captain];
+    idC4-->idCE1[The Chief Engineer is in command over Engineering issues during yellow Alert];
+    idCE1-->idY1[All head of staff are equal below CE];
+
+    idV[Under Violet Alert]-->idCC5[Central Command];
+    style idV fill:#7f00ff,stroke:#333,stroke-width:4px
+    idCC5-->idC5[Captain];
+    idC5-->idCMO1[The Chief Medical Officer is in command over Medical issues during violet alert];
+    idCMO1-->idV1[All head of staff are equal below CMO];
+    end
 ```
