@@ -56,3 +56,13 @@ graph TD;
     idCMO1-->idV1[All head of staff are equal below CMO];
     end
 ```
+
+### Security: 
+
+Security will follow the "Security Operating Procedure" (SOP), it will feature "Security Dresscode", "Optimal Proccessing Time Guideline", "Scene Response Guideline", "Evidence Handling and Collection Guideline", and "Interrogations 101" 
+
+I plan for these to add not only some interesting guidelines that will hopefully improve roleplay, but to also add lore. You may have noticed at this point but a lot of these are named like guidelines you would see in an office, and that is sort of my intention. I am hoping to add lore friendly Nanotrasen guidebooks for each department. With fun tidbits and interesting insights to the departments. 
+
+### Engineering: 
+
+Engineering will follow the "Engineering & Atmospherics Operating Procedure" (EAOP), it will feature "Ship Modification Guidelines", "Departmental Repair Guidelines", and "Maintaining Clean Air"
