@@ -171,6 +171,7 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
 		
 	- [Proposals]()
+		- [Departmental Operating Procedure](en/space-station-14/roleplay-lore/proposals/Departmental-Operating-Procedure.md)
 
 - [Roundflow](en/space-station-14/round-flow.md)
 	- [PR Guidelines](en/space-station-14/round-flow/guidelines.md)
