@@ -19,7 +19,7 @@ I will split these procedures between two categories
 * Guidelines
     - Think of these as the original SOP, a set of straight forward points and guides to explain how a department is to be run, but do not limit roleplay and instead encourage more. With things like medical evaluations and alert procedures. These could be appended with 'guideline' or just left as is such as "Alert Procedure" instead of "Alert Procedure Guidelines". 
 
-## How will this look per department? NOTE: These are examples
+## How will this look per department? NOTE: This is my example. I think this could be achieved in many ways but this is how I would do it. 
 
 ---
 
@@ -92,4 +92,16 @@ Medical will follow the "Medical Operating Procedure" (MOP), it will feature thi
 
 ### Research
 
-Research will follow the "Research Operating Procedure" 
+Research will follow the "Research Operating Procedure" (ROP), it will feature things like "Research and Develeopment: How not to blow up", "Research Operation Guidelines", and "Human Experimentation: An Art" 
+
+### Service
+
+Service will not have it's own Operating Procedure and will instead have guidelines and more lore focused text for each job I.E. Chef, Janitor, and Barkeep. 
+
+---
+
+## Inspirations and places I took from. 
+
+* Aurorastation has an excellent operating procedure with many different guidelines that I took a lot of inspiration from, I think it uses a lot of simple guidelines in very interesting ways.
+* The original SOP, I really liked this SOP and took a lot of inspiration from it and I hope with this I can create a more open ended SOP that accomadates both an LRP and MRP audience.
+* Old workplace guidebooks, I think SS13 used these a lot as inspirations as well. Trying to make something lighthearted out of police interogations or Medical Evaluations feels very in line with how SS13 and 14 operate. 
