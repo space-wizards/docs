@@ -6,18 +6,14 @@
 
 ## Overview
 
-Avalis are a relativly well known open scpiecies of avians. They are smaller then standard humans 
-https://avali.fandom.com/wiki/The_Official_Avali_Wiki
+Avalis are a relatively well known open species of avians. They are smaller then standard humans at around 1-1.2 meters. The general lore and features are described on the [Avali wiki](https://avali.fandom.com/wiki/The_Official_Avali_Wiki).
 
 ## Background
 
-They exist by diffrent names on Space Station 13 and there has been quite a bit of interest in adding them, there has also been previous implementation attempts.
-Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game.
+They exist by different names on Space Station 13 and there has been quite a bit of interest in adding them, there has also been previous implementation attempts that I have taken inspiration from [Resomi](https://github.com/space-wizards/docs/pull/266).
 
-The Scope as discussed in the spiecies discussion would fit in a role as follows:
-'Scope' Archetypes:
-"Minor mechanics": A species with some gameplay implications but not major
-"Support": Low damage potential, utility benefits
+The Scope as discussed in the species discussion would fit in a role as follows:
+"Minor mechanics": A species with some gameplay implications but not major and "Support": Low damage potential, utility benefits
 
 [Species Document Discussion](https://discord.com/channels/310555209753690112/1264385774065815616/1264390827371663420)
 
@@ -27,5 +23,6 @@ Is entirely up to you.
 
 
 
-## Fetures
+## Features
 
+- They will take 15 % less cold damage thanks the their feathers
