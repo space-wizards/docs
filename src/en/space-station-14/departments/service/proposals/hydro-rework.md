@@ -93,6 +93,8 @@ Hydroponics doesn't pose much threat to the people doing it. It's not a departme
 ### The High-Risk, High-Reward Process
 The new process to get to the high-risk mutations mentioned earlier is easy: give plants plasma. This presents a little danger, as you'll need to understand the basics of the Atmos items involved. In Hydroponics, its mostly a connector port for a tank of gas and a passive vent in a 2x2 greenhouse room. Advanced setups will be left to advanced players.
 
+![image](https://github.com/user-attachments/assets/72e86f99-8810-4dde-a731-a4018e00326f)
+
 New to the code is that plants always check for plasma gas when growing, and consume it if present. Doing this sets a flag on the plant that tells it to use the high-risk mutation table instead of the normal one. Plasma absorbed will increase the mutation factor like unstable mutagen and left4zed do, and cause an immediate roll on the new table. The safe strategy will be to use small amounts of plasma on one or two plants to enable the list, and use liquid mutagens like normal. The fast strategy will be to pump in plenty of plasma and let the dice fall where they may.
 
 Risks added for botanists on duty:
