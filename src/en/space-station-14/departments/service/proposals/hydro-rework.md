@@ -25,25 +25,31 @@ The main change to the Botany code that makes Hydroponics better is fairly simpl
 
 ### Odds revealed
 The rarer/move powerful chemicals currently available on the mutation list can either be moved to the high-risk set, or added to it with much better odds. Here are the odds of getting one of the rarest chemicals (omnizine):
-* Getting the 'new chemical' mutation is 0.018% per mutation severity
+* Getting the 'new chemical' mutation is 7.2% per mutation severity
 * Getting the rarest set of chemicals picked is 5%
 * Getting the chemical you want on that set is 17%.
-* For 1u of mutagen, your odds of getting Omnizine added to the produce is 0.000153%
-* For a whole bottle of unstable mutagen (30u), which in the system ends up being 6 checks of x5 base chance, those odds jump to 0.0046% per bottle. You need about 200 whole bottles to have a 1% chance of getting your choice of the rarest chemical in the normal mutation list right now. You can expect to see it once every ~600,000u of mutagen used in botany.
+* For 1u of mutagen, your odds of getting Omnizine added to the produce is 0.00062%
+* For a whole bottle of unstable mutagen (30u), which in the system ends up being 6 checks of x5 base chance, those odds jump to 0.8% per bottle of getting your choice of the rarest chemical in the normal mutation list right now. You can expect to see it once every ~120 bottles (~4,000u) of unstable mutagen used in botany
 
-The high-risk mutation path should certainly have better chances of rare/powerful chemicals that that.
+The odds of getting a mutation with 1u (a drop of unstable mutagen, or typical Left4Zed use) is below:
+* 1 bit: .4% (consume gasses)
+* 2 bits: .7% (sentient)
+* 4 bits: 1.4% (exude gasses)
+* 5 bits: 1.8% (tolerance changes)
+* 10 bits: 3.6% (change species, kudzu, and 'fun' mutations)
+* 20 bits: 7.2% (change chemicals)
+* 30 bits: 10.9% (unviable)
+  
+And for reference, here's the odds of getting each possible current mutation at least once if you dump 30u of unstable mutagen (6 checks at 5 severity) into one tray:
+* 1 bit: 10% (consume gasses)
+* 2 bits: 19% (sentient)
+* 4 bits: 36% (exude gasses)
+* 5 bits: 43.2% (tolerance changes)
+* 10 bits: 69% (change species, kudzu, and 'fun' mutations)
+* 20 bits: 93% (change chemicals)
+* 30 bits: 99% (unviable)
 
-And for reference, here's the odds of getting each possible current mutation if you dump 30u of unstable mutagen (6 checks at 5 severity) into one tray:
-* 69.5% (stat changes, per stat)
-* 43.2% (tolerance changes, per tolerance)
-* 19.7% (change species and 'fun' mutations)
-* 10.3% (consume gasses)
-* 2.7% (exude gasses)
-* 1.07% (ligneous, kudzu, screaming, harvest type)
-* 0.53% (change chemicals)
-* 0.36% (unviable)
-
-I do not offer a suggestion on the 'correct' odds of what mutations should be on either the normal or high-risk table. But now we can actually discuss the odds since they are no longer hidden behind 2 steps of bit-thermometer logic.
+I do not offer a suggestion on the 'correct' odds of what mutations should be on either the normal or high-risk table at this point. But now we can actually discuss the odds since they are no longer hidden behind 2 steps of bit-thermometer logic.
 
 ## Interconnections
 
@@ -113,27 +119,31 @@ But what you get out of this process is worth the danger. Some examples:
 ### New plant species:
 * Hellfruit. A plant not normally found on the station. Grows better in additional light, needs lots of water and nutrients, requires plasma gas to grow, heats the air around it, hurts the botanist if harvested without gloves, has a Yield of 1. But the fruit is so delicious and rare, someone will pay big bucks to eat it.
 * Pitcher plants. Grows Plant Beakers, which hold an amount of chemicals based on the plants potency and chemicals contained. Starts off with just water. Requires some effort and luck to make this bigger than Large Beakers, but should be possible.
-* Cherry tree. Delicious fruit for pies.
+* ~~Cherry tree. Delicious fruit for pies.~~ In someone else's PR somewhere.
 
 ### High-Risk mutations:
 * Good/Fun:
 	* Jumbo. Large plant sprites, but a huge (x5?) multiplier for the chemical contents of the produce.
 	* RGBioluminescent. Disco plants! Light cycles through colors over time.
-    * Storyfruit: The produce will connect into the system that makes random library books, and read it out loud a sentence at a time.
+    	* Storyfruit: The produce will connect into the system that makes random library books, and read it out loud a sentence at a time.
 	* Perfect metabolism. An effect that removes growth components that use nutrients or water.
 	* Giving pit: When eaten, leaves a Giving Seed. Touch that to an item and the seed will grow into a tree that lets you harvest copies of that item.
 * Neutral/Situational
 	* Sunglow: A high-power point light. Radius is ~8 tiles, higher intensity. Acts like a permanent flare you can also eat.
-    * New species. Varies by parent species. These should be more varied in 'power level', both good and bad. 
-        * Plastic-cap. Like Tower-cap or Steel-cap, but makes plastic. Mutates from one of those two.
-        * Spanish Cherry Tree. Also called Bulletwood. Mutated from the Cherry tree, can be fed steel sheets to get back bullets. Everyone wants untraceable ammo, right?
+	* New species. Varies by parent species. These should be more varied in 'power level', both good and bad. 
+        	* Plastic-cap. Like Tower-cap or Steel-cap, but makes plastic. Mutates from one of those two.
+        	* Spanish Cherry Tree. Also called Bulletwood. Mutated from the Cherry tree, can be fed steel sheets to get back bullets. Everyone wants untraceable ammo, right?
 	* New chemicals. A second list of chemicals that makes it more likely for exposed plants to acquire rare chemicals via high-risk mutations. May share some chemicals with the base list, but they'll be easier to get on this list. Some may be moved to this list.
 * Bad/Chaotic:
 	* Fragile: Produce breaks and spills its contents if thrown or stepped on.
 	* Anomaly: plant turns into a plant anomaly, and needs Science to come handle it.
 	* Thorned: Produce or plant damages user on touch. Might already be implemented by death nettle somewhere.
-    * Hostile: Plant attacks you for some damage when you touch it. Scales with potency.
+    	* Hostile: Plant attacks you for some damage when you touch it. Scales with potency.
 	* Dangerous Kudzu types. There's a few in the code that should become possible to acquire.
 	* Furnace/Cooler: Starts dramatically increasing/decreasing the air temperature around it, and has extreme temperature tolerances.
 	* Anti-Killer: weed killer heals this plant dramatically, possibly also de-aging it some. Really bad if this also get a roll for kudzu.
 	* Big mob: Spawn an 'Audrey Jr' style monster that inherits all the EntityEffect mutations on the plant. Can break windows, attack people, and inject the plant's chemicals into them on attacks. If possible, eats people that are dead/crit. Signficantly more dangerous and durable than tomato killers. Possibly only available via pre-made mutator a traitor could buy with TC, and apply to a plant they crafted themselves, or specific to a mini-antag that wants to make a mean green mutha in outer space.
+
+## Smaller changes to existing stuff
+
+* Sentient plants need changed. With new botany code, the sentient plant could have its aging/needs removed so that it remains present until someone uproots it from the tray instead of dying a few minutes later automatically. At a stretch, it could be given actions to do normal plant stuff, like grow its produce on a significant cooldown.
