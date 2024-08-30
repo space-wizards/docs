@@ -43,7 +43,7 @@ All of the variables are named in a self-documenting way (*R* gets a pass becaus
    float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
-Because this only explains what the code is literally doing, which you could have gathered from any cusory reading of the code. **However, you still have absolutely no idea what this code is doing and why**, even though the code is self-documenting.
+Because this only explains what the code is literally doing, which you could have gathered from any cursory reading of the code. **However, you still have absolutely no idea what this code is doing and why**, even though the code is self-documenting.
 
 You don't know where this magic formula came from, what it's trying to accomplish, or even if the formula is correct. Therefore, this needs to be documented:
 
@@ -221,7 +221,7 @@ public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
   <summary>RSI meta.json (click to expand)</summary>
 
 - The order of fields should be `version -> license -> copyright -> size -> states`.
-- JSON should not be minified, and should follow normal JSON quality guideliens (egyptian brackets, etc)
+- JSON should not be minified, and should follow normal JSON quality guidelines (egyptian brackets, etc)
 
 Example:
 
@@ -269,7 +269,7 @@ _adminLogs.Add(LogType.MyLog, LogImpact.Medium, $"{entityManager.ToPrettyString(
 
 ### Optional Entities
 If you need to pass "optional" entities around, you should use a nullable `EntityUid` for this.
-Never use `EntityUid.Invalid` to denote the abscence of `EntityUid`, always use `null` and nullability so we have compile-time checks.
+Never use `EntityUid.Invalid` to denote the absence of `EntityUid`, always use `null` and nullability so we have compile-time checks.
 e.g. `EntityUid? uid`
 
 ## Components
@@ -518,7 +518,7 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
   name: 'Spessman's Smokes packet'
   description: 'A label on the packaging reads, 'Wouldn't a slow death make a change?''
 ```
-- Dont specify textures in abstract prototypes/parents.
+- Don't specify textures in abstract prototypes/parents.
 - You should declare the first prototype block in this order: `type` > `abstract` > `parent` > `id`  > `name` > `description` > `components.`
 - New components should not have an indent when added to the `components:` section.
     This

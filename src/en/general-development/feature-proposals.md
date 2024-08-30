@@ -37,9 +37,9 @@ These don't have to be discrete sections and shouldn't be. When you're detailing
 
 ## Does my idea really need a design doc?
 
-It depends on the scale, and pervasiveness of whatever you're thinking of proposing. If it's something like adding a single gun or a couple simple plants it probably won't. On the other hand if you are adding an entire subdepartment ala anomalies/xenoarchaeology, or something on the order of reworking the entirity of botany or chemistry it certainly will.
+It depends on the scale, and pervasiveness of whatever you're thinking of proposing. If it's something like adding a single gun or a couple simple plants it probably won't. On the other hand if you are adding an entire subdepartment ala anomalies/xenoarchaeology, or something on the order of reworking the entirety of botany or chemistry it certainly will.
 
-A good rule of thumb if the new feature or rework you have in mind would require adding or reworking a page of the guidebook or one of the feature docs on this site then it probably needs a design doc. Same if the proposal could be accurately described as 'reworking the entirity of X'.
+A good rule of thumb if the new feature or rework you have in mind would require adding or reworking a page of the guidebook or one of the feature docs on this site then it probably needs a design doc. Same if the proposal could be accurately described as 'reworking the entirety of X'.
 
 ## Will my design doc get accepted?
 

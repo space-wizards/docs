@@ -39,7 +39,9 @@ A [development environment](../../../general-development/setup/setting-up-a-deve
 If you are using a development enviroment instead of just hosting a local server, make sure to use Tools instead of Debug/DebugOpt mode. This is because Debug adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
 Additionally be careful to not use Release, which disables development environment tooling and configuration and causes the game to act like a standard server instead of a development environment.
 
-If you are launching via a console, you can just use:
+If you have ``runclient-Tools.bat`` and ``runserver-Tools.bat`` you can run those.
+
+If you don't have the above or want to launch via a console yourself, you can just use:
 ```
 dotnet run --project Content.Server --configuration Tools
 dotnet run --project Content.Client --configuration Tools
@@ -81,7 +83,7 @@ Now to start creating maps follow the below steps:
 * If you want to test the lighting on your map without leaving the editor, use the "mapinit" command. Do **save before doing this** as it will ruin your map if you save after running this command.
 * Use https://affectedarc07.github.io/SS13WebMap/ to see most SS13 maps online
     - (https://game.ss13.moe/minimaps/images/maps/ for the /vg/ ones)
-* While testing your map, you might not want to be bothered to set up power each time. In that case, try: `forall with Battery do setbatterypercent $ID 100`
+* While testing your map, you might not want to be bothered to set up power each time. In that case, try: `> entities with Battery do "setbatterypercent $ID 100"`
 * Map auto-saving is enabled by default and goes to the server data directory every 10 minutes (cvar `mapping.autosave_interval`). You can turn it off with `toggleautosave [map id]` or change the `mapping.autosave` cvar.
 
 ## Mapping Actions
@@ -116,12 +118,16 @@ Now that you've completed your map, you'll want to test it in game to ensure you
 4. Connect to the game and you should now be on your new map. Refer to the troubleshooting section if you're having issues.
     
     
-## Testing and getting it into the game
+## Opening a PR and getting it into the game
 Once you've tested your map by running it in game as shown previously, and you've ran through the quality control checklist as shown here, you're ready to do a pull request to get your map submitted to the game.
+
+### Important
+When submitting a PR, the associated branch will be tested using 'checks' to ensure there are no errors or conflicts. A PR containing a new map will be flagged by the task AllMapsTested within PostMapInitTest.cs unless it is added to the list of test cases within the file.
+To prevent this simply enter the file PostMapInitTest.cs and add the IDs of any new maps to the list named GameMaps.
     
 To pull request:
 1. Create a branch on your cloned respository either through your Github client.
-2. Add your map and map prototype files to your commit. (Stage them)
+2. Add your map and map prototype files to your commit and update PostMapInitTest.cs where applicable. (Stage them)
 4. Commit these two changes to your branch then push them to origin.
 5. Head to the upstream SS14 repository and navigate to the pull requests tab. There should be a banner saying something like "recent changes on your branch, pull request?" Do this to open a pull request for your map. Alternatively you can open a pull request from your repository.
 6. Fill out the pull request page with details like screenshots / map renders, advising you've followed the quality control checklist, max / min players, and any other details and add a changelog entry.
