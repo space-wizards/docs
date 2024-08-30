@@ -6,7 +6,9 @@ This section is a placeholder, pending a design-doc being created by the related
 THE SCIENCE TEAM
 
 ## Concept
-> A high-level conceptual overview of what this department does. This is generally 1-2 paragraphs and should reflect a high level view of what this department brings to the player and the game. 
+Science is responsible for researching and prototyping new technologies that unlock benefits for the whole station. They perform experimentation on various strange phenomenon to find new discoveries that improve the station.
+- **Primary Goal**: Unlocking and providing technology(not necessarily as items) needed to upgrade the station and improve quality of life for other departments.
+- **Secondary Goal**: Utilizing in-house experiments & technology (i.e artifacts, xenobiology) to create benefits or risks to the station.
 
 ## Player Story
 > A short (1-2 paragraph) story from the perspective of someone playing a role in this department. This is effectively a story of the ideal experience of a player interacting with these mechanics/systems. 

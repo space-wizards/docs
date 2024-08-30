@@ -113,6 +113,7 @@ Space Station 14
 	- [Displacement Maps](en/space-station-14/art/displacement-maps.md)
 	- [Device Network](en/space-station-14/core-tech/device-network.md)
 	- [NPCs](en/space-station-14/core-tech/npcs.md)
+	- [Entity Tables](en/space-station-14/core-tech/entity-tables.md)
 	- [Chemistry](en/space-station-14/core-tech/chemistry.md)
 		- [Metabolism](en/space-station-14/core-tech/chemistry/metabolism.md)
 		- [Reactions](en/space-station-14/core-tech/chemistry/reactions.md)
@@ -184,6 +185,7 @@ Space Station 14
 		- [Pizza Delivery Critter](en/space-station-14/round-flow/proposals/pizza-delivery-critter.md)
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
+   		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
@@ -243,7 +245,8 @@ Space Station 14
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
-                        - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
+   		- [Librarian Gameplay](en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md)
+      - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
 
 General Proposals
 ================
@@ -301,7 +304,6 @@ Community
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
 - [Project Manager](en/community/projectmanager.md)
 - [Maintainer](en/community/maintainer.md)
-  - [Maintainer Policy](en/community/maintainer/wizards-den-maintainer-policy.md)
   - [Review Policy](en/community/maintainer/wizards-den-review-policy.md)
 - [Admin](en/community/admin.md)
   - [Admin Tooling](en/community/admin/admin-tooling.md)

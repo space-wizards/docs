@@ -10,6 +10,8 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
 
 - Large new features and comprehensive reworks to existing large features (ie antags or anything that could be considered a subdepartment unto itself), should first be [proposed and accepted in abstract](../feature-proposals.md) before you start working on actually implementing it.
 
+- Read the [Freezes and Restrictions issue](https://github.com/space-wizards/space-station-14/issues/8524) and make sure your PR does not interfere with anything or requires special requirements.
+
 ## Content
 
 - **Make separate PRs for feature changes, bug fixes, and cleanup/refactors.** This makes changes easier to review, reduces conflicts, and also easier to revert if something goes wrong.
@@ -82,6 +84,34 @@ By default, changes are credited to your Github username. If you would like your
 Each entry is either an `add`, `remove`, `tweak`, or `fix`. There can be multiple entries in each category. These set the change log icon and do not show up in the change log text.
 
 Maintainers may, at their discretion, add, modify, or remove a change log entry that you suggest.
+
+#### Admin changelog
+
+Putting `ADMIN:` in the changelog will place all changelogs below it into the admin changelog category instead of the main changelog category.
+
+Note: The category is case-insensitive, but if it is not alphabetical ending with a colon, it will fail parsing the category and will fall back to placing the changelogs in the previous category or the main changelog category.
+
+```
+:cl:
+ADMIN:
+- add: Added fun!
+- remove: Removed fun!
+- tweak: Changed fun!
+- fix: Fixed fun!
+```
+or
+```
+:cl:
+- add: Added fun!
+- remove: Removed fun!
+- tweak: Changed fun!
+- fix: Fixed fun!
+ADMIN:
+- add: Added fun!
+- remove: Removed fun!
+- tweak: Changed fun!
+- fix: Fixed fun!
+```
 
 ## Writing An Effective Changelog
 The Changelog is for *players* to be aware of new features and changes that could affect how they play the game. It is *not* designed for maintainers, admins, or server operators (these should be in the PR description).
