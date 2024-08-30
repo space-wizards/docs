@@ -10,8 +10,8 @@ As we have discussed in the [Discord](https://discord.com/channels/3105552097536
 
 ## Conversion Rework:
 
-- Instead of flashes, **Head Revolutionaries** are given a two new actions (like screaming, toggling harm mode). One of which will "spread propaganda" to everyone in a four-tile radius around them filling up 15% of the **Conversion Bar** (10% they are mindshielded), while the other one will "spread propoganda" to ONE person, filling up a whopping 50% of their **Conversion Bar** (75% if they are mindshielded). 
-- Everyone has a hidden **Conversion Bar**, only seen by Head Revolutionaries. Once this bar is filled, one of two things will happen:
+- Instead of flashes, **Head Revolutionaries** are given a two new actions (like screaming, toggling harm mode). One of which will "spread propaganda" to everyone in a four-tile radius around them filling up 15% of the **Conversion Bar** (10% they are mindshielded), while the other one will "spread propoganda" to ONE person, filling up a whopping 50% of their **Conversion Bar** (75% if they are mindshielded). Both these abilities will be linked together with a cooldown. This cooldown will start off at 30 seconds, but scale up by 10 for every converted **Revolutionary**.
+- Everyone has a hidden **Conversion Bar**, only seen by **Head Revolutionaries**. Once this bar is filled, one of two things will happen:
   1. **If the person IS NOT mindshielded**, they will be converted into a **Revolutionary**.
   2. **If the person IS mindshielded**, they will be notified of the spreading of **Revolutionary** propaganda.
 
