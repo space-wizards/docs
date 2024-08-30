@@ -128,6 +128,7 @@ But what you get out of this process is worth the danger. Some examples:
     	* Storyfruit: The produce will connect into the system that makes random library books, and read it out loud a sentence at a time.
 	* Perfect metabolism. An effect that removes growth components that use nutrients or water.
 	* Giving pit: When eaten, leaves a Giving Seed. Touch that to an item and the seed will grow into a tree that lets you harvest copies of that item.
+   	* Generator: The plant puts off a little bit of electricity. Anchor it to a wire to supply power to the station, or don't and get small zaps to nearby targets.
 * Neutral/Situational
 	* Sunglow: A high-power point light. Radius is ~8 tiles, higher intensity. Acts like a permanent flare you can also eat.
 	* New species. Varies by parent species. These should be more varied in 'power level', both good and bad. 
