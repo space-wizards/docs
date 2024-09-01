@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Cerol | No | [Pt 1: Mutations](https://github.com/space-wizards/space-station-14/pull/31163) |
+| Cerol | No | [Pt 1: Mutations](https://github.com/space-wizards/space-station-14/pull/31163), [Pt 2: GrowthComponents](https://github.com/space-wizards/space-station-14/pull/31461) |
 
 ## Overview
 
@@ -53,7 +53,7 @@ This should be multiple PRs, so that incremental improvements can be made and wo
 * Mutation System rework (minus stat mutations and harvest type)
     * This should probably be a bunch of EntityEffects and components to fire them off.
     * Mutations should be defined in YAML similar to how chemicals are. 
-    * Simplify this system down to just be low percentage rolls instead of the fake-gene-bit setup it is now. The conversion math for those is (1 / totalBits(275 today) / bitCount), so a 5-bit mutation would just be Prob(0.00072 * severity)
+    * Simplify this system down to just be low percentage rolls instead of the fake-gene-bit setup it is now. The conversion math for those is (1 / totalBits(275 today) * bitCount), so a 5-bit mutation would just be Prob(0.018 * severity)
 * HarvestComponents rework
     * 2 EventEffects that fire off and create the actual produce. Copies all the mutation components active on the plant to the produce. One destroys the plant, the other reverts it to the previous growth stage.
 * GrowthComponent/System and seed prototype rework.
@@ -61,7 +61,7 @@ This should be multiple PRs, so that incremental improvements can be made and wo
     * Auto-harvest becomes one of these, since it runs at Update() and not OnHarvest().
     * I am not sure how much of SeedData remains after this. I suspect it does still exist, but mostly for which prototype the seed creates at harvest and which species it can mutate into.
 * Update Mutation System to include mutations for GrowthComonents and HarvestComponents
-    * This must be delayed until both the new Mutation system and new Components are in place, because this is where those systems touch.
+    * This must be delayed until one of the new Mutation / Components PRs are in place, because this is where those systems touch.
 * Plant entity replaces PlantHolder/SeedData
     * Update PlantHolder, ideally by moving much of its logic to Plant and what can't be moved should reference the Plant entity instead.
     * Update other Botany systems to use Plant instead of Plantholder where appropriate. 
