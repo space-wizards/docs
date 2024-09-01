@@ -1,7 +1,7 @@
 # Chat and Other Messaging
 
 ## What is Chat?
-Under term 'chat' we understand all messages that players, in-game entities and admins are exchanging in game. There are a lot of requirements that are implemented in current chat system, but there are also a lot to be desired - extensibility is quite poor, some of features require a lot of work for just porting stuff from ss13. In this document we will try to deduce core requirements and ways to fit them in current ecosystem of the game, also will discuss positive and negative traits of new chat system.
+Under term 'chat' we understand all messages that players, in-game entities and admins are exchanging in game. There are a lot of requirements that are implemented in current chat system, but there are also a lot to be desired - extensibility is quite poor, code contains a lot of questional double/triple+ checks, it is distributed over a vast amount of classes. In this document we will try to deduce core requirements and ways to fit them in current ecosystem of the game, also will discuss positive and negative traits of new chat system.
 
 ** this document is based on FairlySadPanda Chatfactor Design Page (https://github.com/space-wizards/docs/pull/221/files).
 
@@ -11,6 +11,8 @@ Chat and other messages are usually sent in context of some 'way of communicatio
 - constraints on sending side (must have mouth, must have ability to speak, must have working headset, must have cryptokey inside headset, etc)
 - constraints on receiving side (must... have ears?, must see message author, must be near author, etc)
 - specific formatting settings for rendering this communication type
+
+As chat is one of core parts of the game, almost all chat messages are part of replays.
 
 Other then that chat and other messages sent between players (in-game entities and admins) can be grouped into two typesfrom game atmophere standpoint:
 * **In-round messages** - These chat types cover messages that are "round-scoped". This means they relate to something that shows up in replays and are "things that happened in that particular round". They are part of round and thus part of replay.
@@ -22,14 +24,14 @@ Generally you can summarize the difference between the two types by "the former 
 
 | Commuication type				| Details  	|
 |:---:							| ---		|
-| Whisper  						| Quiet verbal communication that is very short range and features occlusion mechanics.				|
+| Whisper  						| Quiet verbal communication that is very short range and features occlusion mechanics. |
 | Say  							| Normal verbal communication. Main difference compared to whisper - is not obfuscated. You either hear it all or not hear it at all. Can be modified to be louder using exclamations.				|
 | Emote  						| Visual communication via body langage. Requires line-of-sight.				|
 | LOOC  						| Out-of-character chat that is supposed to be used for asking for help or "I need to go AFK" messages, but is actually used for being salty.				|
 | Background					| Place where automated chats like vending machine announcements are issued. Essentially identical to local chat, but these messages are "not real" and do not go into chat logs or get message IDs (see below).				|
 | Device radio					| Device radio covers radio that sends and receives from a specific location in the game, like handheld radios or intercoms.				|
 | Internal radio  				| Internal radio covers radio that is granted by some internal power, like Binary for robots or "nearly everything" for Nar'sie				|
-| Radio  						| Equipment radio covers radio that is granted by having access to a worn piece of equipment, such as a headset				|
+| Radio  						| Equipment radio covers radio that is granted by having access to a worn piece of equipment, such as a headset. This way of communication is kinda special as it involves whispering for nearby even if there communicatons for radio are not working |
 | Dead	 						| The place ghosts talk where players can't hear them (and the place admins post when they want to be seen by dead people)				|
 | Prayer 						| Messages sent from players in-game to admins via some artifact like the red phone or the maint altar				|
 | Announcements  				| Various announcements from automated messages through to adminbus messages or comms console notifications				|
@@ -48,12 +50,22 @@ Radio-related ones are all different kinds of wireless communication via **hub s
 * Faxing and other player-to-player messages like PDA messages (proposed) work like chatting but don't use the same devices like the chat log and fall out of most of the "chat" domain.
 * Server tips are out-of-round, but Tippy (the rare pop-up clown that gives a tip) is considered in-round by players.
 
+### Desirable but not currently implemented
+
+Here we will list things that are not currently implemented but are desired to be easily added - porting stuff from ss13 is usually alluring, although not always good idea.
+
+| Commuication type				| Details  	|
+| :---:							| ---		|
+| Hivemind  					| Blobs and other oddities usually can talk using some sort of bio-radio - hivemind, which is like real radio, but - messages are not being forwarded to whisper on talking, and when hivemind core members are dead - it should collapse (at least chat is not available). And there is no reason to have same hive-mind radio if there is more then one main blob, for example - such chat should have id of network and round should be able to have more then 1 of such chat at the same time, even for same antag type. As for hivemind core - blob have single core, but for example changeling could have multiple main ones. |
+| Telepathy  					| vamps and brain-parasites could communicate using direct messaging, selecting one target and talking 'as kinda hivemind between 2 targets' but only in one direction. |
+| PDA DM						| PDA needs messaging feature which is ofc PDA app and depends on separate system, but it also requires to leave notification for player in chat - that they received message on PDA. Maybe text of message should be included. It is sort of direct messaging. |
+
 ## Functional requirements
-Now that we looked at all what we have, lets try to aggregate it into unique requirements.
+Now what we looked at in previous parts, lets try to aggregate it into unique requirements.
 
-From main standpoint of chat we can deduce that most of requirements will be concentrated around two processes - **emitting (producing) message**, and **consuming** (and rendering, as a result). **We will call process in between oh those 'chat pipeline'.**
+From main standpoint of chat we can deduce that most of requirements will be concentrated around two processes - **emitting (producing) message**, and **consuming** (and rendering, as a result). **We will call process in between oh those 'chat pipeline'.** But sometimes that process is more complex - consuming device could be just relay that transfers and emits almost the same message by itself - some kind of **forwarding**. *Example of such thing is portable radio, which is listening and broadcasting what it hears.*
 
-We can state that there is always 1 producer, and 1 or more consumers of messages. Both sides can be either player or some in-game entity. For both sides pipeline can be different, based on aspects of entity, environment, and way of communication.
+We can state that there is always 1 producer, and 1 or more consumers of messages. Both sides can be either player or some in-game entity. Chat pipeline exact process can be different, based on aspects of entity, environment, and way of communication. Consumers could be not only players, but **also devices**. This is important part as it brings extensibility to next level - all sort of devices becomes available when routing of messages can be done through multiple layers of devices without too much of hand-crafted c# logic.
 
 Nature of ss14 development is fluent and there is a lot of demand for features to be customizable within yaml prototypes, without having 'fun' of writing and testing c# code. It is better to create new chat system with this in mind. As previously said, we have producing and consuming, so lets try to find out what configuration/configurability they need.
 
@@ -87,6 +99,8 @@ From **message consumption** standpoint
 |Is part of living hivemind	| Have HivemindComponent, and there is at least one HivemindComponent with 'IsMain'=true value with same HivemindId as author| same as for producer |
 |Is dead				| Have GhostHearingComponent | Dead chat only for admin or dead people|
 
+All of conditions could be summarized as acyclic graph of checks, Composite pattern if you like, that will look pretty much the same way as construction system conditions - look at Content.Shared.Construction.***IGraphCondition*** and types, implementing it. Most of checks would be simple checking if entity have components, or something simple yet custom - if certain component have expected value of property.
+
 Then, in chat pipeline there should be parts which mutate message text in some cases - **chat message mutators**.
 
 | Mutator				| Examples |
@@ -95,58 +109,94 @@ Then, in chat pipeline there should be parts which mutate message text in some c
 |Languages				| Some players can talk using their 'native language' of race, which obscures message for players of same race, and does not for others|
 |Accents 				| Accent of charater mutates words / parts of messages for all who can hear them|
 
+There must be basic mutators - as currently system have cvar-based things like capitalize 'I' and small stuff like this. It might be ok to put them into basic type for communicationType and still turn them on/off based on cvar.
+
 Other then that we have some **non-functional requirements**
 - messages should be censored if they have naughty stuff
 - messages should be trottled (rate-limited and excessive-ones should be ignored + notification of limit should be visible to sender)
 - messages should be removable in batch from history (using author as key)
 - most messages (in-round) should be written to round replay, but there are ephemeral communication types which are excluded
 
-For sample of condition for checking if 'something' have component - see  **ComponentInTile**.
-
+Those are major part of chat pipeline and must be invoked always. There might be need for flags on messages that are relayed (travel through chat pipeline multiple times) to not invoke all of mutators for same text multiple times.
 
 ```mermaid
 ---
 title: chat prototypes
 ---
 classDiagram
-	note for ProximityObfuscatableChat "degrades 'quality' of message with distance,<br> further you go - less you hear"
-	namespace ByDistance{
-		class ProximityBasedChatRangeLimiter{
-			<<Prototype>>
-			+int distance
+	namespace ChatConditionsBase{
+		class IChatConsumeCondition{
+			+bool Check(EntityUid producer, EntityUid consumer, IEntityManager entityManager);
 		}
-		class LineOfSightBasedChatRangeLimiter{
-			<<Prototype>>
+		class IChatProduceCondition{
+			+bool Check(EntityUid producer, IEntityManager entityManager);
 		}
-		class GridBasedChatRangeLimiter{
-			<<Prototype>>
-			+bool onlySameGrid
-		}
-		class RoundBasedChatRangeLimiter{
-			<<Prototype>>
-		}
-	}
-	namespace ByReceivingDevice{
-		class HearableChatLimiter{
-			<<Prototype>>
-			+FixedPoint2? distanceModifier
-		}
-		class PartOfHivemindChatLimiter{
-			<<Prototype>>
-			+string hivemindId
-		}
-		class TelepathyChatLimiter{
-			<<Prototype>>
-			+int? distance
-			+bool isBroadcast
-		}
-		class GhostChatLimiter{
-			<<Prototype>>
+		class IChatCondition{
 
 		}
-		class RadioChatLimiter{
-			<<Prototype>>
-			+int radioFreq
+		class HaveComponentChatCondition{
+			+string[] components
+		}
+		class DoesntHaveComponentChatCondition{
+			+string[] components
+		}
+		class AllChatCondition{
+			+IChatConsumeCondition[] consumeConditions
+			+IChatProduceCondition[] porduceConditions
+		}
+		class AnyChatCondition{
+			+IChatConsumeCondition[] consumeConditions
+			+IChatProduceCondition[] porduceConditions
+		}
+
+	}
+	namespace ChatConditionsSpecific{
+		class IsWithinLineOfSightChatCondition{
+
+		}
+		class IsOnGridChatCondition{
+			+bool onlySameGrid
+		}
+		class IsWithinRangeChatReceiveCondition{
+			+int maxDistance
+		}
+		class HaveDeviceInInventoryChatCondition{
+			+SlotFlags targetSlot
+			+EntityWhitelist? providerWhitelist
+			+string deviceComponent
+		}
+		class IsPartOfHivemindChatCondition{
+			+string hivemindId
+		}
+		class IsRequestedEntityChatConsumeCondition{
+
+		}
+	}
+
+	IChatCondition --|> IChatConsumeCondition
+	IChatCondition --|> IChatProduceCondition
+	HaveComponentChatCondition --|> IChatCondition 
+	DoesntHaveComponentChatCondition --|> IChatCondition 
+	AllChatCondition --|> IChatCondition 
+	AnyChatCondition --|> IChatCondition 
+	IsWithinLineOfSightChatCondition --|> IChatCondition 
+	IsOnGridChatCondition --|> IChatCondition 
+	IsWithinRangeChatReceiveCondition --|> IChatCondition 
+	HaveDeviceInInventoryChatCondition --|> IChatCondition 
+	IsPartOfHivemindChatCondition --|> IChatCondition
+	IsRequestedEntityChatConsumeCondition --|> IChatConsumeCondition
+
+```
+
+```mermaid
+---
+title: chat prototypes
+---
+classDiagram
+	namespace NewComponents{
+		class VoiceComponent{
+			<<Component>>
+			+int VoicePower
 		}
 	}
 	namespace ChatFormatting{
@@ -168,12 +218,8 @@ classDiagram
 			+int maxDistance
 		}
 	}
-
-	class EphemeralChat{
-		<<Prototype>>
-	}
-
-```
+	
+````
 
 <table>
 <tr>
@@ -190,14 +236,21 @@ classDiagram
   id: say
   name: Say
   description: 
+  isEphemeral: false
   chatPublishConditions: 
-  - !type:IsNotMuteChatConsumeCondition
-	component: VoiceComponent
-	
+  - !type:WhenAllPublishCondition
+	conditions:
+	- !type:DoesNotHaveComponentsChatCondition
+	  components: [StunnedComponent, MutedComponent, GhostComponent]
+	- !type: HaveComponentsChatCondition
+	  components: [VoiceComponent]
   chatConsumeConditions:
-  - !type:HaveEarsChatConsumeCondition
-  - !type:IsNearChatConsumeCondition
-	maxDistance: 10
+  - !type: WhenAllPublishCondition
+	conditions:
+	- !type:HaveComponentsChatCondition
+      components: [ListingComponent]
+  	- !type:IsInProximityChatConsumeCondition
+	  maxDistance: 10
 ```
 
 </td>
