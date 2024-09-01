@@ -19,9 +19,24 @@ I will split these procedures between two categories
 * Guidelines
     - Think of these as the original SOP, a set of straight forward points and guides to explain how a department is to be run, but do not limit roleplay and instead encourage more. With things like medical evaluations and alert procedures. These could be appended with 'guideline' or just left as is such as "Alert Procedure" instead of "Alert Procedure Guidelines". 
 
+## "Encourage Roleplay"
+
+I use this phrase a lot to describe the DOP but I don't really explain it. And therefore I will implement a set of guidelines for the guidelines 
+
+### The Guidelines for the Guidelines
+
+1. A guideline should encourage roleplay through either pro-active (i.e. "Interview surronding crew members for a crime report") or passive encouragment (i.e. "Firearms should not be openly carried by security during green alert")
+2. A guideline should never be an exorbiant length. Instead of a guideline covering multiple things, cover one thing well. 
+
 ## How will this look per department? NOTE: This is my example. I think this could be achieved in many ways but this is how I would do it. 
 
 ---
+
+## ENFORCMENT
+(This is in my opinion how things should be enforced) 
+Any commanding officer over a department can choose whether or not to enforce certain guidelines. This will allow for repeatable and consistent roleplay expectations that are easy to learn but still allow for some mallability. 
+
+This would be no different than an HOS utilizing team names for security. Something that is totally up to the commanding officer to utilize but many players are already aware of their function. (This is an example of passive encouragment, as it passively promotes more coherent rp for security officers) 
 
 ### Command: 
 
