@@ -35,7 +35,7 @@ While you're here, install `Python 3.7+` as well if you don't have it already. Y
 <hr>
 
 ```admonish danger "Name and Email privacy"
-When [setting up your `user.name` and `user.email`](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity), know that these are publicly displayed on all commits that you create, so I recommend setting `user.name` to your username not your real name, and `user.email` to the one provided by GitHub when the [`Keep my email addresses private`](https://github.com/settings/emails#toggle_visibility) setting is checked in [GitHub Email Settings](https://github.com/settings/emails#primary_email_select_label).
+When [setting up your `user.name` and `user.email`](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity), know that these are publicly displayed on all commits that you create. If you want to keep your information private, you can set `user.name` to your username instead of your real name, and `user.email` to the one provided by GitHub when the [`Keep my email addresses private`](https://github.com/settings/emails#toggle_visibility) setting is checked in [GitHub Email Settings](https://github.com/settings/emails#primary_email_select_label).
 ```
 
 Now that you have Git installed, I recommend you read up a bit on the basics of it first and get acquainted with whatever git client you're working with, whether its just command-line (Git Bash) or anything else.
