@@ -27,7 +27,7 @@ General Development
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
-  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md)
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
@@ -51,7 +51,7 @@ SS14 By Example
   - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
 - [Basic Networking and You](en/ss14-by-example/basic-networking-and-you.md)
 - [Fluent and Localization](en/ss14-by-example/fluent-and-localization.md)
-- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md) 
+- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
 
 
 Robust Toolbox
@@ -77,6 +77,7 @@ Robust Toolbox
     - [Entities](en/robust-toolbox/toolshed/commands/entity-control.md)
     - [General](en/robust-toolbox/toolshed/commands/general.md)
     - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
+  - [Toolshed Examples](en/robust-toolbox/toolshed/toolshed-examples.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
 - [IoC](en/robust-toolbox/ioc.md)
 - [Rendering]()
@@ -165,7 +166,7 @@ Space Station 14
 	- [Proposals]()
 	  - [PAI Expansion Slots](en/space-station-14/player-interaction/proposals/pai-expansion-slots.md)
 	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
-	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md) 
+	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md)
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
