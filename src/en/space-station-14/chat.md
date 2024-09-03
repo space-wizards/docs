@@ -111,6 +111,25 @@ Then, in chat pipeline there should be parts which mutate message text in some c
 
 There must be basic mutators - as currently system have cvar-based things like capitalize 'I' and small stuff like this. It might be ok to put them into basic type for communicationType and still turn them on/off based on cvar.
 
+Author of message is important part of message itself and his identity can be obstructed, based on his, or listener situation:
+
+| Is identity obstructed 			| Have line of sight| Is voice changed	| Result|
+|:--- |:---| :---| :---|
+| Clothes hides identity 			| have no LOS		|Voice changed 		|Author is marked as impersonated|
+| Clothes hides identity 			| have LOS			|Voice changed 		|Author is marked as impersonated|
+| Clothes does not hide identity 	| have no LOS		|Voice changed 		|Author is marked as impersonated|
+| Clothes does not hide identity 	| have LOS			|Voice changed 		|Author is marked as himself but voice is remarked as impersonated|
+| Clothes hides identity 			| have no LOS		|Voice not changed 	|Author is marked as himself|
+| Clothes hides identity 			| have LOS			|Voice not changed 	|Author is marked as himself|
+| Clothes does not hide identity 	| have no LOS		|Voice not changed 	|Author is marked as himself|
+| Clothes does not hide identity 	| have LOS			|Voice not changed 	|Author is marked as himself|
+
+
+- Cloths and no line of sight can obstruct seeing real identity of author
+- Some devices can lead to changes in voice, basically changing author identity from listener perspective.
+- Having id card on author AND having line of sight should lead to knowing author identity BUT have still mention using which voice author is talking
+- Having no clothes that disguise identity and having line of sight should lead to knowing author identity and mentioning voice he used to talk.
+
 Other then that we have some **non-functional requirements**
 - messages should be censored if they have naughty stuff
 - messages should be trottled (rate-limited and excessive-ones should be ignored + notification of limit should be visible to sender)
@@ -119,37 +138,79 @@ Other then that we have some **non-functional requirements**
 
 Those are major part of chat pipeline and must be invoked always. There might be need for flags on messages that are relayed (travel through chat pipeline multiple times) to not invoke all of mutators for same text multiple times.
 
+
 ```mermaid
 ---
-title: chat prototypes
+title: communication type prototype and events
 ---
 classDiagram
-	namespace ChatConditionsBase{
+	direction BT
+	namespace CommunicationType{
+		class CommunicationTypePrototype {
+			<<Prototype>>
+			+string name;
+			+string description;
+			+bool abstract
+			+bool isEphemeral
+			+ForwardRule forwardRule
+			+IChatPublishCondition[] chatPublishConditions
+			+IChatConsumeCondition[] chatConsumeConditions
+			+IChatMessageModifiers[] messageMutators
+		}
+		class ForwardRule{
+			+ProtoId~CommunicationTypePrototype~ to
+			+ForwardCondition condition
+		}
+		class ForwardCondition{
+			<<enum>>
+			Always
+			OnlyOnSuccess
+		}
+		
+	}
+
+	note for ForwardRule "helps to send to more then one channel at the same <br>time, if always required - for example saying something <br>to radio should result also into whispering"
+
+	direction TB
+
+	namespace ChatEvents{
+		class ChatMessageProduceEvent {
+			+ProtoId~CommunicationTypePrototype~ targetCommunicationType;
+		}
+		class DirectChatMessageProduceEvent{
+
+		}
+		class ChatMessageConsumeEvent {
+
+		}
+	}	
+	
+	DirectChatMessageProduceEvent --|> ChatMessageProduceEvent
+	style CommunicationTypePrototype fill:#f9f,stroke:#333,stroke-width:4px
+
+```
+
+Condition types listed below are samples but not full list of required to implement conditions.
+
+```mermaid
+---
+title: chat conditions - interfaces and specific conditions
+---
+classDiagram
+	direction BT
+	namespace ChatConditionsInterfaces{
 		class IChatConsumeCondition{
-			+bool Check(EntityUid producer, EntityUid consumer, IEntityManager entityManager);
+			+Check(EntityUid producer, EntityUid consumer, IEntityManager entityManager) bool
 		}
 		class IChatProduceCondition{
-			+bool Check(EntityUid producer, IEntityManager entityManager);
+			+Check(EntityUid producer, IEntityManager entityManager) bool
 		}
 		class IChatCondition{
 
 		}
-		class HaveComponentChatCondition{
-			+string[] components
-		}
-		class DoesntHaveComponentChatCondition{
-			+string[] components
-		}
-		class AllChatCondition{
-			+IChatConsumeCondition[] consumeConditions
-			+IChatProduceCondition[] porduceConditions
-		}
-		class AnyChatCondition{
-			+IChatConsumeCondition[] consumeConditions
-			+IChatProduceCondition[] porduceConditions
-		}
-
 	}
+	style IChatCondition fill:#f9f,stroke:#333,stroke-width:4px
+
 	namespace ChatConditionsSpecific{
 		class IsWithinLineOfSightChatCondition{
 
@@ -162,8 +223,7 @@ classDiagram
 		}
 		class HaveDeviceInInventoryChatCondition{
 			+SlotFlags targetSlot
-			+EntityWhitelist? providerWhitelist
-			+string deviceComponent
+			+string[] deviceComponents
 		}
 		class IsPartOfHivemindChatCondition{
 			+string hivemindId
@@ -171,35 +231,76 @@ classDiagram
 		class IsRequestedEntityChatConsumeCondition{
 
 		}
+		class HaveWorkingDeviceOnGridChatCondition{
+			+string component
+			+GridCondition gridCondition	
+		}
+		class GridCondition{
+			<<enum>>
+			OnlySameGrid
+			AnyGrid
+		}
 	}
 
 	IChatCondition --|> IChatConsumeCondition
 	IChatCondition --|> IChatProduceCondition
-	HaveComponentChatCondition --|> IChatCondition 
-	DoesntHaveComponentChatCondition --|> IChatCondition 
-	AllChatCondition --|> IChatCondition 
-	AnyChatCondition --|> IChatCondition 
 	IsWithinLineOfSightChatCondition --|> IChatCondition 
 	IsOnGridChatCondition --|> IChatCondition 
 	IsWithinRangeChatReceiveCondition --|> IChatCondition 
 	HaveDeviceInInventoryChatCondition --|> IChatCondition 
 	IsPartOfHivemindChatCondition --|> IChatCondition
 	IsRequestedEntityChatConsumeCondition --|> IChatConsumeCondition
-
+	HaveWorkingDeviceOnGridChatCondition --|> IChatCondition
 ```
 
 ```mermaid
 ---
-title: chat prototypes
+title: chat conditions - basic
 ---
 classDiagram
-	namespace NewComponents{
-		class VoiceComponent{
-			<<Component>>
-			+int VoicePower
+	namespace ChatConditionsInterfaces{
+		class IChatCondition{
+
+		}
+		class IChatConsumeCondition{
+			+Check(EntityUid producer, EntityUid consumer, IEntityManager entityManager) bool
 		}
 	}
+	style IChatCondition fill:#f9f,stroke:#333,stroke-width:4px
+
+	namespace ChatConditionsBasic{
+		
+		class HaveComponentChatCondition{
+			+string[] components
+		}
+		class DoesntHaveComponentChatCondition{
+			+string[] components
+		}
+		class AnyChatCondition{
+			+IChatConsumeCondition[] consumeConditions
+			+IChatProduceCondition[] porduceConditions
+		}
+		class IsInProximityOfVoiceChatConsumeCondition{
+			+FixedPoint2 voiceModifier
+		}
+	}
+	IChatCondition --|> IChatConsumeCondition
+	HaveComponentChatCondition --|> IChatCondition 
+	DoesntHaveComponentChatCondition --|> IChatCondition 
+	AnyChatCondition --|> IChatCondition 
+	IsInProximityOfVoiceChatConsumeCondition --|>IChatConsumeCondition
+```
+Only **AnyChatCondition** is a separate aggregator, as default strategy is 'WhenAll' - only accept chat message produce/consume when all mentioned conidtions are met.
+
+```mermaid
+---
+title: chat mutators
+---
+classDiagram
 	namespace ChatFormatting{
+		class IChatFormattingModifier{
+			Modify(string original, string wrapper) string
+		}
 		class ChatFormattingModifier{
 			<<Prototype>>
 			+int? fontSize
@@ -212,14 +313,15 @@ classDiagram
 			<<Prototype>>
 			+delegate?
 		}
-		class ProximityObfuscatableChat{
+		class ProximityObfuscationMessageMutator{
 			<<Prototype>>
-			+int minDistance
-			+int maxDistance
+			+FixedPoint2 fullInfoDistanceVoiceModifier
+			+FixedPoint2 minInfoDistanceVoiceModifier
 		}
 	}
 	
-````
+```
+Below are samples, how yaml configs for communicationType are expected to be looking like.
 
 <table>
 <tr>
@@ -231,26 +333,54 @@ classDiagram
 
 ```yaml
 - type: communicationType
-  abstract: false
+  abstract: true
   parent: []
+  id: commonSay
+  name: Base say
+  description: basic proto for any verbal interactions
+  chatPublishConditions: 
+  - !type: DoesNotHaveComponentsChatCondition
+    components: [StunnedComponent, MutedComponent, GhostComponent]
+  - !type: HaveComponentsChatCondition
+    components: [VoiceComponent]
+```
+
+</td>
+<td>
+
+```yaml
+- type: communicationType
+  abstract: true
+  parent: [commonSay]
+  id: commonRadio
+  name: Base radio
+  description: basic proto for any radio interactions
+  chatPublishConditions: 
+  - !type: HaveDeviceInInventoryChatCondition
+    targetslot: All
+	deviceComponents: [HeadsetComponent]
+  - !type: HaveWorkingDeviceOnGridChatCondition
+    component: TelecomServerComponent
+	gridCondition: sameGrid
+
+```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```yaml
+- type: communicationType
+  abstract: false
+  parent: [commonSay]
   id: say
   name: Say
-  description: 
-  isEphemeral: false
-  chatPublishConditions: 
-  - !type:WhenAllPublishCondition
-	conditions:
-	- !type:DoesNotHaveComponentsChatCondition
-	  components: [StunnedComponent, MutedComponent, GhostComponent]
-	- !type: HaveComponentsChatCondition
-	  components: [VoiceComponent]
+  description: normal verbal conversation
   chatConsumeConditions:
-  - !type: WhenAllPublishCondition
-	conditions:
-	- !type:HaveComponentsChatCondition
-      components: [ListingComponent]
-  	- !type:IsInProximityChatConsumeCondition
-	  maxDistance: 10
+  - !type:HaveComponentsChatCondition
+    components: [ListeningComponent]
+  - !type:IsInProximityOfVoiceChatConsumeCondition
 ```
 
 </td>
@@ -259,302 +389,93 @@ classDiagram
 ```yaml
 - type: communicationType
   abstract: false
-  parent: []
+  parent: [commonSay]
   id: whisper
-  name: whisper
+  name: Whisper
   description: 
-  chatPublishConditions: 
-  - !type:CanSpeakChatProduceCondition
   chatConsumeConditions:
-  - !type:HaveEarsChatConsumeCondition
-  - !type:IsNearChatConsumeCondition
-	maxDistance: 7
+  - !type:HaveComponentsChatCondition
+    components: [ListeningComponent]
+  - !type:IsInProximityOfVoiceChatConsumeCondition
+    voiceModifier: 0.3
   messageMutators:
   - !type:ProximityObfuscationMessageMutator
-    minDistance: 3
-    maxDistance: 7
-  messageMutators:
-  - !type:SenderWithoutLineOfSightObstructionMessageMutator
+    fullInfoDistanceVoiceModifier: 0.1
+    minInfoDistanceVoiceModifier: 0.7
 ```
 
 </td>
 </tr>
-<tr>
-<td>
 
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: handsEmote
-  name: HandsEmote
-  description: 
-  chatPublishConditions: 
-  - !type:HaveHandsChatProduceCondition
-  chatConsumeConditions:
-  - !type:HaveEyesChatConsumeCondition
-  - !type:IsNearChatConsumeCondition
-	maxDistance: 10
-```	
-</td>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: faceEmote
-  name: FaceEmote
-  description: 
-  chatPublishConditions: 
-  - !type:FaceVisibleChatProduceCondition
-  chatConsumeConditions:
-  - !type:HaveEyesChatConsumeCondition
-  - !type:IsNearChatConsumeCondition
-	maxDistance: 10
-```	
-</td>
-</tr>
-<tr>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: robotEmote
-  name: RobotEmote
-  description: 
-  chatPublishConditions: 
-  - !type:HaveHandsChatProduceCondition
-  chatConsumeConditions:
-  - !type:HaveEarsChatConsumeCondition
-  - !type:IsNearChatConsumeCondition
-	maxDistance: 10
-```	
-</td>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: looc
-  name: LOOC
-  description: 
-  chatPublishConditions: 
-  - !type:CanSpeakChatProduceCondition
-  chatConsumeConditions:
-  - !type:HaveEarsChatConsumeCondition
-  - !type:IsNearChatConsumeCondition
-	maxDistance: 10
-```	
-</td>
-</tr>
-<tr>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: background
-  name: Background
-  description: 
-  chatPublishConditions: 
-  - !type:CanSayBackgroundProduceCondition
-  chatConsumeConditions:
-  - !type:HaveEarsChatConsumeCondition
-  - !type:IsNearChatConsumeCondition
-	maxDistance: 5
-```	
-</td>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: deviceRadioSecurity
-  name: Device radio security wave
-  description: 
-  chatPublishConditions: 
-  - !type:CanSpeakChatProduceCondition
-  chatConsumeConditions:
-  - !type:HaveEarsChatConsumeCondition
-  - !type:HaveRadioHeadgearChatConsumeCondition
-    radioWave: 'security'
-  - !type:IsNearChatConsumeCondition
-	maxDistance: 10
-	minDistance: 3
-```	
-</td>
-</tr>
-<tr>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: dead
-  name: Dead
-  description: 
-  chatPublishConditions: 
-  - !type:IsDeadChatProduceCondition
-  chatConsumeConditions:
-  - !type:IsDeadChatConsumeCondition
-
-```	
-</td>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: prayer
-  name: Prayer
-  description: 
-  chatPublishConditions: 
-  - !type:IsNearDeviceChatProduceCondition
-    deviceType: altar
-  chatConsumeConditions:
-  - !type:IsAdminChatConsumeCondition
-```	
-</td>
-</tr>
-<tr>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: announcement
-  name: Announcement
-  description: 
-  chatPublishConditions: 
-  - !type:IsDevice
-	device: ComputerComms
-  chatConsumeConditions:
-  - !type:GridBoundChatConsumeCondition
-	onlySameGrid: true
-
-```	
-</td>
-<td>
-
-```yaml
-- type: communicationType
-  abstract: false
-  parent: []
-  id: prayer
-  name: Prayer
-  description: 
-  chatPublishConditions: 
-  - !type:IsNearDeviceProduceCondition
-    deviceType: altar
-  chatConsumeConditions:
-  - !type:IsAdminChatConsumeCondition
-```	
-</td>
-</tr>
 </table>
 
-## Component-based Chat Privilages
-
-Chat should be driven by components, rather than having its functionality defined completely in C#. This brings easiness to manage and add more independent actors. To use messaging mob should have access to it, which should be governed by components they have. That is true to most channels (excluding LOOC and Dead). For example, to actually speak in local chat, a mob must have the following component:
-
-```cs
-using Robust.Shared.GameStates;
-
-namespace Content.Shared.Chat.V2.Components;
-
-/// <summary>
-/// Declares that this entity can chat in local chat
-/// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class CanLocalChatComponent : Component
-{
-    // TODO: Ensure you can't locally chat in insufficient atmosphere
-    /// <summary>
-    /// How far can this entity be heard from?
-    /// </summary>
-    [DataField, AutoNetworkedField]
-    public float Range = 10.0f;
-}
-```
-
-Note that this component not only grants them the right to use local chat, it also determines how they use it. In this case, it governs the range they can be heard from. It stands to reason that Nar'sie, eldritch god, probably speaks louder than Pun-Pun.
-
-## The Chat Message Lifecycle
-
-Chat messages are created and used via a lifecycle of events. This can also be described as "chat is event-driven". What both of these terms mean is that a series of events build a step-by-step process (pipeline) that turns a player's input into output other players can read.
+## Chat pipeline
 
 The lifecycle can be summarized by the following steps.
 
-
 ```mermaid
   graph LR;
-	A(Player client \nsend ChatMessageAttemptEvent)-->ServerSide;
+	A(<1.1>Player client send <br>ChatMessageProduceAttemptEvent)-->ServerSide;
 	ServerSide-->RecepientClient-ChatMessageRecievedEvent
 	subgraph ServerSide
-		subgraph ChatMessageAttemptEvent
-			B0(Validate)-->B1(Sanitize)
-			B1-->D1(give UID)
-			B1-->D2(identify sender)
-			B1-->D3(save for mass manipulation)
-			D1-->DF(Emit ChatMessageCreatedEvent)
+		subgraph ChatMessageProduceSystem.HandleProduce
+			B0(<2.1>Validate)-->B1(<2.2>Sanitize)
+			B1-->D1(<2.3>Give message UID)
+			B1-->D2(<2.5>Identify sender)
+			D1-->D3(<2.4>Save ID for mass manipulation)
+			D3-->DF(Invoke mutators)
 			D2-->DF
-			D3-->DF
 		end
-		subgraph ChatMessageCreatedEvent
-			E1(character specific \naccent transofrm)
-			E1-->E2(global \n accent transform)
-			E2-->E3(Emit ChatMessageReceptionEvent)
+		subgraph ChatMessageProduceSystem.ModifyMessage
+			E0(<3.1>Get mutator list <br>from prototype)-->E1
+			E1(<3.2>Character specific <br>accent transofrm)
+			E1-->E2(<3.3>Global <br> accent transform)
+			E2-->E3(<3.4>Emit ChatMessageProducedEvent)
 		end
-		subgraph ChatMessageReceptionEvent
-			C1(determine who \nrecieves event)-->C2(emit 'receive event' \nfor each receiver)
-			C2-->C3(Emit ChatMessageMutationEvent)
+		subgraph ChatMessageProduceSystem.DetectRecepients
+			C1(<3.5>determine who <br>recieves event)-->C2(<3.6>Emit ChatMessageReceiveAttemptEvent <br>for each receiver)
 		end
-		subgraph ChatMessageMutationEvent
-			F3(apply obfuscations)-->F4(apply limitations \nof receiver)
-			F4-->F5(Emit ChatMessageRecievedEvent)
+		subgraph ChatMessageConsumeSystem
+			F3(<4.1>Validate <br>against consume conditions)-->F4
+			F4(<4.2>apply obfuscations)-->F5(<4.3>apply limitations <br>of receiver)
+			F5-->F6(<4.4>Emit ChatMessageRecievedEvent)
 		end
 
-	  	ChatMessageAttemptEvent-->ChatMessageCreatedEvent
-		ChatMessageCreatedEvent-->ChatMessageReceptionEvent
-		ChatMessageReceptionEvent-->ChatMessageMutationEvent
+	  	ChatMessageProduceSystem.HandleProduce-->ChatMessageProduceSystem.ModifyMessage
+		ChatMessageProduceSystem.ModifyMessage-->ChatMessageProduceSystem.DetectRecepients
+		ChatMessageProduceSystem.DetectRecepients-->ChatMessageConsumeSystem
 		
 	end
 	subgraph RecepientClient-ChatMessageRecievedEvent
-		F0(Receiver Player client \ngets message)-->F1(Formatting)
+		F0(Receiver Player client <br>gets message)-->F1(Formatting)
 		F1-->F2(Render/save)
 	end
 
 ```
 
-1. In the client, a player attempts to send a chat message to a channel by issuing a chat message attempt event.
-    * This attempt goes over the network to the server.
-2. The attempt is processed by a **chat message attempt processor** on the server.
-    * The validator issues a chat validation event that is consumed by processors. 
-    * If no processor fails the attempt, the validator will then sanitize the message's contents. 
-    * The result of sanitization is handed to the **chat message repository**.
+1. On client side, a player attempts to send a chat message to a channel by issuing a chat message attempt event **<1.1>**. It is important to undestand that **this is a statement of intent**. System should deduce what attempt to send to certain Communication type really means separately.
+	* To create attempt, client should deduce from user intentions (control settings and message content) by which **Communication type** user wants to send message. CommunicationType protoId is packed into event.
+    * This attempt goes over the network to the server emitting **ChatMessageProduceAttemptEvent**.
+2. Attempt is processed by a 'chat message attempt processor' on the server - **ChatMessageProduceSystem**.
+    * Rate-limit for message original author is checked, and if limit is reached - author is notified **<2.1>**.
+	* By ProtoId of Communication type list of conditions for produce is extracted. Each of them is executed, and if all of them return 'true' - message produce is considered valid **<2.1>**.
+    * Sanitize on message's contents is called **<2.2>**. Sanitization consists of censorship and removal of non valid text (for example, smiley faces at the end of message are are ejected from message text and emitted as separate emote events)
 3. The **chat message repository** stashes the chat message away to be referred to later.
-    * It gives the message a unique ID that can be used to reference the message at any point later on.
-    * It associates all messages with the player who sent them, allowing for easy mass-deletion by an admin.
-    * It issues a chat message created event that allows further processors to respond.
-4. The **chat message created processor** listens for chat message creation events.
-    * The processor issues an chat message accent transformation event that is consumed by processors.
-    * These processors modify the sent message to add "global" modifiers, such as a lizard person's trailing s's, a voice mask, and so on.
-    * It issues a chat reception event that is consumed by processors.
-    * These processors determine who receives the event.
-    * The receiver processor then emits a chat message mutation event for each receiver.
-    * These processors determine how a chat message is altered due to obfuscation, language, and so on.
-    * After each mutation event is fully processed, the processor emits a chat message received event to the receiver.
-    * This received event goes over the network to the client.
-5. The **chat message received processor** listens to chat message received events on the client.
+    * It gives the message a unique ID that can be used to reference the message at any point later on **<2.3>**.
+    * It associates all messages with the player who sent them, allowing for easy mass-deletion by an admin **<2.4>**.
+4. The **chat message mutator** listens for 'chat message produced' events.
+	* By ProtoId of Communication type list of mutators is requested **<&#8203;3.1>**. 
+	* These mutators are refined by adding "global" modifiers, such as a lizard person's trailing s's, a voice mask, and so on **<&#8203;3.2>** (additional event to collect mutators?)
+    * The system issues an chat message accent transformation event for person-specific accents **<&#8203;3.3>**.
+	* Then **ChatMessageProducedEvent** is emitted.
+5. List of receivers is prepared, based on communication type:
+	* Check if there are players or devices, fitting to receive message (use consume conditions? need to narrow down list before running conditions!**<&#8203;3.5>**)
+	* ChatMessageConsumeAttemptEvent is emitted for each possible consumer **<&#8203;3.6>**.
+6. ChatConsumeSystem ensures people who recieves messages CAN receive it transforms messages personally for each of them
+    * Send **ChatMessageConsumeAttemptEvent** **<4.1>**.
+    * Check consumer obfuscation, language, and so on **<4.2>**.
+    * Emit **ChatMessageConsumedEvent** - network it to client side! **<4.4>**
+7. The client side listens to **ChatMessageConsumedEvent** events.
     * The various types of chat messages are then formatted and emitted in the various ways the client displays chat (in the chat log, in speech bubbles, etc)
 
 It's not required that the processors in the above lifecycle are synchronous. For example, the chat message created processor could be broken up into accent transformation, receiver determination, mutation transformation and emission to clients. But the overall set of steps remains the same.
@@ -564,25 +485,11 @@ Likewise, it's not required these names to be stuck to absolutely - naming thing
 ### Intended benefits of this approach
 
 1. Code is split between "is this legal to send" and "how to handle that it has been sent". This means concerns are separated, which tends to make code easier to maintain - security requirements shouldn't bleed into other aspects of the chat management system, for example.
-2. A set of events is easy to refactor. The work of the chat message repository does not assume anything about validation, who the eventual receivers are, and so on. It's one tightly-bounded component in a larger set of processors. This means it's easy to add or remove any one part.
-3. Аunctionality can be added using event listeners, without need to ruin Open-Closed Principle. For example, handheld radios don't ever really need to share code space with actual radios, but they both listen for radio message creation events. The handheld radio code would implement its own chat message created processor, handling accent, reception and mutation events itself. An example of why this is beneficial is that it makes a "universal translator" radio easy to implement.
+2. A set of events is easy to refactor. The work of the chat message repository does not assume anything about validation, who the eventual receivers are, and so on. This means it's easy to add or remove any one part.
+3. Some of functionality can be added using event listeners, conditions and mutators, without need to ruin Open-Closed Principle. For example, handheld radios don't ever really need to share specific code space with actual radios, but they both listen for radio message creation events and can share most of conditions on producer side. The handheld radio code would implement its own prototype and maybe even some of conditions and mutators, while sharing handling accent, reception and mutation events itself. An example of why this is beneficial is that it makes a "universal translator" radio easy to implement, or have vast network of relaying mechanisms based on messaging.
 4. All messages have a common ID. This means de-duplication is possible. For example, if the same message is sent to a handheld radio, an intercom and someone's headset, the frontend can detect that it has already displayed the chat message once, and thus the message does not need to be spammed repeatedly into the chat log, or might have a reduced impact in message bubbles.
     * This also means specific "delete/modify this message" and "nuke all of this player's messages" commands are possible for admin!
 
-### Technical Details
+## Implementation Considerations
 
-This document can't describe the exact names and properties of every single event this process issues, but at an overall level there are a few technical notes worth considering.
-
-1. Messages use inheritance and generics where possible to allow for code reuse. For example, all chat attempt events inherit from "ChatAttemptEvent", which specifies they must have a NetEntity and a message. Sometimes, like with internal, device and equipment radio events, this can involve multiple stages of inheritance.
-2. Inheritance (and generics) are prioritized over in-message state flags. For example, there are several "radio attempt event" messages, rather than one "radio attempt event" message that has an internal type enum. This is so we can leverage the message bus effectively. In general, letting the message bus handle directing messages where they need to go is more efficient and cleaner, even
-if it occasionally causes handler code duplication.
-3. Generics are used for processor events, like chat sanitization events. For example, ChatValidationEvent\<T\> allows for different events to be validated in different ways: a radio event can have its channel checked to make sure it exists, for example.
-4. Processor events should have the "abstract generic" raised first, then the "implementation generic" events. The event bus can't handle deep type comparison. For example, when T implements ChatAttemptEvent, ChatValidationEvent\<ChatAttemptEvent\> is raised before ChatValidationEvent\<T\>. Only when both types of event are raised and processed can the overall process continue onwards.
-
-## Frontend Considerations
-
-This document is almost entirely concerned with the backend implementation of chat. However, from exploration, there are a few considerations to take place:
-
-1. It should not be too hard to bolt this new system on to the legacy frontend chat system, although this will need old and new code to live side-by-side for a while. Transformation between the new backend events and the old ChatMessage events, with their janky WrappedMessage fields and so on, will be necessary.
-2. When building the new frontend system, it would be best to mimic the separation of concerns that the backend server code has implemented. The frontend chat management system is a large class that is exceptionally difficult to read. Reception, formatting and display should be broken apart into their own steps, with the former not assuming the implementation details of the latter.
-3. It'd be really funny if shouting made your text bigger. I'm just saying. Bold is fine, but, like, size eighteen font would really sell that you're being loud.
+As far as it goes, implementing systems, described in document in one go will not end up well, so implementing them as non-functional code (inactive) and then attaching all of the strings - seems like realistic approach. This will require some adapter code for front-end and could use parts of FSP previously added Chat/V2 code, but is clearly preferred to replaing all of the stuff in one go.
