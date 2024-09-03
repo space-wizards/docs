@@ -186,7 +186,7 @@ classDiagram
 	}	
 	
 	DirectChatMessageProduceEvent --|> ChatMessageProduceEvent
-	style CommunicationTypePrototype fill:#f9f,stroke:#333,stroke-width:4px
+	style CommunicationTypePrototype fill:#99f,stroke:#333,stroke-width:4px
 
 ```
 
@@ -209,7 +209,7 @@ classDiagram
 
 		}
 	}
-	style IChatCondition fill:#f9f,stroke:#333,stroke-width:4px
+	style IChatCondition fill:#99f,stroke:#333,stroke-width:4px
 
 	namespace ChatConditionsSpecific{
 		class IsWithinLineOfSightChatCondition{
@@ -266,7 +266,7 @@ classDiagram
 			+Check(EntityUid producer, EntityUid consumer, IEntityManager entityManager) bool
 		}
 	}
-	style IChatCondition fill:#f9f,stroke:#333,stroke-width:4px
+	style IChatCondition fill:#99f,stroke:#333,stroke-width:4px
 
 	namespace ChatConditionsBasic{
 		
