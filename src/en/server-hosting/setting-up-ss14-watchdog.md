@@ -57,6 +57,8 @@ Assuming you've followed the structure laid out above, you simply need to have a
 
 ## Watchdog Configuration
 
+Watchdog's config file is ``appsettings.yml``
+
 The watchdog configuration is split into two major sections:
 
 + Global elements, shared across all instances (servers).
@@ -122,7 +124,7 @@ Servers:
       # This example is for the official server builds.
       UpdateType: "Manifest"
       Updates:
-        ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
+        ManifestUrl: "https://wizards.cdn.spacestation14.com/fork/wizards/manifest"
 
       # The server is expected to ping the Watchdog occastionally.
       # (The aforementioned BaseUrl is passed to the server to facilitate this.)
@@ -199,7 +201,7 @@ Servers:
       # (This is an example, do NOT blindly copy paste this. Or you may end up with an unfinished configuration)
       UpdateType: "Manifest"
       Updates:
-        ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
+        ManifestUrl: "https://wizards.cdn.spacestation14.com/fork/wizards/manifest"
 ```
 
 ### Git-based Updates
@@ -468,7 +470,7 @@ Servers:
       # See above for alternatives.
       UpdateType: "Manifest"
       Updates:
-        ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
+        ManifestUrl: "https://wizards.cdn.spacestation14.com/fork/wizards/manifest"
         
       # Any environment variables you may want to specify.
       EnvironmentVariables:
