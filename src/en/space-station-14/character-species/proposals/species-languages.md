@@ -30,7 +30,7 @@ Besides humans and dwarfs, every species in the game can say a diferent language
 |---|---|
 | Vox | Voxian |
 |---|---|
-| Diona | Sylvanic |
+| Diona | Rootsong |
 |---|---|
 | Arachnid | Arachnis |
 |---|---|
@@ -67,7 +67,9 @@ Understanding a language is only the halfway to speaking it. There are some spec
 
 The best, fastest and easiest way to learn all languages is spawning or arriving on the station as a Librarian. Their years of study have allowed them to understand and speak basically any language imaginable.
 
-The other way to learn to speak and understand a different language is through Salvage. They can find discarded language manuals through debris and expeditions that upon used, it will consume the manual and the user will learn the language specific to the language manual it used(If its the draconic language manual, the user will learn to understand and speak draconic if they arent a Reptilian).
+Another way to learn a different language is through Salvage. They can find discarded language manuals through debris and expeditions that upon used, it will consume the manual and the user will learn the language specific to the language manual it used(If its the draconic language manual, the user will learn to understand and speak draconic if they arent a Reptilian).
+
+The last way to learn a new language is through maintenance lockers. They have a very small chance to spawn a discarded language manual of every language except Codespeak and Piratespeak, and it shoudn't be uncommon to not find a language manual through a whole shift.
 
 Admins ghosts and normal ghosts know all languanges by default.
 
@@ -103,7 +105,7 @@ Because of the similirities with department radio IDs, This system to identify w
 |---|---|
 | Voxian | ,v |
 |---|---|
-| Sylvanic | ,s |
+| Rootsong | ,s |
 |---|---|
 | Arachnis | ,a |
 |---|---|
@@ -127,6 +129,8 @@ Because of the similirities with department radio IDs, This system to identify w
 
 When someone listens to a conversation from a languange they dont know, it will sound like absolute gibberish. Every word in the speech gets changed to a random sylable from a list in the languange it is speaking, with no pattern whatsoever, different from languange to languange. So saying "I want to file a complaint agaisnt security" can sound like "Ss rueh usuh shzuul lusr oru he elolso" to someone who doesnt draconic, to "shzuul lusr sk huro sielo. Ek sz zalo" and even "sz uk oru he elolso ar rueh".
 
+When trying to speak a language you don't understand, Like a Slime person trying to speak Rootsong without being a Librarian or reading the discarted language manual for Rootsong, they will default to Galactic Common and a brief message will appear atop of their character saying "You don't know that language!"
+
 ### Examples of each languanges "gibberish"
 
 | Language Name | "gibberish" |
@@ -139,7 +143,7 @@ When someone listens to a conversation from a languange they dont know, it will 
 |---|---|
 | Voxian | tititihi SKREAHKEHK hikikikikiya EHKRAWK KRAKA yayichi chakah SKREAHKEHK titihi KRAAAA EEE KIIIKRI KA |
 |---|---|
-| Sylvanic | "Nasyu qip. Maaeobwex tisyudilamel tok. Eresnas aeqedointyuala haqipbalriifalbisvilbisinthaaearasbisalaqeuis. Pii." |
+| Rootsong | "Nasyu qip. Maaeobwex tisyudilamel tok. Eresnas aeqedointyuala haqipbalriifalbisvilbisinthaaearasbisalaqeuis. Pii." |
 |---|---|
 | Arachnis | "Clink-Click-Clink Hizee Click Hummme-Hunnee Hunne Cli. Clivk Hizee-Click Akkk-Hizee Akk. Vek Click Cli Hummne" |
 |---|---|
