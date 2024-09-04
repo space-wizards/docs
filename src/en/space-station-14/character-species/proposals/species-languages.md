@@ -35,13 +35,6 @@ Besides humans and dwarfs, every species in the game can say a diferent language
 | Arachnid | Arachnis |
 |---|---|
 | Silicons (Cyborgs and AI) | Encoded Audio Language |
-
-Some other species, like monkeys and kobolds, and even antagonists, like syndicate agents and nuclear operatives, can also speak different languages
-
-| "Species" | Language Name |
-| Syndicate Agents and Nuclear Operatives | Codespeak |
-|---|---|
-| Pirates | Piratespeak (Default language) |
 |---|---|
 | Monkeys and Gorilas | Monkey (Default language if not made sentient by cognize) |
 |---|---|
@@ -52,6 +45,15 @@ Some other species, like monkeys and kobolds, and even antagonists, like syndica
 | Slimes and Smile | Slime (Default language if not made sentient by cognize) |
 |---|---|
 | Rats, Rat King, Hamlet, Hamsters and Mothroaches | Chriter (Default language if not made sentient by cognize) |
+
+Some other species, like monkeys and kobolds, and even antagonists, like syndicate agents and nuclear operatives, can also speak different languages
+
+| "Species" | Language Name |
+| Syndicate Agents, Nuclear Operatives and Syndicate PAIs | Codespeak |
+|---|---|
+| Pirates | Piratespeak (Default language) |
+|---|---|
+| Mutes and Mimes | Galactic Sign Language (Default language) |
 
 Any other creature not covered here speaks what they already say ingame. Syndicats still meow, and space carp still 'raw'
 
@@ -105,7 +107,7 @@ Because of the similirities with department radio IDs, This system to identify w
 |---|---|
 | Voxian | ,v |
 |---|---|
-| Rootsong | ,s |
+| Rootsong | ,r |
 |---|---|
 | Arachnis | ,a |
 |---|---|
@@ -114,6 +116,8 @@ Because of the similirities with department radio IDs, This system to identify w
 | Codespeak | ,t |
 |---|---|
 | Piratespeak | ,p |
+|---|---|
+| Galactic Sign Language | ,s |
 |---|---|
 | Monkey | ,o |
 |---|---|
@@ -130,6 +134,16 @@ Because of the similirities with department radio IDs, This system to identify w
 When someone listens to a conversation from a languange they dont know, it will sound like absolute gibberish. Every word in the speech gets changed to a random sylable from a list in the languange it is speaking, with no pattern whatsoever, different from languange to languange. So saying "I want to file a complaint agaisnt security" can sound like "Ss rueh usuh shzuul lusr oru he elolso" to someone who doesnt draconic, to "shzuul lusr sk huro sielo. Ek sz zalo" and even "sz uk oru he elolso ar rueh".
 
 When trying to speak a language you don't understand, Like a Slime person trying to speak Rootsong without being a Librarian or reading the discarted language manual for Rootsong, they will default to Galactic Common and a brief message will appear atop of their character saying "You don't know that language!"
+
+### Galactic Sign Language
+
+Galactic Sign Language is Special because it can only be "Spoken" by mimes and mute people, whatever species they might come from, whether they are a antagonist or not. Only other mimes, mute people, the librarian and crew that have read any found discarded languange manual for galactic sign languange can understand and "speak" galactic sign languange.
+
+Galactic Sign Languange is completely silent by default, being only visible, even its "gibberish", by line of sight, it cant be heard over walls, and only appears in the text channel if it was send with line of sight. As a result of this, you can't send a message over the radio or whisper in galactic sign languange, and it may only be send in the local volume and seen if people have a direct line of sight.
+
+Even if your mute, however, you can still understand your species languange and read discarded languange manuals. So if your a mute moth person and someone speaks moffic next to you, you will understand them, but you wont be able to reply back in moffic (or galactic common), or if your a mime and you find a discarted languange manual for kobold in maintenance and read it, you will be able to understand Kobold now, but you wont be able to speak it.
+
+Since this languange is so unique, it needs to be developed separately from the main language system, so that it may not cause problems with the other languages, with potentially unique components and prototypes specific to galactic sign languange.
 
 ### Examples of each languanges "gibberish"
 
@@ -152,6 +166,8 @@ When trying to speak a language you don't understand, Like a Slime person trying
 | Codespeak | "Nettles, hats, vodka and tonic, airlocks, zombies, engineering, Lawyer, petes, Captain, hungry, white russians, Darell Briner, peaceful, drunken blumpkin." |
 |---|---|
 | Piratespeak | "Timbers grog scallywag timbers scallywag scallywag matey me matey timbers rum shiver arr bucko bucko blimey shiver." |
+|---|---|
+| Galactic Sign Language | "***Hand Up*** ***Hand Down*** ***Thumbs Up*** ***Hand to the left*** ***Hand to the Right*** ***Clapping*** ***Thumbs Down*** ***Hand to the mouth*** ***Punch down*** ***Finger Walking*** ***Holding three fingers*** ***Hand Palm*** ***Point finger up*** ***Closed hand***" |
 |---|---|
 | Monkey | "Eek eek oop aak chee aak oop oop aak oop oop aak chee. Chee chee chee. Chee oop aak aak oop aak oop eek eek eek." |
 |---|---|
