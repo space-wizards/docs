@@ -143,6 +143,8 @@ Galactic Sign Languange is completely silent by default, being only visible, eve
 
 Even if your mute, however, you can still understand your species languange and read discarded languange manuals. So if your a mute moth person and someone speaks moffic next to you, you will understand them, but you wont be able to reply back in moffic (or galactic common), or if your a mime and you find a discarted languange manual for kobold in maintenance and read it, you will be able to understand Kobold now, but you wont be able to speak it.
 
+Mute librarians will still be able to understand all languanges, but they will only be able to speak in Galactic Sign Languange.
+
 Since this languange is so unique, it needs to be developed separately from the main language system, so that it may not cause problems with the other languages, with potentially unique components and prototypes specific to galactic sign languange.
 
 ### Examples of each languanges "gibberish"
