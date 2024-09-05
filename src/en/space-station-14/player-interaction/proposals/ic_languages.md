@@ -11,11 +11,54 @@ I will firstly like to adress the point of adding languages at all. Languages al
 ## Languages and you
 
 Listed below are the common languages, languages that can be found roundstart spoken by cognitive and sentient creatures.
-Mind you to anyone who cannot understand the language, it will appear as random chains of ununderstandable words.
+Mind you to anyone who cannot understand the language, it will appear as random chains of ununderstandable words. Language descriptions are solely based on what real life languages or sounds (onomatopoeias) will be used to generate the garbled mess players who do not understand the language will see.
 
 | Native Speaker | Language Name | Language description |
 |---|---|---|
 | NT Crew | Galactic Common | Sounds like a combination of Mandarin Chinese and various forms of Spanish |
+|---|---|---|
+| Humans | Galactic Uncommon | Sounds like a combination of Russian and English |
+|---|---|---|
+| Lizard-People | Draconic | Sounds Nordic with aspects of hisses, rattles and snorts added |
+|---|---|---|
+| Moth-People | Moffic | Sounds like humming, with mixed in chittering and squeaks |
+|---|---|---|
+| Arachnids | Aranean | Sounds like Latin with aspects of clicking |
+|---|---|---|
+| Slime-People | Geran | Sounds like bubbling, popping, and squishing |
+|---|---|---|
+| Dwarves | Dwarven | Sounds like hebrew |
+|---|---|---|
+| Slime-People | Geran | Sounds like bubbling, popping, and squishing |
+|---|---|---|
+| Diona | Rootspeak | Sounds like whistling, creaking, and snapping |
+|---|---|---|
+| Vox | Vox-Pidgin | Sounds like shrieking, cooing, and cawing (as in the sound a crow makes) |
+
+Next is a list of uncommon languages that you may find being spoken on station although not by any crew.
+
+| Native Speaker | Language Name | Language description |
+|---|---|---|
+| Mice, Mothroaches, critters, staion pets | Animalisch | Sounds like generic animal sounds |
+|---|---|---|
+| Monkies | Apeish | Sounds like yelling and common monkey sounds |
+|---|---|---|
+| Xenos, Carp, Salv-mobs, Dragons | Xeno-Common | Sounds like gargling, gutteral yells and backwards Galactic Common |
+|---|---|---|
+| Silicons and Synthetics | Encoded Audio Language | Sounds electric buzzing and occasionals beeps |
+|---|---|---|
+
+Next is a list of antagonistic languages, hearing someone speaking any of these sound be concerning...
+
+| Native Speaker | Language Name | Language description |
+|---|---|---|
+| The Syndicate | Codespeak | Sounds like random words from Galactic Common |
+|---|---|---|
+| Heretics/Cultists | Shadow Tongue | Sounds like long strings of completely random words from every language |
+|---|---|---|
+| Heretics/Cultists | Nar'sian | You know how people sound when they drink Cogchamp? Just that. |
+|---|---|---|
+
 
 ## The rest?
 
