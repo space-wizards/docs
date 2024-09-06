@@ -12,15 +12,21 @@ This Proposal aims to add in-game languages based on what species you are curren
 
 ### The galatic standard language
 
-Every single member of the crew (and sentient beings, made sentient by an event or cognize), by default, speaks the Galactic Common Language, the equivelent of present day english. Any word you say by default while whispering, talking and speaking on the radio is automatically said in Galactic Common.
+Every single member of the crew (and sentient beings, made sentient by an event or cognize), by default, speaks the Galactic Common Language. Galactic Common Language is an artifial language using a discovered pattern in every sapient vocal coords sound production to facilitate universal communication across different species in the galaxy, and it is an absolute requirement to know in order to work in any intergalatic organization or corporation, like say, Nanosten or the Syndicate. Any word you say by default while whispering, talking and speaking on the radio is automatically said in Galactic Common.
+
+In-lore, it is a mishap of words and sentences. In-game, it can be any language, depending on the server's rules.
 
 Nonsentient beings, like space carp, smile, hamlet and any ghost role or creature can understand Galactic Common, but can't speak it.
 
 ### Diffrent species, diferent languages
 
-Besides humans and dwarfs, every species in the game can say a diferent language besides Galactic Common. The list is
+All species in the game can say a diferent language besides Galactic Common. The list is
 
 | Species | Language Name |
+|---|---|
+| Humans | Neo-Solar |
+|---|---|
+| Dwarfs | Dwarfish |
 |---|---|
 | Reptilian | Draconic |
 |---|---|
@@ -64,14 +70,15 @@ Understanding a language is only the halfway to speaking it. There are some spec
 1) Slime People can understand the Slime language (So understand what a slime is saying if they, for example, say hello), but cant speak it.
 2) Arachnids can understand the Spider language, but cant speak it.
 3) Although monkeys, gorilas and kobolds dont speak the same language, they can both understand each other languages clearly.
+4) Although dwarfs are decendents of humans and are well incorporated into human society, their ways of speaking have diverged. Dwarfs can understand the Neo-Solar languange, but can't speak it.
 
 ### Ways to learn different languages
 
 The best, fastest and easiest way to learn all languages is spawning or arriving on the station as a Librarian. Their years of study have allowed them to understand and speak basically any language imaginable.
 
-Another way to learn a different language is through Salvage. They can find discarded language manuals through debris and expeditions that upon used, it will consume the manual and the user will learn the language specific to the language manual it used(If its the draconic language manual, the user will learn to understand and speak draconic if they arent a Reptilian).
+Another way to learn a different language is through Salvage. They can find discarded language manuals through debris and expeditions that upon used, it will consume the manual and the user will learn the language specific to the language manual it used(If its the draconic language manual, the user will learn to understand and speak draconic if they arent a Reptilian). All languages have a manual and can be found through salvage this way, except Galactic Common.
 
-The last way to learn a new language is through maintenance lockers. They have a very small chance to spawn a discarded language manual of every language except Codespeak and Piratespeak, and it shoudn't be uncommon to not find a language manual through a whole shift.
+The last way to learn a new language is through maintenance lockers. They have a very small chance to spawn a discarded language manual of every language except Galactic Common, Codespeak and Piratespeak, and it shoudn't be uncommon to not find a language manual through a whole shift.
 
 Admins ghosts and normal ghosts know all languanges by default.
 
@@ -98,6 +105,12 @@ Because of the similirities with department radio IDs, This system to identify w
 ### List of languages IDs
 
 | Language Name | Language IDs |
+|---|---|
+| Galactic Common | ,c |
+|---|---|
+| Neo-Solar | ,n |
+|---|---|
+| Dwarfish | ,w |
 |---|---|
 | Draconic | ,d |
 |---|---|
@@ -147,21 +160,33 @@ Mute librarians will still be able to understand all languanges, but they will o
 
 Since this languange is so unique, it needs to be developed separately from the main language system, so that it may not cause problems with the other languages, with potentially unique components and prototypes specific to galactic sign languange.
 
+### Adding new languages
+
+If any new sapient species gets added into the game, the creator of the species needs to create a new language for their species, and a species cannot have more than one species language at a time.
+
+If it is an non-sapient species, a new language is unadvised, and may be discussed with the maintaners if need be, but if it is an antagonist non-sapient species, a new language is allowed, but only one species language.
+
 ### Examples of each languanges "gibberish"
 
 | Language Name | "gibberish" |
 |---|---|
-| Draconic | "Ss rueh usuh shzuul lusr sk huro sz uk oru he elolso ar. Rsku suok sz zalo uh iksuah. Rasi si ilro sh sielo. Ek." |
+| Galactic Common | "Sao chua guang zhan alion pukai hong shanislun e sheng tha. Arnotpoha. Orle lao. Re shan qiang shuaithe are le es" |
+|---|---|
+| Neo-Solar | "Arm, instable amarillo kàn bù dào, rehabilitation shìjiè davniy equitación, and dobro pozhalovat làzhú assurément community" |
+|---|---|
+| Dwarfish | "Kadrin rinriak karaz ekrund sked grint. Karugrombthi gnol druegskaggrund kalan. Jifful grong haraz dum chuf bak grob frongol rikkaz." |
+|---|---|
+| Draconic | "Ss rueh usuh shzuul fliskth lusr sk huro sh uk oru he elolso ar. Rsku suok fs zalo uh iksuah. Rasi sh flinsss si ilro sh sielo. Ek." |
 |---|---|
 | Moffic | "Sekygglitomånkönvii. Detdetdår møtmå. Ån. Gårköndagint. Viitehjaomköntyclaviinæbraånhönledetygglithankäytokmo sek." |
 |---|---|
-| Gloomspeak | "Qix quum. Qil qoovol qilzixqr quum. Zaoo qr*vol qil xrim qu-uuzix !qu-uu qil volqu-uu zix." |
+| Gloomspeak | "Qib quum. Qil qoovol qilzixqr quum. Zaoo qbvol qil brim qu-uuzib! Qu-uu qil volqu-uu zix." |
 |---|---|
 | Voxian | tititihi SKREAHKEHK hikikikikiya EHKRAWK KRAKA yayichi chakah SKREAHKEHK titihi KRAAAA EEE KIIIKRI KA |
 |---|---|
 | Rootsong | "Nasyu qip. Maaeobwex tisyudilamel tok. Eresnas aeqedointyuala haqipbalriifalbisvilbisinthaaearasbisalaqeuis. Pii." |
 |---|---|
-| Arachnis | "Clink-Click-Clink Hizee Click Hummme-Hunnee Hunne Cli. Clivk Hizee-Click Akkk-Hizee Akk. Vek Click Cli Hummne" |
+| Arachnis | "Clink-Click-Clink Hizee Click Hummme-Hunnee Hunne Cli. Clivk Hizee-Click Akkk-Hizee Akk. Vek Click Cli Hummne Click" |
 |---|---|
 | Encoded Audio Language | "Tzzzwurrboopbeepkssshbeephissbuzz keeyhsshisshsswurrboopdoo wahh. Buzzdoohisshssbeepboopbeepkeeyhss. Tzzzdeebeep." |
 |---|---|
