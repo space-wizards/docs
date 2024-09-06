@@ -22,7 +22,6 @@ Mind you to anyone who cannot understand the language, it will appear as random 
 | Arachnids | Aranean | Sounds like Latin with aspects of clicking |
 | Slime-People | Geran | Sounds like bubbling, popping, and squishing |
 | Dwarves | Dwarven | Sounds like gaelic |
-| Slime-People | Geran | Sounds like bubbling, popping, and squishing |
 | Diona | Rootspeak | Sounds like whistling, creaking, and snapping |
 | Vox | Vox-Pidgin | Sounds like shrieking, cooing, and cawing (as in the sound a crow makes) |
 
@@ -31,24 +30,17 @@ Next is a list of uncommon languages that you may find being spoken on station a
 | Native Speaker | Language Name | Language description |
 |---|---|---|
 | Mice, Mothroaches, critters, staion pets | Animalisch | Sounds like generic animal sounds |
-|---|---|---|
 | Monkies | Apeish | Sounds like yelling and common monkey sounds |
-|---|---|---|
-| Xenos, Carp, Salv-mobs, Dragons | Xeno-Common | Sounds like gargling, gutteral yells and backwards Galactic Common |
-|---|---|---|
 | Silicons and Synthetics | Encoded Audio Language | Sounds electric buzzing and occasionals beeps |
-|---|---|---|
 
 Next is a list of antagonistic languages, hearing someone speaking any of these sound be concerning...
 
 | Native Speaker | Language Name | Language description |
 |---|---|---|
 | The Syndicate | Codespeak | Sounds like random words from Galactic Common |
-|---|---|---|
+| Xenos, Carp, Salv-mobs, Dragons | Xeno-Common | Sounds like gargling, gutteral yells and backwards Galactic Common |
 | Heretics/Cultists | Shadow Tongue | Sounds like long strings of completely random words from every language |
-|---|---|---|
 | Heretics/Cultists | Nar'sian | You know how people sound when they drink Cogchamp? Just that. |
-|---|---|---|
 
 
 ## How the hell do I even speak my mother tongue?
