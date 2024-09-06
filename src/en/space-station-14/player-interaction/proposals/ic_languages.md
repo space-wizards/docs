@@ -16,23 +16,14 @@ Mind you to anyone who cannot understand the language, it will appear as random 
 | Native Speaker | Language Name | Language description |
 |---|---|---|
 | NT Crew | Galactic Common | Sounds like a combination of Mandarin Chinese and various forms of Spanish |
-|---|---|---|
 | Humans | Galactic Uncommon | Sounds like a combination of Russian and English |
-|---|---|---|
 | Lizard-People | Draconic | Sounds Nordic with aspects of hisses, rattles and snorts added |
-|---|---|---|
 | Moth-People | Moffic | Sounds like humming, with mixed in chittering and squeaks |
-|---|---|---|
 | Arachnids | Aranean | Sounds like Latin with aspects of clicking |
-|---|---|---|
 | Slime-People | Geran | Sounds like bubbling, popping, and squishing |
-|---|---|---|
-| Dwarves | Dwarven | Sounds like hebrew |
-|---|---|---|
+| Dwarves | Dwarven | Sounds like gaelic |
 | Slime-People | Geran | Sounds like bubbling, popping, and squishing |
-|---|---|---|
 | Diona | Rootspeak | Sounds like whistling, creaking, and snapping |
-|---|---|---|
 | Vox | Vox-Pidgin | Sounds like shrieking, cooing, and cawing (as in the sound a crow makes) |
 
 Next is a list of uncommon languages that you may find being spoken on station although not by any crew.
@@ -60,6 +51,6 @@ Next is a list of antagonistic languages, hearing someone speaking any of these 
 |---|---|---|
 
 
-## The rest?
+## How the hell do I even speak my mother tongue?
 
-Is entirely up to you.
+There is two ways to do it, the easy way for short conversations or for just saying one sentence is to add the proper prefix before what you are saying, for example: :c ,m I am speaking over command comms in moffric!. Alternatively for speaking for long amounts of time, using a radial button and key exactly like emotes, you can choose your default languge. This is the language you will speak in when not specifying with a comma and character. 
