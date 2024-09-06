@@ -4,9 +4,9 @@
 |---|---|---|
 | Hanzdegloker | :x: No | TBD |
 
-## Languages and Game Impact
+## Languages, game impact and why
 
-I will firstly like to adress the point of adding languages at all. Languages allow for new RP opportunities and even game balance. Languages first and foremost will serve as a new way for SS14 players to express themselves, and communicate with each other. In terms of game balance, this allows for all kinds of antags to properly communicate without revealing crucial information or setting unbelievable situations. My exmaples for communication and expression would be a slimeperson being able to talk to Smile the slime, or Vox talking their native tongue together in an nitrogren enviroment. Languages are powerful tools for feeling a connection, species specific languages foster kinship between crew of the same species as well as open new RP opportunities. On the second point, for example, carp could now speak with their dragon leader thru xeno-common. Traitors would be more willing to work together and coordinate through the use of their unique codespeak. I can imagine in the future heretics of some sort, or any cult themed gamemode/antag, making great use of languages in an antag sense likewise. It should be possible to within a round, learn to understand a language, but perhaps not learn to speak it. Although learning to speak it should not be impossible neither, simply something that must be worked towards specifically or get lucky due to circumstance. 
+I will firstly like to adress the point of adding languages at all. Languages allow for new RP opportunities and even game balance. Languages first and foremost will serve as a new way for SS14 players to express themselves, and communicate with each other. In terms of game balance, this allows for all kinds of antags to properly communicate without revealing crucial information or setting unbelievable situations. My exmaples for communication and expression would be a slimeperson being able to talk to Smile the slime, or Vox talking their native tongue together in an nitrogren enviroment. Languages are powerful tools for feeling a connection, species specific languages foster kinship between crew of the same species as well as open new RP opportunities. On the second point, for example, carp could now speak with their dragon leader thru xeno-common. Traitors would be more willing to work together and coordinate through the use of their unique codespeak. I can imagine in the future heretics of some sort, or any cult themed gamemode/antag, making great use of languages in an antag sense likewise. It should be possible to within a round, learn to understand a language, but perhaps not learn to speak it. Although learning to speak it should not be impossible neither, simply something that must be worked towards specifically or get lucky due to circumstance. On a more personal note, I have grown up my entire life in a city surrounded my immigrants and come from an immigrant family myself. Everyday I hear all kinds of languages, sayings from cultures across the globe, and people proud to be able to speak the language of where they come from even if the opportunities to do so are rare. Hell, I also come into contact with plenty folk who cannot speak english, here in the good ol USA. I have come to find way of communicating with non-verbally or other work arounds. Point being, we are in a space station far in the future filled with all kinds of unique species with unique backgrounds and you're saying we ALL speak the EXACT same language MAYBE with accents and thats it? Even if I barely get any chances to speak moffic with a fellow moth, the chances to do so would be wonderful, and if someone who is not a moth learns to speak it I would ecstatic. 
 
 ## Languages and you
 
@@ -29,9 +29,9 @@ Next is a list of uncommon languages that you may find being spoken on station a
 
 | Native Speaker | Language Name | Language description |
 |---|---|---|
-| Mice, Mothroaches, critters, staion pets | Animalisch | Sounds like generic animal sounds |
+| Mice, Mothroaches, critters, station pets | Animalisch | Sounds like generic animal sounds |
 | Monkies | Apeish | Sounds like yelling and common monkey sounds |
-| Silicons and Synthetics | Encoded Audio Language | Sounds electric buzzing and occasionals beeps |
+| Silicons and Synthetics | Encoded Audio Language | Sounds like electric buzzing and occasionals beeps |
 
 Next is a list of antagonistic languages, hearing someone speaking any of these sound be concerning...
 
@@ -39,10 +39,31 @@ Next is a list of antagonistic languages, hearing someone speaking any of these 
 |---|---|---|
 | The Syndicate | Codespeak | Sounds like random words from Galactic Common |
 | Xenos, Carp, Salv-mobs, Dragons | Xeno-Common | Sounds like gargling, gutteral yells and backwards Galactic Common |
-| Heretics/Cultists | Shadow Tongue | Sounds like long strings of completely random words from every language |
+| Pirates | Piratespeak | Sounds like random generic pirate words |
+| Heretics/Cultists | Shadowtongue | Sounds like long strings of completely random words from every language |
 | Heretics/Cultists | Nar'sian | You know how people sound when they drink Cogchamp? Just that. |
 
 
 ## How the hell do I even speak my mother tongue?
 
-There is two ways to do it, the easy way for short conversations or for just saying one sentence is to add the proper prefix before what you are saying, for example: :c ,m I am speaking over command comms in moffric!. Alternatively for speaking for long amounts of time, using a radial button and key exactly like emotes, you can choose your default languge. This is the language you will speak in when not specifying with a comma and character. 
+There is two ways to do it, the easy way for short conversations or for just saying one sentence is to add the proper prefix before what you are saying, for example: :c ,m I am speaking over command comms in moffric!. Alternatively for speaking for long amounts of time, using a radial button and key exactly like emotes, you can choose your default languge. This is the language you will speak in when not specifying with a comma and character. Anyways time for another lovely list so here it is.
+
+| Input | Language | 
+|---|---|
+| ,1 | Galactic Common | 
+| ,2 | Galactic Uncommon | 
+| ,d | Draconic |
+| ,m | Moffic | 
+| ,a | Aranean | 
+| ,g | Geran |
+| ,w | Dwarven | 
+| ,r | Rootspeak | 
+| ,v | Vox-Pidgin | 
+| ,e | Animalisch | 
+| ,5 | Apeish | 
+| ,3 | Encoded Audio Language |
+| ,4 | Codespeak | 
+| ,x | Xeno-Common | 
+| ,p | Piratespeak |
+| ,s | Shadowtongue | 
+| ,n | Nar'sian |
