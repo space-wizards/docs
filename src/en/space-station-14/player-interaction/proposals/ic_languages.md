@@ -24,6 +24,7 @@ Mind you to anyone who cannot understand the language, it will appear as random 
 | Dwarves | Dwarven | Sounds like gaelic |
 | Diona | Rootspeak | Sounds like whistling, creaking, and snapping |
 | Vox | Vox-Pidgin | Sounds like shrieking, cooing, and cawing (as in the sound a crow makes) |
+| Mutes | Galactic Sign Language | Hand gestures and movements |
 
 Next is a list of uncommon languages that you may find being spoken on station although not by any crew.
 
@@ -46,12 +47,13 @@ Next is a list of antagonistic languages, hearing someone speaking any of these 
 
 ## How the hell do I even speak my mother tongue?
 
-There is two ways to do it, the easy way for short conversations or for just saying one sentence is to add the proper prefix before what you are saying, for example: :c ,m I am speaking over command comms in moffric!. Alternatively for speaking for long amounts of time, using a radial button and key exactly like emotes, you can choose your default languge. This is the language you will speak in when not specifying with a comma and character. Anyways time for another lovely list so here it is.
+There is two ways to do it, the easy way for short conversations or for just saying one sentence is to add the proper prefix before what you are saying, for example: :c ,m I am speaking over command comms in moffic!. Alternatively for speaking for long amounts of time, using a radial button and key exactly like emotes, you can choose your default languge. This is the language you will speak in when not specifying with a comma and character. This would get pretty crowded with all the languges so any common languages show up when pressing the button and a sub-menu must be clicked on to select any rare languages like codespeak or Animalish. Anyways time for another lovely list so here it is.
 
 | Input | Language | 
 |---|---|
 | ,1 | Galactic Common | 
 | ,2 | Galactic Uncommon | 
+| ,q | Galactic Sign Language | 
 | ,d | Draconic |
 | ,m | Moffic | 
 | ,a | Aranean | 
@@ -67,3 +69,20 @@ There is two ways to do it, the easy way for short conversations or for just say
 | ,p | Piratespeak |
 | ,s | Shadowtongue | 
 | ,n | Nar'sian |
+
+## Librarian gets some love
+
+So you wanna learn a new language? Better go consult one of the least played jobs on the station! Thats right a language PR is basically a mini job expansion for the librarian. So let me lay down precisely how this all works, and this basic structure can be expanded eventually to include even more than just languages and eventually perhaps offer unique loot for multiple departments but for now this is just within the scope of languages. 
+
+I propose a new item called a language codex, a language codes is a 2x2 invgrid book that looks more like a spell tome and have a chance of spawning roundstart within bookshelves. The only guranteed spawn is the one language codex the librarian can choose to spawn with in their loadout (think musicians and their instruments!). The bigger the library, which should be equal to the size of the map in theory, the higher chances for some roundstart codexes. Using a new unqiue item the librarian spawns with (The codex ledger) a librarian is able to start the decoding process since without doing so the codex is useless. Lets say the librarian spawns in with a Language Codex (Moffic), they use their ledger on it and after a 4 second do-after they get some flavor text about the book glowing. Afterwards they may inspect the book and see what catalyst they need to find. A catalyst is a random, usualy mundane, item that must be sacrificed to the book in order to decode it. In this instance the book is calling for a cargo bounty (yes that mundane, but hey it makes you interact with Cargo hah). So you ask the nice Vox at the front desk for a bounty paper and then feed it to the codex you are decoding. You will get the glowing flavor text again and boom! Decoded!
+This process ensures the librarian has some form of unique tool/feature and encourages crew interaction within the process of decoding. A good librarian would be decoding whatever books they can and storing them at the library for the crew! Decoded books have a different name, IE: Decoded Language Codex (Moffic). There is one extra ledger in the cura-drobe incase the original is lost or stolen (the codex ledger makes a fine theif objective!). For this reason the librarian would need a unique access, especially once the codex system is expanded outside of just languages. A decoded language codex takes an 8 second do-after to read and then you will improve your language tier. Your language tier is how well you know the language. Tier 0 is you don't know it, tier 1 is you can understand it but not speak it, tier 2 is you can both speak and understand it. This means you would have to read a language codex twice to go from not knowing it at all to speaking it. An important note is that once a codex is decoded it only has 3 uses! So either 3 people can learn to understand a language from a codex, or only one learning to speak it and only one learns to understand it. Codexes will have text displaying what level of durability they are on, and become ruined codexes once fully read, only good for recycling. 
+
+I find any addition of languages must give some love to the poor librarian. This not only gives them a proper job on the station with language learning and teaching but lays the fondation and framework for further expansion of the librarian as a role on the station with the codex system.
+
+Now all the codexes that spawn in the bookshelves and the one you spawn with are all common languages. The only way to get rare languges is from salvage finding some more. Salv can find all language codexes (Except codespeak there is no codex for that) as well as the book of babel. So if you hope to learn xeno-common, be nice to your local salv. The book of babel is fun, if you read it yourself (8 second do-after and thats it, no decoding or catalyst) you forget galactic common but learn every language! (yes even codespeak) I mean learn how to speak and understand it too, but you lose glactic common and are unable to learn it again. If you are less silly, and bring the book to the librarian, they can use their ledger on it. After an 8 second do-after the book of babel will explode into multiple codexes! 3 common languges and 1 rare as well as a one ruined codex for good measure. You really get your bang for your buck as a librarian, if you are lucky to not have the Salv read the forbidden book upon finding it...
+
+## Speaking to Smile the Slime
+
+Now while you can speak to Smile roundstart as a slimeperson there is some caveats. Firstly if you're the only slimeperson in Sci everyone just kinda has to take your word for it, that you are translating what they are saying correctly. The next point of the matter is Smile is not cognitive. I would like to setup 3 tiers for you, non-sentient, sentient and cognitive. Non-sentient is morty roundstart just wandering around as an NPC. Sentient would be Smile whom is player controlled but can only speak in Geran, and even then not very well! All sentient creatures who are player controlled but not cognitive thru cognizine are given an accent. This non-cognitive accent simply restricts them to simple words and short sentences with some forced mispellings for good measure. Smile roundstart should be saying "Food!!!" not "Research Director I hunger" and this accent should mechanically enforce that. EVEN THEN, not every slimeperson even speaks their native tongue of Geran and would be able to speak to Smile but we will touch on that in a bit. When cognizine does its magic, it instantly allows the creature to speak and understand galactic common as well as removes the restricting accent. 
+
+Now, I would also like to state mobs such as mice and mothroaches, do not understand galactic common at all. Mothroaches are a little special and can understand moffic, but cannot speak it. Basically majority sentient and non-sentient creatures speak/understand their respective languge and thats it, with 4 exceptions. Hammy, Smile the Slime, Remelia and Pun Pun can all understand galactic common shift-start but cannot speak it. 
