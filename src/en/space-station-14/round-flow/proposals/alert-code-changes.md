@@ -24,9 +24,7 @@ Here are the main problems with current alert system:
 
 I suggest to change alert codes to a type-based system. Every alert code points out *what* is the problem, not the severity of it.
 
-Additionally, it should be possible to set multiple alert codes.
-
-![new system proposal](https://i.imgur.com/IliqzBu.png)
+![new system proposal](https://i.imgur.com/0U8Uoul.png)
 
 This change aims to result in the following changes:
 
