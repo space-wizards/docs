@@ -44,7 +44,7 @@ Radio-related ones are all different kinds of wireless communication via **hub s
 | Commuication type				| Details  	|
 | :---:							| ---		|
 | OOC  							| Lobby comms for people out-of-game. Usually switched off by cvar during games.				|
-| Admin  						| Admin notices, from all-player bwoinks to requests for feedback on events.			|
+| Admin  						| Admin notices, from all-player bwoinks to requests for feedback on events. Should not be included into replay by default (needs to be controlled by CVar)			|
 | Server  						|  "PLAYER JOINED, PLAYER LEFT" yadda yadda. Also covers tips.				|
 
 * Faxing and other player-to-player messages like PDA messages (proposed) work like chatting but don't use the same devices like the chat log and fall out of most of the "chat" domain.
