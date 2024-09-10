@@ -1,9 +1,14 @@
-# Chat and Other Messaging
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| Fildrance, FSP | :x: No | TBD |
+
+** this document is based on FairlySadPanda Chatfactor Design Page (https://github.com/space-wizards/docs/pull/221/files).
+
+
+# Refactor of chat and other messaging
 
 ## What is Chat?
 Under term 'chat' we understand all messages that players, in-game entities and admins are exchanging in game. There are a lot of requirements that are implemented in current chat system, but there are also a lot to be desired - extensibility is quite poor, code contains a lot of questional double/triple+ checks, it is distributed over a vast amount of classes. In this document we will try to deduce core requirements and ways to fit them in current ecosystem of the game, also will discuss positive and negative traits of new chat system.
-
-** this document is based on FairlySadPanda Chatfactor Design Page (https://github.com/space-wizards/docs/pull/221/files).
 
 ## First lets discuss what game currently have.
 
@@ -73,7 +78,7 @@ From **message producing** standpoint
 
 | Condition				| Technical description | Description 			|
 |:---					|:---			|:---				|
-|Is cautious			| Does not have StunnedComponent, MutedComponent or GhostComponent |Can only speak if alive and awake |
+|Is conscious			| Does not have StunnedComponent, MutedComponent or GhostComponent |Can only speak if alive and awake |
 |Have organ to speark	| Have VoiceComponent / HandsComponent / BorgChassisComponent |  Can only speak while having mouth, can only emote while having hands, can only beep-boop whyle having chassis, can smile only when have mouth, etc.|
 |Have device in inventory| Have item with component in InventorySlot 'ears' / 'hands'... |Can talk to radio only while have headset and cryptokey. Includes 'device should be turned on' / 'is not jammed' and |
 |Have working server on same grid| Grid that current entity is on have also Entity with component, |Can talk to radio only if comms are not dead (exist and have power)|
@@ -89,7 +94,7 @@ From **message consumption** standpoint
 
 | Condition				| Technical description |Examples |
 |:---					|:---				|:---				|
-|Is cautious			| Does not have SleepingComponent, DeafComponent (?)| Can only hear if is alive and awake.|
+|Is conscious			| Does not have SleepingComponent, DeafComponent (?)| Can only hear if is alive and awake.|
 |HaveOrgan				| Have HearingComponent (?) | Can only hear if have ears, can only see if have eyes, etc.|
 |Have working device	| Have item with component in InventorySlot 'ears' / 'hands'...|Can only hear if have device in slot|
 |Is within proximity	| Have distance between message consumer and author less then 'max distance' (can be modified with values on HearingComponent? SUPER EARS?) |Can only hear if is within some range of message author, or some device|
@@ -428,8 +433,8 @@ The lifecycle can be summarized by the following steps.
 		end
 		subgraph ChatMessageProduceSystem.ModifyMessage
 			E0(<3.1>Get mutator list <br>from prototype)-->E1
-			E1(<3.2>Character specific <br>accent transofrm)
-			E1-->E2(<3.3>Global <br> accent transform)
+			E1(<3.2>Global <br> accent transform)
+			E1-->E2(<3.3>Character specific <br>accent transofrm)
 			E2-->E3(<3.4>Emit ChatMessageProducedEvent)
 		end
 		subgraph ChatMessageProduceSystem.DetectRecepients
