@@ -79,7 +79,7 @@ From **message producing** standpoint
 | Condition				| Technical description | Description 			|
 |:---					|:---			|:---				|
 |Is conscious			| Does not have StunnedComponent, MutedComponent or GhostComponent |Can only speak if alive and awake |
-|Have organ to speark	| Have VoiceComponent / HandsComponent / BorgChassisComponent |  Can only speak while having mouth, can only emote while having hands, can only beep-boop whyle having chassis, can smile only when have mouth, etc.|
+|Have organ to speak	| Have VoiceComponent / HandsComponent / BorgChassisComponent |  Can only speak while having mouth, can only emote while having hands, can only beep-boop whyle having chassis, can smile only when have mouth, etc.|
 |Have device in inventory| Have item with component in InventorySlot 'ears' / 'hands'... |Can talk to radio only while have headset and cryptokey. Includes 'device should be turned on' / 'is not jammed' and |
 |Have working server on same grid| Grid that current entity is on have also Entity with component, |Can talk to radio only if comms are not dead (exist and have power)|
 |Have admin access		| AdminManager.IsAdmin(ActorComponent.PlayerSession) returns true |Can only speak if is admin|
