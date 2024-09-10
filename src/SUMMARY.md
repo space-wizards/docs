@@ -27,7 +27,7 @@ General Development
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
-  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md)
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
@@ -51,7 +51,7 @@ SS14 By Example
   - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
 - [Basic Networking and You](en/ss14-by-example/basic-networking-and-you.md)
 - [Fluent and Localization](en/ss14-by-example/fluent-and-localization.md)
-- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md) 
+- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
 
 
 Robust Toolbox
@@ -77,6 +77,7 @@ Robust Toolbox
     - [Entities](en/robust-toolbox/toolshed/commands/entity-control.md)
     - [General](en/robust-toolbox/toolshed/commands/general.md)
     - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
+  - [Toolshed Examples](en/robust-toolbox/toolshed/toolshed-examples.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
 - [IoC](en/robust-toolbox/ioc.md)
 - [Rendering]()
@@ -113,6 +114,7 @@ Space Station 14
 	- [Displacement Maps](en/space-station-14/art/displacement-maps.md)
 	- [Device Network](en/space-station-14/core-tech/device-network.md)
 	- [NPCs](en/space-station-14/core-tech/npcs.md)
+	- [Entity Tables](en/space-station-14/core-tech/entity-tables.md)
 	- [Chemistry](en/space-station-14/core-tech/chemistry.md)
 		- [Metabolism](en/space-station-14/core-tech/chemistry/metabolism.md)
 		- [Reactions](en/space-station-14/core-tech/chemistry/reactions.md)
@@ -185,6 +187,7 @@ Space Station 14
 		- [Pizza Delivery Critter](en/space-station-14/round-flow/proposals/pizza-delivery-critter.md)
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
+   		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
@@ -303,7 +306,6 @@ Community
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
 - [Project Manager](en/community/projectmanager.md)
 - [Maintainer](en/community/maintainer.md)
-  - [Maintainer Policy](en/community/maintainer/wizards-den-maintainer-policy.md)
   - [Review Policy](en/community/maintainer/wizards-den-review-policy.md)
 - [Admin](en/community/admin.md)
   - [Admin Tooling](en/community/admin/admin-tooling.md)

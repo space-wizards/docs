@@ -57,6 +57,8 @@ Assuming you've followed the structure laid out above, you simply need to have a
 
 ## Watchdog Configuration
 
+Watchdog's config file is ``appsettings.yml``
+
 The watchdog configuration is split into two major sections:
 
 + Global elements, shared across all instances (servers).
