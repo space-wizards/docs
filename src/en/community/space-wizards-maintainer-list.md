@@ -39,6 +39,7 @@ Content Maintainers:
 - [LankLTE](https://github.com/LankLTE) - @lanklte (328292818265047041)
 - [slarticodefast](https://github.com/slarticodefast) - @sebseb5071 (578191477839101967)
 - [UbaserB](https://github.com/UbaserB) - @ubaser (578881480386805771)
+- [Errant-4](https://github.com/Errant-4) - @err.ant (502504545579040768)
 
 Engine maintainers:
 No one maintains only engine :p
