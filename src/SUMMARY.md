@@ -175,7 +175,6 @@ Space Station 14
 
 - [Roundflow](en/space-station-14/round-flow.md)
 	- [PR Guidelines](en/space-station-14/round-flow/guidelines.md)
-	
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
@@ -187,6 +186,7 @@ Space Station 14
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
    		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
+     		- [Reputation](en/space-station-14/round-flow/proposals/contracts-and-rep.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
