@@ -23,7 +23,7 @@ with 0 being the base reputation for a player while 100 is the highest reputatio
 There are 5 states of reputation, each state contains new benefits along with previous benefits. 
 (this is subject to change depending on balancing and concerns)
 | Rep Level | Contracts Veiwable | Objectives | Unlocked Purchasables |
-|---|---|---|
+|---|---|---|---|
 | 0-20 "Unknown Agent" | 2 Contracts | Low Risk | Stealth Gear + Objective Items |
 | 20-40 "Reputable Insider" | 3 Contracts | Moderate Risk | Melee Weapons + Chemicals |
 | 60-80 "Preferred Pawn" | 3 Contracts | Moderate Risk | Side Arms + Explosives + Allies|
