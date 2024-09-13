@@ -4,11 +4,11 @@
 |---|---|---|
 | AjexRose | :x: No | TBD |
 
-##Overview
+## Overview
 
   Reputation is a system of risk and reward meant to replace the current objective based system that current antagonists utilize. However, it can be broadened for more uses.
 
-##Elevator Pitch
+## Elevator Pitch
 
    Reputation is a system of risk and reward meant to replace the current objective based system that current antagonists utilize. However, it can be broadened for more uses.
 Designed to give antagonists set "contracts" that can be completed or rejected. Completed contracts will increase the player reputation while also granting
@@ -38,7 +38,7 @@ All traitors, no matter their reputation can purchase additional ammo + surplus 
 removes the contract from the player and starts a 15 minute count down until a new contract is made. The second option is a :white_check_mark: option that only appears when an contract is completed. 
 When selected the contract will dissapear, the player will be granted 5-10 reputation, additional telecrystals and enter a 5 minute refresh rate before a new contract is found.
 
-##A Contractor's Work
+## A Contractor's Work
 
 Syndicate Objectives are classed under 3 different categories based on their difficulties.
 
@@ -67,7 +67,7 @@ High Risk objectives are objectives that should get a traitor brigged for a long
   - A certain location or machine needs to be bombed using C4 or other high powered explosives
 - Die A Glorious Death
 
-##A Contractor's Tools
+## A Contractor's Tools
 
 Traitors recieve a new set of tools labeled "Objective" and "Station Destruction" respectively.
 These objective tools should never cost more then the contract value.
