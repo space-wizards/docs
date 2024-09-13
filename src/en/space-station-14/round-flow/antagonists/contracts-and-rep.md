@@ -21,17 +21,17 @@ There are 5 states of reputation, each state contains new benefits along with pr
 | Rep Level | Contracts Veiwable | Objectives | Unlocked Purchasables |
 |---|---|---|---|
 | 0-20 "Unknown Agent" | 2 Contracts | Low Risk | Stealth Gear + Objective Items |
-| 20-40 "Reputable Insider" | 3 Contracts | Moderate Risk | Melee Weapons + Chemicals |
-| 60-80 "Preferred Pawn" | 3 Contracts | Moderate Risk | Side Arms + Explosives + Allies|
+| 20-40 "Preferred Pawn" | 3 Contracts | Moderate Risk | Melee Weapons + Chemicals |
+| 60-80 "Reputable Insider" | 3 Contracts | Moderate Risk | Side Arms + Explosives + Allies|
 | 80-100 "Reliable Contact" | 4 Contracts | High Risk | Long Arms + More Powerful Explosions + Hardsuits |
 | 100+ "Syndicate Operative" | 4 Contracts | High Risk | Station Destructive Items + High Power Weapons |
 
-All traitors, no matter their reputation can purchase additional ammo + surplus crates. 
+All traitors, no matter their reputation, can purchase additional ammo + surplus crates. 
 
-##Contracts
+## Contracts
 
   Reputation can be increased by completing contracts. These contracts act similarly to current objectives. However they contain two options. The first option would be a always available :x: option that when selected
-removes the contract from the player and starts a 15 minute count down until a new contract is made. The second option is a :white_check_mark: option that only appears when an contract is completed. 
+removes the contract from the player and starts a 15 minute count down until a new contract is found. The second option is a :white_check_mark: option that only appears when an contract is completed. 
 When selected the contract will dissapear, the player will be granted 5-10 reputation, additional telecrystals and enter a 5 minute refresh rate before a new contract is found.
 
 ## A Contractor's Work
@@ -46,6 +46,7 @@ These objectives include but are not limited to;
   - Antagonist must steal minor items of a department and utilize syndicate fultons to extract them. 
 - Assist Traitors
   - Ensure a traitor completes an contract. If the traitor rejects the contract, this objective will also reject, but will only take 5 minutes to refresh instead of the standard 15. 
+
 Moderate Risk Objectives are objectives that should get a traitor brigged for a while
 These objectives include but are not limited to;
 - High Value Theft Objectives
@@ -53,8 +54,10 @@ These objectives include but are not limited to;
 - Place Tracker Objective
   - A syndicate tracker must be placed on a character person. Whether it be directly on them, in their pockets, or inside their bag. The tracker can be removed without uncompleting the contract
 - Corporate Espionage
-  - Utilizing a syndicate data-knife, a traitor must extract 1-3 researches from a science research console.
+  - Utilizing a syndicate data-knife, a traitor must extract 1-3 researches from a science research console (Not the research server).
+
 High Risk objectives are objectives that should get a traitor brigged for a long time, permanently, or executed
+These objectives include but are not limited to;
 - Kill Targets
   - The traitor must kill a target, this target can be a member of crew or another traitor. The target does not have to be gibbed. If the target is revived, the contract remains complete.
 - Extract Target
@@ -83,6 +86,6 @@ A bit of a clarity, these items are mainly inspired by the existence of the "Del
 It also reduces EMAG functionality
 
 - The Anti-Matter Cascader
-  - When inserted into the AME Controller, allows the controller to go beyond the safety limits to generate an anti-matter explosion.
+  - When inserted into the AME Controller, allows the controller to go beyond the safety limits to generate a large and destructive anti-matter explosion.
 - The Particle Hyper-Acceleration Module
   - When inserted into the Particle Accelerator Console, allows the console to go beyond the safety limits to generate powerful singularity breaches and tesla-looses.
