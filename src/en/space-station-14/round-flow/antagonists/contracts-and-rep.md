@@ -4,10 +4,6 @@
 |---|---|---|
 | AjexRose | :x: No | TBD |
 
-## Overview
-
-  Reputation is a system of risk and reward meant to replace the current objective based system that current antagonists utilize. However, it can be broadened for more uses.
-
 ## Elevator Pitch
 
    Reputation is a system of risk and reward meant to replace the current objective based system that current antagonists utilize. However, it can be broadened for more uses.
@@ -74,7 +70,7 @@ These objective tools should never cost more then the contract value.
 
 Objective Items
 - Blood-Red Bug
-  - A bug that can be placed on walls, in plant pots, or even in food. Has no effect on crew besides. Should make a beeping noise and have a slight glow to show where it is. Is a tiny item
+  - A bug that can be placed on walls, in plant pots, or even in food. Has no effect on crew. Should make a beeping noise and have a slight glow to show where it is. Is a tiny item
 - Tracker Bead
   - A small bead which transmits its location should it be placed on a person. This person will always be on the crew monitor system as coords active. Is a tiny item
 - Syndicate Fultons
