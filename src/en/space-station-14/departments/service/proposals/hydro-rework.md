@@ -13,12 +13,12 @@ Botanist is a unusually slow and safe Nanotrasen career path. The worst that can
 
 ## Summarized Proposed Changes:
 
-Hydroponics needs the 3 I's to become a good job on the station:
+Hydroponics needs the 3 I's to become a better job on the station:
 * Interconnections with the other departments. More departments will find Hydroponics potentially has useful stuff for them, and should be asking for it. This mostly happens by giving Hydro more stuff, with only Chemistry getting something removed to add a dependency on Hydroponics.
 * In-round job progress. Over the course of a calm round, you should be able to go from making plants with random effects to adding the specific traits you want onto a plant. The expectations of a Botanist having a calm round will be decreased due to the other factors involved in this rework.
 * Internal danger. A botanist should be able to cause problems for the stations at various scales. Usually intentional by a bad actor, but with enough room for accidents, carelessness, and sabotage to bring this up without warning. 
 
-To make those happen, the Botany system needs 1 significant change.
+To make those happen, the Botany system needs 1 significant change: more stuff. But to get to this new stuff, I propose an extra setup.
 
 ## The Second Mutation List
 The main change to the Botany code that makes Hydroponics better is fairly simple. You have a 2nd list of high-risk/high-reward mutations. Plants do not automatically roll on this list when mutating. To get access to this list, a plant must first be exposed to and consume gaseous plasma, which will now count as a mutagen for plants. After one exposure, the exposed plants will roll on this high-risk table for the rest of their lifespan when doing mutation rolls. Seeds from that plant will need exposed again separately to use the high-risk table. Botanists should have a small greenhouse room (2x2) with a simple atmos setup(a connector port, a passive vent, possibly a heater and lights outside) and 2 growing trays to use for high-risk mutations. Randomly dumping plasma into the main Hydropnics room in an attempt to get more of the powerful mutations is a move done accidentally, in desperation, or as sabotage. 
@@ -49,7 +49,7 @@ And for reference, here's the odds of getting each possible current mutation at 
 * 20 bits: 93% (change chemicals)
 * 30 bits: 99% (unviable)
 
-I do not offer a suggestion on the 'correct' odds of what mutations should be on either the normal or high-risk table at this point. But now we can actually discuss the odds since they are no longer hidden behind 2 steps of bit-thermometer logic.
+I do not offer a suggestion on the 'correct' odds of what mutations should be on either the normal or high-risk table at this point. But now we can actually discuss the odds since they are now a single exposed odds value for each.
 
 ## Interconnections
 
