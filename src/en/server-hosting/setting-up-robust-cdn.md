@@ -235,10 +235,6 @@ If your fork's repository is hosted on GitHub, the easiest way to automatically 
 
 This should be everything you need!
 
-```admonish warning
-Actions publishing works by uploading a temporary artifact and having Robust.Cdn download that. While this should work from a private repo there may be additional cost introduced by this, you've been warned.
-```
-
 ### Custom
 
 For people looking to do custom publishing workflows without GitHub actions, please refer to the API reference of the "publish" endpoint.
@@ -319,7 +315,12 @@ Robust.Cdn stores and expects build zips in the `FileDiskPath` directory (`/buil
 
 ## Example reverse proxy configs
 
-You likely want to run Robust.Cdn behind a reverse proxy of some kind. Here are some example configurations for your reverse proxy:
+You likely want to run Robust.Cdn behind a reverse proxy of some kind. There are a few things to make sure of:
+
+* When using multi-request publishing, you should set the maximum client body size to fit the entire client download at once.
+* When using one-shot publishing, you should set the request timeout high enough (usually more than a minute or two).
+
+Here are some example configurations for your reverse proxy:
 
 ### Nginx
 
@@ -334,7 +335,10 @@ location / {
     # High body size to avoid buffering of download request bodies.
     client_body_buffer_size 10M;
     # Increased read timeout to avoid timeouts on the publish API endpoint.
+    # Not strictly necessary for multi-request publishes, but cannot hurt.
     proxy_read_timeout 120s;
+    # Increased max body size for multi-request publishes. Not necessary for oneshot publishes.
+    client_max_body_size 512m;
     # Boilerplate reverse proxy config.
     proxy_set_header   Host $http_host;
     proxy_set_header   X-Real-IP $remote_addr;
@@ -353,6 +357,14 @@ location / {
 ### 504 gateway timeout during publish
 
 Increase your reverse proxy's response timeout. In nginx this is controlled via `proxy_read_timeout`.
+
+### Connection errors during publishing (multi-request publish)
+
+Make sure you have your reverse proxy's max body size set high enough to allow 
+
+### 404 not found error on CDN API while publishing
+
+Make sure you are using the latest version of Robust.Cdn. Version 2.2.0 added a new publishing mechanism that is used by the upstream infrastructure.
 
 ## Migration from Robust.Cdn 1.x
 
@@ -429,6 +441,10 @@ Some API endpoints may require authentication:
 * Fork control endpoints such as publish need `Authorization: Bearer <updateToken>`, with the `UpdateToken` specified in the fork configuration.
 * Endpoints to access server files require Basic authentication if the fork is configured as private.
 
+### Publishing
+
+There are two separate APIs to publish: "one-shot" and "multi-request". The one-shot API is under `/fork/{fork}/publish`, while the multi-request API is under `/fork/{fork}/publish/{start,file,finish}`. We recommend the multi-request publishing API, and it is also what the official publishing scripts use.
+
 ### GET `/fork/{fork}`
 
 Gets a nice human-readable HTML page about the last builds available.
@@ -445,7 +461,9 @@ Gets a JSON list of every server build available for a fork.
 
 ### POST `/fork/{fork}/publish`
 
-Publishes a new version to the CDN. It expects a JSON body with the following information:
+Publishes a new version to the CDN in a single API request. This is as opposed to the "multi-request" API described below. 
+
+It expects a JSON body with the following information:
 
 ```json
 {
@@ -458,6 +476,49 @@ Publishes a new version to the CDN. It expects a JSON body with the following in
 The version is the new version number you are publishing. This can be anything. Engine version is the version number of the engine to use.
 
 The archive is must be URL to a zip that Robust.Cdn will download containing the build zip files (client and server).
+
+This require authentication.
+
+### POST `/fork/{fork}/publish/start`
+
+Start a new publishing operation that involves multiple subsequent API requests. The initial JSON request body is as follows:
+
+```json
+{
+  "version": "<version>",
+  "engineVersion": "<engine version>"
+}
+```
+
+The version is the new version number you are publishing. This can be anything. Engine version is the version number of the engine to use.
+
+If a publish is already undergoing on under the given version number, it is aborted and you are given a clean slate.
+
+This require authentication.
+
+### POST `/fork/{fork}/publish/file`
+
+Add an extra file to an in-progress publish.
+
+The file contents are provided in the request body as `application/octet-stream`. Additional metadata should be provided in the following HTTP headers:
+* `Robust-Cdn-Publish-File`: the name of the file being published. Usually this is something like `SS14.Client.zip` or `SS14.Server_win-x64.zip`.
+* `Robust-Cdn-Publish-Version`: the version number being published to (provided before).
+
+This require authentication.
+
+### POST `/fork/{fork}/publish/finish`
+
+Finishes publishing a new version started before.
+
+```json
+{
+  "version": "<version>"
+}
+```
+
+The version is the new version number you are publishing.
+
+If the publish fails validation (for example, missing client files), the publish will be aborted and must be restarted from zero.
 
 This require authentication.
 
