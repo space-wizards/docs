@@ -376,7 +376,7 @@ location / {
 
 ### Caddy
 
-This is an example Caddyfile to go into an existing block for the domain with the CDN
+This is an example Caddyfile to go into an existing block for the domain with the CDN. If you are putting this in a path you can just put all these under the path.
 
 ```
 # Increased max body size for multi-request publishes.
@@ -384,10 +384,12 @@ request_body {
         max_size 512MB
 }
 
+# Update port here.
 reverse_proxy localhost:8080 {
         flush_interval -1
 }
 
+# Compress JSON responses.
 encode zstd gzip {
     match header Content-Type application/json*
 }
