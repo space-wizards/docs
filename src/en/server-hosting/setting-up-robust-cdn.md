@@ -57,6 +57,32 @@ The latest stable image of Robust.Cdn is `ghcr.io/space-wizards/robust.cdn:2`. I
   * `/manifest`: contains SQLite database for server manifest operations.
   * `/database`: contains SQLite database for client content downloads.
 
+Here is an example ``docker-compose.yml``, please modify it to your needs.
+
+```
+services:
+  robust_cdn:
+    image: ghcr.io/space-wizards/robust.cdn:2
+    container_name: robust_cdn
+    user: 1654:1654
+    volumes:
+      - ./appsettings.json:/app/appsettings.json
+      - ./builds:/builds
+      - ./manifest:/manifest
+      - ./database:/database
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+```
+
+You may have to run these commands to set the correct owner and permissions for the ``builds``, ``manifest`` and ``database`` folders.
+
+```
+sudo chown -R 1654:1654 builds/ database/ manifest/
+sudo chmod -R u+w,g+w builds/ database/ manifest/
+```
+
+
 ### Manual compilation
 
 If you hate containers, you can manually publish Robust.Cdn and deploy the files yourself. For this you will need Git and the .NET 8 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
@@ -353,6 +379,27 @@ location / {
 
     # Update port here.
     proxy_pass         http://localhost:8080;
+}
+```
+
+### Caddy
+
+This is an example Caddyfile to go into an existing block for the domain with the CDN. If you are putting this in a path you can just put all these under the path.
+
+```
+# Increased max body size for multi-request publishes.
+request_body {
+    max_size 512MB
+}
+
+# Update port here.
+reverse_proxy localhost:8080 {
+    flush_interval -1
+}
+
+# Compress JSON responses.
+encode zstd gzip {
+    match header Content-Type application/json*
 }
 ```
 
