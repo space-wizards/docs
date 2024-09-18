@@ -381,12 +381,12 @@ This is an example Caddyfile to go into an existing block for the domain with th
 ```
 # Increased max body size for multi-request publishes.
 request_body {
-        max_size 512MB
+    max_size 512MB
 }
 
 # Update port here.
 reverse_proxy localhost:8080 {
-        flush_interval -1
+    flush_interval -1
 }
 
 # Compress JSON responses.
