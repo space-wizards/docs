@@ -57,6 +57,24 @@ The latest stable image of Robust.Cdn is `ghcr.io/space-wizards/robust.cdn:2`. I
   * `/manifest`: contains SQLite database for server manifest operations.
   * `/database`: contains SQLite database for client content downloads.
 
+Here is an example ``docker-compose.yml``, please modify it to your needs.
+
+```
+services:
+  robust_cdn:
+    image: ghcr.io/space-wizards/robust.cdn:2
+    container_name: robust_cdn
+    user: 1654:1654
+    volumes:
+      - ./appsettings.json:/app/appsettings.json
+      - ./builds:/builds
+      - ./manifest:/manifest
+      - ./database:/database
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+```
+
 ### Manual compilation
 
 If you hate containers, you can manually publish Robust.Cdn and deploy the files yourself. For this you will need Git and the .NET 8 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
@@ -225,7 +243,7 @@ You should go over this config file in full to understand what you are setting u
 
 If your fork's repository is hosted on GitHub, the easiest way to automatically publish new builds to Robust.Cdn is via the GitHub Actions configuration available in the codebase. This is how official Wizard's Den builds are published.
 
-1. Edit `Tools/publish_github_artifact.py` to modify the "configuration parameters" at the top of the script:
+1. Edit `Tools/publish_multi_request.py` to modify the "configuration parameters" at the top of the script:
   * `ROBUST_CDN_URL` should be the URL at which Robust.Cdn is accessible.
   * `FORK_ID` should be the ID of the fork you configured in `appsettings.json`
 
@@ -354,6 +372,23 @@ location / {
     # Update port here.
     proxy_pass         http://localhost:8080;
 }
+```
+
+### Caddy
+
+This is an example Caddyfile to go into an existing block for the domain with the CDN
+
+```
+# Increased max body size for multi-request publishes.
+request_body {
+        max_size 512MB
+}
+
+reverse_proxy localhost:8080 {
+        flush_interval -1
+}
+
+encode zstd gzip
 ```
 
 ## Troubleshooting
