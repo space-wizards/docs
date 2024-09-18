@@ -297,7 +297,6 @@ Community
 
 - [Infrastructure References](en/community/infrastructure-references.md)
   - [Wizards Den Infrastructure](en/community/infrastructure-reference/wizards-den-infrastructure.md)
-  - [Publishing Scripts](en/community/infrastructure-reference/publishing-scripts.md)
   - [Grafana Dashboards](en/community/infrastructure-reference/grafana-dashboards.md)
 - [Space Wizards Hub Rules](en/community/space-wizards-hub-rules.md)
 - [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)

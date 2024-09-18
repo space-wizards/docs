@@ -345,8 +345,6 @@ nowish = datetime.datetime.now().isoformat()
 print(json.dumps({"builds":{nowish: {"time": nowish, "client": {"url": "", "sha256": ""}, "server": {"linux-x64": {"url": "http://localhost:9283/SS14.Server_linux-x64.zip", "sha256": ""}}}}}))
 ```
 
-You can also checkout our publishing script [here](../community/infrastructure-reference/publishing-scripts.md)
-
 ## Systemd service
 
 To allow watchdog to run in the background and automatically start up with the server, you can make a service file. It will look something like this.
