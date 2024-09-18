@@ -75,6 +75,14 @@ services:
     restart: unless-stopped
 ```
 
+You may have to run these commands to set the correct owner and permissions for the ``builds``, ``manifest`` and ``database`` folders.
+
+```
+sudo chown -R 1654:1654 builds/ database/ manifest/
+sudo chmod -R u+w,g+w builds/ database/ manifest/
+```
+
+
 ### Manual compilation
 
 If you hate containers, you can manually publish Robust.Cdn and deploy the files yourself. For this you will need Git and the .NET 8 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
