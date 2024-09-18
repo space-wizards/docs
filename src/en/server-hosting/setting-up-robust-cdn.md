@@ -225,7 +225,7 @@ You should go over this config file in full to understand what you are setting u
 
 If your fork's repository is hosted on GitHub, the easiest way to automatically publish new builds to Robust.Cdn is via the GitHub Actions configuration available in the codebase. This is how official Wizard's Den builds are published.
 
-1. Edit `Tools/publish_github_artifact.py` to modify the "configuration parameters" at the top of the script:
+1. Edit `Tools/publish_multi_request.py` to modify the "configuration parameters" at the top of the script:
   * `ROBUST_CDN_URL` should be the URL at which Robust.Cdn is accessible.
   * `FORK_ID` should be the ID of the fork you configured in `appsettings.json`
 
@@ -237,7 +237,7 @@ This should be everything you need!
 
 ### Custom
 
-For people looking to do custom publishing workflows without GitHub actions, please refer to the API reference of the "publish" endpoint.
+For people looking to do custom publishing workflows without GitHub Actions, you can also use the `Tools/publish_multi_request.py` script. I recommend you look at the Actions workflow as a reference for the required steps.
 
 ## Watchdog configuration
 
