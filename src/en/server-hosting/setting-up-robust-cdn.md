@@ -332,20 +332,24 @@ gzip on;
 gzip_types application/json;
 
 location / {
-    # High body size to avoid buffering of download request bodies.
-    client_body_buffer_size 10M;
-    # Increased read timeout to avoid timeouts on the publish API endpoint.
-    # Not strictly necessary for multi-request publishes, but cannot hurt.
-    proxy_read_timeout 120s;
     # Increased max body size for multi-request publishes. Not necessary for oneshot publishes.
     client_max_body_size 512m;
+
+    # Do not buffer request bodies inside nginx, especially important for multi-request publishes.
+    proxy_request_buffering off;
+    # Disable buffering of outgoing responses.
+    proxy_buffering         off;
+    # Ensure request and response can be streamed via HTTP 1.1.
+    proxy_http_version      1.1;
+    # Increased read timeout to avoid timeouts on the publish API endpoint.
+    # Not strictly necessary for multi-request publishes, but cannot hurt.
+    proxy_read_timeout      120s;
+
     # Boilerplate reverse proxy config.
     proxy_set_header   Host $http_host;
     proxy_set_header   X-Real-IP $remote_addr;
     proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header   X-Forwarded-Proto $scheme;
-    # Disable buffering of outgoing requests.
-    proxy_buffering    off;
 
     # Update port here.
     proxy_pass         http://localhost:8080;
