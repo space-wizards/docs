@@ -388,7 +388,9 @@ reverse_proxy localhost:8080 {
         flush_interval -1
 }
 
-encode zstd gzip
+encode zstd gzip {
+    match header Content-Type application/json*
+}
 ```
 
 ## Troubleshooting
