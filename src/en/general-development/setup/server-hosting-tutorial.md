@@ -4,12 +4,12 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ## Level 0: Local Sandbox Server
 
-1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
+1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
 2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#custom-code) section below.
 3. Extract that to a directory somewhere.
 4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
 5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
-6. When there is a new update. Go back to the second step and just overwrite the files to update your server.
+6. When there is a new update. Go back to the second step, and copy over the ``data`` and ``server_config.toml`` folder if you modified it.
 
 ```admonish info
 If you ever wish to develop for the game. You will need a [proper development environment](./setting-up-a-development-environment.md). You cannot use the premade server for this use case.
