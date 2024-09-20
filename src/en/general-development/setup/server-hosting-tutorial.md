@@ -11,6 +11,8 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
 6. When there is a new update. Go back to the second step, and copy over the ``data`` folder and ``server_config.toml``if you modified it.
 
+If you prefer video guides, [here is one](https://youtu.be/IDBqrAGZ3cA)!
+
 ```admonish info
 If you ever wish to develop for the game. You will need a [proper development environment](./setting-up-a-development-environment.md). You cannot use the premade server for this use case.
 ```
