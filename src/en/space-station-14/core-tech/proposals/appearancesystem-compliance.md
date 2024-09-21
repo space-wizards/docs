@@ -33,6 +33,15 @@ At least, this is how it works in theory. Unfortunately this method of ensuring 
 
 There are also some minor issue like how there's no consistent naming scheme for visualizer systems (e.g. "SystemNameVisuals" vs. "SystemNameVisualizer"), and how there is a "helper class" named `VisualizerSystem` that is just a normal EntitySystem that requires implementing subscribing to `OnAppearanceDataChanged` but doesn't do anything beyond that.
 
+A good example of this is the Chameleon Projector. It copies the prototype's base sprite, but copying the `AppearanceData` is not sufficient since it also needs to include the component which applies that data. This can be easily seen when copying the appearance of a lathe, as the lathe uses `AppearanceData` and applies the visuals via `MachineSystem`, which means the lathe must have the `MachineComponent` component. Without that component (which also forces the `MachineSystem` functionality onto the entity) it doesn't include the modifications required to accurately copy the sprite. 
+
+![image](https://github.com/user-attachments/assets/77bc4593-c858-4246-b79b-426f530cff10)
+
+*Left*: The base lathe.
+*Right*: The Chameleon Projector copy of the base lathe, with all sprite layers showing. These layers would be hidden via `AppearanceData` and `MachineSystem`, but requires the copy to have `MachineComponent`.
+
+You can hardcode exceptions to this manually, but this is of course not tennable and is bad coding practice when a general solution should be used instead.
+
 ### Proposed Solution, Overview
 
 In a perfect world, the process of setting and copying an entity's sprite would be the following:
@@ -65,15 +74,15 @@ The red arrows show "destructive" operations where you either can't know for cer
 
 To achieve the overview, the following implementation would be required:
 
-- Any game logic system that modifies sprites is split up into a game logic system and a VisualizerSystem. The game logic sets AppearanceData instead of modifying the sprites directly.
-- All VisualizerSystems are connected to VisualizerComponents (e.g. `ClothingSystem` have `ClothingVisualizerSystem` and `ClothingVisualizerComponent`; the system handles the visual logic, and the component indicates an entity should run the system).
-- SpriteSystem/SpriteComponent may not be accessed outside of VisualizerSystems, to prevent game logic systems modifying sprites.
-- VisualizerSystems must be connected to a VisualizerComponent; this is enforced with the Attribute tag `[VisualizerComponent]`.
+- Any game logic system that modifies sprites is split up into a game logic system and a visualizer system (i.e. inherits `VisualizerSystem`). The game logic system *sets* `AppearanceData` for the visualizer system to work with, instead of modifying the sprites directly.
+- All visualizer systems are connected to visualizer components (e.g. `ClothingSystem` have `ClothingVisualizerSystem` and `ClothingVisualizerComponent`). The visualizer system handles the visual logic, and the component on an entity indicates an entity should run the system.
+- `SpriteSystem`/`SpriteComponent` may not be accessed outside of visualizer systems to prevent game logic systems modifying sprites.
+- Visualizer systems must be connected to a visualizer component (via inheritance, `[ExampleVisualizerSystem] : VisualizerSystem<[ExampleVisualizerComponent]>`; this is enforced with a new Attribute tag `[VisualizerComponent]` that ensures the component is only tied to a system that inherits the appropriate `VisualizerSystem`.
   - This tag is also what allows easy copying of visualizers between objects, as the copying entity can check for all components with the tag.
  
 Entities are free to modify the `AppearanceData` of other entities. `AppearanceData` should not be used to store game logic and should be kept as lightweight as possible; only data used to modify the entity's base prototype sprite should be included.
 
-The use of VisualizerSystems and components, as well as access to SpriteSystem, can be mechanically enforced in the codebase. There would need to be attention paid during code review to ensure there is no game logic performed inside of VisualizerSystems.
+The use of visualizer systems and components, as well as access to `SpriteSystem`, can be mechanically enforced in the codebase. There would need to be attention paid during code review to ensure there is no game logic performed inside of visualizer systems.
  
 ### Issues
 
@@ -85,7 +94,7 @@ This implementation does have its downsides:
 
 ### Animations
 
-Animations (especially looping ones) would require syncing the start time/offset of the animation frame, so that if a new client loads the animating entity it can accurately set the sprite's animation. This needs to be replicated across multiple systems such as lights and movement as well.
+Animations (especially looping ones) would require syncing the start time/offset of the animation frame, so that if a new client loads the animating entity it can accurately set the sprite's animation. This needs to be replicated across multiple systems such as lights and movement as well. 
 
 ### Examples of concrete uses
 
@@ -93,6 +102,7 @@ Animations (especially looping ones) would require syncing the start time/offset
   - End of round sprites
   - Photography
 - Reliable chameleon projector
+  - Accurate recreation for boardgame system entities
 - Copying character appearances
   - Changelings
 - Easier maintainability / Less hardcoded systems
