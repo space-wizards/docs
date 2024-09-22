@@ -41,20 +41,27 @@ The goals that we want to reach with the Revolutionaries are the following:
 - Crew shouldn't be able to hard counterplay the antag without engaging with the antag. 
 
 --- uuuuuuuh below is draft ---
-## Basic layout
-headrevs exist, several can spawn if it is the revolutionaries gamemode, and one spawns if it's a midround. headrevs can see each other. whenever a value is given it's a *suggestion* and will need to be tweaked based on playtests and feedback.
+whenever a value is given it's a *suggestion* and will need to be tweaked based on playtests and feedback.
 
-## Conversion Damage
+## Basic layout
+- headrevs exist
+- several can spawn if it is the revolutionaries gamemode, and one spawns if it's a midround
+- headrevs can see each other
+
+## Conversion
+
+### Conversion Damage
 - crew have conversation HP (CHP), in the range of 100 to -100 CHP. Crew begin at 100 CHP.
 - revolutionaries can do covert and loud actions to deal conversion damage.
 - if the CHP becomes 0, the crewmember gets into a convertable state.
   - in this state, revs can perform certain actions to convert the crewmember to being a revolutionary. this sets their CHP to -25. 
 - if the CHP goes above 0 after being in the negatives, it gets set to 25 CHP. 
 - headrevs have a range of CHP between -500 and 100, and starts at -500.
-- the Captain is unique in that they always have 100 CHP and cannot go below this
 - headrevs can see a healthbar of an individual's CHP
 - CHP can only be dealt/healed when alive, non-crit
+- the Captain is unique in that they always have 100 CHP and cannot go below this
 
+- Command and Security have mindshields roundstart
 - having a mindshield gives the character a shield with 100 CHP
   - the mindshield takes CHP damage before the character
   - the shield slowly regains CHP, 0.2 CHP / second
@@ -62,20 +69,7 @@ headrevs exist, several can spawn if it is the revolutionaries gamemode, and one
   - this does not change revolutionary status; a revolutionary can be mindshielded, but they are still a revolutionary.
   - someone who is mindshielded can still have their CHP healed
 
-## Deconversion
-- deconversion is the main way for crew to fight back against the revolution.
-- deconversion should be fairly easy when targeted but shouldn't happen by accident. 
-- deconversion returns a player to the crew side; doing this allows the player to sell out the revolutionaries they have interacted with
-- a deconverted crewmate should be able to be converted again
-
-- methods of deconversion:
-  - harm baton heals 10 CHP
-  - being in cuffs heals 0.5 CHP / second
-  - wearing an electro pack heals 0.5 CHP / second
-
-- if a headrev reaches 0 CHP, they are fully deconverted and lose their antag status
-
-## Revolutionary Codewords
+### Revolutionary Codewords
 - revolutionary codewords is the main way a rev can convert crew
 - hearing a revolutionary codeword spoken by a revolutionary will deal conversion damage
 - codewords come in three levels; low, mid and high conversion.
@@ -90,14 +84,21 @@ headrevs exist, several can spawn if it is the revolutionaries gamemode, and one
   - low: 10 CHP
   - mid: 20 CHP
   - high: 30 CHP, converts any crew in a convertable state
+- speaking through a radio deals 0.25x CHP damage.
+- announcement messages by a revolutionary deals 0.5x CHP damage.
 
-## Dead Drop Duffelbag / The Revolutionaries Uplink 
-- can be spawned by rummaging through any disposals bin
-- when used, opens the store
-- can be carried around to access the store at any point & when worn deals passive conversion damage in an area around the wearer
-- when placed back into a disposals bin it disappears.
-- one dead drop item is available per headrev per tier
-  - the next tier unlocks when a certain percentage of the station has been converted
+### Deconversion
+- deconversion is the main way for crew to fight back against the revolution.
+- deconversion should be fairly easy when targeted but shouldn't happen by accident. 
+- deconversion returns a player to the crew side; doing this allows the player to sell out the revolutionaries they have interacted with
+- a deconverted crewmate should be able to be converted again
+
+- methods of deconversion:
+  - harm baton heals 10 CHP
+  - being in cuffs heals 0.5 CHP / second
+  - wearing an electro pack heals 0.5 CHP / second
+
+- if a headrev reaches 0 CHP, they are fully deconverted and lose their antag status
 
 ## Win Conditions
 Win conditions are the following:
@@ -108,35 +109,51 @@ rev-crew tie: both rev minor & crew minor criteria are met, or neither rev minor
 crew minor victory: no *alive, unrestrained* headrevs are *on the evac shuttle* when evac reaches centcom
 crew major victory: *all* revolutionaries are *deconverted* or *dead* when evac reaches centcom
 
+## Revolutionary Items
+
 ### Generally available items
 Headbands:
 - Headbands can be cut up using a sharp object to turn into a headband
 - This is a fashion accessory accessible to all crew, however when worn by a revolutionary codewords they say deal 1.5x more damage.
 
 Revolutionary posters:
-- Crew can print posters from autolathes
-- These posters are randomized, and can result in loyal, neutral or revolutionary posters
-- Revolutionary posters have a radius of influence.
+- Crew can print rolled-up posters from autolathes using cloth
+- These posters are randomized when printed, and can result in loyal, neutral or revolutionary posters
+  - Examining a rolled-up poster gives its name
+- Revolutionary posters have a radius of influence when put up.
   - When inside this radius, you take 0.25 CHP damage / second
   - When inside this radius, codewords deal 1.25x more damage
-- Loyal posters also have a radius of influence.
+- Loyal posters also have a radius of influence when put up.
   - When inside this radius, you heal 0.25 CHP damage / second
   - When inside this radius, codewords deal 0.5x damage
+- Posters can be taken down, and if recycled gives back some cloth
+
+### Dead Drop Duffelbag / The Revolutionaries Uplink 
+- can be spawned by rummaging through any disposals bin
+- when used, opens the store
+- can be carried around to access the store at any point & when worn deals passive conversion damage in an area around the wearer
+- when placed back into a disposals bin it disappears.
+- one dead drop item is available per headrev per tier
+  - the next tier unlocks when a certain percentage of the station has been converted
+
 
 ### Dead Drop Items
 tier 1:
+tier 1 items should help the revolution grow in a stealthy or efficient way, in ways that don't involve combat
 - the classic: a two-use flash that deals massive conversion damage and can convert
 - headset override: when used on a headset adds the revolutionary channel
-- revolutionary poster blueprint: allows producing posters directly, for cheaper cost
+- revolutionary poster blueprint: allows producing rev posters directly, for cheaper cost
 - expanded reading: unlocks more revolutionary codewords
 
 tier 2:
+tier 2 items should allow the revolution to blossom; these should have conditional usecases, meaning a headrev selects the one that is most suitable for how the revolution has developed
 - marximov: revolutionary-aligned AI lawboard
 - cargommunism pad: QM's cargo pad but doesn't announce the purchase
-- cyanide pills: a bottle of pills. when ingested, unlocks the ability to kill oneself with 200 poison, dealing conversion damage around you
+- cyanide pills: a bottle of pills. when ingested, unlocks the ability to kill oneself with 200 poison, dealing 80 CHP damage in a radius around the user
 - de-friedman-rillator: converts someone who is brought to life with this defibrillator
 
 tier 3: 
+tier 3 items is the revolution's capstone ability; if the revolution reaches this stage, the item should provide an option for the revs to go loud, or a way to comeback against a crew that is trying to fight back
 - mind swap: allows you to change mind with a fellow revolutionary. a trusted scapegoat.
 - revolutionary leader cap: amplifies conversion damage dealt by the wearer's codewords       
 - megaphone: codeword damage spoken when holding a megaphone is not split; full damage is dealt to all who hear it                                                                                                                          
