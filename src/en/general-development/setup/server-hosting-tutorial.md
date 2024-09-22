@@ -4,7 +4,7 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ## Level 0: Local Sandbox Server
 
-```admonish danger title="DO NOT MODIFY THE RESOURCES FOLDER FOR PRE-PACKAGED SERVER BUILD"
+```admonish danger title="DO NOT MODIFY THE RESOURCES FOLDER IN PRE-PACKAGED SERVER BUILDS"
 Really don't, it wont work. Attempting to do so anyway will **void your support**.
 The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
 If you wish to modify your server to add your own content. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
