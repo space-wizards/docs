@@ -28,6 +28,6 @@ If this PR may affect game admins too (rules, rule clarifications, round flow, e
     - There is no veto power from any role in the project.
   - If less than 75% of people vote to merge the PR, it must be discussed again and the PR author must be notified.
   - If after another 48 hours no poll reaches 75% or more approvals, the PR may be closed.
-  - (Optional but recommended) Edit the discord post to have "[MERGED]" or "[CLOSED]" and give it the proper label for that.
+  - (Optional but recommended) Edit the discord post to have "[MERGED]", "[CLOSED]" or "[DERELICT]/[AWAITING CHANGES]" and give it the proper label for that.
 
 **Breaking any of these rules may result in an instant demotion from Maintainer.**
