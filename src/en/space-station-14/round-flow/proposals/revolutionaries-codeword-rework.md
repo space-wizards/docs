@@ -160,9 +160,9 @@ A deconverted Revolutionary can be reconverted again. If a Headrev is deconverte
 
 ### Death & CHP Damage
 
-Authoritarian regimes killing of protesting civilians causing further unrest, or freedom fighters getting a shock when they first murder someone, are concepts that are closely tied to a revolution. They are also ideas that would be suitably mechanically to combat murder sprees from either side during a Revolution round. 
+Authoritarian regimes killing of protesting civilians causing further unrest, or freedom fighters getting a shock when they first murder someone, are concepts that are closely tied to a revolution. They are also ideas that would be suitable mechanically to combat murder sprees from either side during a Revolution round. 
 
-If a Revolutionary dies, they will deal 15 non-split CHP damage in a **8** tile line-of-sight radius around their body. While remaining dead they will also provide a passive **-0.1** CHP / second in a **4** tile line-of-sight radius. Crew death works in the same way and with the same values but in reverse, healing CHP upon death. The initial burst of CHP damage when a Revolutionary dies is able to convert crew in a Convertable state. The initial burst also has a **120** second cooldown, to avoid repeatedly reviving and killing the same person twice to trigger the effect.
+If a Revolutionary dies by the hand of a crewmember (the crewmember dealt the damage putting them in a critical state), they will deal 15 non-split CHP damage in a **8** tile line-of-sight radius around their body. While remaining dead they will also provide a passive **-0.1** CHP / second in a **4** tile line-of-sight radius. Crew death works in the same way and with the same values but in reverse, healing CHP upon death when killed by a revolutionary. The initial burst of CHP damage when a Revolutionary dies is able to convert crew in a Convertable state. The initial burst also has a **120** second cooldown, to avoid repeatedly reviving and killing the same person twice to trigger the effect.
 
 Being converted/deconverted by a character dying displays a special conversion message, to indicate it was the reason for being converted/deconverted.
 
