@@ -40,52 +40,108 @@ The goals that we want to reach with the Revolutionaries are the following:
 - Round end conditions should be clear and straight-forward, though a crew overcoming the antag shouldn't necessarily mean the end of the round.
 - Crew shouldn't be able to hard counterplay the antag without engaging with the antag. 
 
---- uuuuuuuh below is draft ---
-whenever a value is given it's a *suggestion* and will need to be tweaked based on playtests and feedback.
 
-## Basic layout
-- headrevs exist
-- several can spawn if it is the revolutionaries gamemode, and one spawns if it's a midround
-- headrevs can see each other
+## New Revolutionaries, Basic layout
+<sup>Any values given here are suggestions, and should be adjusted based on playtesting.</sup>
+
+The Revolutionary antag begins either as a 2-4 roundstart antag roll for the Revolutionary gamemode, or a single crewmember secretly becomes a Revolutionary antag during another gamemode midround.
+
+Revolutionary antags that start out this way are considered Head Revolutionaries (HeadRevs). A Head Revolutionary has the duty to begin the conversion of other crew and have some extra tools at their disposal to strengthen the progression of the antag faction, but they are not strictly necessary for the revolution antags to succeed. The goal for Head Revolutionaries is to convert crew to grow the faction's strength, convert department Heads and survive until the evacuation shuttle without being deconverted. 
+
+Head Revolutionaries share the same team and when they are given the role they obtain the names and jobs of the other Head Revolutionaries on the station. Revolutionaries can be identified by other revolutionaries via an icon next to their character, however Head Revs do not have a unique icon.
+
+For crew, the goal is to deconvert revolutionary converts, protect Heads from being converted, and ensure Head Revs are discovered and/or do not make it onto the evacuation shuttle. 
+
+### Win Conditions
+
+Win conditions for a round with a Revolutionary antag are the following:
+
+- Revolutionary Major Victory: No *alive, unrestrained* Command *on the evac shuttle* are non-rev, >50% of Command are converted Revolutionaries.
+- Revolutionary Minor Victory:  No *alive, unrestrained* Command *on the evac shuttle* are non-rev, <50% of Command are converted Revolutionaries.
+- Rev-Crew Tie: Both Rev Minor & Crew Minor criteria are met, or neither Rev Minor & Crew Minor criteria are met.
+- Crew Minor Victory: No *alive, unrestrained* headrevs are *on the evac shuttle* when Evac reaches CentComm.
+- Crew Major Victory: *All* revolutionaries are *deconverted* or *dead* when Evac reaches CentComm.
+
+The round-end screen could look like the following:
+
+```
+Revolutionary Major Victory!
+X% of Crew were converted to the Revolution.
+X% of Command were converted to the Revolution.
+0 Loyal Command made it to CentComm.
+X Head Revolutionaries made it to CentComm.
+```
+
+```
+Crew Minor Victory!
+X% of Crew were converted to the Revolution.
+X% of Command were converted to the Revolution.
+X Loyal Command made it to CentComm.
+0 Head Revolutionaries made it to CentComm.
+```
+
+```
+Crew Major Victory!
+All Revolutionaries were killed or deconverted!
+```
 
 ## Conversion
 
-### Conversion Damage
-- crew have conversation HP (CHP), in the range of 100 to -100 CHP. Crew begin at 100 CHP.
-- revolutionaries can do covert and loud actions to deal conversion damage.
-- if the CHP becomes 0, the crewmember gets into a convertable state.
-  - in this state, revs can perform certain actions to convert the crewmember to being a revolutionary. this sets their CHP to -25. 
-- if the CHP goes above 0 after being in the negatives, it gets set to 25 CHP. 
-- headrevs have a range of CHP between -500 and 100, and starts at -500.
-- headrevs can see a healthbar of an individual's CHP
-- CHP can only be dealt/healed when alive, non-crit
-- the Captain is unique in that they always have 100 CHP and cannot go below this
+Conversion is how the Revolutionary antag faction grows, and is a *requirement* to obtain Revolutionary Major Victory. To convert a crewmember they must be interacted with by a Revolutionary over time, and once a critera is met they can be converted to the Revolution. Crew are also able to de-convert Revolutionaries. Conversion is not restricted to Headrevs, though they have access to certain tools that benefit them in this regard.
 
-- Command and Security have mindshields roundstart
-- having a mindshield gives the character a shield with 100 CHP
-  - the mindshield takes CHP damage before the character
-  - the shield slowly regains CHP, 0.2 CHP / second
-  - if the mindshield reaches 0 CHP, it breaks
-  - this does not change revolutionary status; a revolutionary can be mindshielded, but they are still a revolutionary.
-  - someone who is mindshielded can still have their CHP healed
+To represent the convertable state a crewmember is in and the faction they belong to, there is now a hidden nummerical stat called Conversion Health Points (CHP). 
 
-### Revolutionary Codewords
-- revolutionary codewords is the main way a rev can convert crew
-- hearing a revolutionary codeword spoken by a revolutionary will deal conversion damage
-- codewords come in three levels; low, mid and high conversion.
-  - low conversion words are easy to incorporate into normal speech. these should be so many, so wide that they are effectively impossible to metagame.
-  - mid conversion words deal a decent amount of damage but can be noticed if one pays attention. these would be at the risk of metagaming, so it would be on the rev player to incorporate them well.
-  - high conversion words are very clearly revolutionary and deal high conversion damage. mostly useful when speaking to crew with high conversion damage to seal the deal, but risky if someone with low conversion damage hears it.
-- these codewords are unique to each headrev
-  - when a crewmate is converted, they are given the codewords as well
-- damage dealt is split among the crew who hear it
-- dealing codeword conversion damage has a 10 second cooldown
-- codewords deal the following damage:
-  - low: 10 CHP
-  - mid: 20 CHP
-  - high: 30 CHP, converts any crew in a convertable state
-- speaking through a radio deals 0.25x CHP damage.
-- announcement messages by a revolutionary deals 0.5x CHP damage.
+### Conversion Health Points & Damage
+
+All sentient crew have Conversion Health Points, which can normally range between 100 to -100 CHP. All crew, unless specified, begin at a full 100 CHP.
+
+- Revolutionaries are able to do specific actions that "deal damage" to a crewmember's CHP, gradually lowering it with varying effectiveness depending on how covert or obviously antagonistic the action is. 
+- If a crewmember gets below <10 CHP, they enter a Convertable state.
+  - As long as the crewmember is not a Revolutionary, their CHP can not be reduced below 0. They will remain in the Convertable state until their CHP rises above 10 CHP again.
+  - While a crewmember is in the Convertable state,  they can be converted into a Revolutionary via specific actions available to Revolutionaries.
+  - When converted to a Revolutionary, their CHP is set to -25.
+- Crew are able to "heal" CHP via specific actions, deconverting Revolutionaries into normal crewmembers.
+  - If a Revolutionary's CHP is no longer in the negatives (i.e. at >=0 CHP), they instantly revert into a normal crewmember with 25 CHP and lose their antag status. *This is true for Headrevs as well.*
+
+Headrevs are unique in that they have a CHP range between -500 and 100 CHP. Headrevs begin at -500 CHP when they are given the antag status. As a benefit of being a Headrev, they are able to visually see the current CHP of any crewmember, similar to a health HUD display. 
+
+The Captain is also unique in that they always have 100 CHP and can never go below this. This makes the Captain unconvertable to the Revolution, and they are the only Command on the station with this property. CentComm agents and other Admeme should be similarly unconvertable by default.
+
+Unlike normal damage, CHP can only be dealt/healed to an individual who is alive and not in crit. 
+
+### Mindshields
+
+Mindshield implants are a way to add extra safety for vital station personnel. They can not prevent or heal conversion on its own, but provides a buffer that requires the Revolutionaries to put in targeted effort to successfully convert someone with a mindshield. The mindshield is not a hard counter to Revolutionaries and while serving some use in preventing conversion they are not useful for deconversion.
+
+Command and Security are the only roles that have mindshields roundstart.
+
+- A mindshield gives its owner a "shield" with 100 CHP. The mindshield absorbs any CHP damage dealt to the owner and takes it instead.
+- If the mindshield reaches 0 CHP, it breaks and is removed from its owner.
+- The shield slowly regains CHP on its own, at 0.2 CHP / second.
+- Having a mindshield does not change Revolutionary status or antag faction; a Revolutionary can be mindshielded and still belong to the Revolution.
+
+Mindshields only protects the owner from CHP *damage*. Someone with a mindshield can still be healed.
+
+### Revolutionary Codewords & CHP Damage
+
+Revolutionary codewords is the main way a Rev convert crew, and is the primary conversion method the gamemode is balanced around. When becoming a Revolutionary (Headrev or converted) you are provided with a number of codewords that when spoken deals CHP damage to anyone hearing it. These codewords are unique to each Headrev and are passed on to whatever Revolutionary they convert, and any further conversions down the chain get the same codewords passed on. 
+
+Codewords come in three levels; Low, Mid and High Conversion words.
+  - Low Conversion words are meant to be easy to incorporate into normal speech. There should be so many possible low conversion words that can be rolled that it becomes effectively impossible to metagame.
+  - Mid Conversion words deal a decent amount of CHP damage but can be noticed if one pays attention. These would be at the risk of metagaming due to being flavored towards revolutionary speech, so it would be on the rev player to incorporate them well into conversations.
+  - High Conversion words are very clearly revolutionary and deal high CHP damage, *and is able to convert a crewmember in the Convertable state. They should be mostly useful when the revolution is in full swing, but risky for a non-convertable crewmember to overhear.
+
+Dealing damage with codeword has a 10 second cooldown, to avoid simply spamming the codewords. Damage is also split among the crew who hear it, making speech directed to a single individual more effective at targeted conversion, while multiple Revolutionaries can shout it out to crowds without the conversion happening to fast.
+
+Codewords are proposed to deal the following damage:
+  - Low: 10 CHP
+  - Mid: 20 CHP
+  - High: 30 CHP, and converts any crew in the Convertable state.
+
+Codewords are able to deal damage even when communicated across different mediums, however the conversion strength is reduced to compensate for how easy it may be to do so:
+
+- A Revolutionary speaking a codeword through a headset radio deals 0.15x CHP damage.
+- Announcement messages with a codeword by a Revolutionary deals 0.5x CHP damage.
 
 ### Deconversion
 - deconversion is the main way for crew to fight back against the revolution.
@@ -100,14 +156,6 @@ whenever a value is given it's a *suggestion* and will need to be tweaked based 
 
 - if a headrev reaches 0 CHP, they are fully deconverted and lose their antag status
 
-## Win Conditions
-Win conditions are the following:
-[draft]
-rev major victory: no *alive, unrestrained* command *on the evac shuttle* are non-rev, >50% of command are revolutionary
-rev minor victory:  no *alive, unrestrained* command *on the evac shuttle* are non-rev, <50% of command are revolutionary
-rev-crew tie: both rev minor & crew minor criteria are met, or neither rev minor & crew minor criteria are met
-crew minor victory: no *alive, unrestrained* headrevs are *on the evac shuttle* when evac reaches centcom
-crew major victory: *all* revolutionaries are *deconverted* or *dead* when evac reaches centcom
 
 ## Revolutionary Items
 
@@ -144,6 +192,8 @@ tier 1 items should help the revolution grow in a stealthy or efficient way, in 
 - headset override: when used on a headset adds the revolutionary channel
 - revolutionary poster blueprint: allows producing rev posters directly, for cheaper cost
 - expanded reading: unlocks more revolutionary codewords
+- how to hug: after reading this book, hugging someone deals minor CHP damage.
+- revolutionary stamp: any document stamped with this red stamp deals high CHP when read.
 
 tier 2:
 tier 2 items should allow the revolution to blossom; these should have conditional usecases, meaning a headrev selects the one that is most suitable for how the revolution has developed
