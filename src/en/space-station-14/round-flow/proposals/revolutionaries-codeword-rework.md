@@ -253,7 +253,7 @@ Tier 3 items is the revolution's capstone ability; if the revolution reaches thi
 
 ## Possible Expansions
 
-Revolutions could be flavored after certain corporations with appropriate codewords (Syndicate converting the station or DonkCo. doing a corporate takeover).<br>
-More items could be implemented for more Revolutionary playstyles.
-Certain events could trigger based on conversion thresholds; e.g. ERT if station reaches 80% conversion.
-Revs could be given objectives that, if successful, deals special map-wide CHP damage that is difficult to heal back up. 
+- Revolutions could be flavored after certain corporations with appropriate codewords (Syndicate converting the station or DonkCo. doing a corporate takeover).
+- More items could be implemented for more Revolutionary playstyles.
+- Certain events could trigger based on conversion thresholds; e.g. ERT if station reaches 80% conversion.
+- Revs could be given objectives that, if successful, deals special map-wide CHP damage that is difficult to heal back up.
