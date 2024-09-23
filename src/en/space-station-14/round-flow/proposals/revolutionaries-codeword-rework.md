@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| SlamBamactionman | :x: No | TBD |
+| SlamBamActionman<br>ScarKy0 | :x: No | TBD |
 
 ## Overview
 
@@ -158,6 +158,16 @@ Methods of deconversion include:
 
 A deconverted Revolutionary can be reconverted again. If a Headrev is deconverted (>= 0 CHP) they lose their antag status, and being converted to the Revolution makes you a normal Revolutionary. 
 
+### Death & CHP Damage
+
+Authoritarian regimes killing of protesting civilians causing further unrest, or freedom fighters getting a shock when they first murder someone, are concepts that are closely tied to a revolution. They are also ideas that would be suitably mechanically to combat murder sprees from either side during a Revolution round. 
+
+If a Revolutionary dies, they will deal 15 non-split CHP damage in a **8** tile line-of-sight radius around their body. While remaining dead they will also provide a passive **-0.1** CHP / second in a **4** tile line-of-sight radius. Crew death works in the same way and with the same values but in reverse, healing CHP upon death. The initial burst of CHP damage when a Revolutionary dies is able to convert crew in a Convertable state. The initial burst also has a **120** second cooldown, to avoid repeatedly reviving and killing the same person twice to trigger the effect.
+
+Being converted/deconverted by a character dying displays a special conversion message, to indicate it was the reason for being converted/deconverted.
+
+There is an interesting dichotomy that can form here where Revolutionaries have an easier time to "heal" revolutionary fervor by dealing CHP damage to each other via chanting codewords. On the other hand, Security has more access to stun weaponry and as such have an easier time subduing Revolutionary groups non-lethally. 
+
 ### Mindshields
 
 Mindshield implants are a way to add extra safety for vital station personnel. They can not prevent or heal conversion on its own, but provides a buffer that requires the Revolutionaries to put in targeted effort to successfully convert someone with a mindshield. The mindshield is not a hard counter to Revolutionaries and while serving some use in preventing conversion they are not useful for deconversion.
@@ -170,6 +180,8 @@ Command and Security are the only roles that have mindshields roundstart.
 - Having a mindshield does not change Revolutionary status or antag faction; a Revolutionary can be mindshielded and still belong to the Revolution.
 
 Mindshields only protects the owner from CHP *damage*. Someone with a mindshield can still be healed.
+
+New mindshields are able to be purchased from Cargo at a reasonable price. One possible suggestion would be 4 implanters for $3000.
 
 ## Revolutionary Items
 
