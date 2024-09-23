@@ -178,7 +178,7 @@ To assist in the revolution, Revolutionaries have access to a multitude of items
 ### Generally available items
 
 **Headbands**
-- Headband is a headwear item that can be created by using a sharp object on a bandana.
+- Headband is a headwear item that can be created by using a sharp object on a bandana. (Crafting method may be changed if dyeing clothes is implemented).
 - This is a fashion accessory accessible to all crew, however when worn by a Revolutionary their codewords deal 1.5x more CHP damage.
 
 **Revolutionary posters**
@@ -204,11 +204,13 @@ The DDD is a duffelbag provided by an unknown sponsor of the Revolution, bluespa
 - Putting the DDD back into a disposals bin, regardless of who does it, immediately despawns the DDD.
 - A Headrev can not rummage for a new DDD if they already have one active on the map. 
 
-The items in the DDD are available in three different tiers. A Headrev is able to select **1** item per tier with the Tier 1 items available from the start, with the Tier 2 and Tier 3 items locked until certain criteria are met. This criteria is the percentage of crew on the station that are converted. 
+The items in the DDD are available in three different tiers. A Headrev is able to select **1** item per tier with the Tier 1 items available from the start, with the Tier 2 and Tier 3 items locked until certain criteria are met. This criteria is the percentage of crew on the station that are converted. The DDD shows this percentage in its UI.
 
 - Tier 1: Always available.
-- Tier 2: **15**% conversion.
-- Tier 3: **35**% conversion.
+- Tier 2: **20**% conversion.
+- Tier 3: **45**% conversion.
+
+These percentages *could* be made lower for a solo mid-round Revolutionary, or they could be granted extra items on the same tier, if this would result in better balance.
 
 ### Dead Drop Items
 
@@ -237,3 +239,9 @@ Tier 3 items is the revolution's capstone ability; if the revolution reaches thi
 - Revolutionary Leader Cap: Codeword damage spoken when wearing the cap is not split; full damage is dealt to all who hear it. Only Headrevs benefit from this effect.
 - Distress Beacon: Spawns a Revolutionary-aligned shuttle with **3** Revolutionary ghost roles and some supplies to combat Command.
 
+## Possible Expansions
+
+Revolutions could be flavored after certain corporations with appropriate codewords (Syndicate converting the station or DonkCo. doing a corporate takeover).<br>
+More items could be implemented for more Revolutionary playstyles.
+Certain events could trigger based on conversion thresholds; e.g. ERT if station reaches 80% conversion.
+Revs could be given objectives that, if successful, deals special map-wide CHP damage that is difficult to heal back up. 
