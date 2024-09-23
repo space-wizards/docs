@@ -184,11 +184,11 @@ To assist in the revolution, Revolutionaries have access to a multitude of items
 **Revolutionary posters**
 - Crew can print rolled posters from autolathes using cloth.
 - These posters are randomized when printed, and can result in loyal, neutral or revolutionary posters. Examining a rolled poster gives its name and allegiance.
-- Revolutionary posters have a radius of 4 tile influence when put up (requires line of sight).
-  - When inside this radius, you take **0.25** CHP damage / second (to a max of 4 stacks).
+- Revolutionary posters have a **4** tile radius of influence when put up (requires line of sight).
+  - When inside this radius, you take **0.25** CHP damage / second (to a max of **4** stacks).
   - When inside this radius, codewords deal **1.25**x more damage (does not stack with itself).
-- Loyal posters also have a radius of 4 tile influence when put up (requires line of sight).
-  - When inside this radius, you heal **0.25** CHP damage / second (to a max of 4 stacks).
+- Loyal posters also have a **4** tile radius of influence when put up (requires line of sight).
+  - When inside this radius, you heal **0.25** CHP damage / second (to a max of **4** stacks).
   - When inside this radius, codewords deal **0.5**x damage (does not stack with itself).
 - Posters can be taken down, and if recycled gives back some cloth
 - Destroying a poster that is up heals **10** CHP if it's a Revolutionary poster, or deals **10** CHP if it's a Loyal poster.
@@ -211,6 +211,8 @@ The items in the DDD are available in three different tiers. A Headrev is able t
 - Tier 3: **35**% conversion.
 
 ### Dead Drop Items
+
+This list is not exhaustive and more items could be added in the future, and some items listed may end up not working in actual gameplay and will have to be removed.
 
 #### Tier 1
 Tier 1 items should be designed to help the revolution grow in a stealthy way or give them a temporary bump in effectiveness, in ways that don't involve combat.
