@@ -285,7 +285,7 @@ public sealed class CheckboxSheetlet<T> : Sheetlet<T> where T : PalettedStyleshe
     public override StyleRule[] GetRules(T sheet, object config)
     {
         // cast the sheet into any of its required dependencies here
-        var checkboxCfg = (ICheckboxConfig) sheet;
+        ICheckboxConfig checkboxCfg = sheet;
 
         // get any textures / construct any complicated resources here
         var uncheckedTex = sheet.GetTextureOr(checkboxCfg.CheckboxUncheckedPath, NanotrasenStylesheet.TextureRoot);
@@ -350,7 +350,7 @@ public sealed class PaperSheetlet : Sheetlet<NanotrasenStylesheet>
     public override StyleRule[] GetRules(NanotrasenStylesheet sheet, object config)
     {
         // define any IConfigs you need here
-        var windowCfg = (IWindowConfig)sheet;
+        IWindowConfig windowCfg = sheet;
 
         // get any textures / construct any complicated resources here
         var paperBackground = ResCache.GetTexture("/Textures/Interface/Paper/paper_background_default.svg.96dpi.png")
