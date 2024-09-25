@@ -65,6 +65,10 @@ If it succeeds and your server is accessible from the outside world, great! If i
 ## Manual Port Forwarding
 
 ```admonish info
+Disable UPnP from your config if you are going to do manual port forwarding. It may cause issues.
+```
+
+```admonish info
 It is extremely common for your ISP to install a router for you. Because of this, "check your router's manual" may instead involve "check your ISP's help site or ask their support".
 
 If you do have your own router, there may be somebody in your house that knows how to do this, so ask them.
