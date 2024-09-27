@@ -14,40 +14,31 @@ Botanist is a unusually slow and safe Nanotrasen career path. The worst that can
 ## Summarized Proposed Changes:
 
 Hydroponics needs the 3 I's to become a better job on the station:
-* Interconnections with the other departments. More departments will find Hydroponics potentially has useful stuff for them, and should be asking for it. This mostly happens by giving Hydro more stuff, with only Chemistry getting something removed to add a dependency on Hydroponics.
+* Interconnections with the other departments. More departments will find Hydroponics potentially has useful stuff for them, and should be asking for it. This mostly happens by giving Hydro more stuff, with only Chemistry getting something removed to add a dependency on Hydroponics. Botany shouldn't do EVERYTHING in a single round, but it should be able to help ANYONE. 
 * In-round job progress. Over the course of a calm round, you should be able to go from making plants with random effects to adding the specific traits you want onto a plant. The expectations of a Botanist having a calm round will be decreased due to the other factors involved in this rework.
 * Internal danger. A botanist should be able to cause problems for the stations at various scales. Usually intentional by a bad actor, but with enough room for accidents, carelessness, and sabotage to bring this up without warning. 
 
 To make those happen, the Botany system needs 1 significant change: more stuff. But to get to this new stuff, I propose an extra setup.
 
 ## The Second Mutation List
-The main change to the Botany code that makes Hydroponics better is fairly simple. You have a 2nd list of high-risk/high-reward mutations. Plants do not automatically roll on this list when mutating. To get access to this list, a plant must first be exposed to and consume gaseous plasma, which will now count as a mutagen for plants. After one exposure, the exposed plants will roll on this high-risk table for the rest of their lifespan when doing mutation rolls. Seeds from that plant will need exposed again separately to use the high-risk table. Botanists should have a small greenhouse room (2x2) with a simple atmos setup(a connector port, a passive vent, possibly a heater and lights outside) and 2 growing trays to use for high-risk mutations. Randomly dumping plasma into the main Hydropnics room in an attempt to get more of the powerful mutations is a move done accidentally, in desperation, or as sabotage. 
+The main change to the Botany code that makes Hydroponics better is fairly simple. You have a 2nd list of high-risk/high-reward mutations. Plants do not automatically roll on this list when mutating. To get access to this list, a plant must first be exposed to and consume gaseous plasma, which will now count as a mutagen for plants. After one exposure, the exposed plants will roll on this high-risk table for the rest of their lifespan when doing mutation rolls. Seeds from that plant will need exposed again separately to use the high-risk table. Botanists should have a small greenhouse room (2x2) with a simple atmos setup(a connector port, a passive vent, possibly a heater and lights outside) and 2 growing trays to use for high-risk mutations. Randomly dumping plasma into the main Hydroponics room in an attempt to get more of the powerful mutations is a move done accidentally, in desperation, or as sabotage. 
 
 ### Odds revealed
-The rarer/move powerful chemicals currently available on the mutation list can either be moved to the high-risk set, or added to it with much better odds. Here are the odds of getting one of the rarest chemicals (omnizine):
+The rarer/move powerful chemicals currently available on the mutation list can either be moved to the high-risk set, or added to it with much better odds. Here are the odds of getting one of the rarest chemicals (omnizine) in the current code:
 * Getting the 'new chemical' mutation is 7.2% per mutation severity
 * Getting the rarest set of chemicals picked is 5%
 * Getting the chemical you want on that set is 17%.
 * For 1u of mutagen, your odds of getting Omnizine added to the produce is 0.00062%
 * For a whole bottle of unstable mutagen (30u), which in the system ends up being 6 checks of x5 base chance, those odds jump to 0.8% per bottle of getting your choice of the rarest chemical in the normal mutation list right now. You can expect to see it once every ~120 bottles (~4,000u) of unstable mutagen used in botany
 
-The odds of getting a mutation with 1u (a drop of unstable mutagen, or typical Left4Zed use) is below:
-* 1 bit: .4% (consume gasses)
-* 2 bits: .7% (sentient)
-* 4 bits: 1.4% (exude gasses)
-* 5 bits: 1.8% (tolerance changes)
-* 10 bits: 3.6% (change species, kudzu, and 'fun' mutations)
-* 20 bits: 7.2% (change chemicals)
-* 30 bits: 10.9% (unviable)
-  
 And for reference, here's the odds of getting each possible current mutation at least once if you dump 30u of unstable mutagen (6 checks at 5 severity) into one tray:
-* 1 bit: 10% (consume gasses)
-* 2 bits: 19% (sentient)
-* 4 bits: 36% (exude gasses)
-* 5 bits: 43.2% (tolerance changes)
-* 10 bits: 69% (change species, kudzu, and 'fun' mutations)
-* 20 bits: 93% (change chemicals)
-* 30 bits: 99% (unviable)
+* 10%: consume gasses
+* 19%: sentient
+* 36%: exude gasses
+* 43%: tolerance changes
+* 69%: change species, kudzu, and 'fun' mutations
+* 93%: change chemicals
+* 99%: unviable
 
 I do not offer a suggestion on the 'correct' odds of what mutations should be on either the normal or high-risk table at this point. But now we can actually discuss the odds since they are now a single exposed odds value for each.
 
@@ -91,7 +82,6 @@ Botany Mutators are one-use items that only work on plants. They set values or a
 
 This lets Hydroponics end up with powerful, useful plants over time. It requires them to engage with the random mutation system, but once they've identified something they want, they can copy that and apply it to one super-plant or grow gene-stock to get a consisten supply of it. The biggest limiter on this is luck and time, as it can take a while for the mutation you want to actually show up and keep that plant alive to harvest produce from. Additional resource costs on making Botany Mutators may limit down things, but the primary one is waiting for plants to grow and getting lucky on mutations you want to find. This doesn't exclude new Botanists from the process, since you could feed normal produce into the BGM to mix and match traits on baseline plants and still get a desireable result. It just may not be particularly flashy. A mutation-free plant with the growing speed of tobacco, the lifespan of tower-cap, the yield of cocoa pods, containing dermaline and bicardine to heal common damage, becomes a great snack for Security to munch on while hunting down troublemakers. Experienced players willing to gamble and experiment can do even better things.
 
-
 ## Internal Danger
 Hydroponics doesn't pose much threat to the people doing it. It's not a department likely to be attacked or overtaken by antags. Kudzu is the biggest threat, and it's stopped with the hachet in your toolbelt. Tomato killers and death nettle are the only things that might actually hurt someone else. This must change.
 
@@ -113,15 +103,19 @@ But what you get out of this process is worth the danger. Some examples:
 * New species worth getting. Steel-cap could mutate into Plastic-cap, and make plastic sheets.
 * Silly results worth showing off. A Giving Pit found in an eaten fruit could be touched to an item to grow copies of anything. A shotgun tree. A vodka tree. A Captain's ID tree. An Ian tree? I hope that fruit was safe to eat.
 
-## Content Expansion Ideas:
+## Content Expansion Ideas
 
 ### New plant species:
 * Hellfruit. A plant not normally found on the station. Grows better in additional light, needs lots of water and nutrients, requires plasma gas to grow, heats the air around it, hurts the botanist if harvested without gloves, has a Yield of 1. But the fruit is so delicious and rare, someone will pay big bucks to eat it.
 * Pitcher plants. Grows Plant Beakers, which hold an amount of chemicals based on the plants potency and chemicals contained. Starts off with just water. Requires some effort and luck to make this bigger than Large Beakers, but should be possible.
+* Giving tree. The seed for these are special and rare, acquisition method TBD (rare maintenance loot? Traitor gear? mini-antag only? A mutation that requires eating the produce first?). When the seed is touched to an item, it imprints that item, and creates copies of that item on harvest. 
+
+### Grow lamps
+A new device that allows nearby plants to gain extra growth ticks (consuming resources as normal, slightly more often) at the cost of an increase in department power drain. Won't be available every round due to power availability, ideally used in small bursts, may cause conflicts with the rest of the crew if Hydroponics is using 75% of the station's electricity to grow gatfruit
 
 ### High-Risk mutations:
 * Good/Fun:
-	* Jumbo. Large plant sprites, but a huge (x5?) multiplier for the chemical contents of the produce.
+	* Jumbo. Large plant sprites, but a huge (x5?) multiplier for the chemical contents of the produce. May not be carryable, and must be eaten on the floor?
 	* RGBioluminescent. Disco plants! Light cycles through colors over time.
     	* Storyfruit: The produce will connect into the system that makes random library books, and read it out loud a sentence at a time.
 	* Perfect metabolism. An effect that removes growth components that use nutrients or water.
@@ -153,6 +147,7 @@ Early plans on this:
 * Repeatable harvest plants should take longer between harvests each time it is harvested. If we add 1 tick (15 seconds) to the time it takes for a harvest to repeate each time it's harvested, that reduced the amount of harvests on the min-maxed plant mentioned from 85 to 11, dropping produce entities created from 510 to 66, without severly impacting the more typical cases.
 * Water consumption should be roughly connected to maturation, so players will have to keep up with watering fast-growing plants.
 * Nutrient consumpion should be roughly connected to the utility of the plant, with plants that are just for the chef being low and plants full of useful chemicals or having special use cases being higher. This should mean that a botanist growing lots of non-food plants should need to grow a couple baseline plants as compost or be acquiring significant amounts of fertilizer.
+* Mutation steps for stats, now that they're disconnected from the odds of getting the mutation, can be re-evaluated as well.
 
 ## Smaller changes to existing stuff
 
