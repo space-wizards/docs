@@ -231,9 +231,9 @@ public sealed class ExampleSheetlet<T> : Sheetlet<T> where T : PalettedStyleshee
 all the sheetlets that have `[CommonSheetlet]`, they will first check that they
 satisfy the type constraint before adding the rules to the stylesheet.
 
-```admonish warning
-This also means that the `Sheetlet` can silently fail the check and not be added
-to the styles. If your sheetlet doesn't seem to be working, this may be the cause.
+```admonish info
+A sheetlet failing to satisfy the type constraints of any stylesheet will cause
+the game to log an error. If your styles are not showing up, this may be why.
 ```
 
 #### Resource Access
@@ -389,7 +389,7 @@ and modify an existing color.
 > what to do and what not to do. This is just a general overview for now and
 > should be updated.
 
-The best way to learn how to write UI code is to look at existing code. Some UIs 
+The best way to learn how to write UI code is to look at existing code. Some UIs
 definitely do some terrible things you should never replicate, but there are mountains
 of terrible code in SS14, so this is not abnormal. I cannot teach familiarity with
 the internals of this game, but I can give a  general overview.
@@ -400,7 +400,7 @@ Code you could reference:
 -    Reagent Dispenser
 
 There are a few different parts to any UI. say were working with a entity
-called `MyThing`, which we wanted to show a UI for. Heres, generally, what the 
+called `MyThing`, which we wanted to show a UI for. Heres, generally, what the
 structure would look like:
 
 ```yaml
