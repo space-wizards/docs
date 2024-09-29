@@ -94,8 +94,9 @@ Proposals:
         - In the examine tooltip and hope it just looks good
 
 We need a vibe check on how examining works in SS13
-![](https://cdn.discordapp.com/attachments/903694002577113118/909137595638890497/unknown.png)
-![](https://cdn.discordapp.com/attachments/903694002577113118/909137935683698708/unknown-10.png)
+
+![](../assets/images/maintainer-meeting/2021-11-13-examine-1.png)
+![](../assets/images/maintainer-meeting/2021-11-13-examine-2.png)
 
 # Revert .NET 6 | PJB
 - It wasn't a joke...

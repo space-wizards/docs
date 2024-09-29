@@ -2,8 +2,8 @@
 
 First you're gonna need some software:
 
-* [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](https://cdn.discordapp.com/attachments/560845886263918612/861267188971470898/unknown.png).
-* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](https://cdn.discordapp.com/attachments/560845886263918612/1147634791148179457/image.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
+* [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
+* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
 * [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio also installs this if you're on Windows.
   * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
@@ -11,6 +11,7 @@ First you're gonna need some software:
   * For **macOS**, [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/).
   * For **all platforms**, (NOT FREE) [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 devs prefer it over Visual Studio. College/University students can get a free education license, even if they're not a computer science major.
   * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
+    * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
 
 ## 1. Cloning
@@ -39,21 +40,26 @@ And with that, your repo is now properly setup!
 
 ### Visual Studio
 
-1. Download Visual Studio Community (if you don't own a paid version) from here https://visualstudio.microsoft.com/vs/community/
+1. Download Visual Studio Community (if you don't own a paid version) from [here](https://visualstudio.microsoft.com/vs/community/)
 2. Run the installer and choose `.net desktop development`, then install
 3. If the installer asks you for a development environment select `Visual C#`.
 4. Open Visual Studio
 5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.sln`
 
-### Jetbrains Rider
-* TODO
+### JetBrains Rider
+1. Install Rider, we suggest using [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) so it can also automaticly update in the future.
+2. Go through the setup.
+3. Press "Open" and select `SpaceStation14.sln`
+4. If you plan to do engine development you must add Robust Toolbox to the Directory Mappings so that Riders VCS can detect changes to Robust.
+   Open Riders settings and go to the Version Control section > Directory Mappings and press the plus (+) button. For Directory point it to the `RobustToolbox` folder in the project and Git as the VCS
 
 ### VSCodium
 1. Download [VSCodium Here](https://vscodium.com/) or more directly [on Github Here](https://github.com/VSCodium/vscodium/releases) (On the latest release, click the assets dropdown then scroll to the ZIP or .exe for your OS).
 2. Run the installer or extract the zip file to a location of your choice and run the .exe once extracted.
 3. Once installed, navigate to the Extensions tab (part way down on the top left corner bar, looks like 4 tiles) and search for "C#". An extension by "Muhammad-Sammy" with over 70K downloads and a green / white logo is the one, install that. Extension ID `muhammad-sammy.csharp`.
 4. Select File > Open Folder, then navigate to your cloned repository from above and open this full folder.
-5. Now you can run and debug your game. Select the icon above "Extensions" from earlier for "Run and Debug" and from the dropdown next to the green play button you can select "Server/Client". This will run both the client and server, opening the game for you to debug. Relevant information will pop up in the debug along the bottom. Select the processes in the call stack on the left to change what you are debugging.
+5. When asked to open a solution, select `SpaceStation14.sln`. Alternatively, set `dotnet.defaultSolution` setting to `SpaceStation14.sln` in your workspace settings.
+6. Now you can run and debug your game. Select the icon above "Extensions" from earlier for "Run and Debug" and from the dropdown next to the green play button you can select "Server/Client". This will run both the client and server, opening the game for you to debug. Relevant information will pop up in the debug along the bottom. Select the processes in the call stack on the left to change what you are debugging.
 
 ## 4. Starting SS14
 
@@ -99,12 +105,35 @@ In Rider you can create a "compound configuration" to run or debug both client a
 
 ![](../../assets/images/setup-rider-configurations.png)
 
-# Miscellaneous IDE setup
+## 6. Configuring IDE directories
 
-## JetBrains Rider
-In Rider you can attach the resources directory to the solution so that you can more easily navigate to resource files like prototypes.
+C# IDEs like Visual Studio and Rider do not automatically show the `Resources` folder in the project. This folder contains all non-C# files such as sprites, audio, and most importantly, YAML prototypes. These instructions will explain how to get this folder to show up in your IDE, so you can easily work with it.
 
-![](../../assets/images/setup-rider-attach-existing-folder.png)
+### Visual Studio 2022
+
+In Visual Studio, you can switch the **Solution Explorer** from "solution" view (only showing the C# projects) to "folder" view (showing all the files in the project). Press the button to switch views as follows, then select the folder view:
+
+![](../../assets/images/setup/vs-solution-explorer-switch-view-1.png)
+![](../../assets/images/setup/vs-solution-explorer-switch-view-2.png)
+
+After this, the Solution Explorer should look something like this, and you should be able to easily access the `Resources` folder:
+
+![](../../assets/images/setup/vs-solution-explorer-switch-view-3.png)
+
+### JetBrains Rider
+
+In Rider, you can "attach" the resources directory to the solution. Do this by right clicking the solution in the explorer, then doing "Add" -> "Existing Folder...". Select the "Resources" directory in the file picker.
+
+![asdfs](../../assets/images/setup/rider-attach-folder-1.png)
+![](../../assets/images/setup/rider-attach-folder-2.png)
+
+After this, your solution view should look something like this, and you should be able to easily access the `Resources` folder:
+
+![](../../assets/images/setup/rider-attach-folder-3.png)
+
+### Visual Studio Code
+
+Visual Studio Code shows all files by default, so no extra setup is needed here.
 
 # Reproducible Development Environment with Nix/NixOS
 
@@ -154,7 +183,7 @@ And voila! You have robustly set up your development environment in a way that d
 
 # Troubleshooting
 
-Make sure the first three items on top are downloaded.
+Make sure [the first three items](#setting-up-a-development-environment) on top are downloaded.
 
 ## `RUN_THIS.py` not running
 Check that python is installed from the website and not the Microsoft Store. If it's installed from the Microsoft Store, uninstall it then download and install from the python website.
@@ -184,4 +213,8 @@ Uninstall .NET Core SDK x86. Install .NET Core SDK x64.
 
 ## The client and server aren't available in Visual Studio to configure in Multiple startup projects
 
-This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file. 
+This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file.
+
+## The system cannot find the specified file RUN_THIS.py
+
+`The system cannot find the specified file` error usually means that OneDrive is conflicting with the git repository. Clone the git repo outside of OneDrive or disable syncing for the cloned folder.

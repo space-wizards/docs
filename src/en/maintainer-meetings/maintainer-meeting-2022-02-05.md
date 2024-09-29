@@ -55,7 +55,8 @@ Silver
 [Discord message](https://discord.com/channels/310555209753690112/900426319433728030/934889142431653888)
 [GitHub link](https://github.com/bors-ng/bors-ng)
 Helps avoid this:
-![](https://cdn.discordapp.com/attachments/900426319433728030/934889141789921401/unknown.png)
+
+![](../assets/images/maintainer-meeting/2022-02-05-ci-fail.png)
 - Usage: you write bors r+
 - Gives more overhead to merging PRs
 - We can use it when we are merging a lot of PRs at once, not for every PR
