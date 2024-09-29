@@ -1,3 +1,7 @@
+```admonish warning "В процессе"
+Эта страница находится в стадии разработки! Некоторая информация может быть неполной или неактуальной.
+```
+
 # Git для разработчика СС14
 
 Если вы когда-нибудь смотрели халтурно написанное руководство по Git'у или открывали один из множества невероятно раздутых современных графических интерфейсов git'а, таких как GitKraken, вы, вероятно, понимаете, что Git может быть *очень запутанным*. Цель этого руководства - дать вам только ту информацию, которая необходима для правильной разработки для SS14, и предоставить вам ресурсы, чтобы узнать больше, если это необходимо.
@@ -209,57 +213,55 @@ GitHub - это онлайн-сервис, на котором размещаю�
 
 Ветви и коммиты - две самые важные концепции в Git, и большая часть вашей работы будет вращаться вокруг них.
 
-### 4.1 Whats a commit?
+### 4.1 Что такое этот ваш коммит?
 
 
-Like I mentioned before, **commits** are just packaged up changes to the code. As the developer, you choose which changes go into a commit and when to commit those changes. **Committing** refers to creating a commit, and it essentially makes a save point that you can go back to at any time.
+Как я уже говорил, **коммиты** - это просто упакованные изменения в коде. Как разработчик, вы выбираете, какие изменения войдут в коммит и когда их фиксировать.
 
-Commits have an author, timestamp, a message, and some code changes attached to them. They also have a really long 'commit hash', a unique identifier used to refer to different commits.
+Коммиты имеют автора, временную метку создания, сообщение и некоторые изменения кода. У них также есть длинный «хэш коммита», уникальный идентификатор, используемый для ссылки на разные коммиты.
 
-Commits are how history is built up--you can actually view the history of every single commit made to the SS14 repository from the beginning, which is pretty cool:
+Коммиты - это то, как строится история. Вы можете просмотреть историю каждого коммита, сделанного в репозитории SS14 с самого начала, что очень здорово:
 
 ![](https://i.imgur.com/HQDdw6h.png)
 
-(done with `git log --reverse`)
+(выполняется с помощью `git log --reverse`)
 
-### 4.2 What's a branch?
+### 4.2 Что такое это ваша ветка(бранч)?
 
-**Branches** are very, very important. They're basically just a list of changes to the code (commits). The default branch is 'master', and all of our servers use that branch to compile the code. 
+**Ветки**(в русском сообществе их называют бранчи!) очень, очень важны. По сути, это просто список изменений в коде (коммитов). По умолчанию используется бранч 'master', и все наши серверы используют эту ветку для компиляции кода. 
 
-You're pretty much always 'on a branch' when you're working with your code, and you can switch which branch you're working on easily.
+Вы практически всегда находитесь "в бранче", когда работаете с кодом, и вы можете легко переключать ветку, в которой работаете.
+Как правило, ветки называются по имени того, над чем вы собираетесь в них работать, но на самом деле не имеет значения, как они называются.
 
-Generally, branches are named for whatever you're going to be working on in them, but it doesn't *really* matter what they're named.
-
-You can make as many branches as you like. When you create a branch, it 'branches out' (no shit, really?) from the current branch you're on and becomes its own independent thing you can add commits to. 
+Вы можете создавать столько веток, сколько захотите. Когда вы создаете ветку, она «отходит»  (нифига себе, правда?) от текущей ветки, на которой вы находитесь, и становится полностью независимой, в которую вы можете добавлять коммиты. 
 
 ![](https://i.imgur.com/ByMugxu.png=500x300)
 
-In this diagram, each little node is a different commit, and each color is a different branch.
+На этой диаграмме каждый маленький узел - это отдельный коммит, а каждый цвет - отдельная ветвь.
 
-#### Branch merging
+#### Объединение веток
 
-Branches are important because they can be **merged** together. This is how features are integrated into the main `master` branch. A **merge** just means 'take the special commits from this branch, and apply them to another branch'.  You can merge any two branches together.
+Ветви важны, потому что они могут быть **мерджнуты** вместе. Именно так функции интегрируются в основную ветку `master`. **Слияние** означает «взять специальные коммиты из этой ветки и применить их к другой ветке».  Вы можете объединить две любые ветки.
 
-Sometimes this doesn't go well, because both branches modify the same part in a file in contradictory ways, in which case you'll get a **merge conflict**--more on that in the addendums.
+Иногда это не проходит гладко, потому что обе ветки изменяют одну и ту же часть файла противоречивыми способами, и в этом случае вы получите **мердж конфликт** - подробнее об этом в дополнениях.
 
-GitHub pull requests are really a 'merge request'--you're saying that you want to merge the commits on your branch into another branch, usually their `master`. More on that later.
-
-Pull requests show all this info very well:
+Pull Requests(в русском сообществе их обычно называют ПРы) от GitHub на самом деле является «запросом на мердж» - вы говорите, что хотите объединить коммиты в вашей ветке с другой веткой, обычно `master`. Подробнее об этом позже.
+ПРы очень хорошо отображают всю эту информацию:
 
 ![](https://i.imgur.com/YAOWX5R.png)
 ![](https://i.imgur.com/nWWy3J4.png)
 
-In this pull request, Swept started out by creating a new branch. Since he now had a fresh branch free of interference to work with, he started working on the feature and created commits to 'save his progress' whenever he felt it was necessary. These commits were added to the branch sequentially, and you can see the evolution of the branch as more code was written. We'll talk more about pull requests later.
+В этом пулл реквесте Swept начал с создания новой ветки. Поскольку теперь у него была свежая ветка, свободная от помех, он начал работать над функцией и создавал коммиты для «сохранения прогресса», когда считал это необходимым. Эти коммиты добавлялись в ветку последовательно, и вы можете видеть эволюцию ветки по мере написания кода. Подробнее о запросах на исправление мы поговорим позже.
 
-#### But whyyy?
+#### Но почему я должен это все делать?
 
-Okay, technically, sure, you can just do all of your work on the `master` branch and pull request from there. But, creating different branches makes it easy to understand where you are, how many changes you've made, and it makes it possible to work on multiple features at once.
+Технически, конечно, вы можете просто сделать всю свою работу в ветке `master` и отправлять запросы оттуда. Но создание разных веток позволяет легко понять, где вы находитесь, сколько изменений вы внесли, и дает возможность работать над несколькими функциями одновременно.
 
-Also we'll close your PR if it's from your `master` branch (it can very easily cause issues) so don't do it.
+Также мы закроем ваш PR, если он будет из вашей ветки `master` (это может легко привести к проблемам), так что не делайте этого.
 
-### 4.3 Making and working with branches
+### 4.3 Создание и работа с ветками
 
-Making branches is pretty easy. Let's make a new branch called `funny-feature`:
+Создавать ветки довольно просто. Давайте создадим новую ветку под названием `smeshnoye-izmenenie`:
 
 <details><summary>TortoiseGit</summary>
 <p>
@@ -284,20 +286,20 @@ Making branches is pretty easy. Let's make a new branch called `funny-feature`:
 
 ![](https://i.imgur.com/kOc9rfe.png)
 
-You may notice that the bit in parentheses (master) changed to (funny-feature)! Incredible!
+Вы можете заметить, что название в скобках (master) изменился на (funny-feature)! Невероятно!
 
-The `-b` in `git checkout` here means 'checkout this branch, and create it if it doesn't exist.'
+`-b` в `git checkout` здесь означает «проверить эту ветку, и создать её, если она не существует».
 
 </p>
 </details>
 
 <hr>
 
-Now, you can work freely with this branch as you please without fear of messing up your all-important master branch.
+Теперь вы можете свободно работать с этой веткой по своему усмотрению, не боясь испортить важную мастер-ветку.
 
-Switching between branches is pretty easy: it's called **checking out** a branch. When you do this, your files and folders locally will be changed to match the branch, so Git will yell at you if you have local changes and you try to check out.
+Переключаться между ветками довольно просто: когда вы это делаете, ваши локальные файлы и папки будут изменены в соответствии с веткой, поэтому Git будет кричать на вас(и я тоже), если у вас есть локальные изменения, а вы пытаетесь сменить ветку.
 
-Checking out a branch:
+Меняем ветку:
 
 <details><summary>TortoiseGit</summary>
 <p>
@@ -325,7 +327,7 @@ Checking out a branch:
 
 <hr>
 
-Then, make whatever local changes you want! It doesn't really matter. Make a new file, delete everything, change one line in a file, etc. It won't affect your `master` branch, because this is`funny-feature` land now!
+Затем внесите любые локальные изменения! Это не имеет значения. Создайте новый файл, удалите всё, измените одну строку в файле и т. д. Это не повлияет на вашу `мастерскую` ветку, потому что теперь это земля `funny-feature`!
 
 ### 4.4 Staging and committing changes to your branch
 
