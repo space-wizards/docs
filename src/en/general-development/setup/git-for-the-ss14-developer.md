@@ -34,6 +34,10 @@ While you're here, install `Python 3.7+` as well if you don't have it already. Y
 
 <hr>
 
+```admonish danger "Name and Email privacy"
+When [setting up your `user.name` and `user.email`](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity), know that these are publicly displayed on all commits that you create. If you want to keep your information private, you can set `user.name` to your username instead of your real name, and `user.email` to the one provided by GitHub when the [`Keep my email addresses private`](https://github.com/settings/emails#toggle_visibility) setting is checked in [GitHub Email Settings](https://github.com/settings/emails#primary_email_select_label).
+```
+
 Now that you have Git installed, I recommend you read up a bit on the basics of it first and get acquainted with whatever git client you're working with, whether its just command-line (Git Bash) or anything else.
 
 We're going to run through the process of setting up a Git environment for Space Station 14 so that you can **contribute code through pull requests, create your own codebase**, or just **check out the history of the project.**
@@ -201,6 +205,10 @@ All this does is add a new remote named `upstream` that points to the original `
 The convention is to call the remote pointing to the original repository `upstream` but you can technically call it whatever you like. I'll be referring to it as 'the upstream', though, and it's terminology Git guides use as well.
 
 **Addendum for fork/downstream developers:** If a downstream repository you wish to contribute to is set up as a direct fork (IE: GitHub shows a "forked from" label underneath the repo's name), then you'll additionally want to add that fork as a remote (but if the fork isn't set up that way, you can ignore this). You can do this in a way similar to how you've added the upstream as a remote (just use the fork's GitHub link as the remote URL), but be sure to substitute the remote name of `upstream` with any name you deem appropriate. Your own fork does not have to be a fork of the downstream's fork for this; all that matters is that the commit history in the individual branches you push to your own remote line up with the commit history of wherever you're intending to PR your changes to.
+
+```admonish warning title="Before working on your first PR to the space-wizards repo"
+Please make sure you read through the [Freezes & Restrictions](https://github.com/space-wizards/space-station-14/issues/8524) and ensure your idea does not fall into the freezes or if your PR requires some prerequisite before being made. 
+```
 
 ## 4. Branching & Commits
 

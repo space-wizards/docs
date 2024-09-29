@@ -57,6 +57,32 @@ The latest stable image of Robust.Cdn is `ghcr.io/space-wizards/robust.cdn:2`. I
   * `/manifest`: contains SQLite database for server manifest operations.
   * `/database`: contains SQLite database for client content downloads.
 
+Here is an example ``docker-compose.yml``, please modify it to your needs.
+
+```
+services:
+  robust_cdn:
+    image: ghcr.io/space-wizards/robust.cdn:2
+    container_name: robust_cdn
+    user: 1654:1654
+    volumes:
+      - ./appsettings.json:/app/appsettings.json
+      - ./builds:/builds
+      - ./manifest:/manifest
+      - ./database:/database
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+```
+
+You may have to run these commands to set the correct owner and permissions for the ``builds``, ``manifest`` and ``database`` folders.
+
+```
+sudo chown -R 1654:1654 builds/ database/ manifest/
+sudo chmod -R u+w,g+w builds/ database/ manifest/
+```
+
+
 ### Manual compilation
 
 If you hate containers, you can manually publish Robust.Cdn and deploy the files yourself. For this you will need Git and the .NET 8 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
@@ -204,6 +230,11 @@ You should go over this config file in full to understand what you are setting u
   // This is necessary for correct generation of build metadata.
   "BaseUrl": "https://<robust-cdn-url>/",
 
+  // The base path that Robust.Cdn is exposed under.
+  // You should set this when reverse proxying Robust.Cdn behind a subpath.
+  // See also further notes down below.
+  "PathBase": "/",
+
   // Valid host names for clients to use to connect to Robust.Cdn.
   // You can just leave this as-is.
   "AllowedHosts": "*",
@@ -220,7 +251,7 @@ You should go over this config file in full to understand what you are setting u
 
 If your fork's repository is hosted on GitHub, the easiest way to automatically publish new builds to Robust.Cdn is via the GitHub Actions configuration available in the codebase. This is how official Wizard's Den builds are published.
 
-1. Edit `Tools/publish_github_artifact.py` to modify the "configuration parameters" at the top of the script:
+1. Edit `Tools/publish_multi_request.py` to modify the "configuration parameters" at the top of the script:
   * `ROBUST_CDN_URL` should be the URL at which Robust.Cdn is accessible.
   * `FORK_ID` should be the ID of the fork you configured in `appsettings.json`
 
@@ -230,13 +261,9 @@ If your fork's repository is hosted on GitHub, the easiest way to automatically 
 
 This should be everything you need!
 
-```admonish warning
-Actions publishing works by uploading a temporary artifact and having Robust.Cdn download that. While this should work from a private repo there may be additional cost introduced by this, you've been warned.
-```
-
 ### Custom
 
-For people looking to do custom publishing workflows without GitHub actions, please refer to the API reference of the "publish" endpoint.
+For people looking to do custom publishing workflows without GitHub Actions, you can also use the `Tools/publish_multi_request.py` script. I recommend you look at the Actions workflow as a reference for the required steps.
 
 ## Watchdog configuration
 
@@ -256,6 +283,27 @@ You will likely also want to set up `NotifyWatchdogs` in Robust.Cdn's fork confi
 Robust.Cdn generates a simple HTML web page to allow people to manually download the latest server builds. This page is available automatically at `/fork/<fork_id>`.
 
 For example: [Wizard's Den builds](https://wizards.cdn.spacestation14.com/fork/wizards/).
+
+### Custom PathBase
+
+If you can't have subdomains for some reason (seriously, you should use subdomains if you can), you will want to mount multiple services behind the same domain with a reverse proxy such as nginx. When you do this you need to set `PathBase` in the config file to make links in the HTML builds page work. Other API functionality is not affected by this.
+
+For example, if you want to host the CDN under `https://example.com/cdn/`, you should configure it as such:
+
+```json
+"BaseUrl": "https://example.com/cdn/",
+"PathBase": "/cdn/",
+```
+
+**Make sure your reverse proxy is configured correctly**: it should be passing the full path to Robust.Cdn, i.e. not cutting off the path prefix itself. If using **nginx**, this is achieved as such:
+
+```nginx
+# Note the trailing slash!
+# bad
+proxy_pass http://127.0.0.1:8080/;
+# good
+proxy_pass http://127.0.0.1:8080;
+```
 
 ## Private forks
 
@@ -290,6 +338,84 @@ Robust.Cdn stores and expects build zips in the `FileDiskPath` directory (`/buil
 │   │   ├── SS14.Client.zip
 │   │   ├── SS14.Server_linux-arm64.zip
 ```
+
+## Example reverse proxy configs
+
+You likely want to run Robust.Cdn behind a reverse proxy of some kind. There are a few things to make sure of:
+
+* When using multi-request publishing, you should set the maximum client body size to fit the entire client download at once.
+* When using one-shot publishing, you should set the request timeout high enough (usually more than a minute or two).
+
+Here are some example configurations for your reverse proxy:
+
+### Nginx
+
+This example is intended to go into an existing `server` block of your configuration (TLS termination, server name, etc...)
+
+```nginx
+# gzip JSON responses.
+gzip on;
+gzip_types application/json;
+
+location / {
+    # Increased max body size for multi-request publishes. Not necessary for oneshot publishes.
+    client_max_body_size 512m;
+
+    # Do not buffer request bodies inside nginx, especially important for multi-request publishes.
+    proxy_request_buffering off;
+    # Disable buffering of outgoing responses.
+    proxy_buffering         off;
+    # Ensure request and response can be streamed via HTTP 1.1.
+    proxy_http_version      1.1;
+    # Increased read timeout to avoid timeouts on the publish API endpoint.
+    # Not strictly necessary for multi-request publishes, but cannot hurt.
+    proxy_read_timeout      120s;
+
+    # Boilerplate reverse proxy config.
+    proxy_set_header   Host $http_host;
+    proxy_set_header   X-Real-IP $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+
+    # Update port here.
+    proxy_pass         http://localhost:8080;
+}
+```
+
+### Caddy
+
+This is an example Caddyfile to go into an existing block for the domain with the CDN. If you are putting this in a path you can just put all these under the path.
+
+```
+# Increased max body size for multi-request publishes.
+request_body {
+    max_size 512MB
+}
+
+# Update port here.
+reverse_proxy localhost:8080 {
+    flush_interval -1
+}
+
+# Compress JSON responses.
+encode zstd gzip {
+    match header Content-Type application/json*
+}
+```
+
+## Troubleshooting
+
+### 504 gateway timeout during publish
+
+Increase your reverse proxy's response timeout. In nginx this is controlled via `proxy_read_timeout`.
+
+### Connection errors during publishing (multi-request publish)
+
+Make sure you have your reverse proxy's max body size set high enough to allow 
+
+### 404 not found error on CDN API while publishing
+
+Make sure you are using the latest version of Robust.Cdn. Version 2.2.0 added a new publishing mechanism that is used by the upstream infrastructure.
 
 ## Migration from Robust.Cdn 1.x
 
@@ -366,6 +492,10 @@ Some API endpoints may require authentication:
 * Fork control endpoints such as publish need `Authorization: Bearer <updateToken>`, with the `UpdateToken` specified in the fork configuration.
 * Endpoints to access server files require Basic authentication if the fork is configured as private.
 
+### Publishing
+
+There are two separate APIs to publish: "one-shot" and "multi-request". The one-shot API is under `/fork/{fork}/publish`, while the multi-request API is under `/fork/{fork}/publish/{start,file,finish}`. We recommend the multi-request publishing API, and it is also what the official publishing scripts use.
+
 ### GET `/fork/{fork}`
 
 Gets a nice human-readable HTML page about the last builds available.
@@ -382,7 +512,9 @@ Gets a JSON list of every server build available for a fork.
 
 ### POST `/fork/{fork}/publish`
 
-Publishes a new version to the CDN. It expects a JSON body with the following information:
+Publishes a new version to the CDN in a single API request. This is as opposed to the "multi-request" API described below. 
+
+It expects a JSON body with the following information:
 
 ```json
 {
@@ -395,6 +527,49 @@ Publishes a new version to the CDN. It expects a JSON body with the following in
 The version is the new version number you are publishing. This can be anything. Engine version is the version number of the engine to use.
 
 The archive is must be URL to a zip that Robust.Cdn will download containing the build zip files (client and server).
+
+This require authentication.
+
+### POST `/fork/{fork}/publish/start`
+
+Start a new publishing operation that involves multiple subsequent API requests. The initial JSON request body is as follows:
+
+```json
+{
+  "version": "<version>",
+  "engineVersion": "<engine version>"
+}
+```
+
+The version is the new version number you are publishing. This can be anything. Engine version is the version number of the engine to use.
+
+If a publish is already undergoing on under the given version number, it is aborted and you are given a clean slate.
+
+This require authentication.
+
+### POST `/fork/{fork}/publish/file`
+
+Add an extra file to an in-progress publish.
+
+The file contents are provided in the request body as `application/octet-stream`. Additional metadata should be provided in the following HTTP headers:
+* `Robust-Cdn-Publish-File`: the name of the file being published. Usually this is something like `SS14.Client.zip` or `SS14.Server_win-x64.zip`.
+* `Robust-Cdn-Publish-Version`: the version number being published to (provided before).
+
+This require authentication.
+
+### POST `/fork/{fork}/publish/finish`
+
+Finishes publishing a new version started before.
+
+```json
+{
+  "version": "<version>"
+}
+```
+
+The version is the new version number you are publishing.
+
+If the publish fails validation (for example, missing client files), the publish will be aborted and must be restarted from zero.
 
 This require authentication.
 

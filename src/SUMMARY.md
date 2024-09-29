@@ -27,7 +27,7 @@ General Development
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
 - [Tips](en/general-development/tips.md)
-  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md)
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
@@ -55,7 +55,6 @@ SS14 By Example
   - [UI Cookbook](en/ss14-by-example/ui-and-you/ui-cookbook.md)
 - [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
 
-
 Robust Toolbox
 ==============
 
@@ -79,6 +78,7 @@ Robust Toolbox
     - [Entities](en/robust-toolbox/toolshed/commands/entity-control.md)
     - [General](en/robust-toolbox/toolshed/commands/general.md)
     - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
+  - [Toolshed Examples](en/robust-toolbox/toolshed/toolshed-examples.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
   - [Containers](en/robust-toolbox/user-interface/containers.md)
 - [IoC](en/robust-toolbox/ioc.md)
@@ -116,6 +116,7 @@ Space Station 14
 	- [Displacement Maps](en/space-station-14/art/displacement-maps.md)
 	- [Device Network](en/space-station-14/core-tech/device-network.md)
 	- [NPCs](en/space-station-14/core-tech/npcs.md)
+	- [Entity Tables](en/space-station-14/core-tech/entity-tables.md)
 	- [Chemistry](en/space-station-14/core-tech/chemistry.md)
 		- [Metabolism](en/space-station-14/core-tech/chemistry/metabolism.md)
 		- [Reactions](en/space-station-14/core-tech/chemistry/reactions.md)
@@ -167,7 +168,7 @@ Space Station 14
 	- [Proposals]()
 	  - [PAI Expansion Slots](en/space-station-14/player-interaction/proposals/pai-expansion-slots.md)
 	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
-	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md) 
+	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md)
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
@@ -184,9 +185,11 @@ Space Station 14
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
 		- [Game Director](en/space-station-14/round-flow/proposals/game-director.md)
+		- [Departmental Economy](en/space-station-14/round-flow/proposals/departmental-economy.md)
 		- [Pizza Delivery Critter](en/space-station-14/round-flow/proposals/pizza-delivery-critter.md)
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
+   		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
@@ -297,16 +300,9 @@ Community
 
 - [Infrastructure References](en/community/infrastructure-references.md)
   - [Wizards Den Infrastructure](en/community/infrastructure-reference/wizards-den-infrastructure.md)
-  - [Publishing Scripts](en/community/infrastructure-reference/publishing-scripts.md)
   - [Grafana Dashboards](en/community/infrastructure-reference/grafana-dashboards.md)
 - [Space Wizards Hub Rules](en/community/space-wizards-hub-rules.md)
-- [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)
-- [Space Wizards Maintainer List](en/community/space-wizards-maintainer-list.md)
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
-- [Project Manager](en/community/projectmanager.md)
-- [Maintainer](en/community/maintainer.md)
-  - [Maintainer Policy](en/community/maintainer/wizards-den-maintainer-policy.md)
-  - [Review Policy](en/community/maintainer/wizards-den-review-policy.md)
 - [Admin](en/community/admin.md)
   - [Admin Tooling](en/community/admin/admin-tooling.md)
     - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
@@ -326,9 +322,14 @@ Staff
 ==============
 
 ----------------------
-
-- [Maintainer Policy](en/staff/maintainer-policy.md)
-- [Staff Conflict Resolution](en/staff/staff-conflict-resolution.md)
+- [Project Manager](en/wizden-staff/projectmanager.md)
+- [Maintainer](en/wizden-staff/maintainer.md)
+  - [Review Policy](en/wizden-staff/maintainer/wizards-den-review-policy.md)
+- [Space Wizards Role Hierarchy](en/wizden-staff/space-wizards-role-hierarchy.md)
+- [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
+- [Maintainer Policy](en/wizden-staff/maintainer-policy.md)
+- [Staff Policy](en/wizden-staff/staff-staff-policy.md)
+- [Staff Conflict Resolution](en/wizden-staff/staff-conflict-resolution.md)
 
 Maintainer Meetings
 ==============

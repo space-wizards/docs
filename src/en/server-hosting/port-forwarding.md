@@ -65,6 +65,10 @@ If it succeeds and your server is accessible from the outside world, great! If i
 ## Manual Port Forwarding
 
 ```admonish info
+Disable UPnP from your config if you are going to do manual port forwarding. It may cause issues.
+```
+
+```admonish info
 It is extremely common for your ISP to install a router for you. Because of this, "check your router's manual" may instead involve "check your ISP's help site or ask their support".
 
 If you do have your own router, there may be somebody in your house that knows how to do this, so ask them.
@@ -114,7 +118,7 @@ If you don't know the login credentials, some things you may want to try:
 1. Checking the router unit to see if there's a sticker or something
 2. Checking any documentation from your ISP
 3. Trying your wifi password
-4. Asking your parents
+4. Asking your family
 5. Trying common combinations like "admin" "admin"
 
 ### Step 2: Port forward
@@ -132,6 +136,22 @@ When you do find it, you'll want to look for some form of "add" button to add an
 ![router-forward-add.png](../assets/images/router-forward-add.png)
 
 Save the settings or something.
+
+If this failed too, we have one last check.
+
+## Check your computers firewall
+If you are certain you did not mess up the above (or you are using your regular rented linux server), our last hope is to check for if your computer has it's own firewall active and blocking the connection.
+
+If you are on MacOS or Linux you will have to do your own research. Especially on linux as there are many firewall programs.
+
+I will cover Windows here
+
+1. Search for "Windows firewall" and open it
+2. At the top, click on "Action" --> "New rule"
+3. Change the option to "Port"
+3. Type "1212" as the port and make it a tcp rule (or whatever you set your port to if you changed it)
+4. Ensure "Allow the connection" is selected and that the rule applies everywhere (domain, private, public)
+5. Name it anything and do the steps again for udp instead.
 
 If you did this step correctly, then maybe it works! If it still doesn't work, uhhhh...
 
