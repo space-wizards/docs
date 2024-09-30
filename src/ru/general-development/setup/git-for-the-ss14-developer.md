@@ -649,7 +649,7 @@ git branch -d another-feature
 - **'Сабмодули'** это репозитории, которые находятся внутри другого репозитория.
 - **'Форки'** это репозитории, которые основаны на другом репозитории. Если вы собираетесь сделать ПР в репозиторий SS14, вам нужно сначала его форкнуть.
 - **"Рабочее дерево"**(Working tree) - это все файлы, папки и прочее, что есть в репозитории.
-- **'Staging'** означает добавление (с помощью `git add`) изменений из вашего рабочего дерева в «staging area», где над ними могут быть произведены некоторые действия.
+- **'Стейджинг'**(Staging) означает добавление (с помощью `git add`) изменений из вашего рабочего дерева в «staging area», где над ними могут быть произведены некоторые действия.
 - **'Коммиты'** это снимки рабочего дерева репозитория в определённый момент времени. По сути, это точка сохранения. Коммит» - это просто список файлов, которые были изменены с момента последнего коммита, а изменения, которые "коммитнули", - это изменения, которые вы "стейджнули"
 - **'Чекаут'**(Checkout) - это акт переключения на другую ветку, чтобы вы могли работать с ней или просматривать её изменения локально.
 - **'Мерджинг'** это акт интеграции изменений из одной ветки в другую ветку.
@@ -661,125 +661,123 @@ git branch -d another-feature
 
 Существует гораздо больше команд и концепций, чем эта, но это все, что вам действительно нужно знать для базовой разработки.
 
-# Appendix A: Helpful tips and tricks
+# Приложение A: Полезные советы и рекомендации
 
-There's some stuff I didn't cover, but you'll almost inevitably have to do at some point. I'll cover these all **exclusively as git commands in Git Bash** quickly, but they're not too hard to figure out in the other programs (same keywords, just look for those). I recommend using their specific guides because I don't know TortoiseGit / SmartGit / GitKraken / Github Desktop well enough to help you with more advanced stuff.
+Есть вещи, которые я не описал, но они почти неизбежно понадобятся вам в какой-то момент. Я быстро расскажу обо всех этих **исключительно git-командах в Git Bash**, но их несложно найти и в других программах (те же ключевые слова, просто ищите их). Я рекомендую использовать их специальные руководства, потому что я не знаю TortoiseGit / SmartGit / GitKraken / Github Desktop достаточно хорошо, чтобы помочь вам с более сложными вещами.
 
-One note since it comes up a lot here: **`HEAD` is a fancy name for the commit that you're currently on**. Nothing more than that. Branches are also technically fancy names for commits, but you don't need to know that yet.
+Одно замечание, поскольку оно часто встречается здесь: **`HEAD` - это модное название коммита, на котором вы сейчас находитесь**. Не более того. Ветви тоже технически являются причудливыми названиями коммитов, но вам это пока не нужно знать.
 
-A lot of these can be found probably more eloquently in Oh Shit, Git?! (see resources above)
+Многое из этого можно найти в «Ёбанный Git!!!», (см. ресурсы выше)
 
+## Мердж Конфликты
 
-## Resolving merge conflicts
+*WIP Я напишу лучшее руководство для этого позже, потому что это важно*
 
-*WIP i'll write a better guide for this later because it's important*
+Мерзкий маленький мейнтейнер сказал вам убрать «мердж конфликты», иначе ваш PR «не будет мерджнут. Вот засранец! К счастью, это не так уж сложно.
 
-A nasty little maintainer has told you to 'resolve conflicts' or your PR 'wont be merged'. What an asshole! Thankfully, it's not too hard.
+Сначала вам нужно обновить локальную ветку `master branch`. Как это сделать, смотрите выше.
 
-First, you're going to want to update your local `master branch`. See above for how to do that.
+Когда вы запустите `git merge master [local branch]`, он либо сделает это чисто (ура), либо скажет, что вам нужно разрешить конфликты (меххх). 
 
-When you run `git merge master [local branch]`, it'll either do it cleanly (woohoo) or tell you you have to resolve conflicts (wahhhh). 
+Чтобы разрешить конфликты вручную, достаточно зайти в конфликтующие файлы, удалить всю ерунду типа `>>>>HEAD` и `===== <<<<master` (просто отмечает, откуда произошли изменения), а затем отредактировать файл так, чтобы он правильно объединял оба набора изменений. Иногда это легко, иногда трудно. Если это сложно, то вы, вероятно, знаете, что делаете. После этого просто сделайте `git commit`.
 
-All you need to do to resolve conflicts manually is go into the files that are conflicting, remove all the `>>>>HEAD` and `===== <<<<master` nonsense (just notates where the changes originated) and then edit the file so that it properly integrates both sets of changes. Sometimes this is easy, sometimes it's hard. If it's hard, you probably know what you're doing. After that, just `git commit`.
+В Atlassian есть очень хорошее руководство по этому вопросу [здесь](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
-Atlassian has a really good guide for this [here](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+## Проверяем историю
 
-## Checking history
+`git log --oneline` - ваш друг. Он показывает короткие хэши коммитов (уникальные идентификаторы коммитов), их сообщения, а также их ветки и теги.
 
-`git log --oneline` is your friend. It shows short commit hashes (unique IDs for commits), their messages, and their branches and tags.
+## Избавление от локальных изменений
 
-## Getting rid of local changes
-
-You might have accidentally made changes you didn't want to, and you don't want to bother with making an entirely new branch or something--but you haven't committed those changes yet.
+Возможно, вы случайно внесли изменения, которых не хотели, и не хотите возиться с созданием совершенно новой ветки или чего-то подобного - но вы еще не коммитнули эти изменения.
 
 ```
 git reset --hard HEAD
 ```
 
-This just means 'change the working tree to the current commit, before any local changes. Or else.' **You can't retrieve those local changes if you do this, so be wary.**
+Это просто означает «изменить рабочее дерево на текущий коммит, до любых локальных изменений. **Вы не сможете вернуть эти локальные изменения, если сделаете это, так что будьте осторожны.**
 
-## Unstaging changes
+## Снятие изменений с постановки
 
-Ah shit, I just staged RobustToolbox by accident. No fear!
+Вот блядь, я случайно стейджнул RobustToolbox. Не страшно!
 
 ```
 git reset HEAD [file]
 ```
 
-Alternatively, to unstage everything:
+В качестве альтернативы, чтобы удалить все:
 
 ```
 git reset HEAD
 ```
+## Отмена сделанного вами коммита
 
-## Reverting a commit you made
-
-Oh shit, your xenomorph erotica made its way into a commit/you accidentally committed a submodule! What now? Well, there's two solutions:
+Вот чёрт, ваш ЕРП спрайт ксеноморфа случайно попал в коммит/вы случайно закоммитили в сабмодуль! Что теперь? Есть два решения:
 
 ```
 git revert HEAD
 ```
 
-This makes a new commit undoing the current commit, and then commits it. Hehe commit. 
+Это создаст новый коммит, отменяющий текущий коммит, а затем закоммитит его. Хе-хе коммит. 
 
-If you want to undo a different commit, you can check its hash in `git log --oneline` and then call `git revert [commit hash]`. Git has a more robust system for doing this; you can do `git revert HEAD~1` to undo the commit before your current one or `git revert HEAD~2` to revert the one before that. The `~1` just means '1 commit before HEAD'.
+Если вы хотите отменить другой коммит, вы можете проверить его хэш в `git log --oneline` и затем вызвать `git revert [commit hash]`. В Git'е есть более надёжная система для этого; вы можете сделать `git revert HEAD~1`, чтобы отменить коммит перед текущим, или `git revert HEAD~2`, чтобы отменить тот, который был перед этим. `~1` просто означает «1 коммит перед HEAD».
 
-Alternatively,
+Альтернативный вариант,
 
 ```
 git reset --hard HEAD~1
 ```
 
-**I don't recommend doing this unless you're fully aware of what you're doing.**
+**Я не рекомендую делать это, если вы не осознаёте, что делаете.**
 
-For when you REALLY don't want anyone to know about that xenomorph erotica you just made. This method rewrites history, so it isn't the best for a collaborative environment. If you do this, you'll need to force push (`git push origin [branch] --force`) or else it won't work. Force pushing can be dangerous, so again, be sure you know what you're doing.
+Для тех случаев, когда вы РЕАЛЬНО не хотите, чтобы кто-то узнал об ерп ксеноморфе, которого вы только что коммитнули. Этот метод переписывает историю, поэтому он не подходит для совместной разработки. Если вы сделаете это, вам нужно будет выполнить принудительный push (`git push origin [branch] --force`), иначе он не сработает. Принудительный пуш может быть опасным, поэтому, опять же, убедитесь, что вы знаете, что делаете.
 
+## Проверка изменений в PR локально
 
-## Checking out a PR's changes locally
-
-Ok, this one is a little difficult. There's a couple ways to do this:
+Окей, это немного сложно. Есть несколько способов сделать это:
 
 ### Github CLI
 
-Install github's fancy CLI and do this:
+Установите модный CLI от github и сделайте следующее:
 
 ```
-gh pr checkout [pr number]
+gh pr checkout [номер ПРа]
 ```
 
-Neat.
+Аккуратно.
 
-### Changing .git/config
+### Изменение .git/config
 
-Go into your .git folder (hidden by default--may need to enable showing hidden folders in Windows), and open up the 'config' file. There should be a bit that looks something like:
+Зайдите в папку .git (по умолчанию она скрыта - возможно, потребуется включить отображение скрытых папок в Windows) и откройте файл 'config'. Там должен быть фрагмент, который выглядит примерно так:
 
 ```
-[remote "upstream"]
+[remote «upstream»]
 	url = https://github.com/space-wizards/space-station-14
 	fetch = +refs/heads/*:refs/remotes/upstream/*
 ```
 
-Add a line to this that reads `fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*`, so that section should now look like:
+Добавьте к этому строку, которая гласит `fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*`, так что теперь эта секция должна выглядеть следующим образом:
 
 ```
-[remote "upstream"]
+[remote «upstream»]
         url = https://github.com/space-wizards/space-station-14
         fetch = +refs/heads/*:refs/remotes/upstream/*
         fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
 ```
 
-Now, `git fetch upstream`. This method is great if you're a maintainer, but it also.. fetches every branch that's still up from every PR that's been opened, so not fantastic if you just wanted one thing. From here, you can `git checkout upstream/pr/[pr number]` to check out their branch. This is basically what GitHub CLI does but less sophisticated.
+Теперь пропишите `git fetch upstream`. Этот метод хорош, если вы мейнтейнер, но он также... собирает все ветки, которые еще не закрыты, из всех PR, которые были открыты, так что это не лучший вариант, если вам нужно только что-то одно. Отсюда вы можете сделать `git checkout upstream/pr/[номер ПРа]`, чтобы проверить их ветку. В принципе, это то же самое, что делает GitHub CLI, но менее сложное.
 
-### Adding a new remote
 
-This method kinda sucks because it takes a while but if you want to check out someone else's fork of the game and their branches it's pretty nice.
+### Добавление нового ремоута
 
-Not actually that hard but its confusing if you don't know Git very well. Set up a remote to the user's remote repository, fetch their branches, and then checkout their branch:
+Этот метод немного отстойный, потому что занимает много времени, но если вы хотите проверить чужой форк игры и его ветки, то это довольно удобно.
+
+На самом деле это не так уж и сложно, но если вы не очень хорошо знаете Git, это может сбить с толку. Настройте удалённый доступ к удалённому репозиторию пользователя, получите его ветки, а затем проверьте его ветку:
 
 ```
-git remote add [username] https://github.com/[username]/space-station-14
-git fetch [username]
-git checkout [username]/[branch name]
+git remote add [имя пользователя] https://github.com/[имя пользователя]/space-station-14
+git fetch [имя пользователя]
+git checkout [имя пользователя]/[название ветки]
 ```
 
-This also lets you make PRs to their remote branch, if you so desired.
+Это также позволит вам делать PR в их удаленную ветку, если вы того пожелаете.
