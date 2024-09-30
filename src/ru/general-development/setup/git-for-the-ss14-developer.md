@@ -329,20 +329,20 @@ Pull Requests(в русском сообществе их обычно назы�
 
 Затем внесите любые локальные изменения! Это не имеет значения. Создайте новый файл, удалите всё, измените одну строку в файле и т. д. Это не повлияет на вашу `мастерскую` ветку, потому что теперь это земля `funny-feature`!
 
-### 4.4 Staging and committing changes to your branch
+### 4.4 Внесение и сохранение изменений в вашей ветке
 
-One more important thing: Before you can `commit` your changes, you have to `add` your changes to the **staging area**. All this means is that you're specifying which files you want to commit. This is helpful, because you *almost never* want to commit submodule changes, so you avoid that by not adding them to the staging area. 
+И еще один важный момент: прежде чем `коммитить` свои изменения, вы должны `добавить` их в **staging**. Это означает, что вы указываете, какие файлы вы хотите коммитнуть. Это полезно, потому что вы *почти никогда* не захотите коммитить изменения сабмодулей, поэтому вы избежите этого, не добавляя их в staging. 
 
-As mentioned before, commits always come with a message, which is just a short, imperative description of what's being done in that commit. Or you can be a chad and name every commit "changes stuff", up to you.
+Как уже говорилось, коммиты всегда сопровождаются сообщением, которое представляет собой краткое, императивное описание того, что было сделано в этом коммите. Или вы можете быть чадом и называть каждый коммит «123», решать вам.
 
-If you want to see what you've currently changed, and what's in the staging area, it's pretty easy:
+Если вы хотите посмотреть, что вы изменили в данный момент и что находится в staging, это довольно просто:
 
 <details><summary>TortoiseGit</summary>
 <p>
 
 ![](https://i.imgur.com/xmZKKWJ.png)
 
-TortoiseGit also shows changed files/folders (a red icon in the bottom right) in the Windows Explorer which is really nice and why I have it installed in the first place.
+TortoiseGit также показывает измененные файлы/папки (красный значок в правом нижнем углу) в проводнике Windows, что очень приятно и это почему я установил его в первую очередь.
 
 </p>
 </details>
@@ -352,7 +352,7 @@ TortoiseGit also shows changed files/folders (a red icon in the bottom right) in
 
 ![](https://i.imgur.com/ROsurs1.png)
 
-This is assuming you installed SmartGit with the option that the main window shows diffs and status. If you didn't, I don't really know where it is.
+Это при условии, что вы установили SmartGit с опцией, при которой в главном окне отображаются диффы и статус. Если вы этого не сделали, я не знаю, где это находится.
 
 </p>
 </details>
@@ -367,7 +367,7 @@ This is assuming you installed SmartGit with the option that the main window sho
 
 <hr>
 
-Now that you've verified that all of these changes look good, we'll add them to the staging area and commit them (some Git GUIs do this in one step)
+Теперь, когда вы убедились, что все эти изменения выглядят хорошо, мы добавим их в staging и коммитнем (некоторые графические интерфейсы Git делают это в один шаг).
 
 <details><summary>TortoiseGit</summary>
 <p>
@@ -397,19 +397,19 @@ Now that you've verified that all of these changes look good, we'll add them to 
 
 <hr>
 
-Woo, we've committed our changes to a branch! Now that they're committed, they're in the history of the branch forever (sort of). We can do a lot of things now: merge our `funny-feature` into our local `master` branch (if we wanted, for some reason), upload (push) our `funny-feature` branch to our remote repository, or nuke the branch entirely (among other things). We'll opt for pushing the branch and making a pull request now.
+Ух ты, мы зафиксировали наши изменения в ветке! Теперь, когда они зафиксированы, они навсегда остаются в истории ветки (вроде как). Теперь мы можем сделать множество вещей: мерджнуть нашу `funny-feature` в нашу локальную ветку `master` (если мы хотим, по какой-то причине), загрузить (push) нашу ветку `funny-feature` в наш удалённый репозиторий или полностью удалить ветку (среди прочего). Сейчас мы выберем push и сделаем pull request.
 
-## 5. Pushing and making a PR
+## 5. Делаем Pull Request
 
-A **pull request** is a GitHub-specific thing. It just means that you want a codebase to merge your changes on one of your branches into one of their branches--usually to their `master` branch. Before we can do this, our remote GitHub repository (origin) needs to know about the beautiful branches and commits we've created locally, so we upload or **push** those changes to the remote.
+**Pull request** - это специфическая для GitHub вещь. Он означает, что вы хотите, чтобы кодовая база объединила ваши изменения в одной из ваших веток в одну из xe;b[] веток - как правило, в свою `master` ветку. Прежде чем мы сможем это сделать, наш удаленный репозиторий GitHub (origin) должен знать о красивых ветках и коммитах, которые мы создали локально, поэтому мы загружаем или **пушим**(push, толкаем) эти изменения на удаленный репозиторий.
 
-### 5.1 Pushing commits
+### 5.1 Пушим коммиты
 
-It's pretty easy to push our changes now that we've committed them. Be aware that, when using these commands, Git is probably going to ask for your GitHub credentials so that it can verify that you're allowed to push to that remote.
+Теперь, когда мы коммитнули наши изменения, их очень просто пушнуть. Имейте в виду, что при использовании этих команд Git, вероятно, запросит ваши учетные данные GitHub, чтобы убедиться, что вам разрешено отправлять изменения на этот ремоут.
 
-When pushing changes, we specify the *remote* repository that we're pushing to and the *local* branch that we're pushing. Simple enough.
+При пуше изменений мы указываем *удаленный* репозиторий, в который мы отправляем изменения, и *локальную* ветку, в которую мы отправляем изменения. Достаточно просто.
 
-Pushing our branch to our remote repository (origin):
+Пушим нашу ветку в удаленный репозиторий (origin):
 
 <details><summary>TortoiseGit</summary>
 <p>
@@ -417,7 +417,7 @@ Pushing our branch to our remote repository (origin):
 ![](https://i.imgur.com/bWS5Kdk.png)
 ![](https://i.imgur.com/Irv1e5k.png)
 
-Selecting 'push all branches' does what it says on the tin. Can be useful.
+ «Push all branches» делает то, что написано в его названии. Может быть полезным.
 
 </p>
 </details>
@@ -439,30 +439,29 @@ Selecting 'push all branches' does what it says on the tin. Can be useful.
 </p>
 </details>
 
-### 5.2 Making a pull request
+### 5.2 Создание Pull Request'а
 
-Now, the fun part. We'll go to GitHub now and make a pull request for our funny feature.
+А теперь самое интересное. Сейчас мы пойдем на GitHub и сделаем pull request для нашей забавной функции.
 
 ![](https://i.imgur.com/YNmEMtG.png)
 
-Add a description, a nice title, some screenshots, and hopefully it gets merged.
+Добавьте описание, красивое название, несколько скриншотов, и, надейтесь, что он будет мерджнут.
 
-## 6. Updating our repository
+## 6. Обновляем наш репозиторий
 
-Maybe it's been a while, a week or two, since your last pull request, and you'd like to make another. Before you do anything, you need to download (**pull**) the code changes from the main SS14 repository into your local repository. If you don't, you'll have out-of-date code and your local changes may not be accurate to how the game will actually run--you might even get **merge conflicts** when you try to PR.
+Возможно, прошло уже много времени, неделя или две, с момента вашего последнего ПРа, и вы хотите сделать еще один. Прежде чем что-то делать, вам нужно загрузить (**pull**) изменения кода из основного репозитория SS14 в свой локальный репозиторий. Если вы этого не сделаете, у вас будет устаревший код, а ваши локальные изменения могут не соответствовать тому, как игра будет работать на самом деле - вы даже можете получить **мердж конфликт**, когда попытаетесь сделать ПР.
 
-There are two ways to update your repository. Both methods assume you have the `upstream` remote set up properly--if not, go back to earlier in the guide. And of course, if you're developing for a downstream, then you'll want to substitute `upstream` for whatever you named the downstream repo in step 4, to make sure that you're working with that downstream's files instead of upstream's. Make sure you *always* go through the update process when switching between contributing to a fork, and contributing to upstream, otherwise you'll inevitably end up either PRing the entire history of a downstream to upstream, or making PRs to downstream that immediately conflict.
+Существует два способа обновления репозитория. Оба способа предполагают, что вы правильно настроили удаленный `upstream` - если это не так, вернитесь к предыдущему пункту руководства. И, конечно, если вы разрабатываете для форка, то вам нужно заменить `upstream` на то, как вы назвали репозиторий downstream в шаге 4, чтобы убедиться, что вы работаете с файлами downstream, а не upstream. Убедитесь, что вы *всегда* проходите процесс обновления при переключении между вкладом в форк и вкладом в upstream, иначе вы неизбежно окажетесь либо в PR всей истории downstream в upstream, либо сделаете PR в downstream, которые немедленно вступят в конфликт.
 
-The first method, **fetch+merge**, gives you more control but can be confusing. The second method, **pulling**, is simple and easy but doesn't give you much control. However, pulling is usually all you need.
+Первый метод, **fetch+merge**, дает вам больше контроля, но может быть запутанным. Второй метод, **pull**, прост и легок, но не дает вам большого контроля. Однако, как правило, pull - это все, что вам нужно.
 
-### 6.1 Fetch + merge method
+### 6.1 Метод fetch + merge
 
-**Fetching** refers to downloading the new branches and commits from a remote repository--but not doing anything with them just yet (nothing locally will be changed). After we fetch changes from our `upstream` remote (the main SS14 repository), we'll merge them into our local `master` branch.
+**Fetching** означает загрузку новых веток и коммитов из удалённого репозитория, но пока ничего с ними не делаем (локально ничего не изменится). После получения изменений из удаленного `upstream` (основного репозитория SS14) мы объединим их с нашей локальной веткой `master`.
 
-When you fetch a remote, it downloads those branches to your local repository and prepends them with the remotes name and a slash. So, when you fetch `upstream`, it'll make a branch called `upstream/master`. As a bonus, you can checkout this remote branch directly if you'd like, and even create a local branch based off it, which is especially useful if you're working with more than just upstream.
+Когда вы качаете удалённый репозиторий, он загружает эти ветки в ваш локальный репозиторий и добавляет к ним имя удалённой ветки и слеш. Таким образом, когда вы получаете `upstream`, он создаст ветку под названием `upstream/master`. В качестве бонуса вы можете проверить эту удаленную ветку напрямую, если захотите, и даже создать на ее основе локальную ветку, что особенно полезно, если вы работаете не только с upstream.
 
-
-First, let's fetch from our `upstream` remote. It'll take a little bit to complete.
+Сначала давайте фетчнем `upstream`. Это займет немного времени.
 
 <details><summary>TortoiseGit</summary>
 <p>
@@ -470,7 +469,7 @@ First, let's fetch from our `upstream` remote. It'll take a little bit to comple
 ![](https://i.imgur.com/3cWun8b.png)
 ![](https://i.imgur.com/XGgXRY0.png)
 
-Make sure you select `upstream` and not origin!
+Убедитесь, что вы выбрали `upstream`, а не origin!
 
 </p>
 </details>
@@ -480,9 +479,9 @@ Make sure you select `upstream` and not origin!
 
 ![](https://i.imgur.com/CNFFJJ8.png)
 
-I think smartgit fetches from all remotes when you click this?????
+Я думаю, что smartgit берет данные со всех ремоутов, когда вы нажимаете вот это?????.
 
-If it doesn't and it just fetches from origin, go to the bottom left and do this:
+Если это не так, и он просто берет из origin, перейдите в левый нижний угол и сделайте следующее:
 
 ![](https://i.imgur.com/8rF0tz5.png)
 
@@ -494,16 +493,16 @@ If it doesn't and it just fetches from origin, go to the bottom left and do this
 
 ![](https://i.imgur.com/aJvW9PX.png)
 
-Here nothing happened because I just fetched, but it'll take a while.
+Здесь ничего не произошло, потому что я только что выполнил фетч и это займет некоторое время.
 
 </p>
 </details>
 
 <hr>
 
-Now, we'll merge those changes we just downloaded into our `master` branch. You don't have to merge into master here; you can merge into another branch, too. If you just wanted to 'fast-forward' update one of your branches to make sure your PR is up to date, you can merge into that branch instead.
+Теперь мы мерджнем изменения, которые мы только что загрузили, в нашу ветку `master`. Здесь не обязательно мерджить в master; вы можете мерджнуть и в другую ветку. Если вы просто хотите «быстро» обновить одну из ваших веток, чтобы убедиться, что ваш PR обновлён, вы можете мерджнуть коммиты и в эту ветку.
 
-Check out the branch you want to merge to. Then,
+Проверьте ветку в которую вы хотите мерджнуть ПР и затем,
 
 <details><summary>TortoiseGit</summary>
 <p>
@@ -528,20 +527,20 @@ Check out the branch you want to merge to. Then,
 
 ![](https://i.imgur.com/H2L8pOp.png)
 
-You can also `git merge upstream/master [branch-to-merge-to]
+Вы также можете `git merge upstream/master [ветка куда мерджнуть]
 
 </p>
 </details>
 
-### 6.2 Pull method
+### 6.2 Метод Pull'а
 
-**Pulling** refers to **fetching** (downloading) the new branches and commits from a remote repository, and then merging them into a branch. Pulling is often easier because Git has a nice system for automatically figuring out which remote you want to fetch from (but it doesn't always work cleanly). 
+**Pulling** означает **фетчинг** (загрузку) новых веток и коммитов из удаленного репозитория, а затем их мердж в вашу ветку. Пуллинг часто проще, потому что в Git есть хорошая система для автоматического определения того, из какого удалённого репозитория вы хотите получить информацию (но она не всегда работает хорошо). 
 
-Pulling is usually simpler and a lot easier to do.
+Пуллить обычно проще и намного легче.
 
-We'll **pull** from our `upstream` remote (the main SS14 repo) and tell it to merge into our local `master` branch.
+Мы сделаем **pull** из нашего удаленного `upstream` (основного репо SS14) и скажем ему слиться с нашей локальной `master` веткой.
 
-First, checkout your `master` branch. We covered this earlier. Then,
+Сначала `checkout` `master` ветку. Мы уже рассказывали об этом ранее. Затем,
 
 <details><summary>TortoiseGit</summary>
 <p>
@@ -572,96 +571,95 @@ First, checkout your `master` branch. We covered this earlier. Then,
 
 <hr>
 
-If either method went well, you've successfully updated your master branch (or whichever branch you chose to update)! Do this regularly, and always before you start work on a new branch.
+Если оба метода прошли успешно, значит, вы успешно обновили мастер-ветку (или ту ветку, которую вы выбрали для обновления)! Делайте это регулярно и всегда перед началом работы над новой веткой.
 
-# Addendums
+# Дополнения
 
-## 1. Things to keep in mind
+## 1. Что нужно иметь в виду
 
-You've more or less learned the workflow for developing features for SS14 Git-wise, but here's some things I'd really like to hammer into your mind:
-- When creating a new feature, *always always always* create a new branch off of `master` before committing anything. If you accidentally commit your physics changes to your bike horn branch, you're not in for a fun time, but it is fixable (see Oh Shit, Git?! above)
-- **Never, ever commit RobustToolbox or any submodules like Lidgren.Network** unless you know what you're doing. In the top-level local repository, these submodules are considered 'files', so it's easy to accidentally stage and commit them. Do not do this. See below for how to fix your fuckups if it happens.
-- If you need further help with Git, feel free to ask in the SS14 Discord in #howdoicode.
+Вы более или менее изучили рабочий процесс разработки функций для SS14 с точки зрения Git, но вот некоторые вещи, которые я бы хотел вбить вам в голову:
+- При создании новой штуки, *всегда всегда* создавайте новую ветку от `master`, прежде чем коммитить что-либо. Если вы случайно закоммитите изменения физики в ветку с велосипедным клаксоном, вам не поздоровится, но это поправимо (см. Ёбанный Git!!!» выше).
+- **Никогда, никогда не коммитьте в RobustToolbox или любые сабмодули вроде Lidgren.Network**, если вы не знаете, что делаете. В локальном репозитории верхнего уровня эти сабмодули считаются «файлами», поэтому их легко случайно закоммитить. Не делайте этого. О том, как исправить свои ошибки, если это произошло, читайте ниже.
+- Если вам нужна дополнительная помощь с Git, не стесняйтесь спрашивать в [SS14 Discord](https://discord.gg/ss14) в канал #разработка
 
-## 2. A quick example workflow
+## 2. Быстрый пример рабочего процесса
 
-To get everything in your head and to summarize it all, here's an example workflow for making several pull requests using Git Bash commands.
+Чтобы все уложилось в голове и всё подытожить, вот пример рабочего процесса по созданию нескольких Пулл Реквестов с помощью команд Git Bash.
 
 ```python
-git checkout master # Before we create a new branch, we should be on master.
-git fetch upstream # We'll fetch any new changes from the SS14 repo..
-git merge upstream/master # ..and merge them into our master branch.
+git checkout master # Прежде чем мы создадим новую ветку, мы должны быть на master.
+git fetch upstream # Мы получим все новые изменения из репозитория SS14...
+git merge upstream/master # ...и объединим их в нашу ветку master.
 
-git checkout -b my-new-feature # Make a new branch for the feature
-...local changes later...
-git add -A # Add all of our local changes to the staging area
-git commit -m "Fix spaghetti explosions" # Commit them
-git push origin my-new-feature # and push them to our remote
+git checkout -b my-new-feature # Создаём новую ветку для нашей фичи.
+...после локальных изменений кода...
+git add -A # Добавляем все наши локальные изменения в staging
+git commit -m «Fix spaghetti explosions» # Коммитим их
+git push origin my-new-feature # и отправляем их на наш удалённый репозиторий
 
-# Now, I want to work on a different pull request.
+# Теперь я хочу поработать над другим ПРом.
 
 git checkout master
 
-# It hasn't been too long, and nothing important was merged,
-# so I won't fetch and merge changes again--just a new branch.
+# Прошло не так много времени, и ничего важного не было мерджнуто,
+# поэтому я не буду фетчить и мерджить изменения снова - просто новая ветка.
 
 git checkout -b another-feature
-...local changes later...
+...после локальных изменений кода...
 git add -A
-git commit -m "Deletes nuclear operatives"
+git commit -m «Удаляет ядерных оперативников»
 
-# I committed, but then I realized my commit was entirely wrong 
-# and i'll take it up later.
+# Я коммитнул изменение, но потом понял, что мой коммит был совершенно неправильным 
+# и я займусь этим позже.
 
 git revert HEAD
 git checkout master
 
-...a week later...
+...неделю спустя...
 
-# A lot of new stuff was merged, so let's update our branch.
+# Было мерджнуто много нового, так что давайте обновим нашу ветку.
 
 git fetch upstream
 git merge upstream/master master
 git checkout another-feature
 git merge master
 
-# Now we'll make changes and push again, this time correctly.
+# Теперь внесём изменения и снова пушнем, на этот раз корректно.
 
-...local changes later...
+...локальные изменения позже...
 git add -A
-git commit -m "Adds Highlander gamemode"
+git commit -m «Добавляет игровой режим Highlander»
 git push origin another-feature
 
-# Made both PRs, both were merged, so we're done here
+# Мы сделали оба PR, оба были объединены, так что на этом мы закончили
 
 git checkout master
-git branch -d my-new-feature # Delete both old branches
+git branch -d my-new-feature # Удаляем обе старые ветки
 git branch -d another-feature
 
 ```
 
-# Glossary: The Inner Machinations of Git
+# Глоссарий: Внутренние механизмы Git
 
-Just for reference, here's a little glossary of Git concepts and terms explained in a little more detail, all in one place.
+Для справки, вот небольшой глоссарий понятий и терминов Git, объясняющий их более подробно и в одном месте.
 
-- **'Branches'** are self-contained versions of the codebase that you can add commits to. The default branch is **master**, but you can make as many as you like.
-- **'Repositories'** are essentially just folders where you can use Git to make changes and keep track of changes made. Local repositories are repositories you have on your computer, and remote repositories are repositories that live on websites like [GitHub](https://github.com/space-wizards/space-station-14). Repositories are made up of a lot of branches.
-- **'Remotes'** are names for and links to remote repositories that your local repository can use.
-- **'Submodules'** are repositories that are located inside another repository.
-- **'Forks'** are repositories that are based on another repository. If you're going to make a pull request to the SS14 repo, you need to fork it first.
-- **'The working tree'** is just every file and folder and what not that's in the repository.
-- **'Staging'** means adding (with `git add`) changes from your working tree into the 'staging area', where  some actions can be performed on it
-- **'Commits'** are snapshots of the repository's working tree at a given time. Basically a save point. A 'commit' is just a list of files that have been changed from the last commit, and the changes that are 'committed' are the changes that you've 'staged'.
-- **'Checking out'** is the act of switching to another branch so you can mess with it or look at its changes locally.
-- **'Merging'** is the act of integrating the changes from one branch into another branch.
-- **'Merge conflicts'** occur when integrating the changes from one branch into another can't be done automatically because they both change the same area in a file, or their changes are mutually exclusive in some other way.
-- **'Fetching'** means getting the branches and commits of a remote repository, but not actually.. doing anything with them yet. You'll just have them updated for if you want to checkout or merge them later.
-- **'Pulling'** is the act of integrating changes from a remote repository's branch into your local branch.
-- **'Pull requests'** are a GitHub-specific action that allow you to request that your local branch and all of its changes is merged into another repository's branch.
-- **'Pushing'** is the act of integrating your local changes into a remote repository.
+- **'Ветки'**(Branch) это последовательность коммитов (история изменения состояния репозитория). Каждый коммит в ветке имеет «родителя» (parent commit) - коммит, на основе которого был получен текущий. В репозитории может быть несколько веток (в случаях, когда к одной версии репозитория применяется несколько независимых изменений).
+- **'Репозиторий'** совокупность файлов, состояние которых отслеживается, и история их изменений. По факту, репозиторий — это проект, над которым ведется работа, и все изменения в этом проекте. Для отслеживания состояния файла его необходимо добавить в репозиторий, репозитории живут на сайтах по типу [GitHub](https://github.com/space-wizards/space-station-14).
+- **'Ремоуты'** это имена и ссылки на удаленные репозитории, которые может использовать ваш локальный репозиторий.
+- **'Сабмодули'** это репозитории, которые находятся внутри другого репозитория.
+- **'Форки'** это репозитории, которые основаны на другом репозитории. Если вы собираетесь сделать ПР в репозиторий SS14, вам нужно сначала его форкнуть.
+- **"Рабочее дерево"**(Working tree) - это все файлы, папки и прочее, что есть в репозитории.
+- **'Staging'** означает добавление (с помощью `git add`) изменений из вашего рабочего дерева в «staging area», где над ними могут быть произведены некоторые действия.
+- **'Коммиты'** это снимки рабочего дерева репозитория в определённый момент времени. По сути, это точка сохранения. Коммит» - это просто список файлов, которые были изменены с момента последнего коммита, а изменения, которые "коммитнули", - это изменения, которые вы "стейджнули"
+- **'Чекаут'**(Checkout) - это акт переключения на другую ветку, чтобы вы могли работать с ней или просматривать её изменения локально.
+- **'Мерджинг'** это акт интеграции изменений из одной ветки в другую ветку.
+- **'Мердж конфликты'** возникают, когда интеграция изменений из одной ветки в другую не может быть выполнена автоматически, потому что обе ветки изменяют одну и ту же область файла или их изменения взаимоисключают друг друга каким-либо другим способом.
+- **'Фетчинг'**(Fetching) означает получить ветки и коммиты удаленного репозитория, но на самом деле... ничего с ними пока не делать. Они просто будут обновлены, если вы захотите проверить или мерджнуть их позже.. 
+- **'Пуллинг'**(Pulling) это акт интеграции изменений из ветки удаленного репозитория в вашу локальную ветку.
+- **'Пулл Реквесты'**(Pull Request) это специфическое для GitHub действие, позволяющее запросить слияние вашей локальной ветки и всех ее изменений с веткой другого репозитория.
+- **'Пушинг'**(Pushing) это акт интеграции ваших локальных изменений в удаленный репозиторий.
 
-There are way more commands and concepts than this, but this is all you *really* need to know for basic development work.
-
+Существует гораздо больше команд и концепций, чем эта, но это все, что вам действительно нужно знать для базовой разработки.
 
 # Appendix A: Helpful tips and tricks
 
