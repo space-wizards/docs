@@ -13,7 +13,7 @@ In the case where a player has optimized plants for output, they can drop a HUGE
 
 Entity spam is eventually an issue, but bigger problems are hit by glowing plants. The lighting engine gets weird when there are hundreds or thousands of lights on screen at once, and reported issues vary from "screen goes permanently black" to "FoV disabled entirely" to "shadows dont look right until you walk away". I don't want to remove stuff because of engine limits, but I do know that some problems don't show up for everyone and are hard to reproduce live, and may vary in addition with settings and hardware performance levels.
 
-I maintain that the best way to address the issue is to give botanists more demands from the rest of the station to juggle, and more potential goals to pursue. I also acknowledge that 
+I maintain that the best way to address the issue(s) is to give botanists more demands from the rest of the station to juggle, and more potential goals to pursue. I also acknowledge that doesn't mean players wouldn't choose to max production to a problematic degree anyways, and there should still be some sort of mechanical way to minimize the impact of that. It's time to fix the issue.
 
 ## Details
 
@@ -30,7 +30,7 @@ Other potential ideas I'd pass on:
 * GlowCode: A new system tracks the specific offenders everyone hates
 * SpaceAnts: Produce rot after a certain amount of time on the floor.
 
-##SlowGrow
+## SlowGrow
 
 Every time a repeatable harvest plant is harvested, another tick (15 seconds) is added to the time required for the next harvest(so after the 4th harvest, you're waiting another minute on top the plants normal wait time for the 5th). For the same min-maxed plant above, this reduces harvest count from 28 to 8, and total produce from 168 to 48. That's 30% of the original total, and puts the 30-minute spam number closer to 1,000.... which is still a lot, but a huge improvement.
 
@@ -40,8 +40,7 @@ For most normal plants, this cuts down on the number of total harvests by ~2. Th
 * CON: still allows possibly-too-big numbers of produce production
 * OPINION: This is my favorite idea on the list. It lets a botanist do stuff, and the quantities involved should still FEEL like you're making a ton of stuff even if those numbers are cut down from current state. It also limits bad actors ability to jump DUMP LIGHTS onto the engine, but it doesn't remove the possibility entirely. It's a solid plan, but it may not be enough to end the conversation on its own.
 
-
-### YieldCap
+## YieldCap
 We could allow mutation effects to set their own cap on stat values. In this case, no matter what you rolled Bioluminescent on, it would get its Yield/Production clamped to a specific value (EX: Yield at max 2 or 3, Production to min 5). This cuts back on using high-yield/fast-reharvest plants as the base for mutations since they no longer offer any benefit, and it does not matter which order mutations get rolled in.
 
 This puts a solid cap on how quickly effects can be dropped in-game depending on the number of PlantHolders available. Using the example values (Yield 3, Production 5), that's 12 glowy fruits every 5 minutes per plant tray. In a normal Hydro room with the same min-maxed setup as above, it's a similar 1100 produce per 30 minutes. 
