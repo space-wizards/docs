@@ -1,197 +1,197 @@
-# Setting up a Development Environment
+# Настройка среды разработки
 
-First you're gonna need some software:
+Для начала вам понадобится некоторое программное обеспечение:
 
-* [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
-* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio also installs this if you're on Windows.
-  * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
-* Preferably an IDE to make development not painful (all free options unless otherwise noted):
-  * For **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 8 SDK or something along those lines.
-  * For **macOS**, [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/).
-  * For **all platforms**, (NOT FREE) [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 devs prefer it over Visual Studio. College/University students can get a free education license, even if they're not a computer science major.
-  * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
-    * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
-  * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
+* [Git](https://git-scm.com/) или одно из [многих](https://www.sourcetreeapp.com/) [сторонних](http://www.syntevo.com/smartgit/) [интерфейсов](https://tortoisegit.org/), которые облегчают его использование. Убедитесь, что он устанавливается в ваш PATH, как [это](../../assets/images/setup/git-path.png).
+* [Python 3.7 или выше](https://www.python.org/). Убедитесь, что он установлен в ваш [PATH в Windows](../../assets/images/setup/python-path.png). Также убедитесь, что опция 'py launcher' включена при установке на Windows. Вы можете скачать python с сайта [python.org](https://www.python.org/). Версии, установленные из Windows Store, иногда вызывают проблемы со сборкой.
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio также устанавливает его, если вы работаете под Windows.
+  * ARM (M1) Пользователи Mac: Вы должны убедиться, что установили x64 .NET, **не** ARM .NET. В настоящее время движок не работает на Mac ARM, поэтому рекомендуется использовать x64 через эмуляцию Rosetta 2. 
+* Желательно наличие IDE, чтобы разработка не была мучительной (все варианты бесплатны, если не указано иное):
+  * Для **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). Для минимальной установки (О боже, какой он большой) вам понадобится .NET desktop, компилятор C#, поддержка C#, менеджер пакетов NuGet, MSBuild и .NET 8 SDK или что-то в этом роде.
+  * Для **macOS** - [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/).
+  * Для **всех платформ**, (НЕ БЕСПЛАТНО) [Rider](https://www.jetbrains.com/rider/) - одна из лучших доступных IDE, и многие разработчики предпочитают ее Visual Studio. Студенты колледжей/университетов(в основном европейских и американских) могут получить бесплатную образовательную лицензию, даже если они не изучают информатику.
+  * Для **всех платформ**, [Visual Studio Code](https://code.visualstudio.com/) с расширением C#. Обычно уступает полноценным IDE, таким как обычная Visual Studio, но некоторым опытным программистам нравится минимализм.
+    * **Эксклюзивно для VSCode/VSCodium**: вы можете установить расширение [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml), созданное нашим сообществом, для улучшения работы Robust Toolbox с YAML поверх расширения [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml).
+  * Для **всех платформ**, [VSCodium](https://vscodium.com/) с расширением C#. С открытым исходным кодом и без раздутости и отслеживания VSCode.
 
-## 1. Cloning
+## 1. Клонирование
 
-**Even if you already know Git, scroll down to read the section about submodule setup. Seriously.**
+**Даже если вы уже знакомы с Git, прокрутите страницу вниз, чтобы прочитать раздел о настройке сабмодулей. Серьезно.**
 
-If you're **familiar with Git**, just fork and clone the repository, set up remotes, and then follow the submodule guide below.
+Если вы **знакомы с Git**, просто форкните и клонируйте репозиторий, настройте ремоуты, а затем следуйте руководству по сабмодулям ниже.
 
-If you're **unfamiliar with Git**, or just don't know how to proceed, follow the [Git for the SS14 Developer](./git-for-the-ss14-developer.md) guide, which goes in depth on how to contribute to the game and how to set up your initial repository. It also touches on submodule setup, but that's included here as well because of its importance.
+Если вы **не знакомы с Git** или просто не знаете, как действовать, следуйте руководству [Git для разработчиков SS14](./git-for-the-ss14-developer.md), в котором подробно рассказывается о том, как внести свой вклад в игру и как создать свой начальный репозиторий. В нем также затрагивается настройка подмодулей, но это также включено сюда из-за его важности.
 
-## 2. Submodule Setup
+## 2. Настройка сабмодулей
 
-We have an automatic submodule updater so you don't have to worry about running `git submodule update --init --recursive` all the time. 
+У нас есть автоматический апдейтер сабмодулейй, так что вам не придется постоянно запускать `git submodule update --init --recursive`. 
 
-Run `RUN_THIS.py` inside the repo you downloaded with Python. Preferably from a terminal too. This should take a few seconds so if it instantly stops then check if you are running Python 3.7+ otherwise keep reading.
+Запустите `RUN_THIS.py` внутри репозитория с помощью Python. Желательно также из терминала. Это должно занять несколько секунд, так что если он мгновенно остановится, проверьте, не используете ли вы Python 3.7+, иначе продолжайте читать.
 
-**If running `RUN_THIS.py` immediately opens and closes a window: do not worry.** This does not mean that it failed. The script closes automatically upon completion, so if you want to verify that it worked properly, check the submodule `/RobustToolbox/` and verify that all the files are there. If not try checking out the troubleshooting at the bottom of this page.
+**Если при запуске `RUN_THIS.py` сразу открывается и закрывается окно: не волнуйтесь**. Это не означает, что скрипт не сработал. Скрипт автоматически закрывается по завершении, поэтому, если вы хотите проверить, что он сработал правильно, проверьте подмодуль `/RobustToolbox/` и убедитесь, что все файлы там есть. Если нет, посмотрите категорию устранение неполадок в нижней части этой страницы.
 
-Note: If you have any issues when getting started with missing files it's recommended you run `git submodule update --init --recursive` by hand once in case something went wrong with python.
+Примечание: Если у вас возникли проблемы с отсутствием файлов, рекомендуется запустить `git submodule update --init --recursive` вручную один раз, на случай если что-то пошло не так с python.
 
-If you *do* want to modify the engine directly however, or you want to update the submodule manually (the auto updating can be a pain), make a file called `DISABLE_SUBMODULE_AUTOUPDATE` inside the `BuildChecker/` directory. 
+Если же вы хотите модифицировать движок напрямую или обновлять сабмодуль вручную (автообновление может быть неприятным), создайте файл `DISABLE_SUBMODULE_AUTOUPDATE` в директории `BuildChecker/`. 
 
-And with that, your repo is now properly setup!
+И все, теперь ваше репо настроено должным образом!
 
-## 3. Setup an IDE
+## 3. Настройка среды разработки
 
 ### Visual Studio
 
-1. Download Visual Studio Community (if you don't own a paid version) from [here](https://visualstudio.microsoft.com/vs/community/)
-2. Run the installer and choose `.net desktop development`, then install
-3. If the installer asks you for a development environment select `Visual C#`.
-4. Open Visual Studio
-5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.sln`
+1. Скачайте Visual Studio Community (если у вас нет платной версии) [здесь](https://visualstudio.microsoft.com/vs/community/)
+2. Запустите программу установки и выберите `.net desktop development`, затем установите.
+3. Если программа установки спросит вас о среде разработки, выберите `Visual C#`.
+4. Откройте Visual Studio
+5. Выберите `Открыть проект или решение`, затем перейдите в клонированный репозиторий и откройте файл `SpaceStation14.sln`.
 
 ### JetBrains Rider
-1. Install Rider, we suggest using [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) so it can also automaticly update in the future.
-2. Go through the setup.
-3. Press "Open" and select `SpaceStation14.sln`
-4. If you plan to do engine development you must add Robust Toolbox to the Directory Mappings so that Riders VCS can detect changes to Robust.
-   Open Riders settings and go to the Version Control section > Directory Mappings and press the plus (+) button. For Directory point it to the `RobustToolbox` folder in the project and Git as the VCS
+1. Установите Rider, мы рекомендуем использовать [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/), чтобы он мог автоматически обновляться в будущем.
+2. Выполните настройку.
+3. Нажмите «Открыть» и выберите `SpaceStation14.sln`.
+4. Если вы планируете заниматься разработкой движка, необходимо добавить Robust Toolbox в Directory Mappings, чтобы Riders VCS мог обнаруживать изменения в Robust.
+   Откройте настройки Riders, перейдите в раздел Version Control > Directory Mappings и нажмите кнопку с плюсом (+). Для Directory укажите на папку `RobustToolbox` в проекте и Git в качестве VCS
 
 ### VSCodium
-1. Download [VSCodium Here](https://vscodium.com/) or more directly [on Github Here](https://github.com/VSCodium/vscodium/releases) (On the latest release, click the assets dropdown then scroll to the ZIP or .exe for your OS).
-2. Run the installer or extract the zip file to a location of your choice and run the .exe once extracted.
-3. Once installed, navigate to the Extensions tab (part way down on the top left corner bar, looks like 4 tiles) and search for "C#". An extension by "Muhammad-Sammy" with over 70K downloads and a green / white logo is the one, install that. Extension ID `muhammad-sammy.csharp`.
-4. Select File > Open Folder, then navigate to your cloned repository from above and open this full folder.
-5. When asked to open a solution, select `SpaceStation14.sln`. Alternatively, set `dotnet.defaultSolution` setting to `SpaceStation14.sln` in your workspace settings.
-6. Now you can run and debug your game. Select the icon above "Extensions" from earlier for "Run and Debug" and from the dropdown next to the green play button you can select "Server/Client". This will run both the client and server, opening the game for you to debug. Relevant information will pop up in the debug along the bottom. Select the processes in the call stack on the left to change what you are debugging.
+1. Скачайте [VSCodium здесь](https://vscodium.com/) или напрямую [на Github здесь](https://github.com/VSCodium/vscodium/releases) (В последней версии нажмите на выпадающий список активов, затем прокрутите до ZIP или .exe для вашей ОС).
+2. Запустите программу установки или распакуйте zip-файл в выбранное вами место и запустите .exe после извлечения.
+3. После установки перейдите на вкладку «Расширения» (она на панели в левом верхнем углу, выглядит как 4 плитки) и найдите «C#». Расширение от «Muhammad-Sammy» с более чем 70K загрузок и зеленым / белым логотипом - это то, что нужно, установите его. ID расширения `muhammad-sammy.csharp`.
+4. Выберите File > Open Folder (Файл > Открыть папку), перейдите в клонированный репозиторий и откройте эту полную папку.
+5. Когда появится запрос на открытие решения, выберите `SpaceStation14.sln`. В качестве альтернативы установите в настройках рабочего пространства параметр `dotnet.defaultSolution` замените на `SpaceStation14.sln`.
+6. Теперь вы можете запустить и отладить свою игру. Выберите значок «Запуск и отладка» над «Расширениями» и в выпадающем списке рядом с зеленой кнопкой воспроизведения выберите «Сервер/клиент». Это запустит и клиент, и сервер, открыв игру для отладки. Соответствующая информация появится в отладке внизу. Выберите процессы в стеке вызовов слева, чтобы изменить то, что вы отлаживаете.
 
-## 4. Starting SS14
+## 4. Запуск SS14
 
-Now you can get on to compiling the client and server! Use your flavor of IDE to open the solution file `SpaceStation14.sln` and press the build button.
+Теперь вы можете приступить к компиляции клиента и сервера! С помощью IDE откройте файл решения `SpaceStation14.sln` и нажмите кнопку сборки.
 
-To compile without an IDE, run `dotnet build` in the Space Station 14 repo directory. Then, call the following commands to run the client and server.
+Чтобы скомпилировать без IDE, запустите команду `dotnet build` в каталоге репозитория Space Station 14. Затем вызовите следующие команды для запуска клиента и сервера.
 * `dotnet run --project Content.Server`
-* `dotnet run --project Content.Client`
+* `dotnet run --project Content.Client`.
 
-Both these commands use a debug configuration by default. To enable release optimizations, add `--configuration Release` to the dotnet invocation.
+Обе эти команды по умолчанию используют отладочную конфигурацию для дебага. Чтобы включить конфигурацию для серверов, добавьте `--configuration Release` к dotnet.
  
-Note: If you're having problems with dotnet not finding libssl (e.g. when using libressl), try setting the `CLR_OPENSSL_VERSION_OVERRIDE` environment variable to the appropriate version. For instance, set it to `48` if your `/usr/lib` contains `libssl.so.48`.
-If that doesn't work you can also try running `ln -s /usr/lib/libssl.so /usr/local/lib/libssl.so.1.0.0` instead.
+Примечание: Если у вас возникли проблемы с тем, что dotnet не находит libssl (например, при использовании libressl), попробуйте установить переменную окружения `CLR_OPENSSL_VERSION_OVERRIDE` в соответствующую версию. Например, установите значение `48`, если ваш `/usr/lib` содержит `libssl.so.48`.
+Если это не сработает, вы также можете попробовать запустить `ln -s /usr/lib/libssl.so /usr/local/lib/libssl.so.1.0.0` вместо этого.
 
-## 5. Configuring Build Options
+## 5. Настройка параметров сборки
 
-The SS14 client and server are independent projects, but both can launch with a single button somewhere in your IDE. This needs to be set up, however. Note: **It is recommended that you run `Content.Client` and `Content.Server` when developing from your IDE.** *Not* `Robust.Client` or `Robust.Server`. The reason is that running `Content.*` will make your IDE aware of dependencies correctly and ensure everything is rebuilt nicely. If you run `Robust.Client` directly you have to make sure the solution is fully built every time which is annoying and easy to forget. If you're unsure what Robust or Content are, check out [this page](../codebase-info/codebase-organization.md) on how the project is organized.
+Клиент и сервер SS14 являются независимыми проектами, но оба могут запускаться одной кнопкой в вашей IDE. Однако это необходимо настроить. Примечание: **При разработке в IDE рекомендуется запускать `Content.Client` и `Content.Server`.** *Не* `Robust.Client` или `Robust.Server`. Причина в том, что запуск `Content.*` позволит вашей IDE правильно определить зависимости и обеспечить хорошую пересборку. Если вы запустите `Robust.Client` напрямую, вам придется каждый раз убеждаться, что решение полностью собрано, что раздражает и о чем легко забыть. Если вы не знаете, что такое Robust или Content, посмотрите [эту страницу](../codebase-info/codebase-organization.md) о том, как организован проект.
 
 ### Visual Studio 2022
 
-In Visual Studio 2022, you can configure the build button to run both the server and client by right clicking the solution, then selecting `Configure StartUp Projects...`. Once the menu pops up, then select `Multiple startup projects:` and set the action for `Content.Client` and `Content.Server` to `Start`. Once you apply the changes, hitting the big `Start` button with a green arrow next to it should launch both client and server at the same time.
+В Visual Studio 2022 вы можете настроить кнопку сборки на запуск как сервера, так и клиента, щелкнув правой кнопкой мыши на решении и выбрав `Configure StartUp Projects...`. В появившемся меню выберите `Multiple startup projects:` и установите действие для `Content.Client` и `Content.Server` на `Start`. После применения изменений нажатие на большую кнопку `Start` с зеленой стрелкой должно запустить одновременно и клиент, и сервер.
 
-Note: If you're having problems with the program not getting built right, you may need to set always build before run. Go to Options `Projects and Solutions/Build and Run` and change `On Run, when projects are out of date` to `Always build`.
+Примечание: Если у вас возникли проблемы с тем, что программа не собирается правильно, вам может понадобиться установить параметр always build before run. Перейдите в Options `Projects and Solutions/Build and Run` и измените `On Run, when projects are out of date` на `Always build`.
 
-In VS you can also use the keys F7 to build the project and F5 to run it.
+В VS вы также можете использовать клавиши F7 для сборки проекта и F5 для его запуска.
 
 ### Visual Studio Code
 
-The C# extension provides a `"coreclr"` launch type which can be used to run the `Content.Server` and `Content.Client` executables in their respective `bin/` directories. A [compound launch configuration](https://code.visualstudio.com/Docs/editor/debugging#_compound-launch-configurations) can be used to run the server and client at the same time.
+Расширение C# предоставляет тип запуска `«coreclr»`, который можно использовать для запуска исполняемых файлов `Content.Server` и `Content.Client` в соответствующих каталогах `bin/`. Для одновременного запуска сервера и клиента можно использовать [составную конфигурацию запуска](https://code.visualstudio.com/Docs/editor/debugging#_compound-launch-configurations).
 
-### Command Line
+### Командная строка
 
-Build with `dotnet build` and run the client and server on different command lines with:
+Соберите с помощью `dotnet build` и запустите клиент и сервер в разных командных строках с помощью:
 
 * `dotnet run --project Content.Server`
-* `dotnet run --project Content.Client`
+* `dotnet run --project Content.Client`.
 
-There's also definitely some way to run two commands at the same time, but you should probably google it.
+Также наверняка есть способ запускать две команды одновременно, но вам, вероятно, стоит погуглить.
 
 ### JetBrains Rider
 
-In Rider you can create a "compound configuration" to run or debug both client and server at the same time. Quite convenient!
+В Rider вы можете создать «составную конфигурацию» для одновременного запуска или отладки клиента и сервера. Очень удобно!
 
 ![](../../assets/images/setup-rider-configurations.png)
 
-## 6. Configuring IDE directories
+## 6. Настройка каталогов IDE
 
-C# IDEs like Visual Studio and Rider do not automatically show the `Resources` folder in the project. This folder contains all non-C# files such as sprites, audio, and most importantly, YAML prototypes. These instructions will explain how to get this folder to show up in your IDE, so you can easily work with it.
+C# IDE, такие как Visual Studio и Rider, не отображают автоматически папку `Resources` в проекте. Эта папка содержит все файлы, не относящиеся к C#, такие как спрайты, аудио и, самое главное, прототипы YAML. В этой категории мы расскажем, как сделать так, чтобы эта папка появилась в вашей IDE, и вы могли легко с ней работать.
 
 ### Visual Studio 2022
 
-In Visual Studio, you can switch the **Solution Explorer** from "solution" view (only showing the C# projects) to "folder" view (showing all the files in the project). Press the button to switch views as follows, then select the folder view:
+В Visual Studio вы можете переключить **Solution Explorer** с вида «решение» (показывает только проекты C#) на вид «папка» (показывает все файлы в проекте). Нажмите кнопку для переключения вида следующим образом, а затем выберите вид папки:
 
 ![](../../assets/images/setup/vs-solution-explorer-switch-view-1.png)
 ![](../../assets/images/setup/vs-solution-explorer-switch-view-2.png)
 
-After this, the Solution Explorer should look something like this, and you should be able to easily access the `Resources` folder:
+После этого проводник решений должен выглядеть примерно так, и вы должны иметь возможность легко получить доступ к папке `Resources`:
 
 ![](../../assets/images/setup/vs-solution-explorer-switch-view-3.png)
 
 ### JetBrains Rider
 
-In Rider, you can "attach" the resources directory to the solution. Do this by right clicking the solution in the explorer, then doing "Add" -> "Existing Folder...". Select the "Resources" directory in the file picker.
+В Rider вы можете «прикрепить» каталог ресурсов к решению. Для этого щелкните правой кнопкой мыши решение в проводнике, затем выберите «Add» -> «Existing Folder...». Выберите каталог «Resources» в папке выбора файлов.
 
 ![asdfs](../../assets/images/setup/rider-attach-folder-1.png)
 ![](../../assets/images/setup/rider-attach-folder-2.png)
 
-After this, your solution view should look something like this, and you should be able to easily access the `Resources` folder:
+После этого вид вашего решения должен выглядеть примерно так, и вы должны иметь возможность легко получить доступ к папке `Resources`:
 
 ![](../../assets/images/setup/rider-attach-folder-3.png)
 
 ### Visual Studio Code
 
-Visual Studio Code shows all files by default, so no extra setup is needed here.
+Visual Studio Code показывает все файлы по умолчанию, так что никаких дополнительных настроек здесь не требуется.
 
-# Reproducible Development Environment with Nix/NixOS
+# Воспроизводимая среда разработки с Nix/NixOS
 
-An easier way to set up your development environment for Linux users is to leverage Nix. Nix is a package manager and a functional domain specific language that allows one to declare anything from development environments to entire systems. In order to prevent the dreaded "it works on my machine" conundrum, we can declare a development environment in Nix that spawns an isolated reproducible shell.
+Более простым способом создания среды разработки для пользователей Linux является использование Nix. Nix - это менеджер пакетов и функциональный язык, позволяющий декларировать все, что угодно, от сред разработки до целых систем. Чтобы избежать страшной проблемы «это не работает на моей машине», мы можем объявить среду разработки в Nix, которая порождает изолированную воспроизводимую оболочку.
 
-## Setting up Nix/NixOS with flakes
+## Настройка Nix/NixOS с помощью flakes
 
-You can [install Nix](https://nixos.org/download) either through installing the NixOS distribution itself or by using the script that is compatible with all Linux distributions that use systemd (Ubuntu, Fedora, Mint etc). For the sake of simplicity and convenience, it is recommended that you install Nix in a distribution that you are comfortable with instead of making the jump to a different operating system entirely. It is also possible to use Nix with MacOS through `nix-darwin` though this has not been tested as of yet and thus not covered in this article.
+Вы можете [установить Nix](https://nixos.org/download) либо через установку самого дистрибутива NixOS, либо с помощью скрипта, который совместим со всеми дистрибутивами Linux, использующими systemd (Ubuntu, Fedora, Mint и т.д.). Для простоты и удобства рекомендуется установить Nix в дистрибутив, с которым вам удобно работать, а не переходить на другую операционную систему. Также возможно использование Nix с MacOS через `nix-darwin`, но этот вариант пока не тестировался и поэтому не рассматривается в этой статье.
 
-Once Nix is installed, you should enable experimental features such as flakes. If you are on a non-NixOS distribution, you can just add the following to your `~/.config/nix/nix.conf`.
+После установки Nix вам следует включить экспериментальные функции, такие как flakes. Если вы работаете на дистрибутиве, отличном от NixOS, вы можете просто добавить следующее в `~/.config/nix/nix.conf`.
 
-* `experimental-features = nix-command flakes`
+* `experimental-features = nix-command flakes`.
 
-If you're using NixOS, you only need to add these options to your `configuration.nix` file.
+Если вы используете NixOS, вам нужно добавить только эти опции в файл `configuration.nix`.
 
-* `nix.settings.experimental-features = [ "nix-command" "flakes" ];`
+* `nix.settings.experimental-features = [«nix-command» «flakes» ];`.
 
-For more information about how to enable Nix flakes, see [here](https://nixos.wiki/wiki/Flakes).
+Более подробную информацию о том, как включить Nix flakes, можно найти [здесь](https://nixos.wiki/wiki/Flakes).
 
-## Using Nix flakes for a Robust Development Environment
+## Использование Nix flakes для Robust Toolbox
 
-NB it is technically required that you already have Git installed but in the case with most Linux distributions it comes preinstalled. In the highly unlikely case that you do not:
+Для NB технически требуется, чтобы у вас уже был установлен Git, но в случае с большинством дистрибутивов Linux он поставляется предустановленным. В крайне маловероятном случае, если у вас его нет:
 
-* Use your distribution's package manager
+* Используйте менеджер пакетов вашего дистрибутива.
 
-* Declare it in your `configuration.nix` file if you're using NixOS. It's recommended that you check the [appropriate section in the NixOS manual](https://nixos.org/manual/nixos/stable/#sec-configuration-file) but in short you should add `pkgs.git` into the `environment.systemPackages` attribute.
+* Объявите его в файле `configuration.nix`, если вы используете NixOS. Рекомендуется ознакомиться с [соответствующим разделом руководства по NixOS](https://nixos.org/manual/nixos/stable/#sec-configuration-file), но вкратце вам следует добавить `pkgs.git` в атрибут `environment.systemPackages`.
 
-Using your terminal you can simply navigate to the root directory of your SS14 repo and run:
+Используя терминал, вы можете просто перейти в корневой каталог вашего репозитория SS14 и запустить:
 
-* `nix develop`
+* `nix develop`.
 
-Nix will automatically handle all dependencies as declared by `shell.nix` and called by the `flake.nix` file. You will have a new ephemeral shell (known as a `devShell`) that has everything that you need installed to build SS14 from source.
+Nix автоматически обработает все зависимости, объявленные в файле `shell.nix` и вызванные файлом `flake.nix`. У вас появится новая эфемерная оболочка (известная как `devShell`), в которой установлено все, что нужно для сборки SS14 из исходников.
 
-This remains the reason as to why flakes are highly recommended despite being considered an experimental feature. We can make sure that everyone has the same versions of dependencies by specifying the nixpkgs collection version in the input attribute of the flake and locking the versions in a `flake.lock` file. In this way, all contributors that use Nix/NixOS get to have the exact same development environment. No pun intended, but that is pretty robust!
+Это остается причиной, по которой флейки настоятельно рекомендуются, несмотря на то, что считаются экспериментальной функцией. Мы можем убедиться, что все имеют одинаковые версии зависимостей, указав версию коллекции nixpkgs во входном атрибуте flake и заблокировав версии в файле `flake.lock`. Таким образом, все участники, использующие Nix/NixOS, получают абсолютно одинаковую среду разработки. Без каламбура, но это довольно надежно!
 
-## (Optional) Run JetBrains Rider through Nix
+## (Опционально) Запуск JetBrains Rider через Nix.
 
-You can then use either use an editor or IDE of your choosing. However within the shell that you already spawned you can just specify that you require JetBrains Rider. Run this command in your devShell.
+После этого вы можете использовать редактор или IDE по своему усмотрению. Однако в уже созданной оболочке вы можете просто указать, что вам требуется JetBrains Rider. Выполните эту команду в вашей devShell.
 
-* `NIXPKGS_ALLOW_UNFREE=1 nix shell nixpkgs#jetbrains.rider --impure`
+* `NIXPKGS_ALLOW_UNFREE=1 nix shell nixpkgs#jetbrains.rider --impure`.
 
-From your new shell you can start a "detached" JetBrains Rider process by running something like:
+Из новой оболочки вы можете запустить «отсоединенный» процесс JetBrains Rider, выполнив что-то вроде:
 
 * `nohup rider >/dev/null 2>&1 &`
 
-And voila! You have robustly set up your development environment in a way that doesn't result in pesky buildup of "state". You can practically work on SS14 from any Linux distribution (granted that they use systemd) without irreversibly changing your system.
+И вуаля! Вы надежно настроили свою среду разработки таким образом, чтобы не накапливать «состояние». Вы практически можете работать над SS14 из любого дистрибутива Linux (при условии, что они используют systemd) без необратимых изменений в вашей системе.
 
-# Troubleshooting
+# Устранение неполадок
 
-Make sure [the first three items](#setting-up-a-development-environment) on top are downloaded.
+Убедитесь, что [первые три пункта](#setting-up-a-development-environment) сверху загружены.
 
-## `RUN_THIS.py` not running
-Check that python is installed from the website and not the Microsoft Store. If it's installed from the Microsoft Store, uninstall it then download and install from the python website.
+## `RUN_THIS.py` не запускается
+Проверьте, что python установлен с веб-сайта, а не из Microsoft Store. Если он установлен из Microsoft Store, удалите его, а затем скачайте и установите с сайта python.
 
-If you are on Windows and get redirected to the Microsoft Store or encounter a message in your terminal claiming that Python is not installed. This issue may be caused by a stupid Microsoft shortcut. Which you can disable by searching for `Manage App Execution Aliases` and disabling the two python references
+Если вы работаете под Windows и перенаправляетесь в Microsoft Store или получаете сообщение в терминале о том, что Python не установлен. Эта проблема может быть вызвана глупым ярлыком Microsoft. Его можно отключить, найдя в поиске `Manage App Execution Aliases` и отключив две ссылки на python
 
 ### py not found
-If python was installed from the website and the `python` command works, but you still get the error 'py is not installed', then check if `C:\WINDOWS\py.exe` works. If so, then add `C:\WINDOWS` to your path.
+Если python был установлен с сайта и команда `python` работает, но вы все равно получаете ошибку «py не установлен», то проверьте, работает ли `C:\WINDOWS\py.exe`. Если да, то добавьте `C:\WINDOWS` в свой путь.
 
 ## System.DllNotFoundException: Unable to load DLL 'freetype6' or one of its dependencies: The specified module could not be found.
 
@@ -208,13 +208,13 @@ Unhandled exception. Robust.Shared.IoC.Exceptions.ImplementationConstructorExcep
    at Robust.Client.GameController.ParsedMain(CommandLineArgs args, Boolean contentStart, IMainArgs loaderArgs, GameControllerOptions options) in C:\Users\Larme\Downloads\space-station-14\RobustToolbox\Robust.Client\GameController\GameController.Standalone.cs:line 49
 ```
 
-Uninstall .NET Core SDK x86. Install .NET Core SDK x64.
+Удалите .NET Core SDK x86. Установите .NET Core SDK x64.
 
 
-## The client and server aren't available in Visual Studio to configure in Multiple startup projects
+## Клиент и сервер недоступны в Visual Studio для настройки в проекте Multiple startup.
 
-This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file.
+Это может быть связано с тем, что вы открыли проект как папку, а не как решение. Убедитесь, что вы открыли его как решение и щелкните файл .sln космической станции 14.
 
-## The system cannot find the specified file RUN_THIS.py
+## Система не может найти указанный файл RUN_THIS.py
 
-`The system cannot find the specified file` error usually means that OneDrive is conflicting with the git repository. Clone the git repo outside of OneDrive or disable syncing for the cloned folder.
+Ошибка `The system cannot find the specified file` обычно означает, что OneDrive конфликтует с git-репозиторием. Клонируйте git-репозиторий за пределами OneDrive или отключите синхронизацию для клонированной папки.
