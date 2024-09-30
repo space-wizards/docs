@@ -1,361 +1,358 @@
-# Server Hosting Tutorial
+# Хостинг для
+Разместить локальный сервер-песочницу для игры несложно, но создать большой производственный сервер, поддерживающий сотни игроков, немного сложнее. Это руководство разбито на «уровни», соответствующие сложности.
 
-Hosting a local sandbox server for playing around is easy, but setting up a large production server supporting hundreds of players is a bit harder. This guide is organized into "levels" corresponding to difficulty.
+## Level 0: Локальная Песочница
 
-## Level 0: Local Sandbox Server
-
-```admonish danger title="DO NOT MODIFY THE RESOURCES FOLDER IN PRE-PACKAGED SERVER BUILDS"
-Really don't, it wont work. Attempting to do so anyway will **void your support**.
-The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
-If you wish to modify your server to add your own content. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
+```admonish danger title="НЕ МОДИФИЦИРУЙТЕ ПАПКУ RESOURCES В ПРЕДВАРИТЕЛЬНО СКОМПИЛИРОВАННЫХ СЕРВЕРАХ"
+Действительно не стоит, это не сработает. Попытка сделать это в любом случае приведет к **отказу от поддержки**.
+Единственные изменения, которые вы можете внести в упакованную сборку сервера - это файл ``server_config.toml`.
+Если вы хотите модифицировать свой сервер и добавить в него собственное содержимое. Вам понадобится [соответствующая среда разработки](./setting-up-a-development-environment.md) с вашими изменениями, а затем [сбилдить вашу собственную сборку](#level-2-server-with-custom-code).
 ```
 
-1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
-2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
-3. Extract that to a directory somewhere.
-4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
-5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
-6. When there is a new update. Go back to the second step, and copy over the ``data`` folder and ``server_config.toml``if you modified it.
+1. Скачайте и установите [.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). Вам нужен только «x64» в разделе «run console apps», а не «hosting bundle» со страницы загрузок.
+2. Скачайте последнюю версию сервера с [нашей страницы сборок](https://wizards.cdn.spacestation14.com/fork/wizards), для вашей операционной системы. Если вы ищете другой форк, спросите его, есть ли у него страница с готовой сборкой сервера. В противном случае обратитесь к разделу [Custom Code](#level-2-server-with-custom-code) ниже.
+3. Распакуйте это в какую-нибудь директорию.
+4. Запустите `run_server.bat` (Windows) или `Robust.Server` [через терминал на macOS/Linux](#running-the-server-on-macos-or-linux))
+5. Откройте Space Station 14 Launcher и нажмите на ``Прямое подключение к серверу``, введите ``localhost`` и нажмите кнопку подключения. Вы также можете добавить его в избранное, если нажмете кнопку ``Добавить в избранное``.
+6. Когда появится новое обновление. Вернитесь ко второму шагу и скопируйте папку ``data`` и ``server_config.toml``, если вы его изменяли.
 
-If you prefer video guides, [here is one](https://youtu.be/IDBqrAGZ3cA)!
+Если вы предпочитаете видеоинструкции, [вот одна из них](https://youtu.be/IDBqrAGZ3cA)!
 
-## Level 1: Invite Your Friends
+## Уровень 1: Играем с друзьями
+Если вы хотите, чтобы другие люди могли подключиться и играть, вам нужно будет выполнить несколько дополнительных действий.
 
-You will need to do some extra steps if you want other people to be able to connect and play.
+### Переадресация портов
 
-### Port Forwarding
+Чтобы люди могли подключаться к серверу, необходимо открыть сетевые порты. По умолчанию игровой сервер использует два порта:
+* UDP `1212` используется для основного игрового неткода. Он необходим для того, чтобы *клиент* мог подключиться к серверу. Его можно настроить с помощью переменной конфигурации `net.port`.
+* TCP `1212` - это API статуса HTTP. Он также необходим для того, чтобы *лаунчер* мог подключиться к серверу. Для соединения с голым клиентом он не нужен. Это можно настроить с помощью конфигурационной переменной `status.bind` (которая принимает строку типа `*:1212` или `127.0.0.1:3000`).
 
-The server needs network ports to be forwarded so that people can connect. By default, the game server uses two ports:
-* UDP `1212` is used for main game netcode. This is necessary for the *client* to be able to connect to the server. This can be configured with the `net.port` configuration variable.
-* TCP `1212` is a HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
+Для получения дополнительной информации о том, как открыть порты, см: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
+После переадресации портов вы можете использовать [этот сайт](https://www.whatismyip.com/), чтобы получить свой публичный IP-адрес. Если у вас есть IPV4 и IPV6, попробуйте оба, если один из них не работает.
 
-After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6 try both if one fails.
-
-Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
+Дайте это своим друзьям и попросите их подключиться к нему напрямую. Если проброс портов был выполнен правильно, они должны иметь возможность подключиться.
 
 ```admonish info
-If have an IPV6 address (looks kinda like this ``fd11:5ee:bad:c0de::ab3:3d03``) make sure to include square brackets (``[fd11:5ee:bad:c0de::ab3:3d03]``) when in the direct connect menu.
+Если у вас есть IPV6-адрес (выглядит примерно так ``fd11:5ee:bad:c0de::ab3:3d03``), убедитесь, что в меню прямого подключения указаны квадратные скобки (``[fd11:5ee:bad:c0de::ab3:3d03]``).
 ```
 
-### Configure Your Server
+ 
+### Настройте ваш сервер
 
-You can configure settings in the server by editing the config file, `server_config.toml`. The config file is TOML which is basically INI ~~except better specified, somewhat more powerful, easier to misuse, and more annoyingly opinionated (comments NEED their own line)~~.
+Вы можете настроить параметры сервера, отредактировав файл конфигурации, `server_config.toml`. Конфигурационный файл - это TOML, который по сути является INI ~~за исключением того, что он лучше специфицирован, несколько мощнее, его легче использовать не по назначению и он более раздражающе настроен (комментарии не имеют своей собственной строки)~~.
 
-Settings have one key they fall under and then the name. So if I say `game.lobbyenabled` it goes under the `[game]` header like so:
+Настройки имеют один ключ, под который они попадают, а затем имя. Так что если я скажу `game.lobbyenabled`, то это будет под заголовком `[game]`, например:
 ```toml
 [game]
 lobbyenabled = true
 ```
 
-Got that? Good.
+Понятно? Хорошо.
 
-**Some sane defaults you might want to set for your server if you actually intend to host this properly:**
+**Некоторые разумные значения по умолчанию, которые вы, возможно, захотите установить для своего сервера, если вы действительно собираетесь разместить это должным образом:**
 
 ```admonish warning
-Please read through the comments here so you have a solid grasp of what you're doing.
+Пожалуйста, прочтите комментарии здесь, чтобы вы хорошо понимали, что вы делаете.
 ```
 
 ```toml
 [net]
-# Reducing tickrate to 30 is basically unnoticeable
-# but reduces server, client and network load dramatically.
+# Уменьшение тикрейта до 30 практически незаметно.
+# но значительно снижает нагрузку на сервер, клиентов и сеть.
 tickrate = 30
 
 [game]
-# Changes the name of the server as it appears in the lobby and launcher.
-hostname = "Foo Station"
-# Enables the lobby instead of straight up throwing clients into a game.
+# Изменяет имя сервера, отображаемое в лобби и пусковой установке.
+hostname = «Foo Station»
+# Включает лобби вместо того, чтобы сразу бросать клиентов в игру.
 lobbyenabled = true
 
 [auth]
-# Enforces authentication so that ALL connecting clients must have a proper account.
-# Otherwise, guest logins are allowed.
-# Possible values here are: 0 (optional), 1 (required), 2 (disabled)
-mode = 1
+# Обеспечивает аутентификацию, так что ВСЕ подключающиеся клиенты должны иметь соответствующую учетную запись.
+# В противном случае разрешены гостевые логины.
+# Возможные значения: 0 (необязательно), 1 (обязательно), 2 (отключено)
+режим = 1
 ```
 
-See [Config File Reference](../tips/config-file-reference.md) for a somewhat more thorough guide on server configuration.
+Несколько более подробное руководство по настройке сервера см. в [Config File Reference](../tips/config-file-reference.md).
 
-### Admin Privileges
+ 
+### Привилегии администратора
 
-By default, no admin privileges are set. A privileged administrator can give out permissions to other admins with the `permissions` console command in-game, but that has a chicken-and-egg problem. To get initial `+HOST` administrator permissions to your server, you can use one of the following three methods:
+По умолчанию привилегии администратора не установлены. Привилегированный администратор может раздавать права другим администраторам с помощью консольной команды `permissions` в игре, но в этом случае возникает проблема курицы и яйца. Чтобы получить начальные права администратора `+HOST` на вашем сервере, вы можете использовать один из следующих трех методов:
 
 ```admonish danger
-`+HOST` privileges are **extremely dangerous** to give and should only be given to people who already have access to your computer or server.
+Привилегии `+HOST` предоставлять **очень опасно**, и их следует давать только тем людям, у которых уже есть доступ к вашему компьютеру или серверу.
 
-**Giving somebody `+HOST` allows them to completely take over your server and/or computer.** 
+**Давая кому-то `+HOST`, он может полностью захватить ваш сервер и/или компьютер.** 
 ```
 
-* If you connect to the game server over localhost (IP `127.0.0.1` or `::1`), the game will automatically give you full host privileges. This can be disabled with the `console.loginlocal` CVar.
-* If you set the `console.login_host_user` CVar to your user name, you will be given host when you connect.
-* You can use `promotehost` command from the server console (e.g. `promotehost PJB`) to temporarily give a connected client host.
+* Если вы подключаетесь к игровому серверу через localhost (IP `127.0.0.1` или `::1`), игра автоматически предоставит вам полные привилегии хоста. Это можно отключить с помощью параметра `console.loginlocal` CVar.
+* Если вы установите в CVar `console.login_host_user` ваше имя пользователя, то при подключении вам будет предоставлен хост.
+* Вы можете использовать команду `promotehost` из консоли сервера (например, `promotehost PJB`) для временного предоставления хоста подключенному клиенту.
 
+## Уровень 2: Сервер с пользовательским кодом
+Чтобы создать сборку сервера с пользовательским кодом, необходимо [настроить среду разработки](./setting-up-a-development-environment.md). После этого вам нужно сгенерировать сборку сервера, запустив ее:
 
-## Level 2: Server With Custom Code
-You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
+Сначала вы билдите инструмент упаковки, используя:
 
-You first build the packaging tool using:
+`dotnet build Content.Packaging --configuration Release`.
 
-`dotnet build Content.Packaging --configuration Release`
-
-Then you can use Content.Packaging to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``
+Затем вы можете использовать Content.Packaging для выполнения сложной работы. Команда ниже упакует сервер с помощью hybrid-acz (чтобы программа запуска могла загружать ваш пользовательский контент) для систем linux. Если вы хотите сделать это для Windows, замените ``linux-x64`` на ``win-x64``.
 
 `dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
 
 ```admonish info
-Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this instead
+Обратите внимание, что если вы используете более старый сервер, на котором данная система не была реализована, или вам нужно использовать устаревший скрипт (больше не поддерживается), то вместо этого используйте следующее
 `python Tools/package_server_build.py --hybrid-acz`
 ```
 
-Check the `release/` folder for a packaged server for your custom codebase.
+Проверьте папку `release/` на наличие упакованного сервера для вашей пользовательской кодовой базы.
 
+## Уровень 3: «Производственный» сервер
 
-## Level 3: A "Production" Server
+Разумеется, он не будет делать автоматические перезагрузки (в случае чего) или обновления, как это делает Watchdog. Он также не будет публично публиковать ваш сервер на хабе, так как публикация в хабе по умолчанию отключена. Если вы хотите, чтобы ваш сервер был опубликован на хабе, прочтите статью `Public Hub Server` ниже.
 
-This will not, of course, handle automatic restarts (in case of a crash) or updates like the watchdog would. This also won't list your server publicly on the hub as advertising defaults to off. If you wish to have your server listed on the hub please read `Bare Server Configuration` below.
+Для других сервисов, таких как `SS14.Watchdog`, вам также потребуется [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (входит в .NET 8 SDK).
 
-For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
+### Установка правил
+По умолчанию сервер поставляется без правил. Чтобы установить пользовательские правила для своего сервера, выполните следующие действия:
 
-### Setting Rules
-By default, the server ships with no rules. To set custom rules for your own server:
+1. Форкните проект, если вы этого еще не сделали (что означает также [setting up development environment](./setting-up-a-development-environment.md)).
+2. Добавьте файл-путеводитель с вашими правилами в директорию `Resources/ServerInfo/Guidebook/ServerRules`. Придерживайтесь формата `DefaultRules.xml`.
+3. Добавьте запись прототипа справочника в `Resources/Prototypes/Guidebook/rules.yml`. Укажите на созданный вами текстовый файл путеводителя.
+4. Установите CCVar `server.rules_file` в ID, который вы задали в прототипе справочника, созданном на предыдущем шаге.
 
-1. Fork the project if you have not already (which means also [setting up development environment](./setting-up-a-development-environment.md))
-2. Add a guidebook file with your rules in the `Resources/ServerInfo/Guidebook/ServerRules` directory. Follow the format of `DefaultRules.xml`
-3. Add a guidebook prototype entry in `Resources/Prototypes/Guidebook/rules.yml`. Pointing to the newly created guidebook text file file you made.
-4. Set the `server.rules_file` CCVar to the ID you set in the guidebook prototype you made in the previous step.
+### Public Hub Server - Получение вашего сервера в списке программы запуска
 
-### Public Hub Server - Getting your server on the launcher's list
+1. Прочитайте [правила хаба](../../community/space-wizards-hub-rules.md), прежде чем размещать свой сервер в нём. Размещение в хабе означает согласие с его правилами.
 
-1. Read  the [hub server rules](../../community/space-wizards-hub-rules.md) before putting your server on the hub. Advertising to the hub constitutes acceptance of the hub rules.
+2. Выберите теги для своего сервера на основе [стандартных тегов](../../robust-toolbox/server-http-api.md#standard-tags).
 
-2. Pick tags for your server based on the [standard tags](../../robust-toolbox/server-http-api.md#standard-tags).
-
-3. Add the following lines to your [server configuration](../tips/config-file-reference.md):
+3. Добавьте следующие строки в [конфигурацию сервера](../tips/config-file-reference.md):
 
     ```toml
     [hub]
     advertise = true
-    # Uncomment to change the server URL advertised on the master server list.
-    # Use this if you want an ss14s:// URL or have configured the server behind a reverse proxy or any of that.
-    # Defaults to "ss14://[public server IP]:networking port"
-    # server_url = "ss14://..."
-    tags = "" # comma separated list of tags
+    # Чтобы изменить URL-адрес сервера, показываемый в списке основных серверов.
+    # Используйте это, если вам нужен ss14s:// URL или вы настроили сервер за обратным прокси или что-то в этом роде.
+    # По умолчанию «ss14://[IP-адрес публичного сервера]:сетевой порт»
+    # server_url = «ss14://...»
+    tags = «» # список тегов, разделенных запятыми
     ```
-If you get an error attempting to advertise please read [the troubleshooting bellow](#Troubleshooting)
+Если при попытке размещения сервера в хабе вы получаете ошибку, прочтите [раздел по устранению неполадок](#Troubleshooting)
 
-### Bare Server Build Configuration
+### Конфигурация сборки сервера
 
-If you *do* want to set up a more permanent server, you will have to re-host the client downloads somewhere. Anywhere accessible via a plain URL is fine.
+Если вы захотите создать более постоянный сервер, вам придется где-то разместить клиентские загрузки. Подойдет любое место, доступное по обычному URL.
 
-You will want to edit the server config file (`server_config.toml`) to add the following to it:
+Вам нужно будет отредактировать файл конфигурации сервера (`server_config.toml) и добавить в него следующее:
 
 ```toml
 [build]
-# Download locations of the entire client build in a zip, as a HTTP (or HTTPS) URL.
-download_url = ""
+# Загружать местоположение всей сборки клиента в zip-архиве в виде HTTP (или HTTPS) URL.
+download_url = «»
 ```
 
-### Performance Tweaks
+### Настройки производительности
 
-Here are some settings you probably want to enable on your server to improve performance:
+Вот некоторые настройки, которые вы, вероятно, захотите включить на своем сервере для повышения производительности:
 
-Environment variable to enable full dynamic PGO, which drastically improves performance at the cost of marginally higher startup time:
+Переменная окружения для включения полного динамического PGO, что значительно повышает производительность ценой незначительного увеличения времени запуска:
 ```
 DOTNET_TieredPGO: 1
 DOTNET_TC_QuickJitForLoops: 1
 DOTNET_ReadyToRun: 0
 ```
 
-Environment variable to enable AVX operations across the codebase. Depending on your processor, this might hurt performance instead of improving it, otherwise it may improve atmos performance.
+Переменная окружения для включения операций AVX во всей кодовой базе. В зависимости от вашего процессора, это может ухудшить производительность, а не улучшить ее, в противном случае это может улучшить производительность atmos.
 ```
 ROBUST_NUMERICS_AVX: true
 ```
 
-You can set environment variables from the watchdog, see below.
+Вы можете установить переменные окружения из настроек WatchDog, см. ниже.
 
-## Level 4: Production Watchdog Server
+## Уровень 4: Производственный сервер c Watchdog
 
-This is for people running their own codebase and server and/or those who want a more robust hosting solution.
+Этот уровень предназначен для тех, кто работает с собственной кодовой базой и сервером, и/или для тех, кто хочет более надежное решение для хостинга.
 
-[`SS14.Watchdog`](https://github.com/space-wizards/SS14.Watchdog/) (codename Ian) is our server-hosting wrapper thing, similar to TGS for BYOND (but much simpler for the time being). It handles auto updates, monitoring, automatic restarts, and administration. We recommend you use this for proper deployments.
+[`SS14.Watchdog`](https://github.com/space-wizards/SS14.Watchdog/) (кодовое имя Ian) - это наш помощник для хостинга, похожий на TGS для BYOND (но гораздо более простой на данный момент). Он обрабатывает автообновления, мониторинг, автоматические перезагрузки и администрирование. Мы рекомендуем вам использовать его для правильного развертывания.
 
-### Installation
-[`Refer to this`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for instructions on building and configuring Watchdog.
+### Установка
+[`Ссылайтесь на это`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) для получения инструкций по сборке и настройке Watchdog.
 
-### Server Build Configuration
+### Конфигурация сборки сервера
 
-The launcher needs to download the client binary to be able to run the game. It gets information about this client binary from the game server via an info API.
+Чтобы запустить игру, пусковой установке необходимо загрузить бинарный файл клиента. Он получает информацию об этом клиентском бинарнике с игрового сервера через информационный API.
 
-The information returned from this API is configured in two ways: `build.json` and `build.*` configuration variables.
+Информация, возвращаемая из этого API, настраивается двумя способами: `build.json` и `build.*` конфигурационные переменные.
 
-`build.json` is a file that gets put next to the server executable automatically by the build system. This is how the server knows what the build info is when just downloading a bare server zip. (note that this is NOT done by `package_release_build.py`, since it relies on extra build information. `gen_build_info.py` does it in a separate step)
+`build.json` - это файл, который система сборки автоматически помещает рядом с исполняемым файлом сервера. Так сервер узнает информацию о сборке, когда просто загружает zip-архив голого сервера (обратите внимание, что это НЕ делает `package_release_build.py`, поскольку он полагается на дополнительную информацию о сборке. `gen_build_info.py` делает это на отдельном шаге)
 
-The second option is by specifying configuration variables (from command line or config file, both work):
-
+Второй вариант - указание конфигурационных переменных (из командной строки или файла конфигурации, оба варианта работают):
 ```toml
 [build]
-# "Identifier" of your codebase. This is used by the launcher to manage installations.
-# Try to keep this unique between different codebases.
-# Nothing will break if you don't (or if there's a malicious actor),
-# but the launcher WILL be forced to redownload files more often than otherwise necessary.
-fork_id = ""
+# «Идентификатор» вашего сервера. Он используется программой запуска для управления установками.
+# Старайтесь, чтобы он был уникальным для разных кодовых баз.
+# В противном случае (или при наличии злоумышленника) ничего не сломается,
+# но программа запуска будет вынуждена скачивать файлы чаще, чем это необходимо.
+fork_id = «»
 
-# Version string of the current build running on the server.
-# This just prompts the launcher to redownload if it's different.
-version = ""
+# Строка версии текущей сборки, запущенной на сервере.
+# Это просто побуждает программу запуска к повторной загрузке, если она отличается.
+version = «»
 
-# Version of the engine to download.
-# Engine versions are hosted by us and will probably stay up forever.
-# At least, as long as they are not found to be vulnerable to any security exploits, then we may pull them.
-engine_version = ""
+# Версия движка для загрузки.
+# Версии движков размещаются у нас и, вероятно, останутся навсегда.
+# По крайней мере, до тех пор, пока не будет обнаружено, что они уязвимы к каким-либо эксплойтам безопасности, тогда мы можем их удалить.
+engine_version = «»
 
-# Download locations of the entire client build in a zip, as a HTTP/HTTPS URL.
-download_url = ""
+# Место загрузки всей клиентской сборки в zip-архиве, в виде ссылки HTTP/HTTPS.
+download_url = «»
 
-# SHA256 hash of client zip files specified above.
-hash = ""
+# SHA256-хэш zip-файлов клиента, указанных выше.
+hash = «»
 ```
 
-Note that `SS14.Watchdog` specifies *most* of it for you if you have configured it with auto updates (depending on update provider). It notably cannot provide `engine_version` or `fork_id` version, so you're best off specifying the former in build.json (your build system should be non garbage for this) and the latter in a config file.
+Обратите внимание, что `SS14.Watchdog` определяет *большую часть* этого за вас, если вы настроили его на автоматическое обновление (в зависимости от поставщика обновлений). В частности, он не может предоставить версию `engine_version` или `fork_id`, так что лучше всего указать первую в build.json (ваша система сборки должна быть не мусорной для этого), а вторую в файле конфигурации.
 
-## Level 5: Big Production Server
-Things that aren't necessary for small/private servers, but strongly recommended for forks or larger production servers.
+## Уровень 5: Большой сервер
+Вещи, которые не являются необходимыми для небольших/частных серверов, но настоятельно рекомендуются для форков или больших производственных серверов.
 
-### Advanced Port Forwarding
+### Расширенная переадресация портов
 
-You can slap the HTTP status API behind a reverse proxy if you want. This is recommended for production servers since then you can do HTTPS (slap it behind nginx and turn on HTTPS). Note that if you do this you have to set the `status.connectaddress` config variable to specify the UDP address the main netcode should connect to. This has to look like this: `udp://server.spacestation14.io:1212` (for our server, obviously substitute with your params). 
+При желании вы можете засунуть HTTP status API за обратный прокси. Это рекомендуется для производственных серверов, так как тогда вы можете сделать HTTPS (пробросить его за nginx и включить HTTPS). Обратите внимание, что в этом случае вы должны установить конфигурационную переменную `status.connectaddress`, чтобы указать UDP-адрес, к которому должен подключаться основной неткод. Это должно выглядеть следующим образом: `udp://server.spacestation14.io:1212` (для нашего сервера, очевидно, замените своими параметрами). 
 
 
-### PostgreSQL Setup
+### Настройка PostgreSQL
 
-SS14 uses an SQL database to store server data like player slots. By default, an **SQLite** database is automatically used which is sufficient for local testing and small servers. If you want the ability to share the database between multiple servers or such however, the server also supports connecting to **PostgreSQL**.
-Support for MySQL/MariaDB isn't currently planned, but we will accept contributions.
+SS14 использует базу данных SQL для хранения данных сервера, таких как слоты игроков. По умолчанию автоматически используется база данных **SQLite**, которой достаточно для локального тестирования и небольших серверов. Однако если вам нужна возможность разделить базу данных между несколькими серверами, сервер также поддерживает подключение к **PostgreSQL**.
+Поддержка MySQL/MariaDB в настоящее время не планируется, но мы будем принимать предложения.
 
-Relevant configuration properties, along with default values:
+Соответствующие свойства конфигурации, а также значения по умолчанию:
 
 ```toml
-# Server config file
+# Файл конфигурации сервера
 [database]
-# Database type to use. Can be "sqlite" or "postgres" currently.
-engine = "sqlite"
+# Тип используемой базы данных. В настоящее время это может быть «sqlite» или «postgres».
+engine = «sqlite»
 
-# Path to store the database at when using SQLite. Note that is NOT a disk path.
-# This is relative to the server data directory, which is specified by --data-dir when starting the server from the command (or automatically set by SS14.Watchdog)
-sqlite_dbpath = "preferences.db"
+# Путь для хранения базы данных при использовании SQLite. Обратите внимание, что это НЕ путь к диску.
+# Это относительно каталога данных сервера, который указывается параметром --data-dir при запуске сервера из команды (или автоматически устанавливается SS14.Watchdog)
+sqlite_dbpath = «preferences.db»
 
-# PostgreSQL database configuration, should be self explanatory.
-pg_host = "localhost"
+# Конфигурация базы данных PostgreSQL, все говорит само за себя.
+pg_host = «localhost»
 pg_port = 5432
-pg_database = "ss14"
-pg_username = ""
-pg_password = ""
+pg_database = «ss14»
+pg_username = «»
+pg_password = «»
 ```
 
-The game server automatically does migrations when it starts up, you do not have to do them manually.
+Игровой сервер автоматически выполняет миграцию при запуске, вам не нужно делать это вручную.
 
-### Prometheus Metrics
+### Метрика Prometheus
 
-SS14 supports hosting a metrics server that [Prometheus](https://prometheus.io/) can scrape, with which you can then make fancy graphs in [Grafana](https://grafana.com/) or such. You can find our Grafana dashboards [here](../../community/infrastructure-reference/grafana-dashboards.md), in case they happen to be useful.
+SS14 поддерживаеn [Prometheus](https://prometheus.io/), с помощью которого вы можете создавать причудливые графики в [Grafana](https://grafana.com/) или тому подобное. Вы можете найти наши графики Grafana [здесь](../../community/infrastructure-reference/grafana-dashboards.md), если они вдруг окажутся полезными.
 
-To configure this, you can use the following config variables:
+Чтобы настроить это, вы можете использовать следующие переменные конфигурации:
 
 ```toml
 [metrics]
 enabled = true
-# Address to bind the metrics server to, use "*" for all local interfaces
-host = "localhost"
-# Port to bind the metrics server to
-port = 44880
+# Адрес для привязки сервера метрик, используйте «*» для всех локальных интерфейсов
+host = «localhost»
+# Порт для привязки сервера метрик
+порт = 44880
 ```
 
-You can then scrape this with the following Prometheus config (for example):
+Затем вы можете скрапировать это с помощью следующей конфигурации Prometheus (например):
 
 ```yml
 global:
   scrape_interval: 1s
-  evaluation_interval: 1s
+  интервал_оценки: 1с
 
 scrape_configs:
-  - job_name: "wizards_den_us_west"
+  - имя_работы: «wizards_den_us_west»
     static_configs:
-      - targets: ["localhost:44880"]
+      - targets: [«localhost:44880»]
 ```
 
-### Loki Logging
+### Логирование через Loki
 
-SS14 also supports pushing structured log data to [Loki](https://grafana.com/oss/loki/). Because this is modern DevOps crap the website doesn't say what it actually does but when combined with Grafana you can go and look at and filter logs in a debatably more sane way than bare text files.
+SS14 также поддерживает отправку структурированных данных логов в [Loki](https://grafana.com/oss/loki/). Поскольку это современное DevOps-дерьмо, на сайте не сказано, что это на самом деле делает, но в сочетании с Grafana вы можете просматривать и фильтровать логи более разумным способом, чем голые текстовые файлы.
 
-No, you do not need Promtail set up for this to work. SS14 pushes directly to Loki.
+Нет, вам не нужно настраивать Promtail, чтобы это работало. SS14 напрямую передает данные в Loki.
 
-To configure this, you can use the following config variables:
+Чтобы настроить это, вы можете использовать следующие переменные конфигурации:
 
 ```toml
 [loki]
 enabled = true
-# HTTP address of the Loki server.
-address = "http://localhost:3100"
-# Name of this server, gets included in all log messages.
-name = "wizards_den_us_west"
-# Parameters for HTTP Basic authentication, if you have Loki configured behind it.
-# If left out, no authentication will be attempted.
-# username = ""
-# password = ""
+# HTTP-адрес сервера Loki.
+address = «http://localhost:3100»
+# Имя этого сервера, включаемое во все сообщения журнала.
+name = «wizards_den_us_west»
+# Параметры для HTTP Basic-аутентификации, если Loki настроен за ней.
+# Если оставить эти параметры, аутентификация не будет производиться.
+# username = «»
+# пароль = «»
 ```
 
-## Troubleshooting
+## Устранение неполадок
 
-### Unable to advertise to hub / people cannot connect
+### Невозможно разместить сервер х хабе / люди не могут подключиться
 
-People aren't able to connect to your server OR you get the following error in your server console:
+Люди не могут подключиться к вашему серверу ИЛИ вы получаете следующую ошибку в консоли сервера:
 
 ```
-[ERRO] hub: Error status while advertising server: [UnprocessableEntity] "Unable to contact status address"
+[ERRO] hub: Error status while advertising server: [UnprocessableEntity] «Unable to contact status address»
 ```
 
-This means your server is not accessible from the outside internet. Make sure you have followed the guide to [Port Forwarding](../../server-hosting/port-forwarding.md).
+Это означает, что ваш сервер недоступен из внешнего интернета. Убедитесь, что вы следовали руководству по [открытию портов](../../server-hosting/port-forwarding.md).
 
 ### SS14.Watchdog
 
-#### Server keeps restarting every 30 seconds
+#### Сервер перезапускается каждые 30 секунд.
 
-This means the server isn't communicating with the watchdog correctly and the watchdog is forced to assume that the server is locked up or similar. This happens if `BaseUrl` in the watchdog configuration is set incorrectly or otherwise inaccessible by the game server.
+Это означает, что сервер некорректно взаимодействует с Watchdog, и Watchdog считает, что сервер заблокирован или что-то подобное. Это происходит, если `BaseUrl` в конфигурации watchdog установлен неверно или иным образом недоступен игровому серверу.
 
 #### `System.IO.FileNotFoundException: Could not load file or assembly 'Mono.Posix.NETStandard, Version=1.0.0.0, Culture=neutral` (...)
 
-Current working theory is that this is caused by improper `dotnet publish` settings.
-The below set of test results should help explain.
+Текущая рабочая теория заключается в том, что это вызвано неправильными настройками `dotnet publish`.
+Приведенный ниже набор результатов тестирования должен помочь объяснить это.
 
 ```
 dotnet publish -c Release -r linux-x64 --no-self-contained SS14.Watchdog -o test
- RESULT: Mono.Posix.NETStandard.dll included, System.dll not included (as expected)
+ РЕЗУЛЬТАТ: Mono.Posix.NETStandard.dll включена, System.dll не включена (как и ожидалось)
 
 dotnet publish -c Release -r linux-x64 SS14.Watchdog -o test
- RESULT: Mono.Posix.NETStandard.dll included, System.dll included
+ РЕЗУЛЬТАТ: Mono.Posix.NETStandard.dll включена, System.dll включена
 
 dotnet publish -c Release SS14.Watchdog -o test
- RESULT: Mono.Posix.NETStandard.dll not included, System.dll not included
+ РЕЗУЛЬТАТ: Mono.Posix.NETStandard.dll не включена, System.dll не включена
 ```
 
-Since Watchdog uses `Mono.Posix.NETStandard.dll` to mark executables as executable on Linux and Mac OS X, it's important to have it around on those OSes.
+Поскольку Watchdog использует `Mono.Posix.NETStandard.dll` для пометки исполняемых файлов как исполняемых в Linux и Mac OS X, важно иметь его под рукой в этих ОС.
 
-### Running the server on MacOS or Linux
+### Запуск сервера на MacOS или Linux
 
-Open a terminal in the unzipped build directory (it should have the Robust.Server file in it.)
-Type `./Robust.Server` then hit enter. If you see a bunch of stuff being printed to the screen and it doesn't say error, then the server is running.
+Откройте терминал в распакованном каталоге сборки (в нем должен быть файл Robust.Server).
+Введите `./Robust.Server` и нажмите Enter. Если вы видите, что на экран выводится куча всякой всячины, и при этом нет сообщения об ошибке, значит, сервер запущен.
 
-### Additional Troubleshooting
+### Дополнительное устранение проблем
 
-[Troubleshooting](../tips/troubleshooting-faq.md#server)
+[Типичные проблемы](../tips/troubleshooting-faq.md#server)
 
-## Useful Links
-All of the important links on this page in one convenient place.
-* [Config Reference](../tips/config-file-reference.md)
-* [.NET 8 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 8 SDK)
-* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Also included in full .NET 8 SDK)
+## Полезные ссылки
+Все важные ссылки на этой странице в одном удобном месте.
+* [Помощь в конфигурации сервера](../tips/config-file-reference.md)
+* [.NET 8 Runtime](https://dotnet.microsoft.com/download) (Также входит в полный .NET 8 SDK)
+* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Также включено в полный .NET 8 SDK)
 * [SS14.Watchdog](https://github.com/space-wizards/SS14.Watchdog/)
-* [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
-* [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)
-* [Public Hub Server Rules](../../community/space-wizards-hub-rules.md)
-* [Port Forwarding](../../server-hosting/port-forwarding.md)
+* [Официальные сборки](https://central.spacestation14.io/builds/wizards/builds.html)
+* [Референс инфраструктуры Wizard's Den](../../community/infrastructure-reference/wizards-den-infrastructure.md) (спецификации сервера)
+* [Правила хаба](../../community/space-wizards-hub-rules.md)
+* [Открытие портов](../../server-hosting/port-forwarding.md)
