@@ -11,7 +11,7 @@ Updates are deployed every 14 days over the course of a weekend (Usually on a Sa
 All PRs must be reviewed according to the PR review procedure [documented here], and may be merged to the development branch "master" at any point. PR's fixing code bugs or critical gameplay issues must additionally follow the Hotfix procedure [documented here], and should be deployed to the "stable" branch. 
 
 ### What is Hotfixable?
-Any issue that directly impacts a player's ability to play the game in a largely negative way and can be considered by most to be a "bug" can be merged as a Hotfix. Critical gameplay issues may also fall into this category as well. "Critical" being a gameplay issue that is majorly disruptive to players **or admins**. *Outside of an emergency*, all **Hotfixes require 3 maintainers to sign-off** on merging (Ideally they should also review but giving approval is enough).
+Any issue that directly impacts a player's ability to play the game in a largely negative way and can be considered by most to be a "bug" can be merged as a Hotfix. Critical gameplay issues may also fall into this category as well. "Critical" being a gameplay issue that is majorly disruptive to players **or admins**. *Outside of an emergency*, all **Hotfixes require 3 maintainers to sign-off** on merging (Ideally they should also review but giving approval is enough). Bugfixes may be applied to master following the regular review requirements.
 
 ### Branching
 There are *three* branches that are used in this process:
