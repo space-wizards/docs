@@ -7,7 +7,7 @@ This doc was last updated at 2024-10-01 13:52:04 UTC
 ```admonish danger
 All forks listed here (Exept Wizard's Den) are **not vetted**. We only just put the links in a convinient place.
 
-Third party server builds are not affiliated with the project, and have the samse risks as running any random executable off the internet. Only run them if you trust them to not take over your computer
+Third party server builds are not affiliated with the project, and have the same risks as running any random executable off the internet. Only run software that you trust.
 ```
 
 | Fork name | URL | Available platforms | License |
