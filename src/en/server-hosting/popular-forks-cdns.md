@@ -13,7 +13,7 @@ Third party server builds are not affiliated with the project, and have the same
 | Fork name | URL | Available platforms | License |
 |---|---|---|---|
 | Wizard's Den | [Link](https://wizards.cdn.spacestation14.com/fork/wizards) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | MIT |
-| Harmony 14 | [Link](http://cdn.harmony14.com/fork/harmony/) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | Someone please tell @vasilisiscool on discord |
+| Harmony 14 | [Link](http://cdn.harmony14.com/fork/harmony/) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | MIT |
 | Solaris 14 | [Link](https://ss14-cdn.mw-gc.com/fork/MWGSolaris14) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | MIT |
 | Axolotl MRP | [Link](https://axolotl.yuniiworks.de/cdn/fork/axolotl/) | Linux (x64) | MIT |
 | DeltaV | [Link](https://cdn.delta-v.org/fork/delta-v/) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | AGPL |
