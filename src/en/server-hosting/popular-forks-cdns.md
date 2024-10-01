@@ -2,7 +2,7 @@
 
 This document will serve as a list of forks known to have a prebuilt server software for players to download.
 
-This doc was last updated at 2024-10-01 13:52:04 UTC
+This doc was last updated at 2024-10-01
 
 ```admonish danger
 All forks listed here (Exept Wizard's Den) are **not vetted**. We only just put the links in a convinient place.
