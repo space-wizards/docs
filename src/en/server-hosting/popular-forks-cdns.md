@@ -7,17 +7,16 @@ This doc was last updated at 2024-10-01 13:52:04 UTC
 ```admonish danger
 All forks listed here (Exept Wizard's Den) are **not vetted**. We only just put the links in a convinient place.
 
-Unlike game clients, server executables have way more access to the system they are ran on and as such may be harmful to your security.
-
-Please ensure you trust the fork before you run any server files. We are not responsible for any damage caused to your system by 3rd party forks.
+Third party server builds are not affiliated with the project, and have the samse risks as running any random executable off the internet. Only run them if you trust them to not take over your computer
 ```
 
-| Fork name | URL | Available platforms |
-|---|---|---|
-| Wizard's Den | [Link](https://wizards.cdn.spacestation14.com/fork/wizards) | Windows, macOS (x64/Intel), Linux (x64/ARM64) |
-| Harmony 14 | [Link](http://cdn.harmony14.com/fork/harmony/) | Windows, macOS (x64/Intel), Linux (x64/ARM64) |
-| Solaris 14 | [Link](https://ss14-cdn.mw-gc.com/fork/MWGSolaris14) | Windows, macOS (x64/Intel), Linux (x64/ARM64) |
-| Axolotl MRP | [Link](https://axolotl.yuniiworks.de/cdn/fork/axolotl/) | Linux (x64) |
+| Fork name | URL | Available platforms | License |
+|---|---|---|---|
+| Wizard's Den | [Link](https://wizards.cdn.spacestation14.com/fork/wizards) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | MIT |
+| Harmony 14 | [Link](http://cdn.harmony14.com/fork/harmony/) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | Someone please tell @vasilisiscool on discord |
+| Solaris 14 | [Link](https://ss14-cdn.mw-gc.com/fork/MWGSolaris14) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | MIT |
+| Axolotl MRP | [Link](https://axolotl.yuniiworks.de/cdn/fork/axolotl/) | Linux (x64) | MIT |
+| DeltaV | [Link](https://cdn.delta-v.org/fork/delta-v/) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | AGPL |
 
 FAQ:
 
@@ -43,5 +42,5 @@ Rules for listing:
 6. Dehubbed servers or any servers breaking these rules will be removed.
 
 Template
-| SERVER NAME | [Link](SERVER_LINK) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | 
+| SERVER NAME | [Link](SERVER_LINK) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | LICENSE |
 -->
