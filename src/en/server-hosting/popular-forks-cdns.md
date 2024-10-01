@@ -5,7 +5,7 @@ This document will serve as a list of forks known to have a prebuilt server soft
 This doc was last updated at 2024-10-01
 
 ```admonish danger
-All forks listed here (Exept Wizard's Den) are **not vetted**. We only just put the links in a convinient place.
+All forks listed here (Exept Wizard's Den) are **not vetted by Wizard's Den**. We only just put the links in a convinient place.
 
 Third party server builds are not affiliated with the project, and have the same risks as running any random executable off the internet. Only run software that you trust.
 ```
