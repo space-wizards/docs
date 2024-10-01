@@ -4,6 +4,14 @@ This document will serve as a list of forks known to have a prebuilt server soft
 
 This doc was last updated at 2024-10-01 13:52:04 UTC
 
+```admonish danger
+All forks listed here (Exept Wizard's Den) are **not vetted**. We only just put the links in a convinient place.
+
+Unlike game clients, server executables have way more access to the system they are ran on and as such may be harmful to your security.
+
+Please ensure you trust the fork before you run any server files. We are not responsible for any damage caused to your system by 3rd party forks.
+```
+
 | Fork name | URL | Available platforms |
 |---|---|---|
 | Wizard's Den | [Link](https://wizards.cdn.spacestation14.com/fork/wizards) | Windows, macOS (x64/Intel), Linux (x64/ARM64) |
