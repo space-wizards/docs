@@ -5,7 +5,7 @@ This document will serve as a list of forks known to have a prebuilt server soft
 This doc was last updated at 2024-10-01
 
 ```admonish danger
-All forks listed here (Exept Wizard's Den) are **not vetted by Wizard's Den**. We only just put the links in a convinient place.
+All forks listed here (Except Wizard's Den) are **not vetted by Space Wizards**. We only put the links here for convenience.
 
 Third party server builds are not affiliated with the project, and have the same risks as running any random executable off the internet. Only run software that you trust.
 ```
@@ -18,7 +18,7 @@ Third party server builds are not affiliated with the project, and have the same
 | Axolotl MRP | [Link](https://axolotl.yuniiworks.de/cdn/fork/axolotl/) | Linux (x64) | MIT |
 | DeltaV | [Link](https://cdn.delta-v.org/fork/delta-v/) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | AGPL |
 
-FAQ:
+## FAQ:
 
 - The fork I want is not listed here.
 	- You will need to contact the fork you want a server build for and ask them if they provide one. If they do suggest them to add themselves here.
@@ -32,15 +32,16 @@ FAQ:
 - I'm a server host and I want to add myself here.
 	- You are free to make a PR yourself in the docs or ping @vasilisiscool (322708417540259841) in #hosting on discord with all the information needed.
 
-<!-- 
-Rules for listing:
+## Rules for listing:
 1. Must have a decent playerbase on the hub and been on for at least a week.
-2. Must be a simple link to the download source, no discord invites or anything like that.
+2. Must be a simple link to the download source, no discord invites, no passwords or anything like that.
 3. Must have at least one server platform.
-4. No protected forks (Require a password for access to server builds)
+4. Nothing malicious (Malware, infostealers etc)
 5. 18+/ERP forks must be expliticly stated in the fork name.
-6. Dehubbed servers or any servers breaking these rules will be removed.
 
+Dehubbed servers or any servers breaking these rules will be removed when found.
+
+<!--
 Template
 | SERVER NAME | [Link](SERVER_LINK) | Windows, macOS (x64/Intel), Linux (x64/ARM64) | LICENSE |
 -->
