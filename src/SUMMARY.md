@@ -26,6 +26,7 @@ General Development
   - [Pull Request Guidelines](en/general-development/codebase-info/pull-request-guidelines.md)
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
+  - [SS14 Release Model](en/general-development/codebase-info/releases.md)
 - [Tips](en/general-development/tips.md)
   - [Beginner FAQ](en/general-development/tips/beginner-faq.md)
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
@@ -322,7 +323,9 @@ Staff
 ----------------------
 - [Project Manager](en/wizden-staff/projectmanager.md)
 - [Maintainer](en/wizden-staff/maintainer.md)
-  - [Review Policy](en/wizden-staff/maintainer/wizards-den-review-policy.md)
+  - [Review Policy](en/wizden-staff/maintainer/maintainer-policy.md)
+  - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
+  - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
 - [Space Wizards Role Hierarchy](en/wizden-staff/space-wizards-role-hierarchy.md)
 - [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
 - [Maintainer Policy](en/wizden-staff/maintainer-policy.md)
