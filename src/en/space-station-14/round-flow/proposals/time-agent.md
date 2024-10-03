@@ -4,16 +4,16 @@ This proposal suggests the implementation of a new, mostly-neutral solo antagoni
 
 ## Mechanics
 #### Chronodisc:
-Every agent starts with a **Chronodisc** item in their bag. All abilities require the **Chronodisc** to be present somewhere in the inventory or body of their owner. Every agent is attuned to their own **Chronodisc**, so one cannot use the **Chronodisc** of another for the purposes of time manipulation. (therefore, Security might be willing to place a repentant agent on parole by taking away and destroying their **Chronodisc**, effectively making them a normal crewmember; the Science department might also appreciate being given a **Chronodisc**, as it grants a nice amount of research points)
+Every agent starts with a **Chronodisc** item in their bag, as well as a compact medpack. The **Chronodisc** is an embeddable throwing weapon, and it can be rewinded/resummoned back into the agent's hand via **Rewind Chronodisc** by its original owner. It must be noted that the Science department, when word gets out that there is a Time Agent on the station, will be incentivized to hunt down said agent in order to claim their **Chronodisc**, as it grants a rather nice amount of research points.
 
 #### Possibilities:
 By completing objectives - even optional ones - agents create opportunities for them to be able to use their abilities safely. Each agent starts with 1 possibility plus 1 additional possibility per **Nudge Life** objective at spawntime. The amount of possibilities the agent may have can freely dip into the negatives, but there are consequences to this listed below.
 
 #### Doom:
-By failing mandatory objectives or by excessively using possibilities, the total amount of possibilities an agent currently has decreases. This amount can decrease into the negative. When an agent's amount of available possibilities is negative, they become doomed. Dying while doomed prevents revival and resuscitation. While an agent is alive for a certain amount of time while doomed, they become vulnerable to Doom Events. The only way for an agent to escape doom is to bring the amount of possibilities they have back to the positive or, at the very least, 0.
+By failing mandatory objectives or by excessively using possibilities, the total amount of possibilities an agent currently has decreases. This amount can decrease into the negative. When an agent's amount of available possibilities is negative, they become doomed. Dying while doomed prevents revival and resuscitation. While an agent is alive for a certain amount of time while doomed, they enter a Doom State. The only way for an agent to escape doom is to bring the amount of possibilities they have back to the positive or, at the very least, 0.
 
-#### Doom Events:
-When a doomed agent is alive for a certain amount of time - the timer for which gets halved every time the agent continues expending possibilities while their counter is in the negative - things around them may malfunction in certain ways to cause their demise. Examples include getting shocked having a 90% chance of husking, getting hit by a stabbing/blunt attack having a 90% chance of piercing/bludgeoning the eyes & brain if the attack was on the head, getting hit by a stabbing/blunt attack having a 90% chance of piercing/bludgeoning the heart if the attack was on anything other than the head, damage taken from chemicals/diseases/ailments is increased tenfold, being affected by a chemical substance has a 90% chance to instantly cause an allergy to said substance, etc.
+#### Doom State:
+When a doomed agent is alive for a certain amount of time - the timer for which gets halved every time the agent continues expending possibilities while their counter is in the negative - they enter a Doom State, causing them to become affected by a 10x multiplier to all incoming damage - both from combat and from DoT effects like harmful chemicals. Additionally, being in a Doom State causes a roll of the proverbial die every single minute (with random delays to avoid predictability) which has a 25% chance of causing the agent to die immediately, regardless of their current health. Instadeath caused by successful Doom State rolls is accompanied by one of several unique death messages, as well as various unique flairs accompanying the message in question: some blood decals, vomit decals, outright gibbing, loss of limbs; basically, whatever fits the theme of that specific death.
 
 
 ## Skills
@@ -37,17 +37,8 @@ Teleports the agent into a projection of the past - a temporary, empty dimension
 #### Temporal Loop Memories:
 The agent recalls the actions they must perform with **Assist the Past** to close the time loops created by **Summon Future Assistance**.
 
-#### United Synchronization:
-Can be cycled through freely. Multiplied uses of abilities incur multiplied amounts of possibilities, as is expected.
-* **None**: The default.
-* **Past Only**: Using **Summon Past Assistance** uses the ability twice if there are 2 or more **Assist the Future** loops currently prepared for closure.
-* **Past & Future**: Using **Summon Past Assistance** uses the ability as many times as there is **Assist the Future** loops currently prepared for closure. If the amount of prepared **Assist the Future** loops is less than 3, **Summon Future Assistance** is used however many times needed to bring the total number of summoned doppelgangers up to 3. Using **Summon Future Assistance** uses the ability thrice.
-* **Future Only**: Using **Summon Future Assistance** uses the ability twice.
-
-#### Rewind Bubble:
-Expends 4 possibilities. When blown, automatically pops in 21 seconds if not popped manually. (manual popping is simply done by using the ability again while a bubble is currently active)
-* **Blow**: Saves the state of the area in a 5 tile radius around the agent, as well as the agent's position.
-* **Pop**: Rewinds the saved area, as well as any items or mobs tagged/logged by the bubble, to the state everything was in when the bubble was blown. The agent's position, obviously, gets rewinded to their saved position as well.
+#### Rewind Chronodisc:
+Expends 1 possibility. The agent rewinds the **Chronodisc** attuned to them back into their hand. If, at the time of rewinding, it was embedded in someone, the victim begins bleeding and the rewinding happens as normal.
 
 ## Objectives
 #### Nudge Item: 
@@ -77,7 +68,5 @@ Seeing a Clown running away from a pissed-off crowd, and then using **Summon Fut
 Getting caught off-guard by a Space Ninja and placed into crit, and then using **Summon Future Assistance** to have an aggressive future iteration of the agent attack the enemy to distract them while also using **Summon Future Assistance** again - this time benevolently - to have the second future iteration of the agent stabilize and heal the agent's present self.
 ``````
 The usage of **Summon Future Assistance**, if the agent resorts to it, prompts a race against time to close the loop created by the ability. If the agent collects the necessary items - listed by using **Temporal Loop Memories** - and successfully closes the loop by using **Assist the Past** while performing the necessary string of actions listed by, yet again, using **Temporal Loop Memories**, they remain safe from being doomed. If they take too long, though, or perform the required string of actions within **Assist the Past** incorrectly... their minutes are numbered. Hubris had signed the agent's death warrant.
-
-Either due to having plenty of possibilities left to spare, or deciding to sacrifice themselves in a blaze of (delayed) glory, the agent might consider adjusting their **United Synchronization** ability or creating a **Rewind Bubble**, depending on what they're dealing with. Both options are very risky, but risk and drawbacks are embedded in this role's DNA - it's up to the agent in question to choose to stray away from a safer path.
 
 And, in the end, ideally with all necessary objectives completed, the agent retires from the shift alongside the other surviving crewmembers. Them still being alive in spite of the many dangers of time is an impressive feat already.
