@@ -19,7 +19,7 @@ This document aims to create a safe and healthy environment while fostering posi
 For conflicts specifically involving staff members (Maintainers, Art Directors, Project Managers, or Wizards), refer to the detailed Staff Conflict Resolution Policy. This document outlines the specific procedures for addressing staff conflicts, including immediate reporting, mediation, resolution options, and documentation.
 ## Policy Violations
 Members found in breach—such as through harassment, discrimination, or personal attacks—will face disciplinary actions ranging from warnings to removal from the project. All reports will be taken seriously and investigated promptly, ensuring fairness and confidentiality. Our goal is to maintain a positive environment where all members feel safe and valued.
-Encouragement of Reporting
+## Encouragement of Reporting
 We encourage all team members to promptly report any policy violations. It is essential to foster a culture of accountability where everyone feels safe to speak up. Reports can be made confidentially, and individuals who come forward will be protected against retaliation.
 ## Feedback Mechanism
 Members are encouraged to provide feedback on this policy to ensure it meets the project's needs. Suggestions for improvement can be submitted anonymously via forums or direct messages to HR members. The HR team will review regular feedback for necessary adjustments.
