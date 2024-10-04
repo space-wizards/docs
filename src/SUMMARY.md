@@ -328,7 +328,6 @@ Staff
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
 - [Space Wizards Role Hierarchy](en/wizden-staff/space-wizards-role-hierarchy.md)
 - [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
-- [Maintainer Policy](en/wizden-staff/maintainer-policy.md)
 - [Staff Policy](en/wizden-staff/staff-policy.md)
 - [Staff Conflict Resolution](en/wizden-staff/staff-conflict-resolution.md)
 
