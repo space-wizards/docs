@@ -449,6 +449,10 @@ Now, the fun part. We'll go to GitHub now and make a pull request for our funny 
 
 Add a description, a nice title, some screenshots, and hopefully it gets merged.
 
+```admonish warning title="Don't do it now"
+Your pull request will be made directly in the official repository and will be visible to others. Ensure that your changes are thoroughly reviewed and ready for official evaluation. If you only want to test, create the PR in your own fork to avoid making it publicly visible.
+```
+
 ## 6. Updating our repository
 
 Maybe it's been a while, a week or two, since your last pull request, and you'd like to make another. Before you do anything, you need to download (**pull**) the code changes from the main SS14 repository into your local repository. If you don't, you'll have out-of-date code and your local changes may not be accurate to how the game will actually run--you might even get **merge conflicts** when you try to PR.
