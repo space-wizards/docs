@@ -7,14 +7,14 @@
 ## Overview
 
 This proposal is a partial redesign of the old wraith from SS13.
-The first change is a base kit redesign that revolves around EmoGarbage404's idea to add a fear mechanic.
+The first change is a base kit change that revolves around EmoGarbage404's idea to add a fear debuff and soul harvesting mechanic.
 The wraith can use its abilities to inflict a fear debuff on the crew which generates power
-to use stronger abilities or evolve and become more powerful.
+to use stronger abilities and harvest souls of extremely fearful and dead players to evolve and become more powerful.
 The second change addresses survivability in that it is too easy to kill early and too difficult to kill later.
 
 ## Background
 
-The wraith is an underwhelming role currently. 
+The wraith is an underwhelming role currently.
 It tends to play passive since it can die very easily early in its lifetime.
 It also doesn't have many abilities to cause conflict or add midgame ghost roles for dead players.
 The main benefit of these proposed changes is that it will allow the wraith to lean into its strength as
@@ -26,7 +26,7 @@ a). Implements most of the old wraith abilities/evolutions from SS13 (some featu
     The old designs had plenty of skill expression, potential for the wraith to become a major threat
     when left uncontested, and lots of ghost roles.
 
-b). Pulls from EmoGarbage404's idea to focus on gaining power through a fear mechanic. This also borrows 
+b). Utilizes EmoGarbage404's idea to focus on gaining power through a fear mechanic. This also borrows 
     some of their ability designs to generate fear and places into the base ability kit.
 
 c). Redesigns the basic functionality of the role for added survivability and to make it more counterable and fun
@@ -34,6 +34,40 @@ c). Redesigns the basic functionality of the role for added survivability and to
 
 ## Survivability Changes
 
+The wraith has moderate amount of health that can only be replenished by consuming souls of the dead. 
+This will act as a buffer of protection for when it initially exposes itself. 
+This also prevents a wraith that has accumulated an enormous amount of power to become unkillable.
+
+The wraith cannot phase through walls and has an ability on cooldown that allows it to do so temporarily.
+It can still phase through doors normally. 
+
+The wraith has an ability that can be used to see people
+through walls temporarily. It has normal line of sight vision otherwise.
+
+These design decisions ensure that there is counterplay to the wraith, especially if they want to
+enter secure areas such as command and security to create chaos. The wraith is also more vulnerable to any 
+crew member who is equipped to track and hunt the wraith.
+
 ## Fear Kit
 
+The wraith gains power to cast abilities by being in moderate proximity to people who suffer from the fear debuff.
+Fear can be inflicted in various ways such as by overdosing on LSD or being trapped in a dark room. 
+However, the wraith primarily inflicts fear through its abilities, such as a person being in proximity to 
+blood writing or being attacked by a possessed object.
+
+There are seven levels of fear which progressively effect a persons stats negatively. 
+The highest level of fear will cause a crew member to become traumatized and they will be able to see the wraith in this state at all times. 
+Until treated they will not fall below fear level 3. Trauma can be treated by the chaplain, psychologist, or with certain medications.
+
+## Harvesting Souls
+
+A person who is unable to escape the wraith while at the highest level will have their soul harvested if they are too close
+and the wraith left clicks them. They can also be harvested from fresh corpses. 
+Souls can be used to unlock new abilities or evolutions. Evolutions are more powerful versions
+of the wraith that have a unique skill set.
+
+Primary objectives revolve around harvesting as many souls as possible and harvesting the souls of key figures.
+
 ## SS13 Implementation
+
+Aside from wallwalking and being able to see people through walls, most of the abilities will be taken from the SS13 wraith design.
