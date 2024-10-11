@@ -4,25 +4,36 @@
 |------------------------| ----------- | --------------------------------------------------------------------- |
 | TechFox, EmoGarbage404 |   :x: No    | https://github.com/DillinRobbins/space-station-14/tree/wraith-rework  |
 
-`Designers` should be the names that you use on GitHub and/or Discord. This is optional but strongly recommended, since:
-
-- This acknowledges credit where it is due
-- People who are confused about the written intent can use this information to contact the authors
-
-`Implemented` is the status of the feature.
-
-Github links can include multiple PRs, if relevant.
-
 ## Overview
 
-A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds".
+This proposal is a partial redesign of the old wraith from SS13.
+The first change is a base kit redesign that revolves around EmoGarbage404's idea to add a fear mechanic.
+The wraith can use its abilities to inflict a fear debuff on the crew which generates power
+to use stronger abilities or evolve and become more powerful.
+The second change addresses survivability in that it is too easy to kill early and too difficult to kill later.
 
 ## Background
 
-Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game.
+The wraith is an underwhelming role currently. 
+It tends to play passive since it can die very easily early in its lifetime.
+It also doesn't have many abilities to cause conflict or add midgame ghost roles for dead players.
+The main benefit of these proposed changes is that it will allow the wraith to lean into its strength as
+a unique fear based stealth/manipulation role and evolve into something terrifying to the crew.
 
-Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
+This redesign is focused on 3 aspects:
 
-## The rest?
+a). Implements most of the old wraith abilities/evolutions from SS13 (some features are missing such as diseases).
+    The old designs had plenty of skill expression, potential for the wraith to become a major threat
+    when left uncontested, and lots of ghost roles.
 
-Is entirely up to you.
+b). Pulls from EmoGarbage404's idea to focus on gaining power through a fear mechanic. This also borrows 
+    some of their ability designs to generate fear and places into the base ability kit.
+
+c). Redesigns the basic functionality of the role for added survivability and to make it more counterable and fun
+    to play against or with for the crew.
+
+## Survivability Changes
+
+## Fear Kit
+
+## SS13 Implementation
