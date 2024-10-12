@@ -62,12 +62,22 @@ Until treated they will not fall below fear level 3. Trauma can be treated by th
 ## Harvesting Souls
 
 A person who is unable to escape the wraith while at the highest level will have their soul harvested if they are too close
-and the wraith left clicks them. They can also be harvested from fresh corpses. 
+and the wraith left clicks them. They can also be harvested from fresh corpses.
 Souls can be used to unlock new abilities or evolutions. Evolutions are more powerful versions
 of the wraith that have a unique skill set.
 
-Primary objectives revolve around harvesting as many souls as possible and harvesting the souls of key figures.
+Primary objectives revolve around harvesting as many souls as possible, harvesting the souls of key figures, and possessing and utilizing rare items in funny ways.
 
 ## SS13 Implementation
 
-Aside from wallwalking and being able to see people through walls, most of the abilities will be taken from the SS13 wraith design.
+Aside from wallwalking and being able to see people through walls, most of the abilities will be 
+from the SS13 wraith design which can be found here: https://wiki.ss13.co/Wraith
+
+Any missing features from this design will be left out until it is decided whether they will be implemented or substituted.
+
+## Items to counter Wraith
+
+Adding ghostbusting tools that detectives or chaplains can use to track down the ghost would make a great addition for a future PR.
+
+Some ideas include cursed items that allow its user to interact with the wraith and gain an advantage at a cost.
+The crew will also need more than just salt to trap the ghost, so adding a spirit candle would be a good start.
