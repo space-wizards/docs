@@ -99,23 +99,23 @@ Major changes are required to station setups, but the core systems are already p
 
 ### Benefits (Arguments for the implementation)
 1. **Proper atmospheric flow.**
-  - This system allows for true, flow-based atmospherics (HVAC) which is a highly complex system, present in real life. This gives Atmos another level of depth and distracts away from sitting in the department waiting for something to happen.
+   - This system allows for true, flow-based atmospherics (HVAC) which is a highly complex system, present in real life. This gives Atmos another level of depth and distracts away from sitting in the department waiting for something to happen.
 2. **Station-wide temperature control.**
-  - This system allows for the proper control of station temperature, which is currently a huge issue. Atmos currently has no easy way to modify the station temperature en-masse.
+   - This system allows for the proper control of station temperature, which is currently a huge issue. Atmos currently has no easy way to modify the station temperature en-masse.
 3. **Emergent gameplay based on the Ideal Gas Law.**
-  - Savvy Atmos techs can take advantage of the Ideal Gas Law to create interesting solutions to station problems. For example, the station's temperature can be increased slightly to increase the effective pressure of the station's air, helping to alleviate a potential gas shortage before more gas is acquired.
+   - Savvy Atmos techs can take advantage of the Ideal Gas Law to create interesting solutions to station problems. For example, the station's temperature can be increased slightly to increase the effective pressure of the station's air, helping to alleviate a potential gas shortage before more gas is acquired.
 4. **Centralization of station waste gas removal.**
-  - Gas circulation means that all gasses, including waste gasses, are sent to the recyclernet, enabling recycling on a station-wide level, not a room-by-room level.
+   - Gas circulation means that all gasses, including waste gasses, are sent to the recyclernet, enabling recycling on a station-wide level, not a room-by-room level.
 5. **Gives Atmos a proper system to manage and keep watch.**
-  - Atmos now has to oversee the station's temperature and gas reserves, which requires constant monitoring and maintaining.
-  - Engineering, in comparison, has the power of overseeing station power, a system which requires constant monitoring and maintaining (singulo gas tank refilling, tesla coil repairs).
+   - Atmos now has to oversee the station's temperature and gas reserves, which requires constant monitoring and maintaining.
+     - Engineering, in comparison, has the power of overseeing station power, a system which requires constant monitoring and maintaining (singulo gas tank refilling, tesla coil repairs).
 6. **Moves away from infinite gas.**
-  - This system moves away from infinite gas, which is a huge issue in the current atmos system and is a goal in the **Atmos Roadmap**.
-  - As previously mentioned, Atmos techs can space and refill rooms with zero consequence of wasting gas. All problems with bad air can be inherently fixed by just replacing the room's air.
+   - This system moves away from infinite gas, which is a huge issue in the current atmos system and is a goal in the **Atmos Roadmap**.
+   - As previously mentioned, Atmos techs can space and refill rooms with zero consequence of wasting gas. All problems with bad air can be inherently fixed by just replacing the room's air.
 7. **Encourages the usage of Frezon gas in radiator loops.**
-  - In the future, Frezon can be used as a highly effective working gas for use in radiator loops. Cooling and heating an entire station requires a lot of energy and work to be done. Normal gasses might not have thermal properties good enough for conducting heat fast enough.
+   - In the future, Frezon can be used as a highly effective working gas for use in radiator loops. Cooling and heating an entire station requires a lot of energy and work to be done. Normal gasses might not have thermal properties good enough for conducting heat fast enough.
 8. **More agency for antagonists.**
-  - Antagonists can now sabotage the station's air supply, which can lead to a station-wide crisis. This can be used to create interesting rounds and scenarios. However, the ease at which this can be accomplished presents greater issues, explained in Drawbacks.
+   - Antagonists can now sabotage the station's air supply, which can lead to a station-wide crisis. This can be used to create interesting rounds and scenarios. However, the ease at which this can be accomplished presents greater issues, explained in Drawbacks.
 9. **Encourages greater care with station atmos setups and adds value to gasses.**
    - With this change, all gasses are now extremely valuable. Spacing a room's air is no longer a viable solution, as the station's air reserves are no longer infinite. Atmos techs now have to take extra care and ensure that holes are fully patched before filling a room.
    - This will also lead to Atmos taking great care to ensure that further gas does not escape to space when moving between firelocks. This reinforces the usage of holofans.
@@ -123,34 +123,35 @@ Major changes are required to station setups, but the core systems are already p
    - This change also encourages Atmos to spend more time ensuring their setups are correct, as a mistake could lead to wasting precious gas or dealing with an expensive-to-fix mess.
 ### Drawbacks (Arguments against the implementation)
 1. **Potential for easy and devastating mass station sabotage.**
-  - While it could be argued that this could lead to emergent gameplay and hostage roleplay, it could also lead to 5 minute rounds.
-  - All air returns to a central location, so it is incredibly easy to simply replace all of the air with a harmful gas (carbon dioxide or pure nitrogen).
-  - The entire station's temperature is controlled by two air alarms. It is very easy to sabotage these air alarms and deep fry or freeze the station.
-    - This has some implications for the future Malfunctioning AI gamemode, as they can easily sabotage the station's air supply under Atmos' nose (superheating/supercooling), although this instantly outs the AI and the crew will work to kill the AI posthaste.
-  - This has some counterarguments, though:
-    - Mass station sabotage is prohibited by the rules. Familiarly, mass sabotage like this isn't exactly a huge undertaking, similar to someone snipping wires on a Tesla/Singularity containment.
-    - Because of the flow-based nature of the system, it is possible to detect and fix the sabotage by simply undoing the sabotage. However, half the station could be dead by the time this is done. What are you gonna do? Un-steam half of the station?
-  - This proposal introduces another source of mass station sabotage with a very neutral counterbalance. Right now, changes should be working towards the goal of making mass station sabotage before the 30-minute mark harder.
+   - While it could be argued that this could lead to emergent gameplay and hostage roleplay, it could also lead to 5 minute rounds.
+     - All air returns to a central location, so it is incredibly easy to simply replace all of the air with a harmful gas (carbon dioxide or pure nitrogen).
+     - The entire station's temperature is controlled by two air alarms. It is very easy to sabotage these air alarms and deep fry or freeze the station.
+       - This has some implications for the future Malfunctioning AI gamemode, as they can easily sabotage the station's air supply under Atmos' nose (superheating/supercooling), although this instantly outs the AI and the crew will work to kill the AI posthaste.
+     - This has some counterarguments, though:
+       - Mass station sabotage is prohibited by the rules. Familiarly, mass sabotage like this isn't exactly a huge undertaking, similar to someone snipping wires on a Tesla/Singularity containment.
+       - Because of the flow-based nature of the system, it is possible to detect and fix the sabotage by simply undoing the sabotage. However, half the station could be dead by the time this is done. What are you gonna do? Un-steam half of the station?
+     - This proposal introduces another source of mass station sabotage with a very neutral counterbalance. Right now, changes should be working towards the goal of making mass station sabotage before the 30-minute mark harder.
 2. **Potential performance issues from mass gas flow.**
-  - This system introduces a lot of gas flow by design, which could potentially cause performance issues. The atmospherics system should be properly tested to see if servers can properly handle the load, and optimized if necessary.
+   - This system introduces a lot of gas flow by design, which could potentially cause performance issues. The atmospherics system should be properly tested to see if servers can properly handle the load, and optimized if necessary.
 3. **Reduced oxygen available for burn chambers.**
-  - With the tuning of Gas Miners, the station's oxygen supply is now less infinite. This could potentially lead to a lack of oxygen for burn chambers, which could be a problem for the station's power supply. We want to promote the usage of the Thermo-Electric Generator (TEG) as a power source, and this could potentially hamper that.
-  - This could also hamper the production of Frezon, something we still want to promote.
-  - Obviously, I'm just outlining this as a point that this is something that requires tuning. We want to make burn chambers possible for Frezon production and the TEG, whilst preventing the circumvention of the HVAC system. 
+   - With the tuning of Gas Miners, the station's oxygen supply is now less infinite. This could potentially lead to a lack of oxygen for burn chambers, which could be a problem for the station's power supply. We want to promote the usage of the Thermo-Electric Generator (TEG) as a power source, and this could potentially hamper that.
+     - This could also hamper the production of Frezon, something we still want to promote.
+     - Obviously, I'm just outlining this as a point that this is something that requires tuning. We want to make burn chambers possible for Frezon production and the TEG, whilst preventing the circumvention of the HVAC system. 
 
 ## Future Systems
 
 In the future, the following systems could be implemented to further enhance the station's atmospherics simulation, to encourage the setup of whole-station HVAC:
 1. **All lifeforms radiate heat into the atmosphere.**
-  - Now that the station's air is temperature-controlled, lifeforms can radiate heat into the atmosphere. This encourages the setup of HVAC, as the station's air will naturally heat up over time, making the station stuffier over time.
-  - To encourage this even further, we could introduce a system where lifeforms experience further discomfort if the station's air is too hot or too cold (rather than simply taking damage).
-2. **All lifeforms sweat (or otherwise emit/exhale water vapor).**
-  - Now that the station's air is recirculating and managed at a central place, lifeforms can sweat, which will increase the humidity of the station's air.
-  - This could warrant the creation of a humidity system, which could be used to further enhance the depth of the atmospherics system.
-  - This could also be used to create a system where lifeforms experience further discomfort if the station's air is too humid or too dry, which could give Atmos another aspect of air to manage.
-  - This system could have parallels with the current presence of water vapor.
+   - Now that the station's air is temperature-controlled, lifeforms should radiate heat into the atmosphere. This encourages the setup of HVAC, as the station's air will naturally heat up over time, making the station stuffier over time.
+   - To encourage this even further, we could introduce a system where lifeforms experience further discomfort if the station's air is too hot or too cold (rather than simply taking damage).
+2. **The creation of a humidity system.**
+   - A humidity system could be implemented that further expands the depth of the atmospherics system.
+     - Humidity could have interactions with how temperature is felt by organics and objects.
+     - Humidity could be visualized by the appearance of fog in the station's air in cold areas (in spacing, for example), or the appearance of condensation on windows.
+   - Lifeforms should be able to sweat or exhale water vapor, which will increase the humidity of the station's air.
+     - This could also be used to create a system where lifeforms experience further discomfort if the station's air is too humid or too dry, which could give Atmos another aspect of air to manage.
 3. **Advanced programmable computers that can preform complex logic.**
-  - Managing temperature and pressure is complex for air alarms. A computer system could be implemented to handle the valve-based control of cooling and heating station air.
-  - This can also enable the precise regulation of pumps to control the specific power of heating and cooling.
-    - This is **exactly** what modern thermostats and air conditioning units do in real life to increase efficiency and reduce energy consumption. Rather than running an AC compressor at full power, the compressor is run at a lower power to maintain a specific temperature.
-  - This system has **huge** potential for emergent gameplay, as savvy Atmos techs can use applied mathematics (Ideal Gas Law, Thermodynamics, Specific Heat Capacity, Energy In/Out) to create complex solutions to station problems.
+   - Managing temperature and pressure is complex for air alarms. A computer system could be implemented to handle the valve-based control of cooling and heating station air.
+   - This can also enable the precise regulation of pumps to control the specific power of heating and cooling.
+     - This is **exactly** what modern thermostats and air conditioning units do in real life to increase efficiency and reduce energy consumption. Rather than running an AC compressor at full power, the compressor is run at a lower power to maintain a specific temperature.
+   - This system has **huge** potential for emergent gameplay, as savvy Atmos techs can use applied mathematics (Ideal Gas Law, Thermodynamics, Specific Heat Capacity, Energy In/Out) to create complex solutions to station problems.
