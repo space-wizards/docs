@@ -62,7 +62,7 @@ This system allows the cooling or heating of the station's air to standard tempe
 
 Below is a visual flowchart of the gas mixing chamber, describing a potential solution to the problem:
 
-(This image will be added later when I put the PR up)
+![image](https://github.com/user-attachments/assets/1f2c42a9-801b-48c6-bded-47537b7bac30)
 
 ### Moving Away from Infinite Gas
 With the proposed system, the station's air reserves no longer have to be infinite.
