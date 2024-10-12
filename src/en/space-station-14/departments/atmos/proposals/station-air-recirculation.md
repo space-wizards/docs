@@ -14,7 +14,7 @@ This is okay, but this system falls apart when atmospheres experience temperatur
 
 This proposal plans to introduce a pressure-based recirculation system, where temperature controlled air can recirculate to maintain a stable atmosphere. Air will flow from a slightly higher pressure air vent (at 110.325 kPa for example) and move to lower pressure air scrubbers. This gas is then recycled, temperature-controlled, and reintroduced into the atmosphere through Distro.
 
-This proposal also plans to remove Gas Miners, as they are no longer needed with the new system.
+This proposal also plans to move away from infinite gas reserves, to promote the usage of the station's recyclernet. Gas miners will be tuned to produce less gas, to ensure that the station's air reserves are not infinite.
 
 ## The Problem
 
@@ -24,7 +24,7 @@ Currently, air scrubbers **do not** regulate a room's pressure; they simply regu
 2. Cold-based temperature upsets. This includes things like ice anomalies, frezon, and room spacing.
 
 In the event of a heat-based temperature upset, an air scrubber will simply scrub the high-pressure waste gasses and nothing else.
-An atmos tech has to manually drag a station heater and set it up in the area (a machine that some stations don't even have roundstart) to fix the problem.
+An atmos tech has to manually drag a station heater (a machine that some stations don't even have roundstart) and set it up in the area to fix the problem.
 The solution most techs execute is to simply space the gas and refill the room with fresh air. The panic mode on scrubbers is not viable, as it simply operates too slowly compared to RCDing a hole into space.
 **This is not viable given the current atmos roadmap (no infinite gas), as we are actively spacing useful gasses!**
 
@@ -64,12 +64,28 @@ Below is a visual flowchart of the gas mixing chamber, describing a potential so
 
 ![image](https://github.com/user-attachments/assets/1f2c42a9-801b-48c6-bded-47537b7bac30)
 
-### Moving Away from Infinite Gas
-With the proposed system, the station's air reserves no longer have to be infinite.
-The station's air reserves are now a finite resource, which can be recycled and reused.
+### Moving Away from High-Pressure Infinite Gas
 Previously, air reserves were infinite and can be replaced at any time.
-This basically invalidated any sense of using the recyclernet to recycle air, as it was easier to just space the gas and replace it with fresh air.
-Now, Atmos will be forced to reduce, reuse, and recycle the station's air.
+This basically invalidated using the recyclernet to recycle air, as it was easier to just space the gas and replace it with fresh air.
+
+With the proposed system of recycling gasses, the station no longer has to have an infinite supply of gas.
+
+To promote the usage of the recycling system, gas miners will be tuned to produce much less gas.
+Now, the station's air reserves are a less infinite resource. Atmos will be forced to reduce, reuse, and recycle the station's air.
+
+This does go against the current approved design document for Atmos, which states that the station's air reserves should be finite and gas miners should be phased out.
+
+However, we still want a small trickle of incoming gas for multiple reasons:
+1. **To make Atmos independent from Cargo.**
+   - With total reliance on Cargo for gas, Atmos is at the mercy of Cargo's incompetence or malice. A huge spacing could leave Atmos gas-negative and they can do basically nothing about it, as the only way to import gasses is through cargo.
+     - This could be countered by increasing the capacity of air tanks, but we start running to realism issues with container volumes, which was already brought up with similar PRs. Additionally, I think this is a noobtrap/death spiral that should be avoided at all costs.
+2. **To ensure burn chambers are still viable.**
+   - Burn chambers should still be viable for power generation and frezon production. The station should recieve at least some gas, without invalidating the entire point of the reduced output of gas miners.
+3. **To have a safety net to fall back on.**
+   - Atmos is extremely integral to the station and a lack of gas could lead to a station-wide crisis. It is best to simply have a small trickle of gas to ensure that the station does not run out of gas, while promoting gas recycling.
+     - I understand this is a repeat of Point 1 but I would like to get this point out on paper because I believe that it is important. Just like the AME (not an extremely perfect analogy), Atmos should have something to fall back on. Maybe make the gas miners take power from the station?
+     - Hypothetical: "CE here. An atmos tech accidentally set up the recyclernet wrong and spaced all of the station's gas. Cargo has no money and we are unable to pressurize spaced areas." and shortly thereafter, "The emergency shuttle has been called."
+
 
 
 ### Required Changes
@@ -79,6 +95,7 @@ Major changes are required to station setups, but the core systems are already p
   - This change might be too breaking. An alternative "return vent" could be mapped to the station, which would allow the return of air to the station's recyclernet. This honestly makes more sense, as we're dealing with vent-based gas flow now, not scrubber-based gas management.
 - The ExternalBound of air vents will have to be changed to allow the venting of air at a higher pressure than standard atmospheric pressure, to promote the natural flow of gas.
 - A more complex air alarm may have to be implemented to handle the valve-based control of cooling and heating (perhaps a computer system?).
+- Tests and observation will have to be done in order to tune gas miner values to ensure that the station's air reserves are not infinite, but still have a small trickle of incoming gas for burn chambers.
 
 ### Benefits (Arguments for the implementation)
 1. **Proper atmospheric flow.**
@@ -95,11 +112,15 @@ Major changes are required to station setups, but the core systems are already p
 6. **Moves away from infinite gas.**
   - This system moves away from infinite gas, which is a huge issue in the current atmos system and is a goal in the **Atmos Roadmap**.
   - As previously mentioned, Atmos techs can space and refill rooms with zero consequence of wasting gas. All problems with bad air can be inherently fixed by just replacing the room's air.
-7. **Encouragement of Frezon gas usage in radiator loops.**
+7. **Encourages the usage of Frezon gas in radiator loops.**
   - In the future, Frezon can be used as a highly effective working gas for use in radiator loops. Cooling and heating an entire station requires a lot of energy and work to be done. Normal gasses might not have thermal properties good enough for conducting heat fast enough.
 8. **More agency for antagonists.**
   - Antagonists can now sabotage the station's air supply, which can lead to a station-wide crisis. This can be used to create interesting rounds and scenarios. However, the ease at which this can be accomplished presents greater issues, explained in Drawbacks.
-
+9. **Encourages greater care with station atmos setups and adds value to gasses.**
+   - With this change, all gasses are now extremely valuable. Spacing a room's air is no longer a viable solution, as the station's air reserves are no longer infinite. Atmos techs now have to take extra care and ensure that holes are fully patched before filling a room.
+   - This will also lead to Atmos taking great care to ensure that further gas does not escape to space when moving between firelocks. This reinforces the usage of holofans.
+     - Holofans should also see a slight buff to encourage their use and to compensate for the change removing the Firedoor Remote.
+   - This change also encourages Atmos to spend more time ensuring their setups are correct, as a mistake could lead to wasting precious gas or dealing with an expensive-to-fix mess.
 ### Drawbacks (Arguments against the implementation)
 1. **Potential for easy and devastating mass station sabotage.**
   - While it could be argued that this could lead to emergent gameplay and hostage roleplay, it could also lead to 5 minute rounds.
@@ -109,7 +130,13 @@ Major changes are required to station setups, but the core systems are already p
   - This has some counterarguments, though:
     - Mass station sabotage is prohibited by the rules. Familiarly, mass sabotage like this isn't exactly a huge undertaking, similar to someone snipping wires on a Tesla/Singularity containment.
     - Because of the flow-based nature of the system, it is possible to detect and fix the sabotage by simply undoing the sabotage. However, half the station could be dead by the time this is done. What are you gonna do? Un-steam half of the station?
-  - This proposal introduces another source of mass station sabotage with a very neutral counterbalance. Right now, changes should be working towards the goal of making mass station sabotage before the 30 minute mark harder.
+  - This proposal introduces another source of mass station sabotage with a very neutral counterbalance. Right now, changes should be working towards the goal of making mass station sabotage before the 30-minute mark harder.
+2. **Potential performance issues from mass gas flow.**
+  - This system introduces a lot of gas flow by design, which could potentially cause performance issues. The atmospherics system should be properly tested to see if servers can properly handle the load, and optimized if necessary.
+3. **Reduced oxygen available for burn chambers.**
+  - With the tuning of Gas Miners, the station's oxygen supply is now less infinite. This could potentially lead to a lack of oxygen for burn chambers, which could be a problem for the station's power supply. We want to promote the usage of the Thermo-Electric Generator (TEG) as a power source, and this could potentially hamper that.
+  - This could also hamper the production of Frezon, something we still want to promote.
+  - Obviously, I'm just outlining this as a point that this is something that requires tuning. We want to make burn chambers possible for Frezon production and the TEG, whilst preventing the circumvention of the HVAC system. 
 
 ## Future Systems
 
