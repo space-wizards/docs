@@ -11,3 +11,11 @@ Not following this procedure/policy will result in disiplinary action being take
 - Whether a PR should be classifed as a bug fix or not is up to the maintainers reviewing the PR. But in general, a bug fix adjusts existing content/code to fix an issue without dramatically changing the game or adding new content.
 
 - Balancing changes are usually not bug fixes. A balancing change adjusts tuning values on a gameplay system/mechanic to change gameplay to be more in line with the intended experience. If the experience before the change is still playable then the balancing change is not a bug fix, however if the gameplay is *causing major issues for players/admins* then a balancing change can be considered as a bugfix in this case.
+## Creating and applying a hotfix
+A hotfix needs to be based on the branch the bug appears in.
+During the release phase bugs on staging need to be fixed using hotfixes based on staging and vice versa.
+The hotfix branch needs to be merged into the affected branch (staging/live) and then into master.
+
+If a bug needs to be fixed on live during the release cycle the hotfix branch needs to be based on live and then merged into staging and master.
+
+This will eventually be done by a github action or a bot automatically.
