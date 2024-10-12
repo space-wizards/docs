@@ -121,6 +121,9 @@ Major changes are required to station setups, but the core systems are already p
    - This will also lead to Atmos taking great care to ensure that further gas does not escape to space when moving between firelocks. This reinforces the usage of holofans.
      - Holofans should also see a slight buff to encourage their use and to compensate for the change removing the Firedoor Remote.
    - This change also encourages Atmos to spend more time ensuring their setups are correct, as a mistake could lead to wasting precious gas or dealing with an expensive-to-fix mess.
+10. **Gas mixtures are respected across the station**
+    - Previously, it was very easy for a large gathering of oxygen-breathing species to consume all of the oxygen present in the atmosphere, leading to suffocation. With this change, air will actually be recirculated with a fresh air mixture.
+    - Large courtroom gatherings or a large group of people in medical caused this problem easily.
 ### Drawbacks (Arguments against the implementation)
 1. **Potential for easy and devastating mass station sabotage.**
    - While it could be argued that this could lead to emergent gameplay and hostage roleplay, it could also lead to 5 minute rounds.
