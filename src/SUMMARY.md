@@ -63,6 +63,7 @@ Robust Toolbox
 - [ECS](en/robust-toolbox/ecs.md)
 - [Netcode]()
   - [Net Entities](en/robust-toolbox/netcode/net-entities.md)
+  - [Connection Sequence](en/robust-toolbox/netcode/connection-sequence.md)
   - [Potentially Visible Set]()
 - [Coordinate Systems](en/robust-toolbox/coordinate-systems.md)
 - [Transform]()
