@@ -11,7 +11,7 @@ If you wish to modify your server to add your own content. You will need a [prop
 ```
 
 1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
-2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
+2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are looking for another fork, [try looking here](../../server-hosting/popular-forks-cdns.md).
 3. Extract that to a directory somewhere.
 4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
 5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
