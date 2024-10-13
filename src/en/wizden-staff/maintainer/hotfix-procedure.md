@@ -12,9 +12,9 @@ Not following this procedure/policy will result in disiplinary action being take
 
 - Balancing changes are usually not bug fixes. A balancing change adjusts tuning values on a gameplay system/mechanic to change gameplay to be more in line with the intended experience. If the experience before the change is still playable then the balancing change is not a bug fix, however if the gameplay is *causing major issues for players/admins* then a balancing change can be considered as a bugfix in this case.
 ## Creating and applying a hotfix
-A hotfix needs to be based on the branch the bug appears in.
+A hotfix needs to be created based on the branch the bug appears in.
 During the release phase bugs on staging need to be fixed using hotfixes based on staging and vice versa.
-A PR needs to be made for the hotfix branch for the affected branch (staging/stable) and for master.
+A PR needs to be made for the newly created hotfix branch for the branch the bug appeared on (staging/stable) and for master.
 
 If a bug needs to be fixed on stable during the release phase the hotfix branch needs to be based on stable and then a PR needs to be made for staging and master.
 
