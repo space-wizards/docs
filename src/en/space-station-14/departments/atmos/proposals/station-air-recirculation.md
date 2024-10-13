@@ -35,7 +35,85 @@ This also leads to more gas entering the room, which drains the station's air re
 Additionally, Atmos techs are largely discouraged from using the station's recyclernet, as recycled high-temperature or low-temperature gasses are free to mix with regular temperature gasses, which then get redistributed to the station, heating or cooling the entire station to dangerous levels, which is hilariously hard to undo, given the lack of a station-wide cooling system.
 
 
-## Solution / Core Changes
+## Solution Preamble
+Testing was actually done using an outdated set of proposed changes, using current systems.
+It demonstrated the realities of a whole-station HVAC system, and the results had their ups and downs.
+However, simple modification to the original proposal shows air circulation is actually **viable** and gives Atmos serious control over the station's temperature and pressure.
+
+The testing environment was as follows:
+- A centralized heating/cooling setup was made similar to the original design document.
+- All air scrubbers were replaced with siphoning vents with an ExternalBound set to 1 ATM.
+- All vents were changed to output gas at 120 kPa.
+- Temperature atmospheric upsets were introduced in multiple areas, like fire anomalies, ice anomalies, to see the effects it had on the air and how the system reacted to it
+
+### Behavior of the system observed during testing
+The tested system demonstrated the following behaviors, in no particular order:
+1. **Recycling gas station-wide puts an astronomically large load on the station's Recyclernet and Distro.**
+   - Because 100 vents were handling +20 kPa of gas, the recyclernet was attempting to recycle and store +2000 kPa of gas. This doesn't even account for has that has been reheated (which makes it even harder to recycle due to pressure increases).
+   - On top of attempting to store +2000 kPa of gas, the distro was attempting to distribute +2000 kPa of gas, which was a huge load on the distro. The distro was never able to achieve standard atmospheric pressure, let alone anything above that.
+     - The system was modified in testing to have as much flow as physically possible, utilizing two gas mixers at max pressure to recycle gas. This was still not enough to handle the requested load.
+2. **The system was able to handle high-temperature upsets.**
+   - As part of testing, a fire anomaly was placed in a room, which over the course of an hour slowly heated the room to 70C (or 343.15 K).
+   - To test the system further, the fire anomaly was critted, which caused a plasmafire. This plasmafire heated the room to around 2000C (or 2273.15 K), and raised the pressure to around 2000-4000 kPa.
+     - The siphoning vent successfully lowered the pressure of the room to it's ExternalBound limit (101.325 kPa), however 1000C+ gas remained in the room, and was not being cooled fast enough from a pathetic 20kPa room temperature flow of gas.
+       - Increasing the gas flow of the air vent to 200 kPa demonstrated fast cooling of the room to near room temperature. Further testing is required to see if this is still the case and is not a one-off. it is important to note that the vent was not really pumping at 200 kPa, as a consequence of Behavior 1 stated above.
+3. **The system was not able to handle extreme low-temperature upsets.**
+    - As part of testing, an ice anomaly was placed in a room, which over the course of an hour slowly cooled the room to 0C (or 273.15 K).
+    - To test the system further, the ice anomaly was critted, releasing frezon into the air, which combined with the present nitrogen and formed nitrous oxide, cooling the air to around -200C (or 73.15 K).
+      - The pressure in the room was lowered considerably, to the point where the vent pressure lockouts engaged. The vents were screwdrivered open to allow room temp gas to flow, which slowly raised the temperature of the room, although not fast enough to make a noticeable difference.
+        - Increasing the gas flow to 200 kPa sped up this process a little bit, but the room was still too cold to be habitable over a long period of time. However, the vent was not really pumping at 200 kPa, as a consequence of Behavior 1 stated above.
+4. **Waste gasses were still present and were not given priority.**
+   - During testing, waste gasses emitted from animals were enough to trigger warning alarms given enough time. The system was recirculating air, but it was simply not doing it fast enough due to Behavior 1.
+5. **The original gas recirculation chamber had a critical design fault.**
+   - The radiators in the gas recirculation chamber were not purged of gas when cooling/heating was no longer commanded.
+     - A passive gate was present to prevent the backflow of heat to the radiator. However, the design did not purge the radiators of residual gas from the system, instead leaving them present to radiate heat into the chamber. This led to 20,000C gas remaining in the radiator, wicking its heat away to the chamber with no way to stop it.
+
+All of these problems are taken into account in the revised proposal. Behavior not listed here was also taken into account.
+
+## Solution and Core Changes
+Unfortunately, as explored above, station-wide gas recirculation is not possible given the current speed of Atmos equipment.
+Increasing the speed to handle the load is not something we want, as this can create absurdly powerful pressure bombs and invalidate a lot of the technical challenges that Atmos techs have to face when building systems "to the max".
+
+However, a solution is still possible, based on a compromise between the current "atmosphere maintenance" system and the proposed "station-wide HVAC" system.
+
+### New Air Scrubber Behavior
+Air scrubbers will now have the PressureBound component, which will prevent the scrubber from drawing gasses from a room past a certain pressure.
+
+This will allow for the proper management of pressure in a room, which is a huge issue in the current atmos system. This also enables pressure-based recirculation.
+
+### New Air Alarm Behavior
+Air alarms will have their operating modes and alarm types expanded, to enable the proper control of cooling and heating systems, and to enable finer control of scrubbers.
+
+Air alarms will get two new modes, "Recirculation" and "Fast Recirculation":
+1. **Recirculation**
+   - Recirculation is enabled when the air alarm senses a "warning" temperature in the room.
+   - Connected air vents will have their pressure bound increased to 150 kPa to push fresh air into the room.
+   - Connected air scrubbers will start scrubbing all gasses.
+2. **Fast Recirculation**
+   - Fast Recirculation is enabled when the air alarm senses a "critical" temperature in the room.
+   - Connected air vents will have their pressure bound increased to 200 kPa (maybe even 500kPa?) to push fresh air into the room.
+   - Connected air scrubbers will start scrubbing all gasses.
+
+The **Filtering (Wide)** also gets its presets changed to scrub all gasses when wide filtering, as a second option to help reduce pressure to normal levels.
+
+Because scrubbers now have the PressureBound system, the room will stay pressurized while gas is being refreshed.
+
+Air alarms will also have their warnings expanded into Pressure, Temperature, and Composition warnings, with their respective output signals.
+This ensures that the Recirculation modes will only enable during a temperature upset, and not a composition upset (where it's simply more efficient to scrub the gas instead of recycle it).
+This also expands the potential of signal-controlled systems that can be made with air alarms.
+
+It is important to note that under this new system, air alarms can experience multiple types of warnings at once.
+Picking the right mode is important, so a mode priority is established.
+
+1. **Fast Recirculation**
+2. **Recirculation**
+4. **Filtering (Wide)**
+5. **Filtering**
+
+This way a gas alarm can "work towards" a solution in the proper "steps".
+This is not invalidating all atmospheric upsets and making everything automatic.
+An air alarm can easily get the operating mode wrong given the situation and an atmospheric technician will correct it on-site and monitor the situation.
+
 ### Gas Life Cycle
 Under gas recirculation, gas is to follow a gas life cycle. This cycle is as follows:
 1. Oxygen and Nitrogen flows from gas reserves to a gas mixer.
@@ -47,7 +125,7 @@ Under gas recirculation, gas is to follow a gas life cycle. This cycle is as fol
 7. The station's wastenet sends the air to the station's recyclernet, which filters and recyclers the gasses back to the gas reserves.
 8. The cycle repeats.
 
-This allows proper flow-based atmospherics and the proper control of station temperature (and indirectly, pressure)!
+This allows for proper flow-based atmospherics and the proper control of station temperature (and indirectly, pressure)!
 
 ### The Gas Mixing Chamber
 The gas mixing chamber is a new system that will have to be enabled at the start of the shift. This system uses a series of radiators exposed to space and a burn chamber to heat or cool the air in the chamber dramatically. To explain it linearly:
@@ -61,6 +139,8 @@ The gas mixing chamber is a new system that will have to be enabled at the start
 This system allows the cooling or heating of the station's air to standard temperature, which is then sent to the station's distro.
 
 Below is a visual flowchart of the gas mixing chamber, describing a potential solution to the problem:
+
+(This image describes the system quite well, but the mixing chamber has major flaws that must be corrected. The underlying principle stays the same.)
 
 ![image](https://github.com/user-attachments/assets/1f2c42a9-801b-48c6-bded-47537b7bac30)
 
@@ -86,15 +166,13 @@ However, we still want a small trickle of incoming gas for multiple reasons:
      - I understand this is a repeat of Point 1 but I would like to get this point out on paper because I believe that it is important. Just like the AME (not an extremely perfect analogy), Atmos should have something to fall back on. Maybe make the gas miners take power from the station?
      - Hypothetical: "CE here. An atmos tech accidentally set up the recyclernet wrong and spaced all of the station's gas. Cargo has no money and we are unable to pressurize spaced areas." and shortly thereafter, "The emergency shuttle has been called."
 
-
-
 ### Required Changes
-Major changes are required to station setups, but the core systems are already present in the game. The following changes are required:
+Major changes are required to station setups, but the core systems are already present in the game. The following changes are summarized from the proposal above:
 - An air mixing chamber, with the necessary cooling/heating infrastructure, will have to be mapped to all stations. Some stations do not have an air holding chamber currently.
 - Air scrubbers will have to be changed to scrub all gasses, not just waste gasses. Additionally, air scrubbers will need the PressureBound system added to enable the prevention of drawing gasses from a room past a certain pressure.
-  - This change might be too breaking. An alternative "return vent" could be mapped to the station, which would allow the return of air to the station's recyclernet. This honestly makes more sense, as we're dealing with vent-based gas flow now, not scrubber-based gas management.
+  - A "return vent" concept was explored in testing, but it was found to be horrible. The PressureBound system is a much more viable solution.
 - The ExternalBound of air vents will have to be changed to allow the venting of air at a higher pressure than standard atmospheric pressure, to promote the natural flow of gas.
-- A more complex air alarm may have to be implemented to handle the valve-based control of cooling and heating (perhaps a computer system?).
+- A more complex air alarm will have to be implemented to handle the valve-based control of cooling and heating, as well as the different modes air scrubbers will operate in.
 - Tests and observation will have to be done in order to tune gas miner values to ensure that the station's air reserves are not infinite, but still have a small trickle of incoming gas for burn chambers.
 
 ### Benefits (Arguments for the implementation)
@@ -158,3 +236,6 @@ In the future, the following systems could be implemented to further enhance the
    - This can also enable the precise regulation of pumps to control the specific power of heating and cooling.
      - This is **exactly** what modern thermostats and air conditioning units do in real life to increase efficiency and reduce energy consumption. Rather than running an AC compressor at full power, the compressor is run at a lower power to maintain a specific temperature.
    - This system has **huge** potential for emergent gameplay, as savvy Atmos techs can use applied mathematics (Ideal Gas Law, Thermodynamics, Specific Heat Capacity, Energy In/Out) to create complex solutions to station problems.
+4. **Negative pressure rooms and filtration/disinfection systems for future disease systems.**
+   - Negative pressure rooms are used in real life to prevent the spread of airborne diseases. This could be implemented in SS14 to prevent the spread of diseases through the station's vent system.
+   - Filtration/disinfection systems could be implemented to further enhance the depth of the atmospherics system. These systems could be used to filter out or disinfect airborne bacteria/viruses from the station's air.
