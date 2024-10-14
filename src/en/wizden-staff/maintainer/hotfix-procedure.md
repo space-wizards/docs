@@ -26,7 +26,7 @@ This will eventually be done by a github action or a bot automatically.
 - Branch of off the staging branch
 ```shell
 git checkout staging
-git branch -b "<hotfix branch name>"
+git checkout -b "<hotfix branch name>"
 ```
 - Implement the hotfix
 - Push the hotfix branch
@@ -41,7 +41,7 @@ git push <remote name> HEAD
 - Branch of off the stable branch
 ```shell
 git checkout stable
-git branch -b "<hotfix branch name>"
+git checkout -b "<hotfix branch name>"
 ```
 - Implement the hotfix
 - Push the hotfix branch
@@ -57,7 +57,7 @@ git push <remote name> HEAD
 - Branch of off the stable branch
 ```shell
 git checkout stable
-git branch -b "<hotfix branch name>"
+git checkout -b "<hotfix branch name>"
 ```
 - Implement the hotfix
 - Push the hotfix branch
