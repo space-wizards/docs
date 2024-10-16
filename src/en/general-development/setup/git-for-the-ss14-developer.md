@@ -450,7 +450,7 @@ Now, the fun part. We'll go to GitHub now and make a pull request for our funny 
 Add a description, a nice title, some screenshots, and hopefully it gets merged.
 
 ```admonish warning title="Don't do it now"
-Your pull request will be made directly in the official repository and will be visible to others. Ensure that your changes are thoroughly reviewed and ready for official evaluation. If you only want to test, create the PR in your own fork to avoid making it publicly visible.
+Any pull request made to the official repository will be publicly visible and open for review and comments by anyone. Ensure that your changes are thoroughly reviewed and ready for official evaluation. If you only want to test, consider creating the PR in your own fork.
 ```
 
 ## 6. Updating our repository
