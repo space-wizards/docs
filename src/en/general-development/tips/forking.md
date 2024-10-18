@@ -8,9 +8,31 @@ This document only describes the technical considerations of forking. Keep in mi
 
 ## Creating Your Repo
 
-You should not create your project's reposistory with the github fork button. This is because github only permits one fork of a repo per account and forks of your repo will be counted the same as forks of your upstream.
+You should not create your project's repository with the github fork button. This is because github only permits one fork of a repo per account and forks of your repo will be counted the same as forks of your upstream. Additionally, it makes it impossible to accidentally send pull requests to your upstream.
 
-Instead, download your upstream's git tree locally on your computer and create a blank git repo in the organization for your project. Then simply push your changes to the repo. Anybody who wants to contribute will need to fork your new repository instead of your upstream's.
+Instead, do the following:
+- Create blank repo, either on an org or in your user. Do not initialize the repo with an initial commit, leave it blank.
+- git clone the repository of the upstream you wish to fork from (if you already have a local copy, then you can use that instead)
+- `git remote add YourFork github.com/YourOrg/YourRepo` to add your blank repo as a remote
+- git checkout your desired remote branch. If you're basing off Wizard's den, it is strongly recommended that you base your fork on stable.
+    - `git fetch upstream stable` (assuming the remote pointing to the repository you wish to fork from is called upstream)
+    - `git checkout upstream/stable`
+- `git push YourFork master` to push that to your fork as the master branch.
+
+Congratulations, you have successfully started a fork!
+
+To update your fork in the future do as flows:
+- Create a new branch based on the most recent commit of your fork
+- git fetch your desired upstream branch as above
+- Then git pull it.
+
+Continuing with the example of mainline stable, the commands used for the above would be:
+- `git fetch upstream stable`
+- `git pull upstream stable`
+- Fix merge conflicts if needed, and PR your fresh upstream merge branch
+- If you do not want an upstream feature, now is the time to revert the change using `git revert`
+
+Note that any contributors to your fork will need to press the github fork button on your repository instead of your upstream's.
 
 ## Organization
 ### Put your code in dedicated server folders.
