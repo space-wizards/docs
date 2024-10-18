@@ -96,17 +96,6 @@ The conflicts are trying to tell you something, if they happen.
 ### But don't make the defaults server-specific.
 CCVars is not your server's config file, configure your server on your server in `server_config.toml`, not in the codebase. Change defaults if the default breaks the game, enables mechanics you want disabled, or breaks your design, not to set your discord link.
 
-## Solutions & Assemblies
-### Extra DLLs are not mods.
-RobustToolbox features a "mod-loader", allowing you to separate functionality into additional DLLs. This is how some third-party libraries work. However, this functionality deliberately doesn't include support for resources, and shouldn't be used like some sort of drag-drop modding toolkit unless you want the game to be about as coherent as gmod. However, use it for libraries, through submodules, and it'll prove useful.
-
-### Make sure to change Content.Packaging to include new assemblies.
-
-If using a third party library, make sure to add the name of its DLL(s) to ClientPackaging.cs and ServerPackaging.cs as appropriate, to ensure release builds of the game include the necessary files.
-
-### Assemblies must follow the `Content.*` naming scheme.
-In short, if you don't do this you will be met with sandbox errors, and your game will not function.
-
 ## Database Layout
 
 EFCore is not really made to be used in the way that you will be using it as a fork developer, if you can avoid making DB changes you should. To avoid a number of bugs (most notably [this one](https://github.com/dotnet/efcore/issues/24834)) it is strongly recommended to not modify your upstream's tables. Instead, you should make a corresponding table for your fork's data that is in a one to one relationship with the original table.
