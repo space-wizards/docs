@@ -4,14 +4,14 @@
 |---|---|---|
 | Warpzoned, Doru991 | :x: | TBD |
 
-Heavy inspiration from EmoGarbage404's Specter antagonist. (https://github.com/space-wizards/docs/pull/262)
+Heavy inspiration from EmoGarbage404's Specter antagonist (https://github.com/space-wizards/docs/pull/262), as well as SS13's Wraith antagonist (https://wiki.ss13.co/Wraith).
 
 ## Overview
 
 With this proposal we aim to add more self-sufficiency to the Revenant, as well as make it more fleshed out.
 Some existing abilities have been reworked to better fit with how this new Revenant plays out on top of having the shop expanded.
 Not all abilities reveal the Revenant now.
-The Revenant is now extra susceptible to holy attacks, as per SlamBamActionman's PR.
+The Revenant is now extra susceptible to holy attacks, as per SlamBamActionman's PR. (refer to https://github.com/space-wizards/space-station-14/pull/32755)
 The Revenant is now be able to possess harvest-prone players, taking over their body completely.
 The Revenant can upgrade some of it's abilities in exchange of souls.
 Player souls are ranked differently.
@@ -32,7 +32,7 @@ There will be ways to upgrade the Revenant's MHP up to double its base amount.
 
 ### Vulnerabilities
 
-The Revenant is intangible towards nearly all kinds of damage when metaphysical, the one exception being holy damage. (refer to https://github.com/space-wizards/space-station-14/pull/32755)
+The Revenant is intangible towards nearly all kinds of damage when metaphysical, the one exception being holy damage.
 When possessing someone, the Revenant will not be able to pick up the Bible, nor any container with one within, as they will burn similarly to how you do when touching a light fixture without insulated gloves.
 If salt is poured on the ground, it acts as an invisible barrier to the Revenant.
 
@@ -70,6 +70,8 @@ Abilities under this category can be used by the Revenant whenever.
  - Flicker - Unlock Cost: Very Low - Use Cost: Very Low - Cooldown: Short - Use Duration: Short - Causes lights around the Revenant to flicker ominously, an ability innate to ghosts.
  - Mistify - Unlock Cost: Medium - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Enshrouds the Revenant in a shadowy mist that obscurs vision to everyone but the caster, similarly to the shadow anomaly's.
 
+### Metaphysical Abilities
+
 Abilities under this category can only be used when the Revenant is in it's metaphysical form.
 
  - Whisper - Unlock Cost: Very Low - Use Cost: Very Low - Cooldown: Near-Instant - Use Duration: Instant - Sends an otherworldly message to the selected target, spooky!
@@ -77,12 +79,16 @@ Abilities under this category can only be used when the Revenant is in it's meta
  - Mark - Unlock Cost: High - Use Cost: Medium - Cooldown: Very Long - Use Duration: Short - Marks the targeted crew member with an effect that periodically drains them of their energy, making them experience drowsiness, an effect similar to that of being drunk, in which after a while they'll forcefully enter an asleep state.
  - Possess - Unlock Cost: Very High - Use Cost: High - Cooldown: Long - Use Duration: Medium - Reveal Time: Medium - The Revenant may possess recently deceased personnel, upon entering their body, they will be brought back to the Poor state, and any kind of DoT will be immediately and completely halted (ie. poison, bleeding). If the Revenant uses any ability on the mortal plane, they will emit a dim purple haze around them. Possessed bodies will be frighteningly cold, and upon examining them they will apear pale. If the possessed body dies the Revenant will not be able to gather Soul Essence for a while.
 
+### Post-possession Abilities
+
 Abilities under this category can only be used when the Revenant is possessing someone.
 
  - Dispossess - Unlock Cost: *Free (comes with Possess) - Use Cost: Free - Cooldown: None - Use Duration: Short - Allows the Revenant to leave the physical body at any point in time.
  - Unshackle - Unlock Cost: Low - Use Cost: Medium - Cooldown: Average - Use Duration: Instant - Frees the Revenant of any binds.
  - Adhere - Unlock Cost: High - Use Cost: Free - Cooldown: Near-Instant - Use Duration: Toggleable - Grants the possessed body no-slip capabilities.
  - Filch - Unlock Cost: Very High - Use Cost: Free - Cooldown: Near-Instant - Use Duration: Toggleable - Makes it so that when stealing something from someone there's no visible action bar, similarly to thieving gloves.
+
+### Ability Upgrades
 
 Items listed under this category are upgrades to existing abilities.
 
