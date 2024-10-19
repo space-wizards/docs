@@ -6,10 +6,12 @@
 
 Heavy inspiration from EmoGarbage404's [Specter antagonist](https://github.com/space-wizards/docs/pull/262), as well as SS13's [Wraith antagonist](https://wiki.ss13.co/Wraith).
 
+[Holy Damage PR](https://github.com/space-wizards/space-station-14/pull/32755)
+
 ## Overview
 
 With this proposal we aim to add more self-sufficiency to the Revenant, as well as make it more fleshed out.</p>
-<p>Some existing abilities have been reworked to better fit with how this new Revenant plays out on top of having the shop expanded, and not all abilities reveal the Revenant now. The Revenant is now extra susceptible to holy damage, as per [SlamBamActionman's PR](https://github.com/space-wizards/space-station-14/pull/32755), as well as being able to possess harvest-prone players, taking over their body completely. Lastly, it can upgrade some of it's abilities in exchange of souls.</p>
+<p>Some existing abilities have been reworked to better fit with how this new Revenant plays out on top of having the shop expanded, and not all abilities reveal the Revenant now. The Revenant is now extra susceptible to holy damage as per SlamBamActionman's PR, as well as being able to possess harvest-prone players, taking over their body completely. Lastly, it can upgrade some of it's abilities in exchange of souls.</p>
 <p>Player souls are ranked differently.
 
 ## Background
