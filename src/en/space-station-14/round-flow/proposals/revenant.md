@@ -9,32 +9,29 @@ Heavy inspiration from EmoGarbage404's [Specter antagonist](https://github.com/s
 ## Overview
 
 With this proposal we aim to add more self-sufficiency to the Revenant, as well as make it more fleshed out.</p>
-Some existing abilities have been reworked to better fit with how this new Revenant plays out on top of having the shop expanded -
-Not all abilities reveal the Revenant now.
-The Revenant is now extra susceptible to holy damage, as per [SlamBamActionman's PR](https://github.com/space-wizards/space-station-14/pull/32755), as well as being able to possess harvest-prone players, taking over their body completely.
-Lastly, it can upgrade some of it's abilities in exchange of souls.</p>
-Player souls are ranked differently.
+<p>Some existing abilities have been reworked to better fit with how this new Revenant plays out on top of having the shop expanded, and not all abilities reveal the Revenant now. The Revenant is now extra susceptible to holy damage, as per [SlamBamActionman's PR](https://github.com/space-wizards/space-station-14/pull/32755), as well as being able to possess harvest-prone players, taking over their body completely. Lastly, it can upgrade some of it's abilities in exchange of souls.</p>
+<p>Player souls are ranked differently.
 
 ## Background
 
 Currently, the Revenant is a mediocre mid-round antag ghost role, due to it's dependence on crew deaths, which are entirely beyond the Revenant's control, the present gameplay loop usually consists of the Revenant having to visit med at least once in order to attain Stolen Essence, or pray for major disasters, which isn't fun at all, and even after having unlocked all abilities, there's not much going for the Revenant besides being a mild and repetitive annoyance.</p>
-What we bring you is a major re-design of the Revenant, which not only makes getting 'fun' abilities less of a grind, but tries to make it actually interact with the crew.
+<p>What we bring you is a major re-design of the Revenant, which not only makes getting 'fun' abilities less of a grind, but tries to make it actually interact with the crew.
 
 ## MHP (Metaphysical Hitpoints)
 
 The Revenant's HP will now be completely separate of the Soul Essence harvested.</p>
-MHP does not passively regenerate, making the only way to get it back through Soul Essence conversion, the Revenant starts with below average HP, similarly to the existing version, however, there will be ways to upgrade the Revenant's MHP up to double its base amount.
+<p>MHP does not passively regenerate, making the only way to get it back through Soul Essence conversion, the Revenant starts with below average HP, similarly to the existing version, however, there will be ways to upgrade the Revenant's MHP up to double its base amount.
 
 ### Vulnerabilities
 
 The Revenant is intangible towards nearly all kinds of damage when metaphysical, the one exception being holy damage.</p>
-When possessing someone, the Revenant will not be able to pick up the Bible, nor any container with one within, as they will burn similarly to how you do when touching a light fixture without insulated gloves.</p>
-If the Revenant passes/steps through salt that is poured on the ground, they will be revealed for a short while.
+<p>When possessing someone, the Revenant will not be able to pick up the Bible, nor any container with one within, as they will burn similarly to how you do when touching a light fixture without insulated gloves.</p>
+<p>If the Revenant passes/steps through salt that is poured on the ground, they will be revealed for a short while.
 
 ## Soul Essence
 
 (Stolen Essence has been renamed to Soul Essence as to not make it feel like the Revenant's a complete kleptomaniac)</p>
-Soul Essence is the Revenant's universal currency, almost everything revolves around it's usage, you can obtain it solely via Harvesting.
+<p>Soul Essence is the Revenant's universal currency, almost everything revolves around it's usage, you can obtain it solely via Harvesting.
 
 ### Soul ranking
 
