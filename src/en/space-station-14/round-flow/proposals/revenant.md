@@ -69,7 +69,7 @@ Abilities under this category can be used by the Revenant whenever.
 Abilities under this category can only be used when the Revenant is in it's metaphysical form.
 
  - **Whisper** - Unlock Cost: Very Low - Use Cost: Very Low - Cooldown: Near-Instant - Use Duration: Instant - Sends an otherworldly message to the selected target, spooky!
- - **Slip** - Unlock Cost: Very Low - Use Cost: Very Low - Cooldown: Short - Use Duration: Instant - Makes the selected target slip.
+ - **Slip** - Unlock Cost: Very Low - Use Cost: Very Low - Cooldown: Short - Use Duration: Instant - Makes the selected target slip. stun duration similar to that of normal soap.
  - **Hallucinate** - Unlock Cost: Low - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Makes the selected target start hearing things, goes away after a while.
  - **Disorient** - Unlock Cost: Medium - Use Cost: Low - Cooldown: Long - Use Duration: Instant - Makes the selected target's controls go haywire, so that they're either completely inverted, stuck in walking one direction, or inputting late.
  - **Mark** - Unlock Cost: High - Use Cost: Medium - Cooldown: Very Long - Use Duration: Short - Marks the targeted crew member with an effect that periodically drains them of their energy, making them experience drowsiness, an effect similar to that of being drunk, in which after a while they'll forcefully enter an asleep state.
@@ -91,4 +91,5 @@ Items listed under this category are upgrades to existing abilities.
  - **Sleep Paralysis** - Unlock Cost: Very High - Affects: Harvest, Possess - SSD and asleep personnel are now susceptible to having their Soul Essence reaped by the Revenant, as well as being possessed. The Revenant will take slightly longer to harvest and possess crew members if they are in a slumbering state.
  - **Hyperload** - Unlock Cost: High - Affects: Overload - Overload's flashes now penetrate through sun glasses, welding masks, and any other kinds of flash protection.
  - **Mist Empowerment** - Unlock Cost: Medium - Affects: Mistify - Mistify's mist size now increases with each purchase. (every additional acquisition of this upgrade costs more than previously)
+ - **Super Slip** - Unlock Cost: Medium - Affects: Slip - Slip's slips now stun for longer, duration similar to that of syndie soap.
  - **Domain** - Unlock Cost: Very High - Affects: Mistify - If there any any bodies within the Revenant's shadowy mist, any Harvest or Possess used on said targets will have their Use Duration cut.
