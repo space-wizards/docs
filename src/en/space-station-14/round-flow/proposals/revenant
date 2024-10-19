@@ -1,0 +1,40 @@
+# Revenant V2
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| Warpzoned, Doru991 | :x: | TBD |
+
+Heavy inspiration from EmoGarbage's Specter antagonist. (https://github.com/space-wizards/docs/pull/262)
+
+## Overview
+
+With this proposal we aim to add more self-sufficiency to the Revenant, as well as make it more fleshed out.
+Some existing abilities have been reworked to better fit with how this new Revenant plays out on top of having the shop expanded.
+The Revenant is now extra susceptible to holy attacks, as per SlamBamActionman's PR.
+The Revenant is now be able to possess harvest-prone players, taking over their body completely.
+The Revenant can upgrade some of it's abilities in exchange of souls.
+Player souls are ranked differently.
+
+## Background
+
+Currently, the Revenant is a mediocre mid-round antag ghost role, due to it's dependence on crew deaths, which are entirely beyond the Revenant's control.
+The present gameplay loop usually consists of the Revenant having to visit med at least once in order to attain Stolen Essence, or pray for major disasters.
+And even after having unlocked all abilities, there's not much going for the Revenant besides being a mild and repetitive annoyance.
+What we bring you is a major re-design of the Revenant, which not only makes getting 'fun' abilities less of a grind, but tries to make it actually interact with the crew.
+
+## MHP
+
+The Revenant's HP will now be completely separate of the Soul Essence harvested.
+MHP (Metaphysical Hitpoints) do not passively regenerate, making the only way to get them back through Soul Essence conversion.
+There will be ways to upgrade the Revenant's MHP up to double its base amount.
+
+## Soul ranking
+
+Souls are now divided into 3 different grades: Low-value, Medium-value, and High-value
+Low-value souls will be that of 'normal' personnel (Civillians, common Engineers, common Medics, et cetera)
+Medium-value souls will be that of 'special' personnel (ie. Security Officers and Cadets, most of Command)
+High-value souls will be that of 'unique' personnel (ie. Captain, Head of Security, Antagonists)
+Your soul's essence will be dependent on it's grade, Low-value having the least base amount, and High-value having the most.
+Players may rise through the rankings via killing other player-controlled humanoid characters.
+
+## Soul Essence Shop
