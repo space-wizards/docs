@@ -5,7 +5,7 @@ I will do my best to keep this up to date as Maintainers come and leave.
 
 The format is as follows
 
-**Github - Discord (ID)**
+**Github - @Discord (Discord ID)**
 
 Both Engine and Content Maintainers:
 - [Jezithyr](https://github.com/Jezithyr) - @jezithyr (107689319396831232)
@@ -13,7 +13,6 @@ Both Engine and Content Maintainers:
 - [PJB3005](https://github.com/PJB3005) - @pjb (97089048065097728)
 - [ShadowCommander](https://github.com/ShadowCommander) - @shadowcommander (104693014407950336)
 - [DrSmugleaf](https://github.com/DrSmugleaf) - @drsmugleaf (109067752286715904)
-- [mirrorcult](https://github.com/mirrorcult) - @mirrorcult (176065747200507904)
 - [metalgearsloth](https://github.com/metalgearsloth) - @metalgearsloth (229052932476108800)
 - [Visne](https://github.com/Visne) - @visne (182723474257608705)
 - [keronshb](https://github.com/keronshb) - @keronshb (226429200553213952)
@@ -35,11 +34,12 @@ Content Maintainers:
 - [TemporalOroboros](https://github.com/TemporalOroboros) - @the_quiet_one (423542163503185942)
 - [Flareguy](https://github.com/Flareguy) - @flar3guy (310216766192091156)
 - [TheShuEd](https://github.com/TheShuEd) - @eshhhed (267327466060775425)
-- [EmoGarbage404](https://github.com/EmoGarbage404) - @emogarbage (500128901805244436)
 - [LankLTE](https://github.com/LankLTE) - @lanklte (328292818265047041)
 - [slarticodefast](https://github.com/slarticodefast) - @sebseb5071 (578191477839101967)
 - [UbaserB](https://github.com/UbaserB) - @ubaser (578881480386805771)
 - [Errant-4](https://github.com/Errant-4) - @err.ant (502504545579040768)
+- [Mervill](https://github.com/Mervill) - @mervill (153632198845661184)
+- [SlamBamActionman](https://github.com/SlamBamActionman) - @slambamactionman (91969935848251392)
 
 Engine maintainers:
 No one maintains only engine :p
