@@ -30,21 +30,14 @@ once again to reward Geneticist from requesting assistance from people from as m
 alternative from the fully random mutation: Each Departement will bring something unique to genetic, not only thanks to the ressources they might provide but also because each departement workforce will come with a unique set of dormant mutations,
 now each departement have a role to play with Genetic.
 
-Each departement workforce will also not provide useful mutations for their own department, in order to encourage player interaction and limit powergaming.
-
-Or like in SS13, keep the mutation randomly picked
-
--First idea : Stability
-The Stability system will also be thrown into the trash , this system aim to limit the amount of mutation one's can have active, with negative mutation increasing stability,
-it doesn't bring anything meaninful to Genetic because people will always go with a handful of mutation never reaching or going above the 100 points limit and is in the end just an artifical limiting factor.
-This is why each crew members will have a very limited number of mutations active at a time(with potential possibility to break the limit with T3 research?)
-i think a base limit 2 at most it good enough, and mutation being part of their current sequences doesn't affect the maximum limit, 2 activated, 1 activated and 1 mutated or 2 mutated), and each mutation will come with downsides.
+Each departement workforce will also not provide useful mutations for their own department, in order to encourage player interaction and limit powergaming. Or like in SS13, keep the mutation randomly picked without departemental limitation.
 
 -Second idea : Stability
-Stability is kept, but player will suffer drawbacks as they reach certain threholds of stability.
+Stability is kept, but player will suffer drawbacks as they reach certain threholds of stability. Each overall positive mutation have a high stability cost, trying to run combos(for example improved regeneration and mending touch) would require accepting negative mutations to balance stability and not dying a horrible goopy death.
 
 -idea : Genetic minigame
 Having Genetic play a more involving minigame than pairing AT-CG, when it's easy to build up muscle memory in order to complete the sequences it is not really involving the players at some point(also counting cross referencing)
+Mastermind was suggested by Jez (4 or any number of colored dot combinaison that must be guessed following hints(right color at the right spot or right color on a wrong spot))
 
 -First idea : Research point printing
 Each researched mutations will give a small amount of research points, and printing an activators/mutators will cost points(activators cost less since they are very limited in their use cases), activators and mutators will also need to be kept cold in a special container, genetic will get a small one and R&D desk with get a bigger one.
@@ -55,7 +48,7 @@ Each mutation injector will be researched and stored in a fridge, R&D and Geneti
 Things will most likely go like this, the geneticist will start experiment on their round start monkeys/kobolds and grab a few mutations from them
 (they should be alive and well for artifact research afterward if they didn't kill them) then they should start seeking people from other departements and start gathering mutations and start gathering research material and research mutations.
 
-For the sake of presentation, I will provide a few mutation that some may already know, but paired with downsides. Of course certain mutations will be present without drawback,
+For the sake of presentation, I will provide a few exemples that some may already know, but paired with downsides. Of course certain mutations will be present without drawback,
 like the mutations changing your accent as they are purely for flavor(but they should be exclusive among themselves to prevent having John Grey having Pirate+Medieval+Swedish).
 
 _Cold adaptation could lower even more the low temperature threshold and give some resistance to cold damages(this is after all an adaptation not an immunity) but make you numbs, tempering your ability to see if your wounded.
