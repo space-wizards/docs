@@ -38,15 +38,21 @@ Note that any contributors to your fork will need to press the github fork butto
 
 ```admonish warning
 The author of this document is not a lawer and nothing written here should be interpreted as legal advice. If you have questions about licensing you should consult a lawer before proceeding
+
+MAKE SURE YOU READ AND UNDERSTAND THE LICENSE OF ALL FILES IN YOUR FORK.
 ```
 
 If you are not well-versed with open source software licenses we recommend that you license you fork under the same license as your upstream. This will cause you the least amount of legal issues (or more likely, general controversy). Wizard's Den uses the "MIT License" (which is sometimes referred to as the Expat license). A copy of this license is already included in the repository and requires no action on your part to use. The MIT license grants you the right to do almost anything with the code (including sublicense it) as long as a copy of the copyright notice is retained.
+
+Art assists are almost universally licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). Note that the NC means non-commercial, so if you would like to use ss14 commercially you will need to remove those assets. See the linked websites for more information.
 
 Be aware when porting content from other forks that they may have more restrictive licenses like the GNU Affero General Public License (AGPL) or Mozilla Public License (MPL). Be careful to follow the restrictions imposed by those licenses.
 
 The AGPL and MPL licenses are "copyleft" licenses, meaning they require any modifications of your code to be released under the same license. The AGPL requires the resulting binary of your project to be licensed under the AGPL which means every user is entitled to a copy of the *entire* source tree. This prevents you from having hidden content. AGPL code can be licensed in two different ways: AGPL-3.0-only, or AGPL-3.0-or-later. The difference between them is that AGPL-3.0-or-later code will be licensed under any future version of the AGPL that the Free Software Foundation publishes. The MPL has no "v2 only" option, your license will always be the latest version published by Mozilla.
 
 The MPL only requires that files under the MPL license be released to users which makes it suitable for projects that include hidden content. Note that the MPL has an optional term called "Exhibit B". Code which is licensed under the MPL and the Exhibit B clause cannot be combined with code licensed under the AGPL.
+
+Remember that this document provides a very brief overview of the licenses discussed. You should read the license of any files/code you intend to include in it's entirety and consult a lawer if you have any questions.
 
 ## Organization
 ### Put your code in dedicated server folders.
