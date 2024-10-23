@@ -1,150 +1,3 @@
-# ECS
-
-Embed these nicely somewhere.
-
-https://youtu.be/W3aieHjyNvw
-
-https://youtu.be/JxI3Eu5DPwE
-
-## The solution to 'OOP is Bad': ECS
-
-So, the ECS ([Entity Component System](https://en.wikipedia.org/wiki/Entity_component_system)) gang has finally convinced you that OOP is bad and ECS is good, huh?
-Good! OOP is indeed bad. In this document, we'll revisit some basic concepts such as Components, Entity Systems and Events, and explore an ECS approach to them.
-
-```admonish info
-For a solid, real example of ECS in action on our codebase, take a look at [Stacks](https://github.com/space-wizards/space-station-14/pull/4046) and [Actors](https://github.com/space-wizards/RobustToolbox/pull/1774).
-```
-
-## Why composition over inheritance for game objects?
-When you think of how to design game objects such as humans, items or walls, your first idea might be to use complex inheritance trees for this:
-
-```mermaid
-flowchart TD
-    GameObject --> BaseDamageable
-    BaseDamageable --> BaseMob
-    BaseDamageable --> BaseItem
-    BaseDamageable --> BaseBuckleable
-    BaseDamageable --> BaseMachine
-    BaseMachine --> BasePoweredMachine --> CoffeeMaker
-    BaseItem --> Crowbar
-    BaseBuckleable --> Chair
-    BaseBuckleable --> Wheelchair
-    BaseMob --> BaseCarbon
-    BaseMob --> BaseSilicon
-    BaseCarbon --> Human
-    BaseCarbon --> Cow
-    BaseCarbon --> Horse
-    BaseSilicon --> Borg
-    BaseSilicon --> AI
-    BaseSilicon --> pAI
-    Human --> Monkey
-    Human --> Catgirl
-```
-
-Seems fine at first, right?
-However, as you keep adding more and more features you'll soon realize the limitations of this. Let's go over some of the problems you might encounter.
-
-1. Say you wanted to make borgs, but not AIs nor pAIs, draw power from the powernet like `BasePoweredMachine` can.
-What do you do? Do you make borgs inherit from `BasePoweredMachine`?
-That's not an option, as they need to inherit both `BaseMob` and `BaseSilicon`.
-Do you make `BaseMob` inherit `BasePoweredMachine` instead?
-That doesn't make sense either, most mobs will not need that functionality.
-Your only option here is to duplicate the code that handles power across `BaseMachinePowered` and `Borg`.
-2. Now, say you wanted to allow people to buckle themselves to horses and borgs, but not the rest of mobs.
-What do you do, do you make `BaseMob` inherit `BaseBuckleable`?
-That doesn't make sense, as most mobs will not need that functionality.
-Your only option again is to duplicate code across multiple, distant classes. 
-
-As we've seen, having complex inheritance trees like this is not ideal, and eventually forces us to needlessly duplicate code, or give certain game objects functionality they're never gonna need.
-The solution to all these problems is to use **composition** instead.
-
-```mermaid
-flowchart TD
-    subgraph Human Mob
-    Damageable;
-    Buckleable;
-    PlayerControllable;
-    end
-```
-
-```mermaid
-flowchart TD
-    subgraph Borg Mob
-    Damageable;
-    PlayerControllable;
-    Buckle;
-    PowerReceiver;
-    end
-```
-
-```mermaid
-flowchart TD
-    subgraph Crowbar Item
-    Item;
-    Weapon;
-    Tool;
-    end
-```
-
-```mermaid
-flowchart TD
-    subgraph Chair Entity
-    Damageable;
-    Buckle;
-    end
-```
-
-```mermaid
-flowchart TD
-    subgraph Coffee Maker Machine
-    Damageable;
-    PowerReceiver;
-    SolutionContainer;
-    SolutionProducer;
-    end
-```
-
-As you can see, by using composition all our problems from before are solved neatly, without duplicating any code and allowing for better maintainability and extensability:
-- Borgs and coffee makers share the `PowerReceiver` component, which makes them able to draw power from a net.
-- Borgs and chairs share the `Buckle` component, which allows entities with `Buckleable`, like humans, to be buckled to them.
-- Humans and borgs share the `PlayerControllable` (also known as `Mind` in SS14 code) component, which allows them to be controlled by a player...
-- And most of the game objects above share `Damageable`, which allows them to have "health" and be damaged.
-
-TODO: finish this
-----
-
-Edit all this text into something proper for a doc... Sigh
-
-Okay so we usually mean a bunch of things by "OOP bad", and I'm not sure how to condense it all into a simple explanation but here I go.
-1. First of all, inheritance. There are many problems and inflexibility that come with complex inheritance trees... Imagine we had no components and instead had a big-ass inheritance tree: If you had a "machine" base class that has power consumption, and a different "mob" base class that has funny player-controlling mechanics, now you essentially cannot make a mob have machine qualities or vice versa without making ugly hacks, or a common base for both "machine" and "mob". But at the same time, that wouldn't make much sense either! Most mobs aren't gonna need "power consumption features", and few machines are gonna be player-controlled at all... So to solve this awful, gnarly problem we use "composition" (components!) instead of inheritance. You know this stuff already, if you want an entity to have hands, add `HandsComponent`. If you want to make it consume power, `PowerConsumerComponent` will help! If you want to make it player-controllable, add `MindComponent` and control the entity and-- oh hey we made a "cyborg mob" out of reusable, generic components! This, of course, is hard to do with a big-ass inheritance tree alone... Of course, inheritance can be good and fine for small things, or when you have a very small and self-contained inheritance tree (see something like `SoundSpecifier` for example, it's tiny but inheritance helps a ton there) but when you have a big complex game like ss14, inheritance just makes things way more painful.
-2. Also, encapsulation is another one. OOP likes to put both data and methods/logic on the same class, as a bundle, and only expose certain things to the outside of that class. You know, the funny access modifiers like `public`, `private` and such? So encapsulation is good for something like the engine, which specifically needs to obscure/prohibit access to some data or methods. But it doesn't make thaaaat much sense for game data and logic, for example. `StackComponent` in SS14 have no private fields or properties in 'em, anyone is free to go and read/write the values as they please. However, this is not the recommended way to interact with stacks, at all!
-`StackSystem` has a few methods to operate on `StackComponent`, and change its values. So to use a certain amount of things on the stack, you use `StackSystem.Use`, to split it you use `StackSystem.Split`, etc, and `StackSystem` will take care of everything for you. Because turns out that changing the stack amount value isn't enough. You also need to do funny stuff such as: dirtying the component for network syncing purposes, setting the appearance value, raise a `StackCountChanged` event, etc.
-The way you would do this in E/C would be to put all of that logic in the "amount" property on `StackComponent`, or maybe a method. Then you could `private` the actual "amount" number away. However the E/C architecture will not be accepted in this codebase, we will only use the ECS architecture going forward.
-
-See, putting any kind of logic in a component class doesn't make sense at all. If we think about how stuff in ECS is structured, it's like this:
-1. Our game world has a bunch of entities, the entities have components
-2. There are systems that operate on components
-
-Therefore, components should only have data in them, and no logic whatsoever. Systems should give the entities their behavior, when they have the appropriate components.
-I'm more saying like... Rather than have logic in components change stuff, we want entity systems to operate and modify components. So instead of having:
-`HandsComponent.Pickup(ItemComponent)`, you would have:
-`HandsSystem.Pickup(UserEntity, ItemEntity)`.
-
-
-## Components, revisited
-Ah, components. For a long time, they have been the heart of the game's simulation: a mix of data and logic akin to a bowl full of soggy noodles.
-However, as we've experienced in our own codebase, scaling these is far from ideal.
-After a while, you start getting components which are tightly coupled to a lot of other components, and end up with an unmaintainable mess. What do you do when a component requires another component to exist on an entity? Add it if it's missing, or report an error?
-
-The solution to all this and more is to remove ALL logic from components, and simply treat them as containers for your data, or markers. In the long run, this means that components can be all turned into structs, and therefore potentially increase performance in many areas of the game.
-
-But wait, if we remove all logic from components, how do we add behavior to an entity?
-Enter *Entity Systems*.
-
-## Entity Systems: What they should have been from the start
-Entity Systems, as their name implies, are systems for entities.
-This means that ultimately they hold all logic and behavior for entities.
-
 ### Events, subscriptions and methods
 Entity Systems use *event subscriptions* to receive callbacks when certain things happen.
 For example, you can subscribe to receive a callback when a component of a certain type gets initialized, etc.
@@ -161,24 +14,24 @@ public sealed class FooSystem : EntitySystem
 
     // Always subscribe to events here, on initialize
     public override void Initialize()
-    {    
+    {
         // Subscribe to FooComponent being initialized...
         SubscribeLocalEvent<FooComponent, ComponentInit>(OnFooInit);
-        
+
         // Subscribe to FooComponent being interacted on by an user with an item.
         SubscribeLocalEvent<FooComponent, InteractUsingEvent>(Handle);
-        
+
         // Subscribe to the MoveEvent broadcast event, raised whenever
         // an entity moves... Just an example subscription
         SubscribeLocalEvent<MoveEvent>(OnEntityMove);
     }
-    
-    // This is called when a FooComponent is initialized. 
+
+    // This is called when a FooComponent is initialized.
     private void OnFooInit(Entity<FooComponent> ent, ref ComponentInit _)
     {
          // Initialize your FooComponent here
     }
-    
+
     // Example handler for when FooComponent is interacted with by an user.
     private void Handle(Entity<FooComponent> ent, ref InteractUsingEvent args)
     {
@@ -186,7 +39,7 @@ public sealed class FooSystem : EntitySystem
         // We call this method as it handles everything for us.
         SetInteractCounter((ent, ent.Comp), ent.Comp.InteractCounter + 1);
     }
-    
+
     // This is called whenever an entity moves.
     private void OnEntityMove(ref MoveEvent ev)
     {
@@ -206,27 +59,27 @@ public sealed class FooSystem : EntitySystem
         // Try to resolve the component...
         if (!Resolve(ent, ref ent.Comp))
             return;
-    
+
         // Store the old counter, for later...
         var oldCounter = ent.Comp.InteractCounter;
-        
+
         // Set the new interact counter
         ent.Comp.InteractCounter = count;
-    
+
         // Now we set some appearance data, if the entity has an appearance comp
         if (TryComp(ent, out AppearanceComponent? appearance))
             _appearanceSystem.SetData(ent, FooVisualData.InteractCounter, count, appearance);
-            
+
         // Now, we raise an event to let everyone know InteractCounter changed
         // Because the third argument is false, this event will not be broadcast.
-        // This is raised as a directed event only! 
+        // This is raised as a directed event only!
         RaiseLocalEvent(ent, new FooInteractCounterChangedEvent(oldCounter, ent.Comp.InteractCounter));
     }
 }
 
 [RegisterComponent]
 public sealed partial class FooComponent : Component
-{    
+{
     // This will be increased every time an user interacts with us.
     // Notice how the logic for this is not in this component, but in the system.
     [DataField]
@@ -240,7 +93,7 @@ public sealed class FooInteractCounterChangedEvent : EntityEventArgs
 {
     public int OldCounter { get; }
     public int NewCounter { get; }
-    
+
     public FooInteractCounterChangedEvent(int oldCounter, int newCounter)
     {
         OldCounter = oldCounter;
@@ -265,11 +118,11 @@ Entity Systems have different lifetimes on the server and the client:
 On the server, the lifetime of entity systems is essentially the same as the program.
 
 But on the client, the lifetime of entity systems is completely different.
-Entity Systems will be created and initialized upon connecting to a server, and shutdown then removed when the client disconnects from the server. For this reason, you should always handle Entity System shutdown cleanup very carefully on the client. 
+Entity Systems will be created and initialized upon connecting to a server, and shutdown then removed when the client disconnects from the server. For this reason, you should always handle Entity System shutdown cleanup very carefully on the client.
 
 ### Inter-dependencies
 
-Entity Systems can hold dependencies to other entity systems, using the `[Dependency]` attribute, just like with IoC managers. This is preferred over getting other entity systems manually and caching them in a field in your system, or getting them on the fly in methods. 
+Entity Systems can hold dependencies to other entity systems, using the `[Dependency]` attribute, just like with IoC managers. This is preferred over getting other entity systems manually and caching them in a field in your system, or getting them on the fly in methods.
 Something to note is that you can only have dependencies to entity systems in entity systems.
 Example:
 
@@ -280,7 +133,7 @@ public sealed class BarSystem : EntitySystem
     {
         // Some logic here
     }
-    
+
     public void Hicky()
     {
         // Some logic here
@@ -291,16 +144,16 @@ public sealed class FooSystem : EntitySystem
 {
     // This will be automatically set when the system is created.
     [Dependency] private readonly BarSystem _barSystem = default!;
- 
+
      // Regular IoC manager dependencies also work here
     [Dependency] private readonly IPlayerManager _playerManager = default!;
- 
+
     public override void Initialize()
     {
         // This works in initialize, dependencies have been resolved already.
         _barSystem.Doo();
     }
-    
+
     public void MyFunnyMethod()
     {
         _barSystem.Hicky();
@@ -368,7 +221,7 @@ You can inherit `HandledEntityEventArgs` to use this.
 
 #### Ensuring event
 This event is essentially a *handled event*, the only thing that changes is how entity systems deal with it. This kind of event allows you to perform an operation on an entity, *ensuring* that it will have a certain component. If it doesn't have it, it will be added by the entity system handling it.
-This pattern works by raising a handled event, both directed and broadcast. 
+This pattern works by raising a handled event, both directed and broadcast.
 It works because directed events are always raised before broadcast events.
 
 The directed subscription will always set the event as handled, and perform some operation.
@@ -380,8 +233,8 @@ The broadcast subscription, on the same entity system, does nothing if the event
 99.9 % of the time you need to use methods on entity systems instead of this.
 
 This type of event can have "input" fields, which are immutable and set by whoever is raising the event,
-"output" fields, which are mutable and set by whoever handles the event, and 
-"input/output" fields, which are mutable, and able to be set by the caller and receivers. 
+"output" fields, which are mutable and set by whoever handles the event, and
+"input/output" fields, which are mutable, and able to be set by the caller and receivers.
 
 For example, stack splitting uses (*not anymore since the anti-method event revolt of 2021*) a (directed) event which has an amount as the input field, and a nullable entity for the newly created split stack as the output field.
 However, broadcast events that follow this pattern are also very useful: to create a stack entity of a specific stack type, you can raise a broadcast event with the stack type as the input, and get an entity as the output.
