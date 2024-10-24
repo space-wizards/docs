@@ -9,7 +9,6 @@ First you're gonna need some software:
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
   * For **all platforms**, [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 maintainers and contributors prefer it over Visual Studio. It used to be paid but now it's free for Non-Commercial use.
   * For **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 8 SDK or something along those lines.
-  * For **macOS**, [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/).
   * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
     * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
