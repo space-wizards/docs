@@ -1,19 +1,11 @@
-# Short, Properly Capitalized Title
+# Introducing Mechanical Skill to Melee Combat(Kanashi Panda)
 
-Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
+
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Your Names Here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
+| Kanashi Panda | :x: No | TBD |
 
-`Designers` should be the names that you use on GitHub and/or Discord. This is optional but strongly recommended, since:
-
-- This acknowledges credit where it is due
-- People who are confused about the written intent can use this information to contact the authors
-
-`Implemented` is the status of the feature.
-
-Github links can include multiple PRs, if relevant.
 
 ## Overview
 
@@ -21,10 +13,26 @@ A very short, maybe three sentence summary of what this proposal is about. A hig
 
 ## Background
 
+Melee combat is easily called shallow with ALL weapons and creatures resorting to a "WIDESWING WIDESWING WIDESWING WIDESWING WIDESWING WIDESWING" spam to kill. 
+specifically, people lack nearly all agency in *intentional* and fast paced attacks the moment you try to move away from this. There is no dedicated button to melee
+so there is a massive lack of retail space on the keyboard to realistically use for any expansion. But expansion for any more depth is necessary as for a creature like
+Ninja their quick bar becomes to over crowded, overwelming, and complicated. you can only realistically hit, in a fast paced fight, or any kind of panic, numbers one
+through six or seven. So within the current set up setting up 8 more quick abilities for expanded melee combat would unecessarly bloat the game. 
+
+Though, to narrow down the exact issue that needs addressing, in an example as follows: "a syndicate with no slips, and an emp implant swings a wrench at an engi without a suit.
+the engi only has what he can realistically hang onto" so long as the syndi even has so much as a knife, the only solution is to run, which feels like shit since often they DONT
+have a knife, infact they have a sword. What happens is even experienced players quickly realise that anyone half baked and prepared leaves you with literally no option but to run
+feeling helpless. your only agency over your own life is to simply hope by some blind luck you live.
+
+A Melee combat system, a way to realistically have a fight where someone, with sufficient skill, but due to luck, not always have the situation, be able to disarm, parry, or expand
+their list of abilities to survive these situations. Also because I feel like shit when im forced into a situation where though I WANT to fight I am FORCED to run. Also it kinda REALLY 
+it rubs salt in the wound that as Ninja or Captain/Mime with my trusty baguette I cant properly duel someone, with proper blocks, deflects, stabs, and slashes. 
+
+
 Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game.
 
 Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
 
 ## The rest?
 
-Is entirely up to you.
+Placeholder: ive still got other stuff in life so give me grace as I fumble through this.
