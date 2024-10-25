@@ -10,10 +10,11 @@
 ## Overview
 
 A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds".
+---------------Placeholder, forgive me------------------
 
 ## Background
 
-Melee combat is easily called shallow with ALL weapons and creatures resorting to a "WIDESWING WIDESWING WIDESWING WIDESWING WIDESWING WIDESWING" spam to kill. 
+Melee combat can be easily called shallow with ALL weapons and creatures resorting to a "WIDESWING WIDESWING WIDESWING WIDESWING WIDESWING WIDESWING" spam to kill. 
 specifically, people lack nearly all agency in *intentional* and fast paced attacks the moment you try to move away from this. There is no dedicated button to melee
 so there is a massive lack of retail space on the keyboard to realistically use for any expansion. But expansion for any more depth is necessary as for a creature like
 Ninja their quick bar becomes to over crowded, overwelming, and complicated. you can only realistically hit, in a fast paced fight, or any kind of panic, numbers one
@@ -29,10 +30,46 @@ their list of abilities to survive these situations. Also because I feel like sh
 it rubs salt in the wound that as Ninja or Captain/Mime with my trusty baguette I cant properly duel someone, with proper blocks, deflects, stabs, and slashes. 
 
 
-Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game.
+------Placeholder: ive still got other stuff in life so give me grace as I fumble through this.----------
 
-Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
+# Overview Of: fitting new control scheme and mechanics into keybinds and ui without "bloat"
 
-## The rest?
+The current state necessitates that we need something to allow for more retail space on the keyboard to be used. I would suggest that in addition to "harm mode" we have a "melee mode".
+It would find its use immediately as now guns can suddenly do realistic melee attacks like "pushing" and individual back. Plus, this new mode to the mechanics has to have the feature of
+restricting your current keybinds, this is important to prevent accidentally using an item, picking up an item, open a bag, or otherwise fumbling. In a general sense it should add a "z" layer of sorts
+to your current keybinds so we can have full access to the same keybinds that are used for backpack and belt, but now we can reporpose them (or if its in the cards, however the player may change their
+own keybinds to suit them) specifically for melee purposes.
 
-Placeholder: ive still got other stuff in life so give me grace as I fumble through this.
+#Clarification:
+
+1, No, "harm mode" currently in the game doesnt disappear as it has massive uses for "quick" attacks of weapons (removing it would also stress the players.) A combat system meant
+and built around "melee combat" is important to differentiate "ranged" combat. "ranged" specifically has nice mechanical feature already we satisfyingly(sometimes annoying) have to: Weild most weapons,
+rack them, put in a new mag, pay attention gun chamber status, and manage ammo economy and magazine waste. So removing harm mode and trying to merge it into melee wouldnt be viable, as unknown issues may occur
+and it already has a VERY set of circumstances already.
+
+### Benefits:
+- Reduces User interface quick bar bloat, instead of adding 15 different abilities, half of which they cant use, confusing a new player, we can neatly pile it into one button, with multiple controls now 
+being freed up for, in no particular order or priority, parries, blocks, deflects, slashes, wide swing, thrust, lunge, push, drop weapon, heavy attack, light attack, stance change.
+- To add to the above, this doesnt mean all weapons get all of the above, but all weapons will, much like equiping a hardsuit, gain their abilities in accordance to the specific weapon.
+meaning making gimick weapons that DO have stances if none other have one, will be possible, as it would then be another "z" layer on the controls.
+- If this "z" layer proves to be a niche not yet coded, it will set the standard for other areas of coding, opening up creativity.
+
+### Drawbacks:
+- A lot of leg work will need to be done to add the individual effects for each melee weapon CURRENTLY in the game, though it should be simple to "not add" these features to any weapon as the dedicated harm mode
+will still exist(more on this in implementation)
+- none others currently being seen, other than it being potentially a new and hard to implement feature, though I will update this as I learn of these. Do not be afraid to through heavy criticism so
+this idea can properly fit the game and playerbase.
+
+## Overview Of: Managing different melee abilities and their balance.
+
+This includes any weapon that we may want to have but notible necessities to be effected by this are: captains sabre, Mimes baguette(why wouldnt it?), esword, combat knifes, shivs, baseballbats, fists, 
+crowbars and probably all common tools will have minor abilities, and using melee while holding a gun, or weilding it will give abilities to cope with fast paced melee rushes. 
+
+#Clarification:
+- No in no way should this ever mean 2 people of equal skill should be on equal ground even with unequal firepower(esword vs. wrench) but someone with greater skill, gamesense, and even experience should be
+totally in their right to have the opprotunity(heavily context dependant) or options to either fully defend themselves via a disarm, or have the option to delay their death while waiting for help.
+- This is important because it not only feels realistic, but giving agency and accountablility into your actions and lives can be an important factor in how immersed or in control a player may feel.
+not being able to defend yourself sucks. but its salt in the wound when your FORCED into that position due to a game limitation rather then some kind of personal choice.
+- "gives the attacked player more options" though vague is completely the right description here.
+
+## Overview Of: Implementation plan/things that need to be changed in what way.
