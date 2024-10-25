@@ -17,7 +17,9 @@ If you wish to modify your server to add your own content. You will need a [prop
 5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
 6. When there is a new update. Go back to the second step, and copy over the ``data`` folder and ``server_config.toml``if you modified it.
 
-If you prefer video guides, [here is one](https://youtu.be/IDBqrAGZ3cA)!
+If you prefer video guides, here is one!
+
+{% embed youtube id="IDBqrAGZ3cA" loading="lazy" %}
 
 ## Level 1: Invite Your Friends
 
