@@ -8,7 +8,8 @@
 
 
 ## Overview
-
+Adds a new "melee button" allowing everyone a dedicated set of abilities depending on weapon to add options to fights with awkward gaps in the combat gameplay. Additionally, adding a completely
+new combat focused play style to be slightly more skill demanding but also a little more flexable and therefor viable. Also so the mime can properly duel people with some bread.
 A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds".
 ---------------Placeholder, forgive me------------------
 
@@ -22,8 +23,9 @@ through six or seven. So within the current set up setting up 8 more quick abili
 
 Though, to narrow down the exact issue that needs addressing, in an example as follows: "a syndicate with no slips, and an emp implant swings a wrench at an engi without a suit.
 the engi only has what he can realistically hang onto" so long as the syndi even has so much as a knife, the only solution is to run, which feels like shit since often they DONT
-have a knife, infact they have a sword. What happens is even experienced players quickly realise that anyone half baked and prepared leaves you with literally no option but to run
-feeling helpless. your only agency over your own life is to simply hope by some blind luck you live.
+have a knife, but the northstar gloves and or the esword. What happens is even experienced players quickly realise that anyone half baked and prepared leaves you with literally no option but to run
+feeling helpless(assuming you have not taken a gun "just in case"). your only agency over your own life is to simply to hope by some blind luck you live, or more likely med finds you
+get revived.
 
 A Melee combat system, a way to realistically have a fight where someone, with sufficient skill, but due to luck, not always have the situation, be able to disarm, parry, or expand
 their list of abilities to survive these situations. Also because I feel like shit when im forced into a situation where though I WANT to fight I am FORCED to run. Also it kinda REALLY 
@@ -57,7 +59,7 @@ meaning making gimick weapons that DO have stances if none other have one, will 
 ### Drawbacks:
 - A lot of leg work will need to be done to add the individual effects for each melee weapon CURRENTLY in the game, though it should be simple to "not add" these features to any weapon as the dedicated harm mode
 will still exist(more on this in implementation)
-- none others currently being seen, other than it being potentially a new and hard to implement feature, though I will update this as I learn of these. Do not be afraid to through heavy criticism so
+- none others currently being seen, other than it being potentially a new and hard to implement feature, though I will update this as I learn of these. Do not be afraid to throw heavy criticism so
 this idea can properly fit the game and playerbase.
 
 ## Overview Of: Managing different melee abilities and their balance.
@@ -65,11 +67,47 @@ this idea can properly fit the game and playerbase.
 This includes any weapon that we may want to have but notible necessities to be effected by this are: captains sabre, Mimes baguette(why wouldnt it?), esword, combat knifes, shivs, baseballbats, fists, 
 crowbars and probably all common tools will have minor abilities, and using melee while holding a gun, or weilding it will give abilities to cope with fast paced melee rushes. 
 
+Very simple, each weapon depending on its proper place in the game and its balance will be given abilities which based on its previous state, will most likely INCREASE its viablility in combat. It is necessary to 
+do this because once the changes are merged, 
+
+### The Abilities planned for Implementation:
+
+This is intended to describe the abilities not to say how their used. appropriate examples should be given below.
+
+Wideswing:
+
+Disarms:
+
+block:
+
+heavy attack:
+
+Dash:
+
+thrust:
+
+Parry:
+
+Dodge: 
+
+###Antag status and access to melee weapons with these abilities. ----------PLACEHOLDER----------
+
+Non-Antag: besides contra which will have various abilities depending on the weapon. barefists are a interesting exception, a person must have 1 or the other features available to them:
+- A barefist system based on combo's, the natural costs requiring you to tank hits, which the abilities naturally given to an individual can change on a "training level". captain and sec,
+which syndi's possibly getting a new item to increase theirs.
+- If barefists are kept as a barely viable way to ensure everyone has the option to semi-decently(skill dependant) defend themselves. Then, it is important for balance that basic tools be given more abilities.
+
+Antag: Full access with the esword and edagger, to the complete range of abilties(pending what those are currently*)
+
 #Clarification:
 - No in no way should this ever mean 2 people of equal skill should be on equal ground even with unequal firepower(esword vs. wrench) but someone with greater skill, gamesense, and even experience should be
-totally in their right to have the opprotunity(heavily context dependant) or options to either fully defend themselves via a disarm, or have the option to delay their death while waiting for help.
+totally in their right to have the opprotunity(heavily context dependant) or options to either fully defend themselves via a disarm, or have the option to delay their death while waiting for help. All without relying
+on gear they may be otherwise be arrested for obtaining illegally.
 - This is important because it not only feels realistic, but giving agency and accountablility into your actions and lives can be an important factor in how immersed or in control a player may feel.
 not being able to defend yourself sucks. but its salt in the wound when your FORCED into that position due to a game limitation rather then some kind of personal choice.
 - "gives the attacked player more options" though vague is completely the right description here.
 
 ## Overview Of: Implementation plan/things that need to be changed in what way.
+
+### Statuses:
+A couple new statuses, which probably wont effect the players movement in any way, but their vulnerablility to certain moves by a opposite party.
