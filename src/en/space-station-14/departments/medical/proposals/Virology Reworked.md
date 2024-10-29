@@ -60,9 +60,9 @@ Coughing/Sneezing: Makes the carrier cough or sneeze intermittently, creates an 
 Dizziness: Applies the drunk effect to the carrier, more severe symptoms can apply a move debuff.
 Vomiting: Causes the carrier to vomit, will create a puddle containing any viruses the patient has, and can be spread to others via drinking (why) or through contact if they don't have shoes. Can cause blood vomiting at high severity which will remove a good chunk of the affected bloodstream.
 Drowsiness: Causes the character to yawn, affects stamina cap, can cause the character to enter forced sleep at high severity.
-Chills: Makes the patient feel colder than they are. Can potentially raise the target body temp of the affected.
-Sweats: Makes the target feel overheated. Reduces the target body temp of the affected.
-Blindness: Applies a set vision damage value to the carrier.
+Chills: Makes the patient feel colder than they are. Can potentially raise the target body temp of the affected. Would show on visual inspection as "clammy".
+Sweats: Makes the target feel overheated. Reduces the target body temp of the affected. Would show on visual inspection as "hot".
+Blindness: Applies a set vision damage value to the carrier. Would show on visual inspection as cataracts or a different indicator of eye damage.
 Blistering: Visible blisters develop on the carrier. Can have a severity level where it may add a slight level of armor, or can go the other way where it causes bleeding.
 Convulsions/Seizures: Stuns the carrier similar to touching an electrified object.
 Poison: Variable, but a severe symptom that will eventually kill the patient if left untreated.
