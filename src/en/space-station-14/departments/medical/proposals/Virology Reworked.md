@@ -8,7 +8,7 @@
 Virology existed in the past and for the most part was very static and boring, as well as generally unpleasant to deal with. This proposal is hopefully going to make Virology as a job more interesting, as well as have more impact on a round. Viruses would be procedural instead of one and done.
 
 ## Viruses
-At the start of a round, a majority if not all of the crew should start with some sort of benign effect virus (will explain more later about benign versus active viruses). Ideally each crewmember would start with between 1 and 4 viruses in their system.
+At the start of a round, a large percentage of the crew should start with some sort of benign effect virus (will explain more later about benign versus active viruses). Each crewmember would start with between 0 and 3 viruses in their system.
 These viruses initially won't have any effects to the crew carrying said viruses, but later as the round progresses can mutate based on various factors.
 Viruses can be identified and tracked using a similar system to the detective DNA sequencing and collected by crew using sterile swabs on individuals, or by taking blood samples from crew. Method of sample collection will determine which, if any viruses are collected. These samples can then be inserted into the medical diagnoser (or something else but we have the machine for it) to determine the 6 core characteristics of the virus.
 
