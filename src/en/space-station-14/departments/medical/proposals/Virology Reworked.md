@@ -22,6 +22,8 @@ Not shown to the virologist would be wether or not the virus is capable of jumpi
 ## Viral Mutations
 Viruses on their own will all start with a benign type symptom, or, the carrier of the virus won't know it exists. Over time, viruses will pass between crew naturally through normal work, physical contact, being near each other, and potential medical malpractice with improperly sterilized tools. 
 As the viruses transfer between hosts, there would be a variable chance for the virus to mutate based on the volatility rating of the virus (min of about 10% and max of 75%). When the virus mutates, it can select from a (hopefully) large list of symptoms and maladies, from literally nothing, to a cough or fever, to a series of more lethal traits like coughing blood, blindness, ecetra.
+The point buy can also remove previous traits the virus had, at a moderate weighting.
+Viral volatility should reroll every time the virus mutates. It should be possible for there to be a novel virus that only affects one or three crewmembers before it changes to a different virus based on the original.
 
 ## Combating Viruses
 Cleanliness will go a long way to preventing viruses from getting out of hand. Medical tools, such as syringes will have a high chance to pick up viruses and transfer them between patients if the syringes are not sterilized properly. This can be done via a sterilization machine which would need to be added inside of medical, or in a pinch, you can use liquid soaps or space cleaners to attempt to clean syringes if you're in a rush, but with a much reduced probability of success.
@@ -50,9 +52,10 @@ All of the above can also have a species jump modifier, which will allow the vir
 
 ## Virus Symptoms
 Viruses should only very rarely be beneficial. They should be something that the crew should be aware of however. Viral symptoms would be generated based on the mutation point buy system with low cost mutations being most common. Ideally these symptoms would be assigned a severity as well.
+When a virus jumps species, the severity should be bumped up by one or two equivalent levels to make the event impactful. The originator species may have a minor cough while the reciever species might be literally coughing up their lungs for example.
 
 Benign: The default virus state. Doesn't do anything.
-Runny Nose/Feels Funny: Basically doesn't do anything but let the carrier know they have something with an occasional popup.
+Runny Nose/Feels Funny: Basically doesn't do anything but let the carrier know they have something with an occasional popup. At higher levels, this can manifest into diziness or drowsiness.
 Coughing/Sneezing: Makes the carrier cough or sneeze intermittently, creates an invisible area of effect for the virus to cause infection if it has a contact or airborne infection type. Should not generate an AOE if the individual is wearing a sterile mask. Severe cough can include coughing blood, and would cause minor bloodloss.
 Dizziness: Applies the drunk effect to the carrier, more severe symptoms can apply a move debuff.
 Vomiting: Causes the carrier to vomit, will create a puddle containing any viruses the patient has, and can be spread to others via drinking (why) or through contact if they don't have shoes. Can cause blood vomiting at high severity which will remove a good chunk of the affected bloodstream.
