@@ -53,25 +53,25 @@ Running out of charge would not prevent the suit from protecting you from space,
 
 Specific hardsuits would have specific abilities that could be seen in SS13 modsuits, but these abilities would be hard-locked to specific suits, rather than being placed on any suit with a module. The abilities could include...
 
-- A basic flashlight on the helmet/suit.
+- **A basic flashlight on the helmet/suit.**
 A small light with a low energy cost that lets you see. You could keep it off in a lit area, or if you want to conserve suit charge. Carrying a seclight or a normal flashlight is also viable.
-- Engi hardsuits giving welding protection.
+- **Engi hardsuits giving welding protection.**
 Maybe you want to wear sunglasses or a medhud or just don't like how engi goggles look on your character, well it doesn't come free, since having this turned on would also cost suit charge. An efficient player could turn it on/off whenever they're welding, but that runs the risk of forgetting to turn it on and damaging your eyes.
-- Engi hardsuits having built-in magboots.
+- **Engi hardsuits having built-in magboots.**
 Perhaps you didn't grab magboots before gravity went out or stole an engi suit and don't have access to them at all, either way, you still need to use suit charge to power them.
-- Atmos hardsuits having thermal regulators that when disabled don't protect you from extreme heat.
+- **Atmos hardsuits having thermal regulators that when disabled don't protect you from extreme heat.**
 A similar situation to the welding goggles ability. You can either leave it turned on at all times while wearing the suit, or you can turn it on/off while you're dealing with a recent plasma leak and subsequent fire. Conserving suit charge at slight risk of forgetting and causing your death.
-- Mining/luxury hardsuits having built-in appraisal tools on item examination.
+- **Mining/luxury hardsuits having built-in appraisal tools on item examination.**
 Just a handy tool to make salvaging more efficient, you can still carry a regular appraisal tool.
-- HoS/sec hardsuit having a small (2x3?) ammo storage (with a whitelist, maybe use the sec belt one?).
+- **HoS/sec hardsuit having a small (2x3?) ammo storage (with a whitelist, maybe use the sec belt one?).**
 You could stick some magazines or grenades in here in a pinch and leave it on for easy access while you're in a rush, or you could fill it with items you don't commonly use so that you only have to turn it on sometimes. There are plenty of different ways to use this.
-- Clown hardsuit playing music or bike horn sounds.
-- Blood-red and variants having built-in blood-red magboots or noslips.
-Here's the question, do you spend 2 tc on noslips to permanently become immune to soap, or do you spend it on something else and put faith in yourself and your team to wrap up the mission before your charge becomes an issue? Or perhaps you're going with a hit and run strategy using your ship, where you'll be able to charge your suit frequently in safe moments of downtime. The possibilities are endless.
-- Elite hardsuit having a small chance to reflect energy weapons.
-- Juggernaut hardsuit increasing its damage resistance at the cost of increased energy usage.
-- Deathsquad hardsuit reflecting ballistic weapons (because screw you lol).
-- Deathsquad hardsuit being self-recharging (because screw you lol).
+- **Clown hardsuit playing music or bike horn sounds.**
+- **Blood-red and variants having built-in blood-red magboots or noslips.**
+Here's a dilemma, do you spend 2 tc on noslips to permanently become immune to soap, or do you spend it on something else and put faith in yourself and your team to wrap up the mission before your charge becomes an issue? Or perhaps you're going with a hit and run strategy using your ship, where you'll be able to charge your suit frequently in safe moments of downtime. The possibilities are endless.
+- **Elite hardsuit having a small chance to reflect energy weapons.**
+- **Juggernaut hardsuit increasing its damage resistance at the cost of increased energy usage.**
+- **Deathsquad hardsuit reflecting ballistic weapons (because screw you lol).**
+- **Deathsquad hardsuit being self-recharging (because screw you lol).**
 It's an admin-only spawn to kill everything and everyone. If any suit is going to be self-recharging, it's going to be this one.
 
 No other suit would ever get this ability, it goes against the very idea of this entire design doc the same way being able to swap out power cells would, you NEED to take a few minutes of downtime to charge your suit, using abilities and not using them is done with the knowledge that you are either delaying when you'll need that downtime or moving it closer it for special benefits.
