@@ -56,5 +56,7 @@ Vomiting: Causes the carrier to vomit, will create a puddle containing any virus
 Drowsiness: Causes the character to yawn, affects stamina cap, can cause the character to enter forced sleep at high severity.
 Chills: Makes the patient feel colder than they are. Can potentially raise the target body temp of the affected.
 Sweats: Makes the target feel overheated. Reduces the target body temp of the affected.
+Blindness: Applies a set vision damage value to the carrier.
+Convulsions/Seizures: Stuns the carrier similar to touching an electrified object.
 Poison: Variable, but a severe symptom that will eventually kill the patient if left untreated.
 Zombification/Cluwne: Effectively a way for the zombie virus to spawn naturally, this should be extremely rare (like a 1 in 10k chance), but would function the same as poison above, but turn the victim into a zombie or cluwne on death.
