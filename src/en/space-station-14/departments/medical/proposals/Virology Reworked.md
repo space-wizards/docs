@@ -45,6 +45,7 @@ Airborne, Inhalation: Would require people to stand near each other in order to 
 Contact: Virus can be picked up through contact with objects the infected has handled with a lifespan assigned to the virus for objects, as well as hugs, cuffing actions, buckling. Moderate point cost.
 Airborne, Infectious: High virulence, able to infect through anything via proximity except for full virology suits and the CMO hardsuit and Paramedic Softsuit (gotta make them useful for something). High point cost.
 All of the above can also have a species jump modifier, which will allow the virus to transfer between species and survive successfully, at a higher mutation cost.
+
 ## Virus Symptoms
 Viruses should only very rarely be beneficial. They should be something that the crew should be aware of however. Viral symptoms would be generated based on the mutation point buy system with low cost mutations being most common. Ideally these symptoms would be assigned a severity as well.
 
