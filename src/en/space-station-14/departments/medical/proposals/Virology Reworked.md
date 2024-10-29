@@ -67,3 +67,6 @@ Blistering: Visible blisters develop on the carrier. Can have a severity level w
 Convulsions/Seizures: Stuns the carrier similar to touching an electrified object.
 Poison: Variable, but a severe symptom that will eventually kill the patient if left untreated.
 Zombification/Cluwne: Effectively a way for the zombie virus to spawn naturally, this should be extremely rare (like a 1 in 10k chance), but would function the same as poison above, but turn the victim into a zombie or cluwne on death.
+Insular: Virus will actively suppress other viruses, removing them from the carrier after a period of time based on the severity of this symptom. Should come with some other symptoms to offset.
+Vocal Modification: Can cause speech impediments, or if you want to be fun, cause full language/word replacements, such as Ravatarian, or straight up mute the patient.
+Numbing: Acts as a small increase to the patients critical damage threshold, but increases action doafters, and can induce the clumsiness trait.
