@@ -48,6 +48,7 @@ Airborne, Infectious: High virulence, able to infect through anything via proxim
 ## Virus Symptoms
 Viruses should only very rarely be beneficial. They should be something that the crew should be aware of however. Viral symptoms would be generated based on the mutation point buy system with low cost mutations being most common. Ideally these symptoms would be assigned a severity as well.
 
+Benign: The default virus state. Doesn't do anything.
 Runny Nose/Feels Funny: Basically doesn't do anything but let the carrier know they have something with an occasional popup.
 Coughing/Sneezing: Makes the carrier cough or sneeze intermittently, creates an invisible area of effect for the virus to cause infection if it has a contact or airborne infection type. Should not generate an AOE if the individual is wearing a sterile mask. Severe cough can include coughing blood, and would cause minor bloodloss.
 Dizziness: Applies the drunk effect to the carrier, more severe symptoms can apply a move debuff.
