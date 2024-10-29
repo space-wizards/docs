@@ -26,7 +26,7 @@ As the viruses transfer between hosts, there would be a variable chance for the 
 ## Combating Viruses
 Cleanliness will go a long way to preventing viruses from getting out of hand. Medical tools, such as syringes will have a high chance to pick up viruses and transfer them between patients if the syringes are not sterilized properly. This can be done via a sterilization machine which would need to be added inside of medical, or in a pinch, you can use liquid soaps or space cleaners to attempt to clean syringes if you're in a rush, but with a much reduced probability of success.
 Alternatively, virologists can attempt to create vaccines to the virus in question, in order to create a vaccine, the virologist would need to provide multiple samples of the virus to the vaccinatior machine, which will then synthesize a vaccine with a hidden success probability based on the volatility of the target virus. Vaccine production will require *something* to actually create the vaccine. 
-A successful vaccine will prevent the specific virus the vaccine is created for from jumping to any person who has not already been infected by the vaccine, but will not prevent any mutation of the same virus eventually coming around and infecting later.
+A successful vaccine will prevent the specific virus the vaccine is created for from jumping to any person who has not already been infected by the vaccine parent, but will not prevent any future mutation of the same virus eventually coming around and infecting later.
 
 ## External Infection Sources
 Viruses that don't originate in the crew round start can be instead picked up from other sources, such as raw meats in the kitchen, not cleaning meat cutting tools in the kitchen, rats and mice, artifacts creating (usually very lethal) diseases, and sometimes external sources, such as carp bites, vent spider bites, spawned blood puddles, and potentially bio terror from nukkies.
@@ -34,7 +34,9 @@ This is mostly done so the crew can't somehow systematically wipe out viruses.
 
 ## Viral Modification
 Virologists can take multiple viruses and attempt to take characteristics from each of them in an effort to create new viruses, which can potentially be used to combat other viruses, or be turned into bioweappns.
-Viruses can be modified when exposed to Mutagen or Spacacillin to cause different effects. Mutagen will immediately trigger a mutation of the virus as would normally happen when the virus transfers between subjects. Spacacillin can be used to "stabilize" the virus, and then later be used to intentionally infect people without the virus that the original sample was taken from. A Spacacillin modified virus would block the original virus from transferring to the patient as an alternative to a vaccine, as a form of inoculation instead.
+Viruses can be modified when exposed to Mutagen or Spacacillin to cause different effects.
+Mutagen will immediately trigger a mutation of the virus as would normally happen when the virus transfers between subjects. 
+Spacacillin can be used to "stabilize" the virus, and then later be used to intentionally infect people without the virus that the original sample was taken from. A Spacacillin modified virus would block the original virus from transferring to the patient as an alternative to a vaccine, as a form of inoculation instead but still subject the patient to the symptoms of the virus.
 
 ## Contagion Tiers
 These can all stack in one virus based on volatility and mutation, and will always start with at least one of these.
@@ -58,6 +60,7 @@ Drowsiness: Causes the character to yawn, affects stamina cap, can cause the cha
 Chills: Makes the patient feel colder than they are. Can potentially raise the target body temp of the affected.
 Sweats: Makes the target feel overheated. Reduces the target body temp of the affected.
 Blindness: Applies a set vision damage value to the carrier.
+Blistering: Visible blisters develop on the carrier. Can have a severity level where it may add a slight level of armor, or can go the other way where it causes bleeding.
 Convulsions/Seizures: Stuns the carrier similar to touching an electrified object.
 Poison: Variable, but a severe symptom that will eventually kill the patient if left untreated.
 Zombification/Cluwne: Effectively a way for the zombie virus to spawn naturally, this should be extremely rare (like a 1 in 10k chance), but would function the same as poison above, but turn the victim into a zombie or cluwne on death.
