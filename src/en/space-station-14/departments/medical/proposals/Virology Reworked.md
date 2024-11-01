@@ -27,12 +27,12 @@ Not shown to the virologist would be wether or not the virus is capable of jumpi
 
 ## Viral Mutations
 Viruses on their own will all start with a benign type symptom, or, the carrier of the virus won't know it exists. Over time, viruses will pass between crew naturally through normal work, physical contact, being near each other, and potential medical malpractice with improperly sterilized tools. 
-As the viruses transfer between hosts, there would be a variable chance for the virus to mutate based on the volatility rating of the virus (min of about 10% and max of 75%). When the virus mutates, it can select from a (hopefully) large list of symptoms and maladies, from literally nothing, to a cough or fever, to a series of more lethal traits like coughing blood, blindness, ecetra.
+As the viruses transfer between hosts, there would be a variable chance for the virus to mutate based on the volatility rating of the virus (min of about 10% and max of 75%). When the virus mutates, it can select from a (hopefully) large list of symptoms and maladies, from literally nothing, to a cough or fever, to a series of more lethal traits like coughing blood, blindness, etc.
 The point buy can also remove previous traits the virus had, at a moderate weighting.
 Viral volatility should reroll every time the virus mutates. It should be possible for there to be a novel virus that only affects one or three crewmembers before it changes to a different virus based on the original.
 
 ## Combating Viruses
-Cleanliness will go a long way to preventing viruses from getting out of hand. Medical tools, such as syringes will have a high chance to pick up viruses and transfer them between patients if the syringes are not sterilized properly. This can be done via a sterilization machine which would need to be added inside of medical for rapid sterelization of tools (reccomend to have science make this), alternatively you can use liquid soaps or space cleaners to attempt to clean syringes and other objects, but with a much reduced speed.
+Cleanliness will go a long way to preventing viruses from getting out of hand. Medical tools, such as syringes will have a high chance to pick up viruses and transfer them between patients if the syringes are not sterilized properly. This can be done via a sterelization machine which would need to be added inside of medical for rapid sterelization of tools (reccomend to have science make this), alternatively you can use liquid soaps or space cleaners to attempt to clean syringes and other objects, but with a much reduced speed.
 
 Solid soaps can be used to treat items using the same clean evidence system that is uses to wipe DNA from objects. Solid soaps will not collect viruses unless otherwise specified by certain virus characteristics.
 
@@ -41,7 +41,7 @@ Janitorial will have the primary responsibility of removing messes as soon as pr
 Medical and janitorial clothing items such as nitrile gloves, rubber gloves and other appropriate PPE items should allow doctors to safely move potentially infected items and handle patients without getting themselves infected, and without spreading the contagion via touch.
 These PPE items should either be cleaned or destroyed as they will lose their effectiveness after X number of items handled or contacts made (nothing too crazy, 150+ things should be fine). Once the PPE is considered to be worn out it will begin to infect the wearer with increased probability over time and have the potential to transfer any eligible viruses to other objects and players through normal contact infection.
 
-Alternatively, virologists can attempt to create vaccines to the virus in question, in order to create a vaccine, the virologist would need to provide multiple samples of the virus to the vaccinatior machine, which will then synthesize a vaccine with a hidden success probability based on the volatility of the target virus. Vaccine production will require blood, and a specified, randomized curated series of chems besides blood to actually create the vaccine. 
+Alternatively, virologists can attempt to create vaccines to the virus in question, in order to create a vaccine, the virologist would need to provide multiple samples of the virus to the vaccinator machine, which will then synthesize a vaccine with a hidden success probability based on the volatility of the target virus. Vaccine production will require blood, and a specified, randomized curated series of chems besides blood to actually create the vaccine. 
 A successful vaccine will prevent the specific virus the vaccine is created for from jumping to any person who has not already been infected by the vaccine parent, but will not prevent any future mutation of the same virus eventually coming around and infecting later.
 
 ## External Infection Sources
@@ -52,7 +52,7 @@ Late arrival crew should also spawn with a virus or two at a 20% rate potentiall
 This is mostly done so the crew can't somehow systematically wipe out viruses.
 
 ## Viral Modification
-Virologists can take multiple viruses and attempt to take characteristics from each of them in an effort to create new viruses, which can potentially be used to combat other viruses, or be turned into bioweappns.
+Virologists can take multiple viruses and attempt to take characteristics from each of them in an effort to create new viruses, which can potentially be used to combat other viruses, or be turned into bioweapons.
 * Viruses can be modified when exposed to chems to cause different effects.
 * Mutagen will immediately trigger a mutation of the virus as would normally happen when the virus transfers between subjects.
 * Radium, Uranium, and Liquid Plasma will not trigger a mutation, but instead randomly strengthen or weaken the symptoms of the virus by one level for each type of reagent applied to the virus in it's respective container.
@@ -79,10 +79,10 @@ All of the above can also have a species jump modifier, which will allow the vir
 Viruses should only very rarely be beneficial. They should be something that the crew should be aware of however. Viral symptoms would be generated based on the mutation point buy system with low cost mutations being most common. Ideally these symptoms would be assigned a severity as well.
 Symptoms should not manifest until at least a fifth of the virus lifetime has passed in the carrier.
 The point buy for a virus symptom severity should operate on a weighted bell curve, where very low severity symptoms (sometimes positive symptoms) are unlikely to happen, mild to moderate symptoms should be common, and severe symptoms should be uncommon.
-When a virus jumps species, the severity should be bumped up by one or two equivalent levels to make the event impactful (assuming this scale is working on a 0-5 scale). The originator species may have a minor cough while the reciever species might be literally coughing up their lungs for example. For the sake of simplicity in this doc, symptoms will be on a severity scale of 0-5.
+When a virus jumps species, the severity should be bumped up by one or two equivalent levels to make the event impactful (assuming this scale is working on a 0-5 scale). The originator species may have a minor cough while the receiving species might be literally coughing up their lungs for example. For the sake of simplicity in this doc, symptoms will be on a severity scale of 0-5.
 
 * Benign: The default virus state. Doesn't do anything. Cannot be removed. Functions as a time delay for other symptoms.
-* Runny Nose/Feels Funny: Basically doesn't do anything but let the carrier know they have something with an occasional popup. At higher levels, this can manifest into diziness, drowsiness or breathing difficulty.
+* Runny Nose/Feels Funny: Basically doesn't do anything but let the carrier know they have something with an occasional popup. At higher levels, this can manifest into dizziness, drowsiness or breathing difficulty.
 * Coughing/Sneezing: Makes the carrier cough or sneeze intermittently, creates an invisible area of effect for the virus to cause infection if it has a contact or airborne infection type. Should not generate an AOE if the individual is wearing a sterile mask. Severe cough can include coughing blood, and would cause minor bloodloss. No effect for no severity.
 * Dizziness: Applies the drunk effect to the carrier, more severe symptoms can apply a move debuff. No severity makes the carrier immune to drunkeness.
 * Breathing Difficulty: Makes the infected take a sliding scale of airloss damage proportional to the severity. No severity can slightly reduce the airloss damage the carrier receives from the environment. Carrier should gasp at a regular interval with this symptom.
@@ -119,7 +119,7 @@ Wehpox
 * Contagion: Blood to Blood, Saliva
 * Originating Species: Reptilian
 * Can Jump Species: Yes
-* Jump Concequence: +2 Drowsiness
+* Jump Consequence: +2 Drowsiness
 * Homeopathy: Aloe Blistering Severity -3 (to 2) Stebellin Blistering Severity -1 (to 4) Drowsiness +1 (to 4)
 
 Romerol Virus (Zombies)
@@ -130,5 +130,5 @@ Romerol Virus (Zombies)
 * Contagion: Blood to Blood
 * Originating Species: Whoever gets it first.
 * Can Jump Species: Yes
-* Species Jump Concequence: +1 Poison
+* Species Jump Consequence: +1 Poison
 * Homeopathy: Dylovene +1 Poison (to 4) Dipenhydramine +2 Poison (to 5)
