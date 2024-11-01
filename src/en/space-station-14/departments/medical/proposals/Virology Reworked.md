@@ -47,7 +47,7 @@ A successful vaccine will prevent the specific virus the vaccine is created for 
 ## External Infection Sources
 Viruses that don't originate in the crew round start can be instead picked up from other sources, such as raw meats in the kitchen, not cleaning meat cutting tools in the kitchen, rats and mice, rotting corpses, artifacts creating (usually very lethal) diseases, and sometimes external sources, such as carp bites, vent spider bites, spawned blood puddles, cargo imports (such as on/in the crates) and potentially bio terror from nukkies using specific, unique viruses.
 
-Late arrival crew should also spawn with a virus or two at a 60% rate potentially with minor symptoms as well unlike round start crew which should only have the benign symptom.
+Late arrival crew should also spawn with a virus or two at a 20% rate potentially with minor symptoms as well unlike round start crew which should only have the benign symptom.
 
 This is mostly done so the crew can't somehow systematically wipe out viruses.
 
