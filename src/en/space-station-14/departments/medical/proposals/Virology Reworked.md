@@ -8,7 +8,7 @@
 Virology existed in the past and for the most part was very static and boring, as well as generally unpleasant to deal with. This proposal is hopefully going to make Virology as a job more interesting, as well as have more impact on a round. Viruses would be procedural instead of one and done.
 
 ## The Core Loop
-Virologists would be working with the crew to identify viruses, isolate the viruses, then attempt to create vaccines or inoculation for these viruses, or use these viruses to create potentially beneficial new viruses. Viruses will be constantly changing over time, and virologists will have to keep up with current known viruses in the crew and attempt to get ahead of them. Antagonist virologists may attempt to create pandemic bioweapon tier viruses. Chemistry will be working with Virology in the fabrication of vaccines and treatments. Janitorial will work with medical as well as perform normal functions to help reduce viral infection.
+Virologists would be working with the crew to identify viruses, isolate the viruses, then attempt to create vaccines or inoculation for these viruses, or use these viruses to create potentially beneficial new viruses. Viruses will be constantly changing over time, and virologists will have to keep up with current known viruses in the crew and attempt to get ahead of them. Antagonist virologists may attempt to create pandemic bioweapon tier viruses. Chemistry will be working with Virology in the fabrication of vaccines and treatments. Janitorial will work with medical as well as perform normal functions to help reduce viral infection. Salvage and cargo will likely be bringing in viruses due to nature of their work.
 
 ## Viruses
 At the start of a round, a large percentage of the crew should start with some sort of benign effect virus (will explain more later about benign versus active viruses). Each crewmember would start with between 0 and 3 viruses in their system.
@@ -35,7 +35,7 @@ Alternatively, virologists can attempt to create vaccines to the virus in questi
 A successful vaccine will prevent the specific virus the vaccine is created for from jumping to any person who has not already been infected by the vaccine parent, but will not prevent any future mutation of the same virus eventually coming around and infecting later.
 
 ## External Infection Sources
-Viruses that don't originate in the crew round start can be instead picked up from other sources, such as raw meats in the kitchen, not cleaning meat cutting tools in the kitchen, rats and mice, rotting corpses, artifacts creating (usually very lethal) diseases, and sometimes external sources, such as carp bites, vent spider bites, spawned blood puddles, and potentially bio terror from nukkies using specific, unique viruses.
+Viruses that don't originate in the crew round start can be instead picked up from other sources, such as raw meats in the kitchen, not cleaning meat cutting tools in the kitchen, rats and mice, rotting corpses, artifacts creating (usually very lethal) diseases, and sometimes external sources, such as carp bites, vent spider bites, spawned blood puddles, cargo imports (such as on/in the crates) and potentially bio terror from nukkies using specific, unique viruses.
 Late arrival crew should also spawn with a virus or two at a 60% rate potentially with minor symptoms as well unlike round start crew which should only have the benign symptom.
 This is mostly done so the crew can't somehow systematically wipe out viruses.
 
