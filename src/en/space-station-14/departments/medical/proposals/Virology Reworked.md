@@ -81,7 +81,7 @@ Symptoms should not manifest until at least a fifth of the virus lifetime has pa
 The point buy for a virus symptom severity should operate on a weighted bell curve, where very low severity symptoms (sometimes positive symptoms) are unlikely to happen, mild to moderate symptoms should be common, and severe symptoms should be uncommon.
 When a virus jumps species, the severity should be bumped up by one or two equivalent levels to make the event impactful (assuming this scale is working on a 0-5 scale). The originator species may have a minor cough while the reciever species might be literally coughing up their lungs for example. For the sake of simplicity in this doc, symptoms will be on a severity scale of 0-5.
 
-* Benign: The default virus state. Doesn't do anything. Cannot be removed.
+* Benign: The default virus state. Doesn't do anything. Cannot be removed. Functions as a time delay for other symptoms.
 * Runny Nose/Feels Funny: Basically doesn't do anything but let the carrier know they have something with an occasional popup. At higher levels, this can manifest into diziness, drowsiness or breathing difficulty.
 * Coughing/Sneezing: Makes the carrier cough or sneeze intermittently, creates an invisible area of effect for the virus to cause infection if it has a contact or airborne infection type. Should not generate an AOE if the individual is wearing a sterile mask. Severe cough can include coughing blood, and would cause minor bloodloss. No effect for no severity.
 * Dizziness: Applies the drunk effect to the carrier, more severe symptoms can apply a move debuff. No severity makes the carrier immune to drunkeness.
@@ -102,7 +102,7 @@ When a virus jumps species, the severity should be bumped up by one or two equiv
 ## Sample Viruses
 
 Common Cold
-Symptoms: Benign Irremovable Coughing/Sneezing Severity 3, Runny Nose/Feeling Unwell Severity 2
+Symptoms: Benign 1 Minute Irremovable Coughing/Sneezing Severity 3, Runny Nose/Feeling Unwell Severity 2
 Volatility: 30%
 Lifespan: 6 Minutes
 Contagion: Airborne Inhaled, Contact
@@ -111,7 +111,7 @@ Can Jump Species: No
 Homeopathy: Tricordazine Coughing/Sneezing Severity -2 (to 1) Ethanol Coughing/Sneezing +1 (to 4)
 
 Wehpox
-Symptoms: Benign Irremovable Blistering Severity 5 Drowsiness Severity 3
+Symptoms: Benign 2 Minutes Irremovable Blistering Severity 5 Drowsiness Severity 3
 Volatility: 50%
 Lifespan: 8 Minutes
 Contagion: Blood to Blood, Saliva
