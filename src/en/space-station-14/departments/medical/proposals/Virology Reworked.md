@@ -121,3 +121,14 @@ Wehpox
 * Can Jump Species: Yes
 * Jump Concequence: +2 Drowsiness
 * Homeopathy: Aloe Blistering Severity -3 (to 2) Stebellin Blistering Severity -1 (to 4) Drowsiness +1 (to 4)
+
+Romerol Virus (Zombies)
+
+* Symptoms: Benign 10 Seconds Irremovable Poison Severity 3 Zombification Unique
+* Volatility: 10%
+* Lifespan: 20 Minutes
+* Contagion: Blood to Blood
+* Originating Species: Whoever gets it first.
+* Can Jump Species: Yes
+* Species Jump Concequence: +1 Poison
+* Homeopathy: Dylovene +1 Poison (to 4) Dipenhydramine +2 Poison (to 5)
