@@ -4,9 +4,9 @@ Here's a revised design document that aligns with the feedback provided by the m
 
 # New Race Proposal: Avali
 
-| **Designers** | **Implemented** | **GitHub Links** |
-|---------------|-----------------|------------------|
-| AwareFoxy     | No              | TBD              |
+| **Designers**          | **Implemented** | **GitHub Links** |
+|------------------------|-----------------|------------------|
+| pofitlo-Git, AwareFoxy | No              | TBD              |
 
 ## Overview
 
