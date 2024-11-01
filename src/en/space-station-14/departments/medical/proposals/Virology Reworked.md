@@ -102,20 +102,22 @@ When a virus jumps species, the severity should be bumped up by one or two equiv
 ## Sample Viruses
 
 Common Cold
-Symptoms: Benign 1 Minute Irremovable Coughing/Sneezing Severity 3, Runny Nose/Feeling Unwell Severity 2
-Volatility: 30%
-Lifespan: 6 Minutes
-Contagion: Airborne Inhaled, Contact
-Originating Species: Human
-Can Jump Species: No
-Homeopathy: Tricordazine Coughing/Sneezing Severity -2 (to 1) Ethanol Coughing/Sneezing +1 (to 4)
+
+* Symptoms: Benign 1 Minute Irremovable Coughing/Sneezing Severity 3, Runny Nose/Feeling Unwell Severity 2
+* Volatility: 30%
+* Lifespan: 6 Minutes
+* Contagion: Airborne Inhaled, Contact
+* Originating Species: Human
+* Can Jump Species: No
+* Homeopathy: Tricordazine Coughing/Sneezing Severity -2 (to 1) Ethanol Coughing/Sneezing +1 (to 4)
 
 Wehpox
-Symptoms: Benign 2 Minutes Irremovable Blistering Severity 5 Drowsiness Severity 3
-Volatility: 50%
-Lifespan: 8 Minutes
-Contagion: Blood to Blood, Saliva
-Originating Species: Reptilian
-Can Jump Species: Yes
-Jump Concequence: +2 Drowsiness
-Homeopathy: Aloe Blistering Severity -3 (to 2) Stebellin Blistering Severity -1 (to 4) Drowsiness +1 (to 4)
+
+* Symptoms: Benign 2 Minutes Irremovable Blistering Severity 5 Drowsiness Severity 3
+* Volatility: 50%
+* Lifespan: 8 Minutes
+* Contagion: Blood to Blood, Saliva
+* Originating Species: Reptilian
+* Can Jump Species: Yes
+* Jump Concequence: +2 Drowsiness
+* Homeopathy: Aloe Blistering Severity -3 (to 2) Stebellin Blistering Severity -1 (to 4) Drowsiness +1 (to 4)
