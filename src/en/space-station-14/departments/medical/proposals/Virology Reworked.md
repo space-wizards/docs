@@ -21,6 +21,7 @@ Viruses will have 4 of 6 characteristics that the virologist can detect using th
 * Volatility, which would operate on a sliding scale of how likely the virus is to mutate, and how severe the potential mutations can be using a random weighted point buy, similar to botany chem mutations.
 * Estimated lifespan of the virus before it eventually "dies", by 20 minutes, none of the initial viruses should exist.
 * Lastly, there'd be the mode of contagion spread. Most likely to spread would be airborne, least likely to spread would be blood to blood contact (this will also require medical to sterilize their tools, which will be discussed later). Contagion types can stack.
+
 Not shown to the virologist would be wether or not the virus is capable of jumping species type, nor the major health effect related to such an event occurring. 
 
 ## Viral Mutations
@@ -69,6 +70,7 @@ All of the above can also have a species jump modifier, which will allow the vir
 
 ## Virus Symptoms
 Viruses should only very rarely be beneficial. They should be something that the crew should be aware of however. Viral symptoms would be generated based on the mutation point buy system with low cost mutations being most common. Ideally these symptoms would be assigned a severity as well.
+Symptoms should not manifest until at least a fifth of the virus lifetime has passed in the carrier.
 The point buy for a virus symptom severity should operate on a weighted bell curve, where very low severity symptoms (sometimes positive symptoms) are unlikely to happen, mild to moderate symptoms should be common, and severe symptoms should be uncommon.
 When a virus jumps species, the severity should be bumped up by one or two equivalent levels to make the event impactful (assuming this scale is working on a 0-5 scale). The originator species may have a minor cough while the reciever species might be literally coughing up their lungs for example. For the sake of simplicity in this doc, symptoms will be on a severity scale of 0-5.
 
