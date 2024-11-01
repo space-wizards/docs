@@ -50,6 +50,8 @@ Virologists can take multiple viruses and attempt to take characteristics from e
 * Radium, Uranium, and Liquid Plasma will not trigger a mutation, but instead randomly strengthen or weaken the symptoms of the virus by one level for each type of reagent applied to the virus in it's respective container.
 * Spacacillin can be used to "stabilize" the virus, and then later be used to intentionally infect people without the virus that the original sample was taken from. A Spacacillin modified virus would block the original virus from transferring to the patient as an alternative to a vaccine, as a form of inoculation instead but still subject the patient to the symptoms of the virus.
 * Placing multiple virus samples together would work similarly to swabbing, and combine both viruses into one once the container is shaken with probability proportional to how volatile the viruses are, the most stable virus would be most likely to retain it's traits in the new virus.
+* Virology should start the round with some samples of current viruses in their department to get a head start.
+
 
 ## Homeopathic Treatment
 Per virus, each symptom associated with it will have a specific chem that can be administered to the patient in order to reduce or eliminate the effects of the disease. For example, coughing can be fixed with tricordazine for one specific virus, while another symptom of the same virus would need something like dylovene. Effectiveness of the treatment would depend on the severity of the system and a hidden modifier on each symptom as to how effective these treatments are. Treatments can make viral symptoms worse as well. 
@@ -68,15 +70,15 @@ All of the above can also have a species jump modifier, which will allow the vir
 ## Virus Symptoms
 Viruses should only very rarely be beneficial. They should be something that the crew should be aware of however. Viral symptoms would be generated based on the mutation point buy system with low cost mutations being most common. Ideally these symptoms would be assigned a severity as well.
 The point buy for a virus symptom severity should operate on a weighted bell curve, where very low severity symptoms (sometimes positive symptoms) are unlikely to happen, mild to moderate symptoms should be common, and severe symptoms should be uncommon.
-When a virus jumps species, the severity should be bumped up by one or two equivalent levels to make the event impactful (assuming this scale is working on a 1-5 scale). The originator species may have a minor cough while the reciever species might be literally coughing up their lungs for example.
+When a virus jumps species, the severity should be bumped up by one or two equivalent levels to make the event impactful (assuming this scale is working on a 0-5 scale). The originator species may have a minor cough while the reciever species might be literally coughing up their lungs for example. For the sake of simplicity in this doc, symptoms will be on a severity scale of 0-5.
 
 * Benign: The default virus state. Doesn't do anything. Cannot be removed.
 * Runny Nose/Feels Funny: Basically doesn't do anything but let the carrier know they have something with an occasional popup. At higher levels, this can manifest into diziness, drowsiness or breathing difficulty.
 * Coughing/Sneezing: Makes the carrier cough or sneeze intermittently, creates an invisible area of effect for the virus to cause infection if it has a contact or airborne infection type. Should not generate an AOE if the individual is wearing a sterile mask. Severe cough can include coughing blood, and would cause minor bloodloss.
 * Dizziness: Applies the drunk effect to the carrier, more severe symptoms can apply a move debuff.
 * Breathing Difficulty: Makes the infected take a sliding scale of airloss damage proportional to the severity. Low severity can slightly reduce the airloss damage the carrier receives from the environment.
-* Vomiting: Causes the carrier to vomit, will create a puddle containing any viruses the patient has, and can be spread to others via drinking (why) or through contact if they don't have shoes. Can cause blood vomiting at high severity which will remove a good chunk of the affected bloodstream. Can temporarily blind the victim if they are wearing a breath mask or gas mask. Low severity would just give the carrier a notice that they feel queasy.
-* Drowsiness: Causes the character to yawn, affects stamina cap, can cause the character to enter forced sleep at high severity. At very low severity, slightly increases the stamina cap.
+* Vomiting: Causes the carrier to vomit, will create a puddle containing any viruses the patient has, and can be spread to others via drinking (why) or through contact if they don't have shoes. Can cause blood vomiting at high severity which will remove a good chunk of the affected bloodstream. Can temporarily blind the victim if they are wearing a breath mask or gas mask. Low severity would just give the carrier a notice that they feel queasy. No severity would make the carrier unable to vomit.
+* Drowsiness: Causes the character to yawn, affects stamina cap, can cause the character to enter forced sleep at high severity. At very no severity, slightly increases the stamina cap.
 * Chills: Makes the patient feel colder than they are. Can potentially raise the target body temp of the affected. Would show on visual inspection as "clammy".
 * Sweats: Makes the target feel overheated. Reduces the target body temp of the affected. Would show on visual inspection as "hot".
 * Blindness: Applies a set vision damage value to the carrier. Would show on visual inspection as cataracts or a different indicator of eye damage. Low severity can reverse vision damage over time.
@@ -87,3 +89,24 @@ When a virus jumps species, the severity should be bumped up by one or two equiv
 * Insular: Virus will actively suppress other viruses, removing them from the carrier after a period of time based on the severity of this symptom. Should come with some other symptoms to offset.
 * Vocal Modification: Can cause speech impediments, or if you want to be fun, cause full language/word replacements, such as Ravatarian, or straight up mute the patient.
 * Numbing: Acts as a small increase to the patients critical damage threshold, but increases action doafters, and can induce the clumsiness trait.
+
+## Sample Viruses
+
+Common Cold
+Symptoms: Coughing/Sneezing Severity 3, Runny Nose/Feeling Unwell Severity 2
+Volatility: 30%
+Lifespan: 6 Minutes
+Contagion: Airborne Inhaled, Contact
+Originating Species: Human
+Can Jump Species: No
+Homeopathy: Tricordazine Coughing/Sneezing Severity -2 (to 1) Ethanol Coughing/Sneezing +1 (to 4)
+
+Wehpox
+Symptoms: Blistering Severity 5 Drowsiness Severity 3
+Volatility: 50%
+Lifespan: 8 Minutes
+Contagion: Blood to Blood, Saliva
+Originating Species: Reptilian
+Can Jump Species: Yes
+Jump Concequence: +2 Drowsiness
+Homeopathy: Aloe Blistering Severity -3 (to 2) Stebellin Blistering Severity -1 (to 4) Drowsiness +1 (to 4)
