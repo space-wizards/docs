@@ -26,19 +26,25 @@ The point buy can also remove previous traits the virus had, at a moderate weigh
 Viral volatility should reroll every time the virus mutates. It should be possible for there to be a novel virus that only affects one or three crewmembers before it changes to a different virus based on the original.
 
 ## Combating Viruses
-Cleanliness will go a long way to preventing viruses from getting out of hand. Medical tools, such as syringes will have a high chance to pick up viruses and transfer them between patients if the syringes are not sterilized properly. This can be done via a sterilization machine which would need to be added inside of medical, or in a pinch, you can use liquid soaps or space cleaners to attempt to clean syringes if you're in a rush, but with a much reduced probability of success.
+Cleanliness will go a long way to preventing viruses from getting out of hand. Medical tools, such as syringes will have a high chance to pick up viruses and transfer them between patients if the syringes are not sterilized properly. This can be done via a sterilization machine which would need to be added inside of medical for rapid sterelization of tools, alternatively you can use liquid soaps or space cleaners to attempt to clean syringes and other objects, but with a much reduced speed.
+Medical and janitorial clothing items such as nitrile gloves, rubber gloves and other appropriate PPE items should allow doctors to safely move potentially infected items without getting themselves infected, and without spreading the contagion via touch. These PPE items should either be cleaned or destroyed as they will lose their effectiveness after X number of items handled (nothing too crazy, 150+ things should be fine).
 Alternatively, virologists can attempt to create vaccines to the virus in question, in order to create a vaccine, the virologist would need to provide multiple samples of the virus to the vaccinatior machine, which will then synthesize a vaccine with a hidden success probability based on the volatility of the target virus. Vaccine production will require *something* to actually create the vaccine. 
 A successful vaccine will prevent the specific virus the vaccine is created for from jumping to any person who has not already been infected by the vaccine parent, but will not prevent any future mutation of the same virus eventually coming around and infecting later.
 
 ## External Infection Sources
 Viruses that don't originate in the crew round start can be instead picked up from other sources, such as raw meats in the kitchen, not cleaning meat cutting tools in the kitchen, rats and mice, artifacts creating (usually very lethal) diseases, and sometimes external sources, such as carp bites, vent spider bites, spawned blood puddles, and potentially bio terror from nukkies.
+Late arrival crew should also spawn with a virus or two at a 60% rate potentially with minor symptoms as well.
 This is mostly done so the crew can't somehow systematically wipe out viruses.
 
 ## Viral Modification
 Virologists can take multiple viruses and attempt to take characteristics from each of them in an effort to create new viruses, which can potentially be used to combat other viruses, or be turned into bioweappns.
 Viruses can be modified when exposed to Mutagen or Spacacillin to cause different effects.
-Mutagen will immediately trigger a mutation of the virus as would normally happen when the virus transfers between subjects. 
+Mutagen will immediately trigger a mutation of the virus as would normally happen when the virus transfers between subjects.
+Radium, Uranium, and Liquid Plasma will not trigger a mutation, but instead randomly strengthen or weaken the symptoms of the virus by one level for each type of reagent applied to the virus in it's respective container.
 Spacacillin can be used to "stabilize" the virus, and then later be used to intentionally infect people without the virus that the original sample was taken from. A Spacacillin modified virus would block the original virus from transferring to the patient as an alternative to a vaccine, as a form of inoculation instead but still subject the patient to the symptoms of the virus.
+
+## Homeopathic Treatment
+Per virus, each symptom associated with it will have a specific chem that can be administered to the patient in order to reduce or eliminate the effects of the disease. For example, coughing can be fixed with tricordazine for one specific virus, while another symptom of the same virus would need something like dylovene. Effectiveness of the treatment would depend on the severity of the system and a hidden modifier on each symptom as to how effective these treatments are.
 
 ## Contagion Tiers
 These can all stack in one virus based on volatility and mutation, and will always start with at least one of these.
