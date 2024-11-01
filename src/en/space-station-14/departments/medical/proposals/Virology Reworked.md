@@ -74,21 +74,21 @@ When a virus jumps species, the severity should be bumped up by one or two equiv
 
 * Benign: The default virus state. Doesn't do anything. Cannot be removed.
 * Runny Nose/Feels Funny: Basically doesn't do anything but let the carrier know they have something with an occasional popup. At higher levels, this can manifest into diziness, drowsiness or breathing difficulty.
-* Coughing/Sneezing: Makes the carrier cough or sneeze intermittently, creates an invisible area of effect for the virus to cause infection if it has a contact or airborne infection type. Should not generate an AOE if the individual is wearing a sterile mask. Severe cough can include coughing blood, and would cause minor bloodloss.
-* Dizziness: Applies the drunk effect to the carrier, more severe symptoms can apply a move debuff.
-* Breathing Difficulty: Makes the infected take a sliding scale of airloss damage proportional to the severity. Low severity can slightly reduce the airloss damage the carrier receives from the environment.
+* Coughing/Sneezing: Makes the carrier cough or sneeze intermittently, creates an invisible area of effect for the virus to cause infection if it has a contact or airborne infection type. Should not generate an AOE if the individual is wearing a sterile mask. Severe cough can include coughing blood, and would cause minor bloodloss. No effect for no severity.
+* Dizziness: Applies the drunk effect to the carrier, more severe symptoms can apply a move debuff. No severity makes the carrier immune to drunkeness.
+* Breathing Difficulty: Makes the infected take a sliding scale of airloss damage proportional to the severity. No severity can slightly reduce the airloss damage the carrier receives from the environment. Carrier should gasp at a regular interval with this symptom.
 * Vomiting: Causes the carrier to vomit, will create a puddle containing any viruses the patient has, and can be spread to others via drinking (why) or through contact if they don't have shoes. Can cause blood vomiting at high severity which will remove a good chunk of the affected bloodstream. Can temporarily blind the victim if they are wearing a breath mask or gas mask. Low severity would just give the carrier a notice that they feel queasy. No severity would make the carrier unable to vomit.
-* Drowsiness: Causes the character to yawn, affects stamina cap, can cause the character to enter forced sleep at high severity. At very no severity, slightly increases the stamina cap.
+* Drowsiness: Causes the character to yawn, affects stamina cap, can cause the character to enter forced sleep at high severity. At no severity, slightly increases the stamina cap.
 * Chills: Makes the patient feel colder than they are. Can potentially raise the target body temp of the affected. Would show on visual inspection as "clammy".
 * Sweats: Makes the target feel overheated. Reduces the target body temp of the affected. Would show on visual inspection as "hot".
-* Blindness: Applies a set vision damage value to the carrier. Would show on visual inspection as cataracts or a different indicator of eye damage. Low severity can reverse vision damage over time.
-* Blistering: Visible blisters develop on the carrier. Can have a severity level where it may add a slight level of armor, or can go the other way where it causes bleeding.
-* Convulsions/Seizures: Stuns the carrier similar to touching an electrified object.
+* Blindness: Applies a set vision damage value to the carrier. Would show on visual inspection as cataracts or a different indicator of eye damage. No severity can reverse vision damage over time.
+* Blistering: Visible blisters develop on the carrier. No severity adds a slight level of armor, or can go the other way where it causes bleeding at 4 severity.
+* Convulsions/Seizures: Stuns the carrier similar to touching an electrified object. Level 5 severity would induce paralysis, level 0 severity reduces the impact of electrical shocks similar to almost good budget insuls.
 * Poison: Variable, but a severe symptom that will eventually kill the patient if left untreated.
 * Zombification/Cluwne: Effectively a way for the zombie virus to spawn naturally, this should be extremely rare (like a 1 in 10k chance), but would function the same as poison above, but turn the victim into a zombie or cluwne on death.
 * Insular: Virus will actively suppress other viruses, removing them from the carrier after a period of time based on the severity of this symptom. Should come with some other symptoms to offset.
 * Vocal Modification: Can cause speech impediments, or if you want to be fun, cause full language/word replacements, such as Ravatarian, or straight up mute the patient.
-* Numbing: Acts as a small increase to the patients critical damage threshold, but increases action doafters, and can induce the clumsiness trait.
+* Numbing: Acts as a small increase to the patients critical damage threshold, but increases action doafters, and can induce the clumsiness trait. 
 
 ## Sample Viruses
 
