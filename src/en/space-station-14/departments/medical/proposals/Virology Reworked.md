@@ -45,11 +45,11 @@ This is mostly done so the crew can't somehow systematically wipe out viruses.
 
 ## Viral Modification
 Virologists can take multiple viruses and attempt to take characteristics from each of them in an effort to create new viruses, which can potentially be used to combat other viruses, or be turned into bioweappns.
-* Viruses can be modified when exposed to Mutagen or Spacacillin to cause different effects.
+* Viruses can be modified when exposed to chems to cause different effects.
 * Mutagen will immediately trigger a mutation of the virus as would normally happen when the virus transfers between subjects.
 * Radium, Uranium, and Liquid Plasma will not trigger a mutation, but instead randomly strengthen or weaken the symptoms of the virus by one level for each type of reagent applied to the virus in it's respective container.
 * Spacacillin can be used to "stabilize" the virus, and then later be used to intentionally infect people without the virus that the original sample was taken from. A Spacacillin modified virus would block the original virus from transferring to the patient as an alternative to a vaccine, as a form of inoculation instead but still subject the patient to the symptoms of the virus.
-* Placing multiple virus samples together would work similarly to swabbing, and combine both viruses into one once the container is shaken with probability proportional to how volatile the viruses are, the most stable virus would be most likely to retain it's traits in the new virus.
+* Placing multiple virus samples together would work similarly to swabbing, and combine all viruses into one once the container is shaken with probability proportional to how volatile the viruses are, the most stable virus would be most likely to retain it's traits in the new virus.
 * Virology should start the round with some samples of current viruses in their department to get a head start.
 
 
