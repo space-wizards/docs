@@ -8,7 +8,8 @@
 Virology existed in the past and for the most part was very static and boring, as well as generally unpleasant to deal with. This proposal is hopefully going to make Virology as a job more interesting, as well as have more impact on a round. Viruses would be procedural instead of one and done.
 
 ## The Core Loop
-Virologists would be working with the crew to identify viruses, isolate the viruses, then attempt to create vaccines or inoculation for these viruses, or use these viruses to create potentially beneficial new viruses. Viruses will be constantly changing over time, and virologists will have to keep up with current known viruses in the crew and attempt to get ahead of them. Antagonist virologists may attempt to create pandemic bioweapon tier viruses. Chemistry will be working with Virology in the fabrication of vaccines and treatments. Janitorial will work with medical as well as perform normal functions to help reduce viral infection. Salvage and cargo will likely be bringing in viruses due to nature of their work.
+Virologists would be working with the crew to identify viruses, isolate the viruses, then attempt to create vaccines or inoculation for these viruses, or use these viruses to create potentially beneficial new viruses. Viruses will be constantly changing over time, and virologists will have to keep up with current known viruses in the crew and attempt to get ahead of them. 
+Antagonist virologists may attempt to create pandemic bioweapon tier viruses. Chemistry will be working with Virology in the fabrication of vaccines and treatments. Janitorial will work with medical as well as perform normal functions to help reduce viral infection. Salvage and cargo will likely be bringing in viruses due to nature of their work.
 
 ## Viruses
 At the start of a round, a large percentage of the crew should start with some sort of benign effect virus (will explain more later about benign versus active viruses). Each crewmember would start with between 0 and 3 viruses in their system.
@@ -31,17 +32,23 @@ The point buy can also remove previous traits the virus had, at a moderate weigh
 Viral volatility should reroll every time the virus mutates. It should be possible for there to be a novel virus that only affects one or three crewmembers before it changes to a different virus based on the original.
 
 ## Combating Viruses
-Cleanliness will go a long way to preventing viruses from getting out of hand. Medical tools, such as syringes will have a high chance to pick up viruses and transfer them between patients if the syringes are not sterilized properly. This can be done via a sterilization machine which would need to be added inside of medical for rapid sterelization of tools, alternatively you can use liquid soaps or space cleaners to attempt to clean syringes and other objects, but with a much reduced speed. 
-Solid soaps can be used to treat items using the same clean evidence system that is uses to wipe DNA from objects. Solid soaps will not collect viruses unless otherwise specified by certain virus characteristics. 
+Cleanliness will go a long way to preventing viruses from getting out of hand. Medical tools, such as syringes will have a high chance to pick up viruses and transfer them between patients if the syringes are not sterilized properly. This can be done via a sterilization machine which would need to be added inside of medical for rapid sterelization of tools, alternatively you can use liquid soaps or space cleaners to attempt to clean syringes and other objects, but with a much reduced speed.
+
+Solid soaps can be used to treat items using the same clean evidence system that is uses to wipe DNA from objects. Solid soaps will not collect viruses unless otherwise specified by certain virus characteristics.
+
 Janitorial will have the primary responsibility of removing messes as soon as practical, but their Janitorial trolleys will be a major vector for disease transmission and mutation. The janitor should ideally try to sterilize their trolley with space cleaner at regular intervals.
+
 Medical and janitorial clothing items such as nitrile gloves, rubber gloves and other appropriate PPE items should allow doctors to safely move potentially infected items and handle patients without getting themselves infected, and without spreading the contagion via touch.
 These PPE items should either be cleaned or destroyed as they will lose their effectiveness after X number of items handled or contacts made (nothing too crazy, 150+ things should be fine). Once the PPE is considered to be worn out it will begin to infect the wearer with increased probability over time and have the potential to transfer any eligible viruses to other objects and players through normal contant infection.
+
 Alternatively, virologists can attempt to create vaccines to the virus in question, in order to create a vaccine, the virologist would need to provide multiple samples of the virus to the vaccinatior machine, which will then synthesize a vaccine with a hidden success probability based on the volatility of the target virus. Vaccine production will require blood, and a specified, randomized curated series of chems besides blood to actually create the vaccine. 
 A successful vaccine will prevent the specific virus the vaccine is created for from jumping to any person who has not already been infected by the vaccine parent, but will not prevent any future mutation of the same virus eventually coming around and infecting later.
 
 ## External Infection Sources
 Viruses that don't originate in the crew round start can be instead picked up from other sources, such as raw meats in the kitchen, not cleaning meat cutting tools in the kitchen, rats and mice, rotting corpses, artifacts creating (usually very lethal) diseases, and sometimes external sources, such as carp bites, vent spider bites, spawned blood puddles, cargo imports (such as on/in the crates) and potentially bio terror from nukkies using specific, unique viruses.
+
 Late arrival crew should also spawn with a virus or two at a 60% rate potentially with minor symptoms as well unlike round start crew which should only have the benign symptom.
+
 This is mostly done so the crew can't somehow systematically wipe out viruses.
 
 ## Viral Modification
@@ -95,7 +102,7 @@ When a virus jumps species, the severity should be bumped up by one or two equiv
 ## Sample Viruses
 
 Common Cold
-Symptoms: Coughing/Sneezing Severity 3, Runny Nose/Feeling Unwell Severity 2
+Symptoms: Benign Irremovable Coughing/Sneezing Severity 3, Runny Nose/Feeling Unwell Severity 2
 Volatility: 30%
 Lifespan: 6 Minutes
 Contagion: Airborne Inhaled, Contact
@@ -104,7 +111,7 @@ Can Jump Species: No
 Homeopathy: Tricordazine Coughing/Sneezing Severity -2 (to 1) Ethanol Coughing/Sneezing +1 (to 4)
 
 Wehpox
-Symptoms: Blistering Severity 5 Drowsiness Severity 3
+Symptoms: Benign Irremovable Blistering Severity 5 Drowsiness Severity 3
 Volatility: 50%
 Lifespan: 8 Minutes
 Contagion: Blood to Blood, Saliva
