@@ -20,7 +20,7 @@ Viruses can be identified and tracked using a similar system to the detective DN
 Viruses will have 4 of 6 characteristics that the virologist can detect using the diagnoser. 
 * Symptoms, which can have many potential symptoms the virologist can see to assess who has what disease potentially.
 * Volatility, which would operate on a sliding scale of how likely the virus is to mutate, and how severe the potential mutations can be using a random weighted point buy, similar to botany chem mutations.
-* Estimated lifespan of the virus before it eventually "dies", by 20 minutes, none of the initial viruses should exist.
+* Estimated lifespan of the virus before it eventually "dies", by 20 minutes, none of the initial viruses should exist. One the virus dies, the crewmember will be immune to the virus and will not suffer from the effects of said infection.
 * Lastly, there'd be the mode of contagion spread. Most likely to spread would be airborne, least likely to spread would be blood to blood contact (this will also require medical to sterilize their tools, which will be discussed later). Contagion types can stack.
 
 Not shown to the virologist would be wether or not the virus is capable of jumping species type, nor the major health effect related to such an event occurring. 
