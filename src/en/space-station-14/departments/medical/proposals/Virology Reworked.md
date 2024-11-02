@@ -61,7 +61,7 @@ Virologists can take multiple viruses and attempt to take characteristics from e
 * Virology should start the round with some samples of current viruses in their department to get a head start.
 
 
-## Homeopathic Treatment
+## Chemical Medical Treatment
 Per virus, each symptom associated with it will have a specific chem that can be administered to the patient in order to reduce or eliminate the effects of the disease. For example, coughing can be fixed with tricordazine for one specific virus, while another symptom of the same virus would need something like dylovene. Effectiveness of the treatment would depend on the severity of the system and a hidden modifier on each symptom as to how effective these treatments are. Treatments can make viral symptoms worse as well. 
 
 ## Contagion Tiers
@@ -109,7 +109,7 @@ Common Cold
 * Contagion: Airborne Inhaled, Contact
 * Originating Species: Human
 * Can Jump Species: No
-* Homeopathy: Tricordazine Coughing/Sneezing Severity -2 (to 1) Ethanol Coughing/Sneezing +1 (to 4)
+* Treatments: Tricordazine Coughing/Sneezing Severity -2 (to 1) Ethanol Coughing/Sneezing +1 (to 4)
 
 Wehpox
 
@@ -120,7 +120,7 @@ Wehpox
 * Originating Species: Reptilian
 * Can Jump Species: Yes
 * Jump Consequence: +2 Drowsiness
-* Homeopathy: Aloe Blistering Severity -3 (to 2) Stebellin Blistering Severity -1 (to 4) Drowsiness +1 (to 4)
+* Treatments: Aloe Blistering Severity -3 (to 2) Stebellin Blistering Severity -1 (to 4) Drowsiness +1 (to 4)
 
 Romerol Virus (Zombies)
 
@@ -131,4 +131,4 @@ Romerol Virus (Zombies)
 * Originating Species: Whoever gets it first.
 * Can Jump Species: Yes
 * Species Jump Consequence: +1 Poison
-* Homeopathy: Dylovene +1 Poison (to 4) Dipenhydramine +2 Poison (to 5)
+* Treatments: Dylovene +1 Poison (to 4) Dipenhydramine +2 Poison (to 5)
