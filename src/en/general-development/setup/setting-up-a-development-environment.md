@@ -13,6 +13,13 @@ First you're gonna need some software:
     * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
 
+## Video guide
+Are you stuck? Don't understand how to do a certain part? This video should help
+
+This video is intended to be followed *along with the guide* and may become out of date.
+
+{% embed youtube id="EUGl_zNS6Uk?t=3" loading="lazy" %}
+
 ## 1. Cloning
 
 **Even if you already know Git, scroll down to read the section about submodule setup. Seriously.**
