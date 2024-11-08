@@ -6,7 +6,7 @@
 
 ## Overview
 
-Penumatic valves currently have no gui to configure things like threshold or gain. Pneumatic valves also can't be inversed (explained below). This PR seeks to implement both features and to make inversibility a toggle within the GUI.
+Pneumatic valves currently have no GUI to configure things like threshold or gain. Pneumatic valves also can't be inversed (explained below). This PR seeks to implement both features and to make inversibility a toggle within the GUI.
 
 ## Background
 
@@ -14,4 +14,4 @@ Pneumatic valves are like transistors, but for pressure-based systems. The curre
 
 ## Motivation
 
-Having a GUI for the pneumatic valve can improve the intutive useability of the valve. Additionally, being able to toggle the inversbility of the pneumatic valve can lead to a lot of FUN™.
+Having a GUI for the pneumatic valve can improve the intuitive usability of the valve. Additionally, being able to toggle the inversbility of the pneumatic valve can lead to a lot of FUN™.
