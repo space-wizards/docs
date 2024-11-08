@@ -40,6 +40,7 @@ Content Maintainers:
 - [Errant-4](https://github.com/Errant-4) - @err.ant (502504545579040768)
 - [Mervill](https://github.com/Mervill) - @mervill (153632198845661184)
 - [SlamBamActionman](https://github.com/SlamBamActionman) - @slambamactionman (91969935848251392)
+- [SaphireLattice](https://github.com/SaphireLattice) - @saphire (107368676348416000)
 
 Engine maintainers:
 No one maintains only engine :p
