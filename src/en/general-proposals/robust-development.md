@@ -7,12 +7,9 @@ just like you. As a developer, make your own indie sensation with an
 easy-to-learn language, built-in online support, tools for developers, and
 plenty of articles and tutorials.
 
-
-| Designers | Implemented | GitHub Links | Crazy                   |
-|-----------|-------------|--------------|-------------------------|
-| benev0    | :x: No      | not yet      | :heavy_check_mark: Once |
-
-<!-- note to self: edit for (statement -> reason) structure -->
+| Designers         | Implemented | GitHub Links | Crazy                   |
+|-------------------|-------------|--------------|-------------------------|
+| benev0 / benevo   | :x: No      | not yet      | :heavy_check_mark: Once |
 
 ## Preamble
 Nearly all of the concepts described here will require their own design
@@ -21,17 +18,22 @@ facing development. All issues mentioned in this document should be addressed
 in this document but may not be fully specified. It should be clear that the
 scope of this proposal and size of work is ***extreme***.
 
-This proposal alters proposes taking on large quantities of technical dept. In
-the documentation, this technical dept already exists and should be addressed.
-In the module section new technical dept is created by respcifieding that
+This document proposes to take on large quantities of technical debt. Most of this
+technical debt already exists in the current documentation, and should be addressed.
+In the module section new technical debt is created by re-specifying that
 services should be extracted; this will require a retrofit of the core content
-repo, SS14, and subsequently all forks. In the publishing section
+repo, SS14, and subsequently all forks.
+
+In the publishing & Monetization section, recommended changes to existing policy are
+provided. The goal of these changes is to protect the core community of players and
+devs while allowing new RobustToolbox game communities to join without friction.
+
 
 <!-- Concept -->
 ## Concept
-Robust Toolbox is an engine which like its predecessor, BYOND, handles nearly
+Robust Toolbox is an engine which, like its predecessor, BYOND, handles nearly
 all of the low level networking. Paired with a well known architecture ECS,
-Robust Toolbox should be high in consideration for many projects; however,
+Robust Toolbox should be high in consideration for many projects. However,
 there are three major issues.
 
 1. Documentation & Examples
@@ -46,25 +48,25 @@ there are three major issues.
 ### Clear development path
 
 These issues should be addressed so that development does not require *side
-quests* (reading or creating SS14 source); although, *side quests* may be
-recommended in the docs but should not be used as a crutch.
+quests* (reading or creating SS14 source); although *side quests* may be
+recommended in the docs, they should not be used as a crutch.
 
 ### Do not require devs to reinvent the wheel
 
 Common functionality such as database interaction should be abstracted into
 modules which can be imported into user games.
 
-This functionality should be sourced like the game from the community allowing
+This functionality should be sourced like the game from the community, allowing
 imports from a remote git repository while trusting the content.
 
 ### Publishing with Space Wizards should be mutually beneficial
 
 Space Wizards and the game should mutually gain visibility by Space Wizards
-allowing games to be published on the launcher and developers bring new players
+allowing games to be published on the launcher as developers bring new players
 to the launcher.
 
-Developers should be free to publish their games without concern of harm by
-other Developers by theft or defamation by other community members.
+Developers should be free to publish their games without concern of harm from
+other Developers by theft or defamation from other community members.
 
 ## Addressing the issues
 ### Documentation & Examples
@@ -77,13 +79,13 @@ demonstrate all the engine functionality required to create a feature complete
 game<!-- to be defined -->. This can and should include a basic project, but
 should avoid copy paste syndrome.
 
-    Avoid Recursion at any point where a writher types "we'll revisit this
-concept later" should be scrutinized heavily, and a new ordering should be
+    Avoid Recursion at any point where a writer types "we'll revisit this
+concept later." The documentation should be scrutinized heavily, and a new ordering
 considered.
 
 2. Standard
 
-    Every Writer has a different style, this is will create issues when style
+    Every Writer has a different style. This is will create issues when style
 seeps into document structure. Documentation will need a standard structure.
 
 3. Simple
@@ -104,35 +106,35 @@ documentation.
 #### Design Targets
 1. Community Driven
 
-    Like Robust Toolbox and Space Station 14 Modules will be community driven,
-that is created and managed by the community.
+    Like Robust Toolbox and Space Station 14 Modules will be community driven;
+that is, created and managed by the community.
 
 2. Documented
 
-    Modules are adding functionally this functionally should be documented;
-however, as these are community projects these standards will likely be very
+    Modules are adding functionality. This functionality should be documented.
+However, as these are community projects these standards will likely be very
 relaxed. Recommended templates based off of official Space Wizards
 documentation should be provided in the module creation documentation.
 
 3. Easy Dependency Management
 
     Developers who add a module to their project should not need to add whole
-non config files the maximum complexity should be that of adding a new
+non config files. The maximum complexity should be that of adding a new
 submodule to the repo.
 
 4. Validated
 
-    The Space Wizards community that is developers using robust toolbox should
-be able to trust their submodules. Minimally complaints about submodules should
+    The Space Wizards community, developers using robust toolbox, should
+be able to trust their submodules. Minimally, complaints about submodules should
 be able to be taken on the forums.
 
-    Better Space Wizards could curate a set of quality module projects.
+    Better, Space Wizards could curate a set of quality or internal module projects.
 
 5. License Clarity
 
-    Developers should know the repercussions of adding a RT-module before it is
-added to their code. Licenses should be recommended RT-modules open source
-monetizable and public domain licenses should be encouraged.
+    Developers should know the repercussions of adding an RT-module before it is
+added to their code. Licenses should be recommended RT-modules, open source,
+monetizable, and public domain licenses should be encouraged.
 
 ### Robust Toolbox Publishing & Monetization
 [RobustHub](./robusthub.md) has some of the same goals.
@@ -143,18 +145,18 @@ monetizable and public domain licenses should be encouraged.
 
     Developers should be encouraged to publish their game on robust hub knowing
 that it will be seen by new players. Developers who then advertize their game
-outside of the hub will pull additional players.
+outside of the hub will pull in additional players.
 
     The Hub should not mask games by being named for another game in any
-location launcher, site, steam, etc.. This is a Deviation form the RobustHub
+location launcher, site, steam, etc.. This is a Deviation from the RobustHub
 proposal.
 
 2. Effectively Moderated
 
-    The current strike rules are acceptable; however, the procedure in this
+    The current strike rules are acceptable. However, the procedure in this
 [document](../community/space-wizards-hub-rules.md) should be more formal. This
 may require sending server contact info when hosting.
 
 3. Safe Monetization
 
-    Guidelines for taking player monetization including recommended procedures.
+    Guidelines for taking player monetization should include recommended procedures.
