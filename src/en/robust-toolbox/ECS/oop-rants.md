@@ -1,3 +1,7 @@
+# OOP Rants
+<!-- this whole documents should probably not be added back more on the hub-->
+This is the rant that acted as the preamble to old ECS documentation.
+
 ## The solution to 'OOP is Bad': ECS
 
 So, the ECS ([Entity Component System](https://en.wikipedia.org/wiki/Entity_component_system)) gang has finally convinced you that OOP is bad and ECS is good, huh?
