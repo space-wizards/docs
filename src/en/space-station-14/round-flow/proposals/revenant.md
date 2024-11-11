@@ -16,7 +16,7 @@ With this proposal we aim to add more self-sufficiency to the Revenant, as well 
 
 ## Background
 
-Currently, the Revenant is a mediocre mid-round antag ghost role, due to it's dependence on crew deaths, which are entirely beyond the Revenant's control, the present gameplay loop usually consists of the Revenant having to visit med at least once in order to attain Stolen Essence, or pray for major disasters, which isn't fun at all, and even after having unlocked all abilities, there's not much going for the Revenant besides being a mild and repetitive annoyance.</p>
+Currently, the Revenant is a mediocre mid-round antag ghost role, due to it's dependence on crew deaths, which are entirely beyond the Revenant's control, the present gameplay loop usually consists of the Revenant having to visit medbay at least once in order to attain Stolen Essence, or pray for major disasters, which isn't fun at all, and even after having unlocked all abilities, there's not much going for the Revenant besides being a mild and repetitive annoyance.</p>
 <p>What we bring you is a major re-design of the Revenant, which not only makes getting 'fun' abilities less of a grind, but tries to make it actually interact with the crew.
 
 ## MHP (Metaphysical Hitpoints)
@@ -38,8 +38,8 @@ The Revenant is intangible towards nearly all kinds of damage when metaphysical,
 ### Soul ranking
 
 Souls are now divided into 3 different grades: **Low-value**, **Medium-value**, and **High-value.**
- - **Low-value** souls will be that of 'normal' personnel (Civillians, common Engineers, common Medics, et cetera)
- - **Medium-value** souls will be that of 'special' personnel (ie. Security Officers and Cadets, most of Command)
+ - **Low-value** souls will be that of 'normal' personnel (ie. Civillians, Department Staff)
+ - **Medium-value** souls will be that of 'special' personnel (ie. Security Officers/Cadets, most of Command)
  - **High-value** souls will be that of 'unique' personnel (ie. Captain, Head of Security, Antagonists)</p>
 Your soul's essence will be dependent on it's grade, Low-value having the least base amount, and High-value having the most. Players may rise through the rankings via killing other player-controlled characters.
 
@@ -56,7 +56,7 @@ Abilities aren't tiered, contrary to EmoGarbage404's proposal, but rather, will 
 
 Abilities under this category can be used by the Revenant whenever.
 
- - **Harvest** - Unlock Cost: Free - Use Cost: Free - Cooldown: None - Use Duration: Short - Reveal Time: Short - Harvests the soul of a deceased crew member, dealing high cold damage if successful.
+ - **Harvest** - Unlock Cost: Free - Use Cost: Free - Cooldown: None - Use Duration: Short - Reveal Time: Short - Harvests the soul of a deceased/slumbering (ie. asleep or SSD) crew member, dealing high cold damage if successful.
  - **Defile** - Unlock Cost: Low - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Defiles the surrounding area, ripping up floors, damaging windows, and opening most containers.
  - **Overload** - Unlock Cost: Medium - Use Cost: Medium - Cooldown: Average - Use Duration: Short - Overloads all nearby lights, causing light fixtures to pulse and flash-stun people as they break.
  - **Malfunction** - Unlock Cost: Very High - Use Cost: High - Cooldown: Long - Use Duration: Short - Ions every silicon in the vicinity, and has an added chance of granting other machines close-by sentience!
@@ -74,7 +74,7 @@ Abilities under this category can only be used when the Revenant is in it's meta
  - **Deafen** - Unlock Cost: Medium - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Makes the selected target progressively more deaf until they can't hear anything but their own footsteps.
  - **Disorient** - Unlock Cost: Medium - Use Cost: Medium - Cooldown: Long - Use Duration: Instant - Makes the selected target's controls go haywire, so that they're either completely inverted, stuck in walking one direction, or inputting late.
  - **Mark** - Unlock Cost: High - Use Cost: Medium - Cooldown: Very Long - Use Duration: Short - Marks the targeted crew member with an effect that periodically drains them of their energy, making them experience drowsiness, an effect similar to that of being drunk, in which after a while they'll forcefully enter an asleep state.
- - **Possess** - Unlock Cost: Very High - Use Cost: High - Cooldown: Long - Use Duration: Medium - Reveal Time: Medium - The Revenant may possess recently deceased personnel, upon entering their body, they will be brought back to the Poor state, and any kind of DoT will be immediately and completely halted (ie. poison, bleeding). If the Revenant uses any ability on the mortal plane they emit a dim purple haze around them. Possessed bodies will be frighteningly cold and upon examining them they will apear pale. If the possessed body dies the Revenant is kicked from it and will be unable to gather Soul Essence for a while.
+ - **Possess** - Unlock Cost: Very High - Use Cost: High - Cooldown: Long - Use Duration: Medium - Reveal Time: Medium - The Revenant may possess recently deceased/slumbering personnel, upon entering their body, they will be brought back to the Poor state, and any kind of DoT will be immediately and completely halted (ie. poison, bleeding). If the Revenant uses any ability on the mortal plane they emit a dim purple haze around them. Possessed bodies will be frighteningly cold and upon examining them they will appear pale. If the possessed body dies the Revenant is kicked from it and will be unable to gather Soul Essence for a while.
 
 ### Post-possession Abilities
 
@@ -89,7 +89,7 @@ Abilities under this category can only be used when the Revenant is possessing s
 
 Items listed under this category are upgrades to existing abilities.
 
- - **Sleep Paralysis** - Unlock Cost: Very High - Affects: Harvest, Possess - SSD and asleep personnel are now susceptible to having their Soul Essence reaped by the Revenant, as well as being possessed. The Revenant will take slightly longer to harvest and possess crew members if they are in a slumbering state.
+ - **Sleep Paralysis** - Unlock Cost: Very High - Affects: Harvest, Possess - Anyone the Revenant attempts to use Harvest/Possess on while in a slumbering state will be temporarily paralyzed as they wake up, a time in which the Revenant's abilities still take effect.
  - **Hyperload** - Unlock Cost: High - Affects: Overload - Overload's flashes now penetrate through sun glasses, welding masks, and any other kinds of flash protection.
  - **Mist Empowerment** - Unlock Cost: Medium - Affects: Mistify - Mistify's mist size now increases with each purchase. (every additional acquisition of this upgrade costs more than previously)
  - **Domain** - Unlock Cost: Very High - Affects: Mistify - Bodies within the Revenant's shadowy mist decompose considerably slower, as well as any Harvest or Possess used on said targets will have their Use Duration cut.
