@@ -25,6 +25,8 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
 - **Do not make multiple unrelated changes in one PR.** For example, do not make miscellaneous additional changes to a PR, e.g. changing the heat resistance of a pair of gloves alongside your PR adding a new gun.
 
     - Try to split your PR into smaller ones where it makes sense to do so. This makes it significantly easier to read and can lead to faster reviews. It's also usually easier for you, and means you will receive earlier feedback and can avoid spending time making changes that have to be reworked.
+ 
+- **Start each PR with a short summary of what your PR does in simple terms, and link to design documents if possible.** Being able to quickly see what your PR intends to do and how it relates to established design documents makes for faster triages and reviews. When submitting a small change, or when there is no existing design document that is applicable, the design may instead be outlined directly in the PR description.
 
 ## Testing
 
