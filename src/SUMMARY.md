@@ -326,6 +326,7 @@ Staff
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
   - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
+  - [Triage Procedure](en/wizden-staff/maintainer/triage-procedure.md)
 - [Space Wizards Role Hierarchy](en/wizden-staff/space-wizards-role-hierarchy.md)
 - [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
 - [Staff Policy](en/wizden-staff/staff-policy.md)
