@@ -5,7 +5,7 @@ Triage is the process of assigning appropriate labels for an Issue or PR, making
 
 ## Who can Triage?
 
-Triage permissions are assigned to trusted contributors and staff on the project; being a maintainer is *not* a requirement to be able to Triage, though someone with Triage access should have codebase knowledge to the extent that they can perform Triage correctly. Performing Triage is does require going as in-depth as a Code Review would, and should largely be possible by reading the PR description and skimming the code. 
+Triage permissions are assigned to trusted contributors and staff on the project; being a maintainer is *not* a requirement to be able to Triage, though someone with Triage access should have codebase knowledge to the extent that they can perform Triage correctly. Performing Triage does not require going as in-depth as a Code Review would, and should largely be possible by reading the PR description and skimming the code. 
 
 For a non-maintainer to be given Triage permissions, a thread should be opened up in the main private staff channel where staff are given 24 hours to provide input. If there is dissent by the end of the 24 hour period, staff should discuss and attempt to reach a resolution shortly thereafter. If there is no dissent, the candidate is to be given the "Triager" role on Discord and Triage permissions on Github.
 
