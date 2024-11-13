@@ -25,7 +25,7 @@ When a CVar is referred to as `net.port`, that means put `port = foo` under the 
 
 ## CVar reference
 
-if you want to find a reference of all CVars available in the game/engine, your best bet is to check the game and engine code: [`CCVars.cs` for Space Station 14](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/CCVar/CCVars.cs), [`CVars.cs` for Robust](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/CVars.cs). It should be pretty easy to read.
+if you want to find a reference of all CVars available in the game/engine, your best bet is to check the game and engine code: [`CCVars.<category>.cs` for Space Station 14](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/CCVar), [`CVars.cs` for Robust](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/CVars.cs). It should be pretty easy to read.
 
 ## Ways of specifying CVars
 
