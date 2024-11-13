@@ -49,8 +49,8 @@ Each label has a description that explains what is to be used for in its categor
 | Category | Shorthand | Description |
 |---|---|---|
 | Area | A | Describes which area of the project an item is related to. An item may be related to multiple areas, however it should always have at least one. An example would be a guidebook entry on an undocumented Science feature, which would fit within both the Guidebook and Science area. If an item doesn't seem to fit in any area, report it to a maintainer to see if a new label needs to be made. |
-| Branch | B | If an item is intended for a non-master branch. Most commonly used for hotfixes. |
-| Bug | Bug | Reserved for Issues, where a complex bug should be replicated to ensure it's accurately reported. Not necessary for all bug reports. |
+| Branch | Branch | If an item is intended for a non-master branch. Most commonly used for hotfixes. |
+| Bug | B | Reserved for Issues, where a complex bug should be replicated to ensure it's accurately reported. Not necessary for all bug reports. |
 | Category | C | What the item is attempting/suggesting to do. Multiple categories may be applicable. |
 | Changes | Changes | Indicates an item should be handled by someone with knowledge in a certain area. |
 | Difficulty | D | An estimate of how complex the item would be to review or create a PR for. Fairly subjective and should be based on the code.
