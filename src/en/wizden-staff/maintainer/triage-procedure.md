@@ -28,11 +28,11 @@ For a triage to be completed, the item must have *at least one* label from the f
   - Category
   - Difficulty
   - Priority
-  - Size
   - Status
 
 While not mandatory, it's likely that the following label categories will be relevant for most items:
-  - Changes
+  - Size (Only applicable to PRs, is assigned automatically)
+  - Changes (Applicable to both Issues and PRs, some Changes labels are assigned automatically)
 
 Once a triage is completed, remove the `S: Untriaged` label and attach 'S: Needs Review' for PRs, or 'S: Requires Content PR' for Issues (alternative labels may be more appropriate, such as when closing an issue).
 
