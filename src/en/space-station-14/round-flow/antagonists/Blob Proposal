@@ -1,0 +1,103 @@
+# Blob Proposal
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| TiniestShark | :x: No | TBD |
+
+## Overview
+
+The Blob is a Major Conversion Antagonist with the goal of replicating and evolving until it can ultimately consume the station. A strange biohazardous organism that arrived on the station through the infestation of vermin, or a meteor impact carrying its core, the Blob is a Round start antagonist that must find a safe place to establish its core and expand. 
+
+This is an intended re-imagining of the original Blob to better support a more interesting style of play both for the crew of the station and the Blob itself. The Blob is no longer simply spreading, but evolving in its quest to perfect itself and consume the galaxy.
+
+This is a condensed version of the main doc found here, with more reasonings and explanations compared to the Blob's 13 incarnation: https://docs.google.com/document/d/1JTyuuHHEphncsvq3ubqJ9hwMzDlBHUfSY0dehHIBRww/edit?usp=sharing
+
+## Gameplay Loop
+
+The Blob will begin the round as an infected Mouse or Mothroach and placed somewhere at random on the station alongside other roundstard vermin. From there the Blob has approximately five minutes to find an ideal location on the station to place its Core, its base building and the center of a Blob's base. From here the Blob will begin to place Blob tiles within the Core's radius of influence, using resources for each one placed, to expand itself outward. If the Blob clicks on an occupied tile, the surrounding Blob will attack whatever is in the tile if it is not able to spread into it, beating down walls to open the area up.
+The Blob starts with a pool of resources it spends in order to place Blob tiles, build buildings, and spawn units. It has a maximum initial storage of 100 resources, and can expand this reservoir with Storage Blobs. The Blob must also start placing Nodes to solidify its influence over an area. It will then research upgrades that boost its base stats and spreading potential until it can achieve its final evolution, while also working to fight off the crew when its inevitably discovered.
+
+## Abilities
+
+The Blob has a number of basic controls and abilities to make their job of spreading and consuming much easier.
+
+-Spread: Clicking on a tile spreads Blob to selected tile. Tile must be connected to existing Blob. Each placed tile takes resources based on type. Can be placed under Crew.
+-Attack: Attacks selected entity with nearest Blob tiles.
+-Delete Blob: Allows Blob to delete misplaced or unnecessary Blob tiles for a small refund (Weak tiles are not refunded).
+-Core Relocate: Available during first stages: Allows Blob core to move to new location.
+-Rally Spores: Commands all Spores to move towards target location. Spores will attack anything in area or in path. Acts as a "Point" command for Ghost controlled Spores.
+-Detonate Spore: Commands selected Spore to manually explode. Exploded Spores deal damage in a radius around them and spread Weak Blob.
+-Mutate Blobbernaut: Choose target factory to convert into a Blobbernaut. Selected factory is destroyed in the process. Costs 80 resources. Only available after First Evolution.
+-Evolve: Upgrades Blob to next tier of Evolution. Each Evolution takes time to complete.
+-Swap to Node/Core: Quickly moves the Camera to the next Node/Core in sequence.
+-Grapple: Commands a Blob Grapple to latch onto a target entity. Using again on the same tower releases.
+
+## Types of Blob Tile
+
+-Normal Blob | Cost 5: Main tile of the Blob. Spreads influence outwards, allows buildings to be placed down, attacks entities that attempt to wander into it. Entities that walk onto Blob Tiles are slowed by 50%. Degrades into Weak Blob if outside the influence of a Node/Core.
+-Weak Blob | Cost: 2: If the Blob attempts to spread outside the influence of a Node/Core, they will only spread Weak Blob at a reduced cost. Weak Blob has half health and damage of a regular Blob Tile, and only slows by 15%. Buildings can still be placed on Weak Blob.
+-Strong Blob | Cost: 15: Upgraded from Normal Blob. Strong Blob Tiles are solid walls that can take much more damage before being destroyed. Fireproof and block air flow in the event of station fires.
+-Reflective Blob | Cost: 15: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew.
+-Blob Locks/Membrane | Cost: 0: Variant of Strong Blob. Blob Locks/Membrane are doors the Blob can establish to fortify an area, while still letting their units through. Useful for chokepoints, and for letting units into space.
+
+## Buildings
+
+-All buildings aside from the Core must be built on Blob Tiles. Any buildings within the influence radius of a Node/Core will regenerate health over time, and lose it slowly when not.
+
+-Core: The brain of the Blob. Generates 1 resource a second on its own. Supports buildings in its influence radius. If destroyed: The Blob loses.
+-Node | Cost: 60: The nerves of the Blob. Spreads Blob around itself automatically and supports buildings in its influence radius. Blobs around node attack automatically and will take out any non-blob walls around it. Additionally restores any Weak Blob in its radius to Normal Blob. Nodes are the major signifiers of Blob Presence and required both to hold its territory down, and also to evolve.
+-Resource Pool | Cost: 40: Produces resources over time, faster if closer to Core/Node. Cannot be built within three tiles of another Resource Pool.
+-Spore Factory | Cost: 50: Creates Blob Spores over time with a cap of three per factory. Takes five resources per Spore. Cannot be built within four tiles of another Spore Factory.
+-Storage Blob | Cost: 40: Increases max resource capacity by 50.
+-Spore Cannon | Cost: 80: A support tower that fires fast, weak blob projectiles at enemies. Slows targets with a stacking speed debuff as they're covered in Blob. Functions to dissuade lone attackers from assaulting Nodes or specific locations, and assists in harassing combatants attempting to outrange the Blob.
+-Blob Grapple | Cost: 60: A support tower that fires a Blob tendril that grapples onto the first thing it hits and prevents it from moving. Blob can spread Blob Tiles from point of grapple's impact. Intended to give Blobs a way to spread back onto the station if they're disconnected for any reason, or to grab and hold down Shuttles for its units to attack and overtake. Grapples can be destroyed by Crew.
+
+## Unique Buildings
+
+-Captured Nuke: If the Blob manages to spread onto a Nuke, it creates a Captured Nuke. This is a reinforced Blob tile that prevents the Crew from arming the Nuke.
+
+## Units
+
+-Spore | Cost: 5: Low Tier Unit/Workhorse. Floats through air, attacks weakly, and explodes when killed. Can drift through space without being harmed. Spread Weak Blob in a radius around them when they explode, and can be commanded to explode manually. Also function as Ghost Roles for Players to take.
+-Blob Zombie "Blombie": Medium Tier Unit. Created when a Spore takes over a dead crew member. Controlled by downed Player, or by AI if the player has disconnected or taken another role. Acts as a regular mob, chasing down Crew and attacking. Spores on head "pop" when killed, allowing Crew's body to be retrieved and revived.
+-Blobbernaut | Cost: 80: High Tier Unit. Expensive, powerful bruiser. Attacks deal heavy Blunt damage with additional damage based on Blob Strain. Blobbernauts have a low attack speed to emphasize their bruiser role, and leaves them open to being swarmed if not supported by other units. Regenerates health while on Blob Tile. Ghost role for Players, AI if uncontrolled.
+
+## Resistances
+
+-Blunt/Brute: The Blob is a solid mass of matter, making most blunt weaponry deal little damage.
+-Spacing: The Blob has adapted to survive in space, making it resistant to low pressure environments/cold temperatures.
+-Piercing: Due to the Blob's strange composition; bullets will either fly through it or pierce and deal little damage. Blob Units take normal damage from Pierce to not make guns useless.
+
+## Vulnerabilities/Weaknesses
+
+-Slash: Bladed weapons deal full damage against the Blob, giving the crew a clear avenue of damage if other sources are not readily available.
+-Fire: The Blob's composition makes it vulnerable to fire damage, meaning that Welders and Flamethrowers will deal additional damage to it alongside Laser based weaponry.
+-Structural: The more concentrated the Blob is in an area, the more resistant it is to normal methods of attack, but the weaker it is to structural damage. Strong Blob and Buildings take additional Structure damage.
+
+## Upgrades
+
+-Evolution (Blobolution):
+
+| Level | Required Nodes | Node Cap | Range of Influence (Tiles) | Resource Generation | Research Time | Cost |
+| Base Level "Interphase" | 0 | 3 | 3 | 1 | 0 | 0 |
+| 1st Evolution "Prophase" | 2 | 4 | 4 | 2 | 10 | 50 |
+
+## Blob Objectives
+
+- The Blob's main objective is to perfect itself over the course of a round through four tiers of "Evolution" it can research. Each tier of research is enabled by the Blob building a specific amount
+
+## Additions
+
+These are intended to be bonuses to the Blob's primary functions to help mix things up and add flavor to a round, but are not necessary for the base antagonist to function.
+
+---
+
+## Blob Strains
+
+- Blob Strains are variations either to specific mechanics the Blob is capable of, or the properties of said mechanics. Before the Blob places their core they are given the option of choosing a specific strain of Blob to alter their overall strategy either through damage types or specific abilities. Blob players do not have to pick one if they do not wish and it will be recommended for first time players to choose the default Blob option in order to get used to how the Blob functions at its baseline first.
+
+- Strains should be designed with specific positives and negatives to make for more interesting alterations to strategy. Alternate damage types especially should carry some downside that ties into the theme they're meant to evoke.
+
+| Name | Attack Effects | Positives | Negatives |
+| Blazing Oil | 5 Brute, 20 Burn, Lights targets on fire | When hit with burn damage - emits a burst of fire. Immune to fire | Weak to water |
+| Electromagnetic Web | 5 Brute, 25 Burn, 20% EMP Chance | Causes EMP if killed by melee, bullets or lasers. | Takes 25% more burn, and full brute |
