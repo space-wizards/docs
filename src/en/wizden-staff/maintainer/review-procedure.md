@@ -34,4 +34,4 @@ Not following this procedure/policy will result in disiplinary action being take
 ## Issues & Reviews
 While Issues do not have any code to review, they may still contain suggestions and feature proposals that would benefit from a Maintainer Discussion.
 
-- An Issue can be given the "S: Undergoing Maintainer Discussion" label to create a discussion thread as per the process described in the Policy section. If the discussion has a positive outcome, the issue can be given the `S: Conceptual Approval` label, and any PR that references the issue without major deviation can subsequently also be given the same label, indicating no new discussion is necessary.
+- An Issue can be given the `S: Undergoing Maintainer Discussion` label to create a discussion thread as per the process described in the Policy section. If the discussion has a positive outcome, the issue can be given the `S: Conceptual Approval` label, and any PR that references the issue without major deviation can subsequently also be given the same label, indicating no new discussion is necessary.
