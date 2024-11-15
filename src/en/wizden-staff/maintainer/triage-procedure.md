@@ -23,18 +23,18 @@ When closing an issue, ideally either link to the PR that resolved it, post an i
 
 Github automatically assigns the `S: Untriaged` label to any Issue or PR that is submitted. Triage should be performed on any such new item. Read through the item and assign appropriate labels based on its content.
 
-For a triage to be completed, the item must have *at least one* label from the following label categories:
-  - Area
-  - Difficulty
-  - Priority
-  - Status
-  - Type
+For a triage to be completed, the item must have *at least one* label from the following label categories. This is signified by these categories having a 1-letter category name:
+  - Area / A
+  - Difficulty / D
+  - Priority / P
+  - Status / S
+  - Type / T
 
 The following categories are assigned automatically by Github:
   - Size
   - Changes
 
-Once a triage is completed, remove the `S: Untriaged` label and attach 'S: Needs Review' for PRs, or 'S: Requires Content PR' for Issues (alternative labels may be more appropriate, such as when closing an issue).
+Once a triage is completed, remove the `S: Untriaged` label and attach `S: Needs Review` for PRs, or `S: Requires Content PR` for Issues (alternative labels may be more appropriate, such as when closing an issue).
 
 ### Old Issue / PR Re-Triage
 
