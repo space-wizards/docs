@@ -12,114 +12,117 @@ This is an intended re-imagining of the original Blob to better support a more i
 
 This is a condensed version of the main doc found here as I try to condense and focus this down: https://docs.google.com/document/d/1JTyuuHHEphncsvq3ubqJ9hwMzDlBHUfSY0dehHIBRww/edit?usp=sharing
 
-## Gameplay Loop
+### Gameplay Loop
 
 The Blob will begin the round as an infected Mouse or Mothroach and placed somewhere at random on the station alongside other roundstard vermin. From there the Blob has approximately five minutes to find an ideal location on the station to place its Core, its base building and the center of a Blob's base. From here the Blob will begin to place Blob tiles within the Core's radius of influence, using resources for each one placed, to expand itself outward. If the Blob clicks on an occupied tile, the surrounding Blob will attack whatever is in the tile if it is not able to spread into it, beating down walls to open the area up.
-The Blob starts with a pool of resources it spends in order to place Blob tiles, build buildings, and spawn units. It has a maximum initial storage of 100 resources, and can expand this reservoir with Storage Blobs. The Blob must also start placing Nodes to solidify its influence over an area. It will then research upgrades that boost its base stats and spreading potential until it can achieve its final evolution, while also working to fight off the crew when its inevitably discovered.
+
+The Blob starts with a pool of resources it spends in order to place Blob tiles, build buildings, and spawn units. It has a maximum initial storage of 100 resources, and can expand this reservoir with Storage Blobs. The Blob must also start placing Nodes to solidify it's influence over an area. It will then research upgrades that boost its base stats and spreading potential until it can achieve its final evolution, while also working to fight off the crew when its inevitably discovered.
 
 After the Blob has been confirmed on station: the Emergency Shuttle will be unable to be called. If the shuttle has already arrived: It will be unable to leave. Only Escape Pods will be launched if the Blob wins.
 
 In order to win, the Blob must research four tiers of "Evolution", which it reaches through putting down a certain number of nodes and then spending the amount of resources needed to research the upgrade.
 
-## Abilities
+### Abilities
 
 The Blob has a number of basic controls and abilities to make their job of spreading and consuming much easier.
 
--Spread: Clicking on a tile spreads Blob to selected tile. Tile must be connected to existing Blob. Each placed tile takes resources based on type. Can be placed under Crew.
--Attack: Attacks selected entity with nearest Blob tiles.
--Delete Blob: Allows Blob to delete misplaced or unnecessary Blob tiles for a small refund (Weak tiles are not refunded).
--Core Relocate: Available during first stages: Allows Blob core to move to new location.
--Rally Spores: Commands all Spores to move towards target location. Spores will attack anything in area or in path. Acts as a "Point" command for Ghost controlled Spores.
--Detonate Spore: Commands selected Spore to manually explode. Exploded Spores deal damage in a radius around them and spread Weak Blob.
--Mutate Blobbernaut: Choose target factory to convert into a Blobbernaut. Selected factory is destroyed in the process. Costs 80 resources. Only available after First Evolution.
--Evolve: Upgrades Blob to next tier of Evolution. Each Evolution takes time to complete.
--Jump to Node: Quickly moves the Camera to the next Node in sequence.
--Jump to Core: Quickly moves the Camera to the Blob's Core.
--Grapple: Commands a Blob Grapple to latch onto a target entity. Using again on the same tower releases.
+- Spread: Clicking on a tile spreads Blob to selected tile. Tile must be connected to existing Blob. Each placed tile takes resources based on type. Can be placed under Crew.
+- Attack: Attacks selected entity with nearest Blob tiles.
+- Delete Blob: Allows Blob to delete misplaced or unnecessary Blob tiles for a small refund (Weak tiles are not refunded).
+- Core Relocate: Available during first stages: Allows Blob core to move to new location.
+- Rally Spores: Commands all Spores to move towards target location. Spores will attack anything in area or in path. Acts as a "Point" command for Ghost controlled Spores.
+- Detonate Spore: Commands selected Spore to manually explode. Exploded Spores deal damage in a radius around them and spread Weak Blob.
+- Mutate Blobbernaut: Choose target factory to convert into a Blobbernaut. Selected factory is destroyed in the process. Costs 80 resources. Only available after First Evolution.
+- Evolve: Upgrades Blob to next tier of Evolution. Each Evolution takes time to complete.
+- Jump to Node: Quickly moves the Camera to the next Node in sequence.
+- Jump to Core: Quickly moves the Camera to the Blob's Core.
+- Grapple: Commands a Blob Grapple to latch onto a target entity. Using again on the same tower releases.
 
-## Blob Tiles
+### Blob Tiles
 
 Blob Tiles are the Blob's primary method of spreading throughout the station. Each tile costs a small amount of resources, allowing a Blob to either slowly spread out by spending their resources constantly, or saving up for a rush of Blob. Blob Tiles are capable of attacking, dealing damage depending both on the type of tile and the strain of the Blob. Blob Tiles can be destroyed by the crew through damaging them with any weapons on hand.
 
--Normal Blob | Cost 5: Main tile of the Blob. Spreads influence outwards, allows buildings to be placed down, attacks entities that attempt to wander into it. Entities that walk onto Blob Tiles are slowed by 50%. Degrades into Weak Blob if outside the influence of a Node/Core.
--Weak Blob | Cost: 2: If the Blob attempts to spread outside the influence of a Node/Core, they will only spread Weak Blob at a reduced cost. Weak Blob has half health and damage of a regular Blob Tile, and only slows by 15%. Buildings can still be placed on Weak Blob.
--Strong Blob | Cost: 15: Upgraded from Normal Blob. Strong Blob Tiles are solid walls that can take much more damage before being destroyed. Fireproof and block air flow in the event of station fires.
--Reflective Blob | Cost: 15: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew.
--Blob Locks/Membrane | Cost: 0: Variant of Strong Blob. Blob Locks/Membrane are doors the Blob can establish to fortify an area, while still letting their units through. Useful for chokepoints, and for letting units into space.
+- Normal Blob | Cost 5: Main tile of the Blob. Spreads influence outwards, allows buildings to be placed down, attacks entities that attempt to wander into it. Entities that walk onto Blob Tiles are slowed by 50%. Degrades into Weak Blob if outside the influence of a Node/Core.
+- Weak Blob | Cost: 2: If the Blob attempts to spread outside the influence of a Node/Core, they will only spread Weak Blob at a reduced cost. Weak Blob has half health and damage of a regular Blob Tile, and only slows by 15%. Buildings can still be placed on Weak Blob.
+- Strong Blob | Cost: 15: Upgraded from Normal Blob. Strong Blob Tiles are solid walls that can take much more damage before being destroyed. Fireproof and block air flow in the event of station fires.
+- Reflective Blob | Cost: 15: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew.
+- Blob Locks/Membrane | Cost: 0: Variant of Strong Blob. Blob Locks/Membrane are doors the Blob can establish to fortify an area, while still letting their units through. Useful for chokepoints, and for letting units into space.
 
-## Blob Buildings
+### Blob Buildings
 
 Blob Buildings are what the Blob must use to gather strength and fight the station. All buildings aside from the Core must be built on Blob Tiles. Any buildings within the influence radius of a Node/Core will regenerate health over time, and lose it slowly when not.
 
--Core: The brain of the Blob. Generates 1 resource a second on its own. Supports buildings in its influence radius. If destroyed: The Blob loses.
--Node | Cost: 60: The nerves of the Blob. Spreads Blob around itself automatically and supports buildings in its influence radius. Blobs around node attack automatically and will take out any non-blob walls around it. Additionally restores any Weak Blob in its radius to Normal Blob. Nodes are the major signifiers of Blob Presence and required both to hold its territory down, and also to evolve.
--Resource Pool | Cost: 40: Produces resources over time, faster if closer to Core/Node. Cannot be built within three tiles of another Resource Pool.
--Spore Factory | Cost: 50: Creates Blob Spores over time with a cap of three per factory. Takes five resources per Spore. Cannot be built within four tiles of another Spore Factory.
--Storage Blob | Cost: 40: Increases max resource capacity by 50. Cannot be built within three tiles of another Storage Blob.
--Spore Cannon | Cost: 80: A support tower that fires fast, weak blob projectiles at enemies. Slows targets with a stacking speed debuff as they're covered in Blob. Functions to dissuade lone attackers from assaulting Nodes or specific locations, and assists in harassing combatants attempting to outrange the Blob.
--Blob Grapple | Cost: 60: A support tower that fires a Blob tendril that grapples onto the first thing it hits and prevents it from moving. Blob can spread Blob Tiles from point of grapple's impact. Intended to give Blobs a way to spread back onto the station if they're disconnected for any reason, or to grab and hold down Shuttles for its units to attack and overtake. Grapples can be destroyed by Crew.
+- Core: The brain of the Blob. Generates 1 resource a second on its own. Supports buildings in its influence radius. If destroyed: The Blob loses.
+- Node | Cost: 60: The nerves of the Blob. Spreads Blob around itself automatically and supports buildings in its influence radius. Blobs around node attack automatically and will take out any non-blob walls around it. Additionally restores any Weak Blob in its radius to Normal Blob. Nodes are the major signifiers of Blob Presence and required both to hold its territory down, and also to evolve.
+- Resource Pool | Cost: 40: Produces resources over time, faster if closer to Core/Node. Cannot be built within three tiles of another Resource Pool.
+- Spore Factory | Cost: 50: Creates Blob Spores over time with a cap of three per factory. Takes five resources per Spore. Cannot be built within four tiles of another Spore Factory.
+- Storage Blob | Cost: 40: Increases max resource capacity by 50. Cannot be built within three tiles of another Storage Blob.
+- Spore Cannon | Cost: 80: A support tower that fires fast, weak blob projectiles at enemies. Slows targets with a stacking speed debuff as they're covered in Blob. Functions to dissuade lone attackers from assaulting Nodes or specific locations, and assists in harassing combatants attempting to outrange the Blob.
+- Blob Grapple | Cost: 60: A support tower that fires a Blob tendril that grapples onto the first thing it hits and prevents it from moving. Blob can spread Blob Tiles from point of grapple's impact. Intended to give Blobs a way to spread back onto the station if they're disconnected for any reason, or to grab and hold down Shuttles for its units to attack and overtake. Grapples can be destroyed by Crew.
 
-## Unique Buildings
+### Unique Buildings
 
 Unique Buildings are specific structures that are created when the Blob consumes specific station objects or machines. These are mainly to highlight what the Blob has taken from the crew and to clearly show the crew where the objects have gone.
 
--Captured Nuke: If the Blob manages to spread onto a Nuke, it creates a Captured Nuke. This is a reinforced Blob tile that prevents the Crew from arming the Nuke. When destroyed, the Nuke is freed and able to be armed by the Crew once again.
+- Captured Nuke: If the Blob manages to spread onto a Nuke, it creates a Captured Nuke. This is a reinforced Blob tile that prevents the Crew from arming the Nuke. When destroyed, the Nuke is freed and able to be armed by the Crew once again.
 
-## Units
+### Units
 
 While the Blob is able to fight directly through its tiles, it has access to a roster of Units it can create to assist in reinforcing its position, pushing into new territory, or simply harassing the Crew.
 
--Spore | Cost: 5: Low Tier Unit. Floats through air, attacks weakly, and explodes when killed. Can drift through space without being harmed. Spread Weak Blob in a radius around them when they explode, and can be commanded to explode manually. Also function as Ghost Roles for Players to take. Cannot be exploded manually by Ghost players.
--Blob Zombie "Blombie": Medium Tier Unit. Created when a Spore takes over a dead crew member. Controlled by downed Player, or by AI if the player has disconnected or taken another role. Acts as a regular mob, chasing down Crew and attacking. Spores on head "pop" when killed, allowing Crew's body to be retrieved and revived.
--Blobbernaut | Cost: 80: High Tier Unit. Expensive, powerful bruiser. Attacks deal heavy Blunt damage with additional damage based on Blob Strain. Blobbernauts have a low attack speed to emphasize their bruiser role, and leaves them open to being swarmed if not supported by other units. Regenerates health while on Blob Tile. Ghost role for Players, AI if uncontrolled.
+- Spore | Cost: 5: Low Tier Unit. Floats through air, attacks weakly, and explodes when killed. Can drift through space without being harmed. Spread Weak Blob in a radius around them when they explode, and can be commanded to explode manually. Also function as Ghost Roles for Players to take. Cannot be exploded manually by Ghost players.
+- Blob Zombie "Blombie": Medium Tier Unit. Created when a Spore takes over a dead crew member. Controlled by downed Player, or by AI if the player has disconnected or taken another role. Acts as a regular mob, chasing down Crew and attacking. Spores on head "pop" when killed, allowing Crew's body to be retrieved and revived.
+- Blobbernaut | Cost: 80: High Tier Unit. Expensive, powerful bruiser. Attacks deal heavy Blunt damage with additional damage based on Blob Strain. Blobbernauts have a low attack speed to emphasize their bruiser role, and leaves them open to being swarmed if not supported by other units. Regenerates health while on Blob Tile. Ghost role for Players, AI if uncontrolled.
 
-## Damage Resistances
+### Damage Resistances
 
--Blunt/Brute: The Blob is a solid mass of matter, making most blunt weaponry deal little damage.
--Spacing: The Blob has adapted to survive in space, making it resistant to low pressure environments/cold temperatures.
--Piercing: Due to the Blob's strange composition; bullets will either fly through it or pierce and deal little damage. Blob Units take normal damage from Pierce to not make guns useless.
+- Blunt/Brute: The Blob is a solid mass of matter, making most blunt weaponry deal little damage.
+- Spacing: The Blob has adapted to survive in space, making it resistant to low pressure environments/cold temperatures.
+- Piercing: Due to the Blob's strange composition; bullets will either fly through it or pierce and deal little damage. Blob Units take normal damage from Pierce to not make guns useless.
 
-## Damage Vulnerabilities
+### Damage Vulnerabilities
 
--Slash: Bladed weapons deal full damage against the Blob, giving the crew a clear avenue of damage if other sources are not readily available.
--Fire: The Blob's composition makes it vulnerable to fire damage, meaning that Welders and Flamethrowers will deal additional damage to it alongside Laser based weaponry.
--Structural: The more concentrated the Blob is in an area, the more resistant it is to normal methods of attack, but the weaker it is to structural damage. Strong Blob and Buildings take additional Structure damage.
+- Slash: Bladed weapons deal full damage against the Blob, giving the crew a clear avenue of damage if other sources are not readily available.
+- Fire: The Blob's composition makes it vulnerable to fire damage, meaning that Welders and Flamethrowers will deal additional damage to it alongside Laser based weaponry.
+- Structural: The more concentrated the Blob is in an area, the more resistant it is to normal methods of attack, but the weaker it is to structural damage. Strong Blob and Buildings take additional Structure damage.
 
-## Weapons against the Blob:
+### Weapons against the Blob:
 
--Laser Weapons: The main dealers of Heat damage the crew has access to. Lasers will be useful all around weapons for fighting the Blob, just be wary of Reflective Blob.
--Flashes: Flashes will clear Weak Blob in a small radius around the user, and prevent Normal Blob from attacking momentarily so a crew may escape its clutches. Ideal defensive tool.
--Flashbangs: Flashbangs can be used to clear Blob Tiles in a wide radius, just warn other crew members before throwing!
--Flamethrowers: Chemists can work with the crew to create Flamethrowers for use against the Blob. This will need to be done with caution so crew members don't just set each other on fire.
--Shuttle Weapons: Powerful, stationary weapons that can be used to hold down positions or make heavy pushes into the Blob's territory. Can be hard countered by Reflective Blob. 
--APEs/Emitters: While these don't deal much damage, they do still deal some Heat damage which allows them to provide basic point defense in a pinch.
+- Laser Weapons: The main dealers of Heat damage the crew has access to. Lasers will be useful all around weapons for fighting the Blob, just be wary of Reflective Blob.
+- Flashes: Flashes will clear Weak Blob in a small radius around the user, and prevent Normal Blob from attacking momentarily so a crew may escape its clutches. Ideal defensive tool.
+- Flashbangs: Flashbangs can be used to clear Blob Tiles in a wide radius, just warn other crew members before throwing!
+- Flamethrowers: Chemists can work with the crew to create Flamethrowers for use against the Blob. This will need to be done with caution so crew members don't just set each other on fire.
+- Shuttle Weapons: Powerful, stationary weapons that can be used to hold down positions or make heavy pushes into the Blob's territory. Can be hard countered by Reflective Blob. 
+- APEs/Emitters: While these don't deal much damage, they do still deal some Heat damage which allows them to provide basic point defense in a pinch.
 
-## Strategies that should be mechanically discouraged:
+### Strategies that should be mechanically discouraged:
 
--Plasma/Trit Fires: The Blob can erect Strong Blob walls to block off the potential hazard, and air scrubbers will be destroyed as it spreads. Mass Fires will be more of a hazard to the crew than the Blob itself.
--Welderbombs: The Blob has an inherent resistant to explosives so this will only end up damaging and harming the Crew more than the Blob.
+- Plasma/Trit Fires: The Blob can erect Strong Blob walls to block off the potential hazard, and air scrubbers will be destroyed as it spreads. Mass Fires will be more of a hazard to the crew than the Blob itself.
 
-## Evolution (Blobolution)
+- Welderbombs: The Blob has an inherent resistant to explosives so this will only end up damaging and harming the Crew more than the Blob.
+
+### Evolution (Blobolution)
 
 In order to give the Blob a more specific objective to achieve and a way to power themselves up in their fight against the crew: The Blob has access to four tiers of "Evolution" that directly increase its spreading potential and resource generation. Evolutions do not modify the Blob's health or damage. These are intended to emulate an RTS player advancing up their tech tree and growing in power. Each tier also comes with a stationwide alert so the Crew is able to keep track of the Blob's overall progress towards its objective.
 
 | Level | Required Nodes | Node Cap | Range of Influence (Tiles) | Resource Generation | Research Time (Seconds) | Cost |
+|---|---|---|---|---|---|---|
 | Base Level "Interphase" | 0 | 3 | 3 | 1 | 0 | 0 | - The Blob's starting level. If the Blob is discovered at this point it will have a use of Core Relocate to escape and regroup.
 | 1st Evolution "Prophase" | 2 | 4 | 4 | 2 | 10 | 50 | - After researching Prophase: the station will receive an alert that a class five biohazard has been detected on station and must be dealt with if they wish to escape/survive. Blobbernauts will be unlocked, and the hunt for the Blob will begin if the crew has not already discovered it.
 | 2nd Evolution "Metaphase" | 3 | 5 | 5 | 2 | 15 | 100 | - Metaphase should be roughly where skirmishes between the Blob and Crew are occuring regularly in a back and forth between pushes from both sides. The Blob also loses its Core Relocate ability at this point as it should be fully entrenched on the station.
 | 3rd Evolution "Anaphase" | 4 | 6 | 7 | 3 | 20 | 150 | - Anaphase is where the Blob's strength is at its peak requiring the Crew to adopt the heaviest measures possible to really begin making meaningful pushes against the Blob. This is also the point where they can request codes for the station's Nuke if all seems lost.
 | 4th Evolution "Cytokinesis" | 6 | Infinite | Infinite | Infinite | 300 | 200 | - The ultimate goal of the Blob. Takes much longer to research than every previous tier and comes with a stationwide alert that the Blob is close to reaching critical mass. This is the make or break moment for the round as the Crew must defeat the Blob or lose the round. After the research has finished: the round will end and the Blob will gain infinite resources and have all caps on its abilities removed. Any Escape Pods will launch to allow some method of escape, but anyone trapped on the station is doomed to be consumed. 
 
-## Blob Objectives (Blobjectives)
+### Blob Objectives (Blobjectives)
 
 The Round will end in Victory for the Blob if it:
--Researches all four tiers of its Evolution.
+ - Researches all four tiers of its Evolution.
 
 The Round will end in a loss for the Blob if:
--The Crew finds and destroys the Blob's Core.
--The station's Nuke is armed and detonated, killing both the station and the Blob.
+ - The Crew finds and destroys the Blob's Core.
+ - The station's Nuke is armed and detonated, killing both the station and the Blob.
 
-## Ideal Round Flow
+### Ideal Round Flow
 
 **Early Game:** The Blob makes its way onto the station as a mouse (or mothroach) with a five minute timer until it ruptures into a Blob Core. Once it has found a suitable place away from prying eyes or cameras it can establish its base of operations by spreading Blob Tiles and creating buildings to start its economy. Once it has a functional starting base and begun to create Spores and built up some defenses, it will begin to research its first Evolution.
 
@@ -131,18 +134,19 @@ If the Blob is detected early it can attempt to spread Blob Tiles underneath the
 
 **Round End:** The Round ends either in a nuclear detonation, the crew managing to destroy the Blob's Core, or the Blob researching its final evolution. If the Crew destroy the Blob's Core: the Escape Shuttle will be automatically called on a short timer to allow the survivors to escape. If the Blob researches its final Evolution: the round immediately ends and enters post-game. Escape Pods will launch and the Blob will begin rapidly consuming what's left of the station with its infinite resources.
 
-## The Blob Side (Ghost Roles)
+### The Blob Side (Ghost Roles)
 
 The Blob is the overarching entity the crew will be facing against, but is not necessarily alone in its quest. Spores and Blobbernauts act as Ghost Roles for Players to occupy if they are round removed for any reason. The Blob will speak to its units via its Blobmind on :b. Spores and Blobbernauts should coordinate with the Blob in its attempts to strategize, either in defending key points, pushing against the crew's defenses, or helping it find new ways to spread. Spores especially will benefit from a ghost role as they can float out to new locations on their own and ask the Blob to detonate them if they find an ideal spot, spreading Weak Blob and letting the Blob place a Node if it so wishes.
 
 If a player on the crew's side is killed and taken by a Spore: They become a Blob Zombie on the Blob's side. Players can still /ghost if they don't wish to fight on the Blob's side, but Blob Zombies can be rescued and revived which will help incentivize them to keep playing. Blob Zombies can also speak on :b. If crew members are freed from the Blob and revived: they will remember all details from their infestation. 
 
-## Mid-Round Potential
+### Mid-Round Potential
 
 To keep the Blob from being too predictable as to when it can appear: The Blob has options for arriving as a mid-round antagonist.
 
--Blob Meteor (Blobeteor): During a standard meteor shower: one of the meteors was a Blob Core launched by a Blob that had completed its final Evolution. This event won't trigger until a player chooses the Blob Ghost Role, where the Blob will then impact the station with a group of Meteors and begin to spread. Due to the attention a meteor shower will bring: this Blob will start with an extra Node, Factory, and Resource Pool, while also having the advantage of spacing to discourage an early assault.
--Blob Vermin: A swarm of creatures from the ventilation system carried an extra visitor among their ranks. This is treated as a normal Vermin invasion event, letting the Blob steathily make its way on station to establish its base of operations and spread.
+**Blob Meteor (Blobeteor):** During a standard meteor shower: one of the meteors was a Blob Core launched by a Blob that had completed its final Evolution. This event won't trigger until a player chooses the Blob Ghost Role, where the Blob will then impact the station with a group of Meteors and begin to spread. Due to the attention a meteor shower will bring: this Blob will start with an extra Node, Factory, and Resource Pool, while also having the advantage of spacing to discourage an early assault.
+
+**Blob Vermin:** A swarm of creatures from the ventilation system carried an extra visitor among their ranks. This is treated as a normal Vermin invasion event, letting the Blob steathily make its way on station to establish its base of operations and spread.
 
 ## Additions
 
@@ -152,15 +156,14 @@ These are intended to be bonuses to the Blob's primary functions to help mix thi
 
 ## Blob Strains
 
-- Blob Strains are variations either to specific mechanics the Blob is capable of, or the properties of said mechanics. Before the Blob places their core they are given the option of choosing a specific strain of Blob to alter their overall strategy either through damage types or specific abilities. Blob players do not have to pick one if they do not wish and it will be recommended for first time players to choose the default Blob option in order to get used to how the Blob functions at its baseline first.
-
+Blob Strains are variations either to specific mechanics the Blob is capable of, or the properties of said mechanics. Before the Blob places their core they are given the option of choosing a specific strain of Blob to alter their overall strategy either through damage types or specific abilities. Blob players do not have to pick one if they do not wish and it will be recommended for first time players to choose the default Blob option in order to get used to how the Blob functions at its baseline first.
 - Strains should be designed with specific positives and/or negatives to make for more interesting alterations to strategy. Alternate damage types especially should carry some downside that ties into the theme they're meant to evoke.
-
 - This will add a straightforward way to give the Blob more specific themes without the need for any major reworks in terms of its base mechanics. Given the amount of giant virus creatures in fiction, there's a lot of avenues to take.
 
 **Values and Strains are not final and can be adjusted/added/removed as needed**
 
 | Name | Attack Effects | Positives | Negatives |
+|---|---|---|---|
 | Basic Blob | 20 Brute, 2.5 Caustic | N/A | N/A |
 | Blazing Oil | 5 Brute, 20 Burn, Lights targets on fire | When hit with burn damage - emits a burst of fire. Immune to fire | Weak to water |
 | Electromagnetic Web | 5 Brute, 25 Burn, 20% EMP Chance | Causes EMP if killed by melee, bullets or lasers. | Takes 25% more burn, and full brute |
@@ -183,4 +186,5 @@ These are intended to be bonuses to the Blob's primary functions to help mix thi
 
 ## Unit Variations
 
--Evolutions could include unique and alternate upgrades to encourage even more variation in a Blob's strategy. IE: The Blob researches Metaphase and chooses between Blobbernauts or more powerful Spore Cannons. Ideally it would be between only two options to not overwhelm a Blob Player with choice, but should still feel meaningful towards their overall development.
+Evolutions could include unique and alternate upgrades to encourage even more variation in a Blob's strategy. 
+ - IE: The Blob researches Metaphase and chooses between Blobbernauts or more powerful Spore Cannons. Ideally it would be between only two options to not overwhelm a Blob Player with choice, but should still feel meaningful towards their overall development.
