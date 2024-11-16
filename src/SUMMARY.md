@@ -61,10 +61,11 @@ Robust Toolbox
 ----------------------
 
 - [ECS](en/robust-toolbox/ECS/ecs.md)
+  - [Object Oriented Pitfalls](en/robust-toolbox/ECS/object-oriented-pitfalls.md)
   - [ECS Events](en/robust-toolbox/ECS/ecs-events.md)
   - [ECS Full Example](en/robust-toolbox/ECS/ecs-full-example.md)
   - [ECS FAQ](en/robust-toolbox/ECS/ecs-faq.md)
-  - [OOP Rants](en/robust-toolbox/ECS/oop-rants.md)
+
 - [Netcode]()
   - [Net Entities](en/robust-toolbox/netcode/net-entities.md)
   - [Connection Sequence](en/robust-toolbox/netcode/connection-sequence.md)

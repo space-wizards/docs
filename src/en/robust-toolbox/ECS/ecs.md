@@ -4,6 +4,12 @@ RobustToolbox (RT) employs the Entity Component System (ECS) software architectu
 
 ECS is a fairly constrained pattern when compared to the entirety of object oriented programming. ECS does not need to utilize any object oriented concepts; however, RobustToolbox makes use of inheritance to ensure that programers do not need to build games with boiler plate. Inheritance is also used in the multiplayer configuration of RobustToolbox to alleviate the need for code repetition on the client and server. Beyond the engine's implementation of ECS and the multiplayer setups, programers should not consider inherence as a valid solution to an ECS problem.
 
+```admonish info
+For a solid, real example of ECS in action: [Stacks](https://github.com/space-wizards/space-station-14/pull/4046) and [Actors](https://github.com/space-wizards/RobustToolbox/pull/1774).
+
+These are external links to quality sources: [Entity Component System](https://en.wikipedia.org/wiki/Entity_component_system)
+```
+
 ## Parts of ECS
 <!-- insert cursed diagram (class) ECS -->
 ```mermaid
