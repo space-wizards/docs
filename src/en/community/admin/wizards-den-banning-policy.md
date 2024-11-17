@@ -313,11 +313,11 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
 ## Appeal Procedure
 
 1. Check appeal format.
-3. Checking for ban evasion and denying the appeal if it is found is highly recommended, but not required. 
-4. If you placed the ban, you may only process the appeal if you intend to remove or reduce the ban. For this case you may skip to step 9.
-5. If you are not an Appeals Team Member or a trialmin under supervision by one you may not process the appeal.
-6. If the ban has less than 2 weeks remaining, and the player does not allege that the ban was placed improperly then deny the appeal.
-7. Collect information
+2. Checking for ban evasion and denying the appeal if it is found is highly recommended, but not required. 
+3. If you placed the ban, you may only process the appeal if you intend to remove or reduce the ban. For this case you may skip to step 9.
+4. If you are not an Appeals Team Member or a trialmin under supervision by one you may not process the appeal.
+5. If the ban has less than 2 weeks remaining, and the player does not allege that the ban was placed improperly then deny the appeal.
+6. Collect information
 	1. Check the player's history of appeals.
 	2. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
 	3. Check the player's note and ban history.
@@ -325,16 +325,16 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
 	5. Attempt to contact the banning admin.
 	6. Ask the player questions that are important for the processing of the appeal.
 	7. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
-8. If Applicable, Run a vote
+7. If Applicable, Run a vote
  	- Votes must run at least 24 hours unless the net vote criteria is met.
 	- Votes must not be closed if there is ongoing discussion unless the net vote criteria is met.
 	- Votes must be made in one of the designated internal appeals discussion channels.
 	- Votes should present as much relevant information as possible.
 	- Votes should indicate if the ban is within guidelines, preferably by presenting the guideline range for the ban.
-9. Check for ban evasion. If found deny the appeal.
-10. Post a response on the appeal which must be a summary of the following:
+8. Check for ban evasion. If found deny the appeal.
+9. Post a response on the appeal which must be a summary of the following:
     - The outcome of the appeal.
     - The facts relied on for the outcome.
     - An opinion detailing why you, the appeals team or the admin team as a whole have decided upon the outcome.
     - If applicable, when the player is able to reappeal.
-11. Implement the outcome 
+10. Implement the outcome 
