@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| SpaceRox1244 (ricemar on discord) | :x: No | TBD |
+| **SpaceRox1244** and **ayoitslilith** | :x: No | TBD |
 
 ## Overview
 
