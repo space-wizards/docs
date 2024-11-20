@@ -12,13 +12,13 @@ This proposal is aimed towards addressing some issues that Space Ninjas currentl
 
 ## Background
 
-Currently, albeit being an extremely fun mid-round antag role and definitely one of the better ones, I find that the Space Ninja isn't correctly geared towards what it should be the best at: Stealthing - Which is what this document hopes to address, mostly to add some more uniqueness to antagonist roles since a lot of them can be played by just killing everything in your way, and this includes Space Ninjas.
+Currently, albeit being an extremely fun mid-round antag role and definitely one of the better ones, Space Ninjas aren't correctly geared towards what they should be the best at: Stealthing - Which is what this document hopes to address, mostly to add some more uniqueness to antagonist roles since a lot of them can be played by just killing everything in your way, and this includes Space Ninjas.
 
 ## Spider Clan Code
 
 All Space Ninjas will now have a Spider Clan Code they will have to live by, and this thus affects gameplay substantially by imposing certain restrictions.
 - The already existing one, being the inability to shoot ranged weapons, will be included in this Code.
-- The second restriction is making it so the Space Ninjas can no longer tend to their own wounds - This includes applying topicals, injecting syringes, consuming pills, and drinking liquid chemicals, as it would be preferred that they are not even spotted during their mission. To compensate, Space Ninjas will now have increased passive regeneration as well as faster bleed recovery that far exceeds what normal crewmates could ever achieve due to their bio-engineered bodies.
+- The second restriction is making it so the Space Ninjas can no longer tend to their own wounds - This includes applying topicals, injecting syringes, consuming pills, and drinking liquid chemicals, as it would be preferred that they are not even spotted during their mission. To compensate, Space Ninjas will now have increased passive regeneration as well as faster bloodloss recovery that far exceeds what normal crewmates could ever achieve due to their bio-engineered bodies.
 
 ## New Items & Mechanics
 
@@ -36,6 +36,8 @@ All Space Ninjas will now have a Spider Clan Code they will have to live by, and
 - All stealing objectives can now only be performed with a specialized item that is dropped by the ninja upon death, unlike previously where they only used their gloves - This allows the crew to regain their losses.
 - A strongbox for Cargo containing all their deposited spesos, can be the target of one of the Space Ninja's objectives, located in the vault - An alternative to "Steal X technologies".
 - An AI law board that can be used for one of the Space Ninja's objectives - An alternative to "Detonate your spider charge".
+- The criminal records computer now only announces the error locally in the Security channel, instead of it being broadcasted as a Central Command announcement station-wide.
+- The communications computer objective now revolves around the Space Ninja sending a Spider Clan Announcement from it, the contents of said announcement being up to their discretion. Life before, it requires the use of turned on space ninja gloves, the one key difference being that now the EMAG interaction is instantaneous, overriding all access restrictions as well as unlocks Spider Clan as an announcement sender.
 
 ## Balance Changes
 
@@ -43,6 +45,7 @@ All Space Ninjas will now have a Spider Clan Code they will have to live by, and
 - [Fix ninja stunlocking](https://github.com/space-wizards/space-station-14/pull/33244)
 - All Space Ninjas are now bio-engineered humans, making it so they don't get specie-specific attributes such as tail-dragging.
 - The space ninja gloves have lost their EMAG interactions with lathes and printers.
+- Removes the survival box from the ninja's satchel, as there's no longer any use for it.
 - Lower the energy katana's one-handed damage.
 - Lower the ninja throwing star's piercing damage to compensate for the newly added ninja caltrops.
 - Lower the ninja throwing star's stamina damage.
@@ -50,7 +53,7 @@ All Space Ninjas will now have a Spider Clan Code they will have to live by, and
 ### Buffs
 - Space Ninjas no longer have a need to eat nor drink.
 - Space Ninjas now come outfitted with a ninja headset as per [Alwayswannahunt's PR](https://github.com/space-wizards/space-station-14/pull/32841) , green encryption key included.
-- To compensate for the newly removed EMAG interactions with lathes, the space ninja gloves can now unlock access-restricted lockers and crates.
+- To compensate for the newly removed EMAG interactions with lathes and printers, the space ninja gloves can now unlock access-restricted lockers and crates.
 - The katana dash is considerably quieter, at the cost of a longer recharge duration.
 - The energy katana's slash rate is slightly faster than it was previously when one-handed to compensate for it's damage loss.
 - Grants the ability to wield the energy katana for a hard-hitting swing, at the cost of a slower slash rate.
