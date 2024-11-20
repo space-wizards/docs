@@ -304,7 +304,7 @@ Trial Admins may get involved in appeals processing in order to get familiar wit
 
 After an appeal, a banned player with a correctly handled appeal is only entitled to appeal their ban again if the ban is an Indefinite Ban, or a Voucher Ban. Typically the wait period between attempts is 6 months. 
 
-A player with a temporary ban may be given the right to appeal the same ban again in the future at the discretion of the handling Appeals Team member. This should generally only be granted in the case of temporary bans over 2 weeks. Typically the wait period between attempts to appeal a temporary ban should be double the wait period for previous appeals, or 2 weeks if there have been no previous appeals.
+A player with a temporary ban may be told when they can appeal again by the processing admin. This is at the processing admin's discretion, but is typically 2 weeks or double the waiting period for the previous appeal.
 
 A player may have their appeal reviewed again or be allowed to submit a new appeal regardless of any waiting period if their appeal was handled improperly(e.g. The Handling Appeals Team member relied on incorrect facts). This may only be authorized by a head game admin following a successful complaint.
 
@@ -314,8 +314,8 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
 
 1. Check appeal format.
 2. Checking for ban evasion and denying the appeal if it is found is highly recommended, but not required. 
-3. If you placed the ban, you may only process the appeal if you intend to remove or reduce the ban. For this case you may skip to step 9.
-4. If you are not an Appeals Team Member or a trialmin under supervision by one you may not process the appeal.
+3. If you are not the banning admin, an appeals Team Member, or a trialmin under supervision by one you may not process the appeal.
+4. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban. For this case skip to step 9.
 5. If the ban has less than 2 weeks remaining, and the player does not allege that the ban was placed improperly then deny the appeal.
 6. Collect information
 	1. Check the player's history of appeals.
