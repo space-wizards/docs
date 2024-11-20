@@ -312,8 +312,8 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
 
 ## Appeal Procedure
 
-1. Check appeal format.
-2. Checking for ban evasion and denying the appeal if it is found is highly recommended, but not required. 
+1. Checking for ban evasion and denying the appeal if it is found is highly recommended, but not required. If Ban evasion is found deny the appeal.
+2. If the ban has expired then deny the appeal.
 3. If you are not the banning admin, an appeals Team Member, or a trialmin under supervision by one you may not process the appeal.
 4. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban. For this case skip to step 9.
 5. If the ban has less than 2 weeks remaining, and the player does not allege that the ban was placed improperly then deny the appeal.
