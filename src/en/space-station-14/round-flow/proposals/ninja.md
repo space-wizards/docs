@@ -37,14 +37,14 @@ All Space Ninjas will now have a Spider Clan Code they will have to live by, and
 - A strongbox for Cargo containing all their deposited spesos, can be the target of one of the Space Ninja's objectives, located in the vault - An alternative to "Steal X technologies".
 - An AI law board that can be used for one of the Space Ninja's objectives - An alternative to "Detonate your spider charge".
 - The criminal records computer now only announces the error locally in the Security channel, instead of it being broadcasted as a Central Command Announcement station-wide.
-- The communications computer objective now revolves around the Space Ninja sending a Spider Clan Announcement from it, the contents of said announcement being up to their discretion. Life before, it requires the use of turned on space ninja gloves, the one key difference being that now the EMAG interaction is instantaneous, overriding all access restrictions as well as unlocks Spider Clan as an announcement sender.
+- The communications computer objective now revolves around the Space Ninja sending a Spider Clan Announcement from it, the contents of said announcement being up to their discretion. Like before, it requires the use of turned on space ninja gloves, the one key difference being that now the EMAG interaction is instantaneous, overriding all access restrictions as well as unlocking Spider Clan as an announcement sender.
 
 ## Balance Changes
 
 ### Nerfs
 - [Fix ninja stunlocking](https://github.com/space-wizards/space-station-14/pull/33244)
 - All Space Ninjas are now bio-engineered humans, making it so they don't get specie-specific attributes such as tail-dragging.
-- Removes the survival box from the ninja's satchel, as there's no longer any use for it.
+- Removes the extended-capacity survival box from the ninja's satchel, as there's no longer any use for it.
 - Lower the energy katana's one-handed damage.
 - Lower the ninja throwing star's piercing damage to compensate for the newly added ninja caltrops.
 - Lower the ninja throwing star's stamina damage.
@@ -56,6 +56,6 @@ All Space Ninjas will now have a Spider Clan Code they will have to live by, and
 - The katana dash is considerably quieter, at the cost of a longer recharge duration.
 - The energy katana's slash rate is slightly faster than it was previously when one-handed to compensate for it's damage loss.
 - Grants the ability to wield the energy katana for a hard-hitting swing, at the cost of a slower slash rate.
-- The ninja throwing stars and ninja caltrops can be stacked, as well as thrown in spreads.
+- The ninja throwing stars can now be stacked, as well as thrown in spreads.
 - When phased, the Space Ninja is able to discreetly steal from people, at the cost of a longer action duration.
 - When phased, the Space Ninja's cloak will act similarly to that of stealth boxes', but in a much more potent manner - Movement will slightly weaken the stealth field, whereas staying still/moving slowly strengthens it to the point of near-full invisibility.
