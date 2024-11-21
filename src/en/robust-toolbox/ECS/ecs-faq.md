@@ -1,50 +1,49 @@
 ## ECS FAQ
+
 **Q**: Whats the difference between E/C and ECS?
 
-**A**: The E/C architecture was popularized in 2003 by the Unity Engine. ECS+Events is a better architecture than the Unity style E/C architecture. E/C uses component messages which involves putting logic in components. ECS is a specific design that's optimized for parallelism and cache friendliness. ECS downgrades entities from having their own code to just being a bundle of components, and does the same for components, loading all the work onto systems. The idea is a system can be optimized to do it's job in a massively parallel manner, and systems themselves can be executed in parallel with dependency resolution.
+**A**: The E/C architecture was popularized in 2003 by the Unity Engine. ECS+Events architecture offers advantages over the the Unity style E/C architecture. E/C uses component messages which involves putting logic in components. ECS is a specific design that is optimized for parallelism and cache friendliness. ECS downgrades entities from having their own code to just being a bundle of components, and does the same for components, loading all the work onto systems. The idea is that a system can be optimized to do its job in a massively parallel manner, and systems themselves can be executed in parallel with dependency resolution.
 
 ---
 
-**Q**: So why do components not use encapsulation? (i.e. private members.)
+**Q**: Why do components not use encapsulation? (i.e. private members.)
 
-**A**: First of all, components cannot use encapsulation because then they would have logic them, which would conflict with the ECS principles we follow. Encapsulation makes no sense when components are simple data containers, as they have no logic. Furthermore, if the purpose of encapsulation is to prevent coders from directly modifying underlying component members instead of going through specific entity systems, there are better ways to prevent that.
-Documenting/commenting the code, reviewing PRs and using the new `Friend` attributes.
+**A**: Components cannot use encapsulation because logic would conflict with the ECS principles we follow. Encapsulation makes no sense when components are simple data containers, as they have no logic. Furthermore, if the purpose of encapsulation is to prevent coders from directly modifying underlying component members instead of going through specific entity systems, there are better ways to prevent that such as documenting/commenting the code, reviewing PRs and using the new `Friend` attributes.
 
 ---
 
 **Q**: Why were interfaces in components replaced by systems and events?
 
-**A**: Using interfaces had very poor performance, events and systems are significantly faster, aside from more powerful and maintainable. Aside from that, using interfaces in components meant they needed to hold logic, violating one of our main ECS principles.
+**A**: Interfaces have poor performance, events and systems are significantly faster, aside from being more powerful and maintainable. Interfaces are intended to ensure that a class contains logic. Using interfaces on components violates one of the main ECS principles.
 
 ---
 
-**Q**: And an entity is a collection of components with an identifier?
+**Q**: Is an entity is a collection of components with an identifier?
 
-**A**: An ideal entity is just an identifier, and its components are stored elsewhere, efficiently.
-The point is data oriented design. The identifier is just an index into several one-component-type-only arrays in most performant setups. Components have no code, no behaviour, nothing, just data fields.
-Systems are supposed to do the behavior/logic.
+**A**: An entity does not directly aggregate components. Instead, several auxiliary data structures bind an `EntityUid` to the locations of components. Components are stored efficiently in arrays. Each array contains only one component type. Storing only one component type per array allows for better cache locality when systems operate on components. ECS users need not care about how the components are stored, as functions provided by RobustToolbox obscure this complexity.
 
 ---
 
-**Q**: So components act like tags?
+**Q**: Do components act like tags?
 
-**A**: Yes. Components are data storage, essentially tags with configurable data. Entity Systems act on components, and their data.
-
----
-
-**Q**: So the systems are just looking for components on entities?
-**A**: Yes and no. The ideal system doesn't know about the entity at all, it only knows the components it acts on.
+**A**: Systems act on entities with specific components. By adding or removing components which set of systems operate on an entity changes. Viewing the components as a tag for whether a operates on an entity is valid. However, within ECS, "tag" is frequently used to describe components with no data.
 
 ---
 
-**Q**: So when you need an interaction between two components what looks at both of those components and goes "oh these need to work together"?
+**Q**: Systems are just look for components on entities?
 
-**A**: #1 It's best to avoid these kinds of relationships in the first place.
-#2 You have a 3rd system (so you have A and ASystem, B and BSystem, you'd have an ABSystem that gets a list of tuples of (A,B) to act on).
-For example, a player rendering system might need access to 3-4 components, but that's valid for its use case (in, e.g., a roguelike).
+**A**: Yes, systems will operate directly on components but also are able to operate on the source entity via the `EntityUid`. Operations using the `EntityUid` are more costly than operating directly on the components.
+
+
+
+---
+
+**Q**: How do systems operate on more than one component?
+
+**A**: Although a system for component A and another B may exist, this does not exclude the creation of other systems on A and B simultaneously. Systems can acquire singles, pairs, triples, etc. of components to operate on simultaneously. Each pair, triple, etc. will all come from the same entity. Operating on more components is more costly.
 
 ---
 
 **Q**: What does `RaiseLocalEvent` do?
 
-**A**: It raises an event, locally (as opposed to networked). There are two overloads to it. One only takes the event, and will raise it broadcasted. And the other takes in an `EntityUid` and the event to raise it directed to an entity, and has an optional parameter to also raise it broadcasted.
+**A**: It raises an event locally on the current machine as opposed to raising an event over the network. There are two types of local event: broadcasted and directed. Broadcasted events are sent to all listeners. Directed events take an `EntityUid` to direct the event to a specific entity. Directed events can be extended to broadcast events by supplying an optional parameter to also raise it as broadcasted while still containing an `EntityUid`.
