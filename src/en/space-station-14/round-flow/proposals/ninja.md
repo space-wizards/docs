@@ -20,7 +20,7 @@ All Space Ninjas will now have a Spider Clan Code they will have to live by, and
 - The already existing one, being the inability to shoot ranged weapons, will be included in this Code.
 - The second restriction is making it so the Space Ninjas can no longer tend to their own wounds - This includes applying topicals, injecting syringes, consuming pills, and drinking liquid chemicals, as it would be preferred that they are not even spotted during their mission. To compensate, Space Ninjas will now have increased passive regeneration as well as faster bloodloss recovery that far exceeds what normal crewmates could ever achieve due to their bio-engineered bodies.
 
-## New Items & Mechanics
+## New Items & Abilities
 
 ### Flavour Additions
 
@@ -31,15 +31,28 @@ All Space Ninjas will now have a Spider Clan Code they will have to live by, and
 - The Space Ninja can now fabricate ninja caltrops, a variant of ninja throwing stars with an emphasis on piercing damage and bleeding, once deployed, that is, dropped on the ground, they will progressively get more and more camouflaged to the point of near-invisibility. Upon being stepped on, the caltrops will stick to the victim and perform continous bloodloss damage until taken off.
 - The ninja visor can now alternate between normal vision and night vision.
 
-### Objective Mechanics
+## New Objectives & Mechanics
 
-- All stealing objectives can now only be performed with a specialized item that is dropped by the ninja upon death, unlike previously where they only used their gloves - This allows the crew to regain their losses.
-- A strongbox for Cargo containing all their deposited spesos, can be the target of one of the Space Ninja's objectives, located in the vault - An alternative to "Steal X technologies".
-- An AI law board that can be used for one of the Space Ninja's objectives - An alternative to "Detonate your spider charge".
-- The criminal records computer now only announces the error locally in the Security channel, instead of it being broadcasted as a Central Command Announcement station-wide.
-- The communications computer objective now revolves around the Space Ninja sending a Spider Clan Announcement from it, the contents of said announcement being up to their discretion. Like before, it requires the use of turned on space ninja gloves, the one key difference being that now the EMAG interaction is instantaneous, overriding all access restrictions as well as unlocking Spider Clan as an announcement sender.
+All stealing objectives can now only be performed with a specialized item that is dropped by the ninja upon death, unlike previously where they only used their gloves - This allows the crew to regain their losses.
+
+### Objectives
+
+- Steal X spesos - A strongbox for Cargo containing all their deposited spesos will be located in the vault, the Space Ninja is tasked with stealing a designated amount - An alternative to "Steal X technologies".
+- Upload the law board - An AI law board with a Spider Clan-oriented law set, the Space Ninja is tasked with uploading it to the AI upload console - An alternative to "Detonate your spider charge".
+- Make an announcement - The communications computer objective now revolves around the Space Ninja sending a Spider Clan Announcement from it, the contents of said announcement being up to their discretion. Like before, it requires the use of turned on space ninja gloves, the one key difference being that now the EMAG interaction is instantaneous, overriding all access restrictions as well as unlocking Spider Clan as an announcement sender.
+- Hack X - One of the Miscellaneous Interactions machines is picked to be hacked by the Space Ninja. Note that you can still hack machines that aren't included in your objectives.
+
+### Miscellaneous Interactions
+
+- Hacking the criminal records computer is now one of the many miscellaneous actions the Space Ninja can do in order to frustrate the crew - The error announcement will now only be sent by the criminal records computer on the Security channel, opposed to the previous station-wide Central Command Announcement.
+- The crew monitoring server is now prone to being hacked by the Space Ninja, doing so will disable everyone's sensors until deconstructed and reconstructed.
+- The station records computer is now prone to being hacked by the Space Ninja, doing so will delete a small % of random personnel from it accompanied by a station-wide announcement.
+- The robotics control console is now prone to being hacked by the Space Ninja, doing so will turn all connected cyborgs into zealous tech-priests, obsessing them over hoarding all manners of electronics and machines.
+- The camera router is now prone to being hacked by the Space Ninja, doing so will kill a large % of its connected cameras and render them useless.
 
 ## Balance Changes
+
+These changes are intended to fix previously broken mechanics, as well to accomodate the new additions.
 
 ### Nerfs
 - [Fix ninja stunlocking](https://github.com/space-wizards/space-station-14/pull/33244)
