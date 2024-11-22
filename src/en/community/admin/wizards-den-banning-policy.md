@@ -322,7 +322,7 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
     - The appellant is clearly not expecting their appeal to be accepted, and made it simply to troll. 
     - The appeal is incomprehensible or written in a language other than English.
     - The appeal is so low effort that no other outcome could be derived from it but to close it.
-5. Collect information
+6. Collect information
 	1. Check the player's history of appeals.
 	2. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
 	3. Check the player's note and ban history.
@@ -330,16 +330,16 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
 	5. Attempt to contact the banning admin.
 	6. Ask the player questions that are important for the processing of the appeal.
 	7. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
-6. If Applicable, Run a vote
+7. If Applicable, Run a vote
  	- Votes must run at least 24 hours unless the net vote criteria is met.
 	- Votes must not be closed if there is ongoing discussion unless the net vote criteria is met.
 	- Votes must be made in one of the designated internal appeals discussion channels.
 	- Votes should present as much relevant information as possible.
 	- Votes should indicate if the ban is within guidelines, preferably by presenting the guideline range for the ban.
-7. Check for ban evasion. If found deny the appeal.
-8. Post a response on the appeal which must be a summary of the following:
+8. Check for ban evasion. If found deny the appeal.
+9. Post a response on the appeal which must be a summary of the following:
     - The outcome of the appeal.
     - The facts relied on for the outcome.
     - An opinion detailing why you, the appeals team or the admin team as a whole have decided upon the outcome.
     - If applicable, when the player is able to reappeal.
-9. Implement the outcome 
+10. Implement the outcome 
