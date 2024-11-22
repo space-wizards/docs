@@ -321,7 +321,7 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
     - The appeal is clearly the output of an LLM such as ChatGPT.
     - The appellant is clearly not expecting their appeal to be accepted, and made it simply to troll. 
     - The appeal is incomprehensible or written in a language other than English.
-    - The appeal has such little effort put into it that no other outcome could be derived from it but to close it.
+    - The appeal has such little effort put into it that no other outcome can be derived from it but to close it.
 6. Collect information
 	1. Check the player's history of appeals.
 	2. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
