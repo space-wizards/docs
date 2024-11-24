@@ -22,9 +22,9 @@ There are 5 states of reputation, each state contains new benefits along with pr
 |---|---|---|---|
 | 0-20 "Unknown Agent" | 2 Contracts | Low Risk | Stealth Gear + Objective Items |
 | 20-40 "Preferred Pawn" | 3 Contracts | Moderate Risk | Melee Weapons + Chemicals |
-| 60-80 "Reputable Insider" | 3 Contracts | Moderate Risk | Side Arms + Explosives + Allies|
-| 80-100 "Reliable Contact" | 4 Contracts | High Risk | Long Arms + More Powerful Explosions + Hardsuits |
-| 100+ "Syndicate Operative" | 4 Contracts | High Risk | Station Destructive Items + High Power Weapons |
+| 40-60 "Reputable Insider" | 3 Contracts | Moderate Risk | Side Arms + Explosives + Allies|
+| 60-80 "Reliable Contact" | 4 Contracts | High Risk | Long Arms + More Powerful Explosions + Hardsuits |
+| 80-100 "Syndicate Operative" | 4 Contracts | High Risk | Station Destructive Items + High Power Weapons |
 
 All traitors, no matter their reputation, can purchase additional ammo + surplus crates. 
 
@@ -88,11 +88,15 @@ Objective Items
    - Black Fultons with a red horizontal strip. Shouldnt require linking to any sort of beacon, rather it deletes the item or crate thats been extracted.
    - It cannot extract humanoids or organic beings, dead or alive.
    - Is a medium sized item.
+   - The station should be able to recover items in the form of paying via cargo
 - Syndicate Sophont Fultons
    -  Black Fultons with a red horizontal strip. Shouldnt require linking to any sort of beacon, rather it deletes the humanoid or organic entity attached. Has a 1 minute timer unlike the standard 45 seconds, and makes loud beeping noises.
    -  If the person who is attached is awake, then they will not be able to move, but can free themselves with a 30 second do-after. Do-after can be cancelled with shoving.
    -  Cannot extract dead humanoids or organics
    -  Is a large item
+   -  The station should be able to recover players via paying them by cargo
+      - Returned players should have a 10%-25 chance to come back as antagonists.
+      - While not returned, players should be kept in a sort of syndicate prison with stuff todo. 
 - Data Knife
    - A knife with similar damage levels to the cybersun pen. Should be blatently obvious it is ~~a titanfall reference~~ contraband.
    - Is a small item.
