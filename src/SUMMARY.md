@@ -336,6 +336,7 @@ Maintainer Meetings
 ==============
 
 ----------------------
+- [2024-11-23](en/maintainer-meetings/maintainer-meeting-2024-11-23.md)
 - [2024-11-09](en/maintainer-meetings/maintainer-meeting-2024-11-09.md)
 - [2024-10-27](en/maintainer-meetings/maintainer-meeting-2024-10-27.md)
 - [2024-10-12](en/maintainer-meetings/maintainer-meeting-2024-10-12.md)
