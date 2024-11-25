@@ -15,7 +15,7 @@ If you wish to modify your server to add your own content. You will need a [prop
 3. Extract that to a directory somewhere.
 4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
 5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
-6. When there is a new update. Go back to the second step, and copy over the ``data`` folder and ``server_config.toml``if you modified it.
+6. When there is a new update. Go back to the second step, and copy over the ``data`` folder and ``server_config.toml`` (if you modified it) from your old server to the new server.
 
 If you prefer video guides, here is one!
 
