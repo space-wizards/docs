@@ -9,6 +9,7 @@ The format is as follows
 
 Both Engine and Content Maintainers:
 - [Jezithyr](https://github.com/Jezithyr) - @jezithyr (107689319396831232)
+- [Mervill](https://github.com/Mervill) - @mervill (153632198845661184)
 - [ZoldorfTheWizard](https://github.com/ZoldorfTheWizard) - @zoldorf (140921734109855744)
 - [PJB3005](https://github.com/PJB3005) - @pjb (97089048065097728)
 - [ShadowCommander](https://github.com/ShadowCommander) - @shadowcommander (104693014407950336)
@@ -34,11 +35,9 @@ Content Maintainers:
 - [TemporalOroboros](https://github.com/TemporalOroboros) - @the_quiet_one (423542163503185942)
 - [Flareguy](https://github.com/Flareguy) - @flar3guy (310216766192091156)
 - [TheShuEd](https://github.com/TheShuEd) - @eshhhed (267327466060775425)
-- [LankLTE](https://github.com/LankLTE) - @lanklte (328292818265047041)
 - [slarticodefast](https://github.com/slarticodefast) - @sebseb5071 (578191477839101967)
 - [UbaserB](https://github.com/UbaserB) - @ubaser (578881480386805771)
 - [Errant-4](https://github.com/Errant-4) - @err.ant (502504545579040768)
-- [Mervill](https://github.com/Mervill) - @mervill (153632198845661184)
 - [SlamBamActionman](https://github.com/SlamBamActionman) - @slambamactionman (91969935848251392)
 - [SaphireLattice](https://github.com/SaphireLattice) - @saphire (107368676348416000)
 
