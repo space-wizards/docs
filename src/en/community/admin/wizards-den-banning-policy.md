@@ -296,7 +296,7 @@ If an appeal is currently assigned to someone, it is generally best to let them 
 - the processor has somehow indicated that they are not going to process the appeal, or
 - a head game admin has told you that you can process the appeal.
 
-## Processing by non-Appeal Team Membmers
+## Processing by non-Appeal Team Members
 
 Game Admins and Trial Game Admins may not process appeals without the supervision of an Appeals Team Member. Before an outcome can be made it must be approved by the supervising Appeals Team member.
 The only exception to this is when an admin reduces or removes their own ban.
