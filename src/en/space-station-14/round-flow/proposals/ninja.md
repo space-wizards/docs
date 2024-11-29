@@ -25,6 +25,7 @@ All Space Ninjas will now have a Spider Clan Code they will have to live by, and
 ### Flavour Additions
 
 - The Space Ninja now comes with an adequately themed satchel, as well as a katana sheath.
+- The Space Ninja's pinpointer will now act as software for the brand new space ninja PDA instead of being its own gadget, the agent ID card will also be within the aforementioned device.
 - Equipping the space ninja helmet is now an instantaneous toggle action that comes with the space ninja suit.
 
 ### Ability Additions
@@ -69,6 +70,7 @@ These changes are intended to fix previously broken mechanics, as well to accomo
 - The katana dash is considerably quieter, at the cost of a longer recharge duration.
 - The energy katana's slash rate is slightly faster than it was previously when one-handed to compensate for it's damage loss.
 - Grants the ability to wield the energy katana for a hard-hitting swing, at the cost of a slower slash rate.
+- When wielding the energy katana, the Space Ninja's reflect probability increases.
 - The ninja throwing stars can now be stacked, as well as thrown in spreads.
 - When phased, the Space Ninja is able to discreetly steal from people, at the cost of a longer action duration.
-- When phased, the Space Ninja's cloak will act similarly to that of stealth boxes', but in a much more potent manner - Movement will slightly weaken the stealth field, whereas staying still/moving slowly strengthens it to the point of near-full invisibility.
+- When phased, the Space Ninja's cloak will act similarly to that of stealth boxes', but in a much more potent manner - Movement will slightly weaken the stealth field by increasing the distortion's strength, whereas staying still/moving slowly will fade it to the point of near-full invisibility.
