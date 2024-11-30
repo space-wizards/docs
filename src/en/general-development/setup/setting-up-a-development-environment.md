@@ -13,6 +13,27 @@ First you're gonna need some software:
     * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
 
+~~~admonish info title="Windows and winget"
+Windows users are suggested to use winget for an easier install, just open a command prompt/powershell and enter the following:
+
+Required:
+```
+winget install Git.Git
+winget install Python.Python.3.13
+winget install Microsoft.DotNet.SDK.8
+```
+
+And one of the following ide's:
+
+``winget install JetBrains.Toolbox`` (replace with ``JetBrains.Rider`` if you don't want the whole toolbox app)
+
+``winget install Microsoft.VisualStudio.2022.Community`` (Visual Studio 2022)
+
+``winget install Microsoft.VisualStudioCode`` (Visual Studio Code)
+
+``winget install VSCodium.VSCodium`` (VSCodium)
+~~~
+
 ## Video guide
 Are you stuck? Don't understand how to do a certain part? This video should help
 
