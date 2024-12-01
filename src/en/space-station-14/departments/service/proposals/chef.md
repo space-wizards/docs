@@ -20,23 +20,43 @@ This will include the new machines and their purpose, as well as the new kitchen
 
 ### New Appliances
 
-- Oven - The new general appliance, works chronometrically, meaning that if the food isn't taken out in due time it'll turn into a burned mess, you can also adjust the heat in order to assert how fast it'll cook, primarily used to bake a wide assortment of dishes: Breads, Pizzas, Cookies, Pancakes, Waffles, Pies, and Cakes
-- Stovetop - An appliance oriented towards boiling and cooking, works chronometrically, however, unlike ovens, food doesn't turn into burned messes if kept on for too long, contains an assortment of food recipes: Pasta, Soups, and Chilis
-- Deep Fryer - Eats up vegetable oil in order to fry, works chronometrically, contains a relatively narrow assortment of dishes: Fries and Taco Shells
-- Ice Cream Maker - Used in the creation of ice cream, yum!
+- Oven - The new general appliance.
+(+) Works chronometrically, so if the dish stays in it for too long it turns into a burned mess.
+(+) Has adjustable temperature to control how fast something cooks for.
+(+) Used primarily to bake the following: Breads, Pizzas, Cookies, Pancakes, Waffles, Pies, and Cakes
+
+- Stovetop - An appliance oriented towards pots and pans. 
+(+) Works chronometrically, however, dishes don't turn into a burned mess if not taken out in due time.
+(+) Has adjustable temperature to control how fast something cooks for.
+(+) Used primarily to boil and cook the following: Pasta, Soups, and Chilis
+
+- Deep Fryer - Eats up vegetable oii. 
+(+) Works chronometrically. 
+(+) Has adjustable temperature to control how fast something fries for.
+(+) Used to fry the following: Fries and Taco Shells
+
+- Ice Cream Maker - The maker of the iconic frozen dessert.
+(+) Works chronometrically.
+(+) Used to create the following: Ice Cream
+
 
 ### Appliance Changes
 
 - Microwave - Now only used for a select few recipes and donk pockets.
-- Grill - Now in full grilling glory, works chronometrically and the heat is also adjustable, like the name implies, it grills an assortment of meat-based dishes: Patties, Steaks, Cutlets, and Bacon.
+
+- Grill - Now in full grilling glory.
+(+) Works chronometrically.
+(+) Has adjustable temperature to control how fast something grills for.
+(+) Used to grill the following: Patties, Steaks, Cutlets, and Bacon.
 
 ### New Amenities
 
 - Oil Barrel - Stores vegetable oil, more can be bought from Cargo.
 - Oil Tray - Used to transport oil from the barrel to the fryer.
 - Cooking Tray - Used for bakery.
-- Steel Pot - Used for boiling.
+- Steel Pot - Used for boiling and cooking.
 - Mortar & Pestle - Used to grind various ingredients.
+- Waffle Maker - Used to press dough into a waffle shape.
 
 ## Procedures, Recipes & Ingredients
 
@@ -51,16 +71,22 @@ This will include new ways to cook up existing dishes, new recipes, as well as n
 - Kebabs - Similarly to burgers, kebabs are now also assembled outside any appliances, however, the tortillas must still be baked.
 - Tacos - Similarly to burgers, tacos are now also assembled outside any appliances, however, the shells must still be fried.
 - Salads - Now assembled outside appliances, similar system to drink-making except with solids.
-- Ice Cream - The ice cream maker's signature dish, requires eggs, milk, and sugar - Once frozen, you can add toppings up to your own discretion.
+- Ice Creams - The ice cream maker's signature dish, requires eggs, milk, and sugar - Once frozen, you can add toppings up to your own discretion.
+- Pastas - Upon mixing the initial dough batch, it must be flattened with a rolling pin and then cut into the desired pasta type, afterwards, it can be boiled.
+- Boiled Rice - First goes the water, and then goes the rice. Must be boiled.
+- Soups - Put water in the pot, then put the ingredients listed on the cookbook for whatever soup you're making, simple as. Must be cooked on the stovetop.
+- Chilis - Add oil to the pot, then the chopped onions and beef, and lastly whichever kind of pepper you prefer, spices are entirely optional. Must be cooked on the stovetop.
+- Fries - Chop up the potato into strips, then chuck them onto the fryer, after they're out you may add whichever sauces and extra add-ons you so desire.
+Cookies, Pancakes, Waffles
 
 ### New Recipes
 
-- TBD
+- To-do
 
 ### New Ingredients
 
-- Olives - Planted by botany.
-- Olive Oil - Used to season or as a makeshift frying oil, obtained by grinding olives with a pestle.
+- Olives - Planted by Botany.
+- Olive Oil - Used to for cooking, as seasoning, or as a makeshift frying oil, obtained by grinding olives with a pestle.
 - Vegetable Oil - Used to fry, obtained via Cargo.
 - Tomato Sauce - Used in a wide selection of recipes, obtained by grinding tomatoes with a pestle.
 
