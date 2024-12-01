@@ -23,10 +23,16 @@ public sealed class FooSystem : EntitySystem
         SubscribeLocalEvent<MoveEvent>(OnEntityMove);
     }
 
+    // This is called each game tick
+    public override void Update(float frameTime)
+    {
+        // This code is ran every tick
+    }
+
     // This is called when a FooComponent is initialized.
     private void OnFooInit(Entity<FooComponent> ent, ref ComponentInit _)
     {
-         // Initialize your FooComponent here
+        // Initialize your FooComponent here
     }
 
     // Example handler for when FooComponent is interacted with by an user.
