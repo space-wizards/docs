@@ -8,25 +8,25 @@
 
 **Q**: Why do components not use encapsulation? (i.e. private members.)
 
-**A**: Components cannot use encapsulation because logic would conflict with the ECS principles we follow. Encapsulation makes no sense when components are simple data containers, as they have no logic. Furthermore, if the purpose of encapsulation is to prevent coders from directly modifying underlying component members instead of going through specific entity systems, there are better ways to prevent that such as documenting/commenting the code, reviewing PRs and using the new `Friend` attributes.
+**A**: Components cannot use encapsulation because logic would conflict with the ECS principles we follow. Encapsulation makes no sense when components are simple data containers, as they have no logic. If the purpose of encapsulation is to prevent coders from directly modifying underlying component members instead of going through specific entity systems, then there are better ways to prevent that such as documenting/commenting the code, reviewing PRs, and using the new `Friend` attributes.
 
 ---
 
 **Q**: Why were interfaces in components replaced by systems and events?
 
-**A**: Interfaces have poor performance, events and systems are significantly faster, aside from being more powerful and maintainable. Interfaces are intended to ensure that a class contains logic. Using interfaces on components violates one of the main ECS principles.
+**A**: Interfaces have poor performance, events and systems are significantly faster, aside from being more powerful and maintainable. Interfaces are intended to ensure that a class contains logic. Using interfaces on components violates the main ECS principal of separation of data and logic.
 
 ---
 
 **Q**: Is an entity is a collection of components with an identifier?
 
-**A**: An entity does not directly aggregate components. Instead, several auxiliary data structures bind an `EntityUid` to the locations of components. Components are stored efficiently in arrays. Each array contains only one component type. Storing only one component type per array allows for better cache locality when systems operate on components. ECS users need not care about how the components are stored, as functions provided by RobustToolbox obscure this complexity.
+**A**: An entity does not directly aggregate components. Instead, several auxiliary data structures bind an `EntityUid` to the locations of components. ECS users need not care about how the components are stored, as functions provided by RobustToolbox obscure this complexity.
 
 ---
 
 **Q**: Do components act like tags?
 
-**A**: Systems act on entities with specific components. By adding or removing components which set of systems operate on an entity changes. Viewing the components as a tag for whether a operates on an entity is valid. However, within ECS, "tag" is frequently used to describe components with no data.
+**A**: Systems act on entities with specific components. By adding or removing components the set of systems that operate on an entity changes. Viewing the components as a tag for whether a system operates on an entity is valid. However, within ECS, "tag" is frequently used to describe components with no data.
 
 ---
 
@@ -35,12 +35,11 @@
 **A**: Yes, systems will operate directly on components but also are able to operate on the source entity via the `EntityUid`. Operations using the `EntityUid` are more costly than operating directly on the components.
 
 
-
 ---
 
 **Q**: How do systems operate on more than one component?
 
-**A**: Although a system for component A and another B may exist, this does not exclude the creation of other systems on A and B simultaneously. Systems can acquire singles, pairs, triples, etc. of components to operate on simultaneously. Each pair, triple, etc. will all come from the same entity. Operating on more components is more costly.
+**A**: Although a system for component A and another B may exist, this does not exclude the creation of other systems on A and B simultaneously. Systems can acquire singles, pairs, triples, etc. of components to operate on simultaneously. Each pair, triple, etc. will all come from the same entity. Operating on multiple components is costly.
 
 ---
 
