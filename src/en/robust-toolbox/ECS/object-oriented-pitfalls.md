@@ -1,10 +1,10 @@
 # Object Oriented Pitfalls
 
-Many programers are familiar with object oriented programming (OOP) basics. Some of the contributors to SS14 and RobustToolbox have experience with BEYOND and the DM language which utilize unconstrained OOP as a platform for development. This guide exposes some of the pitfalls of OOP and how ECS and RobustToolbox avoid said pitfalls.
+Many programers are familiar with object oriented programming (OOP) basics. Some of the contributors to SS14 and RobustToolbox have experience with BEYOND and the DM language which utilize unconstrained OOP as a platform for development. This guide exposes some of the pitfalls of OOP and how ECS avoids said pitfalls.
 
 ## composition over inheritance
 
-Composition over inheritance is an object oriented design principal; ECS is considered to be a maximization of this principal. This document will demonstrate the what and why of Composition over inheritance and its relevance to RobustToolbox.
+Composition over inheritance is an object oriented design principal; ECS is considered to be a maximization of this principal. This document will demonstrate the what and why of Composition over inheritance and its relevance to ECS.
 
 ### What is composition over inheritance?
 In the case of a choice between inherence to grant properties and composition, fields which are other classes, which do the same, chose composition. The reasoning is that while inherence can be powerful, it is inflexible.
@@ -110,7 +110,7 @@ Either methods must be added to components to communicate between themselves cau
 
 Systems have the ability to operate on more than one component simultaneously. For example a `PoweredMovementSystem` could operate on all `PowerReceiver` and `PlayerControllable` components contained within a single entity. Entities witch contain those components will be operated on by the `PoweredMovementSystem`. Multiple systems can operate on components at the same time. Input being taken by `PlayerInputSystem` and `PoweredMovementSystem` can both operate on `PlayerControllable`.
 
-Because systems are external to components and still need to interact, components must only contain public fields. This allows for direct interaction with components from any system. Each system could interact with every component, but this would likely cause redundant code. Systems may call functions on other systems to avoid replication functionality that always exists. Since there is no state in a system there should be no concern of side effects. However, the order in which systems are executed will change the outcome and should be configured.
+Because systems are external to components and still need to interact, components must only contain public fields. This allows for direct interaction with components from any system. Each system could interact with every component, but this would likely cause redundant code. Systems may call functions of other systems to avoid replication of functionality that always exists. Since there is no state in a system, there should be no concern of side effects within a single system. However, the order in which systems are executed will change the outcome and should be configured.
 
 
 ## Conclusions
