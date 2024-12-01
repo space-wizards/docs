@@ -51,6 +51,7 @@ This will include the new machines and their purpose, as well as the new kitchen
 
 ### New Amenities
 
+- Barbecue Grill - Portable grill variant, can only be obtained from Cargo.
 - Oil Barrel - Stores vegetable oil, more can be bought from Cargo.
 - Oil Tray - Used to transport oil from the barrel to the fryer.
 - Cooking Tray - Used for bakery.
@@ -65,23 +66,23 @@ This will include new ways to cook up existing dishes, new recipes, as well as n
 ### New Procedures
 
 - Breads - You are now able to shape the dough into different formats with a rolling pin to attain whatever kind you desire, be it boules, buns, or baguettes. Must be baked in the oven. 
-- Pizzas - First comes the dough, then the tomato sauce & cheese, and lastly whichever toppings you prefer, similarly to how in burgers you can pick whichever add-ons. Must be baked in the oven.
+- Pizzas - First comes the dough, then the tomato sauce & cheese, and lastly whichever toppings you prefer, similarly to how in burgers you can pick whatever to go on it. Must be baked in the oven.
 - Pies - Similar procedure to that of the pizzas', except with a differently shaped dough, as well as an extra final step where you add an added sheet of pastry on-top before it goes into the oven to bake.
 - Burgers - Burgers are now assembled outside any appliances, however, the buns must still be baked.
 - Patties - All burgers' dedicated meat, changes place with raw meats in the previous recipes. Must be grilled.
 - Kebabs - Similarly to burgers, kebabs are now also assembled outside any appliances, however, the tortillas must still be baked.
 - Tacos - Similarly to burgers, tacos are now also assembled outside any appliances, however, the shells must still be fried.
-- Salads - Now assembled outside appliances, similar system to drink-making except with solids.
+- Salads - Now assembled outside appliances, just throw some veggies together, and don't forget the seasoning.
 - Ice Creams - The ice cream maker's signature dish, requires eggs, milk, and sugar - Once frozen, you can add toppings up to your own discretion.
 - Pastas - Upon mixing the initial dough batch, it must be flattened with a rolling pin and then cut into the desired pasta type, afterwards, it can be boiled.
-- Boiled Rice - First goes the water, and then goes the rice. Must be boiled.
-- Soups - Put water in the pot, then put the ingredients listed on the cookbook for whatever soup you're making, simple as. Must be cooked on the stovetop.
-- Chilis - Add oil to the pot, then the chopped onions and beef, and lastly whichever kind of pepper you prefer, spices are entirely optional. Must be cooked on the stovetop.
+- Boiled Rice - First goes the water, then goes the rice. Must be boiled.
+- Soups - First put water in the pot, then put the ingredients listed on the cookbook depending on the soup you're making, simple as. Must be cooked on the stovetop.
+- Chilis - First you add oil to the pot, then the chopped onions and beef, and lastly whichever kind of pepper you prefer, spices are entirely optional. Must be cooked on the stovetop.
 - Fries - Chop up the potato into strips, then chuck them onto the fryer, after they're out you may add whichever sauces and extra add-ons you so desire.
-- Pancakes - After the initial egg, milk and flour mixture, pour it on the cooking tray so that it goes on the oven to bake, afterwards, add whichever extra toppings you so prefer. You can also use a knife to split it off into smaller portions.
+- Pancakes - upon mixing the eggs, milk and flour, pour it on the cooking tray so that it goes on the oven to bake, afterwards, add whichever toppings you so prefer. You can also use a knife to split it off into smaller portions.
 - Waffles - Similar procedure to that of the pancakes', except that instead of the batch going into the cooking tray it goes into the waffle maker.
-- Cookies - Similar procedure to that of the pancakes', except with more flour and the added step of taking out tidbits of the pre-baked batch individually for the cookies.
-- Cake - Similar procedure to that of the pancakes', except with more eggs and butter.
+- Cookies - Similar procedure to that of the pancakes', except with more flour and the added step of taking out tidbits of the pre-baked batch for each individual cookie, 6 max.
+- Cakes - Similar procedure to that of the pancakes', except with more eggs and butter.
 
 ### New Recipes
 
@@ -89,6 +90,8 @@ This will include new ways to cook up existing dishes, new recipes, as well as n
 
 ### New Ingredients
 
+- Spinach - Planted by Botany.
+- Lettuce - Planted by Botany.
 - Olives - Planted by Botany.
 - Olive Oil - Used to for cooking, as seasoning, or as a makeshift frying oil, obtained by grinding olives with a pestle.
 - Vegetable Oil - Used to fry, obtained via Cargo.
