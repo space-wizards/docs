@@ -6,7 +6,7 @@
 
 ## Overview
 
-This proposal is a moderately basic expansion of the current cooking system, adding mostly new machines, procedures, recipes, and ingredients.
+This proposal is a moderately basic expansion of the current cooking system, adding mostly new machines, procedures, and ingredients.
 <p>Microwaves have been made less redundant via the addition of new appliances, consequentially, new methods of cooking have been added.</p>
 <p>Botany and Cargo possess new ingredients and orders respectfully for the Chef and the kitchen.
 
@@ -21,7 +21,7 @@ This will include the new machines and their purpose, as well as the new kitchen
 ### New Appliances
 
 #### Oven - The new general appliance
-- Works chronometrically, so if the dish stays in it for too long it turns into a burned mess.
+- Works chronometrically, and if the dish stays in it for too long it turns into a burned mess.
 - Has adjustable temperature to control how fast something cooks for.
 - Used primarily to bake the following: Breads, Pizzas, Cookies, Pancakes, Waffles, Pies, and Cakes
 
@@ -42,7 +42,7 @@ This will include the new machines and their purpose, as well as the new kitchen
 ### Appliance Changes
 
 #### Grill - Now in full grilling glory
-- Works chronometrically.
+- Works chronometrically, and if the dish stays in it for too long it turns into a burned mess.
 - Has adjustable temperature to control how fast something grills for.
 - Used to grill the following: Patties, Steaks, Cutlets, and Bacon.
 
@@ -59,9 +59,9 @@ This will include the new machines and their purpose, as well as the new kitchen
 - Mortar & Pestle - Used to grind various ingredients.
 - Waffle Maker - Used to press dough into a waffle shape.
 
-## Procedures, Recipes & Ingredients
+## Procedures & Ingredients
 
-This will include new ways to cook up existing dishes, new recipes, as well as new ingredients and their sources.
+This will include new ways to cook up existing dishes, as well as new ingredients and their sources.
 
 ### New Procedures
 
@@ -83,10 +83,6 @@ This will include new ways to cook up existing dishes, new recipes, as well as n
 - Waffles - Similar procedure to that of the pancakes', except that instead of the batch going into the cooking tray it goes into the waffle maker.
 - Cookies - Similar procedure to that of the pancakes', except with more flour and the added step of taking out tidbits of the pre-baked batch for each individual cookie, 6 max.
 - Cakes - Similar procedure to that of the pancakes', except with more eggs and butter.
-
-### New Recipes
-
-- To-do
 
 ### New Ingredients
 
