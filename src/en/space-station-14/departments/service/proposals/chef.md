@@ -6,7 +6,7 @@
 
 ## Overview
 
-This proposal is a moderately basic expansion of the current cooking system, adding mostly new procedures, recipes, and ingredients.
+This proposal is a moderately basic expansion of the current cooking system, adding mostly new machines, procedures, recipes, and ingredients.
 <p>Microwaves have been made less redundant via the addition of new appliances, consequentially, new methods of cooking have been added.</p>
 <p>Botany and Cargo possess new ingredients and orders respectfully for the Chef and the kitchen.
 
@@ -20,34 +20,34 @@ This will include the new machines and their purpose, as well as the new kitchen
 
 ### New Appliances
 
-- Oven - The new general appliance.
-(+) Works chronometrically, so if the dish stays in it for too long it turns into a burned mess.
-(+) Has adjustable temperature to control how fast something cooks for.
-(+) Used primarily to bake the following: Breads, Pizzas, Cookies, Pancakes, Waffles, Pies, and Cakes
+#### Oven - The new general appliance
+- Works chronometrically, so if the dish stays in it for too long it turns into a burned mess.
+- Has adjustable temperature to control how fast something cooks for.
+- Used primarily to bake the following: Breads, Pizzas, Cookies, Pancakes, Waffles, Pies, and Cakes
 
-- Stovetop - An appliance oriented towards pots and pans. 
-(+) Works chronometrically, however, dishes don't turn into a burned mess if not taken out in due time.
-(+) Has adjustable temperature to control how fast something cooks for.
-(+) Used primarily to boil and cook the following: Pasta, Soups, and Chilis
+#### Stovetop - Best with pots
+- Works chronometrically, however, dishes don't turn into a burned mess if not taken out in due time.
+- Has adjustable temperature to control how fast something cooks for.
+- Used primarily to boil and cook the following: Pasta, Soups, and Chilis
 
-- Deep Fryer - Eats up vegetable oii. 
-(+) Works chronometrically. 
-(+) Has adjustable temperature to control how fast something fries for.
-(+) Used to fry the following: Fries and Taco Shells
+#### Deep Fryer - Eats up vegetable oii 
+- Works chronometrically. 
+- Has adjustable temperature to control how fast something fries for.
+- Used to fry the following: Fries and Taco Shells
 
-- Ice Cream Maker - The maker of the iconic frozen dessert.
-(+) Works chronometrically.
-(+) Used to create the following: Ice Cream
-
+#### Ice Cream Maker - The maker of the iconic frozen dessert
+- Works chronometrically.
+- Used to create the following: Ice Cream
 
 ### Appliance Changes
 
-- Microwave - Now only used for a select few recipes and donk pockets.
+#### Grill - Now in full grilling glory
+- Works chronometrically.
+- Has adjustable temperature to control how fast something grills for.
+- Used to grill the following: Patties, Steaks, Cutlets, and Bacon.
 
-- Grill - Now in full grilling glory.
-(+) Works chronometrically.
-(+) Has adjustable temperature to control how fast something grills for.
-(+) Used to grill the following: Patties, Steaks, Cutlets, and Bacon.
+#### Microwave - Ol' reliable
+- Now only used for a select few recipes and donk pockets.
 
 ### New Amenities
 
@@ -64,8 +64,9 @@ This will include new ways to cook up existing dishes, new recipes, as well as n
 
 ### New Procedures
 
-- Bread - You are now able to shape the dough into different formats with a rolling pin to attain whatever kind you desire, be it boules, buns, or baguettes. Must be baked in the oven. 
-- Pizza - First comes the dough, then the tomato sauce & cheese, and lastly whichever toppings you prefer, similarly to how in burgers you can pick whichever add-ons. Must be baked in the oven.
+- Breads - You are now able to shape the dough into different formats with a rolling pin to attain whatever kind you desire, be it boules, buns, or baguettes. Must be baked in the oven. 
+- Pizzas - First comes the dough, then the tomato sauce & cheese, and lastly whichever toppings you prefer, similarly to how in burgers you can pick whichever add-ons. Must be baked in the oven.
+- Pies - Similar procedure to that of the pizzas', except with a differently shaped dough, as well as an extra final step where you add an added sheet of pastry on-top before it goes into the oven to bake.
 - Burgers - Burgers are now assembled outside any appliances, however, the buns must still be baked.
 - Patties - All burgers' dedicated meat, changes place with raw meats in the previous recipes. Must be grilled.
 - Kebabs - Similarly to burgers, kebabs are now also assembled outside any appliances, however, the tortillas must still be baked.
@@ -77,7 +78,10 @@ This will include new ways to cook up existing dishes, new recipes, as well as n
 - Soups - Put water in the pot, then put the ingredients listed on the cookbook for whatever soup you're making, simple as. Must be cooked on the stovetop.
 - Chilis - Add oil to the pot, then the chopped onions and beef, and lastly whichever kind of pepper you prefer, spices are entirely optional. Must be cooked on the stovetop.
 - Fries - Chop up the potato into strips, then chuck them onto the fryer, after they're out you may add whichever sauces and extra add-ons you so desire.
-Cookies, Pancakes, Waffles
+- Pancakes - After the initial egg, milk and flour mixture, pour it on the cooking tray so that it goes on the oven to bake, afterwards, add whichever extra toppings you so prefer. You can also use a knife to split it off into smaller portions.
+- Waffles - Similar procedure to that of the pancakes', except that instead of the batch going into the cooking tray it goes into the waffle maker.
+- Cookies - Similar procedure to that of the pancakes', except with more flour and the added step of taking out tidbits of the pre-baked batch individually for the cookies.
+- Cake - Similar procedure to that of the pancakes', except with more eggs and butter.
 
 ### New Recipes
 
