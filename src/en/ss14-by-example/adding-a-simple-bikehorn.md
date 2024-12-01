@@ -6,7 +6,7 @@ This tutorial goes over the **entity component system** system and several other
 
 ## Entities, components, and systems
 
-While Space Station 14 is written in C#, an object-oriented programming language, it uses a different data model to represent items in game. This data model is called the *entity component system* (ECS). (*Why do we do this? See [ECS](../robust-toolbox/ecs.md)*)
+While Space Station 14 is written in C#, an object-oriented programming language, it uses a different data model to represent items in game. This data model is called the *entity component system* (ECS). (*Why do we do this? See [ECS](../robust-toolbox/ecs/ecs.md)*)
 
 ### Entities
 
@@ -32,7 +32,7 @@ Entity systems implement behavior by defining *event handlers* or by implementin
 
 As an another example, consider the `FoodComponent`. A programmer might make `EatingSystem` to handle eating food. `EatingSystem` listens to the `OnUseInHand` event - whenever `OnUseInHand` is heard/triggered, `EatingSystem` checks if there is a `FoodComponent` in the object that was used. If there is, then it lowers the value of `nutritionLeft` and plays a munching sound.
 
-That's the jist of ECS. If you're interested in learning more about it, then check out [Your mind on ECS](../robust-toolbox/ecs.md). The ECS approach really is powerful and allows us to avoid spaghetti code, despite the complexity of SS14.
+That's the jist of ECS. If you're interested in learning more about it, then check out [Your mind on ECS](../robust-toolbox/ecs/ecs.md). The ECS approach really is powerful and allows us to avoid spaghetti code, despite the complexity of SS14.
 
 ```admonish info
 You don't have to perfectly understand the ECS architecture at first. It can be daunting for both new programmers and those used to traditional OOP. However, the overall 'feel' and advantages of the architecture should become clear as you use it more.
@@ -40,9 +40,9 @@ You don't have to perfectly understand the ECS architecture at first. It can be 
 
 ## How do I make an Entity and give it Components?
 
-SS14 uses a system we call **prototypes**. These are "entity presets", essentially. They are similar to *prefabs* in Unity, or a subtype of `/obj` or `/mob` in BYOND. 
+SS14 uses a system we call **prototypes**. These are "entity presets", essentially. They are similar to *prefabs* in Unity, or a subtype of `/obj` or `/mob` in BYOND.
 
-Entity prototypes define *which components are on the entity, and what data those components hold*. It also defines basic data like the entity's name, description, and prototype ID (used to spawn it). 
+Entity prototypes define *which components are on the entity, and what data those components hold*. It also defines basic data like the entity's name, description, and prototype ID (used to spawn it).
 
 An example is shown below:
 
@@ -64,7 +64,7 @@ An example is shown below:
     delay: 2.0
 ```
 
-This is written in **YAML**, a data language similar to JSON, and is located in the folder `Resources/Prototypes/Entities/Objects/Fun/skub.yml`. All prototypes must be in the `Resources/Prototypes` folder and should be organized into the proper folder. 
+This is written in **YAML**, a data language similar to JSON, and is located in the folder `Resources/Prototypes/Entities/Objects/Fun/skub.yml`. All prototypes must be in the `Resources/Prototypes` folder and should be organized into the proper folder.
 
 If you want more pointers on YAML, check [YAML Crash Course](../general-development/tips/yaml-crash-course.md) and [Serialization](../robust-toolbox/serialization.md).
 
@@ -120,7 +120,7 @@ To make our component, we'll need to make a new class, let's call it ```PlaySoun
 
 ![](https://i.imgur.com/s9O13qH.png)
 
-Where do we put it? To answer this question, we have to think broad. We have to think about the **client** and the **server**.  
+Where do we put it? To answer this question, we have to think broad. We have to think about the **client** and the **server**.
 
 ### Client-Server Paradigm
 
@@ -137,7 +137,7 @@ With that in mind, our logic for our clown horn should look like this:
 
 This sounds rather complicated to implement from scratch. Thankfully, we have some premade code that helps us! Namely, the event `UseInHandEvent` which is raised on the server when an item is used, and the function `SoundSystem.Play()` which plays a sound to clients in range.
 
-Those helpers can be thought of as handling **client click -> server** and **server -> client sound** for us. so all we need to do is have a component on the server which routes one into the other. 
+Those helpers can be thought of as handling **client click -> server** and **server -> client sound** for us. so all we need to do is have a component on the server which routes one into the other.
 
 ### A basic implementation of a component
 
@@ -225,7 +225,7 @@ Let's finally add some flavor to our bike horn by.. making it actually honk. As 
 // Content.Server/Sound/PlaySoundOnUseSystem.cs
 
 namespace Content.Server.Sound;
-    
+
 public sealed class PlaySoundOnUseSystem : EntitySystem
 {
 
@@ -272,7 +272,7 @@ namespace Content.Server.Sound;
 public sealed class PlaySoundOnUseSystem : EntitySystem
 {
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    
+
     public override void Initialize()
     {
         SubscribeLocalEvent<PlaySoundOnUseComponent, UseInHandEvent>(OnUseInHand);
@@ -301,9 +301,9 @@ The `PlayPvs` method is useful for playing sounds. It has two arguments:
 
 1. The sound to play.
 
-In this case, we just pass it our `sound` field on our `PlaySoundOnUseComponent`. 
+In this case, we just pass it our `sound` field on our `PlaySoundOnUseComponent`.
 
-2. The source entity 
+2. The source entity
 
 This is an optional argument that is used for positional audio. In our case, we want the sound to come from the horn, so we pass in the horn's Uid (which is the `Owner` property of the entity). If this arugment is not given, the sound is played globally and will be audible to all players.
 
@@ -322,7 +322,7 @@ With that, this tutorial is finished! If you want to continue experimenting with
     - This one is kind of hard and involves adding a lot of new data! Look at glass shards for an example.
 - Make the bike horn do damage on attack using MeleeWeaponComponent
 - Make the bike horn edible using FoodComponent and SolutionContainerComponent
-- Add support for playing a random sound from a SoundCollection or SoundSpecifier rather than a single sound (the real EmitSoundOnUse does this, if you need pointers) 
+- Add support for playing a random sound from a SoundCollection or SoundSpecifier rather than a single sound (the real EmitSoundOnUse does this, if you need pointers)
 - Dive into explosion code and give it a 5% chance to explode on each honk!
 
 The world's your donk packet, and you've got a sizzling hot fire ready to cook it!
