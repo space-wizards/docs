@@ -66,7 +66,7 @@ Now to start creating maps follow the below steps:
 4. Run the `mapping [MapID] [MapFile]` command to either create a new map or edit an existing one.
     - To make a new map, specify only the map-id. The ID must be free, i.e., the server cannot currently have another map loaded with the same ID), as such you should use a sufficiently high ID to avoid a conflict.
     - To edit an existing map in the Maps/ folder you need to specify the map file name and a free ID. For example, in order to edit the Saltern map you can use something like `mapping 1000 Maps/saltern.yml`
-    - To edit a map you have previously saved you can run the command `mapping 1000 [filename.yml]`. Your saved maps are found in the `bin/content.server/data` folder, separate from the maps used by the repository in the `Resources/Maps` folder.
+    - To edit a map you have previously saved you can run the command `mapping 1000 [filename.yml]`. Your saved maps are found in the `bin/Content.Server/data` folder, separate from the maps used by the repository in the `Resources/Maps` folder.
 5. Make all the changes you want to make using sandbox-mode and admin tools. Press <kbd>F5</kbd> to toggle the entity spawner and <kbd>F6</kbd> to toggle the tile spawner. Walls are entities so you'll find them in the entity spawner.
 6. In order to save your changes, use the `savemap [MapID] [MapFile]` command. For example, `savemap 1000 name.yml` saves a local copy of your modified map to `space-station-14/bin/Content.Server/data/name.yml`
 
@@ -111,9 +111,9 @@ After this, run the command `dotnet run --project Content.MapRenderer {your_map_
 
 ## Running your map for the first time
 Now that you've completed your map, you'll want to test it in game to ensure you can spawn correctly and there are no issues with doors, access, atmos, power etc etc. To do this:
-1. Copy your newly saved mapping file from "space-station-14/bin/Content.Server/data/" to "space-station-14/Resources/maps/". You will also need to do this to submit your changes later.
+1. Copy your newly saved mapping file from "space-station-14/bin/Content.Server/data/" to "space-station-14/Resources/Maps/". You will also need to do this to submit your changes later.
 
-2. If this is a brand new map, head to "space-station-14/resources/prototypes/maps" and create a .yml file for your map (known as a map prototype). As a guide, copy an existing one and change the name to match your new map, and edit the contents in a word editor like Notepad++ or your prefered method so that your new map has a unique ID and name. See section on multi-grid and multi-station for Station IDs (this is not the same as your map ID).
+2. If this is a brand new map, head to "space-station-14/Resources/Prototypes/Maps" and create a .yml file for your map (known as a map prototype). As a guide, copy an existing one and change the name to match your new map, and edit the contents in a word editor like Notepad++ or your prefered method so that your new map has a unique ID and name. See section on multi-grid and multi-station for Station IDs (this is not the same as your map ID).
     
 3. You can now relaunch the client and server. Once connected run the command `forcemap [ID]` where the ID is the one specified in the .yml file we mentioned just before. On Release, simply press F7 in Lobby to bring up the Admin Menu, and use `Round > Start Round` to skip waiting. If you are on Tools, run the `restartnow` command or F7 Admin Menu then `Round > Restart NOW` to restart the server on your map.
 
