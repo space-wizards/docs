@@ -17,9 +17,9 @@ If you've read "Workflow" and are looking for a refresher:
    
 2. If desired, `mappingclientsidesetup` to use the default mapping setup.
 
-3. Make all your changes.
+3. Make all mapping changes.
    
-4. If you have created new rooms, run `fixgridatmos GID` before saving.
+4. If new rooms were created, run `fixgridatmos GID`.
    
 5. Save the map with the same ID you used previously: `savemap ID PATH`. **Important**: If you are working with a salvage or a shuttle, you need `savegrid GRID_ID PATH` instead.
 
@@ -73,7 +73,7 @@ Now to start creating maps follow the below steps:
 ## Common Tools and Commands
 * <kbd>SHIFT-Click</kbd>: place a **line** of tiles/item/anything with a snap grid
 * <kbd>CTRL-Click</kbd>: place a **square** of tiles/item/anything with a snap grid
-* By default, the `P` ("Pick") key will select the entity or tile currently highlighted under your mouse for placement.
+* By default, the `P` ("Pick") key will select the entity or tile currently highlighted under the cursor for placement.
   * Note that this places entities of the same prototype, it does not actually copy the initial entity. 
 * To color all pipes in a pipe network use `colornetwork [entity id] Pipe [color]` where the entity ID is any uid of a pipe within a connected network of pipes (Use View Variable on a pipe to find this if not displayed in the right click menu), and color is a color hex starting with #. See standard pipe colors under Standard Pipe Colors.
 * `zoom N` to zoom out while mapping. `zoom 3` zooms out 3x. Use `zoom 1` to restore normal zoom.
@@ -107,7 +107,7 @@ This means you can have multiple stations loaded in a single map, so do with tha
 ## Taking a screenshot of your station
 To screenshot your station you need both a map prototype, stored in `Resources/Maps` which is the prototype that the `savemap 1000 name.yml` command from previous steps should generate and a game map prototype stored on Resources/Prototypes/Maps which contains the ID, path and other information, refer to the other prototypes in there as examples when making one.
 
-After this, run the command `dotnet run --project Content.MapRenderer {your_map_id_here}` in your IDE or Git CLI, with the game map prototype ID (case-sensitive). You can also set command line arguments through your IDE and run it that way. The image should be inside Resources/MapImages once completed.
+After this, run the command `dotnet run --project Content.MapRenderer {your_map_id_here}` in the IDE or Git CLI, with the game map prototype ID (case-sensitive). You can also set command line arguments through your IDE and run it that way. The image should be inside Resources/MapImages once completed.
 
 ## Running your map for the first time
 Now that you've completed your map, you'll want to test it in game to ensure you can spawn correctly and there are no issues with doors, access, atmos, power etc etc. To do this:
