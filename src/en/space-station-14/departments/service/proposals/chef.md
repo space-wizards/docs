@@ -23,26 +23,32 @@ This will include the new machines and their purpose, as well as the new kitchen
 #### Oven
 - Works chronometrically, and if the dish stays in it for too long it turns into a burned mess.
 - Has adjustable temperature to control how fast something cooks for.
+- Used for baking a moderately wide selection of food.
 
 #### Stovetop
-- Works chronometrically, however, dishes don't turn into a burned mess if not taken out in due time.
+- Works chronometrically, however, dishes don't turn into a burned mess if not taken out in due time, the one exception to this being pancakes, as they require the pan to be flipped.
 - Has adjustable temperature to control how fast something cooks for.
+- Used mostly for boiling and brothy goods.
 
 #### Deep Fryer
 - Works chronometrically. 
 - Has adjustable temperature to control how fast something fries for.
+- Used for frying.
 
 #### Ice Cream Maker
 - Works chronometrically.
+- Used exclusively for ice creams.
 
 ### Appliance Changes
 
 #### Grill
 - Works chronometrically, and if the dish stays in it for too long it turns into a burned mess.
 - Has adjustable temperature to control how fast something grills for.
+- Used for grilling meat.
 
 #### Microwave
-- Now only used for a select few recipes and donk pockets.
+- Works on a timer.
+- Used for a select few instant recipes and donk pockets.
 
 ### New Amenities
 
