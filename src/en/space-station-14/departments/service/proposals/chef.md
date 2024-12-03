@@ -14,39 +14,34 @@ This proposal is a moderately basic expansion of the current cooking system, add
 
 As it stands, the way food is prepared comes to be extremely lackluster and boring, due to the fact microwaves are the only widely utilized appliance since most recipes revolve around it - This document strives to address these issues by enriching Chef gameplay and the service department in general.
 
-## Appliances & Amenities
+## Appliances, Amenities, & Tables
 
 This will include the new machines and their purpose, as well as the new kitchen amenities geared towards increasing immersion.
 
 ### New Appliances
 
-#### Oven - The new general appliance
+#### Oven
 - Works chronometrically, and if the dish stays in it for too long it turns into a burned mess.
 - Has adjustable temperature to control how fast something cooks for.
-- Used primarily to bake the following: Breads, Pizzas, Cookies, Pancakes, Waffles, Pies, and Cakes
 
-#### Stovetop - Best with pots
+#### Stovetop
 - Works chronometrically, however, dishes don't turn into a burned mess if not taken out in due time.
 - Has adjustable temperature to control how fast something cooks for.
-- Used primarily to boil and cook the following: Pasta, Soups, and Chilis
 
-#### Deep Fryer - Eats up vegetable oii 
+#### Deep Fryer
 - Works chronometrically. 
 - Has adjustable temperature to control how fast something fries for.
-- Used to fry the following: Fries and Taco Shells
 
-#### Ice Cream Maker - The maker of the iconic frozen dessert
+#### Ice Cream Maker
 - Works chronometrically.
-- Used to create the following: Ice Cream
 
 ### Appliance Changes
 
-#### Grill - Now in full grilling glory
+#### Grill
 - Works chronometrically, and if the dish stays in it for too long it turns into a burned mess.
 - Has adjustable temperature to control how fast something grills for.
-- Used to grill the following: Patties, Steaks, Cutlets, and Bacon.
 
-#### Microwave - Ol' reliable
+#### Microwave
 - Now only used for a select few recipes and donk pockets.
 
 ### New Amenities
@@ -56,8 +51,39 @@ This will include the new machines and their purpose, as well as the new kitchen
 - Oil Tray - Used to transport oil from the barrel to the fryer.
 - Cooking Tray - Used for bakery.
 - Steel Pot - Used for boiling and cooking.
+- Steel Pan - Used for Pancakes and Tortillas.
+- Steel Tongs - Used to flip meat.
 - Mortar & Pestle - Used to grind various ingredients.
 - Waffle Maker - Used to press dough into a waffle shape.
+
+### Table of What-Cooks-What
+
+|| Oven | Stovetop | Deep Fryer | Ice Cream Maker | Grill | Microwave | None | Other |
+|---|---|---|---|---|---|---|---|---|
+| Boiled Rice || Yes |||||||
+| Breads | Yes ||||||||
+| *Burgers ||||||| Yes ||
+| Cakes | Yes ||||||||
+| Chilis || Yes |||||||
+| Cookies | Yes ||||||||
+| Donk Pockets |||||| Yes |||
+| Fries ||| Yes ||||||
+| Ice Creams |||| Yes |||||
+| Instant |||||| Yes |||
+| *Kebabs ||||||| Yes ||
+| Pancakes || Yes |||||||
+| Pastas || Yes |||||||
+| Patties ||||| Yes ||||
+| Pies | Yes ||||||||
+| Pizzas | Yes ||||||||
+| Salads ||||||| Yes ||
+| Soups || Yes |||||||
+| Steaks ||||| Yes ||||
+| *Tacos ||||||| Yes ||
+| Taco Shells ||| Yes ||||||
+| Waffles |||||||| Yes |
+
+Note: Items with an asterisk (*) depict just the completed product, not their contents.
 
 ## Procedures & Ingredients
 
@@ -65,34 +91,34 @@ This will include new ways to cook up existing dishes, as well as new ingredient
 
 ### New Procedures
 
-- Breads - You are now able to shape the dough into different formats with a rolling pin to attain whatever kind you desire, be it boules, buns, or baguettes. Must be baked in the oven. 
-- Pizzas - First comes the dough, then the tomato sauce & cheese, and lastly whichever toppings you prefer, similarly to how in burgers you can pick whatever to go on it. Must be baked in the oven.
-- Pies - Similar procedure to that of the pizzas', except with a differently shaped dough, as well as an extra final step where you add an added sheet of pastry on-top before it goes into the oven to bake.
-- Burgers - Burgers are now assembled outside any appliances, however, the buns must still be baked.
-- Patties - All burgers' dedicated meat, changes place with raw meats in the previous recipes. Must be grilled.
-- Kebabs - Similarly to burgers, kebabs are now also assembled outside any appliances, however, the tortillas must still be baked.
-- Tacos - Similarly to burgers, tacos are now also assembled outside any appliances, however, the shells must still be fried.
-- Salads - Now assembled outside appliances, just throw some veggies together, and don't forget the seasoning.
-- Ice Creams - The ice cream maker's signature dish, requires eggs, milk, and sugar - Once frozen, you can add toppings up to your own discretion.
-- Pastas - Upon mixing the initial dough batch, it must be flattened with a rolling pin and then cut into the desired pasta type, afterwards, it can be boiled.
-- Boiled Rice - First goes the water, then goes the rice. Must be boiled.
-- Soups - First put water in the pot, then put the ingredients listed on the cookbook depending on the soup you're making, simple as. Must be cooked on the stovetop.
-- Chilis - First you add oil to the pot, then the chopped onions and beef, and lastly whichever kind of pepper you prefer, spices are entirely optional. Must be cooked on the stovetop.
-- Fries - Chop up the potato into strips, then chuck them onto the fryer, after they're out you may add whichever sauces and extra add-ons you so desire.
-- Pancakes - upon mixing the eggs, milk and flour, pour it on the cooking tray so that it goes on the oven to bake, afterwards, add whichever toppings you so prefer. You can also use a knife to split it off into smaller portions.
-- Waffles - Similar procedure to that of the pancakes', except that instead of the batch going into the cooking tray it goes into the waffle maker.
-- Cookies - Similar procedure to that of the pancakes', except with more flour and the added step of taking out tidbits of the pre-baked batch for each individual cookie, 6 max.
-- Cakes - Similar procedure to that of the pancakes', except with more eggs and butter.
+- Boiled Rice - First goes the pot, then goes the water, and lastly, the rice.
+- Breads - You are now able to shape the dough into different formats with a rolling pin to attain whatever kind you desire, these being: Baguette, Boule, Bun, Flatbread, Pasta, Pie Cover, Pie Crust, Pizza, White. Note that some doughs require added ingredients to be finalized.
+- Burgers - Burgers are now assembled outside any appliances with the use of the same food sequence system.
+- Cakes - Upon the initial mixture, you place the batch on a cooking tray, then after it's done baking you may add toppings up to your own discretion using a food sequence system. Can be cut into smaller portions once finished.
+- Chilis - Throw in olive oil, onions, and beef, then either add the listed recipe ingredients, or whichever others you prefer as chilis also use a food sequence system.
+- Cookies - Similar procedure to that of the cakes', except that instead of the batch going immediately into a cooking tray, you first pick up small bits of the cookie batch as to place them individually.
+- Fries - Chop up the potato into strips, then chuck them onto the fryer, simple as.
+- Ice Creams - Upon the listed mixture being complete and ready to eat, you may add toppings up to your own discretion using a food sequence system.
+- Kebabs - Kebabs are now also assembled outside any appliances with the use of a food sequence system.
+- Pancakes - Upon the initial mixture, pour the batch on a pan, afterwards, you must wait until it's ready to be flipped. Can be cut into smaller portions once finished.
+- Pastas - Upon the initial dough batch it must be cut into the desired pasta type, afterwards just add whichever ingredients the recipe lists.
+- Patties - All burgers' dedicated meat, changes place with raw meats in the previous recipes, must be flipped with steel tongs.
+- Pies - Similar procedure to that of the pizzas, except with a differently shaped salted dough, upon filling up the interior with whichever ingredients the recipe lists you finish it off with an added sheet of pastry. Can be cut into smaller portions once finished.
+- Pizzas - First comes the dough, then the tomato sauce & cheese, and lastly whichever added ingredients you so prefer using a food sequence system similar to that of burgers'. Can be cut into smaller portions once finished.
+- Salads - Salads are now also assembled outside appliances.
+- Soups - Upon having a pot full of water, either add the listed recipe ingredients, or whichever others you prefer as soups also use a food sequence system.
+- Steaks - Now grilled, has to be flipped with steel tongs.
+- Tacos - Tacos are now also assembled outside any appliances with the use of a food sequence system.
+- Waffles - Similar procedure to that of the pancakes', except that instead of the batch going into a pan it goes into the waffle maker, does not require flipping.
 
 ### New Ingredients
 
 - Spinach - Planted by Botany.
 - Lettuce - Planted by Botany.
 - Olives - Planted by Botany.
-- Olive Oil - Used to for cooking, as seasoning, or as a makeshift frying oil, obtained by grinding olives with a pestle.
+- Olive Oil - Used for cooking, as seasoning, or as a makeshift frying oil, obtained by either grinding olives up on a grinder, or by mushing them with a mortar & pestle.
 - Vegetable Oil - Used to fry, obtained via Cargo.
-- Tomato Sauce - Used in a wide selection of recipes, obtained by grinding tomatoes with a pestle.
-
+- Tomato Sauce - Used in a wide selection of recipes, obtained by either grinding tomatoes up on a grinder, or by mushing them with a mortar & pestle.
 
 ## Miscellaneous
 
