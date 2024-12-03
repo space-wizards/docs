@@ -53,14 +53,16 @@ This will include the new machines and their purpose, as well as the new kitchen
 ### New Amenities
 
 - Barbecue Grill - Portable grill variant, can only be obtained from Cargo.
+- Cheese Grater - Used to grate cheese.
+- Cheese Press - Used to turn milk into cheese.
+- Cooking Tray - Used for bakery.
+- Mortar & Pestle - Used to grind various ingredients.
 - Oil Barrel - Stores vegetable oil, more can be bought from Cargo.
 - Oil Tray - Used to transport oil from the barrel to the fryer.
-- Cooking Tray - Used for bakery.
+- Steel Pan - Used for Pancakes.
 - Steel Pot - Used for boiling and cooking.
-- Steel Pan - Used for Pancakes and Tortillas.
 - Steel Tongs - Used to flip meat.
-- Mortar & Pestle - Used to grind various ingredients.
-- Waffle Maker - Used to press dough into a waffle shape.
+- Waffle Maker - Used to press batches into a waffle shape.
 
 ### Table of What-Cooks-What
 
@@ -71,6 +73,7 @@ This will include the new machines and their purpose, as well as the new kitchen
 | *Burgers ||||||| Yes ||
 | Cakes | Yes ||||||||
 | Chilis || Yes |||||||
+| Cheese |||||||| Yes |
 | Cookies | Yes ||||||||
 | Donk Pockets |||||| Yes |||
 | Fries ||| Yes ||||||
@@ -97,24 +100,32 @@ This will include new ways to cook up existing dishes, as well as new ingredient
 
 ### New Procedures
 
-- Boiled Rice - First goes the pot, then goes the water, and lastly, the rice.
-- Breads - You are now able to shape the dough into different formats with a rolling pin to attain whatever kind you desire, these being: Baguette, Boule, Bun, Flatbread, Pasta, Pie Cover, Pie Crust, Pizza, White. Note that some doughs require added ingredients to be finalized.
+#### Entrées
+- Breads - You are now able to shape the dough into different formats with a rolling pin to obtain one of the listed types of bread, these being: Baguette, Boule, Bun, Flatbread, Pasta, Pie Cover, Pie Crust, Pizza, and White. Note that some doughs require added ingredients to be finalized.
+- Cheeses - You are now able to use a cheese press in order to obtain whatever kind of cheese you so desire, these kinds being: Brie, Cheddar, Feta, Gouda, Mozzarela, and Swiss.
+- Soups - Upon having a pot full of water, either add the listed recipe ingredients, or whichever others you prefer as soups also use a food sequence system.
+
+#### Main Dishes
 - Burgers - Burgers are now assembled outside any appliances with the use of the same food sequence system.
-- Cakes - Upon the initial mixture, you place the batch on a cooking tray, then after it's done baking you may add toppings up to your own discretion using a food sequence system. Can be cut into smaller portions once finished.
-- Chilis - Throw in olive oil, onions, and beef, then either add the listed recipe ingredients, or whichever others you prefer as chilis also use a food sequence system.
-- Cookies - Similar procedure to that of the cakes', except that instead of the batch going immediately into a cooking tray, you first pick up small bits of the cookie batch as to place them individually.
-- Fries - Chop up the potato into strips, then chuck them onto the fryer, simple as.
-- Ice Creams - Upon the listed mixture being complete and ready to eat, you may add toppings up to your own discretion using a food sequence system.
+- Chilis - Throw in olive oil, onions, and beef, then whichever remaining ingredients listed on the recipe.
 - Kebabs - Kebabs are now also assembled outside any appliances with the use of a food sequence system.
-- Pancakes - Upon the initial mixture, pour the batch on a pan, afterwards, you must wait until it's ready to be flipped. Can be cut into smaller portions once finished.
 - Pastas - Upon the initial dough batch it must be cut into the desired pasta type, afterwards just add whichever ingredients the recipe lists.
 - Patties - All burgers' dedicated meat, changes place with raw meats in the previous recipes, must be flipped with steel tongs.
-- Pies - Similar procedure to that of the pizzas, except with a differently shaped salted dough, upon filling up the interior with whichever ingredients the recipe lists you finish it off with an added sheet of pastry. Can be cut into smaller portions once finished.
-- Pizzas - First comes the dough, then the tomato sauce & cheese, and lastly whichever added ingredients you so prefer using a food sequence system similar to that of burgers'. Can be cut into smaller portions once finished.
-- Salads - Salads are now also assembled outside appliances.
-- Soups - Upon having a pot full of water, either add the listed recipe ingredients, or whichever others you prefer as soups also use a food sequence system.
+- Pizzas - First comes the dough, then the tomato sauce & grated cheese, and lastly whichever added ingredients you so prefer using a food sequence system similar to that of burgers'. Can be cut into smaller portions once finished.
+- Pies - Similar procedure to that of the pizzas', except with a differently shaped salted dough, upon filling up the interior with whichever ingredients the recipe lists you finish it off with an added sheet of pastry. Can be cut into smaller portions once finished.
 - Steaks - Now grilled, has to be flipped with steel tongs.
 - Tacos - Tacos are now also assembled outside any appliances with the use of a food sequence system.
+
+#### Side Dishes
+- Boiled Rice - First goes the pot, then goes the water, and lastly, the rice.
+- Fries - Chop up the potato into strips, then chuck them onto the fryer, simple as.
+- Salads - Salads are now also assembled outside appliances.
+
+#### Desserts
+- Cakes - Upon the initial mixture, you place the batch on a cooking tray, then after it's done baking you may add toppings up to your own discretion using a food sequence system. Can be cut into smaller portions once finished.
+- Cookies - Similar procedure to that of the cakes', except that instead of the batch going immediately into a cooking tray, you first pick up small bits of the cookie batch as to place them individually.
+- Ice Creams - Upon the listed mixture being complete and ready to eat, you may add toppings up to your own discretion using a food sequence system.
+- Pancakes - Upon the initial mixture, pour the batch on a pan, afterwards, you must wait until it's ready to be flipped. Can be cut into smaller portions once finished.
 - Waffles - Similar procedure to that of the pancakes', except that instead of the batch going into a pan it goes into the waffle maker, does not require flipping.
 
 ### New Ingredients
