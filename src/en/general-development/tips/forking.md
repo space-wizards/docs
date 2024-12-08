@@ -52,7 +52,7 @@ The AGPL and MPL licenses are "copyleft" licenses, meaning they require any modi
 
 The MPL only requires that files under the MPL license be released to users which makes it suitable for projects that include hidden content. Note that the MPL has an optional term called "Exhibit B". Code which is licensed under the MPL and the Exhibit B clause cannot be combined with code licensed under the AGPL.
 
-Remember that this document provides a very brief overview of the licenses discussed. You should read the license of any files/code you intend to include in it's entirety and consult a lawer if you have any questions.
+Remember that this document provides a very brief overview of the licenses discussed. You should read the license of any files/code you intend to include in it's entirety and consult a lawyer if you have any questions.
 
 ## Organization
 ### Put your code in dedicated server folders.
