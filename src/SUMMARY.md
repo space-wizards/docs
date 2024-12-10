@@ -187,6 +187,7 @@ Space Station 14
 		- [Departmental Economy](en/space-station-14/round-flow/proposals/departmental-economy.md)
 		- [Pizza Delivery Critter](en/space-station-14/round-flow/proposals/pizza-delivery-critter.md)
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
+		- [Time Agent](en/space-station-14/round-flow/proposals/time-agent.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
    		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		
