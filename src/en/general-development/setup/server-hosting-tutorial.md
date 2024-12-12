@@ -21,11 +21,18 @@ If you prefer video guides, here is one!
 
 {% embed youtube id="IDBqrAGZ3cA" loading="lazy" %}
 
-## Level 1: Invite Your Friends
+## Level 1: Invite Your Friends/Family
 
-You will need to do some extra steps if you want other people to be able to connect and play.
+If you are looking to let people from your *internal* network (connected to the same router as you).
 
-### Port Forwarding
+#### Getting your internal IP address (Windows)
+1. Open Windows Settings
+2. Click on "Network & Internet"
+3. Look for "IPV4 address". Thats your computers local IP. And what your family needs to enter in the direct connect menu to join.
+
+If you are looking to let people outside of your local internal network. You will need to do some extra steps to allow external connections.
+
+#### Port Forwarding
 
 The server needs network ports to be forwarded so that people can connect. By default, the game server uses two ports:
 * UDP `1212` is used for main game netcode. This is necessary for the *client* to be able to connect to the server. This can be configured with the `net.port` configuration variable.
