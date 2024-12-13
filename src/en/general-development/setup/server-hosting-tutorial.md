@@ -21,14 +21,14 @@ If you prefer video guides, here is one!
 
 {% embed youtube id="IDBqrAGZ3cA" loading="lazy" %}
 
-## Level 1: Invite Your Friends/Family
+## Level 1: Invite Your Friends
 
 If you are looking to let people from your *internal* network (connected to the same router as you).
 
 #### Getting your internal IP address (Windows)
-1. Open Windows Settings
+1. Open Windows Settings on the computer running the server.
 2. Click on "Network & Internet"
-3. Look for "IPV4 address". That's your computers local IP. And what people on your local network needs to enter into the direct connect menu to join.
+3. Look for "IPV4 address". That's your computers local IP. And what people on your local network need to enter into the direct connect menu to join.
 
 If you are looking to let people outside of your local internal network. You will need to do some extra steps to allow external connections.
 
