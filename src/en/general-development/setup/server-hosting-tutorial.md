@@ -28,7 +28,7 @@ If you are looking to let people from your *internal* network (connected to the 
 #### Getting your internal IP address (Windows)
 1. Open Windows Settings
 2. Click on "Network & Internet"
-3. Look for "IPV4 address". Thats your computers local IP. And what your family needs to enter in the direct connect menu to join.
+3. Look for "IPV4 address". That's your computers local IP. And what people on your local network needs to enter into the direct connect menu to join.
 
 If you are looking to let people outside of your local internal network. You will need to do some extra steps to allow external connections.
 
