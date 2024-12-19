@@ -86,6 +86,14 @@ X Head Revolutionaries made it to CentComm. [Green text if >0]
 ```
 
 ```
+Revolutionary-Crew Tie! [Green text]
+X% of Crew were converted to the Revolution. [Yellow text]
+X% of Command were converted to the Revolution. [Red text]
+0 Unconverted Command made it to CentComm. [Red text]
+0 Head Revolutionaries made it to CentComm. [Red text]
+```
+
+```
 Crew Minor Victory! [Green text]
 X% of Crew were converted to the Revolution. [Green text]
 X% of Command were converted to the Revolution. [Green text]
@@ -128,12 +136,12 @@ Unlike normal damage, LHP can only be dealt/healed to an individual who is alive
 
 Revolutionary codewords is the main way a Rev convert crew, and is the primary conversion method the gamemode is balanced around. When becoming a Revolutionary (Headrev or converted) you are provided with a number of codewords that when spoken deals LHP damage to anyone hearing it. These codewords are unique to each Headrev and are passed on to whatever Revolutionary they convert, and any further conversions down the chain get the same codewords passed on. 
 
-Codewords come in three levels; Low, Mid and High Conversion words, with **4** codewords given in each level.
+Codewords come in three levels; Low, Mid and High Conversion words, with **5** codewords given in each level.
   - Low Conversion words are meant to be easy to incorporate into normal speech. There should be so many possible low conversion words that can be rolled that it becomes effectively impossible to metagame. Examples: "love", "hello", "great", "hate".
   - Mid Conversion words deal a decent amount of LHP damage but can be noticed if one pays attention. These would be at the risk of metagaming due to being flavored towards revolutionary speech, so it would be on the rev player to incorporate them well into conversations. Examples: "disrupt", "rise up", "join".
   - High Conversion words are very clearly revolutionary and deal high LHP damage, *and is able to convert a crewmember in the Convertable state. They should be mostly useful when the revolution is in full swing, but risky for a non-convertable crewmember to overhear. Examples: "viva", "communism", "comrade".
 
-Dealing damage with codeword has a **10** second cooldown, to avoid simply spamming the codewords. Damage is also split among the crew who hear it, making speech directed to a single individual more effective at targeted conversion, while multiple Revolutionaries can shout it out to crowds without the conversion happening to fast.
+Dealing damage with codeword has a **10** second cooldown, to avoid simply spamming the codewords. Damage is also split among the crew who hear it, making speech directed to a single individual more effective at targeted conversion, while multiple Revolutionaries can shout it out to crowds without the conversion happening to fast. Using multiple codewords in one sentence does not do anything; it simply uses the highest-tier codeword instead.
 
 Codewords are proposed to deal the following damage:
   - Low: **10** LHP
@@ -142,9 +150,8 @@ Codewords are proposed to deal the following damage:
 
 Codewords are able to deal damage even when communicated across different mediums, however the conversion strength is reduced to compensate for how easy it may be to do so:
 
-- A Revolutionary speaking a codeword through a headset radio deals **0.25**x LHP damage.
-- Announcement messages with a codeword by a Revolutionary deals **0.5**x LHP damage, without being divided among the people hearing it.
-  - Announcement consoles would need to display the location of the console for this to not be infinitely abuseable.
+- A Revolutionary speaking a codeword through a headset radio deals **0.2**x LHP damage. (Note that crew passively heal LHP, as described in the Deconversion section)
+- The first time a Revolutionary uses the Announcement console to send a message with a codeword, it deals **1**x LHP damage, without being divided among the people hearing it. This is a one-time trigger.
 
 ### Deconversion
 
@@ -157,15 +164,17 @@ Methods of deconversion include:
   - Being in cuffs heals **0.5** LHP / second
   - Wearing an electro pack heals **0.5** LHP / second
 
-Loyal crew are also able to passively heal LHP at **0.1** LHP / second, though as this does not happen for Revolutionaries it can not be used for deconversion. This passive heal is disabled for 10 seconds upon taking LHP damage.
+Loyal crew are also able to passively heal LHP at **0.1** LHP / second, though as this does not happen for Revolutionaries it can not be used for deconversion. This passive heal is disabled for **10** seconds upon taking LHP damage.
 
 A deconverted Revolutionary can be reconverted again. If a Headrev is deconverted (>= 0 LHP) they lose their antag status, and being converted to the Revolution makes you a normal Revolutionary. 
 
 ### Death & LHP Damage
 
-Authoritarian regimes killing of protesting civilians causing further unrest, or freedom fighters getting a shock when they first murder someone, are concepts that are closely tied to a revolution. They are also ideas that would be suitable mechanically to combat murder sprees from either side during a Revolution round. 
+Authoritarian regimes killing of protesting civilians causing further unrest, or freedom fighters getting a shock when they first murder someone, are concepts that are closely tied to a revolution. They are also ideas that would be suitable mechanically to combat murder sprees from either side during a Revolution round. The following section is only relevant for crew and Revs; non-crew characters (pets, mobs) and other antags (traitors, Nukies) do not interact with the following mechanic.
 
-If a Revolutionary dies by the hand of a crewmember (the crewmember dealt the damage putting them in a critical state), they will deal 15 non-split LHP damage in a **8** tile line-of-sight radius around their body. While remaining dead they will also provide a passive **-0.1** LHP / second in a **4** tile line-of-sight radius. Crew death works in the same way and with the same values but in reverse, healing LHP upon death when killed by a revolutionary. The initial burst of LHP damage when a Revolutionary dies is able to convert crew in a Convertable state. The initial burst also has a **120** second cooldown, to avoid repeatedly reviving and killing the same person twice to trigger the effect. 
+If a Revolutionary *or crewmember* dies by the hand of another crewmember (being dealt the damage that put them in a critical state), they will deal **15** non-split LHP in a **8** tile line-of-sight radius around their body. While remaining dead they will also provide a passive **-0.1** LHP / second in a **4** tile line-of-sight radius. This works in the same way but in reverse if a Revolutionary performs the kill, healing LHP upon death when killed by a Revolutionary/Crewmember. The initial burst also has a **120** second cooldown, to avoid repeatedly reviving and killing the same person twice to trigger the effect. This means both sides are discouraged from indiscriminately killing, favoring limited killing and kidnapping. 
+
+If the death of a *Revolutionary* is at the hand of a *crewmember*, the initial burst of LHP damage is able to convert. This is not true for the death of a crewmember by the hand of a crewmember (otherwise large-scale death in other gamemodes could risk spawning Revolutionaries without any headrev). 
 
 Being converted/deconverted by a character dying displays a special conversion message, to indicate it was the reason for being converted/deconverted.
 
@@ -177,14 +186,13 @@ Mindshield implants are a way to add extra safety for vital station personnel. T
 
 Command and Security are the only roles that have mindshields roundstart.
 
-- A mindshield gives its owner a "shield" with **100** LHP. The mindshield absorbs any CHP damage dealt to the owner and takes it instead.
-- If the mindshield reaches 0 LHP, it breaks and is removed from its owner.
-- The shield slowly regains LHP on its own, at **0.2** LHP / second.
+- A mindshield gives its owner a "shield" with **100** LHP. The mindshield absorbs any LHP damage dealt to the owner and takes it instead.
+- The shield slowly regains LHP on its own, at **0.2** LHP / second. This functionality does not work when converted to the Revolution. 
 - Having a mindshield does not change Revolutionary status or antag faction; a Revolutionary can be mindshielded and still belong to the Revolution.
+- A newly injected mindshield always has full LHP, regardless of Revolutionary status.
+- Mindshields can be removed, much like any other implant. The exceptions for this is the Captain and ERT/CentComm, who have unremovable mindshields (however due to being unconvertable, this is mostly just flavor). 
 
-Mindshields only protects the owner from LHP *damage*. Someone with a mindshield can still be healed.
-
-New mindshields are able to be purchased from Cargo at a reasonable price. One possible suggestion would be 4 implanters for $3000.
+New mindshields are able to be purchased from Cargo at a reasonable price. One possible suggestion would be 4 implanters for $8000.
 
 ## Revolutionary Items
 
@@ -197,16 +205,17 @@ To assist in the revolution, Revolutionaries have access to a multitude of items
 - This is a fashion accessory accessible to all crew, however when worn by a Revolutionary their codewords deal 1.5x more LHP damage.
 
 **Revolutionary posters**
-- Crew can print rolled posters from autolathes using cloth.
-- These posters are randomized when printed, and can result in loyal, neutral or revolutionary posters. Examining a rolled poster gives its name and allegiance.
+- Crew can print rolled posters from autolathes using cloth. This feature is available regardless of roundtype.
+- These posters are the same posters that spawn on stations roundstart. 
+- Posters are randomized when printed, and can result in loyal, neutral or revolutionary posters. Examining a rolled poster gives its name and allegiance.
 - Revolutionary posters have a **4** tile radius of influence when put up (requires line of sight).
   - When inside this radius, you take **0.25** LHP damage / second (to a max of **4** stacks).
   - When inside this radius, codewords deal **1.25**x more damage (does not stack with itself).
 - Loyal posters also have a **4** tile radius of influence when put up (requires line of sight).
   - When inside this radius, you heal **0.25** LHP damage / second (to a max of **4** stacks).
   - When inside this radius, codewords deal **0.5**x damage (does not stack with itself).
-- Posters can be taken down, and if recycled gives back some cloth
-- Destroying a poster that is up heals **10** LHP if it's a Revolutionary poster, or deals **10** LHP if it's a Loyal poster.
+- Posters can be taken down, and if recycled gives back some cloth.
+- Destroying a poster that is rolled up on a wall heals **5** LHP if it's a Revolutionary poster, or deals **10** LHP if it's a Loyal poster.
 
 ### Dead Drop Duffelbag / The Revolutionaries Uplink 
 
@@ -229,11 +238,11 @@ These percentages *could* be made lower for a solo mid-round Revolutionary, or t
 
 ### Dead Drop Items
 
-This list is not exhaustive and more items could be added in the future, and some items listed may end up not working in actual gameplay and will have to be removed.
+This list is not exhaustive and more items could be added in the future, and some items listed may end up not working in actual gameplay and will have to be removed. Because of this they might be a bit wacky, playtesting is paramount.
 
 #### Tier 1
 Tier 1 items should be designed to help the revolution grow in a stealthy way or give them a temporary bump in effectiveness, in ways that don't involve combat.
-- The Classic: A **2**-use flash that deals massive conversion damage and can convert.
+- The Original: A **2**-use flash that deals massive conversion damage and can convert.
 - Revolutionary Poster Blueprint: Allows producing rev posters directly, for a cheaper cost.
 - Expanded Reading: Unlocks **4** revolutionary codewords in each category.
 - How 2 Hug: After reading this book, hugging someone deals **10** LHP damage at a **10** second cooldown.
