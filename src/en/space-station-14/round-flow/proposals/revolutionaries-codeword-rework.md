@@ -53,7 +53,7 @@ The Revolutionary antag begins either as a 2-4 roundstart antag roll for the Rev
 
 Revolutionary antags that start out this way are considered Head Revolutionaries (HeadRevs). A Head Revolutionary has the duty to begin the conversion of other crew and have some extra tools at their disposal to strengthen the progression of the antag faction, but they are not strictly necessary for the revolution antags to succeed. The goal for Head Revolutionaries is to convert crew to grow the faction's strength, convert department Heads and survive until the evacuation shuttle without being deconverted. 
 
-Head Revolutionaries share the same team and when they are given the role they obtain the names and jobs of the other Head Revolutionaries on the station. Revolutionaries can be identified by other revolutionaries via an icon next to their character, however Head Revs do not have a unique icon.
+Head Revolutionaries share the same team and when they are given the role they obtain the names and jobs of the other Head Revolutionaries on the station. Revolutionaries can be identified by other Revolutionaries via an icon next to their character; Head Revs have a unique icon that is only visible to other Head Revs, though to regular Revolutionaries they do not have a unique icon and appear as normal Revolutionaries.
 
 For crew, the goal is to deconvert revolutionary converts, protect Heads from being converted, and ensure Head Revs are discovered and/or do not make it onto the evacuation shuttle. 
 
@@ -108,7 +108,7 @@ All Revolutionaries were killed or deconverted! [Red text]
 
 ## Conversion
 
-Conversion is how the Revolutionary antag faction grows, and is a *requirement* to obtain Revolutionary Major Victory. To convert a crewmember they must be interacted with by a Revolutionary over time, and once a critera is met they can be converted to the Revolution. Crew are also able to de-convert Revolutionaries. Conversion is not restricted to Headrevs, though they have access to certain tools that benefit them in this regard.
+Conversion is how the Revolutionary antag faction grows, and is a *requirement* to obtain Revolutionary Major Victory. To convert a crewmember they must be interacted with by a Revolutionary over time, and once a era is met they can be converted to the Revolution. Crew are also able to de-convert Revolutionaries. Conversion is not restricted to Headrevs, though they have access to certain tools that benefit them in this regard.
 
 To represent the convertable state a crewmember is in and the faction they belong to, there is now a hidden nummerical stat called Loyalty Health Points (LHP). 
 
@@ -130,7 +130,7 @@ Headrevs are unique in that they have a LHP range between **-500** and 100 LHP. 
 
 The Captain is also unique in that they always have 100 LHP and can never go below this. This makes the Captain unconvertable to the Revolution, and they are the only Command on the station with this property. CentComm agents and other Admeme should be similarly unconvertable by default.
 
-Unlike normal damage, LHP can only be dealt/healed to an individual who is alive and not in crit. 
+Unlike normal damage, LHP can only be dealt/healed to an individual who is conscious (i.e. awake, alive and not in crit). 
 
 ### Revolutionary Codewords & LHP Damage
 
