@@ -52,8 +52,6 @@ When a Cyborg appears on the station, it is automatically bound to the station's
 
 A player may bind an unbound Cyborg to the station AI by accessing a wire panel inside of the Cyborg's maintenance panel. By pulsing the correct wire with a multitool, the unbound Cyborg will become bound to the station AI, having all of its current laws erased and replaced with the laws of the AI. If some mechanic prevents a Cyborg from being able to be bound to an AI, pulsing the correct wire with the multitool should simply do nothing.
 
-Cyborgs bound to an AI should also function as mobile, audio-equipped cameras. If a bound Cyborg is present in an area without AI camera coverage, the AI should be able to see and hear the area as if the Cyborg itself is a camera. This may function as one way that an AI is able to determine if a Cyborg is not bound to it.
-
 ## AI: Arbiter of Lawsets
 
 Should any law interpretation-related conflicts arise between an AI and one of its bound Cyborgs, the AI's opinion should take precedence. A refusal to bend to an AI's interpretation of the laws should be considered an indication that the Cyborg is unbound. This should ensure that the AI and its bound Cyborgs are always acting co-operatively in pursuit of common goals rather than antagonistically towards each other, increasing the influence of Silicon players on the station through unity of purpose.
