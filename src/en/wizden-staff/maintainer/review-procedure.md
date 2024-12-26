@@ -1,6 +1,7 @@
 # PR Review Procedure
-This does not apply to rule change or server config change PRs from the Head Game Admins. In an emergency these requirements may be waived with written permission from a Project Manager (either on Github, Discord or the SS14 forums).
-Not following this procedure/policy will result in disiplinary action being taken.
+
+This documents lists the Maintainer procedure for reviewing and merging PRs to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14). 
+
 ## Requirements
 - All PRs **should** adhere to the [code conventions](../../general-development/codebase-info/conventions.md), but this is *not* a hard requirement since some specific usecases may require straying from convention for readability.
 - PRs **should** be triaged, as per the [triage procedure](triage-procedure.md) guidelines. If a PR is not triaged, this can be done at the same time as the PR is initially considered for review.
@@ -11,6 +12,14 @@ Not following this procedure/policy will result in disiplinary action being take
   - In the case where there's dissent among maintainers, e.g. 2 Approvals and 1 Disapproval, a Maintainer Discussion should be held as described under the Policy section.
   - You do not need to be one of the two Maintainers who have given Approval/Disapproval to merge/close the PR. Ideally a PR should be processed once it meets the requirements to be merged/closed, but if that does not happen for some reason, any other Maintainer is free to do it (even if that Maintainer is the PR author).
 - PRs that have more than 3 weeks of inactivity waiting on something from the PR author should be considered "stale" and labeled as such with the `S: Stale` label, unless another reason explains the inactivity (e.g. freeze or author has informed about a longer break). You may use any means to contact the author of the PR, but at the minimum you should leave a comment on the PR and give at least 1 week to respond before closing a stale PR. A PR that is waiting on an action from Maintainers (e.g. a code review or discussion resolution) is not eligible to be marked as stale.
+
+### Exemptions:
+- PMs and Wizards may waive any PR Review Procedure requirements if deemed necessary for the health of the project. When doing so, it should be done via written permission with an explanation (either on Github, Discord or the SS14 forums). Note that this exemption is not the default for actions taken by the relevant roles, and should be explicitly invoked when used.
+- Maintainer Maptainers (i.e. Maintainers with additional responsibilities regarding Mapping) may ignore the "2 Maintainer" requirements for merging/closing any PRs involve mapping changes. This means a only single Maintainer Maptainer is needed to approve and merge mapping PRs, and also are able to self-merge mapping PRs.
+  - Map tooling PRs are not included in this exemption.
+  - Map hotfix PRs are not included in this exemption and must still follow normal hotfix procedure.
+- Rule change PRs and server config change PRs submitted by (or with written approval from) a Head Game Admin do not need to adhere to the PR Review Procedure.
+
 ## Policy
 - When starting a new review for a PR that has not yet been assigned to a Maintainer, you are **required** to Assign yourself to the PR. This can be done under "Assignees" in the Github sidebar. This let others know that you will be "owning" the PR. If you decide to stop owning the PR, un-assign yourself so that others may take over the PR. By owning a PR you are taking responsibility for keeping track of the PR's progress, ensuring code quality and keeping the PR author informed of what is the status of the review process. If you are the PR author yourself, you may not also be the PR owner. Anyone may review an owned PR. *If changes are Approved/Disapproved by the PR owner any Maintainer may merge the PR if they also Approve/Disapprove the changes, provided there is no other Maintainer dissent.*
 
@@ -30,6 +39,8 @@ Not following this procedure/policy will result in disiplinary action being take
 - When reviewing code, always assume that the contributor may not have your knowledge of the codebase, and provide a short explanation or reason with your review comments. You shouldn't need to code for them, but pointing them in the right direction to learn more helps build a more robust contributor base. Sometimes a newer contributor may need more help, in that case direct them to #HowDoICode or the docs. But ideally you should try to give them a short explaination on what they need to do rather than just a "change this".
 
 - Any PR that is made for illegitimate reasons, such as abuse, spam or harrassment, may be closed without following the Policy as long as a PM has given written permission, as per the procedures set out in the Requirements section.
+
+- Not following the procedure/policy outlined in this document will result in disiplinary action being taken, at the discretion of SS14's Wizard team.
 
 ## Issues & Reviews
 While Issues do not have any code to review, they may still contain suggestions and feature proposals that would benefit from a Maintainer Discussion.
