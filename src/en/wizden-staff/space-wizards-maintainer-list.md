@@ -8,7 +8,6 @@ The format is as follows
 **Github - @Discord (Discord ID)**
 
 Both Engine and Content Maintainers:
-- [Jezithyr](https://github.com/Jezithyr) - @jezithyr (107689319396831232)
 - [Mervill](https://github.com/Mervill) - @mervill (153632198845661184)
 - [ZoldorfTheWizard](https://github.com/ZoldorfTheWizard) - @zoldorf (140921734109855744)
 - [PJB3005](https://github.com/PJB3005) - @pjb (97089048065097728)
@@ -33,7 +32,6 @@ Content Maintainers:
 - [ficcialfaint](https://github.com/ficcialfaint) - @ficcialfaint (481532274211422209)
 - [chromiumboy](https://github.com/chromiumboy) - @chromiumboy (395222876753625088)
 - [TemporalOroboros](https://github.com/TemporalOroboros) - @the_quiet_one (423542163503185942)
-- [Flareguy](https://github.com/Flareguy) - @flar3guy (310216766192091156)
 - [TheShuEd](https://github.com/TheShuEd) - @eshhhed (267327466060775425)
 - [slarticodefast](https://github.com/slarticodefast) - @sebseb5071 (578191477839101967)
 - [UbaserB](https://github.com/UbaserB) - @ubaser (578881480386805771)
