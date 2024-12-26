@@ -40,7 +40,7 @@ This documents lists the Maintainer procedure for reviewing and merging PRs to t
 
 - Any PR that is made for illegitimate reasons, such as abuse, spam or harrassment, may be closed without following the Policy as long as a PM has given written permission, as per the procedures set out in the Requirements section.
 
-- Not following the procedure/policy outlined in this document will result in disiplinary action being taken, at the discretion of SS14's Wizard team.
+- Not following the procedure/policy outlined in this document will result in disiplinary action being taken, at the discretion of the SS14 Wizard team.
 
 ## Issues & Reviews
 While Issues do not have any code to review, they may still contain suggestions and feature proposals that would benefit from a Maintainer Discussion.
