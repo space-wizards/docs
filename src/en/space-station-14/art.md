@@ -195,7 +195,7 @@ Either respriting to a smaller size or using technical elements that preserve th
 
 ### Licensing
 * the `meta.json` file requires the author to supply both a license and a copyright.
-The copyright is simply the provenance of the art within the file, specifying the specific codebase and commit that the asset was taken from.
+The copyright is simply the provenance of the art within the file, specifying the specific codebase and commit that the asset was taken from. For new assets originating in this codebase, the PR where they are introduced should be listed (to make it easier for other projects to find the source, for their own attribution reference).
 The license is a specific copyright license used for assets.
 
 
