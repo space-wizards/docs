@@ -20,8 +20,6 @@ entities | with Item | count
 ```
 This is three commands, `entities`, `with`, and `count`. They together form a **command run**, a set of successive commands. In this case, the combined effect is to return the total number of entities that have the `ItemComponent`.
 
-For a description of some commonly useful commands, see the [commands section](./toolshed/commands.md). For some examples of how to string toolshead commands together see [toolshead examples](./toolshed/toolshed-examples.md)
-
 ## Explain 
 
 You can use the `explain` command to provide information about a command run's flow. It's highly recommended you `explain` command runs you don't understand to get an idea of their flow. It will break any valid command run into its constituent commands, and for each command it will provide:
@@ -62,9 +60,9 @@ count - Counts the amount of entries in it's input, returning an integer.
 Usage:
   <input (IEnumerable<T>)> → count → Int32
 ```
-Note that the type of the piped "input" argument here is `IEnumerable<T>`, unlike in the `explain` example, which used the type specific to the command run that was being explained(`IEnumerable<EntityUid>`).
+Note that the type of the piped "input" argument here is `IEnumerable<T>`, unlike in the `explain` example, which used the type specific to the command run that was being explained (`IEnumerable<EntityUid>`).
 
-The syntax of the piped and command arguments is `<Name (Type)>`. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`).
+The syntax of the piped and command arguments is `<Name (Type)>`, where the argument name and are taken from the C# method associated with that command. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`).
 
 If a command has more than one valid signature, the help command will list all of them. For example, the `with` command that was used in the previous section can take in either an entity or an entity prototype:
 
@@ -79,7 +77,7 @@ Usage:
   <input (IEnumerable<ProtoId<T>>)> → [not] with <protoId (ProtoId<T>)> → IEnumerable<ProtoId<T>>
 ```
 
-As the previous example explains, some commands can be given an optional "not" prefix to invert their behaviour. So if we wanted to get a count of all entities that do not have an item component, we could use `entities not with Item count`.
+As the above example explains, some commands can be given an optional "not" prefix to invert their behaviour. So if we wanted to get a count of all entities that do not have an item component, we could use `entities not with Item count`.
 
 
 ## Subcommands
@@ -95,7 +93,9 @@ Currently, this is mainly an organisational convention. For users, subcommands b
 
 ## Common commands
 
-This section briefly describes some simple commands that are commonly used to help construct more complex **command runs**.
+This section briefly describes some simple commands that are commonly used to help construct more complex **command runs**. These may be used throughout the docs when providing examples for how to use other commands.
+
+For a description of some other commonly useful commands, see the [commands section](./toolshed/commands.md). For some examples of how to string toolshead commands together see [toolshead examples](./toolshed/toolshed-examples.md)
 
 ### Constants
 
@@ -109,7 +109,7 @@ These commands are often used at the start of a **command run** to provide some 
 
 
 ### Maths
-Toolshed supports many kinds of math operations, including:
+Toolshed supports many kinds of math operations, including, but not limited to:
 * Simple operations: `+`, `-`, `\*`, `/`, `%`
 * Common functions: `sin`, `abs`,`min`, `pow`, `ceil`, etc.
 * Vector operations (i.e., multiplying a list by a number): `+/`, `-/`, `\*/`, `//`, `%/`
@@ -117,7 +117,7 @@ Toolshed supports many kinds of math operations, including:
  
 ### Ranges & Sequences
 
-There are a few commands that are useful for creating or manipulatiting lists/sequences:
+There are a few commands that are useful for creating or manipulating lists/sequences:
 * `count` returns the total number of items in a sequence
 * `to` is used to create a range of numbers. E.g., `i 3 to 5` returns `[3,4,5]`
 * `iota` is used to create a range of numbers up to some value. E.g., `i 3 iota` returns `[1, 2, 3]`.
