@@ -26,7 +26,7 @@ Will check if the entity has the "Mindshield" component and add it if needed, th
 
 ### Targeting yourself
 
-`self` will always return the entity currently controlled by you.
+The `self` command will always return the entity currently controlled by you. Alternatively, you can also use the `$self` variable.
 
 ```
 > self rejuvenate / Will heal your character
@@ -99,9 +99,9 @@ actor:controlled
 Takes in a list of entities and will return all entities that are currently controlled by a player.
 
 ```
-> entities actor:controlled tp:to self
+> entities actor:controlled tp:to $self
 ```
-`self` can also be used as an argument - this will teleport all players to your location.
+Above, the `$self` variable is being used as a command argument - this will teleport all players to your location.
 
 ```
 select [N]
@@ -115,7 +115,7 @@ Takes in a list of entities and will select a percentage of the input.
 
 Combining filters together we can do as follows:
 ```
-> entities actor:controlled select 5 tp:to self
+> entities actor:controlled select 5 tp:to $self
 ```
 Will teleport 5 randomly selected players to the entity you are currently controlling.
 
