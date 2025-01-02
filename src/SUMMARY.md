@@ -75,7 +75,7 @@ Robust Toolbox
   - [Blocks](en/robust-toolbox/toolshed/blocks.md)
   - [Types](en/robust-toolbox/toolshed/types.md)
   - [Commands](en/robust-toolbox/toolshed/commands.md)
-    - [Emplace](en/robust-toolbox/toolshed/commands/emplace.md)
+    - [Emplace & Do](en/robust-toolbox/toolshed/commands/emplace.md)
     - [Entities](en/robust-toolbox/toolshed/commands/entity-control.md)
     - [General](en/robust-toolbox/toolshed/commands/general.md)
     - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
