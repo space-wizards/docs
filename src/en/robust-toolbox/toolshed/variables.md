@@ -50,3 +50,7 @@ As toolshed is a strongly typed, parsing a valid command run requires knowing th
 > val int $x * 2
 6
 ```
+
+## `$marked` Variable
+
+Variables don't necessarily need to be set via `=>` or other toolshed commands, and could be getting set by other systems. For example, in SS14 there is a "mark" admin verb that assigns an entity to the `$marked` toolshed variable, which also has a dedicated `marked` command for reading out its contents. Though in this case the verb & command are mainly just there for convenience.

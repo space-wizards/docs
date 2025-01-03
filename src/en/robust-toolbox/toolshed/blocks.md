@@ -22,6 +22,7 @@ Usage:
 This command is particularly useful if another command only takes in a single `TIn` and has no `IEnumerable<TIn>` support. For example, this command doubles then increments all values in a sequence using a command block that only takes in a single integer at a time:
 ```
 > i 1 to 4 map { * 2 + 1 }
+
 3,
 5,
 7,
@@ -45,4 +46,4 @@ var $mobs sortby { allcomps count } first => $destination
 var $mobs tp:to $destination
 ```
 
-Some commands that require blocks may also define block-local variables. I.e., variables that are only defined within the block, and that are often read-only. For examples, see the [Emplace command](./commands/emplace.md).
+Some commands that require blocks may also define block-local variables. I.e., variables that are only defined within the block, and that are often read-only. For an example, see the [Emplace command](./commands/emplace.md).

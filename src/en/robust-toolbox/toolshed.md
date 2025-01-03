@@ -20,12 +20,88 @@ entities | with Item | count
 ```
 This is three commands, `entities`, `with`, and `count`. They together form a **command run**, a set of successive commands. In this case, the combined effect is to return the total number of entities that have the `ItemComponent`.
 
+
+```admonish warning
+For convenience some of the examples used throughout the documentation may use types or commands that are specific to SS14 (e.g., ItemComponent), even though Toolshed is a part of RobustToolbox and not tied to SS14.
+```
+
+
+## Subcommands
+
+Some commands are grouped together into a "command" with "subcommands". These are just collections of related commands whose names consist of two parts separated by a colon, the command name, and the subcommand name. E.g., there are commands for adding, removing, ensuring, and checking for components, and these are all grouped together as part of the "comp" command:
+* `comp:get`
+* `comp:has`
+* `comp:add`
+* `comp:rm`
+* `comp:ensure`
+
+Currently, this is mainly an organisational convention. For users, subcommands behave just like regular commands. They have no special relationship to each other, and the "comp" command doesn't actually exist.
+
+## Help
+
+The `help` command can be used to show the description and generic signatures of commands. For example:
+```
+> help count
+
+count - Counts the amount of entries in it's input, returning an integer.
+Usage:
+  <input (IEnumerable<T>)> → count → Int32
+```
+
+The usage block shows the syntax for all implementations of that command. In this case there is only one. The usage syntax consists of up to three parts per implementation:
+* The name and type of the piped input argument. Here this is the `<input (IEnumerable<T>)> → ` part. This is omitted if there is no piped input.
+* The command itself, with any prefixes & arguments . As the count command has no arguments, here this is just `count`.
+* The type of the output that can be piped into other commands. Here this is the `→ Int32` part. This is ommited if the command doesn't return anything.
+
+The syntax of the piped and command arguments is `<Name (Type)>`, where the argument name and type are taken from the C# method associated with that command. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`).
+
+For a a more complicated example lets examine the `with` command that was used in the previous section. It can take in either an entity or an entity prototype, so it has multiple implementations. It also requires one argument and supports prefixes:
+
+```
+> help with
+
+with - Filters the input entities by whether or not they have the given component.
+The behaviour of this command can be inverted using the "not" prefix.
+Usage:
+  <input (IEnumerable<EntityUid>)> → [not] with <component (Type)> → IEnumerable<EntityUid>
+  <input (IEnumerable<EntityPrototype>)> → [not] with <component (Type)> → IEnumerable<EntityPrototype>
+  <input (IEnumerable<ProtoId<T>>)> → [not] with <protoId (ProtoId<T>)> → IEnumerable<ProtoId<T>>
+```
+
+The syntax of each command arguments is `<Name (Type)>`, where the argument name and type are taken from the C# method associated with that implementation. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`). Note that in general each implementation can have different numbers and types of arguments, though in this case each implementation has exactly one argument.
+
+As the above help output explains, the `with` command can be given an optional "not" prefix to invert its behaviour. So if we wanted to get a count of all entities that do not have an item component, we could use `entities not with Item count`. If a command supports prefixes, the help page should say so.
+
+### Argument names
+
+The name of an argument in the command's syntax can also help resolve some ambiguities about the order in which arguments should be specified. For example, the `tp:to` command teleports one entity to another. If you were unsure about whether the destination entity is the piped input or the first argument, you can check the name of the argument printed by the help command.
+
+```
+> help tp:to
+
+tp:to - Teleports the given entities to the target entity.
+Usage:
+  <teleporter (EntityUid)> → tp:to <target (EntityUid)> → EntityUid
+  <teleporters (IEnumerable<EntityUid>)> → tp:to <target (EntityUid)> → IEnumerable<EntityUid> 
+```
+
+```admonish warning
+Note that using the c# argument names to auto-generate help strings is relatively new, and some commands may have badly named arguments.
+```
+
+
 ## Explain 
 
 You can use the `explain` command to provide information about a command run's flow. It's highly recommended you `explain` command runs you don't understand to get an idea of their flow. It will break any valid command run into its constituent commands, and for each command it will provide:
-- A short description of the command
-- The command's signature, including argument names & types
-- The specific input and output types in the context of the given command run.
+* A short description of the command
+* The specific input and output types in the context of the given command run.
+* The command's signature, including the **name** and type of any parsed arguments.
+
+```admonish warning
+Note that the explain command only works on **valid** commands. It can't be used to troubleshoot invalid commands. If you are unsure about how to use a command, maybe use the `help` command instead.
+```
+
+The generated explanation can be useful for understanding how each command in a run transforms the data being piped around, and the command signature hopefully makes it clearer what each argument does. For example, explaining the command from the previous section yields:
 
 ```
 > explain entities with Item count
@@ -49,51 +125,11 @@ Signature:
   <input> → count
 ```
 
-## Help
-
-
-The `help` command can be used to show the description and generic signatures of commands. For example:
-```
-> help count
-
-count - Counts the amount of entries in it's input, returning an integer.
-Usage:
-  <input (IEnumerable<T>)> → count → Int32
-```
-Note that the type of the piped "input" argument here is `IEnumerable<T>`, unlike in the `explain` example, which used the type specific to the command run that was being explained (`IEnumerable<EntityUid>`).
-
-The syntax of the piped and command arguments is `<Name (Type)>`, where the argument name and are taken from the C# method associated with that command. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`).
-
-If a command has more than one valid signature, the help command will list all of them. For example, the `with` command that was used in the previous section can take in either an entity or an entity prototype:
-
-```
-> help with
-
-with - Filters the input entities by whether or not they have the given component.
-The behaviour of this command can be inverted using the "not" prefix.
-Usage:
-  <input (IEnumerable<EntityUid>)> → [not] with <component (Type)> → IEnumerable<EntityUid>
-  <input (IEnumerable<EntityPrototype>)> → [not] with <component (Type)> → IEnumerable<EntityPrototype>
-  <input (IEnumerable<ProtoId<T>>)> → [not] with <protoId (ProtoId<T>)> → IEnumerable<ProtoId<T>>
-```
-
-As the above example explains, some commands can be given an optional "not" prefix to invert their behaviour. So if we wanted to get a count of all entities that do not have an item component, we could use `entities not with Item count`.
-
-
-## Subcommands
-
-Some commands are just groups of "subcommands". These are collections of related commands whose names consist of two parts separated by a colon, the command name, and the subcommand name. E.g., there are commands for adding, removing, ensuring, and checking for components, and these are all grouped together as part of the "comp" command:
-* `comp:get`
-* `comp:has`
-* `comp:add`
-* `comp:rm`
-* `comp:ensure`
-
-Currently, this is mainly an organisational convention. For users, subcommands behave just like regular commands. 
+Note that here the type of the piped input argument for the count command is `IEnumerable<EntityUid>`, unlike in the `help` example, which used generic type (`IEnumerable<T>`). The explain command will only ever show the type and syntax for the concrete command implementation that is relevant to the command run that is being explained.
 
 ## Common commands
 
-This section briefly describes some simple commands that are commonly used to help construct more complex **command runs**. These may be used throughout the docs when providing examples for how to use other commands.
+This section briefly describes some simple commands that are commonly used to help construct more complex command runs. These may be used throughout the docs when providing examples for how to use other commands.
 
 For a description of some other commonly useful commands, see the [commands section](./toolshed/commands.md). For some examples of how to string toolshead commands together see [toolshead examples](./toolshed/toolshed-examples.md)
 
@@ -146,7 +182,7 @@ Before toolshed will attempt to execute a command run, it first has to successfu
 Toolshed often spits out lengthy stacktraces upon a command being used incorrectly. But typically there is a clearer error message above the stacktrace in your console, though you may have to scroll up to see it.
 ```
 
-For example, in one of the earlier examples, there is a `with` command that expects either an EntityUid or Prototype piped input . If we instead give it an integer it will inform us that there is no `with` command that takes in that type:
+For example, in one of the earlier examples, there is a `with` command that expects either an EntityUid or Prototype input. If we instead give it an integer it will inform us that there is no `with` command that takes in that type:
 
 ```
 > entities count with Items
@@ -174,5 +210,15 @@ Accepted types: 'IEnumerable<EntityUid>','IEnumerable<EntityPrototype>','IEnumer
    at Robust.Server.BaseServer.MainLoop()
 ```
 
+## Searching for commands
+
+You can combine the `cmd:list` to get a list of all commands. You can then combine this with the `search` commands to search through this list for a command you are trying to find. E.g.,
+```
+cmd:list search "awn"
+
+spawn:at,
+spawn:on,
+spawn:attached
+```
 
 
