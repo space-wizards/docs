@@ -10,7 +10,7 @@ The `Client` project in both Robust and SS14 contains client-specific code, like
 
 The `Server` project contains server-specific code that no specific client should be able to interact with, like atmospherics or botany. This assembly is only located on the game server.
 
-The `Shared` project contains shared code that can be used by the client or the server. This assembly is not executable, and it relies on the client or server to call functions in it or use data classes located within it. The purpose of shared is to allow for network prediction (where the client and server run the same code, to make things smoother) as well as to specify shared data classes, like network messages, so that the client and server can speak to eachother effectively.
+The `Shared` project contains shared code that can be used by the client or the server. This assembly is not executable, and it relies on the client or server to call functions in it or use data classes located within it. The purpose of shared is to allow for network prediction (where the client and server run the same code, to make things smoother) as well as to specify shared data classes, like network messages, so that the client and server can speak to each other effectively.
 
 Shared code is only allowed to access other shared code, not client or server code. However, client and server code are always allowed to access shared code.
 

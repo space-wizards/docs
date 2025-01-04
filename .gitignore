@@ -4,3 +4,6 @@ book
 # editor files
 .*~
 *.swp
+
+# VSCodium files
+.vscode/

@@ -17,9 +17,11 @@ command = "mdbook-admonish"
 [preprocessor.template]
 before = ["mermaid","admonish","emojicodes"] # templates can include these so we run this first
 
+[preprocessor.embedify]
+
 [output.html]
 additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js', 'scripts/nav-additions.js']
-additional-css = ['theme/mdbook-admonish.css', 'theme/ss14.css', 'theme/nav-style.css']
+additional-css = ['theme/compiled/ss14.css']
 default-theme = "navy"
 preferred-dark-theme = "navy"
 

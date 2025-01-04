@@ -2,7 +2,7 @@ Work Groups
 =====================
 Work-groups are effectively the design equivalent to Code-Owners. Each work group is made up from maintainers that volunteer to upkeep the documentation and guidelines related to that area of the game. If you have a question about something related to one of the department/game areas feel free to message a member of its work group to get an authoritative answer.
 
-Each work group is responsible for maintaining corresponding design and pr guidelines documents in the docs repo that outlines the current and intended design for that game area, along with what is acceptible design/quality for a PR in that game area. Maintainers that are not part of any work groups are generalists, and while they might not be fully up to date with the design of a game-area they can still help answer questions.
+Each work group is responsible for maintaining corresponding design and pr guidelines documents in the docs repo that outlines the current and intended design for that game area, along with what is acceptable design/quality for a PR in that game area. Maintainers that are not part of any work groups are generalists, and while they might not be fully up to date with the design of a game-area they can still help answer questions.
 
 
 ## Current Work Groups

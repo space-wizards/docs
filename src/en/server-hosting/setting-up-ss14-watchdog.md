@@ -57,6 +57,8 @@ Assuming you've followed the structure laid out above, you simply need to have a
 
 ## Watchdog Configuration
 
+Watchdog's config file is ``appsettings.yml``
+
 The watchdog configuration is split into two major sections:
 
 + Global elements, shared across all instances (servers).
@@ -122,7 +124,7 @@ Servers:
       # This example is for the official server builds.
       UpdateType: "Manifest"
       Updates:
-        ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
+        ManifestUrl: "https://wizards.cdn.spacestation14.com/fork/wizards/manifest"
 
       # The server is expected to ping the Watchdog occastionally.
       # (The aforementioned BaseUrl is passed to the server to facilitate this.)
@@ -199,7 +201,7 @@ Servers:
       # (This is an example, do NOT blindly copy paste this. Or you may end up with an unfinished configuration)
       UpdateType: "Manifest"
       Updates:
-        ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
+        ManifestUrl: "https://wizards.cdn.spacestation14.com/fork/wizards/manifest"
 ```
 
 ### Git-based Updates
@@ -343,8 +345,6 @@ nowish = datetime.datetime.now().isoformat()
 print(json.dumps({"builds":{nowish: {"time": nowish, "client": {"url": "", "sha256": ""}, "server": {"linux-x64": {"url": "http://localhost:9283/SS14.Server_linux-x64.zip", "sha256": ""}}}}}))
 ```
 
-You can also checkout our publishing script [here](../community/infrastructure-reference/publishing-scripts.md)
-
 ## Systemd service
 
 To allow watchdog to run in the background and automatically start up with the server, you can make a service file. It will look something like this.
@@ -389,6 +389,30 @@ systemctl enable SS14.Watchdog
 If you are not already aware of how to use systemctl [now would be a good time.](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
 
 To view logs you can use [journalctl](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs) from now on.
+
+## Server persistence
+
+Modifying the watchdog's configuration or updating the watchdog requires it to be restarted, and by default, that means restarting all game servers running under the watchdog. Since commit [`6194ed4`](https://github.com/space-wizards/SS14.Watchdog/commit/6194ed481a6007949b7449dcf7140a1387e2ec2f), the watchdog now supports *server persistence*. This allows it to be independently restarted, without affecting the game servers themselves.
+
+To configure this, you can add the following to your `appsettings.yml`:
+
+```yml
+Process:
+  PersistServers: true
+```
+
+With this set, the watchdog will not shut down game servers when it itself is being shut down, and will try to check for the previous game server process on restart, to resume watching them.
+
+### Systemd
+
+When hosting the watchdog as a Systemd service, the above is not enough. With Systemd's default settings, restarting the watchdog would cause Systemd to also kill the game server processes itself. This can be avoided by setting the following in your service definition:
+
+```ini
+[Service]
+KillMode=process
+```
+
+This will make Systemd only stop the main watchdog process, without caring about the game server processes below it. This does, of course, mean that trying to `systemctl stop ss14-watchdog` will not stop game servers, even if they are misbehaving/stuck.
 
 ## General Troubleshooting
 
@@ -468,7 +492,7 @@ Servers:
       # See above for alternatives.
       UpdateType: "Manifest"
       Updates:
-        ManifestUrl: "https://central.spacestation14.io/builds/wizards/manifest.json"
+        ManifestUrl: "https://wizards.cdn.spacestation14.com/fork/wizards/manifest"
         
       # Any environment variables you may want to specify.
       EnvironmentVariables:

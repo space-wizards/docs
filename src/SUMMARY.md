@@ -26,8 +26,9 @@ General Development
   - [Pull Request Guidelines](en/general-development/codebase-info/pull-request-guidelines.md)
   - [Codebase Organization](en/general-development/codebase-info/codebase-organization.md)
   - [Acronyms & Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md)
+  - [SS14 Release Model](en/general-development/codebase-info/releases.md)
 - [Tips](en/general-development/tips.md)
-  - [Beginner FAQ](en/general-development/tips/beginner-faq.md) 
+  - [Beginner FAQ](en/general-development/tips/beginner-faq.md)
   - [Troubleshooting FAQ](en/general-development/tips/troubleshooting-faq.md)
   - [Debugging Tools](en/general-development/tips/debugging-tools.md)
   - [PRs With Engine Changes](en/general-development/tips/prs-with-engine-changes.md)
@@ -51,7 +52,7 @@ SS14 By Example
   - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
 - [Basic Networking and You](en/ss14-by-example/basic-networking-and-you.md)
 - [Fluent and Localization](en/ss14-by-example/fluent-and-localization.md)
-- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md) 
+- [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
 
 
 Robust Toolbox
@@ -62,6 +63,7 @@ Robust Toolbox
 - [ECS](en/robust-toolbox/ecs.md)
 - [Netcode]()
   - [Net Entities](en/robust-toolbox/netcode/net-entities.md)
+  - [Connection Sequence](en/robust-toolbox/netcode/connection-sequence.md)
   - [Potentially Visible Set]()
 - [Coordinate Systems](en/robust-toolbox/coordinate-systems.md)
 - [Transform]()
@@ -77,6 +79,7 @@ Robust Toolbox
     - [Entities](en/robust-toolbox/toolshed/commands/entity-control.md)
     - [General](en/robust-toolbox/toolshed/commands/general.md)
     - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
+  - [Toolshed Examples](en/robust-toolbox/toolshed/toolshed-examples.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
 - [IoC](en/robust-toolbox/ioc.md)
 - [Rendering]()
@@ -113,6 +116,7 @@ Space Station 14
 	- [Displacement Maps](en/space-station-14/art/displacement-maps.md)
 	- [Device Network](en/space-station-14/core-tech/device-network.md)
 	- [NPCs](en/space-station-14/core-tech/npcs.md)
+	- [Entity Tables](en/space-station-14/core-tech/entity-tables.md)
 	- [Chemistry](en/space-station-14/core-tech/chemistry.md)
 		- [Metabolism](en/space-station-14/core-tech/chemistry/metabolism.md)
 		- [Reactions](en/space-station-14/core-tech/chemistry/reactions.md)
@@ -162,9 +166,8 @@ Space Station 14
 	- [Cartridge loaders](en/space-station-14/player-interaction/cartridge-loaders.md)
 
 	- [Proposals]()
-	  - [PAI Expansion Slots](en/space-station-14/player-interaction/proposals/pai-expansion-slots.md)
 	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
-	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md) 
+	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md)
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines](en/space-station-14/roleplay-lore/guidelines.md)
@@ -181,9 +184,11 @@ Space Station 14
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
 		- [Game Director](en/space-station-14/round-flow/proposals/game-director.md)
+		- [Departmental Economy](en/space-station-14/round-flow/proposals/departmental-economy.md)
 		- [Pizza Delivery Critter](en/space-station-14/round-flow/proposals/pizza-delivery-critter.md)
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
+   		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
@@ -237,7 +242,7 @@ Space Station 14
 
 		- [Proposals]()
 			- [GenPop Prisoners](en/space-station-14/departments/security/proposals/genpop-prisoners.md)
-                        - [Reduced Metagaming Mechanics](en/space-station-14/departments/security/proposals/reduced-metagaming.md)
+			- [Reduced Metagaming Mechanics](en/space-station-14/departments/security/proposals/reduced-metagaming.md)
 	- [Service](en/space-station-14/departments/service.md)
 		- [PR Guidelines](en/space-station-14/departments/service/guidelines.md)
 
@@ -245,6 +250,7 @@ Space Station 14
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
    		- [Chaplain Diversification](en/space-station-14/departments/service/proposals/chaplain-diversification.md) 
       - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
+   		- [Librarian Gameplay](en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md)
 
 
 General Proposals
@@ -295,16 +301,9 @@ Community
 
 - [Infrastructure References](en/community/infrastructure-references.md)
   - [Wizards Den Infrastructure](en/community/infrastructure-reference/wizards-den-infrastructure.md)
-  - [Publishing Scripts](en/community/infrastructure-reference/publishing-scripts.md)
   - [Grafana Dashboards](en/community/infrastructure-reference/grafana-dashboards.md)
 - [Space Wizards Hub Rules](en/community/space-wizards-hub-rules.md)
-- [Space Wizards Role Hierarchy](en/community/space-wizards-role-hierarchy.md)
-- [Space Wizards Maintainer List](en/community/space-wizards-maintainer-list.md)
 - [Discord Rich Presence Repository](en/community/discord-rich-presence-repository.md)
-- [Project Manager](en/community/projectmanager.md)
-- [Maintainer](en/community/maintainer.md)
-  - [Maintainer Policy](en/community/maintainer/wizards-den-maintainer-policy.md)
-  - [Review Policy](en/community/maintainer/wizards-den-review-policy.md)
 - [Admin](en/community/admin.md)
   - [Admin Tooling](en/community/admin/admin-tooling.md)
     - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
@@ -320,10 +319,31 @@ Engine Development
 - [Testing against launcher](en/engine-development/testing-against-launcher.md)
 - [Updating CEF](en/engine-development/updating-cef.md)
 
+Staff
+==============
+
+----------------------
+- [Project Manager](en/wizden-staff/projectmanager.md)
+- [Maintainer](en/wizden-staff/maintainer.md)
+  - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
+  - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
+  - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
+  - [Triage Procedure](en/wizden-staff/maintainer/triage-procedure.md)
+- [Space Wizards Role Hierarchy](en/wizden-staff/space-wizards-role-hierarchy.md)
+- [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
+- [Staff Policy](en/wizden-staff/staff-policy.md)
+- [Staff Conflict Resolution](en/wizden-staff/staff-conflict-resolution.md)
+
 Maintainer Meetings
 ==============
 
 ----------------------
+- [2024-12-21](en/maintainer-meetings/maintainer-meeting-2024-12-21.md)
+- [2024-12-07](en/maintainer-meetings/maintainer-meeting-2024-12-07.md)
+- [2024-11-23](en/maintainer-meetings/maintainer-meeting-2024-11-23.md)
+- [2024-11-09](en/maintainer-meetings/maintainer-meeting-2024-11-09.md)
+- [2024-10-27](en/maintainer-meetings/maintainer-meeting-2024-10-27.md)
+- [2024-10-12](en/maintainer-meetings/maintainer-meeting-2024-10-12.md)
 - [2024-04-06](en/maintainer-meetings/maintainer-meeting-2024-04-06.md)
 - [2024-03-23](en/maintainer-meetings/maintainer-meeting-2024-03-23.md)
 - [2024-02-03](en/maintainer-meetings/maintainer-meeting-2024-02-03.md)

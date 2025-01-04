@@ -20,6 +20,7 @@ The following `mdbook` features & plugins are available and in use:
 - `mdbook-template`
 - `mdbook-admonish`
 - `mdbook-emojicodes`
+- `mdbook-embedify`
 
 **For information such as how to edit, build & test these docs, see [Guide to Editing Docs](https://spacestation14.io/docs/en/meta/guide-to-editing-docs.html). on the site itself** (or [in this repo](./src/en/meta/guide-to-editing-docs.md))
 

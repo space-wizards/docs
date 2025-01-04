@@ -6,7 +6,11 @@ This section is a placeholder, pending a design-doc being created by the related
 The powerhouse of the ~~cell~~ station
 
 ## Concept
-> A high-level conceptual overview of what this department does. This is generally 1-2 paragraphs and should reflect a high level view of what this department brings to the player and the game. 
+Engineering is responsible for building, running, maintaining, and repairing life-critical station hardware. No matter what the situation is, engineering keeps the power on and the atmosphere breathable.
+- **Primary Goal**: Keep the station habitable and respond to life-support emergencies
+- **Secondary Goal**: *Perform* upgrades[1] the station and process raw resources into usable items/equipment.
+
+[1] The difference between engineering and science when it comes to upgrades is that Engineering focuses on the implementation/installation while Science researches/creates the upgrades or their components.
 
 ## Player Story
 > A short (1-2 paragraph) story from the perspective of someone playing a role in this department. This is effectively a story of the ideal experience of a player interacting with these mechanics/systems. 
