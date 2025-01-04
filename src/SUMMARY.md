@@ -248,8 +248,10 @@ Space Station 14
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
+   		- [Chaplain Diversification](en/space-station-14/departments/service/proposals/chaplain-diversification.md) 
+                - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
    		- [Librarian Gameplay](en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md)
-      - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
+
 
 General Proposals
 ================
