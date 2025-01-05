@@ -1,4 +1,4 @@
-# Wizards Den MRP Policy
+# Wizards Den MRP Policymrp
 
 ```admonish info
 This is the ban policy for Wizard's Den servers. It applies only to our first-party Wizard's Den servers. The admin policy can be found at [Admin Policy](./wizards-den-admin-policy.md)
@@ -33,7 +33,7 @@ Players who are found to be abusing this Endorsement system can lose their Endor
 # MRP Punishment Guidelines
 
 ```admonish info
-Administrators are not required to follow the punishments suggested by the punishment guidelines when taking action against a whitelisted player, but actions taken within the guidelines are presumed to be of an appropriate.
+Administrators are not required to follow the punishments suggested by the punishment guidelines when taking action against a whitelisted player, but actions taken within the guidelines are presumed to be of appropriate.
 ```
 
 ```admonish info
@@ -41,7 +41,7 @@ All instructions in the subsections of the *MRP Punishment Guidelines* section o
 ```
 
 ```admonish info
-Consulting the admin team via Discord, or consulting multiple (2 or more) other game admins in-game through admin chat or ahelp does not result in those actions being presumed to be of an appropriate, but is sufficient justification for straying from the guidelines.
+Consulting the admin team via Discord, or consulting multiple (2 or more) other game admins in-game through admin chat or ahelp does not result in those actions being presumed to be of appropriate, but is sufficient justification for straying from the guidelines.
 ```
 
 ## Offense Table
