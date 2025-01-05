@@ -307,6 +307,7 @@ Community
     - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
   - [Wizards Den Admin Policy](en/community/admin/wizards-den-admin-policy.md)
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
+  - [Wizards Den MRP Policy](en/community/admin/wizards-den-mrp-policy.md)
 - [Progress Report Creation](en/community/progress-report-creation.md)
 
 Engine Development
