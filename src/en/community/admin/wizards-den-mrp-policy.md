@@ -40,6 +40,10 @@ Administrators are not required to follow the punishments suggested by the punis
 All instructions in the subsections of the *MRP Punishment Guidelines* section only refer to the guidelines, not policy. A statement saying "X is not permitted" means it is not permitted under the guidelines, not that it may never be done.
 ```
 
+```admonish warning
+Administrators who place bans outside of the guidelines are required to be able to justify the decision to the admin team.
+```
+
 ```admonish info
 Consulting the admin team via Discord, or consulting multiple (2 or more) other game admins in-game through admin chat or ahelp does not result in those actions being presumed to be of appropriate, but is sufficient justification for straying from the guidelines.
 ```
