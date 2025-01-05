@@ -208,3 +208,16 @@ Whitelist Applications are to be processed as follows:
     - If you are unsure then call a vote. If the vote fails deny the application.
     - If you believe the notes/bans indicate the player would be an issue on MRP deny the application.
 7. Accept the Application.
+
+# MRP Rule Amendments 
+
+Amendments to MRP rules have to go through the following process:
+1. A proposed amendment first needs to go through an admin team vote
+    - Discussion must last at least 72 hours.
+    - A vote must run for at least 24 hours.
+    - An amendment needs to approved via a 75% majority.
+2. If approved the amendment will be implemented on a provisional basis. 
+3. 2 weeks after the amendment begins being enforced it shall go to a playerbase
+   vote.
+   - The amendment must be approved via a 75% majority.
+4. If approved, the amendment shall remain in force indefinitely.
