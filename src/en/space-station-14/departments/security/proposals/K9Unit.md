@@ -3,31 +3,34 @@
 ## Design Goal
 
 The Goal of adding the K9 unit to add core gameplay loop variety to the security department. Currently, 3 of the roles are nearly identical (Cadet, Secoff, Det)
-with only Det having a minor variation in loadout and some added utility for forensics. All three focus on patroling, detaining, and generally dealing with antagonists with Warden and HOS being the exceptions. A K9 unit would add great variety for sec players while also opening many roleplay opprotunities with a low MVP cost (as dogs and their behaviors already exist in code at least in part). The Main goal for the person playing the K9 is to give a security role where they are not expected to verbally interact with crew, which can be draining, irritating, demoralizing, etc. This gives security a way for players who need a break from the negative human interaction side of the department a way to continue playing there, while also giving new tools to combat the most destructive tools available to antags which currently have very few counters.
+with only Det having a minor variation in loadout and some added utility for forensics. All three focus on patroling, detaining, and generally dealing with antagonists with Warden and HOS being the exceptions. A K9 unit would add great variety for sec players while also opening many roleplay opprotunities with a low MVP cost (as corgi/cerb and their behaviors already exist in code at least in part). The Main goal for the person playing the K9 is to give a security role where they are not expected to verbally interact with crew, which can be draining, irritating, demoralizing, etc. This gives security a way for players who need a break from the negative human interaction side of the department a way to continue playing there, while also giving new tools to combat the most destructive tools available to antags which currently have very few counters, and allow for a ghost to occasionally help security if they want, as current ghost roles are neutral to the station at the best in most cases. Further itreators or refinement could see K9 role given more abilities or more scents to detect and filter through (drugs? food? etc.)
 
 ## K9 Officer Role
 
-The K9 units are something most people are familiar with in real life, and their role will mirror that public perception. This includes sniffing for explosives (bombs, c4, etc)  No more than one (1) K9 officer slot should be made available on all stations, alternative this could be a good ghost role, fitting in with other animal ghost roles as a familiar. K9 Unit will spawn at the normal security officer spawn location and be equipped with a few canine specific items (detailed later). K9 Officers will be mechanically incentivized to accompany security officer, as they will cover gaps in each others abilities to keep the station safe, they would be as follows (and are detailed in their own section later on):
+The K9 units are something most people are familiar with in real life, and their role will mirror that public perception. This includes sniffing for explosives (bombs, c4, etc)  No more than one (1) K9 officer slot should be made available as an early game ghost role with a long reoccurance time (ideally there should only be one active at a time per station). K9 Unit will spawn at the normal security officer spawn location and be equipped with a few canine specific items (detailed later). K9 Officers will be mechanically incentivized to accompany security officer, as they will cover gaps in each others abilities to keep the station safe.
 
 #### Pros / Abilities
 
 * Speed: Faster base speed to chase down fleeing suspects / criminals.
-* Scent: Ability to smell explosives or illicit chemicals on people within a range - useful for creating engaging difficulty for antags who risk being detected if they get too close.
-* Bite: short fading slow on those bit to aide officers in pursuits in addition to damage.
+* Scent: Ability to smell explosives or illicit chemicals on people within a range - useful for creating engaging difficulty for antags who risk being detected if they pass by an inquisitive player
+* Bite: Medium damage bite that applies some stun on hit.
 * Signal: Whistle-like callout / bark to notify handler of contraband.
+* Drag: Dogs can drag bodies and other objects like other humanoids
 
 #### Cons
 
 * Unable to talk or use radio(dog speech)
 * Unable to detain or arrest (only bite)
 * Slightly lower health / armor than humans
+* Limited resource (Ghost role not garunteed, and hard to replace if killed)
+* No suit sensors
 
 
 ### Ability breakdown
 
 #### Speed
 
-The primary enabler of the K9 during normal operations is increased speed. Operating at somewhere between 110% and 130% normal character movement speed allows for easier pursuits than secoffs and for talented players to kite during melee or jink during firefights. This number is a rough first guess at an appropriate speed value, they should be able to catch any undrugged human but still struggle to keep up with those under the influence of hyerzine or similar super stimulants.
+The primary enabler of the K9 during normal operations is increased speed. Operating at somewhere between 110% and 130% normal character movement speed with similar boosts to acceleration allows for easier pursuits than secoffs and for talented players to kite during melee or jink during firefights. This number is a rough first guess at an appropriate speed value, they should be able to catch any undrugged human but still struggle to keep up with those under the influence of hyerzine or similar super stimulants.
 
 #### Scent
 
@@ -44,16 +47,32 @@ Additionally, this bite would be stronger when wearing a k9 hardsuit (detailed i
 
 #### Signal
 
-Functions identically to the security whistle, but with a barking sound effect, for alerting handler.
+Functions identically to the security whistle, but with a barking sound effect, for alerting handler. This will use an action instead of an item, with a bark sfx instead of the standard whitsle sfx.
 
 
-## Dog changes and New Items
+### K9 Inventory
 
-To help make the K9 (and other K9 like animals) more versatile, some new Dog specific items and item slots will be created, outlined here
+Current dogs can be updated to be given support for all new appropriate items (Ian, Cerb, etc.), but doesnt need to be required for MVP.
 
-### Dog changes
+* SecK9 will have an suit slot. The K9 unit default loadout will come with an K9 armored vest that provides similar bonuses to the standard armored vest that security gets. Suit 
+* SecK9 will have standard mask and tank slots for breathing like ian and cerb currently (see corgi prototype)
 
-Current dogs will be updated to be given support for all new appropriate items (Ian, Cerb, etc.), but doesnt need to be required for MVP.
+#### K9 Items
 
-* Dogs will now have an armor slot. The K9 unit default loadout will come with an K9 armored vest that provides similar bonuses to the standard armored vest that security gets.
-* 
+New entities to be implimented for SecK9 use
+
+* SecK9 Hardsuit - spawns with the SecK9, occupies suit slot, only equipable by SecK9 in MVP, other dogs in future. Provides similar bonuses as security hardsuit
+* SecK9 Armored Jacket - spawns equipped to SecK9, occupies suit slot,  only equipable by SecK9 in MVP, other dogs in future. Provides similar bonuses as security armored vest.
+
+### Other Notes
+
+This proposal will require some new sprite and sfx assets:
+
+Sprites:
+* SecK9 Hardsuit: icon + equipped overlay for SecK9
+* SecK9 Armored Vest: icon + equipped overlay for SecK9
+* SecK9 entity: Up/Left/Down and Dead
+
+Sfx:
+* SecK9 alert whistle
+* SecK9 bark (if desired to be unique from other dogs)
