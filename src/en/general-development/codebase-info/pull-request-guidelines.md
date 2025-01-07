@@ -11,6 +11,8 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
 - Large new features and comprehensive reworks to existing large features (ie antags or anything that could be considered a subdepartment unto itself), should first be [proposed and accepted in abstract](../feature-proposals.md) before you start working on actually implementing it.
 
 - Read the [Freezes and Restrictions issue](https://github.com/space-wizards/space-station-14/issues/8524) and make sure your PR does not interfere with anything or requires special requirements.
+  
+- If you are fixing a bug that is present on the live servers, or addressing an urgent balance issue on the live servers, consider if your change should be a hotfix. Hotfixes must target the stable branch, so you should fork your working branch from stable, not master. You will still be able to submit your PR to the master branch even if you forked from stable (and this is in fact the default selection). Such a working branch will, however, miss any changes that have been merged into the game since the last release, so you will not see if your code conflicts with them - this can make the stable branch a poor starting point for making content PRs beyond the scope of a hotfix.
 
 ## Content
 
@@ -38,10 +40,17 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
 
 ## Before Submitting
 
+- Decide if your change is an **urgent hotfix**.
+    - Hotfixes do not wait for the next bi-weekly release after being merged.
+    - Bugs that impact the live server, or urgent balance changes, can be considered a hotfix.
+    - Only changes based on the stable branch can become a hotfix.
+    - When you open a PR on github, you can select which branch it will target. The master branch is the default, for a hotfix you must select the stable branch.
+
 - **Review your diff** using the code preview tab on GitHub.
 
     - Check for changes that you did not intend to commit.
     - Check for accidental whitespace additions or line end changes.
+
 
 ## After Submitting
 
