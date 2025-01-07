@@ -42,7 +42,7 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
 
 - Decide if your change is an **urgent hotfix**.
     - Hotfixes do not wait for the next bi-weekly release after being merged.
-    - Bugs that impact the live server, or urgent balance changes, can be considered a hotfix.
+    - Bugs that impact the live server or urgent balance changes can be considered a hotfix.
     - Only changes based on the stable branch can become a hotfix.
     - When you open a PR on github, you can select which branch it will target. The master branch is the default, for a hotfix you must select the stable branch.
 
