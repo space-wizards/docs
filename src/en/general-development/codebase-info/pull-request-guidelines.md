@@ -12,6 +12,8 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
 
 - Read the [Freezes and Restrictions issue](https://github.com/space-wizards/space-station-14/issues/8524) and make sure your PR does not interfere with anything or requires special requirements.
 
+- If you are fixing a bug or urgent balance issue that is present on the live build, you should base your commits on the stable branch. You will still be able to submit your PR to the master branch (and this is in fact the default selection), but this way your PR will be able to easily target either branch, even after it has already been opened. Turning a PR that was based on the master branch into a hotfix, should it be necessary, is more complicated.
+
 ## Content
 
 - **Make separate PRs for feature changes, bug fixes, and cleanup/refactors.** This makes changes easier to review, reduces conflicts, and also easier to revert if something goes wrong.
