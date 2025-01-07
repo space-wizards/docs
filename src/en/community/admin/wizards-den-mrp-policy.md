@@ -1,4 +1,4 @@
-# Wizards Den MRP Policymrp
+# Wizards Den MRP Policy
 
 ```admonish info
 This is the ban policy for Wizard's Den servers. It applies only to our first-party Wizard's Den servers. The admin policy can be found at [Admin Policy](./wizards-den-admin-policy.md)
