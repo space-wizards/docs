@@ -12,7 +12,10 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
 
 - Read the [Freezes and Restrictions issue](https://github.com/space-wizards/space-station-14/issues/8524) and make sure your PR does not interfere with anything or requires special requirements.
   
-- If you are fixing a bug that is present on the live servers, or addressing an urgent balance issue on the live servers, consider if your change should be a hotfix. Hotfixes must target the stable branch, so you should fork your working branch from stable, not master. You will still be able to open your PR on the master branch even if you forked from stable. Such a working branch will, however, miss any changes that have been merged into the game since the last release, so you will not see if your code conflicts with them - this can make the stable branch a poor starting point for making content PRs beyond the scope of a hotfix.
+- If you are fixing a bug that is present on the live servers, or addressing an urgent balance issue on the live servers, consider if your change should be a hotfix.
+  - Hotfixes must target the stable branch, so you have to fork your working branch from stable, not master.
+  - You will still be able to open your PR on the master branch, even if you fork from stable but change your mind later.
+  - Such a working branch, however, will not show any unreleased changes that have been merged into the game since the last release. You will not see if your code interferes or conflicts with those changes. This may become a problem, should the target of your PR be changed to the master branch. For this reason, content or feature changes should be based on the master branch.
 
 ## Content
 
@@ -44,7 +47,7 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
     - Hotfixes do not wait for the next bi-weekly release after being merged.
     - Bugs that impact the live server or urgent balance changes can be considered a hotfix.
     - Only changes based on the stable branch can become a hotfix.
-    - When you open a PR on github you can select which branch it will target. The master branch is the default, for a hotfix you must select the stable branch.
+    - When you open a PR on github, you can select which branch it will target, and the master branch is always selected by default. For a hotfix you must select the stable branch manually, even if your change was based on stable.
 
 - **Review your diff** using the code preview tab on GitHub.
 
