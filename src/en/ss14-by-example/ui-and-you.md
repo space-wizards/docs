@@ -25,11 +25,11 @@ first.
 that integrate with SS14 better than `DefaultWindow`.
 
 The `Stylesheet` property allows you to give a window to take styles from a
-certain stylesheet. The default stylesheet is `Nanotransen`, but in certain
+certain stylesheet. The default stylesheet is `Nanotrasen`, but in certain
 circumstances you may want to use others. Currently there are the following
 stylesheets:
 
--   `Nanotransen` - The default stylesheet. Used for any standard player-facing Uis
+-   `Nanotrasen` - The default stylesheet. Used for any standard player-facing Uis
 -   `System` - Primarily used for admin and sandbox UIs
 -   `Syndicate` (COMING SOON™) - Used for any UIs affiliated with the syndicate
 
@@ -240,7 +240,7 @@ the game to log an error. If your styles are not showing up, this may be why.
 
 You should access resources differently in sheetlets. Each stylesheet provides a
 list of resource roots to look in, when requesting a resource of a certain type.
-For example, the root for `NanotransenStylesheet` for `TextureResource` is
+For example, the root for `NanotrasenStylesheet` for `TextureResource` is
 `/Textures/Interface/Nano`. Any texture requested with `GetTexture` will will
 append the provided relative path to the root, and return the texture if it exists.
 
