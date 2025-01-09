@@ -194,11 +194,11 @@ Whitelist Applications are to be processed as follows:
 
 
 1. If the application contains any of the following, immediately deny the application:
-       - Low-Effort Name
-       - Using AI to generate backstory
-       - Providing WizDen hours
-       - Not providing server name if “proof of hours” is provided
-       - User has applied within the last 2 weeks already
+    - Low-Effort Name
+    - Using AI to generate backstory
+    - Providing WizDen hours
+    - Not providing server name if “proof of hours” is provided
+    - User has applied within the last 2 weeks already
 2. If the player has a endorsement on their application, verify that there is a note on both their account and the account of the vouching player. If either one is missing, deny the whitelist request for an incomplete endorsement. Otherwise, skip to step 4. An endorsement does not bypass the waiting period between applications.
 3. If the account age or playtime are not 2+ weeks and 20+ hours respectively deny the Application
 4. Check the account for recent use of slurs, if any are found deny the application.
