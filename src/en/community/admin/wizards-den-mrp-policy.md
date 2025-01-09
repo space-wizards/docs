@@ -41,7 +41,7 @@ All instructions in the subsections of the *MRP Punishment Guidelines* section o
 ```
 
 ```admonish warning
-Administrators who place bans outside of the guidelines are required to be able to justify the decision to the admin team.
+Administrators who act outside of the guidelines are required to be able to justify the decision to the admin team.
 ```
 
 ```admonish info
