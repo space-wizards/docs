@@ -25,7 +25,7 @@ Additionally, it can be used as a method to more reliably indicate the presence 
 
 The intents of this implementation on when, where and why it should be used are as follows:
 1. As a starting point, it should trigger on any contraband outside of its owners department or always if it is syndicate contraband. An item in a dragged container cannot be attributed to a specific owner/holder and thus would always set it off without an owner being attached to it.
-2. It should be limited ONLY to high priority areas, there should not be a scanner on every hallway or maints shaft and its research restriction and difficulty to setup should be set accordingly.
+2. It should be limited ONLY to high priority areas, there should not be a scanner on every hallway or maints shaft and its research restriction & difficulty to setup should be set accordingly. For this reason it should probably only be located on EVAC shuttles themselves baseline so that they cannot be stolen and moved round start.
 3. It should not, by itself, be a reason to jail or detain someone. It should ONLY be used to raise a flag for a security officer to engage upon with roleplay, either via following up with a manual search or interrogating the suspect directly.
 4. It should be able to be worked around IF it is planned for ahead of time. It should not be easily "cheeseable" through methods such as Q-Dropping the item past the detector, throwing the item past it or using a simple implant to ignore it. These would devalue more involved methods of a traitor getting past it and the point of the machine itself.
 
