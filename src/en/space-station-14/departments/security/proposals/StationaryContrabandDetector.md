@@ -9,7 +9,7 @@ The Stationary Contraband Detector is a one tile machine that will scan the inve
 If the detector detects any contraband, it will alert those in its vicinity via a loud sound and lights like that of any alarm.
 It will also alert security on their communication channel that the detector was triggered and who set it off, but *not* what item set it off; this effect is proposed to be achieved by having the machine automatically update the Records system whenever it is triggered.
 
-It should additionally have a small percentage chance of displaying a false positive result so that it cannot be a guaranteed method of confirming the presence contraband.
+It should additionally have a small percentage chance of displaying a false positive result so that it cannot be a guaranteed method of confirming the presence of contraband.
 
 ## Background
 
