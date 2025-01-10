@@ -50,7 +50,7 @@ Usage:
 
 The usage block shows the syntax for all implementations of that command. In this case there is only one. The usage syntax consists of up to three parts per implementation:
 * The name and type of the piped input argument. Here this is the `<input (IEnumerable<T>)> → ` part. This is omitted if there is no piped input.
-* The command itself, with any prefixes & arguments . As the count command has no arguments, here this is just `count`.
+* The command itself, with any prefixes & arguments. As the count command has no arguments, here this is just `count`.
 * The type of the output that can be piped into other commands. Here this is the `→ Int32` part. This is ommited if the command doesn't return anything.
 
 The syntax of the piped and command arguments is `<Name (Type)>`, where the argument name and type are taken from the C# method associated with that command. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`).
@@ -68,9 +68,7 @@ Usage:
   <input (IEnumerable<ProtoId<T>>)> → [not] with <protoId (ProtoId<T>)> → IEnumerable<ProtoId<T>>
 ```
 
-The syntax of each command arguments is `<Name (Type)>`, where the argument name and type are taken from the C# method associated with that implementation. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`). Note that in general each implementation can have different numbers and types of arguments, though in this case each implementation has exactly one argument.
-
-As the above help output explains, the `with` command can be given an optional "not" prefix to invert its behaviour. So if we wanted to get a count of all entities that do not have an item component, we could use `entities not with Item count`. If a command supports prefixes, the help page should say so.
+Note that in general each implementation can have different numbers and types of arguments, though in this case each implementation has exactly one argument. As the above help output explains, the `with` command can be given an optional "not" prefix to invert its behaviour. So if we wanted to get a count of all entities that do not have an item component, we could use `entities not with Item count`. If a command supports prefixes, the help page should say so.
 
 ### Argument names
 
