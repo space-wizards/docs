@@ -54,7 +54,7 @@ It would also encourage more RP scenarios as mentioned above, which may not inhe
 ## Potential Follow Ups/ Other Notable PRS
 Some potential follow up PRs to this device have been discussed, which will be noted below:
 
-### Locking Uplink when Evac arrives. 
+### Locking Uplink when Evac arrives [#34359](https://github.com/space-wizards/space-station-14/pull/34359)
 This would be a very appreciated PR to ensure its intent of evac protection is upheld, without this it would be trivial to bypass it for Evac bombing purposes.
 ### Allow the device to be EMAGGED so it always triggers a false positive.
 This will not be part of the initial implementation unless a maintainer would approve of it due to the EMAG restriction/freeze.
