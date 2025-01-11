@@ -12,13 +12,13 @@ For example, this simple command will just return the y-coordinates of all entit
 ```
 entities emplace { var $wy } 
 ```
-In general, the `emplace` command is useful if you want to use the properties of entities as the arguments for some other toolshed command.
+In general, the `emplace` command is useful if you want to use the properties of entities as the arguments for some other Toolshed command.
 
 # Do command
 
 The `do` command is similar to the emplace command. It takes in some enumerable and a command string, and will then try to repeatedly evaluate the command string (as if it had been typed into the console), possibly after having performed some string replacements.
 
-The `do` command mainly exists for backwards compatibility with non-toolshed commands, which do not support toolshed variables. For example, as of the time of writing the `say` command is not a toolshed command. So if you wanted to make your own character say the positions of all mobs, you would need to use the `do` command:
+The `do` command mainly exists for backwards compatibility with non-Toolshed commands, which do not support Toolshed variables. For example, as of the time of writing the `say` command is not a Toolshed command. So if you wanted to make your own character say the positions of all mobs, you would need to use the `do` command:
 ```
 entities with MobState do "say $WX $WY"
 ```

@@ -1,13 +1,13 @@
 # Toolshed Examples
 
-This guide covers some examples of Toolshed commands. Note that several of these commands & referenced C# types are specific to SS14, but they still provide a good overview of how to use toolshed for other forks/games.
+This guide covers some examples of Toolshed commands. Note that several of these commands & referenced C# types are specific to SS14, but they still provide a good overview of how to use Toolshed for other forks/games.
 
 ## Interacting with entities
 
-Most of the time that you are interacting with toolshead you are manipulating entities in some way.
+Most of the time that you are interacting with Toolshed you are manipulating entities in some way.
 
 ### Basics
-`ent` is a toolshed command that allows us to return an entity with the provided ENTID. By pipeing the output of the command, we can use it to various things on the entity. Some examples include:
+`ent` is a Toolshed command that allows us to return an entity with the provided ENTID. By pipeing the output of the command, we can use it to various things on the entity. Some examples include:
 
 ```
 > ent 12345 delete

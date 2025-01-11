@@ -8,7 +8,7 @@ Toolshed is one of the three primary built-in debug tools (alongside `scsi` and 
 Toolshed is not yet available on the client, so you need to use the `>` prefix command on the client in order to run its commands server-side. Ommiting this will often result in an error stating that you lack permission to run the command even if this is not the case.
 ```
 
-Toolshed is a **pipeline shell**, and the primary method of performing complex actions is composition of commands. You can simply write multiple commands one after the other and as long as they are compatible, they will have their inputs successively fed to one another. For those familiar with shells like bash, this is typically done with an explicit pipe symbol like '|'.  However in toolshed the pipe operator is optional. 
+Toolshed is a **pipeline shell**, and the primary method of performing complex actions is composition of commands. You can simply write multiple commands one after the other and as long as they are compatible, they will have their inputs successively fed to one another. For those familiar with shells like bash, this is typically done with an explicit pipe symbol like '|'.  However in Toolshed the pipe operator is optional. 
 
 For example, take the following **command run**:
 ```
@@ -51,7 +51,7 @@ Usage:
 The usage block shows the syntax for all implementations of that command. In this case there is only one. The usage syntax consists of up to three parts per implementation:
 * The name and type of the piped input argument. Here this is the `<input (IEnumerable<T>)> → ` part. This is omitted if there is no piped input.
 * The command itself, with any prefixes & arguments. As the count command has no arguments, here this is just `count`.
-* The type of the output that can be piped into other commands. Here this is the `→ Int32` part. This is ommited if the command doesn't return anything.
+* The type of the output that can be piped into other commands. Here this is the `→ Int32` part. This is omitted if the command doesn't return anything.
 
 The syntax of the piped and command arguments is `<Name (Type)>`, where the argument name and type are taken from the C# method associated with that command. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`).
 
@@ -84,7 +84,7 @@ Usage:
 ```
 
 ```admonish warning
-Note that using the c# argument names to auto-generate help strings is relatively new, and some commands may have badly named arguments.
+Note that using the C# argument names to auto-generate help strings is relatively new, and some commands may have badly named arguments.
 ```
 
 
@@ -143,11 +143,11 @@ These commands are often used at the start of a **command run** to provide some 
 
 
 ### Maths
-Toolshed supports many kinds of math operations, including, but not limited to:
+Toolshed supports many kinds of maths operations, including, but not limited to:
 * Simple operations: `+`, `-`, `\*`, `/`, `%`
-* Common functions: `sin`, `abs`,`min`, `pow`, `ceil`, etc.
+* Common functions: `sin`, `abs`, `min`, `pow`, `ceil`
 * Vector operations (i.e., multiplying a list by a number): `+/`, `-/`, `\*/`, `//`, `%/`
-* Bitwise operations: `&`, `^`, `bitor`, `~`, `&~` `^~`, `bitornot`
+* Bitwise operations: `&`, `^`, `bitor`, `~`, `&~` `^~`, `bitornot` (note that `|` is the explicit pipe symbol, hence it is not used for the bitwise or commands)
  
 ### Ranges & Sequences
 
@@ -174,7 +174,7 @@ Without the `;` the above command would fail to parse, as the `i` command does n
 
 ## Errors and invalid commands
 
-Before toolshed will attempt to execute a command run, it first has to successfully parse it. If it fails to parse the command, it should try to print out a useful error message that points to the specific part of the command that toolshed failed to parse. Note that the `explain` command only works on a valid command run, and cannot be used to figure out why a command run is not working. 
+Before Toolshed will attempt to execute a command run, it first has to successfully parse it. If it fails to parse the command, it should try to print out a useful error message that points to the specific part of the command that Toolshed failed to parse. Note that the `explain` command only works on a valid command run, and cannot be used to figure out why a command run is not working. 
 
 ```admonish note
 Toolshed often spits out lengthy stacktraces upon a command being used incorrectly. But typically there is a clearer error message above the stacktrace in your console, though you may have to scroll up to see it.
@@ -210,13 +210,13 @@ Accepted types: 'IEnumerable<EntityUid>','IEnumerable<EntityPrototype>','IEnumer
 
 ## Searching for commands
 
-You can combine the `cmd:list` to get a list of all commands. You can then combine this with the `search` commands to search through this list for a command you are trying to find. E.g.,
+You can use the `cmd:list` command to get a list of all commands. You can then combine this with the `search` command to search through this list for a command you are trying to find. E.g.,
 ```
-cmd:list search "awn"
+> cmd:list search "awn"
 
 spawn:at,
 spawn:on,
 spawn:attached
 ```
 
-
+If you are trying to find a command that can accept the output of some other command, you can use the `types:consumers` command. E.g., `ent 1 types:consumers` will list all types that can take in an `EntityUid`. Note that the `types:consumers` command is currently somewhat flawed, particularly when it comes to C# methods using generic constraints. E.g., It will often misreport that the various math commands accept any type, even though they only accept numbers.
