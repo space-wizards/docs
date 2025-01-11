@@ -22,7 +22,7 @@ A contraband detector, something that is a staple of real world security operati
 Additionally, it can be used as a method to more reliably indicate the presence of a Storage Implant (I.E. Someone consistently setting one off despite having an empty inventory.), which has been a point of contention as Meta Knowledge due to the limited avenues of knowing when one is in play.
 
 ## Attached PRs
-These are PRs that will synergize with this one in such ways where the result will have a much higher quality with these PRs in mind, this PR should probably wait until these PRS are live before this one does:
+These are PRs that will synergize with this one in such ways where the result will have a much higher quality with these PRs in mind, this PR should probably wait until these PRs go live first:
 
 ### Locking Uplink when Evac arrives [#34359](https://github.com/space-wizards/space-station-14/pull/34359)
 This would be a very appreciated PR to ensure its intent of evac protection is upheld, without this it would be trivial to bypass it for Evac bombing purposes.
