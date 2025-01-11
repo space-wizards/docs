@@ -9,7 +9,7 @@ The Stationary Contraband Detector is a one tile machine that will scan the inve
 If the detector detects any contraband, it will alert those in its vicinity via a loud sound and lights like that of any alarm.
 It will also alert security on their communication channel that the detector was triggered and who set it off, but *not* what item set it off; this effect is proposed to be achieved by having the machine automatically update the Records system whenever it is triggered.
 
-It should additionally have a small percentage chance of displaying a false positive result so that it cannot be a guaranteed method of confirming the presence of contraband.
+It should additionally have a low percentage chance of having an incorrect result, proposed with a false positive result, so that it cannot be a guarenteed method of confirming contraband without a manual search by a physical Security Officer.
 
 ## Background
 
@@ -21,10 +21,16 @@ A contraband detector, something that is a staple of real world security operati
 
 Additionally, it can be used as a method to more reliably indicate the presence of a Storage Implant (I.E. Someone consistently setting one off despite having an empty inventory.), which has been a point of contention as Meta Knowledge due to the limited avenues of knowing when one is in play.
 
+## Attached PRs
+These are PRs that will synergize with this one in such ways where the result will have a much higher quality with these PRs in mind, this PR should probably wait until these PRS are live before this one does:
+
+### Locking Uplink when Evac arrives [#34359](https://github.com/space-wizards/space-station-14/pull/34359)
+This would be a very appreciated PR to ensure its intent of evac protection is upheld, without this it would be trivial to bypass it for Evac bombing purposes.
+
 ## Design Intentions
 
 The intents of this implementation on when, where and why it should be used are as follows:
-1. As a starting point, it should trigger on any contraband outside of its owners department or always if it is syndicate contraband. An item in a dragged container cannot be attributed to a specific owner/holder and thus would always set it off without an owner being attached to it.
+1. As a starting point, it should trigger on any contraband that is not department specific. It should react the same to a Baseball Bat as it should a fully stocked C4 bundle. An item in a dragged container cannot be attributed to a specific owner/holder and thus would always set it off without an owner being attached to it.
 2. It should be limited ONLY to high priority areas, there should not be a scanner on every hallway or maints shaft and its research restriction & difficulty to setup should be set accordingly. For this reason it should probably only be located on EVAC shuttles themselves baseline so that they cannot be stolen and moved round start.
 3. It should not, by itself, be a reason to jail or detain someone. It should ONLY be used to raise a flag for a security officer to engage upon with roleplay, either via following up with a manual search or interrogating the suspect directly.
 4. It should be able to be worked around IF it is planned for ahead of time. It should not be easily "cheeseable" through methods such as Q-Dropping the item past the detector, throwing the item past it or using a simple implant to ignore it. These would devalue more involved methods of a traitor getting past it and the point of the machine itself.
@@ -39,7 +45,7 @@ Effectively, we could roleplay as TSA agents and that itself sounds like it woul
 > This would remove evac bombs from being possible.
 
 It would not since bypassing the detector is planned as part of its core intent.
-It WOULD make it much more difficult to achieve for the DaGD objective type, but it is already a trivial objective to accomplish and would be a massive QoL improvement for the Evac portion of a round.
+It WOULD make it much more difficult to achieve for the DaGD objective type, but it is already a trivial objective to accomplish and would be a massive improvement to the Quality of the Evac portion of a round.
 > Shitsec could abuse this and violate space law with a dubiously "legal" method.
 
 It would be no different if those same officers decided to randomly search people without the machine and would still be breaking Space Law regardless. 
@@ -51,12 +57,15 @@ Considering its intended restrictions, I do not see many scenarios beyond Evac B
 It would be specifically alerting the behavior in regards to casually carrying contraband, which I feel is something that has not yet been dealt with in any direct capacity.
 It would also encourage more RP scenarios as mentioned above, which may not inherently be a buff/nerf to either faction depending on how the "Meta" evolves from it.
 
-## Potential Follow Ups/ Other Notable PRS
+## Follow Up PRs
 Some potential follow up PRs to this device have been discussed, which will be noted below:
 
-### Locking Uplink when Evac arrives [#34359](https://github.com/space-wizards/space-station-14/pull/34359)
-This would be a very appreciated PR to ensure its intent of evac protection is upheld, without this it would be trivial to bypass it for Evac bombing purposes.
-### Allow the device to be EMAGGED so it always triggers a false positive.
+### EMAG Interaction
 This will not be part of the initial implementation unless a maintainer would approve of it due to the EMAG restriction/freeze.
+An example of a possible effect for consideration could be having the device always return a false positive result when Emagged, or giving completely random or arbitrary results instead.
+
+### Refactored Implant Checking [#32136](https://github.com/space-wizards/space-station-14/pull/32136)
+Considering one of the main pillars of this is to help with the Storage Implant problem, this PR will go very easily in hand with it.
+
 ### Create a handheld variant for individuals to hold in their hands.
 This would allow it to be more flexible in its use, though it should probably come with even harsher restrictions such as being unlocked with late tier research or being part of the armory.
