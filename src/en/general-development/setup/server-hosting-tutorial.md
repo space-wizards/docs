@@ -10,7 +10,7 @@ The only modifications you can do to a packaged server build is with the ``serve
 If you wish to modify your server to add your own content. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
 ```
 
-1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.8``
+1. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
 2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
 3. Extract that to a directory somewhere.
 4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
