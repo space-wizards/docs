@@ -53,7 +53,7 @@ The usage block shows the syntax for all implementations of that command. In thi
 * The command itself, with any prefixes & arguments. As the count command has no arguments, here this is just `count`.
 * The type of the output that can be piped into other commands. Here this is the `→ Int32` part. This is omitted if the command doesn't return anything.
 
-The syntax of the piped and command arguments is `<Name (Type)>`, where the argument name and type are taken from the C# method associated with that command. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`).
+The syntax of the piped and command arguments is `<Name (Type)>`, where the argument name and type are taken from the C# method associated with that command. If a command argument is optional, it will instead use square brackets (i.e., `[Name (Type)]`. Some commands also accept infinitely repeatable arguments, which are denoted with ellipses (i.e., `[Name (Type)]...`). These kinds of arguments will always be last, and would mean that the command needs to be terminated with an explicit pipe `|` if you want to pipe the output of the command into another command.
 
 For a a more complicated example lets examine the `with` command that was used in the previous section. It can take in either an entity or an entity prototype, so it has multiple implementations. It also requires one argument and supports prefixes:
 
