@@ -44,14 +44,16 @@ A new body can be printed using the Body Printer. The Body Printer requires biom
 ### Genetic Mutations
 
 Genetic Mutations occur with the degradation of Genetic Information when a body is printed. All clones have the "Cloned Body" genetic mutation, even if at 100% GI Integrity.
-At 90-99.9% GI Integrity, there is 1 extra mutation;
-At 80-89.9% GI Integrity, there is 1 extra mutation and 25% chance of 1 extra mutation;
-At 75-79.9% GI Integrity, there is 1 extra mutation and 50% chance of 1 extra mutation;
-At 70-74.9% GI Integrity, there are 2 extra mutations;
-At 60-69.9% GI Integrity, there are 2 extra mutations and 25% chance of 1 extra mutation;
-At 50-59.9% GI Integrity, there are 2 extra mutations and 50% chance of 1 extra mutation;
-At 25-49.9% GI Integrity, there are 3 extra mutations;
-At 0.1-24.9% GI Integrity, there are 4 extra mutations.
+| GI Integrity | Mutations | Chance of Extra Mutation |
+|---|---|---|
+| 90-99.9% | 1 | 0 |
+| 80-89.9% | 1 | 25% of 1 |
+| 75-79.9% | 1 | 50% of 1 |
+| 70-74.9% | 2 | 0 |
+| 60-69.9% | 2 | 25% of 1 |
+| 50-59.9% | 3 | 50% of 1 |
+| 25-49.9% | 3 | 0 |
+| 0.1-24.9% | 4 | 0 |
 
 All percentages of the mutations bellow stack by adding/subtracting between themselves before calculating into the main stats.
 Mutations of opposite effects exclude each other from being applied on the cloned body.
