@@ -161,4 +161,59 @@ If you did the above steps correctly and your server **still** isn't globally ac
 
 The most common reason for this is that your ISP uses Carrier-grade NAT ("CGNAT") which makes port forwarding impossible. Another possible reason we've heard about is that certain network ports or protocols are automatically blocked by them.
 
-Either way, if this is the case we cannot help you further. You are probably best off contacting your ISP's support or checking their site to see what you can figure out. Some ISPs may allow exemptions to CGNAT, others may do it but will charge you for it, and so on.
+You are probably best off contacting your ISP’s support or checking their site to see what you can figure out. Some ISPs may allow exemptions to CGNAT, others may do it but will charge you for it, and so on.
+
+### So what now?
+
+We can't really do much anymore to help other then suggestions. We made some bellow that we heard have worked.
+
+Essentially from this point on, you will need external help to make your server reachable if you can't get your isp to help.
+
+```admonish info
+We are not the team behind any of these software.
+
+If you encounter any issues with the program/website please contact them.
+
+These are just suggestions and we are not responsible if you do something wierd or get compromised somehow.
+```
+
+# playit.gg
+
+```admonish warning
+I would **heavily** discourage following this if you intend to host a public server, 
+mostly cause everyone's ip appear as coming from the same location or some other playit 
+owned IP which will make administration worthless. By this point rent a Linux VPS instead.
+```
+
+Playit.gg is an external proxy service that will tunnel connections through their unrestricted network and back to your computer. It is essentially a VPN.
+
+If all you want is a simple server to play around with friends. This is by far the easiest option. As your friends won't need any extra software themselves.
+
+It also hides your public IP if that's your thing.
+
+1. [Download and signup](https://playit.gg/) for playit.gg (Guest account won't work) and setup the program with their instructions.
+2. When asked for a tunnel type, switch it to "TCP+UDP"
+3. When asked for a "Local port" type your servers port, in most cases ``1212``. Then "Add tunnel"
+4. Once the tunnel initialises, you should have a domain and ip. This is what you share with your friends, start your server if you have not already. They should be able to connect with either the domain or the IP they give you. The domain will also be in the console for quick copying.
+
+Every time you need to host a server, make sure to start the playit.gg client first.
+
+```admonish info
+I believe the domain and ip will change after a while of inactivity, so you may not be able to favourite the server as the IP may be taken by some other playit user next time you attempt to use it.
+```
+
+# Zerotier/Tailscale/Hamachi
+
+```admonish warning
+Be careful with who you allow access using these programs. As it will give them unrestricted access to anything
+locally running on your computer. Ensure you trust the people that get access and turn it off when not using it.
+
+Also I still **heavily** discourage this for a public server for the same reasons above...
+
+AAAND well... you wont be able to make one with this method anyway
+unless you convince players to setup a VPN to join.
+```
+
+All these programs are VPN software intended to create a local private network. It is essentially like you have a virtual lan party of computers connected to each other.
+
+All these programs will require all your friends to download the program of choice picked, somehow join a network with each other (search for instructions), and then joining using the local IP address created by the program of the computer running the SS14 server.
