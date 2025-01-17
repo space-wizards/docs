@@ -181,7 +181,7 @@ These are just suggestions and we are not responsible if you do something wierd 
 
 ```admonish warning
 I would **heavily** discourage following this if you intend to host a public server, 
-mostly cause everyone's ip appear as coming from the same location or some other playit 
+mostly cause every player's ip will appear as coming from the same location or some other playit 
 owned IP which will make administration worthless. By this point rent a Linux VPS instead.
 ```
 
