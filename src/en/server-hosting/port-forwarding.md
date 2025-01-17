@@ -205,7 +205,7 @@ I believe the domain and ip will change after a while of inactivity, so you may 
 # Zerotier/Tailscale/Hamachi
 
 ```admonish warning
-Be careful with who you allow access using these programs. As it will give them unrestricted access to anything
+Be careful with who you allow access using these programs. As it may give them unrestricted access to anything
 locally running on your computer. Ensure you trust the people that get access and turn it off when not using it.
 
 Also I still **heavily** discourage this for a public server for the same reasons above...
