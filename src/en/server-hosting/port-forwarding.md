@@ -24,7 +24,7 @@ If you are using some form of VPN, probably all the info in this guide is irrele
 
 You can try to see if port forwarding is supported by your VPN service, in which case it will probably be pretty reliable and easy to do.
 
-Using a VPN service may also be the only option you have if your ISP otherwise makes port forwarding impossible. We have no recommendations or guides for specific services here.
+Using a VPN service may also be the only option you have if your ISP otherwise makes port forwarding impossible. More information [here](#vpn-networks-zerotiertailscalehamachi)
 
 ## UPnP Port Forwarding
 
@@ -165,55 +165,48 @@ You are probably best off contacting your ISP’s support or checking their site
 
 ### So what now?
 
-We can't really do much anymore to help other then suggestions. We made some bellow that we heard have worked.
-
-Essentially from this point on, you will need external help to make your server reachable if you can't get your isp to help.
-
 ```admonish info
-We are not the team behind any of these software.
+We do not endorse or maintain any of these programs.
 
-If you encounter any issues with the program/website please contact them.
+If you encounter any issues with any of them please contact the developers of the program instead of us.
 
-These are just suggestions and we are not responsible if you do something wierd or get compromised somehow.
+These are just suggestions by us that we can seen work.
 ```
 
-# playit.gg
+We can't really do much anymore to help other then give suggestions. We made some below that we heard have worked.
+
+Essentially from this point on, you will need external help to make your server reachable if you can't get your ISP to help.
+
+# Tunneling services (Like playit.gg, localtonet)
 
 ```admonish warning
-I would **heavily** discourage following this if you intend to host a public server, 
-mostly cause everyone's ip appear as coming from the same location or some other playit 
-owned IP which will make administration worthless. By this point rent a Linux VPS instead.
+I would **heavily** discourage using tunneling if you intend to host a public server (public on the hub for random players to join), 
+mostly cause everyone's IP appear as coming from the same location which will make IP bans impossible. 
+
+The IP address might change unexpectedly depending on the service, which means your favorite server may stop working after a while.
 ```
 
-Playit.gg is an external proxy service that will tunnel connections through their unrestricted network and back to your computer. It is essentially a VPN.
+Tunneling services tunnel player connections through their unrestricted network and back to your computer. It is essentially a "reverse VPN".
 
 If all you want is a simple server to play around with friends. This is by far the easiest option. As your friends won't need any extra software themselves.
 
 It also hides your public IP if that's your thing.
 
+I will cover playit.gg here as I know it works. Instructions should be similar for similar programs. Make sure the tunneling program you use supports both TCP and UDP traffic!
+
 1. [Download and signup](https://playit.gg/) for playit.gg (Guest account won't work) and setup the program with their instructions.
 2. When asked for a tunnel type, switch it to "TCP+UDP"
 3. When asked for a "Local port" type your servers port, in most cases ``1212``. Then "Add tunnel"
-4. Once the tunnel initialises, you should have a domain and ip. This is what you share with your friends, start your server if you have not already. They should be able to connect with either the domain or the IP they give you. The domain will also be in the console for quick copying.
+4. Once the tunnel initialises, you should have a domain and IP. This is what you share with your friends, start your server if you have not already. They should be able to connect with either the domain or the IP they give you. The domain will also be in the console of the playit.gg app for quick copying.
 
-Every time you need to host a server, make sure to start the playit.gg client first.
+Every time you need to host a server, make sure to start relevant tunneling app first.
 
-```admonish info
-I believe the domain and ip will change after a while of inactivity, so you may not be able to favourite the server as the IP may be taken by some other playit user next time you attempt to use it.
-```
-
-# Zerotier/Tailscale/Hamachi
+# VPN networks (Zerotier/Tailscale/Hamachi)
 
 ```admonish warning
-Be careful with who you allow access using these programs. As it will give them unrestricted access to anything
-locally running on your computer. Ensure you trust the people that get access and turn it off when not using it.
-
-Also I still **heavily** discourage this for a public server for the same reasons above...
-
-AAAND well... you wont be able to make one with this method anyway
-unless you convince players to setup a VPN to join.
+Be careful with who you allow access using these programs. When multiple computers are on the same internal network, they can communicate directly with each other. This means that any device connected could, in theory, access shared files, printers, or even attempt unauthorized actions if not properly secured. Ensure you trust the people that get access and turn it off when not using it.
 ```
 
-All these programs are VPN software intended to create a local private network. It is essentially like you have a virtual lan party of computers connected to each other.
+All these programs are VPN software intended to create a local private network. It is essentially like you have a virtual LAN party of computers connected to each other.
 
 All these programs will require all your friends to download the program of choice picked, somehow join a network with each other (search for instructions), and then joining using the local IP address created by the program of the computer running the SS14 server.
