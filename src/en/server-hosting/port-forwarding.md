@@ -170,7 +170,7 @@ We do not endorse or maintain any of these programs.
 
 If you encounter any issues with any of them please contact the developers of the program instead of us.
 
-These are just suggestions by us that we can seen work.
+These are just suggestions by us that we have seen work.
 ```
 
 We can't really do much anymore to help other then give suggestions. We made some below that we heard have worked.
