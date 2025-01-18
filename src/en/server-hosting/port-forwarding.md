@@ -191,7 +191,7 @@ Tunneling services tunnel player connections through their unrestricted network 
 
 If all you want is a simple server to play around with friends. This is by far the easiest option. It also hides your public IP.
 
-I will cover playit.gg here as I know it works. Instructions should be similar for other programs. Make sure the tunneling program you choose supports both TCP and UDP traffic!
+This guide will cover playit.gg here. Instructions should be similar for other programs. Make sure the tunneling program you choose supports both TCP and UDP traffic!
 
 1. [Download and signup](https://playit.gg/) for playit.gg (Guest account won't work) and setup the program with their instructions.
 2. When asked for a tunnel type, switch it to "TCP+UDP"
