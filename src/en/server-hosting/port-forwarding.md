@@ -165,6 +165,8 @@ You are probably best off contacting your ISP’s support or checking their site
 
 ### So what now?
 
+If you were reading to host a public server (public on the hub for random players to join) we suggest you purchase hosting, these altenatives are only suitable for people intrested in hosting for friends.
+
 ```admonish info
 We do not endorse or maintain any of these programs.
 
@@ -180,15 +182,14 @@ Essentially from this point on, you will need external help to make your server 
 # Tunneling services (Like playit.gg, localtonet)
 
 ```admonish warning
-I would **heavily** discourage using tunneling if you intend to host a public server (public on the hub for random players to join), 
-mostly cause everyone's IP appear as coming from the same location which will make IP bans impossible. 
+Do note tunneling services will cause everyone's IP appear as coming from the same location which will make IP bans impossible. 
 
-The IP address might change unexpectedly depending on the service, which means your favorite server entry may stop working after a while.
+The servers IP address might change unexpectedly depending on the service, which means your favorite server entry may stop working after a while.
 ```
 
 Tunneling services tunnel player connections through their unrestricted network and back to your computer. It is essentially a "reverse VPN".
 
-If all you want is a simple server to play around with friends. This is by far the easiest option. It also hides your public IP if that's your thing.
+If all you want is a simple server to play around with friends. This is by far the easiest option. It also hides your public IP.
 
 I will cover playit.gg here as I know it works. Instructions should be similar for other programs. Make sure the tunneling program you choose supports both TCP and UDP traffic!
 
