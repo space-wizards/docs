@@ -183,16 +183,14 @@ Essentially from this point on, you will need external help to make your server 
 I would **heavily** discourage using tunneling if you intend to host a public server (public on the hub for random players to join), 
 mostly cause everyone's IP appear as coming from the same location which will make IP bans impossible. 
 
-The IP address might change unexpectedly depending on the service, which means your favorite server may stop working after a while.
+The IP address might change unexpectedly depending on the service, which means your favorite server entry may stop working after a while.
 ```
 
 Tunneling services tunnel player connections through their unrestricted network and back to your computer. It is essentially a "reverse VPN".
 
-If all you want is a simple server to play around with friends. This is by far the easiest option. As your friends won't need any extra software themselves.
+If all you want is a simple server to play around with friends. This is by far the easiest option. It also hides your public IP if that's your thing.
 
-It also hides your public IP if that's your thing.
-
-I will cover playit.gg here as I know it works. Instructions should be similar for similar programs. Make sure the tunneling program you use supports both TCP and UDP traffic!
+I will cover playit.gg here as I know it works. Instructions should be similar for other programs. Make sure the tunneling program you choose supports both TCP and UDP traffic!
 
 1. [Download and signup](https://playit.gg/) for playit.gg (Guest account won't work) and setup the program with their instructions.
 2. When asked for a tunnel type, switch it to "TCP+UDP"
@@ -207,6 +205,6 @@ Every time you need to host a server, make sure to start relevant tunneling app 
 Be careful with who you allow access using these programs. When multiple computers are on the same internal network, they can communicate directly with each other. This means that any device connected could, in theory, access shared files, printers, or even attempt unauthorized actions if not properly secured. Ensure you trust the people that get access and turn it off when not using it.
 ```
 
-All these programs are VPN software intended to create a local private network. It is essentially like you have a virtual LAN party of computers connected to each other.
+VPN software is able to create a local private network. It is essentially like you have a virtual LAN party of computers connected to each other.
 
-All these programs will require all your friends to download the program of choice picked, somehow join a network with each other (search for instructions), and then joining using the local IP address created by the program of the computer running the SS14 server.
+All these programs will require all your friends to download the VPN software of choice, somehow join a network with each other (search for instructions), and then joining using the local IP address created by the program of the computer running the SS14 server.
