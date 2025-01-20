@@ -21,7 +21,7 @@ If you've read "Workflow" and are looking for a refresher:
    
 4. If needed, run `fixgridatmos GID`
    
-5. Save the map: `savemap ID PATH`. **Important**: If you are working with a salvage or a shuttle, you need `savegrid GRID_ID PATH` instead.
+5. Save the map: `savemap ID PATH`. **Important**: If you are working with a salvage, a shuttle, or Central Command, you need `savegrid GRID_ID PATH` instead.
 
 To test the map:
 
