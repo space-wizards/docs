@@ -165,7 +165,7 @@ You are probably best off contacting your ISP’s support or checking their site
 
 ### So what now?
 
-If you were reading to host a public server (public on the hub for random players to join) we suggest you purchase hosting, these altenatives are only suitable for people intrested in hosting for friends.
+If you were reading to host a public server (public on the hub for random players to join) we suggest you purchase hosting, these alternatives are only suitable for people interested in hosting for friends.
 
 ```admonish info
 We do not endorse or maintain any of these programs.
@@ -175,7 +175,7 @@ If you encounter any issues with any of them please contact the developers of th
 These are just suggestions by us that we have seen work.
 ```
 
-We can't really do much anymore to help other then give suggestions. We made some below that we heard have worked.
+We can't really do much anymore to help other than give suggestions. We made some below that we heard have worked.
 
 Essentially from this point on, you will need external help to make your server reachable if you can't get your ISP to help.
 
@@ -195,8 +195,8 @@ This guide will cover playit.gg here. Instructions should be similar for other p
 
 1. [Download and signup](https://playit.gg/) for playit.gg (Guest account won't work) and setup the program with their instructions.
 2. When asked for a tunnel type, switch it to "TCP+UDP"
-3. When asked for a "Local port" type your servers port, in most cases ``1212``. Then "Add tunnel"
-4. Once the tunnel initialises, you should have a domain and IP. This is what you share with your friends, start your server if you have not already. They should be able to connect with either the domain or the IP they give you. The domain will also be in the console of the playit.gg app for quick copying.
+3. When asked for a "Local port" type your server's port, in most cases ``1212``. Then "Add tunnel"
+4. Once the tunnel initializes, you should have a domain and IP. This is what you share with your friends, start your server if you have not already. They should be able to connect with either the domain or the IP they give you. The domain will also be in the console of the playit.gg app for quick copying.
 
 Every time you need to host a server, make sure to start the relevant tunneling app first.
 
