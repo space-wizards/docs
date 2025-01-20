@@ -198,7 +198,7 @@ This guide will cover playit.gg here. Instructions should be similar for other p
 3. When asked for a "Local port" type your servers port, in most cases ``1212``. Then "Add tunnel"
 4. Once the tunnel initialises, you should have a domain and IP. This is what you share with your friends, start your server if you have not already. They should be able to connect with either the domain or the IP they give you. The domain will also be in the console of the playit.gg app for quick copying.
 
-Every time you need to host a server, make sure to start relevant tunneling app first.
+Every time you need to host a server, make sure to start the relevant tunneling app first.
 
 # VPN networks (Zerotier/Tailscale/Hamachi)
 
