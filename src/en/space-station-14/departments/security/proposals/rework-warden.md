@@ -20,6 +20,8 @@ Mechanics which incentivize players to do them entirely alone (...) will very li
 ```
 Warden's role is designed in a way that contradicts one of the most important rules of SS14 design. This is bad.
 
+P.S. Also keep in mind that Warden's gameplay loop should improve with GenPop.
+
 ## _transformSystem.Unanchor(warden)
 
 Warden needs more interactions with other departments, which should encourage warden to sometimes leave their nest or at least give them more things to do while guarding security.
