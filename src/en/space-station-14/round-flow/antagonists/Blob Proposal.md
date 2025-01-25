@@ -29,53 +29,54 @@ In order to win, the Blob must research four tiers of "Evolution", which it reac
 The Blob has a number of basic controls and abilities to make their job of spreading and consuming much easier.
 
 - **Spread** *(Left Click)*: Clicking on a tile spreads Blob to selected tile. Tile must be connected to existing Blob. Each placed tile takes resources based on type. Can be placed under Crew.
-- **Attack** *(Left Click)*: Attacks selected entity with nearest Blob tiles.
+- **Attack** *(Right Click)*: Attacks selected entity with nearest Blob tiles.
 - **Delete Blob** *(Alt Click)*: Allows Blob to delete misplaced or unnecessary Blob tiles for a small refund (Weak tiles are not refunded).
 - **Core Relocate**: Available during first stages: Allows Blob core to move to new location.
-- **Rally Neaby Spores** *(Middle Mouse Click)*: Commands all Nearby Spores to move towards target location. Spores will attack anything in area or in path. Acts as a "Point" command for Ghost controlled Spores. Functions as 'soft' control groups rather than moving all Spores the Blob owns at once.
-- **Detonate Spore** *(Alt Click)*: Commands selected Spore to manually explode (Spores will be highlighted while Alt is held so the Blob can easily see which one its targeting). Exploded Spores deal damage in a radius around them and spread Weak Blob. Also works on Blob Zombies so the Blob can stop griefers if needed.
-- **Mutate Blobbernaut**: Choose target factory to spawn a Blobbernaut. Selected factory is damaged in the process. Costs 80 resources. Only available after First Evolution.
+- **Rally Neaby Units** *(Shift + Middle Mouse Click)*: Commands all Nearby Units to move towards target location. Units will attack anything in area or in path. Acts as a "Point" command for Ghost controlled Units. Functions as 'soft' control groups rather than moving all Units the Blob owns at once.
+- **Detonate Spore** *(Q)*: Commands selected Spore to manually explode (Spores will be highlighted while Alt is held so the Blob can easily see which one its targeting). Exploded Spores deal damage in a radius around them and spread Weak Blob. Also works on Blob Zombies so the Blob can stop griefers if needed.
+- **Mutate Blobbernaut** *(X)*: Choose target factory to spawn a Blobbernaut. Selected factory is damaged in the process. Costs 80 resources. Only available after First Evolution.
 - **Upgrade Blob** *(Ctrl + Click)*: Click on a Blob tile to upgrade it to a Strong Blob Tile. Click again to upgrade it to a Reflective Tile.
-- **Evolve**: Upgrades Blob to next tier of Evolution. Each Evolution takes time to complete.
-- **Jump to Node**: Quickly moves the Camera to the next Node in sequence.
-- **Jump to Core**: Quickly moves the Camera to the Blob's Core.
-- **Grapple**: Commands the nearest Blob Grapple to latch onto a target entity. Using again on the same tower releases.
+- **Swap Blob** *(Left Click)*: Changes Strong Blob Tile to Bloblock.
+- **Evolve** *(V)*: Upgrades Blob to next tier of Evolution. Each Evolution takes time to complete.
+- **Jump to Node** *(Numpad 7 + 9)*: Quickly moves the Camera to the next or previous Node in sequence.
+- **Jump to Core** *(Numpad 8)*: Quickly moves the Camera to the Blob's Core.
+- **Grapple** *(Z)*: Commands the nearest Blob Grapple to latch onto a target entity. Using again on the same tower releases.
 
 ### Blob Tiles
 
 Blob Tiles are the Blob's primary method of spreading throughout the station. Each tile costs a small amount of resources, allowing a Blob to either slowly spread out by spending their resources constantly, or saving up for a rush of Blob. Blob Tiles are capable of attacking, dealing damage depending both on the type of tile and the strain of the Blob. Blob Tiles can be destroyed by the crew through damaging them with any weapons on hand.
 
-- **Normal Blob** | Cost 5: Main tile of the Blob. Spreads influence outwards, allows buildings to be placed down, attacks entities that attempt to wander into it. Entities that walk onto Blob Tiles are slowed by 50%. Degrades into Weak Blob if outside the influence of a Node/Core.
-- **Weak Blob** | Cost: 2: If the Blob attempts to spread outside the influence of a Node/Core, they will only spread Weak Blob at a reduced cost. Weak Blob has half health and damage of a regular Blob Tile, and only slows by 15%. Buildings can still be placed on Weak Blob.
-- **Strong Blob** | Cost: 8: Upgraded from Normal Blob. Strong Blob Tiles are solid walls that can take much more damage before being destroyed. Fireproof and block air flow in the event of station fires.
-- **Reflective Blob** | Cost: 8: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew.
-- **Blob Locks/Membrane** | Cost: 0: Variant of Strong Blob. Blob Locks/Membrane are doors the Blob can establish to fortify an area, while still letting their units through. Useful for chokepoints, and for letting units into space.
+- **Normal Blob** | *Cost: 5 | Health: 30*: Main tile of the Blob. Spreads influence outwards, allows buildings to be placed down, attacks entities that attempt to wander into it. Entities that walk onto Blob Tiles are slowed by 50%. Degrades into Weak Blob if outside the influence of a Node/Core.
+- **Weak Blob** | *Cost: 2 | Health: 15*: If the Blob attempts to spread outside the influence of a Node/Core, they will only spread Weak Blob at a reduced cost. Weak Blob has half health and damage of a regular Blob Tile, and only slows by 15%. Buildings can still be placed on Weak Blob.
+- **Strong Blob** | *Cost: 8 | Health: 250*: Upgraded from Normal Blob. Strong Blob Tiles are solid walls that can take much more damage before being destroyed. Fireproof and block air flow in the event of station fires.
+- **Reflective Blob** | *Cost: 8 | Health: 150*: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew (90% Reflect Chance).
+- **Blob Locks/Membrane** | *Cost: 0 | Health: 250*: Variant of Strong Blob. Blob Locks/Membrane are doors the Blob can establish to fortify an area, while still letting their units through. Useful for chokepoints, and for letting units into space.
 
 ### Blob Buildings
 
 Blob Buildings are what the Blob must use to gather strength and fight the station. All buildings aside from the Core must be built on Blob Tiles. Any buildings within the influence radius of a Node/Core will regenerate health over time, and lose it slowly when not.
 
-- **Core**: The brain of the Blob. Generates 1 resource a second on its own while pulsing nearby buildings every 3 seconds. Supports buildings in its influence radius. If destroyed: The Blob loses.
-- **Node** | Cost: 60: The nerves of the Blob. Spreads Blob around itself automatically and supports buildings in its influence radius. Blobs around node attack automatically and will take out any non-blob walls around it. Additionally restores any Weak Blob in its radius to Normal Blob. Nodes are the major signifiers of Blob Presence and required both to hold its territory down, and also to evolve. Cannot be built within four tiles of the Core or another Node.
-- **Resource Pool** | Cost: 40: Produces resources over time, faster if closer to Core/Node. Cannot be built within three tiles of another Resource Pool.
-- **Spore Factory** | Cost: 50: Creates Blob Spores over time with a cap of three per factory. Takes five resources per Spore. Cannot be built within four tiles of another Spore Factory.
-- **Storage Blob** | Cost: 40: Increases max resource capacity by 50. Cannot be built within three tiles of another Storage Blob.
-- **Spore Cannon** | Cost: 80: A support tower that fires fast, weak blob projectiles at enemies. Slows targets with a stacking speed debuff as they're covered in Blob. Functions to dissuade lone attackers from assaulting Nodes or specific locations, and assists in harassing combatants attempting to outrange the Blob.
-- **Blob Grapple** | Cost: 60: A support tower that fires a Blob tendril that grapples onto the first thing it hits and prevents it from moving. Blob can spread Blob Tiles from point of grapple's impact. Intended to give Blobs a way to spread back onto the station if they're disconnected for any reason, or to grab and hold down Shuttles for its units to attack and overtake. Grapples can be destroyed by Crew.
+- **Core** | *Health: 400* : The brain of the Blob. Generates 1 resource a second on its own while pulsing nearby buildings every 20 seconds. Supports buildings in its influence radius. If destroyed: The Blob loses.
+- **Node** | *Cost: 60 | Health: 200*: The nerves of the Blob. Spreads Blob around itself automatically and supports buildings in its influence radius. Blobs around node attack automatically and will take out any non-blob walls around it. Additionally restores any Weak Blob in its radius to Normal Blob. Nodes are the major signifiers of Blob Presence and required both to hold its territory down, and also to evolve. Cannot be built within four tiles of the Core or another Node. Pulses nearby buildings at the same rate as Core.
+- **Resource Pool** | *Cost: 40 | Health: 60*: Produces resources over time, faster if closer to Core/Node. Cannot be built within three tiles of another Resource Pool.
+- **Spore Factory** | *Cost: 50 | Health: 200*: Creates Blob Spores over time with a cap of three per factory. Takes five resources per Spore at a rate of seven seconds taken for each spore. Cannot be built within four tiles of another Spore Factory.
+- **Storage Blob** | *Cost: 40 | Health: 30*: Increases max resource capacity by 50. Cannot be built within three tiles of another Storage Blob.
+- **Spore Cannon** | *Cost: 80 | Health: 300 | Damage: 4*: A support tower that fires fast, weak blob projectiles at enemies. Slows targets with a stacking speed debuff as they're covered in Blob. Functions to dissuade lone attackers from assaulting Nodes or specific locations, and assists in harassing combatants attempting to outrange the Blob.
+- **Blob Grapple** | *Cost: 60 | Health: 200 | Damage: 1*: A support tower that fires a Blob tendril that grapples onto the first thing it hits and prevents it from moving. Blob can spread Blob Tiles from point of grapple's impact. Intended to give Blobs a way to spread back onto the station if they're disconnected for any reason, or to grab and hold down Shuttles for its units to attack and overtake. Grapples can be destroyed by Crew.
 
 ### Unique Buildings
 
 Unique Buildings are specific structures that are created when the Blob consumes specific station objects or machines. These are mainly to highlight what the Blob has taken from the crew and to clearly show the crew where the objects have gone.
 
-- **Captured Nuke**: If the Blob manages to spread onto a Nuke, it creates a Captured Nuke. This is a reinforced Blob tile that prevents the Crew from arming the Nuke. When destroyed, the Nuke is freed and able to be armed by the Crew once again.
+- **Captured Nuke** | *Health: 100*: If the Blob manages to spread onto a Nuke, it creates a Captured Nuke. This is a reinforced Blob tile that prevents the Crew from arming the Nuke. When destroyed, the Nuke is freed and able to be armed by the Crew once again.
 
 ### Units
 
 While the Blob is able to fight directly through its tiles, it has access to a roster of Units it can create to assist in reinforcing its position, pushing into new territory, or simply harassing the Crew.
 
-- **Spore** | Cost: 5: Low Tier Unit. Floats through air, attacks weakly, and explodes when killed. Can drift through space without being harmed. Spread Weak Blob in a radius around them when they explode, and can be commanded to explode manually. Also function as Ghost Roles for Players to take. Cannot be exploded manually by Ghost players.
-- **Blob Zombie "Blombie"**: Medium Tier Unit. Created when a Spore takes over a dead crew member. Controlled by downed Player, or by AI if the player has disconnected or taken another role. Acts as a regular mob, chasing down Crew and attacking. Spores on head "pop" when killed, allowing Crew's body to be retrieved and revived. Blob Zombies cannot harm the Blob.
-- **Blobbernaut** | Cost: 80: High Tier Unit. Expensive, powerful bruiser. Attacks deal heavy Blunt damage with additional damage based on Blob Strain. Blobbernauts have a low attack speed to emphasize their bruiser role, and leaves them open to being swarmed if not supported by other units. Regenerates health while on Blob Tile. Ghost role for Players, AI if uncontrolled.
+- **Spore** | *Cost: 5 | Health: 40 | Damage: 4 (25 Structure)*: Low Tier Unit. Floats through air, attacks weakly, and explodes when killed. Can drift through space without being harmed. Spread Weak Blob in a radius around them when they explode, and can be commanded to explode manually. Also function as Ghost Roles for Players to take. Cannot be exploded manually by Ghost players.
+- **Blob Zombie "Blombie"** | *Cost: 1 Crew | Health: 60 | Damage: 15*: Medium Tier Unit. Created when a Spore takes over a dead crew member. Controlled by downed Player, or by AI if the player has disconnected or taken another role. Acts as a regular mob, chasing down Crew and attacking when AI. Has resistances from armor crew member was wearing. Spores on head "pop" when killed, allowing Crew's body to be retrieved and revived. Blob Zombies cannot harm the Blob.
+- **Blobbernaut** | *Cost: 80 | Health: 300 | Damage: 40 (80 Structure)*: High Tier Unit. Expensive, powerful bruiser. Attacks deal heavy Blunt damage with additional damage based on Blob Strain. Blobbernauts have a low attack speed to emphasize their bruiser role, and leaves them open to being swarmed if not supported by other units. Regenerates health steadily while on Blob Tile. Ghost role for Players, AI if uncontrolled.
 
 ### Damage Resistances
 
