@@ -315,13 +315,13 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
 
 1. Check for ban evasion. If found deny the appeal.
 2. If the ban has expired you may, but are not required to, deny the appeal.
-3. If you are not the banning admin, an Appeals Team Member or under the supervision of an Appeals Team member you may not process the appeal.
-4. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban. 
-5. If the appeal is extremely low effort, or a "troll appeal" deny the appeal. An appeal is considered to be low effort if it meets any of the following critera:
+3. If you are not the banning admin and the appeal is extremely low effort, or a "troll appeal" deny the appeal. An appeal is considered to be low effort if it meets any of the following critera:
     - The appeal is clearly the output of an LLM such as ChatGPT.
     - The appellant is clearly not expecting their appeal to be accepted, and made it simply to troll. 
     - The appeal is incomprehensible or written in a language other than English.
     - The appeal has such little effort put into it that no other outcome can be derived from it but to close it.
+4. If you are not the banning admin, an Appeals Team Member or under the supervision of an Appeals Team member you may not process the appeal.
+5. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban. 
 6. Collect information
 	1. Check the player's history of appeals.
 	2. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
