@@ -12,24 +12,26 @@ This guide is separated into **workflow** (setup, starting a map, saving, useful
 If you've read "Workflow" and are looking for a refresher:
 
 1. To create a new map: `mapping ID`, or
-   To edit an existing map: `mapping ID PATH` (e.g. `mapping 3 Maps/saltern.yml`)
-   Note that `ID` must be the map number of a map that does not already exist. Use `lsmaps` to see a list of maps that are currently in use.
+   To edit an existing map: `mapping ID PATH` (e.g. `mapping 1000 Maps/saltern.yml`)
+   Note that `ID` must be the map number of a map that does not already exist. Use `lsmaps` to see a list of maps that are currently in use. A higher ID is recommended to avoid colliding with existing ones.
    
-2. If desired, `loadmapacts`
+2. If desired, `mappingclientsidesetup` to use the default mapping setup.
 
-3. Make changes
+3. Make all mapping changes.
    
-4. If needed, run `fixgridatmos GID`
+4. If new rooms were created, run `fixgridatmos GID`.
    
-5. Save the map: `savemap ID PATH`. **Important**: If you are working with a salvage, a shuttle, or Central Command, you need `savegrid GRID_ID PATH` instead.
+5. Save the map with the same ID you used previously: `savemap ID PATH`. **Important**: If you are working with a salvage, a shuttle, or Central Command, you need `savegrid GRID_ID PATH` instead.
 
 To test the map:
 
-6. Create a map prototype if it doesn't exist, then `forcemap PROTOTYPE-NAME`
+6. Create a map prototype if you are creating a new map and it doesn't exist yet.
 
-7. `restartroundnow`
+7. `forcemap MAP-NAME` will force the server to load your map. On Release build, you can then press F7 in Lobby to bring up the Admin Menu, and use `Round > Start Round` to skip waiting. On Tools you will need to use `restartroundnow` or F7 Admin Menu then `Round > Restart NOW` to switch to your map.
 
-8. To return to mapping, go to Step 1. Do not save the map while testing.
+8. If you are not testing the powergrid, `entities with Battery do "setbatterypercent $ID 100"` forces all APCs to be fully powered without engine setup.
+
+9. To return to mapping, go back to Step 1. Do not save the map while testing.
 
 # Setup
 ## With Development Environment
@@ -62,18 +64,18 @@ Now to start creating maps follow the below steps:
 2. Once the game client loads up, connect to the server.
 3. Press the backtick/tilde key <kbd>`</kbd> to open the debug console, which allows you to run console commands.
 4. Run the `mapping [MapID] [MapFile]` command to either create a new map or edit an existing one.
-    - To make a new map, specify only the map-id. The ID must be free, i.e., the server cannot currently have another map loaded with the same ID).
-    - To edit an existing map in the Maps/ folder you need to specify the map file name. For example, in order to edit the saltern map you can use something like `mapping 2 Maps/saltern.yml`
-    - To edit a map you have previously saved you can run the command `mapping 2 [filename.yml]`. These are found in the bin/content.server/data folder.
+    - To make a new map, specify only the map-id. The ID must be free, i.e., the server cannot currently have another map loaded with the same ID), as such you should use a sufficiently high ID to avoid a conflict.
+    - To edit an existing map in the Maps/ folder you need to specify the map file name and a free ID. For example, in order to edit the Saltern map you can use something like `mapping 1000 Maps/saltern.yml`
+    - To edit a map you have previously saved you can run the command `mapping 1000 [filename.yml]`. Your saved maps are found in the `bin/Content.Server/data` folder, separate from the maps used by the repository in the `Resources/Maps` folder.
 5. Make all the changes you want to make using sandbox-mode and admin tools. Press <kbd>F5</kbd> to toggle the entity spawner and <kbd>F6</kbd> to toggle the tile spawner. Walls are entities so you'll find them in the entity spawner.
-6. In order to save your changes, use the `savemap [MapID] [MapFile]` command. For example, `savemap 2 foo.yml` should save the server's second map to space-station-14/bin/Content.Server/data/foo.yml
+6. In order to save your changes, use the `savemap [MapID] [MapFile]` command. For example, `savemap 1000 name.yml` saves a local copy of your modified map to `space-station-14/bin/Content.Server/data/name.yml`
 
 ## Common Tools and Commands
 * <kbd>SHIFT-Click</kbd>: place a **line** of tiles/item/anything with a snap grid
 * <kbd>CTRL-Click</kbd>: place a **square** of tiles/item/anything with a snap grid
-* By default, the `P` ("Pick") key will select the entity or tile currently under your mouse for placement.
+* By default, the `P` ("Pick") key will select the entity or tile currently highlighted under the cursor for placement.
   * Note that this places entities of the same prototype, it does not actually copy the initial entity. 
-* To color all pipes in a pipe network use `colornetwork [entity id] Pipe [color]` where the entity ID is any uid of a pipe within a connected network of pipes (Use View Variable on a pipe to find this), and color is a color hex starting with #. See standard pipe colors below.
+* To color all pipes in a pipe network use `colornetwork [entity id] Pipe [color]` where the entity ID is any uid of a pipe within a connected network of pipes (Use View Variable on a pipe to find this if not displayed in the right click menu), and color is a color hex starting with #. See standard pipe colors under Standard Pipe Colors.
 * `zoom N` to zoom out while mapping. `zoom 3` zooms out 3x. Use `zoom 1` to restore normal zoom.
 * You can use the physics shapes command in the debug console to visualize grids.
 * To fix erroneously rotated walls, run `fixrotations [GridID]`
@@ -83,7 +85,7 @@ Now to start creating maps follow the below steps:
 * If you want to test the lighting on your map without leaving the editor, use the "mapinit" command. Do **save before doing this** as it will ruin your map if you save after running this command.
 * Use https://affectedarc07.github.io/SS13WebMap/ to see most SS13 maps online
     - (https://game.ss13.moe/minimaps/images/maps/ for the /vg/ ones)
-* While testing your map, you might not want to be bothered to set up power each time. In that case, try: `> entities with Battery do "setbatterypercent $ID 100"`
+* While testing your map, you might not want to be bothered to set up power each time. In that case, use: `> entities with Battery do "setbatterypercent $ID 100"`
 * Map auto-saving is enabled by default and goes to the server data directory every 10 minutes (cvar `mapping.autosave_interval`). You can turn it off with `toggleautosave [map id]` or change the `mapping.autosave` cvar.
 
 ## Mapping Actions
@@ -91,7 +93,7 @@ The actions toolbar allows you to assign entity, tile, and decal placement actio
 
 To assign an entity to a slot, you can just open the entity placement window and click on an entity to start placing it. Clicking on an empty toolbar slot instead of somewhere in the game world will save that entity to that slot. If you are currently in the entity-eraser mode, clicking on an empty slot will instead create a shortcut to the erase-mode. You can assign tile-placement actions in a similar way. Note that tile deletion is simply the same as placing down space-tiles. Finally, to assign decal actions you need to open the decal menu and configure your decal selection. Once again, clicking on an empty slot will add that decal to the toolbar. You can't save a decal-erasing shortcut to the toolbar, as this requires the decal placement window to be open. To remove an action from a slot, simply right click that slot (assuming the action toolbar has not been locked/frozen).
 
-A preset collection of mapping actions can be loaded to the toolbar by using the `loadmapacts` command. Note that as actions are unique to the currently controlled entity, if you use ghost or possession commands you will lose these actions and will have to re-run the command.
+A preset collection of mapping actions can be loaded to the toolbar by using the `mappingclientsidesetup` command. Note that as actions are unique to the currently controlled entity, if you use ghost or possession commands you will lose these actions and will have to re-run the command.
 
 ## Multi-Grid and Multi-Station Maps
 A station and a grid are not the same thing. For example, each asteroid is not it's own station, while a station may consist of multiple grids (e.g. escape shuttles). Most maps only have one grid, though you do still have to set up stations regardless. However, since you can use savemap and loadmap to save/load maps with multiple grids, there is support for overriding this behaviour.
@@ -103,20 +105,19 @@ To do this in game, find the ID of your station grid using F3 and hovering over 
 This means you can have multiple stations loaded in a single map, so do with that what you will.
 
 ## Taking a screenshot of your station
-To screenshot your station you need both a map prototype, stored on Resources/Maps which is the prototype that the `savemap 2 name.yml` command from previous steps should generate and a game map prototype stored on Resources/Prototypes/Maps which contains the ID, path and other information, refer to the other prototypes in there as examples when making one.
+To screenshot your station you need both a map prototype, stored in `Resources/Maps` which is the prototype that the `savemap 1000 name.yml` command from previous steps should generate and a game map prototype stored on Resources/Prototypes/Maps which contains the ID, path and other information, refer to the other prototypes in there as examples when making one.
 
-After this, run the command `dotnet run --project Content.MapRenderer {your_map_id_here}`, with the game map prototype ID. You can also set command line arguments through your IDE and run it that way. The image should be inside Resources/MapImages once completed.
+After this, run the command `dotnet run --project Content.MapRenderer {your_map_id_here}` in the IDE or Git CLI, with the game map prototype ID (case-sensitive). You can also set command line arguments through your IDE and run it that way. The image should be inside Resources/MapImages once completed.
 
 ## Running your map for the first time
 Now that you've completed your map, you'll want to test it in game to ensure you can spawn correctly and there are no issues with doors, access, atmos, power etc etc. To do this:
-1. Copy your newly saved mapping file from "space-station-14/bin/Content.Server/data/" to "space-station-14/resources/maps/"
+1. Copy your newly saved mapping file from "space-station-14/bin/Content.Server/data/" to "space-station-14/Resources/Maps/". You will also need to do this to submit your changes later.
 
-2. Head to "space-station-14/resources/prototypes/maps" and create a .yml file for your map (known as a map prototype). As a guide, copy an existing one and change the name to match your new map, and edit the contents in a word editor like Notepad++ or your prefered method so that your new map has a unique ID and name. See section on multi-grid and multi-station for Station IDs (this is not the same as your map ID).
+2. If this is a brand new map, head to "space-station-14/Resources/Prototypes/Maps" and create a .yml file for your map (known as a map prototype). As a guide, copy an existing one and change the name to match your new map, and edit the contents in a word editor like Notepad++ or your prefered method so that your new map has a unique ID and name. See section on multi-grid and multi-station for Station IDs (this is not the same as your map ID).
     
-3. You can now relaunch the client and server. Once connected run the command `forcemap [ID]` where the ID is the one specified in the .yml file we mentioned just before. Then run the `restartnow` command to restart the server on your map.
+3. You can now relaunch the client and server. Once connected run the command `forcemap [ID]` where the ID is the one specified in the .yml file we mentioned just before. On Release, simply press F7 in Lobby to bring up the Admin Menu, and use `Round > Start Round` to skip waiting. If you are on Tools, run the `restartnow` command or F7 Admin Menu then `Round > Restart NOW` to restart the server on your map.
 
 4. Connect to the game and you should now be on your new map. Refer to the troubleshooting section if you're having issues.
-    
     
 ## Opening a PR and getting it into the game
 Once you've tested your map by running it in game as shown previously, and you've ran through the quality control checklist as shown here, you're ready to do a pull request to get your map submitted to the game.
@@ -131,6 +132,8 @@ To pull request:
 4. Commit these two changes to your branch then push them to origin.
 5. Head to the upstream SS14 repository and navigate to the pull requests tab. There should be a banner saying something like "recent changes on your branch, pull request?" Do this to open a pull request for your map. Alternatively you can open a pull request from your repository.
 6. Fill out the pull request page with details like screenshots / map renders, advising you've followed the quality control checklist, max / min players, and any other details and add a changelog entry.
+
+Don't forget to delete the saved map in `space-station-14/bin/Content.Server/data` once you are fully done as it will persist even once your changes are committed.
 
 # Troubleshooting and FAQ
 ## Loading your map
@@ -188,12 +191,12 @@ In order to create a life support system aboard your map you'll need to create a
 * **Gas Condenser** - Converts gasses into reagents. Probably more important to chemistry or science than atmospherics.
 
 ### Standard Pipe Colors
-Prefer using standard pipe colors for your atmospherics layout so that players and other mappers can understand it better. Consider an in service ship or station won't often have vibrant colors.
+Prefer using standard pipe colors for your atmospherics layout so that players and other mappers can recognize them immediately.
 
-- Waste loop: #990000 (dull red)
-- Distro loop: #0055cc (subdued blue)
-- Air: #03fcd3 (cyan)
-- Mix: #947507 (brownish)
+- Waste loop: #FF1212FF (red)
+- Distro loop: #0335FCFF (blue)
+- Air: #03FCD3FF (cyan)
+- Mix: #947507FF (brownish)
 
 ## Power
 Your power network consists of HV, MV and LV wires. In all cases the wire needs to be placed **UNDER** the respective device to connect, except in the case of LV consumers as noted below:
