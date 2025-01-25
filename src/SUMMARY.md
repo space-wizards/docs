@@ -307,6 +307,7 @@ Community
     - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
   - [Wizards Den Admin Policy](en/community/admin/wizards-den-admin-policy.md)
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
+  - [Wizards Den MRP Policy](en/community/admin/wizards-den-mrp-policy.md)
 - [Progress Report Creation](en/community/progress-report-creation.md)
 
 Engine Development
@@ -336,6 +337,9 @@ Maintainer Meetings
 ==============
 
 ----------------------
+- [2025-01-04](en/maintainer-meetings/maintainer-meeting-2025-01-04.md)
+- [2024-12-21](en/maintainer-meetings/maintainer-meeting-2024-12-21.md)
+- [2024-12-07](en/maintainer-meetings/maintainer-meeting-2024-12-07.md)
 - [2024-11-23](en/maintainer-meetings/maintainer-meeting-2024-11-23.md)
 - [2024-11-09](en/maintainer-meetings/maintainer-meeting-2024-11-09.md)
 - [2024-10-27](en/maintainer-meetings/maintainer-meeting-2024-10-27.md)

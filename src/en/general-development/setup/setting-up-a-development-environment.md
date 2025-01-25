@@ -4,7 +4,7 @@ First you're gonna need some software:
 
 * [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
 * [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio also installs this if you're on Windows.
+* [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0). Visual Studio also installs this if you're on Windows.
   * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
   * For **all platforms**, [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 maintainers and contributors prefer it over Visual Studio. It used to be paid but now it's free for Non-Commercial use.
@@ -12,6 +12,27 @@ First you're gonna need some software:
   * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
     * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
+
+~~~admonish info title="Windows and winget"
+Windows users are suggested to use winget for an easier install, just open a command prompt/powershell and enter the following:
+
+Required:
+```
+winget install Git.Git
+winget install Python.Python.3.13
+winget install Microsoft.DotNet.SDK.9
+```
+
+And one of the following ide's:
+
+``winget install JetBrains.Toolbox`` (replace with ``JetBrains.Rider`` if you don't want the whole toolbox app)
+
+``winget install Microsoft.VisualStudio.2022.Community`` (Visual Studio 2022)
+
+``winget install Microsoft.VisualStudioCode`` (Visual Studio Code)
+
+``winget install VSCodium.VSCodium`` (VSCodium)
+~~~
 
 ## Video guide
 Are you stuck? Don't understand how to do a certain part? This video should help
