@@ -44,8 +44,8 @@ Blob Tiles are the Blob's primary method of spreading throughout the station. Ea
 
 - Normal Blob | Cost 5: Main tile of the Blob. Spreads influence outwards, allows buildings to be placed down, attacks entities that attempt to wander into it. Entities that walk onto Blob Tiles are slowed by 50%. Degrades into Weak Blob if outside the influence of a Node/Core.
 - Weak Blob | Cost: 2: If the Blob attempts to spread outside the influence of a Node/Core, they will only spread Weak Blob at a reduced cost. Weak Blob has half health and damage of a regular Blob Tile, and only slows by 15%. Buildings can still be placed on Weak Blob.
-- Strong Blob | Cost: 15: Upgraded from Normal Blob. Strong Blob Tiles are solid walls that can take much more damage before being destroyed. Fireproof and block air flow in the event of station fires.
-- Reflective Blob | Cost: 15: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew.
+- Strong Blob | Cost: 8: Upgraded from Normal Blob. Strong Blob Tiles are solid walls that can take much more damage before being destroyed. Fireproof and block air flow in the event of station fires.
+- Reflective Blob | Cost: 8: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew.
 - Blob Locks/Membrane | Cost: 0: Variant of Strong Blob. Blob Locks/Membrane are doors the Blob can establish to fortify an area, while still letting their units through. Useful for chokepoints, and for letting units into space.
 
 ### Blob Buildings
