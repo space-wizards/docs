@@ -40,6 +40,7 @@ General Development
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
 - [Work Groups](en/general-development/work-groups.md)
 - [Contributing Translations](en/general-development/contributing-translations.md)
+- [Client-Side Prediction](en/general-development/clients-servers-and-prediction.md)
 
 SS14 By Example
 ===============
