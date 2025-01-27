@@ -1,6 +1,6 @@
-# Maintainer Meeting (18 January 2024)
+# Maintainer Meeting (18 January 2025)
 
-**Time:** 18 January 2024
+**Time:** 18 January 2025
 
 ```admonish info
 **Attendees:**
