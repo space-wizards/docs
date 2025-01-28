@@ -243,6 +243,7 @@ Space Station 14
 		- [Proposals]()
 			- [GenPop Prisoners](en/space-station-14/departments/security/proposals/genpop-prisoners.md)
 			- [Reduced Metagaming Mechanics](en/space-station-14/departments/security/proposals/reduced-metagaming.md)
+			- [Warden Rework](en/space-station-14/departments/security/proposals/rework-warden.md)
 	- [Service](en/space-station-14/departments/service.md)
 		- [PR Guidelines](en/space-station-14/departments/service/guidelines.md)
 
