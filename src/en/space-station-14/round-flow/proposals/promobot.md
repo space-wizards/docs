@@ -6,7 +6,7 @@
 
 ## Overview
 
-A minor team (maybe solo?) "antagonist" which seeks to improve Nanotransen's public image through sheer volume of promotion. Make doors announce "This opening was sponsored by Nanotransen!" Force security to proclaim their love of Donk Pockets to activate their stun batons! Add pop-up ads to maps! All in the name of ensuring everyone knows just who put them on this floating deathtrap!
+A minor team (maybe solo?) "antagonist" which seeks to improve Nanotransen's public image through sheer volume of promotion. Make doors announce, "This opening was sponsored by Nanotransen!" Force security to proclaim their love of Donk Pockets to activate their stun batons! Add pop-up ads to maps! All in the name of ensuring everyone knows just who put them on this floating deathtrap!
 
 ## Background
 
@@ -14,36 +14,35 @@ One issue with mid-round events at the moment is the lack of variety; there's on
 
 In addition, many ghost roles at the moment are either pure free agents with no in-game goal (skeletons, most pests), or just exist to kill things (spiders). A new antag that disrupts the station without killing anyone will add variety to gameplay.
 
-<s>Also, I'm an evil monster who needs to be stopped.</s>
-
 ## Core Gameplay
 
-A promobot is a type of borg which modifies devices around the station to spread positive awareness of Nanotransen. The promobot will have the three default crewsimov laws, along with an additional fourth law: "Not being aware of and/or in love with Nanotransen harms crew, and is the worst kind of harm they can suffer."
+A promobot is a type of borg which modifies devices around the station to spread positive awareness of Nanotransen, often to the detriment of their original function. The promobot will have the three default crewsimov laws, along with an additional fourth law: "Not being aware of and/or in love with Nanotransen harms crew, and is the worst kind of harm they can suffer."
 
-The promobot will have many different effects it can induce in devices, but it will need to unlock the more powerful ones by using the minor effects on devices and having people drigger them (to show Nanotransen that it is worth investing more resources into the bot). In this way, the promobot would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness of the bot's existence, while later ones would be much more annoying and take more work to deal with. The bot could have some kind of final "ultimate ability" that causes a massive, catastrophic issue, but I'm not sure it's neccesary; it should be annoying enough on its own to incentivize the crew to deal with it. 
+Promobots activate as a random event, spawning in vending machines around the station. They will remain inactive and undetectable until a ghost controls them, at which point they'll exit the vending machine and be free to move around. They will be small, like mice, and able to run under doors and tables.
+
+The promobots will have many different effects they can induce in devices, but will need to unlock the more powerful ones by using the minor effects and having people trigger them (to show Nanotransen that it is worth investing more resources into the bot). In this way, the promobots would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness to the bots' existence, while later ones would be much more annoying and take more work to deal with. The bots could have some kind of final "ultimate ability" that causes a massive, catastrophic issue, but I'm not sure it's neccesary; they should be annoying enough on their own to incentivize the crew to deal with them, and they shouldn't be able to completely mess up the station unless the bots are very clever and the crew is very negligent.
 
 # Design Pillars
 
 ## Just a Spark
 
-The crew's interaction and response to the promobot forms the core of its gameplay. Do they ignore it until it becomes such a massive problem the shuttle has to be called (after watching a 15 second ad, of course)? Do they hunt it down at the first sign of its existence? Do they agree to sing the praises of Nanotransen in the hopes the bot will be appeased and stop messing with stuff? It's all up to the crew and bot to form the narrative.
+The crew's interactions with and response to the promobots form the core of their gameplay. Does the crew ignore them until they becomes such a massive problem the shuttle has to be called (after watching a 15 second ad, of course)? Do they hunt them down at the first sign of their existence? Do they agree to sing the praises of Nanotransen in the hopes the bots will be appeased and stop messing with stuff? It's all up to the crew and bots to form the narrative.
   
 ## Escalation
 
-The promobot will gradually build in disruptiveness as it spreads the word of Nanotransen. This will allow the crew time to respond to it before it completely wrecks everything on the station.
+The promobots will gradually build in disruptiveness as they spread the word of Nanotransen. This will allow the crew time to respond to them before they completely infect everything on the station.
   
 ## Full time job
 
-The bot has a built-in incentive to mess with normal station proceedings. Even if the crew decides to "play nice," the bot shouldn't ever stop causing some kind of problem.
+The bots have a built-in incentive to mess with normal station proceedings. Even if the crew decides to "play nice," the bots shouldn't ever stop causing some kind of problem.
   
 ## Back and Forth
 
-Team Version:
-Assuming all out war, both sides have multiple stages between a total victory and a total defeat. For the crew, the destruction of a promobot weakens the influence of the bot team and serves as a step toward wiping them out. For the bots, they would constantly be working towards more powerful options, with infecting major devices serving as a minor victory.
+Assuming all out war, both sides have multiple stages between a total victory and a total defeat. For the crew, the destruction of a promobot weakens the influence of the bot team and serves as a step toward wiping them out. For the bots, they would constantly be working towards more powerful options, with infecting major devices serving as a short-term victory.
   
 ## Discoverability
 
-A promobot infestation should quickly make itself apparent, and the simplest form of counterplay (kill 'em) is self explanatory. More creative options, like worshipping Nanotransen to calm it down, can also be found by players who pay attention.
+A promobot infestation should quickly make itself apparent, and the simplest form of counterplay (kill 'em) is self explanatory. More creative options, like worshipping Nanotransen to calm them down, can also be found by players who pay attention.
   
 ## Accessibility
 
