@@ -18,9 +18,9 @@ In addition, many ghost roles at the moment are either pure free agents with no 
 
 ## Core Gameplay
 
-The promobot is a type of borg which modifies devices around the station to spread positive awareness of Nanotransen. Like any borg, the promobot will have the three default crewsimov laws, with the additional fourth law "Not being aware of and/or in love with Nanotransen harms crew, and is the worst kind of harm they can suffer."
+The promobot is a type of borg which modifies devices around the station to spread positive awareness of Nanotransen. Like any borg, the promobot will have the three default crewsimov laws, with the additional fourth law, "Not being aware of and/or in love with Nanotransen harms crew, and is the worst kind of harm they can suffer."
 
-The promobot will have many different effects it can induce in devices, but it will need to unlock the more powerful ones by using the minor effects on many devices and having people drigger them (to show Nanotransen than it is worth investing more resources into the bot). In this way, the promobot would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness of the bot's existence, while later ones would be much more annoying and take more work to deal with. The bot could have some kind of final "ultimate ability" that causes a massive, catastrophic issue, but I'm not sure it's neccesary; it should be annoying enough on its own to incentivize the crew to deal with it. 
+The promobot will have many different effects it can induce in devices, but it will need to unlock the more powerful ones by using the minor effects on many devices and having people drigger them (to show Nanotransen that it is worth investing more resources into the bot). In this way, the promobot would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness of the bot's existence, while later ones would be much more annoying and take more work to deal with. The bot could have some kind of final "ultimate ability" that causes a massive, catastrophic issue, but I'm not sure it's neccesary; it should be annoying enough on its own to incentivize the crew to deal with it. 
 
 # Design Pillars
 
@@ -38,15 +38,16 @@ The bot has a built-in incentive to mess with normal station proceedings. Even i
   
 ## Back and Forth
 
-- Success or failure shouldn’t depend on a single event, rather there should be minor wins and losses over the course of a round that add up to the final climax.
+Team Version:
+Assuming all out war, both sides have multiple stages between a total victory and a total defeat. For the crew, the destruction of a promobot weakens the influence of the bot team and serves as a step toward wiping them out. For the bots, they would constantly be working towards more powerful options, with infecting major devices serving as a minor victory.
   
 ## Discoverability
 
-- There should be clear breadcrumbs present to provide clues to which antagonists are present. The crew should also be aware of their counterplay options to prevent antagonists from easily snowballing.
+A promobot infestation should quickly make itself apparent, and the simplest form of counterplay (kill 'em) is self explanatory. More creative options, like worshipping Nanotransen to calm it down, can also be found by players who pay attention.
   
 ## Accessibility
 
-- Antags should be provided with all the information required to perform their role, along with what they are allowed and not allowed to do to achieve their objectives. Mechanics/identification should not rely solely on colors for differentiation or functionality.
+The core gameplay of a promobot should be simple enough that a player can figure it out based on the ghost-role description, in-game tooltips, and the borg laws.
   
 ## Fun to lose against (or as)
 
