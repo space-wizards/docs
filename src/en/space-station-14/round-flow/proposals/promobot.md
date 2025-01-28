@@ -6,7 +6,7 @@
 
 ## Overview
 
-A minor (solo?/team?) "antagonist" which seeks to improve Nanotransen's public image through sheer volume of promotion. Make doors announce "This opening was sponsored by Nanotransen!" Force security to proclaim their love of Donk Pockets to activate their stun batons! Add pop-up ads to maps! All in the name of ensuring everyone knows just who put them on this floating deathtrap!
+A minor team (maybe solo?) "antagonist" which seeks to improve Nanotransen's public image through sheer volume of promotion. Make doors announce "This opening was sponsored by Nanotransen!" Force security to proclaim their love of Donk Pockets to activate their stun batons! Add pop-up ads to maps! All in the name of ensuring everyone knows just who put them on this floating deathtrap!
 
 ## Background
 
@@ -18,9 +18,9 @@ In addition, many ghost roles at the moment are either pure free agents with no 
 
 ## Core Gameplay
 
-The promobot is a type of borg which modifies devices around the station to spread positive awareness of Nanotransen. Like any borg, the promobot will have the three default crewsimov laws, with the additional fourth law, "Not being aware of and/or in love with Nanotransen harms crew, and is the worst kind of harm they can suffer."
+A promobot is a type of borg which modifies devices around the station to spread positive awareness of Nanotransen. The promobot will have the three default crewsimov laws, along with an additional fourth law: "Not being aware of and/or in love with Nanotransen harms crew, and is the worst kind of harm they can suffer."
 
-The promobot will have many different effects it can induce in devices, but it will need to unlock the more powerful ones by using the minor effects on many devices and having people drigger them (to show Nanotransen that it is worth investing more resources into the bot). In this way, the promobot would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness of the bot's existence, while later ones would be much more annoying and take more work to deal with. The bot could have some kind of final "ultimate ability" that causes a massive, catastrophic issue, but I'm not sure it's neccesary; it should be annoying enough on its own to incentivize the crew to deal with it. 
+The promobot will have many different effects it can induce in devices, but it will need to unlock the more powerful ones by using the minor effects on devices and having people drigger them (to show Nanotransen that it is worth investing more resources into the bot). In this way, the promobot would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness of the bot's existence, while later ones would be much more annoying and take more work to deal with. The bot could have some kind of final "ultimate ability" that causes a massive, catastrophic issue, but I'm not sure it's neccesary; it should be annoying enough on its own to incentivize the crew to deal with it. 
 
 # Design Pillars
 
