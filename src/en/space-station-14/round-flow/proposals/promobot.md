@@ -22,6 +22,15 @@ Promobots activate as a random event, spawning in vending machines around the st
 
 The promobots will have many different effects they can induce in devices, but will need to unlock the more powerful ones by using the minor effects and having people trigger them (to show Nanotransen that it is worth investing more resources into the bot). In this way, the promobots would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness to the bots' existence, while later ones would be much more annoying and take more work to deal with. The bots could have some kind of final "ultimate ability" that causes a massive, catastrophic issue, but I'm not sure it's neccesary; they should be annoying enough on their own to incentivize the crew to deal with them, and they shouldn't be able to completely mess up the station unless the bots are very clever and the crew is very negligent.
 
+### Effects
+- Cause usable devices (doors, medical scanners, etc) to make pro-nanotransen announcements when used.
+- Add pop-up ads to devices with screens/huds.
+- Occasionally cause borgs to make pro-nanotransen statements instead of what they meant to say.
+- Cause useable devices to become inoperable until the user states a given pro-nanotransen word/phrase.
+- Cause doors to bolt shut until someone nearby states a given pro-nanotransen phrase.
+- Add unskippable ads to devices with screens/huds.
+- For devices to access with radio channels (intercoms, earpieces), cause pro-nanotransen announcements to be made over coms.
+
 # Design Pillars
 
 ## Just a Spark
