@@ -6,6 +6,10 @@ There are a couple things to keep in mind when contributing. While we disallow w
 
 If you want to get an idea of what features are at your disposal when writing documentation, go to our [Docs Example Page](./docs-example-page.md).
 
+## Style
+
+Documentation should be written in a [technical communications style](https://ohiostate.pressbooks.pub/feptechcomm/chapter/3-writing-style/). Effective technical communications are [concise, precise, direct, and well organized](https://ohiostate.pressbooks.pub/feptechcomm/chapter/3-writing-style/) and should be written in an appropriate [voice and tone](https://ohiostate.pressbooks.pub/feptechcomm/chapter/3-1-voice-tone/) using [correct mechanics and grammar](https://ohiostate.pressbooks.pub/feptechcomm/chapter/3-2-mechanics-grammar/), citing relevant sources where needed.
+
 ## Making basic edits
 
 If you just want to make a basic edit of a page, simply follow these steps--you don't need any of the fancy stuff talked about later:
@@ -52,3 +56,13 @@ If you want a slightly more authentic experience, every PR will have the `Test m
 Then, just unzip it and open `index.html`. Our custom CSS and stuff won't work super well but it'll look good enough.
 
 For an authentic-authentic experience, just follow the build instructions above and run `mdbook serve` like normal.
+
+## Review
+
+Maintainers will review pull requests for documentation for content and [style](#style). Maintainers understand that many contributors do not speak English as a native language and will be helpful with their review comments.
+
+To help make best use of maintainers' review time, before submitting please:
+
+- Proofread your changes
+- Use a spell checker
+- Consider using grammar review tools like [Grammarly](https://www.grammarly.com/)
