@@ -28,17 +28,18 @@ If you just want to make a basic edit of a page, simply follow these steps--you 
 
 ## Building
 
-If you want to locally build the docs, the necessary dependencies are Rust and some binaries installed using `cargo`. It's recommended that you use `cargo binstall` or `cargo quickinstall`, as building can take a while.
+If you want to locally build the docs, the necessary dependencies are Rust and some binaries installed using `cargo`. It's recommended that you use `cargo install` or `cargo quickinstall`, as building can take a while.
 
 From cargo, install:
 - `mdbook`
+- `mdbook-admonish`
+- `mdbook-embedify`
+- `mdbook-emojicodes`
+- `mdbook-linkcheck`
 - `mdbook-mermaid`
 - `mdbook-template`
-- `mdbook-linkcheck`
-- `mdbook-admonish`
-- `mdbook-emojicodes`
 
-Call `mdbook serve` to build and locally host the documentation from the `book` directory at `localhost:3000`.
+Run `mdbook serve` to build and locally host the documentation from the `book` directory at `localhost:3000`.
 
 ## Porting pages from Wiki.js
 
