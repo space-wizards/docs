@@ -16,7 +16,7 @@ In addition, many ghost roles at the moment are either pure free agents with no 
 
 ## Core Gameplay
 
-A promobot is a type of borg which modifies devices around the station to spread positive awareness of Nanotransen, often to the detriment of their original function. The promobot will have the three default crewsimov laws, along with an additional fourth law: "Not being aware of and/or in love with Nanotransen harms crew, and is the worst kind of harm they can suffer."
+A promobot is a type of borg which modifies devices around the station to spread positive awareness of Nanotransen, often to the detriment of their original function. The promobot will have the three default crewsimov laws, along with an additional 0th law: "Not being aware of and/or in love with Nanotransen harms crew, and is the worst kind of harm they can suffer."
 
 Promobots activate as a random event, spawning in vending machines around the station. They will remain inactive and undetectable until a ghost controls them, at which point they'll exit the vending machine and be free to move around. They will be small, like mice, and able to run under doors and tables.
 
