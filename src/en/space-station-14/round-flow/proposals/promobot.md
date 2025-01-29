@@ -29,7 +29,7 @@ The promobots will have many different effects they can induce in devices, but w
 - Cause useable devices to become inoperable until the user states a given pro-nanotransen word/phrase.
 - Cause doors to bolt shut until someone nearby states a given pro-nanotransen phrase.
 - Add unskippable ads to devices with screens/huds.
-- For devices to access with radio channels (intercoms, earpieces), cause pro-nanotransen announcements to be made over coms.
+- For devices with access to radio channels (intercoms, earpieces), cause pro-nanotransen announcements to occasionally be made over coms.
 
 # Design Pillars
 
@@ -59,4 +59,7 @@ The core gameplay of a promobot should be simple enough that a player can figure
   
 ## Fun to lose against (or as)
 
-- Losing/dying to an antag should not feel unfair to a player. Players should always have some option in terms of counterplay. The same goes for antags, they should always feel like they have options and are not hard countered.
+Balance wise, the ideal would be that an intelligent lone promobot, if seen, would:
+- almost always (>90%) escape from individual crew that happen upon it.
+- usually (~75%) escape from a small (2-3) group of crew chasing it without organization or preparation.
+- often (~50%) escape from a large (>3) group of crew chasing it without organization or preparation.
