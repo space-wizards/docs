@@ -20,7 +20,7 @@ A promobot is a type of borg which modifies devices around the station to spread
 
 Promobots activate as a random event, spawning in vending machines around the station. They will remain inactive and undetectable until a ghost controls them, at which point they'll exit the vending machine and be free to move around. They will be small, like mice, and able to run under doors and tables.
 
-The promobots will have many different effects they can induce in devices, but will need to unlock the more powerful ones by using the minor effects and having people trigger them (to show Nanotransen that it is worth investing more resources into the bot). In this way, the promobots would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness to the bots' existence, while later ones would be much more annoying and take more work to deal with. The bots could have some kind of final "ultimate ability" that causes a massive, catastrophic issue, but I'm not sure it's neccesary; they should be annoying enough on their own to incentivize the crew to deal with them, and they shouldn't be able to completely mess up the station unless the bots are very clever and the crew is very negligent.
+The promobots will have many different effects they can induce in devices, but will need to unlock the more powerful ones by using the minor effects and having people trigger them (to show Nanotransen that it is worth investing more resources into the ad campaign). In this way, the promobots would build in disruptiveness over time. Initial effects would be minor and mostly serve to bring awareness to the bots' existence, while later ones would be much more annoying and take more work to deal with. The bots could have some kind of final "ultimate ability" that causes a massive, catastrophic issue (infecting the AI?), but I'm not sure it's neccesary; they should be annoying enough on their own to incentivize the crew to deal with them, and they shouldn't be able to completely mess up the station unless the bots are very clever and the crew is very negligent.
 
 ### Effects
 - Cause usable devices (doors, medical scanners, etc) to make pro-nanotransen announcements when used.
@@ -59,7 +59,9 @@ The core gameplay of a promobot should be simple enough that a player can figure
   
 ## Fun to lose against (or as)
 
-Balance wise, the ideal would be that an intelligent lone promobot, if seen, would:
-- almost always (>90%) escape from individual crew that happen upon it.
-- usually (~75%) escape from a small (2-3) group of crew chasing it without organization or preparation.
-- often (~50%) escape from a large (>3) group of crew chasing it without organization or preparation.
+For the bots, much of the fun comes from the risk/reward nature of their gameplay. They want to infect high-use devices in order to trigger more ads and build up faster, but that naturally means making risky moves against targets that will have a lot of people around them. A bot dying will often be the result of a misplay or taking a risk that doesn't work out, both of which put control in the hands of the player.
+For the crew, the dynamic will be similar to service vs. mice; the bots are a minor nuisance most of the time and can be quickly killed if they get cocky, and the only way they can mess with something important and get away with it is if the device is left alone.
+Also, the bots provide a lot of roleplay potential no matter what happens, which can be fun.
+
+# Alternative: Simple Promobots
+Another option, which could act as a way to recieve feedback prior to the "full" version, would be promobots that don't have any kind of buildup, don't have access to any truly disruptive abilities (just adding announcements to devices), and mostly exist as a way to create roleplay opportunities. They'd be more like a pest in this interpretation; a small ghost role that doesn't have a lot of impact on the round, just running around the station and messing with stuff.
