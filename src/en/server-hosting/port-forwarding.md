@@ -179,7 +179,7 @@ We can't really do much anymore to help other than give suggestions. We made som
 
 Essentially from this point on, you will need external help to make your server reachable if you can't get your ISP to help.
 
-# Tunneling services (Like playit.gg, localtonet)
+## Tunneling services (Like playit.gg, localtonet)
 
 ```admonish warning
 Do note tunneling services will cause everyone's IP appear as coming from the same location which will make IP bans impossible. 
@@ -200,7 +200,7 @@ This guide will cover playit.gg here. Instructions should be similar for other p
 
 Every time you need to host a server, make sure to start the relevant tunneling app first.
 
-# VPN networks (Zerotier/Tailscale/Hamachi)
+## VPN networks (Zerotier/Tailscale/Hamachi)
 
 ```admonish warning
 Be careful with who you allow access using these programs. When multiple computers are on the same internal network, they can communicate directly with each other. This means that any device connected could, in theory, access shared files, printers, or even attempt unauthorized actions if not properly secured. Ensure you trust the people that get access and turn it off when not using it.
