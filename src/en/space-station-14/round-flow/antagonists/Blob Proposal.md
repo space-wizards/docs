@@ -10,7 +10,7 @@ The Blob is a Major Conversion Antagonist with the goal of replicating and evolv
 
 This is an intended re-imagining of the original Blob to better support a more interesting style of play both for the crew of the station and the Blob itself. The Blob is no longer simply spreading, but evolving in its quest to perfect itself and consume the galaxy.
 
-This is a condensed version of the main doc found here as I try to condense and focus this down (Although the original doc has much more ADHD rambling on my thought process if needed): https://docs.google.com/document/d/1JTyuuHHEphncsvq3ubqJ9hwMzDlBHUfSY0dehHIBRww/edit?usp=sharing
+Mildly condensed from a Google Doc with more adhd rambling on my thought processes: https://docs.google.com/document/d/1JTyuuHHEphncsvq3ubqJ9hwMzDlBHUfSY0dehHIBRww/edit?usp=sharing
 
 ### Gameplay Loop
 
@@ -108,9 +108,9 @@ In order to give the Blob a more specific objective to achieve and a way to powe
 | Level | Required Nodes | Node Cap | Range of Influence (Tiles) | Resource Generation | Research Time (Seconds) | Cost |
 |---|---|---|---|---|---|---|
 | Base Level **"Interphase"** | 0 | 3 | 3 | 1 | 0 | 0 | - The Blob's starting level. If the Blob is discovered at this point it will have a use of Core Relocate to escape and regroup.
-| 1st Evolution **"Prophase"** | 2 | 4 | 4 | 2 | 10 | 50 | - After researching Prophase: the station will receive an alert that a class five biohazard has been detected on station and must be dealt with if they wish to escape/survive and the hunt for the Blob will begin if the crew has not already discovered it. *Unlocks Spore Cannons*
-| 2nd Evolution **"Metaphase"** | 3 | 5 | 5 | 2 | 15 | 100 | - Metaphase should be roughly where skirmishes between the Blob and Crew are occuring regularly in a back and forth between pushes from both sides while the Blob begins to unleash its deadliest minions. *Unlocks Blobbernauts*
-| 3rd Evolution **"Anaphase"** | 4 | 6 | 7 | 3 | 20 | 150 | - Anaphase is where the Blob's strength is at its peak requiring the Crew to adopt the heaviest measures possible to really begin making meaningful pushes against the Blob. This is also the point where they can request codes for the station's Nuke if all seems lost. *Unlocks Split Consciousness.*
+| 1st Evolution **"Prophase"** | 2 | 4 | 4 | 2 | 20 | 50 | - After researching Prophase: the station will receive an alert that a class five biohazard has been detected on station and must be dealt with if they wish to escape/survive and the hunt for the Blob will begin if the crew has not already discovered it. *Unlocks Spore Cannons*
+| 2nd Evolution **"Metaphase"** | 3 | 5 | 5 | 2 | 30 | 100 | - Metaphase should be roughly where skirmishes between the Blob and Crew are occuring regularly in a back and forth between pushes from both sides while the Blob begins to unleash its deadliest minions. *Unlocks Blobbernauts*
+| 3rd Evolution **"Anaphase"** | 4 | 6 | 7 | 3 | 50 | 150 | - Anaphase is where the Blob's strength is at its peak requiring the Crew to adopt the heaviest measures possible to really begin making meaningful pushes against the Blob. This is also the point where they can request codes for the station's Nuke if all seems lost. *Unlocks Split Consciousness.*
 | 4th Evolution **"Cytokinesis"** | 6 | Infinite | Infinite | Infinite | 300 | 200 | - The ultimate goal of the Blob. Takes much longer to research than every previous tier and comes with a stationwide alert that the Blob is close to reaching critical mass. This is the make or break moment for the round as the Crew must defeat the Blob before it completes its evolution or they will lose. After the research has finished: the round will end and the Blob will gain infinite resources and have all caps on its abilities removed and its tiles will spread rapidly on their own. Any Escape Pods will launch to allow some method of escape, but anyone trapped on the station is doomed to be consumed. 
 
 ### Blob Objectives (Blobjectives)
@@ -146,7 +146,7 @@ The Blob is an overwhelming hostile force that requires the Crew to properly coo
 - **Security**: Security should be the first line of defense against the Blob, helping to establish points of defense, coordinating with Command staff in order to set up defensive points, protecting key departments and staff, and distributing weapons to crewmates while fortifying areas ahead of the Blob. Riot Gear will be especially useful in combatting the Blob.
 - **Cargo**: Cargo should be doing what they do best: Ordering weapons and supplies for the Station to fight back against the Blob. Ideally the less straightforward nature of the Blob compared to other antagonists will encourage the department to work with the rest of the Station to think of more unconventional methods of attack. Salvage will need to be on their A-Game gathering materials and ores for the Station, and the Blob's new methods of grabbing shuttles and wayward players means that the usual solo mindset of Salvagers is heavily discouraged. The Cargo Shuttle will be a key tool as well in scouting the edges of the station to find signs of the Blob's influence in case it uses its new spreading strategies to go around traditional defenses.
 - **Medical**: Front line triage will be an incredibly important part of Blob defense, as the ability to quickly grab critical crew members and bring them to safety will keep the Blob from taking them to reinforce its numbers. Surgery (If implemented) will also be necessary to be used on recovered Blob Zombies to remove the remnants of their infestation to properly revive them.
-- **Science**: The crew will need every advanced technology they can get in order to defeat the Blob, so Science will be similar to their iteration in WarOps: Quickly researching arsenal tech to gear the Crew up. The Blob's widespread but sedentary nature also makes it feasible to use more unconventional strategies to fight it: Anomalies could be spawned and tossed into the middle of a wayward Blob base as it'll have no methods of dealing with them. The RD's portal will also be as useful as ever in keeping a connected front line. Ideally they will also be producing flashes for point defense.
+- **Science**: The crew will need every advanced technology they can get in order to defeat the Blob, so Science will be similar to their iteration in WarOps: Quickly researching arsenal tech to gear the Crew up. The Blob's widespread but sedentary nature also makes it feasible to use more unconventional strategies to fight it: Anomalies could be spawned and tossed into the middle of a wayward Blob base as it'll have limited methods of dealing with them. The RD's portal will also be as useful as ever in keeping a connected front line. Ideally they will also be producing flashes for point defense.
 - **Engineering**: The Blob is an entity of mass destruction and will need to be slowed down in any way possible. Fortifactions and repairs will be a critical method of slowing down the Blob's spread and assault, or repairing spacing to keep the Blob from attempting to turn the environment against the crew. They should also be assisting Science and Security in producing heavier stationary weapons for powerful pushes into Blob territory.
 - **AI/Silicons**: The Silicons of the Station can take a much more direct role in combating the Blob due to its nature as Non-crew. The AI's ability to keep an eye on all corners of the station will be highly necessary for spotting the Blob's attempts to spread in unconventional ways, or using its abilities to assist in reinforcing areas either on the front line, or in other areas to prevent Blob infiltration. Borgs will be able to assist in direct combat with welders, and their inability to be infested means they will be a prime unit for recovering crew members.
 
@@ -201,6 +201,8 @@ To keep the Blob from being too predictable as to when it can appear: The Blob h
 
 **Blob Vermin:** A swarm of creatures from the ventilation system carried an extra visitor among their ranks. This is treated as a normal Vermin invasion event, letting the Blob steathily make its way on station to establish its base of operations and spread. Can be either a Mouse, Snail, Snoth, or Mothroach.
 
+**Scientific Endeavor:** A Science Ship that had been studying the Blob FTL's to the Station to get supplies and repairs. Unbeknownst to them: The Blob has escaped containment and infested one of the scientists on their ship (Or all of them for something even more fun). The scientist will have five minutes to commit any sabotage they need to while also finding a place to set their core. After five minutes (or sooner if the Scientist chooses), the Blob ruptures out of the scientist's body and gibs them as the Blob begins to spread and take over the station.
+
 ## Blob Strains
 
 Blob Strains are variations either to specific mechanics the Blob is capable of, or the properties of said mechanics. Before the Blob places their core they are given the option of choosing a specific strain of Blob to alter their overall strategy either through damage types or specific abilities. Blob players do not have to pick one if they do not wish and it will be recommended for first time players to choose the default Blob option in order to get used to how the Blob functions at its baseline first.
@@ -229,10 +231,28 @@ Blob Strains are variations either to specific mechanics the Blob is capable of,
 | Feast or Famine | 17.5 Brute | Resource Pools have double generation speed, Spore Factories produce Spores faster. | Pools degrade and lose health over time. Time to death roughly equivilant to time it would take to produce enough resources for 2.5 pools |
 | The Hungering Horror | 20 Caustic 2.5 Burn | Crew members are abducted by Spores and taken to Resource Pools to be dissolved and absorbed over 20-30 seconds. Absorbed crew give 30-40 bonus resources to the Blob. Extra DoT while standing on Blob Tiles. | Blob Zombies disabled, takes full Cold damage |
 | The Beast | 20 Brute | Spores turn dead crew members into Mini-Nodes. These do not count towards Blob's evolution, but can support buildings while turning Weak tiles into Normal tiles. Crew taken by Blob cannot be revived. Blob can use converted Mini-Nodes to talk to the Crew. | Blob Zombies disabled, takes 25% more Slash damage |
-| Fetid Infection | 10 Caustic, 10 Toxic, 2.5 Burn | Factories/Resource pools steadily produce Miasma. Spores release Miasma when exploding. Miasma gives Blob and its units a very slow heal over time effect similar to Rat King | Takes 25% more Fire damage, Water Vapor damages Blob over time |
+| Fetid Infection | 10 Caustic, 10 Toxic, 2.5 Burn | Factories/Resource pools steadily produce Miasma. Spores release Miasma when exploding. Miasma gives Blob and its units a very slow heal over time effect similar to Rat King | Takes 25% more Fire damage, Space cleaner reduces Normal Blob to Weak Blob |
 | Engines of Creation | 20 Slash, 2.5 Caustic | Expands when burned but not immune to fire. Chance of bonus expansion when spreading manually. Expands after destroying objects. Eats items/Materials on Blob and gets bonus resources with each item consumed. | Takes 50% more Brute damage, EMPs stun all units/buildings/tiles for a short period |
 
 ## Unit Variations
 
-Evolutions could include unique and alternate upgrades to encourage even more variation in a Blob's strategy and give Blobs greater freedom. Will need outside discussion and assistance to develop.
- - IE: The Blob researches Metaphase and chooses between Blobbernauts or more powerful Spore Cannons. Ideally it would be between only two options to not overwhelm a Blob Player with choice, but should still feel meaningful towards their overall development.
+Evolutions ideally would include unique alternate upgrades to encourage more variation in a Blob's strategy and give them more freedom to develop a unique strategy. This would be a choice given to the Blob when they evolve to the next stage, and is applied once the research period is complete, letting them choose between two distinct upgrades for each Phase. Preferably these should tie into some mechanical core of the Blob that provides a more interesting upgrade (Stat changes are fine but should be sizable enough to feel distinct). A choice between a more horizontal upgrade and a vertical upgrade would arguably be the better way to go about it (Or something that affects their units vs. something that affects their economy).
+
+These should tie more into the idea of the Blob "Evolving" to respond to the threats it's facing as it attempts to take over the station.
+
+IE: The Blob researches Metaphase and gets to choose between:
+- *Pressurized Glands*: Gives Blob Zombies a ranged attack similar to the Spore Cannon (Five ammo max, 2 damage, 10% slow per hit, regenerates 1 ammo every few seconds)
+- *Creeping Contamination*: Spreading Blob costs 1-2 less resources per tile.
+The Blob researches Anaphase and gets to choose between:
+- *Floating Filaments*: Blobbernauts have greater air control in Zero G.
+- *Compacted Spores*: Spore Cannons deal 12 damage per shot, slow reduced to 10% per shot
+
+ **Alternate examples**
+
+- *Reinforced Pathways*: Code/Node pulses now happen on a shorter, more frequent timer. Can be two pulses active at once.
+- *Budding Factories*: Factory's Spore Cap upgraded by 2, Spores cost 2 less resources.
+- *Fermenting Storage*: Storage Blob now produce resources at 1 every 6 seconds. Cannot be upgraded.
+- *Mobile Factories*: Factories turn into Blobbernauts when ability is used. Blobbernauts now produce Spores at the same resource cost/rate/cap of the factory it was formed from.
+- *Rigid Tendrils*: Solid and Reflective Blob have double HP, take 15% more structure damage.
+
+These do come with the challenge of being tougher to properly balance, but for the longevity of the Blob as an antag I think it's a worthwhile endeavor to give branching opportunities for strategies the player is able to develop. It also helps provide more flavor to a round so the Blob doesn't become an overly predictable antag to fight. 
