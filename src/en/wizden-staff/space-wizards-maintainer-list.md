@@ -42,6 +42,7 @@ Content Maintainers:
 - [Simyon264](https://github.com/Simyon264) - @simyon (327840918482714626)
 - [beck-thompson](https://github.com/beck-thompson) - @orks_are_da_best (774424468117782578)
 - [ScarKy0](https://github.com/ScarKy0) - @ScarKy0 (249858047583846401)
+- [MilonPL](https://github.com/MilonPL) - @milonn (869364265453244467)
 
 Engine maintainers:
 No one maintains only engine :p
