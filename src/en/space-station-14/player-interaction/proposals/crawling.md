@@ -13,7 +13,7 @@ Introduces the ability to intentionally lay down, and the crawling movement opti
 GitHub issue by @keronshb: https://github.com/space-wizards/space-station-14/issues/34894
 Pre-doc Crawling PR by @Ratyyy: https://github.com/space-wizards/space-station-14/pull/30759
 
-Crawling is a mechanic in Space Station 13 that has yet to be ported to Space Station 14's upstream fork. While the idea of crawling being implemented is a popular opinion, and has even been implemented on several forks, the upstream maintainers would like a clear and obvious visual indication that someone is crawling as opposed to being dead or being stunned on the ground. This was done in a few ways in Space Station 13, such as having the character's rotation while crawling being different while downed, or darkening their sprite when stunned.
+Crawling is a mechanic in Space Station 13 that has yet to be ported to Space Station 14's upstream fork. While the idea of crawling being implemented is a popular opinion, and has even been implemented on several forks, the upstream maintainers would like a clear and obvious visual indication that someone is crawling as opposed to being dead or being stunned on the ground. This was done in a few ways in Space Station 13, such as having the character's rotation while crawling looking different compared to being knocked down, or by darkening the character's sprite when stunned.
 
 ## Features to be added
 
