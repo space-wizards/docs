@@ -1,5 +1,75 @@
+
 # Types
-Toolshed's type system is, **for the most part** that of C#'s. Toolshed adds some additional type rules for the convenience of both users and developers.
+
+As the output of the `explain` and `help` commands might suggest, Toolshed is a strongly typed language. The type system is, **for the most part** that of C#'s, though toolshed adds some additional type rules for the convenience of both users and developers. I.e., the outputs of commands are actual C# types like `int`, `EntityUid`, or some `IEnumerable<T>`, and not just strings. All commands have a type signature, and this signature can vary dynamically based on the type of the piped value.
+
+For example, the type piped into the addition command `+` determines the output type, and how the argument is parsed.
+For example, `i 1 + 2` and `f 1 + 2.5` are valid commands, but `i 1 + 1.5` will fail to parse "1.5" as an int argument.
+
+```
+> explain i 1 + 1
+
+i - Integer constant.
+Pipe input: [none]
+Pipe output: Int32
+Signature:
+  i <value (Int32)>
+
++ - Performs numeric addition.
+Pipe input: Int32
+Pipe output: Int32
+Signature:
+  <x> → + <y (Int32)>
+
+> explain f 1 + 1.5
+
+f - Float constant.
+Pipe input: [none]
+Pipe output: Single
+Signature:
+  f <value (Single)>
+
++ - Performs numeric addition.
+Pipe input: Single
+Pipe output: Single
+Signature:
+  <x> → + <y (Single)>
+
+> i 1 + 1.5
+
+i 1 + 1.5
+      ^^^
+The value 1.5 is not a valid Int32.
+```
+
+## Type Arguments
+
+Some command arguments also take in **type arguments**. These arguments usually determine the output type or how some of the other arguments are parsed. **Type arguments** arguments are always specified before any other arguments, but otherwise appear like normal arguments. In the `help` and `explain` command signatures they show up as part of the command's name using the c# generics syntax, i.e., `<T>`, `<T1, T2>`.
+
+For example, the `comp:get<T>` command has the signature `IEnumerable<EntityUid> -> IEnumerable<T>`, where T is any user specified component. The actual component type specified via a **type arguments**:
+```
+> help comp:get
+
+comp:get - Gets the given component from the given entity.
+Usage:
+  <input (IEnumerable<EntityUid>)> → comp:get<T> → IEnumerable<T>
+  <input (EntityUid)> → comp:get<T> → T
+
+
+> explain entities comp:get Item
+
+entities - Returns all entities on the server.
+Pipe input: [none]
+Pipe output: IEnumerable<EntityUid>
+Signature:
+  entities
+
+comp:get - Gets the given component from the given entity.
+Pipe input: IEnumerable<EntityUid>
+Pipe output: IEnumerable<ItemComponent>
+Signature:
+  <input> → comp:get<ItemComponent>
+```
 
 ## For users
 ### All values are a list of length 1 (`T -> IEnumerable<T>`)
