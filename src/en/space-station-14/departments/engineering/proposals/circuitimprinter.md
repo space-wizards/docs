@@ -10,33 +10,31 @@ This proposal is for the circuit imprinter to be moved to engineering on all map
 
 ## Background
 
-Recently, the protolathe was removed from engineering, to be a science exclusive - in order to foster inter-department interaction. This makes sense, but also means that science is now the sole arbitrair of any researched items.
+Recently, the protolathe was removed from engineering, to be a science exclusive - in order to foster interdepartmental interaction. This makes sense, but also means that science is now the sole arbitrair of any researched items.
 
-As it currently stands, engineers have the responsibility of setting up power and atmospherics - usually a 5-10 minute venture. From there, they can at most help with construction works and meteor damage repair. This leaves very little opportunity for engineers to have a meaningful round impact beyond repairs. In other words, "nobody notices a good engineering department, but always notices a bad one".
-
-Engineering is already responsible for the hull, power and air - and it should make sense that machine construction should fall under that umbrella. They're already the most capable department for construction, but rarely have a reason to do so without aid from other departments. This often means that departments will handle construction works themselves, instead of enlisting an engineer to do so.
+As it currently stands, engineers have the responsibility of setting up power and atmospherics - usually a 5-10 minute venture. From there, they can at most help with construction works and meteor damage repair. Rarely are engineers enlisted for construction works, given they usually lack materials and components that are religated to science, and meteor repairs are usually a fairly mundane task. This leaves little opportunity for engineers to have a meaningful round impact beyond repairs. In other words, "nobody notices a good engineering department, but always notices a bad one".
 
 ## Moving the circuit imprinter
 
 Maps should be modified to remove the circuit imprinter from science, and place it in engineering. If engineering had a protolathe, it should be removed and replaced with the imprinter.
 
-## Benifits of moving the circuit imprinter
+## Benefits of moving the circuit imprinter
 
 ### Encourages engineers to do construction work
 
-Science rarely do any external construction work, both being focused on their own department and lacking the tools to do so. Engineers have much more reason to do construction works and the tools to do so.
+Science rarely does any construction work outside of their own department, being primarily focused on upgrading their own department and lacking the tools to do so. Engineers, however, are often expected to be outside of their department, and have plenty of equipment to aid in construction works, such as insuls, welding goggles and the RCD.
 
 ### Encourages interdepartmental interactions
 
-Giving engineering the means to install machinery in departments would encourage other departments to enlist their aid in works. This means engineers can spend extended periods of time inside other departments (whereas they would normally only be doing so if it was uninhabitable), which can provide opportunities for antagonists to collaborate or strike.
+Giving engineering the means to install machinery in departments would encourage other departments to enlist their aid in works. This means engineers can spend extended periods of time inside other departments with other crew members, which can provide opportunities for roleplay, or for antagonists to collaborate or strike.
 
 ### Allows more self expression
 
-Engineers rarely get much opportunity for self expression, lacking much reason for doing construction works usually. Giving them the ability to produce machinery would allow them to spend their time building areas for self expression, in much the same way a tider outfits the maint bar.
+Engineers rarely get much opportunity for self expression, being relegated to only being able to construct basic devices and hull. Giving them the ability to produce advanced machinery would allow them to spend their time building areas for self expression and roleplay, and also open new ways to do so.
 
 ### Encourages cargo to distribute materials more evenly
 
-Cargo only ever needs to deliver materials to science - but by having two high-material consumption departments, it encourages cargo to work with both to properly distribute the materials they need.
+As of currently, cargo only ever needs to deliver materials to science, being the highest consumer of materials. By moving the circuit imprinter to engineering, cargo will be encouraged to spread materials evenly and colaborate with each department.
 
 ## Downsides of moving the circuit imprinter
 
@@ -46,4 +44,4 @@ This proposal would make science reliant on engineering for machine upgrades, bu
 
 ### Allows engineering to become more self sufficient
 
-Although already possible by raiding the tech vault, engineers can build a protolathe for themselves to use. If this is a critical issue, these devices can be removed from the circuit imprinter or otherwise rebalanced.
+Although already possible by raiding the tech vault, engineers would be able to build a protolathe for themselves to use. This may be addressed if needed by removing the protolathe circuit from the circuit imprinter.
