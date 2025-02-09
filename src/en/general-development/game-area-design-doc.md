@@ -1,4 +1,4 @@
-# Game Area Design Document & Template
+# Game Area Design Documents & Template
 
 The goal of a game area design document is to provide a cohesive direction for developers that want to add or modify content in the game. New PRs should aim to align themselves with the design as laid out in the document, and Maintainers are expected to adhere to them when reviewing and discussing PRs.
 
