@@ -39,6 +39,7 @@ General Development
   - [Feature Proposal Template](en/templates/proposal.md)
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
 - [Work Groups](en/general-development/work-groups.md)
+- [Game Area Design Documents](en/general-development/game-area-design-doc.md)
 - [Contributing Translations](en/general-development/contributing-translations.md)
 
 SS14 By Example
