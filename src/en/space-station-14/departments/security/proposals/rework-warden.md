@@ -6,7 +6,7 @@
 
 ## Overview
 
-Warden currently has the worst gameplay: you are actively punished for leaving your department (which often has no roleplay opportunities), effectively making the role very boring and half-AFK.
+Warden currently has the worst gameplay: you are actively punished for leaving your department (which often has no roleplay opportunities), effectively making the role extremely tedious to play.
 
 ## Background
 
@@ -50,18 +50,19 @@ The intended way the interaction with medical will go is like this:
 - Doctor arrives and heals the prisoner;
 - Warden escorts the prisoner back into the cell/perma.
 
-## :s Come to sec and get disabler SMG
-Interaction with cargo is mostly good already, but there is something to add here. A lot of crates in cargo contain security gear - it would be best to make it a little bit more difficult to order those by placing a "Cargo Monitoring Console" in warden's office. All security gear orders from cargo have to get an additional approval via this console. This can also be disabled at the same console in case of an emergency (nukies/dragon).
+## Cargo interaction
+Interaction with cargo is mostly good already, but there is something to add here. A lot of crates in cargo contain security gear - it would be best to make it a little bit more difficult to order those by duplicating announcements to security channel when something security-related gets ordered. This can still be bypassed via antagonist items like jammers, but prevents things like salvagers ordering a crate of guns and breaking it open without any communication.
+While this isn't related specifically to warden, it is still a pretty nice improvement overall.
 
 ## Food and drink for prisoners
 Prisoners have right to food and drink per space law, but this is difficult to provide as of now: in order to give prisoner something, you need to open the cell, which forces you to use a flash if the prisoner wants to escape.
 
-A solution to this is a special cell door with a container slot - you will be able to insert items into the door, and the prisoner can get them out of the door. If meal trays ever get added, maybe it'd make sense to map some near the cells.
+A solution to this is a special cell door with a container slot - you will be able to insert items into the door, and the prisoner can get them out of the door. If meal trays ever get added, maybe it'd make sense to map some near the cells. This will (hopefully) result in more situations where prisoners ask for a meal/drink and warden actually provides it.
 
-## Vandalism, secure tresspass and possession of contraband
+## Space Law
 The process of sentencing itself is mostly fine, however, Space Law is mostly heavily outdated and poorly written. This is out of scope of this proposal, though.
 
-## ;NUKIES ARMORY
+## Armory
 Armory defense is quite a hot topic. Reinforced walls are quite easy to breach, meaning that a single person with 1-2 charges of C4 can easily get access to armory in 10-15 seconds, meaning that warden spending any time outside hearing range of armory potentially endangers security.
 
 This can be solved by a few measures, for example:
@@ -77,3 +78,8 @@ Record status should be updateable remotely by all security members, but with a 
 - Remote Records do not show anything except from name, job and current status. For DNA/fingerprints access, you still need a stationary computer.
 - Crime history also cannot be updated remotely.
 - It should not be possible to change the "Detained" status of a person remotely, forcing warden to actually work with records while handling prisoners.
+
+## Extra section
+One of the changes that would *absolutely* require playtesting, but would help a lot - adding a second warden on mediumpop+.
+This will also shift the Warden role from mini-HoS to a proper side-role, like atmos technicians, paramedics and salvagers in other departments.
+It would also help with the problem that Warden's duties scale significantly with 2 factors: level of roleplay and amount of crew on station. Splitting Warden duties between 2 players on higher pop counts should solve one of these factors.
