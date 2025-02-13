@@ -66,7 +66,7 @@ The process of sentencing itself is mostly fine, however, Space Law is mostly he
 Armory defense is quite a hot topic. Reinforced walls are quite easy to breach, meaning that a single person with 1-2 charges of C4 can easily get access to armory in 10-15 seconds, meaning that warden spending any time outside hearing range of armory potentially endangers security.
 
 This can be solved by a few measures, for example:
-- The next tier of reinforced wall that is harder than reinforced. Should be difficult to produce manually.
+- The next tier of reinforced wall that is harder than reinforced. Probably should be impossible to make during the round.
 - Movement sensors that detect anyone in an area without proper access and play a loud sound.
 
 ## Constant camera monitoring
