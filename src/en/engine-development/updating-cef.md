@@ -77,4 +77,8 @@ Commit everything to CefGlue, build-dependencies and Robust. Yay!
 
 ## Upload new Robust Module to centcomm
 
-Idk just ask me this section will probably change in the future.
+* SSH into suns
+* `mkdir /var/lib/robust-builds/modules/Robust.Client.WebView/<rt_version>`
+* `scp release/Robust.Client.WebView* suns:/var/lib/robust-builds/modules/Robust.Client.WebView/<rt_version>`
+* cd `/home/robust-build-push`
+* `./push_module.ps1 Robust.Client.WebView <rt_version>`

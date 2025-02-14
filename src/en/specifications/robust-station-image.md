@@ -18,6 +18,7 @@ Key | Meaning
 `license` | Required. A valid [SPDX License Identifier](https://spdx.org/licenses/) applying to this work.
 `copyright` | Required. Other arbitrary copyright info such as name, source, ...
 `load` | Special loading parameters that will change how the sprites are interpreted by the engine.
+`metaAtlas` | Boolean that indicates whether the sprite is added together to a larger atlas at load. Enabled by default, this should be disabled for large, rare RSIs.
 
 ### States
 

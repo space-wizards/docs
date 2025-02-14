@@ -5,6 +5,7 @@ This document will explain what you will need to set yourself up with your own i
 
 ## Prerequisites
 
+- .NET 9 SDK (If you're running a server, you should already have this. If not, get it [here](https://dotnet.microsoft.com/en-us/download/dotnet/9.0))
 - A PostgreSQL database already set up with your server(s). ([Some details to that are here](../general-development/setup/server-hosting-tutorial.md))
 - A domain name or at least a DDNS domain.
 - A web server to do a reverse proxy, like Caddy or Nginx. I am assuming you know how to set this up yourself. (To save your sanity I included the nginx config below though)
@@ -15,7 +16,7 @@ Clone the code, then recursive the latest SS14 which can be easily done with `gi
 
 After that you can compile it with `dotnet publish -c Release -r linux-x64 --no-self-contained`.
 
-The files will be dropped in `SS14.Admin/bin/Release/net7.0/linux-x64/publish`. 
+The files will be dropped in `SS14.Admin/bin/Release/net9.0/linux-x64/publish`. 
 
 `SS14.Admin` is the executable to run, I would recommend copying those files somewhere else like `/opt/SS14.Admin`.
 
