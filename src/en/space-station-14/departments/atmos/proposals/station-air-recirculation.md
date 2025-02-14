@@ -1,8 +1,8 @@
 # Station Air Recirculation (HVAC)
 
-| Designers      | Implemented | GitHub Links |
-|----------------|---|---|
-| ArtisticRoomba | :x: No | TBD |
+| Designers      | Implemented | GitHub Links                                                                                                                  |
+|----------------|-------------|-------------------------------------------------------------------------------------------------------------------------------|
+| ArtisticRoomba | :x: No      | [Atmos Circulation](https://github.com/space-wizards/space-station-14/pull/33380)<br/>Mapping PRs TBD when first PR is merged |
 
 ## Background
 
@@ -70,7 +70,7 @@ This basically invalidated using the recyclernet to recycle air, as it was easie
 
 With the proposed system of recycling gasses, the station no longer has to have an infinite supply of gas.
 
-To promote the usage of the recycling system, gas miners will be tuned to produce much less gas.
+To promote the usage of the recycling system, gas miners will be tuned to produce much less gas, along with other limitations.
 Now, the station's air reserves are a less infinite resource. Atmos will be forced to reduce, reuse, and recycle the station's air.
 
 This does go against the current approved design document for Atmos, which states that the station's air reserves should be finite and gas miners should be phased out.
@@ -86,14 +86,32 @@ However, we still want a small trickle of incoming gas for multiple reasons:
      - I understand this is a repeat of Point 1 but I would like to get this point out on paper because I believe that it is important. Just like the AME (not an extremely perfect analogy), Atmos should have something to fall back on. Maybe make the gas miners take power from the station?
      - Hypothetical: "CE here. An atmos tech accidentally set up the recyclernet wrong and spaced all of the station's gas. Cargo has no money and we are unable to pressurize spaced areas." and shortly thereafter, "The emergency shuttle has been called."
 
+#### Gas Miner Limitations
+Nerfing gas miners by having them produce less gas than previously before is suboptimal. Atmospherics can simply ignore the air mixing chamber, stockpiling pressurized mixed air in a room and instead choosing to dump that to the station's distribution pipenet if things go south.
 
+We can force Atmospherics to setup the air mixing chamber by having mined gasses be too hot for all station life.
 
-### Required Changes
+This forces Atmospherics to temperature-control the gasses using the air mixing chamber, if they ever wish to incorporate these freshly mined gasses into the station's recirculation system.
+
+### Steps for the Implementation
+Implementation of this proposal needs to be followed in a set order:
+1. **Atmospherics system performance needs to be profiled.**
+    - There is a concern that the number of excited groups might impact Atmospherics performance. A technical analysis of the system under gas recirculation needs to be done.
+2. **Stations need to have their atmospherics setups modified.**
+   - All major rooms need to have vents and scrubbers as well as a linked air alarm.
+   - All air vents and air scrubbers need to be positioned in a way so that air can naturally flow from high pressure regions to low pressure regions.
+     - Having air vents and scrubbers right next to each other (which is often the case on most stations) negates the benefits of flow-based atmospherics, even when Monstermos is at play.
+   - Atmospherics needs to have a new air mixing chamber or heat exchanger array mapped, alongside a burn chamber and a radiator array in space.
+3. **The in-game guidebook needs to be updated regarding the new flow-based atmospherics system and how to use it.**
+   - Self-explanatory. Ideally it should be its own section under Engineering → Atmospherics → Atmospherics Systems, and it should explain all aspects of the system, why it exists, and the tips and tricks on how to use it.
+4. **Flow-based atmospherics PR can be merged**
+   - After all of this, the [flow-based atmospherics PR](https://github.com/space-wizards/space-station-14/pull/33380) can be merged. This is further explained in **Required Core System Changes**.
+
+### Required Core System Changes:
 Major changes are required to station setups, but the core systems are already present in the game. The following changes are required:
-- An air mixing chamber, with the necessary cooling/heating infrastructure, will have to be mapped to all stations. Some stations do not have an air holding chamber currently.
 - Air scrubbers will have to be changed to scrub all gasses, not just waste gasses. Additionally, air scrubbers will need the PressureBound system added to enable the prevention of drawing gasses from a room past a certain pressure.
   - This change might be too breaking. An alternative "return vent" could be mapped to the station, which would allow the return of air to the station's recyclernet. This honestly makes more sense, as we're dealing with vent-based gas flow now, not scrubber-based gas management.
-- The ExternalBound of air vents will have to be changed to allow the venting of air at a higher pressure than standard atmospheric pressure, to promote the natural flow of gas.
+- The ExternalBound of air vents will have to be changed to allow the venting of air at higher pressures than standard atmospheric pressure, to promote the natural flow of gas.
 - A more complex air alarm may have to be implemented to handle the valve-based control of cooling and heating (perhaps a computer system?).
 - Tests and observation will have to be done in order to tune gas miner values to ensure that the station's air reserves are not infinite, but still have a small trickle of incoming gas for burn chambers.
 
@@ -158,3 +176,9 @@ In the future, the following systems could be implemented to further enhance the
    - This can also enable the precise regulation of pumps to control the specific power of heating and cooling.
      - This is **exactly** what modern thermostats and air conditioning units do in real life to increase efficiency and reduce energy consumption. Rather than running an AC compressor at full power, the compressor is run at a lower power to maintain a specific temperature.
    - This system has **huge** potential for emergent gameplay, as savvy Atmos techs can use applied mathematics (Ideal Gas Law, Thermodynamics, Specific Heat Capacity, Energy In/Out) to create complex solutions to station problems.
+4. **All machines generate and radiate heat into the atmosphere.**
+   - Currently, machines are magical little devices that take in energy and give you something in return, without generating any heat. With flowmos, we have the basis to change this!
+   - All machines can generate heat internal to themselves, at varying degrees of efficiency (or inefficiency). For example, a lathe can generate 50% of its consumed energy as heat, as a portion of that consumed energy is turned into rotational energy. In contrast, a computer converts almost 100% of its consumed energy to heat.
+   - This heat would be internal to the machine and would have to be radiated away from the machine to the atmosphere. This means that cheesy hyperlathe setups which rely on a spaced room to function would no longer work—they wouldn't have any atmosphere to radiate their internal heat off to, and would quickly melt!
+5. Superconductivity can be re-enabled
+   - Superconductivity is a mechanic that made it so that walls, windows, etc. are not perfect insulators of heat, rather the heat could bleed between the walls, windows, and tiling to make other parts of the station hotter or colder. As of right now, this mechanic is disabled, however, now that atmospherics has real control over the station's temperature; we can look at re-enabling it.
