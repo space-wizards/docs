@@ -24,8 +24,10 @@ This is meant to serve several things:
 
 ### Mail Teleporter
 
-The Mail Teleporter is the main thing controlling the flow of mail to the station. It should be mapped somewhere within cargo (being station or ATS).
-While connected to power and enabled, it will generate mail on top of itself every few minutes up. Anyone with cargo access can toggle it on and off to prevent further mail from spawning.
+The Mail Teleporter is the main thing controlling the flow of mail to the station. It should be mapped somewhere within cargo.
+While connected to power and enabled, it will generate mail on top of itself every few minutes. Anyone with cargo access can toggle it on and off to prevent further mail from spawning.
+
+Mail Teleporter is one of a kind machine, with only QM having a spare board to construct it, just like how cargo sell computers can be destroyed. This encourages actually taking care of it as to protect it from destruction by either having cargo keep a closer eye on it or putting it in a more secure area.
 
 ### Deliveries
 
@@ -39,10 +41,12 @@ A small item, usually containing spam mail, birthday wishes (maybe even with mon
 They can be torn open using a Verb if the current holder is unable to open them. Obviously giving cargo a penalty (as stated above) but granting the user the contents.
 
 #### Packages
-A big item that occupies both hands. They are supposed to contain things slightly more of value or items that can be useful to your average player. (Tools, Cakes, Plushies, rarely minor contraband and pipebombs)
+A big item that occupies both hands. They are supposed to contain things slightly more of value or items that can be useful to your average player. The loot table can include things like tools, plushies toys, food as well as some funny things like pipebombs or minor contraband. What needs to be kept in mind is that the "evil" or "funny" options need to be very unlikely as to not make people scared of opening packages, that would beat the entire point of the design.
 When on the ground it can be smashed open with any weapon to break the seal, allowing access to whatever is stored inside, still granting cargo a penalty.
 
 ### Future Expansions
+
+Not meant to be full ready ideas or direction for the future, simply possible ways this can be improved to show mail has potential to be expanded on in the future.
 
 #### Syndie Uplink Items
 
@@ -53,6 +57,10 @@ There could also be some way to sneak items into packages, having the recipient 
 
 Ever wanted to give your arch-nemesis a threatening letter, but never wanted to give it in person? There is potential for a way to create custom letters/packages and allow cargo to deliver them for you.
 
+#### Modifiers
+
+Fragile packages that break when dropped? Letters that grow legs and beg you to not be delivered as that ends their life? Things like these can be added in the future for more variety.
+
 ### Main things to consider:
 - Delivery items need to have a timer that starts upon being taken out of the teleporter. When the timer runs out the money earned should be significatly lowered, either gradually or instantly. This encourages cargo to actually deliver the mail instead of leaving it at the front for others to check.
 - Deliveries that are losing value due to not being delivered should grant less of a penalty to cargo when they do eventually get opened, someone stealing and keeping mail just to sabotage cargo when they find a moment to smash it open should not bring huge penalties.
@@ -61,15 +69,15 @@ Ever wanted to give your arch-nemesis a threatening letter, but never wanted to 
 
 ## Game Design Rationale
 
-Currently cargo is oriented around the bounty system (except salvage, who is mostly seperate from the main cargo loop). A mail system allows for more interaction between players as well as lowers dependancy on bounties.
+Currently cargo is oriented around the bounty system (except salvage, who is mostly separate from the main cargo loop). A mail system allows for more interaction between players as well as lowers dependency on bounties.
 
 Cargo is already meant to interact with other departments, this plays into that fact and gives them a little something to do in the meantime. Ideal situation could be delivering a package to a botanist at the same time as you want to grab a bounty from them. Or a new player player grabbing a bunch of deliveries and getting to explore the station and meet other players as they deliver them.
 
 ## Roundflow & Player interaction
 
-At the start of the round, a cargo technician visits the ATS (or wherever the mail teleporter will be mapped) and grabs letters into their bag and a few packages. Upon checking the manifest they may also pick some bounties to deliver to that person at the same time. The cargo tech brings the mail to the recipient, who then unlocks it and grants cargo some bonus money and gets something small in return.
+At the start of the round, a cargo technician visits Mail Teleporter and grabs letters into their bag and a few packages. Upon checking the manifest they may also pick some bounties to deliver to that person at the same time. The cargo tech brings the mail to the recipient, who then unlocks it and grants cargo some bonus money and gets something small in return.
 In the case the delivery is simply never opened, it will slowly lose all value and become free game for whoever finds it and decides to open it.
 
 Interactions with other players are key here, both sides benefit while being able to get to interact more with each other. Cargo should not simply leave mail at their front door and get someone to pick it up whenever they walk past. The penalty timer is meant to have them deliver it instead. Leaving the packages at front ready for pickup also means a random passerby may tear them all open and lead to big penalties, further discouraging this method while giving cargo a reason to worry about protecting their mail.
 
-Additionally, mail is not meant to be a free item generator for cargo to use to flex drip they get. Losing money for opening mail that doesn't belong to them means they it is almost never worth it to open a package while not the recipient, other than possibly sabotaging cargo if they slip up.
+Additionally, mail is not meant to be a free item generator for cargo to use to flex drip they get. Losing money for opening mail that doesn't belong to them means that it is almost never worth it to open a package while not the recipient, other than possibly sabotaging cargo if they slip up.
