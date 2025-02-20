@@ -49,10 +49,10 @@ The Blob has a number of basic controls and abilities to make their job of sprea
 
 Blob Tiles are the Blob's primary method of spreading throughout the station. Each tile costs a small amount of resources, allowing a Blob to either slowly spread out by spending their resources constantly, or saving up for a rush of Blob. Blob Tiles are capable of attacking, dealing damage depending both on the type of tile and the strain of the Blob. Blob Tiles can be destroyed by the crew through damaging them with any weapons on hand.
 
-- **Normal Blob** | *Cost: 5 | Health: 30*: Main tile of the Blob. Spreads influence outwards, allows buildings to be placed down, and passively damages mobs that walk onto it. Entities that walk onto Blob Tiles are slowed by 30%. Degrades into Weak Blob if outside the influence of a Node/Core. Will attack nearby mobs when pulsed by a Core/Node
-- **Weak Blob** | *Cost: 2 | Health: 15*: If the Blob attempts to spread outside the influence of a Node/Core, they will only spread Weak Blob at a reduced cost. Weak Blob has half health and damage of a regular Blob Tile, and only slows by 15%. Buildings can still be placed on Weak Blob. Also deals damage to mobs standing on top of it.
+- **Normal Blob** | *Cost: 5 | Health: 30*: Main tile of the Blob. Spreads influence outwards, allows buildings to be placed down, and passively damages mobs that walk onto it. Entities that walk onto Blob Tiles are slowed by 30%. Degrades into Weak Blob if outside the influence of a Node/Core. Will attack nearby mobs when pulsed by a Core/Node. Only one tile can attack a mob at a time so a person in the middle of the Blob doesn't get deleted by one pulse (And to better spread out damage).
+- **Weak Blob** | *Cost: 2 | Health: 15*: If the Blob attempts to spread outside the influence of a Node/Core, they will only spread Weak Blob at a reduced cost. Weak Blob has half health and damage of a regular Blob Tile, and only slows by 15%. Buildings can still be placed on Weak Blob but will degrade over time. Also deals damage to mobs standing on top of it.
 - **Strong Blob** | *Cost: 8 | Health: 250*: Upgraded from Normal Blob. Strong Blob Tiles are solid walls that can take much more damage before being destroyed. Fireproof and block air flow in the event of station fires.
-- **Reflective Blob** | *Cost: 8 | Health: 150*: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew (90% Reflect Chance).
+- **Reflective Blob** | *Cost: 15 | Health: 150*: Upgraded from Strong Blob. Reflective Blob Tiles are solid like Strong Blob, but have less health. In exchange: They are able to reflect laser shots from the crew (90% Reflect Chance).
 - **Blob Locks/Membrane** | *Cost: 0 | Health: 250*: Variant of Strong Blob. Blob Locks/Membrane are doors the Blob can establish to fortify an area, while still letting their units through. Useful for chokepoints, and for letting units into space.
 
 ### Blob Buildings
@@ -83,10 +83,10 @@ Unique Buildings are specific structures that are created when the Blob consumes
 
 ### Units
 
-While the Blob is able to fight directly through its tiles, it has access to a roster of Units it can create to assist in reinforcing its position, pushing into new territory, or simply harassing the Crew.
+While the Blob is able to fight directly through its tiles, it has access to a roster of Units it can create to assist in reinforcing its position, pushing into new territory, or simply harassing the Crew. The Blob shares it sight with its units so they can scout areas the Blob cannot reach. Blob units cannot harm the Blob.
 
 - **Spore** | *Cost: 5 | Health: 40 | Damage: 4 (25 Structure)*: Low Tier Unit. Floats through air, attacks weakly, and explodes when killed. Can manuever with ease in Zero G and in Space, and are immune to pressure damage. Spread Weak Blob in a radius around them when they explode, and can be commanded to explode manually. Also function as Ghost Roles for Players to take. Cannot be exploded manually by Ghost players. (AI should attempt to mob players rather than kite to ensure they blob crew when they die)
-- **Blob Zombie "Blombie"** | *Cost: 1 Crew | Health: 60 | Damage: 15*: Medium Tier Unit. Created when a Spore takes over a dead crew member (5 second Doafter). Controlled by downed Player, or by AI if the player has disconnected or taken another role. Acts as a regular mob, chasing down Crew and attacking when AI. Has resistances from armor crew member was wearing. Spores on head "pop" when killed, allowing Crew's body to be retrieved and revived. Blob Zombies cannot harm the Blob.
+- **Blob Zombie "Blombie"** | *Cost: 1 Crew | Health: 60 | Damage: 15*: Medium Tier Unit. Created when a Spore takes over a dead crew member (5 second Doafter). Controlled by downed Player, or by AI if the player has disconnected or taken another role. Acts as a regular mob, chasing down Crew and attacking when AI. Has resistances from armor crew member was wearing. Spores on head "pop" when killed, allowing Crew's body to be retrieved and revived.
 - **Blobbernaut** | *Cost: 80 | Health: 300 | Damage: 40 (80 Structure)*: High Tier Unit. Expensive, powerful bruiser. Attacks deal heavy Blunt damage with additional damage based on Blob Strain. Blobbernauts have a low attack speed to emphasize their bruiser role, and leaves them open to being swarmed if not supported by other units. Regenerates health steadily while on Blob Tile, halved on Weak Blob. Ghost role for Players, AI if uncontrolled. If a Blobbernaut's factory is destroyed, they begin to decay steadily until they die. Immune to pressure/temp changes, but has trouble maneuvering in zero gravity.
 
 ### Damage Resistances
@@ -208,6 +208,7 @@ To keep the Blob from being too predictable as to when it can appear: The Blob h
 Blob Strains are variations either to specific mechanics the Blob is capable of, or the properties of said mechanics. Before the Blob places their core they are given the option of choosing a specific strain of Blob to alter their overall strategy either through damage types or specific abilities. Blob players do not have to pick one if they do not wish and it will be recommended for first time players to choose the default Blob option in order to get used to how the Blob functions at its baseline first.
 - Strains should be designed with specific positives and/or negatives to make for more interesting alterations to strategy. Alternate damage types especially should carry some downside that ties into the theme they're meant to evoke. These should ideally induce some specific changes to Blob/Crew strategy over the course of a round rather than simply a flavor of damage.
 - This will add a straightforward way to give the Blob more specific themes without the need for any major reworks in terms of its base mechanics. Given the amount of giant virus creatures in fiction, there's a lot of avenues to take.
+- This also provides an easy avenue of customization for downstream forks looking to find ways to make their own Blobs unique.
 
 **Values and Strains are not final and can be adjusted/added/removed as needed. Honestly there's probably too many of them but they make decent examples**
 
@@ -234,9 +235,9 @@ Blob Strains are variations either to specific mechanics the Blob is capable of,
 | Fetid Infection | 10 Caustic, 10 Toxic, 2.5 Burn | Factories/Resource pools steadily produce Miasma. Spores release Miasma when exploding. Miasma gives Blob and its units a very slow heal over time effect similar to Rat King | Takes 25% more Fire damage, Space cleaner reduces Normal Blob to Weak Blob |
 | Engines of Creation | 20 Slash, 2.5 Caustic | Expands when burned but not immune to fire. Chance of bonus expansion when spreading manually. Expands after destroying objects. Eats items/Materials on Blob and gets bonus resources with each item consumed. | Takes 50% more Brute damage, EMPs stun all units/buildings/tiles for a short period |
 
-## Unit Variations
+## Unit Variations (Mutations)
 
-Evolutions ideally would include unique alternate upgrades to encourage more variation in a Blob's strategy and give them more freedom to develop a unique strategy. This would be a choice given to the Blob when they evolve to the next stage, and is applied once the research period is complete, letting them choose between two distinct upgrades for each Phase. Preferably these should tie into some mechanical core of the Blob that provides a more interesting upgrade (Stat changes are fine but should be sizable enough to feel distinct). A choice between a more horizontal upgrade and a vertical upgrade would arguably be the better way to go about it (Or something that affects their units vs. something that affects their economy).
+Mutations ideally would include unique alternate upgrades to encourage more variation in a Blob's strategy and give them more freedom in how they choose to adapt to the Crew's tactics. This would be a choice given to the Blob when they evolve to the next stage, and is applied once the research period is complete letting them choose between two distinct upgrades for each Phase. Preferably these should tie into some mechanical core of the Blob that provides a more horizontal upgrade. Vertical stat increases should be handled by the Evolution mechanic so this remains a distinct feature. Generally balanced between an Offensive upgrade vs. a Defensive/Economy upgrade
 
 These should tie more into the idea of the Blob "Evolving" to respond to the threats it's facing as it attempts to take over the station.
 
@@ -252,7 +253,7 @@ The Blob researches Anaphase and gets to choose between:
 - *Reinforced Pathways*: Code/Node pulses now happen on a shorter, more frequent timer. Can be two pulses active at once.
 - *Budding Factories*: Factory's Spore Cap upgraded by 2, Spores cost 2 less resources.
 - *Fermenting Storage*: Storage Blob now produce resources at 1 every 6 seconds. Cannot be upgraded.
-- *Mobile Factories*: Factories turn into Blobbernauts when ability is used. Blobbernauts now produce Spores at the same resource cost/rate/cap of the factory it was formed from.
-- *Rigid Tendrils*: Solid and Reflective Blob have double HP, take 15% more structure damage.
+- *Mobile Factories*: Factories turn into Blobbernauts when ability is used. Blobbernauts now produce Spores at the same resource cost/rate/cap of the factory it was formed from. Upgrade is not retroactive
+- *Rigid Tendrils*: Solid and Reflective Blob gain the Reinforced trait, but cost 1.5x more.
 
-These do come with the challenge of being tougher to properly balance, but for the longevity of the Blob as an antag I think it's a worthwhile endeavor to give branching opportunities for strategies the player is able to develop. It also helps provide more flavor to a round so the Blob doesn't become an overly predictable antag to fight. 
+These do come with the challenge of being tougher to properly balance, but for the longevity of the Blob as an antag I think it's a worthwhile endeavor to give branching opportunities for strategies the player is able to develop. It also helps provide more flavor to a round so the Blob doesn't become an overly predictable antag to fight while also providing an additional branch of customization for Downstream forks to pursue.
