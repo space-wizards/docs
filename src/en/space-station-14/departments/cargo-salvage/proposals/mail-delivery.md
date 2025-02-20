@@ -51,15 +51,17 @@ Not meant to be full ready ideas or direction for the future, simply possible wa
 #### Syndie Uplink Items
 
 Deliveries don't have to stop at just letters and packages. There is also the possibility of a cargo-only uplink item that is a rigged package, potentially spawning something hostile or exploding.
-There could also be some way to sneak items into packages, having the recipient leave their sweet fingerprints on the contents and allowing for a way to frame them.
-
-#### Custom Mail
-
-Ever wanted to give your arch-nemesis a threatening letter, but never wanted to give it in person? There is potential for a way to create custom letters/packages and allow cargo to deliver them for you.
+Think of a cousin to the hot potato, on attempted unlock it activates and starts burning whoever has it while being glued to their hands. While not a very original idea this is only an example.
 
 #### Modifiers
 
 Fragile packages that break when dropped? Letters that grow legs and beg you to not be delivered as that ends their life? Things like these can be added in the future for more variety.
+A good example of such implementation could be that whenever a package there is a low chance it will receive a modifier. Such modifier will add onto the value, make the item pool more interesting but also make the package itself more annoying to handle.
+- Fragile: The package breaks when dropped, but grants 1.25x the spesos on delivery.
+- Burning: The package releases intense heat into the atmosphere around it, but grants 2x spesos.
+- Everlasting Sorrow: The package cries when carried, causing the carrier to slip on water if they're not careful for 1.25x spesos. Would mix great with being fragile.
+- Glued: It cannot be dropped by itself without destroying it and must instead be "stripped" off the carrier for 1.25x spesos.
+- Drunk: Constantly injects small amounts of ethanol into whoever holds it, making them drunk while in inventory for 1.5x spesos.
 
 ### Main things to consider:
 - Delivery items need to have a timer that starts upon being taken out of the teleporter. When the timer runs out the money earned should be significatly lowered, either gradually or instantly. This encourages cargo to actually deliver the mail instead of leaving it at the front for others to check.
