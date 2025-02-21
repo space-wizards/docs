@@ -204,11 +204,11 @@ Space Station 14
 			- [Atmos Rework](en/space-station-14/departments/atmos/proposals/atmos-rework.md)
 			- [Station Air Recirculation](en/space-station-14/departments/atmos/proposals/station-air-recirculation.md)
 
-	- [Cargo/Salvage](en/space-station-14/departments/cargo-salvage.md)
-		- [PR Guidelines](en/space-station-14/departments/cargo-salvage/guidelines.md)
+	- [Cargo](en/space-station-14/departments/cargo.md)
+		- [PR Guidelines](en/space-station-14/departments/cargo/guidelines.md)
 	
           - [Proposals]()
-            - [Salvage Proposal](en/space-station-14/departments/cargo-salvage/proposals/salvage-proposal.md)
+            - [Salvage Proposal](en/space-station-14/departments/cargo/proposals/salvage-proposal.md)
 
 	- [Command](en/space-station-14/departments/command.md)
 		- [PR Guidelines](en/space-station-14/departments/command/guidelines.md)
