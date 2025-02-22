@@ -20,27 +20,47 @@ An often brought up rule is that "Command and Security should not be using contr
 
 ## Features to be added
 
-### Navigation
+### Secbot AI
+
+The secbot uses a 4-state-machine to control it's behaviour. The states are `Patrolling`, `Chasing`, `Exploring`, and `Reorienting`. Secbots will move slightly slower than a player (~90%). They will have maintainence and security access.  
+
+![The secbot state machine (Patent Pending)]()
+
+
+#### Patrolling
 
 The most discussed part of this is how a secbot should navigate around the station. The details for this, and why this method was chosen are in a [later section](#patrol-routing). As far as a player needs to know, the secbots patrol with the following system:
 
-1. Maps have a set of "Patrol Beacons" under the tiles in major locations. This would include places like the bar, the outside of security, and the corridor containing the vault. Importantly these locations should all be public access. TODO - example. Beacons can be unanchored, moved, and destroyed, but not built. A navigation table contains data for travelling between nodes down to the exact tiles a secbot should traverse.
+Maps have a set of "Patrol Beacons" under the tiles in major locations. This would include places like the bar, the outside of security, and the corridor containing the vault. Importantly these locations should all be public access. TODO - example. Beacons can be unanchored, moved, and destroyed. 
 
-2. A Secbot is at a beacon. It is currently in the `Patrolling` state. It chooses another beacon at random on the same grid as it, not including it's current or previous location. It starts moving towards the new beacon using the path laid out in the navigation table. 
+A navigation table is maintained for each grid with a patrol beacon on it. The table contains data for travelling between nodes down to the exact tiles a secbot should traverse. Because of the potential for O(n^2) growth of this table with regards to the number of beacons, they should not be constructable. 
 
-3. If it gets to the beacon successfully, it will stay in the area for a short duration, then pick a new beacon and begin moving towards it.
+A secbot in the `Patrolling` state will choose a random beacon and follow the tile-by-tile path laid out in the navigation table. If it arrives at its destination, it will linger in the area for a short time, before repeating the process - picking a beacon, pathing to it, and lingering in the area. If the path becomes blocked, such as a by a closed firelock or a broken tile, a weak attempt is made to get around the obstacle by pathfinding to the first unblocked tile. This should be effective enough to navigate a pillar in the middle of the corridor, but should not be causing the secbot to path down a different corridor. If this attempt fails, the secbots follows the path backwards to return to the closest beacon, marks that route as `Attempted`, and continues patrolling to a different beacon. If a route is sucessfully navigated, all `Attempted` marks on the route are removed. If a route has been `Attempted` and failed 3 times, the route is deleted from the routing table. If the secbot's return path is blocked, it enters the `Reorienting` state.
 
-3. If it encounters an obstacle on its path (locked firelocks, anomaly rocks, walls, etc) it enters a `Returning` state where it follows the path back to the previous beacon and choose a new node. An "Attempts" score gains +1 for that path.
+If a secbot picks a beacon without a value in the routing table, it enters the `Exploring` state.
 
-4. If the number of attempts for a given path it deletes the path in the navigation table and enters an `Explore` state, where it uses a TODO - algorithm to generate a new path which is added to the navigation table if it works. If it spends more than 2 minutes in the `Explore` state, it enters the `Returning` state.
+At any point if a secbot sees someone that should be arrested, it enters the `Chasing` state.
 
-5. If it encounters an obstacle in the `Returning` state, enter 
+#### Reorienting
 
+When in the `Reorienting` state, a secbot attempts to path towards the nearest beacon. If that fails, it attempts to path towards the nearest beacon that it hasn't already attempted to path to. This repeats until it has attempted to path to every beacon in the navigation table, at which point it will pick random beacons. If it reaches a beacon, it will enter the `Patrolling` state.
+
+The path to the nearest beacon should not be computed in a single tick - capping the search to some heuristically "best" point within X tiles, navigating to that tile, and repeating would prevent a situation in which a massive pathfinding call causes a lag spike. It also means storing less memory.
+
+Failing to reach a beacon could be defined in a few ways and could be tweaked through testing. A good starting point would be to take the current difference in x and y to the beacon, and saying the pathfinding attempt has failed if we have traversed twice as many tiles as the sum of the two.
+
+At any point if a secbot sees someone that should be arrested, it enters the `Chasing` state. 
+
+#### Exploring
+
+The `Exploring` state is entered when the secbot attempts to 
+
+#### Chasing
+
+The `Chasing` state will inevitably need tweaking after implementation: if a player is directly interacting with a secbot, they're probably being chased. When a 
 
 
 ### Generic Secbots
-
-### Controlling Secbots
 
 ### Officer Beepsky
 
