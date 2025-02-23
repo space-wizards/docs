@@ -15,9 +15,10 @@ This documents lists the Maintainer procedure for reviewing and merging PRs to t
 
 ### Exemptions:
 - PMs and Wizards may waive any PR Review Procedure requirements if deemed necessary for the health of the project. When doing so, it should be done via written permission with an explanation (either on Github, Discord or the SS14 forums). Note that this exemption is not the default for actions taken by the relevant roles, and should be explicitly invoked when used.
-- If a triaged PR carries the `T: Bugfix`, `T: Cleanup`, or `T: Performance` labels and is of a smaller size, *and* does not carry the `T: New Feature` or `T: Balance Change` labels, then the PR is exempt from the "2 Maintainer" requirements for merging/closing and can be processed by a single maintainer. 
+- If a triaged PR carries the `T: Bugfix`, `T: Cleanup`, `T: Performance` or `T: Refactor` labels, *and* does not carry the `T: New Feature` or `T: Balance Change` labels, then the PR is exempt from the "2 Maintainer" requirements for merging/closing and can be processed by a single maintainer. 
   - If a maintainer is the author of a PR, this exemption does not apply (i.e no self-merges).
-  - This exemption is intended for smaller PRs but does not define a maximum size. It is expected that the reviewing maintainer uses their judgement for whether a PR should make use of this exemption, or if an additional review from another maintainer is more suitable.
+  - This exemption is intended for smaller PRs, *or* PRs where the reviewing maintainer has extensive codebase knowledge.
+  - It is expected that the reviewing maintainer uses their judgement for whether a PR should make use of this exemption, or if an additional review from another maintainer is more suitable.
 - Maintainer Maptainers (i.e. Maintainers with additional responsibilities regarding Mapping) may ignore the "2 Maintainer" requirements for merging/closing any PRs involve mapping changes. This means a only single Maintainer Maptainer is needed to approve and merge mapping PRs, and also are able to self-merge mapping PRs.
   - Map tooling PRs are not included in this exemption.
   - Map hotfix PRs are not included in this exemption and must still follow normal hotfix procedure.
