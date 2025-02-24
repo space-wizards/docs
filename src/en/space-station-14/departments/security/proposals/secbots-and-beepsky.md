@@ -6,13 +6,13 @@
 
 ## Overview
 
-Secbots are NPC security officers. They patrol the halls and other public areas looking for criminals. When they see one, they attempt to detain them and hold them for sec to arrive. They can be produced in a similar fashion to cleanbots or medibots. Officer Beepsky is a unqiue secbot. They have improved abilities, more complex behaviour, and a personality to their statements. Officer Beepsky is also the only secbot that spawns at the start of the round.
+Secbots are NPC security officers. They patrol the halls and other public areas looking for criminals. When they see one, they attempt to detain them and hold them for sec to arrive. They can be produced in a similar fashion to cleanbots or medibots. Officer Beepsky is a unqiue secbot. They have improved abilities, a personality to their statements, and serve as a potential target for thieves and syndicate agents. Officer Beepsky is also the only secbot that spawns at the start of the round.
 
 ## Background
 
-Secbots, and Beepsky in particlar have been in SS13 for longer than I've known about it and players and maintainers have both expressed a desire for them to be added. Beyond being a cool feature people have wanted for a while, secbots provide a baseline level of security to the station. It is not uncommon to see rounds start with only a single person in the security team and having NPC security helps mitiage that. 
+Secbots, and Beepsky in particlar have been in SS13 for longer than I've known about it and players and maintainers have both expressed a desire for them to be added. Beyond being a cool feature people have wanted for a while, secbots provide a baseline level of security to the station. It is rare but not unheard of to see rounds start with only a single person in the security team and having NPC security helps mitiage that. 
 
-I consider the criminal records computer to be a good addition to the game, but there's a lack of consensus with some security teams as to what each mark should be used for, and very few reasons to use the paroled or released marks. Having secbots interact with players differently based on their criminal records (such as wanted causing an instant arrest, or paroled making secbots quicker to arrest you) would add some mechanical consequences to using the system.
+I consider the criminal records computer to be a good addition to the game, but there's a lack of consensus with some security teams as to what each mark should be used for, and very few reasons to use the paroled or released marks. Having secbots interact with players differently based on their criminal records (such as wanted causing an instant arrest, or parolled making secbots quicker to arrest you) would add some mechanical consequences to using the system.
 
 When griefers, "shitters", or raiders join the game, it usually falls on sec to remove them. In rounds with few, or unrobust security officers, this can be difficult. Beyond just adding a baseline level of competance to the security team, wasting a secbot's time is less rewarding than wasting a player's time. This is unlikely to have a major impact on the number of times it happens, but someone leaving the game when they get arrested will likely leave the game regardless of whether it was a player that got them, or a secbot. 
 
@@ -22,7 +22,7 @@ An often brought up rule is that "Command and Security should not be using contr
 
 ### Secbot AI
 
-The secbot uses a 4-state-machine to control it's behaviour. The states are `Patrolling`, `Chasing`, `Exploring`, and `Reorienting`. Secbots will move slightly slower than a player (~90%). They will have maintainence and security access.  
+The secbot uses a 4-state-machine to control it's behaviour. The states are `Patrolling`, `Chasing`, `Exploring`, and `Reorienting`. Secbots will move slightly slower than a player (~90%). They will have basic department access - HoP access without the actual HoP room.
 
 ![The secbot state machine (Patent Pending)]()
 
@@ -53,20 +53,55 @@ At any point if a secbot sees someone that should be arrested, it enters the `Ch
 
 #### Exploring
 
-The `Exploring` state is entered when the secbot attempts to 
+The `Exploring` state is entered when the secbot attempts to travel between two beacons that don't have an entry in the navigation table. This can occur if a beacon is moved or destroyed, or if an existing route has been deleted through 3 failed attempts at navigating it. The 
+
+At any point if a secbot sees someone that should be arrested, it enters the `Chasing` state. 
 
 #### Chasing
 
-The `Chasing` state will inevitably need tweaking after implementation: if a player is directly interacting with a secbot, they're probably being chased. When a 
+The `Chasing` state will inevitably need tweaking after implementation [1]: if a player is directly interacting with a secbot, they're probably being chased. When a chase starts, the secbot will pause in place for a short duration (somewhere around 0.5-1.5 seconds) to "charge up" and will say some statement: "Stop criminal scum", "Freeze", etc to give the target an oppertunity to react. After this it will gain a significant speed boost for a short duration (~130% of base player speed for ~5 seconds) and move towards the target. If it gets within melee range it will swing a stun baton at the target up to 3 times. 
 
+If the target is stunned, the secbot will apply handcuffs to them, make an announcement to the sec radio "Secbot (1234) has detained a suspect near {nearest beacon}", and pull the target without moving [2]. If a target escapes the handcuffs, the secbot will attempt to arrest them again, but it will not react to the target attempting to take the handcuffs off until they are off. 
 
-### Generic Secbots
+[1] Every number here is a rough guideline and will probably need changing.
+
+[2] There will have to be a special case to the "handcuffs prevent a change of puller" rule.
+
+During the chase, if the secbot does not stun the target before the speed boost ends, it will repeat the process - charging up, then rapidly approaching the target to stun them, repeating this until it succeeds or the chase is lost. If the secbot looses sight of the target, it will move towards their last known point. If it reaches that point without seeing the target, it considers the chase lost, and moves to to the `Reorienting` state.
+
+### When to Arrest?
+
+There's a lot of space to make secbots "smart" with making arrests, and I would welcome additions once the basics are implemented. For the basic implementation, there will be 2 cases where a secbot will attempt to make an arrest.
+
+1. Someone who is marked as Wanted
+
+2. Someone who is seen carrying Syndicate Contraband. 
+
+Obviously someone marked as wanted should be a target. The second case helps reinforce the idea that "Syndicate contraband is *very* illegal", which doesn't always come across in-game. In this case "seen carrying" means anything that can be seen on the strip menu; things that are worn, and held in hands, but not including things that are in pockets.
+
+For case 2, there are 2 exceptions:
+
+1. If the target has armory accesss on a visable ID, they will never be targeted for contraband.
+
+2. If the target has security access on a visable ID, they are given 3 chances; every time the secbot sees them with syndicate contraband they get a strike, every time they are seen without, they lose a strike. Strikes can only be gain or lost every 2 minutes. If someone gets a third strike, an arrest attempt is made. 
+
+Someone needs to be able to reliably move contraband and having the HoS, Warden, and Captain able to do so is the simplest solution. The HoS or Warden can be expected to handle every piece of contraband that sec encounters. Armory access is arguably the most important single access on the station; someone trusted with that can be trusted not to misuse contraband. 
+
+Secoffs need some leeway for handing stuff in; The HoS and Captain can't be expected to respond to every contraband call. Ideally we want officers to be able to transport large contraband, and potentially use it in emergency situations. This system gives at least 4 minutes of open usage, more than enough time to head to the armory, or deal with a life-or-death emergency. It will still arrest anyone abusing contraband, such as openly walking around with an esword "cos it looks cool".
+
+### Producing More
+
+Secbots can be constructed with a Security Helmet, Proximity Sensor, Cyborg arm, Stun Baton, and 2 LV wire. They require cooperation between security and robotics to produce. TODO - justify
 
 ### Officer Beepsky
 
-### As a Thief Objective
+Officer Beepsky is a unique secbot that spawns at roundstart. He has better numbers, different lines, and a unique "Beepsky personality chip" that serves as a thief objective, and a way to rebuild him if he is destroyed. 
 
-### Producing More
+For stats, Beepsky will have improved base movement speed (~95% of player movement speed), a shorter charge up time (~25% less than regular secbots), a longer speed boost (~25% longer than regular secbots), and be more resistant to damage. Ideally, Beepsky should be effective enough to reliably arrest someone unprepared, but be fairly easy to play around for someone planning to interact with them, and a non-issue for anyone with serious loud gear (DAGD or nukies). 
+
+Beepsky will have different voicelines to regular secbots. The personality will be more aggressive than the regular "matter-of-fact" secbots. 
+
+The thing making Officer Beepsky unique is a "Beepsky Personality Chip". It can be removed from Officer Beepsky by destroying them, or by unlocking them with Security access, and removing the chip. Removing the chip will turn them into a regular secbot. Inserting the chip into a secbot will turn that secbot into Officer Beepsky. This chip should not be obtainable outside of the roundstart Officer Beepsky. This makes it possible to "repair" them if they are destroyed. Stealing this chip will be a possible antagonist objective, encouraging players to interact with Beepsky, and make deliberate plans to subvert them. 
 
 ## Game Design Rationale
 
