@@ -26,7 +26,7 @@ Each work group is responsible for maintaining corresponding design and pr guide
 | Group | Members |
 |-------|---------|
 | [Atmos](../space-station-14/departments/atmos.md) | Jezithyr, KeronSHB, notafet(Partmedia), mirrorcult, PJB |
-| [Cargo/Salvage](../space-station-14/departments/cargo-salvage.md) | AJCM, mirrorcult, Jezithyr | 
+| [Cargo/Salvage](../space-station-14/departments/cargo.md) | AJCM, mirrorcult, Jezithyr | 
 | [Command](../space-station-14/departments/command.md) | KeronSHB, EmoGarbage, Vasilis, mirrorcult, Flareguy, AJCM |
 | [Engineering](../space-station-14/departments/engineering.md) | Jezithyr, Julian, AJCM, KeronSHB, mirrorcult, PJB |
 | [Medical](../space-station-14/departments/medical.md) | Jezithyr, Vasilis, AJCM, PJB |
