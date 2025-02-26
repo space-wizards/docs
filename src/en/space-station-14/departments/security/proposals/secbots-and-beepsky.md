@@ -108,9 +108,11 @@ The thing making Officer Beepsky unique is a "Beepsky Personality Chip". It can 
 
 ## Game Design Rationale
 
-
+With regards to the core design principles, TODO
 
 ## Roundflow & Player interaction
+
+
 
 ## Administrative & Server Rule Impact (if applicable)
 
@@ -120,7 +122,7 @@ The thing making Officer Beepsky unique is a "Beepsky Personality Chip". It can 
 
 The obvious blocker to implementing this is the routing. Specifically how does it move around the station when patrolling, and what needs to be added from a code and mapping standpoint to faciliate that? **Station beacons** are the obvious choice for points of interest, but patrolling secbots should be sticking to public areas and corridors, which typically don't have any. 
 
-TODO - image demos
+![The in-game map of Bagel station, with the areas we want secbots to patrol highlighted]()
 
 So how do we define the areas that we want the secbots to patrol. There seem to be 3 main possibilites (and since this seems to be the most debated part of the proposal, would appreciate more):
 
@@ -142,9 +144,27 @@ The main argument against mapper-defined systems is maptainer overhead - mappers
 
 ## The Navigation Table
 
-The navigation table is used to tell a secbot how to get from a given beacon to another beacon via a list of tile-by-tile directions, however a lot of routes between beacons will take it via another beacon. This gives a chance to optimise memory usage. Take 3 beacons in a line, in a 1 block wide corridor.
+The navigation table is used to tell a secbot how to get from a given beacon to another beacon via a list of tile-by-tile directions. It will be a part of the map file, and will be able to update itself through the in-game actions of players. Since a lot of routes between beacons will take it via another beacon, we have a chance to optimise memory usage. Take 3 beacons in a line, in a 1 block wide corridor.
 
 ```
 A -- B -- C
 ```
-We can define the path from A to C as being the path from A to B, and then B to C. By storing this in the table, we have cut down the number of entries by 1, and halved the amount of data stored (since the A to C path is twice as long as the other two). With optimal placement of beacons, **this navigation table becomes a planar graph, which has a linear bound on the number of edges**
+We can define the path from A to C as being the path from A to B, and then B to C. By storing this in the table we half the amount of path data stored (since the A to C path is twice as long as the other two). With optimal placement of beacons, **this navigation table becomes a planar graph, which has a linear max on the number of edges**. We still have to either store the `A -- B -- C` path, or do a smaller pathfinding algorithm over the navigation table to find out that the path `A -- B -- C`. Since it will be the longer paths that are compressed this way, this should have a significant impact on memory usage. Of course this only works when beacons are placed specifically to allow for this; in game it would be possible for a player to make a layout of beacons where every beacon has an  extremely long, explicit path to every other beacon. We can optimise the amount of memory used for a path by packing multiple directions into single bytes. Specifically we can go to anywhere in the following pattern with half a byte of data (4 bits for 16 points). 
+
+```
+X X X
+ XXX
+XX@XX
+ XXX
+X X X
+```
+
+Taking the largest map (Fland) to be about 100x150 tiles. Placing 16 beacons in a circle of diameter of 150 and generating a path between each gives a sum of ~22,000 path tiles. We can encode 2 tiles of a given direction per byte. That's ~10KB of data stored for a scenario in which someone is deliberately trying to maximise the amount of data stored. Even if they were to make some  maze that increased the number of tiles traversed, the `Explore` state will not store paths double the length of the best-case scenario, so we have a worst-case scenerio of ~20KB. In reality we need fewer than 16 beacons, will have shorter paths, and can take advantage of our the above-mentioned linear maximum for edges. Again going to Fland, here's an example of a beacon layout, and the expected edges.
+
+![A possible layout of navigation beacons for Fland, note that 13 beacons and 18 edges cover the majority of the public areas.]()
+
+When updating the navigation table with the `Explore` state, some system will have to be put in place to allow for these A-to-B-to-C paths to be generated. The simplest solution is probably to maintain a stack of visited beacons when trying to go between 2 beacons while exploring.
+
+## Pathfinding
+
+While pathfinding in `Explore`, we want the secbot to stay in public hallways, avoiding maints and departments if possible. The simplest way of doing this would be to block secbots from exploring through any access locked doors. This restriction will be removed while `Reorienting`. A smarter system could be implemented in the future, perhaps encouraging secbots to path over tiled floors, or lit up areas.
