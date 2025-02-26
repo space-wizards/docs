@@ -16,21 +16,21 @@ I consider the criminal records computer to be a good addition to the game, but 
 
 When griefers, "shitters", or raiders join the game, it usually falls on sec to remove them. In rounds with few, or unrobust security officers, this can be difficult. Beyond just adding a baseline level of competance to the security team, wasting a secbot's time is less rewarding than wasting a player's time. This is unlikely to have a major impact on the number of times it happens, but someone leaving the game when they get arrested will likely leave the game regardless of whether it was a player that got them, or a secbot. 
 
-An often brought up rule is that "Command and Security should not be using contraband". There is no mechanical enforcement for this. Having secbots arrest even command and security with contraband visable (wearing or holding, not including pockets) would provide this. Obviously some leeway should exist for officers and command carrying stuff back to the brig.
+An often brought up rule is that "Command and Security should not be using contraband". There is no mechanical enforcement for this. Having secbots arrest even command and security with contraband visable (wearing or holding, not including pockets) would provide this. Obviously some leeway should exist for officers carrying stuff back to the brig.
 
 ## Features to be added
 
 ### Secbot AI
 
-The secbot uses a 4-state-machine to control it's behaviour. The states are `Patrolling`, `Chasing`, `Exploring`, and `Reorienting`. Secbots will move slightly slower than a player (~90%). They will have basic department access (HoP access without the actual HoP room). 
+The secbot uses a 4-state-machine to control it's behaviour. The states are `Patrolling`, `Chasing`, `Exploring`, and `Reorienting`. Secbots will move slightly slower than a player (~90%). They will have basic department access (HoP access without the actual HoP room). In my exeperience state machines are good for NPC AI, and are easy to extend with states for more complex behaviour in the future.
 
-![The secbot state machine (Patent Pending)](..\..\..\..\assets\images\proposals\secbots\Meta.png)
+![The secbot state machine (Patent Pending)](..\..\..\..\assets\images\proposals\secbots\SecbotNavState.png)
 
 The most discussed part of this is how a secbot should navigate around the station. The details for this, and why this method was chosen are in a [later section](#patrol-routing). As far as a player needs to know, the secbots patrol with the following system:
 
 Maps have a set of "Patrol Beacons" under the tiles in major locations. This would include places like the bar, the outside of security, and the corridor containing the vault. Importantly these locations should all be public access. Beacons can be unanchored, moved, and destroyed. 
 
-![Possible beacon layout for Meta Station](..\..\..\..\assets\images\proposals\secbots\SecbotNavState.png)
+![Possible beacon layout for Meta Station](..\..\..\..\assets\images\proposals\secbots\Meta.png)
 
 A navigation table is maintained for each grid with a patrol beacon on it. The table contains data for travelling between nodes down to the exact tiles a secbot should traverse. Because of the potential for O(n^2) growth of this table with regards to the number of beacons, they should not be constructable. 
 
@@ -94,7 +94,7 @@ Secoffs need some leeway for handing stuff in; The HoS and Captain can't be expe
 
 ### Producing More
 
-Secbots can be constructed with a Security Helmet, Proximity Sensor, Cyborg arm, Stun Baton, and 2 LV wire. They require cooperation between security and robotics to produce. TODO - justify
+Secbots can be constructed with a Security Helmet, Proximity Sensor, Cyborg arm, Stun Baton, and 2 LV wire. They require cooperation between security and robotics to produce. Having a roboticist make 30 secbots is a funny gimmick for the first few times, but would make any antags in the round miserable. With these materials, you need someone with armory access to mass-produce batons and helmets and you need someone in science for the sensors and arms. Mass-producing secbots therefore becomes a logistical issue - if a warden is handing a roboticist 30 batons, it's likely that a few of them will end up in the hands of an antagonist. Making a handful of secbots, or [repairing Beepksy](#officer-beepsky) will not have this issue.
 
 ### Officer Beepsky
 
@@ -112,9 +112,11 @@ With regards to the core design principles, TODO
 
 ## Roundflow & Player interaction
 
-
+TODO
 
 ## Administrative & Server Rule Impact (if applicable)
+
+TODO
 
 # Technical Considerations
 
@@ -159,7 +161,7 @@ XX@XX
 X X X
 ```
 
-Taking the largest map (Fland) to be about 100x150 tiles. Placing 16 beacons in a circle of diameter of 150 and generating a path between each gives a sum of ~22,000 path tiles. We can encode 2 tiles of a given direction per byte. That's ~10KB of data stored for a scenario in which someone is deliberately trying to maximise the amount of data stored. Even if they were to make some  maze that increased the number of tiles traversed, the `Explore` state will not store paths double the length of the best-case scenario, so we have a worst-case scenerio of ~20KB. In reality we need fewer than 16 beacons, will have shorter paths, and can take advantage of our the above-mentioned linear maximum for edges. Again going to Fland, here's an example of a beacon layout, and the expected edges.
+Taking the largest map (Fland) to be about 100x150 tiles. Placing 16 beacons in a circle of diameter 150 and generating a path between each gives a sum of ~22,000 path tiles. We can encode 2 tiles of a given direction per byte. That's ~10KB of data stored for a scenario in which someone is deliberately trying to maximise the amount of data stored. Even if they were to make some  maze that increased the number of tiles traversed, the `Explore` state will not store paths double the length of the best-case scenario, so we have a worst-case scenerio of ~20KB. In reality we need fewer than 16 beacons, will have shorter paths, and can take advantage of our the above-mentioned linear maximum for edges. Again going to Fland, here's an example of a beacon layout, and the expected edges.
 
 ![A possible layout of navigation beacons for Fland, note that 13 beacons and 18 edges cover the majority of the public areas.](..\..\..\..\assets\images\proposals\secbots\Fland_smaller.png)
 
