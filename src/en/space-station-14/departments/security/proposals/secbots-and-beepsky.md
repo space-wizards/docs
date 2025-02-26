@@ -24,13 +24,13 @@ An often brought up rule is that "Command and Security should not be using contr
 
 The secbot uses a 4-state-machine to control it's behaviour. The states are `Patrolling`, `Chasing`, `Exploring`, and `Reorienting`. Secbots will move slightly slower than a player (~90%). They will have basic department access (HoP access without the actual HoP room). 
 
-![The secbot state machine (Patent Pending)]()
+![The secbot state machine (Patent Pending)](..\..\..\..\assets\images\proposals\secbots\Meta.png)
 
 The most discussed part of this is how a secbot should navigate around the station. The details for this, and why this method was chosen are in a [later section](#patrol-routing). As far as a player needs to know, the secbots patrol with the following system:
 
 Maps have a set of "Patrol Beacons" under the tiles in major locations. This would include places like the bar, the outside of security, and the corridor containing the vault. Importantly these locations should all be public access. Beacons can be unanchored, moved, and destroyed. 
 
-![Possible beacon layout for Meta Station]()
+![Possible beacon layout for Meta Station](..\..\..\..\assets\images\proposals\secbots\SecbotNavState.png)
 
 A navigation table is maintained for each grid with a patrol beacon on it. The table contains data for travelling between nodes down to the exact tiles a secbot should traverse. Because of the potential for O(n^2) growth of this table with regards to the number of beacons, they should not be constructable. 
 
@@ -122,9 +122,9 @@ With regards to the core design principles, TODO
 
 The obvious blocker to implementing this is the routing. Specifically how does it move around the station when patrolling, and what needs to be added from a code and mapping standpoint to faciliate that? **Station beacons** are the obvious choice for points of interest, but patrolling secbots should be sticking to public areas and corridors, which typically don't have any. 
 
-![The in-game map of Bagel station, with the areas we want secbots to patrol highlighted]()
+![The in-game map of Bagel station, with the areas we want secbots to patrol highlighted](..\..\..\..\assets\images\proposals\secbots\Bagel.png)
 
-So how do we define the areas that we want the secbots to patrol. There seem to be 3 main possibilites (and since this seems to be the most debated part of the proposal, would appreciate more):
+So how do we define the areas that we want the secbots to patrol. There seem to be 3 main possibilites:
 
 1. Defined by a player in-game.
 
@@ -161,7 +161,7 @@ X X X
 
 Taking the largest map (Fland) to be about 100x150 tiles. Placing 16 beacons in a circle of diameter of 150 and generating a path between each gives a sum of ~22,000 path tiles. We can encode 2 tiles of a given direction per byte. That's ~10KB of data stored for a scenario in which someone is deliberately trying to maximise the amount of data stored. Even if they were to make some  maze that increased the number of tiles traversed, the `Explore` state will not store paths double the length of the best-case scenario, so we have a worst-case scenerio of ~20KB. In reality we need fewer than 16 beacons, will have shorter paths, and can take advantage of our the above-mentioned linear maximum for edges. Again going to Fland, here's an example of a beacon layout, and the expected edges.
 
-![A possible layout of navigation beacons for Fland, note that 13 beacons and 18 edges cover the majority of the public areas.]()
+![A possible layout of navigation beacons for Fland, note that 13 beacons and 18 edges cover the majority of the public areas.](..\..\..\..\assets\images\proposals\secbots\Fland_smaller.png)
 
 When updating the navigation table with the `Explore` state, some system will have to be put in place to allow for these A-to-B-to-C paths to be generated. The simplest solution is probably to maintain a stack of visited beacons when trying to go between 2 beacons while exploring.
 
