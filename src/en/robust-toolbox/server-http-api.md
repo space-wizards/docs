@@ -47,7 +47,17 @@ More detailed JSON server information that is mostly necessary when connecting t
             "icon": "discord", // Icon to use for this button, can be left out. See below for valid icon names.
             "url": "https://discord.gg/abcdef" // Link this button opens when pressed. Must be http:// or https://
         }
-    ]
+    ],
+    // Optional, specifies information about a privacy policy that players must agree with.
+    "privacy_policy": {
+        // Link that contains the privacy policy, accessible via web browser.
+        "link": "https://example.com/privacy",
+        // An identifier that will be stored by the launcher when accepted.
+        // THIS SHOULD BE UNIQUE FOR EVERY SERVER COMMUNITY. DON'T JUST COPY PASTE THIS FROM SOMEBODY ELSE.
+        "identifier": "example",
+        // The "version" of the privacy policy. This should be changed if the server's privacy policy has been updated.
+        "version": "example"
+    }
 }
 ```
 

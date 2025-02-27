@@ -67,7 +67,7 @@ You will get a form you will be asked to fill in (**Notice**: Neither us nor the
 ![Input field](../assets/images/discord/redbot-poweactions-form.png)
 
 - Name: The server's name, you will be providing this to the bot when restarting the server.
-- URL: The URL to the watchdog instance, make sure to provide a URL accessible by the bot. Example: If you are exposing the watchdog's API at 'https://example.com/watchdog' then what's that you wanna input. You can probably use 'localhost' too if the bot is hosted on the same machine as the watchdog.
+- URL: The URL to the watchdog instance, make sure to provide a URL accessible by the bot. Example: If you are exposing the watchdog's API at 'https://example.com/watchdog' then what's that you wanna input. You can probably use 'localhost' too if the bot is hosted on the same machine as the watchdog. The default watchdog port is ``5000``
 - Server ID: The name of your server in your watchdog's appsettings.yml that stores your server config. *Not* the "Name" config.
 - API token: The ApiToken in your watchdogs configuration.
 3. After clicking submit if the bot reported success then you are done! Repeat for your other server.

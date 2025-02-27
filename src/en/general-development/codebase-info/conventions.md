@@ -519,7 +519,7 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
   description: 'A label on the packaging reads, 'Wouldn't a slow death make a change?''
 ```
 - Don't specify textures in abstract prototypes/parents.
-- You should declare the first prototype block in this order: `type` > `abstract` > `parent` > `id`  > `name` > `description` > `components.`
+- You should declare the first prototype block in this order: `type` > `abstract` > `parent` > `id` > `categories` > `name` > `suffix` > `description` > `components.`
 - New components should not have an indent when added to the `components:` section.
     This
     ```yaml=
@@ -532,6 +532,16 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
     components:
       - type: Sprite
         state: 
+    ```
+- The same rule applies for any other list or dictionary, for example:
+    ```yaml=
+    - type: Tag
+      tags:
+      - HighRiskItem # correct indentation
+
+    - type: Tag
+      tags:
+        - HighRiskItem # wrong indentation
     ```
 - When it makes sense, place more generalized/engine components near the top of the components list and more specific components near the bottom of the list. For example,
     ```yaml=
@@ -552,13 +562,13 @@ Everything else, even prototype type names, uses `camelCase`.
 Please ensure you structure entities with components as follows for easier YAML readability:
 
 ```
- 	 type: entity
-  parent: Base<nameofparent>
+- type: entity
+  abstract: true # remove this line if not abstract
+  parent: <nameofparent>
   id: 
   name:
-  abstract: 
   components:
- 		<rest of file>
+  <rest of file>
 ```
       
 ### Entity Prototype suffixes

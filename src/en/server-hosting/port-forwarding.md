@@ -24,7 +24,7 @@ If you are using some form of VPN, probably all the info in this guide is irrele
 
 You can try to see if port forwarding is supported by your VPN service, in which case it will probably be pretty reliable and easy to do.
 
-Using a VPN service may also be the only option you have if your ISP otherwise makes port forwarding impossible. We have no recommendations or guides for specific services here.
+Using a VPN service may also be the only option you have if your ISP otherwise makes port forwarding impossible. More information [here](#vpn-networks-zerotiertailscalehamachi)
 
 ## UPnP Port Forwarding
 
@@ -161,4 +161,51 @@ If you did the above steps correctly and your server **still** isn't globally ac
 
 The most common reason for this is that your ISP uses Carrier-grade NAT ("CGNAT") which makes port forwarding impossible. Another possible reason we've heard about is that certain network ports or protocols are automatically blocked by them.
 
-Either way, if this is the case we cannot help you further. You are probably best off contacting your ISP's support or checking their site to see what you can figure out. Some ISPs may allow exemptions to CGNAT, others may do it but will charge you for it, and so on.
+You are probably best off contacting your ISP’s support or checking their site to see what you can figure out. Some ISPs may allow exemptions to CGNAT, others may do it but will charge you for it, and so on.
+
+### So what now?
+
+If you were reading to host a public server (public on the hub for random players to join) we suggest you purchase hosting, these alternatives are only suitable for people interested in hosting for friends.
+
+```admonish info
+We do not endorse or maintain any of these programs.
+
+If you encounter any issues with any of them please contact the developers of the program instead of us.
+
+These are just suggestions by us that we have seen work.
+```
+
+We can't really do much anymore to help other than give suggestions. We made some below that we heard have worked.
+
+Essentially from this point on, you will need external help to make your server reachable if you can't get your ISP to help.
+
+## Tunneling services (Like playit.gg, localtonet)
+
+```admonish warning
+Do note tunneling services will cause everyone's IP appear as coming from the same location which will make IP bans impossible. 
+
+The servers IP address might change unexpectedly depending on the service, which means your favorite server entry may stop working after a while.
+```
+
+Tunneling services tunnel player connections through their unrestricted network and back to your computer. It is essentially a "reverse VPN".
+
+If all you want is a simple server to play around with friends. This is by far the easiest option. It also hides your public IP.
+
+This guide will cover playit.gg here. Instructions should be similar for other programs. Make sure the tunneling program you choose supports both TCP and UDP traffic!
+
+1. [Download and signup](https://playit.gg/) for playit.gg (Guest account won't work) and setup the program with their instructions.
+2. When asked for a tunnel type, switch it to "TCP+UDP"
+3. When asked for a "Local port" type your server's port, in most cases ``1212``. Then "Add tunnel"
+4. Once the tunnel initializes, you should have a domain and IP. This is what you share with your friends, start your server if you have not already. They should be able to connect with either the domain or the IP they give you. The domain will also be in the console of the playit.gg app for quick copying.
+
+Every time you need to host a server, make sure to start the relevant tunneling app first.
+
+## VPN networks (Zerotier/Tailscale/Hamachi)
+
+```admonish warning
+Be careful with who you allow access using these programs. When multiple computers are on the same internal network, they can communicate directly with each other. This means that any device connected could, in theory, access shared files, printers, or even attempt unauthorized actions if not properly secured. Ensure you trust the people that get access and turn it off when not using it.
+```
+
+VPN software is able to create a local private network. It is essentially like you have a virtual LAN party of computers connected to each other.
+
+All these programs will require all your friends to download the VPN software of choice, somehow join a network with each other (search for instructions), and then joining using the local IP address created by the program of the computer running the SS14 server.
