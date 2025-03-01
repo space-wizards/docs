@@ -24,14 +24,15 @@ The paradox clone can also serve as a replacement for the terminator. This antag
 Cloning code will be refactored to properly copy traits, DNA, fingerprints and any other relevant details from the original.
 The clone will get a copy of the outfit and basic equipment (e.g. toolbelts or goggles) the original is currently wearing, restricted by a whitelist. If this causes any problems from a code perspective alternatively the original's roundstart loadout can be used. However, this would be less ideal since many players customize their character during the round.
 
-### Ghost role information:
+### Ghost role information
 
 A freak space-time anomaly has teleported you into another reality! Now you have to find your counterpart and kill and replace them.
 
-### Objectives:
+### Objectives
 - Kill and replace  \<target\>, \<job\> to fix the time paradox. Remember, your mission is to blend in, do not kill anyone else unless you have to!
 - Escape to CentCom alive and unrestrained.
 
 ## Possible optional additions
 - Give the paradox clone a chance to be friendly instead of an antagonist for more roleplay opportunities and to prevent clones from being seen as 'valid' to kill.
 - If the original is an antagonist, additionally give the clone the original's objectives as well. This makes them an even more perfect copy and may lead to some interesting interactions between traitors where you first cooperatere and then inevitably betray each other.
+- Gib the clone when the round ends and they did not fulfill their kill objective.
