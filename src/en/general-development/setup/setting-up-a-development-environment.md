@@ -43,6 +43,12 @@ This video is intended to be followed *along with the guide* and may become out 
 
 ## 1. Cloning
 
+```admonish danger title="Do not download as a zip from GitHub"
+You need to use the `git` in some shape or form (Command line or a Graphical interface) to download/clone the code.
+The "Download zip" option on GitHub will NOT work since it does not contain the submodules required (aka the game engine, Robust Toolbox) and also does not contain previous history.
+Which means it would be impossible to even make a commit without it present.
+```
+
 **Even if you already know Git, scroll down to read the section about submodule setup. Seriously.**
 
 If you're **familiar with Git**, just fork and clone the repository, set up remotes, and then follow the submodule guide below.
