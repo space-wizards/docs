@@ -54,7 +54,7 @@ At any point if a secbot sees someone that should be arrested, it enters the `Ch
 
 #### Exploring
 
-The `Exploring` state is entered when the secbot attempts to travel between two beacons that don't have an entry in the navigation table. This can occur if a beacon is moved or destroyed, or if an existing route has been deleted through 3 failed attempts at navigating it. The secbot attempts to find a path from the first beacon to the second. If it succeeds, the generated path is added to the navigation table and the secbot is put into the `Patrolling` state. If a path already exists (because another secbot has already added one), the 2 paths are compared, and the shorter of the two is used. If it fails, the path is disregarded, and the secbot is put into the `Reorienting` state. 
+The `Exploring` state is entered when the secbot attempts to travel between two beacons that don't have an entry in the navigation table. This can occur if a beacon is moved or destroyed, or if an existing route has been deleted through 3 failed attempts at navigating it. The secbot attempts to find a path from the first beacon to the second. If it succeeds, the generated path is added to the navigation table and the secbot is put into the `Patrolling` state. If a path already exists (because another secbot has already added one), the 2 paths are compared, and the shorter of the two is used. If exploring fails, the path is disregarded, and the secbot is put into the `Reorienting` state. 
 
 Like with the `Reorienting` state, the entire path should not be computed in one tick. Some heuristically best point within X tiles is picked, and pathed towards, with a new point being picked once we get there. Failure is defined with the same process as `Reorienting`: taking the current differences in x and y, and failing if we traverse more than double the sum.
 
@@ -100,7 +100,7 @@ Secbots can be constructed with a Security Helmet, Proximity Sensor, Cyborg arm,
 
 ### Officer Beepsky
 
-Officer Beepsky is a unique secbot that spawns at roundstart. They have better numbers, different lines, and a unique "Beepsky personality chip" that serves as a thief objective, and a way to rebuild them if they are destroyed. 
+Officer Beepsky is a unique secbot that spawns at roundstart. They have better numbers, different lines, and a unique "Beepsky personality chip" that serves as a steal objective, and a way to rebuild them if they are destroyed. 
 
 For stats, Beepsky will have improved base movement speed (~95% of player movement speed), a shorter charge up time (~25% less than regular secbots), a longer speed boost (~25% longer than regular secbots), and be more resistant to damage. Ideally, Beepsky should be effective enough to reliably arrest someone unprepared, but be fairly easy to play around for someone planning to interact with them, and a non-issue for anyone with serious loud gear (DAGD or nukies). 
 
@@ -118,7 +118,7 @@ For antagonists like syndicate agents, secbots would encourage teamwork. Secbots
 
 ## Roundflow & Player interaction
 
-Beepsky would spawn at the start of every round, generic secbots would be constructable. The majority of direct interactions would be people playing around the existence of Beepsky, getting chased/arrested by Beepsky, and security dealing with the people arrested by Beepsky. Secbots should not be making the majority of arrests except in rare specific rounds where people are mass-producing them. As mentioned, Beepsky should be effective enough to reliably arrest someone unprepared, but be fairly easy to play around for someone planning to interact with them, and a non-issue for anyone with serious loud gear (DAGD or nukies). Secbots would be weaker than this - and serve more to put pressure on antagonists rather than reliably arrest them. This can be balanced by tweaking numbers for secbots and Beepsky.
+Beepsky would spawn at the start of every round, generic secbots would be constructable. The majority of direct interactions would be people playing around the existence of Beepsky, getting chased/arrested by Beepsky, and security dealing with the people arrested by Beepsky. Secbots should not be making the majority of arrests except in rare specific rounds where people are mass-producing them. As mentioned, Beepsky should be effective enough to reliably arrest someone unprepared, but be fairly easy to play around for someone planning to interact with them, and a non-issue for anyone with serious loud gear (DAGD or nukies). Secbots would be weaker than this and serve more to put pressure on antagonists rather than reliably arrest them. This can be balanced by tweaking numbers for secbots and Beepsky.
 
 ## Administrative & Server Rule Impact (if applicable)
 
