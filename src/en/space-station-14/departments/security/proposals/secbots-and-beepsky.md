@@ -28,7 +28,7 @@ The secbot uses a 4-state-machine to control it's behaviour. The states are `Pat
 
 The most discussed part of this is how a secbot should navigate around the station. The details for this, and why this method was chosen are in a [later section](#patrol-routing). As far as a player needs to know, the secbots patrol with the following system:
 
-Maps have a set of "Patrol Beacons" under the tiles in major locations. This would include places like the bar, the outside of security, and the corridor containing the vault. Importantly these locations should all be public access. Beacons can be unanchored, moved, and destroyed. 
+Maps have a set of "Patrol Beacons" under the tiles to encourage patrolling between major locations. This would include places like the bar, the outside of security, and the corridor containing the vault. Importantly these locations should all be public access. Beacons can be unanchored, moved, and destroyed. 
 
 ![Possible beacon layout for Meta Station](..\..\..\..\assets\images\proposals\secbots\Meta.png)
 
@@ -38,7 +38,7 @@ A navigation table is maintained for each grid with a patrol beacon on it. The t
 
 A secbot in the `Patrolling` state will choose a random beacon and follow the tile-by-tile path laid out in the navigation table. If it arrives at its destination, it will linger in the area for a short time, before repeating the process - picking a beacon, pathing to it, and lingering in the area. If the path becomes blocked, such as a by a closed firelock or a broken tile, a weak attempt is made to get around the obstacle by pathfinding to the first unblocked tile. This should be effective enough to navigate a pillar in the middle of the corridor, but should not path down a different corridor. If this attempt fails, the secbots follows the path backwards to return to the closest beacon, marks that route as `Attempted`, and continues patrolling to a different beacon. If a route is sucessfully navigated, all `Attempted` marks on the route are removed. If a route has been `Attempted` and failed 3 times, the route is deleted from the navigation table. If the secbot's return path is blocked, it enters the `Reorienting` state.
 
-If a secbot picks a beacon without a value in the navigation table, it enters the `Exploring` state.
+If a secbot picks a beacon without a path from its current beacon in the navigation table, it enters the `Exploring` state.
 
 At any point if a secbot sees someone that should be arrested, it enters the `Chasing` state.
 
@@ -92,13 +92,15 @@ Someone needs to be able to reliably move contraband and having the HoS, Warden,
 
 Secoffs need some leeway for handing stuff in; The HoS and Captain can't be expected to respond to every contraband call. Ideally we want officers to be able to transport large contraband, and potentially use it in emergency situations. This system gives at least 4 minutes of open usage, more than enough time to head to the armory, or deal with a life-or-death emergency. It will still arrest anyone abusing contraband, such as openly walking around with an esword "cos it looks cool". The strikes are shared between secbots.
 
+Station contraband has deliberately not been included here: by the rules there are situations when someone can legally carry major and minor contraband. Allowing for this would mean implementing some form of permit system, which is beyond the scope of this doc.
+
 ### Producing More
 
-Secbots can be constructed with a Security Helmet, Proximity Sensor, Cyborg arm, Stun Baton, and 2 LV wire. They require cooperation between security and robotics to produce. Having a roboticist make 30 secbots is a funny gimmick for the first few times, but would make any antags in the round miserable. With these materials, you need someone with armory access to mass-produce batons and helmets and you need someone in science for the sensors and arms. Mass-producing secbots therefore becomes a logistical issue - if a warden is handing a roboticist 30 batons, it's likely that a few of them will end up in the hands of an antagonist. Making a handful of secbots, or [repairing Beepksy](#officer-beepsky) will not have this issue.
+Secbots can be constructed with a Security Helmet, Proximity Sensor, Cyborg arm, Stun Baton, and 2 LV wire. They require cooperation between security and robotics to produce. Having a roboticist make 30 secbots is a funny gimmick for the first few times, but would make any antags in the round miserable. With these materials, you need someone with armory access to mass-produce batons and helmets and you need someone in science for the sensors and arms. Mass-producing secbots therefore becomes a logistical issue - if a warden is handing a roboticist 30 batons, it's likely that a few of them will end up in the hands of an antagonist. Making a handful of secbots, or [repairing Beepksy](#officer-beepsky) will not be as big a logistical challenge and should be more viable.
 
 ### Officer Beepsky
 
-Officer Beepsky is a unique secbot that spawns at roundstart. He has better numbers, different lines, and a unique "Beepsky personality chip" that serves as a thief objective, and a way to rebuild him if he is destroyed. 
+Officer Beepsky is a unique secbot that spawns at roundstart. They have better numbers, different lines, and a unique "Beepsky personality chip" that serves as a thief objective, and a way to rebuild them if they are destroyed. 
 
 For stats, Beepsky will have improved base movement speed (~95% of player movement speed), a shorter charge up time (~25% less than regular secbots), a longer speed boost (~25% longer than regular secbots), and be more resistant to damage. Ideally, Beepsky should be effective enough to reliably arrest someone unprepared, but be fairly easy to play around for someone planning to interact with them, and a non-issue for anyone with serious loud gear (DAGD or nukies). 
 
@@ -108,15 +110,19 @@ The thing making Officer Beepsky unique is a "Beepsky Personality Chip". It can 
 
 ## Game Design Rationale
 
-With regards to the core design principles, TODO
+With regards to the core design principles, this mostly comes down to being a new system for players to interact with. It is a tool for security, but can also be a tool for antags if subverted. A ninja setting everyone to wanted is now a significant issue rather than being a minor annoyance for the warden, or a smart thief could use it to incapacitate someone by planting contraband on them. It also leans into being "Seriously Silly" - an antagonist having to quickly adapt a plan because they ran into a secbot, or an officer suddenly getting attacked because someone set them to wanted would make for good stories.
+
+There is an argument to be made that having secbots would reduce the amount of chaos in the server by adding a baseline level of order to the station. Effort should be made when balancing to ensure that secbots aren't the be-all and end-all of security. 
+
+For antagonists like syndicate agents, secbots would encourage teamwork. Secbots can only detain one person at a time, making it easy to destroy one by having one person get stunned while the other works to destroy it. For security it would encourage listening to the radio, since once somebody is detained, an officer is needed to actually bring the detainee to security for processing.
 
 ## Roundflow & Player interaction
 
-TODO
+Beepsky would spawn at the start of every round, generic secbots would be constructable. The majority of direct interactions would be people playing around the existence of Beepsky, getting chased/arrested by Beepsky, and security dealing with the people arrested by Beepsky. Secbots should not be making the majority of arrests except in rare specific rounds where people are mass-producing them. As mentioned, Beepsky should be effective enough to reliably arrest someone unprepared, but be fairly easy to play around for someone planning to interact with them, and a non-issue for anyone with serious loud gear (DAGD or nukies). Secbots would be weaker than this - and serve more to put pressure on antagonists rather than reliably arrest them. This can be balanced by tweaking numbers for secbots and Beepsky.
 
 ## Administrative & Server Rule Impact (if applicable)
 
-TODO
+The headline here is mechanical enforcement of the "Command / Sec shouldn't be using contraband" rule. It also would help add a base level of robustness to security teams for dealing with griefers/raiders. Outside of that there is no major adminstrative or server rule impact.
 
 # Technical Considerations
 
