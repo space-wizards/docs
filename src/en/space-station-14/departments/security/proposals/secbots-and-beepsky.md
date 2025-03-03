@@ -6,17 +6,17 @@
 
 ## Overview
 
-Secbots are NPC security officers. They patrol the halls and other public areas looking for criminals. When they see one, they attempt to detain them and hold them for sec to arrive. They can be produced in a similar fashion to cleanbots or medibots. Officer Beepsky is a unqiue secbot. They have improved abilities, a personality to their statements, and serve as a potential target for thieves and syndicate agents. Officer Beepsky is also the only secbot that spawns at the start of the round.
+Secbots are NPC security officers. They patrol the halls and other public areas looking for criminals. When they see one, they attempt to detain them and hold them for sec to arrive. They can be produced in a similar fashion to cleanbots or medibots. Officer Beepsky is a unique secbot. They have improved abilities, a personality to their statements, and serve as a potential target for thieves and syndicate agents. Officer Beepsky is also the only secbot that spawns at the start of the round.
 
 ## Background
 
-Secbots, and Beepsky in particlar have been in SS13 for longer than I've known about it and players and maintainers have both expressed a desire for them to be added. Beyond being a cool feature people have wanted for a while, secbots provide a baseline level of security to the station. It is rare but not unheard of to see rounds start with only a single person in the security team: having NPC security helps mitiage that. 
+Secbots, and Beepsky in particular have been in SS13 for longer than I've known about it and players and maintainers have both expressed a desire for them to be added. Beyond being a cool feature people have wanted for a while, secbots provide a baseline level of security to the station. It is rare but not unheard of to see rounds start with only a single person in the security team: having NPC security helps mitigate that. 
 
-I consider the criminal records computer to be a good addition to the game, but there's a lack of consensus with some security teams as to what each mark should be used for, and very few reasons to use the parolled or released marks. Having secbots interact with players differently based on their criminal records (such as wanted causing an instant arrest, or parolled making secbots quicker to arrest you) would add some mechanical consequences to using the system.
+I consider the criminal records computer to be a good addition to the game, but there's a lack of consensus with some security teams as to what each mark should be used for, and very few reasons to use the paroled or released marks. Having secbots interact with players differently based on their criminal records (such as wanted causing an instant arrest, or paroled making secbots quicker to arrest you) would add some mechanical consequences to using the system.
 
-When griefers, "shitters", or raiders join the game, it usually falls on sec to remove them. In rounds with few, or unrobust security officers, this can be difficult. Beyond just adding a baseline level of competance to the security team, wasting a secbot's time is less rewarding than wasting a player's time. This is unlikely to have a major impact on the number of times it happens, but someone leaving the game when they get arrested will likely leave the game regardless of whether it was a player that got them, or a secbot. 
+When griefers, "shitters", or raiders join the game, it usually falls on sec to remove them. In rounds with few, or unrobust security officers, this can be difficult. Beyond just adding a baseline level of competence to the security team, wasting a secbot's time is less rewarding than wasting a player's time. This is unlikely to have a major impact on the number of times it happens, but someone leaving the game when they get arrested will likely leave the game regardless of whether it was a player that got them, or a secbot. 
 
-An often brought up rule is that "Command and Security should not be using contraband". There is no mechanical enforcement for this. Having secbots arrest even command and security with contraband visable (wearing or holding, not including pockets) would provide this. Obviously some leeway should exist for officers carrying stuff back to the brig.
+An often brought up rule is that "Command and Security should not be using contraband". There is no mechanical enforcement for this. Having secbots arrest even command and security with contraband visible (wearing or holding, not including pockets) would provide this. Obviously some leeway should exist for officers carrying stuff back to the brig.
 
 ## Features to be added
 
@@ -36,7 +36,7 @@ A navigation table is maintained for each grid with a patrol beacon on it. The t
 
 #### Patrolling
 
-A secbot in the `Patrolling` state will choose a random beacon and follow the tile-by-tile path laid out in the navigation table. If it arrives at its destination, it will linger in the area for a short time, before repeating the process - picking a beacon, pathing to it, and lingering in the area. If the path becomes blocked, such as a by a closed firelock or a broken tile, a weak attempt is made to get around the obstacle by pathfinding to the first unblocked tile. This should be effective enough to navigate a pillar in the middle of the corridor, but should not path down a different corridor. If this attempt fails, the secbots follows the path backwards to return to the closest beacon, marks that route as `Attempted`, and continues patrolling to a different beacon. If a route is sucessfully navigated, all `Attempted` marks on the route are removed. If a route has been `Attempted` and failed 3 times, the route is deleted from the navigation table. If the secbot's return path is blocked, it enters the `Reorienting` state.
+A secbot in the `Patrolling` state will choose a random beacon and follow the tile-by-tile path laid out in the navigation table. If it arrives at its destination, it will linger in the area for a short time, before repeating the process - picking a beacon, pathing to it, and lingering in the area. If the path becomes blocked, such as a by a closed firelock or a broken tile, a weak attempt is made to get around the obstacle by pathfinding to the first unblocked tile. This should be effective enough to navigate a pillar in the middle of the corridor, but should not path down a different corridor. If this attempt fails, the secbots follows the path backwards to return to the closest beacon, marks that route as `Attempted`, and continues patrolling to a different beacon. If a route is successfully navigated, all `Attempted` marks on the route are removed. If a route has been `Attempted` and failed 3 times, the route is deleted from the navigation table. If the secbot's return path is blocked, it enters the `Reorienting` state.
 
 If a secbot picks a beacon without a path from its current beacon in the navigation table, it enters the `Exploring` state.
 
@@ -62,7 +62,7 @@ At any point if a secbot sees someone that should be arrested, it enters the `Ch
 
 #### Chasing
 
-The `Chasing` state will inevitably need tweaking after implementation [1]: if a player is directly interacting with a secbot, they're probably being chased. When a chase starts, the secbot will pause in place for a short duration (somewhere around 0.5-1.5 seconds) to "charge up" and will say some statement: "Stop criminal scum", "Freeze", etc to give the target an oppertunity to start running. After this it will gain a significant speed boost for a short duration (~130% of base player speed for ~5 seconds) and move towards the target. If it gets within melee range it will swing a stun baton at the target up to 3 times. 
+The `Chasing` state will inevitably need tweaking after implementation [1]: if a player is directly interacting with a secbot, they're probably being chased. When a chase starts, the secbot will pause in place for a short duration (somewhere around 0.5-1.5 seconds) to "charge up" and will say some statement: "Stop criminal scum", "Freeze", etc to give the target an opportunity to start running. After this it will gain a significant speed boost for a short duration (~130% of base player speed for ~5 seconds) and move towards the target. If it gets within melee range it will swing a stun baton at the target up to 3 times. 
 
 If the target is stunned, the secbot will apply handcuffs to them, make an announcement to the sec radio "Secbot (1234) has detained a suspect near {nearest station beacon}", and pull the target without moving [2]. If a target escapes the handcuffs, the secbot will attempt to arrest them again, but it will not react to the target attempting to take the handcuffs off until they are off. 
 
@@ -84,9 +84,9 @@ Obviously someone marked as wanted should be a target. The second case helps rei
 
 Case 1 has no exceptions, For case 2, there are 2 exceptions:
 
-1. If the target has armory access on a visable ID, they will never be targeted for contraband.
+1. If the target has armory access on a visible ID, they will never be targeted for contraband.
 
-2. If the target has security access on a visable ID, they are given 3 chances; every time the secbot sees them with syndicate contraband they get a strike, every time they are seen without, they lose a strike. Strikes can only be gain or lost every 2 minutes. If someone gets a third strike, an arrest attempt is made. 
+2. If the target has security access on a visible ID, they are given 3 chances; every time the secbot sees them with syndicate contraband they get a strike, every time they are seen without, they lose a strike. Strikes can only be gain or lost every 2 minutes. If someone gets a third strike, an arrest attempt is made. 
 
 Someone needs to be able to reliably move contraband and having the HoS, Warden, and Captain able to do so is the simplest solution. The HoS or Warden can be expected to handle every piece of contraband that sec encounters. Armory access is arguably the most important single access on the station; someone trusted with that can be trusted not to misuse contraband. 
 
@@ -122,17 +122,17 @@ Beepsky would spawn at the start of every round, generic secbots would be constr
 
 ## Administrative & Server Rule Impact (if applicable)
 
-The headline here is mechanical enforcement of the "Command / Sec shouldn't be using contraband" rule. It also would help add a base level of robustness to security teams for dealing with griefers/raiders. Outside of that there is no major adminstrative or server rule impact.
+The headline here is mechanical enforcement of the "Command / Sec shouldn't be using contraband" rule. It also would help add a base level of robustness to security teams for dealing with griefers/raiders. Outside of that there is no major administrative or server rule impact.
 
 # Technical Considerations
 
 ## Patrol Routing
 
-The obvious blocker to implementing this is the routing. Specifically how does it move around the station when patrolling, and what needs to be added from a code and mapping standpoint to faciliate that? **Station beacons** are the obvious choice for points of interest, but patrolling secbots should be sticking to public areas and corridors, which typically don't have any. 
+The obvious blocker to implementing this is the routing. Specifically how does it move around the station when patrolling, and what needs to be added from a code and mapping standpoint to facilitate that? **Station beacons** are the obvious choice for points of interest, but patrolling secbots should be sticking to public areas and corridors, which typically don't have any. 
 
 ![The in-game map of Bagel station, with the areas we want secbots to patrol highlighted, Note that there typically aren't beacons in these areas.](..\..\..\..\assets\images\proposals\secbots\Bagel.png)
 
-So how do we define the areas that we want the secbots to patrol? There seem to be 3 main possibilites:
+So how do we define the areas that we want the secbots to patrol? There seem to be 3 main possibilities:
 
 1. Defined by a player in-game.
 
@@ -171,7 +171,7 @@ XX@XX
 X X X
 ```
 
-Taking the largest map (Fland) to be about 100x150 tiles. Placing 16 beacons in a circle of diameter 150 and generating a path between each gives a sum of ~22,000 path tiles. We can encode 2 tiles of a given direction per byte. That's ~10KB of data stored for a scenario in which someone is deliberately trying to maximise the amount of data stored. Even if they were to make some maze that increased the number of tiles traversed, the `Explore` state will not store paths double the length of the best-case scenario, so we have a worst-case scenerio of ~20KB. In reality we need fewer than 16 beacons, will have shorter paths, and can take advantage of our the above-mentioned linear maximum for edges. Again going to Fland, here's an example of a beacon layout, and the expected edges.
+Taking the largest map (Fland) to be about 100x150 tiles. Placing 16 beacons in a circle of diameter 150 and generating a path between each gives a sum of ~22,000 path tiles. We can encode 2 tiles of a given direction per byte. That's ~10KB of data stored for a scenario in which someone is deliberately trying to maximise the amount of data stored. Even if they were to make some maze that increased the number of tiles traversed, the `Explore` state will not store paths double the length of the best-case scenario, so we have a worst-case scenario of ~20KB. In reality we need fewer than 16 beacons, will have shorter paths, and can take advantage of our the above-mentioned linear maximum for edges. Again going to Fland, here's an example of a beacon layout, and the expected edges.
 
 ![A possible layout of navigation beacons for Fland, note that 13 beacons and 18 edges cover the majority of the public areas.](..\..\..\..\assets\images\proposals\secbots\Fland_smaller.png)
 
