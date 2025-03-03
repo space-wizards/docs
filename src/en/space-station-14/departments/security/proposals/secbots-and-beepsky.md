@@ -130,9 +130,9 @@ The headline here is mechanical enforcement of the "Command / Sec shouldn't be u
 
 The obvious blocker to implementing this is the routing. Specifically how does it move around the station when patrolling, and what needs to be added from a code and mapping standpoint to faciliate that? **Station beacons** are the obvious choice for points of interest, but patrolling secbots should be sticking to public areas and corridors, which typically don't have any. 
 
-![The in-game map of Bagel station, with the areas we want secbots to patrol highlighted](..\..\..\..\assets\images\proposals\secbots\Bagel.png)
+![The in-game map of Bagel station, with the areas we want secbots to patrol highlighted, Note that there typically aren't beacons in these areas.](..\..\..\..\assets\images\proposals\secbots\Bagel.png)
 
-So how do we define the areas that we want the secbots to patrol. There seem to be 3 main possibilites:
+So how do we define the areas that we want the secbots to patrol? There seem to be 3 main possibilites:
 
 1. Defined by a player in-game.
 
@@ -140,15 +140,19 @@ So how do we define the areas that we want the secbots to patrol. There seem to 
 
 3. Defined automatically, using stuff existing on the map.
 
-We can definine our areas in 2 ways:
+We can also store our areas in 2 ways:
 
 1. Graph based (Define individual tiles as interesting, then move between those interesting tiles)
 
-2. Area based (Define a contiguous area we want the secbots to be, then have the secbot move between random points in that).
+2. Area based (Define a contiguous area we want the secbots to be, then have the secbot move between random points, only stepping on those tiles).
 
 This proposal uses a Mapper-defined, Graph-based system. I believe this has the best payoff of out-of-game factors (difficulty to implement and extend, space and time complexity, mapper overhead), and in-game factors (possibility for player interaction, feedback for players, general intuition for the system). 
 
-The main argument against mapper-defined systems is maptainer overhead - mappers would be exp TODO
+The main argument against mapper-defined systems is maptainer overhead - mappers would be expected to place beacons in specific locations to allow secbots to move between them. The 2 alternatives are using something already on the maps to define it, or having it be entirely defined by players in-game. Looking at the first option, you would need a "thing" that only appears in these public areas, or appears everywhere except these public areas. Existing station beacons are the obvious choice, however have 2 main flaws. 1: any system exclusively using beacons wouldn't distinguish between maints and corridors, 2: it requires mappers to place station beacons in such a way to allow for secbot movement, which would be more effort than adding a handful of beacons. The same problems apply for anything else used to define it such as physical station maps or air alarms, except now you are coupling these things to the navigation system. 
+
+A player controlled system would most easily take the form of a console in which someone (probably the HoS or Warden) can mark points or rooms the secbots should patrol through. I don't think having a player-controlled system is a bad idea; my main issue is that it makes secbots another command toy like the digi-board, and would make secbots too powerful too easily. With the current system, a clever antagonist could move the beacons to make secbots not patrol down a specific corridor, a player-controlled system doesn't allow for that. Having secbots patrol throughout the station also make them apply a more general pressure rather than a tool to completely lock down a specific area. A set of navigation beacons and paths between them could also be useful for other systems in the future, but a player-controlled system doesn't allow for that.
+
+For graph based vs area based, either system could work, but a graph based system has better gameplay interactions, and fits the role of "Patrolling" better. A graph based system also has a much simpler dynamic update system (`Explore`). A graph based system has a handful of "key points" that can be interacted with to interact with the system; someone who wants to modify a path just needs to modify a beacon. With an area based system, the locations are more spread out, and invisible to the player. 
 
 ## The Navigation Table
 
@@ -167,11 +171,13 @@ XX@XX
 X X X
 ```
 
-Taking the largest map (Fland) to be about 100x150 tiles. Placing 16 beacons in a circle of diameter 150 and generating a path between each gives a sum of ~22,000 path tiles. We can encode 2 tiles of a given direction per byte. That's ~10KB of data stored for a scenario in which someone is deliberately trying to maximise the amount of data stored. Even if they were to make some  maze that increased the number of tiles traversed, the `Explore` state will not store paths double the length of the best-case scenario, so we have a worst-case scenerio of ~20KB. In reality we need fewer than 16 beacons, will have shorter paths, and can take advantage of our the above-mentioned linear maximum for edges. Again going to Fland, here's an example of a beacon layout, and the expected edges.
+Taking the largest map (Fland) to be about 100x150 tiles. Placing 16 beacons in a circle of diameter 150 and generating a path between each gives a sum of ~22,000 path tiles. We can encode 2 tiles of a given direction per byte. That's ~10KB of data stored for a scenario in which someone is deliberately trying to maximise the amount of data stored. Even if they were to make some maze that increased the number of tiles traversed, the `Explore` state will not store paths double the length of the best-case scenario, so we have a worst-case scenerio of ~20KB. In reality we need fewer than 16 beacons, will have shorter paths, and can take advantage of our the above-mentioned linear maximum for edges. Again going to Fland, here's an example of a beacon layout, and the expected edges.
 
 ![A possible layout of navigation beacons for Fland, note that 13 beacons and 18 edges cover the majority of the public areas.](..\..\..\..\assets\images\proposals\secbots\Fland_smaller.png)
 
 When updating the navigation table with the `Explore` state, some system will have to be put in place to allow for these A-to-B-to-C paths to be generated. The simplest solution is probably to maintain a stack of visited beacons when trying to go between 2 beacons while exploring.
+
+With the suggested system, it would be possible to precompute the navigation table as part of the mapping process. Some `generateNavTable <gridID>` command would be used as part of the mapping process, similar to how pipe networks are colored, or atmos is generated. It would be possible to give a warning if 2 paths overlap, as that suggests a more efficient layout of beacons could be used.
 
 ## Pathfinding
 
