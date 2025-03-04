@@ -6,7 +6,8 @@
 
 ## Overview
 
-This design doc is meant to introduce the concept of mail deliveries to the cargo gameplay loop. Allowing cargo to deliver mail to specific people on the station in order to gain some bonus money without the need to only run bounties.
+The purpose of this design doc is to introduce the concept of mail deliveries to the cargo gameplay loop, allowing to earn bonus spesos by carrying around letters and packages and giving them to desired recipients.
+This is by no means supposed to replace bounties, instead being an additional method of income as to not have cargo rely on them too much.
 
 ## Background
 
@@ -54,7 +55,7 @@ The main point here is to add a little bit of variety to mail as to not keep it 
 
 #### Priority Mail
 
-Same as above, this serves as a small modifier for newly spawned mail. Instead of being broken on dropping, instead this delivery is on a timer.
+Same as above, this serves as a small modifier for newly spawned mail. Instead of being broken on dropping, this delivery will start on a timer.
 The exact time by which a piece of mail marked as priority needs to be delivered can be viewed on examine, showing time within the shift, rather than a countdown. If that time is passed, the mail will lose value and earn cargo less.
 Obviously, this should also be indicated by a change on the sprite.
 
