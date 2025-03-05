@@ -6,16 +6,20 @@
 
 ## Overview
 
-The purpose of this design doc is to introduce the concept of mail deliveries to the cargo gameplay loop, allowing to earn bonus spesos by carrying around letters and packages and giving them to desired recipients.
+The purpose of this design doc is to introduce the concept of mail deliveries to the cargo gameplay loop, allowing cargo to earn bonus spesos by delivering letters and packages to desired recipients.
 This is by no means supposed to replace bounties, instead being an additional method of income as to not have cargo rely on them too much.
 
 ## Background
 
-Currently cargo's main way of earning money is the bounty system and selling random objects around the station. This can lead to situations such as other departments not cooperating or some bounties simply being not possible to make within a reasonable timeframe, as well as getting repetitive after a while. Times where most bounties are unachievable beyond simple ones (such as botany, but those take a while!) and the inability to skip due to a long cooldown happen often.
-While those issues can be fixed by making changes to the bounty system (like lowering the bounty skip cooldown) that feels like a bandaid fix to the fact cargo has basically only one way to earn money.
+Currently, cargo's main way of earning money is the bounty system and selling random objects around the station. Unfortunately, this can lead to a lot of undesired gameplay:
+- Departments can choose to not cooperate with fulfilling bounties, as they rarely get anything direct in return.
+- Some bounties are impossible to procure in a reasonable timeframe, given current circumstances.
+- Most bounties are repetitive after a while and offer no more depth than the same repeat item requests.
+
+Because of the reasons mentioned above, unachievable bounties happen often and bounty skips are used frequently.
 
 Delivering mail is meant to serve as a secondary option of income cargo can take care of during their shift.
-This is meant to serve several things:
+This new mechanic to inteded to achieve several things:
 - Allow new players to get accustomed to learning cargo easier. Currently a new cargo tech might have no idea where to gather items for bounties or which things they can buy to reinvest into a bounty. A simple task of delivering mail can help teach the station layout and introduce to the game while also leaving space for other technicians to explain how the job works.
 - Add gameplay variety to cargo. Cargo as it stands has a rather simple gameplay loop. You print a bounty, you deliver the invoice to a department and then you sit at cargo until you're told it is ready for pickup. Not only is this repetitive but several bounties can also be completed on the spot, which makes cargo generally boring gameplay wise.
 - Encourage player interaction. Simple mail deliveries can greatly help with interactions between cargo and other players/departments.
@@ -26,16 +30,16 @@ This is meant to serve several things:
 ### Mail Teleporter
 
 The Mail Teleporter is the main thing controlling the flow of mail to the station. It should be mapped somewhere within cargo.
-While connected to power and enabled, it will generate mail on top of itself every few minutes. Anyone with cargo access can toggle it on and off to prevent further mail from spawning.
-The amount of deliveries spawned should depend on the amount of players on the station, with a minimum amount to ensure a steady flow of mail. Ideally moments where cargo is overflowing with mail, or getting too little to be able to make use of it, should never happen.
+While connected to power and enabled, it will generate mail on top of itself every few minutes. Anyone can toggle it on and off to prevent further mail from spawning.
+The amount of deliveries spawned should depend on the amount of players on the station, with a minimum amount to ensure a steady flow of mail. Cargo should never have so much mail to the point it becomes overwhelming, it is not supposed to be the main point of the department, and should never have little enough of it that it brings nothing new to the cargo experience.
 
-Mail Teleporter is one of a kind machine, with only QM having a spare board to construct it, just like how cargo sell computers can be destroyed. This encourages actually taking care of it as to protect it from destruction by either having cargo keep a closer eye on it or putting it in a more secure area. In case an additional one is built, it should not generate additional mail, only split the existing amount between all available teleporters. This is to ensure cargo cannot simply create a mail farm.
+The Mail Teleporter is a one of a kind machine, with only QM having a spare board to construct it, just like how cargo sell computers can be destroyed. This encourages actually taking care of it as to protect it from destruction by having cargo keep a closer eye on it, as to not lose another source of income. In case an additional one is built, it should not generate additional mail, only split the existing amount between all available teleporters. This is to ensure cargo cannot simply create a mail farm as well as to ensure deliveries stay fresh and don't overwhelm the crew. In cases where too much mail keeps being delivered to someone, they might start ignoring it as it becomes an annoyance.
 
 ### Deliveries
 
 Deliveries refer to anything that can spawn using the Mail Teleporter. The main focus here is Letters and Packages.
 On spawn, deliveries get assigned a random player in the crew manifest. When collected by the desired recipient they must scan their fingerprint on the delivery to open it, granting them a little reward and cargo some bonus money.
-If a non-recipient is to try to open a delivery, it will instead say they are unable to open it due to their fingerprint not matching. This however can be bypassed by tearing the delivery open (for letters) or smashing it open (for packages). Doing so will not grant cargo any points, as well as will damage anything inside of the delivery, but will still grant the unintended recipient the contents.
+If a non-recipient tries to open a delivery, it will instead say they are unable to open it due to their fingerprint not matching. This however can be bypassed by tearing the delivery open (for letters) or smashing it open (for packages). Doing so will not grant cargo any points, as well as will damage anything inside of the delivery, but it will still grant the unintended recipient the contents.
 
 #### Letters
 
@@ -45,7 +49,7 @@ Letters are not meant to contain expensive items, usually sticking to some silly
 
 #### Packages
 
-A big item that occupies both hands. They are supposed to contain things slightly more of value or items that can be useful to your average player. The loot table can include things like tools, plushies toys, food as well as some funny things like pipebombs or rarely contraband. What needs to be kept in mind is that the "evil" or "funny" options need to be very unlikely as to not make people scared of opening packages, that would beat the entire point of the design. Last thing we want is someone being afraid of opening a package in case it explodes.
+A huge item that occupies both hands, meant to be carried but able to fit in a backpack in a pinch. They are supposed to contain things slightly more of value or items that can be useful to your average player. The loot table can include things like tools, plushies toys, food as well as some funny things like pipebombs or rarely contraband. What needs to be kept in mind is that the "evil" or "funny" options need to be very unlikely as to not make people scared of opening packages, that would beat the entire point of the design. Last thing we want is someone being afraid of opening a package in case it explodes.
 When on the ground it can be smashed open with melee attacks to break the seal, allowing access to whatever is stored inside and obviously not granting cargo any money.
 
 #### Fragile Deliveries
@@ -74,13 +78,13 @@ A good example of such implementation could be that whenever a package there is 
 
 ## Game Design Rationale
 
-Currently cargo is oriented around the bounty system (except salvage, who is mostly separate from the main cargo loop). A mail system allows for more interaction between players as well as lowers dependency on bounties, while also allowing new players to learn basics of the game.
+Currently cargo is oriented around the bounty system (except salvage, who is mostly separate from the main cargo loop). A mail system allows for more interaction between players as well as lowers dependency on bounties, while also allowing new players to learn the basics of the game.
 
-Cargo is already meant to interact with other departments, this plays into that fact and gives them a little something to do in the meantime. Ideal situation could be delivering a package to a botanist at the same time as you want to grab a bounty from them. Or a new player player grabbing a bunch of deliveries and getting to explore the station and meet other players as they deliver them.
+Cargo is already meant to interact with other departments, this plays into that fact and gives them a little something to do in the meantime. An ideal situation could be delivering a package to a botanist at the same time as you want to grab a bounty from them. Or a new player player grabbing a bunch of deliveries and getting to explore the station and meet other players as they deliver them.
 
 ## Roundflow & Player interaction
 
-At the start of the round, after getting prepared a cargo technician visits Mail Teleporter and grabs letters into their bag and a package. Upon checking the manifest they may also pick some bounties to deliver at the same time. The cargo tech brings the mail to the recipient, who then unlocks it and grants cargo some bonus money and gets something small in return.
+At the start of the round, after getting prepared, a cargo technician visits the Mail Teleporter and grabs some letters, stuffs them into their bag, and picks up a package. Upon checking the manifest they may also pick up some bounties to deliver at the same time. The cargo tech brings the mail to the recipient, who then unlocks it and grants cargo some bonus money and gets something small in return. The cargo tech also brings up the bounty they previously selected, offering a follow-up to the department later in the shift. Future mail deliveries to the department encourage cargo to follow up with bounties previously assigned to departments.
 In the case the delivery is simply never opened, or the recipient is dead/missing, it can be simply opened in cargo and the contents sold for very limited profit.
 
 Interactions with other players are key here, both sides benefit while being able to get to interact more with each other. Cargo should not simply leave mail at their front door and get someone to pick it up whenever they walk past. Leaving the packages at front ready for pickup also means a random passerby may tear them all open and lead to cargo losing out on the major rewards, further discouraging this method while giving cargo a reason to worry about protecting their mail.
