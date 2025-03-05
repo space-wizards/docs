@@ -18,7 +18,8 @@ Currently, cargo's main way of earning money is the bounty system and selling ra
 
 Because of the reasons mentioned above, unachievable bounties happen often and bounty skips are used frequently.
 
-Delivering mail is meant to serve as a secondary option of income cargo can take care of during their shift.
+Delivering mail is meant to be a simple thing cargo technicians can do, it is not supposed to be seperated into a whole new job. This makes for a simple and easy way to provide for cargo without worry about fetching things constantly between departments.
+Due to the simplicity of delivering mail, deliveries are not meant to grant big amounts of spesos. They are instead supposed to provide a slower but steadier income than bounties.
 This new mechanic is intended to achieve several things:
 - Allow new players to get accustomed to learning cargo easier. Currently a new cargo tech might have no idea where to gather items for bounties or which things they can buy to reinvest into a bounty. A simple task of delivering mail can help teach the station layout and introduce to the game while also leaving space for other technicians to explain how the job works.
 - Add gameplay variety to cargo. Cargo as it stands has a rather simple gameplay loop. You print a bounty, you deliver the invoice to a department and then you sit at cargo until you're told it is ready for pickup. Not only is this repetitive but several bounties can also be completed on the spot, which makes cargo generally boring gameplay wise.
@@ -38,8 +39,8 @@ The Mail Teleporter is a one of a kind machine, with only the QM having a spare 
 ### Deliveries
 
 Deliveries refer to anything that can spawn using the Mail Teleporter. The main focus here is Letters and Packages.
-On spawn, deliveries get assigned a random player in the crew manifest. When collected by the desired recipient they must scan their fingerprint on the delivery to open it, granting them a little reward and cargo some bonus money.
-If a non-recipient tries to open a delivery, it will instead say they are unable to open it due to their fingerprint not matching. This however can be bypassed by tearing the delivery open (for letters) or smashing it open (for packages). Doing so will not grant cargo any points, as well as will damage anything inside of the delivery, but it will still grant the unintended recipient the contents.
+On spawn, deliveries get assigned a random player in the crew manifest. When collected by the desired recipient they must scan their fingerprint on the delivery to open it, granting them a little reward and cargo some bonus money. Using a fingerprint over an ID is meant to prevent cargo from simply using the ID computer and renaming themselves, essentially granting them free money by sitting and doing nothing.
+If a non-recipient tries to open a delivery, it will instead say they are unable to open it due to their fingerprint not matching. This however can be bypassed by tearing the delivery open. Doing so will invoke a penalty on cargo, taking away from their current funds, but will still grant the unintended recipient the contents.
 
 #### Letters
 
@@ -50,17 +51,17 @@ Letters are not meant to contain expensive items, usually sticking to some silly
 #### Packages
 
 A huge item that occupies both hands, meant to be carried but able to fit in a backpack in a pinch. They are supposed to contain things slightly more of value or items that can be useful to your average player. The loot table can include things like tools, plushies toys, food as well as some funny things like pipebombs or rarely contraband. What needs to be kept in mind is that the "evil" or "funny" options need to be very unlikely as to not make people scared of opening packages, that would beat the entire point of the design. Last thing we want is someone being afraid of opening a package in case it explodes.
-When on the ground it can be smashed open with melee attacks to break the seal, allowing access to whatever is stored inside and obviously not granting cargo any money.
+When on the ground it can be torn open to break the seal, allowing access to whatever is stored inside and obviously invoking a penalty on cargo.
 
 #### Fragile Deliveries
 
-Fragile deliveries serve as a small modifier to add onto already spawned ones. A fragile delivery will break upon being thrown or hit, leading to it losing a major portion of it's value when delivered. Mail being fragile should be indicated on the sprite, as well as have a unique examine text.
+Fragile deliveries serve as a small modifier to add onto already spawned ones. A fragile delivery will break upon being thrown or hit, leading to cargo being penalized for a small sum of money. The amount of spesos lost should not be overwhelming, cargo should not actively lose money if they finish the delivery anyways, instead still gaining a small profit. Mail being fragile should be indicated on the sprite, as well as have a unique examine text.
 The main point here is to add a little bit of variety to mail as to not keep it boring and too simple. While delivering items isn't the most exciting thing ever, it shouldn't be boring either.
 
 #### Priority Mail
 
 Same as above, this serves as a small modifier for newly spawned mail. Instead of being broken on dropping, this delivery will start on a timer.
-The exact time by which a piece of mail marked as priority needs to be delivered can be viewed on examine, showing time within the shift, rather than a countdown. If that time is passed, the mail will lose value and earn cargo less.
+The exact time by which a piece of mail marked as priority needs to be delivered can be viewed on examine, showing time within the shift, rather than a countdown. If that time is passed, the mail will beep and penalize cargo for not delivering it on time. Just as with fragile mail, the penalty should not be overwhemling, still letting cargo make profit if this piece of mail is turned in.
 Obviously, this should also be indicated by a change on the sprite.
 
 ### Future Expansions
@@ -85,7 +86,7 @@ Cargo is already meant to interact with other departments, this plays into that 
 ## Roundflow & Player interaction
 
 At the start of the round, after getting prepared, a cargo technician visits the Mail Teleporter and grabs some letters, stuffs them into their bag, and picks up a package. Upon checking the manifest they may also pick up some bounties to deliver at the same time. The cargo tech brings the mail to the recipient, who then unlocks it and grants cargo some bonus money and gets something small in return. The cargo tech also brings up the bounty they previously selected, offering a follow-up to the department later in the shift. Future mail deliveries to the department encourage cargo to follow up with bounties previously assigned to departments.
-In the case the delivery is simply never opened, or the recipient is dead/missing, it can be simply opened in cargo and the contents sold for very limited profit.
+In the case the delivery is simply never opened, or the recipient is dead/missing, it can be simply opened in cargo and the contents sold, although this should lead to a general loss.
 
 Interactions with other players are key here, both sides benefit while being able to get to interact more with each other. Cargo should not simply leave mail at their front door and get someone to pick it up whenever they walk past. Leaving the packages at front ready for pickup also means a random passerby may tear them all open and lead to cargo losing out on the major rewards, further discouraging this method while giving cargo a reason to worry about protecting their mail.
 
