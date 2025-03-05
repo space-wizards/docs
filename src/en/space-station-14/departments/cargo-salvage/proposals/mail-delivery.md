@@ -19,7 +19,7 @@ Currently, cargo's main way of earning money is the bounty system and selling ra
 Because of the reasons mentioned above, unachievable bounties happen often and bounty skips are used frequently.
 
 Delivering mail is meant to serve as a secondary option of income cargo can take care of during their shift.
-This new mechanic to inteded to achieve several things:
+This new mechanic is intended to achieve several things:
 - Allow new players to get accustomed to learning cargo easier. Currently a new cargo tech might have no idea where to gather items for bounties or which things they can buy to reinvest into a bounty. A simple task of delivering mail can help teach the station layout and introduce to the game while also leaving space for other technicians to explain how the job works.
 - Add gameplay variety to cargo. Cargo as it stands has a rather simple gameplay loop. You print a bounty, you deliver the invoice to a department and then you sit at cargo until you're told it is ready for pickup. Not only is this repetitive but several bounties can also be completed on the spot, which makes cargo generally boring gameplay wise.
 - Encourage player interaction. Simple mail deliveries can greatly help with interactions between cargo and other players/departments.
