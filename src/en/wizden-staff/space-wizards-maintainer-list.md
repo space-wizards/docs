@@ -23,7 +23,6 @@ Both Engine and Content Maintainers:
 Content Maintainers:
 - [Partmedia](https://github.com/Partmedia) - @notafet (774744999379599360)
 - [Emisse](https://github.com/Emisse) - @emisse (109430489684705280)
-- [Chief-Engineer](https://github.com/Chief-Engineer) - @am.ghost (267392122179682307)
 - [juliangiebel](https://github.com/juliangiebel) - @julian_g (234313113766199297)
 - [Tayrtahn](https://github.com/Tayrtahn) - @tayrtahn (147050540214386689)
 - [deathride58](https://github.com/deathride58) - @bhijn (77867936647225344)

@@ -189,7 +189,9 @@ Space Station 14
 		- [Pizza Delivery Critter](en/space-station-14/round-flow/proposals/pizza-delivery-critter.md)
 		- [Rogue Drones](en/space-station-14/round-flow/proposals/rogue-drones.md)
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
-   		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
+		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
+		- [Paradox Clone](en/space-station-14/round-flow/proposals/paradox-clone.md)
+		- [Revolutionaries Rework](en/space-station-14/round-flow/proposals/revolutionaries-codeword-rework.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
@@ -204,12 +206,12 @@ Space Station 14
 			- [Atmos Rework](en/space-station-14/departments/atmos/proposals/atmos-rework.md)
 			- [Station Air Recirculation](en/space-station-14/departments/atmos/proposals/station-air-recirculation.md)
 
-	- [Cargo/Salvage](en/space-station-14/departments/cargo-salvage.md)
-		- [PR Guidelines](en/space-station-14/departments/cargo-salvage/guidelines.md)
+	- [Cargo](en/space-station-14/departments/cargo.md)
+		- [PR Guidelines](en/space-station-14/departments/cargo/guidelines.md)
 
 		- [Proposals]()
-			- [Salvage Proposal](en/space-station-14/departments/cargo-salvage/proposals/salvage-proposal.md)
-			- [Mail Deliveries](en/space-station-14/departments/cargo-salvage/proposals/mail-delivery.md)
+			- [Salvage Proposal](en/space-station-14/departments/cargo/proposals/salvage-proposal.md)
+			- [Mail Deliveries](en/space-station-14/departments/cargo/proposals/mail-delivery.md)
 
 	- [Command](en/space-station-14/departments/command.md)
 		- [PR Guidelines](en/space-station-14/departments/command/guidelines.md)
@@ -340,6 +342,8 @@ Maintainer Meetings
 ==============
 
 ----------------------
+- [2025-03-01](en/maintainer-meetings/maintainer-meeting-2025-03-01.md)
+- [2025-02-15](en/maintainer-meetings/maintainer-meeting-2025-02-15.md)
 - [2025-02-01](en/maintainer-meetings/maintainer-meeting-2025-02-01.md)
 - [2025-01-18](en/maintainer-meetings/maintainer-meeting-2025-01-18.md)
 - [2025-01-04](en/maintainer-meetings/maintainer-meeting-2025-01-04.md)
