@@ -208,9 +208,10 @@ Space Station 14
 
 	- [Cargo](en/space-station-14/departments/cargo.md)
 		- [PR Guidelines](en/space-station-14/departments/cargo/guidelines.md)
-	
-          - [Proposals]()
-            - [Salvage Proposal](en/space-station-14/departments/cargo/proposals/salvage-proposal.md)
+
+		- [Proposals]()
+			- [Salvage Proposal](en/space-station-14/departments/cargo/proposals/salvage-proposal.md)
+			- [Mail Deliveries](en/space-station-14/departments/cargo/proposals/mail-delivery.md)
 
 	- [Command](en/space-station-14/departments/command.md)
 		- [PR Guidelines](en/space-station-14/departments/command/guidelines.md)
