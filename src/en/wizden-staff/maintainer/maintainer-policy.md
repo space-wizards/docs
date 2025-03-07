@@ -26,8 +26,6 @@ This policy applies in addition to the [General Staff](../staff-policy.md) and [
 - The proposal must have a vote open for at least 72 hours.
     - This may be extended if there is a significant amount of discussion.
 - The proposal must have a supermajority (66%) vote in favor to pass.
-    - In cases of a stalemate, a vote will be held by the lead maintainers to ensure a result is reached.
-        - If this vote results in a stalemate, the proposal will be denied.
 - A PR to the Docs repository can be made at any time, even if the vote is still ongoing.
     - If there is an ongoing vote, the PR must not be merged until the vote has concluded.
 
