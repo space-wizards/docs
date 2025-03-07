@@ -7,6 +7,11 @@ The format is as follows
 
 **Github - @Discord (Discord ID)**
 
+Lead Maintainers: 
+- [juliangiebel](https://github.com/juliangiebel) - @julian_g (234313113766199297)
+- [VasilisThePikachu](https://github.com/VasilisThePikachu) - @vasilisiscool (322708417540259841)
+- [Simyon264](https://github.com/Simyon264) - @simyon (327840918482714626)
+
 Both Engine and Content Maintainers:
 - [Mervill](https://github.com/Mervill) - @mervill (153632198845661184)
 - [ZoldorfTheWizard](https://github.com/ZoldorfTheWizard) - @zoldorf (140921734109855744)
