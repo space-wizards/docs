@@ -36,3 +36,4 @@ This policy applies in addition to the [General Staff](../staff-policy.md) and [
     - An emergency is defined as a situation where the policy is causing immediate harm to the project.
     - A minor change is defined as a change that does not significantly impact the responsibilities of Maintainers.
 - A vote may be skipped if the change is minor and the Lead Maintainers agree, but the Maintainers must be informed of the change.
+- A vote is always required for changing the policy that defines the rules on how Maintainer Policy is changed.
