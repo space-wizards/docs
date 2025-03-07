@@ -23,7 +23,7 @@ This policy applies in addition to the [General Staff](../staff-policy.md) and [
 
 - Any Maintainer can propose a change to the Maintainer Policy.
 - The proposal must be made in the /Internal/Maintainers/ category on Discourse.
-- The proposal must have a vote open for at least 24 hours.
+- The proposal must have a vote open for at least 72 hours.
     - This may be extended if there is a significant amount of discussion.
 - The proposal must have a supermajority (66%) vote in favor to pass.
     - Additionally, the proposal must have a majority approval from the Lead Maintainers to pass.
