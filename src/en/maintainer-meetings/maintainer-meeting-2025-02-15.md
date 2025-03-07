@@ -18,7 +18,7 @@
 
 This meeting was recorded:
 
-{% embed youtube id="31mCKgzHDK4" loading="lazy" %}
+{% embed youtube id="RdhR25Vd8kU" loading="lazy" %}
 
 
 ## New maintainer welcome

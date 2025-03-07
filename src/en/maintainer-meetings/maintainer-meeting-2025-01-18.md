@@ -17,7 +17,7 @@
 
 This meeting was recorded:
 
-{% embed youtube id="JNNk3PwQXfI" loading="lazy" %}
+{% embed youtube id="GVNGTo2osgo" loading="lazy" %}
 
 ## WELCOME NEW MAINTS
 - Welcome to hell

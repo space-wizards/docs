@@ -23,7 +23,7 @@
 
 This meeting was recorded:
 
-{% embed youtube id="LjHGgHPTGvg" loading="lazy" %}
+{% embed youtube id="k2qx7sO_grM" loading="lazy" %}
 
 
 ## Reminder to please squash merge PRs!
