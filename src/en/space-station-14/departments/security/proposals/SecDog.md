@@ -12,7 +12,7 @@ The Secdog units are something most people are familiar with in real life, and t
 #### Pros / Abilities
 
 * Bite: Medium damage bite attack
-* Lunge: Dash attack which paralyzes and force-drags the target for a short duration. Slows the dog significantly for the same duration, even if they miss.
+* Lunge: Dash attack which force-drags the target for a short duration. Slows the dog significantly for the same duration, even if they miss.
 * Signal: Whistle-like callout / bark to notify handler of contraband.
 * Drag: Dogs can drag bodies and other objects like other humanoids.
 * No Slip Paws
@@ -31,7 +31,7 @@ The Secdog units are something most people are familiar with in real life, and t
 
 #### Lunge
 
-The Secdog lunges in its current direction, if it makes contact with a mob, that mob is paralyzed for a short duration (1-2 seconds based on playtesting) and is dragged by the secdog for the same duration. The dogs speed is reduced significantly when they hit a target or finish their lunge whichever comes first for the same duration. This ability would have a short cooldown (~5 seconds) to prevent spamming.
+The Secdog lunges in its current direction, if it makes contact with a mob, that mob is force-dragged by the secdog for a short duration. The dogs speed is reduced significantly when they hit a target or finish their lunge whichever comes first for the same duration. This ability would have a short cooldown (~5 seconds) to prevent spamming.
 
 #### Signal
 
