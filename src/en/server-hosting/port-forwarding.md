@@ -165,7 +165,7 @@ You are probably best off contacting your ISP’s support or checking their site
 
 ### So what now?
 
-If you were reading to host a public server (public on the hub for random players to join) we suggest you purchase hosting, these alternatives are only suitable for people interested in hosting for friends.
+If you were reading to host a **public server** (public on the hub for random players to join) we suggest you purchase hosting, these alternatives are only suitable for people interested in **hosting for friends**.
 
 ```admonish info
 We do not endorse or maintain any of these programs.
@@ -182,7 +182,7 @@ Essentially from this point on, you will need external help to make your server 
 ## Tunneling services (Like playit.gg, localtonet)
 
 ```admonish warning
-Do note tunneling services will cause everyone's IP appear as coming from the same location which will make IP bans impossible. 
+Do note tunneling services will cause everyone's IP to appear as coming from the same location which will make IP bans impossible. If `console.loginlocal` is enabled (which it is by default) it will result in **everyone** gaining admin access.
 
 The servers IP address might change unexpectedly depending on the service, which means your favorite server entry may stop working after a while.
 ```
