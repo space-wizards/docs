@@ -21,7 +21,7 @@ The Secdog units are something most people are familiar with in real life, and t
 
 * Unable to talk or use radio(dog speech)
 * Unable to detain or arrest (only bite)
-* Limited resource (Ghost role not garunteed, and hard to replace if killed)
+* Limited resource (Ghost role not guaranteed, and hard to replace if killed)
 * No suit sensors
 * No ranged weapon options
 * No ID card
