@@ -1,0 +1,91 @@
+# Salvage Care Packages
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| RedBoockase | :x: No | TBD |
+
+Special thanks to ScarKy0, creator of the broader Mail system which inspired this idea.
+
+## Overview
+
+The purpose of this design doc is to introduce the concept of Lost NT Care Packages to Salvage gameplay, allowing Salvage to find "loot boxes" tailored to certain jobs or departments. Cargo can deliver these packages to their respective departments for infusions of spesos, and the recieving departments gain unique and useful/flavorful items that enrich their gameplay.
+
+This would introduce a new way for Salvage/Cargo to interact with the station and provides another way for Cargo to make money, not dissimilar to mail itself.
+  
+## Background
+
+In it's current state, Salvage is a rather isolated department. Though they do have pretty consistent interactions with Science, and indirectly interact with the whole station by obtaining raw resources, many departments will go entire shifts without ever seeing a Salvager or feeling the effects of their work. This contributes to the feeling of Salvage as a department that is "disconnected" from the rest of the station.
+
+At the same time, many jobs currently have a one-sided or extremely limited relationship with Cargo. Botanists and Bartenders, for example, are often asked for plants or drinks to fulfill bounties, and rarely have to go to cargo for anything beyond a single Exotic Seeds crate or Booze-O-Mat restock. This was an issue also noted in the Mail proposal. For these jobs, a Cargo Tech at the front desk almost always means they want a bounty fulfilled, which means players in these departments come to associate the appearance of a cargo tech with boring chore-work ("Hey there Botanist, I need you to make me 9 Corn! Hope you have some trays empty...).
+
+To help address this issue, I propose the addition of Lost NT Care Packages. These Packages are rare loot that can be found anywhere with random salvage loot spawns. Ideally, these packages will:
+
+- Add a new aspect to the mail & delivery side of Cargo, as well as a new source of Spesos.
+
+- Improve the relationship between Cargo and certain underappreciated departments. 
+
+- Give other departments more direct and tangible interactions with Salvage by incentivizing Salvage to find gamer loot for *other* people.
+
+## Features to be added
+
+### The Lost Nanotrasen Care Package
+
+The core feature for this proposal. Lost Nanotrasen Care Packages (Name not final, referred to as Care Packages going forwards) are very rare salvage loot items that can spawn anywhere with random Salvage loot spawns (Most prominently Debris, VGRoid, and Expeditions). These are kits of unique equipment that have been put together by NT for use by a specific job/department that have since been lost in transit. They appear not dissimilar to regular Cargo Mail Packages, but are made of solid plasteel and look significantly worn and tattered. Beyond cosmetic differences, they have more mechanical differences as well:
+
+- Care Packages may, upon being spawned in on a piece of Debris or other limited-time magnet pull, add an additional message to the Cargo Radio channel alerting Salvage of the appearance of a lost NT care package. This could further accentuate the rarity of Care Packages and further ensure Salvage is able to retrieve them when they spawn.
+
+- Care Packages are essentially loot boxes for specific jobs or departments, and are labeled as such with the icon of the corresponding job/department. 
+
+- They are not locked to a single person, in the way that a regular piece of mail might be, but are instead locked to a specific job, requiring the use of a keycard with that access in order to be opened. 
+
+- They cannot be opened or destroyed otherwise - **there should never be a situation where Salvage is able to break open a Care Package and steal the loot inside for themselves, unless they're an antagonist with stolen access.**
+
+As very rare Salvage loot, Care Packages should evoke the same sort of neuron activation a Salvager gets when they see other rare loot like Syndicate Contraband, Mining Hardsuits, Crusher Weapons, and the like.
+
+### Returning to Station
+
+After Salvage discovers and retrieves a Care Package, the package must be delivered to it's destination. Salvagers can either choose to do this themselves, or hand it over to Cargo for delivery like any other piece of mail. Regardless, at this stage a member of Cargo either announces that a Care Package is available through the radio/calling a holopad, or leaves Cargo to deliver it themselves.
+
+Delivery of Care Packages is different than the delivery of regular mail in a few ways.
+
+- Care Packages are ID locked rather than being Fingerprint locked, meaning that anyone with the appropriate job/department can recieve it. This has the potential to introduce new scenarios to the delivery process - maybe the station's Bartenders argue over who deserves the Care Package more, or maybe the CMO decides to award the Care Package to the Medical Intern who's exceeded all expectations this shift!
+
+- NT places a premium on the retreival and proper delivery of these lost Care Packages, and awards cargo accordingly. Care Packages should be worth significantly more spesos upon delivery to their assigned department - perhaps five times the regular value, if not more. This should encourage cargo to deliver them promptly, ensuring that the rewards inside are actually utilized.
+
+- After delivery, the empty Care Packages become recyclable trash. Depending on balance concerns, they could grind into regular steel, or maybe more exotic materials like plasteel or plasma. Ideally this gives Salvage and Cargo another way to get some additional resources if managed properly - or, if not, gives scheming tiders easy access to these resources if they're flushed down disposals...
+
+### Care Packages & Their Contents
+
+Care Packages are intended to be rare items that contain pieces of Nanotrasen equipment or decor that are not usually available to their respective departments. As a general guideline, the contents of Care Packages:
+
+- Shouldn't boil down to raw resources, reagents, or fuel. A Care Package should be a unique and exciting delivery, not just another crate of steel or a chemvend restock.
+
+- Should be tailored to their department and provide an upgrade or sidegrade to that department's gameplay. It shouldn't trivialize the job (No research point generators for science or plant cloners for botany) but it should enhance or improve the gameplay in some way.
+
+- Should aim to be themed, where possible. A Care Package for the Bartender might be themed to the wild west, allowing them to decorate their bar in a new style. A botanist's care package could include flooring and decor to make botany look like an idyllic grove, rather than a sterile hydroponics department.
+
+Potential care packages could include: (Very WIP)
+
+- The Wild West Package. Requires Bartender Access to open. Contains Wooden Saloon-tile flooring, multiple sets of Cowboy hats and boots, and the Last Call, a lever-action shotgun for the Bartender that boasts a 5-round tube with a slower rate of fire than the standard Double-Barrel Shotgun.
+
+- The Streamlined Package. Requires Engineering Access to open. Contains unique Engineering Goggles with toggleable T-Ray functionality, and/or a Lightweight Engineering Hardsuit (Think Luxury Mining Hardsuit).
+
+- The Oasis Package. Requires Botany Access to open. Contains astro-grass or jungle style flooring, and one or more flatpacks for Lush Hydroponics Trays, overgrown variants that offer quicker growing speeds at the cost of constant weed growth or increased chances of Kudzu mutations.
+
+- The Biohazard Package. Requires Janitorial Access to open. Contains biohazard gear, NV-R Dirt Tiles that slowly clean themselves, and perhaps a Hydra (If that ever gets merged - see https://github.com/space-wizards/space-station-14/pull/34416).
+
+Ideally, Care Packages should also try to cater to departments that otherwise don't get much back from Cargo, in order to foster a better working relationship between the two. Of course, Care Packages could be made for any department, but jobs like Science already recieve plenty of goods from Cargo as is and aren't as much of a 'priority' in my mind.
+
+## Game Design Rationale
+
+The rationale behind Care Packages is fundamentally similar to the rationale behind mail - it gives Cargo more ways to interact with the crew and encourages them to go outside their department for reasons beyond collecting bounties. Ideally, it will also extend these benefits to Salvage, who can contribute to their department by retrieving high-value packages while also securing gamer loot for other departments to enjoy.
+
+## Roundflow & Player interaction
+
+As part of their regular job, Salvage may come across Care Packages, and retrieve them in much the same way they'd retrieve any other loot. They return to Cargo and either choose to deliver it themselves or pass it off to Cargo Techs for delivery.
+
+As a result of their rarity, value, and unique loot, Care Packages should naturally be seen as "Priority Mail". Upon delivery, Cargo recieves a cash infusion and can process the empty box for raw materials. A popup in the Cargo Radio Channel appears, similarly to the one seen when anything is purchased, containing a message of thanks from the company for the retreival of the package and a transfer of funds. If the Care Package is opened through illict means (Such as an Access Breaker), this message may instead alert Cargo about the tampering of sensitive equipment and incur a Spesos penalty (This aspect may or may not be necessary, depending on the "power level" of Care Package contents). 
+
+Once a package has been delivered, Cargo has recieved a reward, and the recipient of the Care Package recieves unique items tailored to their job on the station. Care Packages should be rare enough to generate significant excitement from their delivery, and should not become a "standard" part of any particular round or job. The person who recieves the contents of the Care Package now has new toys to play with and new decor to use, and can choose to barter or gift them to other members of their department if they wish.
+
+Thanks for reading my wacky little proposal!
