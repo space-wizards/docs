@@ -360,6 +360,20 @@ People aren't able to connect to your server OR you get the following error in y
 
 This means your server is not accessible from the outside internet. Make sure you have followed the guide to [Port Forwarding](../../server-hosting/port-forwarding.md).
 
+### Auth/hub country internet blocking
+
+Some countries (e.g. Russia) currently have internet blocks active that may interfere with your server's ability to connect to hub services. If this is a problem for you, you can attempt to set the following config properties to use fallback services:
+
+```toml
+[auth]
+server = "https://auth.fallback.spacestation14.com/"
+
+[hub]
+hub_urls = "https://hub.fallback.spacestation14.com/"
+```
+
+These configurations do not affect players, the launcher and game client use fallbacks wherever possible by default.
+
 ### SS14.Watchdog
 
 #### Server keeps restarting every 30 seconds
