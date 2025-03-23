@@ -95,7 +95,7 @@ It is important that the SPESS is easy to understand without requiring a full in
 - SPESS' heat mechanics should be visually portrayed, with the body of the machine gaining a warm or cool tint as it operates. A similar effect should also be applied to the TEG if implemented.
 
 #### Additional notes on UX
-Engineering a notoriously poorly communicated department - but this should not be the standard. UX designers should take care to properly communicate the status and of the SPESS and any issues it has, to reduce frustration when working with a new machine.
+Engineering is a notoriously poorly communicated department - but this should not be the standard. UX designers should take care to properly communicate the status of the SPESS, what issues is has, and nudge them towards how it may be resolved.
 
 Any error or failsafe trigger should be logged and displayed on the SPESS console, for an engineer to review and take into consideration. Care should be taken for failsafe triggers to also check for context and provide hints as to what the root issue is and nudge them towards the solution. These errors should be easy to understand and avoid jargon. A few suggestions as follows.
 
