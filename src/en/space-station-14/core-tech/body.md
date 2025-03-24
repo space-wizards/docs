@@ -48,6 +48,8 @@ Each part is addable and removable other BodyParts. There is always a central Bo
 
 BodyParts can be symmetrical and ergo can have a "side" - left or right. They are also typed - a BodyPart might be a "LeftArm" or a "Tail".
 
+BodyParts can sometimes be marked as "vital". A "vital" BodyPart cannot be removed from its host Body without killing the Body's mob, and the Body's mob cannot be revivied. This makes sense - every defibrilator in the universe can't bring back a Urist with a missing head.
+
 ## What Organs Are Supposed To Do
 
 Organs are supposed to be individual agents inside a Body that do things. A few examples of Organs might include:
@@ -65,13 +67,11 @@ Organs allow for an Entity with a Body to do things that go beyond just being a 
 
 Organs are self-managing, ticking by on their own, but tend to obey the Body's metabolism rate. Metabolism is the speed by which the Body does things like digest food or convert chemicals in the bloodstream, and speeding up or slowing this down alters the speed Organs do things.
 
-Organs can sometimes be marked as "vital". A "vital" Organ cannot be removed from its host Body without killing the Body's mob, and the Body's mob cannot be revivied.
-
 ## What They Actually Do
 
 BodyParts are almost completely unused after they are instantiated during the building of a mob's Body. There are commands to add and remove BodyParts from a mob - this can be used by an Admin to remove someone's hands, for example - but nothing in normal gameplay actually interacts with them outside of using them to organize the YAML needed to build a particular mob species. 
 
-Organs are handled extremely inconsistently. 
+Organ behaviours are defined somewhat inconsistently, and sometimes not at all. For example:
 
 * There are some functions of the overall Body that are controlled via "Organs". Breathing, eating and metabolizing chems are some examples. But these are often named inconsistently - breathing is handled by a "LungsComponent", but metabolizing reagents from the Body's chemical solutions is the "MetabolizerComponent". 
 * Sometimes an organ is just there so that some other system does something if that organ is added or removed. For example, brain organs don't themselves control anything to do with the brain of a Body, but instead are just used as the entity chit for where a Player's mind ends up if the brain is ripped out of the Body.
