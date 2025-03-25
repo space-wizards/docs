@@ -404,7 +404,7 @@ You can even mix this pattern with the *handled event* pattern to stop raising t
 
 ## Event creation best practices
 - Event class names should always end in "Event", never "Message" or anything else.
-- If your event involves an entity and is broadcast, it should have a property/field that references the entity. Remember that `RaiseLocalEvent()` broadcasts the event by default unless otherwise specified, so this is very important if you want broadcast subscriptions to be able to use your event properly.
+- If your event involves an entity and is broadcast, it should have a property/field that references the entity so that broadcast subscriptions can use the event properly. `RaiseLocalEvent()` does not broadcast the event by default unless specified by setting the `broadcast` parameter to `true` when raising it.
 - Input parameters for the event should always be set in the constructor. Optional input parameters too, use optional arguments for those.
 - Document your event class properly. Write what it does, or what it's supposed to represent. If a property is meant to be an input and/or output parameter, specify so in a comment.
 
