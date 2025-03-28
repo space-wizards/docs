@@ -12,10 +12,58 @@ Not following this procedure/policy will result in disiplinary action being take
 
 - Balancing changes are usually not bug fixes. A balancing change adjusts tuning values on a gameplay system/mechanic to change gameplay to be more in line with the intended experience. If the experience before the change is still playable then the balancing change is not a bug fix, however if the gameplay is *causing major issues for players/admins* then a balancing change can be considered as a bugfix in this case.
 ## Creating and applying a hotfix
-A hotfix needs to be based on the branch the bug appears in.
+A hotfix needs to be created based on the branch the bug appears in.
 During the release phase bugs on staging need to be fixed using hotfixes based on staging and vice versa.
-The hotfix branch needs to be merged into the affected branch (staging/live) and then into master.
+A PR needs to be made for the newly created hotfix branch for the branch the bug appeared on (staging/stable) and for master.
 
-If a bug needs to be fixed on live during the release cycle the hotfix branch needs to be based on live and then merged into staging and master.
+If a bug needs to be fixed on stable during the release phase the hotfix branch needs to be based on stable and then a PR needs to be made for staging and master.
+
+When a bug needs to be hotfixed on stable outside of the release phase the hotfix needs to be based on stable and then a PR needs to be made for stable and master
 
 This will eventually be done by a github action or a bot automatically.
+
+### Bug appears on staging during release cycle
+- Branch of off the staging branch
+```shell
+git checkout staging
+git checkout -b "<hotfix branch name>"
+```
+- Implement the hotfix
+- Push the hotfix branch
+```shell
+git push <remote name> HEAD
+```
+- Create and merge a PR for the staging branch
+- Create and merge a PR for the master branch
+- Delete the hotfix branch
+
+### Bug appears on stable during release cycle
+- Branch of off the stable branch
+```shell
+git checkout stable
+git checkout -b "<hotfix branch name>"
+```
+- Implement the hotfix
+- Push the hotfix branch
+```shell
+git push <remote name> HEAD
+```
+- Create and merge a PR for the stable branch
+- Create and merge a PR for the staging branch
+- Create and merge a PR for the master branch
+- Delete the hotfix branch
+
+### Bug appears on stable outside release cycle
+- Branch of off the stable branch
+```shell
+git checkout stable
+git checkout -b "<hotfix branch name>"
+```
+- Implement the hotfix
+- Push the hotfix branch
+```shell
+git push <remote name> HEAD
+```
+- Create and merge a PR for the stable branch
+- Create and merge a PR for the master branch
+- Delete the hotfix branch
