@@ -26,12 +26,15 @@ With the (somewhat) recent addition of radial menus AND our superior engine, we 
 As muslims, we are generally refrained from applying our book to the foreheads of others for "spiritual healing"; this undermines the respect given to our book and the bodies of other people.
 The Clear Quran does state that such healing can still be administered via *recitation*, which is where the AoE aspect aries from. 
 
-Instead of whacking someone with the Quran, chaplains will instead recite from the Quran, applying a weaker healing to all nearby humanoids who can hear them (think within audible distance and not deaf [WYCI]).
+Instead of whacking someone with the Quran, chaplains will instead recite from the Quran, applying a weaker healing to all nearby humanoids who can hear them (think: within audible distance and not deaf).
+Additionally, recitation will apply Holy damage (equivalent to the normal healing amount) to all nearby unholy beings (think: Hellspawn, cultists) who can hear them. 
+(If this is implemented, there should be a way for unholy antagonists to heal from Holy damage, and/or Holy damage should be hidden from normal damage scanners to prevent metagaming the existance of them)
 
 ## Implementation
 
-As previously stated, every instance of the bible to-date will be replaced by the jacketed religious book; the first time a chaplain interacts with this book, they can pick whether they want to select a recitaional skin (with an AoE of healing *on use*) or a non-recitational skin (see: current bibles).
+As previously stated, every instance of the bible to-date will be replaced by the jacketed religious book; the first time a chaplain interacts with this book, they can pick whether they want to select a recitaional skin (with an AoE of healing *on use*, but without the two-slot storage present in bibles) or a non-recitational skin (see: current bibles).
 
 After selecting their mechanic of choice via the first radial menu, they can choose skins as they prefer (I'd still prefer the Quran be locked to recitational skins only, but not so with bibles and non-recitational skins!), also via nested radial menu.
 
 A new sprite for the Clear Quran has already been developed and should be present at [Resources/Textures/Objects/Specific/Chapel/quran.rsi](https://github.com/space-wizards/space-station-14/tree/master/Resources/Textures/Objects/Specific/Chapel/quran.rsi), implemented by the linked PR [#27400](https://github.com/space-wizards/space-station-14/pull/27400).
+The Quran should also be less painful in its function: namely, you cannot hit people with it, failing to recite from it (due to not being a roundstart Chaplain) should not show the "sizzling" text, etc. 
