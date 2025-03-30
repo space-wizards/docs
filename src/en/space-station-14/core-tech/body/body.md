@@ -2,6 +2,28 @@
 
 I am the BodySystem, Container of Containers! Look upon my works, ye spessmen, and despair.
 
+**Last Update** X of X, 20XX
+
+# Design
+
+TODO: This is the most important bit of each file that covers the current implementation at a DESIGNER level - how the systems are explained to someone DESIGNING the game.
+
+## Body Composition
+
+## Body Decomposition
+
+See "Damage, Stunning, Rotting and Gibbing"
+
+## Respiration
+
+## Metabolism
+
+## Thermal Regulation
+
+# Engineering
+
+This section covers an overview of important bits of the current Body implementation
+
 ## Components
 
 ### BodyComponent
