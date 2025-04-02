@@ -12,7 +12,7 @@ The Internal Affairs team shall be responsible for enforcing the [Staff Policy](
     - Community Moderators
 - A **Staff Member** is any member of the Staff Team.
 - A **Permanent Staff Member** is any Staff Member who is not under a trial period.
-- A **Staff Memberin Good Standing** is any staff member who has not received a formal disciplinary action within the last 3 months.
+- A **Staff Member in Good Standing** is any staff member who has not received a formal disciplinary action within the last 3 months.
 - **Project Leadership** is all members of the following groups:
     - Wizards
     - Head Game Admins Head Moderators Lead Maintainers
@@ -28,7 +28,7 @@ The Internal Affairs Team shall be composed of a minimum of 2 members and a maxi
 If not enough members exist or for whatever reason the entirity of the Internal Affairs Team is unable to act in a certain situation, the powers and duties of the Internal
 Affairs team will be assumed by Project Leadership.
 
-Internal Affairs Team mebers must be permanent staff members, must be in Good Standing and must not be Wizards.
+Internal Affairs Team members must be permanent staff members, must be in Good Standing and must not be Wizards.
 
 Internal Affairs Team members shall be elected under the following procedure:
 
