@@ -17,7 +17,7 @@ Additionally, vulpkanin were rated very positively by players during their [temp
 
 ## Design
 
-Vulps aren't meant to be a very different species with many defying traits. They are meant to an interesting option for someone to pick instead of another species, based on how someone prefers to paly the game.
+Vulps aren't meant to be a very different species with many defying traits. They are meant to an interesting option for someone to pick instead of another species, based on how someone prefers to play the game.
 The main things that need to be brought up here are their customizability and defining features.
 
 ### Customizability
