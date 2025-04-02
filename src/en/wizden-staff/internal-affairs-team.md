@@ -12,11 +12,12 @@ The Internal Affairs team shall be responsible for enforcing the [Staff Policy](
     - Community Moderators
 - A **Staff Member** is any member of the Staff Team.
 - A **Permanent Staff Member** is any Staff Member who is not under a trial period.
-- A **Staff Member in Good Standing** is any staff member who has not received a formal disciplinary action within the last 3 months.
+- A **Staff Memberin Good Standing** is any staff member who has not received a formal disciplinary action within the last 3 months.
 - **Project Leadership** is all members of the following groups:
     - Wizards
     - Head Game Admins Head Moderators Lead Maintainers
-    - Project Managers A **Strike** is a formal warning against a staff member for a violation of the staff policy.
+    - Project Managers 
+- A **Strike** is a formal warning against a staff member for a violation of the staff policy.
 - A **Suspension** is the temporary removal of permissions on some or all Wizard's Den Infrastructure. 
 - A **Removal** is the permanent removal of permissions on some or all Wizard's Den Infrastructure as well as the formal removal of some or all staff roles. 
 
