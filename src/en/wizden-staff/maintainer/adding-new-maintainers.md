@@ -1,10 +1,10 @@
 # Adding New Maintainers
 
-This document defines the process for adding new Maintainers to Space Station 14. This process must be followed when adding new Maintainers to the Space Wizards team.
+This document defines the process for adding new Maintainers to Space Station 14.
 
 ## Requirements
 
-Maintainers represent Space Wizards as staff. Certain requirements must be met before a person can become a Maintainer. These requirements are as follows:
+Maintainers represent Space Wizards as staff. Certain requirements must be met before a person can become a Maintainer:
 - A vote must be held according to the Voting Process outlined below.
 - The nominated Maintainer must be a member of the Space Station 14 Discord server.
 - If a nominated Maintainer has caused administration issues in the past, these issues must be raised and discussed during the voting process. Administation issues include, but are not limited to, being banned from the game, banned from the Discord server, or having a history of being rude to other members of the community.
