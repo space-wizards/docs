@@ -329,6 +329,7 @@ Staff
 ----------------------
 - [Project Manager](en/wizden-staff/projectmanager.md)
 - [Maintainer](en/wizden-staff/maintainer.md)
+  - [Adding New Maintainers](en/wizden-staff/maintainer/adding-new-maintainers.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
   - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
