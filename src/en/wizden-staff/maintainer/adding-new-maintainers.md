@@ -20,7 +20,6 @@ To add a new Maintainer, a current Maintainer has to nominate the candidate. Onc
     - Concerns about a nominated person must be addressed before the vote may close. This will delay the vote until the concerns are resolved.
     - For a vote to pass, it must have a supermajority (66%) of votes in favor. 
 3. At the end of the week, the vote will be closed and the results will be announced. If the vote passes, the person being nominated will be contacted by a Lead Maintainer and asked if they would like to accept the position. If they agree, they may then be added to the Maintainers list.
-    - If the role they are being nominated for is a special role, they may be added to that role along with the normal Maintainer role.
 
 ### Special Maintainer Roles
 
