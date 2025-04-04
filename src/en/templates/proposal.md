@@ -16,7 +16,7 @@ Your title should convey the basic jist of your proposed changes. It should be s
 - have someone else who agreed to do this for you.
 - already have an existing implementation elsewhere that just needs to be ported.
 
-In either case you will have to write a technical outline on how you plan to implement this feature to show that it is technically sound.
+In either case you will have to write an outline on how you plan to implement this feature in the **Technical Considerations** section to show that is technically sound and feasible.
 
 `Implemented` is the status of the feature.
 
