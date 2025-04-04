@@ -15,13 +15,7 @@ As maintainers represent wizden as staff, certain requirements must be met befor
 
 Before a vote can start, the person being voted on must be nominated by a current maintainer. Once a person has been nominated, the following process should be followed:
 1. The person being nominated should be contacted and asked if they would like to be nominated. If they agree, the nomination can proceed.
-2. A vote should be created "Internal" category on Discourse, with the following format:
-    - **Nominee**: [Name of nominee]
-    - **Nominator**: [Name of nominator]
-    - **Reason**: [Reason for the nomination]
-    - **Vote**: [Link to vote]
-
-For this you can use the template.
+2. A vote should be created "Internal" category on Discourse, using the Discourse template.
 3. The vote should be open for 1 week, and all current maintainers should be notified of the vote. During this time, maintainers should discuss the nomination and ask any questions they may have. If there is a clear majority in favor of the nomination, the vote can be closed early. If there is a clear majority against the nomination, the vote should be closed and the nomination should be withdrawn.
     - If there is no clear majority, the vote should remain open for the full week.
     - If there are any concerns about the nomination, they should be discussed in the thread and addressed before the vote is closed.
