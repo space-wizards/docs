@@ -12,7 +12,7 @@ Maintainers represent Space Wizards as staff. Certain requirements must be met b
 
 ### Voting Process
 
-Before a vote can start, the person being voted on must be nominated by a current maintainer. Once a person has been nominated, the following process should be followed:
+To add a new Maintainer, a current Maintainer has to nominate the candidate. Once a person has been nominated, the following process should be followed:
 1. The person being nominated will be contacted and asked if they would like to be nominated. 
 2. If the person agrees, the nomination may proceed.
 3. A vote will be created in the "Internal" category on the Space Station 14 Discourse, using the appropriate template. This vote will be open for one week, and all Maintainers will be notified of the vote.
