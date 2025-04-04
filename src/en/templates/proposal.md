@@ -4,7 +4,7 @@ Your title should convey the basic jist of your proposed changes. It should be s
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
-| Your Names Here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
+| your names here |coder names here| :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
 
 `Designers` should be the names that you, the author of this document, use on GitHub and/or Discord. This is optional but strongly recommended, since:
 
