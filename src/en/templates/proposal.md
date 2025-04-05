@@ -60,6 +60,6 @@ Consider addressing:
 
 # Technical Considerations
 
+- Does the feature require new systems, UI elements, or refactors of existing ones? Give a short technical outline on how they will be implemented.
 - Are there any anticipated performance impacts?
-- Does the feature require new systems, UI elements, or refactors of existing ones?
 - For required UI elements, give a short description or a mockup of how they should look like (for example a radial menu, actions & alerts, navmaps, or other window types)
