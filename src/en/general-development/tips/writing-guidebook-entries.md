@@ -18,13 +18,17 @@ Thus, the simplest entry you can make looks like this:
 </Document>
 ```
 
-Any text written in the bounds of the tag will be displayed plainly on the guide. But, if you write a guide with only plain text, you will write an incredibly boring guide that will make my eyes glaze over and make me keel over and die.
+Any text written in the bounds of the tag will be displayed plainly on the guide. But, if you write a guide with only plain text, eye explosion (and subsequent death) rates will skyrocket globally.
 
-To alleviate my oncoming death, consider using the (small) variety of markdown tags that are supported:
-- `#` creates a title
-- `##` creates a heading
-- `-` creates a list entry
+Save hundreds of l-eye-ves and use the (small) variety of richtext tags that are supported:
+- `#` creates a title.
+- `##` creates a heading.
+- `-` creates a list entry.
 - `[color=hex][/color]` colors the text inside the tags with the specified hex color.
+- `[bold][/bold]` and `[italic][/italic]` make text inside the tags bold or italic respectively.
+- `[keybind=""]` will display the user's keybind for the function in the quotation marks.
+	- The list of functions can be found in `keybinds.yml`.
+- `[textlink="text" link="guideID"]` will allow users to jump to the article linked.
 
 ### Example
 Here is an example guidebook entry, `magboots.xml`
@@ -171,14 +175,64 @@ Here's an example:
       guides:
       - MachineUpgrading #this is the guide that is opened
 ```
+## Using Richtext
+For consistency across the guidebook, it's easier to pick one way to use each richtext tag and stick to it.
+
+A good way to use each tag is listed here.
+- `[color=cyan]` should be used to highlight keywords or phrases directly related to the subheader.
+- `[bold]` is good for keywords or phrases of a paragraph (but not necessarily a subheader).
+- `[italic]` is good for emphasis on sentences or clauses that may be important to read.
+- Highlight allegiances, departments or roles with `[color=someotherrelevantcolorthatisn'tcyanprobably]`.
+- Text links make the guidebook more interactive and can be done with `[textlink="text" link="guideID"]`.
+- `[color=#a4885c][italic]` is good for actions or text found in the context menu.
+- `[color=yellow][bold][keybind="function"]` is a superb combo to bring attention to keybinds which may be short.
+- And of course, `[color=red]` adds a lot of impact to your sentences, but remember to use it sparingly! Most of the time, you can use boldface instead.
+
+All of this comes together in this example that may or may not be based on reality:
+```xml
+## What I had for lunch today
+Today I decided to have a [color=cyan]burrito[/color] because it was easy to make and I was feeling lazy.
+
+[bold]Knowing how to roll a burrito[/bold] is vital to consistently making good ones.
+
+[bold]Cheese[/bold] is simply a requirement. If you don't put any in your burrito, [italic]I'll refuse to eat it.[/italic] 
+
+I think [bold]Rat Kings[/bold] should find a burrito or two every time when they [color=#a4885c][italic]Rummage[/italic][/color].
+
+If you're holding a burrito in your hand, you can press [color=yellow][bold][keybind="ActivateItemInHand"][/bold][/color] to eat it.
+
+[color=#cb0000]Security[/color] hates burritos. That's why I joined [color=#66FF00]The Spider Clan[/color].
+
+If you hate burritos, [color=red]I'll be very very mad at you.[/color] I hope the [color=pink]Clown[/color] slips you.
+```
+![image](https://github.com/user-attachments/assets/9327f98f-bd40-44a7-981e-1ac4cf9b7a6b)
+
+Important text is highlighted, it's got visual appeal, and it's easy to read. Success!
+
+### Department Colors (hex)
+Credit to Moomoobeef, who has included these in his user profile on the wiki. https://wiki.spacestation14.com/wiki/User:Moomoobeef
+- `#a4885c` Highlight text (old, use cyan)
+- `#cb0000` Security
+- `#c96dbf` Science
+- `#5b97bc` Medical
+- `#b18644` Cargo
+- `#f39f27` Engineering
+- `#ff2fff` Clown
+- `#9fed58` Service
+- `#6e6e6e` Passenger
+- `#1b67a5` Command (blue)
+- `#009100` CentCom (green)
+- `#134975` NanoTrasen (blue)
+- `#ff0000` Syndicate
+- `#66ff00` Spider Clan
 
 ## Best Practices
 
 Here are some general tips for writing good guides:
 - Keep titles clear and concise. Players don't want to search around for what they need.
 - Keep entries short. You can always add child entries if you want to elaborate more on the topic.
-- Use boxes, embedded entities, and text colors to give entries visual interest.
-	- A commonly used color for emphasis is `#a4885c`.
+- Use a healthy amount of boxes, embedded entities, and richtext.
+	- Remember not to overdo it, though. If most of the text is bold or colored, it's too much.
 - Refrain from including specific advice and "meta" strategies. The guide should be an impartial source of information.
 - Articles should be written in a neutral tone. 
 - Encourage interacting with the guide.
