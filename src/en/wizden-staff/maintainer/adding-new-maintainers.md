@@ -19,11 +19,7 @@ To add a new Maintainer, a current Maintainer has to nominate the candidate. Onc
     - If there is no clear majority, the vote must remain open for the full week.
     - Concerns about a nominated person must be addressed before the vote may close. This will delay the vote until the concerns are resolved.
     - For a vote to pass, it must have a supermajority (66%) of votes in favor. 
-        - Abstain votes are considered neutral. However, if counting all abstain votes as "No" would cause the vote to fall below the required 66% threshold, the vote fails.
-            - Example with 10 votes:<br>
-                7 Yes, 1 No, 2 Abstain -> 7/8 = 87.5% -> Pass<br>
-                7 Yes, 0 No, 3 Abstain -> 7/7 = 100%, but if 3 Abstain are added -> 7/10 = 70% -> Still passes<br>
-                6 Yes, 0 No, 4 Abstain -> 6/6 = 100%, but 6/10 = 60% -> Fails<br>
+        - Abstain votes are considered neutral. Only votes in favor or against are counted.
 3. At the end of the week, the vote will be closed and the results will be announced. If the vote passes, the person being nominated will be contacted by a Lead Maintainer and asked if they would like to accept the position. If they agree, they may then be added to the Maintainers list.
 
 ### Special Maintainer Roles
