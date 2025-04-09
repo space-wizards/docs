@@ -220,7 +220,6 @@ Space Station 14
 	- [Engineering](en/space-station-14/departments/engineering.md)
 		- [PR Guidelines](en/space-station-14/departments/engineering/guidelines.md)
 		
-		- [Machine Upgrading Rework](en/space-station-14/departments/engineering/proposals/machine-upgrading-rework.md)
 		- [Pow3r](en/space-station-14/departments/engineering/pow3r.md)
 
 		- [Proposals]()
@@ -342,6 +341,8 @@ Maintainer Meetings
 ==============
 
 ----------------------
+- [2025-03-29](en/maintainer-meetings/maintainer-meeting-2025-03-29.md)
+- [2025-03-15](en/maintainer-meetings/maintainer-meeting-2025-03-15.md)
 - [2025-03-01](en/maintainer-meetings/maintainer-meeting-2025-03-01.md)
 - [2025-02-15](en/maintainer-meetings/maintainer-meeting-2025-02-15.md)
 - [2025-02-01](en/maintainer-meetings/maintainer-meeting-2025-02-01.md)
