@@ -1,3 +1,4 @@
+
 # Conventions
 
 There are nearly infinite ways to program the same thing, but some ways will get your PR rejected.
@@ -24,7 +25,19 @@ Keep in mind that some older areas of the codebase might not follow these conven
 
 - Comment code at a high level to explain *what* the code is doing, and more importantly, *why* code is doing what it is doing. 
 
-- When documenting classes, structs, methods, properties/fields, and class members, use [XML docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/)
+- When documenting classes, structs, methods, properties/fields, and class members, use [XML docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/). DataFields and Public methods should always be documented. 
+	- XML docs should be always indented, example:
+	```csharp
+	    /// <summary>
+	    ///     Resets the InteractCounter on the <see cref="FooComponent"/>.
+	    /// </summary>
+	    /// <remarks>
+	    ///     This is a public method other systems can call to interact with FooComponent!
+	    ///     Remember that public methods should always use docstring.
+	    /// </remarks>
+	    [PublicAPI]
+	    public void ResetInteractCounter(Entity<FooComponent?> ent)
+	```
 
 ### Why Not What
 
@@ -33,14 +46,14 @@ Some folks blindly adhere to "comment the why, not the what" and think that "cod
 #### Example 1
 
 ```csharp
-   float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+	var fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 All of the variables are named in a self-documenting way (*R* gets a pass because that is the ideal gas constant, and physics conventions existed long before computers, so this is following convention). Obviously, the comment should *not* be:
 
 ```csharp
-	 // Take R and multiply it by the ratio of outlet temperature divided by outlet air volume and add it to ...
-   float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+	// Take R and multiply it by the ratio of outlet temperature divided by outlet air volume and add it to ...
+	var fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 Because this only explains what the code is literally doing, which you could have gathered from any cursory reading of the code. **However, you still have absolutely no idea what this code is doing and why**, even though the code is self-documenting.
@@ -55,26 +68,25 @@ You don't know where this magic formula came from, what it's trying to accomplis
         // To solve this we need to write dn in terms of P. Since PV=nRT, dP/dn=RT/V.
         // This assumes that the temperature change from transferring dn moles is negligible.
         // Since we have P=Pi-Po, then dP/dn = dPi/dn-dPo/dn = R(Ti/Vi - To/Vo):
-        float dPdn = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+        var dPdn = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 #### Example 2
 
 ```csharp
-        if (HasComp<MindContainerComponent>(uid))
-        {
-            return;
-        }
-        
-        // more stuff
+	if (HasComp<MindContainerComponent>(uid))
+		return;
+
+	// more stuff
 ```
 
 Obviously, this code skips "more stuff" if the entity represented by *uid* already has a MindContainerComponent. This code is as self-documenting as it gets, it literally just returns early if there is a MindContainer. What needs to be documented is *why* this code needs to skip *uid*s that already have a MindContainerComponent:
 
 
 ```csharp
-				// Don't let players who drink cognizine be eligible for a ghost takeover
-        if (HasComp<MindContainerComponent>(uid))
+	// Don't let players who drink cognizine be eligible for a ghost takeover
+	if (HasComp<MindContainerComponent>(uid))
+		return;
 ```
 
 ## Methods
@@ -85,14 +97,14 @@ If you're defining a function and the parameter declarations are so long they do
 
 Bad:
 
-```cs
+```csharp
 public void CopyTo(ISerializationManager serializationManager, SortedDictionary<TKey, TValue> source, ref SortedDictionary<TKey, TValue> target,
     SerializationHookContext hookCtx, ISerializationContext? context = null)
 ```
 
 Good:
 
-```cs
+```csharp
 public void CopyTo(
     ISerializationManager serializationManager,
     SortedDictionary<TKey, TValue> source,
@@ -115,7 +127,7 @@ If you're doing something like a filter/search dialog, use `CurrentCulture` comp
 
 In a property setter, the value of the property should always literally become the `value` given. None of this:
 
-```cs
+```csharp
 public string Name
 {
     get => _name;
@@ -134,7 +146,7 @@ This is so it is clear to others what it is. This is especially true if the same
 
 ### Prototype data-fields
 Don't cache prototypes, use prototypeManager to index them when they are needed. You can store them by their ID. When using data-fields that involve prototype ID strings, use ProtoId<T>. For example, a data-field for a list of prototype IDs should use something like: 
-```csharp=
+```csharp
 [DataField]
 public List<ProtoId<ExamplePrototype>> ExampleTypes = new();
 ```
@@ -148,15 +160,14 @@ Example: In-game tool "kinds" or "types" should use prototypes instead of enums.
 
 ### Sounds
 When specifying sound data fields, use `SoundSpecifier`.
-
-
+You should avoid defining sound paths directly and instead use `SoundCollectionSpecifier` whenever possible.
 
 <details>
   <summary>C# code example (click to expand)</summary>
 
-```csharp=
-[DataField(required: true)]
-public SoundSpecifier Sound { get; } = default!;
+```csharp
+[DataField]
+public SoundSpecifier Sound = new SoundCollectionSpecifier("MySoundCollection");
 ```
   
 </details>
@@ -164,21 +175,17 @@ public SoundSpecifier Sound { get; } = default!;
 <details>
   <summary>YAML prototype example (click to expand)</summary>
   
-```yml=
-# You can specify a specific sound file like this
+```yaml
+# You can define a sound collection like this
+- type: soundCollection
+  id: MySoundCollection
+  files:
+  - /Audio/Effects/Cargo/ping.ogg
+
+# And use it like this
 - type: MyComponent
   sound:
-    path: /Audio/path/to/my/sound.ogg
-  
-# But this works, too!
-- type: MyOtherComponent
-  sound: /Audio/path/to/my/sound.ogg
-    
-# You can only specify a sound collection like this
-- type: AnotherComponent
-  sound:
     collection: MySoundCollection
- 
 ```
   
 </details>
@@ -189,9 +196,9 @@ When specifying sprite or texture data fields, use `SpriteSpecifier`.
 <details>
   <summary>C# code example (click to expand)</summary>
   
-```csharp=
+```csharp
 [DataField]
-public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
+public SpriteSpecifier Icon = SpriteSpecifier.Invalid;
 ```
   
 </details>
@@ -199,7 +206,7 @@ public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
 <details>
   <summary>YAML prototype example (click to expand)</summary>
   
-```yml=
+```yaml
 # You can specify a specific texture file like this, /Textures/ is optional
 - type: MyComponent
   icon: /Textures/path/to/my/texture.png
@@ -221,33 +228,39 @@ public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
   <summary>RSI meta.json (click to expand)</summary>
 
 - The order of fields should be `version -> license -> copyright -> size -> states`.
-- JSON should not be minified, and should follow normal JSON quality guidelines (egyptian brackets, etc)
+- JSON should not be minified, and should follow normal JSON quality guidelines (egyptian brackets, etc). All new JSON files should be indented at 4 spaces. Existing files should be changed to 4 space indent if you are modifying them (fix as you go). You should never be using tab for indent.
 
 Example:
 
 ```json
 {
+{
     "version": 1,
-    "license": "CC0-1.0",
-    "copyright": "GitHub @PJB3005",
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/547852588166c8e091b441e4e67169e156bb09c1",
     "size": {
         "x": 32,
         "y": 32
     },
     "states": [
         {
-            "name": "hello",
-            "flags": {},
-            "directions": 4,
-            "delays": [
-                [1, 1, 1],
-                [2, 3, 4],
-                [3, 4, 5],
-                [4, 5, 6]
-            ]
+            "name": "icon"
+        },
+        {
+            "name": "equipped-BACKPACK",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
         }
     ]
 }
+
 ```
 </details>
 
@@ -257,7 +270,7 @@ When using `EntityUid` in admin logs, use the `IEntityManager.ToPrettyString(Ent
 <details>
   <summary>Admin log with entities example (click to expand)</summary>
   
-```csharp=
+```csharp
 // If you're in an entity system...
 _adminLogs.Add(LogType.MyLog, LogImpact.Medium, $"{ToPrettyString(uid)} did something!");
   
@@ -279,7 +292,7 @@ All data in components should be public.
 
 ### Component property setters
 You may not have setters with any logic whatsoever in properties. Instead, you should create a setter method in your entity system, and apply the `[Friend(...)]` attribute to the component so only that system can modify it.
-Your component may use properties with setter logic for *ViewVariables integration* (until we have a better system for that)
+Your component may use properties with setter logic for *ViewVariables integration* (until we have a better system for that).
 
 ### Component access restrictions
 The `[Access(...)]` attribute allows you to specify which types can read or modify data in your class, while prohibiting every other type from modifying it.
@@ -301,7 +314,7 @@ When possible, try using the `EntitySystem` [proxy methods](https://github.com/s
 <details>
   <summary>Examples (click to expand)</summary>
 
-```csharp=
+```csharp
 // Without proxy methods...
 EntityManager.GetComponent<MetaDataComponent>(uid).EntityName;
   
@@ -330,7 +343,7 @@ The first thing you should do in your method's body should then be calling `Reso
 <details>
   <summary>Example (click to expand)</summary>
 
-```csharp=
+```csharp
 public void SetCount(Entity<StackComponent?> stack, int count)
 {
     // This call below will set "Comp" to the correct instance if it's null.
@@ -359,14 +372,14 @@ Extension methods (those with an explicit `this` for the first argument) should 
 ### Dependencies On Other Systems
 Inside an entity system, prefer a system dependency instead of resolving the system using the IoCManager. For example, instead of:
   
-```csharp=
+```csharp
 var random = IoCManager.Resolve<IRobustRandom>();
 random.Prob(0.1f);
 ```
 
 Add an entity system dependency:
 
-```csharp=
+```csharp
 [Dependency] private readonly IRobustRandom _random = default!;
 _random.Prob(0.1f);
 ```
@@ -375,12 +388,12 @@ _random.Prob(0.1f);
 
 ### Method Events vs Entity System Methods
 Method Events are events that you raise when you want to perform a certain action. Example:
-```csharp=
+```csharp
 // This would change the damage on the entity by 10.
 RaiseLocalEvent(uid, new ChangeDamageEvent(10));
 ```
 On the other hand, Entity System Methods are methods you call on systems to perform an action.
-```csharp=
+```csharp
 // This would change the damage on the entity by 10.
 EntitySystem.Get<DamageableSystem>().ChangeDamage(uid, 10);
 ```
@@ -403,7 +416,7 @@ Events should always be structs, not classes, and should always be raised by ref
 They should also have the [ByRefEvent] attribute.
   
 In practice this will look like the following:
-```cs
+```csharp
   var ev = new MyEvent();
   RaiseLocalEvent(ref ev);
 ```
@@ -450,7 +463,7 @@ If you're adding a method that takes in a [Func delegate](https://docs.microsoft
 <details>
   <summary>Example of what not to do (click to expand)</summary>
   
-```csharp=
+```csharp
 void DoSomething(EntityUid otherEntity)
 {
     // This is BAD. It will allocate on the heap a lot. 
@@ -473,7 +486,7 @@ void MethodWithPredicate(Func<EntityUid, bool> predicate)
 <details>
   <summary>Example of what to do (click to expand)</summary>
 
-```csharp=
+```csharp
 void DoSomething(EntityUid otherEntity)
 {
     // This is good and much more performant than the example before.
@@ -493,6 +506,105 @@ void MethodWithPredicate<TState>(Func<EntityUid, TState, bool> predicate, TState
 
 </details>
   
+## Field Deltas
+
+Field deltas allow you to send only specific fields of a component over the network instead of the entire state. This is done by adding `fieldDeltas: true` to your `AutoGenerateComponentState` attribute:
+
+```csharp
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(fieldDeltas: true)]
+public sealed partial class MyComponent : Component
+{
+    [DataField, AutoNetworkedField]
+    public bool IsActive;
+    
+    [DataField, AutoNetworkedField]
+    public int Value;
+}
+```
+
+### When to use field deltas
+
+Field deltas are great when:
+- Your component has fields that change at different rates
+- Only a subset of fields typically changes at once
+- You have a bunch of networked fields and don't want to send all of them every time
+
+A good rule of thumb: If you have 3+ fields and they often change independently, consider field deltas. For components with just 1-2 fields, it's usually simpler to skip them.
+
+### Marking fields as dirty
+
+When you change a field and want to network just that field, use `DirtyField` instead of `Dirty`:
+
+```csharp
+// Instead of this:
+comp.IsActive = true;
+Dirty(uid, comp);  // Would send ALL networked fields
+
+// Do this:
+comp.IsActive = true;
+DirtyField(uid, comp, nameof(MyComponent.IsActive));  // Only sends IsActive
+```
+
+For a component with many fields where usually only one or two change at a time, field deltas can reduce network traffic by 80-90%. The more fields you have, the more you'll benefit from field deltas.
+
+Even for components with just 3-4 fields, if they change independently (e.g., one field updates frequently, others rarely), field deltas can still be worth it.
+
+Field deltas add a little overhead for tracking field changes, but this is usually outweighed by the bandwidth savings. The generator automatically handles most of the implementation complexity.
+
+## TimeSpans
+
+### Using TimeSpans
+
+You should always use `TimeSpan` over `float` for defining static periods of time, such as intervals.
+
+### Handling paused entities
+
+When working with `TimeSpan` fields that are modified during runtime (like timers or countdowns), you need to handle entity pausing properly. SS14 provides two important mechanisms for this.
+
+### AutoGenerateComponentPause and AutoPausedField
+
+The `[AutoGenerateComponentPause]` and `[AutoPausedField]` attributes work together to automatically adjust `TimeSpan` fields when an entity is unpaused:
+
+- `[AutoGenerateComponentPause]` is applied to a component class and automatically generates code to handle unpausing.
+- `[AutoPausedField]` is applied to individual `TimeSpan` fields within that component that should be adjusted when the entity is unpaused.
+
+These attributes should **always** be used for `DataField` `TimeSpan` properties that are modified by other systems during runtime, such as timers or cooldowns.
+
+<details>
+  <summary>Example usage (click to expand)</summary>
+
+```csharp
+[RegisterComponent, AutoGenerateComponentPause]
+public sealed partial class CooldownComponent : Component
+{
+    [DataField, AutoPausedField]
+    public TimeSpan Cooldown;
+    
+    [DataField, AutoPausedField]
+    public TimeSpan? OptionalTimer;
+}
+```
+</details>
+
+### TimeOffsetSerializer
+
+The `TimeOffsetSerializer` is used for serializing `TimeSpan` values that are offset by the current game time. 
+
+- It automatically offsets a `TimeSpan` by the game's current time during serialization/deserialization
+- If the entity is paused, it uses the time at which the entity was paused as the reference point
+- It prevents unintentional saving of time offsets to maps during mapping (prototypes always serialize as zero)
+
+Similar to `AutoPausedField`, the `TimeOffsetSerializer` should always be used for runtime-modified `TimeSpan` fields that represent absolute times rather than durations.
+
+<details>
+  <summary>Example usage (click to expand)</summary>
+
+```csharp
+[DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+public TimeSpan NextActivationTime;
+```
+</details>
+
 ## Naming
 
 ### Shared types
@@ -506,7 +618,7 @@ Example:
 
 ### Anchoring
 
-Always use `TransformComponent` anchoring.
+Always use `TransformComponent` anchoring through the system methods.
 You may use `PhysicsComponent` static body anchoring but *only* if you know what you're doing and you can defend your choice over transform anchoring.
   
 # YAML Conventions
@@ -520,31 +632,41 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
 ```
 - Don't specify textures in abstract prototypes/parents.
 - You should declare the first prototype block in this order: `type` > `abstract` > `parent` > `id` > `categories` > `name` > `suffix` > `description` > `components.`
+- Use inline lists for categories and regular lists for everything else:
+	```yaml
+	- type: entity  
+	  parent: [ PartHuman, BaseHead ] # Inline list
+	  id: Headhuman
+	  components:  
+	  - type: Tag
+	    tags: # Regular list
+	    - Head
+	```
 - New components should not have an indent when added to the `components:` section.
     This
-    ```yaml=
+    ```yaml
     components:
     - type: Sprite
       state: 
     ```
     Not this
-    ```yaml=
+    ```yaml
     components:
       - type: Sprite
         state: 
     ```
 - The same rule applies for any other list or dictionary, for example:
-    ```yaml=
+    ```yaml
     - type: Tag
       tags:
-      - HighRiskItem # correct indentation
+      - HighRiskItem # Correct indentation
 
     - type: Tag
       tags:
-        - HighRiskItem # wrong indentation
+        - HighRiskItem # Wrong indentation
     ```
 - When it makes sense, place more generalized/engine components near the top of the components list and more specific components near the bottom of the list. For example,
-    ```yaml=
+    ```yaml
     components:
     - type: Sprite # Engine-specific
     - type: Physics 
@@ -586,9 +708,9 @@ Every player-facing string ever needs to be localized.
 - Localization IDs are always `kebab-case` and should never contain capital letters.
 - Localization IDs should be specific as possible, to avoid clashing with other IDs.
     This
-    ```ftl=
+    ```ftl
     antag-traitor-user-was-traitor-message = ...
     ```
     Not this
-    ```ftl=
+    ```ftl
     traitor-message = ...
