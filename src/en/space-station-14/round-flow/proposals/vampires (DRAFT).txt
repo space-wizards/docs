@@ -1,0 +1,124 @@
+(Draft, still very very unfinished)
+# Vampires
+- major antagonist
+
+# Overview
+  Vampires are rarely attracted to the station as a way to increase their social standing in their organization. Draining blood and spreading their curse with the intent of raising to 
+  the rank of Count trough spreading their curse and draining the crew blood. While frowned upon, infighting and backstabbing is common in such conditions, as the honor of being the sole 
+  survivor is much higher than a collaborative effort.
+  As they gather blood and develop abilities, they will inevitably be disruptive to the station, eventually being hunted.
+
+# Vampire Ranks
+  They posses a strong hierarchy, which allows them access to their abilities
+
+  -Count 
+    Highest rank a vampire can achieve in the station, they will never spawn roundstart 
+    -access to all abilities
+    -limited to 1 per statio
+    -station-wide announcement on its creation
+
+  -Baron
+    Middle rank, vampires will spawn at this rank on their unique gamemode
+    -access to level 2 and below abilities
+
+  -Peasant 
+    Lowest rank, converted crew or mid-round vampires. Desperate to try and attain nobility
+    -access to level 1 abilities
+    -cant make new vampires
+
+Ranking Up:
+  Vampires will have to drain blood and infect X amount of people before they can perform a lenghtly do after to transform. Highly vulnerable during this state, it should only be done in secrecy
+
+# Vampire Curse
+  The curse works like a disease and each vampire possesses their own unique strain of it, blood drain and multiple abilities will apply it to crew members.
+
+  Effects: 
+  -The curse is always lethal, it will very slowly deal unhealable damage. Consumption of holy water can help slow it down even further.
+  -After enough time has passed, you will be able to tell when the vampire that infected you is nearby, this effect getting more intense and accurate as time passes, preventing vampires
+   from hiding indefenetely
+  -Infected and alive crew will passively grant bloodpoints to the specific vampire
+  -The only way to remove the curse is by killing the vampire, any damage done by it quickly healing afterwards.
+
+  -More effects may be developed if the vampire invests in their curse
+
+# Bloodpoints
+    Vampires can perform a lenghty do after on creatures with blood to fully drain them of it, granting them points which can be expended to unlock/upgrade abilities. This will stun the
+    entity, allowing vampires a chance to get away. Though they will most likely require to crit or stun the creature beforehand.
+
+    The amount of bloodpoints granted per unit of blood drained depend on the state and type of entity drained
+    -Alive "humanlike" entity = %150
+    -Dead "humanlike" entity = %75
+    -Alive animal entity = %50
+    -Dead animal entity = %20
+    -Blood outside an entity (medbay bloodbags, pools) = %5
+    (amounts highly subject to change)
+
+     This is intended to desentivize vampires from outright killing crew.
+
+# Ability Shop (i need to think of a better name)
+    Vampires will have permanent access to an internal "store" menu (similar to syndies or wizards) which uses bloodpoints as currency. The abilities they are able to buy from it depending
+    on their rank. 
+    While sticking to more classic vampire powers would be possible, i think streeching the definition a bit would allow for more interesting gameplay
+    (Below is a list of possible abilities (numbers are examples, very in theory stuff))
+
+    | Default abilities | All vampires start with access to these |
+    |----------|:-------------|
+    | Blood Drain | After a lenghty do after, the target is fully drained of their blood and is stunned for 10 seconds |
+    | Bat Transformation | Quickly turn into a speedy bat or return back to your form. Being a bat prevents you from using your other abilities, and grants you access to a weak bite attack |
+
+    | Peasant Abilities | Low cost abilities that while useful, lack the impact of the higher ranks |
+    |----------|:-------------|
+    | Whisper | Sends a private message to a selected vampire or infected entity |
+    | Dazzling Kiss | Super short range, pacifies the target for 4 seconds. 10 seconds cooldown |
+    | Telepathy | Teleports an small item you can see to your hand, 20 seconds cooldown |
+    | Shameful Retreat | Instantly uncuffs you at the cost of taking damage, letting out a long range vampire scream and losing access to your abilities and hands for 2 minutes, 
+      5 minutes cooldown |
+    | Razor Nails | Upgrades your unarmed attack, dealing good slash damage. Keep in mind this will cause your target to lose a lot of blood |
+    | Hypersenses | Allows you to temporarily see entities trough walls |
+    | Word Seal (curse) | Choose a word, infected entities will have it censored out of their text messages. Bypassed by writing
+    | Ascension | Ascend to the next rank, can only be bought after meeting X requirements, its a slow process so be sure nobody can see you |
+
+    | Baron Abilities | Stronger yet more expensive, enough to make them a formidable threat |   
+    |----------|:-------------|
+    | Finger Gun | Shoots a finger, dealing some damae and embedding on impact. You can see the finger trough walls |
+
+    | Count Abilities | The peak of vampiric potential |   
+    |----------|:-------------|
+
+  # Combat/Counters
+      Vampires possess a slow constant regen and are highly resistant to being gibbed. To fully kill them, a crew member needs to perform a lenghty do after on the vampire body or heart
+      with a sharp object.
+
+      They possess several weaknesses common of the vampire trope 
+      (big care will have to be placed on these to avoid metagaming)
+
+      # Garlic 
+        (they contain allicin)
+        Vampires: 
+        - Allicin acts as a slow poison to them, dealing bits of holy damage 
+        - Garlic acts like glass shards, dealing a bit of holy damage and slipping the vampire if they are shoeless
+        Crew:
+        - Garlic may be tossed to deal bits of holy damage
+        - Consuming allicin will decrease the speed at which the curse deals damage by a tiny bit
+        
+      # Holy Water
+        Vampires:
+        -Vampires who have been splashed with holy water will have a temporary damage vulnerability, as it weakens their skin. If the holy water enters their body (likely from a spear or
+        arrow, it will act like a poison and deal holy damage)
+        Crew:
+        -Consuming holy water will drastically decrease the speed at which the curse deals damage
+        
+      # Bible
+        Vampires: 
+        -The bible is incapable of healing them, as it will always deal damage instead.
+        Crew: 
+        -The chap may use the bible to bless melee crew weapons, granting them +1 holy damage
+        -The chap may use the bible to bless ammunition, granting it +0.5 holy damage
+        (laser weapons cannot be blessed)
+
+      (Holy damage is unaffected by resistances and can only be healed overtime or trough a few abilities. Making it a big threat to any vampire)
+ 
+    
+    
+      
+    
