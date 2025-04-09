@@ -7,13 +7,16 @@
   the rank of Count. While frowned upon, infighting and backstabbing is common in such conditions, as the honor of being the sole survivor is much higher than a collaborative effort.
   As they gather blood and develop abilities, they will inevitably be disruptive to the station, eventually being hunted.
 
+# Goals 
+  They will always have 2 objectives, to become a Count and to survive
+
 # Vampire Ranks
   They possess a strong hierarchy, which allows them access to their abilities
 
   -Count 
     Highest rank a vampire can achieve in the station, they will never spawn roundstart 
     -access to all abilities
-    -limited to 1 per statio
+    -limited to 1 per station
     -station-wide announcement on its creation
 
   -Baron
@@ -37,6 +40,8 @@ Ranking Up:
    from hiding indefenetely
   -Infected and alive crew will passively grant bloodpoints to the specific vampire
   -The only way to remove the curse is by killing the vampire, any damage done by it quickly healing afterwards.
+  -Entities cannot be infected by multiple curses. 
+  -Vampires can see if an entity is infected by inspecting them at close range, they will be told if its their curse.
 
   -More effects may be developed if the vampire invests in their curse
 
