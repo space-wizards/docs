@@ -54,7 +54,7 @@ Ranking Up:
     -Dead "humanlike" entity = %75
     -Alive animal entity = %50
     -Dead animal entity = %20
-    -Blood outside an entity (medbay bloodbags, poodles) = %5
+    -Blood outside an entity (medbay bloodbags, puddles) = %5
     (amounts highly subject to change)
 
      This is intended to desentivize vampires from outright killing crew.
@@ -88,7 +88,7 @@ Ranking Up:
     |----------|:-------------|
     | Conversion | Converts an infected humanlike entity into a peasant vampire, 10 minutes cooldown |
     | Face Transfiguration | Perform a medium do after to mold your face upon a target of your choosing within range, granting you their name and voice. Doesnt change any other features. 1 minute cooldown |
-    | Soap Transmutation | Transform nearby poodles of blood into blood soap, which can only slip non vampiric entities, 4 minutes cooldown |
+    | Soap Transmutation | Transform nearby puddles of blood into blood soap, which can only slip non vampiric entities, 4 minutes cooldown |
     | Minor Necromancy | Raises a dead animal entity as a loyal zombie, creating a ghost role. Since they are alive because of magical means, they cannot spread romerol. 
       2 minutes cooldown |
     | Finger Gun | Shoots a finger, dealing some damae and embedding on impact. You can see the finger trough walls |
