@@ -4,12 +4,11 @@
 
 # Overview
   Vampires are rarely attracted to the station as a way to increase their social standing in their organization. Draining blood and spreading their curse with the intent of raising to 
-  the rank of Count trough spreading their curse and draining the crew blood. While frowned upon, infighting and backstabbing is common in such conditions, as the honor of being the sole 
-  survivor is much higher than a collaborative effort.
+  the rank of Count. While frowned upon, infighting and backstabbing is common in such conditions, as the honor of being the sole survivor is much higher than a collaborative effort.
   As they gather blood and develop abilities, they will inevitably be disruptive to the station, eventually being hunted.
 
 # Vampire Ranks
-  They posses a strong hierarchy, which allows them access to their abilities
+  They possess a strong hierarchy, which allows them access to their abilities
 
   -Count 
     Highest rank a vampire can achieve in the station, they will never spawn roundstart 
