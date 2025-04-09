@@ -49,7 +49,7 @@ Ranking Up:
     -Dead "humanlike" entity = %75
     -Alive animal entity = %50
     -Dead animal entity = %20
-    -Blood outside an entity (medbay bloodbags, pools) = %5
+    -Blood outside an entity (medbay bloodbags, poodles) = %5
     (amounts highly subject to change)
 
      This is intended to desentivize vampires from outright killing crew.
@@ -70,19 +70,35 @@ Ranking Up:
     | Whisper | Sends a private message to a selected vampire or infected entity |
     | Dazzling Kiss | Super short range, pacifies the target for 4 seconds. 10 seconds cooldown |
     | Telepathy | Teleports an small item you can see to your hand, 20 seconds cooldown |
+    | Minor Illusion | Creates a fake wall, entities may walk trough it freely. It will be destroyed upon taken any damage |
     | Shameful Retreat | Instantly uncuffs you at the cost of taking damage, letting out a long range vampire scream and losing access to your abilities and hands for 2 minutes, 
       5 minutes cooldown |
     | Razor Nails | Upgrades your unarmed attack, dealing good slash damage. Keep in mind this will cause your target to lose a lot of blood |
     | Hypersenses | Allows you to temporarily see entities trough walls |
+    | Night | Toggle off all nearby light making entities, entites like torches are not affected |
     | Word Seal (curse) | Choose a word, infected entities will have it censored out of their text messages. Bypassed by writing
     | Ascension | Ascend to the next rank, can only be bought after meeting X requirements, its a slow process so be sure nobody can see you |
 
     | Baron Abilities | Stronger yet more expensive, enough to make them a formidable threat |   
     |----------|:-------------|
+    | Conversion | Converts an infected humanlike entity into a peasant vampire, 10 minutes cooldown |
+    | Face Transfiguration | Perform a medium do after to mold your face upon a target of your choosing within range, granting you their name and voice. Doesnt change any other features. 1 minute cooldown |
+    | Soap Transmutation | Transform nearby poodles of blood into blood soap, which can only slip non vampiric entities, 4 minutes cooldown |
+    | Minor Necromancy | Raises a dead animal entity as a loyal zombie, creating a ghost role. Since they are alive because of magical means, they cannot spread romerol. 
+      2 minutes cooldown |
     | Finger Gun | Shoots a finger, dealing some damae and embedding on impact. You can see the finger trough walls |
+    | Unholy Bath | Perform a long do after to heal half of your holy damage, 2 minutes cooldown |
+    | Sporadic Blindness (curse) | Infected entities will occasionally go blind for a few seconds |
+    | Guilt (curse) | Infected entities will occasionally be pacified for a few seconds |
+    | Confusion (curse) | Infected entities will gain the pathological liar trait (it will be removed if the curse is lifted) |
 
     | Count Abilities | The peak of vampiric potential |   
     |----------|:-------------|
+    | Announce | Send a station-wide message, similarly to a console. Mostly used for rp. 2 minutes cooldown |
+    | Shriek | Stuns non vampiric entities in a massive aoe around the user for 2 seconds, 5 minutes cooldown |
+    | Necromancy | Raises a dead "humanlike" entity as a loyal zombie, creating a ghostrole. They cant talk and are slow, but have access to their hands. Since they are alive because of magical means, they cannot spread romerol. 
+      5 minutes cooldown |
+    | Foul Finale (curse) | Infected entities will explode on death, animals will cause a smaller explosion (They can hurt you, so be careful!) |
 
   # Combat/Counters
       Vampires possess a slow constant regen and are highly resistant to being gibbed. To fully kill them, a crew member needs to perform a lenghty do after on the vampire body or heart
