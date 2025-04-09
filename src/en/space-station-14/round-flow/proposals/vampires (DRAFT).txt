@@ -91,6 +91,7 @@ Ranking Up:
     | Sporadic Blindness (curse) | Infected entities will occasionally go blind for a few seconds |
     | Guilt (curse) | Infected entities will occasionally be pacified for a few seconds |
     | Confusion (curse) | Infected entities will gain the pathological liar trait (it will be removed if the curse is lifted) |
+    | Ascension | Ascend to the next rank, can only be bought after meeting X requirements, its a slow process and it will alert the station so be sure nobody can see you |
 
     | Count Abilities | The peak of vampiric potential |   
     |----------|:-------------|
@@ -98,6 +99,7 @@ Ranking Up:
     | Shriek | Stuns non vampiric entities in a massive aoe around the user for 2 seconds, 5 minutes cooldown |
     | Necromancy | Raises a dead "humanlike" entity as a loyal zombie, creating a ghostrole. They cant talk and are slow, but have access to their hands. Since they are alive because of magical means, they cannot spread romerol. 
       5 minutes cooldown |
+    | Life Drain | Deals moderate damage to a target within range that you can see, and heals you by a moderate amount. 1 minute cooldown |
     | Foul Finale (curse) | Infected entities will explode on death, animals will cause a smaller explosion (They can hurt you, so be careful!) |
 
   # Combat/Counters
