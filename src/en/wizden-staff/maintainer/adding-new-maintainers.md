@@ -15,12 +15,14 @@ Maintainers represent Space Wizards as staff. Certain requirements must be met b
 
 To add a new Maintainer, a current Maintainer has to nominate the candidate. Once a person has been nominated, the following process should be followed:
 1. A vote will be created in the "Internal" category on the Space Station 14 Discourse, using the appropriate template. This vote will be open for one week, and all Maintainers will be notified of the vote.
-2. During this time, Maintainers should discuss the nomination, raise concerns, and ask any questions they may have. If there is a clear majority of Maintainers in favor or against the nomination, the vote may be closed early.
+2. During this time, Maintainers should discuss the nomination, raise concerns, and ask any questions they may have.
+    - If there is a unanimous vote in favor or against the nomination by the end of day 2 of the vote, it may be closed early.
+        - If this happens, the Lead Maintainer Team will review the vote and decide if it should be closed or remain open for the full week.
     - If there is no clear majority, the vote must remain open for the full week.
     - Concerns about a nominated person must be addressed before the vote may close. This will delay the vote until the concerns are resolved.
     - For a vote to pass, it must have a supermajority (66%) of votes in favor. 
         - Abstain votes are considered neutral. Only votes in favor or against are counted.
-3. At the end of the week, the vote will be closed and the results will be announced. If the vote passes, the person being nominated will be contacted by a Lead Maintainer and asked if they would like to accept the position. If they agree, they may then be added to the Maintainers list.
+3. Once the vote is closed, the results will be announced. If the vote passes, the person being nominated will be contacted by a Lead Maintainer and asked if they would like to accept the position. If they agree, they may then be added to the Maintainers list.
 
 ### Special Maintainer Roles
 
