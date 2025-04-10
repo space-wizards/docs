@@ -101,6 +101,22 @@ Besides the normal xenoborg radio, the mothership has a special radio frequency 
 
 <!-- Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement the feature from this design document. Exact numbers for game balance however are not necessary, as these can be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so. -->
 
+## Round resolution
+
+The objective of the Xenoborgs is to borg a certain percentage of the crew (50% is a good number I believe, but this can be decided later). Once this objective is complete, the evacuation shuttle is called automatically (can't be recalled) but of course the Xenoborgs can still try to borg more people before the round actually ends.
+
+If all the xenoborgs die or are in a crit state, then the mothership core explodes (big explosion, destroys the mothership)
+If the mothership core is destroyed (it explodes, but not a big explosion) and all the xenoborgs explode (not a big explosion)
+
+Major xenoborg win is to complete the objective to borg X% of the crew.
+Minor xenoborg win is to survive with at least a certain numbers of xenoborgs
+Minor crew win is to escape and leave less than a certain ammount of xenoborgs alive
+Major crew win is to destroy the mothership (either killing all the xenoborgs or destroying the core)
+
+The end summary will also tell how much of the crew were borged, and how many xenoborgs were there in the end.
+
+In the Future the Xenoborgs could have custom objectives such as create another core in the station or mess with the Station AI somehow
+
 ## Game Design Rationale
 
 A army of evil robots saying "the flesh is weak, join us" while bashing a poor crewmate to death and dragging them away is certainly chaotic and silly.
