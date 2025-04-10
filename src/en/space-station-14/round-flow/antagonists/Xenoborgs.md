@@ -31,11 +31,11 @@ This concept became famous with [this youtube video](https://youtu.be/3t2AjKa0Yy
 
 ### Admeme
  
-I had a admeme idea about borgs running a shadow factory. I tried running this admeme idea with spar. the idea was fun but it was clear it needed some prototypes to work.
+I had a admeme idea about borgs running a shadow factory. I tried running this admeme idea with sparlight; the idea was fun but it was clear it needed some prototypes to work..
 
 Spar eventually made a version of this admeme using their own borgis, and called it _shadow borgis_.
 
-I finally started coding protos for my idea in the last week of march. and 2 weeks later they are almost complete. Various tests of these protos were done in the main **Wizden** servers and the players had a very positive reaction.
+I finally started coding protos for my idea in the last week of march and 2 weeks later they are almost complete. Various tests of these protos were done in the main **Wizden** servers and the players had a very positive reaction.
 
 Following various requests to add this to the real game, I decided to actually try to add this to the game.
 
@@ -65,9 +65,9 @@ Xenoborgs come in three different castes
 - heavy xenoborg: defensive role, slow, more HP, equipped with lasers
 - scout xenoborg: combat role, fast, equipped with a melee weapon
 
-All xenoborgs have a unique radio frequency which they can all use to communicate with eachother
+All xenoborgs have a unique radio frequency which they can all use to communicate with each other.
 
-All xenoborgs also have a unique access, that is used to unlock them and the doors in the mothership
+All xenoborgs also have a unique ID access, that is used to unlock them and the doors in the mothership.
 
 ### Mothership
 Is the shuttle the xenoborgs spawn in and is where the borging happens.
@@ -105,31 +105,31 @@ Besides the normal xenoborg radio, the mothership has a special radio frequency 
 
 The objective of the Xenoborgs is to borg a certain percentage of the crew (50% is a good number I believe, but this can be decided later). Once this objective is complete, the evacuation shuttle is called automatically (can't be recalled) but of course the Xenoborgs can still try to borg more people before the round actually ends.
 
-If all the xenoborgs die or are in a crit state, then the mothership core explodes (big explosion, destroys the mothership)
-If the mothership core is destroyed (it explodes, but not a big explosion) and all the xenoborgs explode (not a big explosion)
+- If all the xenoborgs die or are in a crit state, then the mothership core explodes (big explosion, destroys the mothership).
+- If the mothership core is destroyed (it explodes, but not a big explosion) and all the xenoborgs explode (not a big explosion).
 
-Major xenoborg win is to complete the objective to borg X% of the crew.
-Minor xenoborg win is to survive with at least a certain numbers of xenoborgs
-Minor crew win is to escape and leave less than a certain ammount of xenoborgs alive
-Major crew win is to destroy the mothership (either killing all the xenoborgs or destroying the core)
+- Major xenoborg win is to complete the objective to borg X% of the crew.
+- Minor xenoborg win is to survive with at least a certain numbers of xenoborgs.
+- Minor crew win is to escape and leave less than a certain ammount of xenoborgs alive.
+- Major crew win is to destroy the mothership (either killing all the xenoborgs or destroying the core).
 
 The end summary will also tell how much of the crew were borged, and how many xenoborgs were there in the end.
 
-In the Future the Xenoborgs could have custom objectives such as create another core in the station or mess with the Station AI somehow
+In the future the Xenoborgs could have custom objectives, such as create another core in the station or mess with the Station AI somehow.
 
 ## Game Design Rationale
 
 A army of evil robots saying "the flesh is weak, join us" while bashing a poor crewmate to death and dragging them away is certainly chaotic and silly.
 
-It is always enjoyable to play as murderbone antag, so playing as xenoborg is fun. since you are a murderous cyborg you get to roleplay as such and be a deranged borg obsessed with helping the "mother" or saying all organics are weak and the steel is stronger, only to die to a salvager with a lecter.
+It is always enjoyable to play as murderbone antag, so playing as xenoborg is fun. Since you are a murderous cyborg you get to roleplay as such and be a deranged borg obsessed with helping the "mother" or saying all organics are weak and the steel is stronger, only to die to a salvager with a Lecter.
 
-The crew can have fun playing against the xenoborgs as they have to think outside the box when dealing with silicon mobs (something that is not very freequent in the game currently), chems can try to make EMP grenades, people can use flashes to blind the borgs. and since they are cyborgs you can talk with them once they are down.
+The crew can have fun playing against the xenoborgs as they have to think outside the box when dealing with silicon mobs (something that is not very freequent in the game currently), chems can try to make EMP grenades, people can use flashes to blind the borgs, and since they are cyborgs you can talk with them once they are down.
 
 If you die to them (which will most likely happen if you are a poor cargo tech going alone to the ATS to sell that bounty) you can still have hopes to be borged and have fun as a xenoborg now against the crew you used to be part of.
 
 As the mothership you get to play a unique RTS game where you can control the mothership and choose which caste of xenoborgs to make, but you can't control the xenoborgs themselves, you have to give orders and hope they manage to follow them as you expect them to (_they won't_). 
 
-Xenoborgs start quite weak and without good organization and some luck they probably wont take over the station. In fact depending on how well the crew plays is very likely the xenoborgs will stall and stop growing or will straight up lose.
+Xenoborgs start quite weak and without good organization and some luck they probably won't take over the station. In fact depending on how well the crew plays is very likely the xenoborgs will stall and stop growing or will straight up lose.
 
 However their threat grows as more people they borg, so as the round goes on and if they keep getting lost souls, they have the potencial to become a huge issue to the station.
 
@@ -137,9 +137,9 @@ As borgs with specific laws and being instantly valid they are very heavy discou
 
 They are instantly visible as a strange cyborg, examining them will make it clear that they are not friendly and if you don't figure out they mean harm, maybe that cyborg shooting lasers at you will help you figure it out.
 
-As they are essentially cyborgs with special laws and modules, any know how of normal cyborgs transfers, both to players playing as xenoborgs but as crew fighting the xenoborgs. The only things that might need specific instruction are the unique radios they use. The mothership might also need some specific instruction given how weird their role is as a sentient lathe with AI like vision
+As they are essentially cyborgs with special laws and modules, any know how of normal cyborgs transfers, both to players playing as xenoborgs but as crew fighting the xenoborgs. The only things that might need specific instruction are the unique radios they use. The mothership might also need some specific instruction given how weird their role is as a sentient lathe with AI-like vision.
 
-If you lack equipment or they get you via surprise attack and you are alone, is very likely you will die with near to no option on counter play. but in that case, is most certainly you will be able to play as a xenoborg and still have fun and enjoy the round. If you are aware of xenoborgs in the station and are well prepared you can have meaningful fights where the result is not certain.
+If you lack equipment or they get you via surprise attack and you are alone, it's very likely you will die with near to no option or counter-play. But in that case, it's most certainly you will be able to play as a xenoborg and still have fun and enjoy the round. If you are aware of xenoborgs in the station and are well prepared you can have meaningful fights where the result is not certain.
 
 <!--
 Consider addressing:
@@ -152,11 +152,11 @@ Consider addressing:
 
 ## Roundflow & Player interaction
 
-It should be a rare roundstart subgame mode. round start to give them the proper time to grow and become a issue, and if they grow they will affect the round. given that they might lose at the start it should be a subgame mode and accompanied by other antags that they can have fun interactions with.
+It should be a rare roundstart subgame mode; round start to give them the proper time to grow and become a issue, and if they grow they will affect the round. Given that they might lose at the start it should be a subgame mode and accompanied by other antags that they can have fun interactions with.
 
 I wish players playing xenoborg try to be strategic and stealthy in the beginning so they can actually grow and become a threat to the station. This is enforced by the fact that they start with low numbers and are not very strong alone and they are instantly valid and their future threat can encourage the crew to arm if they manage to get discovered.
 
-It will most likely start interacting with cargo, as salvagers and cargo techs are the best starting targets. As they grow and get more people they will be discovered and will have more contact with security but will affect medbay, since they will be healing anyone that is injured but not taken away by borgs, they can affect science as they will try to make weapons and flashes to deal with the borgs, and they will have many MMIs with brains to borg if they destroy xenoborgs. the xenoborgs might also decide to sabotage the station affecting the engineering department.
+It will most likely start interacting with cargo, as salvagers and cargo techs are the best starting targets. As they grow and get more people they will be discovered and will have more contact with security but will affect medbay, since they will be healing anyone that is injured but not taken away by borgs, they can affect science as they will try to make weapons and flashes to deal with the borgs, and they will have many MMIs with brains to borg if they destroy xenoborgs. The xenoborgs might also decide to sabotage the station affecting the engineering department.
 
 <!--
 Consider addressing:
@@ -173,7 +173,7 @@ Rule issues that might arise from the Xenoborgs
 
 I don't think these issues are going to be frequent however.
 
-There is no mechanical way to enforce following silicon laws, however I believe their laws are very direct and should not allow very weird and different interpretations (which is not the point of this antag)  
+There is no mechanical way to enforce following silicon laws, however I believe their laws are very direct and should not allow very weird and different interpretations (which is not the point of this antag).
 
 <!--
 - Does this feature introduce any new rule enforcement challenges or additional workload for admins?
