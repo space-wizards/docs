@@ -2,7 +2,7 @@
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
-| Bhijn & Myr | Bhijn & Myr | :information_source: Open PR | TBD |
+| Bhijn & Myr | Bhijn & Myr | :information_source: Open PR | https://github.com/space-wizards/space-station-14/pull/36483 |
 
 ## Overview
 
