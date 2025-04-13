@@ -553,7 +553,7 @@ Field deltas add a little overhead for tracking field changes, but this is usual
 
 ### Using TimeSpans
 
-You should always use `TimeSpan` over `float` for defining static periods of time, such as intervals.
+You should always use `TimeSpan` over `float` for defining static periods of time, such as intervals. Update loops should compare against `CurTime` instead of accumulating `frametime`.
 
 ### Handling paused entities
 
