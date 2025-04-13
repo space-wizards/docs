@@ -10,7 +10,7 @@ OAuth apps are tied to an SS14 account and can be created [here](https://account
 
 Some information you may want to know (this is repeated on the app management page):
 * Authority: https://account.spacestation14.com/
-* OIDC config: https://hub.spacestation14.com/.well-known/openid-configuration 
+* OIDC config: https://account.spacestation14.com/.well-known/openid-configuration
 * Allowed authorization flow: Authorization code (implicit etc is not allowed)
 * Available scopes: `openid`, `profile`, `email`.
 
