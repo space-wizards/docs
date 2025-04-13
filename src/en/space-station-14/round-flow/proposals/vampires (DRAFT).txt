@@ -180,7 +180,7 @@ Ranking Up:
         -The chap may use the bible to bless ammunition, granting it +0.5 holy damage
         (laser weapons cannot be blessed)
 
-      (Holy damage is unaffected by resistances and can only be healed overtime or trough a few abilities. Making it a big threat to any vampire)
+      (Holy damage is unaffected by resistances and can only be healed trough a few abilities. Making it a big threat to any vampire)
  
     
     
