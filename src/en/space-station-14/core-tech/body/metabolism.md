@@ -1,9 +1,14 @@
+# Metabolism
 
-#### MetabolismGroupEntry
+Covers the joys of eating and drinking, and - more importantly - doing things with solutions that affect each spessman's health and well-being.
 
-This defines a particular metabolism group that the metabolizer handles - and it can handle them better or worse than usual too. 
+## Design
 
-### MetabolizerComponent
+## Engineering
+
+### Components
+
+#### MetabolizerComponent
 
 This server-side organ component marks an organ as being a metabolizer - it causes an effect on the mob via consuming a certain amount of chemicals from a solution - usually the chemstream of the mob.
 
@@ -11,7 +16,7 @@ Like the BloodStreamComponent, it has a metabolism tick-rate.
 
 A Metabolizer can be marked as deleting chemicals that otherwise don't do anything when metabolized - this is usually on the kidneys organ - and otherwise processes metabolizable chemicals (up to a certain amount) each tick based on its list of metabolism groups it supports. Examples of these groups include "medicine", "poison" and "food".
 
-### BloodstreamComponent
+#### BloodstreamComponent
 
 This is a server-side component that defines that a mob has a bloodstream. Despite being a Body component, this is actually for any mob that has blood, including decidedly non-humanoid mobs like space dragons. 
 
@@ -23,7 +28,13 @@ This component essentially covers three things:
 
 The difference between "bloodstream" and "chemstream" is a common cause of confusion. The "bloodstream" exists as the blood of the mob - losing too much blood causes damage, blood is replenished over time. The "chemstream" is the actual flow of chemicals through the body; blood does not actually convey medicine to the heart to be processed.
 
-### BloodstreamSystem
+#### MetabolismGroupEntry
+
+This defines a particular metabolism group that the metabolizer handles - and it can handle them better or worse than usual too. 
+
+### Systems
+
+#### BloodstreamSystem
 
 This is a server EntitySystem and covers how bloodstreams, chemstreams, bloodloss, bleeding, replenishing blood and regaining bloodloss damage all work. 
 
@@ -45,10 +56,12 @@ Otherwise, the Bloodstream behaviours are typical - adding and removing blood an
 
 Damage inflicted by this system is typed as bloodloss.
 
-### MetabolizerSystem
+#### MetabolizerSystem
 
 This is a server-side system that does one principle behaviour - attempt to metabolize chemicals from a Solution into an effect. Like similar systems this happens on a low tickrate, usually once every few seconds.
 
 Metabolizing chemicals works by first stripping out unmetabolizable chemicals in the Solution (if the metabolizer can do that) and then iterating over every chemical in the Solution, up to the maximum the Metabolizer is able to metabolize in that tick. If the mob is alive, the chemical' effects are applied. These effects are ReagentEffectEntries that are defined on the reagent chemical itself.
 
 Even if the mob is dead, some of the chemical will be removed. The amount removed is dependent on the reagent's ReagentEffectEntry metabolism rate and the metabolism rate modifier that chemical's metabolism group has on the Metabolizer (usually just a x1 multiplier).
+
+## YAML

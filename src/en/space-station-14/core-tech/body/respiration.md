@@ -1,10 +1,16 @@
+# Respiration
 
-### LungsComponent
+## Design
+
+## Engineering
+
+### Components
+
+#### LungsComponent
 
 A server-side organ component that covers managing the solution of Air that the organ will contain, and tags an organ as being lungs.
 
-
-### RespiratorComponent
+#### RespiratorComponent
 
 This does the actual "lungs" activity for a given mob. As a reminder, LungsComponent is a component that controls the solution of Air that a set of lungs currently contains. This is a server-side component that actually breathes. Like BloodstreamComponent, this is actually a mob component - most mobs respire.
 
@@ -12,14 +18,15 @@ The Respirator works by tracking the "Saturation" of the Respirator - this refle
 
 Respirator also controls what emote plays when someone gasps for air, and if someone is currently breathing in or out.
 
+### Systems
 
-### LungSystem 
+#### LungSystem 
 
 Lungs covers a small selection of lung-related behaviours, including some atmos behaviours that control how internals work.
 
 Due to the way that the overarching systems have been coded, LungSystem's job outside of some token internals orchestration is directly driven from RespiratorSystem (see below).
 
-### RespiratorSystem
+#### RespiratorSystem
 
 This is a server-side system with a low tickrate that covers how mobs respire - i.e. breathe in and out.
 
@@ -34,3 +41,6 @@ Likewise, regaining Saturation stops suffocation and begins to restore damage.
 Suffocating is not immediate - it takes two failures to breathe before suffocation causes damage. 
 
 Damage inflicted by this system is typed as airloss.
+
+## YAML
+
