@@ -1,10 +1,9 @@
-(Draft, still very very unfinished)
 # Vampires
-- major antagonist
+- Lone Antagonist
 
 # Overview
   Vampires are rarely attracted to the station as a way to increase their social standing in their organization. Draining blood and spreading their curse with the intent of raising to 
-  the rank of King/Queen. While frowned upon, infighting and backstabbing is common in such conditions, as the honor of being the sole survivor is much higher than a collaborative effort.
+  the rank of King/Queen. While frowned upon, infighting and backstabbing is common in such conditions.
   As they gather blood and develop abilities, they will inevitably be disruptive to the station, eventually being hunted.
 
 # Goals 
@@ -16,6 +15,8 @@
   "They are nobles, treacherous selfish creatures by nature, reborn into decadence as they wish to forget their times of peasantry. Thoughts of plotting and acquisition always present, not even their won kings be safe from their greed"
   This may change depending on how viable it actually is, but currently they are intended to be "competing" antag. As in their objectives are gonna crash and its their choice if they wanna risk their overall faction survival
   in exchange of more personal power. You are allowed to try and kill the current King/Queen to usurp their place.
+
+  They dont wanna kill people if they can avoid it, infected crew members allows them to unlock more abilities faster, and are required to increase their rank 
 
 # Vampire Ranks
   They possess a strong hierarchy, which allows them access to their abilities
