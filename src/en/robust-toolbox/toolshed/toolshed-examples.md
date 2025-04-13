@@ -1,6 +1,6 @@
 # Toolshed Examples
 
-This guide covers some examples of Toolshed commands. Note that several of these commands & referenced C# types are specific to SS14, but they still provide a good overview of how to use Toolshed for other forks/games.
+This guide covers some examples of Toolshed commands. Note that several of these commands & referenced C# types are specific to SS14, but they still provide a good overview of how to use Toolshed for other games.
 
 ## Interacting with entities
 
