@@ -74,9 +74,9 @@ Ranking Up:
 
 # Vampiric Energy
     Every vampire has a Vampiric Energy meter, which basically works like mana, passively regenerating and being consumed to use abilities. As they progress trough the ranks the max amount they can hold at a time increases.
-      -King/Queen: 200
-      -Count/Countess: 150
-      -Baron/Baroness: 100
+      -King/Queen: 200, x1.4 energy regen
+      -Count/Countess: 150, x1.2 energy regen
+      -Baron/Baroness: 100, x1 energy regen
     It would be shown trough a small ui indicator on top of the health status. Most likely a red orb, similar to how diablo games show the player hp in vibes
 
 # Ability Shop (i need to think of a better name)
@@ -132,20 +132,21 @@ Ranking Up:
     | Announce | Send a station-wide message, similarly to a console. Mostly used for rp | 2 minutes cooldown, 25 ve |
     | Unchain | Bestowes a peasant the rank of Baron, evolving the form to something much more noble | 5 minutes cooldown (this will unpacify them), 100 ve |
     | Shriek | Stuns non vampiric entities in a massive aoe around the user for 2 seconds | 5 minutes cooldown, 50 ve |
+    | Make Way | Bolts open all nearby doors and removes access requirements from consoles | 20 seconds cooldown, 40 ve | 
     | Necromancy | Raises a dead "humanlike" entity as a loyal zombie, creating a ghostrole. Since they are alive because of magical means, they cannot spread romerol | 5 minutes cooldown, 60 ve |
     | Life Drain | Deals moderate damage to a target within range that you can see, and heals you by a moderate amount | 1 minute cooldown, 50 ve |
     | Foul Finale (curse) | Infected entities will explode on death, animals will cause a smaller explosion (They can hurt you, so be careful!) |
 
 # Biology
     Traits (includes peasants)
-    -Vampires go hungry much slower than regular crew, but they can only sustain themselves trough blood, which will always grant the same amount of substenance regardless of its origin. Any other food will inducing voimiting
+    -Vampires go hungry much slower than regular crew, but they can only sustain themselves trough blood, which will always grant the same amount of substenance regardless of its origin. Any other food will induce voimiting
     -They do not need to breath
     -Their bodies don't rot 
     -Small cold resistance 
     -Small fire vulnerability
 
     Their bodies develop helpful passives as their curses takes further hold of it 
-    -King/Queen:       regen + %25 resistances buff + small speed buff + space immunity
+    -King/Queen:       regen + %25 resistances buff + small speed buff 
     -Count/Countess:   regen + %15 resistances buff + small speed buff
     -Baron/Baroness:   regen + %10 resistances buff
     -Peasant:          regen (stops working when dead, no need to stab their heart)
