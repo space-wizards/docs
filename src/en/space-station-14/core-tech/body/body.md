@@ -2,23 +2,21 @@
 
 I am the BodySystem, Container of Containers! Look upon my works, ye spessmen, and despair.
 
-**Last Update** X of X, 20XX
-
 # Design
 
-TODO: This is the most important bit of each file that covers the current implementation at a DESIGNER level - how the systems are explained to someone DESIGNING the game.
+Body is the stucture which defines and controls the behaviour of many kinds of mobs. Each Body contains a set of entities inside itself - its body parts and organs, and these control what the Body actually does in-game.
 
 ## Body Composition
+
+Bodies are built at runtime out of BodyPrototypes. These are specifications for how a given Body is structured. For example, a human has a BodyPrototype that defines that it has a human torso, a head, arms, legs, all the organs inside itself, and so on.
+
+When a Body is spawned, the BodyPrototype is consulted. As such, when defining monsters and new species, a BodyPrototype ends up being defined somewhere.
+
+Bodies do not by themselves make a creature alive. A BodyPrototype will still be used to spawn random dead corpses.
 
 ## Body Decomposition
 
 See "Damage, Stunning, Rotting and Gibbing"
-
-## Respiration
-
-## Metabolism
-
-## Thermal Regulation
 
 # Engineering
 
@@ -56,55 +54,9 @@ This is an enum with three values - none, left and right. This has limited inter
 
 This is an enum of types of BodyPart - things like "Torso", "Arm" and "Leg". Outside of composing Bodies, this doesn't tend to have a lot of uses, although it matters a great deal when suiciding using a microwave, which will rip every head off of the Body and cook it inside the microwave.
 
-### BloodstreamComponent
-
-This is a server-side component that defines that a mob has a bloodstream. Despite being a Body component, this is actually for any mob that has blood, including decidedly non-humanoid mobs like space dragons. 
-
-This component essentially covers three things:
-
-1. The metabolism rate of the bloodstream - i.e. how many seconds between bloodstream ticks occur.
-2. How bleeding works for the creature - how much they bleed, how much blood can they lose before taking bloodloss damage, how much blood they regain if they're not bleeding, and so on.
-3. How the "bloodstream" and "chemstream" internal Solutions this Bloodstream works with work. This includes how much volume each stream has, what the names of the two solutions are, and what the name of the temporary solution that blood goes into before it pools into a puddle. 
-
-The difference between "bloodstream" and "chemstream" is a common cause of confusion. The "bloodstream" exists as the blood of the mob - losing too much blood causes damage, blood is replenished over time. The "chemstream" is the actual flow of chemicals through the body; blood does not actually convey medicine to the heart to be processed.
-
 ### BrainComponent
 
 A server-side organ component that just tags that an organ is a brain. This is used to allow a brain to be associated with a player's ghost, which is handy when the brain is pulled out of a mob's head and put in a borg. The brain itself does not track this association.
-
-### LungsComponent
-
-A server-side organ component that covers managing the solution of Air that the organ will contain, and tags an organ as being lungs.
-
-### MetabolizerComponent
-
-This server-side organ component marks an organ as being a metabolizer - it causes an effect on the mob via consuming a certain amount of chemicals from a solution - usually the chemstream of the mob.
-
-Like the BloodStreamComponent, it has a metabolism tick-rate.
-
-A Metabolizer can be marked as deleting chemicals that otherwise don't do anything when metabolized - this is usually on the kidneys organ - and otherwise processes metabolizable chemicals (up to a certain amount) each tick based on its list of metabolism groups it supports. Examples of these groups include "medicine", "poison" and "food".
-
-#### MetabolismGroupEntry
-
-This defines a particular metabolism group that the metabolizer handles - and it can handle them better or worse than usual too. 
-
-### RespiratorComponent
-
-This does the actual "lungs" activity for a given mob. As a reminder, LungsComponent is a component that controls the solution of Air that a set of lungs currently contains. This is a server-side component that actually breathes. Like BloodstreamComponent, this is actually a mob component - most mobs respire.
-
-The Respirator works by tracking the "Saturation" of the Respirator - this reflects how ogygenated/nitrated/etc the Respitaror mob is as a whole. Insufficient Saturation causes suffocation, which if not resolved quickly causes damage. When suffocating ceases, the Respirator will slowly heal the damage inflicted. 
-
-Respirator also controls what emote plays when someone gasps for air, and if someone is currently breathing in or out.
-
-### StomachComponent
-
-A server-side component that controls the digestion Organ. This component works with a specific Solution - representing the food and drink that the Body has ingested - and, after a lengthy wait for digestion (by default about 20 seconds) digests food and dumps the reagents into (by default) the chemstream of the mob. Like other tick-based organs, this controls its own tickrate. Stomachs have an EntityWhitelist of things they are capable of eating; this is what leads to the confusing design of "the stomach prevents moths eating pills", and other such complaints.
-
-### ThermalRegulatorComponent
-
-A server-side component that, despite being labelled an Organ component, is once again actually a mob component - most biological mobs will attempt to keep themselves at a given temperature.
-
-This component covers the metabolism rate of this pseudo-organ, the causes of heat (metabolism, shivering), ways to lose heat (radiation, sweating), the target body heat, and how far the mob's body heat can diverge before regulation kicks in.
 
 ## Prototypes
 
@@ -144,77 +96,11 @@ This file is concerned with adding and removing Organs from Bodies. Of note, ins
 
 The server implementation of SharedBodySystem overrides a small amount of its shared parent's behaviour. It's this system that allows a ghost to eject themselves from a dead body on a movement input, and properly handles instantiating gibbed organs (preventing spawning them for a mob that is actually in the process of being deleted, for example).
 
-### BloodstreamSystem
-
-This is a server EntitySystem and covers how bloodstreams, chemstreams, bloodloss, bleeding, replenishing blood and regaining bloodloss damage all work. 
-
-Bloodstreams operate on a low tickrate. Each tick, the amount of blood in the bloodstream is assessed. If there's some blood missing, a small amount is regenerated in (meaning that the Bloodstream stands in for a spleen organ). If there is not enoug blood in the bloodstream (for example because of the bleeding status effect), the mob the Bloodstream is on will be damaged. In addition, the mob suffers drunkenness effects and stuttering. 
-
-When a mob's bleeding, this update loop also slows the bleeding and applies the removal of blood.
-
-Bleeding itself is generally caused as an EntityEffect.
-
-Blood that leaves the body due to bleeding pools into a temporary solution on the Bloodstream. This temporary solution only can contain a small amount of chemicals before overflowing - when it does, the solution is converted into a blood puddle, and a small amount of the contents of the Bloodstream's chemstream are also leaked into the puddle.
-
-Bloodstreams, when the mob they are attached to gets damaged, may cause extra damage to the mob. Losing blood on damage is possible - e.g. a slashing attack from a sword - and bloodloss can cause immediate extra damage, and can sometimes "critical hit", causing extra blood to be lost. 
-
-Bloodstreams also can cauterize wounds - it's how a tider can stop bleeding by touching a lightbulb.
-
-The Bloodstream is responsible for dumping out the contents of the bloodstream and chemstream when a mob gets gibbed.
-
-Otherwise, the Bloodstream behaviours are typical - adding and removing blood and chemicals from the bloodstream and chemstream, modifying the amount of bleeding, outright changing the blood reagent associated with a mob (for example, from normal blood to zombie blood), and setting up blood DNA.
-
-Damage inflicted by this system is typed as bloodloss.
-
 ### BrainSystem
 
 The BrainComponent is a simple component that flags that an Organ is a brain. Likewise, its behaviour in its server-side system is simple - when the brain is added or removed from a Body, it handles moving the associated mind of the brain (which will always have a MindContainer, as this code demands) from the old entity to the new one. An obvious place this is used is when a person is gibbed - their mind is tranferred from the gibbed body to the brain - and then when that brain is put into a borg - the mind is first translated into a MMI and then the borg entity.
 
 Entertainingly, anything with a BrainComponent is not allowed to point at anything.
-
-### LungSystem 
-
-Lungs covers a small selection of lung-related behaviours, including some atmos behaviours that control how internals work.
-
-Due to the way that the overarching systems have been coded, LungSystem's job outside of some token internals orchestration is directly driven from RespiratorSystem (see below).
-
-### MetabolizerSystem
-
-This is a server-side system that does one principle behaviour - attempt to metabolize chemicals from a Solution into an effect. Like similar systems this happens on a low tickrate, usually once every few seconds.
-
-Metabolizing chemicals works by first stripping out unmetabolizable chemicals in the Solution (if the metabolizer can do that) and then iterating over every chemical in the Solution, up to the maximum the Metabolizer is able to metabolize in that tick. If the mob is alive, the chemical' effects are applied. These effects are ReagentEffectEntries that are defined on the reagent chemical itself.
-
-Even if the mob is dead, some of the chemical will be removed. The amount removed is dependent on the reagent's ReagentEffectEntry metabolism rate and the metabolism rate modifier that chemical's metabolism group has on the Metabolizer (usually just a x1 multiplier).
-
-### RespiratorSystem
-
-This is a server-side system with a low tickrate that covers how mobs respire - i.e. breathe in and out.
-
-Similar to other Body systems this runs off a metabolism tick rate. This tickrate determines the opportunities for a mob to breathe in and out - each attempt is either one or the other, and it switches each time.
-
-When breathing in, some atmosphere is transferred from the air to the lungs, or from the lungs to the air when exhaling. Air that enters the lungs is then converted into the Solution the lungs store. The Respirator is directly tied into using Lungs to actually store the Air it breathes in - it can use multiple pairs of lungs, and the conversion of atmosphere to Solution is done by the Lungs on behalf of the Respirator.
-
-Failing to breathe in causes a loss of Saturation. When the Respitator's Saturation drops below a critical level, the Respirator start suffocating, dumping airloss damage into the mob.
-
-Likewise, regaining Saturation stops suffocation and begins to restore damage.
-
-Suffocating is not immediate - it takes two failures to breathe before suffocation causes damage. 
-
-Damage inflicted by this system is typed as airloss.
-
-### StomachSystem
-
-This server-side EntitySystem covers the digestion system. 
-
-Like other Organs this runs on a low tick rate. On each update tick, each chemical in the stomach's Solution is assessed. The StomachComponent itself keeps track of the total time each reagent has been inside the stomach. Once a reagent  has hit its digestion time - by default 20 seconds - the reagent gets placed into the Body's mob's chemstream.
-
-The other role of the StomachSystem is to control if a Food or Drink item can actually be ingested. The Stomach has a SpecialDigestible EntityWhitelist, which allows tags to filter what the stomach is capable of eating. This reflects that stomachs, not some mouth organ, controls what a mob can eat.
-
-### ThermalRegulatorSystem
-
-This server-side EntitySystem is the organ-like system for allowing mobs to try and maintain their preferred body temperature. 
-
-Each tick of the system, each mob with the ThermalRegulatorComponent adds a small amount of heat to its entity that reflects its metabolism. After this, will check to see if it is too hot or too cold - if its actual temperature is too far away from its desired temperature - coverned by being outside of the value of its ideal temperature plus or minus its thermal reglation temperature threshold, a value set on the mob's ThermalRegulatorComponent. If it's too high, the mob will sweat, dropping its temperature slightly. If it's too cold, it shivers, raising its temperature further.
 
 ## YAML
 
