@@ -4,35 +4,45 @@
 
 # Overview
   Vampires are rarely attracted to the station as a way to increase their social standing in their organization. Draining blood and spreading their curse with the intent of raising to 
-  the rank of Count. While frowned upon, infighting and backstabbing is common in such conditions, as the honor of being the sole survivor is much higher than a collaborative effort.
+  the rank of King/Queen. While frowned upon, infighting and backstabbing is common in such conditions, as the honor of being the sole survivor is much higher than a collaborative effort.
   As they gather blood and develop abilities, they will inevitably be disruptive to the station, eventually being hunted.
 
 # Goals 
   They will always have 2 objectives, to become a Count and to survive
 
+# Vibes
+  This may change depending on how viable it actually is, but currently they are intended to be "competing" antag. As in their objectives are gonna crash and its their choice if they wanna risk their overall faction survival
+  in exchange of more personal power. You are allowed to try and kill the current King/Queen to usurp their place, 
+
 # Vampire Ranks
   They possess a strong hierarchy, which allows them access to their abilities
 
-  -Count 
-    Highest rank a vampire can achieve in the station, they will never spawn roundstart 
+  -King/Queen 
+    Highest rank attainable in the station, the peak of their potential. Their rule often ended by the hands of their fellow vampires
     -access to all abilities
     -limited to 1 per station
     -station-wide announcement on its creation
 
-  -Baron
-    Middle rank, vampires will spawn at this rank on their unique gamemode
+  -Count/Countess
+    Middle rank, granted to access to more lethal abiltiies. One step away from their goal
     -access to level 2 and below abilities
 
-  -Peasant 
-    Lowest rank, converted crew or mid-round vampires. Desperate to try and attain nobility
+  -Baron/Baroness
+    Lowest nobility rank, Vampires will spawn in this rank with mostly access to utility abilities
     -access to level 1 abilities
-    -cant make new vampires
+
+  -Peasant (basically thralls)
+    Barely a vampire, mere mortals granted mercy from the curse at the cost of their freedom. Desperate to attain nobility
+    -access to blood drain only
+    -pacified towards higher rank vampires
+    -they cannot spread the infection
+    -easy to identify
 
 Ranking Up:
   Vampires will have to drain blood and infect X amount of people before they can perform a lenghtly do after to transform. Highly vulnerable during this state, it should only be done in secrecy
 
 # Vampire Curse
-  The curse works like a disease and each vampire possesses their own unique strain of it, blood drain and multiple abilities will apply it to crew members.
+  The curse works like a disease and each vampire (excluding peasants) possesses their own unique strain of it, blood drain and multiple abilities will apply it to crew members.
 
   Effects: 
   -The curse is always lethal, it will very slowly deal unhealable damage. Consumption of holy water can help slow it down even further.
@@ -70,7 +80,7 @@ Ranking Up:
     | Blood Drain | After a lenghty do after, the target is fully drained of their blood and is stunned for 10 seconds |
     | Bat Transformation | Quickly turn into a speedy bat or return back to your form. Being a bat prevents you from using your other abilities, and grants you access to a weak bite attack |
 
-    | Peasant Abilities | Low cost abilities that while useful, lack the impact of the higher ranks |
+    | level 1 Abilities | Low cost abilities that while useful, lack the impact of the higher ranks |
     |----------|:-------------|
     | Whisper | Sends a private message to a selected vampire or infected entity |
     | Dazzling Kiss | Super short range, pacifies the target for 4 seconds. 10 seconds cooldown |
@@ -84,9 +94,9 @@ Ranking Up:
     | Word Seal (curse) | Choose a word, infected entities will have it censored out of their text messages. Bypassed by writing
     | Ascension | Ascend to the next rank, can only be bought after meeting X requirements, its a slow process so be sure nobody can see you |
 
-    | Baron Abilities | Stronger yet more expensive, enough to make them a formidable threat |   
+    | level 2 Abilities | Stronger yet more expensive, enough to make them a formidable threat |   
     |----------|:-------------|
-    | Conversion | Converts an infected humanlike entity into a peasant vampire, 10 minutes cooldown |
+    | Conversion | Converts an infected humanlike entity into a loyal peasant, 10 minutes cooldown |
     | Face Transfiguration | Perform a medium do after to mold your face upon a target of your choosing within range, granting you their name and voice. Doesnt change any other features. 1 minute cooldown |
     | Soap Transmutation | Transform nearby puddles of blood into blood soap, which can only slip non vampiric entities, 4 minutes cooldown |
     | Minor Necromancy | Raises a dead animal entity as a loyal zombie, creating a ghost role. Since they are alive because of magical means, they cannot spread romerol. 
@@ -98,7 +108,7 @@ Ranking Up:
     | Confusion (curse) | Infected entities will gain the pathological liar trait (it will be removed if the curse is lifted) |
     | Ascension | Ascend to the next rank, can only be bought after meeting X requirements, its a slow process and it will alert the station so be sure nobody can see you |
 
-    | Count Abilities | The peak of vampiric potential |   
+    | level 3 Abilities | The peak of vampiric potential |   
     |----------|:-------------|
     | Announce | Send a station-wide message, similarly to a console. Mostly used for rp. 2 minutes cooldown |
     | Shriek | Stuns non vampiric entities in a massive aoe around the user for 2 seconds, 5 minutes cooldown |
@@ -106,6 +116,20 @@ Ranking Up:
       5 minutes cooldown |
     | Life Drain | Deals moderate damage to a target within range that you can see, and heals you by a moderate amount. 1 minute cooldown |
     | Foul Finale (curse) | Infected entities will explode on death, animals will cause a smaller explosion (They can hurt you, so be careful!) |
+
+# Biology
+    Traits (includes peasants)
+    -Vampires go hungry much slower than regular crew, but they can only sustain themselves trough blood, which will always grant the same amount of substenance regardless of its origin. Any other food will inducing voimiting
+    -They do not need to breath
+    -Their bodies don't rot 
+    -Small cold resistance 
+    -Small fire vulnerability
+
+    Their bodies develop helpful passives as their curses takes further hold of it 
+    -King/Queen:       regen + %25 resistances buff + small speed buff + space immunity
+    -Count/Countess:   regen + %15 resistances buff + small speed buff
+    -Baron/Baroness:   regen + %10 resistances buff
+    -Peasant:          regen
 
   # Combat/Counters
       Vampires possess a slow constant regen and are highly resistant to being gibbed. To fully kill them, a crew member needs to perform a lenghty do after on the vampire body or heart
