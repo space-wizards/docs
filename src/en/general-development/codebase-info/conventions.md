@@ -576,7 +576,7 @@ These attributes should **always** be used for `DataField` `TimeSpan` properties
 public sealed partial class CooldownComponent : Component
 {
     [DataField, AutoPausedField]
-    public TimeSpan Cooldown;
+    public TimeSpan CooldownEnd;
 
     [DataField, AutoPausedField]
     public TimeSpan? OptionalTimer;
