@@ -8,7 +8,9 @@
   As they gather blood and develop abilities, they will inevitably be disruptive to the station, eventually being hunted.
 
 # Goals 
-  They will always have 2 objectives, to become a Count and to survive
+  They will always have 2 objectives
+  -Become a King/Queen
+  -Survive
 
 # Vibes
   "They are nobles, treacherous selfish creatures by nature, reborn into decadence as they wish to forget their times of peasantry. Thoughts of plotting and acquisition always present, not even their won kings be safe from their greed"
