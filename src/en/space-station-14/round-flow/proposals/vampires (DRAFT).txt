@@ -148,7 +148,6 @@ Ranking Up:
         - Allicin acts as a slow poison to them, dealing bits of holy damage 
         - Garlic acts like glass shards, dealing a bit of holy damage and slipping the vampire if they are shoeless
         Crew:
-        - Garlic may be tossed to deal bits of holy damage
         - Consuming allicin will decrease the speed at which the curse deals damage by a tiny bit
         
       # Holy Water
