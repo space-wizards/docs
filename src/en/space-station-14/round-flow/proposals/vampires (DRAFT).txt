@@ -11,8 +11,9 @@
   They will always have 2 objectives, to become a Count and to survive
 
 # Vibes
+  "They are nobles, treacherous selfish creatures by nature, reborn into decadence as they wish to forget their times of peasantry. Thoughts of plotting and acquisition always present, not even their won kings be safe from their greed"
   This may change depending on how viable it actually is, but currently they are intended to be "competing" antag. As in their objectives are gonna crash and its their choice if they wanna risk their overall faction survival
-  in exchange of more personal power. You are allowed to try and kill the current King/Queen to usurp their place, 
+  in exchange of more personal power. You are allowed to try and kill the current King/Queen to usurp their place.
 
 # Vampire Ranks
   They possess a strong hierarchy, which allows them access to their abilities
@@ -111,6 +112,7 @@ Ranking Up:
     | level 3 Abilities | The peak of vampiric potential |   
     |----------|:-------------|
     | Announce | Send a station-wide message, similarly to a console. Mostly used for rp. 2 minutes cooldown |
+    | Unchain | Bestowes a peasant the rank of Baron, evolving the form to something much more noble. 5 minutes cooldown (this will unpacify them) |
     | Shriek | Stuns non vampiric entities in a massive aoe around the user for 2 seconds, 5 minutes cooldown |
     | Necromancy | Raises a dead "humanlike" entity as a loyal zombie, creating a ghostrole. They cant talk and are slow, but have access to their hands. Since they are alive because of magical means, they cannot spread romerol. 
       5 minutes cooldown |
