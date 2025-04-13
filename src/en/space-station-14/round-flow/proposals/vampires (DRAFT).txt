@@ -72,40 +72,49 @@ Ranking Up:
 
      This is intended to desentivize vampires from outright killing crew.
 
+# Vampiric Energy
+    Every vampire has a Vampiric Energy meter, which basically works like mana, passively regenerating and being consumed to use abilities. As they progress trough the ranks the max amount they can hold at a time increases.
+      -King/Queen: 200
+      -Count/Countess: 150
+      -Baron/Baroness: 100
+    It would be shown trough a small ui indicator on top of the health status. Most likely a red orb, similar to how diablo games show the player hp in vibes
+
 # Ability Shop (i need to think of a better name)
     Vampires will have permanent access to an internal "store" menu (similar to syndies or wizards) which uses bloodpoints as currency. The abilities they are able to buy from it depending
     on their rank. 
     While sticking to more classic vampire powers would be possible, i think streeching the definition a bit would allow for more interesting gameplay
     (Below is a list of possible abilities (numbers are examples, very in theory stuff))
+    (Abilities without a cooldown or vampiric energy cost stated are free of them, vampiric energy will be shortened as ve)
 
     | Default abilities | All vampires start with access to these |
     |----------|:-------------|
     | Blood Drain | After a lenghty do after, the target is fully drained of their blood and is stunned for 10 seconds |
-    | Bat Transformation | Quickly turn into a speedy bat or return back to your form. Being a bat prevents you from using your other abilities, and grants you access to a weak bite attack |
+    | Bat Transformation | Quickly turn into a speedy bat or return back to your form. Being a bat prevents you from using your other abilities, and grants you access to a weak bite attack | 5 ve |
 
     | level 1 Abilities | Low cost abilities that while useful, lack the impact of the higher ranks |
     |----------|:-------------|
     | Whisper | Sends a private message to a selected vampire or infected entity |
-    | Dazzling Kiss | Super short range, pacifies the target for 4 seconds. 10 seconds cooldown |
-    | Telepathy | Teleports an small item you can see to your hand, 20 seconds cooldown |
-    | Minor Illusion | Creates a fake wall, entities may walk trough it freely. It will be destroyed upon taken any damage |
-    | Shameful Retreat | Instantly uncuffs you at the cost of taking damage, letting out a long range vampire scream and losing access to your abilities and hands for 2 minutes, 
-      5 minutes cooldown |
+    | Dazzling Kiss | Super short range, pacifies the target for 4 seconds | 10 seconds cooldown, 20 ve |
+    | Telepathy | Teleports an small item you can see to your hand | 20 seconds cooldown, 15 ve |
+    | Minor Illusion | Creates a fake wall, entities may walk trough it freely. It will be destroyed upon taken any damage | 20 seconds cooldown, 30 ve |
+    | Face Transfiguration | Perform a medium do after to mold your face upon a target of your choosing within range, granting you their name and voice. Doesnt change any other features | 1 minute cooldown, 20 ve |
+    | Shameful Retreat | Instantly uncuffs you at the cost of taking damage, letting out a long range vampire scream and losing access to your abilities and hands for 2 minutes | 
+      5 minutes cooldown, 50 ve |
     | Razor Nails | Upgrades your unarmed attack, dealing good slash damage. Keep in mind this will cause your target to lose a lot of blood |
-    | Hypersenses | Allows you to temporarily see entities trough walls |
-    | Night | Toggle off all nearby light making entities, entites like torches are not affected |
-    | Word Seal (curse) | Choose a word, infected entities will have it censored out of their text messages. Bypassed by writing
+    | Hypersenses | Allows you to temporarily see entities trough walls | 1 ve per second |
+    | Night | Toggle off all nearby light making entities, entites like torches are not affected | 5 seconds cooldown, 10 ve |
+    | Word Seal (curse) | Choose a word, infected entities will have it censored out of their text messages. Bypassed by writing |
     | Ascension | Ascend to the next rank, can only be bought after meeting X requirements, its a slow process so be sure nobody can see you |
 
     | level 2 Abilities | Stronger yet more expensive, enough to make them a formidable threat |   
     |----------|:-------------|
     | Conversion | Converts an infected humanlike entity into a loyal peasant, 10 minutes cooldown |
-    | Face Transfiguration | Perform a medium do after to mold your face upon a target of your choosing within range, granting you their name and voice. Doesnt change any other features. 1 minute cooldown |
-    | Soap Transmutation | Transform nearby puddles of blood into blood soap, which can only slip non vampiric entities, 4 minutes cooldown |
-    | Minor Necromancy | Raises a dead animal entity as a loyal zombie, creating a ghost role. Since they are alive because of magical means, they cannot spread romerol. 
-      2 minutes cooldown |
-    | Finger Gun | Shoots a finger, dealing some damae and embedding on impact. You can see the finger trough walls |
-    | Unholy Bath | Perform a long do after to heal half of your holy damage, 2 minutes cooldown |
+    | Soap Transmutation | Transform nearby puddles of blood into blood soap, which can only slip non vampiric entities | 4 minutes cooldown, 25 ve |
+    | Minor Necromancy | Raises a dead animal entity as a loyal zombie, creating a ghost role. Since they are alive because of magical means, they cannot spread romerol |
+      2 minutes cooldown, 50 ve |
+    | Finger Gun | Shoots a finger, dealing moderate damage and embedding on impact. You can see the finger trough walls | 5 seconds cooldown, 40 ve |
+    | Hurtful Gaze | Shoots 2 purple lasers for high damage | 10 seconds cooldown, 60 ve | (i couldnt resist u.u)
+    | Unholy Bath | Perform a long do after to heal half of your holy damage | 2 minutes cooldown, 70 ve |
     | Sporadic Blindness (curse) | Infected entities will occasionally go blind for a few seconds |
     | Guilt (curse) | Infected entities will occasionally be pacified for a few seconds |
     | Confusion (curse) | Infected entities will gain the pathological liar trait (it will be removed if the curse is lifted) |
@@ -113,11 +122,11 @@ Ranking Up:
 
     | level 3 Abilities | The peak of vampiric potential |   
     |----------|:-------------|
-    | Announce | Send a station-wide message, similarly to a console. Mostly used for rp. 2 minutes cooldown |
-    | Unchain | Bestowes a peasant the rank of Baron, evolving the form to something much more noble. 5 minutes cooldown (this will unpacify them) |
-    | Shriek | Stuns non vampiric entities in a massive aoe around the user for 2 seconds, 5 minutes cooldown |
-    | Necromancy | Raises a dead "humanlike" entity as a loyal zombie, creating a ghostrole. Since they are alive because of magical means, they cannot spread romerol. 5 minutes cooldown |
-    | Life Drain | Deals moderate damage to a target within range that you can see, and heals you by a moderate amount. 1 minute cooldown |
+    | Announce | Send a station-wide message, similarly to a console. Mostly used for rp | 2 minutes cooldown, 25 ve |
+    | Unchain | Bestowes a peasant the rank of Baron, evolving the form to something much more noble | 5 minutes cooldown (this will unpacify them), 100 ve |
+    | Shriek | Stuns non vampiric entities in a massive aoe around the user for 2 seconds | 5 minutes cooldown, 50 ve |
+    | Necromancy | Raises a dead "humanlike" entity as a loyal zombie, creating a ghostrole. Since they are alive because of magical means, they cannot spread romerol | 5 minutes cooldown, 60 ve |
+    | Life Drain | Deals moderate damage to a target within range that you can see, and heals you by a moderate amount | 1 minute cooldown, 50 ve |
     | Foul Finale (curse) | Infected entities will explode on death, animals will cause a smaller explosion (They can hurt you, so be careful!) |
 
 # Biology
