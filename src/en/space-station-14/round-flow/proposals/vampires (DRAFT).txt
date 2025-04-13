@@ -133,7 +133,7 @@ Ranking Up:
     -King/Queen:       regen + %25 resistances buff + small speed buff + space immunity
     -Count/Countess:   regen + %15 resistances buff + small speed buff
     -Baron/Baroness:   regen + %10 resistances buff
-    -Peasant:          regen
+    -Peasant:          regen (stops working when dead, no need to stab their heart)
 
   # Combat/Counters
       Vampires possess a slow constant regen and are highly resistant to being gibbed. To fully kill them, a crew member needs to perform a lenghty do after on the vampire body or heart
