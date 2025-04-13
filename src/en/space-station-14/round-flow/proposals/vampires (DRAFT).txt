@@ -93,6 +93,7 @@ Ranking Up:
 
     | level 1 Abilities | Low cost abilities that while useful, lack the impact of the higher ranks |
     |----------|:-------------|
+    | Blood Tailoring | Generates a set of vampire clothing of choice, certain pieces of it grant extra Vampire Energy regeneration. Mostly for rp purposes | 5 seconds cooldown, 15 ve | 
     | Whisper | Sends a private message to a selected vampire or infected entity |
     | Dazzling Kiss | Super short range, pacifies the target for 4 seconds | 10 seconds cooldown, 20 ve |
     | Telepathy | Teleports an small item you can see to your hand | 20 seconds cooldown, 15 ve |
@@ -109,12 +110,18 @@ Ranking Up:
     | level 2 Abilities | Stronger yet more expensive, enough to make them a formidable threat |   
     |----------|:-------------|
     | Conversion | Converts an infected humanlike entity into a loyal peasant, 10 minutes cooldown |
+    | Blood Forge | Makes a Blood Sword, it deals moderate damage and stops bleeding (most likely trough injecting a chem) | 5 minutes cooldown, 60 ve | 
     | Soap Transmutation | Transform nearby puddles of blood into blood soap, which can only slip non vampiric entities | 4 minutes cooldown, 25 ve |
     | Minor Necromancy | Raises a dead animal entity as a loyal zombie, creating a ghost role. Since they are alive because of magical means, they cannot spread romerol |
       2 minutes cooldown, 50 ve |
+    | Flesh Bulb | Shoots a fleshy projectile, it stops bleeding and mutes the target upon impact | 5 seconds cooldown, 10 ve | 
     | Finger Gun | Shoots a finger, dealing moderate damage and embedding on impact. You can see the finger trough walls | 5 seconds cooldown, 40 ve |
     | Hurtful Gaze | Shoots 2 purple lasers for high damage | 10 seconds cooldown, 60 ve | (i couldnt resist u.u)
+    | Blood Exposure | Entities on an aoe around you take small damage and start bleeding a lot | 25 seconds cooldown, 60 ve | 
+    | Blood Dance | Deals damage to nearby entities depending on how much blood they are missing and closes their wounds | 2 minutes cooldown, 100 ve | 
+    | Infestation | Summons 5 mosquitos, very fragile annoying creatures that will attack any non vampire entity on sight | 20 seconds cooldown, 40 ve | 
     | Unholy Bath | Perform a long do after to heal half of your holy damage | 2 minutes cooldown, 70 ve |
+    | Unholy Sanctum | Curses a coffin, being inside it will quickly heal your damage. Using the ability again will perform a short do after and teleport you back to it | 1 minute cooldown, 20 ve | 
     | Sporadic Blindness (curse) | Infected entities will occasionally go blind for a few seconds |
     | Guilt (curse) | Infected entities will occasionally be pacified for a few seconds |
     | Confusion (curse) | Infected entities will gain the pathological liar trait (it will be removed if the curse is lifted) |
