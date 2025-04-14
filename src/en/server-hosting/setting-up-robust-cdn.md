@@ -85,7 +85,7 @@ sudo chmod -R u+w,g+w builds/ database/ manifest/
 
 ### Manual compilation
 
-If you hate containers, you can manually publish Robust.Cdn and deploy the files yourself. For this you will need Git and the .NET 8 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
+If you hate containers, you can manually publish Robust.Cdn and deploy the files yourself. For this you will need Git and the .NET 9 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
 
 Clone the git repo, then publish:
 
@@ -95,7 +95,7 @@ cd Robust.Cdn
 dotnet publish -c Release -r linux-x64 --no-self-contained
 ```
 
-The finished build will be dropped in `Robust.Cdn/bin/Release/net8.0/linux-x64/publish`. You can copy these into some random location you fancy like `/opt` and run `Robust.Cdn` from there. For example:
+The finished build will be dropped in `Robust.Cdn/bin/Release/net9.0/linux-x64/publish`. You can copy these into some random location you fancy like `/opt` and run `Robust.Cdn` from there. For example:
 
 ```
 /opt/robust_cdn/
@@ -131,7 +131,7 @@ For the love of Miku and all that is holy, do not run the CDN from directly with
 
 ## Configuration
 
-Robust.Cdn is an ASP.NET Core app, so it supports configuration both via config file and other sources such as environment variables. You can see [ASP.NET Core's documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-8.0) for a more in-depth overview.
+Robust.Cdn is an ASP.NET Core app, so it supports configuration both via config file and other sources such as environment variables. You can see [ASP.NET Core's documentation](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-9.0) for a more in-depth overview.
 
 Most configuration of Robust.Cdn is done via the `appsettings.json` config file. Here is a complete reference of its contents:
 

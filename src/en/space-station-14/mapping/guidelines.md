@@ -249,6 +249,7 @@ Required
 - chem vend
 - grinder
 - chemical locker
+- hotplate
 
 Optional
 - extra beaker boxes

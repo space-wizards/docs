@@ -34,7 +34,7 @@ The changeling starts with a few free abilities and can unlock more at the cost 
 
 **NAME | UNLOCK COST | USE COST | NEEDED FORM**
 
-#### FREE ABILITIES
+### FREE ABILITIES
 The changeling, in its weakest state, is still able to do some pretty nasty stuff. These abilities are central to the changeling's functionality and it can never not have them.
 
 
@@ -74,7 +74,7 @@ Replaces Shed while in true form. The changeling turns back into a normal humano
 Intended as a way for changelings to hide amongst the crew after having either won a one-on-one fight or having succeeded in a massacre and wishing to remain hidden in the aftermath.
 
 
-## HIVEMIND
+### HIVEMIND
 The changeling can choose to integrate minds into itself instead of simply devouring them. This is useful for retaining personalities or quickly allowing minions to be controlled. All beings including the changeling that are within a hivemind can speak to each other using :h. Absorbed minds are forced to follow any orders given by the changeling, and griefing the changeling would be extremely rule-breaking.
 
 
@@ -85,28 +85,28 @@ Using this ability will show a radial menu which allows the changeling to use an
 Intended as a way to keep a changeling's victims in the round, losing against a changeling remains enjoyable.
 
 
-- **Relinquish** | free | free | disguised**
+- **Relinquish | free | free | disguised**
 
 Opens a radial menu displaying all minds currently in the changeling's hivemind, upon selecting one, that mind will be granted control over the changeling's body.
 
 Intended as a way for a changeling to disguise as someone while not drastically changing personalities, a changeling would give up control to the person they are pretending to be while giving them commands through the hivemind channel.
 
 
-- **Restrict** | free | free | disguised**
+- **Restrict | free | free | disguised**
 
 Toggles whether minds can use a changeling's abilities while in control of the changeling's body.
 
 Intended as a way to prevent salty players from causing too much damage to a changeling if they choose to grief.
 
 
-- **Retake** | free | free | disguised**
+- **Retake | free | free | disguised**
 
 Instantly retakes control from a mind that has been granted control.
 
 Intended as a way for the changeling to remain as the master of its own body. This is instant in case a mind decides to grief, a changeling can act quickly to undo whatever the mind did.
 
 
-- **Purge** | free | free | disguised**
+- **Purge | free | free | disguised**
 
 The changeling erases an absorbed mind from itself, kicking it out into the afterlife.
 
@@ -120,7 +120,7 @@ Opens a radial menu allowing the changeling to select a mind that will instantly
 Intended as a way to quickly summon minions and reward players for remaining in a changeling's hivemind, also gives players who died to a loud changeling something to look forward to.
 
 
-#### STEALTH
+### STEALTH
 The changeling in a disguised state shouldn't be entirely under the radar. The crew would know there is SOMETHING among them, picking them off, hunting. The changeling's stealth abilities should allow it to remain out of sight while killing, and allow it to deceive the crew and make them feel safe, or throw them off the trail.
 
 - **Mimic | medium | low | disguised**
@@ -158,7 +158,7 @@ The changeling instantly begins to appear mindshielded to anyone wearing a sechu
 Intended as a barrier for entry to infiltrating security/command. A changeling can always get a real mindshield, but then they wouldn't be able to easily disguise as a passenger or scientist when security comes knocking.
 
 
-#### STINGERS
+### STINGERS
 The changeling's stinger can inject its prey with various chemicals to weaken or confuse them, with a mixture of effective stealth and combat uses. Other changelings are immune to these chemicals.
 
 
@@ -217,7 +217,7 @@ The target is injected with a chemical that causes them to be randomly shocked a
 Intended as a very potent offensive chemical, the high price makes it unviable for a stealthy changeling to cause general chaos with. Takes someone out of the fight without entirely preventing them from fleeing for the entire 40-second duration assuming the changeling used the tail stinger.
 
 
-#### MINIONS
+### MINIONS
 The changeling can create all sorts of horrors from its ever-shifting mass of biological matter. These generally take the form of detached body parts. All of the changeling's minions except for the headcrab are ghost roles with a short raffle. Ghost role minions cannot verbally speak, but can silently communicate with the changeling that created it as if it were wearing a headset. The headcrab can speak to people.
 
 - **Eyeslug | high | low | any**
@@ -272,7 +272,7 @@ If a headcrab dies the changeling is fully dead, regardless of if its body is st
 Intended as a last resort for a discovered changeling that's about to be gibbed/cremated but either cannot use rejuvenate or doesn't want to.
 
 
-#### COMBAT
+### COMBAT
 Combat abilities are mostly only available to a changeling in its true form, with the exception of the arm blade as a method of fighting while still in disguise.
 
 - **Armblade | medium | medium | disguised**
@@ -282,7 +282,7 @@ The changeling displays a big bold popup to anyone nearby and begins a 5-second 
 Intended as a combat option in the disguised state for subduing victims or being caught off-guard.
 
 
-- **Rejuvinate | medium | 5/point of damage | true**
+- **Rejuvenate | medium | 5/point of damage | true**
 
 The changeling displays a big bold popup to anyone nearby and begins a 4-second doafter. Once this concludes, the changeling will heal **ALL** damage dealt to it. If the changeling is critical or dead in its disguised form, it performs a 10-second invisible doafter with no popup, after which it will instantly enter its true form at full HP with the usual big bold popup and loud sound effect. If the changeling does not have enough biomass to use this ability, it will use biomass until it reaches -50, and if that is still not enough to revive it from a critical state, it will dramatically explode into a pile of gibs.
 

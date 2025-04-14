@@ -73,5 +73,6 @@ Some labels should not be used/removed by Triagers, as they are either automatic
 | S: Awaiting Changes | Applied automatically. |
 | S: Conceptual Approval | Can only be applied by a Maintainer, following Review Procedure. |
 | S: Undergoing Maintainer Discussion | Maintainer Discussions are at Maintainers' discretion. |
+| S: Art Approval | Can only be applied by an Art Lead following their approval. If the Art Lead has forgotten to apply it, Triagers may apply this label. |
 
 \* May still be applied in certain cases, if the automatic labelling is not working/not implemented.

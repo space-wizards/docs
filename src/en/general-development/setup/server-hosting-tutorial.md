@@ -4,20 +4,19 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ## Level 0: Local Sandbox Server
 
-```admonish danger title="DO NOT MODIFY THE RESOURCES FOLDER IN PRE-PACKAGED SERVER BUILDS"
-Really don't, it wont work. Attempting to do so anyway will **void your support**.
+```admonish danger title="Pre-Packaged server builds should not be used for custom content"
 The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
-If you wish to modify your server to add your own content. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
+If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
 ```
 
-1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.8``
-2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
-3. Extract that to a directory somewhere.
-4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
-5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
-6. When there is a new update. Go back to the second step, and copy over the ``data`` folder and ``server_config.toml`` (if you modified it) from your old server to the new server.
+1. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
+2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
+3. Extract the downloaded zip to a directory somewhere, you may use any Archive program such as 7Zip, Winrar or even the one built into Windows.
+4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux)) and wait until the console windows says "Ready".
+5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` as an IP address and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button using the same IP address.
+6. When there is a new update. Go back to the 2nd step, and copy over the ``data`` folder and ``server_config.toml`` (if you modified it) from your old server files to the new server files.
 
-If you prefer video guides, here is one!
+If you are having trouble understanding what to click, here is a quick video. Subtitles contain some extra information if needed. 
 
 {% embed youtube id="IDBqrAGZ3cA" loading="lazy" %}
 
@@ -361,6 +360,20 @@ People aren't able to connect to your server OR you get the following error in y
 
 This means your server is not accessible from the outside internet. Make sure you have followed the guide to [Port Forwarding](../../server-hosting/port-forwarding.md).
 
+### Auth/hub country internet blocking
+
+Some countries (e.g. Russia) currently have internet blocks active that may interfere with your server's ability to connect to hub services. If this is a problem for you, you can attempt to set the following config properties to use fallback services:
+
+```toml
+[auth]
+server = "https://auth.fallback.spacestation14.com/"
+
+[hub]
+hub_urls = "https://hub.fallback.spacestation14.com/"
+```
+
+These configurations do not affect players, the launcher and game client use fallbacks wherever possible by default.
+
 ### SS14.Watchdog
 
 #### Server keeps restarting every 30 seconds
@@ -397,8 +410,8 @@ Type `./Robust.Server` then hit enter. If you see a bunch of stuff being printed
 ## Useful Links
 All of the important links on this page in one convenient place.
 * [Config Reference](../tips/config-file-reference.md)
-* [.NET 8 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 8 SDK)
-* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Also included in full .NET 8 SDK)
+* [.NET 9 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 9 SDK)
+* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (Also included in full .NET 9 SDK)
 * [SS14.Watchdog](https://github.com/space-wizards/SS14.Watchdog/)
 * [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
 * [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)
