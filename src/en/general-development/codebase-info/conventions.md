@@ -22,9 +22,21 @@ Keep in mind that some older areas of the codebase might not follow these conven
 
 ## Comments
 
-- Comment code at a high level to explain *what* the code is doing, and more importantly, *why* code is doing what it is doing. 
+- Comment code at a high level to explain *what* the code is doing, and more importantly, *why* code is doing what it is doing.
 
-- When documenting classes, structs, methods, properties/fields, and class members, use [XML docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/)
+- When documenting classes, structs, methods, properties/fields, and class members, use [XML docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/). DataFields and Public methods should always be documented.
+    - Example:
+  ```csharp
+      /// <summary>
+      /// Resets the InteractCounter on the <see cref="FooComponent"/>.
+      /// </summary>
+      /// <remarks>
+      /// This is a public method other systems can call to interact with FooComponent!
+      /// Remember that public methods should always use docstring.
+      /// </remarks>
+      [PublicAPI]
+      public void ResetInteractCounter(Entity<FooComponent?> ent)
+  ```
 
 ### Why Not What
 
@@ -33,14 +45,14 @@ Some folks blindly adhere to "comment the why, not the what" and think that "cod
 #### Example 1
 
 ```csharp
-   float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+    var fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 All of the variables are named in a self-documenting way (*R* gets a pass because that is the ideal gas constant, and physics conventions existed long before computers, so this is following convention). Obviously, the comment should *not* be:
 
 ```csharp
-	 // Take R and multiply it by the ratio of outlet temperature divided by outlet air volume and add it to ...
-   float fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+    // Take R and multiply it by the ratio of outlet temperature divided by outlet air volume and add it to ...
+    var fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 Because this only explains what the code is literally doing, which you could have gathered from any cursory reading of the code. **However, you still have absolutely no idea what this code is doing and why**, even though the code is self-documenting.
@@ -55,26 +67,25 @@ You don't know where this magic formula came from, what it's trying to accomplis
         // To solve this we need to write dn in terms of P. Since PV=nRT, dP/dn=RT/V.
         // This assumes that the temperature change from transferring dn moles is negligible.
         // Since we have P=Pi-Po, then dP/dn = dPi/dn-dPo/dn = R(Ti/Vi - To/Vo):
-        float dPdn = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+        var dPdn = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 #### Example 2
 
 ```csharp
-        if (HasComp<MindContainerComponent>(uid))
-        {
-            return;
-        }
-        
-        // more stuff
+    if (HasComp<MindContainerComponent>(uid))
+        return;
+
+    // more stuff
 ```
 
 Obviously, this code skips "more stuff" if the entity represented by *uid* already has a MindContainerComponent. This code is as self-documenting as it gets, it literally just returns early if there is a MindContainer. What needs to be documented is *why* this code needs to skip *uid*s that already have a MindContainerComponent:
 
 
 ```csharp
-				// Don't let players who drink cognizine be eligible for a ghost takeover
-        if (HasComp<MindContainerComponent>(uid))
+    // Don't let players who drink cognizine be eligible for a ghost takeover
+    if (HasComp<MindContainerComponent>(uid))
+        return;
 ```
 
 ## Methods
@@ -85,14 +96,14 @@ If you're defining a function and the parameter declarations are so long they do
 
 Bad:
 
-```cs
+```csharp
 public void CopyTo(ISerializationManager serializationManager, SortedDictionary<TKey, TValue> source, ref SortedDictionary<TKey, TValue> target,
     SerializationHookContext hookCtx, ISerializationContext? context = null)
 ```
 
 Good:
 
-```cs
+```csharp
 public void CopyTo(
     ISerializationManager serializationManager,
     SortedDictionary<TKey, TValue> source,
@@ -115,7 +126,7 @@ If you're doing something like a filter/search dialog, use `CurrentCulture` comp
 
 In a property setter, the value of the property should always literally become the `value` given. None of this:
 
-```cs
+```csharp
 public string Name
 {
     get => _name;
@@ -124,7 +135,7 @@ public string Name
 ```
 
 ## Constants and CVars
-If you have a specific value such as an integer you should generally make it either: 
+If you have a specific value such as an integer you should generally make it either:
 * a constant (const) if it's never meant to be changed
 * a CVar if it's meant to be configured
 
@@ -133,8 +144,8 @@ This is so it is clear to others what it is. This is especially true if the same
 ## Prototypes
 
 ### Prototype data-fields
-Don't cache prototypes, use prototypeManager to index them when they are needed. You can store them by their ID. When using data-fields that involve prototype ID strings, use ProtoId<T>. For example, a data-field for a list of prototype IDs should use something like: 
-```csharp=
+Don't cache prototypes, use prototypeManager to index them when they are needed. You can store them by their ID. When using data-fields that involve prototype ID strings, use ProtoId<T>. For example, a data-field for a list of prototype IDs should use something like:
+```csharp
 [DataField]
 public List<ProtoId<ExamplePrototype>> ExampleTypes = new();
 ```
@@ -148,39 +159,34 @@ Example: In-game tool "kinds" or "types" should use prototypes instead of enums.
 
 ### Sounds
 When specifying sound data fields, use `SoundSpecifier`.
-
-
+You should avoid defining sound paths directly and instead use `SoundCollectionSpecifier` whenever possible.
 
 <details>
   <summary>C# code example (click to expand)</summary>
 
-```csharp=
-[DataField(required: true)]
-public SoundSpecifier Sound { get; } = default!;
+```csharp
+[DataField]
+public SoundSpecifier Sound = new SoundCollectionSpecifier("MySoundCollection");
 ```
-  
+
 </details>
 
 <details>
   <summary>YAML prototype example (click to expand)</summary>
-  
-```yml=
-# You can specify a specific sound file like this
+
+```yaml
+# You can define a sound collection like this
+- type: soundCollection
+  id: MySoundCollection
+  files:
+  - /Audio/Effects/Cargo/ping.ogg
+
+# And use it like this
 - type: MyComponent
   sound:
-    path: /Audio/path/to/my/sound.ogg
-  
-# But this works, too!
-- type: MyOtherComponent
-  sound: /Audio/path/to/my/sound.ogg
-    
-# You can only specify a sound collection like this
-- type: AnotherComponent
-  sound:
     collection: MySoundCollection
- 
 ```
-  
+
 </details>
 
 ### Sprites and Textures
@@ -188,18 +194,18 @@ When specifying sprite or texture data fields, use `SpriteSpecifier`.
 
 <details>
   <summary>C# code example (click to expand)</summary>
-  
-```csharp=
+
+```csharp
 [DataField]
-public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
+public SpriteSpecifier Icon = SpriteSpecifier.Invalid;
 ```
-  
+
 </details>
 
 <details>
   <summary>YAML prototype example (click to expand)</summary>
-  
-```yml=
+
+```yaml
 # You can specify a specific texture file like this, /Textures/ is optional
 - type: MyComponent
   icon: /Textures/path/to/my/texture.png
@@ -214,40 +220,45 @@ public SpriteSpecifier Icon { get; } = SpriteSpecifier.Invalid;
     sprite: /Textures/path/to/my/sprite.rsi
     state: MySpriteState
 ```
-  
+
 </details>
 
 <details>
   <summary>RSI meta.json (click to expand)</summary>
 
 - The order of fields should be `version -> license -> copyright -> size -> states`.
-- JSON should not be minified, and should follow normal JSON quality guidelines (egyptian brackets, etc)
+- JSON should not be minified, and should follow normal JSON quality guidelines (egyptian brackets, etc). All new JSON files should be indented at 4 spaces. Existing files should be changed to 4 space indent if you are modifying them (fix as you go). You should never be using tab for indent.
 
 Example:
 
 ```json
 {
     "version": 1,
-    "license": "CC0-1.0",
-    "copyright": "GitHub @PJB3005",
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/547852588166c8e091b441e4e67169e156bb09c1",
     "size": {
         "x": 32,
         "y": 32
     },
     "states": [
         {
-            "name": "hello",
-            "flags": {},
-            "directions": 4,
-            "delays": [
-                [1, 1, 1],
-                [2, 3, 4],
-                [3, 4, 5],
-                [4, 5, 6]
-            ]
+            "name": "icon"
+        },
+        {
+            "name": "equipped-BACKPACK",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
         }
     ]
 }
+
 ```
 </details>
 
@@ -256,15 +267,15 @@ When using `EntityUid` in admin logs, use the `IEntityManager.ToPrettyString(Ent
 
 <details>
   <summary>Admin log with entities example (click to expand)</summary>
-  
-```csharp=
+
+```csharp
 // If you're in an entity system...
 _adminLogs.Add(LogType.MyLog, LogImpact.Medium, $"{ToPrettyString(uid)} did something!");
-  
+
 // If you're not in an entity system...
 _adminLogs.Add(LogType.MyLog, LogImpact.Medium, $"{entityManager.ToPrettyString(uid)} did something!");
 ```
-  
+
 </details>
 
 ### Optional Entities
@@ -279,7 +290,7 @@ All data in components should be public.
 
 ### Component property setters
 You may not have setters with any logic whatsoever in properties. Instead, you should create a setter method in your entity system, and apply the `[Friend(...)]` attribute to the component so only that system can modify it.
-Your component may use properties with setter logic for *ViewVariables integration* (until we have a better system for that)
+Your component may use properties with setter logic for *ViewVariables integration* (until we have a better system for that).
 
 ### Component access restrictions
 The `[Access(...)]` attribute allows you to specify which types can read or modify data in your class, while prohibiting every other type from modifying it.
@@ -301,20 +312,20 @@ When possible, try using the `EntitySystem` [proxy methods](https://github.com/s
 <details>
   <summary>Examples (click to expand)</summary>
 
-```csharp=
+```csharp
 // Without proxy methods...
 EntityManager.GetComponent<MetaDataComponent>(uid).EntityName;
-  
+
 // With proxy methods
 Name(uid);
-  
+
 // Without proxy methods...
 EntityManager.GetComponent<TransformComponent>(uid).Coordinates;
-  
+
 // With proxy methods
 Transform(uid).Coordinates;
 ```
-    
+
 </details>
 
 ### Public API Method Signature
@@ -330,24 +341,24 @@ The first thing you should do in your method's body should then be calling `Reso
 <details>
   <summary>Example (click to expand)</summary>
 
-```csharp=
+```csharp
 public void SetCount(Entity<StackComponent?> stack, int count)
 {
     // This call below will set "Comp" to the correct instance if it's null.
     // If all components were resolved to an instance or were non-null, it returns true.
     if(!Resolve(stack, ref stack.Comp))
         return; // If the component wasn't found, this will log an error by default.
-    
+
     // Logic here!
-}  
+}
 ```
-    
+
 </details>
 
 The `Resolve` helper performs a few useful checks for you. In `DEBUG`, it checks whether the component reference passed (if not null) is actually owned by the entity specified.
 
 This helper will also log an error by default if the entity is missing any of the components that you attempted to resolve.
-This error logging can be disabled by passing `false` to the helper's `logMissing` argument. You may want to disable the error logging for resolving optional components, `TryX` pattern methods, etc. 
+This error logging can be disabled by passing `false` to the helper's `logMissing` argument. You may want to disable the error logging for resolving optional components, `TryX` pattern methods, etc.
 
 Please note that the `Resolve` helper also has overloads for resolving 2, 3 or even 4 components at once.
 If you want to resolve components for multiple entities, or you want to resolve more than 4 components at once for a given entity, you'll need to perform multiple `Resolve` calls.
@@ -355,18 +366,18 @@ If you want to resolve components for multiple entities, or you want to resolve 
 ### Extension Methods
 
 Extension methods (those with an explicit `this` for the first argument) should never be used on any classes directly related to simulation--that means `EntityUid`, components, or entity systems. Extension methods on `EntityUid` are used throughout the codebase, however this is bad practice and should be replaced with entity system public methods instead.
-  
+
 ### Dependencies On Other Systems
 Inside an entity system, prefer a system dependency instead of resolving the system using the IoCManager. For example, instead of:
-  
-```csharp=
+
+```csharp
 var random = IoCManager.Resolve<IRobustRandom>();
 random.Prob(0.1f);
 ```
 
 Add an entity system dependency:
 
-```csharp=
+```csharp
 [Dependency] private readonly IRobustRandom _random = default!;
 _random.Prob(0.1f);
 ```
@@ -375,12 +386,12 @@ _random.Prob(0.1f);
 
 ### Method Events vs Entity System Methods
 Method Events are events that you raise when you want to perform a certain action. Example:
-```csharp=
+```csharp
 // This would change the damage on the entity by 10.
 RaiseLocalEvent(uid, new ChangeDamageEvent(10));
 ```
 On the other hand, Entity System Methods are methods you call on systems to perform an action.
-```csharp=
+```csharp
 // This would change the damage on the entity by 10.
 EntitySystem.Get<DamageableSystem>().ChangeDamage(uid, 10);
 ```
@@ -393,17 +404,17 @@ In the example above, this would mean that `DamageableSystem.ChangeDamage()` wou
 
 ### Event naming
 - Always suffix your events with `Event`.
-Example: `DamagedEvent`, `AnchorAttemptEvent`...
+  Example: `DamagedEvent`, `AnchorAttemptEvent`...
 
 - Always name your event handler like this: `OnXEvent`
-Example: `OnDamagedEvent`, `OnAnchorAttemptEvent`...
+  Example: `OnDamagedEvent`, `OnAnchorAttemptEvent`...
 
 ### Struct by-ref events
 Events should always be structs, not classes, and should always be raised by ref. If possible it should also be readonly if applicable.
 They should also have the [ByRefEvent] attribute.
-  
+
 In practice this will look like the following:
-```cs
+```csharp
   var ev = new MyEvent();
   RaiseLocalEvent(ref ev);
 ```
@@ -431,12 +442,12 @@ Extending existing C#-defined UIs is fine, but they should be converted eventual
 ### Iterator Methods vs returning collections
 Always use [iterator methods](https://docs.microsoft.com/en-us/dotnet/csharp/iterators) over creating a new collection and returning it in your method.
 
-Keep in mind, however, that iterator methods allocate a lot of memory. 
+Keep in mind, however, that iterator methods allocate a lot of memory.
 If you need to reduce allocations as much as possible, use struct iterators.
 
 ### Sealed Classes
 Your class must be marked as either `abstract`, `static`, `sealed` or `[Virtual]`. This is to avoid accidentally making classes inheritable when the shouldn't be and can improve performance slightly when accessing or invoking virtual members.
-  
+
 Use `sealed` if the class shouldn't be inherited, `[Virtual]` for the normal C# behavior (it mutes the compiler warning), `static` for classes that don't need to be instantiated, or `abstract` if it's meant for being inherited but not meant to be instantiated by itself.
 
 ### Events over updates
@@ -444,55 +455,154 @@ Where possible you should always have your system run code in response to an eve
 
 ### Variable capture
 When using [lambdas](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions) or [local functions](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions) be sure to **avoid variable captures**.
-  
+
 If you're adding a method that takes in a [Func delegate](https://docs.microsoft.com/en-us/dotnet/api/system.func-2), be sure to have an overload that **allows the caller to pass in custom data** to it.
-  
+
 <details>
   <summary>Example of what not to do (click to expand)</summary>
-  
-```csharp=
+
+```csharp
 void DoSomething(EntityUid otherEntity)
 {
-    // This is BAD. It will allocate on the heap a lot. 
+    // This is BAD. It will allocate on the heap a lot.
     var predicate = (EntityUid uid)
-        => uid == otherEntity; 
+        => uid == otherEntity;
 
-  	// This method doesn't allow us to pass custom data,
+    // This method doesn't allow us to pass custom data,
     // so we're forced to do a costly variable capture.
     MethodWithPredicate(predicate);
 }
-  
+
 void MethodWithPredicate(Func<EntityUid, bool> predicate)
 {
-		// We do something with the predicate here...
+    // We do something with the predicate here...
 }
 ```
-  
+
 </details>
 
 <details>
   <summary>Example of what to do (click to expand)</summary>
 
-```csharp=
+```csharp
 void DoSomething(EntityUid otherEntity)
 {
     // This is good and much more performant than the example before.
     var predicate = (EntityUid uid, EntityUid otherUid)
-    		=> uid == otherUid; 
+        => uid == otherUid;
 
-  	// Pass our custom data to this method.
+    // Pass our custom data to this method.
     MethodWithPredicate<EntityUid>(predicate, otherEntity);
 }
-  
+
 // This method allows you to pass custom data into the predicate.
 void MethodWithPredicate<TState>(Func<EntityUid, TState, bool> predicate, TState state)
 {
-		// We do something with the predicate here, making sure to pass "state" to it...
+    // We do something with the predicate here, making sure to pass "state" to it...
 }
 ```
 
 </details>
-  
+
+## Field Deltas
+
+Field deltas allow you to send only specific fields of a component over the network instead of the entire state. This is done by adding `fieldDeltas: true` to your `AutoGenerateComponentState` attribute:
+
+```csharp
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(fieldDeltas: true)]
+public sealed partial class MyComponent : Component
+{
+    [DataField, AutoNetworkedField]
+    public bool IsActive;
+
+    [DataField, AutoNetworkedField]
+    public int Value;
+}
+```
+
+### When to use field deltas
+
+Field deltas are great when:
+- Your component has fields that change at different rates
+- Only a subset of fields typically changes at once
+- You have a bunch of networked fields and don't want to send all of them every time
+
+A good rule of thumb: If you have 3+ fields and they often change independently, consider field deltas. For components with just 1-2 fields, it's usually simpler to skip them.
+
+### Marking fields as dirty
+
+When you change a field and want to network just that field, use `DirtyField` instead of `Dirty`:
+
+```csharp
+// Instead of this:
+comp.IsActive = true;
+Dirty(uid, comp);  // Would send ALL networked fields
+
+// Do this:
+comp.IsActive = true;
+DirtyField(uid, comp, nameof(MyComponent.IsActive));  // Only sends IsActive
+```
+
+For a component with many fields where usually only one or two change at a time, field deltas can reduce network traffic by 80-90%. The more fields you have, the more you'll benefit from field deltas.
+
+Even for components with just 3-4 fields, if they change independently (e.g., one field updates frequently, others rarely), field deltas can still be worth it.
+
+Field deltas add a little overhead for tracking field changes, but this is usually outweighed by the bandwidth savings. The generator automatically handles most of the implementation complexity.
+
+## TimeSpans
+
+### Using TimeSpans
+
+You should always use `TimeSpan` over `float` for defining static periods of time, such as intervals. Update loops should compare against `CurTime` instead of accumulating `frametime`.
+
+### Handling paused entities
+
+When working with `TimeSpan` fields that are modified during runtime (like timers or countdowns), you need to handle entity pausing properly. SS14 provides two important mechanisms for this.
+
+### AutoGenerateComponentPause and AutoPausedField
+
+The `[AutoGenerateComponentPause]` and `[AutoPausedField]` attributes work together to automatically adjust `TimeSpan` fields when an entity is unpaused:
+
+- `[AutoGenerateComponentPause]` is applied to a component class and automatically generates code to handle unpausing.
+- `[AutoPausedField]` is applied to individual `TimeSpan` fields within that component that should be adjusted when the entity is unpaused.
+
+These attributes should **always** be used for `DataField` `TimeSpan` properties that are modified by other systems during runtime, such as timers or cooldowns.
+
+<details>
+  <summary>Example usage (click to expand)</summary>
+
+```csharp
+[RegisterComponent, AutoGenerateComponentPause]
+public sealed partial class CooldownComponent : Component
+{
+    [DataField, AutoPausedField]
+    public TimeSpan CooldownEnd;
+
+    [DataField, AutoPausedField]
+    public TimeSpan? OptionalTimer;
+}
+```
+</details>
+
+### TimeOffsetSerializer
+
+The `TimeOffsetSerializer` is used for serializing `TimeSpan` values that are offset by the current game time.
+
+- It automatically offsets a `TimeSpan` by the game's current time during serialization/deserialization
+- If the entity is paused, it uses the time at which the entity was paused as the reference point
+- It prevents unintentional saving of time offsets to maps during mapping (prototypes always serialize as zero)
+
+Similar to `AutoPausedField`, the `TimeOffsetSerializer` should always be used for runtime-modified `TimeSpan` fields that represent absolute times rather than durations.
+
+<details>
+  <summary>Example usage (click to expand)</summary>
+
+```csharp
+[DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
+public TimeSpan NextActivationTime;
+```
+</details>
+
 ## Naming
 
 ### Shared types
@@ -506,9 +616,9 @@ Example:
 
 ### Anchoring
 
-Always use `TransformComponent` anchoring.
+Always use `TransformComponent` anchoring through the system methods.
 You may use `PhysicsComponent` static body anchoring but *only* if you know what you're doing and you can defend your choice over transform anchoring.
-  
+
 # YAML Conventions
 
 - Every component `- type` should be together without any empty newlines separating them
@@ -520,34 +630,44 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
 ```
 - Don't specify textures in abstract prototypes/parents.
 - You should declare the first prototype block in this order: `type` > `abstract` > `parent` > `id` > `categories` > `name` > `suffix` > `description` > `components.`
+- Use inline lists for categories and regular lists for everything else:
+  ```yaml
+  - type: entity
+    parent: [ PartHuman, BaseHead ] # Inline list
+    id: Headhuman
+    components:
+    - type: Tag
+      tags: # Regular list
+      - Head
+  ```
 - New components should not have an indent when added to the `components:` section.
-    This
-    ```yaml=
+  This
+    ```yaml
     components:
     - type: Sprite
-      state: 
+      state:
     ```
-    Not this
-    ```yaml=
+  Not this
+    ```yaml
     components:
       - type: Sprite
-        state: 
+        state:
     ```
 - The same rule applies for any other list or dictionary, for example:
-    ```yaml=
+    ```yaml
     - type: Tag
       tags:
-      - HighRiskItem # correct indentation
+      - HighRiskItem # Correct indentation
 
     - type: Tag
       tags:
-        - HighRiskItem # wrong indentation
+        - HighRiskItem # Wrong indentation
     ```
 - When it makes sense, place more generalized/engine components near the top of the components list and more specific components near the bottom of the list. For example,
-    ```yaml=
+    ```yaml
     components:
     - type: Sprite # Engine-specific
-    - type: Physics 
+    - type: Physics
     - type: Anchorable # Content, but generalized
     - type: Emitter # A component for a specific type of item
     ```
@@ -556,7 +676,7 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
 `PascalCase` is used for IDs and component names.
 Everything else, even prototype type names, uses `camelCase`.
 `prefix.Something` should NEVER be used for IDs.
-  
+
 ## Entities
 
 Please ensure you structure entities with components as follows for easier YAML readability:
@@ -565,18 +685,18 @@ Please ensure you structure entities with components as follows for easier YAML 
 - type: entity
   abstract: true # remove this line if not abstract
   parent: <nameofparent>
-  id: 
+  id:
   name:
   components:
   <rest of file>
 ```
-      
+
 ### Entity Prototype suffixes
 
-Use `suffix` in prototypes, this it's a spawn-menu-only suffix that allows you to distinguish what prototypes are, without modifying the actual prototype name. You can use it like this: 
+Use `suffix` in prototypes, this it's a spawn-menu-only suffix that allows you to distinguish what prototypes are, without modifying the actual prototype name. You can use it like this:
 ![](https://i.imgur.com/epkPR3Y.png)
 
-And results in this: 
+And results in this:
 ![](https://i.imgur.com/JigMCuu.png)
 
 # Localization
@@ -585,10 +705,10 @@ Every player-facing string ever needs to be localized.
 ### Localization ID naming
 - Localization IDs are always `kebab-case` and should never contain capital letters.
 - Localization IDs should be specific as possible, to avoid clashing with other IDs.
-    This
-    ```ftl=
+  This
+    ```ftl
     antag-traitor-user-was-traitor-message = ...
     ```
-    Not this
-    ```ftl=
+  Not this
+    ```ftl
     traitor-message = ...
