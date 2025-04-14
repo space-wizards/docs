@@ -98,7 +98,7 @@ Ranking Up:
     | Whisper | Sends a private message to a selected vampire or infected entity |
     | Dazzling Kiss | Super short range, pacifies the target for 4 seconds | 10 seconds cooldown, 20 ve |
     | Cold Touch | Click on a target within reach, after 1 minute their body temmperature will rapidly decrease. Good for stealthy ambushes | 25 seconds cooldown, 15 ve | 
-    | Telepathy | Teleports an small item you can see to your hand | 20 seconds cooldown, 15 ve |
+    | Telekinesis | Teleports an small item you can see to your hand | 20 seconds cooldown, 15 ve |
     | Minor Illusion | Creates a fake wall, entities may walk trough it freely. It will be destroyed upon taken any damage | 20 seconds cooldown, 30 ve |
     | Face Transfiguration | Perform a medium do after to mold your face upon a target of your choosing within range, granting you their name and voice. Doesnt change any other features | 1 minute cooldown, 20 ve |
     | Shameful Retreat | Instantly uncuffs you at the cost of taking damage, letting out a long range vampire scream and losing access to your abilities and hands for 2 minutes | 
