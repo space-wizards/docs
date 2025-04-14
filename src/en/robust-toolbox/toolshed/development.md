@@ -26,7 +26,7 @@ The name of the command in the previous example is taken automatically from the 
 
 
 ```admonish note "Naming Convention"
-Auto-generated command names can be configure per-project to either use camel_case. So to support camel_case commands, you should should avoid using class names with abbreviations that have consecutive capitals. I.e., use something like `GetIdCommand` instead of `GetIDCommand`, as the latter would be converted to "get_i_d".
+Auto-generated command names can be configure per-project to use snake_case. So to support conversion CamelCase class names, you should should avoid using class names with abbreviations that have consecutive capitals. I.e., use something like `GetNpcCommand` instead of `GetNPCCommand`, as the latter would be converted to "get_n_p_c".
 ```
 
 ## Arguments & Return Values
