@@ -7,6 +7,7 @@ This section is intended for developers who want create their own Toolshed comma
 
 To create a new Toolshed command, you have to create a new class that:
 * Inherits from `ToolshedCommand`
+* Has a class name that ends with "Command"
 * Is annotated with the `ToolshedCommandAttribute`
 * Has one or more (non-static) methods that are annotated with the `CommandImplementationAttribute`. 
 
@@ -21,7 +22,7 @@ public sealed class FooCommand : ToolshedCommand
     }
 }
 ```
-The name of the command in the previous example is taken automatically from the name of the class, the method's name doesn't matter. I.e., the `FooCommand` class gets mapped to `foo`. Alternatively, the command name can be specified using the class attribute, e.g., `[ToolshedCommand(Name = "foo")]`.
+The name of the command in the previous example is taken automatically from the name of the class, the method's name doesn't matter. I.e., the `FooCommand` class gets mapped to `foo`. Alternatively, the command name can be specified using the class attribute, e.g., `[ToolshedCommand(Name = "foo")]`. If the name is explicitly specified, the name of the class doesn't  **have** to end in "Command", but it is still a good convention to follow.
 
 ## Arguments & Return Values
 To define a command that returns some value that can then be piped into another command, you just have to give the method some return value. To give the command some arguments you just add arguments to the method. For example,
@@ -88,10 +89,10 @@ public sealed class AddCommand : ToolshedCommand
 In order to create a command whose behaviour can be inverted by prefixing it with the "not" keyword, you have to give the method has a `bool` argument that is annotated with the `CommandInvertedAttribute`. For example, this is a simple command that looks for a specific number in a sequence:
 ```cs
 [ToolshedCommand]
-internal sealed class ContainsIntCommand : ToolshedCommand
+internal sealed class ContainsintCommand : ToolshedCommand
 {
     [CommandImplementation]
-    public bool ContainsInt([PipedArgument] IEnumerable<int> input, int value, [CommandInverted] bool inverted)
+    public bool Containsint([PipedArgument] IEnumerable<int> input, int value, [CommandInverted] bool inverted)
     {
         var result = input.Contains(value);
         return inverted ? !result : result;
@@ -200,6 +201,9 @@ public sealed class TpCommand : ToolshedCommand
 ```
 This would define then define the "tp:ent" and "tp:map" commands.
 
+```admonish note "Naming Convention"
+By convention, any new commands should use snake_case naming
+```
 
 ## Generics
 
@@ -290,7 +294,7 @@ If you want to create a method that uses a custom parser, you can specify a cust
 For example, the following defines a method that uses a custom parser to get an integer from a binary string. Though in this specific case, you could just as easily have made the command take in a string and done the conversion within the command's own method, though then the argument would need to be wrapped in quotes (all string arguments need to be wrapped in quotes).
 ```cs
 [ToolshedCommand]
-public sealed class FromBinaryCommand : ToolshedCommand
+public sealed class BinaryCommand : ToolshedCommand
 {
     [CommandImplementation]
     public int FromBinary([CommandArgument(typeof(BinaryParser))] int value) => value;
@@ -319,7 +323,7 @@ public sealed class BinaryParser : CustomTypeParser<int>
 ```
 
 ```
-> frombinary 10101
+> binary 10101
 21
 ```
 
