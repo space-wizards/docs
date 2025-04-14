@@ -24,6 +24,11 @@ public sealed class FooCommand : ToolshedCommand
 ```
 The name of the command in the previous example is taken automatically from the name of the class, the method's name doesn't matter. I.e., the `FooCommand` class gets mapped to `foo`. Alternatively, the command name can be specified using the class attribute, e.g., `[ToolshedCommand(Name = "foo")]`. If the name is explicitly specified, the name of the class doesn't  **have** to end in "Command", but it is still a good convention to follow.
 
+
+```admonish note "Naming Convention"
+Auto-generated command names can be configure per-project to either use camel_case. So to support camel_case commands, you should should avoid using class names with abbreviations that have consecutive capitals. I.e., use something like `GetIdCommand` instead of `GetIDCommand`, as the latter would be converted to "get_i_d".
+```
+
 ## Arguments & Return Values
 To define a command that returns some value that can then be piped into another command, you just have to give the method some return value. To give the command some arguments you just add arguments to the method. For example,
 ```cs
