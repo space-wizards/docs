@@ -96,7 +96,7 @@ Ranking Up:
     |----------|:-------------|
     | Blood Tailoring | Generates a set of vampire clothing of choice, certain pieces of it grant extra Vampire Energy regeneration. Mostly for rp purposes | 5 seconds cooldown, 15 ve | 
     | Whisper | Sends a private message to a selected vampire or infected entity |
-    | Dazzling Kiss | Super short range, pacifies the target for 4 seconds | 10 seconds cooldown, 20 ve |
+    | Dazzling Kiss | Super short range, pacifies the target for 6 seconds | 10 seconds cooldown, 20 ve |
     | Cold Touch | Click on a target within reach, after 1 minute their body temmperature will rapidly decrease. Good for stealthy ambushes | 25 seconds cooldown, 15 ve | 
     | Telekinesis | Teleports an small item you can see to your hand | 20 seconds cooldown, 15 ve |
     | Minor Illusion | Creates a fake wall, entities may walk trough it freely. It will be destroyed upon taken any damage | 20 seconds cooldown, 30 ve |
