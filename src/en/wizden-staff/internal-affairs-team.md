@@ -77,7 +77,8 @@ All powers of the Internal Affairs Team must be exercised via a majority of its 
 
 While Wizards are necessarily exempt from the certain enforcement powers of the Internal Affairs Team such as Removal, they are expected to follow their directives where applicable.
 
-Internal Affairs Team Members must recuse themselves where they may have a conflict of interest.
+Internal Affairs Team Members must recuse themselves where they may have a conflict of interest. If other Internal Affairs Team members believe that another member has a conflict
+of interest they may recuse that member with a majority vote.
 
 ### Mediation 
 
