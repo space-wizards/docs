@@ -22,6 +22,7 @@ This documents lists the Maintainer procedure for reviewing and merging PRs to t
   - This exemption is intended for smaller PRs, *or* PRs where the reviewing maintainer has extensive knowledge about the affected code.
   - It is expected that the reviewing maintainer uses their judgement for whether a PR should make use of this exemption, or if an additional review from another maintainer is more suitable.
 - If a triaged PR carries both the `T: Art` and `Changes: No C#` labels and only adds or edits sprites, it is exempt from the "2 Maintainer" requirements for merging and only requires one maintainer approval and art approval.
+  - If a maintainer is the author of a PR, this exemption does not apply (i.e no self-merges).
 - Maintainer Maptainers (i.e. Maintainers with additional responsibilities regarding Mapping) may ignore the "2 Maintainer" requirements for merging/closing any PRs involve mapping changes. This means a only single Maintainer Maptainer is needed to approve and merge mapping PRs, and also are able to self-merge mapping PRs.
   - Map tooling PRs are not included in this exemption.
   - Map hotfix PRs are not included in this exemption and must still follow normal hotfix procedure.
