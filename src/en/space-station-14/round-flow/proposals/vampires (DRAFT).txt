@@ -184,8 +184,3 @@ Ranking Up:
         (laser weapons cannot be blessed)
 
       (Holy damage is unaffected by resistances and can only be healed trough a few abilities. Making it a big threat to any vampire)
- 
-    
-    
-      
-    
