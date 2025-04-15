@@ -30,6 +30,8 @@ Affairs team will be assumed by Project Leadership.
 
 Internal Affairs Team members must be permanent staff members, must be in Good Standing and must not be Wizards.
 
+The Internal Affairs Team may not have more than 2 members belonging to Project Leadership, Game Admins and Maintainers respectively.
+
 Internal Affairs Team members shall be elected under the following procedure:
 
 ## Elections
