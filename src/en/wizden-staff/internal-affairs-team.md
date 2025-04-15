@@ -56,7 +56,7 @@ Internal Affairs Team members may be removed under the following procedure:
     - A vote must be accompanied with a good faith justification.
     - A vote cannot be held for a justification that was rejected in a previous vote.
     - Should a vote be brought which is clearly in bad faith, Project Leadership
-      collectively may cancel the vote and reprimand the Staff Member
+      with a majority vote of their own members may cancel the vote and reprimand the Staff Member.
       responsible.
 2. There must be at least 24 hours of open discussion with the members subject
    to removal having a chance to defend themselves.
@@ -67,12 +67,11 @@ Internal Affairs Team members may be removed under the following procedure:
 For the duration of the vote, members subject to removal are suspended from
 their position in the Internal Affairs Team.
 
-Project Leadership collectively is responsible for enforcing the Staff Policy
-during removal votes.
+Project Leadership is responsible for enforcing the Staff Policy during removal votes.
 
 ## Powers and Responsibilities 
 
-All powers of the Internal Affairs Team must be exercised collectively or through panels of its members unless otherwise stated.
+All powers of the Internal Affairs Team must be exercised via a majority of its members, or panels of at least three.
 
 While Wizards are necessarily exempt from the certain enforcement powers of the Internal Affairs Team such as Removal, they are expected to follow their directives where applicable.
 
