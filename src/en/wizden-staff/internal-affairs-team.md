@@ -93,10 +93,9 @@ The Internal Affairs Team may apply Strikes, Suspensions and Removals to Staff M
 
 The Internal Affairs Team must have transparent policies and processes. They must make such policies and processes available to the Staff Team.
 
-When taking action against Staff Members all parties involved must be given access to all available non-sensitive information and must be made aware
-of the reasoning behind actions taken by the Internal Affairs Team.
+When taking action the team must inform involved staff members of what the Internal Affairs Team is doing.
 
 In extraordinary circumstances the Internal Affairs Team may decide to deviate from a part of its policies and processes. These occurances must be made 
-public to the Staff Team as soon as possible. The Internal Affairs Team should avoid normalizing such deviations and should instead amend its policies and procedures when they are inconsistent.
+public to the Staff Team as soon as possible. The Internal Affairs Team should avoid normalizing deviating from their policies and should instead amend them if they prove to be insufficient.
 
 Changes to Internal Affairs Team policies, including the Staff Policy, must be ratified by the Staff Team.
