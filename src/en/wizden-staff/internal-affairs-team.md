@@ -77,11 +77,11 @@ of interest they may recuse that member with a majority vote.
 
 The Internal Affairs Team is responsible for identifying, de-escelating and mediating inter-staff conflicts. 
 
-During Active Conflicts, Internal Affairs Team Member may give orders to involved Staff Members with the aim of stopping it. 
-As a last resort, any Internal Affairs Team Member may suspend another Staff Member in order to stop an active conflict.
+During an Active Conflict any Internal Affairs Team Member may order staff members to disengage from a discussion and use moderation tools to enforce this order.
+As a last resort, any Internal Affairs Team Member may temporarily suspend another Staff Member in order to stop an active conflict.
 Such a Suspension must be reviewed by the whole Internal Affairs Team as soon as possible.
 
-Should the Internal Affairs Team deem it necessary, it may apply special measures such as prohibiting interaction between certain Staff Members.
+The Internal Affairs Team may temporarily prohibit interaction between certain staff members or the discussion of certain topics if they deem it necessary to resolve an inter-staff conflicts.
 
 ### Enforcement of the Staff Policy 
 
