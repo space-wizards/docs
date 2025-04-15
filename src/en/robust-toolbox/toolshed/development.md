@@ -170,31 +170,31 @@ public sealed class TpCommand : ToolshedCommand
     [Dependency] private readonly SharedTransformSystem _sys = default!;
 
     [CommandImplementation]
-    public void Teleport([PipedArgument] EntityUid uid, EntityCoordinates entCoords)
+    public void Teleport([PipedArgument] EntityUid uid, EntityUid parent, Vector2 pos)
     {
-        _sys.SetCoordinates(uid, entCoords);
+        _sys.SetCoordinates(uid, new EntityCoordinates(parent, pos));
     }
 
     [CommandImplementation]
-    public void Teleport([PipedArgument] EntityUid uid, MapCoordinates mapCoords)
+    public void Teleport([PipedArgument] EntityUid uid, MapId map, Vector2 pos)
     {
-        _sys.SetCoordinates(uid, _sys.ToCoordinates(mapCoords));
+        _sys.SetCoordinates(uid, _sys.ToCoordinates(new MapCoordinates(pos, map)));
     }
 }
 ```
 
 This limitation is mainly due to the fact that Toolshed would have no way of figuring out which command or arguments it should be attempting to parse. Instead, if you wanted to introduce these kinds of variations of a command, you need to use **subcommands**. 
 
-In some sense commands with subcommands are just normal commands that associate each implementation with its own unique name. These can be specified via the `CommandImplementationAttribute`. Note that if a command contains **any** named implementations, then all of them must be given a name. As an example, our earlier command could be fixed by naming the implementations:
+In some sense subcommands are just named implementations/methods of a command, where the name is assigned via the `CommandImplementationAttribute`. Note that if a command contains **any** named implementations, then all of them must be given a name. As an example, our earlier command could be fixed by naming the implementations:
 ```cs
 public sealed class TpCommand : ToolshedCommand
 {
     [Dependency] private readonly SharedTransformSystem _sys = default!;
 
     [CommandImplementation("ent")]
-    public void Teleport([PipedArgument] EntityUid uid, EntityCoordinates entCoords)
+    public void Teleport([PipedArgument] EntityUid uid, EntityUid parent, Vector2 pos)
     {
-        _sys.SetCoordinates(uid, entCoords);
+        _sys.SetCoordinates(uid, new EntityCoordinates(parent, pos));
     }
 
     [CommandImplementation("map")]
@@ -204,10 +204,10 @@ public sealed class TpCommand : ToolshedCommand
     }
 }
 ```
-This would define then define the "tp:ent" and "tp:map" commands.
+This would then define the `tp:ent` and `tp:map` "sub"-commands
 
 ```admonish note "Naming Convention"
-By convention, any new commands should use snake_case naming
+By convention, any new commands should use snake_case when naming commands or subcommands.
 ```
 
 ## Generics
