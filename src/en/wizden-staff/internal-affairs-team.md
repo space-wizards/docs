@@ -24,16 +24,15 @@ The Internal Affairs team shall be responsible for enforcing the [Staff Policy](
 
 ## Composition
 
-The Internal Affairs Team shall be composed of a minimum of 2 members and a maximum of 5. 
+The Internal Affairs Team shall be composed of a minimum of 2 members and a maximum of 5. There may not have more than 2 members belonging to Project Leadership, Game Admins or Maintainers respectively.
 
 If not enough members exist or for whatever reason the entirity of the Internal Affairs Team is unable to act in a certain situation, the powers and duties of the Internal
 Affairs team will be assumed by Project Leadership.
 
-Internal Affairs Team members must be permanent staff members, must be in Good Standing and must not be Wizards.
-
-The Internal Affairs Team may not have more than 2 members belonging to Project Leadership, Game Admins and Maintainers respectively.
-
-Internal Affairs Team members shall be elected under the following procedure:
+Internal Affairs Team members must:
+- be permanent staff members,
+- be in Good Standing,
+- not be Wizards,
 
 ## Elections
 
