@@ -20,7 +20,7 @@ The Internal Affairs team shall be responsible for enforcing the [Staff Policy](
 - A **Strike** is a formal warning against a staff member for a violation of the staff policy.
 - A **Suspension** is the temporary removal of permissions on some or all Wizard's Den Infrastructure. 
 - A **Removal** is the permanent removal of permissions on some or all Wizard's Den Infrastructure as well as the formal removal of some or all staff roles. 
-- An **Active Conflict** is a hostile disagreement between Staff Members which is either in violation or bordering on violation of Staff Policy.
+- An **Active Conflict** is a hostile disagreement between Staff Members which is either in violation of Staff Policy or bordering on violating Staff Policy.
 
 ## Composition
 
