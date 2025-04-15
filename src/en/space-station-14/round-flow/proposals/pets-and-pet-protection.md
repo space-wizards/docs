@@ -120,7 +120,7 @@ This is a non-exhaustive list.
 
 ## Joining Late With an Optional Pet
 
-If an Optional pet has not been spawned for a role during the round, the first player to spawn with that role is given priority to spawn a pet. If that player has chosen a pet to spawn with, that pet always spawns in a pet carrier in one of the player's hands. If, for some reason, the player is unable to hold the carrier,the carrier spawns at their feet instead.
+If an Optional pet has not been spawned for a role during the round, the first player to spawn with that role is given priority to spawn a pet. If that player has chosen a pet to spawn with, that pet always spawns in a pet carrier in one of the player's hands. If, for some reason, the player is unable to hold the carrier, the carrier spawns at their feet instead.
 
 If the player had not chosen a pet, the next player to spawn with the pet's job role will be given priority. This will continue throughout the entire round if necessary.
 
