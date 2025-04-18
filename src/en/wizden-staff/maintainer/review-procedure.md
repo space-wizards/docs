@@ -3,30 +3,30 @@
 This documents lists the Maintainer procedure for reviewing and merging PRs to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) `master` branch. 
 Hotfixes intended to be merged directly to the `stable` branch must follow additional restrictions specified in the [Hotfix Procedure](hotfix-procedure.md).
 
-Any portion of this procedure may be waived and/or modified with permission from a Project Manager or Wizard.
+Any portion of this procedure may be waived and/or modified with written permission (_via Discord or Github_) from a Project Manager or Wizard.
 
-Failure to follow this procedure may result in disciplinary action.
+Failure to follow this procedure can result in disciplinary action.
 
 ## PR Requirements
 All PRs must adhere to the [code conventions](../../general-development/codebase-info/conventions.md).
 
-All PRs must be triaged, as per the [triage procedure](triage-procedure.md) guidelines. 
-If a PR is not triaged, this should be done at the same time as the PR is initially considered for review.
+All PRs must be triaged, as per the [triage procedure](triage-procedure.md) guidelines.
+Upon actioning on a PR (merging, closing, reviewing), if it is not triaged, the person actioning must triage the PR.
 
 All PRs must not conflict with [core design principles](../../space-station-14/core-design/design-principles.md). 
 Additionally, the PR author should describe how the changes they made fit into the game.
-Sufficiently large PRs may also warrant a **Design Doc** detailing the broader scope and purpose of their changes.
+Sufficiently large feature PRs may also warrant a **Design Doc** detailing the broader scope and purpose of their changes.
 
 All PRs that include **breaking changes** (*e.g. modifying public APIs, moving code into another namespace, changing a prototype ID, etc.*) should contain a "breaking changes" section.
 This consists of a summary of the changes as well as how to apply them.
-After the PR is merged, the maintainer should format a message containing the PR link, the entirety of the "breaking changes" section, and a ping for `@contrib-notification` and post it into the `#codebase-changes` channel of the Discord.
+After the PR is merged, the maintainer should format a message containing the PR link, the entirety of the "breaking changes" section, and a ping for `@contrib-notification` before posting it into the `#codebase-changes` channel of the Discord and publishing.
 
 All PRs must complete fill out the Github PR Template to a satisfactory level.
 This includes filling out all applicable sections and attaching media when necessary.
 
 ## Decision Policy
 2 Maintainers are required to sign off on decisions about a PR.
-One of the maintainers is allowed to be an author of the PR, but the other should be uninvolved.
+One of the sign-offs may come from a maintainer who an author or collaborator for the PR, but the other must be uninvolved.
 
 To merge a PR, **all** the following conditions must be met:
 - The PR must receive 2 approvals for both **Code** and **Design**, given in the form of an approval checkmark on the PR's Github page.
@@ -68,7 +68,7 @@ If there is disagreement between two maintainers about whether a PR should be me
 
 ```admonish info "Use Your Head"
 The following are situations in which the typical decision policy can be modified or opted out of.
-If you do not feel confident, feel free to follow the normal process.
+If you do not feel confident, feel free to follow the normal process or ask a fellow Maintainer for assistance.
 ```
 
 ### Fixes
@@ -83,7 +83,7 @@ These cannot be self-approved.
 
 ### Map Changes
 
-PRs solely modifying map files and/or map prototypes need only a single approval from a **Head Mapper** (including a self-approval).
+PRs solely modifying map files and/or map prototypes need only a single approval from a **Head Mapper**. These may be self-approved.
 
 ### Rule/Config Changes
 
@@ -173,7 +173,7 @@ Discourage others from engaging in rude behavior and try not to upset the PR aut
 People can often be emotional after their PR is closed.
 
 
-- For relatively minor changes, opt to simply complete them yourself and push to the PR.
+- For relatively minor changes, opt to simply [complete them yourself](https://cli.github.com/manual/gh_pr_checkout) and push to the PR.
 
 
 - When requesting changes to a PR be made, keep them within the scope of the PR.
