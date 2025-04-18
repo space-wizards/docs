@@ -85,6 +85,8 @@ And with that, your repo is now properly setup!
 3. Press "Open" and select `SpaceStation14.sln`
 4. If you plan to do engine development you must add Robust Toolbox to the Directory Mappings so that Riders VCS can detect changes to Robust.
    Open Riders settings and go to the Version Control section > Directory Mappings and press the plus (+) button. For Directory point it to the `RobustToolbox` folder in the project and Git as the VCS
+5. Choose the branch you want to use in the top left.
+6. Select what you want to run from a dropdown menu next to the green play button at the top of the window. The setup is finished. You can now press the play button to compile and run it.
 
 ### VSCodium
 1. Download [VSCodium Here](https://vscodium.com/) or more directly [on Github Here](https://github.com/VSCodium/vscodium/releases) (On the latest release, click the assets dropdown then scroll to the ZIP or .exe for your OS).
@@ -96,7 +98,8 @@ And with that, your repo is now properly setup!
 
 ## 4. Starting SS14
 
-Now you can get on to compiling the client and server! Use your flavor of IDE to open the solution file `SpaceStation14.sln` and press the build button.
+Now you can get on to compiling! Use your flavor of IDE to open the solution file `SpaceStation14.sln`, and build and run the required assemblies (both Content.Server and Content.Client). 
+Click Direct Connect in the client window to start testing.
 
 To compile without an IDE, run `dotnet build` in the Space Station 14 repo directory. Then, call the following commands to run the client and server.
 * `dotnet run --project Content.Server`
@@ -134,9 +137,15 @@ There's also definitely some way to run two commands at the same time, but you s
 
 ### JetBrains Rider
 
-In Rider you can create a "compound configuration" to run or debug both client and server at the same time. Quite convenient!
+To run or debug test builds in Rider more easily, you can create a "compound configuration" which runs the client and server at the same time. Quite convenient!
+Just follow these steps or replicate the screenshots below:
+1. Edit configurations from the dropdown menu at the top.
+2. Add the .NET Projects 'Content.Client' and 'Content.Server' to the custom compound configuration by clicking "+" and click OK.
+3. Make sure the custom configuration is chosen from the dropdown menu and the icon has a green symbol. If it's red, go back to step 1.
+4. Press Shift+F10 or click the play button to run it. That's it!
 
-![](../../assets/images/setup-rider-configurations.png)
+![](../../assets/images/setup-rider-configurations-1.jpg)
+![](../../assets/images/setup-rider-configurations-2.jpg)
 
 ## 6. Configuring IDE directories
 

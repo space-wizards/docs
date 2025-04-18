@@ -23,8 +23,13 @@ Any text written in the bounds of the tag will be displayed plainly on the guide
 To alleviate my oncoming death, consider using the (small) variety of markdown tags that are supported:
 - `#` creates a title
 - `##` creates a heading
+- `###` creates a sub-heading
 - `-` creates a list entry
-- `[color=hex][/color]` colors the text inside the tags with the specified hex color.
+- `\n` creates a line break
+- `[color=hex or name][/color]` colors the text inside the tags with a specified hex color or basic color name
+- `[bold][/bold]` applies bold formatting
+- `[italic][/italic]` applies italic formatting
+- `[bolditalic][/bolditalic]` applies bold italic formatting (otherwise bold and italic override each other)
 
 ### Example
 Here is an example guidebook entry, `magboots.xml`
