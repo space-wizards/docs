@@ -1,5 +1,8 @@
-# Vampires
+# Vampires Antagonist
 - Lone Antagonist
+| Designers            | Implemented | GitHub Links |
+|----------------------|-------------|--------------|
+| Thinbug              | :x: No      | TBD          |
 
 # Overview
   Vampires are rarely attracted to the station as a way to increase their social standing in their organization. Draining blood and spreading their curse with the intent of raising to 
