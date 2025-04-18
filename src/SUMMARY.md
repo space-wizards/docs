@@ -181,6 +181,7 @@ Space Station 14
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
+		- [Pursuer](en/space-station-14/round-flow/antagonists/pursuer.md)
 
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
