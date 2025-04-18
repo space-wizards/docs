@@ -5,7 +5,7 @@ Hotfixes intended to be merged directly to the `stable` branch must follow addit
 
 Any portion of this procedure may be waived and/or modified with permission from a Project Manager or Wizard.
 
-Failure to follow this procedure may result in disciplinary action. Tread carefully, maintainer.
+Failure to follow this procedure may result in disciplinary action.
 
 ## PR Requirements
 All PRs must adhere to the [code conventions](../../general-development/codebase-info/conventions.md).
@@ -40,7 +40,7 @@ In this case, when the PR is merged, a Github issue should be created to indicat
 
 
 - If the PR has the `Changes: Sprites` label, it must additionally be approved by at least one **Art Lead** through the addition of the `S: Art Approval` tag.
-
+Changes that are solely minor sprite fixes are exempt from this.
 
 To close a PR, at **least one** of the following conditions must be met:
 - At least 2 maintainers must express wanting to close the PR or an unwillingness to merge it. 
@@ -50,35 +50,62 @@ This can be expressed either on the PR itself, or privately.
 - The PR contains content which violates Wizard Den's rules and/or code of conduct.
 
 
-- The PR author has been banned from the Wizard's Den Github and/or Discord or is otherwise unable to be communicated with.
+- The PR author has been **banned** from the Wizard's Den Github and/or Discord or is otherwise unable to be communicated with.
 
 
-- The PR is **Stale** (see section "Expedited Decision-Making").
+- The PR is **Stale**.
 
 
 - The PR has been superseded by a different PR and thus no longer needs to be merged.
 
 If a PR is closed, the maintainer must leave a message indicating the reason for its closure.
 This should be a formal message that includes all relevant information.
+If a maintainer discussion was held, it should be summarized and included here. 
 
 If there is disagreement between two maintainers about whether a PR should be merged or closed, a discussion should be held as described in the "Discussion Policy" section.
 
-### Exemptions:
+## Exemptions:
 
 ```admonish info "Use Your Head"
 The following are situations in which the typical decision policy can be modified or opted out of.
 If you do not feel confident, feel free to follow the normal process.
 ```
 
+### Fixes
+
 PRs which fix bugs, cleanup code, improve performance, or refactor systems _without_ the introduction of new features or balance changes can be processed by a single maintainer (who is not the PR author).
 The remaining decision policy requirements still apply.
+
+### Resprites
 
 PRs solely modifying sprites need only a single approval from an **Art Lead**.
 These cannot be self-approved.
 
+### Map Changes
+
 PRs solely modifying map files and/or map prototypes need only a single approval from a **Head Mapper** (including a self-approval).
 
+### Rule/Config Changes
+
 PRs solely containing rule changes and/or server config changes submitted by (or with written approval from) a Head Game Admin may be merged at any time with the approval of the Head Game Admin team.
+
+### Stale PRs
+
+A PR is considered stale if it is simultaneously awaiting changes from the author and hasn't received an update for a long period of time.
+
+After 3 weeks, a maintainer should reach out to the PR author and give them a few days to confirm that they are still working on the PR.
+If they are able to or unwilling to, the PR should be marked as stale and closed.
+After 6 weeks, a PR can automatically be considered stale and closed without needing to attempt to contact the author.
+
+Note that PRs undergoing maintainer discussion or awaiting review are not considered stale.
+
+### Drafts
+
+PRs should not be marked as drafts unless there is a meaningful reason behind them.
+Simply opening an incomplete PR as a draft is not permitted and will result in immediate closure.
+
+Drafts are only permitted if a portion of the PR requires review and/or approval in order for other segments of the same PR to be completed.
+Note that this does not apply if the PR is able to be easily atomized.
 
 ## Discussion Policy
 
@@ -120,44 +147,6 @@ This replaces the need for 2 design approvals (though the code still needs to be
 If the discussion has a negative conclusion, the closure message for the PR should include a brief summary of the discussion.
 This should have information about the elements that need to be addressed if a subsequent PR were to be made.
 
-## Expedited Decision-Making
-
-### Stale
-
-A PR is considered stale if it is simultaneously awaiting changes from the author and hasn't received an update for a long period of time.
-
-After 3 weeks, a maintainer should reach out to the PR author and give them a few days to confirm that they are still working on the PR.
-If they are able to or unwilling to, the PR should be marked as stale and closed.
-After 6 weeks, a PR can automatically be considered stale and closed without needing to attempt to contact the author.
-
-Note that PRs undergoing maintainer discussion or awaiting review are not considered stale.
-
-### Drafts
-
-PRs should not be marked as drafts unless there is a meaningful reason behind them.
-Simply opening an incomplete PR as a draft is not permitted and will result in immediate closure.
-
-Drafts are only permitted if a portion of the PR requires review and/or approval in order for other segments of the same PR to be completed.
-Note that this does not apply if the PR is able to be easily atomized. 
-
-### Low-Interest
-
-PRs that have not received any form of maintainer review or approval and are older than 6 weeks are considered **Low-Interest PR**s.
-
-Low-Interest PRs are subject to a expedited Decision Policy, requiring only one code and design approval to be merged or a single dissenting maintainer to be closed.
-Note that, before closing a PR due to Low-Interest, you should still briefly query maintainers to see if there would be any interest (_in the event that it simply slipped by_).
-
-### No-Impact
-
-PRs where the time and effort to review and merge the PR outweighs tangible in-game effects are considered **No-Impact PR**s.
-This does not include features that are low-priority or mundane (_clothing additions, etc._) but rather PRs which do not make substantial changes to the game.
-
-An example of a No-Impact PR would be adjusting an uplink listing's price by 1 TC.
-In most cases, this difference is unlikely to be noticeable in game. 
-Whether a PR is No-Impact is at the discretion of the maintainer team.
-
-No-Impact PRs are subject to an expedited Decision Policy, requiring only one code and design approval to be merged or a single dissenting maintainer to be closed.
-
 ## Review Guidelines
 The following are general guidelines to follow when reviewing PRs. 
 These are especially important to follow for first-time contributors.
@@ -175,7 +164,8 @@ It's okay to critique code and decisions, but you shouldn't insult their charact
 - When possible, direct people to either the [developer wiki](https://docs.spacestation14.com/index.html), `#howdoicode` discord channel, or alternate source for information.
 
 
-- Try to stay online for at least a few hours after reviewing PRs in order to allow contributors to contact you for additional explanations.
+- Make an effort to be available after reviewing a PR.
+You don't need to be constantly online, but if the author has questions, they should be able to get a response in a reasonable amount of time.
 
 
 - Be formal when closing PRs.
