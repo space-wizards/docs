@@ -136,6 +136,44 @@ public string Name
 }
 ```
 
+## Properly order members in a type
+
+When laying out the contents of a type, you should **always** put fields above all other instance members. When reading a piece of code, the best way to get familiar with it is to look at the data it operates on. If fields and other members are mixed randomly, it can be much harder to understand the code.
+
+For this rule, auto-properties (e.g. `string FooBar { get; set; }`) are considered the same as fields, since they have an internal field. Non-auto properties (e.g. `string FooBar => _field.Trim();`) do not, so should not be mixed.
+
+Bad:
+
+```csharp
+class FooBar
+{
+    private int _field;
+
+    public void Update() {
+        _field *= 2;
+        Counter += 1;
+    }
+
+    public int Counter { get; set; }
+}
+```
+
+Good:
+
+```csharp
+class FooBar
+{
+    private int _field;
+    public int Counter { get; set; }
+
+    public void Update() {
+        _field *= 2;
+        Counter += 1;
+    }
+
+}
+```
+
 # Project Conventions
 
 These conventions are specific to Space Station 14. They may talk about code or systems that aren't relevant to other projects, or those other projects may simply have a different opinion about code style.
