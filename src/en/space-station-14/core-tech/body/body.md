@@ -4,7 +4,7 @@ I am the BodySystem, Container of Containers! Look upon my works, ye spessmen, a
 
 # Design
 
-Body is the stucture which defines and controls the behaviour of many kinds of mobs. Each Body contains a set of entities inside itself - its body parts and organs, and these control what the Body actually does in-game.
+Body is the structure which defines and controls the behavior of many kinds of mobs. Each Body contains a set of entities inside itself - its body parts and organs, and these control what the Body actually does in-game.
 
 ## Body Composition
 
