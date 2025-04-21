@@ -154,6 +154,9 @@ These are especially important to follow for first-time contributors.
 - Use **constructive** language and avoid being overly negative.
 
 
+- Try not to be _overly_ vulgar or swear in a derogatory way.
+
+
 - Avoid comments that personally criticize the author.
 It's okay to critique code and decisions, but you shouldn't insult their character.
 
