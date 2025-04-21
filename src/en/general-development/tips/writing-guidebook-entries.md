@@ -26,7 +26,7 @@ To alleviate my oncoming death, consider using the (small) variety of markdown t
 - `###` creates a sub-heading
 - `-` creates a list entry
 - `\n` creates a line break
-- `[color=hex or name][/color]` colors the text inside the tags with a specified hex color or basic color name
+- `[color=hex or name][/color]` colors the text inside the tags with a specified hex color or one of 145 [presets](https://github.com/space-wizards/RobustToolbox/blob/f49b01b1b766458f61a38506dd3e2fa7525f5e6b/Robust.Shared.Maths/Color.cs#L1749)
 - `[bold][/bold]` applies bold formatting
 - `[italic][/italic]` applies italic formatting
 - `[bolditalic][/bolditalic]` applies bold italic formatting (otherwise bold and italic override each other)
