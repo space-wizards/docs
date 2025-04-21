@@ -3,7 +3,7 @@
 This documents lists the Maintainer procedure for reviewing and merging PRs to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) `master` branch. 
 Hotfixes intended to be merged directly to the `stable` branch must follow additional restrictions specified in the [Hotfix Procedure](hotfix-procedure.md).
 
-Any portion of this procedure may be waived and/or modified with written permission (_via Discord or Github_) from a Project Manager or Wizard.
+Any portion of this procedure may be waived and/or modified with written permission (_via Discord or Github_) from a Lead Maintainer, Project Manager or Wizard.
 
 Failure to follow this procedure can result in disciplinary action.
 
@@ -21,12 +21,12 @@ All PRs that include **breaking changes** (*e.g. modifying public APIs, moving c
 This consists of a summary of the changes as well as how to apply them.
 After the PR is merged, the maintainer should format a message containing the PR link, the entirety of the "breaking changes" section, and a ping for `@contrib-notification` before posting it into the `#codebase-changes` channel of the Discord and publishing.
 
-All PRs must complete fill out the Github PR Template to a satisfactory level.
+All PRs must completely fill out the Github PR Template to a satisfactory level.
 This includes filling out all applicable sections and attaching media when necessary.
 
 ## Decision Policy
 2 Maintainers are required to sign off on decisions about a PR.
-One of the sign-offs may come from a maintainer who an author or collaborator for the PR, but the other must be uninvolved.
+One of the sign-offs may come from a maintainer who is an author or collaborator for the PR, but the other maintainer must be uninvolved.
 
 To merge a PR, **all** the following conditions must be met:
 - The PR must receive 2 approvals for both **Code** and **Design**, given in the form of an approval checkmark on the PR's Github page.
