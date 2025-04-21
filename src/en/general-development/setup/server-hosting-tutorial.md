@@ -32,7 +32,7 @@ The server needs network ports to be forwarded so that people can connect. By de
 
 For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6 try both if one fails.
+After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6, try both if one fails.
 
 Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
 
@@ -144,7 +144,7 @@ By default, the server ships with no rules. To set custom rules for your own ser
     # server_url = "ss14://..."
     tags = "" # comma separated list of tags
     ```
-If you get an error attempting to advertise please read [the troubleshooting bellow](#Troubleshooting)
+If you get an error attempting to advertise, please read [the troubleshooting below](#Troubleshooting)
 
 ### Bare Server Build Configuration
 
