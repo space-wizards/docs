@@ -137,12 +137,8 @@ There's also definitely some way to run two commands at the same time, but you s
 
 ### JetBrains Rider
 
-To run or debug test builds in Rider more easily, you can create a "compound configuration" which runs the client and server at the same time. Quite convenient!
-Just follow these steps or replicate the screenshots below:
-1. Edit configurations from the dropdown menu at the top.
-2. Add the .NET Projects 'Content.Client' and 'Content.Server' to the custom compound configuration by clicking "+" and click OK.
-3. Make sure the custom configuration is chosen from the dropdown menu and the icon has a green symbol. If it's red, go back to step 1.
-4. Press Shift+F10 or click the play button to run it. That's it!
+To run or debug test builds in Rider more easily, you can create a [compound configuration](https://www.jetbrains.com/help/rider/Run_Debug_Multiple.html#compound-configs) which runs the client and server at the same time. Quite convenient!
+The project may already include a configuration you can choose from the dropdown at the top, but if it has a red symbol, it wasn't set up properly and you need to create it manually, or it hasn't loaded yet. Once done, press Shift+F10 or click the play button to run it. That's it!
 
 ![](../../assets/images/setup-rider-configurations-1.jpg)
 ![](../../assets/images/setup-rider-configurations-2.jpg)
