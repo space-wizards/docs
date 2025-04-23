@@ -22,7 +22,7 @@ Spacestation 14 explores a several conceptual bases for its alien species, six a
 
 ### Appearance
 
-The fungoid appears as a humanoid shaped mushroom or fungus. Their 'skin' is leathery and mottled, sometimes being covered with overlapping layers and their head ends in a great fungal crown, both an impressive and intimidating like the antlers on a stag.
+The fungoid appears as a humanoid shaped mushroom or fungus. Their 'skin' is leathery and mottled, sometimes being covered with overlapping layers and their head ends in a great fungal crown, both impressive and intimidating like the antlers on a stag.
 
 The fungoid have no sexual dimorphism (or different sexes as we understand them), so have identical male and female sprites.
 Also they have no mammal-like reproductive/sexual organs, so it will __not__ be appear like its inappropriate whilst they are nude.
