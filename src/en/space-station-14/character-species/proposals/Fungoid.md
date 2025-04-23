@@ -81,7 +81,7 @@ This is also not intended to be an obstacle for antagonists as mycelium can be p
 Non fungoid organs slowly accumulate a psychedelic chemical with a mild toxin overdose effect.
 
 Decomposer diet
-- The fungoid can eat rotten and bloated foods with no reproduction.
+- The fungoid can eat rotten and bloated foods with no repercussion.
 A faster digestion or increased nutrition for rot is desirable, but not needed.
 
 Slow speed
