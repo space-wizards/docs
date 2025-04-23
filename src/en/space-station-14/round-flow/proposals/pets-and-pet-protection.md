@@ -1,5 +1,6 @@
 # Pets and Pet Protection
 
+
 | Designers      | Implemented | GitHub Links |
 | -------------- | ----------- | ------------ |
 | FairlySadPanda | :x: No      | TBD          |
@@ -8,9 +9,9 @@
 
 After several instances of our research station employees experiencing the unfortunate side-effects of severe emotional isolation, we at NanoTrasen Animal Research and Cloning (A.R.C.) are proud to announce our all-new mental health initiative for NT staff: cute, fluffy animals!
 
-Research has shown that providing emotional support animals to crew-members in need of friendship (or a parent-child relationship) is 46.3% cheaper than the cost of providing actual psychiatric treatment or replacing failing crewmembers with obedient robots.
+Research has shown that providing emotional support animals to crew-members in need of friendship (or a parent-child relationship) is 46.3% cheaper than the cost of providing actual psychiatric treatment or replacing failing crew-members with obedient robots.
 
-To fulfil our aggressive quarterly targets and prevent needless destruction of company resources, A.R.C. now provides a range of pets to staff deemed at high-risk of common problems like depression (the HOP), psychotic rage (the CMO) or alcohol abuse (everyone else). 
+To fulfil our aggressive quarterly targets and prevent needless destruction of company resources, A.R.C. now provides a range of pets to staff deemed at high-risk of common problems like depression (the HOP), psychotic rage (the CMO) or alcohol abuse (everyone else).
 
 Be aware: NanoTrasen takes a dim view of your personal pets being mistreated, maimed, thrown into singularities, or traded for illegal contraband.
 
@@ -31,6 +32,7 @@ For a long while, Space Station 14 has had a "feature freeze" on new pets, for t
 This design document outlines a proposal to lift the pet freeze by moving pets over to becoming loadout items, unlocked via playtime for various job roles. In addition, it outlines gameplay mechanics that encourage players to role-play owning and taking care of their pets. Afterwards, it outlines the principles behind pet ghost roles and when a pet should be unlocked for late-joiners and the recently deceased to play. Pet Carriers are discussed, and we then dwell for a short time on the Captain and Head Of Personnel's pets and their gameplay importance. Finally, it covers the unique trio of pet-crew ancestors (Pun Pun, Kweh Kweh and Wa Wa), their purpose in gameplay, and their unique circumstances as Junior Assistant Bartenders.
 
 ## Player Profiles
+
 - **Cutesy Gamer** wants to play as a cute critter attached to someone they have a reason to have interactions with.
 - **Thoughtful Role-player** wants their character to have more of a connection to the universe and more ways of expressing their (lack of) capacity for responsibility.
 - **Green-text Enjoyer** wants to get that sweet, sweet green-text at the end of the round, and enjoys being challenged in creative ways to secure that green-text.
@@ -63,7 +65,7 @@ For the unique circumstances surrounding the Junior Assistant Bartender, see the
 
 # Pets As Loadouts
 
-Pets are not mapped directly onto the station. Instead, each role may have at least one pet assigned to it via its loadout. Much like other loadout options, pets are unlocked via playtime. 
+Pets are not mapped directly onto the station. Instead, each role may have at least one pet assigned to it via its loadout. Much like other loadout options, pets are unlocked via playtime.
 
 When a role has a pet as a loadout option, that role will have a mapped pet spawn location on the station. If it does not, the pet will spawn as if the role spawned as a late-joiner (see "Joining Late with a Pet" below).
 
@@ -81,46 +83,54 @@ Almost all pets are considered a singular pet spawn. The only known exception at
 
 ### Mandatory Pets
 
-A Mandatory pet will always spawn, even if their associated role does not spawnat roundstart. Mandatory pets include:
+A Mandatory pet will always spawn, even if their associated role does not spawn at round-start. Mandatory pets include:
 
-1. The Captain's pet. See "Hamlet And Friends" below.
-2. The Head of Personnel's pet. See "Ian And Friends" below.
-3. The Junior Assistant Bartender. See "Junior Assistant Bartenders" below.
 
-Mandatory pets always have a spawn chance weight.
+| Role              | Mandatory Pet Choices         |
+| :---------------- | ----------------------------- |
+| Captain           | Hamlet, Renault               |
+| Head Of Personnel | Puppy Ian, Ian, Lisa, Old Ian |
+| Bartender         | Pun Pun, Kweh Kweh, Wa Wa     |
 
-Mandatory pets are spawned at roundstart based on the following steps:
+Mandatory pets are spawned at round-start based on the following steps:
 
-1. If at least one player from their associated role has spawned, the player with the highest amount of time as that role is given priority. If no player with the role has spawned, skip to step 3.
-2. If the player with priority has selected a pet, that pet is spawned and this workflow ends. Otherwise, priority is passed to the player with the next-highest time as that job role and this step is repeated. If no other player can be passed priority, skip to step 3.
+1. If at least one player from their associated role has spawned, a random player from that role is given priority. If no player with the role has spawned, skip to step 3.
+2. If the player with priority has selected a pet, that pet is spawned and this workflow ends. Otherwise, randomly pick another player with the role who has not been given priority already, and this step is repeated. If no other player can be given priority, skip to step 3.
 3. The spawn chance weights of each of the Mandatory pet choices for that role are used to randomly select a pet. This pet is spawned.
 
 For example, if no bartender has spawned, Pun's weight might be 0.5, Kweh's weight 0.3 and Wa's rate 0.1. This would give Pun a 5/9 chance of being spawned, and Wa only a 1/9 chance.
 
+Mandatory pets spawn in pre-mapped locations, inside their Pet Carrier.
+
 ### Optional Pets
 
-Optional pets are spawned at roundstart based on the following steps:
+Optional pets are spawned at round-start based on the same steps as for Mandatory pets, with a different step 3:
 
-1. If at least one player from their associated role has spawned, the player with the highest amount of time as that role is given priority. If no player with the role has spawned, skip to step 3.
-2. If the player with priority has selected a pet, that pet is spawned and this workflow ends. Otherwise, priority is passed to the player with the next-highest time as that job role and this step is repeated. If no other player can be passed priority, skip to step 3.
 3. No pet is spawned.
+
+Optional pets spawn in their owner's hands, inside their Pet Carrier.
 
 #### Examples of Optional Pets By Job Role
 
 This is a non-exhaustive list.
 
-* Alexander (either Botany or Chef, depending on who you ask)
-* Smile (RD)
-* Exception & Runtime, Walter (CMO)
-* Tropico, Poly (CE)
-* Morty, Morticia (QM)
-* Paperwork (Librarian)
-* The Moproach (Janitor)
-* Shiva, McGruff (The HOS)
+
+| Role                  | Optional Pet Choices        |
+| :-------------------- | --------------------------- |
+| Chef                  | Alexander                   |
+| Research Director     | Smile                       |
+| Chief Medical Officer | Exception & Runtime, Walter |
+| Chief Engineer        | Tropico, Polly              |
+| Quartermaster         | Morty, Morticia             |
+| Librarian             | Paperwork                   |
+| Janitor               | The Moproach                |
+| Head Of Security      | Shiva, McGruff              |
+
+**Note that the above includes some Heads gaining pets that are traditionally assigned to their subordinates**. This is intentional to reduce the number of pets on station. In general, outside Service, each department has a singular pet choice per-round.
 
 ## Joining Late With an Optional Pet
 
-If an Optional pet has not been spawned for a role during the round, the first player to spawn with that role is given priority to spawn a pet. If that player has chosen a pet to spawn with, that pet always spawns in a pet carrier in one of the player's hands. If, for some reason, the player is unable to hold the carrier, the carrier spawns at their feet instead.
+If an Optional pet has not been spawned for a role during the round, the first player to spawn with that role is given priority to spawn a pet. If that player has chosen a pet to spawn with, that pet always spawns in a Pet Carrier in one of the player's hands. If, for some reason, the player is unable to hold the Carrier, the Carrier spawns at their feet instead.
 
 If the player had not chosen a pet, the next player to spawn with the pet's job role will be given priority. This will continue throughout the entire round if necessary.
 
@@ -130,53 +140,56 @@ When a pet is spawned due to a player spawning with that job role, that player i
 
 This role should always match the equivalent "escape to CentComm alive" rules that antagonists use.
 
-For safety, a player may choose to load their pet into a pet carrier, buckle them to a bed or a seat, or any other method to prevent their pet from jumping out the escape shuttle mid-flight. As long as the pet is alive when arriving at CentComm, the player will green-text.
+The objective to ensure the survival of their pet is removed if the player is made into an antagonist **other than a Thief**. A Zombie or Traitor has no interest in keeping their pet alive. Likewise, if a player is made into a Survivor, considerations about their pet's wellbeing ceases to be their chief concern, and the objective is removed.
 
-The exception to this is if the pet has fulfilled a steal objective for an antag, such as the Thief or Traitor. For these antagonists, they must directly be holding the pet in their hands, a pet carrier, or other storage on their person.
+If a Paradox Clone duplicates a player with a crew objective to protect that pet, that objective is inherited by the Clone.
 
-A player is NOT told if their pet has died. In the very rare circumstances where a pet has died and been cloned or duplicated, the clone DOES NOT count towards green-texting.
+For safety, a player may choose to load their pet into a Pet Carrier, buckle them to a bed or a seat, or any other method to prevent their pet from jumping out the escape shuttle mid-flight. As long as the pet is alive when arriving at CentComm, the player will green-text.
+
+The exception to this is if the pet has fulfilled a steal objective for an antag, such as the Thief or Traitor. For these antagonists, they must directly be holding the pet in their hands, a Pet Carrier, or other storage on their person.
+
+A player is NOT told if their pet has died. In the very rare circumstances where a pet has died and been cloned or duplicated, the clone DOES NOT count towards green-texting. Zombified pets do NOT count toward green-texting.
 
 With one exception, all pets only have one "owner" and only one player will have an objective to keep that pet alive. For the exception, see the "Junior Assistant Bartender" section below.
 
-The crew objective to ensure the survival of their pet is removed if the player is made into an antagonist **other than a Thief**. A Zombie or Traitor has no interest in keeping their pet alive. Likewise, if a player is made into a Survivor, considerations about their pet's wellbeing ceases to be their chief concern, and the objective is removed.
-
 # When Should A Pet Be A Ghost Role?
 
-Pets should only be a ghost role if they match the following circumstances:
+Pets should only be a ghost role if they match any of the following circumstances:
 
-1. They have succeeded on a low probability chance to be sentient when spawned. This chance should max out at 5% unless justified via gameplay.
-2. The pet has a unique gameplay gimmick that would be appealing to a ghost to play as.
-3. The pet has been given cognizine, as usual for animals.
-4. The pet was historically a ghost role in Space Station 13 or a Space Station 14 downstream, and it would be sufficiently disappointing to players if the role was removed.
+1. The pet has a unique gameplay gimmick that would be appealing to a ghost to play as.
+2. The pet was historically a ghost role in Space Station 13 or a Space Station 14 downstream, and it would be sufficiently disappointing to players if the role was removed.
+3. The pet is the Captain's.
 
-Examples of pets with unique gameplay gimmicks include:
+Examples of pets that may be a ghost role under this design rule are:
 
-1. Hamlet, because he can run under doors and eats everything on the station before being shoved into a microwave.
-2. Poly, because she can repeat anything she's heard and can fly.
-3. The Junior Assistant Bartender, for obvious reasons.
-4. Shiva, because she can spin webs and help hunt down criminals
-5. McGruff, because he can help hunt down criminals.
-6. The Moproach, as they can help clean spills.
 
-Examples of grandfathered species include:
-
-1. Smile the Slime.
+| Pet                       | Why                                                                                                                        |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Hamlet                    | He can run under doors, be places they shouldn't, and eats everything on the station before being shoved into a microwave. |
+| Renault                   | He's more durable than Hamlet but can't move around the station easily. A guard-fox for the bridge.                        |
+| Polly                     | She can repeat anything she's heard and can fly.                                                                           |
+| Pun Pun, Kweh Kweh, Wa Wa | They're a job role!                                                                                                        |
+| Shiva, McGruff            | Supporting security in fighting crime.                                                                                     |
+| The Moproach              | Helping the Janitor(s) clean spills.                                                                                       |
+| Smile                     | Grandfathered.                                                                                                             |
 
 # Pet Carriers
 
-If a pet spawner is mapped on a station, that spawner must always be accompanied by a pet carrier.
+Pets always spawn inside a Pet Carrier.
 
-Pet carriers are a secure place to place pets out of sight. They also provide the perfect vector for stealing pets, as they do not allow outside observers to see inside.
+Pet Carriers are a secure place to place pets out of sight. They also provide the perfect vector for stealing pets, as they do not allow outside observers to see inside.
 
-It should always be reasonably possible for a player with an objective of keeping a pet alive to find a pet carrier for them.
+It should always be reasonably possible for a player with an objective of keeping a pet alive to find a Pet Carrier for them. Pet Carriers should spawn as maintenance loot and be fabricatable via a lathe, possibly after a research tech unlock.
 
-Pet carriers protect the pet inside from harm, including loss of atmosphere, radiation, and other things that would be unfortunate to their health (such as shuttle bombings).
+Pet Carriers protect the pet inside from harm, including loss of atmosphere, radiation, and other things that would be unfortunate to their health (such as shuttle bombings).
 
-A pet carrier can be locked, preventing entry or exit. This lock is trivial to remove from the outside, even by a station pet.
+A Pet Carrier can be locked, preventing exit. This lock is trivial to remove from the outside, even by a station pet.
 
-If a pet is not being controlled by a player, it may randomly wander out of a pet carrier it is inside unless that carrier is being held. A pet inside a locked carrier will break out of the carrier after several of these random attempts to leave unless the lock is reset.
+A pet inside a locked Carrier can break out of the carrier after attempts, unless the lock is reset.
 
-In general, a pet can rely on a pet carrier to protect themselves against anything other than a direct hit from an explosion or something Very Bad happening to Space Station 14.
+If a pet is not being controlled by a player, it may randomly attempt to leave a out of a Pet Carrier it is inside unless that carrier is being held.
+
+In general, a pet can rely on a Pet Carrier to protect themselves against anything other than a direct hit from an explosion or something Very Bad happening to Space Station 14.
 
 # Hamlet And Friends
 
@@ -187,7 +200,9 @@ The Captain's pet is Mandatory. The Captain must choose from one of the followin
 
 Unlike other pet loadout choices, both of these options are available to the Captain as soon as the role is unlocked.
 
-Renault is a passive and chill fox with only a low chance of being sentient at the start of the round. However, a recent unwise decision involving a telecrystal has made them a target for any Traitor willing to risk breaking into the Bridge.
+All Captain pets contain 5 TC that can be looted if the pet is butchered. All Captain pets are ghost roles.
+
+Renault is a fox who guards the Bridge and the Captain's office.
 
 Hamlet is a small bundle of furry chaos, a guaranteed ghost role with an insatiable appetite and an inability to be stopped by mere doors.
 
@@ -215,12 +230,12 @@ Junior Assistant Bartenders are a Mandatory pet. They are also the only station 
 Junior Assistant Bartenders always spawn with the following equipment:
 
 * A top hat
-* A monkey-sized barkeeping outfit
+* An appropriately-sized barkeeping outfit
 * An ID card
 
 Unlike other station pets, **all** Bartenders are given a crew objective to keep the Junior Assistant Bartender alive.
 
-The role of Junior Assistant Bartender is a role a player can select preference for, and select off of the latejoin list. Observers may also raffle to join the game as the Junior Assistant Bartender as usual for ghost role pets.
+The role of Junior Assistant Bartender is a role a player can select preference for, and select off of the late-join list. Observers may also raffle to join the game as the Junior Assistant Bartender as usual for ghost role pets.
 
 The most senior Bartender on staff can pick from the following options:
 
@@ -230,80 +245,4 @@ The most senior Bartender on staff can pick from the following options:
 
 ### A Note On Ancestor Pets More Generally
 
-Pets, outside the Junior Assistant Bartender, are assumed to be creatures that lack hands. They _may_ be capable of dragging things, or even wearing a small container for moving items around. However, ancestor species always have one "hand", reflecting their diminished size. Ancestor species are a significant power-creep over normal animals, and should be avoided as station pets without being backed by a very strong idea. We would welcome a future design document for ancestor species more widely.
-
-# Proposed Workload
-
-| Strike Team      | Kanban Organizer | Members |
-| ---------------- | ---------------- | ------- |
-| Strike Team Wawa | FairlySadPanda   | TBD     |
-
-(*Pending acceptance of Strike Team methodology)
-
-(** The following is a demonstration of a work-plan for a development project, with features described via User Stories)
-
-## Station Pets Selectable as Loadouts
-
-| As A         | I Can                                                                                                                                  | So That                                                                        |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Lobby Player | Select to have no Optional Pet for my character's loadout for any given job                                                            | I don't have to spawn with an optional pet if I don't want to.                 |
-| Lobby Player | Select a choice of Optional Pets for any given job                                                                                     | I can have a small, cuddly friend on the station.                              |
-| Lobby Player | Select a choice of Mandatory Pets for any given job                                                                                    | I can have my preference of pet if mandated by NanoTrasen.                     |
-| Designer     | Allocate Station Pets to be unlocked in Loadouts at a variety of playtimes                                                             | I can reward long-term players with nice unlocks                               |
-| Round Player | Spawn with my selected Optional or Mandatory Pet at round-start *if I was the most senior member of my role at the time*               | I can feel rewarded for my play-time investment.                               |
-| Designer     | Spawn each Mandatory Pet at round-start even without anyone playing that role, using random chance and weights                         | Mandatory pets always start on the station to enforce other gameplay mechanics |
-| Pet Owner    | Green-text if my pet escapes to Centcomm alive and unharmed at the end of the round                                                    | I can have a goal for the round and feel encouraged to look after my pet       |
-| Thief        | Deny a pet owner their green-text by kidnapping their pet in a pet carrier, bag, or similar method                                     | I can have joy in their suffering                                              |
-| Late Joiner  | Spawn with my selected Optional pet in a pet carrier when late-joining, *if no station pet for my role was selected for the round yet* | I can still have a small cuddly friend even if I late-join sometimes           |
-
-## Station Pet Spawners Replaced By Job Role Pet Spawners
-
-| As A   | I Can                                         | So That                                                                              |
-| ------ | --------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Mapper | Only have to map one pet spawner per job role | I don't have to decide whether to add that pet to every map each time a pet is added |
-
-## Junior Assistant Bartender
-
-| As A                       | I Can                                                     | So That                                                                                     |
-| -------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Lobby Player               | Select Junior Assistant Bartender as a job role           | I can start the round as the Junior Assistant Bartender if I like that role                 |
-| Late Joiner                | Select Junior Assistant Bartender from the late-join menu | I don't need to enter a ghost role raffle if I want to play as a Junior Assistant Bartender |
-| Junior Assistant Bartender | Play as Pun Pun, the Monkey                               | I can OOK and EEE with the best of them, and be a good monkey                               |
-| Junior Assistant Bartender | Play as Kweh Kweh, the Kobold                             | I can KEWH with the best of them, and be a little goober kobold                             |
-| Designer                   | Spawn scurrets                                            | I can use them for unusual ancestor job roles, such as the Pizza Delivery Critter           |
-| Junior Assistant Bartender | Play as Wa Wa, the Scurret                                | Wa wa wa, wa wa wa!                                                                         |
-
-## The Moproach
-
-| As A     | I Can                                                                             | So That                                                                            |
-| -------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Designer | Spawn The Moproach                                                                | I have an unusual pet to use for specific gameplay objectives of my choosing       |
-| Janitor  | Have The Moproach as my station pet *if I am the most senior janitor at the time* | I have a friend to help mop all the station floors with, and because it's adorable |
-
-# Future Work
-
-There are a few station pets which would require either modification or outright addition now that station pets are unblocked.
-
-## Security Pets (Valid-Hunting)
-
-Security pets often are mooted as having a role in hunting bad guys. This has also been used as a way of re-introducing Officer Beepsky. Security pets require a design doc to cover their gameplay, administration interactions, expected power, and so on.
-
-## Poly The C.E.'s Parrot
-
-Probably the most iconic missing pet; Poly is a talking flying parrot that mostly exists to wind up the crew with inane conversation. This pet is complex enough to warrant a short design document of their own; see the note above above in "How Should Station Pets Be Played?" about preventing issues with pets that are only capable of griefing the station.
-
-## Zookeeper Pets
-
-The Zookeeper has many possible "pets", due to their role involving management of alien and mundane animals that don't have a role in hydroponics/botany. There are already some pets of this type included, such as gorllias and penguins. The Zookeeper also has some suggestions as having a crew magic power to talk to animals. As such they warrant a design document of their own. When that document is written and accepted, this design document should be amended to add notes on their interaction with station pet loadouts, if any.
-
-## Boxer Pets (Fighting Animals)
-
-At the moment this is restricted to Willow, but the Loadout system described above could easily be extended to include other unusual pets for the "fighter" role, currently filled by the Boxer on certain high-population maps. This should form part of the Boxer design document. When that document is written and accepted, notes about Willow above should be amended.
-
-## Chaplain and Summonable Pets
-
-Summonable pets are a crew magic power and should form part of a crew magic powers document. However, if that document advocates for extending pet loadouts to support determining which pet a given summoner is capable of accessing at round-start, this document should be updated.
-
-## Xenobiology
-
-There has been design for animal testing as a Science role. This is unlikely to interface with this system, however if the design was to create new assumptions for the availability of station pets (e.g. for DNA sampling or kidnapping for testing) then this design document should be updated to compensate for the new role.
+Pets, outside the Junior Assistant Bartender, are assumed to be creatures that lack hands. They _may_ be capable of dragging things, or even wearing a small container for moving items around. However, ancestor species always have one "hand", reflecting their diminished size. Ancestor species are a significant power-creep over normal animals, and *should be avoided* as station pets without being backed by a very strong idea. We would welcome a future design document for ancestor species more widely.
