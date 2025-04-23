@@ -22,8 +22,6 @@ Spacestation 14 explores a several conceptual bases for its alien species, six a
 
 ### Appearance
 
-(image search myconid for ref)
-
 Colours will be lower saturation, and go from mid blues through purples, reds, oranges and yellows. Cyans and greens are both less common mushroom/fungus colours and also help reduce Diona likeness, however if in practice they look good there will be no initial sprite colour bias.
 
 The fungoid have no sexual dimorphism (or different sexes as we understand them), so have identical male and female sprites.
