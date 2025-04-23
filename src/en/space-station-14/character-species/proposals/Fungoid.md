@@ -22,15 +22,17 @@ Spacestation 14 explores a several conceptual bases for its alien species, six a
 
 ### Appearance
 
-Colours will be lower saturation, and go from mid blues through purples, reds, oranges and yellows. Cyans and greens are both less common mushroom/fungus colours and also help reduce Diona likeness, however if in practice they look good there will be no initial sprite colour bias.
+The fungoid appears as a humanoid shaped mushroom or fungus. Their 'skin' is leathery and mottled, sometimes being covered with overlapping layers and their head ends in a great fungal crown, both an impressive and intimidating like the antlers on a stag.
 
 The fungoid have no sexual dimorphism (or different sexes as we understand them), so have identical male and female sprites.
 Also they have no mammal-like reproductive/sexual organs, so it will __not__ be appear like its inappropriate whilst they are nude.
 
-Mushrooms come in many greatly varying shapes and have just as many variations of smaller defining textures and decals. 
-Because there is too much to represent for an initial build of the species, the body, legs and arms vary minimally from the humanoid shape but have some unsymmetrical vertical mottling. Later on, bodypart variants could show layered/frilled surfaces, stem skirting, thinner areas, and several variant surface texturings. 
-The feet will be like small stumps. It raises the question of how their shoes manage stay on, I imagine they kinda just grip the material with some threadlike mycelium.
-The head is where the fungoid is really able to show its unique appearance due to not needing to conform to any shape/design requirements bar their "eyes" being supportive of glasses. Typical mushroom heads like flat conical or rounded heads will come initially, then the more diverse designs follow: frilled, layered, veiled, brackets, puffballs, stars, comb, bleeding, clustered, ect. This is going to be the defining feature of the fungoid, as it relates to their ability to create spores, inability to wear headware, and the largest element of visual expression that the species has.
+Mushrooms come in many varying shapes and have just as many variations of smaller defining textures and decals. 
+As there is too much to represent for an initial build of the species, the body, the legs and the arms will vary minimally from the humanoid shape, but have some unsymmetrical vertical mottling. Later on, bodypart variants could show layered/frilled surfaces, stem skirting, thinner areas, and several variant surface texturings. 
+The feet will be like small and stump-like.
+The head is where the fungoid is really able to show its unique appearance due to not needing to conform to any shape/design requirements bar their "eyes" being supportive of glasses. Typical mushroom heads like flat, conical or rounded heads will come initially, then the more diverse designs follow: frilled, layered, veiled, brackets, puffballs, stars, comb, bleeding, clustered, ect. This is going to be the defining feature of the fungoid, as it relates to their ability to create spores, inability to wear headware, and it's the largest element of visual expression that the species has.
+
+Colours should have lower saturation, and go from mid blues through purples, reds, oranges and yellows. Cyans and greens are both less common mushroom colours and also help reduce Diona likeness, however if in practice they look good there will be no initial sprite colour bias.
 
 Fungoid could potentially see a greater shape differentiation if variant clothing sprites were made to facilitate the change later on.
 
@@ -47,7 +49,7 @@ I am using Fungoid/Fungoids for this doc as thats what I am currently leaning to
 ### Audio
 
 Speaking, laughing and screaming sounds could be similar to what you hear when you turn mushroom electrical signals to sound. This could potentially infer an implanted speech device, or be made more organic sounding to be a natural voice. Both seem promising paths to try.
-[example](https://www.youtube.com/watch?v=efSXd56gMCg) (skip around the video as the sounds vary a lot) I don't know how "raw" the signals are but compared to other examples ive found, this sounds to be minimally altered.
+[example](https://www.youtube.com/watch?v=efSXd56gMCg) (skip around the video as the sounds vary a lot) I don't know how "raw" the signals are, but compared to other examples ive found, this sounds to be minimally altered.
 
 ### Speech
 
@@ -58,43 +60,43 @@ If similar to the above sounds are used, words such as droned, crackled, pulsed,
 ### Abilities Stats and Restrictions
 
 Disabled headwear
-Their head is too big, this fungus already comes sporting the most trendy and magical hat there is.
+- Their head is too big, this fungus already comes sporting the most trendy and magical hat there is.
 This should not overwrite important features; the fungoid should be considered to already be wearing the wizards hat as to fully allow wizard usage.
 
 Pressure resistance
-While not preferable conditions, nothing about a vacuum outright kills such a simple fungal organism... provided its not freezing or suffocating.
+- While not preferable conditions, nothing about a vacuum outright kills such a simple fungal organism... provided its not freezing or suffocating.
 This should not make space a non-threat, both oxygen and strong insulation are needed for space, making it so helmetless hardsuits are still required for their superior insulation.
 
 Spread spores
-A mushroom is the fruiting body of the mycelium, it produces spores to seed new fungus. 
+- A mushroom is the fruiting body of the mycelium, it produces spores to seed new fungus. 
 If past a certain food and water level, or on death, the fungoid can release spores on its current tile to infest it with mycelium (see below). 
-This is intended to put you into the low food and water slowdown state as to deter painting the stations floor.
+This is intended to put you into the low food and water slowdown state as to deter painting the stations floor with little mushrooms.
 Spreading like weeds in RMC but across a smaller area would be very fun, but really depends on how abusable it is in practice.
 
 Mycelium
-This fungal carpet sustains the fruiting body (the fungoid), and produces a psychedelic effect to ward off predators.
+- This fungal carpet sustains the fruiting body (the fungoid), and produces a psychedelic effect to ward off predators.
 Fungoid organs allow very slow split type healing when on a tile with mycelium, if left dead on the fungal carpet or dragged dead onto one, the fungoid will slowly revive and de-crit given a long enough time. This pairs well with the on death spore release.
 This is intended to not compete even remotely with the medical department, and instead be an emergency backup for when medical is just not an option. 
 This is also not intended to be an obstacle for antagonists as mycelium can be pried, slashed, or the fungoid can be dragged off of the tile to prevent revival.
 Non fungoid organs slowly accumulate a psychedelic chemical with a mild toxin overdose effect.
 
 Decomposer diet
-The fungoid can eat rotten and bloated foods with no reproduction.
+- The fungoid can eat rotten and bloated foods with no reproduction.
 A faster digestion or increased nutrition for rot is desirable, but not needed.
 
 Slow speed
-The fungoid is slow and purposeful in its movements.
+- The fungoid is slow and purposeful in its movements.
 Ideally should be within the range where it does not invalidate chases, only create a disadvantage.
 
 Weak slash resistance
-With no bones, blades cut too deep.
+- With no bones, blades cut too deep.
 Value to be determined.
 
 Strong pierce resistance
-Mushroom vitals are not particularly vital.
+- Mushroom vitals are not particularly vital.
 Value to be determined.
 
-When limbs and organs are fully introduced, a second look at how the 'easily damaged but unbothered' idea can be explored, as it is potential for excellent characterisation.
+When limbs and organs are fully introduced, there should be a second look at how the 'easily damaged but unbothered' idea can be explored, as it has potential for excellent characterisation.
 
 ### Game Design Rationale
 
@@ -113,7 +115,7 @@ Why these mechanics?
 - Decomposers diet clearly portrays the main ecological niche of fungi. It would be preferable to display this in a more interesting way like corpse consuming, but the ideas that come to mind seem more antag suited. Despite this, it gives a reason to not throw out rotten food, every species NT employs is there to save money or make more.
 - Slow movement can be very characterising, but it is only a small slowdown as it has to weigh against the ballance implications and frustration it can bring the player.
 - Strong pierce resistance is there as mushrooms always have many small holes and missing bits, but by design it does little to stop them fulfilling their purpose. In just the same way, a handful of clean bullet holes is hardly a nuisance to a big mushroom.
-- Weak slash resistance is there to represent how blades cut through the mushroom like its... mushroom. After all, fungus doesn't have bones that stop a limb easily being severed.
+- Weak slash resistance is there to represent how blades cut through the mushroom like its... mushroom. After all, fungus doesn't have bones that would otherwise stop a limb from being easily severed.
 
 Overall, this species in theory should be fun for players to play and play alongside. They have useful unique mechanics and their weaknesses look like they wont be frustrating. For players interacting with them, they gain both a new feature to interact with, and shouldn't find them oppressive to face in conflict.
 
@@ -133,7 +135,7 @@ N/A
 
 Speech effects could possibly be limited by pending chatcode refactor.
 
-# Why Fungoid?
+# So why add the Fungoid?
 
 - They introduce new interactable features for the non-fungoid crew to gain rp and gameplay from.
 - They thematically compliment the run-down, abandoned areas that every NT has on their stations.
