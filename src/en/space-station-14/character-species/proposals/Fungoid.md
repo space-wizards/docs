@@ -30,7 +30,7 @@ Also they have no mammal-like reproductive/sexual organs, so it will __not__ be 
 Mushrooms come in many varying shapes and have just as many variations of smaller defining textures and decals. 
 As there is too much to represent for an initial build of the species, the body, the legs and the arms will vary minimally from the humanoid shape, but have some unsymmetrical vertical mottling. Later on, bodypart variants could show layered/frilled surfaces, stem skirting, thinner areas, and several variant surface texturings. 
 The feet will be like small and stump-like.
-The head is where the fungoid is really able to show its unique appearance due to not needing to conform to any shape/design requirements bar their "eyes" being supportive of glasses. Typical mushroom heads like flat, conical or rounded heads will come initially, then the more diverse designs follow: frilled, layered, veiled, brackets, puffballs, stars, comb, bleeding, clustered, ect. This is going to be the defining feature of the fungoid, as it relates to their ability to create spores, inability to wear headware, and it's the largest element of visual expression that the species has.
+The head is where the fungoid is really able to show its unique appearance due to not needing to conform to any shape/design requirements bar their "eyes" being supportive of glasses. Typical mushroom heads like flat, conical or rounded heads will come initially, then the more diverse designs follow: frilled, layered, veiled, brackets, puffballs, stars, comb, bleeding, clustered, ect. This is going to be the defining feature of the fungoid, as it relates to their ability to create spores, inability to wear helmets, and it's the largest element of visual expression that the species has.
 
 Colours should have lower saturation, and go from mid blues through purples, reds, oranges and yellows. Cyans and greens are both less common mushroom colours and also help reduce Diona likeness, however if in practice they look good there will be no initial sprite colour bias.
 
@@ -59,9 +59,10 @@ If similar to the above sounds are used, words such as droned, crackled, pulsed,
 
 ### Abilities Stats and Restrictions
 
-Disabled headwear
-- Their head is too big, this fungus already comes sporting the most trendy and magical hat there is.
-This should not overwrite important features; the fungoid should be considered to already be wearing the wizards hat as to fully allow wizard usage.
+Disabled Helmets
+- Their head is too big to fit inside a helmet, this fungus already comes sporting the most trendy and magical hat there is.
+The blacklist should cover everything that covers sides or comes down far like hoods. The headwear slot will be visually different to make it intuitive that something is different about it.
+Hats could be considered 'poorly attached' and fall off when slipped, stunned or crit. - (FairlySadPanda)
 
 Pressure resistance
 - While not preferable conditions, nothing about a vacuum outright kills such a simple fungal organism... provided its not freezing or suffocating.
@@ -100,7 +101,7 @@ When limbs and organs are fully introduced, there should be a second look at how
 
 ### Game Design Rationale
 
-There are a couple of incidental gameplay implications that look quite tolerable, so will remain as is for now; fungoid are hard to disguise and they are slightly less visually distinguished when a wizard.
+There are a couple of incidental gameplay implications that look quite tolerable, so will remain as is for now; fungoid are hard to disguise and they are slightly less visually distinguished when a wizard (depending if there is a head blacklist).
 
 Balancing
 - For the purpose of balancing, the mycelium healing should be considered in the context that there is almost always significantly better and faster healing available in medical.
@@ -109,9 +110,9 @@ Balancing
 - Traitor. The slowdown puts you on par with a duffelbag user, making slipping away from sec harder. Since big mushrooms are hard to disguise, alternative methods of evading arrest should be used. While they may be weak in this regard, they're far from redundant so its not worth giving up their characterising traits over.
 
 Why these mechanics?
-- Headwear is disabled as clothing heavily restricts use of creative species design unless its humanoid. Disabling the headwear is a compromise between having a truly alien looking alien and fitting the technical limits of clothing in the game. Headware was the right piece to compromise on as the head of a mushroom is its their most defining part.
-- Pressure resistance answers the inability to pressurize without headwear, while being a great way of representing the hardiness fungus can exhibit. It would be fun if they could survive the other space threats, cold and airloss, but this would likely sentence the species to required changes hell.
-- Spores and mycelium are a core characterising component that cant go without being represented in a mushroom species. Spores come from a mushrooms gills giving more reason to disable headwear. The ability works as stated above in order to provide unique utility, to display their regrowth and enduring nature, and to provide a gimmick to roleplay around for both fungoids and other species in separate ways.
+- Helmets are disabled as clothing heavily restricts use of creative species design unless its humanoid. Disabling the helmets is a compromise between having a truly alien looking alien and fitting the technical limits of clothing in the game. Headware was the right piece to compromise on as the head of a mushroom is its their most defining part.
+- Pressure resistance answers the inability to pressurize without helmets, while being a great way of representing the hardiness fungus can exhibit. It would be fun if they could survive the other space threats, cold and airloss, but this would likely sentence the species to required changes hell.
+- Spores and mycelium are a core characterising component that cant go without being represented in a mushroom species. Spores come from a mushrooms gills giving more reason to disable helmets. The ability works as stated above in order to provide unique utility, to display their regrowth and enduring nature, and to provide a gimmick to roleplay around for both fungoids and other species in separate ways.
 - Decomposers diet clearly portrays the main ecological niche of fungi. It would be preferable to display this in a more interesting way like corpse consuming, but the ideas that come to mind seem more antag suited. Despite this, it gives a reason to not throw out rotten food, every species NT employs is there to save money or make more.
 - Slow movement can be very characterising, but it is only a small slowdown as it has to weigh against the ballance implications and frustration it can bring the player.
 - Strong pierce resistance is there as mushrooms always have many small holes and missing bits, but by design it does little to stop them fulfilling their purpose. In just the same way, a handful of clean bullet holes is hardly a nuisance to a big mushroom.
@@ -138,7 +139,7 @@ Speech effects could possibly be limited by pending chatcode refactor.
 # So why add the Fungoid?
 
 - They introduce new interactable features for the non-fungoid crew to gain rp and gameplay from.
-- They thematically compliment the run-down, abandoned areas that every NT has on their stations.
+- They thematically compliment the run-down, abandoned areas that NT have on every station.
 - They explore an alternative and very alien taxonomic kingdom, bringing both new ideas and characterisation with that.
 - They offer the fungoid player unique options to interact with the game.
 - They draw inspiration from several popular settings, giving players lots of inspiration to make their character.
