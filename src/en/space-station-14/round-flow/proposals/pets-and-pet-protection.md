@@ -166,7 +166,7 @@ Examples of pets that may be a ghost role under this design rule are:
 | Pet                       | Why                                                                                                                        |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | Hamlet                    | He can run under doors, be places they shouldn't, and eats everything on the station before being shoved into a microwave. |
-| Renault                   | He's more durable than Hamlet but can't move around the station easily. A guard-fox for the bridge.                        |
+| Renault                   | She's more durable than Hamlet but can't move around the station easily. A guard-fox for the bridge.                        |
 | Polly                     | She can repeat anything she's heard and can fly.                                                                           |
 | Pun Pun, Kweh Kweh, Wa Wa | They're a job role!                                                                                                        |
 | Shiva, McGruff            | Supporting security in fighting crime.                                                                                     |
