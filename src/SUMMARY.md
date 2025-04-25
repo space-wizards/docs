@@ -404,7 +404,7 @@ Admin Meetings
 ==============
 
 ----------------------
-- [2024-04-06](en/admin-meetings/admin-meeting-2025-04-06.md)
+- [2025-04-06](en/admin-meetings/admin-meeting-2025-04-06.md)
 - [2024-05-18](en/admin-meetings/admin-meeting-2024-05-18.md)
 - [2024-04-27](en/admin-meetings/admin-meeting-2024-04-27.md)
 - [2024-03-30](en/admin-meetings/admin-meeting-2024-03-30.md)
