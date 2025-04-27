@@ -34,7 +34,7 @@ To treat SRB, floraxcin must be administered for an extended period. Each second
 
 ## Game Design Rationale
 
-This adds some new, fun dynamics to the medical system. Sanitation could be entirely ignored with the liberal use of antibiotics, but antibiotic resistance would become a big problem and plagues would be likely. If everyone is diligent about sanitizing their syringes (such as by doing a full pulls from an ethanol container) and wearing gloves when handling dead bodies, bacteria will not be a big issue. Of course, novice doctors and emergency situations will create opportunities for bacteria to spread. Experienced doctors also get a fun puzzle around figuring out if the source of poison damage is ingestion, medication overdose, bacteria, or something else. When it comes to treating SRB, there is the fun challenge of keeping the floraxcin dose within the narrow range while keeping the patient alive long enough for it to have its effect. Also, there is more of an incentive now for chemistry to turn various medicines into pills, as doctors may opt to use them in some contexts instead of syringes for everything.
+This adds some new, fun dynamics to the medical system. Sanitation could be entirely ignored with the liberal use of antibiotics, but antibiotic resistance would become a big problem and plagues would be likely. If everyone is diligent about sanitizing their syringes (such as by doing a few pulls from an ethanol container) and wearing gloves when handling dead bodies, bacteria will not be a big issue. Of course, novice doctors and emergency situations will create opportunities for bacteria to spread. Experienced doctors also get a fun puzzle around figuring out if the source of poison damage is ingestion, medication overdose, bacteria, or something else. When it comes to treating SRB, there is the fun challenge of keeping the floraxcin dose within the narrow range while keeping the patient alive long enough for it to have its effect. Also, there is more of an incentive now for chemistry to turn various medicines into pills, as doctors may opt to use them in some contexts instead of syringes for everything.
 
 Janitors also become important for the health of the station, cleaning up potential sources of contamination and exterminating mice that may be spreading disease.
 
@@ -43,7 +43,9 @@ Antagonists may consider manufacturing an SRB plague to create chaos, but it wou
 ## Roundflow & Player interaction
 
 Chemistry may or may not include bactril as an initial chemical to synthesize, but it will need to be on their radar early in case there's an emergent infection. They will also want to provide medical with a sanitizing chemical for cleaning their syringes.
+
 It is not clear yet if doctors will just periodically wash their syringes with ethanol, buy a bunch of syringes and treat them as disposable, or rely a lot more on pills when treating non-emergent, conscious patients.
+
 SRB usually won't be present in a round if precautions are taken, but on the occasional rounds that it does arise it will be of a severity similar to botany's kudzu or science's mismanaged minor anomalies.
 
 ## Administrative & Server Rule Impact (if applicable)
@@ -53,5 +55,7 @@ There is the possibility of medical doctors and interns intentionally causing in
 # Technical Considerations
 
 The two antibiotics can be added as two new synthesizable chemicals.
+
 The premise of bacteria being on skin is just for descriptive purposes and is not how it will actually be implemented. Contamination of syringes will just be a check done in the syringe logic to see if the entity has no bacteria component (i.e. basic, natural bacteria), a resistant bacteria component, or a super resistant bacteria component. If the syringe becomes contaminated it will gain a bacterial contamination component.
-I plan to implement most of this contamination logic as an event system similar to the forensic system's DNA transfers and make minimal changes to the injector system itself, as I want to reuse this contamination logic across a lot of different entities and their interactions (containers, food, liquids, dead bodies).
+
+I plan to implement most of this contamination logic as an event system similar to the forensic system's DNA transfers and make minimal changes to the injector system itself, as I want to reuse this contamination logic across a lot of different entities and their interactions (containers, food, liquids, dead bodies). Sanitation will be implemented as a part of this contamination system.
