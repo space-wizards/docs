@@ -140,6 +140,7 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/art/guidelines.md)
 	
 	- [Proposals]()
+	  - [Skill System](en/space-station-14/character-species/proposals/skills.md)
 
 - [Character/Species](en/space-station-14/characters-species.md)
 	- [PR Guidelines](en/space-station-14/character-species/guidelines.md)
