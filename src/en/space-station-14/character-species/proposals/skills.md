@@ -51,4 +51,4 @@ Q: Are there any anticipated performance impacts?
 A: Given that the skill check would run only when the action is being performed, no.
 
 Q: For required UI elements, give a short description or a mockup of how they should look like (for example a radial menu, actions & alerts, navmaps, or other window types)
-A: ![Here is an example of the similar UI element in C:DDA, called "Proficiencies".](https://imgur.com/niPec94)
+A: ![Here is an example of the similar UI element in C:DDA, called "Proficiencies".](https://i.imgur.com/niPec94.png)
