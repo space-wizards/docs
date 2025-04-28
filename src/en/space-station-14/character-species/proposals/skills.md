@@ -6,7 +6,7 @@
 
 ## Overview
 
-Skills System is an abstract system of labels that describes knowledge an entity possesses, enabling this entity to have certain abilities. It can be used in a variety of ways both by forks and upstream. This doc will focus on upstream usages.
+Skills System is an abstract system of labels that describes knowledge an entity possesses, enabling this entity to have certain abilities. It can be used in a variety of ways both by forks and upstream - this doc discusses both applications.
 
 ## Background
 
@@ -16,10 +16,13 @@ In general, skill system was described as a method of mechanically enforcing met
 
 Skill System is a new tab in character menu. It displays the list of all currently learned skills, as well as some skills that are being learned. A player only has the skill once it has been fully learned, however.
 
-Some of the possible skills to be added are:
-- "Chameleon Technology Knowledge", given to syndicate agents and those who have opened an uplink. Prevents checking stealth items by security.
-- "Machine Assembling", given to engineers roundstart. Allows to see exact components needed for a console/machine assembly.
+Some of the possible skills to be added upstream are:
+- "Chameleon Technology Knowledge", given to syndicate agents and those who have opened an uplink. You can only see the "Chameleon" verb if you have this skill.
 - "Stargate", given to those who have learned it from the library - see (Librarian Proposal)[src/en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md].
+
+Some general possibilities for skills - not necessarily for upstream:
+- Roundstart skills for those picking a certain role. Probably more suitable for MRP+ servers, since those usually enforce some kind of "Don't do others' job" rule.
+- Learnable martial arts, specific moves and such.
 
 ## Game Design Rationale
 
@@ -51,4 +54,6 @@ Q: Are there any anticipated performance impacts?
 A: Given that the skill check would run only when the action is being performed, no.
 
 Q: For required UI elements, give a short description or a mockup of how they should look like (for example a radial menu, actions & alerts, navmaps, or other window types)
-A: ![Here is an example of the similar UI element in C:DDA, called "Proficiencies".](https://i.imgur.com/niPec94.png)
+
+A: Here is an example of the similar UI element in C:DDA, called "Proficiencies".
+![C:DDA screenshot that shows a menu titled "Proficiencies". Proficiencies marked white are at the top, and not fully learned proficiencies with percentage near them are displayed in gray.](https://i.imgur.com/niPec94.png)
