@@ -99,11 +99,57 @@ Each entry is either an `add`, `remove`, `tweak`, or `fix`. There can be multipl
 
 Maintainers may, at their discretion, add, modify, or remove a change log entry that you suggest.
 
+### Changelog Categories
+By default, all changelogs are placed in the main changelog.
+However, you can place them in other categories by prefixing your lists with category names.
+
+These categories serve to reduce clutter in the main changelog and to help players find relevant information.
+After all, admin tooling changes are not relevant to the average player.
+
+Note: The categories are case-insensitive,
+but if it is not alphabetical ending with a colon,
+it will fail parsing the category and will fall back to placing the changelogs in the previous category or the main changelog category.
+
+#### Map changelog
+Putting `MAPS:` in the changelog will place all changelogs below it into the map changelog category instead of the main changelog category.
+
+```
+:cl:
+MAPS:
+- add: Added fun!
+- remove: Removed fun!
+- tweak: Changed fun!
+- fix: Fixed fun!
+```
+
+When writing your mapping changelogs, always prefix your changes with the station you are modifying.
+For example:
+
+```
+:cl:
+MAPS:
+- add: On Meta, a new laser tag arena has been added to north-eastern maints.
+- remove: On Bagel, the evac security checkpoint's ID card terminal has been removed.
+- tweak: On Box, the AI core has been moved to the center of the station, underneath the Bridge.
+- fix: On Fland, the SMES array has been rewired to charge properly.
+```
+
+If you are modifying multiple stations in one PR (a migration deleting a prototype),
+you should prefix your changes with "on many stations."
+
+Note that PRs modifying many stations should generally be avoided.
+
+For example:
+```
+:cl:
+MAPS:
+- remove: On many stations, the anomaly generator has been removed.
+```
+
 #### Admin changelog
 
 Putting `ADMIN:` in the changelog will place all changelogs below it into the admin changelog category instead of the main changelog category.
 
-Note: The category is case-insensitive, but if it is not alphabetical ending with a colon, it will fail parsing the category and will fall back to placing the changelogs in the previous category or the main changelog category.
 
 ```
 :cl:
@@ -149,8 +195,6 @@ When writing your changelog entries, please follow these guidelines:
    - Not so good: "Adjusted pickaxe inhand sprites and added sprites for wielded pickaxes." You would see the changes when you decided to wield a pickaxe. Knowing that the pickaxes look different wouldn't change your traitor strategy.
   
    - Not so good: "Changed the plating sprite to be a little less blue." Same reason as above.
-
-   - Not so good: "Updated Security on Meta Station." Mapping changes often fill the changelog and shouldn't be included. 
 
 3. **Use the present, active voice.**
 
