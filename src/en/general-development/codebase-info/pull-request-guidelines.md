@@ -137,13 +137,25 @@ MAPS:
 If you are modifying multiple stations in one PR (a migration deleting a prototype),
 you should prefix your changes with "on many stations."
 
-Note that PRs modifying many stations should generally be avoided.
+You can also use "on all stations" if the change applies to all stations.
+
+Note that PRs modifying many stations should generally be avoided and atomized into multiple PRs instead.
 
 For example:
 ```
 :cl:
 MAPS:
 - remove: On many stations, the anomaly generator has been removed.
+- remove: On all stations, the cargo shuttle control terminal has been removed.
+```
+
+Changelogs for adding or removing a station can be done in a much more freeform way:
+```
+:cl:
+MAPS:
+- add: Added a new station, RA-12 Spire, a midpop engineering-focused tesla-centric station.
+- add: Added a new station, Gate, a highpop fractured station. 
+- remove: Core station has been removed.
 ```
 
 #### Admin changelog
