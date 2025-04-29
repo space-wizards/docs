@@ -42,7 +42,6 @@ Content Maintainers:
 - [SlamBamActionman](https://github.com/SlamBamActionman) - @slambamactionman (91969935848251392)
 - [SaphireLattice](https://github.com/SaphireLattice) - @saphire (107368676348416000)
 - [Boaz1111](https://github.com/Boaz1111) - @Boaz1111 (759321681083760651)
-- [Aeshus](https://github.com/Aeshus) - @aeshus (865364145330454538)
 - [Simyon264](https://github.com/Simyon264) - @simyon (327840918482714626)
 - [beck-thompson](https://github.com/beck-thompson) - @orks_are_da_best (774424468117782578)
 - [ScarKy0](https://github.com/ScarKy0) - @ScarKy0 (249858047583846401)
