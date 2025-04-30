@@ -6,7 +6,7 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ```admonish danger title="Pre-Packaged server builds should not be used for custom content"
 The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
-If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
+If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code). Doing so otherwise will probably result in a broken server and we will be unable to provide support for such issues.
 ```
 
 1. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
