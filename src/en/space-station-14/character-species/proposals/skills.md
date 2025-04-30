@@ -6,44 +6,43 @@
 
 ## Overview
 
-Skills System is an abstract system of labels that describes knowledge an entity possesses, enabling this entity to have certain abilities. It can be used in a variety of ways both by forks and upstream - this doc discusses both applications.
+Skills System is an abstract system of labels that describes knowledge an entity possesses, enabling this entity to have certain abilities. It can be used in a variety of ways both by forks and possibly upstream - this doc discusses only the technical applications of the system.
 
 ## Background
 
-In general, skill system was described as a method of mechanically enforcing meta-knowledge and preventing others from doing others' jobs. Here's one of the discussions about this: [Link](https://discord.com/channels/310555209753690112/1008709214006427689/1298684771504754791)
+Currently, there are some abilities in the game locked behind your roundstart role (chaplain using the Bible, mime using Mime powers...), as well as other factors. Those abilities aren't directly visible currently.
 
 ## Features to be added
 
 Skill System is a new tab in character menu. It displays the list of all currently learned skills, as well as some skills that are being learned. A player only has the skill once it has been fully learned, however.
 
-Some of the possible skills to be added upstream are:
+### Examples
+**None of those are actual feature suggestions - these are only things you could possibly implement using this system.**
+
+Some of the possible skills to implement via this system are:
 - "Chameleon Technology Knowledge", given to syndicate agents and those who have opened an uplink. You can only see the "Chameleon" verb if you have this skill.
 - "Stargate", given to those who have learned it from the library - see (Librarian Proposal)[src/en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md].
-
-Some general possibilities for skills - not necessarily for upstream:
 - Roundstart skills for those picking a certain role. Probably more suitable for MRP+ servers, since those usually enforce some kind of "Don't do others' job" rule.
 - Learnable martial arts, specific moves and such.
 
 ## Game Design Rationale
 
-This mechanic is both intuitive, realistic and dynamic. Skills can be learned, meaning having no people with a needed skill an inconvenience rathen than an unsolveable problem. It is realistic and intuitive - you have to learn about something before being able to do something. It is also rewarding - some advanced skills may allow to gate certain mechanics behind something that is not yet another science research they will never do.
-
-This is also a core mechanic for the (Librarian Proposal)[src/en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md] - effectively, it implements the knowledge from encrypted books. This actually makes librarian a useful role. Also, it allows for new strategies - for example, antagonists could learn some forbidden knowledge by interacting with a library in order to outplay security later on.
+This is a core mechanic needed for the already accepted (Librarian Proposal)[src/en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md] - effectively, it implements the knowledge from encrypted books. This actually makes librarian a useful role. Also, it allows for new strategies - for example, antagonists could learn some forbidden knowledge by interacting with a library in order to outplay security later on.
 
 ## Roundflow & Player interaction
 
-Skills are mostly related to service, in specific - librarian, where they serve as the source of skill learning. Certain skills can be granted roundstart, like those needed for department jobs. This also introduces some extra "switching jobs" roleplay - you actually learn your new job instead of just switching to it.
+Out of scope - see librarian doc, since this is the only currently accepted application of this system.
 
 ## Administrative & Server Rule Impact (if applicable)
 
 Q: Does this feature introduce any new rule enforcement challenges or additional workload for admins?
-A: No. It is partially created to enforce rules mechanically.
+A: No, it regulates gameplay itself without any need for intervention.
 
 Q: Could this feature increase the likelihood of griefing, rule-breaking, or player disputes?
 A: Theoretically people could break into the library and research the skills, bypassing the librarian, but this is out of the scope of this proposal - this is more of a librarian gameplay problem.
 
 Q: How are the rules enforced mechanically by way the feature will be implemented?
-A: Let's take the "Chameleon Technology Knowledge" from above. If the conditions for learning this skill are set to the exact ones that qualify as revealing in the rules, then the rule has just been reinforced mechanically.
+A: Let's take the "Chameleon Technology Knowledge" from above. If the conditions for learning this skill are set to the exact ones that qualify as revealing in the rules, then the rule has just been reinforced mechanically. Again, this is just an example of how this system can be used to regulate the rules - actual suggestions of the skills are out of scope.
 
 # Technical Considerations
 
