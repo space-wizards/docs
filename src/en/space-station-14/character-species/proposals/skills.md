@@ -16,6 +16,8 @@ Currently, there are some abilities in the game locked behind your roundstart ro
 
 Skill System is a new tab in character menu. It displays the list of all currently learned skills, as well as some skills that are being learned. A player only has the skill once it has been fully learned, however.
 
+Then, move stuff like mime powers and BibleUserComponent to skills. 
+
 ### Examples
 **None of those are actual feature suggestions - these are only things you could possibly implement using this system.**
 
@@ -42,7 +44,7 @@ Q: Could this feature increase the likelihood of griefing, rule-breaking, or pla
 A: Theoretically people could break into the library and research the skills, bypassing the librarian, but this is out of the scope of this proposal - this is more of a librarian gameplay problem.
 
 Q: How are the rules enforced mechanically by way the feature will be implemented?
-A: Let's take the "Chameleon Technology Knowledge" from above. If the conditions for learning this skill are set to the exact ones that qualify as revealing in the rules, then the rule has just been reinforced mechanically. Again, this is just an example of how this system can be used to regulate the rules - actual suggestions of the skills are out of scope.
+A: Let's take the "Chameleon Technology Knowledge" from above. If the conditions for learning this skill are set to the exact ones that qualify as revealing in the rules, then the rule has just been reinforced mechanically.
 
 # Technical Considerations
 
