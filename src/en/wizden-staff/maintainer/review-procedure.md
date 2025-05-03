@@ -17,12 +17,20 @@ All PRs must not conflict with [core design principles](../../space-station-14/c
 Additionally, the PR author should describe how the changes they made fit into the game.
 Sufficiently large feature PRs may also warrant a **Design Doc** detailing the broader scope and purpose of their changes.
 
-All PRs that include **breaking changes** (*e.g. modifying public APIs, moving code into another namespace, changing a prototype ID, etc.*) should contain a "breaking changes" section.
-This consists of a summary of the changes as well as how to apply them.
-After the PR is merged, the maintainer should format a message containing the PR link, the entirety of the "breaking changes" section, and a ping for `@contrib-notification` before posting it into the `#codebase-changes` channel of the Discord and publishing.
-
 All PRs must completely fill out the Github PR Template to a satisfactory level.
 This includes filling out all applicable sections and attaching media when necessary.
+
+### Breaking Changes
+
+Breaking changes are defined as one or more of the following:
+- Modifying a public API
+- Moving code into a different namespace
+- Changing prototype IDs (*even if migrations are present*)
+
+All PRs that include **breaking changes** should also include a section with a summary of the changes as well as instructions on how to fix issues that may come from them.
+
+After the PR is merged, a maintainer should make a post in the [breaking changes](https://forum.spacestation14.com/c/development/breaking-changes/70) section of the forum using the template.
+This consists only of the breaking changes section from the PR itself as well as a link to the PR.
 
 ## Decision Policy
 2 Maintainers are required to sign off on decisions about a PR.
