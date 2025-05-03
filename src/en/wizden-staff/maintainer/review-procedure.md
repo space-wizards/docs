@@ -25,12 +25,12 @@ This includes filling out all applicable sections and attaching media when neces
 Breaking changes are defined as one or more of the following:
 - Modifying a public API
 - Moving code into a different namespace
-- Changing prototype IDs (even if migrations are present)
+- Changing prototype IDs (*even if migrations are present*)
 
-All PRs that include **breaking changes** should include a section with a summary of the changes as well and how to fix issues that may come from them.
+All PRs that include **breaking changes** should also include a section with a summary of the changes as well as instructions on how to fix issues that may come from them.
 
-After the PR is merged, a maintainer should make a post in the [breaking changes](https://forum.spacestation14.com/c/development/breaking-changes/70) sections of the forums using the template and post it.
-This post will then automatically be relayed to the discord.
+After the PR is merged, a maintainer should make a post in the [breaking changes](https://forum.spacestation14.com/c/development/breaking-changes/70) section of the forum using the template.
+This consists only of the breaking changes section from the PR itself as well as a link to the PR.
 
 ## Decision Policy
 2 Maintainers are required to sign off on decisions about a PR.
