@@ -89,6 +89,30 @@ Using the same console used to purchase departmental goods through cargo, player
 
 As for **siphoning**, the idea is that a console in the vault will have the ability to freely withdraw from departmental funds into real paper spesos--with some time delay and announcement for some heist action. Spesos can be inserted into any relevant departmental/cargo purchasing console.
 
+### Interdepartamental and personal trade
+
+Salvage still should be goto way for department to get mats, buying mats and some most common items using ATS should be discuraged in favor of interdepartamental trade.
+Fast trade of common items using vemdomat should be introduced. Most departments will start with almost empty vendomat that they can fill with fruits of their labor (vends do not accept contraband items), they can make some additional money on the side with it. Money from buying stuff in them should go straigh to dept's bank.
+Examples:
+Med: topicals, pills, beakers with meds
+sci: batteries, tools, packed machines
+cargo: Mats, tools, drip from lottery, toys
+botany: fruits
+
+Engie and sec should not have vendomats as it's not part of their job.(no sec venomats with guns :c)
+To compansate their default share Funding Allocation should be increased.
+
+## Personal economy
+Other people like tiders can build setup their own personal vends with items. Money from transactions will be stored in vend, with possibility to remove with screwdriver and medium long doafter.
+Food and drink vends across the station should have small prices with profits going to cargo, giving them incentives to restock them which now they never do.
+Food in bars and kitchen should remain free as this is still part of their job. Same thing with healing in med or fixing station as engies.
+Gambling machines.
+Injecting money into personal economy by:
+- Much more spesos in mail
+- More spesos in maints
+- Maints loot worth more on ATS, tiders will haggle their maints rolexes to cargo techs.
+- Small ammount of starting spesos.
+
 ## Concluding
 
 With a holistic implementation of the systems laid out here I see a lot of benefits. Money is always fun for players to interface with--they like feeling like they're turning big profits or making shady deals or whatever, so integrating it with everybody is nice. Departmental players will have a lot more agency and should feel much less frustrated about certain things "requiring" cargo since the friction for receiving something from cargo is significantly lessened. Cargo players should feel a lot less stress while still retaining the fun parts of their job and a new dimension with having to manage incoming purchases that they weren't always made explicitly aware of. Design-wise, we can design around departments selling, purchasing, and making deals amongst themselves without feeling like we're sentencing players to endless hell with no options if cargo is incompetent or slow. I expect some fun roleplay and interactions to develop around transferring funds between departments, as well as departments begging HoP for more money to work on their pet projects.
