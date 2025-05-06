@@ -46,7 +46,7 @@ Content Maintainers:
 - [beck-thompson](https://github.com/beck-thompson) - @orks_are_da_best (774424468117782578)
 - [ScarKy0](https://github.com/ScarKy0) - @ScarKy0 (249858047583846401)
 - [MilonPL](https://github.com/MilonPL) - @milonn (869364265453244467)
-- [Nemanja](https://github.com/EmoGarbage404) - @emogarbage (500128901805244436)
+- [EmoGarbage404](https://github.com/EmoGarbage404) - @emogarbage (500128901805244436)
 - [ArtisticRoomba](https://github.com/ArtisticRoomba) - @artisticroomba (204036558448230400)
 - [Fildrance](https://github.com/Fildrance) - @fildrance (206823676983771137)
 - [sowelipililimute](https://github.com/sowelipililimute) - @akesima (249987062084665344)
