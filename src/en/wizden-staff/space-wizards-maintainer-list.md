@@ -49,6 +49,7 @@ Content Maintainers:
 - [Nemanja](https://github.com/EmoGarbage404) - @emogarbage (500128901805244436)
 - [ArtisticRoomba](https://github.com/ArtisticRoomba) - @artisticroomba (204036558448230400)
 - [Fildrance](https://github.com/Fildrance) - @fildrance (206823676983771137)
+- [sowelipililimute](https://github.com/sowelipililimute) - @akesima (249987062084665344)
 
 Engine maintainers:
 No one maintains only engine :p
