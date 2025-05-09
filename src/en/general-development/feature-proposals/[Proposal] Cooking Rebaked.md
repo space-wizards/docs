@@ -1,30 +1,13 @@
-# Short, Properly Capitalized Title
+# Cooking Rebaked
 
-Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
 
 | Designers | Coders | Implemented | GitHub Links |
-|---|---|---|---|
-| your names here | coder names here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
-
-`Designers` should be the names that you, the authors of this document, use on GitHub and/or Discord. This is optional but strongly recommended, since:
-
-- This acknowledges credit where it is due
-- People who are confused about the written intent can use this information to contact the authors
-
-`Coders` should be the names of the contributors who plan on implementing this feature. To get a design doc approved you will need either
-- have the technical knowledge to be able to implement the proposed feature yourself.
-- have someone else who agreed to do this for you.
-- already have an existing implementation elsewhere that just needs to be ported.
-
-In either case you will have to write an outline on how you plan to implement this feature in the **Technical Considerations** section to show that is technically sound and feasible.
-
-`Implemented` is the status of the feature.
-
-Github links can include multiple PRs, if relevant.
+|---|---|---|---| 
+| SyaoranFox | T.T | TBD |
 
 ## Overview
 
-A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds".
+This is an overhall to the cooking system and chef role. This includes recipes, methods of cooking, incentive to both cook and eat various foods, and mechanisms for antagonist play.
 
 ## Background
 
@@ -34,7 +17,28 @@ Also link any relevant discussions on Discord, GitHub, or HackMD that are releva
 
 ## Features to be added
 
-Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement the feature from this design document. Exact numbers for game balance however are not necessary, as these can be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so.
+1. Change recipes that require heat to trigger when all ingredients are present, at the correct temperature
+2. Change recipes that require chilling to trigger when all ingredients are present, at the correct temperature (ice cream, ice, jelly etc.)
+3. Add oven to replace microwave as the main means of cooking hot food.
+4. Change microwave to be a faster, but less capacity version of the oven. Can also be limited in what recipes work.
+5. Change cooking to follow a component system that have a base, sauce, and topping.
+6. Add bases that act similar to how "fundamental" ingredients work already such as noodles, buns, bagels.
+7. Create functionality that allows for many items to be "diced" or "grated" to then be sprinkled ontop of food.
+8. Create functionality that allows for many items to be heated/melted to become liquids to be added to food bases.
+9. Allow for most liquids to be used as part of food dishes. This can be both very functional, and horrific. 
+10. Add buffs to more complex meals/components.
+11. Add a saucepan that allows the chef to create sauces that can go with their food
+12. Add jars to allow for the storage of sauces with a lid that can prevent spilling
+13. Add a kitchen lathe that can create utencils, crockery, and glass items useful to the kitchen
+14. Add alergies to crew
+15. Add the ability for HoP and/or CMO to generate a report on the crew's list of food requirements
+16. Add histamine generation for those with alergies that can be treated by medical if they metabolise the alergen.
+17. Add food processor that can allow for chefs to prepare food ingredients in bulk, and to allow chefs to "reclaim" rolled out dough back into "normal" dough.
+18. Increase the consiquences for hunger and thirst
+19. Allow for food to carry the attributes of its ingredients, both beneficial and detrimental
+20. Menu system for chefs to make a menu
+21. Give chefs the innate ability to know what is contained in food by examination
+22. Add a bookshelf with cookbooks to supliment the ingame help system
 
 ## Game Design Rationale
 
