@@ -11,9 +11,9 @@ This is an overhall to the cooking system and chef role. This includes recipes, 
 
 ## Background
 
-Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game.
+Cooking currently only uses a microwave to create dishes. Dishes are aestetic, and chefs need to go out of their way to create new and interesting ways to perform the role. Often times this leads to chefs creating the same menu each shift, and for the only deviation to occur within roleplay. This means that after 30-40 minutes in the kitchen, the chef will abandon their post either because cooking has gotten stale, or, ingredients have dried up to the point where they cannot continue to cook.
 
-Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
+Chefs also lack the antagonist zest present in the SS13 counterpart. Food cannot be poisoned, food instills nothing except to satisfy hunger. Technically the chef can make food that is poisonous, but once the crew has learned what these dishes are, they can just avoid them. Further, there is no insentive for players to see the chef, as the food from vending machines and mail satisfy the slowdown state given by hunger.
 
 ## Features to be added
 
