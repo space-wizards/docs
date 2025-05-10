@@ -42,6 +42,8 @@ Chefs also lack the antagonist zest present in the SS13 counterpart. Food cannot
 
 ## Game Design Rationale
 
+![Cooking Ecosystem](Cooking_Rebaked.svg)
+
 Consider addressing:
 - How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy?
 - What makes this feature enjoyable or rewarding for players?
