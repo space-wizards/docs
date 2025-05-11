@@ -96,9 +96,9 @@ While it's not specificly a bot feature, I thought I might as well throw it in h
 1. Make a discord webhook in the channel you want the pings to arrive in. You can make one by clicking on the cogwheel in the channel > Integrations > Webhooks. Once done copy the URL
 2. Set the following [CCVars](https://docs.spacestation14.com/en/general-development/tips/config-file-reference.html) in your config
 ```
-discord.ahelp_webhook = <Webhook for ahelps>
-discord.round_update_webhook = <Webhook for round ping>
-discord.round_end_role = <Role ID to ping>
+discord.ahelp_webhook = "<Webhook for ahelps>"
+discord.round_update_webhook = "<Webhook for round ping>"
+discord.round_end_role = "<Role ID to ping>"
 ```
 
 ### OOC Bridge
