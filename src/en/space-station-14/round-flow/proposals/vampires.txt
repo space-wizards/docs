@@ -76,12 +76,11 @@ Ranking Up:
 
      This is intended to desentivize vampires from outright killing crew.
 
-# Vampiric Energy
-    Every vampire has a Vampiric Energy meter, which basically works like mana, passively regenerating and being consumed to use abilities. As they progress trough the ranks the max amount they can hold at a time increases.
-      -King/Queen: 200, x1.4 energy regen
-      -Count/Countess: 150, x1.2 energy regen
-      -Baron/Baroness: 100, x1 energy regen
-    It would be shown trough a small ui indicator on top of the health status. Most likely a red orb, similar to how diablo games show the player hp in vibes
+# Blood storage / Nutrition
+  Vampires would have a big internal blood torage (maybe around 400u units) that would slowly deplete, this is their only worry in terms of nutrition.
+  Similarly to how other species hunger works, Vampires walking speed is reduced when they are low on blood and they will quickly start taking damage if they are starving.
+
+  Multiple abilities use this blood as fuel, so there's a risk to abusing them too much. 
 
 # Ability Shop (i need to think of a better name)
     Vampires will have permanent access to an internal "store" menu (similar to syndies or wizards) which uses bloodpoints as currency. The abilities they are able to buy from it depending
@@ -144,7 +143,7 @@ Ranking Up:
 
 # Biology
     Traits (includes peasants)
-    -Vampires go hungry much slower than regular crew, but they can only sustain themselves trough blood, which will always grant the same amount of substenance regardless of its origin. Any other food will induce voimiting
+    -Vampires go hungry much slower than regular crew, but they can only sustain themselves trough blood. Any other food will induce vomiting
     -They do not need to breath
     -Their bodies don't rot 
     -Small cold resistance 
