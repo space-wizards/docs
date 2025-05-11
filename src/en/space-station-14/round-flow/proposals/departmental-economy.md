@@ -92,23 +92,23 @@ As for **siphoning**, the idea is that a console in the vault will have the abil
 ### Interdepartamental and personal trade
 
 Salvage still should be goto way for department to get mats, buying mats and some most common items using ATS should be discuraged in favor of interdepartamental trade.
-Fast trade of common items using vemdomat should be introduced. Most departments will start with almost empty vendomat that they can fill with fruits of their labor (vends do not accept contraband items), they can make some additional money on the side with it. Money from buying stuff in them should go straigh to dept's bank.
+Fast trade of common items using vemdomat should be introduced. Most departments will start with almost empty vendomat that they can fill with fruits of their labor, they can make some additional money on the side with it. Money from buying stuff in them should go straigh to dept's bank.
 Examples:
-Med: topicals, pills, beakers with meds
+Med: topicals, pills, drugs.
 sci: batteries, tools, packed machines
 cargo: Mats, tools, drip from lottery, toys
-botany: fruits
+botany: fruits and other weeds.
 
-Engie and sec should not have vendomats as it's not part of their job.(no sec venomats with guns :c)
-To compansate their default share Funding Allocation should be increased.
+Engie and sec should not have vendomats as item production is not part of their job. (no sec venomats with guns :c)
+To compansate their default share of Funding Allocation should be increased.
 
 ## Personal economy
-Other people like tiders can build setup their own personal vends with items. Money from transactions will be stored in vend, with possibility to remove with screwdriver and medium long doafter.
+Other people like tiders can setup their own personal vendshops. Money from transactions will be stored in vend, with possibility to remove with screwdriver and medium long doafter.
 Food and drink vends across the station should have small prices with profits going to cargo, giving them incentives to restock them which now they never do.
 Food in bars and kitchen should remain free as this is still part of their job. Same thing with healing in med or fixing station as engies.
 Gambling machines.
 Injecting money into personal economy by:
-- Much more spesos in mail
+- Much more spesos in mail(paychecks)
 - More spesos in maints
 - Maints loot worth more on ATS, tiders will haggle their maints rolexes to cargo techs.
 - Small ammount of starting spesos.
