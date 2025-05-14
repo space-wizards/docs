@@ -18,28 +18,29 @@ Chefs also lack the antagonist zest present in the SS13 counterpart. Food cannot
 ## Features to be added
 
 1. Change recipes that require heat to trigger when all ingredients are present, at the correct temperature
-2. Change recipes that require chilling to trigger when all ingredients are present, at the correct temperature (ice cream, ice, jelly etc.)
-3. Add oven to replace microwave as the main means of cooking hot food.
-4. Change microwave to be a faster, but less capacity version of the oven. Can also be limited in what recipes work.
-5. Change cooking to follow a component system that have a base, sauce, and topping.
-6. Add bases that act similar to how "fundamental" ingredients work already such as noodles, buns, bagels.
-7. Create functionality that allows for many items to be "diced" or "grated" to then be sprinkled on top of food.
-8. Create functionality that allows for many items to be heated/melted to become liquids to be added to food bases.
-9. Allow for most liquids to be used as part of food dishes. This can be both very functional, and horrific. 
-10. Add buffs to more complex meals/components.
-11. Add a saucepan that allows the chef to create sauces that can go with their food
-12. Add jars to allow for the storage of sauces with a lid that can prevent spilling
-13. Add a kitchen lathe that can create utensils, crockery, and glass items useful to the kitchen
-14. Add allergies to crew
-15. Add the ability for HoP and/or CMO to generate a report on the crew's list of food requirements
-16. Add histamine generation for those with allergies that can be treated by medical if they metabolise the allergen.
-17. Add food processor that can allow for chefs to prepare food ingredients in bulk, and to allow chefs to "reclaim" rolled out dough back into "normal" dough.
-18. Increase the consequences for hunger and thirst
-19. Allow for food to carry the attributes of its ingredients, both beneficial and detrimental
-20. Menu system for chefs to make a menu
-21. Give chefs the innate ability to know what is contained in food by examination
-22. Add a bookshelf with cookbooks to supliment the ingame help system
-23. Change the name of "cornmeal dough" to "cornbread dough" and "tortilla dough" to "cornmeal dough"
+1. Change recipes that require chilling to trigger when all ingredients are present, at the correct temperature (ice cream, ice, jelly etc.)
+1. Add oven to replace microwave as the main means of cooking hot food.
+1. Change microwave to be a faster, but less capacity version of the oven. Can also be limited in what recipes work.
+1. Change cooking to follow a component system that have a base, sauce, and topping.
+1. Add bases that act similar to how "fundamental" ingredients work already such as noodles, buns, bagels.
+1. Create functionality that allows for many items to be "diced" or "grated" to then be sprinkled on top of food.
+1. Create functionality that allows for many items to be heated/melted to become liquids to be added to food bases.
+1. Allow for most liquids to be used as part of food dishes. This can be both very functional, and horrific. 
+1. Add buffs to more complex meals/components.
+1. Add a saucepan that allows the chef to create sauces that can go with their food
+1. Add jars to allow for the storage of sauces with a lid that can prevent spilling
+1. Add a kitchen lathe that can create utensils, crockery, and glass items useful to the kitchen
+1. ~~Add allergies to crew~~
+1. ~~Add the ability for HoP and/or CMO to generate a report on the crew's list of food requirements~~
+1. ~~Add histamine generation for those with allergies that can be treated by medical if they metabolise the allergen.~~
+1. Add food processor that can allow for chefs to prepare food ingredients in bulk, and to allow chefs to "reclaim" rolled out dough back into "normal" dough.
+1. Increase the consequences for hunger and thirst
+1. Allow for food to carry the attributes of its ingredients, both beneficial and detrimental
+2. Menu system for chefs to make a menu
+1. Give chefs the innate ability to know what is contained in food by examination
+1. Add a bookshelf with cookbooks to supliment the ingame help system
+1. Change the name of "cornmeal dough" to "cornbread dough" and "tortilla dough" to "cornmeal dough"
+1. Cake starter should remain a liquid, and be pourable into a cake pan/sheet pan
 
 ## Game Design Rationale
 
@@ -64,3 +65,4 @@ I am still learning the source of SS14. I can look through and offer suggestions
 - Microwaves would be similar to the above, but the heat transfer is raised, while the maximum heat is lower.
 - Saucepans will act like a blender, but is heated on a hotplate/oven top
 - Buffs already exist in the game in the form of chemical reagents. Given that food is digested, it could use that system as well. An issue that might arise is hitting the maximum reagent ceiling for each race.
+- Recipes will need to be tweaked to use heat, but this is already a part of how chemistry works.
