@@ -62,19 +62,11 @@ Ranking Up:
 
   -More effects may be developed if the vampire invests in their curse
 
-# Bloodpoints
-    Vampires can perform a lenghty do after on creatures with blood to fully drain them of it, granting them points which can be expended to unlock/upgrade abilities. This will stun the
-    entity, allowing vampires a chance to get away. Though they will most likely require to crit or stun the creature beforehand.
+# Blood Drain
+  Vampires can use this skill slowly drain blood from entities, receiving only half of it from dead entities. 
+  If the drained entity blood is fully depleted, they will be stunned for about 20 seconds, giving the vampire a good chance to escape 
 
-    The amount of bloodpoints granted per unit of blood drained depend on the state and type of entity drained
-    -Alive "humanlike" entity = %150
-    -Dead "humanlike" entity = %75
-    -Alive animal entity = %50
-    -Dead animal entity = %20
-    -Blood outside an entity (medbay bloodbags, puddles) = %5
-    (amounts highly subject to change)
-
-     This is intended to desentivize vampires from outright killing crew.
+  This should ideally dicentivize vampires from outright killing people.
 
 # Blood storage / Nutrition
   Vampires would have a big internal blood torage (maybe around 400u units) that would slowly deplete, this is their only worry in terms of nutrition.
