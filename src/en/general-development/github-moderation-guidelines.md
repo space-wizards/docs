@@ -17,7 +17,7 @@ This may also apply should the offending content be located outside the SS14 Git
 As listed under the "**On Community Moderation**" section, content/comments that create an unwelcoming atmosphere for the project may result in moderative actions. Github Moderators have the following actions at their disposal:
 - Hiding comments.
   - This should preferably be used for comments that are off-topic or otherwise inoffensive but fail to contribute to the discussion. Such comments should be marked as "Off-Topic" or "Spam"; while the interface provides other reasons for hiding a comment, they are better served below.
-- Removing content & Providing a 12h Github ban.
+- Removing content & Providing a 24h Github ban.
   - For content/comments that are given in a non-constructive manner (examples listed in the [Code of Conduct](https://github.com/space-wizards/space-station-14/blob/master/CODE_OF_CONDUCT.md)), the content may be removed even if it is partially constructive. Should this be necessary, the offending user should be given a 24 hour Github ban with the Ban Message listed further below. While a ban may sometimes seem excessive, this is the only way we can communicate directly to a user that they have had actions taken against them.
 - Long-duration Github bans.
   - Should a user repeatedly break the Code of Conduct, a Github ban for a longer duration may be warranted. The duration should be between 7 days to 1 month, at the Github Moderator's discretion. Anything longer should be an appeal-only ban.
