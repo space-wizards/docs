@@ -274,7 +274,8 @@ This plan is a series of simple YAML changes, some refactor of loadout code, som
 3. Enhance pet carriers with specified functionality.
 4. Migrate mandatory pets to new spawning system (excluding the Junior Assistant Bartender, who was migrated in step 1)
 5. Migrate non-mandatory pets to new spawning system.
-6. Review mandatory and non-mandatory pet balance and review the code freeze on new pets.
+6. Add crew objectives to pet owners to protect their pet.
+7. Review mandatory and non-mandatory pet balance and review the code freeze on new pets.
 
 ## Step 3: Document and Review
 
