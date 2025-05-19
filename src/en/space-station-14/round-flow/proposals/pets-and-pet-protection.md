@@ -1,9 +1,10 @@
+
 # Pets and Pet Protection
 
 
-| Designers      | Implemented | GitHub Links |
-| -------------- | ----------- | ------------ |
-| FairlySadPanda | :x: No      | TBD          |
+| Designers      |Coders| Implemented | GitHub Links |
+| -------------- |-| ----------- | ------------ |
+| FairlySadPanda |FairlySadPanda| :x: No      | TBD          |
 
 # NanoTrasen Believes In Your Emotional Support Needs
 
@@ -246,3 +247,36 @@ The most senior Bartender on staff can pick from the following options:
 ### A Note On Ancestor Pets More Generally
 
 Pets, outside the Junior Assistant Bartender, are assumed to be creatures that lack hands. They _may_ be capable of dragging things, or even wearing a small container for moving items around. However, ancestor species always have one "hand", reflecting their diminished size. Ancestor species are a significant power-creep over normal animals, and *should be avoided* as station pets without being backed by a very strong idea. We would welcome a future design document for ancestor species more widely.
+
+# Technical Plan
+
+This plan is a series of simple YAML changes, some refactor of loadout code, some mapping alterations and the creation of a "crew objectives" system that supports crew members being able to greentext via doing tasks during their shift. As noted above, the only task we care about for this document is keeping their pet(s) alive.
+
+## Step 0: Review and refactor loadout spawn logic
+
+1. Review current loadout spawn logic to make sure it is fit for purpose and that the new spawn logic for pets does not further decay the code.
+2. If decay is unavoidable, work on paying off technical debt until step 1 can be started.
+
+## Step 1: Junior Assistant Bartender
+
+1. Add Kweh's prototype.
+2. Add the scurrets species prototypes and resources.
+3. Add Wa's prototype.
+4. Randomly choose between Pun, Kweh and Wa each round.
+5. Add being able to round-start as the Junior Assistant Bartender.
+6. Add crew objective to bartenders to protect the Junior Assistant Bartender.
+7. Review current Junior Assistant Bartender balance and resolve any lingering concerns/ideaguying.
+
+## Step 2: Mandatory and Optional Pets
+
+1. Add support for selecting a pet roundstart, similar to selecting other loadout options.
+2. Agree with maintainers and project management what responsible playtime requirements should be used.
+3. Enhance pet carriers with specified functionality.
+4. Migrate mandatory pets to new spawning system (excluding the Junior Assistant Bartender, who was migrated in step 1)
+5. Migrate non-mandatory pets to new spawning system.
+6. Review mandatory and non-mandatory pet balance and review the code freeze on new pets.
+
+## Step 3: Document and Review
+
+1. Document implemented design for historical record.
+2. Conduct review meeting and retrospective about learnings and opportunities for future code refactors exposed by this work.
