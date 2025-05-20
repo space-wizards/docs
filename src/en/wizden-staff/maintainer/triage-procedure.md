@@ -34,7 +34,7 @@ The following categories are assigned automatically by Github:
   - Size
   - Changes
 
-Once a triage is completed, remove the `S: Untriaged` label and attach `S: Needs Review` for PRs, or `S: Requires Content PR` for Issues (alternative labels may be more appropriate, such as when closing an issue).
+Once a triage is completed, remove the `S: Untriaged` label and attach `S: Needs Review` for PRs. If the item was opened by a Maintainer, it should also receive the `S: Approved` label, as they count as the first approver.
 
 ### Priority Labels
 
