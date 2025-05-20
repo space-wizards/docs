@@ -24,4 +24,4 @@ As listed under the "**On Community Moderation**" section, content/comments that
 - Appeal-only bans.
   - An appeal-only ban may be given instead of a long-duration ban. These bans may only be [appealed on the forums](https://forum.spacestation14.com/c/ban-appeals/appeals-github/38), at the soonest 6 months after the ban was issued.
  
-Due to the limitations of Github's moderation tools, the affected user can only receive a notification that an action has been taken against them, not the duration nor the reason. Should an affected user inquire about their ban via one of the official channels, they are to be provided the reason.
+Due to the limitations of Github's moderation tools, the affected user can only receive a notification that an action has been taken against them, not the duration nor the reason. This is only possible via the "Block" option in an offending Github comment, which should be used if possible. Should an affected user inquire about their ban via one of the official channels, they are to be provided the reason.
