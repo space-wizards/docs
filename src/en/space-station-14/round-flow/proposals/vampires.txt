@@ -7,7 +7,7 @@
 # Overview
   Vampires are rarely attracted to the station as a way to increase their social standing in their organization. Draining blood and spreading their curse with the intent of raising to 
   the rank of King/Queen. While frowned upon, infighting and backstabbing is common in such conditions.
-  As they gather blood and develop abilities, they will inevitably be disruptive to the station, eventually being hunted.
+  As they gather blood and develop abilities, they will disrupt the station crew.
 
 # Goals 
   They will always have 2 objectives
@@ -25,9 +25,8 @@
   They possess a strong hierarchy, which allows them access to their abilities
 
   -King/Queen 
-    Highest rank attainable in the station, the peak of their potential. Their rule often ended by the hands of their fellow vampires
+    Highest rank attainable, the peak of their potential
     -access to all abilities
-    -limited to 1 per station
     -station-wide announcement on its creation
 
   -Count/Countess
@@ -38,15 +37,6 @@
     Lowest nobility rank, Vampires will spawn in this rank with mostly access to utility abilities
     -access to level 1 abilities
 
-Ranking Up:
-  Vampires will have to drain blood and infect X amount of people before they can perform a lenghtly do after to transform. Highly vulnerable during this state, it should only be done in secrecy
-
-# Blood Drain
-  Vampires can use this skill slowly drain blood from entities, receiving only half of it from dead entities. 
-  If the drained entity blood is fully depleted, they will be stunned for about 20 seconds, giving the vampire a good chance to escape 
-
-  This should ideally dicentivize vampires from outright killing people.
-
 # Blood storage / Nutrition
   Vampires would have a big internal blood torage (maybe around 400u units) that would slowly deplete, this is their only worry in terms of nutrition.
   Similarly to how other species hunger works, Vampires walking speed is reduced when they are low on blood and they will quickly start taking damage if they are starving.
@@ -54,28 +44,33 @@ Ranking Up:
   Multiple abilities use this blood as fuel, so there's a risk to abusing them too much. 
 
 # Ability Shop (i need to think of a better name)
-    Vampires will have permanent access to an internal "store" menu (similar to syndies or wizards) which uses blood as a currency. The abilities they are able to buy from it depending
+    Vampires will have permanent access to an internal "store" menu (similar to syndies or wizards) which uses their blood as a currency. The abilities they are able to buy from it depending
     on their rank. 
     While sticking to more classic vampire powers would be possible, i think streeching the definition a bit would allow for more interesting gameplay
     (Below is a list of possible abilities (numbers are examples, very in theory stuff))
 
     | Default abilities | All vampires start with access to these |
     |----------|:-------------|
-    | Blood Drain | After a lenghty do after, the target is fully drained of their blood and is stunned for 10 seconds |
-    | Bat Transformation | Quickly turn into a speedy bat or return back to your form. Being a bat prevents you from using your other abilities, and grants you access to a weak bite attack |
-    | Unholy Sanctum | Curses a coffin, being inside it will quickly heal your damage. Using the ability again will perform a short do after and teleport you back to it | 1 minute cooldown | 
+    | Blood Drain | Slowly drains the blood of the targetted entity |
 
-    | level 1 Abilities | Low cost abilities that while useful, lack the impact of the higher ranks |
+    | level 1 Abilities | Cheap abilities, mostly utility |
     |----------|:-------------|
+    | Bat Transformation | Quickly turn into a speedy bat or return back to your form |
+    | Unholy Sanctum | Curses a coffin, being inside it will quickly heal your damage. Using the ability again will perform a short do after and teleport you back to it | 1 minute cooldown | 
+    | Draining Touch | Stealthily curses the target, causing them to fall asleep after 20 seconds (they will be subtly warned 5-10 seconds before falling asleep) |
 
     | level 2 Abilities | Stronger yet more expensive, enough to make them a formidable threat |   
     |----------|:-------------|
+    | Fool's Ground | Transforms nearby puddles of blood into harmful spikes |
+    | Hypnotic Gaze | Puts an entity to sleep for a few seconds | 
+    | Blood Transfiguration | Creates a blood sword, a simple yet powerful melee weapon | 
 
     | level 3 Abilities | The peak of vampiric potential |   
     |----------|:-------------|
+    | Shriek | Stuns all entities on a massive aoe for 2 seconds |
+    | Announce | Sends a station wide message |
 
 # Biology
-    Traits (includes peasants)
     -Vampires go hungry much slower than regular crew, but they can only sustain themselves trough blood. Any other food will induce vomiting
     -They do not need to breath
     -Their bodies don't rot 
@@ -103,4 +98,3 @@ Ranking Up:
       # Bible
         Vampires: 
         -The bible is incapable of healing them, as it will always deal damage instead.
-        Crew: 
