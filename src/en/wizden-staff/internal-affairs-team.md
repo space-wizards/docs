@@ -22,7 +22,7 @@ The Internal Affairs team shall be responsible for enforcing the [Staff Policy](
 - A **Removal** is the permanent removal of permissions on some or all Wizard's Den Infrastructure as well as the formal removal of some or all staff roles. 
 - An **Active Conflict** is an ongoing hostile disagreement between Staff Members which is either in violation of Staff Policy or bordering on violating Staff Policy.
 - A **Panel** is a collection of at least 3 members of the Interla Affairs Team which is created by the Internal Affairs Team to review violations of the Staff Policy by staff members.
- p
+ 
 
 ## Composition
 
