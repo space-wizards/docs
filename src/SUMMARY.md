@@ -339,6 +339,7 @@ Staff
 - [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
 - [Staff Policy](en/wizden-staff/staff-policy.md)
 - [Staff Conflict Resolution](en/wizden-staff/staff-conflict-resolution.md)
+- [Internal Affairs Team](en/wizden-staff/internal-affairs-team.md)
 
 Maintainer Meetings
 ==============
