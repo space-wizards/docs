@@ -41,6 +41,7 @@ General Development
 - [Work Groups](en/general-development/work-groups.md)
 - [Game Area Design Documents](en/general-development/game-area-design-doc.md)
 - [Contributing Translations](en/general-development/contributing-translations.md)
+- [Github Moderation Guidelines](en/general-development/github-moderation-guidelines.md)
 
 SS14 By Example
 ===============
