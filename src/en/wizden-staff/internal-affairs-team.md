@@ -21,6 +21,8 @@ The Internal Affairs team shall be responsible for enforcing the [Staff Policy](
 - A **Suspension** is the temporary removal of permissions on some or all Wizard's Den Infrastructure. 
 - A **Removal** is the permanent removal of permissions on some or all Wizard's Den Infrastructure as well as the formal removal of some or all staff roles. 
 - An **Active Conflict** is an ongoing hostile disagreement between Staff Members which is either in violation of Staff Policy or bordering on violating Staff Policy.
+- A **Panel** is a collection of at least 3 members of the Appeals Team which is created by the Internal Affairs Team to review violations of the Staff Policy by staff members.
+  
 
 ## Composition
 
@@ -66,7 +68,7 @@ For the duration of the vote, members subject to removal are suspended from thei
 
 ## Powers and Responsibilities 
 
-All powers of the Internal Affairs Team must be exercised via a majority of its members, or panels of at least three.
+All powers of the Internal Affairs Team must be exercised via an absolute majority of its members. A panel may also exercise these powers in relation to the violations they are reviewing via an absolute majority of its members.
 
 While Wizards are necessarily exempt from the certain enforcement powers of the Internal Affairs Team such as Removal, they are expected to follow their directives where applicable.
 
