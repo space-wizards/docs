@@ -25,7 +25,7 @@ Github automatically assigns the `S: Untriaged` label to any Issue or PR that is
 
 For a triage to be completed, the item must have *at least one* label from the following label categories. This is signified by these categories having a 1-letter category name:
   - Area / A
-  - Difficulty / D
+  - Difficulty / D    (_Only mandatory for Issues. PRs may have it at the triager's discretion_)
   - Priority / P
   - Status / S
   - Type / T
@@ -34,7 +34,7 @@ The following categories are assigned automatically by Github:
   - Size
   - Changes
 
-Once a triage is completed, remove the `S: Untriaged` label and attach `S: Needs Review` for PRs, or `S: Requires Content PR` for Issues (alternative labels may be more appropriate, such as when closing an issue).
+Once a triage is completed, remove the `S: Untriaged` label and attach `S: Needs Review` for PRs. If the PR was opened by a Maintainer, it should also receive the `S: Approved` label, as they count as the first approver.
 
 ### Priority Labels
 
@@ -45,8 +45,12 @@ Priority labels are used to indicate how important an item is to the project. Th
 - **P2 - Raised:** For items that are beneficial, useful, or deserve Maintainer attention, but don't qualify for P0/P1.
 - **P3 - Standard:** The default for most issues and PRs that are not urgent.
 
-A Maintainer may assign P1 to a non-bugfix item if there is a strong, time-sensitive justification.
-Two Maintainers may jointly raise or lower the priority of an item during triage if they agree the current label is not appropriate.
+These limits can be exceeded by reasonable Staff consensus.
+Within the above limits, any single Maintainer can adjust the priority of an unassigned item. 
+If an item is assigned to a Maintainer, then the item should not be reprioritised without consulting them first.
+In case of unresolvable dispute about the priority of an item, Lead Maintainers have final say.
+
+If the reason for a change is not completely obvious, a comment should be left explaining it, as a change with no explanation is more likely to itself be changed again later by another Maintainer acting in good faith.
 
 ### Old Issue / PR Re-Triage
 
