@@ -50,6 +50,11 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
     - When you open a PR on github, you can select which branch it will target, and the master branch is always selected by default. For a hotfix you must select the stable branch manually.
     - If you are uncertain if your change should be a hotfix, open it targeting the master branch. Then, ask on the PR if it can be made a hotfix.
 
+- Decide if you are opening the PR as a **draft**.
+    - Draft PRs are only permitted if a portion of the PR requires review and/or approval in order for other segments of the same PR to be completed.
+    - Draft PRs should not be opened if the PR is simply incomplete and not ready to be reviewed.
+    - Failure to abide by this may result in the closure of your PR.
+
 - **Review your diff** using the code preview tab on GitHub.
 
     - Check for changes that you did not intend to commit.
