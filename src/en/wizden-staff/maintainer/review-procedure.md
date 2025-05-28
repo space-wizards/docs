@@ -125,7 +125,7 @@ PRs actively undergoing a maintainer discussion should not be merged.
 To begin the discussion process, add the `S: Undergoing Maintainer Discussion` tag.
 The maintainer should then create a post in the `#maint-reviews` discord channel with the PR's name, number, link, and appropriate tags.
 
-Discussion can then proceed with maintainers and admins giving opinions and coming to a conclusion or compromise.
+Discussion can then proceed with maintainers and admins giving opinions and coming to a conclusion orto  compromise.
 Once a conclusion is reached or regular discussion ceases, one of the following must occur:
 - If the discussion was created due a disagreement in the PR decision,
 
