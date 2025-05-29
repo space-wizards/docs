@@ -8,22 +8,9 @@ If I don't list something like network bandwidth it's cuz I'm too lazy to check.
 
 ### Moon
 
-Moon is our NEW central server. When done, it'll host all non-critical infrastructure and game server database and so on. Hosted by Hetzner in Germany. 
+Moon is our central server. It hosts all non-critical infrastructure like the game server database, Forums, Wiki, Robust.CDN and so on. (The hub/auth are considered critical and hosted on another machine.)
 
-Specs: (AX41-NVMe from Hetzner)
-
-### Centcomm
-
-Centcomm is our OLD central server that hosts both the central SS14 infrastructure like authentication, aswell as Wizard's Den infrastructure like the game database, wiki, forum, etc... It is hosted in US East.
-
-Specs:
-* **CPU:** Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
-* **RAM:** 16 GB
-* **SSD:** 256 GB
-* **HDD:** 2 TB
-* **Network:** 150 TB bandwidth, gigabit
-
-This serves all CDN downloads and it comes up to less than 2 TB/month bandwidth.
+Specs: AX41-NVMe from Hetzner in Germany
 
 ### Lizard
 
@@ -37,23 +24,17 @@ Specs:
 
 This is our most loaded server, and it comes out to 5 TB/month bandwidth max.
 
-### Miros
-
-Auctioned server rented from Hetzner, hosted in Germany.
-
-* **CPU:** Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
-* **RAM:** 64 GB
-* **SSD:** 512x2 GB (RAID 1)
-
-### Noodle
+### Noodle (Hypervisor for Leviathan)
 
 Noodle acts as a hypervisor and runs two separate systems, Leviathan and OpenDream1. Hosted in Miami.
+
+Leviathan hosts Wizard's Den Leviathan and Wizard's Den Vulture in US East.
 
 * **CPU:** AMD Ryzen 5 5600X 6-Core Processor
 * **RAM:** 64GB
 * **SSD:** 512 GB
 
-Each VM guest has 6 CPUs and 16 GB RAM assigned.
+Each VM guest has 6 CPUs (Dedicated to the VM) and 16 GB RAM assigned.
 
 
 

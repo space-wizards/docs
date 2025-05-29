@@ -6,7 +6,7 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ```admonish danger title="Pre-Packaged server builds should not be used for custom content"
 The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
-If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
+If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code). Doing so otherwise will probably result in a broken server and we will be unable to provide support for such issues.
 ```
 
 1. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
@@ -32,7 +32,7 @@ The server needs network ports to be forwarded so that people can connect. By de
 
 For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6 try both if one fails.
+After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6, try both if one fails.
 
 Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
 
@@ -144,7 +144,7 @@ By default, the server ships with no rules. To set custom rules for your own ser
     # server_url = "ss14://..."
     tags = "" # comma separated list of tags
     ```
-If you get an error attempting to advertise please read [the troubleshooting bellow](#Troubleshooting)
+If you get an error attempting to advertise, please read [the troubleshooting below](#Troubleshooting)
 
 ### Bare Server Build Configuration
 
