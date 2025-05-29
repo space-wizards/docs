@@ -16,7 +16,7 @@ This proposal originates from this [Discord thread](https://discord.com/channels
 
 In the current state of the game, many antag roles can be identified by metagame aspects that can only be explained by them being an antag. Examples of this are StealthOps Nukies or infiltrating Traitors not appearing on the crew manifest, or DNA Scramblers giving a Traitor a new name. This can make these playstyles very difficult against powergaming players and therefore quite limiting; the Tourist role is meant to remedy that.
 
-For the Tourist player themself, the role is meant to push for opportunities to roleplay and also add a bit of cheeky yet ultimately harmless spice to the station. The Tourist is *not* an antag, and it is important that their goals do not encourage antagonistic behavior. Instead their goals are meant to push for social interactions with crew in a low-stakes environment for the player. The Tourist also appropriately fits into the Standard Operating Procedure that visitors to the station are meant to be welcome.
+For the Tourist player themself, the role is meant to push for opportunities to roleplay and also add a bit of cheeky yet ultimately harmless spice to the station. The Tourist is *not* an antag, and it is important that their goals do not encourage antagonistic behavior. Instead their goals are meant to push for social interactions with crew in a low-stakes environment for the player. The Tourist also appropriately fits into the lore that visitors to the station are meant to be welcomed.
 
 ## Gameplay
 
