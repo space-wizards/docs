@@ -123,7 +123,7 @@ They can be used both when there are disagreements regarding a PR and when a mai
 PRs actively undergoing a maintainer discussion should not be merged.
 
 To begin the discussion process, add the `S: Undergoing Maintainer Discussion` tag.
-The maintainer should then create a Topic in the `Maintainer Reviews` Discourse Category with the PR's name, number, link, and appropriate tags.
+The maintainer should then create a Topic in the `PR Reviews` Discourse Category with the PR's name, number, link, and appropriate tags.
 
 Discussion can then proceed with maintainers and admins giving opinions and coming to a conclusion or compromise.
 Once a conclusion is reached or regular discussion ceases, one of the following must occur:
