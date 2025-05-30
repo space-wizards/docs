@@ -13,4 +13,4 @@ For this they can request membership access to the `@discussion-whitelist` group
 Lead Maintainers are responsible for processing whitelist requests.
 A single Lead Maintainer can approve or deny a request based on the criteria above.
 If a request is denied, the Lead Maintainer should provide a reason for the denial in the Topic.
-If a request is approved, the Lead Maintainer accept the membership request, they will be automatically notified.
+If approved, the Lead Maintainer should accept the membership request, they will be automatically notified.
