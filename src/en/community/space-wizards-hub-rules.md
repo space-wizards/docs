@@ -48,6 +48,20 @@ If we do decide to hand out a strike, we expect you to resolve the problem withi
 
 We expect to be able to contact you about matters of the hub rules. You should have some form of **contact information** on your server: something as simple as a Discord or website link we can follow as a paper trail is good enough. If we are unable to contact you we may be forced to go immediately to delisting.
 
+### Reporting Violations
+
+The hub rules are primarily enforced in response to reports from the wider Space Station 14 community. We do not actively monitor communities or otherwise seek violations, nor do we have the desire to do so. We aren't cops here.
+
+Before sending a report, it's strongly recommended to contact the owner of a given community regarding the violation. Most hub rule violations happen either on accident, or without the community owner's awareness. As such, simply speaking with a community's owner tends to be enough on it's own to make a report unnecessary to begin with, which helps save everyone's time. Coincidentally, this can also make it obvious whether a community owner is operating in bad faith, which can expedite hub rule enforcement if necessary.
+
+To report a hub rule violation, either DM a Project Manager or Wizard in the official Space Station 14 Discord server (preferred), or send an email to telecommunications@spacestation14.com. Be concise, and include as much evidence as feasibly possible. Assume that absolutely nothing is known about a given community (as this is almost always the case). Evidence is usually valued over commentary. Translations for non-English evidence are greatly appreciated, but not required.
+
+Generally, responses and updates to reports are not guaranteed, beyond a confirmation that the report has been forwarded to be discussed internally. Please be patient, as while initial investigations regarding a report might be inconclusive, it's not unusual for the contents of a given report to end up being relevant for future investigations, even months later.
+
+Reports involving non-public information are always treated as anonymous. Provided evidence will only be published if it's known to be public.
+
+Submitting a frivolous report or knowingly including false information may lead to the report being disregarded in its entirety. Do not feign affiliation with a community, do not deliberately provide misleading translations, do not knowingly omit important context, do not harass those you're reporting, and especially don't fabricate evidence outright. 
+
 ## The Rules
 
 ### Section 1 (high severity)
@@ -92,7 +106,7 @@ Breaking one of these rules will lead to your community receiving at most one st
 **2.1. Keep your server names and descriptions clean**
 - They are visible to every player who uses the hub.
 - Keep it safe for work and free from vulgarity.
-- No bigotry, hate speech, descrimination, etc...
+- No bigotry, hate speech, discrimination, etc...
 
 **2.2. Do not impersonate other servers, developers, or organizations.**
 - If there is a reasonable way for players to be confused about the affiliations of your server, you're probably breaking this.
@@ -103,6 +117,9 @@ Breaking one of these rules will lead to your community receiving at most one st
 ### Section 3 (low severity)
 Breaking these rules will not lead your community to receiving any strikes, unless they are repeatedly broken or not resolved within a reasonable timeframe.
 
-**3.1. Your server name must not have any advertisements.**
-- For example, "Hosted by XXX".
-- You are allowed to put these in the server description (inside the foldout).
+**3.1. No advertising in the server name.**
+Server names are for describing a game, server, or community, and *not* for advertising unrelated services, causes, or other information.
+- For example:
+  - A name consisting of only "Hosted by XXX" is not allowed, because it is advertising a hosting service.
+  - A name such as "Foo Station | Now with new and improved X and Y | Running map Z" is allowed, because it describes Foo Station.
+- "Advertisements" as described in this rule *are* permitted in the server description (inside the foldout).

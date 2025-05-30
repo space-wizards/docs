@@ -61,7 +61,7 @@ This gets us `"Bob was a traitor."`
 #### Example 3 (Plurals, gender, and other language-specific problems)
 ```
 humanoid-character-profile-summary = 
-    This is {$name}. {$gender ->
+    This is {$ent}. {GENDER($ent) ->
     [male] He is
     [female] She is
     *[other] They are
@@ -71,9 +71,9 @@ You probably know of atleast 1 language that varies the structure of a sentence 
 
 The `humanoid-character-profile-summary` message is used in the lobby character selection screen and describes your character's name, gender, and age, so obviously it needs to change depending on the character's **name**, **gender**, and **age**! 
 
-**name** and **age** are easy as they don't change the structure of the sentence, we can just include them in the text as we would any other variable.
+**name** and **age** are easy as they don't change the structure of the sentence. Name is assumed when you pass an `EntityUid` in as a parameter, and you can get grammatical gender using the `GENDER()` function. We pass the age in here manually.
 
-**gender** is where it gets tricky. In english a person's gender affects what pronouns are used in sentences that refer to them; We need 'He', 'She' or 'They' to be chosen appropriately.
+However, with **gender** it gets tricky. In english a person's gender affects what pronouns are used in sentences that refer to them; We need 'He', 'She' or 'They' to be chosen appropriately.
 Thankfully Fluent supports '[selectors](https://www.projectfluent.org/fluent/guide/selectors.html)' which should look familiar to anyone who's ever used a `switch/case` or `match` statement in other programming languages. A variable is switched or matched against a series of branches and if a match is found that branch is executed.
 Fluent's selectors are no different, depending on the variable switched the sentence is changed to match the most appropriate branch.
 - String variables are matched against string branches `[male], [female], etc`
@@ -82,56 +82,44 @@ Fluent's selectors are no different, depending on the variable switched the sent
         -  1 minute, 2+ minutes (english plurals)
         -  1 minuta, 2-4 minuty and 5+ minut (czech plurals)
 
-**gender** is still passed in to the message as a variable, but rather than used directly, it gets used as the variable in a selector and the sentence is matched appropriately.
-
-```csharp=
-Loc.GetString(
-    "humanoid-character-profile-summary",
-    ("name", "Bob"),
-    ("gender", "male"),
-    ("age", 37)
-);
-```
-This gets us "This is Bob. He is 37 years old."
-
-***What about 1 year old spacemen? They deserve localization too!***
-Ok, sure we could have a selector on the age too
-
-```
-humanoid-character-profile-summary = 
-    This is {$name}. {$gender ->
-    [male] He is
-    [female] She is
-    *[other] They are
-} {$age} {$age -> 
-    [one] year
-    *[other] years
-} old. 
-```
-But given that the game enforces a minimum age of 18 on characters, we'd never need the `[one]` case. Don't bother localizing situations that the game prevents from happening (Don't worry, this probably won't come up often)
-
 #### Example 4 (Fluent Functions)
 
 Obviously, the above with gender is a little annoying to write and is especially annoying to have to call in C#. Thankfully, we have some fluent functions that make it easier. Fluent functions are called inside the curly braces `{}` just like with variables, and are called with the variables as arguments. Functions are often used multiple times in a row, on the results of other functions.
 
+Using functions, the above example code simply looks like:
+
+```
+humanoid-character-profile-summary = This is {$ent}. {SUBJECT($ent)} {CONJUGATE-BE($ent)} {$age} years old.
+```
+
+##### Function rundown
+
 The easiest to understand is `CAPITALIZE`, which just capitalizes the first letter of whatever is passed in. This is most often used to modify the results returned by other functions.
 
-When entities are passed in to a fluent function, they can automatically figure out some information like **grammatical gender** or **proper-ness**, and we use this to our advantage.
+The functions `GENDER()` and `PROPER()` return the grammatical gender (masculine, feminine, epicene, neuter) and the proper-ness of an entity respectively.
 
-Functions exist for determining the definite and indefinite articles that an entity should have-- These functions are `THE`, which returns 'the' if the entity is proper and nothing otherwise, and `INDEFINITE`, which return either 'a' or 'an' depending on some complex rules.
+Functions also exist for determining the definite and indefinite articles that an entity should have--These functions are `THE`, which returns 'the' if the entity is proper and nothing otherwise, and `INDEFINITE`, which return either 'a' or 'an' depending on some complex rules.
 
 ```
 hugging-success-generic = You hug {THE($target)}.
 hugging-success-generic-others = { CAPITALIZE(THE($user)) } hugs {THE($target)}.
 ```
 
-Functions exist for automatically determining pronouns based on grammatical gender. These include `SUBJECT` (he, she), `OBJECT` (him, her), `REFLEXIVE` (himself, herself), as well as things like `POSS-ADJ` (their, its) for possessive adjectives, etc.
+Other functions exist for automatically determining various pronouns based on grammatical gender of the entity passed in--masculine, feminine, epicene (they), or neuter (it). These include:
+- `SUBJECT($ent)` -- he, she, they, it
+- `OBJECT($ent)` -- him, her, them, it
+- `POSS-PRONOUN($ent)` -- his, hers, theirs, its
+- `POSS-ADJ($ent)` -- his, her, their, its
+- `REFLEXIVE($ent)` -- himself, herself, themselves, itself
 
-Finally, there are functions for conjugating certain special verbs based on gender--these are `CONJUGATE-BE` and `CONJUGATE-HAVE` (and more can be added if necessary).
+Finally, there are functions for conjugating certain special verbs based on gender; these are:
+- `CONJUGATE-BE($ent)` -- (they) are, (he/she/it) is
+- `CONJUGATE-HAVE($ent)` -- (they) have, (he/she/it) has
+- `CONJUGATE-BASIC($ent, first, second)` -- (they) {$first}, (he/she/it) {$second} e.g. `CONJUGATE-BASIC($ent, "run", "runs")` (they run, he/she/it runs)
 
 These functions add up to create some complicated FTL strings, but they're going to read perfectly every time no matter which entity is being used.
 
-In `hands-system.ftl`:
+For example, in `hands-system.ftl`:
 
 ```
 # Examine text after when they're holding something (in-hand)

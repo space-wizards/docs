@@ -4,17 +4,21 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ## Level 0: Local Sandbox Server
 
-1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
-2. Download the latest version of the server from [our builds page](https://central.spacestation14.io/builds/wizards/builds.html), for your operating system. If you are running custom code, or a build is not available for your platform, see [Custom Code](#custom-code) below.
-3. Extract that to a directory somewhere.
-4. Run `Robust.Server.exe` (or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
-5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
-6. When there is a new update. Go back to the second step and just overwrite the files to update your server.
-
-```admonish info
-If you ever wish to develop for the game. You will need a [proper development environment](./setting-up-a-development-environment.md). You cannot use the premade server for this use case.
+```admonish danger title="Pre-Packaged server builds should not be used for custom content"
+The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
+If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code). Doing so otherwise will probably result in a broken server and we will be unable to provide support for such issues.
 ```
 
+1. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
+2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
+3. Extract the downloaded zip to a directory somewhere, you may use any Archive program such as 7Zip, Winrar or even the one built into Windows.
+4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux)) and wait until the console windows says "Ready".
+5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` as an IP address and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button using the same IP address.
+6. When there is a new update. Go back to the 2nd step, and copy over the ``data`` folder and ``server_config.toml`` (if you modified it) from your old server files to the new server files.
+
+If you are having trouble understanding what to click, here is a quick video. Subtitles contain some extra information if needed. 
+
+{% embed youtube id="IDBqrAGZ3cA" loading="lazy" %}
 
 ## Level 1: Invite Your Friends
 
@@ -27,6 +31,14 @@ The server needs network ports to be forwarded so that people can connect. By de
 * TCP `1212` is a HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
 
 For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
+
+After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6, try both if one fails.
+
+Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
+
+```admonish info
+If have an IPV6 address (looks kinda like this ``fd11:5ee:bad:c0de::ab3:3d03``) make sure to include square brackets (``[fd11:5ee:bad:c0de::ab3:3d03]``) when in the direct connect menu.
+```
 
 ### Configure Your Server
 
@@ -85,12 +97,16 @@ By default, no admin privileges are set. A privileged administrator can give out
 ## Level 2: Server With Custom Code
 You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
 
+You first build the packaging tool using:
+
 `dotnet build Content.Packaging --configuration Release`
 
-`dotnet run --project Content.Packaging server --hybrid-acz`
+Then you can use Content.Packaging to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``
+
+`dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
 
 ```admonish info
-Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this
+Note that if you are running an older server before Content packaging was a thing, or need to use the legacy script (not supported anymore) then use this instead
 `python Tools/package_server_build.py --hybrid-acz`
 ```
 
@@ -104,10 +120,12 @@ This will not, of course, handle automatic restarts (in case of a crash) or upda
 For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
 
 ### Setting Rules
-By default, the server ships with the rules that are used on Wizard's Den servers. To set custom rules for your own server:
+By default, the server ships with no rules. To set custom rules for your own server:
 
-1. Add a file with your rules to the `Resources/ServerInfo/` directory.
-2. Set the `server.rules_file` CCVar with the base name of your rules file (just the file name without the leading path).
+1. Fork the project if you have not already (which means also [setting up development environment](./setting-up-a-development-environment.md))
+2. Add a guidebook file with your rules in the `Resources/ServerInfo/Guidebook/ServerRules` directory. Follow the format of `DefaultRules.xml`
+3. Add a guidebook prototype entry in `Resources/Prototypes/Guidebook/rules.yml`. Pointing to the newly created guidebook text file file you made.
+4. Set the `server.rules_file` CCVar to the ID you set in the guidebook prototype you made in the previous step.
 
 ### Public Hub Server - Getting your server on the launcher's list
 
@@ -126,6 +144,7 @@ By default, the server ships with the rules that are used on Wizard's Den server
     # server_url = "ss14://..."
     tags = "" # comma separated list of tags
     ```
+If you get an error attempting to advertise, please read [the troubleshooting below](#Troubleshooting)
 
 ### Bare Server Build Configuration
 
@@ -164,67 +183,7 @@ This is for people running their own codebase and server and/or those who want a
 [`SS14.Watchdog`](https://github.com/space-wizards/SS14.Watchdog/) (codename Ian) is our server-hosting wrapper thing, similar to TGS for BYOND (but much simpler for the time being). It handles auto updates, monitoring, automatic restarts, and administration. We recommend you use this for proper deployments.
 
 ### Installation
-[`Refeer to this`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for intructions on building and configuring Watchdog.
-
-### Server Instance Folder
-
-The watchdog will automatically create a folder structure for each server instance. This is at `instances/<instanceId>`, e.g. instances/wizards_den / instances/wizards_den_two, relative to the current working directory when executing the watchdog.
-
-Each instance folder has the following files and folders:
-
-* `binaries/`: Is used to store client binaries when using the "Local" update type, see below.
-* `bin/`: Contains the actual extracted server binaries.
-* `data/`: Stores server data like player preferences.
-* `config.toml`: Is the config file the server will load (the watchdog overrides the default location, `server_config.toml` next to the .exe, to avoid it getting deleted when the server resets).
-
-```admonish info
-Note that although the watchdog handles server updates you may still want to setup the config.toml as per the `Bare Server Configuration` section above.
-```
-
-### Update types
-The watchdog supports 4 different types of update types:
-1. Jenkins
-2. Local
-3. Git
-4. Manifest
-
-If you wish to obtain more information you can browse the SS14.Watchdog repo to see how they work.
-
-TODO: Explain the update providers better and explain hybrid ACZ.
-
-#### 1. Jenkins Updates
-TBC
-
-#### 2. "Manual" Local Updates
-
-You can use the watchdog with local files, and have it automatically generate the necessary build information. This will also host the client binaries for you.
-
-To configure this, use the following update configuration in your `appsettings.yml`, in the entry for your server instance:
-
-```yml
-UpdateType: "Local"
-Updates:
-  Version: "foobar" # Version string to use.
-```
-
-The watchdog will automatically host client binaries. Where does it pull them from? The `binaries/` folder in your server instance folder! Note that for this to work, the watchdog HAS to be publically accessible via `BaseUrl` in the config file.
-
-You can edit the `Version:` specified in the config to tell the launcher that it should update the game next time you connect.
-
-You will have to manually move files around and extract the server binaries.
-
-#### 3. Git
-This provider has 3 options available
-- BaseUrl: This is the url for the repo, i.e. https://github.com/space-wizards/space-station-14
-- Branch: The branch to checkout from the repo. This defaults to master
-- HybridACZ: `true` or `false`. You most likely want to keep this `true`
-
-#### 4. Manifest
-TBC
-
-#### Custom Auto Updates
-
-Not supported, but it should be relatively trivial to edit the code for `SS14.Watchdog` to add support for whatever update mechanism you need. See `UpdateProvider.cs`.
+[`Refer to this`](https://docs.spacestation14.com/en/server-hosting/setting-up-ss14-watchdog.html) for instructions on building and configuring Watchdog.
 
 ### Server Build Configuration
 
@@ -346,6 +305,49 @@ name = "wizards_den_us_west"
 # password = ""
 ```
 
+### Privacy Policy
+
+```admonish failure "This is not legal advice"
+This functionality and documentation is provided on a best-effort basis **only**. We intend to make it as easy as possible for server hosts to comply with legal requirements, but nothing here is a replacement for talking with a real lawyer if it comes down to it.
+```
+
+The launcher has the capability of presenting a privacy policy prompt when a player tries to connect to your server, if configured. This is likely desirable for all major servers.
+
+How it works: the game server provides three parameters that the launcher will check as early as possible in the connection handshake:
+
+* Link: a link to a HTTP(S) URL where your privacy policy is hosted.
+* Identifier: a unique value that identifies a specific server group's privacy policy, to unambiguously distinguish it.
+* Version: a unique value that identifies a version of your privacy policy, to allow recognizing changes.
+
+To configure this, you should configure the following three CVars in your configuration:
+
+```toml
+[status]
+privacy_policy_link = "https://example.com/privacy"
+# Set this to a unique value for your server community.
+# DO NOT COPY PASTE THIS.
+privacy_policy_identifier = "example_server_identifier"
+# This can be anything, but a date may be the most humanly meaningful.
+# Change it every time you update your privacy policy!
+privacy_policy_version = "2024-11-30"
+```
+
+#### Details
+
+```admonish info
+This section is provided to help you best understand how the launcher interacts with your game server while this feature is enabled.
+```
+
+When a player first connects to your server with this system enabled, they will be prompted with a link to the privacy policy and the ability to accept or decline it. 
+
+* If they click the link, the privacy policy linked will open in their browser.
+* If they click accept, the launcher will continue with normal connection procedures (downloading resources, starting client, connecting to game server, etc...)
+* If they click decline, the connection is aborted immediately. In this scenario, no further contact with your server will have happened than a single `HTTP GET` of the `/info` server API endpoint.
+
+If they click accept, the consent (based on identifier and version) is saved into the launcher's database and they will not be re-prompted again later.
+
+If you change your version parameter later, players will be prompted again by the same dialog, although with different text clearly indicating that your privacy policy has been updated since they last accepted it.
+
 ## Troubleshooting
 
 ### Unable to advertise to hub / people cannot connect
@@ -357,6 +359,20 @@ People aren't able to connect to your server OR you get the following error in y
 ```
 
 This means your server is not accessible from the outside internet. Make sure you have followed the guide to [Port Forwarding](../../server-hosting/port-forwarding.md).
+
+### Auth/hub country internet blocking
+
+Some countries (e.g. Russia) currently have internet blocks active that may interfere with your server's ability to connect to hub services. If this is a problem for you, you can attempt to set the following config properties to use fallback services:
+
+```toml
+[auth]
+server = "https://auth.fallback.spacestation14.com/"
+
+[hub]
+hub_urls = "https://hub.fallback.spacestation14.com/"
+```
+
+These configurations do not affect players, the launcher and game client use fallbacks wherever possible by default.
 
 ### SS14.Watchdog
 
@@ -394,9 +410,10 @@ Type `./Robust.Server` then hit enter. If you see a bunch of stuff being printed
 ## Useful Links
 All of the important links on this page in one convenient place.
 * [Config Reference](../tips/config-file-reference.md)
-* [.NET 8 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 8 SDK)
-* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Also included in full .NET 8 SDK)
+* [.NET 9 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 9 SDK)
+* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (Also included in full .NET 9 SDK)
 * [SS14.Watchdog](https://github.com/space-wizards/SS14.Watchdog/)
 * [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
 * [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)
 * [Public Hub Server Rules](../../community/space-wizards-hub-rules.md)
+* [Port Forwarding](../../server-hosting/port-forwarding.md)

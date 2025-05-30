@@ -1,2 +1,9 @@
 book
 .idea/
+
+# editor files
+.*~
+*.swp
+
+# VSCodium files
+.vscode/

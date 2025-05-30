@@ -24,7 +24,7 @@ If you are using some form of VPN, probably all the info in this guide is irrele
 
 You can try to see if port forwarding is supported by your VPN service, in which case it will probably be pretty reliable and easy to do.
 
-Using a VPN service may also be the only option you have if your ISP otherwise makes port forwarding impossible. We have no recommendations or guides for specific services here.
+Using a VPN service may also be the only option you have if your ISP otherwise makes port forwarding impossible. More information [here](#vpn-networks-zerotiertailscalehamachi)
 
 ## UPnP Port Forwarding
 
@@ -65,9 +65,13 @@ If it succeeds and your server is accessible from the outside world, great! If i
 ## Manual Port Forwarding
 
 ```admonish info
+Disable UPnP from your config if you are going to do manual port forwarding. It may cause issues.
+```
+
+```admonish info
 It is extremely common for your ISP to install a router for you. Because of this, "check your router's manual" may instead involve "check your ISP's help site or ask their support".
 
-If you do have your own router, there should be already somebody in your house that knows how to do this, so ask them.
+If you do have your own router, there may be somebody in your house that knows how to do this, so ask them.
 ```
 
 You will have to open your router's settings interface, and port forward from there. **Instructions may vary heavily based on router model.** We'll try to provide a general outline that might work for a lot of routers, but if it's not applicable you will need to check with your router's manual or check with your ISP.
@@ -114,7 +118,7 @@ If you don't know the login credentials, some things you may want to try:
 1. Checking the router unit to see if there's a sticker or something
 2. Checking any documentation from your ISP
 3. Trying your wifi password
-4. Asking your parents
+4. Asking your family
 5. Trying common combinations like "admin" "admin"
 
 ### Step 2: Port forward
@@ -133,6 +137,22 @@ When you do find it, you'll want to look for some form of "add" button to add an
 
 Save the settings or something.
 
+If this failed too, we have one last check.
+
+## Check your computers firewall
+If you are certain you did not mess up the above (or you are using your regular rented linux server), our last hope is to check for if your computer has it's own firewall active and blocking the connection.
+
+If you are on MacOS or Linux you will have to do your own research. Especially on linux as there are many firewall programs.
+
+I will cover Windows here
+
+1. Search for "Windows firewall" and open it
+2. At the top, click on "Action" --> "New rule"
+3. Change the option to "Port"
+3. Type "1212" as the port and make it a tcp rule (or whatever you set your port to if you changed it)
+4. Ensure "Allow the connection" is selected and that the rule applies everywhere (domain, private, public)
+5. Name it anything and do the steps again for udp instead.
+
 If you did this step correctly, then maybe it works! If it still doesn't work, uhhhh...
 
 ## ISP Fuckery
@@ -141,4 +161,51 @@ If you did the above steps correctly and your server **still** isn't globally ac
 
 The most common reason for this is that your ISP uses Carrier-grade NAT ("CGNAT") which makes port forwarding impossible. Another possible reason we've heard about is that certain network ports or protocols are automatically blocked by them.
 
-Either way, if this is the case we cannot help you further. You are probably best off contacting your ISP's support or checking their site to see what you can figure out. Some ISPs may allow exemptions to CGNAT, others may do it but will charge you for it, and so on.
+You are probably best off contacting your ISP’s support or checking their site to see what you can figure out. Some ISPs may allow exemptions to CGNAT, others may do it but will charge you for it, and so on.
+
+### So what now?
+
+If you were reading to host a **public server** (public on the hub for random players to join) we suggest you purchase hosting, these alternatives are only suitable for people interested in **hosting for friends**.
+
+```admonish info
+We do not endorse or maintain any of these programs.
+
+If you encounter any issues with any of them please contact the developers of the program instead of us.
+
+These are just suggestions by us that we have seen work.
+```
+
+We can't really do much anymore to help other than give suggestions. We made some below that we heard have worked.
+
+Essentially from this point on, you will need external help to make your server reachable if you can't get your ISP to help.
+
+## Tunneling services (Like playit.gg, localtonet)
+
+```admonish warning
+Do note tunneling services will cause everyone's IP to appear as coming from the same location which will make IP bans impossible. If `console.loginlocal` is enabled (which it is by default) it will result in **everyone** gaining admin access.
+
+The servers IP address might change unexpectedly depending on the service, which means your favorite server entry may stop working after a while.
+```
+
+Tunneling services tunnel player connections through their unrestricted network and back to your computer. It is essentially a "reverse VPN".
+
+If all you want is a simple server to play around with friends. This is by far the easiest option. It also hides your public IP.
+
+This guide will cover playit.gg here. Instructions should be similar for other programs. Make sure the tunneling program you choose supports both TCP and UDP traffic!
+
+1. [Download and signup](https://playit.gg/) for playit.gg (Guest account won't work) and setup the program with their instructions.
+2. When asked for a tunnel type, switch it to "TCP+UDP"
+3. When asked for a "Local port" type your server's port, in most cases ``1212``. Then "Add tunnel"
+4. Once the tunnel initializes, you should have a domain and IP. This is what you share with your friends, start your server if you have not already. They should be able to connect with either the domain or the IP they give you. The domain will also be in the console of the playit.gg app for quick copying.
+
+Every time you need to host a server, make sure to start the relevant tunneling app first.
+
+## VPN networks (Zerotier/Tailscale/Hamachi)
+
+```admonish warning
+Be careful with who you allow access using these programs. When multiple computers are on the same internal network, they can communicate directly with each other. This means that any device connected could, in theory, access shared files, printers, or even attempt unauthorized actions if not properly secured. Ensure you trust the people that get access and turn it off when not using it.
+```
+
+VPN software is able to create a local private network. It is essentially like you have a virtual LAN party of computers connected to each other.
+
+All these programs will require all your friends to download the VPN software of choice, somehow join a network with each other (search for instructions), and then joining using the local IP address created by the program of the computer running the SS14 server.

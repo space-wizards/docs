@@ -168,7 +168,7 @@ These attributes are present on most layout controls.
 Sets the margin of the control this attribute is put on.
 Example:
 ```xml
-<BoxContainer Orientation="Vertical" Maring="4">
+<BoxContainer Orientation="Vertical" Margin="4">
         <Label Text="Fancy label 1" />
         <Label Text="Fancy label 2" />
     </BoxContainer>

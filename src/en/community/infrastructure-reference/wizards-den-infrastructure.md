@@ -6,18 +6,11 @@ This is a reference for how the official Wizard's Den game server infrastructure
 
 If I don't list something like network bandwidth it's cuz I'm too lazy to check. You're not gonna run out, don't worry.
 
-### Centcomm
+### Moon
 
-Centcomm is our central server that hosts both the central SS14 infrastructure like authentication, aswell as Wizard's Den infrastructure like the game database, wiki, forum, etc... It is hosted in US East.
+Moon is our central server. It hosts all non-critical infrastructure like the game server database, Forums, Wiki, Robust.CDN and so on. (The hub/auth are considered critical and hosted on another machine.)
 
-Specs:
-* **CPU:** Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz
-* **RAM:** 16 GB
-* **SSD:** 256 GB
-* **HDD:** 2 TB
-* **Network:** 150 TB bandwidth, gigabit
-
-This serves all CDN downloads and it comes up to less than 2 TB/month bandwidth.
+Specs: AX41-NVMe from Hetzner in Germany
 
 ### Lizard
 
@@ -31,40 +24,17 @@ Specs:
 
 This is our most loaded server, and it comes out to 5 TB/month bandwidth max.
 
-### Spider
-
-Home server of PJB, so shared with some non-SS14 infra and other cruft (somebody please play Xonotic with me). Hosted in Belgium.
-
-Specs (it's just an old PC):
-* **CPU:** Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz
-* **RAM:** 16 GB
-* **SSD:** 1 TB
-
-### Miros
-
-Auctioned server rented from Hetzner, hosted in Germany.
-
-* **CPU:** Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
-* **RAM:** 64 GB
-* **SSD:** 512x2 GB (RAID 1)
-
-### Centipede
-
-Hosted by Austation in Australia
-
-* **CPU:** 2 cores of an Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz
-* **RAM:** 4 GB
-* **SSD:** 64 GB
-
-### Noodle
+### Noodle (Hypervisor for Leviathan)
 
 Noodle acts as a hypervisor and runs two separate systems, Leviathan and OpenDream1. Hosted in Miami.
+
+Leviathan hosts Wizard's Den Leviathan and Wizard's Den Vulture in US East.
 
 * **CPU:** AMD Ryzen 5 5600X 6-Core Processor
 * **RAM:** 64GB
 * **SSD:** 512 GB
 
-Each VM guest has 6 CPUs and 16 GB RAM assigned.
+Each VM guest has 6 CPUs (Dedicated to the VM) and 16 GB RAM assigned.
 
 
 

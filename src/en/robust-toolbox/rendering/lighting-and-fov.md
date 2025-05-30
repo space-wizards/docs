@@ -50,7 +50,7 @@ My attempts to run VSM after applying the gaussian weighting were, sadly, too wa
 
 VSM is not used for the final FOV (regular biased distance check is used instead, note that the lighting buffer FOV pass DOES use VSM) because it caused *severe* bleeding issues from the back of walls. Again, maybe I messed something up. 99% sure it was *not* the bleeding issue as described at `8.4.3` in the above article though (the fix they suggest did nothing). Here's the FOV bleeding in action. The blue stuff is bluespace and you should NOT be seeing it.
 
-![](https://cdn.discordapp.com/attachments/560845886263918612/680392572040118306/unknown.png)
+![](../../assets/images/lighting-and-fov/vsm-blue-bleed.png)
 
 These bleeding issues might just be something VSM does that isn't a problem in 3D. It definitely is a problem in 2D however. Luckily due to wall bleed and such we don't notice the problem for regular lights and such. Maybe I'm an idiot and have no idea what I'm talking about, also an option.
 

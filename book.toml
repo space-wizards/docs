@@ -17,9 +17,11 @@ command = "mdbook-admonish"
 [preprocessor.template]
 before = ["mermaid","admonish","emojicodes"] # templates can include these so we run this first
 
+[preprocessor.embedify]
+
 [output.html]
 additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js', 'scripts/nav-additions.js']
-additional-css = ['theme/mdbook-admonish.css', 'theme/ss14.css', 'theme/nav-style.css']
+additional-css = ['theme/compiled/ss14.css']
 default-theme = "navy"
 preferred-dark-theme = "navy"
 
@@ -56,13 +58,21 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/content/yaml/index.html" = "/en/general-development/tips/yaml-crash-course.html"
 "/en/getting-started/pr-guideline/index.html" = "/en/general-development/codebase-info/pull-request-guidelines.html"
 "/en/getting-started/conventions/index.html" = "/en/general-development/codebase-info/conventions.html"
-"/en/content/chemistry/index.html" = "/en/space-station-14/chemistry.html"
 "/en/content/writing-guidebook-entries/index.html" = "/en/general-development/tips/writing-guidebook-entries.html"
-"/en/content/device-network/index.html" = "/en/space-station-14/device-network.html"
-"/en/content/pow3r/index.html" = "/en/spcae-station-14/pow3r.html"
+"/en/content/device-network/index.html" = "/en/space-station-14/core-tech/device-network.html"
+"/en/content/pow3r/index.html" = "/en/spcae-station-14/departments/engineering/pow3r.html"
 # yes this one is correct
-"/en/content/construction/index/index.html" = "/en/space-station-14/construction.html"
-"/en/content/destructible/index.html" = "/en/space-station-14/destructible.html"
+"/en/content/construction/index/index.html" = "/en/space-station-14/core-tech/construction.html"
+"/en/content/destructible/index.html" = "/en/space-station-14/core-tech/destructible.html"
+"/en/content/mapping/index.html" = "/en/space-station-14/mapping/guides/general-guide.html"
+"/en/content/mapping-sins/index.html" = "/en/space-station-14/mapping/guidelines.html"
+"/en/content/mapping-checklist/index.html" = "/en/space-station-14/mapping/guidelines.html"
+"/en/content/dungeons/index.html" = "/en/space-station-14/mapping/dungeons.html"
+"/en/content/node-networks/index.html" = "/en/space-station-14/core-tech/node-networks.html"
+"/en/content/NPCs/index.html" = "/en/space-station-14/core-tech/npcs.html"
+"/en/content/cartridge-loader/index.html" = "/en/space-station-14/player-interaction/cartridge-loaders.html"
+"/en/content/chemistry/index.html" = "/en/space-station-14/core-tech/chemistry.html"
+
 "/en/administration/commands/index.html" = "/en/community/admin/admin-tooling/admin-command-cookbook.html"
 "/en/administration/tooling/index.html" = "/en/community/admin/admin-tooling.html"
 "/en/administration/policy/index.html" = "/en/community/admin/wizards-den-admin-policy.html"
@@ -80,13 +90,6 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/getting-started/troubleshooting/index.html" = "/en/general-development/tips/troubleshooting-faq.html"
 "/en/config-reference/index.html" = "/en/general-development/tips/config-file-reference.html"
 "/en/technical-docs/codebase-organization/index.html" = "/en/general-development/codebase-info/codebase-organization.html"
-"/en/content/mapping/index.html" = "/en/space-station-14/mapping.html"
-"/en/content/mapping-sins/index.html" = "/en/space-station-14/mapping/mapping-sins.html"
-"/en/content/mapping-checklist/index.html" = "/en/space-station-14/mapping/mapping-checklist.html"
-"/en/content/dungeons/index.html" = "/en/space-station-14/dungeons.html"
-"/en/content/node-networks/index.html" = "/en/space-station-14/node-networks.html"
-"/en/content/NPCs/index.html" = "/en/space-station-14/npcs.html"
-"/en/content/cartridge-loader/index.html" = "/en/space-station-14/cartridge-loaders.html"
 "/en/engine/ecs/index.html" = "/en/robust-toolbox/ecs.html" 
 "/en/engine/coordinate-systems/index.html" = "/en/robust-toolbox/coordinate-systems.html"
 "/en/engine/net-entities/index.html" = "/en/robust-toolbox/netcode/net-entities.html"

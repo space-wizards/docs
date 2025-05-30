@@ -17,6 +17,8 @@ Key | Meaning
 `states` | A list of _states_ that store the actual meat of the RSI, see below.
 `license` | Required. A valid [SPDX License Identifier](https://spdx.org/licenses/) applying to this work.
 `copyright` | Required. Other arbitrary copyright info such as name, source, ...
+`load` | Special loading parameters that will change how the sprites are interpreted by the engine.
+`metaAtlas` | Boolean that indicates whether the sprite is added together to a larger atlas at load. Enabled by default, this should be disabled for large, rare RSIs.
 
 ### States
 
@@ -92,6 +94,15 @@ Note that in practice the JSON writer probably writes the most compact JSON poss
     ]
 }
 ```
+
+### Loading Parameters
+
+The `load` key allows various load parameters that change how the engine loads the sprite. Keys are as such:
+
+Key | Meaning
+--- | -------
+`srgb` | Boolean that indicates whether the sprite is interpreted as sRGB by shaders and such. Default `true`.
+
 
 ## Design Goals
 

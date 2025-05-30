@@ -1,0 +1,50 @@
+// These all have to be !important because Mermaid sets all of them based on ID matches, which sucks.
+
+html {
+    --mermaid-sequence-actor-bg: #2d4c5a;
+    --mermaid-sequence-actor-stroke: #2a3355;
+
+    --mermaid-sequence-note-bg: #2d5a44;
+    --mermaid-sequence-note-stroke: #253d31;
+
+    --mermaid-sequence-rect-bg: #21273C;
+}
+
+// Light themes.
+.light, .rust {
+    --mermaid-sequence-actor-bg: #cde498;
+    --mermaid-sequence-actor-stroke: #a6cf47;
+
+    --mermaid-sequence-note-bg: #fff5ad;
+    --mermaid-sequence-note-stroke: #aaaa33;
+
+    --mermaid-sequence-rect-bg: #abe5f3;
+}
+
+pre.mermaid svg[aria-roledescription="sequence"] {
+    defs > #arrowhead > path {
+        fill: var(--fg) !important;
+        stroke: var(--fg) !important;
+    }
+    .actor {
+        fill: var(--mermaid-sequence-actor-bg) !important;
+        stroke: var(--mermaid-sequence-actor-stroke) !important;
+    }
+
+    .actor > tspan, .messageText, .loopText, .loopText > tspan, .noteText > tspan {
+        fill: var(--fg) !important;
+    }
+
+    .actor-line, .messageLine0, .messageLine1, .loopLine {
+        stroke: var(--fg) !important;
+    }
+
+    .note {
+        fill: var(--mermaid-sequence-note-bg) !important;
+        stroke: var(--mermaid-sequence-note-stroke) !important;
+    }
+
+    .rect {
+        fill: var(--mermaid-sequence-rect-bg) !important;
+    }
+}
