@@ -98,6 +98,8 @@ The easiest to understand is `CAPITALIZE`, which just capitalizes the first lett
 
 The functions `GENDER()` and `PROPER()` return the grammatical gender (masculine, feminine, epicene, neuter) and the proper-ness of an entity respectively.
 
+The `POSS-NOUN` function returns the basic possessive form of whatever is passed in. This usually just means adding 's to the end, but will handle adding ' instead for words that end in the letter s. For example, `You laugh at { POSS-NOUN($ent) } joke` will handle "Bob's joke" and "Chris' joke".
+
 Functions also exist for determining the definite and indefinite articles that an entity should have--These functions are `THE`, which returns 'the' if the entity is proper and nothing otherwise, and `INDEFINITE`, which return either 'a' or 'an' depending on some complex rules.
 
 ```
