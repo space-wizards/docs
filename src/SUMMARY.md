@@ -195,6 +195,7 @@ Space Station 14
 		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		- [Paradox Clone](en/space-station-14/round-flow/proposals/paradox-clone.md)
 		- [Revolutionaries Rework](en/space-station-14/round-flow/proposals/revolutionaries-codeword-rework.md)
+		- [Tourists](en/space-station-14/round-flow/proposals/tourists.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
