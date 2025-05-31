@@ -33,7 +33,7 @@ If you used the script, it will automatically generate all the required text for
 > * Title format: "YYYY-MM-DD Release Review Thread"
 > * List the current commit range
 > * link the hedgedoc
-> * Ping all Maintainer
+> * Ping all Maintainers
 
 ### 4. Add the list of Feature Changes to hedgedoc
 Go through the commit range list and note every feature/balance PR in the current release. See the hedgedoc template for the format to be used.
