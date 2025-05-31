@@ -118,7 +118,7 @@ If the fix gets completed before the End Time, then any Maintainers present can 
 
 Available Maintainers should reconvene at the End Time, to decide the continued fate of the blocking PR(s). At this point there will likely be Maintainer consensus established in some way, written decisions from the Lead Maintainers, or Lead Maintainers will be present, but if they aren't, then the Maintainers present decide whether to revert the PR in question or go into overtime waiting for the fix. There is no script for after going into overtime.
 
-> Our level of priority for hitting release targets is currently in general unspecified (but I assume not super high)
+> Our level of priority for hitting release targets is currently in general unspecified
 
 ## The Release
 
