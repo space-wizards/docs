@@ -24,7 +24,7 @@ Before you start, probably make sure no one else is already on it. Lead Maintain
 Further merges into Staging should only happen if it's REALLY necessary, to ensure that we have time to review proposed changes and don't break things in the last moment. The process for this follows the [Hotfix Procedure](https://docs.spacestation14.com/en/wizden-staff/maintainer/hotfix-procedure.html). Revert or other changes may also be the result of a Maintainer vote after the meeting, this will be detailed below.
 
 ### 2. Hedgedoc
-Copy [this template](https://hedgedoc.spacestation14.com/HTKWzwCcRPSyKWrivJvCwg) and create a new doc for the current release
+Copy [this template](https://hedgedoc.spacestation14.com/c5nwAvfqSIOIO5mcaNjy7w) and create a new doc for the current release
 
 ### 3. Make the new Release Review Thread in #maint-reviews
 If you used the script, it will automatically generate all the required text for you so you can just copy that and drop in the link to the new hedgedoc you made.
