@@ -66,7 +66,7 @@ These comments also serve as the best way for people who can't make it to the me
 
 ## Saturday 20:00 - Maintainer Meeting
 
-It would be nice if we all showed up on the clock, so we could start sooner. Pre-meeting ping, maybe?
+It would be nice if we all showed up on the clock, so we could start sooner. Ping 10 minutes before the meeting.
 
 Historically, meetings have started with the Topics section. That will not be detailed in this doc. At some point, the meeting will get to the feature reviews.
 
