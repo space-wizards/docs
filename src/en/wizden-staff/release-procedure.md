@@ -10,7 +10,6 @@ Before you start, probably make sure no one else is already on it. Lead Maintain
 
 ### 1. Update the staging branch
  Use the ```ss14-prepstaging``` function from [Myra's powershell script](https://gist.github.com/VasilisThePikachu/762b90187a5f9a0cca3249cc335cab31), which does most of it automatically (and also creates the Review Thread text for simplicity)
-  * Bash version of the script coming soonTM for Linux ease-of-use
 
 >If you need to do it manually:
 >```
