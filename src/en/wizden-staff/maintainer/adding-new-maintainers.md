@@ -42,3 +42,63 @@ The process for adding a special Maintainer is the same as for a normal Maintain
         - One for members of the special role to vote on.
         - One for all Maintainer to vote on.
     - Both votes must pass for the nomination to be accepted.
+
+
+## On-boarding New Maintainers
+Once a new Maintainer has been accepted, they must be on-boarded. The pre-requisites for on-boarding are:
+- The new Maintainer provides a their Discord, GitHub and Space Station 14 usernames to the Lead Maintainer that is on-boarding them.
+- They must log onto the Wizden Forums once.
+
+### On-boarding Process
+
+1. Invite the new Maintainer to the `Maintainers` group on Discourse, as well as the special Maintainer groups if they are a special Maintainer.
+2. Add the new Maintainer to our Keycloak.
+3. Ask PJB to invite the new Maintainer into our GitHub organization.
+4. Update the Maintainer list on our [docs](/en/wizden-staff/space-wizards-maintainer-list.html)
+5. Add relevant workgroups on Discourse and Discord.
+
+### Addiontal Notes
+
+- Read the [maintainer policy](/en/wizden-staff/maintainer/maintainer-policy.html) and [review procedure](/en/wizden-staff/maintainer/review-procedure.html) to see which rules you have to follow when merging PRs.
+- Read the [doc page](/en/general-development/codebase-info/releases.html) on how our release model and maintainer meetings work. They happen every two weeks and the event schedule can be found on discord.
+- After being invited to the GitHub organization, go to the space-wizards org > People > Find yourself > and set your organization visibility to public. This allows people to more easily see you are a maintainer (you will have a “Member” attached to your comments) AND you get to flex the org on your github profile.
+- It is recommended to set up two-factor authentication for your Discord, SS14, and github accounts to ensure they cannot be compromised.
+- If you want to debug something on the live wizden servers, then you can ask a headmin for debugging permissions. These will need to be approved by the admin team first. Remember that these should only be used for debugging purposes and should not be abused.
+- Optional: Ask for permissions to see our grafana dashboards. These contain server performance metrics, game statistics, and admin tools to view bans. You have to be at least 18 years old because it contains PII.
+- The [#staff-sorority](https://discord.com/channels/310555209753690112/1193403928096821358) channel is for staff chat that needs to be non-public, for example discussions about abusable bugs, highly controversial opinions on game design, reports to community moderators and so on. Anything not SS14 related should go into [#staff-offtopic](https://discord.com/channels/310555209753690112/1145595686201610252). Code and game design discussion should go into the respective public channels whenever possible so we don’t spam the staff channel and contributors can take part. Important staff discussions should be a forum post on discourse so they don’t get lost.
+
+### Useful Tools
+
+~~~admonish info "Checking out someone else's PR"
+
+```
+[alias]
+    pr = "!f() { git fetch -fu ${2:-upstream} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+```
+
+Put this somewhere into your `/.git/config` file.
+Then use the console command `git pr 12345` to automatically pull that PR into a new branch named `pr/12345`.\
+Alternatively use the [GitHub CLI](https://cli.github.com/), but you have to install that first.
+
+To push changes to someone else's PR branch you can use the following command (example for adding me)
+```
+git remote add Slarti https://github.com/slarticodefast/space-station-14
+git push Slarti <yourBranchName>:<theirBranchName>
+```
+For this to work the author has to select this checkmark when opening the PR, which is done by default:\
+![](https://hedgedoc.spacestation14.com/uploads/6a9f9a32-e344-4c68-8f28-e18fa1d58e18.png)\
+You can see on the right sidebar if they did:\
+![](https://hedgedoc.spacestation14.com/uploads/cc6aaa68-11f3-4591-b73e-a45726670634.png)
+
+If a PR only needs minor changes or a merge conflict fixed it is often easier and faster if you do this for the author, rather than wait for them to be addressed. Authors are often happy to see their PR is merged and it saves some maintainer time, so doing this is recommended.
+~~~
+
+~~~admonish info "GitHub Squash Reminder User Script"
+Highly recommended is Myra's [GitHub Squash Reminder Userscript](https://github.com/VasilisThePikachu/GH-Squash-Reminder-Userscript/tree/master).\
+It gives you a visual warning when you selected the wrong merge option by accident.\
+![](https://hedgedoc.spacestation14.com/uploads/25eeda7c-c2c1-449d-9425-073c6756dd10.png)
+~~~
+
+~~~admonish info "GitHub Trollface Remover User Script"
+GitHub has emojis, one of those is a trollface. [This userscript](https://cdn.replay.unstablefoundation.de/trollface-begone.user.js) removes trollfaces from GitHub with some optional functionality to replace the trollface with something else and it keeps track of how many were removed.
+~~~
