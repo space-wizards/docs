@@ -46,7 +46,7 @@ The process for adding a special Maintainer is the same as for a normal Maintain
 
 ## On-boarding New Maintainers
 Once a new Maintainer has been accepted, they must be on-boarded. The pre-requisites for on-boarding are:
-- The new Maintainer provides a their Discord, GitHub and Space Station 14 usernames to the Lead Maintainer that is on-boarding them.
+- The new Maintainer provides their Discord, GitHub and Space Station 14 usernames to the Lead Maintainer that is on-boarding them.
 - They must log onto the Wizden Forums once.
 
 ### On-boarding Process
