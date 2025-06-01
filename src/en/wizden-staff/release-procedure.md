@@ -152,8 +152,6 @@ To do it manually, go to [github's web GUI](https://github.com/space-wizards/spa
 
 ![](https://hedgedoc.spacestation14.com/uploads/ff1cdd6c-a2db-42c3-89e1-134bb6809673.jpg)
 
-### 4. If you would like, yell in #general that the release is here, it gets people excited
-
-### 5. Monitor if Salamander and Lizard actually deploy the new release after their next restart
+### 4. Monitor if Salamander and Lizard actually deploy the new release after their next restart
 
 Specifically these two servers sometimes restart for the patch, but don't actually get it due to "funny network reasons". If this happens, any Maintainer can run ```!updateserver servername``` on Discord to restart them again.
