@@ -84,22 +84,20 @@ Since unlike a revert, a hotfix can't be finished in moments, we have to conside
 > All votes, whether for revert or hotfix, are RELEASE BLOCKERS. If some issue is minor enough that we could just release with it, then it might be better to just adress it in the next release or hotfix it after release through the regular hotfix procedure.
 
 ## Right after the Meeting
-Votes are immediately started for blocked PRs, in the release review thread.
+Votes are immediately started for blocked PRs. Open a Discourse thread for each vote in Internal/Maintainer. If multiple PRs are conceptually linked, and/or were contested "as one", they can be combined into one thread. Copy the summary about the situation from the meeting notes, for anyone who was not present at the Meeting. The recording might not yet be available for review before votes have to be cast.
 
-Polls run for 24 hours so that every Maintainer can get their chance to vote. They must have only 2 outcomes, plus Abstain: such as Keep/Revert/Abstain, or Keep/Hotfix/Abstain. Abstain votes will not have any effect on the outcome, they merely serve to indicate that someone has seen the vote but is not participating. 
+Polls will be kept open until the official release time (roughly 24 hours later), so that every Maintainer can get their chance to vote. They must have only 2 outcomes, plus Abstain: such as Keep/Revert/Abstain, or Keep/Hotfix/Abstain. Abstain votes will not have any effect on the outcome, they merely serve to indicate that someone has seen the vote but is not participating. 
 >Binary votes leave no requirement for interpretation when they finish, so we don't need to have the Maintainer team assembled for closing up the release. Whoever is there can enact the results, even if alone, with no special pressure or responsibility for making "the correct call", since it has already been determined by (the best available) consensus.
 
-Copy the summary about the situation from the meeting notes, for anyone who was not present at the Meeting. The recording might not yet be available for review before votes have to be cast.
-Afterwards, pin the vote post so it's easy to find later, and then ping all Maintainers.
+Afterwards, link the threads in #ongoing-votes and ping all maintainers.
 
 ## Sunday, before Release
 
 The proposed hotfix(es) can be prepared before release, but no one should feel forced to code just so we don't have a delay. If we are voting on a hotfix then we have already accepted a potential delay. It's also possible that the vote will decide to keep the PR, making the fix/change unnecessary.
 
-## 21:00* - The Official Release Time
-*or when the Votes finish
+## 21:00 - The Official Release Time
 
-The Maintainers present can begin. Coordinate in the Release Review Thread who's doing what, check the status of any votes or other release blockers.
+The Maintainers present can begin. If necessary, coordinate in the Release Review Thread who's doing what. Close the votes and check the status of any other release blockers.
 
 * If a vote's result is KEEP, the PR is no longer considered a blocker even if we want to later fix it.
 * If a vote's result is REVERT, create a PR to revert the feature from Staging. This does not require multiple maint approvals - it already has them from the vote. Since we are reverting a feature from master, before it ever hit stable, remove it from the changelog as well
