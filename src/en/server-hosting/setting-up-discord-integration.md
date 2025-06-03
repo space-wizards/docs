@@ -124,7 +124,7 @@ We only provide support for the official wizard-cogs, Support for Red itself or 
 Most of our cogs require a minimum of python 3.11, please ensure you have this version before asking for support.
 ```
 
-## Setup
+### Setup
 1. Follow the [Red Documentation](https://docs.discord.red/en/stable/install_guides/index.html) on how to install and start the Base Red bot. Note that like an SS14 server. You need a computer that will stay turned on for your bot to function.
 2. If you have not already, give [Red's Getting started](https://docs.discord.red/en/stable/getting_started.html#getting-started) page a read.
 3. After you get your bot set up and invited to your server, you can now install the wizard-cogs repository to your bot. [p] in this case is your bots prefix you chose during redbot setup.
@@ -148,22 +148,22 @@ Looking for other interesting cogs? Check out the [Redbot Cog index](https://ind
 Not an English server? Some cogs have translations, You can change this with ```[p]set locale <language_code>```. Our cogs don't support other languages than English currently.
 ```
 
-### Game server status
+#### Game server status
 ![SS14 Status](../assets/images/discord/SS14-game-status-example.png)
 
-#### Setup
+##### Setup
 1. Install ```[p]cog install wizard-cogs gameserverstatus```
 2. Add your server ```[p]statuscfg addserver ss14 <server-name> <address to your server>```
 3. Done! View your work with ```[p]status <server-name>``` (Of course your server needs to be online)
 
-#### Setting up automated watching
+##### Setting up automated watching
 ![SS14 Status Watches](../assets/images/discord/SS14-game-status-watches.png)
 
 If you like to have a channel where the status message is automaticly updated. Then watch is the feature you want.
 1. After adding a server, use the following command ```[p]statuscfg addwatch <server> <#channel>```
 2. As long as the bot has permissions to post in that channel. You will see the server status automaticly update in the message about every 2 seconds.
 
-### SS14.Watchdog Power actions
+#### SS14.Watchdog Power actions
 ![Poweractions](../assets/images/discord/poweractions-example.png)
 
 Allows you to communicate with SS14.Watchdog to perform certain actions.
@@ -179,7 +179,7 @@ You will get a form you will be asked to fill in (**Notice**: Neither us nor the
 - API token: The ApiToken in your watchdogs configuration.
 3. After clicking submit if the bot reported success then you are done! Repeat for your other server.
 
-#### Commands available
+##### Commands available
 Make a server restart now:
 
 ```[p]restartserver <name>```
@@ -198,10 +198,10 @@ Tell watchdog to prepare to update a server:
 
 ```[p]updateserver <name>```
 
-### GitHub Integration
+#### GitHub Integration
 Yet to be ported to redbot. You can use a [github webhook](https://gist.github.com/jagrosh/5b1761213e33fc5b54ec7f6379034a22) in the meantime.
 
-### Autoresponder (WYCI, Nanotrasen Block Game, Based)
+#### Autoresponder (WYCI, Nanotrasen Block Game, Based)
 ![why](../assets/images/discord/autoresponder-example.png)
 
 ```[p]cog install wizard-cogs autoresponder```
