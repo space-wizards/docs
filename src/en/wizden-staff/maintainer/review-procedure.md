@@ -41,14 +41,14 @@ To merge a PR, **all** the following conditions must be met:
 A checkmark is assumed to indicate approval for both code and design, unless stated otherwise by the approver.
 A PR created by a maintainer is assumed to have their implicit approval.
 
-
 - All outstanding maintainer change requests must be resolved.
 If the maintainer who left the request wants, they can choose to forgo requiring the changes.
 In this case, when the PR is merged, a Github issue should be created to indicate the changes that need to be made.
 
-
 - If the PR has the `Changes: Sprites` label, it must additionally be approved by at least one **Art Lead** through the addition of the `S: Art Approval` tag.
 Changes that are solely minor sprite fixes are exempt from this.
+
+> Always **Squash and Merge** rather than Merge, unless a policy specifically tells you to use regular merge (see the [Hotfix](https://docs.spacestation14.com/en/wizden-staff/maintainer/hotfix-procedure.html) and [Release](https://docs.spacestation14.com/en/wizden-staff/maintainer/release-procedure.html) procedures). This can be selected with the dropdown menu on the Merge button.
 
 To close a PR, at **least one** of the following conditions must be met:
 - At least 2 maintainers must express wanting to close the PR or an unwillingness to merge it. 
