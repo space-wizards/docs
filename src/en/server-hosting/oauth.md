@@ -69,3 +69,24 @@ $wgPluggableAuth_Config[] = [
 
 $wgOpenIDConnect_MigrateUsersByUserName=true;
 ```
+
+## Troubleshooting
+
+### Auth-side "An error occurred while processing your request."
+
+![Space Station 14 auth error screen just saying "An error occurred while processing your request."](../assets/images/hosting/oauth-error.png)
+
+This is a general catch-all error that will occur if your client or app configuration is messed up something. Examples of things that can cause it:
+
+* Incorrectly specified redirect URI.
+* App reporting incorrect redirect URI due to misconfiguration.
+* Incorrect client secret specified in config file.
+* Incorrect client ID specified in config file.
+* PKCE enabled if client library doesn't support PKCE.
+* Invalid scopes specified in client library.
+
+We currently do not have any way for you to get clear logs on *what* exactly went wrong, so the best thing you can do is ask for support, either via [the Forum](https://forum.spacestation14.com/c/general/help/46) or via `#hosting` on Discord. If you do ask for support, please provide an approximate timestamp of when you last tried, as the "Request ID" you see is mostly useless to us at the moment.
+
+Speaking from experience, however, in 95% of cases (and especially if you're just hosting something like [SS14.Admin](./setting-up-ss14-admin.md) which should otherwise work very easily), the error is caused by the redirect URI being wrong. You can verify this yourself by keeping your browser dev tools open while trying to log in, as the redirect URI is visible in the query parameters:
+
+![Browser dev tools showing login requests, with the redirect URI being underlined in one of them](../assets/images/hosting/oauth-redirect-uri-devtools.png)

@@ -41,6 +41,7 @@ General Development
 - [Work Groups](en/general-development/work-groups.md)
 - [Game Area Design Documents](en/general-development/game-area-design-doc.md)
 - [Contributing Translations](en/general-development/contributing-translations.md)
+- [Github Moderation Guidelines](en/general-development/github-moderation-guidelines.md)
 
 SS14 By Example
 ===============
@@ -182,6 +183,7 @@ Space Station 14
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
 		- [Xenoborgs](en/space-station-14/round-flow/antagonists/Xenoborgs.md)
+		- [Pursuer](en/space-station-14/round-flow/antagonists/pursuer.md)
 
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
@@ -193,6 +195,7 @@ Space Station 14
 		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		- [Paradox Clone](en/space-station-14/round-flow/proposals/paradox-clone.md)
 		- [Revolutionaries Rework](en/space-station-14/round-flow/proposals/revolutionaries-codeword-rework.md)
+		- [Tourists](en/space-station-14/round-flow/proposals/tourists.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
@@ -275,7 +278,7 @@ Server Hosting
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
-- [Setting up a Discord Bot](en/server-hosting/setting-up-redbot.md)
+- [Setting up Discord Integration](en/server-hosting/setting-up-discord-integration.md)
 - [Maintenance]()
   - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
@@ -338,11 +341,14 @@ Staff
 - [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
 - [Staff Policy](en/wizden-staff/staff-policy.md)
 - [Staff Conflict Resolution](en/wizden-staff/staff-conflict-resolution.md)
+- [Internal Affairs Team](en/wizden-staff/internal-affairs-team.md)
 
 Maintainer Meetings
 ==============
 
 ----------------------
+- [2025-05-10](en/maintainer-meetings/maintainer-meeting-2025-05-10.md)
+- [2025-04-27](en/maintainer-meetings/maintainer-meeting-2025-04-27.md)
 - [2025-04-12](en/maintainer-meetings/maintainer-meeting-2025-04-12.md)
 - [2025-03-29](en/maintainer-meetings/maintainer-meeting-2025-03-29.md)
 - [2025-03-15](en/maintainer-meetings/maintainer-meeting-2025-03-15.md)
