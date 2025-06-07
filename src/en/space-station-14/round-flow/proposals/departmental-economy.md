@@ -91,12 +91,8 @@ As for **siphoning**, the idea is that a console in the vault will have the abil
 
 ### Solid plasma production
 
-There was some talk about implementing ss13's PTL to allow engies to make some money on the side with excess power. While PTL is sound idea it may be mechanicly boring to just give them create-money-using-power-machine. My proposal is to create similar power sink machine, but one that is instead using liquid plasma to create solid plasma. Solidifying machine should be able to be overcloacked, speeding up the solidification time in return for much larger power usage. 
-Solid plasma then can be sold for large profit using cargo boxes, used in PACMAN as fuel or otherwise be used on the stations as mats.
-Where would engies take liquild plasma from? First of all PACMAN would no longer burn plasma but instead liquidate it during power production, turning solid plasma into kind of a energy storage with about ~100% efficency. 
-Additionaly salvs can find liquid plasma barrels on space debris as early to mid game source of liquid plasma.
-For late game source of liquid plasma, fracking outpost on VGroid can be (re)build, after power is restored and mining drill repaired it would allow to create steady stream of liquid plasma ready for cargo to transport back to station.
 
+There was some talk about implementing SS13's PTL to allow engineers to make some money on the side with excess power. While PTL is a sound idea, it may be mechanically boring to just give them a "create-money-using-power" machine. My proposal is to create a similar power sink machine, but one that instead uses liquid plasma to create solid plasma. The solidifying machine should be able to be overclocked, speeding up the solidification time in return for much larger power usage. Solid plasma then can be sold for a large profit using cargo boxes, used in PACMAN as fuel, or otherwise be used on the stations as materials. Where would engineers get liquid plasma from? First of all, PACMAN would no longer burn plasma but instead liquefy it during power production, turning solid plasma into a kind of energy storage with about ~100% efficiency. Additionally, salvagers can find liquid plasma barrels on space debris as an early to mid-game source of liquid plasma. For a late-game source of liquid plasma, a fracking outpost on VGroid can be (re)built; after power is restored and the mining drill repaired, it would allow for a steady stream of liquid plasma ready for cargo to transport back to the station.
 ![](../../../assets/images/plasma-flow-chart.png)
 
 ## Concluding
