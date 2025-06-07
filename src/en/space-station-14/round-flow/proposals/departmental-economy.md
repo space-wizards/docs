@@ -97,6 +97,7 @@ Where would engies take liquild plasma from? First of all PACMAN would no longer
 Additionaly salvs can find liquid plasma barrels on space debris as early to mid game source of liquid plasma.
 For late game source of liquid plasma, fracking outpost on VGroid can be (re)build, after power is restored and mining drill repaired it would allow to create steady stream of liquid plasma ready for cargo to transport back to station.
 
+![](../../../assets/images/plasma-flow-chart.png)
 
 ## Concluding
 
@@ -104,7 +105,12 @@ With a holistic implementation of the systems laid out here I see a lot of benef
 
 Circling back to the cargo flow example before, this is how I imagine it'll play out with this implementation:
 
-![](../../../assets/images/plasma-flow-chart.png)
+```mermaid
+flowchart TD
+    A[Player goes to the departmental console and purchases something their department needs] --> B;
+    B[Cargo techs notice the new purchase; prepare to go grab it from the trade station] --> C;
+    C[Techs retrieve it from the trade station and deliver it to the department that ordered it] --> D[Player has the thing they wanted];
+```
 
 
 For our purposes, much better!
