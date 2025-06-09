@@ -81,7 +81,7 @@ Optionally, some SIMPLE/straightforward change to the PR may be suggested. Such 
 
 Since unlike a revert, a hotfix can't be finished in moments, we have to consider the possibility that there will be a schedule slip. As such, for hotfixing to be considered an option, we will specify an acceptable delay. **If we are unwilling to risk such a delay for the feature, then we should simply vote for a revert instead**, and fix it by the next release. Recommended default delay is 24 hours after the original expected Release. (Note that the time chosen is the maximum, we might finish sooner. But we should be willing to accept the full length of the delay. Record the delay's end time in the meeting notes.
 
-> All votes, whether for revert or hotfix, are RELEASE BLOCKERS. If some issue is minor enough that we could just release with it, then it might be better to just adress it in the next release or hotfix it after release through the regular hotfix procedure.
+> All votes, whether for revert or hotfix, are RELEASE BLOCKERS. If some issue is minor enough that we could just release with it, then it might be better to just address it in the next release or hotfix it after release through the regular hotfix procedure.
 
 ## Right after the Meeting
 Votes are immediately started for blocked PRs. Open a Discourse thread for each vote in Internal/Maintainer. If multiple PRs are conceptually linked, and/or were contested "as one", they can be combined into one thread. Copy the summary about the situation from the meeting notes, for anyone who was not present at the Meeting. The recording might not yet be available for review before votes have to be cast.
