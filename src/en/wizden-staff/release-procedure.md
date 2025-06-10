@@ -40,7 +40,7 @@ Go through the commit range list and note every feature/balance PR in the curren
 If there are topically related PRs, reverts or hotfixes, it's nice to group those together. Otherwise the list can be in the order of the original commit list.
 Smaller mapping changes to existing maps, PRs that only fix bugs without larger implications, or refactors and cleanups with no user-facing effects do not need to be listed.
 
-This list should be double-checked because it's easy to miss something, and it's unreasonable to ask one person to spend excessive amounts of time double-checking it. It makes sense for at least one other person to check any remaining PRs if they should also be added. Anyone is free to review and add additional PRs to be listed but it's best do this right after the thread is opened, to reduce the possibility that late-added entries get skipped by early reviews. 
+This list should be double-checked for any feature change PRs that may be mistakenly left off. It's easy to miss something, and it's unreasonable to ask one person to spend excessive amounts of time double-checking it. It makes sense for at least one other person to check any remaining PRs if they should also be added. Anyone is free to review and add additional PRs to be listed but it's best do this right after the thread is opened, to reduce the possibility that late-added entries get skipped by early reviews. 
 
 If you add new entries after people have already reviewed the list (as noted on hedgedoc), then mention the new PRs in the review thread.
 
