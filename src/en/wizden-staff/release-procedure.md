@@ -37,6 +37,8 @@ If you used the script, it will automatically generate all the required text for
 
 ### 4. Add the list of Feature Changes to hedgedoc
 Go through the commit range list and note every feature/balance PR in the current release. See the hedgedoc template for the format to be used.
+> You can use [this script](https://discord.com/channels/310555209753690112/909229454449078333/1350070411571757086) to generate the correctly formatted string for each PR, but you need to pick out the PRs from the full commit list manually
+
 If there are topically related PRs, reverts or hotfixes, it's nice to group those together. Otherwise the list can be in the order of the original commit list.
 Smaller mapping changes to existing maps, PRs that only fix bugs without larger implications, or refactors and cleanups with no user-facing effects do not need to be listed.
 
