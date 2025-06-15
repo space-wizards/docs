@@ -128,7 +128,9 @@ urls: "http://localhost:27689/"
 WebRootPath: "/opt/ss14_admin/bin/wwwroot"
 
 # IP addresses that are allowed to reverse proxy the site.
-# Change this if your reverse proxy isn't coming in from localhost.
+# Change this if your reverse proxy isn't coming in from localhost,
+# for example if SS14.Admin is running in a container,
+# you should add the IP of the host in the container network here.
 ForwardProxies:
     - 127.0.0.1
 
@@ -203,3 +205,18 @@ location / {
     proxy_busy_buffers_size  256k;
 }
 ```
+
+## Troubleshooting
+
+### Auth-side "An error occurred while processing your request." on login
+
+*See also: [troubleshooting in the main OAuth page](./oauth.md#auth-side-an-error-occurred-while-processing-your-request).*
+
+This is a generic error code if the OAuth configuration is messed up. See the article linked above for the possible reasons why. If the redirect URI is indeed wrong, please check below.
+
+### Incorrect redirect URI
+
+The redirect URI being wrong is often caused by incorrect reverse proxy config, either on the proxy or app side:
+
+* Make sure your reverse proxy is sending all the required headers, as shown in the configuration examples above.
+* If your reverse proxy isn't sending to `localhost`, such as if you are running in a container, make sure to set `ForwardProxies` in SS14.Admin's config file properly.

@@ -50,6 +50,8 @@ In this case, when the PR is merged, a Github issue should be created to indicat
 - If the PR has the `Changes: Sprites` label, it must additionally be approved by at least one **Art Lead** through the addition of the `S: Art Approval` tag.
 Changes that are solely minor sprite fixes are exempt from this.
 
+> Always **Squash and Merge** rather than Merge, unless a policy specifically tells you to use regular merge (see the [Hotfix](https://docs.spacestation14.com/en/wizden-staff/maintainer/hotfix-procedure.html) and [Release](https://docs.spacestation14.com/en/wizden-staff/maintainer/release-procedure.html) procedures). This can be selected with the dropdown menu on the Merge button.
+
 To close a PR, at **least one** of the following conditions must be met:
 - At least 2 maintainers must express wanting to close the PR or an unwillingness to merge it. 
 This can be expressed either on the PR itself, or privately.
@@ -154,6 +156,26 @@ This replaces the need for 2 design approvals (though the code still needs to be
 
 If the discussion has a negative conclusion, the closure message for the PR should include a brief summary of the discussion.
 This should have information about the elements that need to be addressed if a subsequent PR were to be made.
+
+## Docs Repo
+For PRs made to the [Space Station 14 Docs Repo](https://github.com/space-wizards/docs), the above policy is to be used unless specified otherwise.
+
+### Design Doc Process
+
+For design documents proposing new features to be added to the game, the normal 2-approval system is used. 
+Once it is approved, however, it should not be merged and instead marked with the `S: Doc Approved` label. 
+This lets the author know that the design has initial approval, and they are good to start on the content PR. 
+
+Once the content-side implementation is ready to be merged, ensure that the doc PR is updated to reflect relevant information and changes to the content PR.
+Afterward, both PRs can be merged at once.
+
+### Other
+
+For PRs which update instructional or reference documentation (_including but not limited to setup guides, style guides, system documentation_), only a single approval is needed before it can be merged.
+Likewise, only a single maintainer needs to express concern to close it.
+
+Note that this does not apply to changes to internal procedure or other modifications which require voting or group deliberation.
+
 
 ## Review Guidelines
 The following are general guidelines to follow when reviewing PRs. 
