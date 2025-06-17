@@ -1,0 +1,100 @@
+# Vampires Antagonist
+- Lone Antagonist
+| Designers            | Implemented | GitHub Links |
+|----------------------|-------------|--------------|
+| Thinbug              | :x: No      | TBD          |
+
+# Overview
+  Vampires are rarely attracted to the station as a way to increase their social standing in their organization. Draining blood and spreading their curse with the intent of raising to 
+  the rank of King/Queen. While frowned upon, infighting and backstabbing is common in such conditions.
+  As they gather blood and develop abilities, they will disrupt the station crew.
+
+# Goals 
+  They will always have 2 objectives
+  -Become a King/Queen
+  -Survive
+
+# Vibes
+  "They are nobles, treacherous selfish creatures by nature, reborn into decadence as they wish to forget their times of peasantry. Thoughts of plotting and acquisition always present, not even their won kings 
+  be safe from their greed"
+  This may change depending on how viable it actually is, but currently they are intended to be "competing" antag. There can only be a King/Queen, so its their choice if they wish to try to usurp their place.
+
+  They dont wanna kill people if they can avoid it, as blood from dead creatures is way less efficient at sating their hunger.
+
+# Vampire Ranks
+  They possess a strong hierarchy, which allows them access to their abilities
+
+  -King/Queen 
+    Highest rank attainable, the peak of their potential
+    -access to all abilities
+    -station-wide announcement on its creation
+
+  -Count/Countess
+    Middle rank, granted to access to more lethal abiltiies. One step away from their goal
+    -access to level 2 and below abilities
+
+  -Baron/Baroness
+    Lowest nobility rank, Vampires will spawn in this rank with mostly access to utility abilities
+    -access to level 1 abilities
+
+# Blood storage / Nutrition
+  Vampires would have a big internal blood torage (maybe around 400u units) that would slowly deplete, this is their only worry in terms of nutrition.
+  Similarly to how other species hunger works, Vampires walking speed is reduced when they are low on blood and they will quickly start taking damage if they are starving.
+
+  Multiple abilities use this blood as fuel, so there's a risk to abusing them too much. 
+
+# Ability Shop (i need to think of a better name)
+    Vampires will have permanent access to an internal "store" menu (similar to syndies or wizards) which uses their blood as a currency. The abilities they are able to buy from it depending
+    on their rank. 
+    While sticking to more classic vampire powers would be possible, i think streeching the definition a bit would allow for more interesting gameplay
+    (Below is a list of possible abilities (numbers are examples, very in theory stuff))
+
+    | Default abilities | All vampires start with access to these |
+    |----------|:-------------|
+    | Blood Drain | Slowly drains the blood of the targetted entity |
+
+    | level 1 Abilities | Cheap abilities, mostly utility |
+    |----------|:-------------|
+    | Bat Transformation | Quickly turn into a speedy bat or return back to your form |
+    | Unholy Sanctum | Curses a coffin, being inside it will quickly heal your damage. Using the ability again will perform a short do after and teleport you back to it | 1 minute cooldown | 
+    | Draining Touch | Stealthily curses the target, causing them to fall asleep after 20 seconds (they will be subtly warned 5-10 seconds before falling asleep) |
+
+    | level 2 Abilities | Stronger yet more expensive, enough to make them a formidable threat |   
+    |----------|:-------------|
+    | Fool's Ground | Transforms nearby puddles of blood into harmful spikes |
+    | Hypnotic Gaze | Puts an entity to sleep for a few seconds | 
+    | Blood Transfiguration | Creates a blood sword, a simple yet powerful melee weapon | 
+
+    | level 3 Abilities | The peak of vampiric potential |   
+    |----------|:-------------|
+    | Shriek | Stuns all entities on a massive aoe for 2 seconds |
+    | Announce | Sends a station wide message |
+
+# Biology
+    -Vampires go hungry much slower than regular crew, but they can only sustain themselves trough blood. Any other food will induce vomiting
+    -They do not need to breath
+    -Their bodies don't rot 
+    -Small cold resistance 
+    -Small fire vulnerability
+
+  # Combat/Counters
+      Vampires possess a slow constant regen and are highly resistant to being gibbed. To fully kill them, a crew member needs to perform a lenghty do after on the vampire body or heart
+      with a sharp object.
+
+      They possess several weaknesses common of the vampire trope 
+      (big care will have to be placed on these to avoid metagaming)
+
+      # Garlic 
+        (they contain allicin)
+        Vampires: 
+        - Allicin acts as a slow poison to them
+        - Garlic acts like glass shards, dealing a bit of holy damage and slipping the vampire if they are shoeless
+        
+      # Holy Water
+        Vampires:
+        -Vampires who have been splashed with holy water will have a temporary damage vulnerability, as it weakens their skin. If the holy water enters their body (likely from a spear or
+        arrow, it will act like a poison)
+        
+      # Bible
+        Vampires: 
+        -The bible is incapable of healing them, as it will always deal damage instead.
