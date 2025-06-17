@@ -19,7 +19,7 @@
 
 This meeting was recorded:
 
-{% embed youtube id="meow meow :3" loading="lazy" %}
+{% embed youtube id="9YOPX4y3Rig" loading="lazy" %}
 
 ## Release Procedures Proposal (Errant)
 - Please read [the proposal](https://forum.spacestation14.com/t/maintainer-policy-change-release-procedure/20963) in advance and vote 
