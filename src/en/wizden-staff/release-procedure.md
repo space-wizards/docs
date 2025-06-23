@@ -15,8 +15,18 @@ Before you start, probably make sure no one else is already on it. Lead Maintain
 >```
 >git switch master
 >git pull upstream master
+>git rev-parse HEAD
+>```
+>Note down the displayed hash - the **newest** commit in the update
+>
+>```
 >git switch staging
 >git pull upstream staging
+>git rev-parse HEAD
+>```
+>Note down the displayed hash - the **oldest** commit in the update
+>
+>```
 >git merge master
 >git push upstream staging
 >```
@@ -33,7 +43,8 @@ If you used the script, it will automatically generate all the required text for
 
 > Manual setup:
 > * Title format: "YYYY-MM-DD Release Review Thread"
-> * List the current commit range
+> * List the current commit range: <`oldest commit hash`> - <`newest commit hash`>
+> * Link the current commit range: `https://github.com/space-wizards/space-station-14/compare/<oldest commit hash>...<newest commit hash>`
 > * link the hedgedoc
 
 Ping all Maintainers.
