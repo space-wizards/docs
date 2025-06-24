@@ -38,7 +38,7 @@ The process for adding a special Maintainer is the same as for a normal Maintain
 - Only a member that is already a part of the special role can nominate a new member for that role.
     - When the role is empty, any maintainer can nominate a new member.
     - Lead Maintainers can nominate a new member for the role, even if they are not a part of that role.
-- The template used will be the "Special Maintainer Vote" template.
+- The normal template will be used.
     - This template has two votes that run concurrently:
         - One for members of the special role to vote on.
         - One for all Maintainer to vote on.
