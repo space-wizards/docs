@@ -30,6 +30,7 @@ Some roles are special Maintainer roles and follow a different process to the no
 - **Head Mapper**: A Maintainer responsible for ensuring mapping standards and approving and merging mapping PRs.
 - **Art lead**: A Maintainer responsible for ensuring a consistent art style and approving sprite PRs.
 - **Robust Toolbox Maintainer**: A Maintainer of Robust Toolbox, our underlying game engine. 
+- **UI Lead**: A Maintainer responsible for ensuring a consistent UI style.
 
 #### Starting a Vote for a Special Role
 
