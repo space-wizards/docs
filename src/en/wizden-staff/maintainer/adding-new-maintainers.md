@@ -43,3 +43,28 @@ The process for adding a special Maintainer is the same as for a normal Maintain
         - One for members of the special role to vote on.
         - One for all Maintainer to vote on.
     - Both votes must pass for the nomination to be accepted.
+
+
+## On-boarding New Maintainers
+Once a new Maintainer has been accepted, they must be on-boarded. The pre-requisites for on-boarding are:
+- The new Maintainer provides their Discord, GitHub and Space Station 14 usernames to the Lead Maintainer that is on-boarding them.
+- They must log onto the Wizden Forums once.
+
+### On-boarding Process
+
+1. Invite the new Maintainer to the `Maintainers` group on Discourse, as well as the special Maintainer groups if they are a special Maintainer.
+2. Add the new Maintainer to our Keycloak.
+3. Ask PJB to invite the new Maintainer into our GitHub organization.
+4. Update the Maintainer list on our [docs](/en/wizden-staff/space-wizards-maintainer-list.html)
+5. Add relevant workgroups on Discourse and Discord.
+
+### Addiontal Notes
+
+- Read the [maintainer tools](/en/wizden-staff/maintainer/maintainer-tools.html) page to see some useful tools that can help you as a maintainer.
+- Read the [maintainer policy](/en/wizden-staff/maintainer/maintainer-policy.html) and [review procedure](/en/wizden-staff/maintainer/review-procedure.html) to see which rules you have to follow when merging PRs.
+- Read the [doc page](/en/general-development/codebase-info/releases.html) on how our release model and maintainer meetings work. They happen every two weeks and the event schedule can be found on discord.
+- After being invited to the GitHub organization, go to the space-wizards org > People > Find yourself > and set your organization visibility to public. This allows people to more easily see you are a maintainer (you will have a “Member” attached to your comments) AND you get to flex the org on your github profile.
+- It is recommended to set up two-factor authentication for your Discord, SS14, and github accounts to ensure they cannot be compromised.
+- If you want to debug something on the live wizden servers, then you can ask a headmin for debugging permissions. These will need to be approved by the admin team first. Remember that these should only be used for debugging purposes and should not be abused.
+- Optional: Ask for permissions to see our grafana dashboards. These contain server performance metrics, game statistics, and admin tools to view bans. You have to be at least 18 years old because it contains PII.
+- The [#staff-sorority](https://discord.com/channels/310555209753690112/1193403928096821358) channel is for staff chat that needs to be non-public, for example discussions about abusable bugs, highly controversial opinions on game design, reports to community moderators and so on. Anything not SS14 related should go into [#staff-offtopic](https://discord.com/channels/310555209753690112/1145595686201610252). Code and game design discussion should go into the respective public channels whenever possible so we don’t spam the staff channel and contributors can take part. Important staff discussions should be a forum post on discourse so they don’t get lost.
