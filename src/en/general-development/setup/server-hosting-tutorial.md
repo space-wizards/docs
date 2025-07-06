@@ -30,7 +30,7 @@ The server needs network ports to be forwarded so that people can connect. By de
 * UDP `1212` is used for main game netcode. This is necessary for the *client* to be able to connect to the server. This can be configured with the `net.port` configuration variable.
 * TCP `1212` is a HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
 
-For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
+For more information about how to forward your ports and what to do if you are having issues, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
 After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6, try both if one fails.
 
