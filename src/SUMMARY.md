@@ -334,6 +334,7 @@ Staff
 - [Maintainer](en/wizden-staff/maintainer.md)
   - [Adding New Maintainers](en/wizden-staff/maintainer/adding-new-maintainers.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
+  - [Revert Procedure](en/wizden-staff/maintainer/revert-procedure.md)
   - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
   - [Review Whitelist](en/wizden-staff/maintainer/review-whitelist.md)
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
