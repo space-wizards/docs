@@ -137,7 +137,7 @@ An example of being held back by only one thing would be a species that has an u
 
 # Modifying Species After Introduction
 
-From time-to-time, a species that was previously added to Space Station 14 may be proposed for review by the maintenance team. This review would focus on that species' current quality and conformance to the above rules, and propose remediating remedies, if appropriate, to bring the species up to standard.
+From time-to-time, a species that was previously added to Space Station 14 may be proposed for review by maintainers. This review would focus on that species' current quality and conformance to the above rules, and propose remediating remedies, if appropriate, to bring the species up to standard.
 
 ## Significant Modification to a Species
 
