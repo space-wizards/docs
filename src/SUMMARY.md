@@ -333,6 +333,7 @@ Staff
 - [Project Manager](en/wizden-staff/projectmanager.md)
 - [Maintainer](en/wizden-staff/maintainer.md)
   - [Adding New Maintainers](en/wizden-staff/maintainer/adding-new-maintainers.md)
+  - [Useful Maintainer Tools](en/wizden-staff/maintainer/maintainer-tools.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
   - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
   - [Review Whitelist](en/wizden-staff/maintainer/review-whitelist.md)
