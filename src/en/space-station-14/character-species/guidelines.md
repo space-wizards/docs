@@ -52,7 +52,7 @@ Remember that the most invested person in a character or creature design is alwa
 
 Species **may** be inspired by, and follow design cues from, external IP and inspirations. However, in these cases, the species **must** be able to stand on its own feet (if it has them) and be extensible and maintainable by maintainers long into the future. For example, a proposed species might be inspired by a lion-headed alien species in a comic the author of the proposal is a fan of, and they may reference that species in their proposal. However, a species **must not** be a close or direct lift of the original concept, and must show effort and consideration for Space Station 14's style and tone.
 
-A species **must not** have an ability, theme, gimmick or otherwise that is only existant or relevant for servers that require roleplaying. This sort of design is suitable to HRP servers, which Wizard's Den runs zero of. For example, a species that has a capitalistic culture might spawn with some of their culture's currency to make trades with. Without a mechanical underpinning for this, this concept cannot be reliably explored on non-HRP servers, and is to be avoided. 
+A species **must not** have an ability, theme, gimmick or otherwise that is only existant or relevant for servers that require roleplaying. This sort of design is suitable to HRP servers, but Wizard's Den species must be compatible with all levels of roleplay. For example, a species that has a capitalistic culture might spawn with some of their culture's currency to make trades with. Without a mechanical underpinning for this, this concept cannot be reliably explored on non-HRP servers, and is to be avoided. 
 
 ### Rule 2: New Features and Tech Improvements
 
