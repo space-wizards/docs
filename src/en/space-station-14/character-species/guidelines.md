@@ -80,7 +80,7 @@ Species **must** be conceptually within the power window of humans, slimepeople,
 
  A species **must not** be intentionally designed in a way that makes them specifically good or bad at one particular job on the space station. For example, a short, bearded humanoid species fond of drink and industry should not be, by design, better at being a miner or salvager than any other member of the crew. An ability they have that is useful in those roles should also be useful in other roles.
 
- It is acceptable for a species to be *emergently* better at some aspect of a job. For example, a species with a tail that can pull things might be better than average at moving crates around the station, which is valuable to a Cargo team. But this is a skill that is useful broadly, rather than being focussed on one particular discipline.
+ It is acceptable for a species to be *emergently* better at some aspect of a job. For example, a species with a tail that can pull things might be better than average at moving crates around the station, which is valuable to a Cargo team. But this is a skill that is useful broadly, rather than being focussed on one particular discipline. Other species should not feel comparatively less capable at a job than any one specific species.
 
  A species **must not**, under **any** circumstances, be designed in a way that makes them unusually good or unusually bad at combat. Combat is an essential part of Space Station 14, and species with wildly divergent abilities make the act of balancing it extremely difficult.
 
