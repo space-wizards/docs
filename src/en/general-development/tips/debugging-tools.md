@@ -49,7 +49,7 @@ Pass `-e COMPlus_gcServer=1` to the `dotnet test` command
 
 #### Visual Studio
 
-Somebody who uses VS please fill this in
+Set the environment variable `COMPlus_gcServer=1` using your OS's command line utility. For Windows the command would be `SET COMPlus_gcServer=1`, and in other operating systems it would be `export COMPlus_gcServer=1`. Further details can be found at [Microsoft's official documentation page](https://learn.microsoft.com/en-us/dotnet/core/runtime-config/garbage-collector) on the subject.  
 
 ## Scripting
 
