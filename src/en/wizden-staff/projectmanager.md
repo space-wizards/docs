@@ -11,14 +11,14 @@ The PM team does not appeal bans or get involved in individual player/game dispu
 All Project Managers have the same level of authority and autonomy when it comes to addressing issues; however, some PMs prefer to or are more experienced in handling particular issues. In an emergency, any PM will be able to help you, but generally, a PM with the appropriate area will be able to address your issue faster and more accurately. *Although, if you message the wrong PM, don't worry, we all talk with each other, so they'll be able to help you or forward you along to someone who can, it's just faster to start with a PM from that area!*
 
 Here is a list of PMs and their responsibilities. Some responsibilities, such as Hub Administration and Sensitive Issue handling, are not listed publicly to prevent targeted harassment.
-This page may sometimes be out of date. For the most recent responsibilities, check Discord (If this page is out of date ping @Jezithyr on Discord or let a maintainer know).
+This page may sometimes be out of date. For the most recent responsibilities, check Discord (If this page is out of date, ping @Jezithyr on Discord or let a maintainer know).
 
 | Responsibility | Description | Members |
 |---|---|---|
 | Wizards | Highest level of staff in SS14. They are responsible for handling business-to-business, financial, and legal matters. If you think you need to ping a wizard, you don't; just talk to a PM instead. | PJB, Zoldorf, Bobda, DrSmugleaf |
 | Project Lead | The GOAT. The supreme nerd overlord. Also, someone who is very busy, and unless you need help with something very niche and specific, you're better off asking another PM/Maintainer. | PJB |
 | PM Team Lead | The ~~Queen~~ benevolent leader of the PM team. She manages internal disputes and helps the PM team stay on track! | DrSmugleaf |
-| Head Admins | The triumvirate in charge of the admin team. These are the people who *write the rules/policy for the admins* not the people to ask to appeal your ban. | nikthechampiongr, crazybrain |
+| Head Admins | The triumvirate in charge of the admin team. These are the people who *write the rules/policy for the admins* not the people to ask to appeal your ban. | AdmiralObvious, crazybrain, Reisama |
 | Infrastructure | Anything related to the infrastructure running Wizden servers and Hub/Robust accounts. Outages, connection problems, etc. | Zoldorf, PJB, ShadowCommander, DrSmugleaf |
 | Project Tech Direction | Technical direction when it comes to code/systems in SS14 and RobustToolbox. Specifically, code quality/performance and implementation specifics. | PJB, ElectroSR, ShadowCommander, DrSmugleaf, Keronshb, Sloth |
 | Project Maintenance | Overseeing the maintainer team and making sure that project guidelines are being properly enforced in PRs, along with helping to manage the number of open PRs | PJB, ElectroSR, ShadowCommander, DrSmugleaf, Keronshb, Sloth |
