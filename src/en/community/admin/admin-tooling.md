@@ -6,7 +6,6 @@ The admin tooling in SS14 is hopefully not too complicated, but some things coul
 
 ![adminmenu.png](../../assets/images/admin/adminmenu.png)
 
----
 
 The Admin Menu can be opened by pressing F7 or using the button bar at the top.
 
@@ -22,20 +21,40 @@ The *Server* tab lets you shutdown/restart the entire server, or toggle OOC/LOOC
 
 The *Player* tab lets you view all of the players in a round. You can also toggle the **Player Overlay** here, which draws some basic information (ckey, character name, is antag) over all players in-game.
 
+---
+
 ## Verbs
 
 ### Admin Verbs
 
 ![verbs.png](../../assets/images/admin/verbs.png)
 
+There are multiple admin verbs available. These are all fairly self-explanatory. 
+
+- **Clone:** Clones the targeted player's current entity.
+
+- **Erase:** Deletes the targeted player's entity from the round. Useful for removing a character from a round entirely. 
+
+- **Mark:**
+
+- **Message:** Opens the ahelp window targeted at the player.
+
+- **Open Admin Notes:** Opens the user's notes. 
+
+- **Open Player Panel:** Opens a panel with the targeted player's information, such as their username, if they are whitelisted
+
+- **Teleport Here/To:** Self-explanatory.
+
+- *Freeze* stops them from moving or interacting until they are unfrozen by an admin.
+
+Not all verbs are shown.
+
 ---
-There are multiple admin verbs available. These are all fairly self-explanatory. *Message* opens the ahelp window targeted at the player, *Open Admin Notes* opens the user's notes. *Teleport Here/To* do as they say, and *Freeze* stops them from moving or interacting until they are unfrozen by an admin.
 
 ### Debug Verbs
 
 ![debug.png](../../assets/images/admin/debug.png)
 
----
 
 The debug verbs are primarily for debugging, but are also very useful for normal admins.
 
@@ -53,7 +72,8 @@ Not shown here, *Make ghost role* turns an entity into a controllable ghost role
 
 *Set outfit* lets you change the attire/items that an entity is wearing. Useful for running events or respawning people.
 
-**View variables** is a very, very useful tool that allows you to view all marked variables on every component that an entity has, as well as modify some. Useful for debugging, but also has great use for adminning as it allows you to add or remove arbitrary components, for example `OwOAccent`. Further explanation of how to use **View variables** (VV) is given below.
+
+---
 
 ### Smite Verbs
 
@@ -111,6 +131,7 @@ Admin notes give admins a way to store information about a user when a ban would
 Notes can be accessed using the `Admin` verb category, or at the bottom of the AHelp menu.
 
 ## View Variables
+**View variables** is a very, very useful tool that allows you to view all marked variables on every component that an entity has, as well as modify some. Useful for debugging, but also has great use for adminning as it allows you to add or remove arbitrary components, for example `OwOAccent`. Further explanation of how to use **View variables** (VV) is given below.
 
 ![vv.png](../../assets/images/admin/vv.png)
 
