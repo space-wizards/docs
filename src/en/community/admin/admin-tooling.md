@@ -91,7 +91,7 @@ Use sparingly. These smites can range from minor inconveniences to severely affe
 
 The **Admin Help** menu can be opened by pressing `Esc -> Admin Help`, by using the `Player Actions Panel` in the **Admin Menu**, or by using the `Message` admin verb.
 
-Select the player to message or use any of the buttons via the menu on the left. The 'sword' icon lets you know if they're an antagonist. It also shows their current character name as well as their username.
+Select the player to message or use any of the buttons via the menu on the left. The 'sword' icon lets you know if they're an antagonist. It also shows their current character name as well as their username. The pin on the far right of the player's name can be toggled to lock the player's name to the top of the playerlist. Useful for keeping note of a player or when you are handling a situation involving certain players.
 
 - **Admin Only:** Checking the option will make your messages sent to a player's ahelp only visible to other admins.
 - **Bwoink:** Checking or unchecking the option enables or disables the ahelp message sound for the player. This does not apply whenever a normal player ahelps.
