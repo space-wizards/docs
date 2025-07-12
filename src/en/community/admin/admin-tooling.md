@@ -38,7 +38,7 @@ There are multiple admin verbs available. These are all fairly self-explanatory.
 
 - **Erase:** Deletes the targeted player's entity from the round. Useful for removing a character from a round entirely. 
 
-- **Mark:**
+- **Mark:** Unknown.
 
 - **Message:** Opens the ahelp window targeted at the player.
 
