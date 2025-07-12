@@ -234,7 +234,7 @@ The *Logs* tab shows you actions that have occured. You can search by a date ran
 ![ss14adminlogs.png](../../assets/images/admin/ss14adminlogs.png)
 
 The *Characters* tab shows you all characters a player has currently saved in the server.
-![ss14admincharacter.png](../../assets/images/admin/ss14admincharacter.png)
+![ss14admincharacters.png](../../assets/images/admin/ss14admincharacters.png)
 
 The *Whitelist* tab shows you all current whitelisted players.
 ![ss14adminwhitelist.png](../../assets/images/admin/ss14adminwhitelist.png)
