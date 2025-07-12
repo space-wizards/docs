@@ -18,7 +18,7 @@ The *Round* tab lets you control the flow of the current round. You can start, e
 
 The *Server* tab lets you shutdown/restart the entire server, or toggle OOC/LOOC. This is only available to admins with the proper flags.
 
-The *Panic Bunker* tab lets you 
+The *Panic Bunker* tab lets you toggle settings for the Panic Bunker, such as enabling or disabling the Panic Bunker, automatically enabling or disabling the Panic Bunker, count deadmined players, and showing the reason why the Panic Bunker is enabled. You can also set the minimum required account age or overall playtime to bypass the Panic Bunker.
 
 The *Player* tab lets you view all of the players in a round. You can also toggle the **Player Overlay** here, which draws some basic information (username, character name, is antag) over all players in-game.
 
