@@ -1,11 +1,10 @@
 # Admin Tooling
 
-The admin tooling in SS14 is hopefully not too complicated, but some things could do with some explanation.
+The tools at a Game Admin's disposal take some time to get used to. The tools can range from being easy to understand to requiring a few hours to understand.
 
 ## Admin Menu
 
 ![adminmenu.png](../../assets/images/admin/adminmenu.png)
-
 
 The Admin Menu can be opened by pressing F7 or using the button bar at the top.
 
@@ -19,7 +18,11 @@ The *Round* tab lets you control the flow of the current round. You can start, e
 
 The *Server* tab lets you shutdown/restart the entire server, or toggle OOC/LOOC. This is only available to admins with the proper flags.
 
-The *Player* tab lets you view all of the players in a round. You can also toggle the **Player Overlay** here, which draws some basic information (ckey, character name, is antag) over all players in-game.
+The *Panic Bunker* tab lets you 
+
+The *Player* tab lets you view all of the players in a round. You can also toggle the **Player Overlay** here, which draws some basic information (username, character name, is antag) over all players in-game.
+
+The *Objects* tab lets you view all of the grids, maps, and stations in the current round, including their name and Entity IDs. You can also teleport to an object or delete it from the tab.
 
 ---
 
@@ -41,13 +44,11 @@ There are multiple admin verbs available. These are all fairly self-explanatory.
 
 - **Open Admin Notes:** Opens the user's notes. 
 
-- **Open Player Panel:** Opens a panel with the targeted player's information, such as their username, if they are whitelisted
+- **Open Player Panel:** Opens a panel with the targeted player's information, such as their username, and if they are whitelisted. The panel also includes their total playtime, notes, bans, role bans, and shared connections. The admin verbs are included in the Player Panel.
 
 - **Teleport Here/To:** Self-explanatory.
 
 - *Freeze* stops them from moving or interacting until they are unfrozen by an admin.
-
-Not all verbs are shown.
 
 ---
 
@@ -58,20 +59,21 @@ Not all verbs are shown.
 
 The debug verbs are primarily for debugging, but are also very useful for normal admins.
 
-*Control mob* gives you control of the entity, if they are sentient.
+- **Control Mob:** Gives you control of the entity, if they are sentient.
 
-Not shown here, *Make sentient* makes an entity able to be controlled.
+- **Delete:** Deletes the entity.
 
-Not shown here, *Make ghost role* turns an entity into a controllable ghost role.
+- **Edit Solutions:** Opens a tab that lists the current reagents in the entity. This includes reagents in their bloodstream or temporarily in their bloodstream. You can modify the solutions and reagents in the tab.
 
-*Delete* deletes an entity.
+- **Export Sprite:** Exports the entity's sprite to the SS14 Data folder.
 
-*Edit solutions* lets you modify the solutions and reagents on an entity, e.g., bloodstream, beaker contents, etc.
+- **In Range Unoccluded:** Unknown.
 
-*Rejuvenate* fully heals an entity. Only use when you have to.
+- **Make Ghost Role:** Makes an entity a Ghost role that dead players can request.
 
-*Set outfit* lets you change the attire/items that an entity is wearing. Useful for running events or respawning people.
+- **Rejuvenate:** Fully heals an entity and removes any temporary reagents in their body. Only use when necessary.
 
+- **Set Outfit:** Opens a tab with preset outfits you can set a player to wear. Some outfits may include extra items. This verb is useful for running events or respawning players.
 
 ---
 
@@ -79,15 +81,13 @@ Not shown here, *Make ghost role* turns an entity into a controllable ghost role
 
 ![smite.png](../../assets/images/admin/smite.png)
 
----
+Use sparingly. These smites can range from minor inconveniences to severely affecting a player's round negatively.
 
-Use sparingly. Not all smites available are pictured here. All of these mess with someone's round severely in some way.
+---
 
 ## Admin Help
 
 ![ahelp.png](../../assets/images/admin/ahelp.png)
-
----
 
 The **Admin Help** menu can be opened by pressing `Esc -> Admin Help`, by using the `Player Actions Panel` in the **Admin Menu**, or by using the `Message` admin verb.
 
@@ -102,11 +102,11 @@ Select the player to message or use any of the buttons via the menu on the left.
 - **Respawn:** Sends the targeted player to the lobby. Does not delete their character.
 - **Follow:** Makes you follow the targeted player.
 
+---
+
 ## Admin Logs
 
 ![logs.png](../../assets/images/admin/logs.png)
-
----
 
 The admin logs menu shows you all interactions that have occurred during the round, as well as which entities and players were involved. It can be opened in the *Admin* tab of the **Admin Menu**.
 
@@ -120,15 +120,15 @@ You can view the actual log data on the far right menu, and search for logs. If 
 
 The *Pop out* button pops the log menu into a separate OS window. Useful for saving some space on your main monitor.
 
+---
+
 ## Admin Notes
 
 ![notes.png](../../assets/images/admin/notes.png)
 
----
+Admin notes give admins a way to store information about a user when a ban would be too harsh a punishment. Notes can be edited (and show their edit information), and can be deleted if the note is no longer relevant.
 
-Admin notes give admins a way to store information about a user when a ban would be too harsh of a punishment. Notes can be edited (and show their edit information), and can be deleted if the note is no longer relevant.
-
-Notes can be accessed using the `Admin` verb category, or at the bottom of the AHelp menu.
+Notes can be accessed using the `Admin` verb category, at the bottom of the AHelp menu, or by typing "adminnotes [username] in the console.
 
 ## View Variables
 **View variables** is a very, very useful tool that allows you to view all marked variables on every component that an entity has, as well as modify some. Useful for debugging, but also has great use for adminning as it allows you to add or remove arbitrary components, for example `OwOAccent`. Further explanation of how to use **View variables** (VV) is given below.
