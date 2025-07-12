@@ -139,16 +139,16 @@ Notes can be accessed using the `Admin` verb category, at the bottom of the AHel
 
 ---
 
-A couple of things to discuss about how SS14 works before the VV menu can really be useful to you:
+A couple of things to discuss about how SS14 works before the VV menu can be useful to you:
 
-- An 'entity' is an object in game--walls, players, projectiles, items, etc. Each entity has a unique `EntityUid` corresponding to them, which is the number `15199` you see at the top left next to the entity's name.
-- Each entity (generally) has a prototype ID, or which 'type' of entity it is. This is the `MobObserver` string you see at the top left.
-- Entities have **components**, which give some kind of behavior to the entity. The component for a 'player controlled' entity is `ActorComponent`, for a weapon it is `MeleeWeaponComponent`, for damageable objects it is `DamageableComponent`, etc. You can dynamically add and remove components whenever you want.
-- The game is separated into 'client' and 'server', with some shared stuff between them. Client is whats running on your computer, server is whats running on the game server, obviously.
+- An 'entity' is an object in game--walls, players, projectiles, items, etc. Each entity has a unique `EntityUid` corresponding to it, which is the number `15199` you see at the top left next to the entity's name.
+- Each entity (generally) has a prototype ID, or the 'type' of entity it is. This is the `MobObserver` string you see at the top left.
+- Entities have **components**, which give some kind of behavior to the entity. The component for a 'player-controlled' entity is `ActorComponent`, for a weapon it is `MeleeWeaponComponent`, for damageable objects it is `DamageableComponent`, etc. You can dynamically add and remove components whenever you want.
+- The game is separated into 'client' and 'server', with some shared stuff between them. Client is what's running on your computer, server is what's running on the game server, obviously.
 
-Most of the time, you'll want to view the **Server Components** list, as you can add/remove/modify components there and every client will see the effects.
+Most of the time, you'll want to view the **Server Components** list, as you can add/remove/modify components there, and every client will see the effects.
 
-I recommend that you simply try and use the VV menu to get a feel for how it works. It's a little daunting, but it is very powerful.
+I recommend that you simply try and use the VV menu to get a feel for how it works. It's a little daunting, but once you get the hang of using VV, you'll be able to fix problems within an entity and try new ideas with less trouble.
 
 ### VV Tips
 
@@ -193,7 +193,7 @@ Use the `list` command to list all available commands, and the `help <command na
 | `tp`                                       | Teleports yourself to the coordinates on the specified map.                                           | `tp <X> <Y> <MAPID>`                                               |
 | `setmind`                           | Puts the player's soul into the ID (may require the entity to have a mind).               | `setmind <uid> <ckey>`                                           |
 | `customvote`                       | Creates a custom vote for all players, requires at least two choices. Always do this before running any important events.  | `customvote "<title>" "<option1>" "<option2>" ...`   |
-| `addhand`                           | Adds a hand to the entity, not all entities are supported, requires the "Hands" component in the entity.   | `addhand <uid>`       |
+| `addhand`                           | Adds a hand to the entity; not all entities are supported, requires the "Hands" component in the entity.   | `addhand <uid>`       |
 | `adjstationjob`               | Adds or removes jobs. Can be used if a member of command leaves.                                   | `adjstationjob <STATION_ID> <job> <amount>` |
 | `addgamerule`                   | Adds the chosen game event to the game.                                                                                      | `addgamerule <gameruleName>`                               |
 | `endgamerule`                   | Removes the chosen gamerule from the game. Useful for repeating false events.   | `endgamerule <gameruleName>`                               |
@@ -220,7 +220,7 @@ The *Bans* tab at the top is the most useful. This shows all current bans. You c
 You can see the ban time, reason, and when it expires. You can also check *ban hits*, or whether someone attempted to join and was denied because of a ban, as well as what username/IP/HWID they tried to join with. Useful for detecting ban evaders. You can also unban users on this panel.
 ![ss14adminban.png](../../assets/images/admin/ss14adminban.png)
 
-The *Role Bans* tab shows all current role bans. You can search by name, ID, HWID, role, IP or the banning admin. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
+The *Role Bans* tab shows all current role bans. You can search by name, ID, HWID, role, IP, or the banning admin. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
 ![ss14adminrolebans.png](../../assets/images/admin/ss14adminrolebans.png)
 
 The *Players* tab just lets you search by username, IP, HWID, etc, for any user. **Contains lots of PII, be careful.**
@@ -232,10 +232,10 @@ You can click on *Player Info* to the far right of the player's name to view the
 The *Connections* tab shows you the most recent connections to the servers as well as information for each connection.
 ![ss14adminconnections.png](../../assets/images/admin/ss14adminrolebans.png)
 
-The *Logs* tab shows you actions that have occured. You can search by a date range, text, server, round, player, type, and severity.
+The *Logs* tab shows you actions that have occurred. You can search by a date range, text, server, round, player, type, and severity.
 ![ss14adminlogs.png](../../assets/images/admin/ss14adminlogs.png)
 
-The *Characters* tab shows you all characters a player has currently saved in the server.
+The *Characters* tab shows you all characters a player has currently saved on the server.
 ![ss14admincharacters.png](../../assets/images/admin/ss14admincharacters.png)
 
 The *Whitelist* tab shows you all current whitelisted players.
@@ -244,9 +244,9 @@ The *Whitelist* tab shows you all current whitelisted players.
 ## Admin Ghost
 You can turn yourself into an aghost using the **Admin Menu** or by using the `aghost` command.
 
-Admin ghosts are special observer entities that replaces your ghost's name with your username, have hands, can interact with any object ingame, and have all access. You also spawn with a Satchel of Holding and an Admin PDA.
+Admin ghosts are special observer entities that replace your ghost's name with your username, have hands, can interact with any object ingame, and have all access. You also spawn with a Satchel of Holding and an Admin PDA.
 
-You can return to your initial body whenever as long as the body is still in the round.
+You can return to your initial body whenever, as long as the body is still in the round.
 
 ## Deadmin / Readmin
 
