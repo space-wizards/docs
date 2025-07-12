@@ -132,12 +132,12 @@ Admin notes by default expire after six months, slowly becoming less visible. Yo
 
 Notes can be accessed using the `Admin` verb category, at the bottom of the AHelp menu, or by typing "adminnotes [username] in the console.
 
+---
+
 ## View Variables
 **View variables** is a very, very useful tool that allows you to view all marked variables on every component that an entity has, as well as modify some. Useful for debugging, but also has great use for adminning as it allows you to add or remove arbitrary components, for example `OwOAccent`. Further explanation of how to use **View variables** (VV) is given below.
 
 ![vv.png](../../assets/images/admin/vv.png)
-
----
 
 A couple of things to discuss about how SS14 works before the VV menu can be useful to you:
 
@@ -159,6 +159,8 @@ I recommend that you simply try and use the VV menu to get a feel for how it wor
 - You can modify the `zoom` on the client-side `EyeComponent` to see farther.
 - `MindComponent` contains information like antag roles, jobs, objectives, etc.
 - An entity's name/description can be changed using `Server Variables`, or on the server-side `MetaDataComponent`.
+
+---
 
 ## Game Console
 
