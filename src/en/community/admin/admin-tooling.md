@@ -128,6 +128,8 @@ The *Pop out* button pops the log menu into a separate OS window. Useful for sav
 
 Admin notes give admins a way to store information about a user when a ban would be too harsh a punishment. Notes can be edited (and show their edit information), and can be deleted if the note is no longer relevant.
 
+Admin notes by default expire after six months, slowly becoming less visible. You can hover your mouse over the note to make it easier to see.
+
 Notes can be accessed using the `Admin` verb category, at the bottom of the AHelp menu, or by typing "adminnotes [username] in the console.
 
 ## View Variables
@@ -190,7 +192,7 @@ Use the `list` command to list all available commands, and the `help <command na
 | `tpto`                                   | Teleport all targets to the first `<ckey/uid>` in the command.                                       | `tpto <ckey/uid> <ckey/uid> <ckey/uid>`          |
 | `tp`                                       | Teleports yourself to the coordinates on the specified map.                                           | `tp <X> <Y> <MAPID>`                                               |
 | `setmind`                           | Puts the player's soul into the ID (may require the entity to have a mind).               | `setmind <uid> <ckey>`                                           |
-| `customvote`                       | Creates a custom vote for all players, requires at least two choices. Always do this before running any important events.  | `customvote <title> <option1> <option2> ...`   |
+| `customvote`                       | Creates a custom vote for all players, requires at least two choices. Always do this before running any important events.  | `customvote "<title>" "<option1>" "<option2>" ...`   |
 | `addhand`                           | Adds a hand to the entity, not all entities are supported, requires the "Hands" component in the entity.   | `addhand <uid>`       |
 | `adjstationjob`               | Adds or removes jobs. Can be used if a member of command leaves.                                   | `adjstationjob <STATION_ID> <job> <amount>` |
 | `addgamerule`                   | Adds the chosen game event to the game.                                                                                      | `addgamerule <gameruleName>`                               |
@@ -240,11 +242,12 @@ The *Whitelist* tab shows you all current whitelisted players.
 ![ss14adminwhitelist.png](../../assets/images/admin/ss14adminwhitelist.png)
 
 ## Admin Ghost
+You can turn yourself into an aghost using the **Admin Menu** or by using the `aghost` command.
 
-Admin ghosts are special observer entities that take your ckeys name, have hands, can interact with any object ingame, and have all access. You can turn yourself into an aghost using the **Admin Menu** or by using the `aghost` command.
+Admin ghosts are special observer entities that replaces your ghost's name with your username, have hands, can interact with any object ingame, and have all access. You also spawn with a Satchel of Holding and an Admin PDA.
 
-You can return to your initial body
+You can return to your initial body whenever as long as the body is still in the round.
 
 ## Deadmin / Readmin
 
-If you want to play the game normally, it's recommended that you deadmin using the `deadmin` command. If you want to perform admin duties again, use the `readmin` command.
+If you want to play the game normally, it's recommended that you deadmin using the `deadmin` command. If you want to perform admin duties again or need to use your powers in a certain situation, use the `readmin` command.
