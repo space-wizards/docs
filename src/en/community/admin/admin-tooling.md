@@ -213,17 +213,31 @@ Use the `list` command to list all available commands, and the `help <command na
 
 If you're an official Space Wizards :tm: Admin, you can access the online admin panel at https://ss14-admin.spacestation14.com/. Log in using your SS14 account. Third-party servers can also set up this panel for themselves using the repository, so thats why this information is here and not secret.
 
-![ss14adminban.png](../../assets/images/admin/ss14adminban.png)
-
 The *Bans* tab at the top is the most useful. This shows all current bans. You can search by active bans or total bans for any player. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
 
 You can see the ban time, reason, and when it expires. You can also check *ban hits*, or whether someone attempted to join and was denied because of a ban, as well as what username/IP/HWID they tried to join with. Useful for detecting ban evaders. You can also unban users on this panel.
+![ss14adminban.png](../../assets/images/admin/ss14adminban.png)
 
-
+The *Role Bans* tab shows all current role bans. You can search by name, ID, HWID, role, IP or the banning admin. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
+![ss14adminrolebans.png](../../assets/images/admin/ss14adminrolebans.png)
 
 The *Players* tab just lets you search by username, IP, HWID, etc, for any user. **Contains lots of PII, be careful.**
+![ss14adminplayers.png](../../assets/images/admin/ss14adminrolebans.png)
 
-The *Connections* tab shows you the most recent connections to the servers as well as information for each.
+You can click on *Player Info* to the far right of the player's name to view their PII, play time, characters, notes, bans, and rolebans.
+![ss14adminplayerinfo.png](../../assets/images/admin/ss14adminrolebans.png)
+
+The *Connections* tab shows you the most recent connections to the servers as well as information for each connection.
+![ss14adminconnections.png](../../assets/images/admin/ss14adminrolebans.png)
+
+The *Logs* tab shows you actions that have occured. You can search by a date range, text, server, round, player, type, and severity.
+![ss14adminlogs.png](../../assets/images/admin/ss14adminlogs.png)
+
+The *Characters* tab shows you all characters a player has currently saved in the server.
+![ss14adminlogs.png](../../assets/images/admin/ss14admincharacters.png)
+
+The *Whitelist* tab shows you all current whitelisted players.
+![ss14adminwhitelist.png](../../assets/images/admin/ss14adminwhitelists.png)
 
 ## Admin Ghost
 
