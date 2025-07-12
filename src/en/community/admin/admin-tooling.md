@@ -38,7 +38,7 @@ There are multiple admin verbs available. These are all fairly self-explanatory.
 
 - **Erase:** Deletes the targeted player's entity from the round. Useful for removing a character from a round entirely. 
 
-- **Mark:** Unknown.
+- **Mark:** Places an entity into the $marked variable, a list of entities, replacing its prior value.
 
 - **Message:** Opens the ahelp window targeted at the player.
 
@@ -67,7 +67,7 @@ The debug verbs are primarily for debugging, but are also very useful for normal
 
 - **Export Sprite:** Exports the entity's sprite to the SS14 Data folder.
 
-- **In Range Unoccluded:** Unknown.
+- **In Range Unoccluded**
 
 - **Make Ghost Role:** Makes an entity a Ghost role that dead players can request.
 
