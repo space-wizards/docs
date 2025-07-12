@@ -8,19 +8,19 @@ The admin tooling in SS14 is hopefully not too complicated, but some things coul
 
 ---
 
-The Admin Menu can be opened by pressing F7, or using the button bar at the top.
+The Admin Menu can be opened by pressing F7 or using the button bar at the top.
 
 The *Admin* tab contains useful actions for general admin use.
 
 The *Adminbus* tab gives you control of many things--including spawning entities, tiles, or decals, as well as running/stopping station events.
 
-The *Atmos* tab lets you modify the atmos for the current grid. You shouldn't need to use this when regularly admining.
+The *Atmos* tab lets you modify the atmosphere for the current grid. You shouldn't need to use this when regularly admining.
 
 The *Round* tab lets you control the flow of the current round. You can start, end, or restart the round using this menu. There are equivalent commands for all of these.
 
 The *Server* tab lets you shutdown/restart the entire server, or toggle OOC/LOOC. This is only available to admins with the proper flags.
 
-The *Player* tab lets you view all of the players in a round. You can also toggle the **Player Overlay** here, which draws some basic information (ckey, character name, is antag) over all players in game.
+The *Player* tab lets you view all of the players in a round. You can also toggle the **Player Overlay** here, which draws some basic information (ckey, character name, is antag) over all players in-game.
 
 ## Verbs
 
@@ -47,7 +47,7 @@ Not shown here, *Make ghost role* turns an entity into a controllable ghost role
 
 *Delete* deletes an entity.
 
-*Edit solutions* lets you modify the solutions and reagents on an entity, e.g. bloodstream, beaker contents, etc.
+*Edit solutions* lets you modify the solutions and reagents on an entity, e.g., bloodstream, beaker contents, etc.
 
 *Rejuvenate* fully heals an entity. Only use when you have to.
 
@@ -71,9 +71,16 @@ Use sparingly. Not all smites available are pictured here. All of these mess wit
 
 The **Admin Help** menu can be opened by pressing `Esc -> Admin Help`, by using the `Player Actions Panel` in the **Admin Menu**, or by using the `Message` admin verb.
 
-Select the player to message using the menu on the left. The 'sword' icon lets you know if they're an antagonist. It also shows their current character name as well as ckey.
+Select the player to message or use any of the buttons via the menu on the left. The 'sword' icon lets you know if they're an antagonist. It also shows their current character name as well as their username.
 
-The *kick*, *ban*, *respawn*, and *teleport to* buttons at the bottom should be self explanatory. **Kick has no confirmation, so be careful.**
+- **Admin Only:** Checking the option will make your messages sent to a player's ahelp only visible to other admins.
+- **Bwoink:** Checking or unchecking the option enables or disables the ahelp message sound for the player. This does not apply whenever a normal player ahelps.
+- **Ban list:** Opens a tab containing all of the player's bans and information on the ban.
+- **Notes:** Opens a tab containing any notes about the player and
+- **Kick:** Kicks the player from the server.
+- **Ban:** Opens the Banning panel with the target's username autofilled.
+- **Respawn:** Sends the targeted player to the lobby. Does not delete their character.
+- **Follow:** Makes you follow the targeted player.
 
 ## Admin Logs
 
@@ -81,15 +88,15 @@ The *kick*, *ban*, *respawn*, and *teleport to* buttons at the bottom should be 
 
 ---
 
-The admin logs menu shows you all interactions that have occurred during the round as well as which entities and players were involved. It can be opened in the *Admin* tab of the **Admin Menu**.
+The admin logs menu shows you all interactions that have occurred during the round, as well as which entities and players were involved. It can be opened in the *Admin* tab of the **Admin Menu**.
 
-The far left menu lets you filter by log type. The second-from-the-left menu lets you filter by player/entity who was involved in the log. 
+The far left menu lets you filter by log type. The second-from-the-left menu lets you filter by the player/entity who was involved in the log. 
 
 The top left *Round* spinbox lets you change which round you're looking at, though this rarely needs to be done except for retroactive ahelps.
 
 You can filter by *log impact* at the top, though this is rarely needed if you know what you're looking for.
 
-You can view the actual log data on the far right menu, and search for logs. If the log you're looking for doesn't show up, try hitting *refresh* (you'll likely need to do this when changing which player or log type you're looking for*. If it still doesn't show up, press *Next* and wait for a couple seconds.
+You can view the actual log data on the far right menu, and search for logs. If the log you're looking for doesn't show up, try hitting *refresh* (you'll likely need to do this when changing which player or log type you're looking for*. If it still doesn't show up, press *Next* and wait for a couple of seconds.
 
 The *Pop out* button pops the log menu into a separate OS window. Useful for saving some space on your main monitor.
 
@@ -109,7 +116,7 @@ Notes can be accessed using the `Admin` verb category, or at the bottom of the A
 
 ---
 
-A couple things to discuss about how SS14 works before the VV menu can really be useful to you:
+A couple of things to discuss about how SS14 works before the VV menu can really be useful to you:
 
 - An 'entity' is an object in game--walls, players, projectiles, items, etc. Each entity has a unique `EntityUid` corresponding to them, which is the number `15199` you see at the top left next to the entity's name.
 - Each entity (generally) has a prototype ID, or which 'type' of entity it is. This is the `MobObserver` string you see at the top left.
@@ -122,8 +129,8 @@ I recommend that you simply try and use the VV menu to get a feel for how it wor
 
 ### VV Tips
 
-- Press `enter` after modifying a variable to save it's value.
-- Some variables may look non-modifiable, but there may be a modifiable version of them farther down the list.
+- Press `enter` after modifying a variable to save its value.
+- Some variables may look non-modifiable, but there may be a modifiable version of them further down the list.
 - `TransformComponent` holds the entity's position, rotation, etc.
 - `Grids` (the station) are entities too, and their components can be changed
 - You can modify the `zoom` on the client-side `EyeComponent` to see farther.
@@ -145,7 +152,7 @@ Use the `list` command to list all available commands, and the `help <command na
 | Command                                 | Description                                                                                             | Syntax                                                                     |
 |-----------                            |-----------                                                                                            |-----------                                                                |
 | `aghost`                               | Turn yourself into an admin ghost, or back again.             |                                                                                   |
-| `deadmin`                           | Lets you play the game without getting admin notifications. Always use before plaaying yourself.|   |
+| `deadmin`                           | Lets you play the game without getting admin notifications. Always use before playing in a round normally.|   |
 | `readmin`                           | Returns all admin functions to the user after they `deadmin`. Not necessary to run upon joining.|   |
 | `help`                                   | Shows information about the specified command.                  | `help <keyword>`                                                   |
 | `list`                                  | Lists all commands in the game.                                               |                                                                                   |
@@ -166,8 +173,8 @@ Use the `list` command to list all available commands, and the `help <command na
 | `addhand`                           | Adds a hand to the entity, not all entities are supported, requires the "Hands" component in the entity.   | `addhand <uid>`       |
 | `adjstationjob`               | Adds or removes jobs. Can be used if a member of command leaves.                                   | `adjstationjob <STATION_ID> <job> <amount>` |
 | `addgamerule`                   | Adds the chosen game event to the game.                                                                                      | `addgamerule <gameruleName>`                               |
-| `endgamerule`                   | Removes the chosen gamerule frome the game. Usefull for repeating false events.   | `endgamerule <gameruleName>`                               |
-| `rename`                              | Correct way to rename a person (includes ID, PDA, and, cloner entries).                   | `rename <ckey/uid> <"FIRSTNAME LASTNAME">`  |
+| `endgamerule`                   | Removes the chosen gamerule from the game. Useful for repeating false events.   | `endgamerule <gameruleName>`                               |
+| `rename`                              | Correct way to rename a person (includes ID, PDA, and cloner entries).                   | `rename <ckey/uid> <"FIRSTNAME LASTNAME">`  |
 | `setadminooc`                   | Changes the color of your adminchat while being an admin.                                               | `setadminooc <HEX Code>`                                       |
 |`addcomp`                                | Adds a component to an entity.                                                                                                        | `addcomp <uid> <component name>`                        |
 |`banlist`                                | List all bans for a user.                                                                                                                    | `banlist <ckey>`                                                        |
@@ -186,11 +193,11 @@ Use the `list` command to list all available commands, and the `help <command na
 
 If you're an official Space Wizards :tm: Admin, you can access the online admin panel at https://ss14-admin.spacestation14.com/. Log in using your SS14 account. Third-party servers can also set up this panel for themselves using the repository, so thats why this information is here and not secret.
 
-The *Bans* tab at the top is the most useful. This shows all current bans. You can search by active bans, or total bans, for any player. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
+The *Bans* tab at the top is the most useful. This shows all current bans. You can search by active bans or total bans for any player. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
 
 You can see the ban time, reason, and when it expires. You can also check *ban hits*, or whether someone attempted to join and was denied because of a ban, as well as what username/IP/HWID they tried to join with. Useful for detecting ban evaders. You can also unban users on this panel.
 
-The *Players* tab just lets you search by username, IP, HWID, etc for any user. **Contains lots of PII, be careful.**
+The *Players* tab just lets you search by username, IP, HWID, etc, for any user. **Contains lots of PII, be careful.**
 
 The *Connections* tab shows you the most recent connections to the servers as well as information for each.
 
@@ -202,4 +209,4 @@ You can return to your initial body
 
 ## Deadmin / Readmin
 
-If you want to play the game normally, its recommended that you deadmin using the `deadmin` command. If you want to perform admin duties again, use the `readmin` command.
+If you want to play the game normally, it's recommended that you deadmin using the `deadmin` command. If you want to perform admin duties again, use the `readmin` command.
