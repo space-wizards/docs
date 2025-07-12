@@ -13,7 +13,7 @@ This document aims to create a safe and healthy environment while fostering posi
 ### Conflict Management Procedure
 - Reporting: Members can report conflicts to HR or the Moderation Team.
 - Investigation: HR will conduct a confidential investigation, interviewing involved parties as needed.
-- Resolution Meeting: A meeting will be arranged to discuss issues and seek resolution.
+- Resolution Meeting: A meeting will be arranged to discuss issues and seek a resolution.
 - Follow-Up: A follow-up will ensure the resolution is upheld and address any ongoing concerns.
 ## Staff Conflict Resolution Policy
 For conflicts specifically involving staff members (Maintainers, Art Directors, Project Managers, or Wizards), refer to the detailed Staff Conflict Resolution Policy. This document outlines the specific procedures for addressing staff conflicts, including immediate reporting, mediation, resolution options, and documentation.
