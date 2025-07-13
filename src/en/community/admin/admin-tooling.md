@@ -215,7 +215,7 @@ Use the `list` command to list all available commands, and the `help <command na
 
 ![ss14admin.png](../../assets/images/admin/ss14admin.png)
 
-If you're an official Space Wizards :tm: Admin, you can access the online admin panel at https://ss14-admin.spacestation14.com/. Log in using your SS14 account. Third-party servers can also set up this panel for themselves using the repository, so thats why this information is here and not secret.
+If you're an official Space Wizards :tm: Admin, you can access the online admin panel at https://ss14-admin.spacestation14.com/. Log in using your SS14 account. Third-party servers can also set up this panel for themselves using the repository, so that's why this information is here and not secret.
 
 The *Bans* tab at the top is the most useful. This shows all current bans. You can search by active bans or total bans for any player. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
 
@@ -226,13 +226,13 @@ The *Role Bans* tab shows all current role bans. You can search by name, ID, HWI
 ![ss14adminrolebans.png](../../assets/images/admin/ss14adminrolebans.png)
 
 The *Players* tab just lets you search by username, IP, HWID, etc, for any user. **Contains lots of PII, be careful.**
-![ss14adminplayers.png](../../assets/images/admin/ss14adminrolebans.png)
+![ss14adminplayers.png](../../assets/images/admin/ss14adminplayers.png)
 
 You can click on *Player Info* to the far right of the player's name to view their PII, play time, characters, notes, bans, and rolebans.
-![ss14adminplayerinfo.png](../../assets/images/admin/ss14adminrolebans.png)
+![ss14adminplayerinfo.png](../../assets/images/admin/ss14adminplayerinfo.png)
 
 The *Connections* tab shows you the most recent connections to the servers as well as information for each connection.
-![ss14adminconnections.png](../../assets/images/admin/ss14adminrolebans.png)
+![ss14adminconnections.png](../../assets/images/admin/ss14adminconnections.png)
 
 The *Logs* tab shows you actions that have occurred. You can search by a date range, text, server, round, player, type, and severity.
 ![ss14adminlogs.png](../../assets/images/admin/ss14adminlogs.png)
