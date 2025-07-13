@@ -97,7 +97,7 @@ The Internal Affairs Team must have transparent policies and processes. They mus
 
 When taking action, the team must inform involved staff members of what the Internal Affairs Team is doing.
 
-In extraordinary circumstances, the Internal Affairs Team may decide to deviate from a part of its policies and processes. These occurances must be made 
+In extraordinary circumstances, the Internal Affairs Team may decide to deviate from a part of its policies and processes. These occurrences must be made 
 public to the Staff Team as soon as possible. The Internal Affairs Team should avoid normalizing deviating from their policies and should instead amend them if they prove to be insufficient.
 
 Changes to Internal Affairs Team policies, including the Staff Policy, must be ratified by the Staff Team.
