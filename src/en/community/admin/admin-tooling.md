@@ -51,7 +51,6 @@ There are multiple admin verbs available. These are all fairly self-explanatory.
 - *Freeze* stops them from moving or interacting until they are unfrozen by an admin.
 
 ---
-
 ### Debug Verbs
 
 ![debug.png](../../assets/images/admin/debug.png)
@@ -82,6 +81,15 @@ The debug verbs are primarily for debugging, but are also very useful for normal
 ![smite.png](../../assets/images/admin/smite.png)
 
 Use sparingly. These smites can range from minor inconveniences to severely affecting a player's round negatively.
+
+---
+
+### Antag ctrl
+![antagctrl.png](../../assets/images/admin/antagctrl.png)
+
+Antag ctrl is used to set a player to a round-start antagonist of your choosing. This button is useful when you respawn someone who previously had an antagonist role, admin events, or, in rare cases, redeeming antag tokens.
+
+The list does not include Ghost role antagonists. 
 
 ---
 
