@@ -36,7 +36,7 @@ There are multiple admin verbs available. These are all fairly self-explanatory.
 
 - **Clone:** Clones the targeted player's current entity.
 
-- **Erase:** Deletes the targeted player's entity from the round. Useful for removing a character from a round entirely. 
+- **Erase:** Deletes the targeted player's entity from the round, along with their message history. Useful for removing a character from a round entirely, and if they were spamming.
 
 - **Mark:** Places an entity into the $marked variable, a list of entities, replacing its prior value.
 
@@ -126,7 +126,7 @@ The *Pop out* button pops the log menu into a separate OS window. Useful for sav
 
 ![notes.png](../../assets/images/admin/notes.png)
 
-Admin notes give admins a way to store information about a user when a ban would be too harsh a punishment. Notes can be edited (and show their edit information), and can be deleted if the note is no longer relevant.
+Admin notes give admins a way to document anything important, like incidents that did not result in bans, watchlist, or leaving a message for a player. Notes can be edited (and show their edit information), and can be deleted if the note is no longer relevant.
 
 Admin notes by default expire after six months, slowly becoming less visible. You can hover your mouse over the note to make it easier to see.
 
