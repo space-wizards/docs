@@ -68,7 +68,7 @@ The debug verbs are primarily for debugging, but are also very useful for normal
 
 - **In Range Unoccluded**
 
-- **Make Ghost Role:** Makes an entity a Ghost role that dead players can request.
+- **Make Ghost Role:** Makes an entity a Ghost role that dead players can request. Unlike Control Mob, this option only appears on things that have sentience, and will not pop up if it doesn't.
 
 - **Rejuvenate:** Fully heals an entity and removes any temporary reagents in their body. Only use when necessary.
 
