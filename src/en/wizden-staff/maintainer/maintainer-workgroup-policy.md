@@ -19,6 +19,9 @@ Some of these pull requests are features that are not desired, or don't contribu
 Simply merging these pull requests would lead to content bloat that crowds and distorts what an area should be—and closing them currently requires the input of two Maintainers that agree on the closure.
 If they don't agree, a long voting process is started which draws out the process (and, to be honest, nobody wants to do them).
 
+We can review more and more and more pull requests; however, unless upstream establishes some sort of design direction or works to push contributors towards making changes we want, the pull requests will just keep on coming.
+Hiring more maintainers is good, but real leadership and direction is needed.
+
 ### Previous Implementation
 Workgroups previously existed in the project, however, they were extremely passive and fell out of relevance.
 These workgroups also contained members that did not frequently work on or play these departments.
