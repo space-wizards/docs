@@ -58,7 +58,7 @@ There are multiple admin verbs available. These are all fairly self-explanatory.
 
 The debug verbs are primarily for debugging, but are also very useful for normal admins.
 
-- **Control Mob:** Gives you control of the entity, if they are sentient.
+- **Control Mob:** Gives you control of the entity.
 
 - **Delete:** Deletes the entity.
 
