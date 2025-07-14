@@ -192,14 +192,14 @@ Use the `list` command to list all available commands, and the `help <command na
 | `list <keyword>`              | Lists all commands with the specified keyword.                   | `list <keyword>`                                                     |
 | `quit`                                  | Closes the game.                                                                               |                                                                                      |
 | `adminwho`                          | List all admins online.                                                               |                                                                                   |
-| `togglehealthoverlay`   | Toggles a visual layer for the playerhealth.                       | `togglehealthoverlay <true/false>`               |
+| `togglehealthoverlay`   | Toggles a visual layer for the playerhealth.                       | `togglehealthoverlay [true/false]`               |
 | `scale`                                  | Make things bigger or smaller. Relative to current size (2 twice is the same as 4 once).| `scale <uid>`|
 | `adduplink`                       | Adds an uplink to a PDA and links it to the user.           | `adduplink <ckey> <pda uid>`                           |
 | `lsobjective`                      | Shows all objectives of the targeted player.                       | `lsobjective <ckey>`                                           |
 | `addobjective`                  | Adds an objective, requires the objective ID.                   | `addobjective <ckey> <objectiveID`               |
-| `rmobjective`                      | Removes an objective from the players mind.                       | `rmobjective <ckey> <number>`                       |
+| `rmobjective`                      | Removes an objective from the player's mind.                       | `rmobjective <ckey> <number>`                       |
 | `fixgridatmos`                  | Resets all atmos on the grid to breathable and clean.   | `fixgridatmos <GRID_ID>` (use autofill)   |
-| `tpto`                                   | Teleport all targets to the first `<ckey/uid>` in the command.                                       | `tpto <ckey/uid> <ckey/uid> <ckey/uid>`          |
+| `tpto`                                   | Teleport all targets to the first `<ckey/uid>` in the command.                                       | `tpto [ckey/uid] [ckey/uid] [ckey/uid]`          |
 | `tp`                                       | Teleports yourself to the coordinates on the specified map.                                           | `tp <X> <Y> <MAPID>`                                               |
 | `setmind`                           | Puts the player's soul into the ID (may require the entity to have a mind).               | `setmind <uid> <ckey>`                                           |
 | `customvote`                       | Creates a custom vote for all players, requires at least two choices. Always do this before running any important events.  | `customvote "<title>" "<option1>" "<option2>" ...`   |
@@ -207,7 +207,7 @@ Use the `list` command to list all available commands, and the `help <command na
 | `adjstationjob`               | Adds or removes jobs. Can be used if a member of command leaves.                                   | `adjstationjob <STATION_ID> <job> <amount>` |
 | `addgamerule`                   | Adds the chosen game event to the game.                                                                                      | `addgamerule <gameruleName>`                               |
 | `endgamerule`                   | Removes the chosen gamerule from the game. Useful for repeating false events.   | `endgamerule <gameruleName>`                               |
-| `rename`                              | Correct way to rename a person (includes ID, PDA, and cloner entries).                   | `rename <ckey/uid> <"FIRSTNAME LASTNAME">`  |
+| `rename`                              | Correct way to rename a person (includes ID, PDA, and cloner entries).                   | `rename [ckey/uid] <"FIRSTNAME LASTNAME">`  |
 | `setadminooc`                   | Changes the color of your adminchat while being an admin.                                               | `setadminooc <HEX Code>`                                       |
 |`addcomp`                                | Adds a component to an entity.                                                                                                        | `addcomp <uid> <component name>`                        |
 |`banlist`                                | List all bans for a user.                                                                                                                    | `banlist <ckey>`                                                        |
