@@ -57,7 +57,7 @@ A species **must not** have an ability, theme, gimmick or otherwise that is only
 ### Rule 2: New Features and Tech Improvements
 
 A species **must** represent an opportunity for evolving the Space Station 14 design space or codebase. This can involve either:
-*a completely new feature
+* a completely new feature
 * a significant remix of an existing feature, 
 * fixing or overhauling an area of the codebase
 * exploration of a design idea that has not been done before
