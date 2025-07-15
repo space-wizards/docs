@@ -1,9 +1,8 @@
 # Maintainer Workgroups
 This document outlines Maintainer Workgroups, a subteam within the Maintainer staff group.
 
-Workgroups consist of active maintainers that hold special knowledge on the workgroup's area.
-These members generally define what the area is supposed to be, the problems of the area, what can be worked on to make the area better, and more.
-The members of these groups hold more weight in discussions involving their workgroup as well.
+Workgroups consist of active Maintainers that hold special knowledge on the workgroup's area.
+These members write and actively maintain design documents targeting this area, which outline problems, potential solutions, and direct future development.
 
 ## Justification
 At the time of this document's creation (July 14, 2025), upstream Space Station 14's direction has largely halted and is undefined.
@@ -37,17 +36,22 @@ Maintainer workgroups plan to achieve the following:
 
 ## Policy
 
+### Supervision
+Maintainer Workgroups are overseen by the Lead Maintainers.
+
+They are to make sure that the aforementioned policy is followed.
+
 ### Formation
-Workgroups are self-formed with the assistance of a Lead Maintainer, Project Manager, or Wizard, which helps create roles and a space for discussion in the upstream Discord.
+Workgroups are formed by a Lead Maintainer, Project Manager, or Wizard, by request from a Maintainer.
 These roles can also deny the workgroup's formation if it is deemed an unnecessary atomization or focus.
 
-As few as **two** Maintainers can form a workgroup.
+As few as **two** Maintainers can request to form a workgroup.
 
 Additionally, workgroup members should fulfill the following criteria:
-- They have worked on the SS14 area and/or have interacted with the area in-game extensively.
+- The maintainer has authored a large volume of pull requests to the game area that have been merged.
 - They are an active Maintainer and participate frequently in discussions involving the game area on the Forums, Discord, or GitHub.
 
-### Joining and Removal
+### Joining
 The joining procedure is semiformal:
 1. A Maintainer contacts a member of the group and asks to join. A member of the group can also nominate a person to join the group.
 2. A vote must be created, for three days, in the group's Discord channel dedicated to the workgroup.
@@ -55,29 +59,36 @@ The joining procedure is semiformal:
    - Voting can be expedited if a unanimous decision presents itself.
    - If there is no clear majority, the vote must remain open for the full 3 days.
 
-The removal procedure follows this exact same process, except for removal.
-
-Members of the group that are inactive for a long time (~6 months) or do not frequent discussions should be removed by the same removal steps.
+### Removal
+Removal is entirely handled by Lead Maintainers, Project Managers, or Wizards.
+Members of the group that are inactive for a long time (~6 months) or do not frequent discussions should be removed.
 
 ### General Discussions
 Members of the group are encouraged to be transparent, and discussions should partake in a relatively public channel.
 These channels can be restricted to contributors but shouldn't be hidden away in internal channels unless sensitive information is being discussed (a game-breaking exploit or otherwise).
 
-Generally, active public discussion on a dedicated topic in a dedicated place can help give insight to contributors as to what needs to be worked on and what can be made better in that topic.
+Generally, active public discussion can help give insight to contributors as to what needs to be worked on and what can be made better in that topic.
 Development can be coordinated between maintainers and contributors, which allows maintainers to spend more time reviewing desirable pull requests instead of starting votes on undesirable ones.
 
 ### PR Reviews
-Members of a workgroup still have to follow the same PR review procedure when evaluating a pull request within their workgroup.
+Any pull request to a game area controlled by a maintainer workgroup must receive one conceptual approval from a Maintainer belonging to that workgroup.
+Pull requests authored by a workgroup member that target a workgroup cannot be self-approved for design.
+
+This is to encourage directing pull requests targeting certain game areas to groups that have more experience with that game area.
+
+If a pull request belonging to a maintainer workgroup is closed citing game design reasons, these reasons **must** be citable from any merged design document.
+If a reason cannot be cited from any merged design document, the design document **must** be amended to include these reasons.
 
 When a conflict arises between a maintainer workgroup and a maintainer not part of the work group on a pull request, the same pull request voting procedure can take place.
 However, the votes needed to reach a decision must be a supermajority (66%) instead of a simple majority.
 
 This is intended to allow the workgroup to still achieve their goal or vision if there is friction. However, the entire maintainer team can still weigh in and block or allow a change if they are mostly for or against the change.
 
-Conflicts on pull requests that are internal to the workgroup are subjected to the same PR review procedures, however, these are supposed to be few and far between, with most conflicts being resolved through alternative directions or decisions.
+Conflicts on pull requests that are internal to the workgroup are subjected to the same PR review procedures; however, these are supposed to be few and far between, with most conflicts being resolved through alternative directions or decisions.
 
 ### Design Documents
 Workgroups are encouraged to make design documents for their game area.
+When a workgroup creates a design document, it is said to be owned by that workgroup.
 
 These design documents are invaluable to contributors, as they help give them an insight into maintainer opinion and help them make changes we actually want.
 
@@ -91,7 +102,12 @@ Simple questions can be asked and answered in a design document, like:
 3. **What should we try next?**
    - Why do we think it'll work this time, or what does it try and work towards?
 
-This document can be partially *living*, or revisited at a later date to revise and re-document changes made, and how they affected the game area over time.
+#### Design Document Amendments
+Design documents owned by a workgroup should be revisited from time to time to update the document with new information on current game mechanics, situations, problems, direction, and more.
+They must also be amended if a pull request was closed without citing a reason from a design document.
+
+Any change to a design document owned by a workgroup can be merged with one approval from a member of that workgroup.
+Workgroup members cannot self-approve their own pull requests changing their own design document.
 
 ### Inter-workgroup Collaboration
 Workgroups are encouraged to discuss with each other and make sure the various goals or features they implement align or compliment each other. Workgroups can either discuss this in the upstream Discord or save discussion for a dedicated maintainer meeting topic.
