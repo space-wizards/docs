@@ -26,13 +26,14 @@ These roles can also deny the workgroup's formation if it is deemed an unnecessa
 As few as **two** Maintainers can request to form a workgroup.
 
 Additionally, workgroup members should fulfill the following criteria:
-- The maintainer has authored a large volume of pull requests to the game area that have been merged.
+- The Maintainer has authored a large volume of pull requests to the game area that have been merged.
+  - Alternatively, the Maintainer has demonstrated that they possess knowledge or experience on the SS14 game area that is higher than a regular maintainer.
 - They are an active Maintainer and participate frequently in discussions involving the game area on the Forums, Discord, or GitHub.
 
 ### Joining
 The joining procedure is semiformal:
 1. A Maintainer contacts a member of the group and asks to join. A member of the group can also nominate a person to join the group.
-2. A vote must be created, for three days, in the group's Discord channel dedicated to the workgroup.
+2. A vote must be created, for three days, on Discourse, open to all Maintainers.
 3. A supermajority (66%) of votes in favor must be observed in order for the vote to pass.
    - Voting can be expedited if a unanimous decision presents itself.
    - If there is no clear majority, the vote must remain open for the full 3 days.
@@ -49,6 +50,10 @@ Generally, active public discussion can help give insight to contributors as to 
 Development can be coordinated between maintainers and contributors, which allows maintainers to spend more time reviewing desirable pull requests instead of starting votes on undesirable ones.
 
 ### PR Reviews
+```admonish warning
+A workgroup **has no authority** over a game area until an initial design document is merged.
+```
+
 Any pull request to a game area controlled by a maintainer workgroup must receive one conceptual approval from a Maintainer belonging to that workgroup.
 Pull requests authored by a workgroup member that target a workgroup cannot be self-approved for design.
 
@@ -66,6 +71,8 @@ Conflicts on pull requests that are internal to the workgroup are subjected to t
 
 ### Design Documents
 Workgroups are encouraged to make design documents for their game area.
+View the [Game Area Design Document Template](/src/en/general-development/game-area-design-doc.md) and the [Department Design Document Template](/src/en/templates-docs/department-design-template.md) for a good document basis.
+
 When a workgroup creates a design document, it is said to be owned by that workgroup.
 
 These design documents are invaluable to contributors, as they help give them an insight into maintainer opinion and help them make changes we actually want.
