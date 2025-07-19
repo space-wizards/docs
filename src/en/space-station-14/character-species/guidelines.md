@@ -29,7 +29,7 @@ All species must be considered fairly and equally for proposal, implementation a
 1. A species must have a **distinct identity** that is notably different in theme from the other species available on Wizard's Den.
 2. A species must represent **new or substantially remixed design ideas**.
 3. A species must be, at least conceptually, reasonably balanced with the other species available on Wizard's Den.
-4. A species design must not directly encourage speciesism or other rule-breaking will be rejected.
+4. A species design that directly encourages speciesism or other rule-breaking will be rejected.
 5. A species must not be "deliberately" bad or unusually challenging to play.
 6. A species must not represent a new challenge to moderation and adminning.
 7. A species must be technically feasible to implement and maintain.
