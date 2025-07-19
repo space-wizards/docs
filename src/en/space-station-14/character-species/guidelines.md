@@ -140,7 +140,7 @@ This is commonly referred to as avoiding the creation of a "meta" species for a 
 
 Species **must not** circumvent a significant portion of gameplay. If they do, this gameplay must not be essential to roundflow and an equivalent mechanic should be put in place.
 
-## Rule 8a: No Circumvention of Important Game Design
+#### Rule 8a: No Circumvention of Important Game Design
 
 There are many important pillars of Space Station 14's sandbox, and species **must not** circumvent these. Examples of these pillars include, but are not limited to:
 
@@ -154,7 +154,7 @@ For example, a robotic species without organs, blood or any equivalencies to a m
 
 A test for if this rule is failed is to imagine a round of 80 players who all picked the species. If the round would be drastically altered by this - such as a department ceasing to have a role to play, an antagonist being unable to work effectively, and so on - then this rule is failed.
   
-## Rule 8b: Equivalency when Circumventing Less Important Game Design
+#### Rule 8b: Equivalency when Circumventing Less Important Game Design
 
 There are a lot of game mechanics in Space Station 14 that are not tied into the core job players have in the round. This includes the activies of all of the Service roles, but also things like how Cargo and Science progress each round.  
 
