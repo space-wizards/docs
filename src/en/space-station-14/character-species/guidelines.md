@@ -136,7 +136,7 @@ For example, a species may be unusually large, requiring a 64x64px sprite. Becau
 
 The proposer of a species **should** be able to break down the technical workload required to bring the species to life, and **should** be capable of at least part of that workload themselves.
 
- ### Rule 8: Circumvention of Intentional Game Design
+### Rule 8: Circumvention of Intentional Game Design
 
 Species **must not** circumvent a significant portion of gameplay. If they do, this gameplay must not be essential to roundflow and an equivalent mechanic should be put in place.
 
