@@ -31,6 +31,9 @@ Additionally, workgroup members should fulfill the following criteria:
 - They are an active Maintainer and participate frequently in discussions involving the game area on the Forums, Discord, or GitHub.
 
 ### Joining
+Maintainers wanting to join a workgroup should fulfill the same member criteria defined in the Formation section.
+Additionally, a Maintainer cannot be in more than **two** workgroups at a time.
+
 The joining procedure is semiformal:
 1. A Maintainer contacts a member of the group and asks to join. A member of the group can also nominate a person to join the group.
 2. A vote must be created, for three days, on Discourse, open to all Maintainers.
