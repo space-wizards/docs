@@ -32,7 +32,14 @@ Additionally, workgroup members should fulfill the following criteria:
 
 ### Joining
 Maintainers wanting to join a workgroup should fulfill the same member criteria defined in the Formation section.
-Additionally, a Maintainer cannot be in more than **two** workgroups at a time.
+
+```admonish warning
+Maintainers should be cautious when joining excessive amounts of workgroups.
+Workgroups are intended to lead a game area and direct development on it.
+A maintainer that is largely absent or stretched too thin due to being involved in too many workgroups will slow down the workgroup and its development, and it will likely lead to maintainer burnout from attempting to manage multiple workgroups at the same time.
+
+It is recommended to be active in a select few workgroups, ones that you find personal interest in.
+```
 
 The joining procedure is semiformal:
 1. A Maintainer contacts a member of the group and asks to join. A member of the group can also nominate a person to join the group.
