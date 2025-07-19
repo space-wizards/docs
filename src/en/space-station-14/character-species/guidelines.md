@@ -138,7 +138,7 @@ This is commonly referred to as avoiding the creation of a "meta" species for a 
 
  ### Rule 8: Circumvention of Intentional Game Design
 
-Species **must not** circumvent a significant portion of gameplay.
+Species **must not** circumvent a significant portion of gameplay. If they do, this gameplay must not be essential to roundflow and an equivalent mechanic should be put in place.
 
 ## Rule 8a: No Circumvention of Important Game Design
 
@@ -158,8 +158,7 @@ A test for if this rule is failed is to imagine a round of 80 players who all pi
 
 There are a lot of game mechanics in Space Station 14 that are not tied into the core job players have in the round. This includes the activies of all of the Service roles, but also things like how Cargo and Science progress each round.  
 
-An example of circumventing gameplay would be an implementation of a robot species that allowed players to completely ignore the Medical department via self-repair with tools. Or, due to experiencing no equivalent to hunger or thirst, ever needing to visit the chef or bartender.
-
+For example, a robotic species might not need to eat or drink. This means that they would never have a reason to go to the chef or the barkeeper, so an equvialent reason should be designed for that species to need to interact with those roles, such as giving chefs access to batteries they can "feed" the robot, and the barkeeper having access to lubricants, oils and so on that the robot might enjoy.
 
 ### Rule 9: Overpowered Species With Critical Flaws
 
