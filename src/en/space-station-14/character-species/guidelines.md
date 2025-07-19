@@ -109,7 +109,7 @@ This rule also covers other forms of rule-breaking. For example, a species could
 
 Species **must** not be designed in such a way that a new player, picking a random character and rolling that species, would have an excessively negative experience due to lack of game knowledge. This **does not** mean a species cannot have a notable, potentially deadly, downside. However, that downside **should** be recoverable from, presented obviously to a player who has no prior context of that species, and teachable within the game by other players.
 
-At a minimum, when picking a species which could be challenging to a new player, a guidebook entry exists to help that player play the species, and that guidebook entry **must** appear when that species is picked for the first time, and this page **must** be focussed on assisting the player with how to play the species, not simply being relegated to an encyclopedia entry on that species's mechanics.
+At a minimum, when picking a species which could be challenging to a new player, a guidebook entry exists to help that player play the species, and that guidebook entry **must** appear when that species is picked for the first time, and this page **must** be focused on assisting the player with how to play the species, not simply being relegated to an encyclopedia entry on that species's mechanics.
 
 For example: a species suffers from oxygen poisoning. This means they must wear internals at all times, except in specific circumstances where oxygen is not present. This species **should not** punish the player by dying rapidly if their internals fail or are removed, and, if they do die, they **should** be revivable.
 
