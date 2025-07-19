@@ -97,44 +97,44 @@ A species **must not** be, as a pillar of its design, be designed to be good or 
 
 This is commonly referred to as avoiding the creation of a "meta" species for a job.
 
- ### Rule 4: Speciesism and Otherwise Encouraging Rule-Breaking
+### Rule 4: Speciesism and Otherwise Encouraging Rule-Breaking
 
- Speciesism is banned on Wizard's Den in its entirety. As such, species **must not** directly encourage the "othering" of those that play those species. For example, a nitrogen-breathing species that is poisoned by oxygen **must not** as a design principle be expected to socialize and eat meals in rooms separate from the rest of the station's crew. A species might have the theme of being somewhat distinct and separate from normal galactic society, but when this is the case, it should be clear that they are still an equal and respected species on the station, and their design should outline how this is done, such as through futuristic technology or adaptions the space station has made to accomodate them.
+Speciesism is banned on Wizard's Den in its entirety. As such, species **must not** directly encourage the "othering" of those that play those species. For example, a nitrogen-breathing species that is poisoned by oxygen **must not** as a design principle be expected to socialize and eat meals in rooms separate from the rest of the station's crew. A species might have the theme of being somewhat distinct and separate from normal galactic society, but when this is the case, it should be clear that they are still an equal and respected species on the station, and their design should outline how this is done, such as through futuristic technology or adaptions the space station has made to accomodate them.
 
- For example, if an aquatic species has to live inside a water-filled suit at all times, they should still have the ability to wear a variety of outfits on top of that suit so they can express themselves like every other species. 
+For example, if an aquatic species has to live inside a water-filled suit at all times, they should still have the ability to wear a variety of outfits on top of that suit so they can express themselves like every other species. 
 
- This rule also covers other forms of rule-breaking. For example, a species could be themed around demons, but specifically theming a species around certain succubus/incubus tropes would obviously be too problematic to be suitable for Wizard's Den.
+This rule also covers other forms of rule-breaking. For example, a species could be themed around demons, but specifically theming a species around certain succubus/incubus tropes would obviously be too problematic to be suitable for Wizard's Den.
 
- ### Rule 5: Deliberately Challenging Species
+### Rule 5: Deliberately Challenging Species
 
- Species **must** not be designed in such a way that a new player, picking a random character and rolling that species, would have an excessively negative experience due to lack of game knowledge. This **does not** mean a species cannot have a notable, potentially deadly, downside. However, that downside **should** be recoverable from, presented obviously to a player who has no prior context of that species, and teachable within the game by other players.
+Species **must** not be designed in such a way that a new player, picking a random character and rolling that species, would have an excessively negative experience due to lack of game knowledge. This **does not** mean a species cannot have a notable, potentially deadly, downside. However, that downside **should** be recoverable from, presented obviously to a player who has no prior context of that species, and teachable within the game by other players.
 
- At a minimum, when picking a species which could be challenging to a new player, a guidebook entry exists to help that player play the species, and that guidebook entry **must** appear when that species is picked for the first time, and this page **must** be focussed on assisting the player with how to play the species, not simply being relegated to an encyclopedia entry on that species's mechanics.
+At a minimum, when picking a species which could be challenging to a new player, a guidebook entry exists to help that player play the species, and that guidebook entry **must** appear when that species is picked for the first time, and this page **must** be focussed on assisting the player with how to play the species, not simply being relegated to an encyclopedia entry on that species's mechanics.
 
- For example: a species suffers from oxygen poisoning. This means they must wear internals at all times, except in specific circumstances where oxygen is not present. This species **should not** punish the player by dying rapidly if their internals fail or are removed, and, if they do die, they **should** be revivable.
+For example: a species suffers from oxygen poisoning. This means they must wear internals at all times, except in specific circumstances where oxygen is not present. This species **should not** punish the player by dying rapidly if their internals fail or are removed, and, if they do die, they **should** be revivable.
 
- If a species is significantly challenging to play as, compared to normal round-start species, the following rules apply:
- - It **must not** be able to be selected round-start by new players without clear warnings and tutorialization in place.
- - It **should not** be able to be picked if a random species is chosen for a midround ghost role. 
- - It **should** be given careful consideration on its impact on certain team antagonists, such as Nuclear Operatives, if that species is played as one of the team. (For example, a species that cannot wear shoes may be significantly disadvantaging to a Nuclear Operative team that can't provide that species with access to slip resistance othererwise.)
+If a species is significantly challenging to play as, compared to normal round-start species, the following rules apply:
+- It **must not** be able to be selected round-start by new players without clear warnings and tutorialization in place.
+- It **should not** be able to be picked if a random species is chosen for a midround ghost role. 
+- It **should** be given careful consideration on its impact on certain team antagonists, such as Nuclear Operatives, if that species is played as one of the team. (For example, a species that cannot wear shoes may be significantly disadvantaging to a Nuclear Operative team that can't provide that species with access to slip resistance othererwise.)
  
- Deliberately challenging species must **not** be designed in such a way as to promote speciesism (see Rule 4 above).
+Deliberately challenging species must **not** be designed in such a way as to promote speciesism (see Rule 4 above).
 
- Species that are deliberately challenging **must not** negatively impact round flow for other players. For example, a species may require being sealed in an airtight suit to avoid exploding. If the airtight suit is ruptured, it would be unacceptable if the resultant explosion commonly resulted in the deaths of those around them.
+Species that are deliberately challenging **must not** negatively impact round flow for other players. For example, a species may require being sealed in an airtight suit to avoid exploding. If the airtight suit is ruptured, it would be unacceptable if the resultant explosion commonly resulted in the deaths of those around them.
 
- ### Rule 6: Admin burden
+### Rule 6: Admin burden
 
- A species **must not** have a powerful mechanic or ability that creates burden for the in-game or out-of-game admin team, either by a requirement for rulings or increasing admin help chat load.
+A species **must not** have a powerful mechanic or ability that creates burden for the in-game or out-of-game admin team, either by a requirement for rulings or increasing admin help chat load.
 
- A species **must not** require a specific admin policy in order to manage. For example, Diona nymphs may in-universe and mechanically transmit their former host's brain into a new form, but such a new form should be covered by normal new life/revival rules, not an expectation of the writing of a new, specific, rule. 
+A species **must not** require a specific admin policy in order to manage. For example, Diona nymphs may in-universe and mechanically transmit their former host's brain into a new form, but such a new form should be covered by normal new life/revival rules, not an expectation of the writing of a new, specific, rule. 
 
- ### Rule 7: Technical Feasibility
+### Rule 7: Technical Feasibility
 
- Some more out-there designs for species are wholly within the sort of concept that Space Station 14 would love to have, but would represent a significant technical problem to implement or maintain. 
- 
- For example, a species may be unusually large, requiring a 64x64px sprite. Because all clothing sprites are sprited for 32x32px, it would be technically unfeasible to support this species without an excessively-significant amount of respriting and aggressive use of displacement maps.
+Some more out-there designs for species are wholly within the sort of concept that Space Station 14 would love to have, but would represent a significant technical problem to implement or maintain. 
 
- The proposer of a species **should** be able to break down the technical workload required to bring the species to life, and **should** be capable of at least part of that workload themselves.
+For example, a species may be unusually large, requiring a 64x64px sprite. Because all clothing sprites are sprited for 32x32px, it would be technically unfeasible to support this species without an excessively-significant amount of respriting and aggressive use of displacement maps.
+
+The proposer of a species **should** be able to break down the technical workload required to bring the species to life, and **should** be capable of at least part of that workload themselves.
 
  ### Rule 8: Circumvention of Intentional Game Design
 
