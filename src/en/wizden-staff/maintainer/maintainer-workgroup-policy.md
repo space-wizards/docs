@@ -117,7 +117,7 @@ Furthermore, these Maintainers or Project Managers hold beliefs that aren't writ
 This leads to even more friction when contributors work on their favourite department or want to implement a feature, as the contributor doesn't know what Maintainers want.
 
 Currently, the upstream repository has ~800 pull requests that need reviewing.
-Some of these pull requests are features that are not desired, or don't contribute well to a larger defined goal of what a department should be.
+Some of these pull requests are features that are not desired, or don't contribute well to a larger defined goal of what a game area should be.
 Simply merging these pull requests would lead to content bloat that crowds and distorts what an area should be—and closing them currently requires the input of two Maintainers that agree on the closure.
 If they don't agree, a long voting process is started which draws out the process (and, to be honest, nobody wants to do them).
 
