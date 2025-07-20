@@ -1,6 +1,7 @@
 # Maintainer Meeting (7 June 2025)
 
-:::info
+```admonish info
+
 **Attendees:**
 - Simyon
 - Errant
@@ -15,7 +16,7 @@
 - Slarti
 - Chromiumboy
 - Tayrthan
-:::
+```
 
 This meeting was recorded:
 
