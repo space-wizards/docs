@@ -30,6 +30,25 @@ Additionally, workgroup members should fulfill the following criteria:
   - Alternatively, the Maintainer has demonstrated that they possess knowledge or experience on the SS14 game area that is higher than a regular maintainer.
 - They are an active Maintainer and participate frequently in discussions involving the game area on the Forums, Discord, or GitHub.
 
+#### Game Area Scope
+The game area that a Maintainer Workgroup controls should be something tangible and definable.
+Workgroups targeting a game area that is large in scope (ex. spanning multiple antagonists or departments) should be avoided.
+Additionally, unnecessary atomizations or tiny game areas shouldn't be a focus.
+
+When establishing a game area for formation, think back to [SMART criteria](https://en.wikipedia.org/wiki/SMART_criteria).
+It's also a good idea to apply this to your future design documents and game area goals as well.
+
+Some examples of good and bad game areas are below:
+- **Good:**
+  - Singular departments like Science or Medical.
+    - Reasonable atomizations of departments, ex. Engineering and Atmospherics are also acceptable.
+  - Singular antagonists like Wizard, Traitor, or Nuclear Operatives.
+  - Smaller game areas like Chef, Botany, or Janitor.
+- **Bad:**
+  - An "antagonist" area.
+  - A "roundflow" area.
+  - A "radio jammer" area.
+
 ### Joining
 Maintainers wanting to join a workgroup should fulfill the same member criteria defined in the Formation section.
 
