@@ -75,7 +75,7 @@ services:
     restart: unless-stopped
 ```
 
-You may have to run these commands to set the correct owner and permissions for the ``builds``, ``manifest`` and ``database`` folders.
+You may have to run these commands to set the correct owner and permissions for the ``builds``, ``manifest`` and ``database`` folders. If you get an error about `unable to open database file` then try the below commands.
 
 ```
 sudo chown -R 1654:1654 builds/ database/ manifest/

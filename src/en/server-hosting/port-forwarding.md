@@ -14,8 +14,19 @@ Exactly how to do this depends on your network's router and internet service pro
 
 Note that **none of this is unique to Space Station 14**. "Port Forward" is a standard term you can plop into Google. There's been decades of people doing this for other games, like Minecraft. If you do not manage to get it working with this guide alone, may want to put some combination of your ISP name + "Port forward" into Google.
 
-```admonish info
-> Yes, this guide may grossly oversimplify some networking concepts.
+```admonish info title="Important Notes for basically everything here"
+Yes, this guide may grossly oversimplify some networking concepts.
+
+You can use [this site](https://www.whatismyip.com/) to retrieve your public IP address if you don't have it already.
+
+If have an IPV6 address (looks kinda like this ``fd11:5ee:bad:c0de::ab3:3d03``) make sure to include square brackets (``[fd11:5ee:bad:c0de::ab3:3d03]``) when in the direct connect menu.
+
+Some routers do not support/do not have [NAT Hairpinning](https://en.wikipedia.org/wiki/Network_address_translation#NAT_hairpinning) supported/enabled. This will mean that in some cases you may be **unable to connect** using your public IP on your own network.
+
+To test your connection, we suggest either: 
+- Getting a friend to try to attempt to join the server.
+- Try port forwarding test sites like [this one](https://www.yougetsignal.com/tools/open-ports/). Note these sites can only test the TCP port, sites claiming to support checking UDP are gonna be unreliable.
+- Getting into a mobile hotspot/connecting to a public VPN on another device.
 ```
 
 ## VPN services
@@ -59,6 +70,8 @@ If it failed, you will instead see an warning like this:
 ```
 [WARN] net.upnp: Peer 0.0.0.0: Failed UPnP port forwarding, your server may not be accessible. Check with your router's settings to enable UPnP or port forward manually
 ```
+
+Getting a success message does not mean it 100% worked, some routers lie (or they don't know they are behind CGNAT, more on that below.)
 
 If it succeeds and your server is accessible from the outside world, great! If it doesn't work, read on.
 
@@ -159,9 +172,11 @@ If you did this step correctly, then maybe it works! If it still doesn't work, u
 
 If you did the above steps correctly and your server **still** isn't globally accessible, your ISP may be getting in the way.
 
-The most common reason for this is that your ISP uses Carrier-grade NAT ("CGNAT") which makes port forwarding impossible. Another possible reason we've heard about is that certain network ports or protocols are automatically blocked by them.
+The most common reason for this is that your ISP uses Carrier-grade NAT ("CGNAT") which makes port forwarding impossible. Another possible reason we've heard about is that certain network ports or protocols are automatically blocked by them. 
 
-You are probably best off contacting your ISP’s support or checking their site to see what you can figure out. Some ISPs may allow exemptions to CGNAT, others may do it but will charge you for it, and so on.
+You maybe can try changing your server port to ``25565`` which is what minecraft uses and may look less sus to your ISP if they are blocking certain ports.
+
+You are probably best off contacting your ISP’s support or checking their site or networking forums in your country to see what you can figure out. Some ISPs may allow exemptions to CGNAT, others may do it but will charge you for it, and so on.
 
 ### So what now?
 

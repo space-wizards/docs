@@ -333,8 +333,10 @@ Staff
 - [Project Manager](en/wizden-staff/projectmanager.md)
 - [Maintainer](en/wizden-staff/maintainer.md)
   - [Adding New Maintainers](en/wizden-staff/maintainer/adding-new-maintainers.md)
+  - [Useful Maintainer Tools](en/wizden-staff/maintainer/maintainer-tools.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
   - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
+  - [Review Whitelist](en/wizden-staff/maintainer/review-whitelist.md)
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
   - [Triage Procedure](en/wizden-staff/maintainer/triage-procedure.md)
 - [Space Wizards Role Hierarchy](en/wizden-staff/space-wizards-role-hierarchy.md)
@@ -347,6 +349,10 @@ Maintainer Meetings
 ==============
 
 ----------------------
+
+- [2025-07-19](en/maintainer-meetings/maintainer-meeting-2025-07-19.md)
+- [2025-07-05](en/maintainer-meetings/maintainer-meeting-2025-07-05.md)
+- [2025-06-07](en/maintainer-meetings/maintainer-meeting-2025-06-07.md)
 - [2025-05-10](en/maintainer-meetings/maintainer-meeting-2025-05-10.md)
 - [2025-04-27](en/maintainer-meetings/maintainer-meeting-2025-04-27.md)
 - [2025-04-12](en/maintainer-meetings/maintainer-meeting-2025-04-12.md)
