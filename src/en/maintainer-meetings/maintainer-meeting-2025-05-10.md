@@ -1,6 +1,7 @@
 # Maintainer Meeting (10 May 2025)
 
-:::info
+```admonish info
+
 **Attendees:**
 - Myra
 - Errant
@@ -14,7 +15,7 @@
 - Slart
 - Eletro
 - Fildrance
-:::
+```
 
 This meeting was recorded:
 

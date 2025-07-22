@@ -350,6 +350,7 @@ Maintainer Meetings
 
 ----------------------
 
+- [2025-07-19](en/maintainer-meetings/maintainer-meeting-2025-07-19.md)
 - [2025-07-05](en/maintainer-meetings/maintainer-meeting-2025-07-05.md)
 - [2025-06-07](en/maintainer-meetings/maintainer-meeting-2025-06-07.md)
 - [2025-05-10](en/maintainer-meetings/maintainer-meeting-2025-05-10.md)

@@ -1,6 +1,7 @@
 # Maintainer Meeting (5 July 2025)
 
-:::info
+```admonish info
+
 **Attendees:**
 - Errant
 - Simyon
@@ -13,7 +14,7 @@
 - Julian
 - Fildrance
 - Tayrtahn
-:::
+```
 
 This meeting was recorded:
 
