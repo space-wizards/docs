@@ -30,6 +30,12 @@ Additionally, workgroup members should fulfill the following criteria:
   - Alternatively, the Maintainer has demonstrated that they possess knowledge or experience on the SS14 game area that is higher than a regular maintainer.
 - They are an active Maintainer and participate frequently in discussions involving the game area on the Forums, Discord, or GitHub.
 
+A request to form a workgroup must be made in the Maintainers category on Discourse for documentation.
+The following information should be provided when making a request:
+- The game area that the group will oversee.
+- Members of the group, and why you think the members would be a good fit for the group, whether it be their knowledge, technical expertise, or other reasons.
+- Any other information you'd like to present as justification.
+
 #### Game Area Scope
 The game area that a Maintainer Workgroup controls should be something tangible and definable.
 Workgroups targeting a game area that is large in scope (ex. spanning multiple antagonists or departments) should be avoided.
