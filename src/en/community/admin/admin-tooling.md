@@ -229,7 +229,9 @@ The *Players* tab just lets you search by username, IP, HWID, etc, for any user.
 ![ss14adminplayers.png](../../assets/images/admin/ss14adminplayers.png)
 
 You can click on *Player Info* to the far right of the player's name to view their PII, play time, characters, notes, bans, and rolebans.
-![ss14adminplayerinfo.png](../../assets/images/admin/ss14adminplayerinfo.png)
+![ss14adminplayerinfo1.png](../../assets/images/admin/ss14adminplayerinfo1.png)
+![ss14adminplayerinfo2.png](../../assets/images/admin/ss14adminplayerinfo2.png)
+![ss14adminplayerinfo3.png](../../assets/images/admin/ss14adminplayerinfo3.png)
 
 The *Connections* tab shows you the most recent connections to the servers as well as information for each connection.
 ![ss14adminconnections.png](../../assets/images/admin/ss14adminconnections.png)
