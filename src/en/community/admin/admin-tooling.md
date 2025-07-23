@@ -4,7 +4,7 @@ The tools at a Game Admin's disposal take some time to get used to. The tools ca
 
 ## Admin Menu
 
-![adminmenu.PNG](../../assets/images/admin/adminmenu.PNG)
+![adminmenu.png](../../assets/images/admin/adminmenu.png)
 
 The Admin Menu can be opened by pressing F7 or using the button bar at the top.
 
