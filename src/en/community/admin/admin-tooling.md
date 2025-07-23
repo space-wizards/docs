@@ -220,7 +220,7 @@ If you're an official Space Wizards :tm: Admin, you can access the online admin 
 The *Bans* tab at the top is the most useful. This shows all current bans. You can search by active bans or total bans for any player. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
 
 You can see the ban time, reason, and when it expires. You can also check *ban hits*, or whether someone attempted to join and was denied because of a ban, as well as what username/IP/HWID they tried to join with. Useful for detecting ban evaders. You can also unban users on this panel.
-![ss14adminban.png](../../assets/images/admin/ss14adminban.png)
+![ss14adminbans.png](../../assets/images/admin/ss14adminbans.png)
 
 The *Role Bans* tab shows all current role bans. You can search by name, ID, HWID, role, IP, or the banning admin. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
 ![ss14adminrolebans.png](../../assets/images/admin/ss14adminrolebans.png)
