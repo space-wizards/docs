@@ -1,4 +1,4 @@
-# XenoArch Redux [3MOArch]
+﻿# XenoArch Redux [3MOArch]
 ```admonish warning "Attention: Legacy Documentation!"
 This document is ported from before the game-area reorganization and has not been reviewed or updated.
 It may not fit with the new design requirements.
@@ -57,9 +57,10 @@ Especially when taken in with randomization of artifacts, you can oftentimes jus
 I'll use the element of a [tech tree](https://en.wikipedia.org/wiki/Technology_tree) as a reference to explain the new generation.
 
 Each node is essentially an upgrade in a tech tree.
-The structure can be described as a typical tech tree structure (a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)) but without the presence of the first element in the graph.
+The structure also can be described as a typical tech tree structure (a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)) but without requirement for presence of one 'root' - first element in the graph.
+There can be more then 1 node that are available to be interacted with from the start (depth 0 nodes), they can belong to 1 or more segments (non-connected sub-graphs inside one artifact).
 
-Just like the current system, all of these nodes have a trigger and an effect associated with them.
+Just like old system, all of these nodes have a trigger and an effect associated with them.
 However, you do not 'move' to a node like the current system, but you instead permanently unlock it like a tech tree.
 
 And just like a tech tree, unlocking a node has a cost associated with it.
@@ -71,9 +72,122 @@ The remaining nodes are classified as 'latent' - unlocked but not creating any e
 
 All remaining nodes are simply locked and have no behavior.
 
+### Graph generation
+
+``` mermaid
+flowchart TD
+    subgraph Generate graph
+        direction LR
+        A(1.Roll amount of nodes artifact would like to have - rolled from artifact MinMax)
+        --> B(2.Extract list of triggers and effects that can be used during node generation) 
+        --> C[Generate graph segment]
+        --> D{Is nodes count in segment equal to zero}
+        -- no --> E{Is total nodes count equals desired node count}
+        E -- no --> C
+        E -- yes --> F
+        D -- yes --> F(FINISH)
+    end
+    
+```
+``` mermaid
+flowchart LR
+    subgraph Generate segment
+        direction LR
+        A(Roll desired segment node count)
+        --> B[Generate layer in segment]
+        --> C{Is generated node count equals to zero}
+        C -- yes --> F[Refine with additional edges]
+        C -- no --> E{have we generated desired amount of nodes?}
+        E -- yes --> F
+        E -- no --> B
+        F-->FI(FINISH)
+    end
+```
+This process attemtpts to bind smaller segments into larger graph, as larger interconnected graphs have proven to be much more interesting.
+
+``` mermaid
+flowchart LR
+    subgraph Refine with additional edges
+        direction TB
+        A(Get all segments of artifact)
+        --> B{Do we have more then 1 segment?}
+        B -- no --> FINISH
+        B -- yes -->C("Pick segment with max amount of nodes - [parent] segment")
+        --> D(Get min and max depth from it)
+        --> E
+        subgraph E[for each segment]
+            direction LR
+            F1("Figure out the range of depths that allows for a connection between current and [parent] segment")
+            --> F2(Try picking random node from current segment in range)
+            -- failed to find --> Ex(Next segment)
+            F2 -- found --> F3("Pick node from [parent] segment on layer of depth +1 or -1 relative to node picked on previous step")
+            --> F4(Add edge between them)
+            --> Ex
+        end
+        E  --> FINISH
+    end
+```
+
+
+``` mermaid
+
+flowchart LR
+    subgraph Populate depth layer
+        direction TB
+        A(Roll amount of nodes in layer)
+        --> B(Roll amount of `scatter` edges)
+        --> B1{Do we need more nodes in layer?}
+        -- yes 
+        --> С(Pick 1 direct predecessor for new node)
+        --> D{Is there 1 or more scatter edges to add?}
+        -- yes --> E(roll node for scatter edge <br>and add to direct predecessors list)
+        --> F{roll coin flip to stop adding scatter nodes}
+        -- yes--> I
+        F -- no --> D
+        -- no --> I[try create node]
+        --> G(decrement desired amount of nodes on layer<br> even if failed to generate)
+        --> B1
+        B1 -- no --> FINISH
+    end
+
+```
+
+``` mermaid
+
+flowchart TB
+    subgraph Try generate node
+        direction TB
+        subgraph P1[Preparation]
+            direction LR
+            A1("Get current node virtual budget: (sum of direct predecessor actual budgets + 2000 * depth) ")
+            --> A2(Pick triggers from list of remaining ones, for which current virtual budget fits into range)
+            --> A21{Do we have any triggers?}
+            -- no --> EMPTY(Return no node)
+            A21 -- yes --> A3("Roll trigger (with respect to weights but only between picked ones)")
+            --> A4("Remove rolled trigger from pool")
+            --> A5("Get current node actual budget: (sum of direct predecessors + actual budget of picked trigger)")
+            --> A6(Pick effects from list, for which current actual budget fits into range)
+            --> A7{Do we have any effects?}
+            -- no --> EMPTY
+            A7 -- yes --> A8("Roll effect (with respect to weights but only between picked ones)")
+        end
+        P1 --> P2
+        subgraph P2[Apply actual budget to node]
+            direction LR
+            B1(Spawn node entity and add it to container)
+            --> B2("Get point on scale of effect budget range, where node actual budget is placed - [actual budget placement]")
+            --> B3(Pick strategy for splitting bonus on effects)
+            --> B4(Get bonus amount for each modifier that current node supports and save it)
+            --> B5(Apply bonuses on node init - durability etc.)
+            --> C1(Apply trigger components and tip to node entity)
+        end
+    end
+```
+
 ### Node graph generation
 
-Nodes are generated by picking trigger and effect from respective pools. Effects are actual nodes (entities), while triggers are components which are applied to node. 
+Nodes are generated by picking trigger and effect from respective pools. Same trigger cannot occur more then once on artifact graph or there will be a possibility of overlapping, so list of triggers is getting exhausted as generation goes on.
+List of effects to be picked is list of possible entity prototypes, which will be spawned as nodes inside artifact, while list of triggers contain 1 component for each pick. 
 For unlocking mechanic to work properly all triggers are made unique, which means max size of artifact is amount of different triggers we have in pool. 
 
 **All of budget things is internal game mechanics and is not for player to view.**
