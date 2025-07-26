@@ -1,4 +1,4 @@
-# XenoArch Redux [3MOArch]
+﻿# XenoArch Redux [3MOArch]
 ```admonish warning "Attention: Legacy Documentation!"
 This document is ported from before the game-area reorganization and has not been reviewed or updated.
 It may not fit with the new design requirements.
@@ -6,7 +6,7 @@ It may not fit with the new design requirements.
 
 | Designers       | Implemented | GitHub Links |
 |-----------------|---|---|
-| Thee EmoGarbage | :x: No | TBD |
+| Thee EmoGarbage | :warning: Partiall | https://github.com/space-wizards/space-station-14/pull/33370 |
 
 ## Overview
 
@@ -14,7 +14,8 @@ This proposal aims to re-imagine the science subdepartment of XenoArch and Artif
 This will be accomplished by changing node traversal to add more player agency, improving in-game tools for categorizing and understanding artifact structure, and adding additional equipment that makes manipulation more interesting.
 
 The ultimate goal is to redesign the system so players can better understand how artifacts work and to allow greater utility and mechanics to arise out of artifacts.
-XenoArch should feel like unlocking the sprawling secrets of an artifact while additionally gaining points as a secondary reward for the research.
+XenoArch should feel like unlocking the sprawling secrets of an artifact while additionally gaining points as a secondary reward for the research. Artifacts also should start being viewed not just thing that belongs only to lab, 
+but sometimes as useful tool for other crew members, increasing sci-to-other-departments interactions.
 
 _This redesign lends partial inspiration to Goon's artlab as well as Noita's customizable wands._
 
@@ -56,19 +57,175 @@ Especially when taken in with randomization of artifacts, you can oftentimes jus
 I'll use the element of a [tech tree](https://en.wikipedia.org/wiki/Technology_tree) as a reference to explain the new generation.
 
 Each node is essentially an upgrade in a tech tree.
-The structure can be described as a typical tech tree structure (a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)) but without the presence of the first element in the graph.
+The structure also can be described as a typical tech tree structure (a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)) but without requirement for presence of one 'root' - first element in the graph.
+There can be more then 1 node that are available to be interacted with from the start (depth 0 nodes), they can belong to 1 or more segments (non-connected sub-graphs inside one artifact).
 
-Just like the current system, all of these nodes have a trigger and an effect associated with them.
+Just like old system, all of these nodes have a trigger and an effect associated with them.
 However, you do not 'move' to a node like the current system, but you instead permanently unlock it like a tech tree.
 
 And just like a tech tree, unlocking a node has a cost associated with it.
-The 'cost' is the activation of all of the triggers of the nodes in that path--that is, all of the nodes that needed to be unlocked in order for the current node to become available.
+The 'cost' is the activation of all of the triggers of the nodes in that path - that is, all of the nodes that needed to be unlocked in order for the current node to become available.
 
 In this situation, the 'active' nodes are the nodes in each path that have the highest tier.
 These are the nodes that will produce effects when they are activated.
-The remaining nodes are classified as 'latent'--unlocked but not creating any effects when the artifact is activated.
+The remaining nodes are classified as 'latent' - unlocked but not creating any effects when the artifact is activated.
 
 All remaining nodes are simply locked and have no behavior.
+
+### Graph generation
+
+``` mermaid
+flowchart TD
+    subgraph Generate graph
+        direction LR
+        A(1.Roll amount of nodes artifact would like to have - rolled from artifact MinMax)
+        --> B(2.Extract list of triggers and effects that can be used during node generation) 
+        --> C[Generate graph segment]
+        --> D{Is nodes count in segment equal to zero}
+        -- no --> E{Is total nodes count equals desired node count}
+        E -- no --> C
+        E -- yes --> F
+        D -- yes --> F(FINISH)
+    end
+    
+```
+``` mermaid
+flowchart LR
+    subgraph Generate segment
+        direction LR
+        A(Roll desired segment node count)
+        --> B[Generate layer in segment]
+        --> C{Is generated node count equals to zero}
+        C -- yes --> F[Refine with additional edges]
+        C -- no --> E{have we generated desired amount of nodes?}
+        E -- yes --> F
+        E -- no --> B
+        F-->FI(FINISH)
+    end
+```
+This process attemtpts to bind smaller segments into larger graph, as larger interconnected graphs have proven to be much more interesting.
+
+``` mermaid
+flowchart LR
+    subgraph Refine with additional edges
+        direction TB
+        A(Get all segments of artifact)
+        --> B{Do we have more then 1 segment?}
+        B -- no --> FINISH
+        B -- yes -->C("Pick segment with max amount of nodes - [parent] segment")
+        --> D(Get min and max depth from it)
+        --> E
+        subgraph E[for each segment]
+            direction LR
+            F1("Figure out the range of depths that allows for a connection between current and [parent] segment")
+            --> F2(Try picking random node from current segment in range)
+            -- failed to find --> Ex(Next segment)
+            F2 -- found --> F3("Pick node from [parent] segment on layer of depth +1 or -1 relative to node picked on previous step")
+            --> F4(Add edge between them)
+            --> Ex
+        end
+        E  --> FINISH
+    end
+```
+
+
+``` mermaid
+
+flowchart LR
+    subgraph Populate depth layer
+        direction TB
+        A(Roll amount of nodes in layer)
+        --> B(Roll amount of `scatter` edges)
+        --> B1{Do we need more nodes in layer?}
+        -- yes 
+        --> С(Pick 1 direct predecessor for new node)
+        --> D{Is there 1 or more scatter edges to add?}
+        -- yes --> E(roll node for scatter edge <br>and add to direct predecessors list)
+        --> F{roll coin flip to stop adding scatter nodes}
+        -- yes--> I
+        F -- no --> D
+        -- no --> I[try create node]
+        --> G(decrement desired amount of nodes on layer<br> even if failed to generate)
+        --> B1
+        B1 -- no --> FINISH
+    end
+
+```
+
+``` mermaid
+
+flowchart TB
+    subgraph Try generate node
+        direction TB
+        subgraph P1[Preparation]
+            direction LR
+            A1("Get current node virtual budget: (sum of direct predecessor actual budgets + 2000 * depth) ")
+            --> A2(Pick triggers from list of remaining ones, for which current virtual budget fits into range)
+            --> A21{Do we have any triggers?}
+            -- no --> EMPTY(Return no node)
+            A21 -- yes --> A3("Roll trigger (with respect to weights but only between picked ones)")
+            --> A4("Remove rolled trigger from pool")
+            --> A5("Get current node actual budget: (sum of direct predecessors + actual budget of picked trigger)")
+            --> A6(Pick effects from list, for which current actual budget fits into range)
+            --> A7{Do we have any effects?}
+            -- no --> EMPTY
+            A7 -- yes --> A8("Roll effect (with respect to weights but only between picked ones)")
+        end
+        P1 --> P2
+        subgraph P2[Apply actual budget to node]
+            direction LR
+            B1(Spawn node entity and add it to container)
+            --> B2("Get point on scale of effect budget range, where node actual budget is placed - [actual budget placement]")
+            --> B3(Pick strategy for splitting bonus on effects)
+            --> B4(Get bonus amount for each modifier that current node supports and save it)
+            --> B5(Apply bonuses on node init - durability etc.)
+            --> C1(Apply trigger components and tip to node entity)
+        end
+    end
+```
+
+### Node graph generation
+
+Nodes are generated by picking trigger and effect from respective pools. Same trigger cannot occur more then once on artifact graph or there will be a possibility of overlapping, so list of triggers is getting exhausted as generation goes on.
+List of effects to be picked is list of possible entity prototypes, which will be spawned as nodes inside artifact, while list of triggers contain 1 component for each pick. 
+For unlocking mechanic to work properly all triggers are made unique, which means max size of artifact is amount of different triggers we have in pool. 
+
+**All of budget things is internal game mechanics and is not for player to view.**
+
+For balance we introduce concept of 'node budget'. 
+- Each trigger on the list gets 'budget range' and 'budget' assigned, according to how hard it is to activate by default (w/o interference).
+- Each effect on the list gets 'budget range' it can match to. Some effects can scale (give more resources), giving them greater range, while others cannot.
+- When rolling for trigger (and later for effect), current budget should be considered:
+1. Generation budget starts with 0 on each starting node - so we roll only triggers which have '0-*' in 'Budget range' (things like using tools, feeding artifact, using water etc)
+2. After picking trigger we get actual 'budget' from it (typically starting with 1500) - thats current node 'budget', then we roll for 'effect' that have this budget in its 'budget range'
+3. Now we can go for next node - it can be solo (have only our previous node as predessor) or have multiple tier 0 nodes. We get 'budget' from each of them and sum it up. 
+Then we add const (~2000) and multiply it by current tier (so for tier 1 node its 2000, for tier 2 its 4000 etc) as virtual trigger value, and the sum will be our expected budget by 
+which we search trigger (by trying to fit into budget-range) for current node. If we cannot find node with correct budget range - well, then we just not 
+create node in this segment any further - we reached peak complexity. But if we found trigger - yay! We now can replace our 'virtual additional value' by selected trigger budget.
+
+Sample of process:
+
+We rolled tree with 2 tier0 nodes, 1 tier2 nodes and 1 tier3 node. All tier0 nodes connect to tier1.
+1. We roll tier0 node from triggers with budget range 0-*, we get trigger with budget 1500
+2. We roll effect from effects with budget range which fit 1500
+3. We go to other tier0 node and repeat steps 1 and 2
+4. We calculate tier1 node virtual budget - 2*1500 (2 nodes of tier0 are direct predessors) + 2000 * 1 (its tier1 node) = 5000
+5. We roll trigger with budget range that contain 5000 (for example, trigger with range 5000->10 000) and replace virtual cost (2000) with its actual cost (for example 7500) making actual node budget 3000 (predessors sum) + 7500 = 10 500
+6. We roll effect with budget range that will contain 10 500
+7. We calculate tier2 node virtual budget - 10 500 (tier1 direct predessor) + 2000 * 2 (its tier2 node) = 14 500.
+8. We roll trigger with budget range that contain 14 500 (for example, trigger with range 10 000-> 30 000) and replace virtual cost (4000) with actual cost (for example 14 000) making actual node budget 10 500 + 14 000 = 24 500
+9. We roll effect with budget range that will contain 24 500
+
+### Meta-nodes
+
+To increase interactivity of artifacts and make them more versatile we add meta-nodes - nodes that have no effect by themselves, but change behaviour of other nodes. 
+They can have pretty streight-forward effect, like 'chance to not consume durability on use' or things for more mathematical approach (change position where effect going to be applied by N meters north).
+Meta-nodes are rare compared to normal nodes, and to make them more special - any manipulations with them are going to be much tougher - they cannot be repaired using glue, Resequencer have higher chance of failing with them, etc.
+
+Such nodes won't require unlocking and will just unlock automatically after unlocking of their predessor, but they will affect activations of only those nodes that are their successors.
+Meta-nodes also wont be affected by rule of 'only highest tier unlocked nodes are active nodes'.
+
+Meta-nodes require node activations to utilize shared context between one artifact activation.
 
 ### Activation and Unlocking Nodes
 The activation of an artifact is now something that is distinct from simply triggering a node in the old system.
@@ -112,13 +269,10 @@ This allows players to have a limited strategy for the nodes they want to unlock
 ### Handheld Scanner
 The handheld node scanner will be used to check information on the current active nodes of the artifact.
 
-Clicking on an artifact with the handheld scanner will take a "snapshot" of it which can be viewed in a UI.
-This gives similar info as the analysis console but is limited to the active nodes of the artifact.
+Clicking on an artifact with the handheld scanner will link it to artifact which then can be viewed in a UI.
+This gives similar info as the analysis console but is limited to the active nodes of the artifact and its current state.
 
 The scanner now gains a lot of utility as being able to quickly assess the state of an artifact without needing to bring it to science.
-Being able to check the durability also helps when actively using the effects on the go.
-
-The scanner also has the ability to view the node structure of artifact fragments, which can be useful for sifting through them when trying to splice artifacts.
 
 ### Artifexium
 Artifexium, which previously activated artifacts, will now serve as a "dummy" stimuli when applied during an activation period.
@@ -170,8 +324,6 @@ Note that the calculation for the last two points is based on the total number o
 If you destroy 2 nodes and then repair it by splicing 2 nodes onto it, you incur 0 penalty.
 
 To actually gain research from the artifact, you must place it on an analyzer and begin the 'research' task in the analysis console UI.
-This begins a 30 second countdown where the artifact must remain on the analyzer, cannot be activated, cannot have any stimuli trigger, and the analyzer must remain powered.
+Extracting points works only once per node, and uses all of node durability - so console asks for confirmation before extracting points.
 
 This provides an interesting window wherein sabotage and other such measures can be taken to steal the artifact or otherwise interrupt science.
-
-At the end of this countdown, the research is added into the server and a glorious sound effect plays.
