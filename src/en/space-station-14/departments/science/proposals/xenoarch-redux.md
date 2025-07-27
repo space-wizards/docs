@@ -83,9 +83,10 @@ All remaining nodes are simply locked and have no behavior.
 |Node effect| Actions that artifact will perform after node activation. Can be useful, useless, harmful or annoying|
 |Node activation| invoking effect of node. Can be done by manual interaction, usually is done upon unlocking node. **Manual activation invokes all active nodes in artifact.**|
 |Node unlocking| opening node for future activations. Can be done by executing list of triggers on the node (which is list of trigger on node and all chain of predecessors, connected to it by edges) |
-|Active node| Active are nodes which are both 'unlocked' and are last in chain of unlocked nodes, connected by edges|
+|Active node| Active are nodes which are both 'unlocked' and are last in chain of unlocked nodes, connected by edges (nodes with most depth). Only active nodes effects are invoked when artifact is activated.|
 |Budget range| Min and max values, between which acceptable range of budget lies. Both triggers and effects have budget range, each of them have own values|
-|Virtual budget|Proposed amount of score node could have, based on predecessor and depth. Can be used to pick trigger which then decides actual budget|
+|Trigger budget|Score for how hard this trigger is. The harder trigger condition is, the greater trigger budget should be.|
+|Virtual budget|Proposed amount of score node could have, based on predecessor and depth. Can be used to pick trigger (should be withing its 'Budget range') which then decides 'actual budget' (by adding 'Trigger budget')|
 |Actual budget| Score-estimate of how 'valuable' this node is. Increases with depth and amount of predecessors. |
 |Aspect of effect| Separate part of node effect that, amount of which can be changed. Like range of teleportation can be increased or decreased.|
 |Placement in budget| Floating point value from -1 to 1. Amount of buff or debuff that node should receieve. Calculated using 'actual budget' of node and its effect 'budget range'. Exact amount certain aspect should get is determined by strategy.|
@@ -121,12 +122,15 @@ Once unlocked, the node's effect will occur while a small animation and sound ef
 
 ### Graph generation
 
+Following diagrams describe procedure of how node graph is generated for each artifact upon spawning.
+Rolling all numbers is usually decided by pre-sets, fixed on XenoArtifactComponent (MinMax values for amount of nodes, segments, etc) or by current context (cannot connect node to more predecessors then nodes we have on previous layers)
+
 ``` mermaid
 flowchart TD
     subgraph Generate graph
         direction LR
-        A(1.Roll amount of nodes artifact would like to have - rolled from artifact MinMax)
-        --> B(2.Extract list of triggers and effects that can be used during node generation) 
+        A(Roll amount of nodes artifact would like to have)
+        --> B(Extract list of triggers and effects that can be used during node generation) 
         --> C[Generate graph segment]
         --> D{Is nodes count in segment equal to zero}
         -- no --> E{Is total nodes count equals desired node count}
