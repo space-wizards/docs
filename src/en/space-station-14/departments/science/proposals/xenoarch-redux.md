@@ -14,8 +14,8 @@ This proposal aims to re-imagine the science subdepartment of XenoArch and Artif
 This will be accomplished by changing node traversal to add more player agency, improving in-game tools for categorizing and understanding artifact structure, and adding additional equipment that makes manipulation more interesting.
 
 The ultimate goal is to redesign the system so players can better understand how artifacts work and to allow greater utility and mechanics to arise out of artifacts.
-XenoArch should feel like unlocking the sprawling secrets of an artifact while additionally gaining points as a secondary reward for the research. Artifacts also should start being viewed not just thing that belongs only to lab, 
-but sometimes as useful tool for other crew members, increasing sci-to-other-departments interactions.
+XenoArch should feel like unlocking the sprawling secrets of an artifact while additionally gaining points as a secondary reward for the research. Artifacts should not be viewed as thing that belongs only to lab, 
+but rather as useful tool for all crew members, increasing sci-to-other-departments interactions.
 
 _This redesign lends partial inspiration to Goon's artlab as well as Noita's customizable wands._
 
@@ -74,8 +74,8 @@ All remaining nodes are simply locked and have no behavior.
 
 ### List of terms
 
-| term|explnation|
-| | |
+| Term | Explnation |
+|-----------------|---|
 |Node| Point in graph of nodes, contains trigger for its unlocking, effect that will be invoked upon activation, tips, aspect modifiers, budget info|
 |Segment| Separated acyclic directed graph of nodes. One artifact can contain more then one segment.|
 |Layer/depth| Row in node graph. Starts with 0 at the bottom, with easier nodes and more or less useless/weak effects, and in deeper layers triggers gets harder and effects gets more powerful, dangerous and valuable|
