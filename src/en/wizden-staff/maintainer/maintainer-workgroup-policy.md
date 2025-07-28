@@ -131,25 +131,3 @@ Workgroup members cannot self-approve their own pull requests changing their own
 
 ### Inter-workgroup Collaboration
 Workgroups are encouraged to discuss with each other and make sure the various goals or features they implement align or compliment each other. Workgroups can either discuss this in the upstream Discord or save discussion for a dedicated maintainer meeting topic.
-
-## Justification
-At the time of this document's creation (July 14, 2025), upstream Space Station 14's direction has largely halted and is undefined.
-Discussions involving a design direction (ex. discussing the future of antagonists, departments, or large features) stall frequently or generate a lot of unnecessary friction.
-
-This is largely due to the problem of having "too many cooks in the kitchen" so to speak.
-There are a lot of Maintainers and Project Managers that have their own opinion or idea as to what something should be.
-Furthermore, these Maintainers or Project Managers hold beliefs that aren't written down or are hard to refer back to.
-This leads to even more friction when contributors work on their favourite department or want to implement a feature, as the contributor doesn't know what Maintainers want.
-
-Currently, the upstream repository has ~800 pull requests that need reviewing.
-Some of these pull requests are features that are not desired, or don't contribute well to a larger defined goal of what a game area should be.
-Simply merging these pull requests would lead to content bloat that crowds and distorts what an area should be—and closing them currently requires the input of two Maintainers that agree on the closure.
-If they don't agree, a long voting process is started which draws out the process (and, to be honest, nobody wants to do them).
-
-We can review more and more and more pull requests; however, unless upstream establishes some sort of design direction or works to push contributors towards making changes we want, the pull requests will just keep on coming.
-Hiring more maintainers is good, but real leadership and direction is needed.
-
-### Previous Implementation
-Workgroups previously existed in the project, however, they were extremely passive and fell out of relevance.
-These workgroups also contained members that did not frequently work on or play these departments.
-This is undesirable—the leaders of workgroups should know firsthand what they're working with and what it should look like in the future.
