@@ -339,6 +339,7 @@ Staff
   - [Adding New Maintainers](en/wizden-staff/maintainer/adding-new-maintainers.md)
   - [Useful Maintainer Tools](en/wizden-staff/maintainer/maintainer-tools.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
+  - [Workgroup Policy](en/wizden-staff/maintainer/maintainer-workgroup-policy.md)
   - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
   - [Review Whitelist](en/wizden-staff/maintainer/review-whitelist.md)
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
