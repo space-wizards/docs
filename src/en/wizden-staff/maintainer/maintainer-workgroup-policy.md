@@ -106,7 +106,7 @@ Conflicts on pull requests that are internal to the workgroup are subjected to t
 
 ### Design Documents
 Workgroups are encouraged to make design documents for their game area.
-View the [Game Area Design Document Template](../../general-development/game-area-design-doc.md) and the [Department Design Document Template](../../templates-docs/department-design-template.md) for a good document basis.
+View the [Game Area Design Document Template](../../general-development/game-area-design-doc.md) and the Department Design Document Template on each drafted department for a good document basis.
 
 When a workgroup creates a design document, it is said to be owned by that workgroup.
 
