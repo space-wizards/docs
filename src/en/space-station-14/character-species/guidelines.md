@@ -175,7 +175,7 @@ Species **must not** use a design theme that would non-trivially interact with a
 
 For this rule, it's important to remember the difference between species *design* and a species *mechanic*. It **is** acceptable for a species to be, as designed, having a downside like "poor eyesight", as long as that is technically feasible to be done without causing issue (see rule 7 above). It is **not** acceptable for species design to be unimplementable without causing an accessbility issue.
 
-For example: a player is red-green colorblind. A species that has mandatory red-green colorblindness would therefore not impact that player at all. Colorblindness is more suitable as a character trait than a species one.
+For example: a player is red-green colorblind. A species that has mandatory red-green colorblindness would therefore not impact that player at all. Likewise, a player with yellow-blue colorblindness would be much more seriously impacted. Colorblindness is more suitable as a character trait than a species one.
 
 A player may suffer from severe motion sickness when certain camera movements occur. A species that requires adding jerky camera movements, or other distracting visual effects, could prevent some players playing that species, which is unfair.
 
