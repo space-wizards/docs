@@ -337,6 +337,7 @@ Staff
 - [Project Manager](en/wizden-staff/projectmanager.md)
 - [Maintainer](en/wizden-staff/maintainer.md)
   - [Adding New Maintainers](en/wizden-staff/maintainer/adding-new-maintainers.md)
+  - [Changing Maintainer Policy](en/wizden-staff/maintainer/changing-maintainer-policy.md)
   - [Useful Maintainer Tools](en/wizden-staff/maintainer/maintainer-tools.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
   - [Workgroup Policy](en/wizden-staff/maintainer/maintainer-workgroup-policy.md)
