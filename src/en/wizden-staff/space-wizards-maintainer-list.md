@@ -55,3 +55,12 @@ Content Maintainers:
 
 Engine maintainers:
 No one maintains only engine :p
+
+## List of Workgroups
+
+Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintainer-workgroup-policy.md) are listed below.
+
+**Engineering/Atmospherics**
+- ArtisticRoomba
+- Slarticodefast
+- notafet (Pending)
