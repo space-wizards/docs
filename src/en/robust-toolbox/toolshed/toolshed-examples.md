@@ -1,13 +1,13 @@
 # Toolshed Examples
 
-This guide covers some basic examples of Toolshed commands.
+This guide covers some examples of Toolshed commands. Note that several of these commands & referenced C# types are specific to SS14, but they still provide a good overview of how to use Toolshed for other games.
 
 ## Interacting with entities
 
-Most of the time that you are interacting with toolshead you are manipulating entities in some way.
+Most of the time that you are interacting with Toolshed you are manipulating entities in some way.
 
 ### Basics
-`ent` is a toolshed command that allows us to return an entity with the provided ENTID. By pipeing the output of the command, we can use it to various things on the entity. Some examples include:
+`ent` is a Toolshed command that allows us to return an entity with the provided ENTID. By pipeing the output of the command, we can use it to various things on the entity. Some examples include:
 
 ```
 > ent 12345 delete
@@ -26,7 +26,7 @@ Will check if the entity has the "Mindshield" component and add it if needed, th
 
 ### Targeting yourself
 
-`self` will always return the entity currently controlled by you.
+The `self` command will always return the entity currently controlled by you. Alternatively, you can also use the `$self` variable.
 
 ```
 > self rejuvenate / Will heal your character
@@ -99,9 +99,9 @@ actor:controlled
 Takes in a list of entities and will return all entities that are currently controlled by a player.
 
 ```
-> entities actor:controlled tp:to self
+> entities actor:controlled tp:to $self
 ```
-`self` can also be used as an argument - this will teleport all players to your location.
+Above, the `$self` variable is being used as a command argument - this will teleport all players to your location.
 
 ```
 select [N]
@@ -115,7 +115,7 @@ Takes in a list of entities and will select a percentage of the input.
 
 Combining filters together we can do as follows:
 ```
-> entities actor:controlled select 5 tp:to self
+> entities actor:controlled select 5 tp:to $self
 ```
 Will teleport 5 randomly selected players to the entity you are currently controlling.
 
