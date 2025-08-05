@@ -229,7 +229,7 @@ Consulting and working with players when wanting to change a species has several
 2. Ideas can be generated that are more diverse than what can be thought up by the maintainers.
 3. Ideas can be tested and "run past" players before potentially lengthy maintenance work is done, preventing wasted time.
 
-In general, maintaining a place for interested players to talk about the changes, where players can keep track of what is happening with the changes, and where feedback can be sought, is a good idea. This is a good use of a Discord thread.
+In general, maintaining a place for interested players to talk about the changes, where players can keep track of what is happening with the changes, and where feedback can be sought, is a good idea. This is a good use of a forum thread on our [development design discussion section](https://forum.spacestation14.com/c/development/design-discussions/65). Discord threads are not recommended, as they tend to get side-tracked and are hard to catch up on discussion on, but they can work to support a Discourse thread.
 
 ## Removal of a Species Outright Should Be Rare
 
