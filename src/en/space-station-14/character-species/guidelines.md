@@ -116,7 +116,7 @@ For example: a species suffers from oxygen poisoning. This means they must wear 
 If a species is significantly challenging to play as, compared to normal round-start species, the following rules apply:
 - It **must not** be able to be selected round-start by new players without clear warnings and tutorialization in place.
 - It **should not** be able to be picked if a random species is chosen for a midround ghost role. 
-- It **should** be given careful consideration on its impact on certain team antagonists, such as Nuclear Operatives, if that species is played as one of the team. (For example, a species that cannot wear shoes may be significantly disadvantaging to a Nuclear Operative team that can't provide that species with access to slip resistance othererwise.)
+- It **should** be given careful consideration on its impact on certain team antagonists, such as Nuclear Operatives, if that species is played as one of the team. (For example, a species that cannot wear shoes may be significantly disadvantaging to a Nuclear Operative team that can't provide that species with access to slip resistance.)
  
 Deliberately challenging species must **not** be designed in such a way as to promote speciesism (see Rule 4 above).
 
@@ -213,8 +213,8 @@ Likewise, adding new design pillars to an existing species must be done carefull
 When maintaining a round-start species, the goals of the maintenance should be one or more of the following:
 
 1. To improve the species so that its in-game presence more closely aligns to its intended design.
-2. To 'lean in' to how players have engaged with the species to reflect the evolution of the game over time.
-3. To update the species's core design principles to alignment with how Space Station 14 has evolved.
+2. To 'lean in' to how players have engaged with the species to reflect the cultural evolution of the game over time.
+3. To update the species's core design principles to alignment with how Space Station 14 has mechanically evolved.
 4. To resolve standing issues with the design, such as an emergent issue not noticed during the species' introduction.
 5. To bring legacy species from before this policy document was created up to the standards of this policy document.
 
@@ -235,4 +235,4 @@ In general, maintaining a place for interested players to talk about the changes
 
 A species is the first and most important choice a player makes when building a Space Station 14 character. As such, removing species from the game effectively involves deleting player characters. This sort of change can be controversial, and must be handled responsibly.
 
-Outright removal of a species that has been deployed outside of an event (such as April Fool's) or a test-merge to Vulture **must be** handled carefully and given proper consideration. Even if a species is strongly disliked by many maintainers, it is not automatically a given that the removal of that species would be welcomed by players.
+Outright removal of a species that has been deployed outside of an event (such as April Fools or Christmas) or a test-merge to Vulture **must be** handled carefully and given proper consideration. Even if a species is strongly disliked by many maintainers, it is not automatically a given that the removal of that species would be welcomed by players.
