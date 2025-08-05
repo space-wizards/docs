@@ -33,6 +33,13 @@ After the PR is merged, a maintainer should make a post in the [breaking changes
 This consists only of the breaking changes section from the PR itself as well as a link to the PR.
 
 ## Decision Policy
+```admonish info "Exceptions on Maintainer Workgroups"
+[Maintainer Workgroups](maintainer-workgroup-policy.md) have exceptions to policy regarding decisions and discussions.
+This is intended to help expedite pull requests and maintain a design direction, by directing applicable pull requests to their relevant maintainer workgroups.
+
+Exceptions to policy are listed where applicable.
+```
+
 2 Maintainers are required to sign off on decisions about a PR.
 One of the sign-offs may come from a maintainer who is an author or collaborator for the PR, but the other maintainer must be uninvolved.
 
@@ -40,6 +47,7 @@ To merge a PR, **all** the following conditions must be met:
 - The PR must receive 2 approvals for both **Code** and **Design**, given in the form of an approval checkmark on the PR's Github page.
 A checkmark is assumed to indicate approval for both code and design, unless stated otherwise by the approver.
 A PR created by a maintainer is assumed to have their implicit approval.
+  - If a PR's changes primarily target a game area that belongs to a Maintainer Workgroup, the PR must receive at least one approval from a maintainer belonging to that workgroup. If the author is a workgroup member, they cannot self-approve for design.
 
 
 - All outstanding maintainer change requests must be resolved.
@@ -70,7 +78,10 @@ This can be expressed either on the PR itself, or privately.
 
 If a PR is closed, the maintainer must leave a message indicating the reason for its closure.
 This should be a formal message that includes all relevant information.
-If a maintainer discussion was held, it should be summarized and included here. 
+If a maintainer discussion was held, it should be summarized and included here.
+
+If a PR is closed belonging to a game area controlled by a maintainer workgroup, these reasons **must** be citable from any merged design document.
+If a reason cannot be cited from any merged design document, the design document **must** be amended to include these reasons.
 
 If there is disagreement between two maintainers about whether a PR should be merged or closed, a discussion should be held as described in the "Discussion Policy" section.
 
@@ -125,37 +136,49 @@ They can be used both when there are disagreements regarding a PR and when a mai
 PRs actively undergoing a maintainer discussion should not be merged.
 
 To begin the discussion process, add the `S: Undergoing Maintainer Discussion` tag.
-The maintainer should then create a post in the `#maint-reviews` discord channel with the PR's name, number, link, and appropriate tags.
+The maintainer should then create a Topic in the `PR Reviews` Discourse Category with the PR's name, number, link, and appropriate tags.
 
 Discussion can then proceed with maintainers and admins giving opinions and coming to a conclusion or compromise.
+
+Votes started on a PR that affects a game area controlled by a maintainer workgroup must reach a supermajority (66%) instead of a simple majority.
+
+If the vote was started to settle a disagreement between two members of the same maintainer workgroup, the discussion policy is to be followed normally.
+
 Once a conclusion is reached or regular discussion ceases, one of the following must occur:
-- If the discussion was created due a disagreement in the PR decision,
-
-
-- - If a definitive decision was reached (Approve/Close), then it should be acted upon by a maintainer.
-
-
-- - If a compromise within the scope of the PR is reached, then the PR should be approved once the compromise is implemented.
+- If the discussion was created due to a disagreement in the PR decision,
+  - If a definitive decision was reached (Approve/Close), then it should be acted upon by a maintainer.
+  - If a compromise within the scope of the PR is reached, then the PR should be approved once the compromise is implemented.
 Inability/refusal to implement the compromise should result in the closure of the PR.
-
-
-- - If no definitive decision was reached, then the PR should be closed.
-
-  
+  - If no definitive decision was reached, then the PR should be closed.
 - If the discussion was _not_ created due to a disagreement in the PR decision,
-
-
-- - If a definitive decision or reasonable compromise was reached, then it should be acted upon and/or implemented.
-
-
-- - If no definitive decision was reached, the maintainer who created the discussion may choose to resolve the PR as they see fit. 
-
+  - If a definitive decision or reasonable compromise was reached, then it should be acted upon and/or implemented.
+  - If no definitive decision was reached, the maintainer who created the discussion may choose to resolve the PR as they see fit.
 
 A positive conclusion should be indicated on the PR with the `S: Conceptual Approval` tag.
 This replaces the need for 2 design approvals (though the code still needs to be separately reviewed) and allows the PR to be merged.
 
 If the discussion has a negative conclusion, the closure message for the PR should include a brief summary of the discussion.
 This should have information about the elements that need to be addressed if a subsequent PR were to be made.
+
+## Docs Repo
+For PRs made to the [Space Station 14 Docs Repo](https://github.com/space-wizards/docs), the above policy is to be used unless specified otherwise.
+
+### Design Doc Process
+
+For design documents proposing new features to be added to the game, the normal 2-approval system is used. 
+Once it is approved, however, it should not be merged and instead marked with the `S: Doc Approved` label. 
+This lets the author know that the design has initial approval, and they are good to start on the content PR. 
+
+Once the content-side implementation is ready to be merged, ensure that the doc PR is updated to reflect relevant information and changes to the content PR.
+Afterward, both PRs can be merged at once.
+
+### Other
+
+For PRs which update instructional or reference documentation (_including but not limited to setup guides, style guides, system documentation_), only a single approval is needed before it can be merged.
+Likewise, only a single maintainer needs to express concern to close it.
+
+Note that this does not apply to changes to internal procedure or other modifications which require voting or group deliberation.
+
 
 ## Review Guidelines
 The following are general guidelines to follow when reviewing PRs. 
