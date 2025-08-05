@@ -34,7 +34,8 @@ All species must be considered fairly and equally for proposal, implementation a
 6. A species must not represent a new challenge to moderation and adminning.
 7. A species must be technically feasible to implement and maintain.
 8. A species must not entirely circumvent one or more common gameplay elements of Space Station 14 without a suitable replacement.
-9. A species must not be designed with a specific, critical flaw that, without that flaw, would make the species overpowered compared to other species
+9. A species must not be designed with a specific, critical flaw that, without that flaw, would make the species overpowered compared to other species.
+10. A species must not cause accessibility problems for players (e.g. those that are hard-of-sight, hard-of-hearing, or sensitive to certain visual effects).
 
 # Rules Details
 
@@ -167,6 +168,18 @@ Species **must not** be balanced so as to be unusually powerful (so as to be str
 These species represent a balancing tightrope for maintainers, especially in a game with constantly-evolving content and balance, and such varied gameplay experiences round-to-round, such as Space Station 14.
 
 An example of being held back by only one thing would be a species that has an unusually high amount of effective health but a major weakness to being stunned. Such extreme designs often work on paper, and may even work in practice on first implementation, but are vulnerable to being exploited by players past the point of being fun. In this example, the weakness to being stunned may be so bad as to make combat against the species entirely one-dimensional, or via the collection and use of specific in-game items and mechanics be evaded entirely, creating a species that requires a draining series of hotfixes and patches to bring back to effective parity.
+
+### Rule 10: Accessibility
+
+Species **must not** use a design theme that would non-trivially interact with a player's in-real-life disability or condition.
+
+For this rule, it's important to remember the difference between species *design* and a species *mechanic*. It **is** acceptable for a species to be, as designed, having a downside like "poor eyesight", as long as that is technically feasible to be done without causing issue (see rule 7 above). It is **not** acceptable for species design to be unimplementable without causing an accessbility issue.
+
+For example: a player is red-green colorblind. A species that has mandatory red-green colorblindness would therefore not impact that player at all. Colorblindness is more suitable as a character trait than a species one.
+
+A player may suffer from severe motion sickness when certain camera movements occur. A species that requires adding jerky camera movements, or other distracting visual effects, could prevent some players playing that species, which is unfair.
+
+A player may be visually sensitive to flashes (e.g. they have epilepsy). For obvious reasons, a species that causes the screen to flash would be extremelty unfair to that player.
 
 # What To Do If Your Species Is Declined
 
