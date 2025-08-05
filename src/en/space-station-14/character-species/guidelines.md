@@ -179,7 +179,7 @@ For example: a player is red-green colorblind. A species that has mandatory red-
 
 A player may suffer from severe motion sickness when certain camera movements occur. A species that requires adding jerky camera movements, or other distracting visual effects, could prevent some players playing that species, which is unfair.
 
-A player may be visually sensitive to flashes (e.g. they have epilepsy). For obvious reasons, a species that causes the screen to flash would be extremelty unfair to that player.
+A player may be visually sensitive to flashes (e.g. they have epilepsy). For obvious reasons, a species that causes the screen to flash would be unfair to that player.
 
 # What To Do If Your Species Is Declined
 
