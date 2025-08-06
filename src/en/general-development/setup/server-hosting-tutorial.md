@@ -6,13 +6,13 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ```admonish danger title="Pre-Packaged server builds should not be used for custom content"
 The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
-If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
+If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code). Doing so otherwise will probably result in a broken server and we will be unable to provide support for such issues.
 ```
 
 1. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
 2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
 3. Extract the downloaded zip to a directory somewhere, you may use any Archive program such as 7Zip, Winrar or even the one built into Windows.
-4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux)) and wait until the console windows says "Ready".
+4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux)) and wait until the console windows says "Ready". Do NOT close the console window until you are done playing on your server.
 5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` as an IP address and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button using the same IP address.
 6. When there is a new update. Go back to the 2nd step, and copy over the ``data`` folder and ``server_config.toml`` (if you modified it) from your old server files to the new server files.
 
@@ -30,9 +30,9 @@ The server needs network ports to be forwarded so that people can connect. By de
 * UDP `1212` is used for main game netcode. This is necessary for the *client* to be able to connect to the server. This can be configured with the `net.port` configuration variable.
 * TCP `1212` is a HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
 
-For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
+For more information about how to forward your ports and what to do if you are having issues, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6 try both if one fails.
+After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6, try both if one fails.
 
 Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
 
@@ -144,7 +144,7 @@ By default, the server ships with no rules. To set custom rules for your own ser
     # server_url = "ss14://..."
     tags = "" # comma separated list of tags
     ```
-If you get an error attempting to advertise please read [the troubleshooting bellow](#Troubleshooting)
+If you get an error attempting to advertise, please read [the troubleshooting below](#Troubleshooting)
 
 ### Bare Server Build Configuration
 
@@ -359,6 +359,20 @@ People aren't able to connect to your server OR you get the following error in y
 ```
 
 This means your server is not accessible from the outside internet. Make sure you have followed the guide to [Port Forwarding](../../server-hosting/port-forwarding.md).
+
+### Auth/hub country internet blocking
+
+Some countries (e.g. Russia) currently have internet blocks active that may interfere with your server's ability to connect to hub services. If this is a problem for you, you can attempt to set the following config properties to use fallback services:
+
+```toml
+[auth]
+server = "https://auth.fallback.spacestation14.com/"
+
+[hub]
+hub_urls = "https://hub.fallback.spacestation14.com/"
+```
+
+These configurations do not affect players, the launcher and game client use fallbacks wherever possible by default.
 
 ### SS14.Watchdog
 

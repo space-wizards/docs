@@ -41,6 +41,7 @@ General Development
 - [Work Groups](en/general-development/work-groups.md)
 - [Game Area Design Documents](en/general-development/game-area-design-doc.md)
 - [Contributing Translations](en/general-development/contributing-translations.md)
+- [Github Moderation Guidelines](en/general-development/github-moderation-guidelines.md)
 
 SS14 By Example
 ===============
@@ -72,15 +73,19 @@ Robust Toolbox
   - [Physics](en/robust-toolbox/transform/physics.md)
   - [Grids](en/robust-toolbox/transform/grids.md)
 - [Toolshed](en/robust-toolbox/toolshed.md)
+  - [Variables](en/robust-toolbox/toolshed/variables.md)
+  - [Blocks](en/robust-toolbox/toolshed/blocks.md)
   - [Types](en/robust-toolbox/toolshed/types.md)
-  - [Toolshed and (S)CSI](en/robust-toolbox/toolshed/toolshed-and-scsi.md)
-  - [Environments](en/robust-toolbox/toolshed/environments.md)
-  - [Invocation contexts](en/robust-toolbox/toolshed/invocation-contexts.md)
   - [Commands](en/robust-toolbox/toolshed/commands.md)
+    - [Emplace & Do](en/robust-toolbox/toolshed/commands/emplace.md)
     - [Entities](en/robust-toolbox/toolshed/commands/entity-control.md)
     - [General](en/robust-toolbox/toolshed/commands/general.md)
     - [Miscellaneous](en/robust-toolbox/toolshed/commands/misc.md)
   - [Toolshed Examples](en/robust-toolbox/toolshed/toolshed-examples.md)
+  - [Development](en/robust-toolbox/toolshed/development.md)
+    - [Toolshed and (S)CSI](en/robust-toolbox/toolshed/toolshed-and-scsi.md)
+    - [Environments](en/robust-toolbox/toolshed/environments.md)
+    - [Invocation contexts](en/robust-toolbox/toolshed/invocation-contexts.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
 - [IoC](en/robust-toolbox/ioc.md)
 - [Rendering]()
@@ -181,6 +186,8 @@ Space Station 14
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
+		- [Xenoborgs](en/space-station-14/round-flow/antagonists/Xenoborgs.md)
+		- [Pursuer](en/space-station-14/round-flow/antagonists/pursuer.md)
 
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
@@ -192,6 +199,7 @@ Space Station 14
 		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		- [Paradox Clone](en/space-station-14/round-flow/proposals/paradox-clone.md)
 		- [Revolutionaries Rework](en/space-station-14/round-flow/proposals/revolutionaries-codeword-rework.md)
+		- [Tourists](en/space-station-14/round-flow/proposals/tourists.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines](en/space-station-14/user-interface/guidelines.md)
@@ -220,7 +228,6 @@ Space Station 14
 	- [Engineering](en/space-station-14/departments/engineering.md)
 		- [PR Guidelines](en/space-station-14/departments/engineering/guidelines.md)
 		
-		- [Machine Upgrading Rework](en/space-station-14/departments/engineering/proposals/machine-upgrading-rework.md)
 		- [Pow3r](en/space-station-14/departments/engineering/pow3r.md)
 
 		- [Proposals]()
@@ -275,7 +282,7 @@ Server Hosting
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
-- [Setting up a Discord Bot](en/server-hosting/setting-up-redbot.md)
+- [Setting up Discord Integration](en/server-hosting/setting-up-discord-integration.md)
 - [Maintenance]()
   - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
@@ -329,19 +336,35 @@ Staff
 ----------------------
 - [Project Manager](en/wizden-staff/projectmanager.md)
 - [Maintainer](en/wizden-staff/maintainer.md)
+  - [Adding New Maintainers](en/wizden-staff/maintainer/adding-new-maintainers.md)
+  - [Changing Maintainer Policy](en/wizden-staff/maintainer/changing-maintainer-policy.md)
+  - [Useful Maintainer Tools](en/wizden-staff/maintainer/maintainer-tools.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
+  - [Workgroup Policy](en/wizden-staff/maintainer/maintainer-workgroup-policy.md)
   - [Reviewing Procedure](en/wizden-staff/maintainer/review-procedure.md)
+  - [Review Whitelist](en/wizden-staff/maintainer/review-whitelist.md)
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
   - [Triage Procedure](en/wizden-staff/maintainer/triage-procedure.md)
 - [Space Wizards Role Hierarchy](en/wizden-staff/space-wizards-role-hierarchy.md)
 - [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
 - [Staff Policy](en/wizden-staff/staff-policy.md)
 - [Staff Conflict Resolution](en/wizden-staff/staff-conflict-resolution.md)
+- [Internal Affairs Team](en/wizden-staff/internal-affairs-team.md)
 
 Maintainer Meetings
 ==============
 
 ----------------------
+
+- [2025-08-02](en/maintainer-meetings/maintainer-meeting-2025-08-02.md)
+- [2025-07-19](en/maintainer-meetings/maintainer-meeting-2025-07-19.md)
+- [2025-07-05](en/maintainer-meetings/maintainer-meeting-2025-07-05.md)
+- [2025-06-07](en/maintainer-meetings/maintainer-meeting-2025-06-07.md)
+- [2025-05-10](en/maintainer-meetings/maintainer-meeting-2025-05-10.md)
+- [2025-04-27](en/maintainer-meetings/maintainer-meeting-2025-04-27.md)
+- [2025-04-12](en/maintainer-meetings/maintainer-meeting-2025-04-12.md)
+- [2025-03-29](en/maintainer-meetings/maintainer-meeting-2025-03-29.md)
+- [2025-03-15](en/maintainer-meetings/maintainer-meeting-2025-03-15.md)
 - [2025-03-01](en/maintainer-meetings/maintainer-meeting-2025-03-01.md)
 - [2025-02-15](en/maintainer-meetings/maintainer-meeting-2025-02-15.md)
 - [2025-02-01](en/maintainer-meetings/maintainer-meeting-2025-02-01.md)
@@ -400,6 +423,7 @@ Admin Meetings
 ==============
 
 ----------------------
+- [2025-04-06](en/admin-meetings/admin-meeting-2025-04-06.md)
 - [2024-05-18](en/admin-meetings/admin-meeting-2024-05-18.md)
 - [2024-04-27](en/admin-meetings/admin-meeting-2024-04-27.md)
 - [2024-03-30](en/admin-meetings/admin-meeting-2024-03-30.md)

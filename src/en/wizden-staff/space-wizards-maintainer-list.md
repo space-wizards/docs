@@ -42,11 +42,25 @@ Content Maintainers:
 - [SlamBamActionman](https://github.com/SlamBamActionman) - @slambamactionman (91969935848251392)
 - [SaphireLattice](https://github.com/SaphireLattice) - @saphire (107368676348416000)
 - [Boaz1111](https://github.com/Boaz1111) - @Boaz1111 (759321681083760651)
-- [Aeshus](https://github.com/Aeshus) - @aeshus (865364145330454538)
 - [Simyon264](https://github.com/Simyon264) - @simyon (327840918482714626)
 - [beck-thompson](https://github.com/beck-thompson) - @orks_are_da_best (774424468117782578)
 - [ScarKy0](https://github.com/ScarKy0) - @ScarKy0 (249858047583846401)
 - [MilonPL](https://github.com/MilonPL) - @milonn (869364265453244467)
+- [EmoGarbage404](https://github.com/EmoGarbage404) - @emogarbage (500128901805244436)
+- [ArtisticRoomba](https://github.com/ArtisticRoomba) - @artisticroomba (204036558448230400)
+- [Fildrance](https://github.com/Fildrance) - @fildrance (206823676983771137)
+- [sowelipililimute](https://github.com/sowelipililimute) - @akesima (249987062084665344)
+- [Southbridge-fur](https://github.com/Southbridge-fur) - @southbridge (84761021129973760)
+- [Princess-Cheeseballs](https://github.com/Princess-Cheeseballs) - @princesscheeseballs (122847949205143553)
 
 Engine maintainers:
 No one maintains only engine :p
+
+## List of Workgroups
+
+Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintainer-workgroup-policy.md) are listed below.
+
+**Engineering/Atmospherics**
+- ArtisticRoomba
+- Slarticodefast
+- notafet (Pending)
