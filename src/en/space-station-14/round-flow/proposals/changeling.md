@@ -1,8 +1,7 @@
-:::info
+```admonish warning
 This design doc is currently actively being rewritten and should not be used as the basis for a PR. IF you are intersted in helping out contact Slarti and Scarky first, who are leading the changeling strike group.
 Also check the [changeling development tracker issue](https://github.com/space-wizards/space-station-14/issues/39439) where we will list current bugs and the next steps in the development.
-:::
-
+```
 # Changeling antagonist
 
 | Designers            | Implemented | GitHub Links |
