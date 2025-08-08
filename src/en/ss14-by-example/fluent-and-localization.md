@@ -190,6 +190,12 @@ Look! no YAML definition for name or desc!
 ## Advice
 - ***INDENT WITH SPACES, NOT TABS***
     - Fluent treats tabs literally, so they can't be used for indentation
+- To start a message's line with a formatting tag like `[bold]`, you will need
+  to escape the opening square bracket:
+  ```
+  my-formatted-message =
+      {"["}bold]some bold text[/bold]
+  ```
 - Fluent's [Syntax Guide.](https://www.projectfluent.org/fluent/guide/)
 - Fluent's [Good Practices.](https://github.com/projectfluent/fluent/wiki/Good-Practices-for-Developers)
 - SS14-specific, we recommend prefixing all messages with something relevant to the context they're used in, this helps keep the messageIds unique (a requiement) and also serves to "namespace" messages.
