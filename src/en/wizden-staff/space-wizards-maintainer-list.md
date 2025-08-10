@@ -63,4 +63,9 @@ Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintain
 **Engineering/Atmospherics**
 - ArtisticRoomba
 - Slarticodefast
-- notafet (Pending)
+- notafet
+
+**Combat**
+- SlamBamActionman
+- Keronshb
+- Southbridge-fur
