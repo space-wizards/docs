@@ -55,11 +55,7 @@ Atmospheric technicians start with their basic tools and are tasked with startin
 Since these tasks are both the first actions that need to be taken, and the most important, they should be easy to understand and perform, with players being able to quickly get a grasp of how the department works.
 Someone who just got transferred to Atmospherics, with limited experience in the department, should be able to perform these tasks without much trouble.
 
-To assist in this, atmospherics systems like distronet, wastenet, and recyclernet should be pre-mapped and ready to use.
-These systems can also be left in a half-completed state, with players needing to fill in the gaps and complete the systems themselves.
-Leaving these systems partially completed offers some benefits:
-- For new players, it introduces systems like the construction system.
-- For more experienced players, it allows them to experiment with the systems and create their own solutions to problems, without having to tear down existing systems.
+To assist in this, atmospherics systems like distronet, wastenet, and recyclernet should be pre-mapped and ready to use—the only thing they need to do should be turning them on.
 
 ### Mid-Round
 As the round progresses, Atmospherics will be faced with various challenges and problems that need to be solved.
