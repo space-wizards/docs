@@ -32,10 +32,6 @@ flowchart LR;
         NGasFilter[[N... Gas Filter]]
     end
 
-    OxygenGasFilter -- Filtered Oxygen ---> AirInletOxygen
-    NitrogenGasFilter -- Filtered Nitrogen --> AirInletNitrogen
-    PlasmaGasFilter -- Filtered Plasma --> AirInletPlasma
-
     subgraph GasStorage[Gas Storage Tanks]
         subgraph OxygenTank[Oxygen Tank]
             AirInletOxygen[Air Injector] -->
@@ -60,19 +56,13 @@ flowchart LR;
     end
 
     subgraph GasMixingSystem[Gas Mixing System]
-        PassiveVentOxygen -- Volumetric Pump --> GasMixer(Gas Mixer)
-        PassiveVentNitrogen -- Volumetric Pump --> GasMixer(Gas Mixer)
         GasMixer{Gas Mixer
         21% O2, 79% N2}
 
-        PassiveVentOxygen -- Volumetric Pump --> GasMixerPlasma
-        PassiveVentPlasma -- Volumetric Pump --> GasMixerPlasma
         GasMixerPlasma{Gas Mixer
         2.4% Plasma,
         97.6% N2}
     end
-
-    GasMixer --> AirInjectorMixingChamber
 
     subgraph AirMixingChamber[Air Mixing Chamber]
         AirSensor{{Air Sensor}} ~~~
@@ -94,10 +84,6 @@ flowchart LR;
         end
     end
 
-    TempInfoJunction( )
-    AirSensor -. Temperature Info .- TempInfoJunction -.->
-    HotsideAirAlarm & ColdsideAirAlarm
-
     subgraph BurnChamber[Burn Chamber]
         BurnChamberAirInjector[Air Injector] ~~~
         BurnChamberRadiatorArray[[Burn Chamber Radiator Array]] ~~~
@@ -109,33 +95,12 @@ flowchart LR;
         SpaceRadiatorArray[[Space Radiator Array]]
     end
 
-    GasMixerPlasma -- Puressure Pump --> BurnChamberAirInjector
-
     subgraph Station Atmospherics
         StationAirVent[Air Vent
         @ +110.325 kPa] -- Natural pressure-driven airflow -->
         AirScrubber[Air Scrubber
         @ 101.325 kPa]
     end
-
-    AirScrubber -- Station Wastenet -->
-    OxygenGasFilter
-
-    PassiveVentMixingChamber -- Station Distronet -->
-    StationAirVent
-
-    HotRadiatorArray -->
-    BurnChamberRadiatorArray -->
-    HotsideSignalValve -->
-    HotRadiatorArray
-
-    ColdRadiatorArray -->
-    SpaceRadiatorArray -->
-    ColdsideSignalValve -->
-    ColdRadiatorArray
-
-    TemperatureControlSystem ~~~ AirMixingChamber
-    AirMixingChamber ~~~ BurnChamber
 ```
 
 ### [Intuitive and Inter-Connected Simulation](../core-design.md) (Quasi-Realistic Simulation)
