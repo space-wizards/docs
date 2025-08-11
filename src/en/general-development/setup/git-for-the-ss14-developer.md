@@ -8,6 +8,8 @@ Here are some more resources for learning about Git:
 - [Oh shit, Git?!](https://ohshitgit.com/), a list of solutions to common git problems. This one will come in handy.
 - [Learn Git Branching](https://learngitbranching.js.org/). This one is interactive, and very in-depth, but you **will have learned Git by the end of it**. Recommended for intermediate Git users.
 
+You may also always ask for help in the official [Wizard's Den discord](https://discord.spacestation14.io) or the [fork agnostic developer bus discord](https://discord.gg/X3YCdGHpgF)
+
 ## 1. Setting up Git itself
 
 ```admonish danger "DO NOT USE GITKRAKEN"
@@ -33,6 +35,10 @@ Most IDEs have some form of Git integration as well. [JetBrains Rider](https://w
 While you're here, install `Python 3.7+` as well if you don't have it already. You can do that [here](https://www.python.org/) for Windows and Mac, and if you're on Linux you almost certainly have Python installed already. If you don't, figure it out yourself, dork!
 
 <hr>
+
+```admonish danger "Name and Email privacy"
+When [setting up your `user.name` and `user.email`](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity), know that these are publicly displayed on all commits that you create. If you want to keep your information private, you can set `user.name` to your username instead of your real name, and `user.email` to the one provided by GitHub when the [`Keep my email addresses private`](https://github.com/settings/emails#toggle_visibility) setting is checked in [GitHub Email Settings](https://github.com/settings/emails#primary_email_select_label).
+```
 
 Now that you have Git installed, I recommend you read up a bit on the basics of it first and get acquainted with whatever git client you're working with, whether its just command-line (Git Bash) or anything else.
 

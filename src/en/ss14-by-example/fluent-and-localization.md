@@ -98,6 +98,8 @@ The easiest to understand is `CAPITALIZE`, which just capitalizes the first lett
 
 The functions `GENDER()` and `PROPER()` return the grammatical gender (masculine, feminine, epicene, neuter) and the proper-ness of an entity respectively.
 
+The `POSS-NOUN` function returns the basic possessive form of whatever is passed in. This usually just means adding 's to the end, but will handle adding ' instead for words that end in the letter s. For example, `You laugh at { POSS-NOUN($ent) } joke` will handle "Bob's joke" and "Chris' joke".
+
 Functions also exist for determining the definite and indefinite articles that an entity should have--These functions are `THE`, which returns 'the' if the entity is proper and nothing otherwise, and `INDEFINITE`, which return either 'a' or 'an' depending on some complex rules.
 
 ```
@@ -188,6 +190,12 @@ Look! no YAML definition for name or desc!
 ## Advice
 - ***INDENT WITH SPACES, NOT TABS***
     - Fluent treats tabs literally, so they can't be used for indentation
+- To start a message's line with a formatting tag like `[bold]`, you will need
+  to escape the opening square bracket:
+  ```
+  my-formatted-message =
+      {"["}bold]some bold text[/bold]
+  ```
 - Fluent's [Syntax Guide.](https://www.projectfluent.org/fluent/guide/)
 - Fluent's [Good Practices.](https://github.com/projectfluent/fluent/wiki/Good-Practices-for-Developers)
 - SS14-specific, we recommend prefixing all messages with something relevant to the context they're used in, this helps keep the messageIds unique (a requiement) and also serves to "namespace" messages.

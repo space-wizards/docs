@@ -4,17 +4,21 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ## Level 0: Local Sandbox Server
 
-1. Download and install the [.NET 8 Runtime](https://dotnet.microsoft.com/download). You only need "x64" under "run console apps" not "hosting bundle" from the downloads page.
-2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards), for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#custom-code) section below.
-3. Extract that to a directory somewhere.
-4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux))
-5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button.
-6. When there is a new update. Go back to the second step and just overwrite the files to update your server.
-
-```admonish info
-If you ever wish to develop for the game. You will need a [proper development environment](./setting-up-a-development-environment.md). You cannot use the premade server for this use case.
+```admonish danger title="Pre-Packaged server builds should not be used for custom content"
+The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
+If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code). Doing so otherwise will probably result in a broken server and we will be unable to provide support for such issues.
 ```
 
+1. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
+2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
+3. Extract the downloaded zip to a directory somewhere, you may use any Archive program such as 7Zip, Winrar or even the one built into Windows.
+4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux)) and wait until the console windows says "Ready". Do NOT close the console window until you are done playing on your server.
+5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` as an IP address and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button using the same IP address.
+6. When there is a new update. Go back to the 2nd step, and copy over the ``data`` folder and ``server_config.toml`` (if you modified it) from your old server files to the new server files.
+
+If you are having trouble understanding what to click, here is a quick video. Subtitles contain some extra information if needed. 
+
+{% embed youtube id="IDBqrAGZ3cA" loading="lazy" %}
 
 ## Level 1: Invite Your Friends
 
@@ -26,9 +30,15 @@ The server needs network ports to be forwarded so that people can connect. By de
 * UDP `1212` is used for main game netcode. This is necessary for the *client* to be able to connect to the server. This can be configured with the `net.port` configuration variable.
 * TCP `1212` is a HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
 
-For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
+For more information about how to forward your ports and what to do if you are having issues, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-After you have port forwarded, google "What is my ip" and you will get your public IP address. Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be connecting.
+After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6, try both if one fails.
+
+Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
+
+```admonish info
+If have an IPV6 address (looks kinda like this ``fd11:5ee:bad:c0de::ab3:3d03``) make sure to include square brackets (``[fd11:5ee:bad:c0de::ab3:3d03]``) when in the direct connect menu.
+```
 
 ### Configure Your Server
 
@@ -134,7 +144,7 @@ By default, the server ships with no rules. To set custom rules for your own ser
     # server_url = "ss14://..."
     tags = "" # comma separated list of tags
     ```
-If you get an error attempting to advertise please read [the troubleshooting bellow](#Troubleshooting)
+If you get an error attempting to advertise, please read [the troubleshooting below](#Troubleshooting)
 
 ### Bare Server Build Configuration
 
@@ -295,6 +305,49 @@ name = "wizards_den_us_west"
 # password = ""
 ```
 
+### Privacy Policy
+
+```admonish failure "This is not legal advice"
+This functionality and documentation is provided on a best-effort basis **only**. We intend to make it as easy as possible for server hosts to comply with legal requirements, but nothing here is a replacement for talking with a real lawyer if it comes down to it.
+```
+
+The launcher has the capability of presenting a privacy policy prompt when a player tries to connect to your server, if configured. This is likely desirable for all major servers.
+
+How it works: the game server provides three parameters that the launcher will check as early as possible in the connection handshake:
+
+* Link: a link to a HTTP(S) URL where your privacy policy is hosted.
+* Identifier: a unique value that identifies a specific server group's privacy policy, to unambiguously distinguish it.
+* Version: a unique value that identifies a version of your privacy policy, to allow recognizing changes.
+
+To configure this, you should configure the following three CVars in your configuration:
+
+```toml
+[status]
+privacy_policy_link = "https://example.com/privacy"
+# Set this to a unique value for your server community.
+# DO NOT COPY PASTE THIS.
+privacy_policy_identifier = "example_server_identifier"
+# This can be anything, but a date may be the most humanly meaningful.
+# Change it every time you update your privacy policy!
+privacy_policy_version = "2024-11-30"
+```
+
+#### Details
+
+```admonish info
+This section is provided to help you best understand how the launcher interacts with your game server while this feature is enabled.
+```
+
+When a player first connects to your server with this system enabled, they will be prompted with a link to the privacy policy and the ability to accept or decline it. 
+
+* If they click the link, the privacy policy linked will open in their browser.
+* If they click accept, the launcher will continue with normal connection procedures (downloading resources, starting client, connecting to game server, etc...)
+* If they click decline, the connection is aborted immediately. In this scenario, no further contact with your server will have happened than a single `HTTP GET` of the `/info` server API endpoint.
+
+If they click accept, the consent (based on identifier and version) is saved into the launcher's database and they will not be re-prompted again later.
+
+If you change your version parameter later, players will be prompted again by the same dialog, although with different text clearly indicating that your privacy policy has been updated since they last accepted it.
+
 ## Troubleshooting
 
 ### Unable to advertise to hub / people cannot connect
@@ -306,6 +359,20 @@ People aren't able to connect to your server OR you get the following error in y
 ```
 
 This means your server is not accessible from the outside internet. Make sure you have followed the guide to [Port Forwarding](../../server-hosting/port-forwarding.md).
+
+### Auth/hub country internet blocking
+
+Some countries (e.g. Russia) currently have internet blocks active that may interfere with your server's ability to connect to hub services. If this is a problem for you, you can attempt to set the following config properties to use fallback services:
+
+```toml
+[auth]
+server = "https://auth.fallback.spacestation14.com/"
+
+[hub]
+hub_urls = "https://hub.fallback.spacestation14.com/"
+```
+
+These configurations do not affect players, the launcher and game client use fallbacks wherever possible by default.
 
 ### SS14.Watchdog
 
@@ -343,8 +410,8 @@ Type `./Robust.Server` then hit enter. If you see a bunch of stuff being printed
 ## Useful Links
 All of the important links on this page in one convenient place.
 * [Config Reference](../tips/config-file-reference.md)
-* [.NET 8 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 8 SDK)
-* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (Also included in full .NET 8 SDK)
+* [.NET 9 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 9 SDK)
+* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (Also included in full .NET 9 SDK)
 * [SS14.Watchdog](https://github.com/space-wizards/SS14.Watchdog/)
 * [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
 * [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)

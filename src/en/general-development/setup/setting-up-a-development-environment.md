@@ -4,17 +4,52 @@ First you're gonna need some software:
 
 * [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
 * [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0). Visual Studio also installs this if you're on Windows.
+* [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0). Visual Studio also installs this if you're on Windows.
   * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
+  * For **all platforms**, [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 maintainers and contributors prefer it over Visual Studio. It used to be paid but now it's free for Non-Commercial use.
   * For **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 8 SDK or something along those lines.
-  * For **macOS**, [Visual Studio for Mac](https://docs.microsoft.com/en-us/visualstudio/mac/).
-  * For **all platforms**, (NOT FREE) [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 devs prefer it over Visual Studio. College/University students can get a free education license, even if they're not a computer science major.
   * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
     * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
 
+~~~admonish info title="Windows and winget"
+Windows users are suggested to use winget for an easier install, just open a command prompt/powershell and enter the following:
+
+Required:
+```
+winget install Git.Git
+winget install Python.Python.3.13
+winget install Microsoft.DotNet.SDK.9
+```
+
+And one of the following ide's:
+
+``winget install JetBrains.Toolbox`` (replace with ``JetBrains.Rider`` if you don't want the whole toolbox app)
+
+``winget install Microsoft.VisualStudio.2022.Community`` (Visual Studio 2022)
+
+``winget install Microsoft.VisualStudioCode`` (Visual Studio Code)
+
+``winget install VSCodium.VSCodium`` (VSCodium)
+~~~
+
+## Stuck?
+Are you stuck? Don't understand how to do a certain part? This video should help
+
+This video is intended to be followed *along with the guide* and may become out of date.
+
+{% embed youtube id="EUGl_zNS6Uk?t=3" loading="lazy" %}
+
+You may also always ask for help in the official [Wizard's Den discord](https://discord.spacestation14.io) or the [fork agnostic developer bus discord](https://discord.gg/X3YCdGHpgF)
+
 ## 1. Cloning
+
+```admonish danger title="Do not download as a zip from GitHub"
+You need to use the `git` in some shape or form (Command line or a Graphical interface) to download/clone the code.
+The "Download zip" option on GitHub will NOT work since it does not contain the submodules required (aka the game engine, Robust Toolbox) and also does not contain previous history.
+Which means it would be impossible to even make a commit without it present.
+```
 
 **Even if you already know Git, scroll down to read the section about submodule setup. Seriously.**
 
@@ -52,6 +87,8 @@ And with that, your repo is now properly setup!
 3. Press "Open" and select `SpaceStation14.sln`
 4. If you plan to do engine development you must add Robust Toolbox to the Directory Mappings so that Riders VCS can detect changes to Robust.
    Open Riders settings and go to the Version Control section > Directory Mappings and press the plus (+) button. For Directory point it to the `RobustToolbox` folder in the project and Git as the VCS
+5. Choose the branch you want to use in the top left.
+6. Select what you want to run from a dropdown menu next to the green play button at the top of the window. The setup is finished. You can now press the play button to compile and run it.
 
 ### VSCodium
 1. Download [VSCodium Here](https://vscodium.com/) or more directly [on Github Here](https://github.com/VSCodium/vscodium/releases) (On the latest release, click the assets dropdown then scroll to the ZIP or .exe for your OS).
@@ -63,7 +100,8 @@ And with that, your repo is now properly setup!
 
 ## 4. Starting SS14
 
-Now you can get on to compiling the client and server! Use your flavor of IDE to open the solution file `SpaceStation14.sln` and press the build button.
+Now you can get on to compiling! Use your flavor of IDE to open the solution file `SpaceStation14.sln`, and build and run the required assemblies (both Content.Server and Content.Client). 
+Click Direct Connect in the client window to start testing.
 
 To compile without an IDE, run `dotnet build` in the Space Station 14 repo directory. Then, call the following commands to run the client and server.
 * `dotnet run --project Content.Server`
@@ -101,9 +139,11 @@ There's also definitely some way to run two commands at the same time, but you s
 
 ### JetBrains Rider
 
-In Rider you can create a "compound configuration" to run or debug both client and server at the same time. Quite convenient!
+To run or debug test builds in Rider more easily, you can create a [compound configuration](https://www.jetbrains.com/help/rider/Run_Debug_Multiple.html#compound-configs) which runs the client and server at the same time. Quite convenient!
+The project may already include a configuration you can choose from the dropdown at the top, but if it has a red symbol, it wasn't set up properly and you need to create it manually, or it hasn't loaded yet. Once done, press Shift+F10 or click the play button to run it. That's it!
 
-![](../../assets/images/setup-rider-configurations.png)
+![](../../assets/images/setup-rider-configurations-1.jpg)
+![](../../assets/images/setup-rider-configurations-2.jpg)
 
 ## 6. Configuring IDE directories
 
