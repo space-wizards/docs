@@ -52,7 +52,7 @@ In case of unresolvable dispute about the priority of an item, Lead Maintainers 
 
 If the reason for a change is not completely obvious, a comment should be left explaining it, as a change with no explanation is more likely to itself be changed again later by another Maintainer acting in good faith.
 
-### Re-Triaging Old Issue and PRs
+### Re-Triaging Old Issues and PRs
 
 If an item have not been interacted with for a long time (more than one month), it *may* be relevant to re-triage. There are no labels to indicate an old item requires re-triage.
 
