@@ -24,7 +24,7 @@ Vulpkanin, by design, are similar to lizardpeople, because they cover a wide var
 
 ### Core Visual Elements
 
-Vulpkanin are furred, upright beings. Their universal distinctive features are their noticable canine-like ears and tails, which are commonly visible poking out of their outfits as they go about their business. They make canine noises, such as barks and whines, when speaking, generally sounding more dog or wolf-like than fox-like.
+Vulpkanin are furred, upright beings. Their universal distinctive features are their noticable canine-like ears, wide shoulders, digitigrade legs and tails, which are commonly visible poking out of their outfits as they go about their business. They make canine noises, such as barks and whines, when speaking, generally sounding more dog or wolf-like than fox-like.
 
 ### Species Features
 
@@ -39,10 +39,6 @@ Vulpkanin aren't meant to only represent a single canid species (such as how Vox
 #### Cold Adaption
 
 Due to their thick fur, Vulpkanin are naturally more resistant to colder climates. This gives them more ability to endure cold damage, and grants them innate heat insulation (which works in a similiar way to winter clothing). Due to heating up faster, they are also weaker to heat, making overheated rooms, fire, and weapons like lasers deadlier to them, as well as making it more difficult to use things such as cryo-medicine to heal them.
-
-#### Excellent Sense Of Smell
-
-Vulpkanin have much more sensitive noses than noraml. They are able to sniff reagents to loosely identify what they are, beyond the usual obvious reagents like blood or cleaning fluid.
 
 #### Carnivore Diet
 
