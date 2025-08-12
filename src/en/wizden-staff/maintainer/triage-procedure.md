@@ -33,6 +33,15 @@ For a triage to be completed, the item must have *at least one* label from all t
 
 Once a triage is completed, remove the `S: Untriaged` label and attach `S: Needs Review` for PRs. If the PR was opened by a Maintainer, it should also receive the `S: Approved` label, as they count as the first approver.
 
+During triaging, a Triager may optionally assign Issues to any of the available Issue Types Github provides:
+
+|Type | Definition |
+|-|-|
+| Bug | Something unexpected in the game, like a bug, a problematic feature or an exploit. |
+| Feature | A feature request, such as a request to alter or add new content. |
+| Task | A piece of work, such as a list of to-dos to complete a design document or a reminder to perform a chore. |
+
+
 ### Priority Labelling
 
 Priority labels are used to indicate how important an item is to the project. These range from `P0` (critical) to `P3` (standard). Every triaged item should have one.
