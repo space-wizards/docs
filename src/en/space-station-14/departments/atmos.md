@@ -36,6 +36,13 @@ Instead, mechanics should be designed in a way that players can learn them throu
 
 Current-generation Xenoarch (Emoarch) does an incredibly good job at this. The player may be given a list of artifact triggers; however, real critical thinking, emergent gameplay, and chaos come from trying to make all of those triggers happen at the same time.
 
+Atmospherics should be easy to learn but may be hard to master.
+You should not need a physics degree to understand the basic requirements for keeping the station alive—if no one is around to set up distro or respond to fires or spacing, then the round will end prematurely.
+
+Having to learn atmos can seem frightening to new players and should not require doing hard math.
+For those that do like to experiment and optimize, however, there should be benefit for the station or their antagonistic plans when doing so.
+Combined with the in-depth physics simulation the game offers, this can lead to emergent gameplay on a level few other departments can reach.
+
 ### Large-Scope Effects
 Atmospheric events and mechanics should affect departments, areas, and the station as a whole, rather than just Atmospherics' own department.
 Mechanics should not encourage players staying in their department, minimally interacting with other people in the round.
@@ -43,6 +50,10 @@ Mechanics should not encourage players staying in their department, minimally in
 In these events, interdepartmental interaction can take place, either frictional or cooperative, as players from different departments work together to solve a problem.
 
 For example, the creation of new gasses should not just affect the Atmospherics department. Instead, it should be able to also affect departments like Science or Cargo, as they may be able to use the new gases for their own purposes (new technology, selling, etc.).
+
+Gases have a potential as an environmental hazard, leading to large-scale, area-changing effects, and can quickly be pumped throughout the station.
+A gas like healium (a simple gas that heals you when inhaled) on the other hand does not lead to a lot of gameplay differences from current medical reagents.
+For performance reasons we have a limited number of gas slots, so those that are added should offer enough gameplay justifications for using them.
 
 ## Objectives
 Atmospherics is largely a reactionary department, meaning that it reacts to the state of the station and its air and responds to any upsets or deviations from the norm. Atmospherics can also be proactive, fulfilling requests from other departments or crew members to create new systems or products that can help the station or its crew.
