@@ -337,6 +337,7 @@ Staff
 - [Project Manager](en/wizden-staff/projectmanager.md)
 - [Maintainer](en/wizden-staff/maintainer.md)
   - [Adding New Maintainers](en/wizden-staff/maintainer/adding-new-maintainers.md)
+  - [Changing Maintainer Policy](en/wizden-staff/maintainer/changing-maintainer-policy.md)
   - [Useful Maintainer Tools](en/wizden-staff/maintainer/maintainer-tools.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
   - [Workgroup Policy](en/wizden-staff/maintainer/maintainer-workgroup-policy.md)
@@ -355,6 +356,7 @@ Maintainer Meetings
 
 ----------------------
 
+- [2025-08-02](en/maintainer-meetings/maintainer-meeting-2025-08-02.md)
 - [2025-07-19](en/maintainer-meetings/maintainer-meeting-2025-07-19.md)
 - [2025-07-05](en/maintainer-meetings/maintainer-meeting-2025-07-05.md)
 - [2025-06-07](en/maintainer-meetings/maintainer-meeting-2025-06-07.md)
