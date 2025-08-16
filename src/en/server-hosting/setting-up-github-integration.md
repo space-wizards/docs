@@ -14,20 +14,24 @@ Setting this up will allow any player who meets the requirements (See [Important
 3. Install the app in your orginzation, and only give it access to one repository.
 ![SS14 Status](../assets/images/github/install_location.png)
 ![SS14 Status](../assets/images/github/only_select_repos.png)
-4. Move the private key to the server, and set the `github_app_private_key_path` to the location of the key.  
-Example: `> cvar github.github_app_private_key_path /home/root/appName.2025-08-15.private-key.pem`
-5. Get the apps ID (found in `https://github.com/settings/apps/APPNAME` - see previous steps) and set the `github_app_id` to that ID.  
-Example: `> cvar github.github_app_id 1787332`
-6. Set `github_repository_name` to your repositories name.  
-Example: `> cvar github.github_repository_name space-station-14`
-7. Set `github_repository_owner` to your organization name  
-Example: `> cvar github.github_repository_owner space-wizards`
-8. Set `enable_player_bug_reports` to True.  
-Example: `> cvar bug_reports.enable_player_bug_reports True`
-9. To test, run the `testgithubapi` command
+4.  Add this to your server configuration
+```toml
+[github]
+# Can be found at https://github.com/settings/apps/APPNAME - scroll to the bottom
+github_app_private_key_path = "/home/root/appName.2025-08-15.private-key.pem"
+# The app id found at https://github.com/settings/apps/APPNAME
+github_app_id = 1787332
+# If url is: https://github.com/space-wizards/space-station-14
+# repo name is "space-station-14", repo owner is "space-wizards"
+github_repository_name = "space-station-14"
+github_repository_owner = "space-wizards"
+
+[bug_reports]
+enable_player_bug_reports = true
+```
 
 # Testing
 If you run into issues, the servers console should display errors, make sure to look at that if issues are not being created. The `testgithubapi` also will do a few checks to ensure you filled out all the required fields (And also create 1 issue).
 
 # CVars
-Go to `CCVars.BugReports.cs` for the full updated list of cvars! Almost all the settings can be tweaked there - you probably want to change them depending on what type of fork you are running.
+Go to `CCVars.BugReports.cs` for the full updated list of cvars! Almost all the settings can be tweaked there - you probably want to change them depending on what type of fork you are running. Put them in the server configuration to change them like the other settings.
