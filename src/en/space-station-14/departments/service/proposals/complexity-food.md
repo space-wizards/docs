@@ -100,9 +100,9 @@ Q: How do you wish for players to interact with your feature and how should they
 
 A: The intended behaviour is to encourage chef players to make different complex dishes, and to encourage regular players to interact with the kitchen to satisfy hunger and get useful buffs. Since the snacks are not a complex dish, they have low complexity, resulting in low nutrition and a lack of buffs, meaning they can be used to satisfy hunger if there is no other choice. However, going to the kitchen and getting a complex meal is encouraged via more nutrition and nutrition buffs.
 
-Q: Which department will interact with the feature? How does the feature fit into the [design document](../space-station-14/departments.md) for that department?
+Q: Which department will interact with the feature? How does the feature fit into the design document for that department?
 
-A: This proposal is for service, chef role specifically. With some modifications, this system can also be applied to bartender. This also indirectly brings a small impact to the botany roundflow, since chef now asks for a wider variety of ingredients.
+A: This proposal is for service, chef role specifically. With some modifications, this system can also be applied to bartender. This also indirectly brings a small impact to the botany roundflow, since chef now asks for a wider variety of ingredients. Also, there is no design doc for service as of writing this.
 
 ## Administrative & Server Rule Impact (if applicable)
 
