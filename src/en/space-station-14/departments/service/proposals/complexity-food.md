@@ -74,7 +74,7 @@ Finally, nutrition of the dish is also determined by complexity.
 
 ## Game Design Rationale
 
-Q: How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosophy?
+Q: How does the feature align with our Core Design Principles and game philosophy?
 
 A: It's seriously silly - while it's pretty much close to how cooking works in real life, it still allows for some flexing - for example, making a doomstack lattuce burger with 255 complexity. It doesn't break the balance, though. It is intuitive: healthy diet grants you benefits, feeding on snacks gets you by, but doesn't reward you. It encourages player agency - there are no wrong choices when it comes to cooking, as long as the meal is sufficiently complex. You also don't have any meta dishes.
 
