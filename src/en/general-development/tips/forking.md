@@ -11,7 +11,7 @@ This document only describes the technical considerations of forking. Keep in mi
 You should not create your project's repository with the github fork button. This is because github only permits one fork of a repo per account and forks of your repo will be counted the same as forks of your upstream. Additionally, it makes it impossible to accidentally send pull requests to your upstream.
 
 Instead, do the following:
-- Create blank repo, either on an org or in your user. Do not initialize the repo with an initial commit, leave it blank.
+- Create a blank repository, either as an organisation or in your user. Do not initialize the repo with an initial commit; leave it blank.
 - git clone the repository of the upstream you wish to fork from (if you already have a local copy, then you can use that instead)
 - `git remote add YourFork github.com/YourOrg/YourRepo` to add your blank repo as a remote
 - git checkout your desired remote branch. If you're basing off Wizard's den, it is strongly recommended that you base your fork on stable.
@@ -37,14 +37,14 @@ Note that any contributors to your fork will need to press the github fork butto
 ## Licensing Your Fork
 
 ```admonish warning
-The author of this document is not a lawer and nothing written here should be interpreted as legal advice. If you have questions about licensing you should consult a lawer before proceeding
+The information written in this document should not be interpreted as, nor used as, legal advice.
 
 MAKE SURE YOU READ AND UNDERSTAND THE LICENSE OF ALL FILES IN YOUR FORK.
 ```
 
-If you are not well-versed with open source software licenses we recommend that you license you fork under the same license as your upstream. This will cause you the least amount of legal issues (or more likely, general controversy). Wizard's Den uses the "MIT License" (which is sometimes referred to as the Expat license). A copy of this license is already included in the repository and requires no action on your part to use. The MIT license grants you the right to do almost anything with the code (including sublicense it) as long as a copy of the copyright notice is retained.
+If you are not well-versed with open-source software licenses, we recommend that you license your fork under the same license as your upstream. This will cause you the least amount of legal issues (or more likely, general controversy). Wizard's Den uses the "MIT License" (which is sometimes referred to as the Expat license). A copy of this license is already included in the repository and requires no action on your part to use. The MIT license grants you the right to do almost anything with the code (including sublicensing it) as long as a copy of the copyright notice is retained.
 
-Art assists are almost universally licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). Note that the NC means non-commercial, so if you would like to use ss14 commercially you will need to remove those assets. See the linked websites for more information.
+A _majority_ of art assets are licensed solely under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), or [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). For the latter, NC means 'non-commercial': therefore, any assets licensed under it may **not** be used in commercial projects; you will either have to remove the assets, or have them be relicensed by the owner to allow commercial use.
 
 Be aware when porting content from other forks that they may have more restrictive licenses like the GNU Affero General Public License (AGPL) or Mozilla Public License (MPL). Be careful to follow the restrictions imposed by those licenses.
 
@@ -68,14 +68,14 @@ All serializeable types are in the same global namespace. To prevent conflicts y
 In a similar vein to namespacing serializable types, prototypes also share a singular global namespace. Strongly consider giving all prototype names a prefix to avoid conflicts. For example one might give an entity the ID `FooMyEntity` instead of `MyEntity` if the shorthand of your server was "foo".
 
 ### Merge conflicts aren't that scary.
-In short, when modifying existing code, conflict avoidance techniques are generally *bad* practice, as they often allow your code to continue compiling at the cost of it not actually working correctly anymore. In general if you get a merge conflict, it is likely not for no reason and you should review it manually instead of trying to incorporate avoidance techniques.
+In short, when modifying existing code, conflict avoidance techniques are generally *bad* practice, as they often allow your code to continue compiling at the cost of it not actually working correctly anymore. In general if you get a merge conflict, it is not likely to be for no reason and you should review it manually instead of trying to incorporate avoidance techniques.
 
 ```admonish info
 While this is mostly true, avoiding conflicts in, say, lists of elements, is generally a good idea (as they're going to conflict unnecessarily more often than not.)
 This is usually as simple as just putting your entries at the start of the list, or in a separate part of the list separated by whitespace.
 ```
 
-When modifying upstream code it is recommended to leave a short comment explain *why* you changed what you did in order to make upstream merges easier. An example of this would be `// FOOFORK: Changed Bar to 2 instead of 1 becase it breaks everything if it is 1.`
+When modifying upstream code, it is recommended to leave a short comment explain *why* the change was made, so as to make upstream merges easier. An example of this would be `// FOOFORK: Changed Bar to 2 instead of 1 because everything breaks if it is 1.`
 
 ### Avoiding issues in shared enums.
 A big example of this is the AdminLog enum containing all the kinds of admin logs. Pick a recognizable decimal (or hexadecimal) prefix, positive or negative, for your values, and stick to that. Ideally, pick one randomly, so you don't have issues merging other fork's changes if you want to cherry pick.
