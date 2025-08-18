@@ -8,7 +8,7 @@ This document only describes the technical considerations of forking. Keep in mi
 
 ## Creating Your Repo
 
-You should not create your project's repository with the github fork button. This is because github only permits one fork of a repo per account and forks of your repo will be counted the same as forks of your upstream. Additionally, it makes it impossible to accidentally send pull requests to your upstream.
+You should not create your project's repository with the github fork button. This is because github only permits one fork of a repo per account and forks of your repo will be counted the same as forks of your upstream. Additionally, when you have a repository forked via the fork button, it makes it very easy to send changes to your upstream by mistake. 
 
 Instead, do the following:
 - Create a blank repository, either as an organisation or in your user. Do not initialize the repo with an initial commit; leave it blank.
