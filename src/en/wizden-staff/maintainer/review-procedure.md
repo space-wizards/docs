@@ -120,6 +120,14 @@ After 6 weeks, a PR can automatically be considered stale and closed without nee
 
 Note that PRs undergoing maintainer discussion or awaiting review are not considered stale.
 
+### Experimental PRs
+
+An Experimental PR is any PR marked with the `Intent: Experimental` label. This label is assigned at a Maintainer's discretion and indicates the PR contains features or changes that a) are expected to get a lot of feedback from players, or b) the Maintainer team is seeking a lot of feedback on from playtesting. While all PRs benefit from feedback and may be changed at a later time, Experimental PRs are intended to indicate to the community that feedback is especially appreciated. 
+
+Adding the label to a PR will create a forum thread with the PR's name and number in the Feedback category of the forum. Once merged, any changelog entry for the PR will have an additional :test_tube: symbol to indicate its Experimental status. 
+
+It is strongly recommended that a `FeedbackPopup` prototype for the thread is added to `Resources/Prototypes/FeedbackPopup/feedbackpopups.yml`.
+
 ### Drafts
 
 PRs should not be marked as drafts unless there is a meaningful reason behind them.
