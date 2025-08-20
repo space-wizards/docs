@@ -1,7 +1,7 @@
 # Integrated Photonic Chassis
 | Designers | Implemented | GitHub Links |
-|-----------|-------------|--------------|
-| Minemoder | :x: No      | N/A          |
+|-----------|-------------|-------------|
+| Minemoder | :x: No      | N/A         |
 
 ## Overview
 This proposal is for the Integrated Photonic Chassis Species. IPCs are an alien robotic race not bound to silicon laws. Where there would be skin and bone there is steel; where there would be muscles and joints there is myomer and linkages.
