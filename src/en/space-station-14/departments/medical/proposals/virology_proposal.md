@@ -44,6 +44,7 @@ The victim's body will also produce 'antiserum,' which will diminish the amount 
 
 Antiserum will be keyed to a particular disease. If a person has one disease, and catches another, they'll produce two distinct flavors of antiserum at two different levels. If they get over a disease, the antiserum will linger in their bloodstream, making them much less likely to catch it again. Virologists can also extract antiserum from a person's bloodstream and isolate it to produce a treatment for other patients.
 
+A new organ, 'Lymph Nodes,' will be responsible for metabolising antiserum.
 
 ### Diagnosis and Treatment
 
