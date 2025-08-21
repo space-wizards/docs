@@ -109,6 +109,7 @@ My only note here at present is that any antag who wants to engineer a horrible 
 
 This should naturally tend to reduce station-wiping diseases to the domain of DAGD antags, which is where it should be. And even the worst diseases shouldn't progress so rapidly that virology has no chance to catch them in time. Er, so to speak.
 
+The same machine that creates treatments and vaccines can be used to do bioengineering, but that functionality is locked behind CMO's ID. CMO (or any antags who get their hands on CMO's ID) can use their ID to unlock it. The machine will keep a record of all bioengineering activity, including the IDs of the users, though this can be wiped by snipping the log wire or made to not record any new activity with an emag.
 
 ### Zombies and Romerol
 
