@@ -60,6 +60,11 @@ Virologists don't need to figure out the whole genome of the virus before they c
 
 Virology equipment will be able to produce test treatments, but only slowly. When a test treatment is determined to be effective, it can be sent to Chemistry for mass-production.
 
+In addition to the DDDE, petri dishes will be available. A petri dish can be swabbed, and any bacteria present on the swab will be loaded into the petri dish. Once enough time has passed, the petri dish will reveal the presence, amount, and number of different types of bacteria that have grown in it. Reagents can also be added to a petri dish to observe their effects on the bacteria - this is one way to check if bacteria have developed resistence to a given antibiotic. Petri dishes should be supplied to Virology, and possibly also Chemistry. 
+
+Petri dishes can break, spilling their bacterial load onto the ground. They will also contain agar, a food reagent that will transmit any bacteria growing in the dish to anyone who eats it. If there are no bacteria, it is harmless. Agar could also potentially be a component in food or drink recipes for chefs and bartenders.
+
+Viruses will not interact with petri dishes.
 
 ### Mutation
 
