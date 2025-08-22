@@ -4,7 +4,7 @@ SS14 servers support basic github integration. Currently this is just creation o
 # Setup
 Setting this up will allow any player who meets the requirements (See [Important CVars](#important-cvars)) to make bug reports.
 
-0. (Optional) Create a new repository that only your GitHub organization has access to. You can transfer issues from this new repository to your main repository.
+0. (Optional) Create a new repository that only your GitHub organization has access to. You can transfer issues from this new repository to your main repository. You might want to do this if you are worried about spanning the main repository.
 1. Create a new app (`https://github.com/settings/apps`). When creating the app, only allow issue creation permissions (and metadata). **Make sure you are logged in as the repository owner** (This is usually the organization itself)! You do not need a webhook URL.  
 ![SS14 Status](../assets/images/github/permissions.png)
 ![SS14 Status](../assets/images/github/install.png)
