@@ -11,6 +11,18 @@ This policy applies in addition to the [General Staff](../staff-policy.md) and [
 - Maintainers should try to perform code reviews *whenever possible*, getting content into the game is everyone's responsibility.
 - If there is a conflict around game design between something in the docs and someone's idea, what is detailed in the documentation takes precedent. If a change to specific documentation is needed, it should be brought up with the respective work group for discussion and changes should be made to the documentation if needed.
 
+## Deferral Policy
+- Maintainers are not expected to know everything about every part of the game, but when reviews are made they are expected to at least have oversight from someone who does know.
+- Sometimes a PR is a blocker, or critical to the game in some way where regular review procedure needs to be expidited, in a way different from p0 issues and hotfixes
+- In these cases if a Maintainer is unable to complete a review themselves they should defer to a maintainer who can.
+- Deferrals are different from normal reviews in that it is a whole review split between two or more maintainers.
+  - In a deferral a maintainer completes their review but defers part of the review to a maintainer with more expertise than them.
+  - This would be effectively asking another maintainer to review one specific file/system/concept being modified.
+  - The maintainer being defered to does not need to do a full review with approval, but just needs to approve the code relevant to their expertise
+- Deferrals should be asked for in a separate channel from normal reviews such that they don't get buried
+- Deferrals should only be used if a PR is important, this includes: bugfixes, blockers, and otherwise nonspecified important content
+- If a majority of a PR requires a deferral, you may still use deferral channels to ask another maintainer to review, but it may be better that said deferred maintainer does a full review.
+
 ## In-game Permissions
 - Maintainers can request to be given in game permissions by the admin team.
 - Maintainers may only use the permissions they are given for the purposes of debugging issues, and playtesting new features. 
