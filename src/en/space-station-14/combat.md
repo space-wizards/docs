@@ -10,7 +10,7 @@ Combat should be possible at a range from low to high lethality, with the latter
 
 - Intent matches consequences; a friendly boxing match is easily recovered from, a deadly gunfight is not.
 - Weapons matches lethality; a single punch can be shrugged off, a baseball bat hurts, several knife wounds kill.
-- Equipment matches role; if your role isn't combat-oriented, your equipment and environment will reflect that. 
+- Equipment matches role; the tools, tactics and equipment available to a role provides distinct gameplay differences that reinforce the role's strengths.
 - Viable and variable choices; the game provides meaningful choices in the equipment and strategies you choose to bring to combat. 
 - Reactable combat: you may not have time to do everything you want, but you should generally have time to respond with *something*. 
 - Centered on strategy; understanding how to strategize on both macro and micro levels of combat is rewarded, with adapting to others' strategies on the fly being key to success.
