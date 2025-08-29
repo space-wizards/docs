@@ -37,7 +37,6 @@ Content Maintainers:
 - [TemporalOroboros](https://github.com/TemporalOroboros) - @the_quiet_one (423542163503185942)
 - [TheShuEd](https://github.com/TheShuEd) - @eshhhed (267327466060775425)
 - [slarticodefast](https://github.com/slarticodefast) - @sebseb5071 (578191477839101967)
-- [UbaserB](https://github.com/UbaserB) - @ubaser (578881480386805771)
 - [Errant-4](https://github.com/Errant-4) - @err.ant (502504545579040768)
 - [SlamBamActionman](https://github.com/SlamBamActionman) - @slambamactionman (91969935848251392)
 - [SaphireLattice](https://github.com/SaphireLattice) - @saphire (107368676348416000)
