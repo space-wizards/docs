@@ -283,6 +283,7 @@ Server Hosting
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
 - [OAuth](en/server-hosting/oauth.md)
 - [Setting up Discord Integration](en/server-hosting/setting-up-discord-integration.md)
+- [Setting up Github Integration](en/server-hosting/setting-up-github-integration.md)
 - [Maintenance]()
   - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
