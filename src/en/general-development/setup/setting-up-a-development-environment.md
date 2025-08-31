@@ -34,12 +34,14 @@ And one of the following ide's:
 ``winget install VSCodium.VSCodium`` (VSCodium)
 ~~~
 
-## Video guide
+## Stuck?
 Are you stuck? Don't understand how to do a certain part? This video should help
 
 This video is intended to be followed *along with the guide* and may become out of date.
 
 {% embed youtube id="EUGl_zNS6Uk?t=3" loading="lazy" %}
+
+You may also always ask for help in the official [Wizard's Den discord](https://discord.spacestation14.io) or the [fork agnostic developer bus discord](https://discord.gg/X3YCdGHpgF)
 
 ## 1. Cloning
 
