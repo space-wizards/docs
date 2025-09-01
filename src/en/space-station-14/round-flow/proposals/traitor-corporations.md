@@ -131,3 +131,27 @@ This work would involve replacing some of the current Traitor code, mostly for o
 This work would involve adding pink-text support behind a Cvar for MRP servers.
 
 This work would involve being able to define Syndicate organizations in YAML a bit more deeply than they currently can be. It likely involves creating at least a small icon for each corporation (to use as an objective icon and in their EOR objective list).
+
+# Some Potential Future Work
+
+## Different Uplink Stores For Different Corporations
+
+Maybe Donk and Waffle have interesting unique guns, and only Gorlex has access to Nuclear Operative gear?
+
+## Shifting Allegiances
+
+Maybe the Syndicate could suddenly shift allegiances during a round? This would be a radio announcement broadcast globally, reading something like:
+
+"Due to the CEO of Waffle Corp refusing to attend the birthday party of Donk Co's CFO's great aunt, these two corporations are now at war!"
+"After the kindling of a steamy romance between the leaders the Gorlex Maurauders and Waffle Corp on a celebrity special of Lava Island, these two corporations are now allies!".
+"Despite their best efforts to stay angry at each other, Cybersun Industries and Waffle Corp's recent feud over pancake recipes has burnt out."
+
+These shifting allegiances would then flip (or delete) the corresponding objectives, should they exist.
+
+## Backstabbing Corporations
+
+A Corporation could appear to be Allied with another Corporation, but this could in fact be a ruse: this would lead to one Corporation having an Ally objective with the other, and the other having an Enemy objective in return.
+
+## Corporation Intel
+
+It could be possible for either Security or individual Traitor corporations to gain intelligence on the Syndicate to find out who is allied with whom, or potentially even expose particular traitors on the station, via completing some sort of task (such as identifying a traitor, an objective they had, and the corporation they're working for to Centcomm, for example?).
