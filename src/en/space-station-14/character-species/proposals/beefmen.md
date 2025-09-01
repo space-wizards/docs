@@ -10,7 +10,7 @@ Beefmen are quick, neurotic and creepy humanoids. They have amazing powers of re
 
 ## Background
 
-[Beefmen](https://wiki.fulp.gg/en/beefmen) are based on a race from the SS13 server Fulpstation. Since their lore is rather light, and wouldn't make sense for several reasons, I have taken to liberty to write my own, making them survivors of a bluespace incident which had them stuck in a mysterious dimension known as Photober, changing them in ways no one quite understands.
+[Beefmen](https://wiki.fulp.gg/en/beefmen) are based on a race from the SS13 server Fulpstation. Since their lore is rather light, and wouldn't make sense for several reasons, I have taken to liberty to [write my own](https://docs.google.com/document/d/1j4_m6cBchubjOlQpeGm5gtYsG2U5BasvOSYI4lDRTKs/edit?usp=sharing), making them survivors of a bluespace incident which had them stuck in a mysterious dimension known as Photober, changing them in ways no one quite understands.
 
 Beefmen are based on an [OneyPlays video](https://www.youtube.com/watch?v=oFAA1yPqCvo), although I don't believe he had much involvement in the creation of the species, making it possible to separate the concept from him in case some maintainers wouldn't want SS14 associated with him much.  
 
@@ -22,7 +22,7 @@ I'm looking to not only add a species from Space Station 13 but also add a speci
 
 Beefmen are tall and lanky humanoids, made of lumps of random meat. Their lack of skin means they have no eyelids or lips. Their bodies are red like uncooked beef although it might be possible to have white or orange characters if we allow use of poultry and fish meat.
 
-Beefmen customization would allow hair, heads of different species and special tattoos called Grillmarks.
+Beefmen customization would allow hair and special tattoos called Grillmarks.
 
 If we use the classic SS13 sprites, we may need to make variant clothing sprites. We could also use displacement maps and create a new model based on humans but tall and thin, like elves on april fools.
 
