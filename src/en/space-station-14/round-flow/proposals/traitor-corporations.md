@@ -48,7 +48,7 @@ This relationship web is generated randomly each round, and doesn't have any par
 
 In addition, the number of Corporations active in a given Traitor round is randomized. A Corporation that is available in the round and can have Traitors assigned to it is called a "candidate".
 
-## Traitors All Work For One Corporation
+## Traitors Each Work For One Corporation
 
 For example, Urist McHands might work for Cybersun, and Urist McDwarf works for Donk Co. This is actually how the game already works.
 
