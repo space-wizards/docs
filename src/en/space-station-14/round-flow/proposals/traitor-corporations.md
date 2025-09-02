@@ -132,6 +132,8 @@ This work would involve adding pink-text support behind a Cvar for MRP servers.
 
 This work would involve being able to define Syndicate organizations in YAML a bit more deeply than they currently can be. It likely involves creating at least a small icon for each corporation (to use as an objective icon and in their EOR objective list).
 
+This work would involve making sure that the various controls, including number of corporations, maximum/minimum number of people per corporation, if allies/enemies are enabled, if corporation members can see the IDs of other corporation members, and so on, is customizable, where appropraite, at either the YAML or Cvar level. It should be possible to create the current "traditional" traitor mode, within reason, within the new implementation.
+
 # Some Potential Future Work
 
 ## Different Uplink Stores For Different Corporations
