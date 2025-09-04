@@ -6,10 +6,11 @@ Medical as a department is primarily tasked with keeping the crew alive and heal
 The challenge of that very simple task is that the crew lives in a tin can that is prone to very bloody and violent accidents and disasters.
 It's medicals job to be able to respond to a variety of different injuries and deaths, from a variety of different sources and to diagnose and cure so that the crew can get back to work or at least limp their way to the evacuation shuttle.
 The tools medical uses should be scarce, but never scarce enough to halt the department, should be time consuming such that death is dangerous, but never time consuming enough that there's a lot of waiting involved in healing, and should keep medical constantly moving, but not so constant that it becomes overwhelming or unreasonably swamped. 
-Almost no injuries should be unrecoverable given you have the right tools, and any injuries that are unrecoverable shouldn't waste medical's or the dead player's time.
+Given the right tools medical should be able to deal with most bodies coming in, but there should always be a clear line of when a body is unrecoverable. Some wounds are too grievous, too rotten, too deliberate to recover from. That's what the morgue is for.
 
 ## Design Pillars
-Medical as a department 
+Medical as a department needs to have consistency to work. But things should never be so consistent that they become mundane.
+In order to maintain this balance, there are a number of design pillars that must be upheld. 
 
 ### Pillar 1: Injuries should match the danger of the source.
  The difference between a common workplace accident and getting shot to pieces shouldn't be one number being higher.
