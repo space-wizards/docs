@@ -104,6 +104,8 @@ Speciesism is banned on Wizard's Den in its entirety. As such, species **must no
 
 For example, if an aquatic species has to live inside a water-filled suit at all times, they should still have the ability to wear a variety of outfits on top of that suit so they can express themselves like every other species. 
 
+Species also **must not** have prescribed social interactions that portray them as "lesser" or "animalistic." For example, a species **may** have a mechanic where they accumulate erratic rules from electromagnetic disruptions that affect how they interact with other players, but **may not** use this mechanic to indicate that this species has "inferior" mental faculties to other species. Another example is that a species **may** have physiological differences that affect social interactions, such as tailed species being able to wag their tail to indicate an emotion, but a species **may not** have altered social interactions without a clear physiological basis, such as a furred species prompting people to pet their fur instead of hugging them as a display of affection.
+
 This rule also covers other forms of rule-breaking. For example, a species could be themed around demons, but specifically theming a species around certain succubus/incubus tropes would obviously be too problematic to be suitable for Wizard's Den.
 
 ### Rule 5: Deliberately Challenging Species
