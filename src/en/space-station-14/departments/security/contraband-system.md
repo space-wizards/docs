@@ -1,8 +1,4 @@
 # Contraband System
-| Designers | Implemented | GitHub Links |
-|---|---|---|
-| Killerqu00 | :warning: Partially | https://github.com/space-wizards/space-station-14/pull/32250 https://github.com/space-wizards/space-station-14/pull/35206 and TBD |
-
 ## Overview
 Contraband System is the system that defines what contraband is in-character. As of now (when I am writing this doc), it is a detailed examine showing 2 things: type of contraband (departmental-restricted, minor, major, syndicate) and whether or not the wearer ID allows the person to possess this contraband. 
 
@@ -61,8 +57,3 @@ In order to designate an object as contraband, assign one of the base contraband
 - Starting OOC conflicts about legal status of an item;
 - Uncovering stealth items;
 - Blocking possibility of delegations and exceptions (like captain giving the sabre to HoS due to being a pacifist, or using syndicate contraband as a last resort against nukies).
-## Needed features
-- Hover detailed examine (to reduce the need for clicking);
-- Detailed examine icons that relay information at a glance (not relying only on color for accessibility);
-- Separation of "Grand Theft" status from ContrabandSeverity;
-- Making a general "bad stuff" designation without sacrificing flavor text (right now, we have Syndicate and Magical).
