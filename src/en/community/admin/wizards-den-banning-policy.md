@@ -169,8 +169,6 @@ Rule violations not in the offense table can still have bans applied, but have n
 
 [^abandoningRole]: This includes frequently disconnecting in an important role, disconnecting in an important role without notification when there is reason to believe that the disconnection was not urgent, and failing to attempt to perform the duties of a role.
 
-[^stackEscalation]: Should be combined with an escalation offense from the perspective of the offender. Typically RDM if an execution occurs for no reason, or over escalation if there is a poor reason.
-
 ## Modifiers Tables
 
 ```admonish info
