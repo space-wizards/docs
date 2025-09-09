@@ -145,31 +145,31 @@ Rule violations not in the offense table can still have bans applied, but have n
 | Competence | Taking actions a reasonable person would view as to be to the detriment of the station as security/command | 3d - 7d RB | 7d - 15d RB | Indef RB | |
 | Competence | Unreasonable failure of security/command to follow space law | W - **3d** - 7d RB | 7d - 15d RB | Indef RB | |
 
-[^eachVictim]: Guideline is multiplied by the number of victims.
+[^discrimination]: Includes IC racism/speciesism.
 
-[^stationSabotageRDM]: This should be used in cases where there are deaths that result from a station sabotage offense, like people being killed by an AME being overloaded or dying in a loosed singularity.
+[^badFaith]: To qualify as bad faith, there should be no *reasonable* way that something is being done with good intentions. It is not required for the person to *actually* be acting in bad faith, only that it is *unreasonable* for them to think that they are.
+
+[^requiresIntent]: Offenses where the admin does not believe a violation to have been intentional may be reduced to a warning and do not need to be considered a past offense when evaluating guidelines for future offenses.
+
+[^positiveException]: Use of admin discretion to not enact penalties is highly recommended in cases where the offending player is not negatively impacting players, and is attempting to ensure players have a positive experience. For example, using LOOC to get permission to perform an IC act which would be allowed even without that permission.
+
+[^teachingException]: Use of admin discretion to not enact penalties is highly recommended in cases where the offending player only commits an offense after attempting and failing to teach a new player appropriately.
+
+[^infoFromDeath]: This includes any information that a character should have not known from the same "life". Depending on server rules, this may include information like the information leading to your death. A "life" ends when a player takes a different role, like a ghost role. For the purposes of banning guidelines, a "life" does not end on cloning.
 
 [^excludingEscalationIssues]: Does not include escalation issues.
 
 [^stationSabotage]: Acts that result in station wide, or near station wide disruption. Spacing a hallway is not station sabotage, but cutting HV or destroying substations likely is. Arrivals or arrivals terminal sabotage is not sufficient to apply the station sabotage offense.
 
-[^discrimination]: Includes IC racism/speciesism.
-
-[^badFaith]: To qualify as bad faith, there should be no *reasonable* way that something is being done with good intentions. It is not required for the person to *actually* be acting in bad faith, only that it is *unreasonable* for them to think that they are.
-
 [^antagOnly]: Only applies to antagonists and free agents.
 
-[^stackEscalation]: Should be combined with an escalation offense from the perspective of the offender. Typically RDM if an execution occurs for no reason, or over escalation if there is a poor reason.
+[^eachVictim]: Guideline is multiplied by the number of victims.
 
-[^teachingException]: Use of admin discretion to not enact penalties is highly recommended in cases where the offending player only commits an offense after attempting and failing to teach a new player appropriately.
-
-[^positiveException]: Use of admin discretion to not enact penalties is highly recommended in cases where the offending player is not negatively impacting players, and is attempting to ensure players have a positive experience. For example, using LOOC to get permission to perform an IC act which would be allowed even without that permission.
-
-[^infoFromDeath]: This includes any information that a character should have not known from the same "life". Depending on server rules, this may include information like the information leading to your death. A "life" ends when a player takes a different role, like a ghost role. For the purposes of banning guidelines, a "life" does not end on cloning.
+[^stationSabotageRDM]: This should be used in cases where there are deaths that result from a station sabotage offense, like people being killed by an AME being overloaded or dying in a loosed singularity.
 
 [^abandoningRole]: This includes frequently disconnecting in an important role, disconnecting in an important role without notification when there is reason to believe that the disconnection was not urgent, and failing to attempt to perform the duties of a role.
 
-[^requiresIntent]: Offenses where the admin does not believe a violation to have been intentional may be reduced to a warning and do not need to be considered a past offense when evaluating guidelines for future offenses.
+[^stackEscalation]: Should be combined with an escalation offense from the perspective of the offender. Typically RDM if an execution occurs for no reason, or over escalation if there is a poor reason.
 
 ## Modifiers Tables
 
