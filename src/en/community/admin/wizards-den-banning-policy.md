@@ -320,7 +320,7 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
     - The appellant is clearly not expecting their appeal to be accepted, and made it simply to troll. 
     - The appeal is incomprehensible or written in a language other than English.
     - The appeal has such little effort put into it that no other outcome can be derived from it but to close it.
-    - The appeal is unable to be accepted for reasons outside the administrative teams control, for example the appeal was clearly intended for a different fork or server host.
+    - The appeal is unable to be accepted for reasons outside the administrative team's control; for example, the appeal was clearly intended for a different fork or server host.
 4. If you are not the banning admin, an Appeals Team Member or under the supervision of an Appeals Team member you may not process the appeal.
 5. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban. 
 6. Collect information
