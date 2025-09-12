@@ -12,7 +12,7 @@ Though humanoid in shape, their appearance is distinctly piscine with rarely som
 ## Background
 The Cyprin are inspired by the original "Thaven" concept, reworked to have a more cohesive identity rooted in space carp/dragon ancestry. The name is derived from *Cyprinidae*, the biological family of carp to focus on this biological origin.
 
-### Backstory
+### Lore
 The Cyprin did not evolve naturally. They were an unintended consequence of a long forgotten bio-engineering project of a precursor civilization, seeking to create the perfect deep-space explorers.
 This ancient civilization observed the hardiness of Space Carp and the formidable intelligence of Cosmic Drakes (Space Dragons), and attempted to merge their traits with a humanoid base. Their goal was to create a species that could:
 1. Navigate the Void: Inheriting the Space Carp ability to thrive in the radioactive vacuum of space and handle exotic gases.
@@ -32,7 +32,7 @@ The Cyprin are a people with a past they don't understand. Much of them are scat
 Cyprints offer an interesting roleplay opportunity for the players who play them and those around them. Their Resonances encourage them to act in specific and outwards ways that inherently help to craft a narrative for themselves and those around them.
 
 ### Core Tenent: Roleplay, Not Enforcement
-It is *extremely* vital to understand that Resonances are a **roleplay guide,** not a mechanical enforcement. Players are **never** forced to follow their Resonance to the letter, especially if it would conflict with their survival, other's safety, or their job's duties. The core of the Cyprin experience is internal conflict and roleplayed distress that may inevitably arise from having to compromise.
+It is *extremely* vital to understand that Resonances are a **roleplay guide,** not a mechanical enforcement. Players are **never** forced to follow their Resonance to the letter, especially if it would conflict with their survival, other's safety, or their job's duties. The core of the Cyprin experience is internal conflict and roleplayed distress that may inevitably arise from having to compromise over their resonances.
 
 * **Priority of Survival and Duty**: A Cyprin's conflict is often internalized, a struggle between their Resonance and the practical demands of their job or even station safety. For example, a Secoff's Resonance may be "Violence Is Distasteful," but when a nuclear operative is gunning down crew, their duty to protect lives must come first. The compelling story is NOT them refusing to fight, but in the personal turmoil they experience *after* being forced to use lethal force. They may become withdrawn, seek solace in places of comfort, or lament in fury at the situation that forced their hand.
 * **Distress Over Punishment**: Violating a Resonance should not have any enforcement mechanic behind it, it should trigger a roleplay response. The "distress" is the character's state. A Cyprin who must go against their Resonance for any reason might roleplay a moment of hesitation, discomfort, and complain regarding it. 
@@ -41,9 +41,7 @@ It is *extremely* vital to understand that Resonances are a **roleplay guide,** 
 The Resonance system is built to foster roleplay engagement in many ways:
 * **Character-Driven Conflict:** A Cyprin's conflict is the struggle between their Resonance needs and the practical demands of their job or of the station. This creates immediate and interesting character development.
 * **Crew-Wide Interaction:** Resonances proactively encourage Cyprints to seek out others, making them roleplay catalysts. Their needs have the potential to become a station subplot that others can choose to engage with or navigate around.
-* **Shared Resonance Cultivating Shared Purpose:** Shared Resonances are made to encourage other Cyprins to interact and achieve a shared goal. Interacting with one another and various departments to achieve it.
-
-An example of a Resonance encouraging player interaction, is especially the shared resonances, which often encourage other Cyprin to work together in fufilling and even have other crew assist them in achieving it. Such as "A Holy Place" where Cyprint must congregate three times per day in a specific area of the station, (or as close as they can legally get to it) and go as far as to attempt to create a suitable place for it. Something that would encourage the interaction with related departments to create such a thing.
+* **Shared Resonance Cultivating Shared Purpose:** Shared Resonances are made to encourage other Cyprins to interact and achieve a shared goal. Interacting with one another and various departments to achieve it. Such as "A Holy Place" where Cyprint must congregate three times per day in a specific area of the station, (or as close as they can legally get to it) and go as far as to attempt to create a suitable place for it. Something that would encourage the interaction with related departments to create such a thing.
 
 ### Core Visual Elements
 Cyprints are humanoids with distinct fishlike and could have vaguely draconic (space dragon) features.
@@ -65,13 +63,13 @@ Their sounds should have a gutteral ring to them, inspired by deep-sea and alien
 The Cyprin brain is a unique biological structure, sensitive to electromagnetic fields. This sensitivity manifests in "Resonances," powerful, deeply ingrained cognitive patterns that compel specific behaviors or beliefs.
 
 - **Mechanic:** Every Cyprin has a Resonance. This is a fundamental, driving aspect of their character's behavior and beliefs.
-	- Every Cyprin in a shift will have one shared Resonance, these will encourage Cyprin to interact with each other and the station in various ways.
+	- Every Cyprin in a shift will have one shared Resonance between them, these will encourage Cyprin to interact with each other and the station in various ways.
 	- Every Cyprin will otherwise have 2-3 unique Resonances of their own.
 - **Enforcement:** Acting *against* one's Resonance causes significant psychological dissonance and distress. A Cyprin feels a powerful drive to align their actions with their Resonance, and violating it is deeply upsetting. Players are expected to roleplay this internal conflict. **Players are not required and should not be forced mechanically to align with their Resonances (unless an admin wants to be silly)**, but ***should*** act upset about it. 
-- **Resonance Disruption:** The Cyprin brain is vulnerable to external electromagnetic manipulation. A **Syndicate Cryptographic Sequencer (EMAG)** can be used to overwrite a Cyprin's Resonance, imposing a new, often disruptive or harmful compulsion (examples: "You Must Never Speak To Command," "All Property Is Yours To Take").
+- **Resonance Disruption:** The Cyprin brain is vulnerable to external electromagnetic manipulation. A **Syndicate Cryptographic Sequencer (EMAG)** can distort their ability to read the electromagnetic fields in their mind and overwrite a Cyprin's Resonance, imposing a new, often disruptive or harmful compulsion (examples: "You Must Never Speak To Command," "All Property Is Yours To Take"), this does not make them an antagonist.
 
 ### EM-Lachrymal Strikes
-Cyprints instinctively target sensitive parts of their victim with light electromagnetic shocks. Their strikes are not meant to crush or bruise, but to overwhelm the target's senses with precise, startling blows that trigger a disorienting fear response.
+Cyprints instinctively target sensitive parts of their victim with light electromagnetic shocks. Their strikes are not meant to crush or bruise, but to overwhelm the target's senses with precise, startling blows that disorient them.
 
 *   **Mechanic:** Unarmed attacks deal no physical damage. Instead, their attacks deal light stun damage. It should take the same amount of punches from a Cyprin to stun someone as it would for a human to crit someone.
 
@@ -92,7 +90,7 @@ They are also less sensitive to cold enviroments (such as that of space, however
 ### Medical and Chemistry
 Cyprints die like any other organic species. They can be healed with standard medical equipment and chemicals.
 
-Notably however, the hybrid biology of Cyprin results in a unique condition referred to as "Carpothymia" their circulatory system maintains a delicate, natural balance between their base biology and small amounts of Carpotoxin, inherited from their Space Carp progenitors. In it's natural state, the blood mixture is stable and harmless to them, giving their blood a faint iridescent sheen. As a result, Cyprin are immune to Carpotoxin, and it can even be used to restore their bloodloss. Their circulatory system also innately has a lower blood capacity.
+Notably however, the hybrid biology of Cyprin results in a unique condition referred to as "Carpothymia" their circulatory system maintains a delicate, natural balance between their base biology and small amounts of Carpotoxin, inherited from their Space Carp progenitors. In it's natural state, the blood mixture is stable and harmless to them, even have minor psychedelic effects to those who dare to ingest it, giving their blood a faint iridescent sheen. As a result, Cyprin are immune to Carpotoxin, and it can even be used to restore their bloodloss. Their circulatory system also innately has a lower blood capacity.
 
 Mechanically this comes out as an extremely niche and incredibly inefficent chemical resource. By placing Cyprin blood into a centrifuge, a chemist can isolate the small amounts of Carpotoxin. The process is very inefficient and requires a fair amount of blood to produce a usuable quantity of it, making it a niche and time-consuming process that could require harmful amounts of Cyprin blood. This would also result in funny roleplay interactions were a Cyprin with a Resonance such as "Your Blood Is Sacred" would be horrified by such a process.
 
