@@ -118,6 +118,26 @@ The end summary will also tell how much of the crew were borged, and how many xe
 
 In the future the Xenoborgs could have custom objectives, such as create another core in the station or mess with the Station AI somehow.
 
+### Alternative Xenoborg Endgame
+A Xenoborg round may also resolve via the ultimate endgame objective. Similar to Nukies, Xenoborgs will have access to their own round-ending objective.
+
+#### Option A
+The mothership core can print off an additional mothership core that xenoborgs will have to set up on the station. Only one of these items can exist in the round at all times.
+It **must** be setup on a station that has the `StandardNanoTrasenStation` component. This is to prevent the Xenoborgs from using their shuttle as the power source.
+
+After it has been connected to the stations' powergrid it will start siphoning from the powergrid. At this point the station crew can freely remove it and destroy it. Once destroyed, the primary mothership core can print off a new mothership core to try again.
+
+The mothership core will take roughly ~10 minutes to charge on high-voltage cabling. And it will give plenty of warnings about its existence, just like the regular powersink. The power monitoring station will also alert that there's an active mothership core on the station that's drawing power.
+
+Once the newly created mothership core is fully charged, a 5-minute countdown will start. At this point the core has to be fully destroyed before it finishes its countdown.
+
+Once the newly created mothership cores' countdown reaches 0. It will convert the station into a newly created mothership. This will be considered a major Xenoborg victory condition but will **not** automatically move the round into a post-round state. Instead, evac will be called, and the crew will be given a chance to escape. When evac docks with CentComm, the round will be moved into a post-round state.
+
+##### Rationale behind option A
+Out of playtesting, Xenoborgs tend to swarm the station at the later stages of the round. Giving the mothership core an option to build an expensive round-ender item makes them choose between more borgs, or ending the round via grand finale. This also helps out and reinforces the importance of Engineering Xenoborgs as they would be directly responsible for protecting and reinforcing the new mothership core outside traditional combat.
+
+Players have also expressed a interest in having a grand finale event that gives them a singular objective to watch.
+
 ## Game Design Rationale
 
 A army of evil robots saying "the flesh is weak, join us" while bashing a poor crewmate to death and dragging them away is certainly chaotic and silly.
