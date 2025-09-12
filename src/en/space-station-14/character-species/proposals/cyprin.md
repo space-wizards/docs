@@ -78,12 +78,12 @@ Cyprints instinctively target sensitive parts of their victim with light electro
 ### Resilient Respiration
 Due to sharing a common ancestor with space carp, Cyprin lungs are strange, resilient organs.
 *   **Mechanic:** Cyprints can safely breathe any kind of gas mixture without taking damage from N2O, Plasma, or other "exotic" atmospheres.
-*   **Weakness:** They are not immune to pressure damage (barotrauma) or asphyxiation damage.
+*   **Note:** They are still not immune to pressure damage (barotrauma) or asphyxiation damage.
 
 ### Damage Modifiers
 Their relatively fragile bone structure and unique nervous system make them vulnerable to certain threats, while their space carp ancestry provides resilience to others.
 
-*   **Increased Damage (+10%):** Blunt, Slash, Pierce, Genetic.
+*   **Increased Damage (+10%):** Blunt, Slash, Pierce.
 *   **Reduced Damage (-20%):** Radiation.
 *   **Lower Blood Capacity:** Other species have a blood capacity of 300u whereas Cyprin have 200u. Cyprin have very efficient circulatory systems which require less blood to run, however this also means bleeding out can be much more dangerous to them!
 
@@ -113,6 +113,8 @@ The struggle is the point, the cultural value isn't in perfectly embodying one's
 * Honesty - Believes truth is the foundation of trust and society. They may fight against Resonances that compel being deceptive.
 * Give Thanks - Seeks to find and appreciate the value in all things, fighting against Resonances of cynicism or negativity.
 * Search The Scripts - A perpetual seeker of knowledge and meaning, driven to understand the universe around them.
-* Mourn The Fallen - Honors memory and loss, believing that forgetting is a second death.
+* Sow The Seeds On Barren Worlds - Believes in creating life and hope where none exists. They are likely a Botanist or Terraformer, driven to cultivate gardens in the most desolate parts of the station or on lifeless asteroids.
+* Forge On - Believes in relentless perseverance no matter the obstacle. They are the last to give up in a crisis, often taking on difficult or dangerous tasks with determination.
+* Witness - Believes it is their duty to observe and remember events, especially tragedies or injustices. They may be a passive observer who documents conflicts, or a journalist ensuring that the truth of what happens on the station is never forgotten.
 
 Despite this, some Cyprin might opt for more galactic standard names, resulting in humorous situations where a Cyprin might have the name of "John Kernack" or something, highly confusing their fellow Cyprin kin.
