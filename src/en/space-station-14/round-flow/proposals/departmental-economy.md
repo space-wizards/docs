@@ -89,6 +89,59 @@ Using the same console used to purchase departmental goods through cargo, player
 
 As for **siphoning**, the idea is that a console in the vault will have the ability to freely withdraw from departmental funds into real paper spesos--with some time delay and announcement for some heist action. Spesos can be inserted into any relevant departmental/cargo purchasing console.
 
+### Interdepartamental and Personal trade
+
+Salvaging should remain the primary method for departments to acquire materials. Buying materials and other station-produced items through the ATS (Automated Trade System) should be discouraged in favor of interdepartmental trade.
+Yet trade in game is inconvinient, you really don't know what is on sale in specific departemnt and at what price they are willing to sell. IF there is somone at the front to talk to.
+A fast and convenient way to sell department-produced items using vendomats should be introduced. Most departments would start with an almost empty vendomat that they could fill with the fruits of their labor and set the price. Departments could earn additional money this way, with profits from sales going directly to the department's bank account.
+Examples of items that can be sold by departments:
+Med: topicals, pills, drugs.
+sci: batteries, tools, packed machines
+cargo: Mats, tools, drip from lottery, toys
+botany: fruits and other weeds.
+
+Engie and sec should not have vendomats, as item production is not part of their job. (no sec venomats with guns :c)
+To compansate their default share of Funding Allocation should be increased.
+
+Other players like tiders may setup their own personal vendshops. Destroyed vendomats can be found in maints, those can be fixed by anyone. Money from transactions will be stored in vend, with possibility to remove with screwdriver and medium long doafter.
+Most food and drink in vendomats across the station should have small prices, with profits going to Cargo, giving them an incentive to restock them, which they currently never do. There should be a free option in every food vendomat, allowing for survival if a player spends all their money. For example, an average can of cola and a food item should be priced around 50 spesos.
+Food in the kitchen and drinks in the bars should remain free as this is still part of their job. Same thing applies to healing in med or fixing station as engies.
+In general, avarage player should be able to play entire round without interacting with paid vendomat items and economy system in general.
+
+Injecting money into personal economy by:
+- More spesos in mail(paychecks, allowance etc. Random spesos for average player, between 200-1000 spesos. With about 50% propability of getting it once per round)
+- More spesos as maints loot. 
+- Maints loot worth more on ATS, tiders can find expensive useless items like watches that they can haggle to cargo techs for cash. For example watch worth 1000 spesos on ATS, with description hinting that it can be worth a lot and cargo would be intrested in buying it.
+- Small ammount of starting spesos. Ammount depending on role, with 1000 spesos for command members. 500 for normal workers and 200 for tiders/assistance.
+
+Extras:
+- Gambling machines
+- Possibility to put spesos into PDA
+- Possibility to pay with PDA (using the inserted cash)
+- Department's credit card. It allows to pay in vends with departments fund. It can be dissabled at Funding Allocation Console. Possible steal objective.
+- Trader visitor with goal of making as much money as possible.
+- Mid game abductor "visitor" his job is to abduct then ransom his prisoner or otherwise obtain 15000 spesos.
+
+What will remain free (this is not comprehensive list):
+-Bar.
+-Kitchen.
+-Items in job-specific vendomats.
+-Pies thrown at you by clown (you can tip him tho).
+-Item in job specific vendomats.
+-Pies thrown at you by clown.
+-Medical help.
+-Fixing of station damage by Engie.
+-Jail.
+-Church.
+
+Implementation of interndepartamental and personal economy plan:
+1) Regular loadouts of vendomats can have paid items. Few additional paid items should be added to common use vendomats.
+1.5) Price tweaks and slow introduction of pricing to common use vendomats, increase of propability of getting spesos in mail and maints.
+2) Implementation of special department specific, no-loadout vendomat, with ability to insert items and set the price of product by players. Cash from transaction going straight to department bank.
+3) Implementation of tider vends. Profit from transactions in these vends will stay in vendomat until removed.
+3.5) Further increases of prices in common vendomat and addition of roundstart spesos.
+4) Other extras and QoL improvements.
+
 ## Concluding
 
 With a holistic implementation of the systems laid out here I see a lot of benefits. Money is always fun for players to interface with--they like feeling like they're turning big profits or making shady deals or whatever, so integrating it with everybody is nice. Departmental players will have a lot more agency and should feel much less frustrated about certain things "requiring" cargo since the friction for receiving something from cargo is significantly lessened. Cargo players should feel a lot less stress while still retaining the fun parts of their job and a new dimension with having to manage incoming purchases that they weren't always made explicitly aware of. Design-wise, we can design around departments selling, purchasing, and making deals amongst themselves without feeling like we're sentencing players to endless hell with no options if cargo is incompetent or slow. I expect some fun roleplay and interactions to develop around transferring funds between departments, as well as departments begging HoP for more money to work on their pet projects.
