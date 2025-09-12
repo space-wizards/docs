@@ -7,7 +7,7 @@
 ## Overview
 This proposal is for a new roundstart species known as Cyprin. Cyprints are an alien piscine race descended from space carp and dragons, bound by their unique neurobiology. Where a human has a stable mind, a Cyprin have Resonance influenced by electromagnetic waves, where a human has fists, a Cyprin has precise stun strikes.
 
-Though humanoid in shape, their appearance is distinctly piscine or draconic. Cyprints fill a niche for a species with a deep, roleplay-heavy mechanic that significantly alters how they interact with the station.
+Though humanoid in shape, their appearance is distinctly piscine with rarely some space dragon features. Cyprints fill a niche for a species with a deep, roleplay-heavy mechanic that significantly alters how they interact with the station.
 
 ## Background
 The Cyprin are inspired by the original "Thaven" concept, reworked to have a more cohesive identity rooted in space carp/dragon ancestry. The name is derived from *Cyprinidae*, the biological family of carp to focus on this biological origin.
