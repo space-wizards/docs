@@ -65,8 +65,35 @@ The Cyprin brain is a unique biological structure, sensitive to electromagnetic 
 - **Mechanic:** Every Cyprin has a Resonance. This is a fundamental, driving aspect of their character's behavior and beliefs.
 	- Every Cyprin in a shift will have one shared Resonance between them, these will encourage Cyprin to interact with each other and the station in various ways.
 	- Every Cyprin will otherwise have 2-3 unique Resonances of their own.
+	- Shared Resonance will never change (without admin intervention), however Ion Storms can rarely change a Cyprin's personal Resonances. This should be uncommon though to avoid situations where a Cyprin is constantly having their Resonances changed due to several Ion Storms in a round.
 - **Enforcement:** Acting *against* one's Resonance causes significant psychological dissonance and distress. A Cyprin feels a powerful drive to align their actions with their Resonance, and violating it is deeply upsetting. Players are expected to roleplay this internal conflict. **Players are not required and should not be forced mechanically to align with their Resonances (unless an admin wants to be silly)**, but ***should*** act upset about it. 
-- **Resonance Disruption:** The Cyprin brain is vulnerable to external electromagnetic manipulation. A **Syndicate Cryptographic Sequencer (EMAG)** can distort their ability to read the electromagnetic fields in their mind and overwrite a Cyprin's Resonance, imposing a new, often disruptive or harmful compulsion (examples: "You Must Never Speak To Command," "All Property Is Yours To Take"), this does not make them an antagonist.
+
+#### Problems & Solutions
+This section effectively acts as a FAQ for issues one might see with this mechanic and find solutions to them.
+
+##### 1. Misinterpretation as Silicon Laws
+**Problem:** Players, especially those familiar with Silicon roles such as cyborg or Station AI might see Resonance and conflate it with how Silicon Law works. Believing they are required to follow them or face punishment. This could lead to situations like:
+- Players feeling forced into actions that get them in trouble in-character or with admins.
+- Players feeling frustrated that their agency is removed.
+- Unnecessary load on admins
+
+**Solution:**
+- **Clear Messaging:** The game should give the player, via the Guidebook and other UI parts an OOC message/tooltip, such as:
+    - "Remember: Reasonances are a roleplay guide, not strict rules. You are never forced to follow them, especially if it risks the lives of you or others, your job, or the station. The goal is to roleplay the *internal conflict* of having these Resonances."
+- **In-Universe Flavor Text:** Alongside the OOC message, the Resonance UI can also have an in-universe explanation that gives the same idea as well:
+    - "Resonances are powerful compulsions, but your duty and survival must come first. **To ignore them is to feel a deep unease, but to follow them blindly is to risk *everything*.**"
+
+##### 2. Abuse for Self-Antagging
+**Problem:** A player could use their Resonance as a blanket excuse to grief or self-antag. For example, a player with the "Petty Theft is Morally Neutral" might decide to just start looting everything and claim "It's what my Resonance told me to do."
+
+While I personally believe situations like this should be handled in-character, I can see where this may go too far in some situations.
+
+**Solution:**
+- **Curated Resonance Pools:** Resonances must be carefully designed and sorted into pools.
+    - **Standard Pool:** This is the vast majority of roundstart Resonances. They should be weird but **non-destructive** (Such as "Eat Only Off The Floor," "Must Congregate," and so on.) These create roleplay without reasonably giving an excuse to outright break rules. Only lightly mischievious things can be here.
+    - **Antagonist-Only Pool:** These are Resonances only Cyprin with antagonist status can attain. It could be things such as "You Must Worship The Syndicate," "All Property Is Yours To Take," "Violence Is The Only Answer." Upon gaining Antagonist status, a Cyprin's Resonance might be tacked onto or change to match as such. This has low metagaming potential as Cyprin are under no obligation to be truthful about their Resonances (unless a Resonance explicitly states so, in which, harken back to the internalized conflict).
+ - **Admin Oversight:** The understanding must be that "my Resonance made me do it" is not a valid defense for breaking server rules. If a player uses a non-destructive Resonance to justify unreasonably destructive actions, it should be treated as standard griefing as it would with any player.
+     - Admins will also be able to view and edit a Cyprin's Resonances at any time during a round. So if someone in particular is being a bit too nasty hiding behind Resonance as an excuse for being a shitter. Do as you will accordingly.
 
 ### EM-Lachrymal Strikes
 Cyprints instinctively target sensitive parts of their victim with light electromagnetic shocks. Their strikes are not meant to crush or bruise, but to overwhelm the target's senses with precise, startling blows that disorient them.
