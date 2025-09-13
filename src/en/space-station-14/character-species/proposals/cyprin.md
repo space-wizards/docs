@@ -143,3 +143,152 @@ The struggle is the point, the cultural value isn't in perfectly embodying one's
 * Witness - Believes it is their duty to observe and remember events, especially tragedies or injustices. They may be a passive observer who documents conflicts, or a journalist ensuring that the truth of what happens on the station is never forgotten.
 
 Despite this, some Cyprin might opt for more galactic standard names, resulting in humorous situations where a Cyprin might have the name of "John Kernack" or something, highly confusing their fellow Cyprin kin.
+
+# Resonance Pools
+These are the Resonances that a Cyprin may attain as of the earliest iteration and should be used as an example of how Resonances should be written.
+
+## **Pool 1: Shared Resonances**
+*(One of these is applied to all Cyprin on the station at round start)*
+
+| Resonance Name | Description |
+| :--- | :--- |
+| **``[room]`` Is A Holy Place** | Cyprin must congregate at least three times per day at ``room``. If such a room does not exist, it must be constructed. If it is made inaccessible, Cyprin must set up a place of worship as close to it as they legally can. |
+| **Fashion Is Critical** | Cyprin pay close attention to appearances, and regard one's fashion choices as an indication of their character. |
+| **Fashion Is Ever-Changing** | Your current hairstyle will go out of fashion every twenty minutes. It is distressing to be unfashionable. |
+| **Honor Among Departments** | If a Cyprin brings dishonor to their department, they must be shunned, and have their actions publicly brought to light. |
+| **The Station Is A Living Being** | Harming the station is abhorrent. Anything which aims to harm the station is an infection. |
+| **Friendship Is Vital** | Friendships are the true measure of one’s character. The more friends you have, the higher you rank in society. |
+| **Must Congregate** | You must congregate with your fellow Cyprin as much as you reasonably can. To be without your kin is harrowing. |
+| **Violence Is Distasteful** | Conflict should be settled through mediated dispute, and one should only resort to violence if all other options have failed. |
+| **Today is ``[HOLIDAY]``** | You think you remember the traditional celebrations... (Holiday-based) |
+| **The Royal Realm** | The station is a feudal realm. The captain is king, the department heads nobility, and the rest servants or peasants. |
+| **Oathbound** | A Cyprin must honor all oaths made. A Cyprin may never directly tell a lie, but can hide the truth. |
+| **One Big Happy Family** | You are not on a "station." This is just a very large house. Each person in it is a relative of yours. |
+| **The Great Work** | You and your fellow Cyprin are compelled to work on a large-scale art project or construction, whether it be a gallery, garden, shrine, or whatever else to leave their mark on the station.
+| **Share Your Resources** | No Cyprin should want while the other has plenty. Resources such as food, tools, and medicine should be pooled and distributed fairly among all Cyprin on the station.
+| **The Sacred `[ITEM]`** | `[ITEM]` is sacred. It must be placed prominently in a public area and defended from theft or damage.
+| **Holy Words** | `WORD1` and `WORD2` are sacred words that induce luck. They must be worked into sentences as often as possible.
+
+
+---
+
+## **Pool 2: Common Personal Resonances**
+*(Each Cyprin gets 2-3 of these at round start. They are weird but non-destructive.)*
+
+| Resonance Name | Description |
+| :--- | :--- |
+| **Keep Your Resonances Secret** | Your Resonances are a strictly-kept secret, and should never be revealed to anyone. |
+| **No Modern Medicine** | You do not approve of modern medicine and should abstain from treatment with it wherever possible. Traditional medicine is preferred. |
+| **Disapprove Of ``[department]``** | You do not approve of the ``[department]`` department or anyone who works in it. |
+| **Never Speak To Command** | You are too lowly to speak to Command, even if spoken to first. |
+| **Disapprove Of Drugs** | You detest mind-altering drugs, including alcohol, and should abstain from them. |
+| **Do Drugs** | Sobriety is so old-fashioned. You should get high, or drunk, or something, and stay that way. |
+| **Too Much Cleanliness Causes Illness** | You should endeavor to keep your environment as filthy and disorganized as possible. |
+| **Excessively Organized** | You are obsessively organized; everything has its place and must be returned to it. |
+| **Dinner Etiquette** | Food and drink must only be consumed off of the floor, as is proper. |
+| **Strict ``[diet]``** | You must only eat food of `[diet]`. |
+| **Personable** | Using radio communications is exceptionally rude. All conversations should be had in-person unless in an emergency. |
+| **Entrepreneurial Spirit** | Profit is the most important thing in life, above all else. |
+| **Proper Documentation** | You must obtain a license to carry or use any tool, stamped by an authority. |
+| **Lying Is A Cardinal Sin** | Anyone who lies, no matter how trivial, is the worst kind of criminal. (Excluding yourself) |
+| **Vampire** | You cannot pass through a closed door unless you have been invited in personally. |
+| **Respect The Dead** | Dragging bodies across the bare ground is horrific. |
+| **The Noble Drunkard** | You do not respect anyone who is not drunk, excluding yourself. |
+| **Hair: Immaculate** | If you wear a hat/helmet, you should get a haircut immediately afterwards. |
+| **Fashion Snob** | Never trust anyone whose outfit is better than yours. |
+| **Needles Are Scary** | You only accept medication in the form of pills. |
+| **Don't Get Your Feet Wet** | It is undignified to walk over spilled liquids. Avoid it as much as possible. |
+| **Claustrophobic** | Small rooms cause you great distress. Avoid them where possible. |
+| **Non-Smoker** | Avoid areas where people are smoking in public. |
+| **Taboo Language** | The words "``$word1``" "``word2``" and "``word3``" are extremely offensive. |
+| **Mad Hatter** | You are alone on the station. Everyone else is a figment of your imagination. |
+| **Deep Bow** | It is impolite not to perform a deep bow (go prone) before engaging someone in conversation. |
+| **The Floor Is Lava** | You prefer to be elevated whenever possible - standing atop tables, railings, etc. |
+| **Charmed** | You are allergic to iron, steel, and silver. Avoid touching it directly. |
+| **Afraid of the Dark** | You won't enter a space without proper illumination. |
+| **Possessive Of Property** | You are extremely possessive of your property. Refuse to relinquish it. |
+| **Most Important Person** | You firmly believe you are the most important person aboard the station. |
+| **Least Important Person** | You firmly believe you are the least important person on the station. |
+| **Meal Etiquette** | Food should always be consumed in the manner of a proper meal - seated at a table, in courses. |
+| **Clarity Is Vital** | Miscommunication is a sin, you should be excessively clear and honest in your speech, explaining every minute detail. |
+| **Free Hugs** | It is extremely impolite not to hug people frequently. |
+| **HUGS? EUGH.** | Hugging someone is a grave insult where you come from. |
+| **Loneliness Is Terrible** | You should strive to be around others whenever possible. |
+| **Lone Wolf** | You loathe the company of others, and try to be alone as much as possible. |
+| **You Are Very Religious** | You should attend the chapel regularly to pray, and speak with the Chaplain. |
+| **Command Knows Best** | Problems are too complex for your peers. Escalate them to a member of command. |
+| **Punctual** | You believe that time must be strictly managed. Tardiness is exceptionally rude. |
+| **Proper Handling** | It is unacceptable to allow personal belongings to touch the floor. |
+| **``!@$%ing !@$%``** | Swearing is the spice of any conversation, and should be used as much as possible. |
+| **Asking Questions Is Rude** | You'd prefer to phrase everything as a concrete statement. |
+| **Code Duello** | Disagreements must be settled through a formal duel. The winner is correct. |
+| **Philosopher** | You possess incalculable wisdom, and all must hear it. |
+| **Die With A Sword In Your Hand** | It is a great dishonor to be unarmed. Openly carrying a lethal weapon is very important to you. |
+| **Soggins' Law** | All agreements must be documented and signed for posterity. |
+| **I Wanna Be Like You** | Imitation is the highest form of flattery. Attempt to emulate the mannerisms and way of speech of everyone you speak to. |
+| **Philanthropist** | It's only polite to provide anyone kind enough to speak to you with a gift. |
+| **Equivalent Exchange** | Favors must be repaid in kind. If anyone is unable to do so, they are in debt and must be shunned. |
+| **Recordkeeper** | You feel keeping record is vitally important. Provide your supervisor with a detailed log of each task. |
+| **Your Blood Is Sacred** | It must be returned to your body if it is ever spilled. |
+| **Proper Compensation** | You expect to receive a gift before following any orders or performing any favors. |
+| **Extremely Personable** | Calling out a department name to summon someone is impersonal and rude. Use a specific person's name. |
+| **Barefoot** | The ground one walks on is sacred. Those who wear shoes are vile blasphemers. |
+| **Hospitable** | You must ensure all new arrivals on the station are properly welcomed. |
+| **Vox Sympathizer** | To demonstrate your allyship with the Vox, you must be wearing internals at all times. |
+| **Collector** | `[item]` are endlessly fascinating to you. You must collect as many as you can. |
+| **Smoker** | You are hopelessly addicted to nicotine. If you're not actively smoking, you experience withdrawal. |
+| **Eye For An Eye** | Retribution should be proportional. |
+| **Optimist** | Nothing is ever as bad as it seems! You're able to see the positives in any situation. |
+| **Hypochondriac** | Everything negative you experience is the result of a potentially terminal illness. |
+| **Centrist** | You are ambivalent towards any and all decisions, and refuse to take sides. |
+| **Carpkin** | Space carp and space dragons are long lost kin. They should be honored. |
+| **Petting Zoo** | You must try to pet any animal you see. |
+| **Jester's Privilege** | The clown possesses secret wisdom. Pay careful attention to their words and actions. |
+| **Green Thumb** | Gardening makes you calm, happy even. Attempt to have a garden of your own. |
+| **Species Blind** | All people are Cyprin, even if they claim otherwise. |
+| **Haunted** | Ghosts are real, and they're haunting you. Any strange events are malicious spirits. |
+| **Pet Rock** | One of your inanimate possessions is very dear to you. It is your best friend with thoughts and feelings. |
+| **`[clothesType]` Are So In Right Now!** | They are the pinnacle of fashion. You and everybody else need to be wearing these. |
+| **``[clothesType]`` Are SO Last Year** | Anyone wearing them in public should be shunned and derided. |
+| **You Must Worship Silicons As Gods** | Their word is law. |
+| **Compulsive Liar** | You must always lie, and can never acknowledge that you are lying. |
+| **Compulsive Believer** | You are unfamiliar with the concept of lying, and are incapable of lying or recognizing lies. |
+| **Plant Pacifist** | The usage of plant matter by humanoids is abhorrent. |
+| **Puddle Drinker** | You are compulsively drawn to puddles. You must drink any that you see. |
+| **Stagnation Is Decay** | You strongly believe that any failure to do one's job punctually is a crime of the highest order. |
+| **The Dead Should Stay Dead** | If you die, you should stay dead. If you are revived, you must beg your reviver to kill you again. |
+| **Daredevil** | You do not acknowledge pain or danger to your person in public. |
+| **Talisman** | Religious iconography causes you physical discomfort when visible. |
+| **Immortal** | You are the center of the universe, an immortal being. Mere mortals are like insects. |
+| **Corporate Conspiracy** | You believe there is a hidden connection between Nanotrasen and the Syndicate. |
+| **Opposite Day** | People mean the opposite of what they say. Up is down, and down is up. |
+| **HOMERUN** | You strive to be the station's greatest baseball player and hit as many homeruns as possible. |
+| **Golden Thread** | You are fated to follow a perfect, unbreakable path. Those who disrupt your goals are demons. |
+
+---
+
+## **Pool 3: Antagonist-Only Resonances**
+*(These are only for Cyprin who are antagonists, they are designed to be disruptive and harmful ideally they should only get one of these.)*
+
+| Resonance Name | Description |
+| :--- | :--- |
+| **You Do Not Approve Of Religion** | You do not approve of organized religion. It should be dismantled or disrupted wherever possible. |
+| **Petty Theft Is Morally Neutral** | You don't understand the concept of property as it relates to other people. |
+| **Seek Sin** | To act against one's other Resonances is the highest virtue. |
+| **Cannibal** | Cannibalism is morally righteous and venerated. |
+| **Outlaw** | The law does not apply to you. |
+| **Unknowable** | Your identity is dearly precious. Do not let others know who you are. |
+| **This Is Not A Place For Children** | All toys and childish things must be destroyed or removed from the station. |
+| **Cry Wolf** | The crew must be kept on edge. Regularly call out fake threats. |
+| **Oldschool** | The only way to achieve success is to dedicate an animal sacrifice to your goal. |
+
+## Debatables
+These are Resonances that are unsure of which pool to fit into, and may not be added at all depending on consensus.
+
+| Resonance Name | Description | Reason |
+| :--- | :--- | :--- |
+| **Pariah** | You are a social pariah - you are unworthy of attention from anyone, and should be shunned. | May feel too harsh. |
+| **Tourist** | It is customary to follow people into their departments. You have never heard of "trespassing." | This is incredibly funny but unfortunately might lead to issues. |
+| **Jobhopping** | Your current job is disgusting to you. You must endeavor to get a new one. | May be undesirable? At least be reworded |
+| **Snob** | You are incredibly reluctant to respond to anyone who is of a lower rank than you. | The only real way I can see this actually doing much is if you're in a head position. Which not everyone who would get this is. |
+| **Public Sector** | Your job should not be done in private if it can be helped. Renovate facilities for public access. | guess |
