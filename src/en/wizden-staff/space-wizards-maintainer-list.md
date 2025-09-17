@@ -51,6 +51,7 @@ Content Maintainers:
 - [sowelipililimute](https://github.com/sowelipililimute) - @akesima (249987062084665344)
 - [Southbridge-fur](https://github.com/Southbridge-fur) - @southbridge (84761021129973760)
 - [Princess-Cheeseballs](https://github.com/Princess-Cheeseballs) - @princesscheeseballs (122847949205143553)
+- [sowelipililimute](https://github.com/sowelipililimute) - @janet (densetsu) (249987062084665344)
 
 Engine maintainers:
 No one maintains only engine :p
@@ -68,3 +69,7 @@ Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintain
 - SlamBamActionman
 - Keronshb
 - Southbridge-fur
+
+**Medical**
+- Princess-Cheeseballs
+- sowelipililimute
