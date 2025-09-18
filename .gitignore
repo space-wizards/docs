@@ -7,3 +7,6 @@ book
 
 # VSCodium files
 .vscode/
+!.vscode/*.code-profile
+!.vscode/launch.json
+!.vscode/task.json
