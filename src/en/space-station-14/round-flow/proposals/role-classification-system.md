@@ -10,7 +10,9 @@ Currently, all antagonist and ghost roles are categorized by broad labels, such 
 ## Proposed solution
 Instead of using a small set of predefined labels for describing antagonist and ghost roles, we should consider breaking them down into a set of aspects that can be freely combined, much like the [SCP Anomaly Classification System](https://scp-wiki.wikidot.com/anomaly-classification-system-guide). Having our own role classification system would be very useful from both a design perspective, as well as an aid for players, by providing needed granularity in the descriptions of these roles and as a way of rapidly providing a high-level overview of how different roles are expected to function. 
 
-In this proposal, each antagonist and ghost role is defined by an associated faction (e.g., 'NanoTrasen', 'Syndicate', 'Animal') and four different key aspects: Disruption, Notice, Escalation, and Fraternity. Each aspect has four different ‘levels’ associated with it that modify expectations around player behavior. This system could be readily expanded upon to accommodate crewmember roles as well.
+In this proposal, each antagonist and ghost role is defined by an associated faction (e.g., 'NanoTrasen', 'Syndicate', 'Animal') and four different key aspects: Disruption, Notice, Escalation, and Fraternity. Each aspect has four different ‘levels’ associated with it that modify expectations around player behavior (see below for a more indepth explanation of each of these aspects). This system could be readily expanded upon to accommodate crewmember roles as well.
+
+It should be noted that the proposed system is not intended to replace mechanical enforcement of behavior. For example, Escalation 0 could be mechanically enforced via the pacifism trait. However, being clear with players how a role is intended to function is important for both cultivating the behavior we would like to see from our players, and hopefully reducing attempts to circumvent mechanical enforcement, as well as providing an introduction to the role for newer players and how they can best succeed in the role.
 
 ### Disruption
 Disruption relates to how disruptive player actions should be to other players and round flow in general.
@@ -43,21 +45,21 @@ Escalation relates to expectations around combat and the use of violence against
 | 3 | Extreme | "The escalation rules do not apply to you. You are free to cut down any enemies you encounter." |
 
 ### Fraternity
-Fraternity relates to player cooperation with other faction members.
+Fraternity relates to player cooperation with other faction members. Players are either informed of the other members of their faction directly (e.g., Zombies, Nuclear operatives, and Revolutionaries) or they can infer it via social deduction (e.g., traitor code words). The members of some factions will be obvious (e.g., Animals, Xenoborgs, and Abducators). In instances where the faction of another player cannot be determined, none of the following expectations apply; there should never be a circumstance where this ambiguity would create an issue for a player earnestly attempting to fulfil the expectations of their role.
 
 | Level | Label | Player facing description |
 |-------|-------|---------------------------|
 | 0 | None | "The other members of your faction are your competitors. Either ignore them, or eliminate them." |
 | 1 | Low | "The other members of your faction are your rivals. Temporary alliances might arise if your goals align." |
 | 2 | Moderate | "The other members of your faction are your colleagues. You are welcome to assist them." |
-| 3 | High | "The other members of your faction are your allies. Do whatever you can to support them." |
+| 3 | High | "The other members of your faction are your allies. Where practical, use their help to complete your objectives." |
 
 ### Classification examples
 Here are some examples of how the classification system described above could be applied to clarify expectations on how antagonists and ghost roles should be played. (Note, these examples are meant to be illustrative, not definitive in how these roles should actually be classified.)
 
 | Role | Faction | Disruption | Notice  | Escalation | Fraternity |
 |------|---------|--------|------------|------------|------------|
-| Cyborg | Nanotrasen | 0 | N/A | 0 | 3 |
+| Robot | Nanotrasen | 0 | N/A | 0 | 3 |
 | Mouse | Animal | 1 | 1 | 0 | 2 |
 | Skeleton | Nanotrasen | 1 | N/A | 1 | 1 |
 | Thief | Syndicate | 1 | 1 | 0 | 1 |
