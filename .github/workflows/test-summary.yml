@@ -11,4 +11,4 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     - name: Run SUMMARY.md link check
-    run: tests/test_summary.py
+      run: tests/test_summary.py
