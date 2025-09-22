@@ -8,13 +8,13 @@ REPO_ROOT = Path.cwd()
 
 # Folders to check
 DOCS_DIRS = [
-    REPO_ROOT / r"src\en",
+    REPO_ROOT / r"src/en",
 ]
 
 # Folders to ignore
 EXEMPT_DIRS = [
-    REPO_ROOT / r"src\en\assets",
-    REPO_ROOT / r"src\en\templates",
+    REPO_ROOT / r"src/en/assets",
+    REPO_ROOT / r"src/en/templates",
 ]
 
 # The file to check the links for
