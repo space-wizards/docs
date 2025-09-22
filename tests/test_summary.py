@@ -4,19 +4,21 @@ import re
 import sys
 from pathlib import Path
 
+REPO_ROOT = Path.cwd()
+
 # Folders to check
 DOCS_DIRS = [
-    Path(r"src\en"),
+    REPO_ROOT / r"src\en",
 ]
 
 # Folders to ignore
 EXEMPT_DIRS = [
-    Path(r"src\en\assets"),
-    Path(r"src\en\templates"),
+    REPO_ROOT / r"src\en\assets",
+    REPO_ROOT / r"src\en\templates",
 ]
 
 # The file to check the links for
-SUMMARY_FILE = Path(r"src/SUMMARY.md")
+SUMMARY_FILE = REPO_ROOT / r"src/SUMMARY.md"
 
 
 def get_summary_links():
