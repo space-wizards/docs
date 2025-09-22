@@ -64,6 +64,7 @@ def main() -> int:
 
     for docs_dir in DOCS_DIRS:
         docs = get_all_docs(docs_dir)
+        print(f"found {len(docs)} .md files in {docs_dir}")
         missing = [d for d in docs if d not in summary_links]
 
         if missing:
