@@ -24,12 +24,12 @@ Both Engine and Content Maintainers:
 - [AJCM-git](https://github.com/AJCM-git) - @ajcm_git (239467362380808192)
 - [ElectroJr](https://github.com/ElectroJr) - @electrosr (348118974497816577)
 - [vulppine](https://github.com/vulppine) - @vulppine (102244617314914304)
+- [Tayrtahn](https://github.com/Tayrtahn) - @tayrtahn (147050540214386689)
 
 Content Maintainers:
 - [Partmedia](https://github.com/Partmedia) - @notafet (774744999379599360)
 - [Emisse](https://github.com/Emisse) - @emisse (109430489684705280)
 - [juliangiebel](https://github.com/juliangiebel) - @julian_g (234313113766199297)
-- [Tayrtahn](https://github.com/Tayrtahn) - @tayrtahn (147050540214386689)
 - [deathride58](https://github.com/deathride58) - @bhijn (77867936647225344)
 - [VasilisThePikachu](https://github.com/VasilisThePikachu) - @vasilisiscool (322708417540259841)
 - [ficcialfaint](https://github.com/ficcialfaint) - @ficcialfaint (481532274211422209)
@@ -51,6 +51,8 @@ Content Maintainers:
 - [sowelipililimute](https://github.com/sowelipililimute) - @akesima (249987062084665344)
 - [Southbridge-fur](https://github.com/Southbridge-fur) - @southbridge (84761021129973760)
 - [Princess-Cheeseballs](https://github.com/Princess-Cheeseballs) - @princesscheeseballs (122847949205143553)
+- [sowelipililimute](https://github.com/sowelipililimute) - @janet (densetsu) (249987062084665344)
+- [iaada](https://github.com/iaada) - @aa.da (densetsu) (208069537310965760)
 
 Engine maintainers:
 No one maintains only engine :p
@@ -68,3 +70,7 @@ Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintain
 - SlamBamActionman
 - Keronshb
 - Southbridge-fur
+
+**Medical**
+- Princess-Cheeseballs
+- sowelipililimute
