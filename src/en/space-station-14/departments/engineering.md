@@ -2,8 +2,8 @@
 Assembling, maintaining, and powering a station soon to undergo rapid unscheduled disassembly.
 
 ## Concept
-Engineering is the department responsible for assembling, maintaining, and powering the station and its equipment, keeping it functional and usable by the crew. 
-In addition, Engineering may process or synthesize materials, using these materials to create new items or structures researched by Science or requested by other departments.
+Engineering is the department responsible for assembling, maintaining, and powering the station and its equipment, keeping it functional and usable by the crew.
+In addition, Engineering may embark on large construction projects, either transforming an area or deploying a new system.
 
 It is extremely fun and rewarding for players to solve a mechanical issue or build something new for other players.
 As such, Engineering and its mechanics should promote collaboration, cathartic solutions, and above all, the feeling that the player's actions are making a difference.
@@ -33,26 +33,31 @@ As such, mechanics should be designed in a way that fulfills the following requi
      - Ex. It is **visually intuitive** that an air vent releases air into an atmosphere, or that an SMES stores power.
      - Ex. It is **interactively intuitive** through UI that a generator has greater fuel efficiency at power outputs lower than their maximum output.
 
-### Difficulty Population Scaling
-The difficulty of tasks should scale with the population of the Engineering department, or the number of people that is expected to be doing that task.
-
-The intention of this design pillar is to prevent situations where a skeleton crew (likely) cannot achieve the tasks necessary for the station's beginning-of-round survival.
-For example, stations designed to host a skeleton crew (or stations that may see a skeleton crew engineering department) should have engines that can be operated by a skeleton crew.
-
-It's important to note that it's okay to have tasks out-scale the player in the end-stages of a round where chaos and disrepair are supposed to be happening. However, this should not be happening at the beginning of the round, or as a first introduction to a system.
-
-For example:
-- Setting up the AME is a task that can be achieved in a reasonable timeframe by one person.
-- Setting up the Singularity or Tesla engine can be achieved solo, but this takes a bit of time as setup is a complex series of steps, compared to other engines. Multiple people should be able to set up the engine in a reasonable timeframe. This makes the Singularity/Tesla less attractive for lower-population stations, and an alternative generator should be afforded, or the setup of these generators be partially or fully completed.
-- Setting up the TEG can sometimes be a difficult task for one or multiple people, especially people being introduced to many mechanics like Atmospherics and its limiting factors like window shattering. Mechanics like these should be communicated visually or intuitively as mentioned before.
-
 ### Toolset and Accelerated Work
 The items in Engineering's restricted-level toolset should speed up their work, enabling productivity and response time higher than if a person wants to achieve a maintenance task on their own accord.
 
 In a sense, everyone should be able to do work involving Engineering in a pinch, but performing work in a timely manner involves calling Engineering to help out.
 This allows players to still perform their duties if Engineering is in a skeleton-crew state, but they are still encouraged to call on Engineering if available for large tasks.
 
-### Proactive, Reactive, and Maintenance Tasks
+### Proactive, Reactive, and Menial Tasks
+#### Proactive Tasks
+Proactive tasks are tasks that Engineering does on their own accord, whether that be fulfilling requests from departments or by constructing something in their pass-time.
+
+The bulk of proactive tasks are projects.
+These projects can be anything, from deploying and maintaining a station point defense grid, to renovating or installing a new section of a department.
+These tasks should be able to be completed in a standard shift and benefit the station across the board, not just Engineering.
+
+#### Reactive Tasks
+Reactive tasks are tasks that occur in response to some station event.
+For example, science exploded their artifact chamber, meteors spaced an area of maints, or a hardbomb blew up medical.
+
+These are the most important tasks that affect the round, as not completing them exacerbates the feeling of station damage.
+If damage can be caused too easily, and the damage is not fixed fast enough, Engineering will feel underwater fairly early in the round, which is not a fun experience for players.
+
+Since this gameplay is the most important, it should be the most engaging and fun to fix.
+Reactive tasks should not be seen as a distraction from proactive tasks, as this can lead to Engineering ignoring issues that the crew cannot solve on their own accord, leading to a feeling of helplessness and evacuation.
+
+#### Menial Tasks
 Tasks given to Engineering should not be extremely menial or feel like a filler task meant to keep engineering barely idle.
 These tasks are boring and do not contribute to fun gameplay.
 
@@ -84,5 +89,69 @@ Generally speaking, very few tasks should have this dynamic, if at all.
 Instead, your mechanic should be designed around upsets driven by in-round events that can happen either by chance or by antagonistic activity.
 Players should be able to tell when these upsets occur if their effects on the round are large. These upsets should do damage to the station proportional to the time or amount of resources it takes to perform the upset.
 
+### Difficulty Population Scaling
+The difficulty of tasks should scale with the population of the Engineering department, or the number of people that is expected to be doing that task.
+
+The intention of this design pillar is to prevent situations where a skeleton crew (likely) cannot achieve the tasks necessary for the station's beginning-of-round survival.
+For example, stations designed to host a skeleton crew (or stations that may see a skeleton crew engineering department) should have engines that can be operated by a skeleton crew.
+
+It's important to note that it's okay to have tasks out-scale the player in the end-stages of a round where chaos and disrepair are supposed to be happening. However, this should not be happening at the beginning of the round, or as a first introduction to a system.
+
+For example:
+- Setting up the AME is a task that can be achieved in a reasonable timeframe by one person.
+- Setting up the Singularity or Tesla engine can be achieved solo, but this takes a bit of time as setup is a complex series of steps, compared to other engines. Multiple people should be able to set up the engine in a reasonable timeframe. This makes the Singularity/Tesla less attractive for lower-population stations, and an alternative generator should be afforded, or the setup of these generators be partially or fully completed.
+- Setting up the TEG can sometimes be a difficult task for one or multiple people, especially people being introduced to many mechanics like Atmospherics and its limiting factors like window shattering. Mechanics like these should be communicated visually or intuitively as mentioned before.
+
 ### Station Infrastructure and Sabotage
-Large and critical station infrastructure should be designed in a way that makes sabotage very hard to perform unless significant resources and/or time are dedicated to performing it.
+Large and/or critical station infrastructure mechanics should be designed in a way that makes sabotage difficult to perform unless significant resources and/or time are dedicated to performing it.
+For other station infrastructure, the level of disruption should match the time, effort, or resources put into the sabotage. For example:
+- Disrupting the power in a single room shouldn't be too hard—anyone can cut the wire or disrupt the APC if they have access to it.
+- Disrupting the power in an area serviced by a substation should be harder. The substation can be access locked, be in a space where you can be caught, and disconnecting the substation could set off a series of low power alarms.
+- Disrupting the power on a station-wide level should be challenging unless done at the source or the circuit is open.
+
+Very frequently, the actions of one singular person doom the entire round, whether by intentional malice or simple accident.
+This is unfun for all players, as people may lose out on their antagonist or job roll, and nobody wants to sit through the ~25 minutes that it takes to restart the round.
+This is a large pain point that can be solved through mechanical design.
+
+## Objectives
+Engineering's job is to deploy, maintain, and power the station and its equipment, with their tasks ranging from reactive repair to proactive construction.
+
+As previously mentioned, it is important that tasks involving reactive repair are the most fun and engaging elements of Engineering's gameplay and are not distractors from proactive gameplay. Otherwise, engineers will be encouraged to ignore reactive repair work and focus on proactive work instead.
+
+## Progression
+### Roundstart
+Engineering starts the station off in a state of calm before the storm—their first task is to suit up and prep all the systems available to them and ensure they are operational.
+The only major station system available to all engineering personnel is power.
+
+Power is the most important system to set up, as a station without power effectively pauses gameplay for the entire station. In time-sensitive events like nuclear operatives declaring war, this can easily result in a loss outside the crew's control.
+A lack of power also exacerbates issues like atmospheric upsets, as many devices that stop spacing and maintain an atmosphere stop functioning during a power outage.
+
+Considering that Power is the most important system to set up, it should be the most intuitive system to set up.
+The time that Engineering gets to set up power should allow someone to mentor and teach people how to set up power.
+
+Further guidelines as to what power (and other systems should be like roundstart) should be explained in their respective design documents.
+
+### Mid-Round
+As the round progresses, Engineering can engage in various tasks that are either created on their own accord or pop up due to random events (proactive or reactive tasks).
+Maybe a small group of engineers dedicates themselves to working on a point-defense array, and maybe another group responds to a spacing incident triggered by a passenger.
+
+In any case, this is where Engineering starts to pick up the pace, responding to issues more pressing than the simple emagged door.
+
+### Late-Round
+As the round progresses, Engineering may find that their workload is starting to overwhelm them, with chaos ramping up and destruction widespread. Maybe syndicate traitors have knocked out important substations, or the engine is being forced into an unstable position. 
+
+At this rate, players will start to notice that Engineering simply cannot keep up, and evacuation will be called.
+Just like what is outlined in the Atmospherics design document, it is important that this feeling of being underwater or overwhelmed with work does not come too early.
+Otherwise, players may feel like their efforts are not making a difference.
+
+## Mechanics
+
+### Construction
+At the heart of Engineering is its construction system, which gives players the agency to shape their environment and construct new machinery and areas for the crew.
+
+As outlined in _Toolset and Accelerated Work_, it is important that Engineering's interaction with construction is intuitive and fun, as it is the bulk of their work, especially their repair work.
+Tools that work and give Engineering the feeling of progress further encourage Engineering to restore areas to their former glory.
+
+### Power
+Power is the lifeblood of the station, with the crew living or dying (or becoming really, really bored) because of its presence or absence.
+As such, it is important that Power and its sabotage and roundflow align with the predefined design pillars and contribute to a fun experience.
