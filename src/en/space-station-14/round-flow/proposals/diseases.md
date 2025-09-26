@@ -4,9 +4,42 @@
 |---|---|---|
 | Pok | ⚠️ Partially | Part 1: space-wizards/space-station-14#40545 |
 
-This document describes the mechanics of diseases, largely based on the [SS13 Paradise](https://github.com/ParadiseSS13/Paradise) build, as a simple and straightforward implementation.
+This document describes the mechanisms of diseases and virology.
 
-## Diseases mechanics
+## Why simulate diseases
+* Deepens medical gameplay with diagnosis, triage, and prevention.
+* Creates emergent, station-wide incidents that demand coordination.
+* Increases the number of unexpected situations in a round due to a variety of symptoms and spread.
+
+## Gameplay impact
+
+### Сrew
+* Notice symptoms; use PPE or seek medical help.
+* Provide samples (use the [Diagnoser](#diagnoser)) isolate or disclose status.
+* Follow treatments, take [Vaccines](#vaccines) for immunity.
+* Comply with quarantine and cleaning.
+
+### Antagonists
+* Spread of infection; exploit crowds and airflow.
+* Take advantage of the panic at the station to achieve your goals.
+
+### Departments
+* Medical/Virology: see. [Virology](#Virology)
+* Security: enforce quarantines and access, manage crowds, investigate intent.
+* Engineering/Atmos: adjust ventilation/scrubbers, seal routes, set up decontamination.
+* Cargo: supply PPE, cleaners, meds, prioritize outbreak orders.
+* Command: announce and coordinate response.
+
+## Virology
+Purpose: detect -> confirm -> triage -> treat.
+
+### Role
+The virologist is a separate role in the medical department, whose main task is to combat [diseases](#Diseases) by diagnosing, isolating infected individuals, obtaining medicines, and creating preventive [vaccines](#vaccines). In critical situations, close the department for quarantine.
+
+### Department
+To combat viral diseases, the medical department is equipped with a virology sub-department, which has the necessary equipment ([Diagnoser](#diagnoser), [Vaccinator](#vaccinator), and sample stick), two connected airlocks, and separate wards.
+
+## Diseases
 Diseases can be viruses, infections, or special conditions of living beings; they can have symptoms, stages, and treatment phases.
 
 The mechanics are based on disease prototypes and the carrier component. Each disease has a set of stages, a probability of progression, and infection parameters. Infection may have an incubation period during which symptoms and spread are disabled. On each tick, the system advances the stage with a specified probability, displays sensations, and attempts to trigger the symptoms of the current stage.
@@ -34,7 +67,7 @@ Mechanics:
 * Through direct contact (hitting, touching), there is a chance of the virus being transmitted from the infected to the healthy.
 * When in contact with a surface, the infected entity leaves a level of contamination on it.
 * With each subsequent contact with the same surface, the level of contamination increases.
-* Over time, the level of surface contamination gradually decreases.
+* The level of surface contamination can be cleaned with chemical agents, and also slowly decreases over time.
 * A healthy person interacting with an infected surface reduces the level of contamination; at the same time, they have a chance of becoming infected, which depends on the remaining level of contamination and the characteristics of the virus.
 
 Protective factors:
