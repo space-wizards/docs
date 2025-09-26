@@ -4,52 +4,72 @@
 |---|---|---|
 | Pok | ⚠️ Partially | Part 1: space-wizards/space-station-14#40545 |
 
+## Overview
 This document describes the mechanisms of diseases and virology.
 
-## Why simulate diseases
-* Deepens medical gameplay with diagnosis, triage, and prevention.
-* Creates emergent, station-wide incidents that demand coordination.
-* Increases the number of unexpected situations in a round due to a variety of symptoms and spread.
+## Background
+We aim to introduce a clear, maintainable foundation for diseases and a virology role that integrates with existing medical workflows. The initial scope focuses on readable mechanics, predictable player tools, and performant systems that can be iterated on in future PRs on mutations and virus creation.
 
-## Gameplay impact
+## Game Design Rationale
 
-### Сrew
-* Notice symptoms; use PPE or seek medical help.
-* Provide samples (use the [Diagnoser](#diagnoser)) isolate or disclose status.
-* Follow treatments, take [Vaccines](#vaccines) for immunity.
-* Comply with quarantine and cleaning.
+## Purpose
+Diseases should create station-scale challenges that encourage teamwork rather than rewarding solo lab loops. They exist to drive investigation, communication, and coordinated response across departments.
 
-### Antagonists
-* Spread of infection; exploit crowds and airflow.
-* Take advantage of the panic at the station to achieve your goals.
+## Core design principles
+1. **Readable, actionable problems**. Provide clear signals so players know what to investigate and who to call.  
+2. **Meaningful tradeoffs**. Every response has costs and benefits (see examples below).  
+3. **Support coordination**. UI and tools should reduce guesswork and focus play on cooperation.
 
-### Departments
-* Medical/Virology: see. [Virology](#Virology)
-* Security: enforce quarantines and access, manage crowds, investigate intent.
-* Engineering/Atmos: adjust ventilation/scrubbers, seal routes, set up decontamination.
-* Cargo: supply PPE, cleaners, meds, prioritize outbreak orders.
-* Command: announce and coordinate response.
+## Mechanical tradeoffs (examples)
+* Wearing PPE against viruses instead of more desirable items or avoiding infection altogether.
+* Deploy a narrow vaccine cloned from the first recovered patient now, versus wait to gather more samples to merge resistances into a broader vaccine.
 
-## Virology
-Purpose: detect -> confirm -> triage -> treat.
+## Signals and tooling
+Provide clear, actionable information to support decisions.
+1. Quick identification (HUD/console).
+2. Detailed diagnostics in the department (diagnoser).
 
-### Role
+### Gameplay to avoid
+* Prolonged solo lab isolation with little crew contact. Core progress depends on live samples, ward triage, distribution, and inter-department requests.
+* Unbounded pandemics that overwhelm the station. Bounded severity, tunable spread, and accessible treatments.
+* Excessive or indefinite quarantine. Quarantines are situational and mechanically costly; mitigations (PPE, cleaning, vaccines) are preferred.
+
+## Roundflow & Player interaction
+### Work in virology
+This is the work of the medical department, mainly prioritized by virologists.
+
+1. **Early response:** coordinate with chemists, stock up on personal protective equipment and cleaning supplies.
+2. **Detection:** respond to reports of symptoms, collect samples using sample sticks, confirm diagnosis using a ([diagnoser](#diagnoser)).
+3. **Mitigation:** organize triage and treatment, coordinate limited quarantine measures with security, request engineering services to ventilate or isolate the area, schedule cleaning.
+4. **Prevention:** use a sample from a recovered patient to clone target [vaccines](#vaccines) and distribute them.
+5. **Recovery:** lift quarantine, conduct follow-up observation.
+
+## Desired player experience
+* Medical leads the diagnostic and treatment loop.  
+* Engineering and Atmos handle infrastructure responses.  
+* Cargo and Chemistry provide logistics and reagents.  
+* Crew make meaningful, situational choices: mask up, seek treatment, help with cleaning.  
+* Antagonists may exploit confusion, but diseases are **not** griefy, unstoppable tools.
+
+## Features to be added
+### Virology
+#### Role
 The virologist is a separate role in the medical department, whose main task is to combat [diseases](#Diseases) by diagnosing, isolating infected individuals, obtaining medicines, and creating preventive [vaccines](#vaccines). In critical situations, close the department for quarantine.
 
-### Department
-To combat viral diseases, the medical department is equipped with a virology sub-department, which has the necessary equipment ([Diagnoser](#diagnoser), [Vaccinator](#vaccinator), and sample stick), two connected airlocks, and separate wards.
+#### Department
+To combat viral diseases, the medical department is equipped with a virology sub-department, which has the necessary equipment diagnoser, vaccinator, and sample stick), two connected airlocks, and separate wards.
 
-## Diseases
+### Diseases
 Diseases can be viruses, infections, or special conditions of living beings; they can have symptoms, stages, and treatment phases.
 
 The mechanics are based on disease prototypes and the carrier component. Each disease has a set of stages, a probability of progression, and infection parameters. Infection may have an incubation period during which symptoms and spread are disabled. On each tick, the system advances the stage with a specified probability, displays sensations, and attempts to trigger the symptoms of the current stage.
 
-### Immunity
+#### Immunity
 Immunity is represented on the carrier as the probability of blocking infection with a specific disease.
 
 After complete recovery, the base immunity strength to the disease is applied. Immunity can also be pre-configured for each entity in the carrier component or [vaccines](#vaccines).
 
-### Stealth Flags
+#### Stealth Flags
 A characteristic of a disease that helps to conceal it. Some chemicals should reduce the stealth level of the disease, this is especially important for diseases with hidden treatment methods.
 
 * **None:** default behavior.
@@ -83,7 +103,7 @@ Mechanics:
 * An infected entity generates a certain amount of virus in the surrounding atmosphere when they exhale.
 * The concentration of the virus in the air around the source changes over time and distance.
 * For airborne diseases, the environment parameter is important - under what atmospheric conditions can the virus survive or multiply.
- * Example: miasma a suitable atmosphere for reproduction; when this environment is eliminated, the virus gradually dies.
+* Example: miasma is a suitable atmosphere for reproduction; when this environment is eliminated, the virus gradually dies.
 
 A simplified implementation allows for a simple chance of transmission within a certain radius from a breathing infected person to a suitable healthy person.
 
@@ -114,18 +134,18 @@ The main methods of treatment are:
 * **Bed rest:** chance of recovery when in a hospital bed or lying down; the chance may increase during sleep.
 * **Reagents:** recovery when a set of reagents is present in the bloodstream at or above the required levels (reagents are not consumed).
 
-## Diagnostics
+### Diagnostics
 Diagnostics is built around two tools:
 * Sample stick: used on a living object with a short delay; records a list of active diseases and their stages in a sample with the subject's name and DNA.
 * Diagnoser: takes a sample and displays the diseases found, their current stages, characteristics, and descriptions/treatment steps in the UI. Can print paper reports; some characteristics will not be recorded in them.
 
-### Medical HUD and Console
+#### Medical HUD and Console
 Display an icon next to the infected person. If the disease is positive, it will be displayed in blue.
 
-### Analyzer
+#### Analyzer
 Shows the presence of the disease, its stage, and a hint in the tooltip: use the diagnoser for a detailed examination.
 
-## Diagnoser
+### Diagnoser
 The diagnoser is a stationary medical console that accepts a disease sample and provides a detailed analysis for medical staff. It does not detect diseases on its own, a sample is required.
 
 Inputs:
@@ -145,7 +165,7 @@ Actions:
 * Print report: prints a paper report with the current analysis; some fields may be omitted from printouts.
 * Eject sample: returns the sample to the user without modification.
 
-## Vaccines
+### Vaccines
 Vaccines are a special reagent (`id: vaccine`) that add disease-specific immunity by writing active entries to the carrier's resistances.
 
 Resistance mechanics:
@@ -161,8 +181,8 @@ Notes:
 * Resistance requires the disease to allow resistance.
 * Normal metabolism applies; no special decay or booster mechanics exist beyond standard reagent behavior.
 
-## Vaccinator
-Vaccinator a stationary virology machine that synthesizes vaccine bottles based on a loaded blood sample. It distinguishes between inactive and active resistances in the sample.
+### Vaccinator
+Vaccinator is a stationary virology machine that synthesizes vaccine bottles based on a loaded blood sample. It distinguishes between inactive and active resistances in the sample.
 
 Inputs:
 * Accepts an open reagent container (e.g., beaker) containing a blood sample. The machine reads detected strains and the donor's stored resistances (if present).
