@@ -5,7 +5,7 @@ First you're gonna need some software:
 * [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
 * [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
 * [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0). Visual Studio also installs this if you're on Windows.
-  * ARM (M1) Mac users: You need to make sure to install x64 .NET, **not** ARM .NET. The engine does not currently run natively on Mac ARM so using x64 via Rosetta 2 emulation is recommended. 
+  * Apple Silicon (ARM64) Mac users: Some older codebases will only work with the x64 .NET and not the ARM64 one. You can either download x64 dotnet, or suggest your codebase to update their robust toolbox to add support (or just update it yourself).
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
   * For **all platforms**, [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 maintainers and contributors prefer it over Visual Studio. It used to be paid but now it's free for Non-Commercial use.
   * For **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 8 SDK or something along those lines.
@@ -248,7 +248,9 @@ Unhandled exception. Robust.Shared.IoC.Exceptions.ImplementationConstructorExcep
    at Robust.Client.GameController.ParsedMain(CommandLineArgs args, Boolean contentStart, IMainArgs loaderArgs, GameControllerOptions options) in C:\Users\Larme\Downloads\space-station-14\RobustToolbox\Robust.Client\GameController\GameController.Standalone.cs:line 49
 ```
 
-Uninstall .NET Core SDK x86. Install .NET Core SDK x64.
+Either:
+- The codebase you are running does not support arm64 (Apple Silicon, Snapdragon) processors. You will need to ask your codebase to update robust toolbox or do it yourself.
+- You accidentally installed the x86 version dotnet, in that case uninstall .NET Core SDK x86. Install .NET Core SDK x64.
 
 
 ## The client and server aren't available in Visual Studio to configure in Multiple startup projects
