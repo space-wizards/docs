@@ -5,7 +5,13 @@
 | Pok | ⚠️ Partially | Part 1: space-wizards/space-station-14#40545 |
 
 ## Overview
-This document describes the mechanisms of diseases and virology.
+This document describes the mechanisms of diseases and virology, largely based on the [SS13 Paradise](https://github.com/ParadiseSS13/Paradise) build, as a simple and straightforward implementation.
+
+The transfer is not strict, there are and may be differences, priority should be given to the game design described in this document.
+
+Examples of differences:
+* Vaccines require less time spent by a virologist in one place.
+* Airborne transmission routes, taking into account viruses in the atmosphere, for greater involvement of the engineering department.
 
 ## Background
 We aim to introduce a clear, maintainable foundation for diseases and a virology role that integrates with existing medical workflows. The initial scope focuses on readable mechanics, predictable player tools, and performant systems that can be iterated on in future PRs on mutations and virus creation.
@@ -57,7 +63,7 @@ This is the work of the medical department, mainly prioritized by virologists.
 The virologist is a separate role in the medical department, whose main task is to combat [diseases](#Diseases) by diagnosing, isolating infected individuals, obtaining medicines, and creating preventive [vaccines](#vaccines). In critical situations, close the department for quarantine.
 
 #### Department
-To combat viral diseases, the medical department is equipped with a virology sub-department, which has the necessary equipment diagnoser, vaccinator, and sample stick), two connected airlocks, and separate wards.
+To combat viral diseases, the medical department is equipped with a virology sub-department, which has the necessary equipment (diagnoser, vaccinator, and sample stick), two connected airlocks, and separate wards.
 
 ### Diseases
 Diseases can be viruses, infections, or special conditions of living beings; they can have symptoms, stages, and treatment phases.
