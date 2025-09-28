@@ -152,8 +152,9 @@ Diagnostics is built around two tools:
 * Sample stick: used on a living object with a short delay; records a list of active diseases and their stages in a sample with the subject's name and DNA.
 * Diagnoser: takes a sample and displays the diseases found, their current stages, characteristics, and descriptions/treatment steps in the UI. Can print paper reports; some characteristics will not be recorded in them.
 
-#### Medical HUD and Console
-Display an icon next to the infected person. If the disease is positive, it will be displayed in blue.
+#### Partial diagnosis
+Analyzer, medical HUD, and crew monitoring.
+Displays only the presence and type of disease (beneficial virus or not). For initial warning about the presence of disease for further diagnosis.
 
 #### Analyzer
 Shows the presence of the disease, its stage, and a hint in the tooltip: use the diagnoser for a detailed examination.
