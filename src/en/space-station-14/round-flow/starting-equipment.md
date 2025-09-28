@@ -1,12 +1,12 @@
 # Round Start Player Equipment
 
-There are many locations players can recieve gear and equipment for their job at the start of a round, or mid-round via promotion. This document outlines those various locations and what items are expected to be available to players in those locations. Written following the decision in [Maintainer Meeting (27 September 2025)](https://hedgedoc.spacestation14.com/Wtd4OwYZThqutLbR3y-e4g) and expanded upon.
+There are many locations where players can receive gear and equipment for their job at the start of a round, or mid-round via promotion. This document outlines those various locations and what items are expected to be available to players in those locations. Written following the decision in [Maintainer Meeting (27 September 2025)](https://hedgedoc.spacestation14.com/Wtd4OwYZThqutLbR3y-e4g).
 
 
 ## Loadout
 Players spawn with these items, and possibly can choose between a small set of options. These items are generally cosmetic.
 
-Players should spawn with department identifying clothing. Players should not spawn with job-essential equipment. Late-join and promoted players are expected to visit their department to collect the gear needed to properly do their job.
+Players should spawn with department-identifying clothing. Players should not spawn with job-essential equipment. Late-join and promoted players are expected to visit their department to collect the gear needed to properly do their job.
 
 **Good:**
  - Jumpsuit
@@ -39,7 +39,7 @@ Department lockers should spawn with job-essential equipment. A player should ge
 ## Vendors
 These spawn in departments, and players can visit them to share additional gear. Departments typically have two types of vendors: equipment vendors and clothing vendors. They can be restocked through a purchase from cargo mid-round.
 
-Equipment vendors should spawn with expendable equipment, spare tools, and optional tools. They should not spawn with non-department gear or gear which is easily available (such as in an autolathe).
+Equipment vendors should spawn with expendable equipment, spare tools, and optional tools. They should not spawn with non-department gear or gear that is easily available (such as in an autolathe).
 
 **Good:**
  - Medical topicals
@@ -59,13 +59,13 @@ Clothing vendors should spawn with equipable items typical of a department's col
  - Jackboots
 
 **Bad:**
- - Any item which can't be equipped.
+ - Any item that can't be equipped.
  - High-power items (hardsuits).
 
 Question: Should eyewear in general and insuls specifically be moved to the drobe?
 
 ## Lathe
-Most departments can print additional gear from a machine using shared resources. Some have an autolathe to print spare gear, while others have department specific lathes for this purpose.
+Most departments can print additional gear from a machine using shared resources. Some have an autolathe to print spare gear, while others have department-specific lathes for this purpose.
 
 Items available to be printed round start from lathes might be tools or expendables. In both cases the options available should be the basic, minimum gear to do the job. Better gear is often available later in the round as a result of science research.
 
