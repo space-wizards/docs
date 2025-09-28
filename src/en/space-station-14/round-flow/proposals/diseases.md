@@ -7,6 +7,8 @@
 ## Overview
 This document describes the mechanisms of diseases and virology, largely based on the [SS13 Paradise](https://github.com/ParadiseSS13/Paradise) build, as a simple and straightforward implementation.
 
+This document focuses on the viral aspect of diseases, but implementation should allow for use in medical systems with progressive physical conditions.
+
 The transfer is not strict, there are and may be differences, priority should be given to the game design described in this document.
 
 Examples of differences:
@@ -21,10 +23,15 @@ We aim to introduce a clear, maintainable foundation for diseases and a virology
 ## Purpose
 Diseases should create station-scale challenges that encourage teamwork rather than rewarding solo lab loops. They exist to drive investigation, communication, and coordinated response across departments.
 
-## Core design principles
+### Core design principles
 1. **Readable, actionable problems**. Provide clear signals so players know what to investigate and who to call.  
 2. **Meaningful tradeoffs**. Every response has costs and benefits (see examples below).  
 3. **Support coordination**. UI and tools should reduce guesswork and focus play on cooperation.
+
+## The onset of disease
+Outbreaks may be seeded predictably (scripted incidents, contaminated cargo, wildlife) or arise stochastically from environmental conditions (miasma, poor hygiene, crowding). Randomness adds variety, not force majeure: every disease must offer counterplay via early signals, PPE and cleaning, ventilation, targeted reagents, vaccination, and situational isolation.
+
+Species and animals can possess innate or acquired resistances that modify infection chance, severity, or symptom expression; diagnostics and vaccines should respect these differences.
 
 ## Mechanical tradeoffs (examples)
 * Wearing PPE against viruses instead of more desirable items or avoiding infection altogether.
