@@ -210,8 +210,8 @@ Space Station 14
 		- [Stat Panels](en/space-station-14/user-interface/proposals/statpanels.md)
 		- [Playtime Reminders](en/space-station-14/user-interface/proposals/playtimereminders.md)
 - [Departments](en/space-station-14/departments.md)
-	- [Atmos](en/space-station-14/departments/atmos.md)
-		- [PR Guidelines](en/space-station-14/departments/atmos/guidelines.md)
+	- [Atmos](en/space-station-14/atmos.md)
+		- [PR Guidelines](en/space-station-14/atmos/guidelines.md)
 
 		- [Proposals]()
 			- [Atmos Rework](en/space-station-14/departments/atmos/proposals/atmos-rework.md)
@@ -242,6 +242,7 @@ Space Station 14
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
 
 	- [Medical](en/space-station-14/departments/medical.md)
+ 		- [Medical Workgroup](en/space-station-14/medical-workgroup.md)
 		- [PR Guidelines](en/space-station-14/departments/medical/guidelines.md)
 
 		- [Proposals]()
