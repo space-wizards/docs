@@ -123,6 +123,7 @@ Space Station 14
 	- [Device Network](en/space-station-14/core-tech/device-network.md)
 	- [NPCs](en/space-station-14/core-tech/npcs.md)
 	- [Entity Tables](en/space-station-14/core-tech/entity-tables.md)
+	- [Body](en/space-station-14/core-tech/body.md)
 	- [Chemistry](en/space-station-14/core-tech/chemistry.md)
 		- [Metabolism](en/space-station-14/core-tech/chemistry/metabolism.md)
 		- [Reactions](en/space-station-14/core-tech/chemistry/reactions.md)
@@ -150,6 +151,7 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/character-species/guidelines.md)
 		
 	- [Proposals]()
+		- [Vulpkanin](en/space-station-14/character-species/proposals/vulpkanin.md)
 
 - [Combat](en/space-station-14/combat.md)
 	- [PR Guidelines](en/space-station-14/combat/guidelines.md)
@@ -206,6 +208,7 @@ Space Station 14
 		
 	- [Proposals]()
 		- [Stat Panels](en/space-station-14/user-interface/proposals/statpanels.md)
+		- [Playtime Reminders](en/space-station-14/user-interface/proposals/playtimereminders.md)
 - [Departments](en/space-station-14/departments.md)
 	- [Atmos](en/space-station-14/departments/atmos.md)
 		- [PR Guidelines](en/space-station-14/departments/atmos/guidelines.md)
@@ -213,6 +216,8 @@ Space Station 14
 		- [Proposals]()
 			- [Atmos Rework](en/space-station-14/departments/atmos/proposals/atmos-rework.md)
 			- [Station Air Recirculation](en/space-station-14/departments/atmos/proposals/station-air-recirculation.md)
+			- [Inverse Pneumatic Valves](en/space-station-14/departments/atmos/proposals/inverse-pneumatic-valves.md)
+
 
 	- [Cargo](en/space-station-14/departments/cargo.md)
 		- [PR Guidelines](en/space-station-14/departments/cargo/guidelines.md)
@@ -255,6 +260,7 @@ Space Station 14
 		- [Proposals]()
 			- [GenPop Prisoners](en/space-station-14/departments/security/proposals/genpop-prisoners.md)
 			- [Reduced Metagaming Mechanics](en/space-station-14/departments/security/proposals/reduced-metagaming.md)
+			- [Secdog Unit Ghost role](en/space-station-14/departments/security/proposals/SecDog.md)
 	- [Service](en/space-station-14/departments/service.md)
 		- [PR Guidelines](en/space-station-14/departments/service/guidelines.md)
 
