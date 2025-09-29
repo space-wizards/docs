@@ -35,12 +35,26 @@ Reagent code is messy, broken, and comes with a lot of assumptions and workaroun
 
 As a goal, reagent code should be easy to understand, have a usable API, and its features should justify themselves. A lot of reagent code is made with the assumption it would be used for something someday, but that day never came to fruition. 
 
-### Responsibility 3: Psycho-Med
+### Responsibility 3: Psycho-Med/Offmed
 
-Psycho med is the name we've given to the current medical project, and as a result the third responsibility is developing that system.
+Psycho med is the name we've given to the planned medical system for upstream, and as a result the third responsibility is developing that system.
+
+Offmed is an extension of Psychomed, it is a body-system agnostic medical system that simulates a lot of the behavior we want out of psycho-med without having to deal with the baggage of dealing with current body systems. 
+
+It is the duty of the medical work-group to maintain and manage both for different and distinct reasons. 
+
+#### Psycho-Med
 
 Because of the massive changes required to make a new medical system happen, psycho-med development will need to be done in parallel to current upstream and reviewed and tested off of upstream. From there the system can be merged upstream in large feature complete chunks that would normally be unreviewable due to size and complexity. 
 
 This gives us the leverage to make big sweeping changes while still being able to adequately test them and without the worry of breaking things or having to do big rollbacks that result in setbacks, delays, and loss of morale. 
 
-As of writing, Psycho-Med has no current singular document and due to the current size of the team one isn't needed. And as we are going to be merging Psycho-Med in large chunks, the need of a doc to close issues is not needed because any upstream medical changes fall under responsibilities 1 and 2. 
+As of writing, Psycho-Med has no current singular document for a number of reasons, mostly coming down to organizational reasons. Medical is an exceptionally large system with many aspects requiring a number of targeted documents and discussion for specific systems (solutions, metabolism, organd and body, damage ect.) In addition with refactoring still going on it would be jumping the gun to try and finalize any ideas which are not going to be in the immediate future. Lastly, we have a general medical design document over the desired gameplay and a full psycho-med doc would be a lot "crunchier" falling more into a series technical design document for how we want specific systems to interface. 
+
+#### Offmed
+
+Offmed, aka "Offbrand-Medical" is a official unofficial upstream medical system. Like other unofficial medical systems integrating into it comes with the baggage of potential upstream breaking changes and loss of support. Everything in Offmed is subject to change on a structural level as it is a testing bed for the features we want to see, not the finalized version of them in any capacity.
+
+That being said, Offmed is meant to take advantage of the currently merged refactors and changes to bodysystem meaning it will evolve as psycho-med evolves. Consider it a look into the future of medical since a lot of the simulationist aspects are using smoke and mirrors tactics to avoid touching systems that still need refactoring or building. Features from offmed will be ported to psycho-med as needed and when we are able to. 
+
+As such, offmed is not planned to be officially released in any permanent capacity. Releases and tests are handled by the medical work-group and are for testing purposes without obligation for long term support or a regular release schedule. 
