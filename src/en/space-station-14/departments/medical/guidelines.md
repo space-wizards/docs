@@ -2,7 +2,7 @@
 
 ## Important
 
-All PRs must adhere to the [Medical Design Document](../medical.md) and/or the [Medical Workgroup Document](/src/en/space-station-14/medical-workgroup.md) for questions about the differences between these documents please consult the medical workgroup through the SS14 discord server.
+All PRs must adhere to the [Medical Design Document](../medical.md) and/or the [Medical Workgroup Document](../../medical-workgroup.md) for questions about the differences between these documents please consult the medical workgroup through the SS14 discord server.
 
 ## How to label Medical PRs
 
@@ -22,7 +22,7 @@ PRs which have to be split into multiple parts may require a design document, th
 - PR strays from the Medical Design Document or Medical Workgroup Document
 - PR is of such large scope that it may need to be divided amongst multiple contributors
 
-For more questions on Debodying and Psycho-Med please see: [Medical Workgroup Document](/src/en/space-station-14/medical-workgroup.md)
+For more questions on Debodying and Psycho-Med please see: [Medical Workgroup Document](../../medical-workgroup.md)
 
 ### PRs for Offmed
 PRs for offmed shouldn't be merged into master as offmed is a testing branch. These should instead be merged directly into the offmed branch themselves. Since offmed is a feature testing branch and completely under the control of the medical workgroup, any PR intended for offmed may be closed for any reason.
