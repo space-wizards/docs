@@ -3,30 +3,51 @@
 
 ## Concept
 Medical as a department is primarily tasked with keeping the crew alive and healthy. 
+
 The challenge of that very simple task is that the crew lives in a tin can that is prone to very bloody and violent accidents and disasters.
 It's medicals job to be able to respond to a variety of different injuries and deaths, from a variety of different sources and to diagnose and cure so that the crew can get back to work or at least limp their way to the evacuation shuttle.
+
 The tools medical uses should be scarce, but never scarce enough to halt the department, should be time consuming such that death is dangerous, but never time consuming enough that there's a lot of waiting involved in healing, and should keep medical constantly moving, but not so constant that it becomes overwhelming or unreasonably swamped. 
+
 Given the right tools medical should be able to deal with most bodies coming in, but there should always be a clear line of when a body is unrecoverable. Some wounds are too grievous, too rotten, too deliberate to recover from. That's what the morgue is for.
 
 ## Design Pillars
 Medical as a department needs to have consistency to work. But things should never be so consistent that they become mundane.
 In order to maintain this balance, there are a number of design pillars that must be upheld. 
 
-### Pillar 1: Injuries should match the danger of the source.
- The difference between a common workplace accident and getting shot to pieces shouldn't be one number being higher.
+### Pillar 1: The severity of wounds should match the danger of the source.
+ The difference between a common workplace accident and getting shot to pieces shouldn't be one number being higher. Getting stabbed by a pen 100 times should never be equivalent to getting shot. 
 
-  > Common injuries should be easier to treat, almost trivially so. Something you come into medical for, get a band aid and a pill and then be on your way as to not slow down the department.
+  > Common injuries should be easier to treat, almost trivially so.
+> A crewmember should be able to walk into medical, get a band aid, pill and lollypop for their trouble and then be on their way as to not slow down the department or the rest of the round.
 
-  > Rarer job hazards should require some care and maybe more intensive treatments depending on the degree of the mistake. Got bitten a few times by a carp and lost your hand? A prosthetic limb can fix that. Decided to hang around the singularity for a bit too long? You'll probably need a coupe new organs alongside those radiation burns. 
+  > Uncommon injuries and injuries that are to be expected from doing your job should be harder to fix but nowhere near impossible.
+> A salvager might lose a limb or two as an occupational hazard, provided they haven't bled out or gone into should it should be as simple as reattaching the limbs and undergoing a blood transfusion to get them working again. 
 
- > And most important, if someone really wants you dead then medical shouldn't be able to reverse that easily. 
+  > Rarer injuries that are the result of workplace accidents, or lethal antagonistic behavior should require special attention to deal with.
+> An engineer sunbathing in the singularity might require most of their organs to be replaced, an atmos tech who forgot to wear their suit and blew up the burn chamber might need reconstructive surgery, a security officer who got bombed or shot to death by a traitor or nukie is going to need immediate intensive care to get their heart started again and to wake them up from a coma. These types of injuries should come with the risk that they may not be recoverable if things are chaotic enough to encourage safe workplace behavior. 
+
+ > And most important, if someone really wants you dead then medical shouldn't be able to reverse that easily.
+> Round removal is an important part of round progression, and the threat an antagonist poses to the crew is directly linked to the damage they can do and how difficult it is to reverse it. An antagonist should be able to intentionally and permanently remove a target from the round and the station will have to manage that loss in the same way they might lose a machine or valuable item important to the station. 
 
  ### Pillar 2: Treatment should be reactive.
  Nobody likes doing the same thing over and over again. That's boring! As much as possible injuries should be dynamic and interesting. 
  
- > There should be no cure all medicine that is always the correct option to use. Any that could exist should be limited by drawbacks of side effects, scarcity or exclusiveness.
+ > There should be no cure all medicine that is always the correct option to use.
+> Any that could exist should be limited by drawbacks of side effects, scarcity or exclusiveness. If a medicine is extremely strong and very generalized, it should also be so rare that it's only used for emergencies or otherwise come with such severe drawbacks or limitations that its uses are niche. The vast majority of medicines should be just one tool of many you'll need to cure a patient of their wounds. 
+
+> The cost and complexity of a treatment should scale with the severity of the wound.
+> It should never be a numbers game of just do the same thing x100 because this wound is 100x worse! Simple wounds should generally only require a one and done solutions but more complex wounds should require a series of specialized tools and problem solving to try and treat a patient the most efficiently.
  
- > Real injuries shouldn't be static, gunshot wounds should worsen over time if left untreated, a patient in crit should get worse and become harder to heal, a dead body should rot and that rot should make getting them back up harder and harder the more time passes. A dying crewmember should need to be monitored because no medicine should be a cure all. You should have to put effort into treating bad injuries, it shouldn't just be about waiting for a number to go up after clicking 1-3 times with the correct healing item. 
+ > Wounds should almost never be static.
+> While a crewmember may be able to ignore scratches and bruises, they should want to go to medical if they can afford it.
+> Wounds should affect other wounds. Small injuries should build up over time if left untreated and not given time to heal, worsening other wounds that a crewmember could normally ignore.
+> Severe wounds should need to be addressed immediately with first aid, and require genuine treatment in the near future.
+
+> Treatment should reward reactivity.
+> First aid should almost always be possible on a crewmember provided you have the right tools and provided the wound is fresh. If left to fester your options should become more limited and the difficulty of treating the wound should increase.
+> Severe wounds left untreated should progress into more wounds and scale in their symptoms. A patient left to tend their own wounds should eventually die outright.
+> A doctor keeping a close eye on a patient and giving them a lot of attention should have an easier time responding to new developments of their injuries. The progression of wounds should make sense such that if a wound gets worse while it's being treated, it should generally be easier to deal with compared to a new wound that appears on an untreated patient. 
 
 ### Pillar 3: Medicine should be interesting
 Players should want to know how to be a doctor, not only for the purpose it serves but for the depth and complexity involved.
@@ -47,10 +68,14 @@ The information that is communicated to a doctor should be something doctors hav
 ## Objectives
 Medical is arguably the most important department for the crew round flow wise. If a player can trust that the medical department will be there to catch them when they fall, they're more likely to go out and make mistakes, and mistakes are fun. A traitor trying to assassinate their target should be having to make sure that medical wont be able to save them in addition to security not being able to catch them. A nuclear operative should be thinking about and accounting for the fact that medical is going to be turning dead bodies into walking obstacles. 
 
-From a doctor's perspective, they should be a neutral but station leaning party. It's their job to keep these crewmembers alive in spite of everything and they should at least have a vague idea of how to handle that.
+From a doctor's perspective, they should be a neutral but station leaning party. It's their job to keep these crewmembers alive in spite of everything and they should always at least have a vague idea of how to handle that.
 
-An experienced doctor should never feel overwhelmed but their work also shouldn't feel mundane. Each injury should be a puzzle to solve, some more simple than others but none feeling impossible or discouraging to solve. Intuiting and gathering information should be their most important skill, such that they always have to put some effort in to do their job well. 
+An experienced doctor should never feel overwhelmed, but their work also shouldn't feel mundane. Each patient should be a puzzle to solve, some more simple than others but none feeling impossible or discouraging to solve. Intuiting and gathering information should be their most important skill, such that they always have to put some effort in to do their job well. 
 
 At the same time, medical shouldn't have such a high learning curve or barrier to entry that it becomes obtuse. Tools should be intuitive, information should be immediately understood upon being recieved and the potential solutions obvious. While problems may worsen over time, the stress shouldn't be about "I have no clue what to do" but instead "I'm not sure which option is the best one right now". 
 
-Medical should try to stay within the medical department. Their best tools should be static such that a traitor can't run around with better healing than what the security officer they just shot is going to be getting on their medical bed that they're strapped to. Nobody should be able to become a perfect one crewmember walking medical department. At the same time, a doctor should be able to reasonably handle treating a single patient or a group of patients on their own. Given the nature of the game, there's a very high chance their will be more bodies in the department than there are doctors. 
+As the round progresses the tools medical has should scale with the increasing danger. Science and cargo should be opening new doors for medical through the acquisition of resources and technology. Meanwhile the amount of patients being treated, the severity of wounds coming in, and the amount of bodies in the morgue should match the scaling resource gain. Calling evac should be a matter of practicality and the evac shuttle should have resources which help keep many patients stable for transport to centcomm to encourage calling evac once the situation spirals out of control. Medical should transition into trying to save as many lives as possible over trying to keep the station running.
+
+Most of medical should be limited to their department. Their best tools should be static so that a traitor can't run around with the equivalent of a full medbay in their pocket while a security officer has to get in the medical bed queue. Nobody should be able to become a perfect one crewmember walking medical department. At the same time, a doctor should be able to reasonably handle treating a single patient or a group of patients on their own. Given the nature of the game, there's a very high chance their will be more bodies in the department than there are doctors. 
+
+What isn't departmental exclusive should be distributed by medical if possible. It's not practical to send an MD with salvage to make sure they're getting their wounds patched up, instead medical should be able to distribute first aid supplies that are powerful enough to ensure a security officer, or salvager survive long enough to wrap up what they were doing and limp back to medical. Paramedics should be applying first aid to injured crewmembers so they can have a better chance at survival when being dragged back to medical. Doctors, during their free time, should be doing surgeries for the clown to replace their arms with pie cannons. Chemistry should be making chemicals for science to use for their funny gadgets and artifacts, as well as experimenting with a new lube bomb recipie they cooked up. 
