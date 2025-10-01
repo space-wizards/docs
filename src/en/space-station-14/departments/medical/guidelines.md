@@ -23,7 +23,7 @@ PRs which have to be split into multiple parts may require a design document, th
 - PR is of such large scope that it may need to be divided amongst multiple contributors
 - PR requires multiple other systems to be refactored first
 
-For more questions on Debodying and Psycho-Med please see: [Medical Workgroup Document](../../medical-workgroup.md)
+For more questions on Debodying and Psycho-Med please see: [Medical Workgroup Document](medical-workgroup.md)
 
 ### PRs for Offmed
 PRs for offmed shouldn't be merged into master as offmed is a testing branch. These should instead be merged directly into the offmed branch themselves. Since offmed is a feature testing branch and completely under the control of the medical workgroup, any PR intended for offmed may be closed for any reason.
