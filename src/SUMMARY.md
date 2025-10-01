@@ -242,7 +242,7 @@ Space Station 14
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
 
 	- [Medical](en/space-station-14/departments/medical.md)
- 		- [Medical Workgroup](en/space-station-14/medical-workgroup.md)
+ 		- [Medical Workgroup](en/space-station-14/departments/medical/medical-workgroup.md)
 		- [PR Guidelines](en/space-station-14/departments/medical/guidelines.md)
 
 		- [Proposals]()
