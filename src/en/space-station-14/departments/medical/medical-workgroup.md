@@ -53,7 +53,7 @@ As of writing, Psycho-Med has no current singular document for organizational re
 
 Medical is an exceptionally large system with many aspects requiring a number of targeted documents and discussion for specific systems (solutions, metabolism, organd and body, damage ect.) 
 
-In addition with refactoring still going on it would be jumping the gun to try and finalize any ideas which are not going to be completable in the near future. Instead we have a general [medical design doc](../../medical.md) which goes over what behavior is desired for a new medical system as well as a number of issues that need tackling. For more information consult @princesscheeseballs on Discord. 
+In addition with refactoring still going on it would be jumping the gun to try and finalize any ideas which are not going to be completable in the near future. Instead we have a general [medical design doc](../medical.md) which goes over what behavior is desired for a new medical system as well as a number of issues that need tackling. For more information consult @princesscheeseballs on Discord. 
 
 #### Offmed
 
