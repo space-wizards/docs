@@ -22,10 +22,10 @@ In order to maintain this balance, there are a number of design pillars that mus
 > A crewmember should be able to walk into medical, get a band aid, pill and lollypop for their trouble and then be on their way as to not slow down the department or the rest of the round.
 
   > Uncommon injuries and injuries that are to be expected from doing your job should be harder to fix but nowhere near impossible.
-> A salvager might lose a limb or two as an occupational hazard, provided they haven't bled out or gone into should it should be as simple as reattaching the limbs and undergoing a blood transfusion to get them working again. 
+> A salvager might lose a limb or two as an occupational hazard. Provided they haven't bled out or gone into shock it should be as simple as reattaching the limbs and undergoing a blood transfusion to get them back to work. 
 
   > Rarer injuries that are the result of workplace accidents, or lethal antagonistic behavior should require special attention to deal with.
-> An engineer sunbathing in the singularity might require most of their organs to be replaced, an atmos tech who forgot to wear their suit and blew up the burn chamber might need reconstructive surgery, a security officer who got bombed or shot to death by a traitor or nukie is going to need immediate intensive care to get their heart started again and to wake them up from a coma. These types of injuries should come with the risk that they may not be recoverable if things are chaotic enough to encourage safe workplace behavior. 
+> An engineer sunbathing in the singularity might require most of their organs to be replaced, an atmos tech who forgot to wear their suit and blew up the burn chamber might need reconstructive surgery, a security officer who got bombed or shot to death by a traitor or nukie is going to need immediate intensive care to get their heart started again and to wake them up from a coma. These types of injuries should come with the risk that recovery may not be guaranteed if the station is in disarray, to encourage safe workplace behavior. 
 
  > And most important, if someone really wants you dead then medical shouldn't be able to reverse that easily.
 > Round removal is an important part of round progression, and the threat an antagonist poses to the crew is directly linked to the damage they can do and how difficult it is to reverse it. An antagonist should be able to intentionally and permanently remove a target from the round and the station will have to manage that loss in the same way they might lose a machine or valuable item important to the station. 
@@ -37,12 +37,12 @@ In order to maintain this balance, there are a number of design pillars that mus
 > Any that could exist should be limited by drawbacks of side effects, scarcity or exclusiveness. If a medicine is extremely strong and very generalized, it should also be so rare that it's only used for emergencies or otherwise come with such severe drawbacks or limitations that its uses are niche. The vast majority of medicines should be just one tool of many you'll need to cure a patient of their wounds. 
 
 > The cost and complexity of a treatment should scale with the severity of the wound.
-> It should never be a numbers game of just do the same thing x100 because this wound is 100x worse! Simple wounds should generally only require a one and done solutions but more complex wounds should require a series of specialized tools and problem solving to try and treat a patient the most efficiently.
+> It should never be a numbers game of just do the same thing x100 because this wound is 100x worse! Simple wounds be treated with one and done solutions while more complex wounds will require the use of specialized tools and problem solving skills to be fully recovered from.
  
  > Wounds should almost never be static.
-> While a crewmember may be able to ignore scratches and bruises, they should want to go to medical if they can afford it.
-> Wounds should affect other wounds. Small injuries should build up over time if left untreated and not given time to heal, worsening other wounds that a crewmember could normally ignore.
-> Severe wounds should need to be addressed immediately with first aid, and require genuine treatment in the near future.
+> Even small wounds should be something a crewmember would want to seek treatment for. A crewmember continually building up even small injuries without treating them should suffer appropriate consequences to their neglegence.
+> Wounds should affect other wounds. Even small injuries should have an effect on other injuries you take, such that leaving any wound untreated comes with some risk.
+> Severe wounds should need to be addressed immediately with first aid, and require genuine treatment in the near future. A crewmember should never be able to ignore even one bad injury without facing deadly consequences. 
 
 > Treatment should reward reactivity.
 > First aid should almost always be possible on a crewmember provided you have the right tools and provided the wound is fresh. If left to fester your options should become more limited and the difficulty of treating the wound should increase.
@@ -57,7 +57,7 @@ Players should want to know how to be a doctor, not only for the purpose it serv
 > Getting the best numbers should be mechanically discouraged by having a wide variety of options available. The same injury might call for different treatments depending on context, some poisons might suit some situations better than others. Any "best of their class" meta items or tactics should be discouraged through complexity and should never so heavily outweigh the simpler options that it becomes a burden to not understand them. Not knowing the meta shouldn't put you at a major disadvantage. 
 
 ### Pillar 4: Information is a resource
-The information that is communicated to a doctor should be something doctors have to actively try and get. Medical scanners shouldn't be an end all be all. As with Pillar 2, no treatment should be a cure all, and therefore no source of information should trumph another. 
+The information that is communicated to a doctor should be something doctors have to actively try and get. Medical scanners shouldn't be an end all be all. As with Pillar 2, no treatment should be a cure all, and therefore no source of information should trump another. 
 
 > Getting information from a patient should be the fastest and easiest way to diagnose, but not the only option for obvious reasons.
 
@@ -66,7 +66,7 @@ The information that is communicated to a doctor should be something doctors hav
 > No information should be completely obscured. There should be fallbacks in case other methods of information gathering fail so that a medical player never feels stuck. These fallback methods should be always available but should be inconvenient so players don't rely on them and instead learn to master their medical skills.
 
 ## Objectives
-Medical is arguably the most important department for the crew round flow wise. If a player can trust that the medical department will be there to catch them when they fall, they're more likely to go out and make mistakes, and mistakes are fun. A traitor trying to assassinate their target should be having to make sure that medical wont be able to save them in addition to security not being able to catch them. A nuclear operative should be thinking about and accounting for the fact that medical is going to be turning dead bodies into walking obstacles. 
+Medical is arguably the most important department for the crew round flow wise. If a player can trust that the medical department will be there to catch them when they fall, they're more likely to go out and make mistakes, and mistakes are fun. A traitor trying to assassinate their target should be have to take measures to ensure medical is unable to save them with the same importance as avoiding being captured or killed. A nuclear operative should be thinking about and accounting for the fact that medical is going to be turning dead bodies into walking obstacles.
 
 From a doctor's perspective, they should be a neutral but station leaning party. It's their job to keep these crewmembers alive in spite of everything and they should always at least have a vague idea of how to handle that.
 
