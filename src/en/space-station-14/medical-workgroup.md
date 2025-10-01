@@ -3,7 +3,7 @@
 ## Overview
 Given the split, unbalanced, and blatantly unfinished nature of this game's medical system it's necessary that the medical workgroup's responsibilities and limitations are in a public space such that they can be easily understood and read.
 
-The medical workgroup is responsible for the medical system of Space Station 14 which includes but is not limited to: Damage, BodySystem, Reagents, Metabolism, BodySystem, the Medical Department, and Chemistry. The goal of the medical workgroup is to nearly completely overhaul all of these systems to match the mechanical depth of Space Station 13's various medical systems.
+The medical workgroup is responsible for the medical system of Space Station 14 which includes but is not limited to: Damage, BodySystem, Reagents, Metabolism, and the Medical Department (including Chemistry). The goal of the medical workgroup is to nearly completely overhaul all of these systems to match the mechanical depth of Space Station 13's various medical systems.
 
 To accomplish this impossible task I have set aside three basic responsibilites of the workgroup.
 
@@ -11,7 +11,7 @@ To accomplish this impossible task I have set aside three basic responsibilites 
 
 This comprises of two things, keeping medical balance static as microbalancing is bad and takes away from work we could put towards making it better, but also doing active maintenance on it. Fixing bugs, adding small features, code improvements, cleanup ect. 
 
-Upstream medical balance should be in a "acceptable enough" state, and big changes should only be made if something has gone horribly wrong or needs fixing. New features should be scrutinized and only accepted if they are small and easily reversible or portable to a new medical system. Larger medical changes that may interfere with development should either be redirected to the development of a new medical system if possible, or closed and or frozen if not. 
+Upstream medical balance should be in an "acceptable enough" state, and big changes should only be made if something has gone horribly wrong or needs fixing. New features should be scrutinized and only accepted if they are small and easily reversible or portable to a new medical system. Larger medical changes that may interfere with development should either be redirected to the development of a new medical system if possible, or closed/frozen depending on circumstances. 
 
 Any new PRs for current med should be compliant with the great debodying no matter what or be closed at the discretion of the medical workgroup.
 
@@ -23,12 +23,12 @@ All debodying should be compatible with the goals of the new medical system. Deb
 
 Debodying comprises of two things:
 
-#### 1. Removing the depdencency of all systems reliant on bodysystem or organ code in favor of more generic methods that anything can hook into.
-Previous attempts to overhaul medical came with the assumption that bodysystem would be on every living entity, such that it was often used as a check for if an entity was a mob that was alive. This resulted in extremely rigid code that assumed that many entities would not only have a body, but that there would be specific organs that did specific things and if you wanted something even slightly different, you'd have to make a brand new system for it.
+#### 1. Removing the depdencency of all systems reliant on bodysystem or organ code in favor of event based and generic systems.
+The current medical system is built on the assumption that BodyComponent is a guarantee on every controllable entity, from humans, to mice, to robots to even ghosts! This resulted in extremely rigid code that assumed that many entities would not only have a body, but that there would be specific organs that did specific things and if you wanted something even slightly different, you'd have to make a brand new system for it or add hardcoded into an existing system to add the behavior. 
 
-Needless to say, this coding approach does not flex the benefits of ECS and is not up to modern wizden coding standards. As a result, all of this code needs to be completely refactored or thrown out. 
+This approach is not flexible enough to allow for a wide range of unique species, doesn't take advantage of ECS, and doesn't meet Wizden's current coding standards. As a result all code which iterfaces with, or relies on BodySystem and its related components needs to be reworked, refactored, or deleted. A homogenous entity without organs shouldn't need a BodyComponent to eat or breathe for example, but with the current medical implementation this is completely impossible. 
 
-As a general rule of thumb: Anywhere that checks for a body component, we should be raising handleable events that body system hooks into. And we should make as little assumptions as reasonably possible about what these events are doing. The less rigid the code, the more creatively contributors can use the system and the more flexible we can be with a new medical system. 
+As a general rule of thumb: Anywhere that checks for a BodyComponent, we should be raising handleable events that body system hooks into and then has relevant organs handle. We should make as few assumptions as reasonably possible about what these events are doing. The less rigid the code, the more creatively contributors can use the system and the more flexible we can be with a new medical system. 
 
 #### 2. Refactoring and cleaning up reagent code and attached reactive systems.
 Reagent code is messy, broken, and comes with a lot of assumptions and workarounds that aren't nice.
@@ -49,11 +49,15 @@ Because of the massive changes required to make a new medical system happen, psy
 
 This gives us the leverage to make big sweeping changes while still being able to adequately test them and without the worry of breaking things or having to do big rollbacks that result in setbacks, delays, and loss of morale. 
 
-As of writing, Psycho-Med has no current singular document for a number of reasons, mostly coming down to organizational reasons. Medical is an exceptionally large system with many aspects requiring a number of targeted documents and discussion for specific systems (solutions, metabolism, organd and body, damage ect.) In addition with refactoring still going on it would be jumping the gun to try and finalize any ideas which are not going to be in the immediate future. Lastly, we have a general medical design document over the desired gameplay and a full psycho-med doc would be a lot "crunchier" falling more into a series technical design document for how we want specific systems to interface. 
+As of writing, Psycho-Med has no current singular document for organizational reasons. 
+
+Medical is an exceptionally large system with many aspects requiring a number of targeted documents and discussion for specific systems (solutions, metabolism, organd and body, damage ect.) 
+
+In addition with refactoring still going on it would be jumping the gun to try and finalize any ideas which are not going to be completable in the near future. Instead we have a general [medical design doc](/departments/medical.md) which goes over what behavior is desired for a new medical system as well as a number of issues that need tackling. For more information consult @princesscheeseballs on Discord. 
 
 #### Offmed
 
-Offmed, aka "Offbrand-Medical" is a official unofficial upstream medical system. Like other unofficial medical systems integrating into it comes with the baggage of potential upstream breaking changes and loss of support. Everything in Offmed is subject to change on a structural level as it is a testing bed for the features we want to see, not the finalized version of them in any capacity.
+Offmed, aka "Offbrand-Medical" is an official-unofficial upstream medical system. Like other unofficial medical systems integrating into it comes with the baggage of potential upstream breaking changes and loss of support. Everything in Offmed is subject to change on a structural level as it is a testing bed for the features we want to see, not the finalized version of them in any capacity.
 
 That being said, Offmed is meant to take advantage of the currently merged refactors and changes to bodysystem meaning it will evolve as psycho-med evolves. Consider it a look into the future of medical since a lot of the simulationist aspects are using smoke and mirrors tactics to avoid touching systems that still need refactoring or building. Features from offmed will be ported to psycho-med as needed and when we are able to. 
 
