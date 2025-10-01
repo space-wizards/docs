@@ -2,99 +2,108 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Pok | ⚠️ Partially | Part 1: space-wizards/space-station-14#40545 |
+| Pok | :warning: Partially | Part 1: space-wizards/space-station-14#40545 |
 
 ## Overview
-This document describes the mechanisms of diseases and virology, largely based on the [SS13 Paradise](https://github.com/ParadiseSS13/Paradise) build, as a simple and straightforward implementation.
+This document describes the mechanisms of diseases and virology.
 
-This document focuses on the viral aspect of diseases, but implementation should allow for use in medical systems with progressive physical conditions.
+This document focuses on viral diseases, but the implementation should also support medical systems with progressive physical conditions.
 
-The transfer is not strict, there are and may be differences, priority should be given to the game design described in this document.
+The proposed implementation may resemble those in SS13, but differs to achieve the gameplay experience described [below](#Game-Design-Rationale).
 
 Examples of differences:
-* Vaccines require less time spent by a virologist in one place.
-* Airborne transmission routes, taking into account viruses in the atmosphere, for greater involvement of the engineering department.
+* Vaccines require less time spent by a medical personnel in one place.
+* Airborne transmission routes that account for viruses in the atmosphere, increasing engineering involvement.
 
 ## Background
 We aim to introduce a clear, maintainable foundation for diseases and a virology role that integrates with existing medical workflows. The initial scope focuses on readable mechanics, predictable player tools, and performant systems that can be iterated on in future PRs on mutations and virus creation.
 
 ## Game Design Rationale
+### The onset of disease
+Outbreaks may be seeded predictably or arise stochastically from environmental conditions. Randomness adds variety, not force majeure: every disease must offer counterplay via early signals.
 
-## Purpose
-Diseases should create station-scale challenges that encourage teamwork rather than rewarding solo lab loops. They exist to drive investigation, communication, and coordinated response across departments.
+Species and animals may possess innate or acquired resistance that alters the probability of infection, to create desired gameplay situations.
 
-### Core design principles
-1. **Readable, actionable problems**. Provide clear signals so players know what to investigate and who to call.  
-2. **Meaningful tradeoffs**. Every response has costs and benefits (see examples below).  
-3. **Support coordination**. UI and tools should reduce guesswork and focus play on cooperation.
+#### Global outbreaks
+A virus outbreak affecting a significant number of station personnel (random event). It need not be rare, due to measures that [protect against spread](#protection-against-spread), but it should not occur every round.
 
-## The onset of disease
-Outbreaks may be seeded predictably (scripted incidents, contaminated cargo, wildlife) or arise stochastically from environmental conditions (miasma, poor hygiene, crowding). Randomness adds variety, not force majeure: every disease must offer counterplay via early signals, PPE and cleaning, ventilation, targeted reagents, vaccination, and situational isolation.
+#### Local outbreak
+A virus outbreak affecting one or more individuals due to a predictable event (contact with a corpse, artifact, food poisoning, etc.). May be more dangerous for the carrier because the cause is localized rather than random.
 
-Species and animals can possess innate or acquired resistances that modify infection chance, severity, or symptom expression; diagnostics and vaccines should respect these differences.
+### Diagnostics
+Diagnostics is an important measure for combating disease; it can be either comprehensive or simply warn of the presence of disease. 
 
-## Mechanical tradeoffs (examples)
-* Wearing PPE against viruses instead of more desirable items or avoiding infection altogether.
-* Deploy a narrow vaccine cloned from the first recovered patient now, versus wait to gather more samples to merge resistances into a broader vaccine.
+Some diseases may be hidden, countermeasures should exist, such as a reagent that temporarily reveals the disease to enable targeted treatment.
 
-## Signals and tooling
-Provide clear, actionable information to support decisions.
-1. Quick identification (HUD/console).
-2. Detailed diagnostics in the department (diagnoser).
+#### Partial diagnosis
+Partial diagnostics should warn of the presence of illness but not indicate its type or treatment, motivating more detailed examination using specialized tools. 
+These include HUDs, analyzers, and crew monitoring—simple standard medical tools.
 
-### Gameplay to avoid
-* Prolonged solo lab isolation with little crew contact. Core progress depends on live samples, ward triage, distribution, and inter-department requests.
-* Unbounded pandemics that overwhelm the station. Bounded severity, tunable spread, and accessible treatments.
-* Excessive or indefinite quarantine. Quarantines are situational and mechanically costly; mitigations (PPE, cleaning, vaccines) are preferred.
+#### Complete diagnostics
+A complete diagnosis should provide comprehensive information about the disease, including its characteristics and stages of treatment. Therefore, it should be performed by a stationary machine in the medical department (the diagnoser). For convenience, it can accept samples collected beforehand (e.g., a swab).
+
+### Protection against spread
+Protection prioritizes targeted mitigations that let infected crew keep playing while reducing risk to others.
+
+* Diseases with different types of spread should have their own reagent that greatly reduces the likelihood of spreading the virus while it is active. This lets infected crew keep moving while awaiting treatment. Some strong diseases may be resistant.
+
+* Different types of infection should be blocked by different types of clothing. This increases immersion—less clothing means more points of contact with the disease. Specialized clothing (e.g., medical masks) may have their own protection values. Percentages should be determined during playtesting.
+
+* Quarantine should be avoided as a priority containment measure, as it requires the crew to remain in isolation, which is not a pleasant experience. For some major events or game modes (e.g., zombies), it is acceptable as an effective means of control.
 
 ## Roundflow & Player interaction
-### Work in virology
-This is the work of the medical department, mainly prioritized by virologists.
+### Gameplay loops
+A sample crew gameplay loop during a virus outbreak.
 
-1. **Early response:** coordinate with chemists, stock up on personal protective equipment and cleaning supplies.
-2. **Detection:** respond to reports of symptoms, collect samples using sample sticks, confirm diagnosis using a ([diagnoser](#diagnoser)).
-3. **Mitigation:** organize triage and treatment, coordinate limited quarantine measures with security, request engineering services to ventilate or isolate the area, schedule cleaning.
-4. **Prevention:** use a sample from a recovered patient to clone target [vaccines](#vaccines) and distribute them.
-5. **Recovery:** lift quarantine, conduct follow-up observation.
-
-## Desired player experience
-* Medical leads the diagnostic and treatment loop.  
-* Engineering and Atmos handle infrastructure responses.  
-* Cargo and Chemistry provide logistics and reagents.  
-* Crew make meaningful, situational choices: mask up, seek treatment, help with cleaning.  
-* Antagonists may exploit confusion, but diseases are **not** griefy, unstoppable tools.
+1. Outbreak begins (global or local). Early, soft symptoms appear, crew notices and reports.
+2. Triage and partial diagnostics. Suspected carriers are flagged via [partial diagnosis](#partial-diagnosis), PPE is issued to limit spread.
+3. Immediate suppression and mitigation. Carriers take suppressants, wear masks and gloves, cleaning starts, ventilation is adjusted, players keep working.
+4. Sampling and complete diagnostics. Med collects swabs and runs the [diagnoser](#complete-diagnostics) to identify disease, stages, and treatment paths.
+5. Treatment execution. Targeted therapy is applied. Symptom suppression as needed.
+6. Optional vaccine creation. The Vaccinator clones a vaccine from recovered or inactive resistances.
+7. Vaccination rollout. Healthy at‑risk crew are vaccinated to prevent new cases.
+8. Cleanup and follow‑up. Remaining patients are treated, hotspots decontaminated, atmos corrected. Quarantine is reserved for exceptional modes or events.
 
 ## Features to be added
-### Virology
-#### Role
-The virologist is a separate role in the medical department, whose main task is to combat [diseases](#Diseases) by diagnosing, isolating infected individuals, obtaining medicines, and creating preventive [vaccines](#vaccines). In critical situations, close the department for quarantine.
+### Virology Department
+Virology is needed as a place where medical personnel can focus on treating and diagnosing viruses and, in extreme cases, isolating the crew.
 
-#### Department
-To combat viral diseases, the medical department is equipped with a virology sub-department, which has the necessary equipment (diagnoser, vaccinator, and sample stick), two connected airlocks, and separate wards.
+The implementation described in this document does not require a virologist, but does not completely rule out its appearance in the future if another design document describes the need for one.
+
+To combat viral diseases, the medical department is equipped with a virology sub-department, which has the necessary equipment (diagnoser, vaccinator, and swab), two connected airlocks, and separate wards.
 
 ### Diseases
+Common viruses should cause discomfort (vomiting, brief stuns, etc.) to motivate players to seek treatment, but should not force remove the carrier from the game when immediate treatment is not possible. Damage is allowed in later stages, but it should not be rapidly lethal and should be reducible until complete recovery.
+
 Diseases can be viruses, infections, or special conditions of living beings; they can have symptoms, stages, and treatment phases.
 
-The mechanics are based on disease prototypes and the carrier component. Each disease has a set of stages, a probability of progression, and infection parameters. Infection may have an incubation period during which symptoms and spread are disabled. On each tick, the system advances the stage with a specified probability, displays sensations, and attempts to trigger the symptoms of the current stage.
+Mechanics:
+* The mechanics are based on disease prototypes and the carrier component. Each disease has a set of stages, a probability of progression, and infection parameters. On each tick, the system advances the stage with a specified probability, displays sensations, and attempts to trigger symptoms of the current stage.
 
 #### Immunity
 Immunity is represented on the carrier as the probability of blocking infection with a specific disease.
 
-After complete recovery, the base immunity strength to the disease is applied. Immunity can also be pre-configured for each entity in the carrier component or [vaccines](#vaccines).
+#### Symptoms
+Symptoms should clearly signal that a character is ill, drive the player toward medical tools and help, and shape risk for nearby crew without turning the carrier into a spectator.
 
-#### Stealth Flags
-A characteristic of a disease that helps to conceal it. Some chemicals should reduce the stealth level of the disease, this is especially important for diseases with hidden treatment methods.
+Design goals:
+1. Noticeable cues to the carrier and observers (emotes, sensations) so suspicion of illness does not require machines.
+2. Frequency and intensity scale by stage with clear early tells; avoid sudden spikes to severe effects with no telegraphing.
+3. Symptom channels reflect infection routes (cough/sneeze -> airborne, vomiting/slime -> contact, bleeding -> bloodborne) to teach responses.
+4. Short stumbles or brief stuns are acceptable; long stun chains or frequent item drops that stall the player are not.
+5. Symptoms can harm not only the carrier, but also those around them (e.g., spreading the virus more actively when sneezing), motivating the crew to suppress the symptom or cure the carrier.
 
-* **None:** default behavior.
-* **Hidden:** do not show in HUD.
-* **VeryHidden:** hide from HUD, diagnoser, and health analyzer.
-* **HiddenTreatment:** hide treatment steps in the diagnoser.
-* **HiddenStage:** hide stage in the diagnoser and health analyzer.
+#### Treatment
+Treatment of the disease can be complete, reducing the stage, or at the symptom level. It all depends on the type of disease and what goal it pursues. 
 
-### Types of infection
+Design goals:
+1. Complete diagnostics inform targeted therapy, which is a reward for the time spent.
+2. Blind treatment can be wrong; drugs should have side effects in small doses to punish random search. 
+3. Treatment at the symptom level is temporary and should contain the harm from the disease until complete treatment, so it may require less effort.
+4. Completing treatment grants immunity against this disease. Its strength depends on the disease type, but is usually high to prevent reinfection loops.
 
-#### Contact
-The infected spreads the virus through direct contact with other entities and through contact with surfaces.
+#### Contact infection
+Contact infections spread via direct touch and contaminated surfaces. This path exists to promote hygiene, and active decontamination.
 
 Mechanics:
 * Through direct contact (hitting, touching), there is a chance of the virus being transmitted from the infected to the healthy.
@@ -103,106 +112,48 @@ Mechanics:
 * The level of surface contamination can be cleaned with chemical agents, and also slowly decreases over time.
 * A healthy person interacting with an infected surface reduces the level of contamination; at the same time, they have a chance of becoming infected, which depends on the remaining level of contamination and the characteristics of the virus.
 
-Protective factors:
-* Gloves (40%)
-* Feet (20%)
-* Outer clothing (20%)
-* Inner clothing (10%)
+Countermeasures:
+* Clean contaminated surfaces using cleaning chemicals that can be used by cleaners or medical personnel.
 
-#### Airborne
-The virus spreads through the air: an infected person releases particles when they exhale, cough, etc.; healthy people can inhale them and become infected.
+#### Airborne infection
+Airborne infections spread through exhaled aerosols and ambient atmosphere. This path makes masks, ventilation, and air‑quality management matter.
 
 Mechanics:
 * An infected entity generates a certain amount of virus in the surrounding atmosphere when they exhale.
 * The concentration of the virus in the air around the source changes over time and distance.
-* For airborne diseases, the environment parameter is important - under what atmospheric conditions can the virus survive or multiply.
-* Example: miasma is a suitable atmosphere for reproduction; when this environment is eliminated, the virus gradually dies.
+* For airborne diseases, environmental conditions matter—the atmospheric conditions under which the virus can survive or multiply.
+ * Example: miasma is a suitable atmosphere for reproduction. When this environment is eliminated, the virus gradually dies.
 
-A simplified implementation allows for a simple chance of transmission within a certain radius from a breathing infected person to a suitable healthy person.
+A simplified implementation uses a flat chance of transmission within a certain radius from a breathing infected person to a suitable healthy person.
 
-Protective factors:
-* Mask (40%)
-* Head (20%)
-* Eyes (10%)
-* Connected cylinder (75%)
+Countermeasures:
+* Eliminating harmful atmospheres in which viruses multiply. This is the job of an atmospheric technician, which leads to more interaction between departments.
 
-#### Through blood
-The infection is transmitted when infected blood comes into contact with the blood of a healthy person.
+#### Blood infection
+Blood infections require blood-to-blood exposure. This path reinforces safety during blood transfusions.
 
 Mechanics:
 * Transmission occurs only when infected blood enters the bloodstream of a healthy entity.
 * The probability of infection depends on the volume of blood and the characteristics of the virus.
 
-### Symptoms
-Symptoms are configured as separate prototypes and tied to the stages of the disease. A symptom has a base chance of triggering per tick and a set of behavioral effects. Some symptoms can increase the spread of infection — for example, causing a one-time airborne “spread” that uses the radius and chance of the disease with symptom multipliers.
-
-### Treatment
-Treatment is defined by healing steps at the disease level or a specific stage. On each tick, the system attempts to apply the appropriate steps with their probability (default is 100%; can be used for treatment with reagents).
-
-A step may lower the stage instead of a complete cure. Complete cure removes the disease and grants post-immunity. Individual symptoms may have their own steps that do not cure the disease but suppress the symptom for a specified period of time.
-
-The main methods of treatment are:
-* **Waiting:** cure after staying in the disease for a specified time (in ticks) with a certain probability of success.
-* **Temperature:** requires staying below a specified body temperature for several ticks in a row.
-* **Bed rest:** chance of recovery when in a hospital bed or lying down; the chance may increase during sleep.
-* **Reagents:** recovery when a set of reagents is present in the bloodstream at or above the required levels (reagents are not consumed).
-
-### Diagnostics
-Diagnostics is built around two tools:
-* Sample stick: used on a living object with a short delay; records a list of active diseases and their stages in a sample with the subject's name and DNA.
-* Diagnoser: takes a sample and displays the diseases found, their current stages, characteristics, and descriptions/treatment steps in the UI. Can print paper reports; some characteristics will not be recorded in them.
-
-#### Partial diagnosis
-Analyzer, medical HUD, and crew monitoring.
-Displays only the presence and type of disease (beneficial virus or not). For initial warning about the presence of disease for further diagnosis.
-
-#### Analyzer
-Shows the presence of the disease, its stage, and a hint in the tooltip: use the diagnoser for a detailed examination.
-
-### Diagnoser
-The diagnoser is a stationary medical console that accepts a disease sample and provides a detailed analysis for medical staff. It does not detect diseases on its own, a sample is required.
-
-Inputs:
-* Accepts a sample produced by the sample stick. Only one active sample is analyzed at a time. The sample preserves the subject's name and DNA.
-
-Displayed information (subject to stealth flags):
-* **Patient:** name and DNA from the sample metadata.
-* **Detected diseases:** list of diseases found in the sample.
-  * Name and description.
-  * Stage and stage progress.
-  * Incubation status if applicable.
-  * Spread characteristics: infection type (air/contact/blood) and general contagion parameters.
-  * Severity and notable symptoms for the current stage.
-  * Treatment steps and hints.
-
-Actions:
-* Print report: prints a paper report with the current analysis; some fields may be omitted from printouts.
-* Eject sample: returns the sample to the user without modification.
+Countermeasures:
+* Cleaning and removal of blood.
 
 ### Vaccines
-Vaccines are a special reagent (`id: vaccine`) that add disease-specific immunity by writing active entries to the carrier's resistances.
+The primary purpose of vaccines is to reward medical treatment by preventing healthy personnel from becoming infected with this disease, rather than curing existing infections.
+
+Vaccines are special reagents that add disease‑specific immunity by adding active entries to the carrier's resistances.
 
 Resistance mechanics:
-* After a complete cure, the host receives an inactive resistance entry for that disease. Inactive entries do not protect but are eligible for vaccine cloning in the Vaccinator. The cloned vaccine, when administered, converts the matching resistance to active on the recipient.
-* Active resistance completely blocks infection with the specified disease, but they cannot be used to create vaccines.
+* After a complete cure, the host receives an inactive resistance entry for that disease. Inactive entries do not protect but are eligible for vaccine cloning in the [vaccinator](#vaccinator). The cloned vaccine, when administered, converts the matching resistance to active on the recipient.
+* Active entries completely block infection with the specified disease but cannot be used to create vaccines.
 
-Vaccines mechanics:
+Vaccine mechanics:
 * Targeting: each vaccine dose contains a list of disease types (paths). It only affects those specific diseases.
 * Effect on carrier: on internal application, for each matching disease the host gets an active resistance entry added to resistances. This prevents future contraction of those diseases and does not cure existing ones by itself.
 * Stacking/merge: mixing vaccine reagents merges their target lists; multiple sources combine into one set of resistances.
 
-Notes:
-* Resistance requires the disease to allow resistance.
-* Normal metabolism applies; no special decay or booster mechanics exist beyond standard reagent behavior.
+#### Vaccinator
+Similar to the diagnoser, it is a way to obtain vaccines. It accepts samples for convenience and is stationary due to the utility of vaccines.
 
-### Vaccinator
-Vaccinator is a stationary virology machine that synthesizes vaccine bottles based on a loaded blood sample. It distinguishes between inactive and active resistances in the sample.
-
-Inputs:
-* Accepts an open reagent container (e.g., beaker) containing a blood sample. The machine reads detected strains and the donor's stored resistances (if present).
-
-UI and actions:
-* Culture Information: displays detected strains, analysis progress, and allows naming/printing release forms.
-* Antibodies: lists disease resistances found in the sample with their state. Only inactive resistances can be used to clone a vaccine; active resistances are shown but not clonable.
-* Clone Vaccine: available only for inactive resistances. Creates a glass bottle named after the target disease, filled with 15 units of [vaccine](#vaccines) that, when administered, activates that resistance on the recipient.
-* Eject/Destroy: ejects the loaded container or safely discards its contents.
+The Vaccinator is a stationary virology machine that synthesizes vaccine bottles based on a loaded blood sample. It distinguishes between inactive and active resistances in the sample.
