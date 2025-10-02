@@ -97,13 +97,13 @@ By default, no admin privileges are set. A privileged administrator can give out
 
 
 ## Level 2: Server With Custom Code
-You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
+You will first need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build using custom code. After you are done with that you can continue.
 
-You first build the packaging tool using:
+Next you will need to build the packaging tool itself:
 
 `dotnet build Content.Packaging --configuration Release`
 
-Then you can use Content.Packaging to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``
+Then you can use the Packager to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for 64 bit linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``. If you have an ARM64 processor, replace the ``x64`` to ``arm64``. Available compilation targets are listed here in [this article](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog#known-rids). (Note: Not all of these targets are supported. 64 bits AT LEAST are needed.)
 
 `dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
 
@@ -112,7 +112,7 @@ Note that if you are running an older server before Content packaging was a thin
 `python Tools/package_server_build.py --hybrid-acz`
 ```
 
-Check the `release/` folder for a packaged server for your custom codebase.
+Check the `release/` folder for a packaged server for your custom codebase. You can from now on follow the steps in [level 0](#level-0-local-sandbox-server) starting, skipping step 3.
 
 
 ## Level 3: A "Production" Server
