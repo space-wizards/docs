@@ -24,10 +24,15 @@ A disease outbreak occurs due to a predictable event.
 
 * Disease carriers can vary (corpse, artifact, expired food, etc.) depending on the desired gaming experience.
 * Diseases occur in persons upon contact with a carrier, the nature of which depends on the type of disease. The method of infection can be anything, but it must originate from the event that acts as the carrier (gas from an artifact -> airborne transmission, dirt -> contact transmission) and take into account the appropriate methods of protection.
-* Diseases caused by a local event should have a low chance of infecting others so as not to provoke a chain reaction spreading to most of the station. However, this chance should not be so low that medical personnel can ignore the disease and delay treatment or [containment measures](#protection-against-spread). The danger of the disease can be regulated by the prevalence of the carrier.
+* Diseases caused by a local event should have a low chance of infecting others so as not to provoke a chain reaction spreading to most of the station. However, this chance should not be so low that medical personnel can ignore the disease and delay treatment or [containment measures](#protection-against-spread). 
+* The danger of the disease can be regulated by the prevalence of the carrier (the rarer it is, the more dangerous it can be).
 
 ### Global outbreak
-TODO: there should be a description of a funny random event here.
+Global outbreaks arise from a random station‑level event.
+
+* Usually, the trigger should be a random station event.
+* Diseases caused by a station‑level event should have a high chance of infecting others, creating a chain reaction that can spread to most of the station. At the same time, this chance should not be so high that medical personnel are overwhelmed and unable to react with timely treatment or [containment measures](#protection-against-spread). 
+* The danger of the disease can be regulated by the probability and time when the event usually occurs (the rarer and further in time, the more dangerous it can be).
 
 ### Diagnostics
 Diagnostics is an important measure for combating disease; it can be either comprehensive or simply warn of the presence of disease. 
