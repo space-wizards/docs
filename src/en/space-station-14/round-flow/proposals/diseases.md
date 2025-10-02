@@ -16,19 +16,18 @@ Examples of differences:
 * Airborne transmission routes that account for viruses in the atmosphere, increasing engineering involvement.
 
 ## Background
-We aim to introduce a clear, maintainable foundation for diseases and a virology role that integrates with existing medical workflows. The initial scope focuses on readable mechanics, predictable player tools, and performant systems that can be iterated on in future PRs on mutations and virus creation.
+This design doc aims to introduce a clear, maintainable foundation for diseases that integrates with existing medical workflows and expands the responsibilities of medical personnel. The initial scope focuses on readable mechanics, predictable player tools that can be iterated on in future PRs on mutations and virus creation.
 
 ## Game Design Rationale
-### The onset of disease
-Outbreaks may be seeded predictably or arise stochastically from environmental conditions. Randomness adds variety, not force majeure: every disease must offer counterplay via early signals.
+### Local outbreak
+A disease outbreak occurs due to a predictable event.
 
-Species and animals may possess innate or acquired resistance that alters the probability of infection, to create desired gameplay situations.
+* Disease carriers can vary (corpse, artifact, expired food, etc.) depending on the desired gaming experience.
+* Diseases occur in persons upon contact with a carrier, the nature of which depends on the type of disease. The method of infection can be anything, but it must originate from the event that acts as the carrier (gas from an artifact -> airborne transmission, dirt -> contact transmission) and take into account the appropriate methods of protection.
+* Diseases caused by a local event should have a low chance of infecting others so as not to provoke a chain reaction spreading to most of the station. However, this chance should not be so low that medical personnel can ignore the disease and delay treatment or [containment measures](#protection-against-spread). The danger of the disease can be regulated by the prevalence of the carrier.
 
-#### Global outbreaks
-A virus outbreak affecting a significant number of station personnel (random event). It need not be rare, due to measures that [protect against spread](#protection-against-spread), but it should not occur every round.
-
-#### Local outbreak
-A virus outbreak affecting one or more individuals due to a predictable event (contact with a corpse, artifact, food poisoning, etc.). May be more dangerous for the carrier because the cause is localized rather than random.
+### Global outbreak
+TODO: there should be a description of a funny random event here.
 
 ### Diagnostics
 Diagnostics is an important measure for combating disease; it can be either comprehensive or simply warn of the presence of disease. 
@@ -43,26 +42,28 @@ These include HUDs, analyzers, and crew monitoring—simple standard medical too
 A complete diagnosis should provide comprehensive information about the disease, including its characteristics and stages of treatment. Therefore, it should be performed by a stationary machine in the medical department (the diagnoser). For convenience, it can accept samples collected beforehand (e.g., a swab).
 
 ### Protection against spread
-Protection prioritizes targeted mitigations that let infected crew keep playing while reducing risk to others.
+Protection prioritizes targeted mitigations that let infected crew keep playing while reducing risk to others. Correlate spreadability with mechanical interestingness: the more compelling the disease loop (e.g., zombies), the more acceptable strong measures like quarantine become.
 
 * Diseases with different types of spread should have their own reagent that greatly reduces the likelihood of spreading the virus while it is active. This lets infected crew keep moving while awaiting treatment. Some strong diseases may be resistant.
-
 * Different types of infection should be blocked by different types of clothing. This increases immersion—less clothing means more points of contact with the disease. Specialized clothing (e.g., medical masks) may have their own protection values. Percentages should be determined during playtesting.
-
-* Quarantine should be avoided as a priority containment measure, as it requires the crew to remain in isolation, which is not a pleasant experience. For some major events or game modes (e.g., zombies), it is acceptable as an effective means of control.
+* Quarantine should be avoided as a priority containment measure in most cases, as it requires the crew to remain in isolation, which is not a pleasant experience.
 
 ## Roundflow & Player interaction
-### Gameplay loops
 A sample crew gameplay loop during a virus outbreak.
 
-1. Outbreak begins (global or local). Early, soft symptoms appear, crew notices and reports.
-2. Triage and partial diagnostics. Suspected carriers are flagged via [partial diagnosis](#partial-diagnosis), PPE is issued to limit spread.
-3. Immediate suppression and mitigation. Carriers take suppressants, wear masks and gloves, cleaning starts, ventilation is adjusted, players keep working.
-4. Sampling and complete diagnostics. Med collects swabs and runs the [diagnoser](#complete-diagnostics) to identify disease, stages, and treatment paths.
-5. Treatment execution. Targeted therapy is applied. Symptom suppression as needed.
-6. Optional vaccine creation. The Vaccinator clones a vaccine from recovered or inactive resistances.
-7. Vaccination rollout. Healthy at‑risk crew are vaccinated to prevent new cases.
-8. Cleanup and follow‑up. Remaining patients are treated, hotspots decontaminated, atmos corrected. Quarantine is reserved for exceptional modes or events.
+### Local outbreak loop
+1. Early tells: soft symptoms on affected workers prompt self‑care and reporting.
+2. Mitigation: [protection against spread](#protection-against-spread), local cleaning, limited access to the dirty area.
+3. Diagnosis: swabs and [complete diagnostics](#complete-diagnostics) confirm disease and stages.
+4. Treatment: targeted therapy for patients, symptom suppression as needed. If not treated in time, the infection can slowly spread throughout the crew, which can lead to a [global outbreak](#global-outbreak-loop).
+
+### Global outbreak loop
+1. Early tells: soft symptoms on affected workers prompt self‑care and reporting.
+2. Mitigation: [protection against spread](#protection-against-spread), local cleaning, limited access to the dirty area.
+3. Diagnosis: swabs and [complete diagnostics](#complete-diagnostics) confirm disease and stages.
+4. Treatment: targeted therapy for patients, symptom suppression as needed. If not treated in time, the infection can slowly kill the crew in the final stage.
+5. Vaccine creation (optional): the Vaccinator clones a vaccine from inactive resistances. Healthy at‑risk crew are vaccinated to prevent new cases.
+6. Resolution: after treatment, immunity rises, cases fall, [disinfection](#contact-infection) or/and [atmos corrections](#airborne-infection) finish the event.
 
 ## Features to be added
 ### Virology Department
@@ -73,7 +74,7 @@ The implementation described in this document does not require a virologist, but
 To combat viral diseases, the medical department is equipped with a virology sub-department, which has the necessary equipment (diagnoser, vaccinator, and swab), two connected airlocks, and separate wards.
 
 ### Diseases
-Common viruses should cause discomfort (vomiting, brief stuns, etc.) to motivate players to seek treatment, but should not force remove the carrier from the game when immediate treatment is not possible. Damage is allowed in later stages, but it should not be rapidly lethal and should be reducible until complete recovery.
+Diseases should cause discomfort (vomiting, brief stuns, etc.) to motivate players to seek treatment, but should not remove the carrier from play when immediate treatment is not possible. Not every disease must be harmful, benign or quirky effects can exist, but ignoring harmful diseases should entail increasingly serious consequences, such as damage or other negative effects.
 
 Diseases can be viruses, infections, or special conditions of living beings; they can have symptoms, stages, and treatment phases.
 
@@ -83,14 +84,16 @@ Mechanics:
 #### Immunity
 Immunity is represented on the carrier as the probability of blocking infection with a specific disease.
 
+Species and animals may possess innate or acquired resistance that alters the probability of infection, to create desired gameplay situations.
+
 #### Symptoms
 Symptoms should clearly signal that a character is ill, drive the player toward medical tools and help, and shape risk for nearby crew without turning the carrier into a spectator.
 
 Design goals:
 1. Noticeable cues to the carrier and observers (emotes, sensations) so suspicion of illness does not require machines.
-2. Frequency and intensity scale by stage with clear early tells; avoid sudden spikes to severe effects with no telegraphing.
+2. Frequency and intensity scale by stage with clear early tells. If ignored, consequences should escalate meaningfully.
 3. Symptom channels reflect infection routes (cough/sneeze -> airborne, vomiting/slime -> contact, bleeding -> bloodborne) to teach responses.
-4. Short stumbles or brief stuns are acceptable; long stun chains or frequent item drops that stall the player are not.
+4. Short stumbles or brief stuns are acceptable. Long stun chains or frequent item drops that stall the player are avoided unless a disease is intentionally high‑risk.
 5. Symptoms can harm not only the carrier, but also those around them (e.g., spreading the virus more actively when sneezing), motivating the crew to suppress the symptom or cure the carrier.
 
 #### Treatment
@@ -114,6 +117,7 @@ Mechanics:
 
 Countermeasures:
 * Clean contaminated surfaces using cleaning chemicals that can be used by cleaners or medical personnel.
+* Cleaning items under running water (sink, shower).
 
 #### Airborne infection
 Airborne infections spread through exhaled aerosols and ambient atmosphere. This path makes masks, ventilation, and air‑quality management matter.
@@ -154,6 +158,6 @@ Vaccine mechanics:
 * Stacking/merge: mixing vaccine reagents merges their target lists; multiple sources combine into one set of resistances.
 
 #### Vaccinator
-Similar to the diagnoser, it is a way to obtain vaccines. It accepts samples for convenience and is stationary due to the utility of vaccines.
+Similar to the [diagnoser](#complete-diagnostics), it is a way to obtain vaccines. It accepts samples for convenience and is stationary due to the utility of vaccines.
 
 The Vaccinator is a stationary virology machine that synthesizes vaccine bottles based on a loaded blood sample. It distinguishes between inactive and active resistances in the sample.
