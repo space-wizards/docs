@@ -13,6 +13,3 @@ There's five main locations crew can obtain equipment for their role. The items 
 Of these only the loadout is unavailable for mid-round players receiving a promotion or looking to steal gear. Therefore important items and necessary job equipment should **not** be given in loadouts. This pushes players to visit their department to collect the gear needed to properly do their jobs, connecting them to their department and to their coworkers before they start working in earnest.
 
 Job-essential equipment is found in job lockers located within departments or job specific rooms. They should contain everything needed for a player to perform their job. Additional important items - mainly expendable and optional gear - can be obtained in nearby vending machines. Suplimental tools and materials can be aquired from lathes or found mapped around the department/room.
-
-
-[Core Design Principles](../core-design/design-principles.md)
