@@ -1,0 +1,61 @@
+# Pirates Proposal
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| thesaladmancer, Doru991, RedBookcase | :x: No | TBD |
+
+## Overview
+
+Pirates are roundstart Team Antagonists tasked with plundering the station to fulfill black-market bounties for dubloons and treasure. Spawning within an isolated Pirate's Bay, they begin with basic equipment and are tasked with raiding the station to steal items to fulfill unique bounties, which provide them with the dubloons they require to buy better and more dangerous gear.
+
+This proposal is intended to repurpose the various Pirate assets within the game to re-implement Pirates as a coherent and interesting Team Antagonist role.
+
+### Gameplay Loop - Preparation
+
+"Yarr matey! You are a Pirate, a space-faring loot-grabbing rapscallion! Coordinate with your fellow Scallywags and follow the lead of your dread Captain to raid [Station Name] for plunder! Fulfill your black-market bounties for the dubloons you need to buy better gear, and prepare for the raid of a century!"
+
+Pirates spawn inside the Pirate's Bay, a separate map from the station that serves as their home base. The Pirates will spawn with two main roles - Pirate Scallywags and their Pirate Captain. When compared to their closest analogue, Nuclear Operatives, Pirates will spawn with lackluster gear - Scallywags spawn with armored overcoats and simple guns and cutlasses. Their Captain enjoys the benefits of seniority, and spawns with the Pirate Captain's Hardsuit, a weaker version of the Commander's Hardsuit, and an Energy Cutlass, among other basic gear. All Pirates also spawn with a certain amount of Dubloons.
+
+Upon spawning, the first thing most Pirates will do is scurry to the Smuggler's Cove, a room within the Pirate's Bay that contains three crucial machines.
+
+- The Black-Market Bounty Board, a structure similar to the Cargo Bounty Computer which provides the pirates with a list of illicit bounties they can turn in for dubloons, the Pirate's Antagonist Currency (Analagous to Wizcoin or Telecrystals). Bounties should involve things that can only be found on the station, and they should be things the station is unwilling to part with, such as named Crew ID's, the Mail Teleporter, or Pun-Pun.
+
+- The Bounty Selling Computer, a structure similar to the Cargo Selling Computers. Most items will not sell for anything when brought upon the Pirate's Selling Pallets - only completed bounties will net dubloons.
+
+- The Smuggler's Market Terminal, a purchasing computer that allows Pirates to spend their Dubloons to purchase a variety of gear, including weapons, armor, medical supplies, and more!
+
+After viewing their available bounties, the Pirates will decide on which bounty they want to pursue, and then spend their starting dubloons on some basic gear at the Smuggler's Market Terminal. After they finish preparations, they will use a fourth machine - a Pirate Boarding Teleporter - to transit to the station.
+
+- The Pirate Boarding Teleporter is similar to the Wizard's Teleportation Scroll. It's a stationary machine that can create one-way portals to the station, allowing the pirates to choose from 3 randomly selected locations on board the station (most likely by using station beacons). If the Pirates dislike the available teleportation locations, they cycle every 5 minutes, and can be manually rerolled once every 15 minutes.
+
+After a location is chosen the Pirates enter the portal and officially board the station, eager to fulfill a bounty.
+
+### Gameplay Loop - Aboard the station
+
+After the Pirates have boarded the station, they will seek to collect the items, machines, or creatures necessary to fulfill one or more of their bounties. Depending on where they board and what their objectives are, this will vary in difficulty. One way or another, the Pirates will work towards their goal, following the direction of their Captain and either fighting or intimidating any crew which attempt to stop them.
+
+Presuming the Pirates succeed in claiming the things needed for their bounty, they will begin their extraction phase. To return themselves and their plunder to the station, Pirates each spawn with a Smuggler's Fulton, a quicker, recharging fulton access-locked to Pirates and linked to a stationary beacon within the Pirate's Bay. Pirates will fulton out their plunder, and fulton out themselves within crates or lockers to return to the Pirate's Bay.
+
+Once they successfully extract, the Pirates can then process their bounty for an influx of dubloons, which they can spend on bigger and better equipment to make their next raid easier. This process repeats, until either:
+
+A - The Pirates Succeed in redeeming a number of bounties, whereupon they are locked out of regular bounties and given a singular, extremely high-value bounty that must be fulfilled to obtain victory. This may include the carded Station AI, the Nuke Disk, or the Gravity Generator. If they succeed in achieving this objective, they have secured a major victory, and the Evac shuttle will be called with a short timer to bring the round to a close. This is a less predictable way to end a Pirate round, and maintains their intel advantage over the crew - the Pirates know what they need to steal, and the Crew don't. Alternatively,
+
+B - The Pirates Succeed in redeeming a number of bounties, whereupon they are locked out of further bounties and are given the goal of stealing themselves a new ship - namely, the Evac Shuttle! After their final bounty is redeemed, the Evac shuttle will be called with a short timer, and the Pirates will be tasked with boarding the shuttle, hijacking it's central console, and landing the newly christened Black Pearl at the Pirate's Bay in order to achieve their victory. This would be a setpiece battle to end the round, with the Crew trying their best to fight off the boarders while the Pirates must use all their gathered gear and equipment to sieze and hold the shuttle.
+
+### Gameplay Loop - Overview and Tempo
+
+As previously mentioned, Pirates are most similar to Nuclear Operatives, both being Team-based Antagonists who seek to raid the station to fulfill their goals. The main difference between Nukies and Pirates is tempo - Nuclear Operatives will inevitably send the round from 0-100, as their arrival on the station is generally permanent until it ends with them or the entire crew dead.
+
+Pirates, on the other hand, favor a more gradual, cyclical playstyle. Whereas Nukies enter the station with exceptionally strong gear and are constantly pressured to move forward in the pursuit of a single objective, Pirates start with weaker gear and staggered objectives, which they can complete to gain the Dubloons necessary to buy better and more competitive gear. Their method of boarding the station - a randomized teleporter that drops them in unpredictable locations - makes it hard for Security to anticipate their arrival and wipe them on their first attack. Their access to Smuggler's Fultons also gives them easier access to an escape route, encouraging them to cut their losses and escape to the safety of the Pirate's Bay if a situation turns against them. This further differentiates them from Nukies - Pirates are onboard the station to enrich themselves, not to die in the pursuit of massacring everybody, so they have natural incentives to play more cautiously.
+
+Should the Pirates be wiped out, CentComm will announce that illicit activity in the sector has seen a marked decline, and the round will switch over to Survival or Extended. The Crew is free to Evacuate if they so wish.
+
+### Flavour and Roleplay
+
+Pirates have a variety of mechanics that are very similar to those used by Cargo - Bounties, Fultons, Buying Computers, etc. Pirates are intentionally themed this way, and are intended to be disgraced or rogue members of Cargo that have abandoned Nanotrasen in the pursuit of wealth and glory. This further leans into their theming as wealth-crazed opportunists, and is intended to distinguish them from the more militant and murderous Nuclear Operatives.
+
+#### Potential Concerns/Issues
+
+- While Pirates are envisioned as less severe threats than Nukies, Security may choose to go to red alert and fully arm when Pirates are first called out. Ideally, this should be mitigated by allowing other antagonist roles, like Traitors and Thieves, to spawn during Pirate rounds, to distract Security and to discourage them from standing around and waiting for the Pirates to return again. This provides the potential for interesting interactions between Traitors, Thieves, and Pirates - a Thief may strike a deal with Pirates, offering to quietly steal some of their bounties in exchange for the right to use the Pirate's Bay as a safe location for their goods, or Traitors may end up coming to blows with Pirates if they both share the same steal objectives.
+
+- The speed with which Pirates can board the station and successfully extract their bounties is also intended to give them a leg up over Security, encouraging a quick and dirty playstyle to avoid confrontation with the station's forces where possible.
