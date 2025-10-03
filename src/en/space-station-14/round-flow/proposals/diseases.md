@@ -108,7 +108,7 @@ Design goals:
 1. Complete diagnostics inform targeted therapy, which is a reward for the time spent.
 2. Blind treatment can be wrong; drugs should have side effects in small doses to punish random search. 
 3. Treatment at the symptom level is temporary and should contain the harm from the disease until complete treatment, so it may require less effort.
-4. Completing treatment grants immunity against this disease. Its strength depends on the disease type, but is usually high to prevent reinfection loops.
+4. Completing treatment grants immunity against this virus. Its strength depends on the virus type, but is usually high to prevent reinfection loops.
 
 #### Contact infection
 Contact infections spread via direct touch and contaminated surfaces. This path exists to promote hygiene, and active decontamination.
