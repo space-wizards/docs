@@ -4,14 +4,14 @@
 
 ## Overview
 
-Maps often contain gear around the department for players. A spawner should exist for these to control and standardize their use through YAML, should a mapper choose to use it.
+Maps often contain gear scattered around a department for players to take. These are typically materials. A spawner should exist for these to control and standardize their use through YAML, should a mapper choose to use it.
 
 ## Requirements
 
 Mapped items are shared department resources that players divide amongst themselves. They are often consumable materials but can also include spare equipment.
 
 ```admonish success "Good:"
- - Glass
+ - Plastic
  - Handcuffs
  - Banana peel
 ```

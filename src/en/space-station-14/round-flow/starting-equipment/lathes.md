@@ -21,9 +21,3 @@ Items available to be printed round start from lathes might be tools or expendab
  - Grenade
  - Grappling gun
 ```
-
-## Questions for a full doc
-
-```admonish question
-What makes a department lathe unique? Why do some departments get them but not others?
-```
