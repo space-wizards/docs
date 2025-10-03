@@ -76,6 +76,13 @@ This can be expressed either on the PR itself, or privately.
 
 - The PR has been superseded by a different PR and thus no longer needs to be merged.
 
+- If a PR is not a refactor, bugfix or code cleanup it can be closed due to low interest if it is older than 3 months and has not received a review from a maintainer. If another maintainer disagrees with closing the PR they are free to reopen it if they leave a review. When closing you can use the following template:
+  ```
+  Hello, and thank you for your contribution!
+  At the moment maintainers are facing a high backlog and unfortunately can’t review every single pull request. For this reason, we’ll need to close this one.
+  Feel free to further contribute in the future.
+  ```
+
 If a PR is closed, the maintainer must leave a message indicating the reason for its closure.
 This should be a formal message that includes all relevant information.
 If a maintainer discussion was held, it should be summarized and included here.
