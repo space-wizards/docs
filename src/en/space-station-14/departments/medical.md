@@ -30,7 +30,16 @@ In order to maintain this balance, there are a number of design pillars that mus
  > And most important, if someone really wants you dead then medical shouldn't be able to reverse that easily.
 > Round removal is an important part of round progression, and the threat an antagonist poses to the crew is directly linked to the damage they can do and how difficult it is to reverse it. An antagonist should be able to intentionally and permanently remove a target from the round and the station will have to manage that loss in the same way they might lose a machine or valuable item important to the station. 
 
- ### Pillar 2: Treatment should be reactive.
+### Pillar 2: Damage shouldn't just be flavor
+Damage types, Wounds, and their effects shouldn't just be flavor. The type of damage you take, how and where you take it should matter. 
+
+The wounds you recieve should determine your state, whether you can stand, whether you're bleeding, whether you're conscious and whether you're alive. Damage numbers shouldn't be what kills you, rather it's the effects of that damage that kills you.
+
+> Getting shot with a bullet causes you to bleed, damages your organs, and causes your body to fail you. Radiation burns your flesh and shuts down your metabolism poisioning your body slowly, getting blasted with a laser kills cells and leaves wounds highly suceptible to infection.
+
+> A bullet to the heart should eventually cause you to pass out from lack of blood circulation, a baseball bat to the head should knock you out, traditional mob states of "crit" and "dead" should be applied based on your wounds and not number values. 
+
+ ### Pillar 3: Treatment should be reactive.
  Nobody likes doing the same thing over and over again. That's boring! As much as possible injuries should be dynamic and interesting. 
  
  > There should be no cure all medicine that is always the correct option to use.
@@ -49,14 +58,14 @@ In order to maintain this balance, there are a number of design pillars that mus
 > Severe wounds left untreated should progress into more wounds and scale in their symptoms. A patient left to tend their own wounds should eventually die outright.
 > A doctor keeping a close eye on a patient and giving them a lot of attention should have an easier time responding to new developments of their injuries. The progression of wounds should make sense such that if a wound gets worse while it's being treated, it should generally be easier to deal with compared to a new wound that appears on an untreated patient. 
 
-### Pillar 3: Medicine should be interesting
+### Pillar 4: Medicine should be interesting
 Players should want to know how to be a doctor, not only for the purpose it serves but for the depth and complexity involved.
 
 > Everything from treatment, to chemistry, to surgery should have mechanical depth where knowledge and creativity is rewarded and experimentation is encouraged. 
 
 > Getting the best numbers should be mechanically discouraged by having a wide variety of options available. The same injury might call for different treatments depending on context, some poisons might suit some situations better than others. Any "best of their class" meta items or tactics should be discouraged through complexity and should never so heavily outweigh the simpler options that it becomes a burden to not understand them. Not knowing the meta shouldn't put you at a major disadvantage. 
 
-### Pillar 4: Information is a resource
+### Pillar 5: Information is a resource
 The information that is communicated to a doctor should be something doctors have to actively try and get. Medical scanners shouldn't be an end all be all. As with Pillar 2, no treatment should be a cure all, and therefore no source of information should trump another. 
 
 > Getting information from a patient should be the fastest and easiest way to diagnose, but not the only option for obvious reasons.
