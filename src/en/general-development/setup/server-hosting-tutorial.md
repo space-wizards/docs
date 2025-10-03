@@ -112,7 +112,7 @@ Note that if you are running an older server before Content packaging was a thin
 `python Tools/package_server_build.py --hybrid-acz`
 ```
 
-Check the `release/` folder for a packaged server for your custom codebase. You can from now on follow the steps in [level 0](#level-0-local-sandbox-server) starting, skipping step 3.
+Check the `release/` folder for a packaged server for your custom codebase. You can from now on follow the steps in [level 0](#level-0-local-sandbox-server), skipping step 3 as you already have the server zip. (You may ignore the client file)
 
 
 ## Level 3: A "Production" Server
