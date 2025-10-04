@@ -38,15 +38,15 @@ There are multiple admin verbs available. These are all fairly self-explanatory.
 
 - **Erase:** Deletes the targeted player's entity from the round. Useful for removing a character from a round entirely. 
 
-- **Mark:** Places an entity into the $marked variable, a list of entities, replacing its prior value.
+- **Mark:** Places an entity into the $marked variable, a list of entities, replacing its prior value. This can be used in tandem with other toolshed commands to replace the need to type entity IDs.
 
 - **Message:** Opens the ahelp window targeted at the player.
 
-- **Open Admin Notes:** Opens the user's notes. 
+- **Open Admin Notes:** Opens the user's notes. You can also open a player's notes by typing "*adminnotes username*" in the console.
 
 - **Open Player Panel:** Opens a panel with the targeted player's information, such as their username, and if they are whitelisted. The panel also includes their total playtime, notes, bans, role bans, and shared connections. The admin verbs are included in the Player Panel.
 
-- **Teleport Here/To:** Self-explanatory.
+- **Teleport Here/To:** "Teleport Here" will teleport the targeted player to your current position. "Teleport To" will teleport you to the targeted player's current position.
 
 - *Freeze* stops them from moving or interacting until they are unfrozen by an admin.
 
@@ -59,7 +59,7 @@ There are multiple admin verbs available. These are all fairly self-explanatory.
 
 The debug verbs are primarily for debugging, but are also very useful for normal admins.
 
-- **Control Mob:** Gives you control of the entity, if they are sentient.
+- **Control Mob:** Gives you control of the entity regardless of whether the entity is sentient or not.
 
 - **Delete:** Deletes the entity.
 
@@ -67,7 +67,7 @@ The debug verbs are primarily for debugging, but are also very useful for normal
 
 - **Export Sprite:** Exports the entity's sprite to the SS14 Data folder.
 
-- **In Range Unoccluded**
+- **In Range Unoccluded:** Checks to see if the targeted entity is occluded or not (if there's a structure between either of you).
 
 - **Make Ghost Role:** Makes an entity a Ghost role that dead players can request.
 
@@ -89,14 +89,22 @@ Use sparingly. These smites can range from minor inconveniences to severely affe
 
 ![ahelp.png](../../assets/images/admin/ahelp.png)
 
-The **Admin Help** menu can be opened by pressing `Esc -> Admin Help`, by using the `Player Actions Panel` in the **Admin Menu**, or by using the `Message` admin verb.
+The **Admin Help** menu can be opened by pressing `F1`, by using the `Player Actions Panel` in the **Admin Menu**, or by using the `Message` admin verb.
 
-Select the player to message or use any of the buttons via the menu on the left. The 'sword' icon lets you know if they're an antagonist. It also shows their current character name as well as their username. The pin on the far right of the player's name can be toggled to lock the player's name to the top of the playerlist. Useful for keeping note of a player or when you are handling a situation involving certain players.
+Upon opening the Admin Help menu, you will see a tab that looks like the image above, but may contain a larger list of players who have logged into the server regardless of whether they are online or not. If the server restarts, the list will be reset.
+
+Different icons may appear to the left of a player's username.
+**Sword:** The player is an antagonist.
+
+**White Circle:** The player is online and playing in the current round.
+**Half-white Circle:** The player is online, but idle and not in the current round.
+**Empty Circle:** The player is offline.
+
 
 - **Admin Only:** Checking the option will make your messages sent to a player's ahelp only visible to other admins.
 - **Bwoink:** Checking or unchecking the option enables or disables the ahelp message sound for the player. This does not apply whenever a normal player ahelps.
 - **Ban list:** Opens a tab containing all of the player's bans and information on the ban.
-- **Notes:** Opens a tab containing any notes about the player and
+- **Notes:** Opens a tab containing any notes about the player, including their bans.
 - **Kick:** Kicks the player from the server.
 - **Ban:** Opens the Banning panel with the target's username autofilled.
 - **Respawn:** Sends the targeted player to the lobby. Does not delete their character.
@@ -108,7 +116,7 @@ Select the player to message or use any of the buttons via the menu on the left.
 
 ![logs.png](../../assets/images/admin/logs.png)
 
-The admin logs menu shows you all interactions that have occurred during the round, as well as which entities and players were involved. It can be opened in the *Admin* tab of the **Admin Menu**.
+The admin logs menu shows you all interactions that have occurred during the round, as well as which entities and players were involved. It can be opened in the *Admin* tab of the **Admin Menu**, or right-clicking on the entity, clicking 'Admin' then 'Entity Logs', which will instead show you logs that are related to the targeted entity.
 
 The far left menu lets you filter by log type. The second-from-the-left menu lets you filter by the player/entity who was involved in the log. 
 
@@ -126,11 +134,11 @@ The *Pop out* button pops the log menu into a separate OS window. Useful for sav
 
 ![notes.png](../../assets/images/admin/notes.png)
 
-Admin notes give admins a way to store information about a user when a ban would be too harsh a punishment. Notes can be edited (and show their edit information), and can be deleted if the note is no longer relevant.
+Admin notes give admins a way to store information about a user when a ban would be too harsh a punishment, or for archival of observed behavior in some instances. Notes can be hidden from the player if necessary. Notes can be edited (and show their edit information), and can be deleted if the note is no longer relevant.
 
 Admin notes by default expire after six months, slowly becoming less visible. You can hover your mouse over the note to make it easier to see.
 
-Notes can be accessed using the `Admin` verb category, at the bottom of the AHelp menu, or by typing "adminnotes [username] in the console.
+Notes can be accessed using the `Admin` verb category, at the bottom of the AHelp menu, or by typing "*adminnotes username*" in the console.
 
 ---
 
@@ -141,14 +149,16 @@ Notes can be accessed using the `Admin` verb category, at the bottom of the AHel
 
 A couple of things to discuss about how SS14 works before the VV menu can be useful to you:
 
-- An 'entity' is an object in game--walls, players, projectiles, items, etc. Each entity has a unique `EntityUid` corresponding to it, which is the number `15199` you see at the top left next to the entity's name.
-- Each entity (generally) has a prototype ID, or the 'type' of entity it is. This is the `MobObserver` string you see at the top left.
+**Some components being removed will crash the server, so make sure you only remove components you know the behavior of!**
+
+- An 'entity' is an object in game: walls, players, projectiles, items, etc. Each entity has a unique EntityUid corresponding to it, which is the number you see at the top left next to the entity's name or when you right click them. In the example above, the entity's ID is 99901.
+- Each entity (generally) has a prototype ID, or the 'type' of entity it is. This is the `MobObserver` string you see at the top left. This is also found if you right click an entity.
 - Entities have **components**, which give some kind of behavior to the entity. The component for a 'player-controlled' entity is `ActorComponent`, for a weapon it is `MeleeWeaponComponent`, for damageable objects it is `DamageableComponent`, etc. You can dynamically add and remove components whenever you want.
-- The game is separated into 'client' and 'server', with some shared stuff between them. Client is what's running on your computer, server is what's running on the game server, obviously.
+- The game is separated into 'client' and 'server', with some shared stuff between them. Client is what's running on your computer, server is what's running on the game server.
 
-Most of the time, you'll want to view the **Server Components** list, as you can add/remove/modify components there, and every client will see the effects.
+Typically, you'll want to view the **Server Components** list, as you can add/remove/modify components there, and every client will see the effects.
 
-I recommend that you simply try and use the VV menu to get a feel for how it works. It's a little daunting, but once you get the hang of using VV, you'll be able to fix problems within an entity and try new ideas with less trouble.
+I recommend that you simply try and use the VV menu to get a feel for how it works. It's a little daunting, but once you get the hang of using VV, you'll be able to fix problems afflicting an entity and try new ideas with less trouble.
 
 ### VV Tips
 
@@ -156,7 +166,7 @@ I recommend that you simply try and use the VV menu to get a feel for how it wor
 - Some variables may look non-modifiable, but there may be a modifiable version of them further down the list.
 - `TransformComponent` holds the entity's position, rotation, etc.
 - `Grids` (the station) are entities too, and their components can be changed
-- You can modify the `zoom` on the client-side `EyeComponent` to see farther.
+- You can modify the `zoom` on the client-side `EyeComponent` to see further.
 - `MindComponent` contains information like antag roles, jobs, objectives, etc.
 - An entity's name/description can be changed using `Server Variables`, or on the server-side `MetaDataComponent`.
 
@@ -194,7 +204,7 @@ Use the `list` command to list all available commands, and the `help <command na
 | `tpto`                                   | Teleport all targets to the first `<ckey/uid>` in the command.                                       | `tpto <ckey/uid> <ckey/uid> <ckey/uid>`          |
 | `tp`                                       | Teleports yourself to the coordinates on the specified map.                                           | `tp <X> <Y> <MAPID>`                                               |
 | `setmind`                           | Puts the player's soul into the ID (may require the entity to have a mind).               | `setmind <uid> <ckey>`                                           |
-| `customvote`                       | Creates a custom vote for all players, requires at least two choices. Always do this before running any important events.  | `customvote "<title>" "<option1>" "<option2>" ...`   |
+| `customvote`                       | Creates a custom vote for all players, requires at least two choices. Always do this before running any important events. Quotes are not necessary unless you have spaces in the option itself.   | `customvote "What should I eat today?" Ravioli Fetuccine! "A bunch of ice cream!" "Spaghetti!" ...`   | 
 | `addhand`                           | Adds a hand to the entity; not all entities are supported, requires the "Hands" component in the entity.   | `addhand <uid>`       |
 | `adjstationjob`               | Adds or removes jobs. Can be used if a member of command leaves.                                   | `adjstationjob <STATION_ID> <job> <amount>` |
 | `addgamerule`                   | Adds the chosen game event to the game.                                                                                      | `addgamerule <gameruleName>`                               |
@@ -225,7 +235,7 @@ You can see the ban time, reason, and when it expires. You can also check *ban h
 The *Role Bans* tab shows all current role bans. You can search by name, ID, HWID, role, IP, or the banning admin. **This menu shows PII (personally identifying info) such as HWID and IP, so do not ever reveal this information to others.**
 ![ss14adminrolebans.png](../../assets/images/admin/ss14adminrolebans.png)
 
-The *Players* tab just lets you search by username, IP, HWID, etc, for any user. **Contains lots of PII, be careful.**
+The *Players* tab lets you search by username, IP, HWID, etc, for any user. **Contains lots of PII, so be careful when sharing this information.**
 ![ss14adminplayers.png](../../assets/images/admin/ss14adminplayers.png)
 
 You can click on *Player Info* to the far right of the player's name to view their PII, play time, characters, notes, bans, and rolebans.
@@ -237,6 +247,9 @@ The *Connections* tab shows you the most recent connections to the servers as we
 ![ss14adminconnections.png](../../assets/images/admin/ss14adminconnections.png)
 
 The *Logs* tab shows you actions that have occurred. You can search by a date range, text, server, round, player, type, and severity.
+
+The 'logs' time is almost indentical to the game logs, except you can search logs *per day* instead of only by round number. 
+
 ![ss14adminlogs.png](../../assets/images/admin/ss14adminlogs.png)
 
 The *Characters* tab shows you all characters a player has currently saved on the server.
