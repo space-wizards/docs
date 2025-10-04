@@ -61,7 +61,7 @@ The debug verbs are primarily for debugging, but are also very useful for normal
 
 - **Control Mob:** Gives you control of the entity regardless of whether the entity is sentient or not.
 
-- **Delete:** Deletes the entity.
+- **Delete:** Deletes the entity. Requires you to confirm the deletion.
 
 - **Edit Solutions:** Opens a tab that lists the current reagents in the entity. This includes reagents in their bloodstream or temporarily in their bloodstream. You can modify the solutions and reagents in the tab.
 
@@ -97,7 +97,7 @@ Different icons may appear to the left of a player's username.
 **Sword:** The player is an antagonist.
 
 **White Circle:** The player is online and playing in the current round.
-**Half-white Circle:** The player is online, but idle and not in the current round.
+**Half-white Circle:** The player is online and in the round, but currently idle.
 **Empty Circle:** The player is offline.
 
 
@@ -206,7 +206,6 @@ Use the `list` command to list all available commands, and the `help <command na
 | `setmind`                           | Puts the player's soul into the ID (may require the entity to have a mind).               | `setmind <uid> <ckey>`                                           |
 | `customvote`                       | Creates a custom vote for all players, requires at least two choices. Always do this before running any important events. Quotes are not necessary unless you have spaces in the option itself.   | `customvote "What should I eat today?" Ravioli Fetuccine! "A bunch of ice cream!" "Spaghetti!" ...`   | 
 | `addhand`                           | Adds a hand to the entity; not all entities are supported, requires the "Hands" component in the entity.   | `addhand <uid>`       |
-| `adjstationjob`               | Adds or removes jobs. Can be used if a member of command leaves.                                   | `adjstationjob <STATION_ID> <job> <amount>` |
 | `addgamerule`                   | Adds the chosen game event to the game.                                                                                      | `addgamerule <gameruleName>`                               |
 | `endgamerule`                   | Removes the chosen gamerule from the game. Useful for repeating false events.   | `endgamerule <gameruleName>`                               |
 | `rename`                              | Correct way to rename a person (includes ID, PDA, and cloner entries).                   | `rename <ckey/uid> <"FIRSTNAME LASTNAME">`  |
