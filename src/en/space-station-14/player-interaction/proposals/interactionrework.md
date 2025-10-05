@@ -23,7 +23,7 @@ Soon I found out that this was unfortunately impossible due to how the game is s
 Currently, alt-activating will trigger the first `AlternativeVerb` on that entity. Ideally, the same should be done with `ActivationVerb` and `InteractionVerb`.  
 Clicking would attempt at an `InteractionVerb`, but would fallback to an `ActivationVerb` if necessary.
 
-Infact, this all seems to be already outlined by the commends of both `ActivationVerb` and `InteractionVerb`
+Infact, this all seems to be already outlined by the comments of both `ActivationVerb` and `InteractionVerb`
 - `ActivationVerb`
   > These are verbs that activate an item in the world but are independent of the currently held items. For
   > example, opening a door or a GUI. These verbs should correspond to interactions that can be triggered by
@@ -33,7 +33,6 @@ Infact, this all seems to be already outlined by the commends of both `Activatio
   > These verbs those that involve using the hands or the currently held item on some entity. These verbs usually
   > correspond to interactions that can be triggered by left-clicking or using 'Z', and often depend on the
   > currently held item. These verbs are collectively shown first in the context menu.
-
 
 ## Game Design Rationale
 
@@ -45,7 +44,9 @@ It would hopefully make interactions feel more fluid and predictable.
 
 # Technical Considerations
 
-Initially switching to something like this would be pretty simple, just do the same thing we've already been doing for alt-activations.  
-In practice many components across the whole game would need atleast some refactoring. For the most part this would *probably* just be tedious boilerplate replacing but due to the effective removal of simple interaction events, there will be alot more boilerplate for even simpler tasks.
+Issues with "prediction"; in many cases where verbs can only be decided on the server which has to be sent over the client, causing a delay while this happens.
+This is a much bigger issue than this proposal can cover (See [this comment](https://github.com/space-wizards/docs/pull/525#issuecomment-3368646645) and its links).
 
-There needs to be considerations for multiple components with interactions. How would priority work? You cant make multiple activation events on one entity due to the changes.
+Due to that and the nature of this change many systems across the whole game would need atleast some refactoring to support prediction and use verb interaction, some of which are entirely impossible (or atleast without heavy changes to its logic) such as atmos logic.
+
+There needs to be considerations for multiple components with interactions. You cant make multiple activation events on one entity due to the changes so some sort of priority system needs to be implemented.
