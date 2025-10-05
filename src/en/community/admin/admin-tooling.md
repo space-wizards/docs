@@ -63,17 +63,17 @@ The debug verbs are primarily for debugging, but are also very useful for normal
 
 - **Delete:** Deletes the entity. Requires you to confirm the deletion.
 
-- **Edit Solutions:** Opens a tab that lists the current reagents in the entity. This includes reagents in their bloodstream or temporarily in their bloodstream. You can modify the solutions and reagents in the tab.
+- **Edit Solutions:** Opens a panel that lists the current reagents in the entity. This includes reagents in their bloodstream or temporarily in their bloodstream. You can modify the solutions and reagents in the tab.
 
-- **Export Sprite:** Exports the entity's sprite to the SS14 Data folder.
+- **Export Sprite:** Exports the entity's sprite. You can locate your exported sprites in the Space Station 14 folder location > data > Exports
 
 - **In Range Unoccluded:** Checks to see if the targeted entity is occluded or not (if there's a structure between either of you).
 
 - **Make Ghost Role:** Makes an entity a Ghost role that dead players can request.
 
-- **Rejuvenate:** Fully heals an entity and removes any temporary reagents in their body. Only use when necessary.
+- **Rejuvenate:** Fully heals an entity, removes any temporary reagents in their body, and resets the entity's temperature. Only use when necessary.
 
-- **Set Outfit:** Opens a tab with preset outfits you can set a player to wear. Some outfits may include extra items. This verb is useful for running events or respawning players.
+- **Set Outfit:** Opens a panel with preset outfits you can set a player to wear. Some outfits may include extra items. This verb is useful for running events or respawning players.
 
 ---
 
@@ -124,9 +124,9 @@ The top left *Round* spinbox lets you change which round you're looking at, thou
 
 You can filter by *log impact* at the top, though this is rarely needed if you know what you're looking for.
 
-You can view the actual log data on the far right menu, and search for logs. If the log you're looking for doesn't show up, try hitting *refresh* (you'll likely need to do this when changing which player or log type you're looking for*. If it still doesn't show up, press *Next* and wait for a couple of seconds.
+You can view the actual log data on the far right menu, and search for logs. If the log you're looking for doesn't show up, try hitting *refresh* (you'll likely need to do this when changing which player or log type you're looking for). If it still doesn't show up, press *Next* and wait for a couple of seconds.
 
-The *Pop out* button pops the log menu into a separate OS window. Useful for saving some space on your main monitor.
+The *Pop out* button pops the log menu into a separate OS window. Useful for saving some space on your main monitor, but will sometimes break when running under steam's overlay.
 
 ---
 
@@ -136,7 +136,9 @@ The *Pop out* button pops the log menu into a separate OS window. Useful for sav
 
 Admin notes give admins a way to store information about a user when a ban would be too harsh a punishment, or for archival of observed behavior in some instances. Notes can be hidden from the player if necessary. Notes can be edited (and show their edit information), and can be deleted if the note is no longer relevant.
 
-Admin notes by default expire after six months, slowly becoming less visible. You can hover your mouse over the note to make it easier to see.
+Admin notes are visible by default for six months, then gradually become less visible until they are no longer visible at the end of those six months. You can hover your mouse over the note to make it easier to see. The note will *never* delete itself unless it is not a permanent note.
+
+If you want the note to expire and automatically delete itself, you can uncheck 'permanent?' and choose when the note should be deleted.
 
 Notes can be accessed using the `Admin` verb category, at the bottom of the AHelp menu, or by typing "*adminnotes username*" in the console.
 
@@ -149,7 +151,13 @@ Notes can be accessed using the `Admin` verb category, at the bottom of the AHel
 
 A couple of things to discuss about how SS14 works before the VV menu can be useful to you:
 
-**Some components being removed will crash the server, so make sure you only remove components you know the behavior of!**
+**Be careful when editing or deleting variables. Sometimes, when you delete certain variables or edit specific parts of a variable, the entity may break altogether or crash the server.**
+
+*For example, editing the AttackRate setting in the 'MeleeWeapon' component to be an extremely fast rate can crash server.*
+
+*If you are unsure whether editing or removing a variable may cause issues, experiment in a [localhost server](https://docs.spacestation14.com/en/general-development/setup/server-hosting-tutorial.html)!*
+
+The *'Transform'* and *'MetaData'* components cannot be removed via toolshed or view variables.
 
 - An 'entity' is an object in game: walls, players, projectiles, items, etc. Each entity has a unique EntityUid corresponding to it, which is the number you see at the top left next to the entity's name or when you right click them. In the example above, the entity's ID is 99901.
 - Each entity (generally) has a prototype ID, or the 'type' of entity it is. This is the `MobObserver` string you see at the top left. This is also found if you right click an entity.
@@ -187,7 +195,7 @@ Use the `list` command to list all available commands, and the `help <command na
 | Command                                 | Description                                                                                             | Syntax                                                                     |
 |-----------                            |-----------                                                                                            |-----------                                                                |
 | `aghost`                               | Turn yourself into an admin ghost, or back again.             |                                                                                   |
-| `deadmin`                           | Lets you play the game without getting admin notifications. Always use before playing in a round normally.|   |
+| `deadmin`                           | Lets you play the game without getting admin notifications. Always use before playing in a round normally. Persists across rounds and servers until you use the '*readmin*' command.|   |
 | `readmin`                           | Returns all admin functions to the user after they `deadmin`. Not necessary to run upon joining.|   |
 | `help`                                   | Shows information about the specified command.                  | `help <keyword>`                                                   |
 | `list`                                  | Lists all commands in the game.                                               |                                                                                   |
