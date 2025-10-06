@@ -140,7 +140,7 @@ Optional
 - Water Cooler
 - Secway Spawner + Keys
 
-### Wardens Office
+#### Wardens Office
 Required
 - Warden’s Locker [filled]
 - Criminal Records Computer
@@ -530,7 +530,7 @@ Optional
 - Extra Botany Tools
 - Windows to kitchen or chem or both
 
-##### Bar
+#### Bar
 Required
 - Booze Dispenser
 - Soda Dispenser
