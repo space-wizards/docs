@@ -404,7 +404,7 @@ Optional
 - First Aid Kit
 
 ## Engineering
-##### Main Engineering
+#### Main Engineering
 
 Required
 - Engineer Lockers
@@ -473,7 +473,7 @@ Required
 Required
 - Telecommunications Servers
 
-##### Atmospherics
+#### Atmospherics
 Required
 - Atmospheric Technician’s Locker [filled]
 - Working waste loop
