@@ -1,4 +1,4 @@
-# Department Lathes
+# Lathe Equipment
 
 {{#template ../../../../templates/stub.md}}
 

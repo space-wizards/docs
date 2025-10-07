@@ -22,7 +22,7 @@ Equipment vendors contain expendable equipment, spare tools, and optional tools.
  - Welding mask
 ```
 
-Clothing vendors (typically called "Drobes") should spawn with clothing typical of a department's colors or aesthetic qualities. Clothes should reflect the standard uniform of a department employee and include anything available in a loadout (exluding prestige rewards). Every item in a Drobe must be equippable or be considered clothing in an abstract sense (walking cane). Particularly powerful clothing should instead be found in department lockers.
+Clothing vendors (typically called "Drobes") should spawn with clothing typical of a department's colors or aesthetic qualities. Clothes should reflect the standard uniform of a department employee and include anything available in a loadout (excluding prestige rewards). Every item in a Drobe must be equippable or be considered clothing in an abstract sense (walking cane). Particularly powerful clothing should instead be found in department lockers.
 
 ```admonish success "Good:"
  - Jumpsuit
