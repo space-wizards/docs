@@ -12,13 +12,25 @@ Read the [Pull Request guidelines](./pull-request-guidelines.md) to learn how to
 Keep in mind that some older areas of the codebase might not follow these conventions. These should be refactored in the future to follow them. All new code should try to follow these conventions as closely as possible.
 ```
 
-## File Layout
+# General Programming Conventions
 
-1. Start with [using directives](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) at the top of the file.
+These conventions are not really specific to Space Station 14, and you should be following these no matter what project you are working on. Any experienced programmer should know these by heart.
 
-2. All classes should be explicitly namespaced. Use [file-scoped namespaces](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces), e.g. a single `namespace Content.Server.Atmos.EntitySystems;` before any class definitions instead of `namespace Content.Server.Atmos.EntitySystems { /* class here */ }`.
+## Don't copy paste code
 
-3. Always put all fields and auto-properties before any methods in a class definition.
+If you're every looking at another piece of code and think "I want to do the same thing as this": **DO NOT** copy paste it. Make a new function or some other kind of abstraction that allows you to re-use as much code as possible.
+
+Copy-pasting code is a gigantic maintenance hazard as, in the future, if somebody needs to update the code you copied, they now have to do it in *two* places (and be aware that those *two places* even exist).
+
+Of course, there are places where you may think you're "copy pasting" unavoidable code. For example, the basic structure for making an `EntitySystem` that does a thing always has a class definition, some dependencies, an `override void Initialize()`, and so on. This kind of "boilerplate" is fine to copy as there's really no way to avoid it.
+
+## Don't use magic strings/numbers
+
+These are kind of a subset of "don't copy paste code". A "magic" value is any case in which you have a value in your code, say a string or a number, and it needs to be *that* specific value because it has to be the same as some other value somewhere else.
+
+The name of the game here is "make sure that if two values have to match, it's practically impossible for them not to be." Be that via compiler error, unit test failure, a guaranteed crash on startup, whatever.
+
+In the simplest case, such magic values should simply be stored in a `const` or `static readonly` that gets referenced from multiple locations, so the C# compiler enforces they will always be the same. If you need to reference a prototype ID from C#, you should define the prototype ID in a `static readonly ProtoId<T>`, since our validation tooling ensures the IDs in those fields are always valid.
 
 ## Comments
 
@@ -45,14 +57,14 @@ Some folks blindly adhere to "comment the why, not the what" and think that "cod
 #### Example 1
 
 ```csharp
-    var fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+var fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 All of the variables are named in a self-documenting way (*R* gets a pass because that is the ideal gas constant, and physics conventions existed long before computers, so this is following convention). Obviously, the comment should *not* be:
 
 ```csharp
-    // Take R and multiply it by the ratio of outlet temperature divided by outlet air volume and add it to ...
-    var fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+// Take R and multiply it by the ratio of outlet temperature divided by outlet air volume and add it to ...
+var fractionalPressureChange = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 Because this only explains what the code is literally doing, which you could have gathered from any cursory reading of the code. **However, you still have absolutely no idea what this code is doing and why**, even though the code is self-documenting.
@@ -61,32 +73,118 @@ You don't know where this magic formula came from, what it's trying to accomplis
 
 
 ```csharp
-        // We want moles transferred to be proportional to the pressure difference, i.e.
-        // dn/dt = G*P
+// We want moles transferred to be proportional to the pressure difference, i.e.
+// dn/dt = G*P
 
-        // To solve this we need to write dn in terms of P. Since PV=nRT, dP/dn=RT/V.
-        // This assumes that the temperature change from transferring dn moles is negligible.
-        // Since we have P=Pi-Po, then dP/dn = dPi/dn-dPo/dn = R(Ti/Vi - To/Vo):
-        var dPdn = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
+// To solve this we need to write dn in terms of P. Since PV=nRT, dP/dn=RT/V.
+// This assumes that the temperature change from transferring dn moles is negligible.
+// Since we have P=Pi-Po, then dP/dn = dPi/dn-dPo/dn = R(Ti/Vi - To/Vo):
+var dPdn = Atmospherics.R * (outlet.Air.Temperature / outlet.Air.Volume + inlet.Air.Temperature / inlet.Air.Volume);
 ```
 
 #### Example 2
 
 ```csharp
-    if (HasComp<MindContainerComponent>(uid))
-        return;
+if (HasComp<MindContainerComponent>(uid))
+    return;
 
-    // more stuff
+// more stuff
 ```
 
 Obviously, this code skips "more stuff" if the entity represented by *uid* already has a MindContainerComponent. This code is as self-documenting as it gets, it literally just returns early if there is a MindContainer. What needs to be documented is *why* this code needs to skip *uid*s that already have a MindContainerComponent:
 
 
 ```csharp
-    // Don't let players who drink cognizine be eligible for a ghost takeover
-    if (HasComp<MindContainerComponent>(uid))
-        return;
+// Don't let players who drink cognizine be eligible for a ghost takeover
+if (HasComp<MindContainerComponent>(uid))
+    return;
 ```
+
+## Strings and Identifiers
+
+Human-readable text should never be used as an identifier or vice versa. In one direction, that means no putting human-readable text (result of localization functions) in a dictionary key, comparing with `==`, etc... In the other direction, that means things like "never show `Enum.ToString()` to a user directly."
+
+This avoids spaghetti when these inevitably have to be decoupled for various reasons, and avoids inefficiency and bugs from comparing human-readable strings.
+
+Example:
+
+```csharp
+private void UpdateDisplay(Gender gender)
+{
+    // This can't be localized! And the capitalization is kinda weird!
+    // Don't do this!
+    GenderLabel.Text = gender.ToString();
+
+    // This is good!
+    GenderLabel.Text = Loc.GetString($"gender-{gender}");
+}
+```
+
+### Invariant comparisons on human-readable strings
+
+If you're doing something like a filter/search dialog, use `CurrentCulture` comparisons over human-readable strings. Do not use invariant cultures.
+
+## Properties
+
+In a property setter, the value of the property should always literally become the `value` given. None of this:
+
+```csharp
+public string Name
+{
+    get => _name;
+    private set => _name = Loc.GetString(value);
+}
+```
+
+## Properly order members in a type
+
+When laying out the contents of a type, you should **always** put fields above all other instance members. When reading a piece of code, the best way to get familiar with it is to look at the data it operates on. If fields and other members are mixed randomly, it can be much harder to understand the code.
+
+For this rule, auto-properties (e.g. `string FooBar { get; set; }`) are considered the same as fields, since they have an internal field. Non-auto properties (e.g. `string FooBar => _field.Trim();`) do not, so should not be mixed.
+
+Bad:
+
+```csharp
+class FooBar
+{
+    private int _field;
+
+    public void Update() {
+        _field *= 2;
+        Counter += 1;
+    }
+
+    public int Counter { get; set; }
+}
+```
+
+Good:
+
+```csharp
+class FooBar
+{
+    private int _field;
+    public int Counter { get; set; }
+
+    public void Update() {
+        _field *= 2;
+        Counter += 1;
+    }
+
+}
+```
+
+# Project Conventions
+
+These conventions are specific to Space Station 14. They may talk about code or systems that aren't relevant to other projects, or those other projects may simply have a different opinion about code style.
+
+## File Layout
+
+1. Start with [using directives](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) at the top of the file.
+
+2. All classes should be explicitly namespaced. Use [file-scoped namespaces](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces), e.g. a single `namespace Content.Server.Atmos.EntitySystems;` before any class definitions instead of `namespace Content.Server.Atmos.EntitySystems { /* class here */ }`.
+
+3. Always put all fields and auto-properties before any methods in a class definition.
 
 ## Methods
 
@@ -110,28 +208,6 @@ public void CopyTo(
     ref SortedDictionary<TKey, TValue> target,
     SerializationHookContext hookCtx,
     ISerializationContext? context = null)
-```
-
-## Strings and Identifiers
-
-Human-readable text should never be used as an identifier or vice versa. That means no putting human-readable text (result of localization functions) in a dictionary key, comparing with `==`, etc...
-
-This avoids spaghetti when these inevitably have to be decoupled for various reasons, and avoids inefficiency and bugs from comparing human-readable strings.
-
-### Invariant comparisons on human-readable strings
-
-If you're doing something like a filter/search dialog, use `CurrentCulture` comparisons over human-readable strings. Do not use invariant cultures.
-
-## Properties
-
-In a property setter, the value of the property should always literally become the `value` given. None of this:
-
-```csharp
-public string Name
-{
-    get => _name;
-    private set => _name = Loc.GetString(value);
-}
 ```
 
 ## Constants and CVars
@@ -414,9 +490,9 @@ Events should always be structs, not classes, and should always be raised by ref
 They should also have the [ByRefEvent] attribute.
 
 In practice this will look like the following:
-```csharp
-  var ev = new MyEvent();
-  RaiseLocalEvent(ref ev);
+```cs
+var ev = new MyEvent();
+RaiseLocalEvent(ref ev);
 ```
 
 ### C\# Events vs EventBus Events
@@ -619,7 +695,7 @@ Example:
 Always use `TransformComponent` anchoring through the system methods.
 You may use `PhysicsComponent` static body anchoring but *only* if you know what you're doing and you can defend your choice over transform anchoring.
 
-# YAML Conventions
+## YAML Conventions
 
 - Every component `- type` should be together without any empty newlines separating them
 - Separate prototypes with one empty newline.
@@ -677,7 +753,7 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
 Everything else, even prototype type names, uses `camelCase`.
 `prefix.Something` should NEVER be used for IDs.
 
-## Entities
+### Entities
 
 Please ensure you structure entities with components as follows for easier YAML readability:
 
@@ -691,7 +767,7 @@ Please ensure you structure entities with components as follows for easier YAML 
   <rest of file>
 ```
 
-### Entity Prototype suffixes
+#### Entity Prototype suffixes
 
 Use `suffix` in prototypes, this it's a spawn-menu-only suffix that allows you to distinguish what prototypes are, without modifying the actual prototype name. You can use it like this:
 ![](https://i.imgur.com/epkPR3Y.png)
@@ -699,7 +775,7 @@ Use `suffix` in prototypes, this it's a spawn-menu-only suffix that allows you t
 And results in this:
 ![](https://i.imgur.com/JigMCuu.png)
 
-# Localization
+## Localization
 Every player-facing string ever needs to be localized.
 
 ### Localization ID naming
@@ -712,3 +788,40 @@ Every player-facing string ever needs to be localized.
   Not this
     ```ftl
     traitor-message = ...
+
+## In-simulation or out-of-simulation
+
+```admonish warning
+This convention is *very* poorly enforced by our current codebase. Keep that in mind if you see something that seemingly violates it.
+```
+
+Broadly, all code in the game should be separated based on whether it is *inside* the "simulation" or *outside* it. The "simulation" is a encompassing term that basically means "the contents of the actual game".
+
+For example, the following things are "inside" the simulation:
+- Basically everything concerning entities: interactions, physics, atmos, etc.
+- IC chat
+- Round state (lobby, in-game, post-game)
+
+The following examples are "outside" the simulation:
+- OOC chat
+- Adminhelp
+- Admin votes
+- Basically anything talking to an external service, such as the database or a Discord webhook
+
+We always need locations in the code where these two sides of the codebase exchange data. (For example, a player connecting is initially handled out of simulation, but the simulation needs to be notified of new players to spawn them in somehow.) Exactly how this should be done depends on a case-by-case basis, and it can take effort to do properly, but it is vitally important for code architecture.
+
+A thought experiment to think about this is "should this logic stop working if the game were to be paused by an admin." If such a pause button were to exist, we would like to completely stop the game logic (no time would progress, nobody could move, etc), but we'd still like people to be able to connect to the server, talk in OOC chat, ask an admin *why* the game is still paused, and so on.
+
+```admonish info
+The game server currently already automatically pauses like this when no players are online, to save resources. This isn't purely theoretical! But perhaps hard to observe at the moment.
+```
+
+Time in the simulation may accelerate or slow down relative to "real time", depending on server settings or performance issues. On the client, the simulation is constantly committing time travel as part of network prediction. The simulation doesn't actually *exist* on the client until connected to a server!
+
+Here are some of the differences between how in-simulation and out-of-simulation code should be written:
+
+| Thing you want to do | in-simulation | out-of-simulation |
+|-|---------------|-------------------|
+| "Default place" for singleton code. | Make an `EntitySystem` | Use a manager: make a new class, register it with IoC, and call it from `EntryPoint` or similar. |
+| Check elapsed time | `IGameTiming.CurTime` | `IGameTiming.RealTime`, `(R)Stopwatch`, `DateTime`, etc.
+| Send custom network messages | Networked entity events | Custom `NetMessage` |

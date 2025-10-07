@@ -6,15 +6,17 @@ Hosting a local sandbox server for playing around is easy, but setting up a larg
 
 ```admonish danger title="Pre-Packaged server builds should not be used for custom content"
 The only modifications you can do to a packaged server build is with the ``server_config.toml`` file.
-If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code).
+If you wish to modify your server to add your own content or rules. You will need a [proper development environment](./setting-up-a-development-environment.md) with your changes and then [package your own custom build.](#level-2-server-with-custom-code). Doing so otherwise will probably result in a broken server and we will be unable to provide support for such issues.
 ```
 
-1. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
-2. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
-3. Extract the downloaded zip to a directory somewhere, you may use any Archive program such as 7Zip, Winrar or even the one built into Windows.
-4. Run `run_server.bat` (Windows) or `Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux)) and wait until the console windows says "Ready".
-5. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` as an IP address and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button using the same IP address.
-6. When there is a new update. Go back to the 2nd step, and copy over the ``data`` folder and ``server_config.toml`` (if you modified it) from your old server files to the new server files.
+1. (Windows Only) Download and install the [Latest Microsoft Visual C++ Redistributable version](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version). (Resolves "Unable to load DLL libsodium" and similar errors)
+2. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
+3. Download the latest stable version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) (or if you are looking for latest testing/vulture builds download from [here](https://wizards.cdn.spacestation14.com/fork/wizards-testing/) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
+4. Extract the downloaded zip to a directory somewhere, you may use any Archive program such as 7Zip, Winrar or even the one built into Windows.
+5. (Mac and Linux only) run `chmod +x Robust.Server`. This only needs to be run once and again each time you download a new build.
+6. Run `run_server.bat` (Windows) or `./Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux)) and wait until the console windows says "Ready". Do NOT close the console window until you are done playing on your server.
+7. Open your Space Station 14 Launcher and click on ``Direct Connect To Server`` and type in ``localhost`` as an IP address and click connect. You can also add it as a favorite if you click the ``Add Favorite`` button using the same IP address.
+8. When there is a new update. Go back to the 2nd step, and copy over the ``data`` folder and ``server_config.toml`` (if you modified it) from your old server files to the new server files.
 
 If you are having trouble understanding what to click, here is a quick video. Subtitles contain some extra information if needed. 
 
@@ -30,9 +32,9 @@ The server needs network ports to be forwarded so that people can connect. By de
 * UDP `1212` is used for main game netcode. This is necessary for the *client* to be able to connect to the server. This can be configured with the `net.port` configuration variable.
 * TCP `1212` is a HTTP status API. This is also necessary for the *launcher* to be able to connect to the server. You do not need this to connect with a bare client. This can be configured with the `status.bind` configuration variable (which takes in a string like `*:1212` or `127.0.0.1:3000`).
 
-For more information about how to forward your ports, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
+For more information about how to forward your ports and what to do if you are having issues, see: [Port Forwarding](../../server-hosting/port-forwarding.md)
 
-After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6 try both if one fails.
+After you have port forwarded, you can use [this site](https://www.whatismyip.com/) to retrieve your public IP address. If you have both an IPV4 and IPV6, try both if one fails.
 
 Give this to your friends and tell them to direct connect to it. If port forwarding was done correctly they should be able to connect.
 
@@ -95,13 +97,13 @@ By default, no admin privileges are set. A privileged administrator can give out
 
 
 ## Level 2: Server With Custom Code
-You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
+You will first need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build using custom code. After you are done with that you can continue.
 
-You first build the packaging tool using:
+Next you will need to build the packaging tool itself:
 
 `dotnet build Content.Packaging --configuration Release`
 
-Then you can use Content.Packaging to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``
+Then you can use the Packager to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for 64 bit linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``. If you have an ARM64 processor, replace the ``x64`` to ``arm64``. Available compilation targets are listed here in [this article](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog#known-rids). (Note: Not all of these targets are supported. 64 bits AT LEAST are needed.)
 
 `dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
 
@@ -110,7 +112,7 @@ Note that if you are running an older server before Content packaging was a thin
 `python Tools/package_server_build.py --hybrid-acz`
 ```
 
-Check the `release/` folder for a packaged server for your custom codebase.
+Check the `release/` folder for a packaged server for your custom codebase. You can from now on follow the steps in [level 0](#level-0-local-sandbox-server), skipping step 3 as you already have the server zip. (You may ignore the client file)
 
 
 ## Level 3: A "Production" Server
@@ -144,7 +146,7 @@ By default, the server ships with no rules. To set custom rules for your own ser
     # server_url = "ss14://..."
     tags = "" # comma separated list of tags
     ```
-If you get an error attempting to advertise please read [the troubleshooting bellow](#Troubleshooting)
+If you get an error attempting to advertise, please read [the troubleshooting below](#Troubleshooting)
 
 ### Bare Server Build Configuration
 
