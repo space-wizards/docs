@@ -3,45 +3,50 @@
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
-| BeatusCrow | BeatusCrow | :white_check_mark:| [PR #40779](https://github.com/space-wizards/space-station-14/pull/40779) |
+| BeatusCrow | BeatusCrow | :warning:| |
 
 
-## Overview
+# Overview
+A system of triggers and hallucinations (shaders and sound effects) that depends on the humanoid's immediate environment and the products they consume. This system will increase the demand for service department roles and improve interaction between departments to keep the station in good condition.
 
-A system of psychology consisting of subsystems of triggers and psychoanalysis. This will give diversity to the representatives of this profession, as well as increase the importance of the service department, since some triggers (clown/mime clothes, priest altar, etc.) have a positive effect at the emotional component.
+# Background
+Recently, I had the opportunity to play about 20 shifts as the Chief Physician, during which I noticed that the Psychologist is a rather underutilized role due to a lack of clients. Few people want to roleplay mental disorders on LRP and MRP projects. In addition, the clown and the mime often only played at the beginning of the shift and then left the game because they received little attention from other players who were busy with their own work.
 
-## Background
+Furthermore, the Janitor is also an unpopular role on many projects, as there is no gameplay penalty for moving around the station despite piles of garbage or graffiti.
 
-Recently, I had the opportunity to play about 20 shifts for the chief physician, during which I noticed that the psychologist is a rather unclaimed role due to the lack of clients. Few people want to act out mental disorders on LRP and MRP projects. In addition, the clown and the mime often played only at the beginning of the shift, and then left the game, because they received little attention from those who wanted to do their work in the department throughout the shift.
+# Features to be added
+After considering constructive criticism on the original idea (PR #40779), I concluded that the system should work as follows:
 
-In addition, the cleaner is also an unclaimed role on many projects, as nothing prevents you from moving around the station in the presence of mountains of garbage or graffiti.
+* Puddles, wrappers, cans, and other garbage will cause negative emotions for every humanoid.
+* Frequently consuming the same dishes will also have a negative effect.
+* I think it would be a good solution to allow players to choose their favorite food and drink in the lobby before the round starts. These preferred dishes/drinks will not only avoid reducing the humanoid's mental state but will also have a positive impact.
+* Sustaining severe damage for a long time will also negatively affect the mind, but being in good health will restore it.
+* I would also like to include some racial traits regarding the psyche, such as arachnids' love for interior items made of webs and moths' corresponding aversion to them.
+* I would also add certain items that can strongly influence one's mental state. This could be useful for cult-related gameplay.
 
-## Features to be added
+I propose replacing the previous, unsuccessful penalties with the following for losing one's mind:
 
-The psychology system currently consists of 3 trigger systems and a psychological analysis system.
+* Applying a weak WB effect in a "sad" state.
+* Applying a stronger effect in a "depressive" state.
+* A glitch effect when entering a "lost mind" state.
+* Adding auditory hallucinations and involuntary character actions (such as using emotes or picking up/throwing random nearby objects).
 
-The first trigger system is visual, which applies various effects depending on what you see. The field of view is 5 tiles (objects behind obstacles like walls are not visible, of course). Visually, you can be affected both by items on other players (for example, a clown's mask) and by any other object... All trigger objects in their prototypes can have both positive and negative effects. Additionally, they can affect all races or only some of them. Along with race restrictions, there's also a whitelist for roles, so that, for example, a roboticist wouldn't be afraid of borgs while others might be scared of them.
+# Game Design Rationale
+In my view, these innovations will not disrupt the round for players and will allow them to choose things they like (yes, it's only about food and drinks for now, but the system is more focused on negative effects that must be eliminated during the game by janitors, cooks, or security). It is the elimination of these triggers that should unite departments. The crew will monitor the station's condition to prevent a decrease in sanity. If it does happen, they can contact a psychologist who will prescribe them medicine.
 
-By the way, it's worth mentioning that triggers are selected randomly in volume and order for each player at the start of the round, but there's also the possibility to make some of them permanent. For example, clown and mime equipment has a positive effect on representatives of all races.
+# Roundflow & Player Interaction
+Given that most stations are in good condition at the start of a shift (no rusty walls, debris, puddles, or other visual eyesores), players will only need to maintain their workplaces, which is not difficult. Therefore, the overall pace of the round should not change.
 
-The second system is the chemical content of the organism. Each solution provides an instantaneous positive effect (calculated per ounce of substance) and a long-term negative effect to express a kind of dependency... So, eating a chocolate bar will give you 5 units of emotional state (for each ounce of substance) and you'll lose 10 units over the next 15 seconds. There are also restrictions here, for example, ethanol doesn't affect dwarves.
+* The burden on Chefs will likely increase to ensure a more diverse menu (which, in turn, will affect orders for Botanists).
 
-Finally, the third system is health. When taking damage that amounts to 5% of the allowable amount (from the maximum to enter a critical state), you will start losing emotional state points.
+* Janitors should become more in-demand, and players will call on them more often to keep their departments clean.
 
-Let's move on to the psychological analysis system... The psychologist has many special cards "with images" that can contain either 1 trigger or an infinite number. All triggers are divided into groups (departments, common features), which makes it possible to first identify the approximate group that your trigger belongs to, and then use refinement to find the specific one.
-
-In this simple way, a medical specialist can create recommendations for your work environment (maybe you should put more flowers in your department).
-
-When the emotional state level drops below neutral (sadness, depression, deep depression), black-and-white shaders with different coefficients and slowing effects are applied. When reaching the depression state, the character may commit self-anti-resurrection with a probability of 0.15. This process occurs if you have an item that deals damage in some inventory slot or in your backpack... If there are none, then any item from the ground can be picked up for this act. If there are none of those either, static objects can be used: microwave, crematorium, etc.
-
-## Game Design Rationale
-
-In my opinion, such a system will make it necessary for various departments and roles to interact frequently. This is how people can contact the cargo department to purchase plush toys or flowers to increase their emotional state. They can also visit a bar or other public space more often to watch the performances of a clown and a mime, which raise the mood with their funny appearance. The same cleaner will now become a necessary part of any station, because if there are candy wrappers or puddles, your mood worsens. It is worth saying that the system will not oblige you to run to a psychologist every minute... According to my observations, on most maps, there are on average about 30 objects in rooms of different departments, which, at the boundaries of a good emotional state (from 600.0f to 750.0f) and the average value of the influence of triggers (0.125), gives 15 minutes of a calm existence with a transition only to a sad emotional state (assuming that every second decreases by 0.125, although I have often seen an increase).
-
-## Roundflow & Player interaction
-
-This innovation works from the beginning of the shift and, as I described earlier, does not force players to worry too much about their emotional state, which does not change the overall pace of the round. In my opinion, players can safely consult a psychologist at any time, but in order to encourage them to take this action, I added one event that randomly changes the emotional state of the character with a probability of 0.3. In addition, I would like to add a brainworm-type antagonist in the future, which would have to identify a person's negative triggers through analysis and then cause hallucinations in the form of them, thus bringing him to a critical state in order to leave the host for procreation (which is not a RDM process, but a calm RP wagering). Nevertheless, I assume that some players, having identified their triggers with the help of a psychologist, will put them in a small room in large numbers, which will give a significant change in their emotional state. And at the moment, I have not provided any systems to limit this situation.  Of course, for the most part, these mechanics are for the medical department, and in general, they fit in well here, not changing much, but only expanding the current capabilities of the psychologist.
+* Psychologists may get more clients if, for example, medicine that blocks shaders (a cure for hallucinations) is added.
 
 # Technical Considerations
+This update will require:
 
-This update requires new shaders, a trigger analysis system around the humanoid, new prototypes for triggers, and a system for a new medical visor that will help you see icons of the current change in psychological state and icons of this very state. From my point of view, these innovations will not put a heavy load on the server, because I tried to cram the very logic of applying trigger effects into the component of the emotional state of the humanoid, that is, each time there will be no iteration of trigger prototypes to extract the necessary fields. That is, only at the beginning of the round will a "table" of triggers be created, from which triggers will then be randomly selected for each new humanoid with an emotional state component and transferred to the dictionary of the corresponding component of this humanoid for further system logic. Of course, at the moment, implementing triggers through prototypes looks like a very dubious idea... This was done exactly this way, because initially this system was written for Russian-language projects, where the rule is "touch the code of official developers less" and, accordingly, I could not stuff all this into prototypes of ready-made items.
+* Adding new shaders.
+* Slightly modifying the food consumption system to track eaten dishes.
+* Modifying the existing system for tracking visible objects.
+* Adding a system for auditory and textual hallucinations (changing the penalty system for losing one's mind).
