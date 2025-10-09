@@ -15,7 +15,7 @@ Recently, I had the opportunity to play about 20 shifts as the Chief Physician, 
 Furthermore, the Janitor is also an unpopular role on many projects, as there is no gameplay penalty for moving around the station despite piles of garbage or graffiti.
 
 # Features to be added
-After considering constructive criticism on the original idea (PR #40779), I concluded that the system should work as follows:
+After considering constructive criticism on the original idea [PR #40779](https://github.com/space-wizards/space-station-14/pull/40779 ), I concluded that the system should work as follows:
 
 * Puddles, wrappers, cans, and other garbage will cause negative emotions for every humanoid.
 * Frequently consuming the same dishes will also have a negative effect.
