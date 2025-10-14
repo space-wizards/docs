@@ -223,3 +223,27 @@ People can often be emotional after their PR is closed.
 - When requesting changes to a PR be made, keep them within the scope of the PR.
 For example, while requesting small numerical adjustments on a `No C#` PR is fine, it would exceed the scope of the PR to request a new system to be added.
 In cases like these, it is best to close the PR and explain the changes that would need to be made.
+
+
+- If a PR touches code outside of your area of experise and you are not confident in properly reviewing it, you should try and contact another maintainer to help with the review if possible.
+
+
+- If you are helping another maintainer review a PR but do not want to do dedicate yourself to a full review, you should try and follow partial review guidelines.
+
+
+## Partial Review guidelines.
+
+- Maintainers are not expected to be familiar with every system in the game or have knowledge of all fields of expertise in computer science. As such it is always okay to ask another maintainer to help with your review.
+
+- This policy exists to lower the workload on maintainers who are requested to help with a review due to their expertise as well as improve communication around partial reviews. A maintainer may choose to leave a full review and ignore these guidelines if they want. 
+
+- If you leave a partial review you should clearly state so. You should also try to state why the review is partial for example:
+  - There were a number of standout coding issues that should be addressed before leaving a full review.
+  - This PR touches an area of your expertise and you noticed some coding issues you need addressed, you do not plan to leave a full review.
+  - You wanted to request a couple general things you want changed, but do not plan on returning to the PR later.
+
+- Explaining why you're leaving a partial review helps communicate your intentions to other maintainers so that they can do full reviews later, and approve once their reviews are finished and your changes have been addressed.
+
+- If another maintainer does not state their intention to come back to a PR later after leaving a partial review, it's best to assume they won't be coming back to do a full review. 
+
+- As usual, doing a partial review never exempts you from changing your mind and doing a full review later. Partial reviews are purely for helping with a PR's quality without having to dedicate yourself to a full review. 
