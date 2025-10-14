@@ -121,6 +121,7 @@ The first recipe whose conditions are met is selected and used as the result of 
 
 This system has enormous potential for expanding recipes while remaining interesting to play at every stage and encouraging experimentation with ingredients, and as a result of experimentation, different dishes will always be produced.
 At the same time, only the appearance and name of the recipes are transferred to the final dish, while the original reagents of all ingredients are used as the filling for the dish: Players can use a poisoned apple to make a fruit salad and get a poisoned salad.
+Similarly, in the future, the complexity of a recipe could be used to determine the beneficial properties of a dish, rewarding players with special bonuses for preparing complex dishes.
 
 ## Example of implementation
 
