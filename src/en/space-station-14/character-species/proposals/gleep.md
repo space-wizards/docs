@@ -39,13 +39,21 @@ The sounds they make would be generally spacey stereotypical alien sounds (i am 
 
 ### Shell 
 
-Gleeps have a big shell in their backs, gameplay wise it operates like an unremovable backpack. 
-In return, trough an action they are able to quickly hide inside their shell, losing the ability to move and use items, preventing the usage of radio and greatly increasing their resistances, they can be picked up 
-while in this state.
+Gleeps have a big shell in their backs, gameplay wise it operates like an unremovable backpack with a spiral shaped storage. 
+In return, trough an action they are able to quickly hide inside their shell, losing the ability to move and use items, and gaining spacing immunity, they can be picked up while in this state.
 
 Exiting their shell would require a lenghtly do after,  during combat it would be a big commitment to enter your shell, as it would be easy for a syndie to keep hitting you, or a secoff to just pick you up and 
 carry you to sec. 
+(It's meant to be mostly a silly rp purpose ability, carrying the scared hop hiding inside their shell in your hands would be fun)
 
-### Waterborn 
+### Sticky 
 
-Gleeps require to occasionally splash their body with water to keep it hydrated, they will be slown down/take damage if they fail to do so
+When picking an item without gloves on, it will be covered in a thin weak layer of slime-like glue, which Gleep themselves are immune to. (doesnt affect them at all, they will drop items like normal)
+
+### Bioluminescence 
+
+When splashed by a chemical, Gleeps will glow according to its color.
+
+### Salt 
+
+Being a snail-like species, salt is highly toxic to them.
