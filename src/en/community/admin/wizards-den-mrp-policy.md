@@ -10,7 +10,7 @@ This is the ban policy for Wizard's Den servers. It applies only to our first-pa
 - **Strike:** A strike is a type of warning that will result in Dewhitelisting should too many be accrued.
 - **Dewhitelist:** The removal of an account's ability to join Wizard's Den MRP servers.
 - **Permanent Dewhitelist:** A Dewhitelist which prevents a player from applying for a whitelist again in the future.
-- **Endorsement:** An endorsement is formal support from a whitelisted player to a non-whitelisted player. An endorsed whitelisted player may have their Whitelist Application accepted even if they do not meet our playtime requirements.
+- **Endorsement:** An endorsement is formal support from a whitelisted player to a non-whitelisted player. An endorsed whitelisted player may have their Whitelist Application accepted even if they do not meet our playtime or account age requirements.
 - **Player Report:** A report by a player that does not necessarily allege a violation of the rules, but reports another player for creating experiences that are not consistent with the roleplay standard of MRP.
 
 ## Special Punishment Requirements
