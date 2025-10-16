@@ -112,6 +112,26 @@ The Blob provides enjoyment in being a unique experience in both playing as the 
 
 The Blob is easily discoverable once it spawns; part of the initial strategy of the Blob is finding the best place to hide. Counterplay involves what the crew or security should be doing anyways: keeping an eye out across the station for potential issues. Information for how to play and fight against the Blob should be easily found in guidebooks; the Blob, being a major antagonist, and not being a standard character, should have no administrative rules regarding how it is to be played aside from preventing friendliness. The Blob should be fun to play as and to lose as and the same for the crew; each side always has options available and alternative routes to take to achieve victory. The Blob enhances player cooperation as it forces the crew to band together as one to defeat this monstrous foe threatening them all.
 
+## Addendum: Round Flow
+A Blob round should generally follow the round flow described below:
+
+- Round as per normal up until the Blob midround spawn.
+- Once it spawns, the Blob starts in the Hiding Phase, where it aims to increase its Resource while maintaining secrecy.
+- If the Blob is caught during this phase, it's highly likely they'll lose, so it's paramount to the Blob that it stays hidden for a decent while.
+- Once the Blob has accumulated enough Resource and grown significantly larger, it may exit the Hiding Phase early or attempt to stay hidden for as long as possible.
+- Either by intention or by a crew member stumbling upon them or AI spotting them or CentCom calling them out, the Blob will eventually go loud.
+- This is the Main Phase of the Blob, wherein now there is open conflict between the crew and the Blob, as crew attempts to contain it while it attempts to expand further.
+- This phase's ending is largely dependent upon the state of the station and its crew and the respective skill of, and tactical decisions made by, both crew and the Blob.
+- If crew is well-staffed, well-equipped, tactically minded and skillful, and no other critical issues are present, crew should likely win the conflict and kill the Blob.
+- If one of these conditions aren't met, then the result is more up in the air as to which side will come out victorious.
+- If multiple of these conditions aren't met, then the Blob should have a higher chance of success.
+- If the Blob wasn't discovered by the time CentCom announces their presence, both sides have twenty minutes to defeat the other before the nuke timer activates.
+- The nuke timer will start at its default of 3 minutes, which presents a possibility of it being disarmed if the Blob is dealt with quickly, or the Blob reaches the nuke.
+- The Blob's win condition is reaching Critical Mass which involves taking over a certain high percentage of the station. Once it reaches this point, whether the station is nuked or not doesn't matter.
+- Otherwise, the nuke going off is a neutral ending to the round.
+- If the crew successfully defeats the Blob, the station is likely to still be in complete chaos and disarray, and evacuation will likely be called.
+- There should be an automatic shuttle call after the Blob is dead that can be recalled since the Blob is a midround antagonist and not the sole antagonist of the gamemode.
+
 ## Technical Considerations
 Yes.
 
