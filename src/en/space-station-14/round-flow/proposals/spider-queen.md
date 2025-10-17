@@ -146,7 +146,7 @@ Queens should rely on stealth and selective combat. They should not be able to s
 - Ghost roles use the standard raffle. A successor Queen should ideally go to a different player.  
 - Playtime requirement recommended due to mechanical complexity.
 
-#List of Sprites
+## List of Sprites
 - **Spider Queen:**
   - Small size 
     - Alive, crit, dead
