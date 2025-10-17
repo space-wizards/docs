@@ -15,7 +15,7 @@ The Spider Queen is inspired by a mix of xenomorph, dragon, and rat king. The de
 - Actions and abilties
 
 ### Core Loop
-- The Spider Queen expands upon the existing spider infestation event. When the event triggers, there is a 25% chance that a Queen will spawn alongside ordinary spiders, similar to Rat Kings.
+- The Spider Queen expands upon the existing spider infestation event. When the event triggers, there is a 25% chance that a Queen will spawn alongside ordinary spiders, similar to Rat Kings. Optionally, it could be called in by Spider-Clan ninjas when they hack the comms console.
 - Feed on animal protein (mice, roaches, pets, crew) to gain **biomass**.
 - Use biomass to produce **webbing** and **venom**, which drain biomass passively over time.
 - Weave webs and cocoon victims to store food and expand territory.
