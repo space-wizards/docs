@@ -151,5 +151,32 @@ Queens should rely on stealth and selective combat. They should not be able to s
 - **Reused Systems**: Spider content, knife-stick mechanic, flesh kudzu behavior, Vulpakin pounce.  
 - **Performance**: Broodling cap may be required.  
 - **UI**: Resource bars and simple upgrade menu (similar to uplink/grimoire).  
-- **Sprites and Audio**: Animated Queen sizes, broodlings, web types, icons, and action SFX.  
+- **Sprites**
+  - ** Spider Queen: **
+  - Small size 
+    -Alive, crit, dead
+  - Medium size 
+    -Alive, crit, dead
+  - Large size 
+    -Alive, crit, dead
+  - Probably needed eventually: Living animation for alive sprites
+  - Optional: Visual changes to alive sprites for certain upgrades: armored carapace, insulated carapace, camoflauge, etc.
+- **Broodling:**
+  - Alive, crit, dead
+  - Probably needed eventually: Living animation for alive sprites
+- ** Eggs:**
+  - Broodling egg
+    - Alive, ruptured, OPTIONAL: hatching animation?
+  - Spider Queen egg
+    - Alive, ruptured, OPTIONAL: hatching animation?
+ - **Webbing:**
+  - Monofilament webbing: lower opacity, thinner strands (harder to see)
+  - Sticky webbing: probably sort of goop visible on the web
+  - thorn webbing: Spikes or spines visible on the web
+- **Icons:**
+  - Action bar icons
+  - Upgrade menu icons (can be same as action bar probably)
+  - Biomass resource icon (can borrow from changeling?)
+  - Webbing resource icon (can probably use existing spiderweb sprites, would be nice if it updated to purchased web upgrade)
+  - Venom resource icon
 - **Testing**: Extensive playtests needed for web burn behavior, biomass balance, and venom regeneration.
