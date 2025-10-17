@@ -5,12 +5,14 @@
 | Shaddap1 | :x: No | TBD |
 
 ## Overview
-A mid-round ghost-role major antagonist focused on stealth, ambush, brood expansion, and territorial control. The Spider Queen survives and grows by feeding, weaving webs, cocooning victims, spawning broodlings, and upgrading a wide range of mechanics. Crew counterplay centers on teamwork and environmental control.  I believe this design sticks to the central theme of a spider queen while operationalizing the best mechacnics and attributes of other similar antagonists such as the Rat King and Dragon, and provides a new and interesting antagonist that will contribute meaningfully to roundflow.
+A mid-round ghost-role major antagonist focused on stealth, ambush, brood expansion, and territorial control. The Spider Queen survives and grows by feeding, weaving webs, cocooning victims, spawning broodlings, and upgrading a wide range of mechanics. Crew counterplay centers on teamwork and environmental control.  I believe this design sticks to the central theme of a spider queen while operationalizing the best mechanics and attributes of other similar antagonists such as the Rat King and Dragon, and provides a new and interesting antagonist that will contribute meaningfully to roundflow.
 
 ## Background
 The Spider Queen is inspired by a mix of xenomorph, dragon, and rat king. The design prioritizes stealth, strategy, and slow escalation rather than immediate overt crisis.  It is designed to be a sister-antag to the Rat King while featuring a more comprehensive scope and more diverse mechanics and playstyles.
 
 ## Features to be added
+- Two new Team Antagonists, the Spider Queen and Broodling.
+- Actions and abilties
 
 ### Core Loop
 - The Spider Queen expands upon the existing spider infestation event. When the event triggers, there is a 25% chance that a Queen will spawn alongside ordinary spiders, similar to Rat Kings.
