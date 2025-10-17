@@ -15,7 +15,7 @@ Given the right tools medical should be able to deal with most bodies coming in,
 Medical as a department needs to have consistency to work. But things should never be so consistent that they become mundane.
 In order to maintain this balance, there are a number of design pillars that must be upheld. 
 
-### Pillar 1: The severity of wounds should match the danger of the source.
+### Pillar 1: The severity of wounds should match the danger of the source
  The difference between a common workplace accident and getting shot to pieces shouldn't be one number being higher. Getting stabbed by a pen 100 times should never be equivalent to getting shot. 
 
   > Common injuries should be easier to treat, almost trivially so.
@@ -39,7 +39,7 @@ The wounds you recieve should determine your state, whether you can stand, wheth
 
 > A bullet to the heart should eventually cause you to pass out from lack of blood circulation, a baseball bat to the head should knock you out, traditional mob states of "crit" and "dead" should be applied based on your wounds and not number values. 
 
- ### Pillar 3: Treatment should be reactive.
+ ### Pillar 3: Treatment should be reactive
  Nobody likes doing the same thing over and over again. That's boring! As much as possible injuries should be dynamic and interesting. 
  
  > There should be no cure all medicine that is always the correct option to use.
