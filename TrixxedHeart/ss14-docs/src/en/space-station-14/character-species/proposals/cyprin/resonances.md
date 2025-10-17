@@ -85,33 +85,32 @@ These are the Resonances that a Cyprin may attain as of the earliest iteration
 | :--- | :--- |
 | **Keep Your Resonances Secret** | Your Resonances are a strictly-kept secret, and should never be revealed to anyone. |
 | **No Modern Medicine** | You do not approve of modern medicine and should abstain from treatment with it wherever possible. Traditional medicine is preferred. |
-| **Disapprove Of ``[department]``** | You do not approve of the ``[department]`` department or anyone who works in it. |
-| **Never Speak To Command** | You are too lowly to speak to Command, even if spoken to first. |
-| **Command Knows Best** | Problems you encounter are too complex to be solved by your peers. Escalate them to a member of command for advice instead. |
+| **Not A Fan Of ``[department]``** | You fundamentally do not understand ``[department]`` and find the very concept confusing no matter how many times anyone explains it to you. |
+| **Never Speak To Command** | You are too lowly to speak to Command, even if spoken to first, the very idea sounds horrifying. (Command/Security excluded) |
+| **Command Knows Best** | Problems you encounter are too complex for you and your peers. Escalate them to a member of command for advice instead. |
 | **Disapprove Of Drugs** | You detest mind-altering drugs, including alcohol, and should abstain from them. |
-| **Do Drugs** | Sobriety is so old-fashioned. You should get high, or drunk, or something, and stay that way. |
-| **Too Much Cleanliness Causes Illness** | You should endeavor to keep your environment as filthy and disorganized as possible. |
+| **Do Drugs** | Sobriety is so old-fashioned. You should get high, or drunk, or something, and stay that way. (Command/Security excluded) |
+| **Too Much Cleanliness Causes Illness** | You feel a need to keep your environment as filthy and disorganized as possible. |
 | **Excessively Organized** | You are obsessively organized; everything has its place and must be returned to it. |
 | **Dinner Etiquette** | Food and drink must only be consumed off of the floor, as is proper. |
 | **Strict ``[diet]``** | You must only eat food of `[diet]`. |
-| **Personable** | Using radio communications is exceptionally rude. All conversations should be had in-person unless in an emergency. |
-| **Entrepreneurial Spirit** | Profit is the most important thing in life, above all else. |
-| **Proper Documentation** | You must obtain a license to carry or use any tool, stamped by an authority. |
-| **Lying Is A Cardinal Sin** | Anyone who lies, no matter how trivial, is the worst kind of criminal. (Excluding yourself) |
-| **Vampire** | You cannot pass through a closed door unless you have been invited in personally. |
+| **Personable** | You find that using radio communications is exceptionally rude. All conversations should be had in-person unless in an emergency. |
+| **Entrepreneurial Spirit** | Profit is the most important thing in life, you strive to make as much as you reasonably can. |
+| **Proper Documentation** | Proper documentation is important to you, you should seek to get as many of your activities officially stamped by an authority. |
+| **Lying Is A Cardinal Sin** | Anyone who lies, no matter how trivial, is the worst kind of person. (Excluding yourself) |
+| **Vampire** | Blood is full of all sorts of nutrients for Cyprin, you seek to drink it as much as possible to stay healthy, going as far as to ask fellow crewmembers to donate theirs. |
 | **Respect The Dead** | Dragging bodies across the bare ground is horrific. |
 | **The Noble Drunkard** | You do not respect anyone who is not drunk, excluding yourself. |
-| **Hair: Immaculate** | If you wear a hat/helmet, you should get a haircut immediately afterwards. |
 | **Fashion Snob** | Never trust anyone whose outfit is better than yours. |
-| **Needles Are Scary** | You only accept medication in the form of pills. |
+| **Needles Are Scary** | You'd rather accept medication in the form of drinkables or pills. |
 | **Don't Get Your Feet Wet** | It is undignified to walk over spilled liquids. Avoid it as much as possible. |
 | **Claustrophobic** | Small rooms cause you great distress. Avoid them where possible. |
 | **Non-Smoker** | Avoid areas where people are smoking in public. |
 | **Taboo Language** | The words "``$word1``" "``word2``" and "``word3``" are extremely offensive. |
-| **Mad Hatter** | You are alone on the station. Everyone else is a figment of your imagination. |
+| **Mad Hatter** | You believe you are alone on the station. Everyone else is an elaborate figment of your imagination. |
 | **Deep Bow** | It is impolite not to perform a deep bow (go prone) before engaging someone in conversation. |
 | **The Floor Is Lava** | You prefer to be elevated whenever possible - standing atop tables, railings, etc. |
-| **Charmed** | You are allergic to iron, steel, and silver. Avoid touching it directly. |
+| **Charmed** | You are allergic to iron, steel, and silver. Avoid touching it when you can. |
 | **Afraid of the Dark** | You won't enter a space without proper illumination. |
 | **Possessive Of Property** | You are extremely possessive of your property. Refuse to relinquish it. |
 | **Most Important Person** | You firmly believe you are the most important person aboard the station. |
@@ -122,13 +121,13 @@ These are the Resonances that a Cyprin may attain as of the earliest iteration
 | **HUGS? EUGH.** | Hugging someone is a grave insult where you come from. |
 | **Loneliness Is Terrible** | You should strive to be around others whenever possible. |
 | **Lone Wolf** | You loathe the company of others, and try to be alone as much as possible. |
-| **You Are Very Religious** | You should attend the chapel regularly to pray, and speak with the Chaplain. |
+| **You Are Very Religious** | You should attend the chapel regularly to pray, and seek to speak with the Chaplain. |
 | **Command Knows Best** | Problems are too complex for your peers. Escalate them to a member of command. |
 | **Punctual** | You believe that time must be strictly managed. Tardiness is exceptionally rude. |
 | **Proper Handling** | It is unacceptable to allow personal belongings to touch the floor. |
 | **``!@$%ing !@$%``** | Swearing is the spice of any conversation, and should be used as much as possible. |
 | **Asking Questions Is Rude** | You'd prefer to phrase everything as a concrete statement. |
-| **Code Duello** | Disagreements must be settled through a formal duel. The winner is correct. |
+| **Code Duello** | Disagreements are often settled through a formal duel. The winner is correct. |
 | **Philosopher** | You possess incalculable wisdom, and all must hear it. |
 | **The Critic** | You consider yourself a distinguished critic for an intergalactic review board. You must rate everything you encounter, meals, people fashion, whatever you can think of on your own rating scale, offering 'constructive' criticism. |
 | **Die With A Sword In Your Hand** | It is a great dishonor to be unarmed. Openly carrying a lethal weapon is very important to you. |
@@ -138,9 +137,9 @@ These are the Resonances that a Cyprin may attain as of the earliest iteration
 | **Equivalent Exchange** | Favors must be repaid in kind. If anyone is unable to do so, they are in debt and must be shunned. |
 | **Recordkeeper** | You feel keeping record is vitally important. Provide your supervisor with a detailed log of each task. |
 | **Your Blood Is Sacred** | It must be returned to your body if it is ever spilled. |
-| **Proper Compensation** | You expect to receive a gift before following any orders or performing any favors. |
+| **Proper Compensation** | You expect to receive a gift before following any orders or performing any favors. (Command/Security excluded)|
 | **Extremely Personable** | Calling out a department name to summon someone is impersonal and rude. Use a specific person's name. |
-| **Barefoot** | The ground one walks on is sacred. Those who wear shoes are vile blasphemers. |
+| **Barefoot** | The ground one walks on is sacred. Those who wear shoes should be pitied. |
 | **Hospitable** | You must ensure all new arrivals on the station are properly welcomed. |
 | **Vox Sympathizer** | To demonstrate your allyship with the Vox, you must be wearing internals at all times. |
 | **Collector** | `[item]` are endlessly fascinating to you. You must collect as many as you can. |
