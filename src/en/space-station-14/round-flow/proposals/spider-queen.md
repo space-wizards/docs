@@ -2,7 +2,7 @@
 
 | Designers | Implemented | GitHub Links |
 |------------|-------------|--------------|
-| Shaddap1 | :x: No | TBD |
+| Shaddap1 | :x: No | [Design Doc PR](https://github.com/space-wizards/docs/pull/533) |
 
 ## Overview
 A mid-round ghost-role major antagonist focused on stealth, ambush, brood expansion, and territorial control. The Spider Queen survives and grows by feeding, weaving webs, cocooning victims, spawning broodlings, and upgrading a wide range of mechanics. Crew counterplay centers on teamwork and environmental control.  I believe this design sticks to the central theme of a spider queen while operationalizing the best mechanics and attributes of other similar antagonists such as the Rat King and Dragon, and provides a new and interesting antagonist that will contribute meaningfully to roundflow.
