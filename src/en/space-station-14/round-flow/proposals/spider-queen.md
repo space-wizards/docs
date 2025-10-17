@@ -146,37 +146,40 @@ Queens should rely on stealth and selective combat. They should not be able to s
 - Ghost roles use the standard raffle. A successor Queen should ideally go to a different player.  
 - Playtime requirement recommended due to mechanical complexity.
 
-# Technical Considerations
-- **New Systems**: WebTypeComponent, CocoonComponent, BroodLeashSystem, ResourcePools, QueenEggIncubatorSystem, QueenActions.  
-- **Reused Systems**: Spider content, knife-stick mechanic, flesh kudzu behavior, Vulpakin pounce.  
-- **Performance**: Broodling cap may be required.  
-- **UI**: Resource bars and simple upgrade menu (similar to uplink/grimoire).  
-- **Sprites**
-  - ** Spider Queen: **
+#List of Sprites
+- **Spider Queen:**
   - Small size 
-    -Alive, crit, dead
+    - Alive, crit, dead
   - Medium size 
-    -Alive, crit, dead
+    - Alive, crit, dead
   - Large size 
-    -Alive, crit, dead
+    - Alive, crit, dead
   - Probably needed eventually: Living animation for alive sprites
   - Optional: Visual changes to alive sprites for certain upgrades: armored carapace, insulated carapace, camoflauge, etc.
 - **Broodling:**
   - Alive, crit, dead
   - Probably needed eventually: Living animation for alive sprites
-- ** Eggs:**
+- **Eggs:**
   - Broodling egg
     - Alive, ruptured, OPTIONAL: hatching animation?
   - Spider Queen egg
     - Alive, ruptured, OPTIONAL: hatching animation?
- - **Webbing:**
+- **Webbing:**
   - Monofilament webbing: lower opacity, thinner strands (harder to see)
   - Sticky webbing: probably sort of goop visible on the web
-  - thorn webbing: Spikes or spines visible on the web
+  - Thorn webbing: Spikes or spines visible on the web
 - **Icons:**
   - Action bar icons
   - Upgrade menu icons (can be same as action bar probably)
   - Biomass resource icon (can borrow from changeling?)
   - Webbing resource icon (can probably use existing spiderweb sprites, would be nice if it updated to purchased web upgrade)
   - Venom resource icon
+
+# Technical Considerations
+- **New Systems**: WebTypeComponent, CocoonComponent, BroodLeashSystem, ResourcePools, QueenEggIncubatorSystem, QueenActions.  
+- **Reused Systems**: Spider content, knife-stick mechanic, flesh kudzu behavior, Vulpakin pounce.  
+- **Performance**: Broodling cap may be required.  
+- **UI**: Resource bars and simple upgrade menu (similar to uplink/grimoire).  
+- **Sprites**: See above list
+- **Audio**: Briefing audio, custom hisses/screeches, egg hatching noises.
 - **Testing**: Extensive playtests needed for web burn behavior, biomass balance, and venom regeneration.
