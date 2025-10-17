@@ -97,8 +97,7 @@ The Spider Queen adheres to SS14’s core design principles:
 - **Player Interaction**: Encourages multi-department cooperation (Security, Engineering, Medical).  
 - **Player Agency**: Crew and Queen both retain counterplay choices, Queen gameplay requires extensive decision making, resource management, strategy, and skill expression.
 
-The design ensures escalation over time, promotes teamwork, and avoids “guaranteed chaos” by relying on player decisions.  
-Fire, coordination, and preparation remain strong counter-measures.
+The design ensures escalation over time, promotes teamwork, and avoids “guaranteed chaos” by relying on player decisions rather than overly impactful abilities.   
 
 ## Roundflow & Player Interaction
 **Early** – Hide, feed, and establish the first nest.  
