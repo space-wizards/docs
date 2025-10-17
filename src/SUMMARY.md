@@ -324,6 +324,7 @@ Community
 - [Admin](en/community/admin.md)
   - [Admin Tooling](en/community/admin/admin-tooling.md)
     - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
+	- [Scripting](en/community/admin/admin-tooling/scripting.md)
   - [Wizards Den Admin Policy](en/community/admin/wizards-den-admin-policy.md)
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
   - [Wizards Den MRP Policy](en/community/admin/wizards-den-mrp-policy.md)
