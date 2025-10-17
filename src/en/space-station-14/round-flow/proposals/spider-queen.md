@@ -108,9 +108,10 @@ Fire, coordination, and preparation remain strong counter-measures.
 Departments involved:  
 - **Engineering**: Burns webs with welders, rebuilds maintenance.  
 - **Security**: Engages broodlings and Queens, escorts engineers.  
-- **Medical**: Treats toxins and rescues crew from cocoons.  
+- **Medical**: Treats toxins and rescues crew from cocoons.
+- **All Crew**: Potential snacks
 
-Queens should rely on stealth and selective combat. Direct confrontation with armed Security is discouraged.
+Queens should rely on stealth and selective combat. They should not be able to solo a squad of security officers.
 
 ## Administrative & Server Rule Impact (if applicable)
 - Goal is survival and expansion, not griefing.  
