@@ -110,33 +110,33 @@ Departments involved:
 - **All Crew**: Potential snacks
 
 - A typical round might look like this:
-  -Spider queen spawns at around 20 minutes in
-  -Early phase
-  -Keeps to maints, trying to avoid detection from crew.  Tries to find an isolated and infrequently visited section of maintenance.
-  -Runs into a crewmember, should be able to crit them provided they are not well armed.
-  -Drags them to a safe location, webs them up in a cocoon, and feeds.
-  -Buys an upgrade, lays a few eggs, and weaves some webbing to protect them.
-  -A paramedic comes looking for the dead crew member at the behest of AI
-  -Spider Queen smartly hides, waiting for the paramedic to try to free the crew member from the cocoon or attack the eggs.  Lays webbing at escape routes before ambushing paramedic.
-  -Cocoons paramedic, but is likely outed on radio first.  Broodlings hatch.  Spider Queen quickly feeds on paramedic and departs for a new section of maintenance to hatch more broodlings
-  -Queen is well protected/upgraded enough to abduct station pets or unarmed crew members for additional biomass and upgrades.
-  -Mid phase
-  -Sec is actively searching for the Spider Queen
-  -Spider Queen balances staying mobile enough to evade direct confrontation with finding biomass sources, creating nests, hatching more broodlings, and buying upgrades
-  -Now strong enough to raid unprotected departments and flee back to maintenance
-  -Late phase
-  -Most of the crew is aware and responsive to the Spider Queen threat.  Easy victims are difficult to find.  Confrontation is necessary.
-  -Spider Queen assaults the medbay with her brood, seeking to drag victims into maintainance and leave her brood and webbing behind to fight and delay pursuit.
-  -Sec responds and dies and/or succeeds in dealing critical damage to the Queen
-  -The Spider Queen escapes with a victim, bleeding, with death immminent in the next few minutes
-  -She quickly cocoons her prey, feeds, and flees a bit further to lay a hidden Queen Egg.
-  -The Queen moves across the station, far away from the egg, to draw security away.
-  -The Queen is tracked down and killed, but the Queen Egg begins to hatch.
-  -The threat is lowered, but the station is still armed, and security will be searching maintenance for any more eggs and broodlings
-  -The new Spider Queen hatches and begins the process from the beginning, with the added threat of additional armed security patrols and more cautious victims
-  -She manages to feed from a few left over corpses and raises a small army but is found by security and killed.
-  -During the chaos of the past 20-40 minutes, syndicate agents, thieves, and other antagonists may have taken advantage of the chaos to accomplish their objectives.
-  -The disruption caused by the Spider Queen was major but not round-ending, demanding a coordinated crew response to resolve the crisis.
+  - Spider queen spawns at around 20 minutes in
+  - Early phase
+  - Keeps to maints, trying to avoid detection from crew.  Tries to find an isolated and infrequently visited section of maintenance.
+  - Runs into a crewmember, should be able to crit them provided they are not well armed.
+  - Drags them to a safe location, webs them up in a cocoon, and feeds.
+  - Buys an upgrade, lays a few eggs, and weaves some webbing to protect them.
+  - A paramedic comes looking for the dead crew member at the behest of AI
+  - Spider Queen smartly hides, waiting for the paramedic to try to free the crew member from the cocoon or attack the eggs.  Lays webbing at escape routes before ambushing paramedic.
+  - Cocoons paramedic, but is likely outed on radio first.  Broodlings hatch.  Spider Queen quickly feeds on paramedic and departs for a new section of maintenance to hatch more broodlings
+  - Queen is well protected/upgraded enough to abduct station pets or unarmed crew members for additional biomass and upgrades.
+  - Mid phase
+  - Sec is actively searching for the Spider Queen
+  - Spider Queen balances staying mobile enough to evade direct confrontation with finding biomass sources, creating nests, hatching more broodlings, and buying upgrades
+  - Now strong enough to raid unprotected departments and flee back to maintenance
+  - Late phase
+  - Most of the crew is aware and responsive to the Spider Queen threat.  Easy victims are difficult to find.  Confrontation is necessary.
+  - Spider Queen assaults the medbay with her brood, seeking to drag victims into maintainance and leave her brood and webbing behind to fight and delay pursuit.
+  - Sec responds and dies and/or succeeds in dealing critical damage to the Queen
+  - The Spider Queen escapes with a victim, bleeding, with death immminent in the next few minutes
+  - She quickly cocoons her prey, feeds, and flees a bit further to lay a hidden Queen Egg.
+  - The Queen moves across the station, far away from the egg, to draw security away.
+  - The Queen is tracked down and killed, but the Queen Egg begins to hatch.
+  - The threat is lowered, but the station is still armed, and security will be searching maintenance for any more eggs and broodlings
+  - The new Spider Queen hatches and begins the process from the beginning, with the added threat of additional armed security patrols and more cautious victims
+  - She manages to feed from a few left over corpses and raises a small army but is found by security and killed.
+  - During the chaos of the past 20-40 minutes, syndicate agents, thieves, and other antagonists may have taken advantage of the chaos to accomplish their objectives.
+  - The disruption caused by the Spider Queen was major but not round-ending, demanding a coordinated crew response to resolve the crisis.
 
 Queens should rely on stealth and selective combat. They should not be able to solo a squad of security officers.
 
