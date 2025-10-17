@@ -12,8 +12,7 @@ The Spider Queen is inspired by a mix of xenomorph, dragon, and rat king. The de
 
 ## Features to be added
 - Two new Team Antagonists, the Spider Queen and Broodling.
-- Actions and abilties
-
+- Spider Queen abiltiies and mechanics
 ### Core Loop
 - The Spider Queen expands upon the existing spider infestation event. When the event triggers, there is a 25% chance that a Queen will spawn alongside ordinary spiders, similar to Rat Kings. Optionally, it could be called in by Spider-Clan ninjas when they hack the comms console.
 - Feed on animal protein (mice, roaches, pets, crew) to gain **biomass**.
