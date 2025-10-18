@@ -8,7 +8,7 @@ Most departments can print additional job gear from a machine using shared resou
 
 ## Requirements
 
-Items available to be printed round start from lathes might be tools or expendables. In both cases the options available should be the basic, minimum gear to do the job. Better gear is often available later in the round as a result of science research.
+Items available to be printed round start from lathes might be tools or expendables. In both cases the options available should be the basic, minimum gear to do the job. Specialized equipment should be acquired later in-round either through purchases at cargo or as a result of science research.
 
 ```admonish success "Good:"
  - MV Cable

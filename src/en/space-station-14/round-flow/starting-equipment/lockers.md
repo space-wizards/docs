@@ -29,7 +29,7 @@ In addition to their own specialized gear, there are several items present in al
  - A headset with encryption keys for their department and for command.
  - A door remote controlling their department's airlocks.
  - A box containing spare department encryption keys.
- - A box containing spare circuit boards.
+ - A box containing spare circuit boards for vital machines and computers.
 
 ## Questions for a full doc
 
@@ -50,5 +50,5 @@ Should equipment lockers include items which only have a chance to appear? What 
 ```
 
 ```admonish question
-Should cargo be able to purchase new job lockers?
+Should cargo be able to purchase new job lockers? Should they be actual lockers or a crate with the items inside?
 ```

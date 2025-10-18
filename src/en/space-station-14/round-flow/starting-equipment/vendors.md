@@ -1,14 +1,18 @@
 # Department Vending Machines
 
-{{#template ../../../../templates/stub.md}}
-
 ## Overview
 
-Department vending machines are access-locked vendors located somewhere inside their respective department. They contain items specific to that department, and players need to share the gear inside. Departments typically have two types of vending machines: equipment and clothing. They can be restocked through a purchase from cargo mid-round.
+Department vending machines are access-locked vendors located somewhere inside their respective department. They contain items specific to that department, for use by that department, and players need to share the gear inside. Departments typically have two types of vending machines: equipment and clothing. They can be restocked through a purchase from cargo mid-round.
 
 ## Requirements
 
-Equipment vendors contain expendable equipment, spare tools, and optional tools. Gear they provide should be regularly useful and sought by players. They should not have gear that is easily available (such as in an autolathe), even if those items would be useful to the job.
+A deparment vendor should have enough stock to supply two naked players with the neccesary gear to work the job. An untouched pair of vending machines should have two complete sets of spare tools and uniforms.
+
+### Equipment Vendor
+
+Equipment vendors contain expendable equipment, spare tools, and optional tools. Gear they provide should be regularly useful and sought by players. They should not have gear that is easily available (such as in an autolathe), even if those items would be useful to the job. Nor should they have gear in excess for the purpose of distributing it to non-department players (such as an Engi-Vend with 8 crowbars).
+
+Items in an equipment vendor should never be clothing. This includes all eyewear and gloves, even if such items are important tools for the job. They should instead be found in the department's respective clothing vendor. There are two exceptions: an item which can be worn but isn't clothing - such as a whistle - and clothing that is not worn by the player themselves - such as a medical gown to give to patients.
 
 ```admonish success "Good:"
  - Compressed matter
@@ -22,7 +26,11 @@ Equipment vendors contain expendable equipment, spare tools, and optional tools.
  - Welding mask
 ```
 
-Clothing vendors (typically called "Drobes") should spawn with clothing typical of a department's colors or aesthetic qualities. Clothes should reflect the standard uniform of a department employee and include anything available in a loadout (excluding prestige rewards). Every item in a Drobe must be equippable or be considered clothing in an abstract sense (walking cane). Particularly powerful clothing should instead be found in department lockers.
+The order of gear in a vendor should loosely follow the importance of the item. Spare tools should be at the top, followed by expendable equipment, and lastly stituational and optional gear.
+
+### Clothing Vendor
+
+Clothing vendors (typically called "Drobes") should spawn with clothing typical of a department's colors or aesthetic qualities. Clothes should reflect the standard uniform of a department employee and include anything available in a loadout (excluding prestige rewards). Every item in a Drobe must be equippable. Particularly powerful clothing should instead be found in department lockers.
 
 ```admonish success "Good:"
  - Jumpsuit
@@ -36,16 +44,8 @@ Clothing vendors (typically called "Drobes") should spawn with clothing typical 
  - Hardsuit
 ```
 
-## Questions for a full doc
+The order of clothing in a Drobe from top to bottom should go: `Head -> Eyes -> Mask -> Ears -> Back -> Belt -> InnerClothing -> OuterClothing -> Neck -> Gloves -> Feet`.
 
-```admonish question
-Should department vendors contain items for the purpose of distributing them to crew? For example the EngiVend currently has 8 crowbars and 4 welding masks.
-```
+### Combined Vendors
 
-```admonish question
-Should eyewear in general and insuls specifically be moved to the drobe? What is considered too powerful for a drobe, or should that even be a standard?
-```
-
-```admonish question
-Should tutorial books be added to equipment vendors?
-```
+Certain individual roles on the station have a dedicated vending machine due to the specific nature of that role. Unlike other vendors these only need enough stock to resupply one player. If they contain non-clothing items, they should not use "Drobe" as part of their name.
