@@ -3,7 +3,7 @@
 
 | Designers                                                                         | Implemented     | GitHub Links |
 |-----------------------------------------------------------------------------------|-----------------|--|
-| /tg/station, Citadel Station, and other various SS13 forks, Keron, ActiveMammmoth | :checkmark: Yes | https://github.com/space-wizards/space-station-14/pull/35406 |
+| /tg/station, Citadel Station, and other various SS13 forks, Keron, ActiveMammmoth | :white_check_mark: Yes | https://github.com/space-wizards/space-station-14/pull/35406 |
 
 <!--
 `Designers` should be the names that you use on GitHub and/or Discord. This is optional but strongly recommended, since:
