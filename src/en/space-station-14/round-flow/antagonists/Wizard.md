@@ -20,6 +20,12 @@ Github links can include multiple PRs, if relevant.
 
 <!-- A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds". -->
 
+This is for The Wizard antagonist - which is to help answer any frequently asked questions for the Wizard and to help 
+others understand what the Wizard is about. The Wizard in short is a highly disruptive/chaotic antagonist that does
+anything to their whim. A lot about the Wizard is that it doesn't conform to standard rules so it very much is the
+embodiment of "a wizard did it." Players will be encouraged to come up with their own gimmick, while still being an
+antagonist to the station.
+
 ## Background
 
 <!--
@@ -27,6 +33,8 @@ Summarize any information that is needed to contextualize the proposed changes, 
 
 Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
 -->
+
+## Features to be added
 
 <!-- Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement the feature from this design document. Exact numbers for game balance however are not necessary, as these can be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so. -->
 
