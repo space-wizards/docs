@@ -12,7 +12,7 @@ The issues arise when those laws are changed, either due to random events or inf
 This causes them to be a wild card, usable by both crew and antagonists, but able to backfire severely if their laws suddenly say you're a target, or that oxygen must be removed from the station.
 If laws permit, an antagonist should be able to request a Silicon to steal an item from a high security area for them, but a crewmember should also be able to request that it assists in repairs of a department after it blew up.
 
-**Laws are supposed to be up to interpretation of the Silicon and be written with loopholes in mind.**
+**Laws are supposed to be up to interpretation of the Silicon and be written with the idea that any interpretation can be valid.**
 
 ## Design Pillars
 ### Silicon gameplay revolves around the player's interpretation of their laws:
