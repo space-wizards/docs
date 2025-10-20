@@ -10,7 +10,7 @@ This proposal is for a new roundstart species known as Cyprin. Cyprints are an a
 Though humanoid in shape, their appearance is distinctly piscine with occasional space dragon features. Cyprints fill a niche for a species with a deep, roleplay-heavy mechanic that significantly alters how they interact with the station.
 
 ## Background & Lore
-The Cyprin are inspired by the original "Thaven" concept, reworked to have a more cohesive identity rooted in space carp/dragon ancestry. The name is derived from *Cyprinidae*, the biological family of carp to focus on this biological origin.
+Cyprin are inspired by the downstream species Thaven but with a more complete space carp/dragon focus, The name is derived from *Cyprinidae*, the biological family of carp to focus on this biological origin.
 
 ### Origin
 The Cyprin did not evolve naturally. They were a consequence of a long forgotten bio-engineering project of a precursor civilization, seeking to create the perfect deep-space explorers.
