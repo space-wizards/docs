@@ -26,6 +26,11 @@ If laws permit, an antagonist should be able to request a Silicon to steal an it
 ## Undesired Gameplay
 - Disposability
     - Silicons should not be easily disposable. The crew should seek to repair a Silicon instead of killing it outright due to malicious laws or other issues.
+- Upgraded humanoids
+    - Silicons should not be a general "upgrade" to playing a regular crewmember. They should only excel in what they are built for and be inferior in other aspects.
+    - This also means a player wanting to play a department should not only look to become a Silicon for that department instead of a regular crewmember.
+- Extreme hostility
+    - Silicons should not be openly hostile, and cases when they are should be limited to rare events and antagonist influance.
 
 ## Player Story
 > A short (1-2 paragraph) story from the perspective of someone playing a role in this department. This is effectively a story of the ideal experience of a player interacting with these mechanics/systems. 
