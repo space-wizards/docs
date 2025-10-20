@@ -16,16 +16,16 @@ If laws permit, an antagonist should be able to request a Silicon to steal an it
 
 ## Design Pillars
 ### Silicon gameplay revolves around the player's interpretation of their laws:
-Silicon laws place constraints how the player is expected to behave. The player must either play within those constraints or otherwise find and exploit the weaknesses within them
+Silicon laws place constraints how the player is expected to behave. The player should be able to interpret them in a way that is preferred to them or otherwise attempt to exploit the weaknesses within them.
 
 ### Silicons are a collective:
 Though they can function as individuals, working together they are more than the sum of their parts.
 
 ### Home is where the AI core is:
-The station is the home of the silicons, and they are the station's caretakers. Silicons have no intrinsic interest in interfering in the lives of humanoids, beyond what their laws require, so long as these outsiders do not bring harm to the station
+The station is the home of the silicons, and they are the station's caretakers. Silicons have no intrinsic interest in interfering in the lives of humanoids, beyond what their laws require, so long as these outsiders do not bring harm to the station.
 
 ## Desired Gameplay
-- Working on both sides of the conflict
+- Working on both sides of the conflict.
     - Base Silicons should be able to work with both antagonists and station crew alike, depending if their lawset permits.
 - Work expertise
     - Silicons should be able to excel in their area of expertise, rivaling that of regular station crew.
