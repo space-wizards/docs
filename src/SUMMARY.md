@@ -268,6 +268,8 @@ Space Station 14
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
    		- [Librarian Gameplay](en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md)
       - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
+	- [Silicon](en/space-station-14/departments/proposals/silicon.md)
+		- [PR Guidelines](en/space-station-14/departments/silicon/guidelines.md)
 
 General Proposals
 ================
