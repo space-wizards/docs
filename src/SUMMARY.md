@@ -365,6 +365,9 @@ Maintainer Meetings
 
 ----------------------
 
+- [2025-10-11](en/maintainer-meetings/maintainer-meeting-2025-10-11.md)
+- [2025-09-27](en/maintainer-meetings/maintainer-meeting-2025-09-27.md)
+- [2025-09-13](en/maintainer-meetings/maintainer-meeting-2025-09-13.md)
 - [2025-08-30](en/maintainer-meetings/maintainer-meeting-2025-08-30.md)
 - [2025-08-16](en/maintainer-meetings/maintainer-meeting-2025-08-16.md)
 - [2025-08-02](en/maintainer-meetings/maintainer-meeting-2025-08-02.md)
