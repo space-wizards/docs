@@ -15,17 +15,14 @@ If laws permit, an antagonist should be able to request a Silicon to steal an it
 **Laws are supposed to be up to interpretation of the Silicon and be written with loopholes in mind.**
 
 ## Design Pillars
-> A group of simple high-level ideas that embody this department. These are usually expressed with singluar words or short phrases, but may also include a *short* one sentence explaination. Game pillars are what makes the *identity* of the department. 
+### Silicon gameplay revolves around the player's interpretation of their laws:
+Silicon laws place constraints how the player is expected to behave. The player must either play within those constraints or otherwise find and exploit the weaknesses within them
 
-> Pillars are there to act as guides when creating new mechanics or interactions, they serve as the measuring posts to make sure that what you are trying to do will fit in the department gameplay. 
+### Silicons are a collective:
+Though they can function as individuals, working together they are more than the sum of their parts.
 
-> To acheive this you want pillars that are concrete enough to get your concept across but broad enough that there is some room of interpretation and discussion.
-
-### Pillar_1:
- > Breif Pillar Description
-
-### Pillar_2:
- > Breif Pillar Description
+### Home is where the AI core is:
+The station is the home of the silicons, and they are the station's caretakers. Silicons have no intrinsic interest in interfering in the lives of humanoids, beyond what their laws require, so long as these outsiders do not bring harm to the station
 
 ## Desired Gameplay
 - Working on both sides of the conflict
