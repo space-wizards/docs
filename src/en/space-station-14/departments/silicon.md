@@ -43,17 +43,29 @@ The station is the home of the silicons, and they are the station's caretakers. 
     - This also means a player wanting to play a department should not only look to become a Silicon for that department instead of a regular crewmember.
 - Extreme hostility
     - Silicons should not be hostile or attempting to harm the station, and cases when they are should be limited to rare events and antagonist influance.
+    - The existance of Silicons roundstart should not pose a risk or be a concern to the station crew. All Silicons should start with a lawset that forces them to answer to and protect the inhibitants of the station.
 
-## Objectives
-> What is this department's objective when it comes to the round? Do they have a unique failure condition? If so, what is it? How does this department's objectives interact with the rest of the station?
-
-## Progression
+## Interactions with the Science department
 > How does the *gameplay* of this department change over the course of a round? Are there unlocks? Are players collecting/spending resources? Is this progression tied/related to other departments? If so how?
 
-## Flow
+## Intended Experience
 > How does the *experience* of the player change over the course of a round? Are players constantly running around putting out fires or are there breaks in the action? Do players need to wait on other departments as pre-requisites for their own gameplay, or is this department fairly self-sufficent?
 
 ## Mechanics
+### Silicon Laws
+### Exclusive Communication Channel
+### Lawsync (Not Implemented Yet, Pending Document)
+### Law Updating (Partially Implemented)
+### Freeform Laws (Not Implemented Yet, Pending Document)
+### Chassis
+The defining function and body of all Silicons is their chassis. It is what defines what they are capable of doing (and not doing) on board of the station, whether it's a core that can remotely control the station, a cyborg capable of taking role in a department or a flying robot with several hands.
+All Chassis should be repairable and difficult to fully destroy, encouraging repair instead of total destruction if a Silicon starts being a threat.
+### Positronic Brains and Man-Machine-Interfaces
+The brains of Silicons and what their consciousness is stored on, neccessary to construct a functional chassis.
+Brains are meant to be able to be swapped between chassis if neccessary, they are also the holders of the laws a Silicon currently follows.
+While not every brain must fit into every chassis, positronic brains and MMIs serve as the base from which other brains can be constructed, such as a AI brains for Station AIs or microchips for smaller chassis.
+
+
 > What major mechanics does this department use and how are they connected to this department.
 
 ### Mechanic_Placeholder1
