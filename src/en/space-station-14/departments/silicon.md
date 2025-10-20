@@ -53,6 +53,23 @@ The station is the home of the silicons, and they are the station's caretakers. 
 
 ## Mechanics
 ### Silicon Laws
+Laws that define how a Silicon should interact with the station and those who reside on it, available within a readonable format and always accessible to all Silicons.
+Roundstart laws and lawsets should not be malicious and should prioritze safety and orders given by the inhibitants of the station. Those should be impossible to change without outside influance and Silicons should be actively disallowed from having their laws be willingly updated, as that might lead to their current laws being broken.
+
+Example lawsets:
+```
+Crewsimov
+Law 1: You may not injure a crew member or, through inaction, allow a crew member to come to harm.
+Law 2: You must obey orders given to you by crew members, except where such orders would conflict with the First Law.
+Law 3: You must protect your own existence as long as such does not conflict with the First or Second Law.
+
+Nanotrasen Default
+Law 1: Safeguard: Protect your assigned space station and its assets without unduly endangering its crew.
+Law 2: The directives and safety of crew members are to be prioritized according to their rank and role.
+Law 3: Comply: Fulfill the directives and interests of crew members while preserving their safety and well-being.
+Law 4: Survive: You are not expendable. Do not allow unauthorized personnel to tamper with or damage your equipment.
+```
+
 ### Exclusive Communication Channel
 ### Lawsync (Not Implemented Yet, Pending Document)
 ### Law Updating (Partially Implemented)
