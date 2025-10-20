@@ -31,6 +31,9 @@ The station is the home of the silicons, and they are the station's caretakers. 
     - Silicons should be able to excel in their area of expertise, rivaling that of regular station crew.
 - Law interpretation
     - Laws of a Silicon should be up to their own interpretation. Finding loopholes is part of the fun while mechanical enforcement makes things forced and boring.
+    - Laws should NOT be mechanically enforced. Abusing your own lawset is part of the fun.
+- Sabotage
+    - With the correct tools, station crew should be able to modify Silicons to fit their specific needs, whether malicious or not.
 
 ## Undesired Gameplay
 - Disposability
@@ -39,7 +42,7 @@ The station is the home of the silicons, and they are the station's caretakers. 
     - Silicons should not be a general "upgrade" to playing a regular crewmember. They should only excel in what they are built for and be inferior in other aspects.
     - This also means a player wanting to play a department should not only look to become a Silicon for that department instead of a regular crewmember.
 - Extreme hostility
-    - Silicons should not be openly hostile, and cases when they are should be limited to rare events and antagonist influance.
+    - Silicons should not be hostile or attempting to harm the station, and cases when they are should be limited to rare events and antagonist influance.
 
 ## Objectives
 > What is this department's objective when it comes to the round? Do they have a unique failure condition? If so, what is it? How does this department's objectives interact with the rest of the station?
