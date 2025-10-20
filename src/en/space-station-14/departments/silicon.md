@@ -14,27 +14,6 @@ If laws permit, an antagonist should be able to request a Silicon to steal an it
 
 **Laws are supposed to be up to interpretation of the Silicon and be written with loopholes in mind.**
 
-## Desired Gameplay
-- Working on both sides of the conflict
-    - Base Silicons should be able to work with both antagonists and station crew alike, depending if their lawset permits.
-- Work expertise
-    - Silicons should be able to excel in their area of expertise, rivaling that of regular station crew.
-- Law interpretation
-    - Laws of a Silicon should be up to their own interpretation. Finding loopholes is part of the fun while mechanical enforcement makes things forced and boring.
-
-
-## Undesired Gameplay
-- Disposability
-    - Silicons should not be easily disposable. The crew should seek to repair a Silicon instead of killing it outright due to malicious laws or other issues.
-- Upgraded humanoids
-    - Silicons should not be a general "upgrade" to playing a regular crewmember. They should only excel in what they are built for and be inferior in other aspects.
-    - This also means a player wanting to play a department should not only look to become a Silicon for that department instead of a regular crewmember.
-- Extreme hostility
-    - Silicons should not be openly hostile, and cases when they are should be limited to rare events and antagonist influance.
-
-## Player Story
-> A short (1-2 paragraph) story from the perspective of someone playing a role in this department. This is effectively a story of the ideal experience of a player interacting with these mechanics/systems. 
-
 ## Design Pillars
 > A group of simple high-level ideas that embody this department. These are usually expressed with singluar words or short phrases, but may also include a *short* one sentence explaination. Game pillars are what makes the *identity* of the department. 
 
@@ -45,8 +24,25 @@ If laws permit, an antagonist should be able to request a Silicon to steal an it
 ### Pillar_1:
  > Breif Pillar Description
 
- ### Pillar_2:
+### Pillar_2:
  > Breif Pillar Description
+
+## Desired Gameplay
+- Working on both sides of the conflict
+    - Base Silicons should be able to work with both antagonists and station crew alike, depending if their lawset permits.
+- Work expertise
+    - Silicons should be able to excel in their area of expertise, rivaling that of regular station crew.
+- Law interpretation
+    - Laws of a Silicon should be up to their own interpretation. Finding loopholes is part of the fun while mechanical enforcement makes things forced and boring.
+
+## Undesired Gameplay
+- Disposability
+    - Silicons should not be easily disposable. The crew should seek to repair a Silicon instead of killing it outright due to malicious laws or other issues.
+- Upgraded humanoids
+    - Silicons should not be a general "upgrade" to playing a regular crewmember. They should only excel in what they are built for and be inferior in other aspects.
+    - This also means a player wanting to play a department should not only look to become a Silicon for that department instead of a regular crewmember.
+- Extreme hostility
+    - Silicons should not be openly hostile, and cases when they are should be limited to rare events and antagonist influance.
 
 ## Objectives
 > What is this department's objective when it comes to the round? Do they have a unique failure condition? If so, what is it? How does this department's objectives interact with the rest of the station?
