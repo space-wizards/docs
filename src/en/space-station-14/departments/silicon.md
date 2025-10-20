@@ -57,13 +57,15 @@ The station is the home of the silicons, and they are the station's caretakers. 
 ### Lawsync (Not Implemented Yet, Pending Document)
 ### Law Updating (Partially Implemented)
 ### Freeform Laws (Not Implemented Yet, Pending Document)
+
 ### Chassis
 The defining function and body of all Silicons is their chassis. It is what defines what they are capable of doing (and not doing) on board of the station, whether it's a core that can remotely control the station, a cyborg capable of taking role in a department or a flying robot with several hands.
 All Chassis should be repairable and difficult to fully destroy, encouraging repair instead of total destruction if a Silicon starts being a threat.
+
 ### Positronic Brains and Man-Machine-Interfaces
 The brains of Silicons and what their consciousness is stored on, neccessary to construct a functional chassis.
 Brains are meant to be able to be swapped between chassis if neccessary, they are also the holders of the laws a Silicon currently follows.
-While not every brain must fit into every chassis, positronic brains and MMIs serve as the base from which other brains can be constructed, such as a AI brains for Station AIs or microchips for smaller chassis.
+While not every brain must fit into every chassis, positronic brains and MMIs serve as the base from which other brains can be constructed, such as a AI brains for Station AIs or microchips for smaller bodies.
 
 
 > What major mechanics does this department use and how are they connected to this department.
