@@ -38,6 +38,16 @@ Also link any relevant discussions on Discord, GitHub, or HackMD that are releva
 
 <!-- Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement the feature from this design document. Exact numbers for game balance however are not necessary, as these can be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so. -->
 
+Wizard is already implemented but this would be in hopes of reintroducing it into Roundstart and as a subgame mode.
+
+An advanced targeting system/spawning system will need to be added to not only make more creative spells, but to make it easier for contributors to just
+add the parameters that they want to do while cutting down on custom logic. Custom logic won't be avoided but there can be a point where a lot is cut down.
+- Advanced targeting/spawning as an actual working example is something like the force wall, where it targets a certain set of tiles in front of it.
+- Another example would be having an instant spell with the targeting parameter to target all in sight, and another targeting parameter to spawn something underneath the wizard.
+
+More reality-effecting spells will be also added to help vary up the Wizards gameplay and solidify it as an actual round-shifter.
+- ex). A spell that forces tile movement to all in sight.
+
 ## Game Design Rationale
 
 <!--
