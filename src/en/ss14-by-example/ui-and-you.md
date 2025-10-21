@@ -3,41 +3,43 @@
 Or how I learned to stop worrying and love Sheetlets.
 
 ```admonish note
-The UI system in SS14 has been through several iterations, and much of the
-current UI code is very much antiquated. When creating UI, it is generally very
-helpful to reference other code, however when referencing code when making
-your UI, please keep the age of the code in mind.
+The UI system in SS14 has been through several iterations, and many portions of
+the codebase are out-of-date with the current UI conventions. When using
+existing UIs as reference, please keep the age of the code in mind.
 
 If you find some code that is not up to the current conventions, refactors are
 always appreciated!
 ```
 
 Before learning how it should be done in SS14, it's important to understand how
-the engine handles UI. Please reference the [user interface documentation](../robust-toolbox/user-interface.md)
-first.
+the engine handles UI. Please reference the
+[user interface documentation](../robust-toolbox/user-interface.md) first.
 
 ## Okay, but how do I make it fancy?
 
 ### `FancyWindow`
 
-`DefaultWindow` is depreciated. Unless you're making your own custom window,
+`DefaultWindow` is not recommended. Unless you're making your own custom window,
 `FancyWindow` should be used in all circumstances. It has additional properties
 that integrate with SS14 better than `DefaultWindow`.
 
-The `Stylesheet` property allows you to give a window to take styles from a
-certain stylesheet. The default stylesheet is `Nanotrasen`, but in certain
-circumstances you may want to use others. Currently there are the following
-stylesheets:
+The `Stylesheet` property allows a window to receive styling information from a
+given stylesheet. Currently, there are the following stylesheets:
 
--   `Nanotrasen` - The default stylesheet. Used for any standard player-facing Uis
+-   `Nanotrasen` - The default stylesheet. Used for any standard player-facing
+    Uis
 -   `System` - Primarily used for admin and sandbox UIs
 -   `Syndicate` (COMING SOON™) - Used for any UIs affiliated with the syndicate
 
 ### `StyleClass`
 
-Any styles classes that can be reused must be defined in `Content.Client/Stylesheets/StyleClass.cs`.
-This is to centralize the location of all available style classes, for ease of
-access and prevention of duplicate style classes.
+Style classes allow style rules to apply styling to an element. You can give an
+element style classes by setting the `StyleClasses` property in XAML.
+
+`Content.Client/Stylesheets/StyleClass.cs`: is a static class that for defining
+style class strings that can apply to any UI element. This is to centralize the
+location of all available style classes, for ease of access and prevention of
+duplicate style classes.
 
 Any style classes that are generic / can be used for more than one element are
 defined at the top. For example, the style class `positive` affects `Button`,
@@ -51,56 +53,58 @@ Some common style classes are as follows:
 -   `OpenBoth`: Makes the button flat on both sides; square
 -   `LabelSubtext`: Makes the label smaller and a more muted color
 -   `LabelKeyText`: Makes the label bold and a highlight color
--   `LabelWeak`: Weak is the opposite of strong; makes the label a more muted color
+-   `LabelWeak`: Weak is the opposite of strong; makes the label a more muted
+    color
 
-There are many more than this, but if you want to know exactly what a given label
-does, its as simple as looking at the field's usages, and reading the style rule definition.
-This is where it may be helpful to use the Rider IDE, as it has a fantastic implementation of this feature,
-but its probably possible in other IDEs as well.
+There are many more than this, but if you want to know exactly what a given
+label does, its as simple as looking at the field's usages, and reading the
+style rule definition.
 
 ```admonish tip
 In general, if you are doing UI dev, I would recommend using the Rider IDE. It
 eats up quite a bit of RAM, but it provides autocomplete in XAML files, a lot
 of really nice auto-refactoring and searching features, and very decent git
 integration. Give it a shot!
+
+I don't think this is possible in VSCode though if you figure it out leave the
+setup here.
 ```
 
 ## Writing Styles
 
-This section concerns style rules. For most UIs, editing these will be unnecessary,
-however you should ALWAYS prefer to use style classes instead of hardcoding colors
-or resources that could be commonly used.
+This section concerns style rules. For most UIs, editing these will be
+unnecessary, however you should ALWAYS prefer to use style classes instead of
+hardcoding colors or resources that could be commonly used.
 
 ### All hail the mighty `Sheetlet`
 
 It's important to understand that basically, a stylesheet is a massive list of
-every single style rule. Instead of manually
-making a giant list of style rules (because that would be ridiculous... haha... ha....),
-the responsibility of chipping into this list is distributed between many Sheetlets.
-Each Sheetlet returns a small chunk of style rules, which is agglomerated into the
-final list at the end.
+every single style rule. Instead of making one giant list of style rules
+(because that would be ridiculous... haha... ha....), the responsibility of
+chipping into this list is distributed between many Sheetlets. Each Sheetlet
+returns a small chunk of style rules, which is agglomerated into the final list
+at the end.
 
 ```admonish note
 Previously every single style rule was in one giant list: `StyleNano.cs`, a 1600
-line pit of despair where dreams went to die.
+line pit of despair where dreams went to die. It was so gargantuan that it broke
+syntax highlighting in IDEs. Do NOT let anything like this happen again.
 ```
 
 There are, primarily, two types of Sheetlets:
 
 -   **Generic Sheetlets**: These go in `Content.Client/Stylesheets/Sheetlets`.
-    These stylesheets concern generic UI elements used in many different UIs, and
+    These sheetlets concern generic UI elements used in many different UIs, and
     should be written generically to work with any stylesheet.
--   **Specific Sheetlets**: These go along with the `*.xaml` files they are associated
-    with. These stylesheets concern UI elements that are specific to a single UI,
-    and should be written to work with the specific stylesheet they are associated
-    with.
+-   **Specific Sheetlets**: These go along with the `*.xaml` files they are
+    associated with. These sheetlets concern UI elements that are specific to a
+    single UI, and should be written to work with the specific sheetlets they
+    are associated with.
 
 We will go into more detail about the specific conventions to follow for both of
 these later.
 
-All sheetlets should have the `[CommonSheetlet]` attribute. This is used so
-stylesheets can find all the sheetlets that have this attribute and add their
-styles to their list.
+All sheetlets should have the `[CommonSheetlet]` attribute.
 
 ```admonish tip
 Do not forget the `[CommonSheetlet]` attribute.
@@ -108,37 +112,44 @@ Do not forget the `[CommonSheetlet]` attribute.
 
 ### Style Rules
 
-Each style rule
-has a few different components to it (This will look familiar to anyone who knows CSS):
+Each style rule has a few different components to it (This will look familiar to
+anyone who knows CSS):
 
 **The selector**: This limits the elements that a style rule can affect. This is
 made up of a few different parts:
 
 -   `Type`: The type of element this rule affects. Anything inheriting from this
-    type will be affected by this rule. This is similar to the element selector
-    in css.
--   `StyleClasses`: The classes that the element must have to be affected by this
-    rule. The element must have all of these classes to be affected by this rule.
--   `StyleIdentifier`: The identifier of the element. This is a unique identifier
-    that can be used to target a specific element. This should be used sparingly,
-    when there is only one instance of the element that needs to be styled in a
-    highly specific manner. There may only be one of these specified.
--   `PseudoClasses`: These are special classes that can be used to target elements
-    in a specific state. For example, this is used to style buttons differently
-    when hovered or pressed or whatever.
+    type will also be affected by this rule. 
+-   `StyleClasses`: The classes that the element must have to be affected by
+    this rule. The element must have all of these classes to be affected by this
+    rule. This can be specified in the XML with the `StyleClasses` property.
+-   `StyleIdentifier`: The identifier of the element. This is a unique
+    identifier that can be used to target a specific element. This should be
+    used sparingly, when there is only one instance of the element that needs to
+    be styled in a highly specific manner. There may only be one of these
+    specified. This can be specified in the XML with the `StyleIdentifier`
+    property.
+-   `PseudoClasses`: These are special classes that can be used to target
+    elements in a specific state. For example, this is used to style buttons
+    differently when hovered or pressed or whatever. These are triggered
+    automatically through user interaction.
+-   Elements may also be styled based on their parent elements, and all their
+    style properties. In the style rule definition, this is done with the
+    `.ParentOf(...)` method, and can take advantage of all the same selector
+    properties defined above.
 
 Selectors that specify more of these parts are more "specific", and will take
-priority over less specific elements.
+priority over selectors that are less specific. If you want your style rule to
+override others, make it more specific.
 
-**The properties**: Any elements matching the selector will then have their properties
-modified by the style rule. These are the same properties you would define in
-the XAML.
+**The properties**: Any elements matching the selector will then have their
+properties modified by the style rule. These are the same properties you would
+define in the XAML.
 
-To assist with constructing these style rules, there are helper methods defined in
-`Content.Client/Stylesheets/StylesheetHelpers`.
+To assist with constructing these style rules, there are helper methods defined
+in `Content.Client/Stylesheets/StylesheetHelpers`.
 
-I think it's best to show an examples of style rules instead of describing all
-their intricacies since the code is pretty self-explanatory.
+Let's walk through some examples of style rules:
 
 ```cs
 // you need this using statement to use the helper methods
@@ -177,28 +188,31 @@ var rules =
 
 ### Death to Hardcoding!
 
-You may have noticed before that there wasn't much hardcoding in the rule definitions.
-This is because most style rules are used in multiple stylesheets, and they have
-to be generic between them. There are a couple different utilities used to reduce
-hardcoding.
+Whenever possible, avoid hardcoding in your style rule definitions to keep them
+as reusable / broad as possible. The following systems are designed to help keep
+all the definitions in a central location, and your style rules should be
+patterns that apply those definitions.
 
 #### `ColorPalette`
 
 There is actually a pretty robust (haha) color palette system to hopefully make
 hardcoding colors unnecessary. I created a
-[codepen](https://codepen.io/aspiringLich/pen/VwOXdjd?editors=1000)
-to help visualize the colors. The stylesheets then use these palettes to set the following
-common palettes for sheetlets to reference:
+[codepen](https://codepen.io/aspiringLich/pen/VwOXdjd?editors=1000) to help
+visualize the colors. There are a set of common palettes defined in the
+`Palettes` class, and each stylesheet uses these for the following common
+palettes that sheetlets reference:
 
 -   `PrimaryPalette`: Used for foreground elements
--   `SecondaryPalette`: Used for Background elements
--   `PositivePalette`: A traditionally green palette used to represent success / good / full
--   `NegativePalette`: A traditionally red palette used to represent errors / bad / empty
+-   `SecondaryPalette`: Used for background elements
+-   `PositivePalette`: A traditionally green palette used to represent success /
+    good / full
+-   `NegativePalette`: A traditionally red palette used to represent errors /
+    bad / empty
 -   `HighlightPalette`: Used to highlight headings or important elements
 
-In C#, you access the colors by accessing the
-properties on the `ColorPalette` class. From brightest to darkest, the properties
-are (as of writing) arranged as so:
+In C#, you access the colors by accessing the properties on the `ColorPalette`
+class. From brightest to darkest, the properties are (as of writing) arranged as
+so (where lower numbers are darker):
 
 -   `+0`: `Text` `Base`
 -   `-1`: `TextDark`, `Element`
@@ -206,21 +220,17 @@ are (as of writing) arranged as so:
 -   `-3`: `Background`
 -   `-4`: `BackgroundDark`, `DisabledElement`
 
-Although it would be simpler to have the palettes be arrays of colors, I noticed
-that colors were used in basically three ways: Text, foreground elements, and
-background elements. So I represented that in the palette itself! It just makes
-the code a bit more readable.
-
-All palettes are defined in `Palettes.cs` as static properties. You can read
-them from anywhere! Neat!
+The reason why this approach is taken, rather than a simple array of colors, is
+for readability. The colors in a palette have specific intended uses, so
+representing that intention in your code is important to avoid mistakes and make
+code cleaner and readable.
 
 #### `ISheetletConfig`
 
 `ISheetletConfig` is intended to cut down on repeated code by providing shared
-functionality and definitions between the stylesheets.
-Any `Sheetlet` that requires the values in some instance of
-`ISheetletConfig` should have a generic type constraint that requires the
-`ISheetletConfig` interface.
+functionality and definitions between the stylesheets. Any `Sheetlet` that
+requires the values in some instance of `ISheetletConfig` should have a generic
+type constraint that requires the `ISheetletConfig` interface.
 
 ```cs
 [CommonSheetlet] // don't forget `[CommonSheetlet]`!
@@ -242,10 +252,11 @@ You should access resources differently in sheetlets. Each stylesheet provides a
 list of resource roots to look in, when requesting a resource of a certain type.
 For example, the root for `NanotrasenStylesheet` for `TextureResource` is
 `/Textures/Interface/Nano`. Any texture requested with `GetTexture` will will
-append the provided relative path to the root, and return the texture if it exists.
+append the provided relative path to the root, and return the texture if it
+exists.
 
-This system is built to work with any resource type, though currently only textures
-are used in the sheetlets.
+This system is built to work with any resource type, though currently only
+textures are used in the sheetlets.
 
 ### Generic Sheetlets
 
@@ -253,16 +264,17 @@ As stated earlier, generic sheetlets are used for generic UI elements that are
 used in many different UIs.
 
 -   You should always select elements with `.Class` and not `.Identifier`.
--   When accessing resources, use the `GetTextureOr` method to get the texture and
-    provide a fallback root to use if the texture is not found within the stylesheets roots.
--   Avoid manual hardcoding of classes. When referencing classes,
-    please only use classes defined on the element being styled (in `StyleClass*` properties)
-    or define your own in `StyleClass.cs`.
--   Avoid manual hardcoding of colors. Use the palettes provided by the stylesheet
-    to set the colors of elements. There are very few cases where you will actually
-    need to manually hardcode a color in a generic sheetlet.
--   If you need to access a resource that is not provided already, please add the path
-    to the relevant `ISheetletConfig` or create a new one entirely.
+-   When accessing resources, use the `GetTextureOr` method to get the texture
+    and provide a fallback root to use if the texture is not found within the
+    stylesheets roots.
+-   Avoid manual hardcoding of classes. When referencing classes, please only
+    use classes defined on the element being styled (in `StyleClass*`
+    properties) or define your own in `StyleClass.cs`.
+-   Avoid manual hardcoding of colors. Use the palettes provided by the
+    stylesheet to set the colors of elements. There are very few cases where you
+    will actually need to manually hardcode a color in a generic sheetlet.
+-   If you need to access a resource that is not provided already, please add
+    the path to the relevant `ISheetletConfig` or create a new one entirely.
 
 <details>
 <summary>Example Code (click to expand)</summary>
@@ -318,9 +330,10 @@ to a single UI. These sheetlets are located with the `*.xaml` file they are
 associated with.
 
 -   You should prefer to select elements with `.Identifier` and not `.Class`.
--   Any styles that COULD be used by another UI should be moved to a generic sheetlet.
--   Hardcoding is more relaxed, you should still try and avoid it when possible, but
-    hardcoding `StyleClass`es and `StyleIdentifier`s is probably fine.
+-   Any styles that COULD be used by another UI should be moved to a generic
+    sheetlet.
+-   Hardcoding is more relaxed, you should still try and avoid it when possible,
+    but hardcoding `StyleIdentifier`s is probably fine.
 -   If you REALLY need a specific resource and its not worth adding it to an
     `ISheetletConfig` you can access it through `ResCache` as normal.
 -   You don't need to do the generic type constraints thing since the sheetlet
@@ -373,34 +386,39 @@ public sealed class PaperSheetlet : Sheetlet<NanotrasenStylesheet>
 
 </details>
 
-### Making your own `Stylesheet`
+## Making your own `Stylesheet`
 
-Creating a new stylesheet is pretty simple, so I won't go into it too much.
-One thing to keep in mind is how colors are chosen.
+Creating a new stylesheet is not as complicated as writing all the style rules,
+since with well written style rules, the Stylesheet is mostly One thing to keep
+in mind is how colors are chosen.
 
-The colors are generated using the [OKLAB color space](https://bottosson.github.io/posts/oklab/),
-which is better because something something human eyes something. When you choose
-new colors for your stylesheet, it may be helpful to use an [OKLCH Color Picker](https://oklch.com)
-and modify an existing color.
+The colors are generated using the
+[OKLAB color space](https://bottosson.github.io/posts/oklab/), which is better
+because something something human eyes something. When you choose new colors for
+your stylesheet, it may be helpful to use an
+[OKLCH Color Picker](https://oklch.com) and modify an existing color.
 
 ## Writing C# for UI
 
 > **TODO:** I don't feel confident enough in my knowledge to describe in detail
 > what to do and what not to do. This is just a general overview for now and
 > should be updated.
+>
+> Also this should probably be another page.
 
 The best way to learn how to write UI code is to look at existing code. Some UIs
-definitely do some terrible things you should never replicate, but there are mountains
-of terrible code in SS14, so this is not abnormal. I cannot teach familiarity with
-the internals of this game, but I can give a  general overview.
+definitely do some terrible things you should never replicate, but there are
+mountains of terrible code in SS14, so this is not abnormal. I cannot teach
+familiarity with the internals of this game, but I can give a general overview.
 
 Code you could reference:
--    Robotics Console
--    Cryo Pod
--    Reagent Dispenser
 
-There are a few different parts to any UI. say were working with a entity
-called `MyThing`, which we wanted to show a UI for. Heres, generally, what the
+-   Robotics Console
+-   Reagent Dispenser
+-   BatteryMenu
+
+There are a few different parts to any UI. say were working with a entity called
+`MyThing`, which we wanted to show a UI for. Heres, generally, what the
 structure would look like:
 
 ```yaml
@@ -427,15 +445,18 @@ Content.Client/MyThing/:
 
 ### Bound User Interfaces
 
-> **TODO:** someone more familiar with BUIs than me should write about how to write
-> good BUIs. I'll just stick the notes from
-> `#codebase-changes` by Bard in the discord here for now:
+> **TODO:** someone more familiar with BUIs than me should write about how to
+> write good BUIs. I'll just stick the notes from `#codebase-changes` by Bard in
+> the discord here for now:
 >
 > > Predicted BUIs are in:
 >
 > For networking data:
 >
-> Option 1 (Preferred). Move the BUI state to component states. Use an existing client system / make one to handle updating the BUI upon the state updating (use TryGetOpenUi) and upon calling Open in the BoundUserInterface. See JukeboxSystem for an example, e.g.
+> Option 1 (Preferred). Move the BUI state to component states. Use an existing
+> client system / make one to handle updating the BUI upon the state updating
+> (use TryGetOpenUi) and upon calling Open in the BoundUserInterface. See
+> JukeboxSystem for an example, e.g.
 >
 > ```cs
 > private void OnJukeboxAfterState(Entity<JukeboxComponent> ent, ref AfterAutoHandleStateEvent args)
@@ -449,26 +470,38 @@ Content.Client/MyThing/:
 >
 > Option 2. Have the BUI control be a dummy until the state comes in
 >
-> For UIs:
-> Call TryOpenUi in shared where possible and the client should just handle it. Calling it from server will also still work similar to the old behavior.
+> For UIs: Call TryOpenUi in shared where possible and the client should just
+> handle it. Calling it from server will also still work similar to the old
+> behavior.
 >
-> For messages:
-> Use SendPredictedMessage where possible in BUIs. At some point this will likely become the default over SendMessage.
+> For messages: Use SendPredictedMessage where possible in BUIs. At some point
+> this will likely become the default over SendMessage.
 >
-> Overall:
-> Prefer to use the overloads that take in EntityUids instead of ICommonSession, this will make it easier to code NPCs who can interact with UIs in future.
+> Overall: Prefer to use the overloads that take in EntityUids instead of
+> ICommonSession, this will make it easier to code NPCs who can interact with
+> UIs in future.
 >
 > >
 >
-> -   There's a helper under this.CreateWindow<TWindow>() for BUIs that handles disposing + opening + close subscription for you.
-> -   There's a method OnProtoReload that gets called on BUIs so you can override and handle it without having to manually subscribe on another system.
+> -   There's a helper under this.CreateWindow<TWindow>() for BUIs that handles
+>     disposing + opening + close subscription for you.
+> -   There's a method OnProtoReload that gets called on BUIs so you can
+>     override and handle it without having to manually subscribe on another
+>     system.
 > -   I have added prototype reload support to some stuff.
-> -   I have cleaned up a lot of BUI code. Windows now just raise events and the BUI itself handles message sending.
+> -   I have cleaned up a lot of BUI code. Windows now just raise events and the
+>     BUI itself handles message sending.
 >
 > Some notes for future:
 >
-> -   You should spawn / delete control entities inside of EnteredTree and ExitedTree rather than inside Dispose.
-> -   Controls should be able to be constructed with an empty constructor and should not call BUI methods directly. This makes re-use significantly easier.
+> -   You should spawn / delete control entities inside of EnteredTree and
+>     ExitedTree rather than inside Dispose.
+> -   Controls should be able to be constructed with an empty constructor and
+>     should not call BUI methods directly. This makes re-use significantly
+>     easier.
 > -   All new controls must handle prototype reloading if applicable.
-> -   All new controls should prefer to use component states and not BUI states where possible. These work better with prediction and are easier to use.
-> -   Controls should be able to handle components disappearing and not rely upon GetComponent<T> everywhere as there are no guarantees the component exists.
+> -   All new controls should prefer to use component states and not BUI states
+>     where possible. These work better with prediction and are easier to use.
+> -   Controls should be able to handle components disappearing and not rely
+>     upon GetComponent<T> everywhere as there are no guarantees the component
+>     exists.

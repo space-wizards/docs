@@ -19,21 +19,14 @@ Palettes.Status.GetStatusColor(0.5f); // amber
 Palettes.Status.GetStatusColor(1.0f); // green
 
 Palettes.Status.GetStatusColor(0.25f); // blends between red and amber
-// etc...
 ```
 
 ## Multiple Style Classes
 
-Lets say you want to add multiple style classes to an element. Well, lucky for you,
-arrays in XAML are easy-peasy to define!
+In order to add multiple style classes to an element within its XAML file, some
+extra boilerplate is required:
 
 ```xml
-<!-- stupid and bad, why would you ever think this would work?? -->
-<Control>
-    <Button StyleClasses="ButtonSmall negative" Text="delete" />
-</Control>
-
-<!-- the correct solution (obviously) -->
 <Control xmlns:sys="clr-namespace:System;assembly=System.Runtime">
     <Button Text="delete">
         <Button.StyleClasses>

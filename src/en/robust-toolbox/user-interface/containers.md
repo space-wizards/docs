@@ -1,21 +1,32 @@
 # Container Controls
 
-There are many controls whose sole purpose is to lay their children out in a certain way, and otherwise be invisible. This section will go over some of them.
+Container is type of control that dictates the layout of
+other controls. Containers logic affect directly only direct child controls.
+Containers usually arrange child controls every frame by collecting desired size
+of controls (call to `Measure` method on children) and then providing them with
+size that they can afford (call to `Arrange` method on children), and placing
+them (`ArrangeOverride`) at needed coordinates after all calculations were
+accounted.
 
-This is not a complete list, but it does cover the most commonly used ones. If you would like to complete this list and PR it that would be appreciated :).
+This document only covers some of the most commonly used containers. Additions
+expanding it with others are welcome.
+
+```admonish info
+This page is a stub and complete descriptions of how containers will react to
+new items being added, overflow, the subtleties with `GridContainer` etc. are
+not convered.
+```
 
 ## `BoxContainer`
 
-`BoxContainer` is perhaps one of the simplest layout controls there is. It lays out its children sequentially in a certain `Orientation`, either vertically or horizontally. Controls do not overlap.
-
-```admonish warning
-You MUST include a `Orientation` for the `BoxContainer` to work.
-```
+`BoxContainer` is the most straightforward layout control. It lays out its
+children sequentially in a certain `Orientation`, either vertically or
+horizontally. Controls do not overlap.
 
 | Field                | Type                | Effective Default Value | Description                                                 |
 | -------------------- | ------------------- | ----------------------- | ----------------------------------------------------------- |
-| `Orientation`        | `LayoutOrientation` |                         | Whether to arrange the elements horizontally or vertically. |
-| `Align`              | `AlignMode`         |                         | The alignment of the children along the orientation axis.   |
+| `Orientation`        | `LayoutOrientation` | `Horizontal`            | Whether to arrange the elements horizontally or vertically. |
+| `Align`              | `AlignMode`         | `Begin`                 | The alignment of the children along the orientation axis.   |
 | `SeparationOverride` | `int`               | `0`                     | The separation between elements.                            |
 
 ## `GridContainer`
@@ -34,21 +45,22 @@ You MUST include a `Orientation` for the `BoxContainer` to work.
 
 ## `ScrollContainer`
 
-`ScrollContainer` is a container that shows a slice of its children, with scrollbars to scroll through the rest. You've seen a scrollbar before you know what this is.
+`ScrollContainer` is a container that shows a cropped view of its children, with
+optional scrolling either vertically, horizontally, or both.
 
-| Field                   | Type   | Effective Default Value | Description                                                                 |
-| ----------------------- | ------ | ----------------------- | --------------------------------------------------------------------------- |
-| `FallbackDeltaScroll`   | `bool` | `false`                 | If true, if we have a y-axis scroll it will convert it to an x-axis scroll. |
-| `ScrollSpeedX`          | `int`  | `50`                    | The scroll speed in the x-direction.                                        |
-| `ScrollSpeedY`          | `int`  | `50`                    | The scroll speed in the y-direction.                                        |
-| `ReserveScrollbarSpace` | `bool` | `true`                  | Whether the scrollbar will take up space in the layout                      |
-| `ReturnMeasure`         | `bool` | `false`                 | _TODO: I do not know what this does_                                              |
-| `VScrollEnabled`        | `bool` | `true`                  | Whether vertical scrolling is enabled.                                      |
-| `HScrollEnabled`        | `bool` | `true`                  | Whether horizontal scrolling is enabled.                                    |
+| Field                   | Type   | Effective Default Value | Description                                                                                                   |
+| ----------------------- | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `FallbackDeltaScroll`   | `bool` | `true`                  | If true, a vertical scroll will be translated into a horizontal scroll if vertical scrolling is not possible. |
+| `ScrollSpeedX`          | `int`  | `50`                    | The scroll speed in the x-direction.                                                                          |
+| `ScrollSpeedY`          | `int`  | `50`                    | The scroll speed in the y-direction.                                                                          |
+| `ReserveScrollbarSpace` | `bool` | `false`                 | Whether the scrollbar will take up space in the layout                                                        |
+| `VScrollEnabled`        | `bool` | `true`                  | Whether vertical scrolling is enabled.                                                                        |
+| `HScrollEnabled`        | `bool` | `true`                  | Whether horizontal scrolling is enabled.                                                                      |
 
 ### `LayoutContainer`
 
-`LayoutContainer` helps in complicated layouts by arranging its children.
+`LayoutContainer` helps in complicated layouts by allowing its children to
+specify how they should be laid out.
 
 | Field                 | Type    | Effective Default Value | Description                                                                                |
 | --------------------- | ------- | ----------------------- | ------------------------------------------------------------------------------------------ |
@@ -56,7 +68,8 @@ You MUST include a `Orientation` for the `BoxContainer` to work.
 | `AnchorEnd`           | `float` | `1`                     | The value of an anchor that is at the end of the layout.                                   |
 | `InheritChildMeasure` | `bool`  | `true`                  | If true, measurements of this control will be at least the size of any contained controls. |
 
-Then children of the `LayoutContainer` may use to following fields to control their layout:
+Then children of the `LayoutContainer` may use to following fields to control
+their layout:
 
 | Field            | Type    |
 | ---------------- | ------- |
