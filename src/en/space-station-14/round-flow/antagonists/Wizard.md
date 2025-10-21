@@ -116,6 +116,15 @@ The Wizard being quite strong will be limited by the amount of spells they can b
 allowing the creativeness of the player to mix and match different spell & equipment combinations to make something interesting.
 That being said, timestop and fireball is a classic combination for a reason, but giving players way more interesting options will help cut down on pure offensive Wizards.
 
+### Friendly Wizards
+This will be the only definition and rules of what is considered a friendly wizard. A **friendly wizard** is a wizard who will either refuse to use spells on crew OR will help out the station against other threats without an iron-clad reason.
+
+An iron-clad reason would be something like Nukies relentlessly pursuiting the Wizard or a conversion antagonist attempting to convert the Wizard. In no other circumstances should a Wizard act friendly towards the crew.
+
+A Wizard forcibly taking over the station, whether it's through actual force or mind swapping, is not a friendly wizard.
+
+On the same coin, a wizard not killing a person every second is also not a friendly wizard. As long as a wizard is using their spells in some way that effects the station, they're not friendly.
+
 ## Administrative & Server Rule Impact (if applicable)
 
 <!--
