@@ -89,6 +89,11 @@ Consider addressing:
 - How are the rules enforced mechanically by way the feature will be implemented?
 -->
 
+The Chaos the Wizard brings may introduce challenges to the admin team. 
+Some things like mass event spells (when reworked) will considerably lower the amount of free agents it makes which in turn reduces admin headache.
+
+Furthermore, some optional challenge purchases may be introduced to give the wizard more drive. So people who aren't as creative, but crave a challenge, will have some guidance on what to do which may reduce friendly wizards. There's not too much that can be done mechanically to truly prevent any friendly antag.
+
 # Technical Considerations
 
 <!--
