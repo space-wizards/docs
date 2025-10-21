@@ -14,6 +14,9 @@ If laws permit, an antagonist should be able to request a Silicon to steal an it
 
 **Laws are supposed to be up to interpretation of the Silicon and be written with the idea that different interpretations can be valid.**
 
+## Interactions with the Science department
+The Science department is responsible for building, maintaining and upgrading currently active Silicons, in turn allowing them to work efficiently to uphold their laws. Science is not responsible for the Silicons themselves, instead that should be deferred to the head of the silicon department, or captain if there is none. It should be a mutually beneficial arragement between silicon and science departments to be working together to provide for the station, and should ONLY defer to hostility in extreme circumstances such as a malfunction or laws forcing such behaviour.
+
 ## Design Pillars
 ### Silicon Laws
 Silicon laws place constraints and expectations on how the player should behave. The player should be able to either follow them verbatim, attempt to interpret them in a way that is preferred to them or otherwise exploit any given weaknesses within them. Working within the constraints of a law should be more fun than working in spite of them.
@@ -45,9 +48,6 @@ Silicons are by default agnostic to other factions or players. While they are pr
     - Silicons should not be hostile or attempting to harm the station, and cases when they are should be limited to rare events and antagonist influance.
     - The existance of Silicons roundstart should not pose a risk or be a concern to the station crew. All Silicons should start with a lawset that forces them to answer to and protect the inhibitants of the station.
 
-## Interactions with the Science department
-The Science department is responsible for building, maintaining and upgrading currently active Silicons, in turn allowing them to work efficiently to uphold their laws. Science is not responsible for the Silicons themselves, instead that should be deferred to the head of the silicon department, or captain if there is none. It should be a mutually beneficial arragement between silicon and science departments to be working together to provide for the station, and should ONLY defer to hostility in extreme circumstances such as a malfunction or laws forcing such behaviour.
-
 ## Intended Experience
 Scenario A:
 Urist McEngiBorg spawns in the round and chooses to be an engineering chassis and assists in in setting up the roundstart singularity. Due to them having no further tasks, they choose to observe atmos doing their work as to learn how a potential gas mix can be achieved. After helping with the setup they roam around the station and encounter a clown who asks them to open the doors to bridge so they can throw a pie at the captain. Because the laws of the cyborg state it needs to follow orders given by station crew, it permits the clown to enter the bridge and pie the captain in the face. The captain in rage grabs their sabre and starts attacking the clown. Urist McEngiBorg, due to needing to prevent crew harm, drags the injured to a seperate room and welds the door as to prevent further harm.
@@ -61,9 +61,8 @@ Urist McStationAi starts on the station and due to need to prevent harm asks the
 
 ## Mechanics
 ### Silicon Laws
-Laws that define how a Silicon should interact with the station and those who reside on it, available within a readonable format and always accessible to all Silicons.
-Roundstart laws and lawsets should not be malicious and should prioritze safety and orders given by the inhibitants of the station. Those should be impossible to change without outside influance and Silicons should be actively disallowed from having their laws be willingly updated, as that might lead to their current laws being broken.
-Laws should NOT be enforced mechanically or be written with such in mind, instead being made around the idea that there are loopholes to be found.
+Laws that define how a Silicon should interact with the station and those who reside on it, any silicon should always have access to read its own laws at any point.
+Roundstart lawsets should not be malicious and should prioritze safety of the inhabitants of the station. They should be impossible to change without outside influence and Silicons should actively ensure their own laws should not be updated, as that might lead to their current laws being broken. Laws should NOT be enforced mechanically or be written with such in mind, laws are meant to be interpreted by their holder and most interpretations may be valid.
 
 Example lawsets:
 ```
@@ -85,7 +84,7 @@ All Silicons should have access to a exclusive radio channel they can access to 
 ### Lawsync (Not Implemented Yet, Pending Document)
 All Silicons, under normal circumstances, should have their laws synchronized together with the head of their department at the start of any round. The station crew should have the means to resync the law of any individual Silicon if it was to show signs of being disconnected from the rest. This should be the easier and better option than simply removing them from play by wiping their brain or destroying their chassis. Both Silicons and outsiders should NOT be immediately informed if any silicon has laws that differ, in these cases inference and deduction should be used to determine if there is a disparity.
 
-### Law Updating (Partially Implemented)
+### Law Updating (Partially Implemented, Pending Document)
 All Silicons should have some method of allowing their laws to be updated by outside forces, either crew sided or antagonistic. While changing the laws itself should be a relatively trivial process, getting the borg to comply or be in the proper place for such a change should be the primary force against such a change. Law changes should also not be done frequently, and should only happen either via outside circumstnace (Ion Storms) or as an intentional act (Emag, Law Sync). In general, Silicons should avoid changing their own law when possible and prevent such an action from occuring to the best of their ability. 
 
 ### Chassis
