@@ -15,14 +15,14 @@ If laws permit, an antagonist should be able to request a Silicon to steal an it
 **Laws are supposed to be up to interpretation of the Silicon and be written with the idea that different interpretations can be valid.**
 
 ## Design Pillars
-### Silicon gameplay revolves around the player's interpretation of their laws:
-Silicon laws place constraints how the player is expected to behave. The player should be able to interpret them in a way that is preferred to them or otherwise attempt to exploit the weaknesses within them.
+### Silicon Laws
+Silicon laws place constraints and expectations on how the player should behave. The player should be able to either follow them verbatim, attempt to interpret them in a way that is preferred to them or otherwise exploit any given weaknesses within them. Working within the constraints of a law should be more fun than working in spite of them.
 
-### Silicons are a collective:
-Though they can function as individuals, working together they are more than the sum of their parts.
+### Specializations
+Silicons, by their nature, should be hyper specalized in whatever task they were designed to fufill. They may be able to poorly or inefficiently perform tasks outside of their designated range, but it should generally be better to create a new Silicon for the given task, provided materials and time are available to their creators.
 
-### Home is where the AI core is:
-The station is the home of the silicons, and they are the station's caretakers. Silicons have no intrinsic interest in interfering in the lives of humanoids, beyond what their laws require, so long as these outsiders do not bring harm to the station.
+### Independance
+Silicons are by default agnostic to other factions or players. While they are primarily built to serve their given creators they should not be expected care about anything or anyone unless their laws state otherwise. This may also apply to any other concept or situation a Silicon may find itself in or adjacent to.
 
 ## Desired Gameplay
 - Working on both sides of the conflict.
