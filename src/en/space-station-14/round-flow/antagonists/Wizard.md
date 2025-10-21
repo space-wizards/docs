@@ -96,3 +96,23 @@ Consider addressing:
 - Does the feature require new systems, UI elements, or refactors of existing ones?
 - For required UI elements, give a short description or a mockup of how they should look like (for example a radial menu, actions & alerts, navmaps, or other window types)
 -->
+
+Since Wizard's been out there's refactors that need to happen to get Wizard fully back in and those include (but aren't limited to:)
+- Actions
+  - A generic way to spawn sprite effects is needed (ie. Void's Applause)
+  - Magic Comp (which is just a fancy named requirements comp) needs to be converted to ActionRequirements and expanded on
+  - Targeting and Spawning behaviors need to be added as either presets or overrides
+    - ex) An instant action may have the targeting logic to target X amount of people in sight
+    - ex) A world action might have targeting logic to target 3x3 tiles from where it was clicked
+  - Event Spells (actions) also need to be converted to gamerules and work more as a 1 purchase and done kind of thing.
+- Event Spells
+  - As above, the event spells need to be reworked to launch gamerules instead of just events.
+  - For the more dangerous event spells (Summon Guns/Magic), the Wizard should be forced to teleport back onto the station if we detect they're not. To make it fair that they commit to the bit
+  - And for Summon Guns/Magic specifically the free agent rate is going to be turned down considerably so it has X chance to turn someone into a survivor instead of it being guaranteed.
+- Polymorph
+  - The polymorph system itself needs an overhaul, as there were some issues with entity references and the like. The Rod Polymorph would get the biggest benefit from this.
+- Rods/Brute Damage Gibbing
+  - Wizard Rods need to be changed to not delete people and objects. Even setting gib to no gets bypassed by the deletion that Rods inheretly have and it's extremely easy to gib with enough brute damage so both things also need to be changed.
+- Cameras working off grid
+  - Cameras need to work off grid so the Wizard can use its pondering orb effectively
+  - This would also open up oppertunities for other antags (Nukies, Listening Outpost, Abductors, Clock Cult, etc)
