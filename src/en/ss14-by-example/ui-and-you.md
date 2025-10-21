@@ -12,7 +12,7 @@ always appreciated!
 ```
 
 Before learning how it should be done in SS14, it's important to understand how
-the engine handles UI. Please reference the
+the engine handles UI. You should reference the
 [user interface documentation](../robust-toolbox/user-interface.md) first.
 
 ## Okay, but how do I make it fancy?
@@ -101,8 +101,8 @@ There are, primarily, two types of Sheetlets:
     single UI, and should be written to work with the specific sheetlets they
     are associated with.
 
-We will go into more detail about the specific conventions to follow for both of
-these later.
+This document will go into more detail about the specific conventions to follow
+for both of these later.
 
 All sheetlets should have the `[CommonSheetlet]` attribute.
 
@@ -119,7 +119,7 @@ anyone who knows CSS):
 made up of a few different parts:
 
 -   `Type`: The type of element this rule affects. Anything inheriting from this
-    type will also be affected by this rule. 
+    type will also be affected by this rule.
 -   `StyleClasses`: The classes that the element must have to be affected by
     this rule. The element must have all of these classes to be affected by this
     rule. This can be specified in the XML with the `StyleClasses` property.
@@ -196,9 +196,7 @@ patterns that apply those definitions.
 #### `ColorPalette`
 
 There is actually a pretty robust (haha) color palette system to hopefully make
-hardcoding colors unnecessary. I created a
-[codepen](https://codepen.io/aspiringLich/pen/VwOXdjd?editors=1000) to help
-visualize the colors. There are a set of common palettes defined in the
+hardcoding colors unnecessary. There are a set of common palettes defined in the
 `Palettes` class, and each stylesheet uses these for the following common
 palettes that sheetlets reference:
 
@@ -224,6 +222,10 @@ The reason why this approach is taken, rather than a simple array of colors, is
 for readability. The colors in a palette have specific intended uses, so
 representing that intention in your code is important to avoid mistakes and make
 code cleaner and readable.
+
+BTW, here is a
+[codepen](https://codepen.io/aspiringLich/pen/VwOXdjd?editors=1000) I created to
+help visualize the colors.
 
 #### `ISheetletConfig`
 
@@ -255,26 +257,21 @@ For example, the root for `NanotrasenStylesheet` for `TextureResource` is
 append the provided relative path to the root, and return the texture if it
 exists.
 
-This system is built to work with any resource type, though currently only
-textures are used in the sheetlets.
-
 ### Generic Sheetlets
 
-As stated earlier, generic sheetlets are used for generic UI elements that are
-used in many different UIs.
+Generic sheetlets are used for common UI elements that are used throughout many
+different UIs. Here are some conventions to follow when writing generic
+sheetlets:
 
 -   You should always select elements with `.Class` and not `.Identifier`.
 -   When accessing resources, use the `GetTextureOr` method to get the texture
     and provide a fallback root to use if the texture is not found within the
     stylesheets roots.
--   Avoid manual hardcoding of classes. When referencing classes, please only
-    use classes defined on the element being styled (in `StyleClass*`
+-   Avoid manual hardcoding of classes. When referencing classes, you should
+    only use classes defined on the element being styled (in `StyleClass*`
     properties) or define your own in `StyleClass.cs`.
--   Avoid manual hardcoding of colors. Use the palettes provided by the
-    stylesheet to set the colors of elements. There are very few cases where you
-    will actually need to manually hardcode a color in a generic sheetlet.
--   If you need to access a resource that is not provided already, please add
-    the path to the relevant `ISheetletConfig` or create a new one entirely.
+-   If you need to access a resource that is not provided already, you should
+    add the path to the relevant `ISheetletConfig` or create a new one entirely.
 
 <details>
 <summary>Example Code (click to expand)</summary>
@@ -325,9 +322,12 @@ public sealed class CheckboxSheetlet<T> : Sheetlet<T> where T : PalettedStyleshe
 
 ### Specific Sheetlets
 
-As stated earlier, specific sheetlets are used for UI elements that are specific
-to a single UI. These sheetlets are located with the `*.xaml` file they are
-associated with.
+Specific sheetlets are used in conjunction with UI elements that are used only a
+few times, most often all in a single UI. These sheetlets are located in the
+same directory as the `*.xaml` file they are associated with.
+
+Generally, these sheetlets follow slightly different conventions compared to
+generic sheetlets:
 
 -   You should prefer to select elements with `.Identifier` and not `.Class`.
 -   Any styles that COULD be used by another UI should be moved to a generic
@@ -388,15 +388,16 @@ public sealed class PaperSheetlet : Sheetlet<NanotrasenStylesheet>
 
 ## Making your own `Stylesheet`
 
-Creating a new stylesheet is not as complicated as writing all the style rules,
-since with well written style rules, the Stylesheet is mostly One thing to keep
-in mind is how colors are chosen.
+Creating a new stylesheet is not as complicated as writing all the style rules.
+With well written style rules and sheetlets, a new stylesheet is just defining
+the common colors, definitions and resources shared by all the style rules. In
+its simplest incarnation, a new stylesheet is just a new color palette!
 
-The colors are generated using the
-[OKLAB color space](https://bottosson.github.io/posts/oklab/), which is better
-because something something human eyes something. When you choose new colors for
-your stylesheet, it may be helpful to use an
-[OKLCH Color Picker](https://oklch.com) and modify an existing color.
+The colors for stylesheets are generated using the
+[OKLAB color space](https://bottosson.github.io/posts/oklab/), a perceptually
+uniform color space. When you choose new colors for your stylesheet, it may be
+helpful to use an [OKLCH Color Picker](https://oklch.com) and modify an existing
+color.
 
 ## Writing C# for UI
 
