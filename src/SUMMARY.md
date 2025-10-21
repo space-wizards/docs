@@ -190,7 +190,7 @@ Space Station 14
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
 		- [Xenoborgs](en/space-station-14/round-flow/antagonists/Xenoborgs.md)
 		- [Pursuer](en/space-station-14/round-flow/antagonists/pursuer.md)
-        - [The Wizard](en/space-station-14/round-flow/antagonists/wizard.md)
+        - [The Wizard](en/space-station-14/round-flow/antagonists/Wizard.md)
 
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
