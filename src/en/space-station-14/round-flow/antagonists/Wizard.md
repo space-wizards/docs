@@ -91,6 +91,21 @@ Consider addressing:
 - Which department will interact with the feature? How does the feature fit into the [design document](../space-station-14/departments.md) for that department?
 -->
 
+The Wizard is a _rare_ antagonist, but one that could show up absolutely **anywhere**. They're meant to be unfairly strong and weave chaos into any roundtype.
+And because of this they should never be common. Maybe they should be seen only a few times a day if not less.
+
+Since they can appear anywhere you could see them in the start or the middle of a round.
+
+The Wizard will be given different tools and spells to help influence the chaos they have on the round. Some may be purely offensive or defensive,
+but they also dip into the realm of goofy and wacky.
+
+For example they could have a wand of polymorph which will turn a player into a random creature. That player would still have their own agency but also the positive (or negative) attributes with becoming
+the creature. The wand could easily backfire on the wizard and the other player could be turned into something fearsome like a syndicate borg.
+
+The Wizard being quite strong will be limited by the amount of spells they can buy. The ideal situation is to _avoid_ making "the game winning build" but instead
+allowing the creativeness of the player to mix and match different spell & equipment combinations to make something interesting.
+That being said, timestop and fireball is a classic combination for a reason, but giving players way more interesting options will help cut down on pure offensive Wizards.
+
 ## Administrative & Server Rule Impact (if applicable)
 
 <!--
