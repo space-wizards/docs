@@ -388,12 +388,24 @@ public sealed class PaperSheetlet : Sheetlet<NanotrasenStylesheet>
 
 ## Making your own `Stylesheet`
 
+```admonish note
+Multiple stylesheets only recently became feasable with the introduction of the
+Sheetlet system, so the full range of possibilities this allows has not been 
+explored. If stylesheets get used in interesting ways besides palette swaps, 
+please update this section!
+```
+
 Creating a new stylesheet is not as complicated as writing all the style rules.
 With well written style rules and sheetlets, a new stylesheet is just defining
 the common colors, definitions and resources shared by all the style rules. In
 its simplest incarnation, a new stylesheet is just a new color palette!
 
-The colors for stylesheets are generated using the
+New stylesheets should be created with the intention of communicating a
+different context. For example, the non-diegetic context of the admin UIs being
+communicated with `SystemStylesheet`, or the sinister context of syndicate UIs
+being communicated with `SyndicateStylesheet`.
+
+The colors for stylesheets are defined using the
 [OKLAB color space](https://bottosson.github.io/posts/oklab/), a perceptually
 uniform color space. When you choose new colors for your stylesheet, it may be
 helpful to use an [OKLCH Color Picker](https://oklch.com) and modify an existing
