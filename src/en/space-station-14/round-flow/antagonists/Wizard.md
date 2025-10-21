@@ -34,6 +34,8 @@ Summarize any information that is needed to contextualize the proposed changes, 
 Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
 -->
 
+The Wizard is already added but the document is needed to help clarify certain roundflow and even frequently asked questions about the wizard design.
+
 ## Features to be added
 
 <!-- Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement the feature from this design document. Exact numbers for game balance however are not necessary, as these can be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so. -->
