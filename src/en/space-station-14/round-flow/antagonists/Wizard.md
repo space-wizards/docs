@@ -52,25 +52,35 @@ Consider addressing:
 One of the unique things about the Wizard is that by its existence it does violate some of the antagonist pillars, but that's intended (and previously approved).
 The Wizard is an entire force of chaos. It's meant to have a lot of reality bending/shifting, powerful spells to enable its gimmicks.
 
-Want to trap a bunch of people in lockers with the Staff of Locker and then animate said lockers to make it a challenge for the 
+- Want to trap a bunch of people in lockers with the Staff of Locker and then animate said lockers to make it a challenge for the 
 crew to get out? Go for it.
 
-Want to swap bodies and pretend to be the captain/security to not only sow distrust, but also punish anyone who disobeys you with a smite?
+- Want to swap bodies and pretend to be the captain/security to not only sow distrust, but also punish anyone who disobeys you with a smite?
 100% fine.
 
-Want to summon a dance floor and force everyone to dance until they run out of stamina? Sure.
+- Want to summon a dance floor and force everyone to dance until they run out of stamina? Sure.
 
 The world is your oyster, you're literally a wizard in space.
 
 Now not all spells are going to be straightforward. If you try to fireball someone in the face, you're going to die too unless you put some distance.
 
-Some magic may be locked to using a wand, which means you'd need to risk losing the wand or also buy a recharge spell to compensate.
+Some magic may be locked to using an item, which means you'd need to risk losing the item or also buy a recharge spell to compensate.
 
 Or some magic may require robes, which means you'll be relatively unprotected and the definition of a glass cannon.
 
-Some may even be locked to staves, which recharges on its own over time, or even locked to a long cooldown (2-5 minutes can be a long time in rounds that last anywhere from 30 - 90 minutes)
-
 And with the wizard only being stuck to 10 currency, compared to other antagonists that may have more spending power, they need to make a choice of what they'd like to build.
+
+Despite it potentially violating some antagonist pillars, it does help highlight the core design principles, mainly:
+- Chaos
+  - The Wizard is the embodiment of this pillar. You know you're in for a wild ride when a wizard is around. The potential they have for introducing chaos is pretty high. 
+    They may give everyone in existence a gun and turn the station into a standoff. Or the captain might be turned into a cluwne as punishment. 
+    The Wizard may even just summon a dance floor and make people dance their stamina away. By being able to shift reality, the choices are basically as creative as the contributors can get.
+- Seriously Silly
+  - There's almost nothing more unhinged than a Wizard and their antics. A well timed fireball or a smite may end up being hilarious in a story told later.
+- Dynamic Environment
+  - Wizards being reality benders can easily shift the environment around them, depending on what they're feeling.
+    - The floor could in fact, be lava.
+    - Maybe they feel like the captain's quarters really needed a back door so they just use a wand to turn a wall into a door.
 
 ## Roundflow & Player interaction
 
