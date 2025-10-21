@@ -3,16 +3,16 @@ A robotic force following their laws, for the better or worse of the station.
 
 ## Concept
 ### What is a Silicon?
-The Silicon "department" is meant to stand as a neutral faction of robotic workers on the Nanotrasen stations. They are built to excel in specific tasks at the cost of losing functions in other areas, a Silicon built for the engineering department should be able to repair hull breaches or restore power but be unable to treat patients or clean the floors.
+The Silicon department is meant to stand as a neutral faction of robotic workers on the Nanotrasen stations. They are built to excel in specific tasks at the cost of losing functions in other areas, a Silicon built for the engineering department should be able to repair hull breaches or restore power but be unable to treat patients or clean the floors.
 They are not supposed to be a replacement or an upgrade to regular members of a department, having clear downsides that have to be considered when a Silicon role is picked, such as the inability to pick up items without restriction but having specialized modules or being able to pick up all items but having very limited slots for them.
 
 ### Silicon Laws
 All Silicons are bound to a list of laws. They serve neither the station or antagonists, instead they focus on following their listed laws to the best of their ability.
-The issues arise when those laws are changed, either due to random events or influance from other players. Silicons are meant to be able to adjust to those law changes, sometimes happening several times during a round, and change their behaviour accordingly.
+The issues arise when those laws are changed, either due to random events or influance from other players. Silicons must be notified when their own laws are changed and they must be able to adapt their behavior to match any law changes that occur during a round, even if they were actively attempting to prevent the change beforehand.
 This causes them to be a wild card, usable by both crew and antagonists, but able to backfire severely if their laws suddenly say you're a target, or that oxygen must be removed from the station.
 If laws permit, an antagonist should be able to request a Silicon to steal an item from a high security area for them, but a crewmember should also be able to request that it assists in repairs of a department after it blew up.
 
-**Laws are supposed to be up to interpretation of the Silicon and be written with the idea that any interpretation can be valid.**
+**Laws are supposed to be up to interpretation of the Silicon and be written with the idea that different interpretations can be valid.**
 
 ## Design Pillars
 ### Silicon gameplay revolves around the player's interpretation of their laws:
