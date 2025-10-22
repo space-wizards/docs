@@ -15,6 +15,8 @@ Before learning how it should be done in SS14, it's important to understand how
 the engine handles UI. You should reference the
 [user interface documentation](../robust-toolbox/user-interface.md) first.
 
+Read that? Great.
+
 ## Okay, but how do I make it fancy?
 
 ### `FancyWindow`
@@ -24,12 +26,14 @@ the engine handles UI. You should reference the
 that integrate with SS14 better than `DefaultWindow`.
 
 The `Stylesheet` property allows a window to receive styling information from a
-given stylesheet. Currently, there are the following stylesheets:
+given stylesheet. We will talk about stylesheets in more depth later, but which
+stylesheet a given UI is using determines which set of style rules are applied
+to it. Currently, there are the following stylesheets:
 
--   `Nanotrasen` - The default stylesheet. Used for any standard player-facing
-    Uis
--   `System` - Primarily used for admin and sandbox UIs
--   `Syndicate` (COMING SOON™) - Used for any UIs affiliated with the syndicate
+- `Nanotrasen` - The default stylesheet. Used for any standard player-facing
+  Uis
+- `System` - Primarily used for admin and sandbox UIs
+- `Syndicate` - Used for any UIs affiliated with the syndicate
 
 ### `StyleClass`
 
@@ -48,13 +52,13 @@ defined at the top. For example, the style class `positive` affects `Button`,
 The rest of the style classes are defined for a specific generic UI element.
 Some common style classes are as follows:
 
--   `OpenLeft`: Makes the button flat on its left side
--   `OpenRight`: Makes the button flat on its right side
--   `OpenBoth`: Makes the button flat on both sides; square
--   `LabelSubtext`: Makes the label smaller and a more muted color
--   `LabelKeyText`: Makes the label bold and a highlight color
--   `LabelWeak`: Weak is the opposite of strong; makes the label a more muted
-    color
+- `OpenLeft`: Makes the button flat on its left side
+- `OpenRight`: Makes the button flat on its right side
+- `OpenBoth`: Makes the button flat on both sides; square
+- `LabelSubtext`: Makes the label smaller and a more muted color
+- `LabelKeyText`: Makes the label bold and a highlight color
+- `LabelWeak`: Weak is the opposite of strong; makes the label a more muted
+  color
 
 There are many more than this, but if you want to know exactly what a given
 label does, its as simple as looking at the field's usages, and reading the
@@ -93,13 +97,13 @@ syntax highlighting in IDEs. Do NOT let anything like this happen again.
 
 There are, primarily, two types of Sheetlets:
 
--   **Generic Sheetlets**: These go in `Content.Client/Stylesheets/Sheetlets`.
-    These sheetlets concern generic UI elements used in many different UIs, and
-    should be written generically to work with any stylesheet.
--   **Specific Sheetlets**: These go along with the `*.xaml` files they are
-    associated with. These sheetlets concern UI elements that are specific to a
-    single UI, and should be written to work with the specific sheetlets they
-    are associated with.
+- **Generic Sheetlets**: These go in `Content.Client/Stylesheets/Sheetlets`.
+  These sheetlets concern generic UI elements used in many different UIs, and
+  should be written generically to work with any stylesheet.
+- **Specific Sheetlets**: These go along with the `*.xaml` files they are
+  associated with. These sheetlets concern UI elements that are specific to a
+  single UI, and should be written to work with the specific sheetlets they
+  are associated with.
 
 This document will go into more detail about the specific conventions to follow
 for both of these later.
@@ -118,25 +122,25 @@ anyone who knows CSS):
 **The selector**: This limits the elements that a style rule can affect. This is
 made up of a few different parts:
 
--   `Type`: The type of element this rule affects. Anything inheriting from this
-    type will also be affected by this rule.
--   `StyleClasses`: The classes that the element must have to be affected by
-    this rule. The element must have all of these classes to be affected by this
-    rule. This can be specified in the XML with the `StyleClasses` property.
--   `StyleIdentifier`: The identifier of the element. This is a unique
-    identifier that can be used to target a specific element. This should be
-    used sparingly, when there is only one instance of the element that needs to
-    be styled in a highly specific manner. There may only be one of these
-    specified. This can be specified in the XML with the `StyleIdentifier`
-    property.
--   `PseudoClasses`: These are special classes that can be used to target
-    elements in a specific state. For example, this is used to style buttons
-    differently when hovered or pressed or whatever. These are triggered
-    automatically through user interaction.
--   Elements may also be styled based on their parent elements, and all their
-    style properties. In the style rule definition, this is done with the
-    `.ParentOf(...)` method, and can take advantage of all the same selector
-    properties defined above.
+- `Type`: The type of element this rule affects. Anything inheriting from this
+  type will also be affected by this rule.
+- `StyleClasses`: The classes that the element must have to be affected by
+  this rule. The element must have all of these classes to be affected by this
+  rule. This can be specified in the XML with the `StyleClasses` property.
+- `StyleIdentifier`: The identifier of the element. This is a unique
+  identifier that can be used to target a specific element. This should be
+  used sparingly, when there is only one instance of the element that needs to
+  be styled in a highly specific manner. There may only be one of these
+  specified. This can be specified in the XML with the `StyleIdentifier`
+  property.
+- `PseudoClasses`: These are special classes that can be used to target
+  elements in a specific state. For example, this is used to style buttons
+  differently when hovered or pressed or whatever. These are triggered
+  automatically through user interaction.
+- Elements may also be styled based on their parent elements, and all their
+  style properties. In the style rule definition, this is done with the
+  `.ParentOf(...)` method, and can take advantage of all the same selector
+  properties defined above.
 
 Selectors that specify more of these parts are more "specific", and will take
 priority over selectors that are less specific. If you want your style rule to
@@ -200,32 +204,32 @@ hardcoding colors unnecessary. There are a set of common palettes defined in the
 `Palettes` class, and each stylesheet uses these for the following common
 palettes that sheetlets reference:
 
--   `PrimaryPalette`: Used for foreground elements
--   `SecondaryPalette`: Used for background elements
--   `PositivePalette`: A traditionally green palette used to represent success /
-    good / full
--   `NegativePalette`: A traditionally red palette used to represent errors /
-    bad / empty
--   `HighlightPalette`: Used to highlight headings or important elements
+- `PrimaryPalette`: Used for foreground elements
+- `SecondaryPalette`: Used for background elements
+- `PositivePalette`: A traditionally green palette used to represent success /
+  good / full
+- `NegativePalette`: A traditionally red palette used to represent errors /
+  bad / empty
+- `HighlightPalette`: Used to highlight headings or important elements
 
 In C#, you access the colors by accessing the properties on the `ColorPalette`
 class. From brightest to darkest, the properties are (as of writing) arranged as
 so (where lower numbers are darker):
 
--   `+0`: `Text` `Base`
--   `-1`: `TextDark`, `Element`
--   `-2`: `BackgroundLight`, `PressedElement`
--   `-3`: `Background`
--   `-4`: `BackgroundDark`, `DisabledElement`
+- `+0`: `Text` `Base`
+- `-1`: `TextDark`, `Element`
+- `-2`: `BackgroundLight`, `PressedElement`
+- `-3`: `Background`
+- `-4`: `BackgroundDark`, `DisabledElement`
 
 The reason why this approach is taken, rather than a simple array of colors, is
 for readability. The colors in a palette have specific intended uses, so
 representing that intention in your code is important to avoid mistakes and make
 code cleaner and readable.
 
-BTW, here is a
-[codepen](https://codepen.io/aspiringLich/pen/VwOXdjd?editors=1000) I created to
-help visualize the colors.
+Here is a visualization of the colors used in `NanotrasenStylesheet`'s palette:
+
+![Nanotrasen Color Palette](../assets/images/ss14-by-example/nano-palettes.png)
 
 #### `ISheetletConfig`
 
@@ -250,28 +254,29 @@ the game to log an error. If your styles are not showing up, this may be why.
 
 #### Resource Access
 
-You should access resources differently in sheetlets. Each stylesheet provides a
-list of resource roots to look in, when requesting a resource of a certain type.
-For example, the root for `NanotrasenStylesheet` for `TextureResource` is
-`/Textures/Interface/Nano`. Any texture requested with `GetTexture` will will
-append the provided relative path to the root, and return the texture if it
-exists.
+Resources are accessed different in sheetlets compared to other parts of the
+codebase. Each stylesheet provides a list of directories (roots) to use when a
+resource is requested (For example, the `TextureResource` root in
+`NanotrasenStylesheet` is `/Textures/Interface/Nano`). This means that any
+texture requested with `GetTexture` will be searched for relative to this
+directory.
 
 ### Generic Sheetlets
 
 Generic sheetlets are used for common UI elements that are used throughout many
-different UIs. Here are some conventions to follow when writing generic
-sheetlets:
+different UIs. These are grouped together in
+`Content.Client/Stylesheets/Sheetlets`. Here are some conventions to follow when
+writing generic sheetlets:
 
--   You should always select elements with `.Class` and not `.Identifier`.
--   When accessing resources, use the `GetTextureOr` method to get the texture
-    and provide a fallback root to use if the texture is not found within the
-    stylesheets roots.
--   Avoid manual hardcoding of classes. When referencing classes, you should
-    only use classes defined on the element being styled (in `StyleClass*`
-    properties) or define your own in `StyleClass.cs`.
--   If you need to access a resource that is not provided already, you should
-    add the path to the relevant `ISheetletConfig` or create a new one entirely.
+- You should always select elements with `.Class` and not `.Identifier`.
+- When accessing resources, use the `GetTextureOr` method to get the texture
+  and provide a fallback root to use if the texture is not found within the
+  stylesheets roots.
+- Avoid manual hardcoding of classes. When referencing classes, you should
+  only use classes defined on the element being styled (in `StyleClass*`
+  properties) or define your own in `StyleClass.cs`.
+- If you need to access a resource that is not provided already, you should
+  add the path to the relevant `ISheetletConfig` or create a new one entirely.
 
 <details>
 <summary>Example Code (click to expand)</summary>
@@ -329,15 +334,15 @@ same directory as the `*.xaml` file they are associated with.
 Generally, these sheetlets follow slightly different conventions compared to
 generic sheetlets:
 
--   You should prefer to select elements with `.Identifier` and not `.Class`.
--   Any styles that COULD be used by another UI should be moved to a generic
-    sheetlet.
--   Hardcoding is more relaxed, you should still try and avoid it when possible,
-    but hardcoding `StyleIdentifier`s is probably fine.
--   If you REALLY need a specific resource and its not worth adding it to an
-    `ISheetletConfig` you can access it through `ResCache` as normal.
--   You don't need to do the generic type constraints thing since the sheetlet
-    should be specific to a single UI, and thus a single stylesheet.
+- You should prefer to select elements with `.Identifier` and not `.Class`.
+- Any styles that COULD be used by another UI should be moved to a generic
+  sheetlet.
+- Hardcoding is more relaxed, you should still try and avoid it when possible,
+  but hardcoding `StyleIdentifier`s is probably fine.
+- If you REALLY need a specific resource and its not worth adding it to an
+  `ISheetletConfig` you can access it through `ResCache` as normal.
+- You don't need to do the generic type constraints thing since the sheetlet
+  should be specific to a single UI, and thus a single stylesheet.
 
 <details>
 <summary>Example Code (click to expand)</summary>
@@ -386,12 +391,12 @@ public sealed class PaperSheetlet : Sheetlet<NanotrasenStylesheet>
 
 </details>
 
-## Making your own `Stylesheet`
+## Making your own Stylesheet
 
 ```admonish note
 Multiple stylesheets only recently became feasable with the introduction of the
-Sheetlet system, so the full range of possibilities this allows has not been 
-explored. If stylesheets get used in interesting ways besides palette swaps, 
+Sheetlet system, so the full range of possibilities this allows has not been
+explored. If stylesheets get used in interesting ways besides palette swaps,
 please update this section!
 ```
 
@@ -411,6 +416,116 @@ uniform color space. When you choose new colors for your stylesheet, it may be
 helpful to use an [OKLCH Color Picker](https://oklch.com) and modify an existing
 color.
 
+## Applying a Stylesheet to your UI
+
+To apply a stylesheet to your UI, you just need to set the
+`FancyWindow.Stylesheet` to the name of the stylesheet. If you only want your UI
+to have one stylesheet this is enough. However, if you want your UI to have
+different stylesheets depending on context, there is a standard idiomatic way to
+achieve this.
+
+### Example: Syndicate Uplink UI
+
+The syndicate uplink UI actually uses a more general UI called `StoreMenu`, so
+we take a look at that. First, we need to make sure that `StoreMenu` is using
+`FancyWindow` and this won't work without it.
+
+<details>
+<summary>Example Code (click to expand)</summary>
+
+```xml
+<!-- StoreMenu.xaml-->
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    Title="{Loc 'store-ui-default-title'}"
+    MinSize="512 512"
+    SetSize="512 512">
+
+    <!-- ... -->
+
+</controls:FancyWindow>
+```
+
+```cs
+// StoreMenu.xaml.cs
+public class StoreMenu : FancyWindow
+{
+    // ...
+}
+```
+
+</details>
+
+Now, it's important to understand a little bit about how UIs fit into ECS. Each
+UI window is created by an entity. These entities are defined in prototype files.
+In the case of `StoreMenu`, `Resources/Prototypes/Store/presets.yml`. To change
+the stylesheet we can add a `StylesheetComponent`, attaching a little data to
+tell us what stylesheet this UI should use.
+
+```yml
+# presets.yml
+- type: entity
+  id: StorePresetUplink
+  abstract: true
+  components:
+      - type: Store
+        # ...
+      - type: Stylesheet # add this component to the entity prototype!
+        stylesheet: Syndicate
+```
+
+Each of these entities also owns an instance of a `BoundUserInterface`. The
+purpose of the `BoundUserInterface` is to interface with the server and manage
+the lifecycle of the UI window. What's important to us is that the BUI
+initializes and opens the UI window based on the components in the entity.
+So, now that our entity has a `StylesheetComponent` attached to it, we can query
+it and apply the stylesheet:
+
+```cs
+// StoreMenuBoundUserInterface.cs
+public class StoreMenuBoundUserInterface : BoundUserInterface
+{
+    private StoreMenu _menu;
+
+    protected override void Open() {
+        base.Open();
+
+        _menu = this.CreateWindow<StoreMenu>();
+        if (EntMan.TryGetComponent<StylesheetComponent>(Owner, out var stylesheet))
+        {
+            _menu.Stylesheet = stylesheet.Stylesheet;
+        }
+
+        // ...
+    }
+}
+```
+
+Since this pattern is so common, there's a helper method on `FancyWindow` that
+does it for you! (This is why we needed to ensure `StoreMenu` extended
+`FancyWindow`)
+
+```cs
+// StoreMenuBoundUserInterface.cs
+public class StoreMenuBoundUserInterface : BoundUserInterface
+{
+    private StoreMenu _menu;
+
+    protected override void Open() {
+        base.Open();
+
+        _menu = this.CreateWindow<StoreMenu>();
+        _menu.ApplyStylesheetFrom(Owner);
+
+        // ...
+    }
+}
+```
+
+Congratulations! Now you've dynamically applied a stylesheet to your UI window.
+
 ## Writing C# for UI
 
 > **TODO:** I don't feel confident enough in my knowledge to describe in detail
@@ -426,9 +541,9 @@ familiarity with the internals of this game, but I can give a general overview.
 
 Code you could reference:
 
--   Robotics Console
--   Reagent Dispenser
--   BatteryMenu
+- Robotics Console
+- Reagent Dispenser
+- BatteryMenu
 
 There are a few different parts to any UI. say were working with a entity called
 `MyThing`, which we wanted to show a UI for. Heres, generally, what the
@@ -436,24 +551,24 @@ structure would look like:
 
 ```yaml
 Content.Server/MyThing/:
-- Systems/:
-  - MyThingSystem.cs                # Inherits from `SharedMyThingSystem.cs`
-                                    # Takes the messages and makes changes in-world, and takes data from in-world to update the UI state.
+    - Systems/:
+          - MyThingSystem.cs # Inherits from `SharedMyThingSystem.cs`
+            # Takes the messages and makes changes in-world, and takes data from in-world to update the UI state.
 Content.Shared/MyThing/:
-- Components/:
-  - MyThingComponent.cs             # Defines the component for the entity
-- Systems/:
-  - SharedMyThingSystem.cs          # Controls the appearance data and general shared logic
-- SharedMyThing.cs                  # Defines the messages that can be sent between server and client, and the UI state
+    - Components/:
+          - MyThingComponent.cs # Defines the component for the entity
+    - Systems/:
+          - SharedMyThingSystem.cs # Controls the appearance data and general shared logic
+    - SharedMyThing.cs # Defines the messages that can be sent between server and client, and the UI state
 
 Content.Client/MyThing/:
-- Ui/:
-  - MyThingWindow.xaml              # The main window, where the main structure of the UI is defined
-  - MyThingWindow.xaml.cs           # Defines behavior for `MyThingWindow.xaml`, reading in inputs and calling `Action`s
-  - MyThingBoundUserInterface.cs    # Interfaces with the server, sending messages and updating the UI state
-- Systems/:
- - MyThingSystem.cs                 # Inherits from `SharedMyThingSystem.cs`
-                                    # Takes appearance data and makes in-world changes to reflect that
+    - Ui/:
+          - MyThingWindow.xaml # The main window, where the main structure of the UI is defined
+          - MyThingWindow.xaml.cs # Defines behavior for `MyThingWindow.xaml`, reading in inputs and calling `Action`s
+          - MyThingBoundUserInterface.cs # Interfaces with the server, sending messages and updating the UI state
+    - Systems/:
+          - MyThingSystem.cs # Inherits from `SharedMyThingSystem.cs`
+            # Takes appearance data and makes in-world changes to reflect that
 ```
 
 ### Bound User Interfaces
@@ -496,25 +611,25 @@ Content.Client/MyThing/:
 >
 > >
 >
-> -   There's a helper under this.CreateWindow<TWindow>() for BUIs that handles
->     disposing + opening + close subscription for you.
-> -   There's a method OnProtoReload that gets called on BUIs so you can
->     override and handle it without having to manually subscribe on another
->     system.
-> -   I have added prototype reload support to some stuff.
-> -   I have cleaned up a lot of BUI code. Windows now just raise events and the
->     BUI itself handles message sending.
+> - There's a helper under this.CreateWindow<TWindow>() for BUIs that handles
+>   disposing + opening + close subscription for you.
+> - There's a method OnProtoReload that gets called on BUIs so you can
+>   override and handle it without having to manually subscribe on another
+>   system.
+> - I have added prototype reload support to some stuff.
+> - I have cleaned up a lot of BUI code. Windows now just raise events and the
+>   BUI itself handles message sending.
 >
 > Some notes for future:
 >
-> -   You should spawn / delete control entities inside of EnteredTree and
->     ExitedTree rather than inside Dispose.
-> -   Controls should be able to be constructed with an empty constructor and
->     should not call BUI methods directly. This makes re-use significantly
->     easier.
-> -   All new controls must handle prototype reloading if applicable.
-> -   All new controls should prefer to use component states and not BUI states
->     where possible. These work better with prediction and are easier to use.
-> -   Controls should be able to handle components disappearing and not rely
->     upon GetComponent<T> everywhere as there are no guarantees the component
->     exists.
+> - You should spawn / delete control entities inside of EnteredTree and
+>   ExitedTree rather than inside Dispose.
+> - Controls should be able to be constructed with an empty constructor and
+>   should not call BUI methods directly. This makes re-use significantly
+>   easier.
+> - All new controls must handle prototype reloading if applicable.
+> - All new controls should prefer to use component states and not BUI states
+>   where possible. These work better with prediction and are easier to use.
+> - Controls should be able to handle components disappearing and not rely
+>   upon GetComponent<T> everywhere as there are no guarantees the component
+>   exists.
