@@ -1,4 +1,4 @@
-# Scientific research proposal
+# Scientific research rework proposal
 
 | Designers     | Implemented | GitHub Links |
 |---------------|-------------|--------------|
