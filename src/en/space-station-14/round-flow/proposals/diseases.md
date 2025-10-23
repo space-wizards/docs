@@ -54,15 +54,18 @@ Protection prioritizes targeted mitigations that let infected crew keep playing 
 * Quarantine should be avoided as a priority containment measure in most cases, as it requires the crew to remain in isolation, which is not a pleasant experience.
 
 ## Roundflow & Player interaction
+The goal of Roundflow is to make rounds more diverse for medical personnel and crew by introducing diseases whose complex mechanics allow them to be used to achieve various [gameplay goals](#game-design-rationale), from simply entertaining events (e.g., zombies) to motivating cleanliness during operations. [Countermeasures](#protection-against-spread) for contagious diseases should make infection more fair, but not completely eliminate the element of chance.
+
+### Game loop
 A sample crew gameplay loop during a virus outbreak.
 
-### Local outbreak loop
+Local outbreak:
 1. Early tells: soft symptoms on affected workers prompt self‑care and reporting.
 2. Mitigation: [protection against spread](#protection-against-spread), local cleaning, limited access to the dirty area.
 3. Diagnosis: swabs and [complete diagnostics](#complete-diagnostics) confirm disease and stages.
 4. Treatment: targeted therapy for patients, symptom suppression as needed. If not treated in time, the infection can slowly spread throughout the crew, which can lead to a [global outbreak](#global-outbreak-loop).
 
-### Global outbreak loop
+Global outbreak:
 1. Early tells: soft symptoms on affected workers prompt self‑care and reporting.
 2. Mitigation: [protection against spread](#protection-against-spread), local cleaning, limited access to the dirty area.
 3. Diagnosis: swabs and [complete diagnostics](#complete-diagnostics) confirm disease and stages.
