@@ -243,6 +243,7 @@ Space Station 14
 
 	- [Medical](en/space-station-14/departments/medical.md)
  		- [Medical Workgroup](en/space-station-14/departments/medical/medical-workgroup.md)
+ 		- [Chemistry](en/space-station-14/departments/medical/chemistry.md)
 		- [PR Guidelines](en/space-station-14/departments/medical/guidelines.md)
 
 		- [Proposals]()
