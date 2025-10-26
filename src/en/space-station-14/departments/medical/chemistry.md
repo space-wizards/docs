@@ -1,6 +1,8 @@
 # Chemistry
 > _Medical's bartender, and sometimes an arms or drug dealer._
 
+![sugar](../../../assets/images/medical/sugar.png)
+
 ## Concept
 
 Chemistry is to medical what service is to the rest of the station: a means of producing goods on-station for the benefit of others.
