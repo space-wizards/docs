@@ -53,6 +53,8 @@ Cargo may be able to get you a cartridge of pure carbon, but that costs spesos o
 Storage itself is also a resource, for both a Chemist and for anyone carrying chemicals---what's available to a passenger to carry medicine should differ from a traitor should differ from a nuclear operative corpsman.
 There should be no "best storage" for reagents.
 
+Storage should vary based on ease/speed of the chemical being given to someone---cartridges are unwieldy outside of the ChemDispenser on multiple levels, beakers and bottles require force drinking, pills require a force feed and have a delay, and syringes, hyposprays, and autoinjectors are generally smaller than anything meant to carry chemicals.
+
 > Do not: A Chemist has all the resources they will need for the round at the start of it to produce every medicine Medical might need that round, and then some. If they run out, they can order a ChemVend to get another set of roundstart chemicals.
 
 > Do: A Chemist has access to a limited set of chemicals that can be used with discretion, and if they run out, they have various means of replenishing various chemicals, but there is no one-size-fits-all solution to get everything.
