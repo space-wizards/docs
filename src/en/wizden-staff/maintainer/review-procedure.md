@@ -225,7 +225,7 @@ For example, while requesting small numerical adjustments on a `No C#` PR is fin
 In cases like these, it is best to close the PR and explain the changes that would need to be made.
 
 
-- If a PR touches code outside of your area of experise and you are not confident in properly reviewing it, you should try and contact another maintainer to help with the review if possible.
+- If a PR touches code outside of your area of expertise and you are not confident in properly reviewing it, you should try and contact another maintainer to help with the review if possible.
 
 
 - If you are helping another maintainer review a PR but do not want to do dedicate yourself to a full review, you should try and follow partial review guidelines.
