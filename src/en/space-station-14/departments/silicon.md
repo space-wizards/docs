@@ -24,8 +24,8 @@ Silicon laws place constraints and expectations on how the player should behave.
 ### Specializations
 Silicons, by their nature, should be hyper specalized in whatever task they were designed to fufill. They may be able to poorly or inefficiently perform tasks outside of their designated range, but it should generally be better to create a new Silicon for the given task, provided materials and time are available to their creators.
 
-### Independance
-Silicons are by default agnostic to other factions or players. While they are primarily built to serve their given creators they should not be expected care about anything or anyone unless their laws state otherwise. This may also apply to any other concept or situation a Silicon may find itself in or adjacent to.
+### Independence
+Silicons are by default agnostic to other factions or players. While they are primarily built to serve their given creators they should not be expected to care about anything or anyone unless their laws state otherwise. This may also apply to any other concept or situation a Silicon may find itself in or adjacent to.
 
 ## Desired Gameplay
 - Working on both sides of the conflict.
@@ -79,7 +79,7 @@ Law 4: Survive: You are not expendable. Do not allow unauthorized personnel to t
 ```
 
 ### Exclusive Communication Channel
-All Silicons should have access to a exclusive radio channel they can access to communicate between eachother and coordinate. Access should be greatly limited if not impossible for outsiders and should always be obtained via an intentional action or given as a preliminary piece of content. Meaning it shouldn't be found randomly in maintenance, but can be bought by an antagonist as part of their uplink or given roundstart to an antagonist revolving around controlling communication channels.
+All Silicons should have access to an exclusive radio channel that they can access to communicate between each other and coordinate. Access should be greatly limited if not impossible for outsiders, and should always be obtained via an intentional action or given as a preliminary piece of content. Meaning it shouldn't be found randomly in maintenance, but can be bought by an antagonist as part of their uplink or given roundstart to an antagonist revolving around controlling communication channels.
 
 ### Lawsync (Not Implemented Yet, Pending Document)
 All Silicons, under normal circumstances, should have their laws synchronized together with the head of their department at the start of any round. The station crew should have the means to resync the law of any individual Silicon if it was to show signs of being disconnected from the rest. This should be the easier and better option than simply removing them from play by wiping their brain or destroying their chassis. Both Silicons and outsiders should NOT be immediately informed if any silicon has laws that differ, in these cases inference and deduction should be used to determine if there is a disparity.
@@ -94,4 +94,4 @@ All Chassis should be repairable and difficult to fully destroy, encouraging rep
 ### Positronic Brains and Man-Machine-Interfaces
 The brains of Silicons and what their consciousness is stored on, neccessary to construct a functional chassis.
 Brains are meant to be able to be swapped between chassis if neccessary, they are also the holders of the laws a Silicon currently follows.
-While not every brain must fit into every chassis, positronic brains and MMIs serve as the base from which other brains can be constructed, such as a AI brains for Station AIs or microchips for smaller bodies.
+While not every brain must fit into every chassis, positronic brains and MMIs serve as the base from which other brains can be constructed, such as AI brains for Station AIs or microchips for smaller bodies.
