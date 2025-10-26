@@ -239,7 +239,7 @@ In cases like these, it is best to close the PR and explain the changes that wou
 
 - If you leave a partial review, you should clearly state so. You should also try to state why the review is partial, for example:
   - There were a number of standout coding issues that should be addressed before leaving a full review.
-  - This PR touches an area of your expertise and you noticed some coding issues you need addressed, you do not plan to leave a full review.
+  - This PR touches an area of your expertise, and you noticed some coding issues that need to be addressed; you do not plan to leave a full review.
   - You wanted to request a couple general things you want changed, but do not plan on returning to the PR later.
 
 - Explaining why you're leaving a partial review helps communicate your intentions to other maintainers so that they can do full reviews later, and approve once their reviews are finished and your changes have been addressed.
