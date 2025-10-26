@@ -38,7 +38,7 @@ How Chemistry fits into the game loop of players interacting with it should not 
 
 > Do: A Chemist, wanting to make a specialty request, has to tackle the choice of how they're going to get the prerequisites---can they cooperate with a Botanist to get precursors from plants, should they see if Atmospherics has anything to spare, or should they tank the cost of synthesizing from raw and have to order some cartridges from Cargo to replace the cost?
 
-> Do: A Passenger, wanting to synthesize gunpowder, without asking the Chemist to make an obviously suspicious request, has to scrounge for the ingredients in maintenance, either directly, or in forms that can be broken down with the equipment of various jobs. They also have to source something from Botany and convince the Chemist to give them 10u of something, or perhaps they can convince Cargo to fill an order for a cartridge of it.
+> Do: A Passenger wants to synthesize gunpowder without asking the Chemist to make an obviously suspicious request. They have to scrounge for the ingredients in maintenance, either directly, or indirectly in forms that can be broken down with equipment given to various jobs. They also have to source something from Botany and convince the Chemist to give them 10u of something, or perhaps they can convince Cargo to fill an order for a cartridge of it.
 
 ### Pillar 3: Resource management reigns supreme
 
@@ -48,22 +48,28 @@ Players interacting with Chemistry from different angles should have different r
 Nobody should be able to have a full supply of everything, and players should not be so inundated with resources that storage becomes the primary concern over availability.
 
 At the same time, resources should be flexible in terms of how they are acquired, with different pros and cons to consider.
-Cargo may be able to get you a cartridge of pure carbon, but that costs spesos or may be defunct, so you might consider processing some wood from the Botanist or maintenance to get carbon instead in a pinch.
+Cargo may be able to get you a cartridge of pure carbon, but that requires that you have money _and_ that Cargo is operational.
+You might consider processing some wood from the Botanist or maintenance to get carbon instead in a pinch.
 
-Storage itself is also a resource, for both a Chemist and for anyone carrying chemicals---what's available to a passenger to carry medicine should differ from a traitor should differ from a nuclear operative corpsman.
+Storage itself is also a resource, for both a Chemist and for anyone carrying chemicals---available options to carry and distribute medicine should differ from passenger, to traitor, to physician, to nuclear operative.
+
+Storage should be balanced based on ease/speed of the chemical being given to someone---cartridges are unwieldy outside of the ChemDispenser on multiple levels, beakers and bottles require force drinking, pills require a force feed and have a delay, and syringes, hyposprays, and autoinjectors are generally smaller than anything meant to carry chemicals.
+
 There should be no "best storage" for reagents.
 
-Storage should vary based on ease/speed of the chemical being given to someone---cartridges are unwieldy outside of the ChemDispenser on multiple levels, beakers and bottles require force drinking, pills require a force feed and have a delay, and syringes, hyposprays, and autoinjectors are generally smaller than anything meant to carry chemicals.
+> Do not: A nuclear operative corpsman has an entire medbay's worth of chemicals in their bag which allows them to account for every situation for an entire mission without ever having to worry about conserving or running out of chemicals.
 
 > Do not: A Chemist has all the resources they will need for the round at the start of it to produce every medicine Medical might need that round, and then some. If they run out, they can order a ChemVend to get another set of roundstart chemicals.
 
 > Do: A Chemist has access to a limited set of chemicals that can be used with discretion, and if they run out, they have various means of replenishing various chemicals, but there is no one-size-fits-all solution to get everything.
 
+> Do: A traitor chemist has access to the chemicals they need to prolong their fights, but not enough to keep them fighting forever. They will eventually need to step back and replenish their supplies after a couple of fights.
+
 ### Pillar 4: Chemistry is not required
 
 The act of Chemistry can be a boon to a round, but just like other mechanics, explicit player interaction with it should not be outright required for basic function of any department it participates in.
 
-That is not to say that Chemistry's absence shouldn't be felt.
+**That is not to say that Chemistry's absence shouldn't be felt.**
 
 Construction is a good reference point---it is not required until destruction happens, and e.g. air starts leaking out of the station.
 Someone that can do Construction can properly seal the patch and re-air the room, but firelocks will drop on their own and prevent the situation from worsening.
