@@ -228,7 +228,7 @@ In cases like these, it is best to close the PR and explain the changes that wou
 - If a PR touches code outside of your area of expertise and you are not confident in properly reviewing it, you should try and contact another maintainer to help with the review if possible.
 
 
-- If you are helping another maintainer review a PR but do not want to do dedicate yourself to a full review, you should try and follow partial review guidelines.
+- If you are helping another maintainer review a PR but do not want to dedicate yourself to a full review, you should try and follow partial review guidelines.
 
 
 ## Partial Review guidelines.
