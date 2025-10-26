@@ -50,6 +50,9 @@ Nobody should be able to have a full supply of everything, and players should no
 At the same time, resources should be flexible in terms of how they are acquired, with different pros and cons to consider.
 Cargo may be able to get you a cartridge of pure carbon, but that costs spesos or may be defunct, so you might consider processing some wood from the Botanist or maintenance to get carbon instead in a pinch.
 
+Storage itself is also a resource, for both a Chemist and for anyone carrying chemicals---what's available to a passenger to carry medicine should differ from a traitor should differ from a nuclear operative corpsman.
+There should be no "best storage" for reagents.
+
 > Do not: A Chemist has all the resources they will need for the round at the start of it to produce every medicine Medical might need that round, and then some. If they run out, they can order a ChemVend to get another set of roundstart chemicals.
 
 > Do: A Chemist has access to a limited set of chemicals that can be used with discretion, and if they run out, they have various means of replenishing various chemicals, but there is no one-size-fits-all solution to get everything.
@@ -90,7 +93,15 @@ In particular, electrolysis, centrifugation, and grinding take center stage once
 
 The ChemDispenser becomes the main source of raw chemicals roundstart, given the absence of the ChemVend---it should operate on cartridges that can only be used by the ChemDispenser, and these cartridges can be found roundstart, or ordered individually from Cargo at great price.
 
+To avoid these cartridges becoming the undisputed best container, they should not be refillable, or at the very least, not refillable with arbitrary chemicals.
+Being able to re-insert carbon into a carbon cartridge _may_ be acceptable, but ideally, the UI should be such that experienced players make few mistakes that would demand re-inserting raw resources into them.
+
 Given the tighter constraints on resources, the ChemMaster's infinity storage/lavabeaker behaviour can be removed outright, and the machine refocused on packaging chemicals.
+
+Overall, there should not be an "all-in-one" machine for chemistry.
+
+The dispenser dispenses, the master packs, the electrolysis unit electrolyses, so on and so forth.
+And of course, the various machines should have various budget equivalents, i.e. just pouring things, handmade pill press, putting a stunprod in a beaker, using a microwave, etc.
 
 ### What Medicines Are There?
 
