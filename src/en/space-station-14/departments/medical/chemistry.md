@@ -40,7 +40,7 @@ How Chemistry fits into the game loop of players interacting with it should not 
 
 > Do: A Chemist, wanting to make a specialty request, has to tackle the choice of how they're going to get the prerequisites---can they cooperate with a Botanist to get precursors from plants, should they see if Atmospherics has anything to spare, or should they tank the cost of synthesizing from raw and have to order some cartridges from Cargo to replace the cost?
 
-> Do: A Passenger wants to synthesize gunpowder without asking the Chemist to make an obviously suspicious request. They have to scrounge for the ingredients in maintenance, either directly, or indirectly in forms that can be broken down with equipment given to various jobs. They also have to source something from Botany and convince the Chemist to give them 10u of something, or perhaps they can convince Cargo to fill an order for a cartridge of it.
+> Do: A Passenger wants to synthesize gunpowder without asking the Chemist to make an obviously suspicious request. They have to scrounge for the ingredients in maintenance, acquiring them either directly, or indirectly in forms that can be broken down with readily accessible tools or improvisation. They also have to source something from Botany and convince the Chemist to give them 10u of something, or perhaps they can convince Cargo to fill an order for a cartridge of it.
 
 ### Pillar 3: Resource management reigns supreme
 
