@@ -233,7 +233,7 @@ In cases like these, it is best to close the PR and explain the changes that wou
 
 ## Partial Review guidelines.
 
-- Maintainers are not expected to be familiar with every system in the game or have knowledge of all fields of expertise in computer science. As such it is always okay to ask another maintainer to help with your review.
+- Maintainers are not expected to be familiar with every system in the game or have knowledge of all fields of expertise in computer science. As such, it is always okay to ask another maintainer to help with your review.
 
 - This policy exists to lower the workload on maintainers who are requested to help with a review due to their expertise, as well as improve communication around partial reviews. A maintainer may choose to leave a full review and ignore these guidelines if they want. 
 
