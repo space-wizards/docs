@@ -70,7 +70,7 @@ You are free to make changes to your PR after submitting, for example, if you ma
 
 Reviews are an important part of the pull request process. Reviews help us obtain feedback from the community and maintain a high quality of code in the codebase. Since maintainers are volunteers, we ask for your patience. The review process for large changes can take up to several months.
 
-We appreciate and consider all player feedback. However, maintainers ultimately have the final say which changes are merged into the repository. Keep in mind that even if a PR is merged that it may be reverted as part of the next maintainer meeting and may not end up in the next stable release. See our [release model](./releases.md) for more details.
+We appreciate and consider all player feedback. However, maintainers ultimately have the final say on which changes are merged into the repository. Keep in mind that even if a PR is merged, it may be reverted as part of the next maintainer meeting and may not end up in the next stable release. See our [release model](./releases.md) for more details.
 
 ## Getting Reviews
 
