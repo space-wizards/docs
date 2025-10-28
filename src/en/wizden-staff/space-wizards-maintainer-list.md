@@ -74,3 +74,12 @@ Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintain
 **Medical**
 - Princess-Cheeseballs
 - sowelipililimute
+
+**Science**
+- chromiumboy
+- Fildrance
+
+**Silicon**
+- ScarKy0
+- chromiumboy
+- sowelipililimute
