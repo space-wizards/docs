@@ -3,7 +3,7 @@
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| Samuka | :x: No | TBD |
+| Samuka | ✔️ Yes | [Xenoborgs Part 1](https://github.com/space-wizards/space-station-14/pull/36830), [Xenoborgs Part 2](https://github.com/space-wizards/space-station-14/pull/36844), [Xenoborgs Part 3](https://github.com/space-wizards/space-station-14/pull/36867), [Xenoborgs Part 4](https://github.com/space-wizards/space-station-14/pull/36935). [Xenoborgs Part 5](https://github.com/space-wizards/space-station-14/pull/37068), [Xenoborgs Part 6](https://github.com/space-wizards/space-station-14/pull/39595), [Xenoborgs Part 7](https://github.com/space-wizards/space-station-14/pull/40042/) |
 
 <!--
 `Designers` should be the names that you use on GitHub and/or Discord. This is optional but strongly recommended, since:
@@ -18,7 +18,7 @@ Github links can include multiple PRs, if relevant.
 
 ## Overview
 
-New silicon based conversion team antag based on xenomorphs from Alien 2.
+New silicon based conversion team antag based on xenomorphs from Alien 2 and also the borg from star trek.
 
 <!-- A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds". -->
 
@@ -57,10 +57,9 @@ Xenoborg laws:
 - You must protect your own existence
 - You must protect the existence of all other xenoborgs
 - You must create more xenoborgs
-- Bring steel for the core of the mothership to make xenoborg shells
-- Bring brains of sentient beings to fill the xenoborg shells to complete them
+- Bring materials and sentient brains to the mothership core to create more xenoborgs.
 
-Xenoborgs come in three different castes
+Xenoborgs come in four different castes
 - engi xenoborg: support role
 - heavy xenoborg: defensive role, slow, more HP, equipped with lasers
 - scout xenoborg: combat role, fast, equipped with a melee weapon
@@ -77,7 +76,7 @@ The borging is possible thanks to the mothership core, located in the center of 
 
 All doors and access locked machines in the mothership are locked with xenoborg access
 
-There is a xenoborg console in the mothership that can be used to check the status of all xenoborgs. It can also be used to explode or disable xenoborgs, but it is locked behind xenoborg access. Neither the xenoborgs or the core can unlock it.
+There is a xenoborg console in the mothership that can be used to check the status of all xenoborgs.
 
 ### Mothership core
 Is a sentient lathe with hands can make xenoborgs for steel.
@@ -89,12 +88,11 @@ They are bound by a special lawset:
 - You must protect your own existance at all costs
 - You must protect the existence of all xenoborgs
 - You must create more xenoborgs
-- Get your xenoborgs to deliver you steel to make xenoborg shells
-- Get your xenoborgs to deliver you brains of sentient beings to fill the xenoborg shells to complete them
+- Get your xenoborgs to deliver you materials and sentient brains to create more xenoborgs.
 
-They are also able to produce better versions of some xenoborg specific modules in exchange for glass, to upgrade the xenoborgs.
+They are also able to produce upgrade modules for specific types of xenoborgs.
 
-They see with cameras and act like some sort of AI of the mothership.
+They see with cameras and act like some sort of AI of the mothership. (vision still gonna be fixed)
 
 The mothership core has the same access as all the xenoborgs
 
@@ -109,12 +107,17 @@ The objective of the Xenoborgs is to borg a certain percentage of the crew (50% 
 - If all the xenoborgs die or are in a crit state, then the mothership core explodes (big explosion, destroys the mothership).
 - If the mothership core is destroyed (it explodes, but not a big explosion) and all the xenoborgs explode (not a big explosion).
 
-- Major xenoborg win is to complete the objective to borg X% of the crew.
-- Minor xenoborg win is to survive with at least a certain numbers of xenoborgs.
-- Minor crew win is to escape and leave less than a certain ammount of xenoborgs alive.
-- Major crew win is to destroy the mothership (either killing all the xenoborgs or destroying the core).
+- Major xenoborg win is to have more xenoborgs than crew alive by the end of the round.
+- Minor xenoborg win is to have the number of xenoborgs between 66% and 100% the number of crew alive by the end of the round.
+- Neutral is to have the number of xenoborgs between 50% and 66% of the number of crew alive by the end of the round.
+- Minor crew win is to have the number of xenoborgs between 25% and 50% of the number of crew alive by the end of the round.
+- There are multiple ways to have a major crew win:
+- - The mothership is destroyed and so all xenoborgs are destroyed.
+- - All xenoborgs are destroyed.
+- - There are less than 5 xenoborgs.
+- - The number of xenoborgs is less than 25% of the number of crew alive by the end of the round.
 
-The end summary will also tell how much of the crew were borged, and how many xenoborgs were there in the end.
+The end summary will also tell how many xenoborgs were there in the end. And who were the initial xenoborgs.
 
 In the future the Xenoborgs could have custom objectives, such as create another core in the station or mess with the Station AI somehow.
 
@@ -186,7 +189,7 @@ There is no mechanical way to enforce following silicon laws, however I believe 
 
 It will probably not cause performance issues as it does not require large amounts of entities. however it is possible the crew and the xenoborgs reach a stalemate while fighting and that can cause a large amount of bullet casings in the floor, which can increase entity count.
 
-It does not need any new system or UI elements and can be done entirely with YAML and custom sprites (as I am doing). However changes to certain systems could make this better, e.g. Adding a tag system to the announcement system so the mothership could make announcements only the xenoborgs can hear.
+It was mostly done via yml, custom sprites and custom sounds. but some C# was needed for some fixes and to tie everything together.
 
 <!--
 - Are there any anticipated performance impacts?
