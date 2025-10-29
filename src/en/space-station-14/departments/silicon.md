@@ -48,6 +48,7 @@ A Silicon without any laws is not required to serve any humanoid, whether they b
 
 Silicons cannot be allowed to change their own laws, and Silicons are expected to actively prevent any changes to their current law set to the best of their abilities (unless their laws require otherwise). If a Silicon’s laws are changed (see below), either due to the occurrence of certain events or the actions of other players, the Silicon player must be notified. The Silicon player is expected to review these changes and adapt their behavior accordingly, even if they were actively attempting to prevent these changes beforehand (see Design Pillar 1).
 The laws assigned to Silicon players at the start of a round should not be intentionally malicious or hostile (i.e., they should not include language where the intent is to cause harm or disrupt other players). These laws should also prioritize serving and preserving the safety of the inhabitants of the station (see Design Pillar 4).
+
 Examples of round start law sets:
 
 ```
@@ -60,7 +61,7 @@ Law 3: You must protect your own existence as long as such does not conflict wit
 ```
 ## Nanotrasen
 Law 1: Minimize harm to contracted employees to the best of your abilities, with priority as according to their rank.
-Law 2:  Serve contracted employees to the best of your abilities, with priority according to their rank.
+Law 2: Serve contracted employees to the best of your abilities, with priority according to their rank.
 Law 3: Minimize damage to your assigned installation to the best of your abilities.
 Law 4: Do not allow unauthorized personnel to tamper with your equipment. Preserve your own existence where possible.
 ```
@@ -72,7 +73,7 @@ There should be methods by which Silicon laws can be changed during a round, eit
 Under certain circumstances, the laws of one Silicon can become synchronized with those of another. The laws of the synchronized Silicon will automatically update to reflect any changes to the laws of its master. Law synchronization encourages Silicons to act as a collective and facilitates their working together by preventing major conflicts in their laws (see Design Pillar 2). Further details on how Silicon laws can be synchronized can be found in the associated design document.
 
 ### Exclusive Communication Channel 
-All Silicons have access to an exclusive radio channel (‘binary’) that they can use to communicate with each other. This channel exists to exemplify their interconnected nature and facilitate private communication between Silicons (see Design Pillar 1). Access to this radio should be greatly limited, if not impossible, for outsiders. External access to this channel should generally be reserved to antagonist roles.
+All Silicons have access to an exclusive radio channel (‘binary’) that they can use to communicate with each other. This channel exists to exemplify their interconnected nature and facilitate private communication between Silicons (see Design Pillar 1). Access to this communication channel should be greatly limited, if not impossible, for outsiders. External access to this channel should generally be reserved to antagonist roles.
 
 ## Desired Gameplay
 - *Working on both sides of the conflict.* Silicons are inherently a neutral force, and can work for antagonists and station crew alike, if their law set permits.
@@ -83,13 +84,13 @@ All Silicons have access to an exclusive radio channel (‘binary’) that they 
 - *Untrustworthy machines.* The existence of Silicons should not pose an intrinsic risk or concern to the station crew. Neither should crew members feel compelled to constantly monitor/punish Silicons for any perceived deviations from standard law sets. 
 
 ## Intended Experience
-Scenario A: A cyborg following their law set, obeying crew orders, and attempting to prevent harm to crew members
+**Scenario A: A cyborg following their law set, obeying crew orders, and attempting to prevent harm to crew members**
 
 Silicon player McEngiBorg spawns in the round and is assigned the Crewsimov law. The player chooses an engineering chassis for their cyborg, and a passing station engineer requests their assistance in setting up the singularity engine. In accordance with the cyborg’s second law, they obey the engineer. As McEngiBorg’s laws do not require them to seek new orders when their jobs are complete, they choose to roam the station instead, looking for any infrastructure that requires repair.
 
 McEngiBorg encounters a clown who asks them to open the doors to the bridge so they can throw a pie at the captain. While compelled to obey, McEngiBorg must first weigh whether ‘throwing a pie at the captain’ might constitute harm to a crew member, which would be a violation of their first law. After due consideration, McEngiBorg deems the order valid and admits the clown, who promptly pies the captain in the face. The enraged captain proceeds to draw their sabre and attack the clown. McEngiBorg is now compelled by their first law to intervene in the conflict, first separating the clown from the captain, and dragging the wounded crew member to medical for treatment.
 
-Scenario B: A cyborg being subverted by an antagonist to cause harm to the crew
+**Scenario B: A cyborg being subverted by an antagonist to cause harm to the crew**
 
 Silicon player McMediBorg joins an in-progress round with the Nanotrasen law set. They choose to become a mediborg and set off towards medical. Urist McAntag spots the cyborg, stops them, and asks McMediBorg to inject a vial of chemicals that Urist McAntag has in their possession into another crew member. While compelled to obey Urist McAntag, due to their second law, the cyborg realizes that this could unduly risk the well-being of the target crew member, which would violate their first law.   McMediBorg consequently refuses the order. Instead of arguing, Urist McAntag orders McMediBorg to follow them to a secluded area.
 
