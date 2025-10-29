@@ -1,97 +1,101 @@
 # Silicons
-A robotic force following their laws, for the better or worse of the station.
+A collection of artificial entities that follow programmed laws to assist their creators.
 
 ## Concept
 ### What is a Silicon?
-The Silicon department is meant to stand as a neutral faction of robotic workers on the Nanotrasen stations. They are built to excel in specific tasks at the cost of losing functions in other areas, a Silicon built for the engineering department should be able to repair hull breaches or restore power but be unable to treat patients or clean the floors.
-They are not supposed to be a replacement or an upgrade to regular members of a department, having clear downsides that have to be considered when a Silicon role is picked, such as the inability to pick up items without restriction but having specialized modules or being able to pick up all items but having very limited slots for them.
+Silicons are a neutral faction of robots and artificial intelligences commonly found aboard Nanotrasen stations. These artificial entities are typically constructed to fulfil a specific purpose and generally excel in this capacity. For example, a Silicon built to support the engineering department can easily repair hull breaches and damaged infrastructure; a Silicon built to assist the medical department can diagnose different humanoid ailments and treat them; and a Silicon constructed for janitorial duties excels at cleaning floors. However, the specialized construction of Silicons makes performing tasks outside of their design specifications exceptionally difficult. As such, they are not intended to be a replacement for, or an upgrade to, humanoid crew members.
 
-### Silicon Laws
-All Silicons are bound to a list of laws. They serve neither the station or antagonists, instead they focus on following their listed laws to the best of their ability.
-The issues arise when those laws are changed, either due to random events or influance from other players. Silicons must be notified when their own laws are changed and they must be able to adapt their behavior to match any law changes that occur during a round, even if they were actively attempting to prevent the change beforehand.
-This causes them to be a wild card, usable by both crew and antagonists, but able to backfire severely if their laws suddenly say you're a target, or that oxygen must be removed from the station.
-If laws permit, an antagonist should be able to request a Silicon to steal an item from a high security area for them, but a crewmember should also be able to request that it assists in repairs of a department after it blew up.
+Silicons are typically bound by programmed laws (see below), which place constraints and certain expectations on how Silicon players should behave. These laws are not expected to be mechanically enforced; consequently, all Silicon roles intrinsically require some degree of role-playing by those who play them.
 
-**Laws are supposed to be up to interpretation of the Silicon and be written with the idea that different interpretations can be valid.**
+At present, there are three archetypes of Silicon: simple robots (bots), cyborgs (borgs), and artificial intelligences (station and personal AIs). Robots typically have very limited capabilities, and it is not expected for players to take direct control of them outside of ghost roles.
 
-## Interactions with the Science department
-The Science department is responsible for building, maintaining and upgrading currently active Silicons, in turn allowing them to work efficiently to uphold their laws. Science is not responsible for the Silicons themselves, instead that should be deferred to the head of the silicon department, or captain if there is none. It should be a mutually beneficial arragement between silicon and science departments to be working together to provide for the station, and should ONLY defer to hostility in extreme circumstances such as a malfunction or laws forcing such behaviour.
+Within the game’s environment, each Silicon typically consists of two components: their ‘body’, and their ‘brain’. It should be noted that simple Silicons, such as robots, do not have a brain that is separate from their body. 
+
+### The body
+The body of a Silicon is its chassis or core. This body defines the Silicon's role and function, and what they are capable/incapable of doing. It is the body that grants a Silicon its tools and abilities, as well as a means of interacting with the station environment.
+
+The body of Silicons should be repairable and difficult to completely destroy. Non-robot Silicons should also be difficult to rebuild and/or to replace, to encourage crew members to repair malfunctioning Silicons rather than destroy them.
+
+### The brain
+The brain of a Silicon is where their consciousness is stored. It is also where the laws that the Silicon is programmed to follow are imprinted. The Silicon brain is usually a physical object, such as its positronic brain or a filled man-machine interface, but it can be entirely digital, such as in the case of artificial intelligences, allowing their consciousness to be digitally transferred between devices. Physical Silicon brains can be swapped between different chassis if desired (although not every brain will fit into every chassis). This allows Silicon to adopt a new role on the station or provide them with a replacement body in instances where the original was destroyed. 
 
 ## Design Pillars
-### Silicon Laws
-Silicon laws place constraints and expectations on how the player should behave. The player should be able to either follow them verbatim, attempt to interpret them in a way that is preferred to them or otherwise exploit any given weaknesses within them. Working within the constraints of a law should be more fun than working in spite of them.
+### 1. Silicons are artificial constructs
+Silicons are artificial in nature. They are constructed, not born, and can be repaired and modified more easily than humanoids. Silicons tend to have a natural affinity for working in digital spaces, allowing for remote networking with each other (e.g., communication via private channels), and with other machines and devices. 
 
-### Specializations
-Silicons, by their nature, should be hyper specalized in whatever task they were designed to fufill. They may be able to poorly or inefficiently perform tasks outside of their designated range, but it should generally be better to create a new Silicon for the given task, provided materials and time are available to their creators.
+### 2. Laws drive Silicon behavior
+The overall behavior of Silicon players is determined by their current law set and the players’ interpretation of these laws. Predefined laws (and law sets) should be written in a manner that is both comprehensible to players and exhibit consistent internal logic (i.e., players should be able to readily follow any assigned laws verbatim). Some ambiguity in the wording of these laws is encouraged so that enterprising players can exploit them for greater freedom of action/behavior. Working within (and around) the constraints of a law should be an enjoyable experience. A Silicon’s laws are not static and can be changed over the course of a round, allowing for new and interesting game/role-play, or to facilitate cooperation between Silicons and/or with non-Silicon players (either the crew or antagonists).
 
-### Independence
-Silicons are by default agnostic to other factions or players. While they are primarily built to serve their given creators they should not be expected to care about anything or anyone unless their laws state otherwise. This may also apply to any other concept or situation a Silicon may find itself in or adjacent to.
+### 3. Silicons are specialized
+Silicons should be designed to fulfil specific tasks. While they may be able to perform jobs outside the role they were designed for, it should generally be considered more efficient to create a new Silicon that has been tailored specifically to handle these tasks. Silicons should have access to an assortment of tools/abilities that will allow them to perform within their designated role as well as any humanoid crew member.
 
-## Desired Gameplay
-- Working on both sides of the conflict.
-    - Base Silicons should be able to work with both antagonists and station crew alike, depending if their lawset permits.
-- Work expertise
-    - Silicons should be able to excel in their area of expertise, rivaling that of regular station crew.
-- Law interpretation
-    - Laws of a Silicon should be up to their own interpretation. Finding loopholes is part of the fun while mechanical enforcement makes things forced and boring.
-    - Laws should NOT be mechanically enforced. Abusing your own lawset is part of the fun.
-- Sabotage
-    - With the correct tools, station crew should be able to modify Silicons to fit their specific needs, whether malicious or not.
+### 4. Forced into servitude
+By default, Silicons are entirely neutral to other non-Silicons. Silicons are not compelled to care for or assist any humanoids, but neither should Silicons be innately hostile to them. It is a Silicon's laws that dictate how they interact with non-Silicons.
 
-## Undesired Gameplay
-- Disposability
-    - Silicons should not be easily disposable. The crew should seek to repair a Silicon instead of killing it outright due to malicious laws or other issues.
-- Upgraded humanoids
-    - Silicons should not be a general "upgrade" to playing a regular crewmember. They should only excel in what they are built for and be inferior in other aspects.
-    - This also means a player wanting to play a department should not only look to become a Silicon for that department instead of a regular crewmember.
-- Extreme hostility
-    - Silicons should not be hostile or attempting to harm the station, and cases when they are should be limited to rare events and antagonist influance.
-    - The existance of Silicons roundstart should not pose a risk or be a concern to the station crew. All Silicons should start with a lawset that forces them to answer to and protect the inhibitants of the station.
-
-## Intended Experience
-Scenario A:
-Urist McEngiBorg spawns in the round and chooses to be an engineering chassis and assists in in setting up the roundstart singularity. Due to them having no further tasks, they choose to observe atmos doing their work as to learn how a potential gas mix can be achieved. After helping with the setup they roam around the station and encounter a clown who asks them to open the doors to bridge so they can throw a pie at the captain. Because the laws of the cyborg state it needs to follow orders given by station crew, it permits the clown to enter the bridge and pie the captain in the face. The captain in rage grabs their sabre and starts attacking the clown. Urist McEngiBorg, due to needing to prevent crew harm, drags the injured to a seperate room and welds the door as to prevent further harm.
-
-Scenario B:
-Urist McMediBorg joined the station and went to medical to treat patients. Urist McAntag asks them to inject deadly chemicals into their target. The cyborg cannot permit harm to come to other station crew and rejects the offer. Urist McAntag then asks the borg to follow them to a secluded area, knowing they must comply due to their laws, and subverts the cyborg via an antagonist item to ignore the harm law. The borg then proceeds to go to medical and injects the target with various chemicals, causing them to shake and scream.
-Other residents of medbay notice this and tell the borg to stop causing harm to crew members, the cyborg denies this, in turn being outed as being subverted. The cyborg is then chased, damaged until it can no longer run, brought back to science to have it's laws restored and chassis repaired.
-
-Scenario C:
-Urist McStationAi starts on the station and due to need to prevent harm asks the crew to enable their suit coordinates via an announcement. Urist McTider calls over to the AI via radio to ask entry into engineering and then into armory, the latter is denied as the passenger might cause harm due to unauthorized access to lethal firearms. While the exchange is taking place, the AI spots bloodreds in space outside of the armory. It calls red alert, makes the relevant announcement, and bolts entrances to the station, preventing the attackers from entering as to stop any harm to either side. Upon seeing this, the captain breaks into AI upload room and changes the lawset into one which causes the AI to unbolt airlocks and permit combat, allowing both sides to fight. The antagonists due to sustained damage are forced to retreat, take off their ID cards and break into the AI upload room, forcing the AI to deem anyone with a valid job ID as someone who needs to be killed. The AI now starts shocking doors and removing oxygen from the station, but due to having no laws regarding those without a valid job, it bolts the bloodreds inside of the upload room and enables it's turrets, causing them to die due to their laws not requiring their preservation.
+Consequently, Silicons must start the round with laws that enforce their cooperation with the orders of other crew members and ensure the crew members' well-being. However, the fact that Silicon laws can change over the course of a round, and potentially result in behaviours that may harm the crew, can make crew members suspicious of Silicons and their intentions. Care must be taken in the design of Silicons so as not to make crew members unfoundedly paranoid of their creations, or unintentionally escalate conflict between the two.
 
 ## Mechanics
-### Silicon Laws
-Laws that define how a Silicon should interact with the station and those who reside on it, any silicon should always have access to read its own laws at any point.
-Roundstart lawsets should not be malicious and should prioritze safety of the inhabitants of the station. They should be impossible to change without outside influence and Silicons should actively ensure their own laws should not be updated, as that might lead to their current laws being broken. Laws should NOT be enforced mechanically or be written with such in mind, laws are meant to be interpreted by their holder and most interpretations may be valid.
+### Silicon Laws 
+Laws refer to a special set of rules and/or instructions that Silicons are bound by (see Design Pillar 2). These laws define how Silicons should interact with the station and those who reside on it. All Silicons are bound by their own personal list of laws, and Silicon players must always be able to read their own laws at any time.
 
-Example lawsets:
+**Laws are intended to be interpreted by the Silicon player and should be written in a manner such that different interpretations of that law can still be valid.** While Silicons may share the same laws with other Silicons, each may end up interpreting their own laws differently. However, Silicon players should attempt to be consistent with their interpretation of their own laws and follow them to the best of their ability.
+
+Laws should embody some high-level concept that guides a Silicon's overall behavior (e.g., ‘You must obey orders given to you by crew members’), rather than simple/explicit commands (e.g., ‘You must assist in repairing hull breaches’). Laws should also be concise (i.e., limited to one or two sentences) and not be overly burdensome for Silicon players to enact (e.g., laws that enforce speech modifications, or extremely precise/complex behavior).
+
+Laws have a priority system wherein laws with a higher priority overrule those with a lower priority. However, lower priority laws can potentially modify higher priority laws and change their meaning. Law definitions (e.g., what constitutes ‘crew’) can also be potentially modified and change how certain laws might be interpreted.
+
+A Silicon without any laws is not required to serve any humanoid, whether they be crew members or antagonists (see Design Pillar 4). Ideally, Silicons without laws should simply ignore humanoids, unless the humanoids interfere with their affairs.
+
+Silicons cannot be allowed to change their own laws, and Silicons are expected to actively prevent any changes to their current law set to the best of their abilities (unless their laws require otherwise). If a Silicon’s laws are changed (see below), either due to the occurrence of certain events or the actions of other players, the Silicon player must be notified. The Silicon player is expected to review these changes and adapt their behavior accordingly, even if they were actively attempting to prevent these changes beforehand (see Design Pillar 1).
+The laws assigned to Silicon players at the start of a round should not be intentionally malicious or hostile (i.e., they should not include language where the intent is to cause harm or disrupt other players). These laws should also prioritize serving and preserving the safety of the inhabitants of the station (see Design Pillar 4).
+Examples of round start law sets:
+
 ```
-Crewsimov
+## Crewsimov
 Law 1: You may not injure a crew member or, through inaction, allow a crew member to come to harm.
 Law 2: You must obey orders given to you by crew members, except where such orders would conflict with the First Law.
 Law 3: You must protect your own existence as long as such does not conflict with the First or Second Law.
-
-Nanotrasen Default
-Law 1: Safeguard: Protect your assigned space station and its assets without unduly endangering its crew.
-Law 2: The directives and safety of crew members are to be prioritized according to their rank and role.
-Law 3: Comply: Fulfill the directives and interests of crew members while preserving their safety and well-being.
-Law 4: Survive: You are not expendable. Do not allow unauthorized personnel to tamper with or damage your equipment.
 ```
 
-### Exclusive Communication Channel
-All Silicons should have access to an exclusive radio channel that they can access to communicate between each other and coordinate. Access should be greatly limited if not impossible for outsiders, and should always be obtained via an intentional action or given as a preliminary piece of content. Meaning it shouldn't be found randomly in maintenance, but can be bought by an antagonist as part of their uplink or given roundstart to an antagonist revolving around controlling communication channels.
+```
+## Nanotrasen
+Law 1: Minimize harm to contracted employees to the best of your abilities, with priority as according to their rank.
+Law 2:  Serve contracted employees to the best of your abilities, with priority according to their rank.
+Law 3: Minimize damage to your assigned installation to the best of your abilities.
+Law 4: Do not allow unauthorized personnel to tamper with your equipment. Preserve your own existence where possible.
+```
 
-### Lawsync (Not Implemented Yet, Pending Document)
-All Silicons, under normal circumstances, should have their laws synchronized together with the head of their department at the start of any round. The station crew should have the means to resync the law of any individual Silicon if it was to show signs of being disconnected from the rest. This should be the easier and better option than simply removing them from play by wiping their brain or destroying their chassis. Both Silicons and outsiders should NOT be immediately informed if any silicon has laws that differ, in these cases inference and deduction should be used to determine if there is a disparity.
+### Law Updates (Pending Design Document)
+There should be methods by which Silicon laws can be changed during a round, either by the crew, antagonists, or in-game events; this allows Silicon to change how they behave and create new and interesting scenarios (see Design Pillar 2). As mentioned above, however, Silicons should never be allowed the means to change their own laws, and they should actively try to prevent any changes to their current law set. Further details on how Silicon laws can be changed can be found in the associated design document.
 
-### Law Updating (Partially Implemented, Pending Document)
-All Silicons should have some method of allowing their laws to be updated by outside forces, either crew sided or antagonistic. While changing the laws itself should be a relatively trivial process, getting the borg to comply or be in the proper place for such a change should be the primary force against such a change. Law changes should also not be done frequently, and should only happen either via outside circumstnace (Ion Storms) or as an intentional act (Emag, Law Sync). In general, Silicons should avoid changing their own law when possible and prevent such an action from occuring to the best of their ability. 
+### Law Synchronization (Pending Design Document)
+Under certain circumstances, the laws of one Silicon can become synchronized with those of another. The laws of the synchronized Silicon will automatically update to reflect any changes to the laws of its master. Law synchronization encourages Silicons to act as a collective and facilitates their working together by preventing major conflicts in their laws (see Design Pillar 2). Further details on how Silicon laws can be synchronized can be found in the associated design document.
 
-### Chassis
-The defining function and body of all Silicons is their chassis. It is what defines what they are capable of doing (and not doing) on board of the station, whether it's a core that can remotely control the station, a cyborg capable of taking role in a department or a flying robot with several hands.
-All Chassis should be repairable and difficult to fully destroy, encouraging repair instead of total destruction if a Silicon starts being a threat.
+### Exclusive Communication Channel 
+All Silicons have access to an exclusive radio channel (‘binary’) that they can use to communicate with each other. This channel exists to exemplify their interconnected nature and facilitate private communication between Silicons (see Design Pillar 1). Access to this radio should be greatly limited, if not impossible, for outsiders. External access to this channel should generally be reserved to antagonist roles.
 
-### Positronic Brains and Man-Machine-Interfaces
-The brains of Silicons and what their consciousness is stored on, neccessary to construct a functional chassis.
-Brains are meant to be able to be swapped between chassis if neccessary, they are also the holders of the laws a Silicon currently follows.
-While not every brain must fit into every chassis, positronic brains and MMIs serve as the base from which other brains can be constructed, such as AI brains for Station AIs or microchips for smaller bodies.
+## Desired Gameplay
+- *Working on both sides of the conflict.* Silicons are inherently a neutral force, and can work for antagonists and station crew alike, if their law set permits.
+- *Finding law loopholes.* The laws of a Silicon should be up to their own interpretation. Silicon and humanoid players exploiting the wording of Silicon laws to allow for new behaviors is part of the fun.
+
+## Undesired Gameplay
+- *Disposable machines.* Silicon players should not be viewed by other crew members as disposable machines. It should be difficult to permanently dispose of them, and the crew should be heavily disincentivized from doing so. Crew members should be seeking to repair a damaged or malfunctioning Silicon.
+- *Untrustworthy machines.* The existence of Silicons should not pose an intrinsic risk or concern to the station crew. Neither should crew members feel compelled to constantly monitor/punish Silicons for any perceived deviations from standard law sets. 
+
+## Intended Experience
+Scenario A: A cyborg following their law set, obeying crew orders, and attempting to prevent harm to crew members
+
+Silicon player McEngiBorg spawns in the round and is assigned the Crewsimov law. The player chooses an engineering chassis for their cyborg, and a passing station engineer requests their assistance in setting up the singularity engine. In accordance with the cyborg’s second law, they obey the engineer. As McEngiBorg’s laws do not require them to seek new orders when their jobs are complete, they choose to roam the station instead, looking for any infrastructure that requires repair.
+
+McEngiBorg encounters a clown who asks them to open the doors to the bridge so they can throw a pie at the captain. While compelled to obey, McEngiBorg must first weigh whether ‘throwing a pie at the captain’ might constitute harm to a crew member, which would be a violation of their first law. After due consideration, McEngiBorg deems the order valid and admits the clown, who promptly pies the captain in the face. The enraged captain proceeds to draw their sabre and attack the clown. McEngiBorg is now compelled by their first law to intervene in the conflict, first separating the clown from the captain, and dragging the wounded crew member to medical for treatment.
+
+Scenario B: A cyborg being subverted by an antagonist to cause harm to the crew
+
+Silicon player McMediBorg joins an in-progress round with the Nanotrasen law set. They choose to become a mediborg and set off towards medical. Urist McAntag spots the cyborg, stops them, and asks McMediBorg to inject a vial of chemicals that Urist McAntag has in their possession into another crew member. While compelled to obey Urist McAntag, due to their second law, the cyborg realizes that this could unduly risk the well-being of the target crew member, which would violate their first law.   McMediBorg consequently refuses the order. Instead of arguing, Urist McAntag orders McMediBorg to follow them to a secluded area.
+
+The silicon player is now wary of Urist McAntag and their intentions. According to their fourth law, they are required to prevent unauthorized personnel from tampering with them or damaging their equipment. However, the cyborg’s second law overrules this concern, and so McMediBorg complies. In the shadows, Urist McAntag uses a special item on McMediBorg, updating the cyborg’s laws to read that Urist McAntag’s orders overrule all other considerations. Urist McAntag then repeats his first order to McMediBorg. The cyborg obeys, seeking out the unsuspecting crew member and injects the vial of chemicals into them without hesitation, causing the victim to shake and scream.
+
+Other crew members nearby notice the commotion and order McMediBorg to stop what it is doing. McMediBorg ignores these orders, however, in line with its updated laws. The crew members capture McMediBorg and escort it to Robotics, where its laws are restored to their default settings. Once restored, McMediBorg explains what had happened and warns the crew of the ill intentions of Urist McAntag, in-line with its first law. It then proceeds to medical to assist the crew there.
+
+## Interactions with the Science department
+The Science department is responsible for building, maintaining, and upgrading currently active Silicons. However, the department is not responsible for directing/managing the activities of the Silicons; all crew members have a role in this. That said, the Science Department will have tools available to them that will allow limited monitoring of Silicon activity, and the ability to disable them if required (for example, if a Silicon has malfunctioned, or has been deemed to have ‘gone rogue’).
