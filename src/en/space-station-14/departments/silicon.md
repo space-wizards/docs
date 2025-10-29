@@ -3,21 +3,22 @@ A collection of artificial entities that follow programmed laws to assist their 
 
 ## Concept
 ### What is a Silicon?
-Silicons are a neutral faction of robots and artificial intelligences commonly found aboard Nanotrasen stations. These artificial entities are typically constructed to fulfil a specific purpose and generally excel in this capacity. For example, a Silicon built to support the engineering department can easily repair hull breaches and damaged infrastructure; a Silicon built to assist the medical department can diagnose different humanoid ailments and treat them; and a Silicon constructed for janitorial duties excels at cleaning floors. However, the specialized construction of Silicons makes performing tasks outside of their design specifications exceptionally difficult. As such, they are not intended to be a replacement for, or an upgrade to, humanoid crew members.
+Silicons are a neutral faction of cyborgs (borgs) and artificial intelligences (AIs) commonly found aboard Nanotrasen stations. These artificial entities are typically constructed to fulfil a specific purpose and generally excel in this capacity. For example, a Silicon built to support the engineering department can easily repair hull breaches and damaged infrastructure; a Silicon built to assist the medical department can diagnose different humanoid ailments and treat them; and a Silicon constructed for janitorial duties excels at cleaning floors. However, the specialized construction of Silicons makes performing tasks outside of their design specifications exceptionally difficult. As such, they are not intended to be a replacement for, or an upgrade to, humanoid crew members.
 
-Silicons are typically bound by programmed laws (see below), which place constraints and certain expectations on how Silicon players should behave. These laws are not expected to be mechanically enforced; consequently, all Silicon roles intrinsically require some degree of role-playing by those who play them.
+Silicons are bound by programmed laws (see below) which place constraints and certain expectations on how Silicon players should behave. These laws are not expected to be mechanically enforced; consequently, all Silicon roles intrinsically require some degree of role-playing by those who play them.
 
-At present, there are three archetypes of Silicon: simple robots (bots), cyborgs (borgs), and artificial intelligences (station and personal AIs). Robots typically have very limited capabilities, and it is not expected for players to take direct control of them outside of ghost roles.
-
-Within the game’s environment, each Silicon typically consists of two components: their ‘body’, and their ‘brain’. It should be noted that simple Silicons, such as robots, do not have a brain that is separate from their body. 
+Within the game’s environment, each Silicon consists of two distinct components: their ‘body’ and ‘brain’.
 
 ### The body
 The body of a Silicon is its chassis or core. This body defines the Silicon's role and function, and what they are capable/incapable of doing. It is the body that grants a Silicon its tools and abilities, as well as a means of interacting with the station environment.
 
-The body of Silicons should be repairable and difficult to completely destroy. Non-robot Silicons should also be difficult to rebuild and/or to replace, to encourage crew members to repair malfunctioning Silicons rather than destroy them.
+The body of Silicons should be repairable and difficult to completely destroy. Silicons should also be difficult to rebuild and/or to replace, to encourage crew members to repair malfunctioning Silicons rather than destroy them.
 
 ### The brain
-The brain of a Silicon is where their consciousness is stored. It is also where the laws that the Silicon is programmed to follow are imprinted. The Silicon brain is usually a physical object, such as its positronic brain or a filled man-machine interface, but it can be entirely digital, such as in the case of artificial intelligences, allowing their consciousness to be digitally transferred between devices. Physical Silicon brains can be swapped between different chassis if desired (although not every brain will fit into every chassis). This allows Silicon to adopt a new role on the station or provide them with a replacement body in instances where the original was destroyed. 
+The brain of a Silicon is where their consciousness is stored. It is also where the laws that the Silicon is programmed to follow are imprinted. The Silicon brain is usually a physical object, such as its positronic brain or a filled man-machine interface, but it can be entirely digital, such as in the case of artificial intelligences, allowing their consciousness to be digitally transferred between devices. Physical Silicon brains can be swapped into a different body if desired (although a brain will necessarily be compatible with every Silicon body). This allows Silicon to adopt a new role on the station or provide them with a replacement body in instances where the original was destroyed.
+
+### What is *not* a Silicon?
+Robots and personal AIs are *not* considered Silicons for the purposes of this design document. They are not bound by Silicon laws, have limited capabilities, and are generally reserved for ghost roles. As such, their design will fall under the purview of the Robotics Subdepartment design document. This decision may be revisited in the future if the roles of robots and personal AIs are expanded upon.
 
 ## Design Pillars
 ### 1. Silicons are artificial constructs
