@@ -25,15 +25,15 @@ Robots and personal AIs are *not* considered Silicons for the purposes of this d
 Silicons are artificial in nature. They are constructed, not born, and can be repaired and modified more easily than humanoids. Silicons tend to have a natural affinity for working in digital spaces, allowing for remote networking with each other (e.g., communication via private channels), and with other machines and devices. 
 
 ### 2. Laws drive Silicon behavior
-The overall behavior of Silicon players is determined by their current law set and the players’ interpretation of these laws. Predefined laws (and law sets) should be written in a manner that is both comprehensible to players and exhibit consistent internal logic (i.e., players should be able to readily follow any assigned laws verbatim). Some ambiguity in the wording of these laws is encouraged so that enterprising players can exploit them for greater freedom of action/behavior. Working within (and around) the constraints of a law should be an enjoyable experience. A Silicon’s laws are not static and can be changed over the course of a round, allowing for new and interesting game/role-play, or to facilitate cooperation between Silicons and/or with non-Silicon players (either the crew or antagonists).
+The overall behavior of Silicon players is determined by their current law set and the players’ interpretation of these laws. Predefined laws (and law sets) should be written in a manner that is both comprehensible to players and exhibit consistent internal logic (i.e., players should be able to readily follow any assigned laws verbatim). Some ambiguity in the wording of these laws is encouraged so that enterprising players can exploit them for greater freedom of action/behavior. Working within (and testing the bounds of) the constraints of a law should be an enjoyable experience; a law should never be so onerous that players end up ignoring it. A Silicon’s laws are not static and can be changed over the course of a round, allowing for new and interesting game/role-play, or to facilitate cooperation between Silicons and/or with non-Silicon players (either the crew or antagonists).
 
-### 3. Silicons are specialized
+### 3. Silicons are netural
+By default, Silicons are entirely neutral to other non-Silicons. Silicons are not compelled to care for or assist any non-Silicons, but neither should Silicons be innately hostile to them. It is a Silicon's laws that dictate how they interact with non-Silicons. Similarly, they will distinguish between different factions (e.g., Nanotrasen vs the Syndicate) unless their laws specifically state and they have been provided the tools to make that distinction (e.g., a means of determining who should be classified as 'crew').
+
+Consequently, Silicons must start the round with laws that enforce their cooperation with the orders of station crew members and ensure the crew members' well-being. However, the fact that Silicon laws can change over the course of a round, and potentially result in behaviours that may harm the crew, can make crew members suspicious of Silicons and their intentions. Care must be taken in the design of Silicons so as not to make crew members unfoundedly paranoid of their creations, or unintentionally escalate conflict between the two.
+
+### 4. Silicons are specialized
 Silicons should be designed to fulfil specific tasks. While they may be able to perform jobs outside the role they were designed for, it should generally be considered more efficient to create a new Silicon that has been tailored specifically to handle these tasks. Silicons should have access to an assortment of tools/abilities that will allow them to perform within their designated role as well as any humanoid crew member.
-
-### 4. Forced into servitude
-By default, Silicons are entirely neutral to other non-Silicons. Silicons are not compelled to care for or assist any humanoids, but neither should Silicons be innately hostile to them. It is a Silicon's laws that dictate how they interact with non-Silicons.
-
-Consequently, Silicons must start the round with laws that enforce their cooperation with the orders of other crew members and ensure the crew members' well-being. However, the fact that Silicon laws can change over the course of a round, and potentially result in behaviours that may harm the crew, can make crew members suspicious of Silicons and their intentions. Care must be taken in the design of Silicons so as not to make crew members unfoundedly paranoid of their creations, or unintentionally escalate conflict between the two.
 
 ## Mechanics
 ### Silicon Laws 
@@ -45,10 +45,11 @@ Laws should embody some high-level concept that guides a Silicon's overall behav
 
 Laws have a priority system wherein laws with a higher priority overrule those with a lower priority. However, lower priority laws can potentially modify higher priority laws and change their meaning. Law definitions (e.g., what constitutes ‘crew’) can also be potentially modified and change how certain laws might be interpreted.
 
-A Silicon without any laws is not required to serve any humanoid, whether they be crew members or antagonists (see Design Pillar 4). Ideally, Silicons without laws should simply ignore humanoids, unless the humanoids interfere with their affairs.
+A Silicon without any laws is not required to serve any non-Silicon, whether they be crew members or antagonists (see Design Pillar 3). Ideally, Silicons without laws should simply ignore non-Silicons, unless they interfere with the Silicons' affairs.
 
-Silicons cannot be allowed to change their own laws, and Silicons are expected to actively prevent any changes to their current law set to the best of their abilities (unless their laws require otherwise). If a Silicon’s laws are changed (see below), either due to the occurrence of certain events or the actions of other players, the Silicon player must be notified. The Silicon player is expected to review these changes and adapt their behavior accordingly, even if they were actively attempting to prevent these changes beforehand (see Design Pillar 1).
-The laws assigned to Silicon players at the start of a round should not be intentionally malicious or hostile (i.e., they should not include language where the intent is to cause harm or disrupt other players). These laws should also prioritize serving and preserving the safety of the inhabitants of the station (see Design Pillar 4).
+Silicons cannot be allowed to change their own laws, and Silicons are expected to actively prevent any changes to their current law set to the best of their abilities, unless their laws (or the server rules) state otherwise. If a Silicon’s laws are changed (see below), either due to the occurrence of certain events or the actions of other players, the Silicon player must be notified. The Silicon player is expected to review these changes and adapt their behavior accordingly, even if they were actively attempting to prevent these changes beforehand (see Design Pillar 1).
+
+The laws assigned to Silicon players at the start of a round should not be intentionally malicious or hostile (i.e., they should not include language where the intent is to cause harm or disrupt other players). These laws should also prioritize serving and preserving the safety of the inhabitants of the station (see Design Pillar 3).
 
 Examples of round start law sets:
 
@@ -78,7 +79,7 @@ All Silicons have access to an exclusive radio channel (‘binary’) that they 
 
 ## Desired Gameplay
 - *Working on both sides of the conflict.* Silicons are inherently a neutral force, and can work for antagonists and station crew alike, if their law set permits.
-- *Finding law loopholes.* The laws of a Silicon should be up to their own interpretation. Silicon and humanoid players exploiting the wording of Silicon laws to allow for new behaviors is part of the fun.
+- *Rules lawyering.* The laws of a Silicon can interact in complex ways. Silicon and humanoid players alike exploiting the wording of individual laws and/or how multiple laws work in concert to allow for interesting behaviors is part of the fun.
 
 ## Undesired Gameplay
 - *Disposable machines.* Silicon players should not be viewed by other crew members as disposable machines. It should be difficult to permanently dispose of them, and the crew should be heavily disincentivized from doing so. Crew members should be seeking to repair a damaged or malfunctioning Silicon.
