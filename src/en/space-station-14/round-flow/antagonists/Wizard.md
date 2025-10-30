@@ -61,7 +61,30 @@ Consider addressing:
 - If the feature is a new antagonist, how does it fit into the corresponding [design pillars](../space-station-14/round-flow/antagonists.md)?
 -->
 
-One of the unique things about the Wizard is that by its existence it does violate some of the antagonist pillars, but that's intended (and previously approved).
+One of the unique things about the Wizard is that by its existence it does potentially violate some of the antagonist pillars, but that's intended (and previously approved).
+
+Potential antagonist pillars that it violates:
+- Just a Spark
+  - Wizards are 100% meant to disrupt a round, they are a major force of chaos afterall.
+
+- Escalation
+  - As above, the Wizards are like Nukies and have their full potential right off the bat.
+
+- Discoverability
+  - Like Nukies, the Wizard can announce itself so it's relatively easily discovered. The Wizard has relatively low armor and healing access, easy to slip, and no stun or stamina resistance. It's very much the definition of a glass cannon, so counterplay comes from smacking the wizard.
+
+Despite it potentially violating some antagonist pillars, it does help highlight the core design principles, mainly:
+- Chaos
+  - The Wizard is the embodiment of this pillar. You know you're in for a wild ride when a wizard is around. The potential they have for introducing chaos is pretty high.
+    They may give everyone in existence a gun and turn the station into a standoff. Or the captain might be turned into a cluwne as punishment.
+    The Wizard may even just summon a dance floor and make people dance their stamina away. By being able to shift reality, the choices are basically as creative as the contributors can get.
+- Seriously Silly
+  - There's almost nothing more unhinged than a Wizard and their antics. A well timed fireball or a smite may end up being hilarious in a story told later.
+- Dynamic Environment
+  - Wizards being reality benders can easily shift the environment around them, depending on what they're feeling.
+    - The floor could in fact, be lava.
+    - Maybe they feel like the captain's quarters really needed a back door so they just use a wand to turn a wall into a door.
+
 The Wizard is an entire force of chaos. It's meant to have a lot of reality bending/shifting, powerful spells to enable its gimmicks.
 
 - Want to trap a bunch of people in lockers with the Staff of Locker and then animate said lockers to make it a challenge for the 
@@ -81,18 +104,6 @@ Some magic may be locked to using an item, which means you'd need to risk losing
 Or some magic may require robes, which means you'll be relatively unprotected and the definition of a glass cannon.
 
 And with the wizard only being stuck to 10 currency, compared to other antagonists that may have more spending power, they need to make a choice of what they'd like to build.
-
-Despite it potentially violating some antagonist pillars, it does help highlight the core design principles, mainly:
-- Chaos
-  - The Wizard is the embodiment of this pillar. You know you're in for a wild ride when a wizard is around. The potential they have for introducing chaos is pretty high. 
-    They may give everyone in existence a gun and turn the station into a standoff. Or the captain might be turned into a cluwne as punishment. 
-    The Wizard may even just summon a dance floor and make people dance their stamina away. By being able to shift reality, the choices are basically as creative as the contributors can get.
-- Seriously Silly
-  - There's almost nothing more unhinged than a Wizard and their antics. A well timed fireball or a smite may end up being hilarious in a story told later.
-- Dynamic Environment
-  - Wizards being reality benders can easily shift the environment around them, depending on what they're feeling.
-    - The floor could in fact, be lava.
-    - Maybe they feel like the captain's quarters really needed a back door so they just use a wand to turn a wall into a door.
 
 ## Roundflow & Player interaction
 
