@@ -146,10 +146,32 @@ On the same coin, a wizard not killing a person every second is also not a frien
 - How are the rules enforced mechanically by way the feature will be implemented?
 -->
 
-The Chaos the Wizard brings may introduce challenges to the admin team. 
-Some things like mass event spells (when reworked) will considerably lower the amount of free agents it makes which in turn reduces admin headache.
-
+The Chaos the Wizard brings may introduce challenges to the admin team.
 Furthermore, some optional challenge purchases may be introduced to give the wizard more drive. So people who aren't as creative, but crave a challenge, will have some guidance on what to do which may reduce friendly wizards. There's not too much that can be done mechanically to truly prevent any friendly antag.
+
+### Current Issues
+
+- Event Spells
+  - These are spells like Summon Guns or Magic - which turns everyone into a free agent. This was added initially, as a request _by a wizard_, because it would be too much of a net positive for the crew to get a bunch of guns and magic for them to use against the Wizard without any intra-conflict. 
+  - The current implementation turns all crew into a free agent, which has caused some admin headache. Instead of mass-changing crew, the new solutions is that a small group of players will be made into a free agent at a low percent based chance each time the event fires off (and the event will fire off automatically instead of manually).
+Which will considerably lower the amount of free agents it makes which in turn reduces admin headache.
+
+
+- Fast Greenshift
+  - One issue is that a Roundstart Wizard has the potential to turn the rest of the round into a greenshift if they died too fast. One option _could_ be to end the round instantly when they die,
+    however that has its own issues when we move to dynamic. So it could be implmented as a temporary bandaid. 
+  - Other missing features such as Wizard Apprentices (a much lower power wizard), summoning Slaughter Demons, and a Lich power
+    could help the roundflow continue if the wizard was to die early -- if they decide to purchase extra help
+  - Additionally if a Wizard dies too fast, another one could be called in immediately.
+
+
+- Obsurdly Powerful
+  - This is part in due to some unintended effects (Rod deleting people and things) and some overtuned abilities. Abilities and equipment are planned on being adjusted, while still remaining strong.
+    A Wizard will absolutely be a glass cannon and there will be times that a player may be hit by an unfair choice (ex. polymorphed into something simple, gibbed) but that is the will of the game.
+
+
+- Choice of Spells
+  - The Wizard has a relatively low choice of spells and some are overtuned, which means that people will gravitate towards those choices. So more spells are on the way to address this.
 
 # Technical Considerations
 
