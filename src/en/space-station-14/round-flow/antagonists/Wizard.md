@@ -138,6 +138,19 @@ A Wizard forcibly taking over the station, whether it's through actual force or 
 
 On the same coin, a wizard not killing a person every second is also not a friendly wizard. As long as a wizard is using their spells in some way that effects the station, they're not friendly.
 
+Like any friendly antag, an antag just joining up with the station with zero reason isn't fun for anyone. But an iron-clad reason as stated above helps make rounds more interesting and memorable.
+
+### Hiding in Ship/Space
+
+Some Wizards may hide in their ship or in space and do nothing but event spells. This isn't good because while the event spells may have some sort of large impact on the round, 
+the wizard themselves are effectively removed from it.
+- Event spells
+  - The plan to prevent Wizards from sitting back and firing off events is that the event trigger will also automatically detect if the Wizard is either 
+    on a space tile (a certain distance away from the station) or not on the station grid. If any of those are true, there will be a mechanic to automatically teleport
+    the wizard back onto the station.
+- Spacing Protection
+  - This mostly applies to Hardsuits or Softsuits of some sort. There is a plan to either double cooldowns of spells for Wizards who wear spacing protection or disable spells entirely.
+
 ## Administrative & Server Rule Impact (if applicable)
 
 <!--
