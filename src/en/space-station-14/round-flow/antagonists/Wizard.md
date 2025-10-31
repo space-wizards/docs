@@ -20,11 +20,13 @@ Github links can include multiple PRs, if relevant.
 
 <!-- A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds". -->
 
-This is for The Wizard antagonist - which is to help answer any frequently asked questions for the Wizard and to help 
-others understand what the Wizard is about. The Wizard in short is a highly disruptive/chaotic antagonist that does
-anything to their whim. A lot about the Wizard is that it doesn't conform to standard rules so it very much is the
-embodiment of "a wizard did it." Players will be encouraged to come up with their own gimmick, while still being an
-antagonist to the station.
+This is for The Wizard antagonist - which is to help answer any frequently asked questions for the Wizard and to help others understand what the Wizard is about.
+
+The Wizard in short is a highly disruptive/chaotic antagonist that does anything to their whim.
+A lot about the Wizard is that it doesn't conform to standard rules so it very much is the
+embodiment of "a wizard did it."
+
+Players will be encouraged to come up with their own gimmick, while still being an antagonist to the station.
 
 ## Background
 
