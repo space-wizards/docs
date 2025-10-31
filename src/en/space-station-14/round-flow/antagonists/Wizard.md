@@ -97,13 +97,22 @@ crew to get out? Go for it.
 
 The world is your oyster, you're literally a wizard in space.
 
-Now not all spells are going to be straightforward. If you try to fireball someone in the face, you're going to die too unless you put some distance.
+Now not all spells are going to be straightforward. If you try to fireball someone in the face, you're going to die too unless you put some distance. 
+Some spells having drawbacks (long cooldown, dangerous to use up close, long after-effect, hard to control, a Slaughter Demon not being your friend, etc) makes more interesting conflict.
 
-Some magic may be locked to using an item, which means you'd need to risk losing the item or also buy a recharge spell to compensate.
+Some magic may be locked to using an item, which means you'd need to risk losing the item or also buy a recharge spell to compensate. A Wizard being slipped just to have their equipment used against them is a classic moment.
+And it's even funnier when the Wizard yoinks it right back with a different spell.
 
-Or some magic may require robes, which means you'll be relatively unprotected and the definition of a glass cannon.
+Or some magic may require robes, which means you'll be relatively unprotected and the definition of a glass cannon and reserved for some of the more powerful spells.
+
+Most of this is based on vibes and themeatics. Does it make much sense for a Wizard to shoot lockers out of their hands? It's funny conceptually but it makes more sense that some piece of equipment is doing it instead.
 
 And with the wizard only being stuck to 10 currency, compared to other antagonists that may have more spending power, they need to make a choice of what they'd like to build.
+Generally the higher the cost of a spell/item the more impact it has. That being said, some spells are planned on being upgradeable so they may cost 3 at base price, but further purchases of the spell (at the same or lower cost) may give you stronger effects.
+- 1 Cost - Relatively low risk low reward (something like teleport spells, smoke, etc).
+- 2 Cost - Standard. Higher power or unique utility.
+- 3 Cost - Powerful. May have a lot of power (instant gibbing) or a profound effect (summoning guns)
+- 4 Cost and above - Should be reserved for something that's 100% dominating because this is 40% of your budget.
 
 ## Roundflow & Player interaction
 
