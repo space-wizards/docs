@@ -120,6 +120,8 @@ crew to get out? Go for it.
 
 The world is your oyster, you're literally a wizard in space.
 
+### Spell/Equipment breakdown:
+
 Now not all spells are going to be straightforward. If you try to fireball someone in the face, you're going to die too unless you put some distance. 
 Some spells having drawbacks (long cooldown, dangerous to use up close, long after-effect, hard to control, a Slaughter Demon not being your friend, etc) makes more interesting conflict.
 
@@ -129,6 +131,51 @@ And it's even funnier when the Wizard yoinks it right back with a different spel
 Or some magic may require robes, which means you'll be relatively unprotected and the definition of a glass cannon and reserved for some of the more powerful spells.
 
 Most of this is based on vibes and themeatics. Does it make much sense for a Wizard to shoot lockers out of their hands? It's funny conceptually but it makes more sense that some piece of equipment is doing it instead.
+
+#### Spells (Actions)
+
+- These can be a wide variety of execution and power.
+  - Execution examples:
+      - Projectile, touch, event, area-effecting.
+  - Power examples:
+    - Summoning smoke which creates a thick smokescreen, and causing people to cough which forces item drop (themself included)
+    - Shooting a fireball and blowing people up in an area of effect
+    - Touching someone and they get knocked back.
+    - An event trigger that temporary makes the floor lava.
+
+#### Wands
+
+- Like spells they can have a variety of effects. Never event-level effects.
+- Wands are limited by charges and have a relatively higher power than staves.
+- Can be given to allies to help assist you.
+- Also meant to be used as combo pieces with other Spells or Equipment
+  - Examples:
+    - Wand of Animation + Flesh2Stone Touch Spell
+    - Wand of Animation + Staff of Locker
+    - Polymorphing your PAI or Wizard Apprentices
+
+#### Staves
+- Similar to Wands, Staves can have a variety of effects but nothing as powerful as event-level.
+- Staves are also limited by charges, but have a lower power level compared to wands.
+- They can self-recharge due to this, which also enforces them being combo pieces with other Spells or Equipment
+- Can also be given to allies to help assist you
+  - Examples:
+    - A staff that turns walls into doors
+    - A staff that polymorphs someone into a random creature
+    - A staff that fires a random bolt of magic
+
+#### Other Equipment
+- This is for a variety of equipment that doesn't fit into the above three categories, these can be low-medium power.
+- Examples
+  - An orb of scrying to turn yourself into a ghost (temporarily) to observe others
+  - An orb of pondering to look at the stations cameras
+  - A deck of cards to give yourself a Holoparasite/Guardian
+  - A magical contract to summon a predefined Wizard Apprentice
+  - A magical item that summons a Slaughter Demon
+  - A hammer that pulls everyone and everything towards you
+  - A hammer that stuns and also knocks people away
+
+### Wizcoin breakdown:
 
 And with the wizard only being stuck to 10 currency, compared to other antagonists that may have more spending power, they need to make a choice of what they'd like to build.
 Generally the higher the cost of a spell/item the more impact it has. That being said, some spells are planned on being upgradeable so they may cost 3 at base price, but further purchases of the spell (at the same or lower cost) may give you stronger effects.
