@@ -44,7 +44,7 @@ During triaging, a Triager may optionally assign Issues to any of the available 
 
 ### Priority Labelling
 
-Priority labels are used to indicate how important an item is to the project. These range from `P0` (critical) to `P3` (standard). Every triaged item should have one.
+Priority labels are used to indicate the importance of an item to the project. These range from `P0` (critical) to `P3` (standard). Every triaged item should have one.
 
 | Name     | Prefix | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
