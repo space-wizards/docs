@@ -17,8 +17,8 @@ To change the Maintainer Policy, the following process must be followed:
    - If there is no clear majority, the vote must remain open for the full week.
    - If there is a clear indication that the vote will not pass, the Maintainer may withdraw the PR and vote, and make changes based on the feedback received. This can be done at any time during the vote.
    - For a vote to pass, it must have a supermajority (66%) of votes in favor. 
-     - Abstain votes are considered neutral. Only votes in favor or against are counted.
-3. Once the vote is closed, the results will be announced. If the vote passes, the PR may then be merged. If the vote fails, the Maintainer may either close the PR or make changes based on the feedback received during the vote. Step 1 and 2 can then be skipped and the vote can be remade with the new changes in the same Topic created initally in step 2.
+     - Abstain votes are considered neutral. Only votes in favor of or against are counted.
+3. Once the vote is closed, the results will be announced. If the vote passes, the PR may then be merged. If the vote fails, the Maintainer may either close the PR or make changes based on the feedback received during the vote. Steps 1 and 2 can then be skipped, and the vote can be remade with the new changes in the same Topic created initially in step 2.
 
 ## Special Cases
 
