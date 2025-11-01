@@ -38,6 +38,11 @@ Also link any relevant discussions on Discord, GitHub, or HackMD that are releva
 
 The Wizard is already added but the document is needed to help clarify certain roundflow and even frequently asked questions about the wizard design.
 
+It's an extremely rare, high-chaos, high-impact, and highly disruptive lone antagonist. Its existence is a culmination of the chaotic and goofy nature of the game and has existed as an implementation in SS13 for over a decade.
+
+Their general goal is to "show off" their magical talent to the station.  They have spells and magical items that they can purchase to help them with these goals. Compared to other antagonists they're relatively powerful due to not only the rarity of the game mode, but also the nature of the Wizard being a glass cannon.
+Compared to Traitors, this allows Wizards to be given powerful spells and some with reality-warping effects (like animating tons of objects, changing walls into doors, making the floor lava, etc).
+
 ### SS13 History
 It's a port of the longstanding SS13 antagonist. Mainly it's based off of it's /tg/ server derivatives, but it's planned to be based off of multiple codebase implementations and a celebration of all things magic from SS13.
 The Wizard was added relatively early in SS13's history, sometime between 2008-2011. By comparison Nukies and Revolutionaries were added sometime in 2004-2005. 
@@ -45,15 +50,14 @@ The /tg/ (and also Goon) implementation is a high-chaos lone antagonist. Sometim
 
 Generally their main goal was relatively freeform - teach the station a lesson they'll never forget. And they may have had some objectives mixed in, similar to that of Traitors but more open ended (eg. Take over the station, Kill X, Do Y to Z amount of crew, etc).
 
-They have spells and magical items that they can purchase to help them with these goals. Compared to other antagonists they're relatively powerful due to not only the rarity of the game mode, but also the nature of the Wizard being a glass cannon.
-Compared to Traitors, this allowed Wizards to be given powerful spells and some with reality-warping effects (like animating tons of objects, changing walls into doors, making the floor lava, etc).
-
 ### SS13 Issues
 One of the issues that some servers faced was that the spell upgrades fell somewhat flat. Mostly they were just cooldown reductions. Now not every spell's going to need an upgrade, but one thing to strive for will be meaningful spell upgrades.
 
 Another was anti-magic. A relatively lazy way to counter Wizards (and other magical based antagonists) was the introduction of null rods and holy melons. At their conception they 100% shut down magic and while some adjustments were made to be more fair, 
 the inclusion of antimagic changed per server due to its nature of being too much of a hard counter. This also gave the Chaplain (and Botany) too much focus on a handful of game modes,
 which they ended up as departments you had to permakill ASAP.
+
+As with SS14, a Wizard being a friendly antagonist was also an issue in SS13. Even with Traitor-like objectives, it didn't stop Wizards from joining up with the station for no good reason. See Friendly Wizards later on in this doc for the exact definition.
 
 ## Features to be added
 
