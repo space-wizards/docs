@@ -219,9 +219,9 @@ On the same coin, a wizard not killing a person every second is also not a frien
 
 Like any friendly antag, an antag just joining up with the station with zero reason isn't fun for anyone. But an iron-clad reason as stated above helps make rounds more interesting and memorable.
 
-### Hiding in Ship/Space
+### Hiding in Ship/Space (Beginning of Round Stalling)
 
-Some Wizards may hide in their ship or in space and do nothing but event spells. This isn't good because while the event spells may have some sort of large impact on the round, 
+Some Wizards may hide in their den or in space and do nothing but event spells. This isn't good because while the event spells may have some sort of large impact on the round, 
 the wizard themselves are effectively removed from it.
 - Event spells
   - The plan to prevent Wizards from sitting back and firing off events is that the event trigger will also automatically detect if the Wizard is either 
@@ -229,6 +229,18 @@ the wizard themselves are effectively removed from it.
     the wizard back onto the station.
 - Spacing Protection
   - This mostly applies to Hardsuits or Softsuits of some sort. There is a plan to either double cooldowns of spells for Wizards who wear spacing protection or disable spells entirely.
+
+### Polymorphs
+
+Being polymorphed by a Wizard does **not** convert you to their team, no matter the result of the polymorph! The only exception is if you were already on the Wizard's team to begin with (ex. Wizard Apprentice).
+
+### End State
+
+The Wizard game mode does not have a natural end state generally, as the antagonist is mainly encouraged to come up with some gimmick to terrorize the station enough for them to call the shuttle.
+
+In part, a shuttle should be automatically called if a majority % of crew are dead regardless of game mode. The shuttle would be unrecallable so people cannot stall out the round.
+
+As stated later in the doc, an optional buy in to do objectives up to a round-end state will also be implemented to give people who are less than creative some end goal to work towards while also getting bonuses along the way.
 
 ## Administrative & Server Rule Impact (if applicable)
 
