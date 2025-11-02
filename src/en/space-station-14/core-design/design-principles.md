@@ -21,7 +21,7 @@ SS14, at its heart, is a horror comedy: on one hand you have a soulless megacorp
 
 The situations that regularly happen in SS14 are absolutely unhinged, yet players generally take them seriously. When you are creating content or mechanics, you should lean into this dissonance and embrace the fact that something can be silly and serious at the same time. 
 
-When creating a new mechanic, you should try to introduce ways that things can go horribly, horribly and hilariously wrong (or right, depending on who you ask). Try to create situations that would be hilarious to hear told as a story but would be terrifying to be in as a player.
+When creating a new mechanic, you should try to introduce ways that things can go horribly, horribly, and hilariously wrong (or right, depending on who you ask). Try to create situations that would be hilarious to hear told as a story but would be terrifying to be in as a player.
 
 ## Dynamic Environment
 
