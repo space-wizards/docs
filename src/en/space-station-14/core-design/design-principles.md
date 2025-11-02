@@ -41,7 +41,7 @@ Realism is not important and may end up causing gameplay/readability issues for 
 
 Any simulation-based mechanic or interaction should be easy to learn from in-game information alone and not require wiki- or textbook-diving to understand.
 
-When designing simulation-based mechanics, try to think of the different ways that existing systems/mechanics will interact with them. Inter-connected systems also help create more opportunties for players to create unique situations stemming from how those systems interact. 
+When designing simulation-based mechanics, try to think of the different ways that existing systems/mechanics will interact with them. Inter-connected systems also help create more opportunities for players to create unique situations stemming from how those systems interact. 
 
 ## Player Interaction
 
