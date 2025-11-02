@@ -17,7 +17,7 @@ New mechanics should also be integrated with existing mechanics when possible to
 
 ## Seriously Silly
 
-SS14, at its heart, is a horror comedy: on one hand you have a soulless megacorp that cares nothing of its employees while exposing them to the horrific dangers of unknown space, while on the other you have clowns and incompetent assistants causing all sorts of hilarious disasters.
+SS14, at its heart, is a horror comedy: on one hand you have a soulless megacorp that cares nothing for its employees while exposing them to the horrific dangers of unknown space, while on the other you have clowns and incompetent assistants causing all sorts of hilarious disasters.
 
 The situations that regularly happen in SS14 are absolutely unhinged, yet players generally take them seriously. When you are creating content or mechanics, you should lean into this dissonance and embrace the fact that something can be silly and serious at the same time. 
 
