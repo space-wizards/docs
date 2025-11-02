@@ -9,7 +9,7 @@ Here we go into more detail about each of SS14's Core Design Pillars by breaking
 
 The inherent complexity of SS14's sandbox combined with the unpredictability of human players creates a truly chaotic environment where anything can happen. This should be embraced when designing mechanics to fit SS14, especially with regards to giving players opportunities to cause mischief.
 
-One key mantra to use when making new mechanics is "nothing is perfect". Conceptually, this means that **your mechanic should not allow for "perfect" solutions**. Make sure to sprinkle plently of opportunities for players to intentionally or unintentionally screw up while interacting with your mechanic.
+One key mantra to use when making new mechanics is "nothing is perfect". Conceptually, this means that **your mechanic should not allow for "perfect" solutions**. Make sure to sprinkle plenty of opportunities for players to intentionally or unintentionally screw up while interacting with your mechanic.
 
 It's also important to differentiate between potential chaos and guaranteed chaos. Mechanics should generally introduce potential chaos in the form of the choices players make while interacting with them. Mechanics that guarantee that a chaotic situation will always occur should be avoided since they would negatively impact player agency.
 
