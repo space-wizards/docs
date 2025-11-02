@@ -25,7 +25,7 @@ When creating a new mechanic, you should try to introduce ways that things can g
 
 ## Dynamic Environment
 
-The environment of a SS14 round is as much a character as the players, and can dramatically change over the course of a round. Players have the complete freedom to shape the gameworld the way they wish whether by building, destroying, or changing things on the station. 
+The environment of an SS14 round is as much a character as the players, and can dramatically change over the course of a round. Players have the complete freedom to shape the gameworld the way they wish, whether by building, destroying, or changing things on the station. 
 
 SS14 is a game where it should be possible for players to decide to "make their own station with blackjack and hookers", and go do just that, or continue playing a round and rebuild the station after it was sliced in half (Both of these have occured multiple times in the history of SS13 and SS14.)
 
