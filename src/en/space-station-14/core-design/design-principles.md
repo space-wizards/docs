@@ -35,7 +35,7 @@ Because of this, **Mechanics *cannot* be location specific or require items that
 
 If SS14's heart is being a horror comedy, then SS14's soul is simulation. SS13/14 has come a long way from the simple atmospherics simulator that Exadv1 wrote all those ages ago, yet at its Core SS14 features indepth atmospheric and power simulation. 
 
-Part of the unique experience of Spacestation 14 is interacting with its indepth simulation gameplay while dealing with the chaos that comes from antagonists and random events. SS14's indepth simulation and numerous inter-system interactions work for the average player because "They just make sense."
+Part of the unique experience of SS14 is interacting with its in-depth simulation gameplay while dealing with the chaos that comes from antagonists and random events. SS14's indepth simulation and numerous inter-system interactions work for the average player because "They just make sense."
 
 Realism is not important and may end up causing gameplay/readability issues for players. **It's far more important that a Mechanic/Simulation is Intuitive than Realistic.** If a system completely realistically models a subject but requires someone with a PhD to understand how it works, that is a major problem. 
 
