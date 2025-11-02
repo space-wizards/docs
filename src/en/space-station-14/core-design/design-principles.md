@@ -33,7 +33,7 @@ Because of this, **Mechanics *cannot* be location specific or require items that
 
 ## Intuitive and Inter-Connected Simulation
 
-If SS14's heart is being a horror comedy, then SS14's soul is simulation. SS13/14 has come a long way from the simple atmospherics simulator that Exadv1 wrote all those ages ago, yet at its Core SS14 features indepth atmospheric and power simulation. 
+If SS14's heart is a horror comedy, then SS14's soul is a simulation. SS13/14 has come a long way from the simple atmospherics simulator that Exadv1 wrote all those ages ago, yet at its Core, SS14 features in-depth atmospheric and power simulation. 
 
 Part of the unique experience of SS14 is interacting with its in-depth simulation gameplay while dealing with the chaos that comes from antagonists and random events. SS14's indepth simulation and numerous inter-system interactions work for the average player because "They just make sense."
 
