@@ -186,6 +186,7 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/round-flow/guidelines.md)
 	
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
+		- [Exterimator](en/space-station-14/round-flow/antagonists/space-ninja.md)
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
 		- [Xenoborgs](en/space-station-14/round-flow/antagonists/Xenoborgs.md)
