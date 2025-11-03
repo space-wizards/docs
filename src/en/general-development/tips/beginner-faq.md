@@ -6,9 +6,9 @@
 
 Go to [Issues in Space Station 14](https://github.com/space-wizards/space-station-14/issues)
 - Choose 1 or more of the following labels in [Labels](https://github.com/space-wizards/space-station-14/labels)
-1. [Beginner Friendly](https://github.com/space-wizards/space-station-14/labels/Beginner%20Friendly)
-2. [Difficulty: 1 - Easy](https://github.com/space-wizards/space-station-14/labels/Difficulty%3A%201-Easy)
-3. [No C#](https://github.com/space-wizards/space-station-14/labels/No%20C%23) to work on issues that require no code. 
+1. [Beginner Friendly](https://github.com/space-wizards/space-station-14/labels/DB%3A%20Beginner%20Friendly)
+2. [Difficulty: 3 - Low](https://github.com/space-wizards/space-station-14/labels/D3%3A%20Low)
+3. [No C#](https://github.com/space-wizards/space-station-14/labels/Changes%3A%20No%20C%23) to work on issues that require no code. 
 
 After you have chosen an issue to fix, follow the steps here to start making and testing code changes on your own copy of the Space Station 14 code: 
 - [Setting up a Development Environment](https://docs.spacestation14.com/en/general-development/setup/setting-up-a-development-environment.html) 
