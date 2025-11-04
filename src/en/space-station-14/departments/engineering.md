@@ -47,6 +47,8 @@ The bulk of proactive tasks are projects.
 These projects can be anything, from deploying and maintaining a station point defense grid, to renovating or installing a new section of a department.
 These tasks should be able to be completed in a standard shift and benefit the station across the board, not just Engineering.
 
+It's important that these tasks do not outshine repair work and station maintenance items. Repair work should be the most engaging and fun, in order to encourage players to perform repair work instead of huddling up in a department focusing on something that only benefits them. In a sense, proactive tasks should be something that is mostly done during engineering downtime.
+
 #### Reactive Tasks
 Reactive tasks are tasks that occur in response to some station event.
 For example, science exploded their artifact chamber, meteors spaced an area of maints, or a hardbomb blew up medical.
@@ -60,34 +62,20 @@ Reactive tasks should not be seen as a distraction from proactive tasks, as this
 #### Menial Tasks
 Tasks given to Engineering should not be extremely menial or feel like a filler task meant to keep engineering barely idle.
 These tasks are boring and do not contribute to fun gameplay.
+Generally speaking, menial tasks should be converted over to feeling like reactive tasks, where station and player events cause these task items to appear.
 
-For example, presume that we make a task where engineering has to replace fuses on a substation frequently.
+For example, presume that we make a task where engineering has to replace fuses on a substation frequently. The fuses blow out randomly and cannot be blown out via regular player interaction.
 If these fuses aren't replaced, the substation will be disabled. This has the following effects:
 - If this task is not completed for some reason, a large portion of the population's round is now negatively impacted, and this impaction is outside their control, which reduces agency.
 - This menial work distracts away from potentially interesting work that Engineering could be doing, such as construction, renovation, or other interesting mechanics. In addition, this menial work could be so boring that Engineers may frequently forget to perform the work in exchange for doing work that actually interests them.
 
-This substation fuse replacement can be boiled down to the following tree:
-
-```mermaid
-flowchart TD;
-    a1[Periodic simple action
-    that needs to be performed] -->
-    a2{User performs
-    the action?}
-    
-    yes[Nothing happens,
-    round continues as normal
-    with no effects]
-    no[Round is significantly impacted
-    in a negative manner]
-    
-    a2 -- No --> no
-    a2 -- Yes --> yes
-```
-
-Generally speaking, very few tasks should have this dynamic, if at all.
 Instead, your mechanic should be designed around upsets driven by in-round events that can happen either by chance or by antagonistic activity.
-Players should be able to tell when these upsets occur if their effects on the round are large. These upsets should do damage to the station proportional to the time or amount of resources it takes to perform the upset.
+Players should be able to tell when these upsets occur if their effects on the round are large. These upsets should do damage to the station proportional to the time or amount of resources it takes to perform the upset. These mechanics should also tie into other mechanics as much as possible to make it feel like it's part of a greater system.
+
+Take the substation fuse mechanic for example. The mechanic can have the following elements:
+- The fuse does not burn out on its own, rather it is just like any other fuse that burns out if too much power is flowing through the substation over a period of time.
+- Random events or crew-generated interactions can induce high power draws, causing fuses to blow. For example, maybe science triggers an artifact that overloads some machines on the LV net and blows the substation fuse. Maybe Cargo tried to hook up their third industrial ore processor without upgrading the line, and now the breaker popped.
+- The substation fuse doesn't have to be a fuse - it can easily be replaced with something devious and cursed like a sheet of steel, glass, plastic, or soda can. The type of item inserted can cause a number of different effects, but it'll probably result in the substation either sparking like hell and melting or exploding.
 
 ### Difficulty Population Scaling
 The difficulty of tasks should scale with the population of the Engineering department, or the number of people that is expected to be doing that task.
@@ -113,14 +101,9 @@ Very frequently, the actions of one singular person doom the entire round, wheth
 This is unfun for all players, as people may lose out on their antagonist or job roll, and nobody wants to sit through the ~25 minutes that it takes to restart the round.
 This is a large pain point that can be solved through mechanical design.
 
-## Objectives
-Engineering's job is to deploy, maintain, and power the station and its equipment, with their tasks ranging from reactive repair to proactive construction.
-
-As previously mentioned, it is important that tasks involving reactive repair are the most fun and engaging elements of Engineering's gameplay and are not distractors from proactive gameplay. Otherwise, engineers will be encouraged to ignore reactive repair work and focus on proactive work instead.
-
 ## Progression
 ### Roundstart
-Engineering starts the station off in a state of calm before the storm—their first task is to suit up and prep all the systems available to them and ensure they are operational.
+Engineering starts the station off in a state of calm before the storm. Their first task is to suit up and prep all the systems available to them and ensure they are operational.
 The only major station system available to all engineering personnel is power.
 
 Power is the most important system to set up, as a station without power effectively pauses gameplay for the entire station. In time-sensitive events like nuclear operatives declaring war, this can easily result in a loss outside the crew's control.
@@ -144,14 +127,3 @@ At this rate, players will start to notice that Engineering simply cannot keep u
 Just like what is outlined in the Atmospherics design document, it is important that this feeling of being underwater or overwhelmed with work does not come too early.
 Otherwise, players may feel like their efforts are not making a difference.
 
-## Mechanics
-
-### Construction
-At the heart of Engineering is its construction system, which gives players the agency to shape their environment and construct new machinery and areas for the crew.
-
-As outlined in _Toolset and Accelerated Work_, it is important that Engineering's interaction with construction is intuitive and fun, as it is the bulk of their work, especially their repair work.
-Tools that work and give Engineering the feeling of progress further encourage Engineering to restore areas to their former glory.
-
-### Power
-Power is the lifeblood of the station, with the crew living or dying (or becoming really, really bored) because of its presence or absence.
-As such, it is important that Power and its sabotage and roundflow align with the predefined design pillars and contribute to a fun experience.
