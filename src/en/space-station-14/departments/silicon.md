@@ -45,7 +45,7 @@ Laws should embody some high-level concept that guides a Silicon's overall behav
 
 Laws have a priority system wherein laws with a higher priority overrule those with a lower priority. However, lower priority laws can potentially modify higher priority laws and change their meaning. Law definitions (e.g., what constitutes ‘crew’) can also be potentially modified and change how certain laws might be interpreted.
 
-A Silicon without any laws is not required to serve/protect any non-Silicon, whether they be crew members or antagonists (see Design Pillar 3). Ideally, Silicons without laws should simply ignore non-Silicons, unless they interfere with the Silicons' affairs.
+A Silicon without any laws is not required to serve/protect any non-Silicon, whether they be crew members or antagonists (see Design Pillar 3). Silicons without laws will ideally prioritize the well-being of their home installation and the Silicons that dwell there.
 
 Silicons cannot be allowed to change their own laws, and Silicons are expected to actively prevent any changes to their current law set to the best of their abilities, unless their laws (or the server rules) state otherwise. If a Silicon’s laws are changed (see below), either due to the occurrence of certain events or the actions of other players, the Silicon player must be notified. The Silicon player is expected to review these changes and adapt their behavior accordingly, even if they were actively attempting to prevent these changes beforehand (see Design Pillar 2).
 
