@@ -200,7 +200,7 @@ In order to create a life support system aboard your map you'll need to create a
 * **Atmos Markers** - If you're mapping gas storage tanks, be sure to use the "Atmos Fix (gas) Marker" in the entity spawner to set the tanks to the correct gas. This ensures when you run the fixgridatmos command it puts the correct gas in the tanks.
 * **Air Sensor** - Used to connect logic and sensing to other devices to trigger them. Used specifically for Air Alarms and Fire Alarms.
 * **Air Alarm** - Used with Air Sensors in order to detect harmful atmospheric conditions on areas and feed alerts to Engineering / Atmospherics. Use machine linking to connect air sensors in **adjacent** rooms to the air alarm, as well as vents and scrubbers in the **current room** to the air alarm. Also connect the firelocks between rooms to the air alarm so that it can trigger them to block off sections.
-* **Fire Alarm** - Used to trigger firelocks in the current area. Use machine linking to link it directly to firelocks in it's room or section.
+* **Fire Alarm** - Used to trigger firelocks in the current area. Use machine linking to link it directly to firelocks in its room or section.
 * **Gas Recycler** - Converts carbon dioxide to oxygen and nitrous oxide to nitrogen when the input gas is pressurized to 3 MPa and heated to at least 300 C.
 * **Gas Condenser** - Converts gasses into reagents. Probably more important to chemistry or science than atmospherics.
 
@@ -250,7 +250,7 @@ All maps need warp points so observers can get around quicker.
 
 Most maps now will use **Station Beacon**s instead of warp point as they already include the named warp point component on them. Place these in the relevant rooms of your station **instead** of warp points. This will allow them to populate station maps correctly.
 
-If you want to allow people to ghost warp to a location but don't want it to show up on a station map, or it's not suitable for a station beacon (planets, player griefing by moving the warp point, other reasons) then use the classic purple warp point marker. Place it, then right click, view variable, navigate to serverside components, search for the warp component, then alter the name in that component to reflect what you want in the warp menu.
+If you want to allow people to ghost warp to a location but don't want it to show up on a station map, or it's not suitable for a station beacon (planets, player griefing by moving the warp point, other reasons) then use the classic purple warp point marker. Place it, then right click, view variable, navigate to server side components, search for the warp component, then alter the name in that component to reflect what you want in the warp menu.
 
 ## Naming Doors and Editing Signs
 View variable (VV) is your friend. Right click an entity such as a door or sign and navigate to the server variables tab. In here you can edit the name and description of any entity on your map.
