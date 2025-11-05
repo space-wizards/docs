@@ -55,6 +55,19 @@ If you are using an IDE, there will be some other way of setting the configurati
 ## Without Development Environment
 If you choose not to do this, you will need to download a [recent server build](https://central.spacestation14.io/builds/wizards/builds.html).
 
+# Terminology
+
+- **Entity** - An in-game object. Entities are game items like vending machines or chairs.
+- **[Grid](../../../robust-toolbox/transform/grids.md)** - Composed of linked tiles, a grids is a structure such as a station, shuttle or asteroid. Grids are placed on maps.
+- **Map** - Map, in this context, refers to an in-game region of empty space. Travel between maps requires an FTL jump. Each map that exists within the current game has a unique ID. Think of a map as a canvas to place a grid or grids on. A map is ***not*** the same as a mapfile.
+- **MapFile** - The representation of a map on disk. These YAML files contain all of the entities on a map and their locations. These files should never be edited directly. This is the map prototype.
+- **Prototype** - Two types of prototype are important to specify for maps. 
+  - The prototype of a map is a structure in `Resources/Maps` that defines by which it is called. This is the MapFile. 
+  - There is also a gamemap prototype in `Resources/Prototypes/Maps` that defines gameplay related station parameters like job slots and custom cargo shuttles.
+- **Shuttle** - Free flying grids such as escape pods and the cargo shuttle. These are spawned automatically near or docked to the station at roundstart.
+- **Station** - A grid can be promoted to a station using the BecomeStationComponent.
+- **Tile** - The building block of any grid. Tiles could be lattice, floors or asteroid rock. 
+
 # Workflow
 
 ## Start Mapping
