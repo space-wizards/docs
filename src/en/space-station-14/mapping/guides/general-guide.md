@@ -38,7 +38,7 @@ To test the map:
 A [development environment](../../../general-development/setup/setting-up-a-development-environment.md) and [Git installation](../../../general-development/setup/git-for-the-ss14-developer.md) are strongly recommended, so that you can keep your local mapping server up to date and submit [pull requests](../../../general-development/codebase-info/pull-request-guidelines.md).
 
 ### Tools Build
-If you are using a development enviroment instead of just hosting a local server, make sure to use Tools instead of Debug/DebugOpt mode. This is because Debug adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
+If you are using a development environment instead of just hosting a local server, make sure to use Tools instead of Debug/DebugOpt mode. This is because Debug adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
 Additionally be careful to not use Release, which disables development environment tooling and configuration and causes the game to act like a standard server instead of a development environment.
 
 If you have ``runclient-Tools.bat`` and ``runserver-Tools.bat`` you can run those.
@@ -127,7 +127,7 @@ After this, run the command `dotnet run --project Content.MapRenderer {your_map_
 Now that you've completed your map, you'll want to test it in game to ensure you can spawn correctly and there are no issues with doors, access, atmos, power etc etc. To do this:
 1. Copy your newly saved mapping file from "space-station-14/bin/Content.Server/data/" to "space-station-14/Resources/Maps/". You will also need to do this to submit your changes later.
 
-2. If this is a brand new map, head to "space-station-14/Resources/Prototypes/Maps" and create a .yml file for your map (known as a map prototype). As a guide, copy an existing one and change the name to match your new map, and edit the contents in a word editor like Notepad++ or your prefered method so that your new map has a unique ID and name. See section on multi-grid and multi-station for Station IDs (this is not the same as your map ID).
+2. If this is a brand new map, head to "space-station-14/Resources/Prototypes/Maps" and create a .yml file for your map (known as a map prototype). As a guide, copy an existing one and change the name to match your new map, and edit the contents in a word editor like Notepad++ or your preferred method so that your new map has a unique ID and name. See section on multi-grid and multi-station for Station IDs (this is not the same as your map ID).
     
 3. You can now relaunch the client and server. Once connected run the command `forcemap [ID]` where the ID is the one specified in the .yml file we mentioned just before. On Release, simply press F7 in Lobby to bring up the Admin Menu, and use `Round > Start Round` to skip waiting. If you are on Tools, run the `restartnow` command or F7 Admin Menu then `Round > Restart NOW` to restart the server on your map.
 
@@ -141,7 +141,7 @@ When submitting a PR, the associated branch will be tested using 'checks' to ens
 To prevent this simply enter the file PostMapInitTest.cs and add the IDs of any new maps to the list named GameMaps.
     
 To pull request:
-1. Create a branch on your cloned respository either through your Github client.
+1. Create a branch on your cloned repository either through your Github client.
 2. Add your map and map prototype files to your commit and update PostMapInitTest.cs where applicable. (Stage them)
 4. Commit these two changes to your branch then push them to origin.
 5. Head to the upstream SS14 repository and navigate to the pull requests tab. There should be a banner saying something like "recent changes on your branch, pull request?" Do this to open a pull request for your map. Alternatively you can open a pull request from your repository.
@@ -171,7 +171,7 @@ If your map is now complete, follow the attached checklist [here](https://hackmd
 - When placing tiles as mentioned you can hold ctrl and click to place a rectangle of tiles or shift and click for a line.
 - To remove tiles use the "Space" tile.
 - You do not need to place plating down first then tiles, you can just place any tile and it will pry up to show the below tile in game (usually plating).
-- Similary you can overwrite tiles by placing a new one in its place - no need to remove them first.
+- Similarly you can overwrite tiles by placing a new one in its place - no need to remove them first.
 - Be careful when placing new tiles that they are part of the correct grid - place them from on top of an existing tile if bulk placing or making sure it snaps to an existing tile. Run `lsgrid` in console periodically to check you haven't created more grids.
 
 ## Entity Spawner and Placement
@@ -190,7 +190,7 @@ If you're creating a new map from scratch instead of editing an existing map, th
 
 ### Mapping Atmospherics Components
 In order to create a life support system aboard your map you'll need to create a pipe network or two - one for **distributing** air, and one for pulling **waste** gasses out of the air. Use the following devices in your pipe networks (pipe net):
-* **Vents** - use these around your station to distrubute your fresh air.
+* **Vents** - use these around your station to distribute your fresh air.
 * **Scrubbers** - connect these to your waste pipe network around the station to scrub bad gasses out of the air.
 * **Passive Vents** - use these in your gas distribution tanks such as your air mix tank to connect INTO your distribution network. Also used to vent to space when placed behind a pump and valve
 * **Mixers** - Use these to mix gasses into a distribution mix. Make sure to pipe the primary side (the side port) and secondary side (bottom port) as you need for your mix in proportion to the UI. For an air distribution mix you need approximately 78% Nitrogen and 22% Oxygen. The output can then go into an air mix / storage tank or straight to distribution.
