@@ -97,7 +97,7 @@ To assign an entity to a slot, you can just open the entity placement window and
 A preset collection of mapping actions can be loaded to the toolbar by using the `mappingclientsidesetup` command. Note that as actions are unique to the currently controlled entity, if you use ghost or possession commands you will lose these actions and will have to re-run the command.
 
 ## Multi-Grid and Multi-Station Maps
-A station and a grid are not the same thing. For example, each asteroid is not it's own station, while a station may consist of multiple grids (e.g. escape shuttles). Most maps only have one grid, though you do still have to set up stations regardless. However, since you can use savemap and loadmap to save/load maps with multiple grids, there is support for overriding this behaviour.
+A station and a grid are not the same thing. For example, each asteroid is not its own station, while a station may consist of multiple grids (e.g. escape shuttles). Most maps only have one grid, though you do still have to set up stations regardless. However, since you can use savemap and loadmap to save/load maps with multiple grids, there is support for overriding this behaviour.
 
 To make a grid part of a station, give it a BecomesStationComponent with a unique ID string (only used for mapping purposes). For example, Saltern's grids have this component with the ID Saltern. You can edit these in VV, or in the map file directly.
 
