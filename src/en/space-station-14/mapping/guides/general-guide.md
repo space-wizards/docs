@@ -83,7 +83,8 @@ Now to start creating maps follow the below steps:
 * While in mapping mode you shouldn't require any light. If for any reason everything is dark, run the `togglelight` command in console.
 * Use the admin menu (<kbd>F8</kbd>) to toggle other things like showing spawn points and subfloor. This can make it easier to see what you'redoing.
 * If you want to test the lighting on your map without leaving the editor, use the "mapinit" command. Do **save before doing this** as it will ruin your map if you save after running this command.
-* Use https://affectedarc07.github.io/SS13WebMap/ to see most SS13 maps online
+* Use https://map.spacestation14.com/ to view SS14 maps.
+* Use https://webmap.affectedarc07.co.uk/ to see most SS13 maps online
     - (https://game.ss13.moe/minimaps/images/maps/ for the /vg/ ones)
 * While testing your map, you might not want to be bothered to set up power each time. In that case, use: `> entities with Battery do "setbatterypercent $ID 100"`
 * Map auto-saving is enabled by default and goes to the server data directory every 10 minutes (cvar `mapping.autosave_interval`). You can turn it off with `toggleautosave [map id]` or change the `mapping.autosave` cvar.
