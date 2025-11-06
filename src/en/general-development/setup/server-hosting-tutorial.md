@@ -11,7 +11,7 @@ If you wish to modify your server to add your own content or rules. You will nee
 
 1. (Windows Only) Download and install the [Latest Microsoft Visual C++ Redistributable version](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version). (Resolves "Unable to load DLL libsodium" and similar errors)
 2. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version for your operating system. If you know how to use winget ``winget install Microsoft.DotNet.Runtime.9``
-3. Download the latest version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
+3. Download the latest stable version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) (or if you are looking for latest testing/vulture builds download from [here](https://wizards.cdn.spacestation14.com/fork/wizards-testing/) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
 4. Extract the downloaded zip to a directory somewhere, you may use any Archive program such as 7Zip, Winrar or even the one built into Windows.
 5. (Mac and Linux only) run `chmod +x Robust.Server`. This only needs to be run once and again each time you download a new build.
 6. Run `run_server.bat` (Windows) or `./Robust.Server` [via terminal on macOS/Linux](#running-the-server-on-macos-or-linux)) and wait until the console windows says "Ready". Do NOT close the console window until you are done playing on your server.
@@ -97,13 +97,13 @@ By default, no admin privileges are set. A privileged administrator can give out
 
 
 ## Level 2: Server With Custom Code
-You need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build for custom code. After you do that, you need to generate the server build by running:
+You will first need to [set up a development environment](./setting-up-a-development-environment.md) in order to produce a server build using custom code. After you are done with that you can continue.
 
-You first build the packaging tool using:
+Next you will need to build the packaging tool itself:
 
 `dotnet build Content.Packaging --configuration Release`
 
-Then you can use Content.Packaging to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``
+Then you can use the Packager to do the hard work. The command below will package the server using hybrid-acz (so that the launcher can download your custom content) for 64 bit linux systems. If you wanna do for Windows instead replace ``linux-x64`` to ``win-x64``. If you have an ARM64 processor, replace the ``x64`` to ``arm64``. Available compilation targets are listed here in [this article](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog#known-rids). (Note: Not all of these targets are supported. 64 bits AT LEAST are needed.)
 
 `dotnet run --project Content.Packaging server --hybrid-acz --platform linux-x64`
 
@@ -112,7 +112,7 @@ Note that if you are running an older server before Content packaging was a thin
 `python Tools/package_server_build.py --hybrid-acz`
 ```
 
-Check the `release/` folder for a packaged server for your custom codebase.
+Check the `release/` folder for a packaged server for your custom codebase. You can from now on follow the steps in [level 0](#level-0-local-sandbox-server), skipping step 3 as you already have the server zip. (You may ignore the client file)
 
 
 ## Level 3: A "Production" Server

@@ -242,6 +242,8 @@ Space Station 14
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
 
 	- [Medical](en/space-station-14/departments/medical.md)
+ 		- [Medical Workgroup](en/space-station-14/departments/medical/medical-workgroup.md)
+ 		- [Chemistry](en/space-station-14/departments/medical/chemistry.md)
 		- [PR Guidelines](en/space-station-14/departments/medical/guidelines.md)
 
 		- [Proposals]()
@@ -323,6 +325,7 @@ Community
 - [Admin](en/community/admin.md)
   - [Admin Tooling](en/community/admin/admin-tooling.md)
     - [Admin Command Cookbook](en/community/admin/admin-tooling/admin-command-cookbook.md)
+	- [Scripting](en/community/admin/admin-tooling/scripting.md)
   - [Wizards Den Admin Policy](en/community/admin/wizards-den-admin-policy.md)
   - [Wizards Den Banning Policy](en/community/admin/wizards-den-banning-policy.md)
   - [Wizards Den MRP Policy](en/community/admin/wizards-den-mrp-policy.md)
@@ -363,6 +366,9 @@ Maintainer Meetings
 
 ----------------------
 
+- [2025-10-11](en/maintainer-meetings/maintainer-meeting-2025-10-11.md)
+- [2025-09-27](en/maintainer-meetings/maintainer-meeting-2025-09-27.md)
+- [2025-09-13](en/maintainer-meetings/maintainer-meeting-2025-09-13.md)
 - [2025-08-30](en/maintainer-meetings/maintainer-meeting-2025-08-30.md)
 - [2025-08-16](en/maintainer-meetings/maintainer-meeting-2025-08-16.md)
 - [2025-08-02](en/maintainer-meetings/maintainer-meeting-2025-08-02.md)
