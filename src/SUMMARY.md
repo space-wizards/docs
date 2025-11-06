@@ -240,6 +240,7 @@ Space Station 14
 			- [Machine Upgrading Rework](en/space-station-14/departments/engineering/proposals/machine-upgrading-rework.md)
 			- [Power Generation Rework](en/space-station-14/departments/engineering/proposals/power-generation.md)
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
+            - [R-ANGL Tokamak Fusion Reactor](en/space-station-14/departments/engineering/proposals/tokamak.md)
 
 	- [Medical](en/space-station-14/departments/medical.md)
  		- [Medical Workgroup](en/space-station-14/departments/medical/medical-workgroup.md)
