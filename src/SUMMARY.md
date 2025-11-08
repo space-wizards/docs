@@ -217,6 +217,7 @@ Space Station 14
 			- [Atmos Rework](en/space-station-14/departments/atmos/proposals/atmos-rework.md)
 			- [Station Air Recirculation](en/space-station-14/departments/atmos/proposals/station-air-recirculation.md)
 			- [Inverse Pneumatic Valves](en/space-station-14/departments/atmos/proposals/inverse-pneumatic-valves.md)
+            - [R-ANGL Tokamak Fusion Reactor](en/space-station-14/departments/engineering/proposals/tokamak.md)
 
 
 	- [Cargo](en/space-station-14/departments/cargo.md)
@@ -240,7 +241,6 @@ Space Station 14
 			- [Machine Upgrading Rework](en/space-station-14/departments/engineering/proposals/machine-upgrading-rework.md)
 			- [Power Generation Rework](en/space-station-14/departments/engineering/proposals/power-generation.md)
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
-            - [R-ANGL Tokamak Fusion Reactor](en/space-station-14/departments/engineering/proposals/tokamak.md)
 
 	- [Medical](en/space-station-14/departments/medical.md)
  		- [Medical Workgroup](en/space-station-14/departments/medical/medical-workgroup.md)
