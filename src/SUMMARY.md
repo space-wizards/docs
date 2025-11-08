@@ -217,7 +217,7 @@ Space Station 14
 			- [Atmos Rework](en/space-station-14/departments/atmos/proposals/atmos-rework.md)
 			- [Station Air Recirculation](en/space-station-14/departments/atmos/proposals/station-air-recirculation.md)
 			- [Inverse Pneumatic Valves](en/space-station-14/departments/atmos/proposals/inverse-pneumatic-valves.md)
-            - [R-ANGL Tokamak Fusion Reactor](en/space-station-14/departments/engineering/proposals/tokamak.md)
+            - [R-ANGL Tokamak Fusion Reactor](en/space-station-14/departments/atmos/proposals/tokamak.md)
 
 
 	- [Cargo](en/space-station-14/departments/cargo.md)
