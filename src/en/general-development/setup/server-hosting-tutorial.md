@@ -168,7 +168,6 @@ Environment variable to enable full dynamic PGO, which drastically improves perf
 ```
 DOTNET_TieredPGO: 1
 DOTNET_TC_QuickJitForLoops: 1
-DOTNET_ReadyToRun: 0
 ```
 
 Environment variable to enable AVX operations across the codebase. Depending on your processor, this might hurt performance instead of improving it, otherwise it may improve atmos performance.
