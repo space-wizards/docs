@@ -35,6 +35,7 @@ General Development
   - [Writing Guidebook Entries](en/general-development/tips/writing-guidebook-entries.md)
   - [Config File Reference](en/general-development/tips/config-file-reference.md)
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
+  - [Forking Tips](en/general-development/tips/forking.md)
 - [Feature Proposals](en/general-development/feature-proposals.md)
   - [Feature Proposal Template](en/templates/proposal.md)
   - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
