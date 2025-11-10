@@ -167,6 +167,7 @@ Space Station 14
 		- [General Guide](en/space-station-14/mapping/guides/general-guide.md)
 
 	- [Proposals]()
+    	- [Rooms](en/space-station-14/mapping/proposals/rooms.md)
 
 - [Player Interaction](en/space-station-14/player-interaction.md)
 	- [PR Guidelines](en/space-station-14/player-interaction/guidelines.md)
