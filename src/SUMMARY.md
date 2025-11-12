@@ -242,6 +242,8 @@ Space Station 14
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
 
 	- [Medical](en/space-station-14/departments/medical.md)
+ 		- [Medical Workgroup](en/space-station-14/departments/medical/medical-workgroup.md)
+ 		- [Chemistry](en/space-station-14/departments/medical/chemistry.md)
 		- [PR Guidelines](en/space-station-14/departments/medical/guidelines.md)
 
 		- [Proposals]()
@@ -364,6 +366,11 @@ Maintainer Meetings
 
 ----------------------
 
+- [2025-11-08](en/maintainer-meetings/maintainer-meeting-2025-11-08.md)
+- [2025-10-25](en/maintainer-meetings/maintainer-meeting-2025-10-25.md)
+- [2025-10-11](en/maintainer-meetings/maintainer-meeting-2025-10-11.md)
+- [2025-09-27](en/maintainer-meetings/maintainer-meeting-2025-09-27.md)
+- [2025-09-13](en/maintainer-meetings/maintainer-meeting-2025-09-13.md)
 - [2025-08-30](en/maintainer-meetings/maintainer-meeting-2025-08-30.md)
 - [2025-08-16](en/maintainer-meetings/maintainer-meeting-2025-08-16.md)
 - [2025-08-02](en/maintainer-meetings/maintainer-meeting-2025-08-02.md)
