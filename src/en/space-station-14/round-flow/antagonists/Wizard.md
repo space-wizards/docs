@@ -65,6 +65,10 @@ As with SS14, a Wizard being a friendly antagonist was also an issue in SS13. Ev
 
 Wizard is already implemented but this would be in hopes of reintroducing it into Roundstart and as a subgame mode.
 
+Currently their spell list is limited to some projectiles, very few events, teleportation spells, and a few different rods and staves, which gives them a little to work with but overall limits their capabilities and creativity. But once more spells and features are added to the Wizard that'll solve itself relatively quickly.
+
+The plan is to overall add more spells that better help this, and backend mechanics to go with it such as an advanced targeting system and shifting some spells to game rules.
+
 An advanced targeting system/spawning system will need to be added to not only make more creative spells, but to make it easier for contributors to just
 add the parameters that they want to do while cutting down on custom logic. Custom logic won't be avoided but there can be a point where a lot is cut down.
 - Advanced targeting/spawning as an actual working example is something like the force wall, where it targets a certain set of tiles in front of it.
