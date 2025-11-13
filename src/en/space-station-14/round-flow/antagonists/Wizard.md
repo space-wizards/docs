@@ -88,7 +88,7 @@ One of the unique things about the Wizard is that by its existence it does poten
 
 Potential antagonist pillars that it violates:
 - Just a Spark
-  - Wizards are 100% meant to disrupt a round, they are a major force of chaos afterall.
+  - Wizards are 100% meant to disrupt a round, they are a major force of chaos after-all.
 
 - Escalation
   - As above, the Wizards are like Nukies and have their full potential right off the bat.
@@ -97,10 +97,12 @@ Potential antagonist pillars that it violates:
   - Like Nukies, the Wizard can announce itself so it's relatively easily discovered. The Wizard has relatively low armor and healing access, easy to slip, and no stun or stamina resistance. It's very much the definition of a glass cannon, so counterplay comes from smacking the wizard.
 
 Despite it potentially violating some antagonist pillars, it does help highlight the core design principles, mainly:
-- Chaos
+- Chaos (not carnage)
   - The Wizard is the embodiment of this pillar. You know you're in for a wild ride when a wizard is around. The potential they have for introducing chaos is pretty high.
     They may give everyone in existence a gun and turn the station into a standoff. Or the captain might be turned into a cluwne as punishment.
     The Wizard may even just summon a dance floor and make people dance their stamina away. By being able to shift reality, the choices are basically as creative as the contributors can get.
+  - Spells can have a wide range of abilities, using weaponizing different features and game mechanics across the codebase. By combining them through freeform selection the wizard is able to have these features interact in emergent gameplay with wildly unexpected or rare results. The creativity of the wizard player is the tool that drives the round.
+  - It can get old doing the same old thing all the other wizards are doing. Try out some new and creative combination to really spice up the round!
 - Seriously Silly
   - There's almost nothing more unhinged than a Wizard and their antics. A well timed fireball or a smite may end up being hilarious in a story told later.
 - Dynamic Environment
