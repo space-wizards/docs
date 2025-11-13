@@ -279,7 +279,7 @@ Which will considerably lower the amount of free agents it makes which in turn r
   - Additionally if a Wizard dies too fast, another one could be called in immediately.
 
 
-- Obsurdly Powerful
+- Absurdly Powerful
   - This is part in due to some unintended effects (Rod deleting people and things) and some overtuned abilities. Abilities and equipment are planned on being adjusted, while still remaining strong.
     A Wizard will absolutely be a glass cannon and there will be times that a player may be hit by an unfair choice (ex. polymorphed into something simple, gibbed) but that is the will of the game.
 
