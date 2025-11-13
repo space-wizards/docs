@@ -89,9 +89,13 @@ One of the unique things about the Wizard is that by its existence it does poten
 Potential antagonist pillars that it violates:
 - Just a Spark
   - Wizards are 100% meant to disrupt a round, they are a major force of chaos after-all.
+  - In ways it can help spark interaction too! 
+    - By giving the entire living playerbase guns or magic, it could help tip the scales in a crew vs nukie fight.
+    - They could punish a crew member by turning them into a cluwne, which should turn their fellow crewmates against them and also fear the Wizard so they too don't get cluwned.
+    - A lot of the possibility are endless once the options are available to add sparks to the round!
 
 - Escalation
-  - As above, the Wizards are like Nukies and have their full potential right off the bat.
+  - As above, the Wizards are like Nukies and have their full potential right off the bat. This is so they can combine spells in a unique and creative way to make a more interesting round.
 
 - Discoverability
   - Like Nukies, the Wizard can announce itself so it's relatively easily discovered. The Wizard has relatively low armor and healing access, easy to slip, and no stun or stamina resistance. It's very much the definition of a glass cannon, so counterplay comes from smacking the wizard.
