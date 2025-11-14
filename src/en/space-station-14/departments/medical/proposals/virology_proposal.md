@@ -18,7 +18,7 @@ A take on how virology might be re-added to the game in a way that has depth and
 
 A few (one to three, maybe) diseases will happen every shift, but most of them will be mild and ignorable - a runny nose, a slight cough, and so on. Moderate diseases, requiring some virology intervention, will be possible but uncommon. Severe diseases will be their own game mode. 
 
-A disease will spawn in at a location or on an object. Anyone who walks through the location or touches the object will have a chance to catch the disease.
+A disease will spawn in at a location or on an object. Anyone who walks through the location or touches the object will have a chance to catch the disease. Unsanitary objects or locations - trash, spilled liquids, corpses, spoiled food, miasma, and so forth - will be more likely to harbor diseases.
 
 A disease will be either bacterial, or virological. It will have:
 - One or more symptoms from a weighted list, ranging in severity from "you get the sniffles" to "spontaneous combustion." These will include normal, sensible symptoms, but also (more rarely) silly space game symptoms.
@@ -131,7 +131,7 @@ Since diseases cause problems through their secondary effects, in the form of sy
 
 Though every round should have a mild disease or two, these should usually be ignorable or at worst inconvenient, whereas a severe disease counts as a round-defining major 'antagonist' and should be its own game mode.
 
-In a regular round, there should be a constant, low chance for a mild disease to spawn as an event. These will infect a particular object or location (tile) and afflict themselves upon anyone who touches or stands on their source, spreading from there as per their mode of transmission. The disease should infect one to a few people and cause mild inconvenience at best. The exact nature of the disease should be random, with at least some possibility that it will be severe enough for virology to take an interest - maybe one moderate disease appears every three to five rounds on average. Good janitorial coverage might reduce this.
+In a regular round, there should be a constant, low chance for a mild disease to spawn as an event. These will infect a particular object or location (tile), gravitating towards the filthier parts of the station, and afflict themselves upon anyone who touches or stands on their source, spreading from there as per their mode of transmission. The disease should infect one to a few people and cause mild inconvenience at best. The exact nature of the disease should be random, with at least some possibility that it will be severe enough for virology to take an interest - maybe one moderate disease appears every three to five rounds on average. Good janitorial coverage can reduce this. Extremely filthy stations, on the other hand, might generate extra diseases in sufficiently disgusting areas.
 
 In a Plague Round, there will be a severe disease that spawns within the first 10 minutes or so. Other minor diseases might also show up via events. Like mild diseases, the severe disease will have a particular object or tile that is its source, though it might slowly spread out from that source to help ensure that the crew doesn't totally miss it all shift. The only real difference between a severe disease and a mild one will be the numbers: Severe diseases can have higher mutation rates, a longer infection period before symptoms appear, faster progression once symptoms do appear, more serious symptoms, or most likely a combination of those.
 
