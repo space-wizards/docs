@@ -156,6 +156,13 @@ Diseases start out small and weak, then escalate through spread and mutation. A 
 
 - Service has the least to do, but might have to navigate delivering food and drinks to quarantined parts of the station.
 
+### Species Interactions
+
+- Reptiles, arachnids and vulpkanin, as well as any other predatory species, should have a stronger immune response to diseases that come from eating raw flesh or (for reptiles in particular) drinking floor blood. Flood blood consumption is, after all, an important part of reptilian culture. Fresh kills should also not count as unsanitary - only after they've sat for a bit do bacteria have a chance to develop.
+
+- Diona should have a stronger immune response to diseases that come from the floor, and especially from infected puddles. This is to help counterbalance the fact that they can't protect themselves with shoes.
+
+- Vox should have a stronger immune response across the board, but especially to diseases that come from trash.
 
 ## Administrative & Server Rule Impact
 
