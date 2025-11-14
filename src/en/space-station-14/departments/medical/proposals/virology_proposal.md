@@ -88,7 +88,7 @@ If there are no virologists on staff, a CMO might recruit from among the existin
 
 ### Prevention
 
-Depending on the disease's mode of transmission, surgical masks, (which already exist,) latex gloves, (which already exist,) and even tissues or handkerchiefs (which could be added) can be used to help prevent them from spreading. Space Cleaner will reduce viral load on a given surface or object, though it won't necessarily eliminate it entirely. For more severe diseases, biosuits and gas masks might be necessary.
+Depending on the disease's mode of transmission, surgical masks, (which already exist,) latex gloves, (which already exist,) and even tissues or handkerchiefs (which could be added) can be used to help prevent them from spreading. Space Cleaner will reduce viral load on a given surface or object, though it won't necessarily eliminate it entirely. Bleach will be twice as effective, but not immediately available. For more severe diseases, biosuits and gas masks might be necessary.
 
 Anyone who leaves their used tissues on the ground is a bad person and should feel bad. Anyone who picks them up bare-handed is liable to contract whatever disease the person had.
 
