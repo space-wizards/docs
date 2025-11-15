@@ -1,15 +1,13 @@
 # Container Controls
 
-Container is type of control that dictates the layout of
-other controls. Containers logic affect directly only direct child controls.
-Containers usually arrange child controls every frame by collecting desired size
-of controls (call to `Measure` method on children) and then providing them with
-size that they can afford (call to `Arrange` method on children), and placing
-them (`ArrangeOverride`) at needed coordinates after all calculations were
-accounted.
-
-This document only covers some of the most commonly used containers. Additions
-expanding it with others are welcome.
+Container is type of control that dictates the layout of other controls. The
+containers logic only affects direct child controls. Containers usually arrange
+child controls every frame by collecting their desired size via `.Measure()` and
+then providing them with the size that they can afford via `.Arrange()`. After
+calculation of the desired and afforded sizes of its children, the container can
+override the child components coordinates if needed. This document only covers
+some of the most commonly used containers. Additions expanding it with others
+are welcome.
 
 ```admonish info
 This page is a stub and complete descriptions of how containers will react to

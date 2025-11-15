@@ -116,44 +116,42 @@ Do not forget the `[CommonSheetlet]` attribute.
 
 ### Style Rules
 
-Each style rule has a few different components to it (This will look familiar to
-anyone who knows CSS):
-
-**The selector**: This limits the elements that a style rule can affect. This is
-made up of a few different parts:
+Style rules are what apply styling to XML elements, not unlike the ones found 
+in CSS. They are composed of a selector, which specifies what elements this
+style rule affects, and a set of properties that define the styling to apply
+to those elements. First, lets look at selectors, which filter elements based on
+a few different traits:
 
 - `Type`: The type of element this rule affects. Anything inheriting from this
   type will also be affected by this rule.
 - `StyleClasses`: The classes that the element must have to be affected by
-  this rule. The element must have all of these classes to be affected by this
-  rule. This can be specified in the XML with the `StyleClasses` property.
+  this rule. The element must have all of the classes specified by the rule to
+  be affected by it. This is specified in the XML with the `StyleClasses` 
+  property.
 - `StyleIdentifier`: The identifier of the element. This is a unique
   identifier that can be used to target a specific element. This should be
-  used sparingly, when there is only one instance of the element that needs to
-  be styled in a highly specific manner. There may only be one of these
-  specified. This can be specified in the XML with the `StyleIdentifier`
-  property.
+  used when there is only one instance of the element that needs to
+  be styled in a highly specific manner. An element may only have one 
+  identifier, which is specified in the XML with the `StyleIdentifier` property.
 - `PseudoClasses`: These are special classes that can be used to target
   elements in a specific state. For example, this is used to style buttons
   differently when hovered or pressed or whatever. These are triggered
   automatically through user interaction.
-- Elements may also be styled based on their parent elements, and all their
+- Elements may also be styled based on their parent element, and all their
   style properties. In the style rule definition, this is done with the
-  `.ParentOf(...)` method, and can take advantage of all the same selector
-  properties defined above.
+  `.ParentOf(...)` method, which takes in another selector describing the 
+  child element which the styles will be applied to.
 
-Selectors that specify more of these parts are more "specific", and will take
+Selectors that specify more of these filters are more "specific", and will take
 priority over selectors that are less specific. If you want your style rule to
 override others, make it more specific.
 
-**The properties**: Any elements matching the selector will then have their
-properties modified by the style rule. These are the same properties you would
-define in the XAML.
+Any elements matching the selector will then have the properties defined in the
+style rule applied to them. The properties are the same in both C# and XAML.
 
 To assist with constructing these style rules, there are helper methods defined
-in `Content.Client/Stylesheets/StylesheetHelpers`.
-
-Let's walk through some examples of style rules:
+in `Content.Client/Stylesheets/StylesheetHelpers`. To see this in action, let's
+walk through some examples of style rules:
 
 ```cs
 // you need this using statement to use the helper methods
@@ -189,6 +187,9 @@ var rules =
         .Font(sheet.BaseFont.GetFont(8))
 ];
 ```
+
+Of course they are capable of much more. Read the sheetlets implemented in-game
+to learn how something is done!
 
 ### Death to Hardcoding!
 

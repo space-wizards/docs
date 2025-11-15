@@ -1,8 +1,6 @@
 # User Interface
 
-```admonish warning
-The information on this page may be outdated, and may not accurately describe current conventions for upstream Space Station 14.
-```
+{{ #template ../templates/outdated.md }}
 
 I can't be bothered to think of an elegant opening paragraph for this page. This is the UI tutorial.
 
