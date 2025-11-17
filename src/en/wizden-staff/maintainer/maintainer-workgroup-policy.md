@@ -107,6 +107,10 @@ Conflicts on pull requests that are internal to the workgroup are subjected to t
 ### Design Documents
 Workgroups are encouraged to make design documents for their game area.
 View the [Game Area Design Document Template](../../general-development/game-area-design-doc.md) and the Department Design Document Template on each drafted department for a good document basis.
+Game Area / Department Design document (which will describe pillars of design for workgroup dedicated area) should be merged, before workgroup will be considered fully-formed and functional. 
+Merging such document will mark the fact that maintainers team agreed to give more freedom of action to workgroup upon designated area, and thus it should be accepted by majority of maintainers votes. 
+Document should be accompanied by separate Discourse thread, in which any other maintainer should be able to request merge delay (for a preiod not more then a week), in case he want to review document and possibly leave change requests, but cannot do it right now.
+Document merge should be done upon gettint no requested changes / no merge delay requests for 1 week or more.
 
 When a workgroup creates a design document, it is said to be owned by that workgroup.
 
