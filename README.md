@@ -1,16 +1,10 @@
-# Space Wizards Development Wiki
+# Monolith Development Wiki
 
-This is the `mdbook`-based developer documentation for all Space Wizards projects, including Robust Toolbox, Space Station 14, the SS14 launcher, etc. These docs cover many topics and can be potentially very useful for mappers, spriters, active contributors & prospective contributors, people who want to use our engine for their own projects, fork developers, and so on.
+This is the `mdbook`-based developer documentation for the Monolith project, a ship-based fork of Space Station 14. This book covers topics relevant to both seasoned and beginner mappers, spriters, and contributors.
 
-The site is currently hosted at [https://docs.spacestation14.com](https://docs.spacestation14.com).
+The documentation is currently hosted at [TODO](TODO) using Github Pages.
 
-Benefits of the current docs site infrastructure include:
-- First-class git support, open source and actually editable by everyone
-- Decently familiar & comfortable for developers since `mdbook` use is very widespread
-- No sign-on infrastructure or hosting necessary (besides GH pages), if forks would like to host their own
-- Very low friction to adding new pages and editing/fixing old ones
-- High level of customizability with styling and easy custom scripting
-- Eventual localization support
+This repository can be edited by anyone who would like to contribute to improving the documentation for Monolith development. The Monolith Book uses `mdbook` and the Markdown markup language for formatting, we recommend [Markdown Guide](https://www.markdownguide.org/) as a reference or guide for anyone contributing to this repository.
 
 The following `mdbook` features & plugins are available and in use:
 - `MathJax` support 
@@ -22,14 +16,8 @@ The following `mdbook` features & plugins are available and in use:
 - `mdbook-emojicodes`
 - `mdbook-embedify`
 
-**For information such as how to edit, build & test these docs, see [Guide to Editing Docs](https://spacestation14.io/docs/en/meta/guide-to-editing-docs.html). on the site itself** (or [in this repo](./src/en/meta/guide-to-editing-docs.md))
-
-## Screenshots
-
-![](src/en/assets/images/readme-example-1.png)
-
-![](src/en/assets/images/readme-example-2.png)
+**For information pertaining to editing, building, and testing this documentation, see [TODO](TODO)** (or [within the repository](./src/en/meta/guide-to-editing-docs.md))
 
 ## License
 
-The Space Wizards Development Wiki is released under the Mozilla Public License v2.0.
+The Monolith Development Wiki is released under the Mozilla Public License v2.0.
