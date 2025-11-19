@@ -21,3 +21,7 @@ The following `mdbook` features & plugins are available and in use:
 ## License
 
 The Monolith Development Wiki is released under the Mozilla Public License v2.0.
+
+## Attribution
+
+This documentation is a derivative work based on the [Space Station 14 Development Wiki](https://github.com/space-wizards/docs), originally created by Space Wizards and contributors. Modifications have been made to adapt the content for the Monolith project. See [NOTICE.md](NOTICE.md) for complete attribution details.
