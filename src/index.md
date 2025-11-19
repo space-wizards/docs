@@ -1,41 +1,32 @@
-<img src="en/assets/misc/icon-trans.svg" width=128 style="margin-left:auto;margin-right:auto;display:block"/>
-
-```admonish warning "Players beware"
-This is the developer's wiki. If you are a player, you are looking for [the player wiki](https://wiki.spacestation14.io/wiki/Main_Page).
+```admonish warning "Players Beware!"
+This is the developer's wiki. If you are a player, you are looking for the in-game guidebook. Press 0 and you are good to go!
 ```
 
 ```admonish question "Technical Issues"
-If you are having difficulties with logging into the game or building it, please try the following resources:
-[🔊 Discord](https://discord.gg/ss14). This is the most active community of developers for Space Station 14. Ask a question on the General or Help channel.
-[📲 FAQ](https://spacestation14.io/about/faq/)
-[🎮 Forums](https://forum.spacestation14.io/)
+If you are having difficulties with modifying or building the game after consulting this guide, let us know on the [Discord](https://discord.gg/mxY4h2JuUw) server. We are happy to help to the best of our abilities.
 ```
 
-This wiki is written in [Markdown](https://docs.requarks.io/en/editors/markdown) using `mdbook`. You can view our README.md for the docs site [here](https://github.com/space-wizards/docs/blob/master/README.md), which has useful information.
-
-```admonish info "Making contributions"
-If you would like to make contributions to this documentation site, it's hosted fully open source on GitHub and you can make a webedit PR to any page using the button in the top right. Check out our [Guide to Editing Docs](en/meta/guide-to-editing-docs.md) page for more information.
+```admonish info "Making Contributions"
+If you would like to improve our documentation, the docs repository can be found [here](https://github.com/Monolith-Station/docs). We accept webedit PRs which can be made using the top-right pencil button while viewing an .md file on GitHub, or you can make changes on a local docs instance and PR using git. Check out the [Guide to Editing Docs](en/meta/guide-to-editing-docs.md) page for more details.
 ```
+
+This is the developer's wiki for [Monolith](https://github.com/Monolith-Station/Monolith), a ship-based Space Station 14 fork. The aim of this document is to make contributing to the project as seamless as possible after reading the relevant chapters of this book. Chapters relevant to programming, spriting, or creating custom maps for the game can be found in their relevant subsection.
 
 ## Getting Started
 
 - [:question: How do I code?](en/general-development/setup/howdoicode.md)
 - [:package: Setting up the Dev Environment](en/general-development/setup/setting-up-a-development-environment.md)
-- [:page_with_curl: Core Game Design](en/space-station-14/core-design.md)
-- [:world_map: Mapping](en/space-station-14/mapping.md)
-- [:chart_with_upwards_trend: Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
-
+- [:chart_with_upwards_trend: Git for the Monolith Developer](en/general-development/setup/git-for-the-ss14-developer.md)
+- [:rocket: Mapping 101](en/space-station-14/mapping.md)
+- [:art: Spriting 101]()
 
 ### What should I work on?
 
-* Talk to current developers in Discord.
-* Check [the list of issues](https://github.com/space-wizards/space-station-14/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) for anything you can work on.
-* Reading through [Acronyms & Common Nomenclature](en/general-development/codebase-info/acronyms-and-nomenclature.md) as well as the other articles on this wiki in `Tips` or `Setup` will likely help you understand what is happening.
+* Talk to developers and maintainers in the Discord server.
+* Take a look at the suggestions, feedback, and bounty channels on the Discord server.
+* Check [the list of issues](https://github.com/Monolith-Station/Monolith/issues) for a list of reported issues.
 
-### What repositories are part of Space Station 14?
-* [Space Station 14](https://github.com/space-wizards/space-station-14) is the main codebase. It has the most priority issues. [Space Station 14 Issues](https://github.com/space-wizards/space-station-14/issues)
-* [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) is the custom game engine. [Robust Toolbox Issues](https://github.com/space-wizards/RobustToolbox/issues)
+### Additional Resources
 
-There are other repositories that do not have as many priority issues to work on. If you are still curious about them, they are here:
-- [Space-Wizards](https://github.com/space-wizards) 
-
+- [Space Station 14](https://github.com/space-wizards/space-station-14)
+- [Robust Toolbox](https://github.com/space-wizards/RobustToolbox)

@@ -1,10 +1,9 @@
 [book]
-authors = ["Space Wizards Contributors"]
+authors = ["Monolith & Space Wizards Contributors"]
 language = "en"
-multilingual = false
 src = "src"
-title = "Space Wizards Development Wiki"
-description = "Tutorial & reference for all Space Wizards Federation projects, including the Robust Toolbox engine and its flagship open source game, Space Station 14."
+title = "Monolith Development Wiki"
+description = "Tutorial & reference for the Monolith project."
 
 [preprocessor.mermaid]
 
@@ -25,8 +24,8 @@ additional-css = ['theme/compiled/ss14.css']
 default-theme = "navy"
 preferred-dark-theme = "navy"
 
-git-repository-url = "https://github.com/space-wizards/space-station-14"
-edit-url-template = "https://github.com/space-wizards/docs/blob/master/{path}"
+# git-repository-url = ""
+# edit-url-template = ""
 
 mathjax-support = true
 curly-quotes = true
@@ -45,82 +44,3 @@ runnable = false # sorry we arent rustpilled :(
 [output.linkcheck]
 traverse-parent-directories = false
 warning-policy = "ignore" # false-positives like hell with absolute links & latex, so.. cant do
-
-# Redirects
-# These are used to map between old Wiki.js links and current docs site links,
-# so we can avoid the hell that was dead links with the old hackmd transfer.
-# Wiki.js doesn't have `.html` endings on files, so we hack it by putting /index.html
-# and just letting the browser look there, then get redirected
-[output.html.redirect]
-"/en/getting-started/how-do-i-code/index.html" = "/en/general-development/setup/howdoicode.html"
-"/en/getting-started/dev-setup/index.html" = "/en/general-development/setup/setting-up-a-development-environment.html"
-"/en/getting-started/git/index.html" = "/en/general-development/setup/git-for-the-ss14-developer.html"
-"/en/content/yaml/index.html" = "/en/general-development/tips/yaml-crash-course.html"
-"/en/getting-started/pr-guideline/index.html" = "/en/general-development/codebase-info/pull-request-guidelines.html"
-"/en/getting-started/conventions/index.html" = "/en/general-development/codebase-info/conventions.html"
-"/en/content/writing-guidebook-entries/index.html" = "/en/general-development/tips/writing-guidebook-entries.html"
-"/en/content/device-network/index.html" = "/en/space-station-14/core-tech/device-network.html"
-"/en/content/pow3r/index.html" = "/en/spcae-station-14/departments/engineering/pow3r.html"
-# yes this one is correct
-"/en/content/construction/index/index.html" = "/en/space-station-14/core-tech/construction.html"
-"/en/content/destructible/index.html" = "/en/space-station-14/core-tech/destructible.html"
-"/en/content/mapping/index.html" = "/en/space-station-14/mapping/guides/general-guide.html"
-"/en/content/mapping-sins/index.html" = "/en/space-station-14/mapping/guidelines.html"
-"/en/content/mapping-checklist/index.html" = "/en/space-station-14/mapping/guidelines.html"
-"/en/content/dungeons/index.html" = "/en/space-station-14/mapping/dungeons.html"
-"/en/content/node-networks/index.html" = "/en/space-station-14/core-tech/node-networks.html"
-"/en/content/NPCs/index.html" = "/en/space-station-14/core-tech/npcs.html"
-"/en/content/cartridge-loader/index.html" = "/en/space-station-14/player-interaction/cartridge-loaders.html"
-"/en/content/chemistry/index.html" = "/en/space-station-14/core-tech/chemistry.html"
-
-"/en/administration/commands/index.html" = "/en/community/admin/admin-tooling/admin-command-cookbook.html"
-"/en/administration/tooling/index.html" = "/en/community/admin/admin-tooling.html"
-"/en/administration/policy/index.html" = "/en/community/admin/wizards-den-admin-policy.html"
-"/en/administration/banning-policy/index.html" = "/en/community/admin/wizards-den-banning-policy.html"
-"/en/getting-started/hosting/index.html" = "/en/general-development/setup/server-hosting-tutorial.html"
-"/en/hosting/replays/index.html" = "/en/server-hosting/server-replay-recording.html"
-"/en/hosting/changelogs/index.html" = "/en/server-hosting/setting-up-ss14-changelog.html"
-"/en/hosting/SS14-Admin/index.html" = "/en/server-hosting/setting-up-ss14-admin.html"
-"/en/hosting/robust-cdn/index.html" = "/en/server-hosting/setting-up-robust-cdn.html"
-"/en/hosting/oauth/index.html" = "/en/server-hosting/oauth.html"
-"/en/hosting/port-forwarding/index.html" = "/en/server-hosting/port-forwarding.html"
-"/en/technical-docs/acronyms-and-nomenclature/index.html" = "/en/general-development/codebase-info/acronyms-and-nomenclature.html"
-"/en/getting-started/engine-changes/index.html" = "/en/general-developmnet/codebase-info/prs-with-engine-changes.html"
-"/en/getting-started/debugging-tools/index.html" = "/en/general-development/tips/debugging-tools.html"
-"/en/getting-started/troubleshooting/index.html" = "/en/general-development/tips/troubleshooting-faq.html"
-"/en/config-reference/index.html" = "/en/general-development/tips/config-file-reference.html"
-"/en/technical-docs/codebase-organization/index.html" = "/en/general-development/codebase-info/codebase-organization.html"
-"/en/engine/ecs/index.html" = "/en/robust-toolbox/ecs.html" 
-"/en/engine/coordinate-systems/index.html" = "/en/robust-toolbox/coordinate-systems.html"
-"/en/engine/net-entities/index.html" = "/en/robust-toolbox/netcode/net-entities.html"
-"/en/engine/entity-coordinates/index.html" = "/en/robust-toolbox/transform/entity-coordinates.html"
-"/en/meta/role-hierarchy/index.html" = "/en/community/space-wizards-role-hierarchy.html"
-"/en/super-simple-14/intro/index.html" = "/en/ss14-by-example/introduction-to-ss14-by-example.html"
-"/en/super-simple-14/bike-horn/index.html" = "/en/ss14-by-example/adding-a-simple-bikehorn.html"
-"/en/super-simple-14/bike-horn-visualizer/index.html" = "/en/ss14-by-example/making-a-sprite-dynamic.html"
-"/en/content/localization/index.html" = "/en/ss14-by-example/fluent-and-localization.html"
-"/en/super-simple-14/networking-and-you/index.html" = "/en/ss14-by-example/basic-networking-and-you.html"
-"/en/launcher/content-updates-deltas-manifests/index.html" = "/en/other-projects/launcher/delta-updates-and-manifests.html"
-"/en/engine/content-manifests/index.html" = "/en/robust-toolbox/content-manifests.html"
-"/en/fork-development/discord-rich-presence/index.html" = "/en/community/discord-rich-presence-repository.html"
-"/en/launcher/content-bundles/index.html" = "/en/other-projects/launcher/content-bundles.html"
-"/en/engine/user-interface/index.html" = "/en/robust-toolbox/user-interface.html"
-"/en/engine/midi/index.html" = "/en/robust-toolbox/midi.html"
-"/en/engine/sandboxing/index.html" = "/en/robust-toolbox/sandboxing.html"
-"/en/engine/serialization/index.html" = "/en/robust-toolbox/serialization.html"
-"/en/engine/shaders/index.html" = "/en/robust-toolbox/rendering/shaders.html"
-"/en/engine/ioc/index.html" = "/en/robust-toolbox/ioc.html"
-"/en/engine/Physics/index.html" = "/en/robust-toolbox/transform/physics.html"
-"/en/engine/grids/index.html" = "/en/robust-toolbox/transform/grids.html"
-"/en/technical-docs/preprocessor-defines/index.html" = "/en/robust-toolbox/preprocessor-defines.html"
-"/en/engine/build-configurations/index.html" = "/en/robust-toolbox/build-configurations.html"
-"/en/engine/http-api/index.html" = "/en/robust-toolbox/server-http-api.html"
-"/en/getting-started/server-hosting-rewrite-workspace/watchdog/index.html" = "/en/server-hosting/setting-up-ss14-watchdog.html"
-"/en/engine/robust-modules/index.html" = "/en/robust-toolbox/robust-modules.html"
-"/en/engine/user-data-dir/index.html" = "/en/robust-toolbox/user-data-directory.html"
-"/en/engine/porting-visualizers/index.html" = "/en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.html"
-"/en/engine/lighting-fov/index.html" = "/en/robust-toolbox/rendering/lighting-and-fov.html"
-"/en/engine/sprites-icons/index.html" = "/en/robust-toolbox/rendering/sprites-and-icons.html"
-"/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
-"/en/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
-"/en/server-hosting/setting-up-redbot.html" = "/en/server-hosting/setting-up-discord-integration.html"
