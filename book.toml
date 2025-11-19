@@ -24,8 +24,8 @@ additional-css = ['theme/compiled/ss14.css']
 default-theme = "navy"
 preferred-dark-theme = "navy"
 
-# git-repository-url = ""
-# edit-url-template = ""
+git-repository-url = "https://github.com/Monolith-Station/Monolith"
+edit-url-template = "https://github.com/Monolith-Station/docs/blob/master/{path}"
 
 mathjax-support = true
 curly-quotes = true

@@ -7,10 +7,10 @@ If you are having difficulties with modifying or building the game after consult
 ```
 
 ```admonish info "Making Contributions"
-If you would like to improve our documentation, the docs repository can be found [here](https://github.com/Monolith-Station/docs). We accept webedit PRs which can be made using the top-right pencil button while viewing an .md file on GitHub, or you can make changes on a local docs instance and PR using git. Check out the [Guide to Editing Docs](en/meta/guide-to-editing-docs.md) page for more details.
+If you would like to improve our documentation, the docs repository can be found [here](https://github.com/Monolith-Station/docs). We accept webedit PRs which can be made using the top-right pencil button, or you can make changes on a local docs instance and PR using git. Check out the [Guide to Editing Docs](en/meta/guide-to-editing-docs.md) page for more details.
 ```
 
-This is the developer's wiki for [Monolith](https://github.com/Monolith-Station/Monolith), a ship-based Space Station 14 fork. The aim of this document is to make contributing to the project as seamless as possible after reading the relevant chapters of this book. Chapters relevant to programming, spriting, or creating custom maps for the game can be found in their relevant subsection.
+This is the developer's wiki for [Monolith](https://github.com/Monolith-Station/Monolith), a ship-based Space Station 14 fork. The aim of this document is to make contributing to the project as seamless as possible after reading the relevant chapters of this book. Chapters pertaining to programming, spriting, or creating custom maps for the game can be found in their parent subsections.
 
 ## Getting Started
 
@@ -24,7 +24,7 @@ This is the developer's wiki for [Monolith](https://github.com/Monolith-Station/
 
 * Talk to developers and maintainers in the Discord server.
 * Take a look at the suggestions, feedback, and bounty channels on the Discord server.
-* Check [the list of issues](https://github.com/Monolith-Station/Monolith/issues) for a list of reported issues.
+* Check out [the list of issues](https://github.com/Monolith-Station/Monolith/issues) on GitHub.
 
 ### Additional Resources
 
