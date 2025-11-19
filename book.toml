@@ -1,7 +1,6 @@
 [book]
 authors = ["Monolith & Space Wizards Contributors"]
 language = "en"
-multilingual = false
 src = "src"
 title = "Monolith Development Wiki"
 description = "Tutorial & reference for the Monolith project."
@@ -25,8 +24,8 @@ additional-css = ['theme/compiled/ss14.css']
 default-theme = "navy"
 preferred-dark-theme = "navy"
 
-git-repository-url = ""
-edit-url-template = ""
+# git-repository-url = ""
+# edit-url-template = ""
 
 mathjax-support = true
 curly-quotes = true
