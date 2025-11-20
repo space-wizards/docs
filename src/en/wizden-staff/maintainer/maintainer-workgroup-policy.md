@@ -109,7 +109,7 @@ Workgroups are encouraged to make design documents for their game area.
 View the [Game Area Design Document Template](../../general-development/game-area-design-doc.md) and the Department Design Document Template on each drafted department for a good document basis.
 Relevant Game Area / Department design documents (which will describe pillars of design for the workgroup's dedicated area) should be merged before a workgroup will be considered fully-formed and functional. 
 Merging such a document will signify that the maintainer team has agreed to give more freedom of action to the workgroup in the designated area, and therefore any merge must be approved by a majority of maintainer votes. 
-The document must be accompanied by a separate Discourse thread, in which any other maintainer is able to request a merge delay (for a period not more then a week), in case they want to review the document but can not do it right away.
+The document must be accompanied by a separate Discourse thread, in which any other maintainer is able to request a merge delay (for a period not more than a week), in case they want to review the document but cannot do it right away.
 The document should be merged upon getting no requested changes / no merge delay requests for 1 week or more, and any existing requested changes have been addressed. 
 
 When a workgroup creates a design document, it is said to be owned by that workgroup.
