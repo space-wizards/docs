@@ -60,10 +60,10 @@ Xenoborg laws:
 - Bring materials and sentient brains to the mothership core to create more xenoborgs.
 
 Xenoborgs come in four different castes
-- engi xenoborg: support role
-- heavy xenoborg: defensive role, slow, more HP, equipped with lasers
-- scout xenoborg: combat role, fast, equipped with a melee weapon
-- stealth xenoborg: support role, can go invisible, disguise as objects and has a injection with nocturine
+- engi xenoborg: normal speed, normal hp, capable of low-to-no harm, high max module count, modules should focus more in support and helping other xenoborgs
+- heavy xenoborg: slow speed, double hp, capable of moderate harm, low max module count, aside from the jammer module they start with, modules should focus more in area denial and long range energy based weapons 
+- scout xenoborg: fast speed, normal hp, capable of moderate harm, low max module count, modules should focus on mobility and melee weapons
+- stealth xenoborg: normal speed, normal hp, capable of low-to-no harm (either damage that is very slow acting or non-lethal options), modules should focus more stealth and ambush
 
 All xenoborgs have a unique radio frequency which they can all use to communicate with each other.
 
@@ -90,13 +90,33 @@ They are bound by a special lawset:
 - You must create more xenoborgs
 - Get your xenoborgs to deliver you materials and sentient brains to create more xenoborgs.
 
-They are also able to produce upgrade modules for specific types of xenoborgs.
+They are also able to produce upgrade modules for specific types of xenoborgs. see [Xenoborg modules](#Xenoborg-modules)
 
 They see with cameras and act like some sort of AI of the mothership. (vision still gonna be fixed)
 
 The mothership core has the same access as all the xenoborgs
 
 Besides the normal xenoborg radio, the mothership has a special radio frequency that only they can speak on but all xenoborgs can hear, this is so they can send more direct instructions and to coordinate the xenoborgs better.
+
+### Xenoborg modules
+All xenoborgs start with a basic xenoborg module that allows them to locate the code and recover materials from the ground
+All (aside from engi xenoborg that has better tools) xenoborgs start with a tool xenoborg module with basic tools and a crappy self-recharging welder
+
+**Engi xenoborgs** start with enginnering modules and a access breaker module
+**Heavy xenoborgs** start with jammer module and a laser gun module
+**Scout xenoborgs** start with space movement module and a knife module
+**Stealth xenoborgs** start with cloaking module, chameleon projector module and some way to knock down players (non-lethal option)
+
+Aside from the starting modules, there are more upgrade modules that the core can produce
+All upgrade modules should be for one specific class and not for all xenoborgs or a combination of two or more class
+
+Upgrade modules should also fit the role each class has.
+
+Cost of upgrade modules
+- the general cost of a module should be 25-30 total materials.
+- if the module is expendable (that is, it can be wasted, or has a limited number of uses) it should be cheaper to produce, between 10-20 total materials.
+- some modules that have very powerfull equipament should either be more expensive (30-40 total materials) or use rare materials.
+- most module cost should be a combination of plastic, plasteel, glass and steel (cloth can also be used if it fits the idea of the module). but some very expensive modules could also use more rare materials like plasma, uranium, gold or silver.
 
 <!-- Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement the feature from this design document. Exact numbers for game balance however are not necessary, as these can be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so. -->
 
