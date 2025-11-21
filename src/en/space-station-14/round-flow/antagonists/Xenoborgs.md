@@ -99,7 +99,7 @@ The mothership core has the same access as all the xenoborgs
 Besides the normal xenoborg radio, the mothership has a special radio frequency that only they can speak on but all xenoborgs can hear, this is so they can send more direct instructions and to coordinate the xenoborgs better.
 
 ### Xenoborg modules
-All xenoborgs start with a basic xenoborg module that allows them to locate the code and recover materials from the ground
+All xenoborgs start with a basic xenoborg module that allows them to locate the core and recover materials from the ground
 All (aside from engi xenoborg that has better tools) xenoborgs start with a tool xenoborg module with basic tools and a crappy self-recharging welder
 
 **Engi xenoborgs** start with enginnering modules and a access breaker module
