@@ -8,7 +8,7 @@ Many jobs on the station have specific lockers where players can find their equi
 
 ## Requirements
 
-Job lockers for a department's standard crew should spawn with all job-essential equipment for that department. A player should want most items found in their locker, or have a clear picture of why they would want them. Cosmetic items and optional/situational tools should only occasionally appear in lockers, and should be clearly separated from standard items. Expendable equipment and powerful equipment should not found in lockers to discourage raiding the lockers for loot.
+Job lockers for a department's standard crew should spawn with all job-essential equipment for that department. A player should want most items found in their locker, or have a clear picture of why they would want them. Cosmetic items and optional/situational tools should only occasionally appear in lockers, and should be clearly separated from standard items in code. Expendable items and powerful upgrades should not available to discourage raiding the lockers for loot.
 
 ```admonish success "Good:"
  - Toolbelt
