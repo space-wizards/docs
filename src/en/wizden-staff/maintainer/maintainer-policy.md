@@ -18,4 +18,3 @@ This policy applies in addition to the [General Staff](../staff-policy.md) and [
 - Maintainers may only host playtests with a Propermin from the admin team who must handle ahelps and log the playtest as an event. 
 - Maintainers **must** deadmin while playing.
 - **Any violation of the above rules will lead to in-game permissions being indefinitely revoked.**
-

@@ -2,14 +2,21 @@
 
 Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
 
-| Designers | Implemented | GitHub Links |
-|---|---|---|
-| Your Names Here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
+| Designers | Coders | Implemented | GitHub Links |
+|---|---|---|---|
+| your names here | coder names here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
 
-`Designers` should be the names that you use on GitHub and/or Discord. This is optional but strongly recommended, since:
+`Designers` should be the names that you, the authors of this document, use on GitHub and/or Discord. This is optional but strongly recommended, since:
 
 - This acknowledges credit where it is due
 - People who are confused about the written intent can use this information to contact the authors
+
+`Coders` should be the names of the contributors who plan on implementing this feature. To get a design doc approved you will need either
+- have the technical knowledge to be able to implement the proposed feature yourself.
+- have someone else who agreed to do this for you.
+- already have an existing implementation elsewhere that just needs to be ported.
+
+In either case you will have to write an outline on how you plan to implement this feature in the **Technical Considerations** section to show that is technically sound and feasible.
 
 `Implemented` is the status of the feature.
 
@@ -53,6 +60,6 @@ Consider addressing:
 
 # Technical Considerations
 
+- Does the feature require new systems, UI elements, or refactors of existing ones? Give a short technical outline on how they will be implemented.
 - Are there any anticipated performance impacts?
-- Does the feature require new systems, UI elements, or refactors of existing ones?
 - For required UI elements, give a short description or a mockup of how they should look like (for example a radial menu, actions & alerts, navmaps, or other window types)

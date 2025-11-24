@@ -18,7 +18,7 @@
 Notice: This meeting was recorded:
 Notice 2: Myra is stupid and forgot to unmute her mic in OBS. Also the voice is double. Sorry!
 
-{% embed youtube id="qnYBHDHw5mU" loading="lazy" %}
+{% embed youtube id="APv7tDdkTg8" loading="lazy" %}
 
 # No topics?
 ![image](https://i.imgflip.com/64sz4u.png?a481512)

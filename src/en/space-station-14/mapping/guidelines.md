@@ -140,7 +140,7 @@ Optional
 - Water Cooler
 - Secway Spawner + Keys
 
-### Wardens Office
+#### Wardens Office
 Required
 - Warden’s Locker [filled]
 - Criminal Records Computer
@@ -249,6 +249,7 @@ Required
 - chem vend
 - grinder
 - chemical locker
+- hotplate
 
 Optional
 - extra beaker boxes
@@ -403,7 +404,7 @@ Optional
 - First Aid Kit
 
 ## Engineering
-##### Main Engineering
+#### Main Engineering
 
 Required
 - Engineer Lockers
@@ -472,7 +473,7 @@ Required
 Required
 - Telecommunications Servers
 
-##### Atmospherics
+#### Atmospherics
 Required
 - Atmospheric Technician’s Locker [filled]
 - Working waste loop
@@ -529,7 +530,7 @@ Optional
 - Extra Botany Tools
 - Windows to kitchen or chem or both
 
-##### Bar
+#### Bar
 Required
 - Booze Dispenser
 - Soda Dispenser

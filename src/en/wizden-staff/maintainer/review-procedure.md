@@ -1,52 +1,232 @@
 # PR Review Procedure
 
-This documents lists the Maintainer procedure for reviewing and merging PRs to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14). 
+This documents lists the Maintainer procedure for reviewing and merging PRs to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) `master` branch. 
+Hotfixes intended to be merged directly to the `stable` branch must follow additional restrictions specified in the [Hotfix Procedure](hotfix-procedure.md).
 
-## Requirements
-- All PRs **should** adhere to the [code conventions](../../general-development/codebase-info/conventions.md), but this is *not* a hard requirement since some specific usecases may require straying from convention for readability.
-- PRs **should** be triaged, as per the [triage procedure](triage-procedure.md) guidelines. If a PR is not triaged, this can be done at the same time as the PR is initially considered for review.
-- PRs affecting gameplay **should** reference a design doc/proposal if one exists. For smaller changes, or where design documentation does not exist yet, the design may instead be outlined in the PR description. All gameplay PRs must not conflict with the [core design principles](../../space-station-14/core-design/design-principles.md) and should ideally reference how they fit into it. The responsibility to include this is on the PR author.
-- **2 Maintainers are required to review/sign off on merging or closing a PR**. *This requirement may be waived with written permission from a PM when the situation warrants it (either on Github, Discord or the SS14 forums).*
-  - For merging, this takes the form of 2 "Approval" checkmarks from Maintainers on the PR (visible in the PR's comments or under "Reviewers" in the Github sidebar). This Approval can also be given in written form during discussions on other platforms such as Discord or the SS14 forums, as long as it is also stated by another Maintainer in a comment under the PR. If the PR author is a Maintainer, this automatically counts as the PR having 1 Approval. Github will automatically assign a PR with 1 Maintainer approval the `S: Approved` label. *An "Approval" checkmark implies that you have reviewed and approved the PR's contents (code, art, mapping change etc.). If you approve of the PR conceptually without reviewing it this can be written in a PR comment, but does not count as an Approval. The label "S: Conceptual Approval" is reserved for Maintainer Discussions and may not be used in this instance.*
-  - For closing, this takes the form of 2 Maintainers expressing an opinion to close the PR, or a reluctance to implement the PR, in the PR's comments. This "Disapproval" can also be given in written form during discussions on other platforms such as Discord or the SS14 forums, as long as it is also stated by another Maintainer in a comment under the PR.
-  - In the case where there's dissent among maintainers, e.g. 2 Approvals and 1 Disapproval, a Maintainer Discussion should be held as described under the Policy section.
-  - You do not need to be one of the two Maintainers who have given Approval/Disapproval to merge/close the PR. Ideally a PR should be processed once it meets the requirements to be merged/closed, but if that does not happen for some reason, any other Maintainer is free to do it (even if that Maintainer is the PR author).
-- PRs that have more than 3 weeks of inactivity waiting on something from the PR author should be considered "stale" and labeled as such with the `S: Stale` label, unless another reason explains the inactivity (e.g. freeze or author has informed about a longer break). You may use any means to contact the author of the PR, but at the minimum you should leave a comment on the PR and give at least 1 week to respond before closing a stale PR. A PR that is waiting on an action from Maintainers (e.g. a code review or discussion resolution) is not eligible to be marked as stale.
-- PRs that change public APIs, move code into another namespace, change a prototype ID / prototype definition in C# etc. should contain a "breaking changes" section. This section should contain a summary of the changes and how to apply them. Upon merging the PR it is the maintainers task to post the breaking changes section (Not just the PR link!) into `#codebase-changes`. The message format should first include a link to the PR, then the "breaking changes" section copied from the PR and lastly a ping for `@contrib-notifications.`. While not necessary, checking the message for spelling errors and correcting them is preferred.
+Any portion of this procedure may be waived and/or modified with written permission (_via Discord or Github_) from a Lead Maintainer, Project Manager or Wizard.
 
-### Exemptions:
-- PMs and Wizards may waive any PR Review Procedure requirements if deemed necessary for the health of the project. When doing so, it should be done via written permission with an explanation (either on Github, Discord or the SS14 forums). Note that this exemption is not the default for actions taken by the relevant roles, and should be explicitly invoked when used.
-- If a triaged PR carries the `T: Bugfix`, `T: Cleanup`, or `T: Performance` labels and is of a smaller size, *and* does not carry the `T: New Feature` or `T: Balance Change` labels, then the PR is exempt from the "2 Maintainer" requirements for merging/closing and can be processed by a single maintainer. 
-  - If a maintainer is the author of a PR, this exemption does not apply (i.e no self-merges).
-  - This exemption is intended for smaller PRs but does not define a maximum size. It is expected that the reviewing maintainer uses their judgement for whether a PR should make use of this exemption, or if an additional review from another maintainer is more suitable.
-- Maintainer Maptainers (i.e. Maintainers with additional responsibilities regarding Mapping) may ignore the "2 Maintainer" requirements for merging/closing any PRs involve mapping changes. This means a only single Maintainer Maptainer is needed to approve and merge mapping PRs, and also are able to self-merge mapping PRs.
-  - Map tooling PRs are not included in this exemption.
-  - Map hotfix PRs are not included in this exemption and must still follow normal hotfix procedure.
-- Rule change PRs and server config change PRs submitted by (or with written approval from) a Head Game Admin do not need to adhere to the PR Review Procedure.
+Failure to follow this procedure can result in disciplinary action.
 
-## Policy
-- When starting a new review for a PR that has not yet been assigned to a Maintainer, you are **required** to Assign yourself to the PR. This can be done under "Assignees" in the Github sidebar. This let others know that you will be "owning" the PR. If you decide to stop owning the PR, un-assign yourself so that others may take over the PR. By owning a PR you are taking responsibility for keeping track of the PR's progress, ensuring code quality and keeping the PR author informed of what is the status of the review process. If you are the PR author yourself, you may not also be the PR owner. Anyone may review an owned PR. *If changes are Approved/Disapproved by the PR owner any Maintainer may merge the PR if they also Approve/Disapprove the changes, provided there is no other Maintainer dissent.*
+## PR Requirements
+All PRs must adhere to the [code conventions](../../general-development/codebase-info/conventions.md).
 
-- If you think a PR warrants further discussion with maintainers, or there is dissent regarding merging/closing, you may **optionally** start a Maintainer Discussion. **This is not a requirement**, but is recommended when you aren't sure about something. If you choose to do this, you are **required** to tag the PR with the "S: Under Maintainer Discussion" label, which should automatically cause a thread with the PR's name, PR number, Github link and appropriate tags/pings to be created on Discord in the #maint-review channel. If this does not happen automatically (e.g. the Discord bot is down or otherwise unavailable), you should create the thread manually. Any maintainer may do this, not just the PR owner but make sure to check to not make a duplicate. Once discussion has concluded, summarize the result of the discussion in a PR comment *before* taking any action. Then, remove the `S: Under Maintainer Discussion` label. Closing or merging should automatically apply appropriate tags and title prefixes to the discussion thread (e.g. [Approved], [Merged], [Closed] etc.), as well as close it.
-  - If the result of a Maintainer Discussion is positive and the PR has not undergone code review (meaning it is not yet ready to merge), the PR may be given the label `S: Conceptual Approval`, to show that it has been discussed with a positive outcome.
-  - If the result of a Maintainer Discussion is negative (i.e. a desire to close the PR), the result of the discussion can be cited as the reason to close the PR without explicitly requiring 2 Disapprovals.
+All PRs must be triaged, as per the [triage procedure](triage-procedure.md) guidelines.
+Upon actioning on a PR (merging, closing, reviewing), if it is not triaged, the person actioning must triage the PR.
 
-- If a Maintainer Discussion thread has been inactive for a week with no new messages, the Discord bot will tag the PR owner and prompt for a resolution. What this resolution is depends on the discussion, but Maintainers are encouraged to arrive at a compromise to either give the PR conceptual approval, agree to close the PR, or in rare cases ask the PR to be set to Draft in case a resolution can not be reached for some unique reason related to the PR. Other actions may also be taken. In the case the Discord bot fails, Maintainers are encouraged to do the prompting.
+All PRs must not conflict with [core design principles](../../space-station-14/core-design/design-principles.md). 
+Additionally, the PR author should describe how the changes they made fit into the game.
+Sufficiently large feature PRs may also warrant a **Design Doc** detailing the broader scope and purpose of their changes.
 
-- All non-gamebreaking revert PRs are **required** to undergo a Maintainer Discussion *before* being created. If there is a PR that you would like to be reverted, please *manually create a thread in maint-reviews with the format REVERT-PRNumber and ping the relevant work group Maintainers.* Discussions should reach a resolution within 48 hours, if discussions have stalled notify the Game Director or a PM.
-**This does not apply for reverts made to the staging branch during the review period**, as there will be a discussion thread for the release.
+All PRs must completely fill out the Github PR Template to a satisfactory level.
+This includes filling out all applicable sections and attaching media when necessary.
 
-- When closing a PR you are **required** to give a reason explaining why the PR is being closed, and if applicable this should include an alternative solution or approach. Stale PRs may just be closed for the reason of being stale, as described under the Requirements section. 
+### Breaking Changes
 
-- When reviewing a PR use *constructive* language and avoid referring negatively to the author's ability. Strong but fair criticism of code/decisions are fine, personal criticisms are not.
+Breaking changes are defined as one or more of the following:
+- Modifying a public API
+- Moving code into a different namespace
+- Changing prototype IDs (*even if migrations are present*)
 
-- When reviewing code, always assume that the contributor may not have your knowledge of the codebase, and provide a short explanation or reason with your review comments. You shouldn't need to code for them, but pointing them in the right direction to learn more helps build a more robust contributor base. Sometimes a newer contributor may need more help, in that case direct them to #HowDoICode or the docs. But ideally you should try to give them a short explaination on what they need to do rather than just a "change this".
+All PRs that include **breaking changes** should also include a section with a summary of the changes as well as instructions on how to fix issues that may come from them.
 
-- Any PR that is made for illegitimate reasons, such as abuse, spam or harrassment, may be closed without following the Policy as long as a PM has given written permission, as per the procedures set out in the Requirements section.
+After the PR is merged, a maintainer should make a post in the [breaking changes](https://forum.spacestation14.com/c/development/breaking-changes/70) section of the forum using the template.
+This consists only of the breaking changes section from the PR itself as well as a link to the PR.
 
-- Not following the procedure/policy outlined in this document will result in disiplinary action being taken, at the discretion of the SS14 Wizard team.
+## Decision Policy
+```admonish info "Exceptions on Maintainer Workgroups"
+[Maintainer Workgroups](maintainer-workgroup-policy.md) have exceptions to policy regarding decisions and discussions.
+This is intended to help expedite pull requests and maintain a design direction, by directing applicable pull requests to their relevant maintainer workgroups.
 
-## Issues & Reviews
-While Issues do not have any code to review, they may still contain suggestions and feature proposals that would benefit from a Maintainer Discussion.
+Exceptions to policy are listed where applicable.
+```
 
-- An Issue can be given the `S: Undergoing Maintainer Discussion` label to create a discussion thread as per the process described in the Policy section. If the discussion has a positive outcome, the issue can be given the `S: Conceptual Approval` label, and any PR that references the issue without major deviation can subsequently also be given the same label, indicating no new discussion is necessary.
+2 Maintainers are required to sign off on decisions about a PR.
+One of the sign-offs may come from a maintainer who is an author or collaborator for the PR, but the other maintainer must be uninvolved.
+
+To merge a PR, **all** the following conditions must be met:
+- The PR must receive 2 approvals for both **Code** and **Design**, given in the form of an approval checkmark on the PR's Github page.
+A checkmark is assumed to indicate approval for both code and design, unless stated otherwise by the approver.
+A PR created by a maintainer is assumed to have their implicit approval.
+  - If a PR's changes primarily target a game area that belongs to a Maintainer Workgroup, the PR must receive at least one approval from a maintainer belonging to that workgroup. If the author is a workgroup member, they cannot self-approve for design.
+
+
+- All outstanding maintainer change requests must be resolved.
+If the maintainer who left the request wants, they can choose to forgo requiring the changes.
+In this case, when the PR is merged, a Github issue should be created to indicate the changes that need to be made.
+
+
+- If the PR has the `Changes: Sprites` label, it must additionally be approved by at least one **Art Lead** through the addition of the `S: Art Approval` tag.
+Changes that are solely minor sprite fixes are exempt from this.
+
+> Always **Squash and Merge** rather than Merge, unless a policy specifically tells you to use regular merge (see the [Hotfix](https://docs.spacestation14.com/en/wizden-staff/maintainer/hotfix-procedure.html) and [Release](https://docs.spacestation14.com/en/wizden-staff/maintainer/release-procedure.html) procedures). This can be selected with the dropdown menu on the Merge button.
+
+To close a PR, at **least one** of the following conditions must be met:
+- At least 2 maintainers must express wanting to close the PR or an unwillingness to merge it. 
+This can be expressed either on the PR itself, or privately.
+
+
+- The PR contains content which violates Wizard Den's rules and/or code of conduct.
+
+
+- The PR author has been **banned** from the Wizard's Den Github and/or Discord or is otherwise unable to be communicated with.
+
+
+- The PR is **Stale**.
+
+
+- The PR has been superseded by a different PR and thus no longer needs to be merged.
+
+- If a PR is not a refactor, bugfix or code cleanup it can be closed due to low interest if it is older than 3 months and has not received a review from a maintainer. If another maintainer disagrees with closing the PR they are free to reopen it if they leave a review. When closing you can use the following template:
+  ```
+  Hello, and thank you for your contribution!
+  At the moment maintainers are facing a high backlog and unfortunately can’t review every single pull request. As this PR pertains to the addition of new content and/or balance changes deemed low-impact, we have opted to close it instead of leaving it open indefinitely.
+  PRs may be reopened in the future once the backlog has been reduced, and we encourage you to keep contributing in other areas of the codebase.
+  ```
+
+If a PR is closed, the maintainer must leave a message indicating the reason for its closure.
+This should be a formal message that includes all relevant information.
+If a maintainer discussion was held, it should be summarized and included here.
+
+If a PR is closed belonging to a game area controlled by a maintainer workgroup, these reasons **must** be citable from any merged design document.
+If a reason cannot be cited from any merged design document, the design document **must** be amended to include these reasons.
+
+If there is disagreement between two maintainers about whether a PR should be merged or closed, a discussion should be held as described in the "Discussion Policy" section.
+
+## Exemptions:
+
+```admonish info "Use Your Head"
+The following are situations in which the typical decision policy can be modified or opted out of.
+If you do not feel confident, feel free to follow the normal process or ask a fellow Maintainer for assistance.
+```
+
+### Fixes
+
+PRs which fix bugs, cleanup code, improve performance, or refactor systems _without_ the introduction of new features or balance changes can be processed by a single maintainer (who is not the PR author).
+The remaining decision policy requirements still apply.
+
+### Resprites
+
+PRs solely modifying sprites need only a single approval from an **Art Lead**.
+These cannot be self-approved.
+
+### Map Changes
+
+PRs solely modifying map files and/or map prototypes need only a single approval from a **Head Mapper**. These may be self-approved.
+
+### Rule/Config Changes
+
+PRs solely containing rule changes and/or server config changes submitted by (or with written approval from) a Head Game Admin may be merged at any time with the approval of the Head Game Admin team.
+
+### Stale PRs
+
+A PR is considered stale if it is simultaneously awaiting changes from the author and hasn't received an update for a long period of time.
+
+After 3 weeks, a maintainer should reach out to the PR author and give them a few days to confirm that they are still working on the PR.
+If they are able to or unwilling to, the PR should be marked as stale and closed.
+After 6 weeks, a PR can automatically be considered stale and closed without needing to attempt to contact the author.
+
+Note that PRs undergoing maintainer discussion or awaiting review are not considered stale.
+
+### Experimental PRs
+
+An Experimental PR is any PR marked with the `Intent: Experimental` label. This label is assigned at a Maintainer's discretion and indicates the PR contains features or changes that a) are expected to get a lot of feedback from players, or b) the Maintainer team is seeking a lot of feedback on from playtesting. While all PRs benefit from feedback and may be changed at a later time, Experimental PRs are intended to indicate to the community that feedback is especially appreciated. 
+
+Adding the label to a PR will create a forum thread with the PR's name and number in the Feedback category of the forum. Once merged, any changelog entry for the PR will have an additional :test_tube: symbol to indicate its Experimental status. 
+
+It is strongly recommended that a `FeedbackPopup` prototype for the thread is added to `Resources/Prototypes/FeedbackPopup/feedbackpopups.yml`.
+
+### Drafts
+
+PRs should not be marked as drafts unless there is a meaningful reason behind them.
+Simply opening an incomplete PR as a draft is not permitted and will result in immediate closure.
+
+Drafts are only permitted if a portion of the PR requires review and/or approval in order for other segments of the same PR to be completed.
+Note that this does not apply if the PR is able to be easily atomized.
+
+## Discussion Policy
+
+Maintainer discussions are an optional way to gain insight into general staff sentiment.
+They can be used both when there are disagreements regarding a PR and when a maintainer is not confident in the design of a PR.
+
+PRs actively undergoing a maintainer discussion should not be merged.
+
+To begin the discussion process, add the `S: Undergoing Maintainer Discussion` tag.
+The maintainer should then create a Topic in the `PR Reviews` Discourse Category with the PR's name, number, link, and appropriate tags.
+
+Discussion can then proceed with maintainers and admins giving opinions and coming to a conclusion or compromise.
+
+Votes started on a PR that affects a game area controlled by a maintainer workgroup must reach a supermajority (66%) instead of a simple majority.
+
+If the vote was started to settle a disagreement between two members of the same maintainer workgroup, the discussion policy is to be followed normally.
+
+Once a conclusion is reached or regular discussion ceases, one of the following must occur:
+- If the discussion was created due to a disagreement in the PR decision,
+  - If a definitive decision was reached (Approve/Close), then it should be acted upon by a maintainer.
+  - If a compromise within the scope of the PR is reached, then the PR should be approved once the compromise is implemented.
+Inability/refusal to implement the compromise should result in the closure of the PR.
+  - If no definitive decision was reached, then the PR should be closed.
+- If the discussion was _not_ created due to a disagreement in the PR decision,
+  - If a definitive decision or reasonable compromise was reached, then it should be acted upon and/or implemented.
+  - If no definitive decision was reached, the maintainer who created the discussion may choose to resolve the PR as they see fit.
+
+A positive conclusion should be indicated on the PR with the `S: Conceptual Approval` tag.
+This replaces the need for 2 design approvals (though the code still needs to be separately reviewed) and allows the PR to be merged.
+
+If the discussion has a negative conclusion, the closure message for the PR should include a brief summary of the discussion.
+This should have information about the elements that need to be addressed if a subsequent PR were to be made.
+
+## Docs Repo
+For PRs made to the [Space Station 14 Docs Repo](https://github.com/space-wizards/docs), the above policy is to be used unless specified otherwise.
+
+### Design Doc Process
+
+For design documents proposing new features to be added to the game, the normal 2-approval system is used. 
+Once it is approved, however, it should not be merged and instead marked with the `S: Doc Approved` label. 
+This lets the author know that the design has initial approval, and they are good to start on the content PR. 
+
+Once the content-side implementation is ready to be merged, ensure that the doc PR is updated to reflect relevant information and changes to the content PR.
+Afterward, both PRs can be merged at once.
+
+### Other
+
+For PRs which update instructional or reference documentation (_including but not limited to setup guides, style guides, system documentation_), only a single approval is needed before it can be merged.
+Likewise, only a single maintainer needs to express concern to close it.
+
+Note that this does not apply to changes to internal procedure or other modifications which require voting or group deliberation.
+
+
+## Review Guidelines
+The following are general guidelines to follow when reviewing PRs. 
+These are especially important to follow for first-time contributors.
+
+- Use **constructive** language and avoid being overly negative.
+
+
+- Try not to be _overly_ vulgar or swear in a derogatory way.
+
+
+- Avoid comments that personally criticize the author.
+It's okay to critique code and decisions, but you shouldn't insult their character.
+
+
+- For people who may not be familiar with a system, try to be more thorough in your explanations.
+
+
+- When possible, direct people to either the [developer wiki](https://docs.spacestation14.com/index.html), `#howdoicode` discord channel, or alternate source for information.
+
+
+- Make an effort to be available after reviewing a PR.
+You don't need to be constantly online, but if the author has questions, they should be able to get a response in a reasonable amount of time.
+
+
+- Be formal when closing PRs.
+Discourage others from engaging in rude behavior and try not to upset the PR author.
+People can often be emotional after their PR is closed.
+
+
+- For relatively minor changes, opt to simply [complete them yourself](https://cli.github.com/manual/gh_pr_checkout) and push to the PR.
+
+
+- When requesting changes to a PR be made, keep them within the scope of the PR.
+For example, while requesting small numerical adjustments on a `No C#` PR is fine, it would exceed the scope of the PR to request a new system to be added.
+In cases like these, it is best to close the PR and explain the changes that would need to be made.
