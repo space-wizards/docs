@@ -32,13 +32,15 @@ Stealth and deception tools should be ubiquitous. Traitors gain a lot by blendin
 
 Tools that help a traitor blend in. These tools are best suited for a traitor with big plans that rely heavily on deception and subterfuge. An ideal tool of deception concretely support any deception a traitor may try to pull off, with the main pitfalls being the deception itself. A tool of deception doesn't really work if there's a master key that can quickly or easily negate it, rather the station should have to try and actively disprove the deception. The usefulness of these tools, much like tools of violence, comes down entirely to the skill of the traitor using them being compared to the skills of those they are using them against. 
 
-Anything which changes a traitor's identity, or changes concrete station information would be considered a tool of deception. These tools should never directly benefit a traitor in combat, only be used to evade and misdirect which can buy a traitor more time, or more resources. 
+Anything which changes a traitor's identity, or changes concrete station information would be considered a tool of deception. These tools should never directly benefit a traitor in combat, only be used to evade and misdirect which can buy a traitor more time, or more resources. These tools should also be some of the cheapest to acquire as they are context dependent and deception should be a large part of the Traitor's gamemode. 
 
 #### Tools of Stealth: Evading Detection
 
 Tools that help a traitor forward their objectives stealthily. These are different from tools of deception in that they are intended to help prevent discovery while an agent is being proactive. These would include items which disrupt vision or communication, and tools or weapons which appear to be something completely mundane. 
 
-Unlike tools of deception, these tools are useful for a wide variety of approaches and actively useful in completing objectives. As such they should be designed with much clearer flaws and limitations so that they aren't oppressive, especially in regards to items which could assist with an ambush in combat. Ideally stealth items should be proactively used, not something that you keep on you which provides a passive and permanent beneift. Generally these items should be easier to unmask compared to items of deception, the point of these items are to help you from getting caught after all.
+Unlike tools of deception, these tools are useful for a wide variety of approaches and actively useful in completing objectives. As such they should be designed with much clearer flaws and limitations so that they aren't oppressive, especially in regards to items which could assist with an ambush in combat. These items shouldn't be impossible to discover especially if they have been seen being used.
+
+Ideally stealth items should be proactively used, not something that you keep on you which provides a passive and permanent beneift. They're an investment which a traitor is making and should be priced appropriately. While not as expensive as more offensive options, their TC cost should reflect the doors they open in terms of completing objectives and acquiring resources while remaining undetected. 
 
 Do:
 - A disguise that lets you pull off a one time ambush before it needs to be recharged or discarded.
@@ -54,7 +56,9 @@ Dont:
 
 These tools generally cover items which assist a traitor in hindering the station or collecting resources for their objectives. These would include items which allow a traitor to hack open doors, hack lathes to print ammo, or blow a hole through a wall. 
 
-These items can be used alongside stealth, but shouldn't ever be stealth tools or exclusively useful for stealth. They should be obvious when seen, obviously syndicate contraband, but also quick and easy to use. Speed is often your best friend in both combat and stealth, a single second could mean the difference between getting caught and getting away! Ideally, these tools should have broad usecases so they're rarely a sunk cost purchase, but never to the point where they become an "all-in-one" tool.
+These items can be used alongside stealth, but shouldn't ever be stealth tools or exclusively useful for stealth. They should be obvious when seen, obviously syndicate contraband, but also quick and easy to use. Speed is often your best friend in both combat and stealth, a single second could mean the difference between getting caught and getting away! Ideally, these tools should have broad usecases so they're rarely a sunk cost purchase, but never to the point where they become an "all-in-one" tool. 
+
+These items should always be a worthwhile investment balanced out by the quantity of them. A Traitor should feel that they never have enough to get all the utility they may want such that they don't become too disruptive. An item that is so strong it's only balanced by a high cost should be broken down into smaller cheaper items with distinct uses.
 
 Do:
 - You buy a station blackout to give you the cover of darkness to sneak into a place you shouldn't be sneaking into.
@@ -78,7 +82,9 @@ As such these tools should be balanced cost wise where if you want all the tools
 
 #### Tools of Utility: Keeping Yourself Useful
 
-This covers "everything else" which completes a traitor's kit. Primarily items which extend a traitor's survivability. These would include: medicine, speed enhancers, or teleporters. Anything which keeps a traitor alive and out of cuffs without being necessarily made for violence would fall into this category. These items should be cheap since they extend a traitor's impact on the round, but they shouldn't last forever. 
+This covers "everything else" which completes a traitor's kit. Primarily items which extend a traitor's survivability. These would include: medicine, speed enhancers, or teleporters. Anything which keeps a traitor alive and out of cuffs without being necessarily made for violence would fall into this category. 
+
+These items should be cheap and expendable since they extend a traitor's impact on the round. Items which last long amounts of time or provide an indefinite passive buff to a traitor shouldn't exist. Medicine runs out, batteries drain, money doesn't grow on trees. 
 
 Do:
 - You buy an implant for a negligible amount of TC which gives you the opportunity to evade security in a pinch, but only a limited number of times.
@@ -87,6 +93,19 @@ Do:
 Dont: 
 - You buy an item which lets you inject effectively limitless medicine and drugs into your bloodstream instantly.
 - You spend a large chunk of your budget on a kit of stimulants which are only enough to evade security once or twice.
+
+### Tools of the Trade: Being Unique
+
+This covers job specific tools and as such is extremely nonspecific. Job specific tools should be strong and very unique. There is a risk being put forward in using an item that heavily narrows down the number of suspects and that risk should be rewarded. Normal balance suggestions for all other categories still apply but generally these items should be cheaper rather than stronger such that they don't become meta. 
+
+In addition job specific items should justify themselves through flavor and playing into the strengths of the job they're specific to. These should if possible, play into the normal duties of a job without replacing those duties and especially shouldn't be beneficial to the station if used. 
+
+Do:
+- The clown buys a banana peel that explodes.
+- The engineer can purchase faulty machine parts which cause machines that use them to break down.
+Dont:
+- The doctor gets access to medicine for cheaper.
+- The engineer can purchase insualted gloves, or a faster RCD. 
 
 ### Objectives
 
