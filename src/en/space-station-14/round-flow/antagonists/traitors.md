@@ -10,17 +10,20 @@ Traitors is the bread and butter default gamemode of space station 14. Traitors 
 
 ## Game Design Rationale
 
-Traitors by design should be as loose as possible in terms of restrictions. They are designed to betray the station and hinder it as much as possible. If Traitors can do this too easily, the gamemode ceases to be interesting. Traitors should be an expression of creativity with objectives that are direct and simple but have many different ways to be accomplished to facilitate creativity. 
+Traitors are intended to be a major hinderance to the station with as few restrictions as possible in regards to accomplishing that goal. It should be a traitor's goal to cripple the station as much as possible through betrayal and sabatoge without artificial restrictions or limitations placed on them. This should be no easy task, if it is trivial to cripple the station then Traitors cease to be interesting, on the other hand if it's too difficult, they cease to be a threat. 
 
-Traitors should also be evasive; their primary strength is that they are normal crew members covered by space law, but that doesn't save them if they're easy to catch. Their arsenal should rely on cheap reliable options which promote stealthy, deceptive, and evasive gameplay styles to keep security just out of reach. Offensive options should be built more as a strong backbone which makes traitors threatening without being so prevalent that they become oppressive. 
+Creativity and freedom should be the highlights of the Traitors antagonist. Objectives should be designed such that a player can flex their skills and creativity, allowing the gamemode to stay unpredictable. High skill plays and creative thinking should be rewarded and supported.
+
+The greatest strength a Traitor has is their evasiveness. Traitors are normal crew members covered by space law which gives them a lot more freedom for social manipulation and a much bigger cushion for failure. Stealth and deception should be the forte of traitors, but a more direct and violent approach should always be an option to give them a strong backbone. A Traitor being hard to pin down keeps the station busy and keeps the round interesting. 
 
 ### Tools
 
-The main hindrance of traitors should be resources. Health, ammo, and materials, with much of their time spent gathering resources to achieve their objectives. They shouldn't feel like their uplink has enough resources to complete all their objectives, but also never feel like it's impossible to get these resources.
+The main hindrance of traitors should be resources. Health, ammo, and materials, with much of their time spent gathering resources to achieve their objectives. A Traitor should never feel like their uplink can provide everything they'll need for every situation. Specialization and planning should be important if a traitor wants to complete all their objectives, and much of their time should be spent account for holes in their kit. 
 
 Do:
-- A traitor needs to prevent a department from functioning, so they scrounge up some materials to create a bomb that will level that department.
--  As one of their many objectives, a traitor has to kill the captain. They spend time finding armor, ammunition, and a disguise so they can kill the captain and escape into the shadows before security catches them. 
+- A traitor needs to prevent a department from functioning, so they scrounge up some materials to create a bomb that will level that department, then spend their TC budget on items to accomplish this unseen with a bit left over for insurance. 
+-  As one of their many objectives, a traitor has to kill the captain. They spend time finding armor, ammunition, and a disguise so they can kill the captain and escape into the shadows before security catches them.
+-  A traitor who needs to kill many people goes all in on weapons and armor, but find themselves lacking on ammo and utility items forcing them to pick their fights until they can acquire more resources.
 Dont: 
 - A traitor with one kill objective buys a gun with plenty of magazines and kills their target. They then spend the rest of the round doing nothing.
 - A traitor needs to disable a single machine in a department, so they buy a single brick of C4 to level it.
