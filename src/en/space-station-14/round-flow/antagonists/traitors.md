@@ -90,18 +90,27 @@ Dont:
 
 ### Objectives
 
-Traitors should have either many objectives which strongly impact the round through small sabatoges that are felt by everyone through quantity, or large objectives which everyone feels if accomplished. No objective should have one clear path to complete it, and no objective should be so unimpactful that the general station reaction is a shrug and moving on to more important things. The consequences objectives should feel so important that completing them creates conflict with other traitors potentially encourging infighting or cooperation.
+Traitor objectives need to be impactful and shouldn't encourage passive play and should be noticable. Ideally these objectives should also further their interestests as well. Overall traitors should have a wider variety of objectives ranging from low difficulty easy to secure objectives which are noticable but don't have permanent effects, to a larger overarching objective which requires active effort or preparation to complete. 
+
+Objectives should not be easily reversible, either because they become locked in when completed, are unable to be reverse due to permanently altering the round in some way, are so wide in scope that they're extremely difficult for the station to recover from, or because they fail due to inactivity from a traitor. 
+
+Recovery from objectives should be directly proportional to their rarity. A machine being broken is easy to recover from and therefore common, A department losing a big chunk of their funds requires a lot of time to recover from and therefore should be uncommon, A department head being gibbed requires a lot of paperwork and security involvement making it rare, and an entire department being rendered unable to operate is near unrecoverable and should be extremely rare. 
+
+No traitor should feel less impactful than another due to their objectives, a traitor with a single extremely rare objective should be as much of a nuissance as one who only has extremely common objectives, quantity should be used to make up the difference. 
+
+The impact of objectives being completed should naturally bring traitors into conflict with the station and therefore other traitors. For example, one traitor needs to prevent sci from completing their research, another traitor who is a scientist, wants to complete their research to help them with one of their objectives, lastly a third traitor needs to steal research from sci. These objectives naturally conflict and require either cooperation or competition to resolve such conflict.
 
 Do:
 - A traitor has to kill multiple people. They get a gun and some utility items to perform a number of hit and run attacks which keep the station on its toes for a while.
 - A traitor has to kill the captain, so they disguise as the head of security and assassinate the captain stealthily allowing them to continue acting antagonistically throughout the round.
-- A traitor has to sabatoge a piece of key infrastructure so they spend the majority of the round preparing the tools needed to disable it, then break in and kill anyone trying to stop them. This action forces evac to be called.
+- A traitor has to sabatoge a major piece of infrastructure so they spend the majority of the round preparing the tools needed to disable it, then break in and kill anyone trying to stop them. This action forces evac to be called.
 - A traitor needs to keep science from completing their research so they spend the majority of the round blowing up anomalies and sabatoging the science department.
+- A traitor needs to destroy a few high value assets, they plant bombs and remotely detonate them causing trouble for the crew that is reversible but their objective remains completed. 
 Dont:
 - A traitor has a steal objective, this will put a target on their back the whole round so they stealthly take the item on evac after doing nothing the whole round.
 - A traitor needs to steal the cheif engineer's magboots, so they kill the chief engineer then hide in space the whole shift.
 - A traitor has to kill one random passenger and survive. The passenger is killed in maintenance and nobody notices or particularly cares.
-- One traitor has to steal one item and escape, three traitors need to help them do their objectives. All of them need to not get caught.  
+- One traitor has to steal one item and escape, three traitors need to help them do their objectives. All of them need to not get caught. 
 
 ### Solo Antagonists
 
