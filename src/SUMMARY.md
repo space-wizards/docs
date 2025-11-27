@@ -1,4 +1,4 @@
-Space Wizards Development Wiki
+Monolith Development Wiki
 =====================
 
 [The Monolith Book](index.md)
@@ -18,7 +18,7 @@ Monolith
 
 ----------------------
 
-- [Shipyard](src/en/monolith/shipyard.md)
+- [Shipyard](en/monolith/shipyard.md)
   - [Roster Guide](en/monolith/shipyard/roster_guide.md)
   - [Shipyard Roster](en/monolith/shipyard/roster.md)
   - [Ship Guidelines](en/monolith/shipyard/ship_guidelines.md)
