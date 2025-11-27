@@ -24,7 +24,12 @@ Monolith
   - [Ship Guidelines](en/monolith/shipyard/ship_guidelines.md)
 
 
-General Development
+
+
+
+
+
+Upstream - General Development
 ===================
 
 ----------------------
@@ -56,7 +61,7 @@ General Development
 - [Contributing Translations](en/general-development/contributing-translations.md)
 - [Github Moderation Guidelines](en/general-development/github-moderation-guidelines.md)
 
-SS14 By Example
+Upstream - SS14 By Example
 ===============
 
 ----------------------
@@ -70,7 +75,7 @@ SS14 By Example
 - [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
 
 
-Robust Toolbox
+Upstream - Robust Toolbox
 ==============
 
 ----------------------
@@ -118,7 +123,7 @@ Robust Toolbox
 - [Asset Packaging](en/robust-toolbox/asset-packaging.md)
 - [Publishing a new Robust Toolbox Version](en/robust-toolbox/publishing-robusttoolbox.md)
 
-Space Station 14
+Upstream - Space Station 14
 ================
 
 ----------------------
@@ -284,14 +289,14 @@ Space Station 14
    		- [Librarian Gameplay](en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md)
       - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
 
-General Proposals
+Upstream - General Proposals
 ================
 
 ----------------------
 
 - [Robust Hub](en/general-proposals/robusthub.md)
 
-Server Hosting
+Upstream - Server Hosting
 ==============
 
 ----------------------
@@ -307,7 +312,7 @@ Server Hosting
 - [Maintenance]()
   - [Debugging server lockups](en/server-hosting/maintenance/debugging-server-lockups.md)
 
-Other Projects
+Upstream - Other Projects
 ==============
 
 ----------------------
@@ -317,7 +322,7 @@ Other Projects
   - [Delta Updates & Manifests](en/other-projects/launcher/delta-updates-and-manifests.md)
 - [SpaceWizards Lidgren]()
 
-Specifications
+Upstream - Specifications
 ==============
 
 ----------------------
@@ -325,7 +330,7 @@ Specifications
 - [Robust Station Image](en/specifications/robust-station-image.md)
 - [Robust Generic Attribution](en/specifications/robust-generic-attribution.md)
 
-Community
+Upstream - Community
 ========================
 
 ----------------------
@@ -344,7 +349,7 @@ Community
   - [Wizards Den MRP Policy](en/community/admin/wizards-den-mrp-policy.md)
 - [Progress Report Creation](en/community/progress-report-creation.md)
 
-Engine Development
+Upstream - Engine Development
 ========================
 
 ------------------
@@ -352,7 +357,7 @@ Engine Development
 - [Testing against launcher](en/engine-development/testing-against-launcher.md)
 - [Updating CEF](en/engine-development/updating-cef.md)
 
-Staff
+Upstream - Staff
 ==============
 
 ----------------------
