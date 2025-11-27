@@ -5,10 +5,11 @@
 The Shipyard Roster serves as a guideline for contributing ships. Different shipyards have different "slots" for ships. Each "slot" can be filled by one ship that matches the slot's criteria (e.g a Large Chemistry vessel.)
 When contributing ships, keep the roster in mind - If your ship is trying to fill out a slot, make sure it obeys the criteria for said slot. No putting a small botany ship in a slot whose criteria is "Large artillery cruiser!"
 If all existing slots are already filled, **you can still make a PR to replace an existing slot's ship with the one in your PR!** However, keep in mind: If you want your PR to be merged, make sure it A. Removes the original vessel, and B. that your vessel is of higher quality than the previous one! This is subject to maintainer discretion.
-``````
+
 ```admonish info
-``` Note: These guidelines *are not solid* - If you provide sufficient justification in your PR, exceptions can be made!
-``````
+Note: These guidelines *are not solid* - If you provide sufficient justification in your PR, exceptions can be made!
+```
+
 ## What do the categories mean?
 
 The header for each shipyard indicates *what* shipyard console each roster is for (e.g "medical shipyard" refers to what is available in... the medical shipyard console.)
