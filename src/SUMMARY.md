@@ -7,10 +7,21 @@ Meta
 ====
 
 ----------------------
+
 - [Guide to Editing Docs](en/meta/guide-to-editing-docs.md)
 - [Docs Example Page](en/meta/docs-example-page.md)
 - [Docs are for Discoverability](en/meta/docs-are-for-discoverability.md)
 - [Credits and Attribution](en/meta/attribution.md)
+
+Monolith
+===================
+
+----------------------
+
+- [Shipyard]()
+  - [Roster Guide](en/monolith/shipyard/roster_guide.md)
+  - [Shipyard Roster](en/monolith/shipyard/roster.md)
+
 
 General Development
 ===================
