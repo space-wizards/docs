@@ -8,22 +8,22 @@
 
 Traitors is the bread-and-butter default gamemode of Space Station 14. Traitors gamemode is characterized by a select number of crew members being chosen to betray the station, hindering its functionality and pursuing their own goals. 
 
-Traitors aesthetically should range from professional insurgents and spies, to corporate thugs. Traitors should feel scrappy; explicitly loud branded confrontations should be suicide missions, more tactful planned approaches should be rewarded. When fighting a larger foe, you must rely on your wits primarily to bleed them dry through attrition, that and a handful of expensive state of the art toys.
+Traitors, aesthetically, should range from professional insurgents and spies, to unsubtle corporate goons. Traitors should feel scrappy; explicitly loud branded confrontations should be suicide missions, and more tactful planned approaches should feel rewarding. When fighting a larger foe, you must rely on your wits primarily to bleed them dry through attrition, that and a handful of expensive state-of-the-art toys.
 
 ## Game Design Rationale
 
-Traitors are intended to be a major hindrance to the station, with as few restrictions as possible to accomplish that goal. It should be a traitor's goal to cripple the station as much as possible through betrayal and sabotage without artificial restrictions or limitations placed on them. This should be no easy task; if it is trivial to cripple the station then Traitors cease to be interesting. On the other hand, if it's too difficult, they cease to be a threat. 
+Traitors are intended to be a major hindrance to the station, with as few restrictions as possible to accomplish that goal. It should be a traitor's goal to cripple the station as much as possible through betrayal and sabotage without artificial restrictions or limitations placed on them. This should be no easy task; if it is trivial to cripple the station, then Traitors cease to be interesting. On the other hand, if it's too difficult, they cease to be a threat. 
 
 Creativity and freedom should be the highlights of the Traitors antagonist. Objectives should be designed so a player can flex their skills and creativity, keeping the gamemode unpredictable. High skill plays and creative thinking should be rewarded and supported.
 
-The greatest strength a Traitor has is their evasiveness. Traitors are ordinary crew members covered by space law, which gives them much more freedom for social manipulation and a much bigger cushion for failure. Stealth and deception should be the forte of traitors, but a more direct and violent approach should always be an option to give them a strong backbone. A Traitor, being hard to pin down keeps the station busy and keeps the round interesting. 
+The greatest strength a Traitor has is their evasiveness. Traitors are ordinary crew members covered by space law, which gives them much more freedom for social manipulation and a much bigger cushion for failure. Stealth and deception should be the forte of traitors, but a more direct and violent approach should always be an option to give them a strong backbone. When a Traitor is hard to pin down, they keep the station busy and make the round interesting. 
 
 ### Tools
 
 The main hindrance of traitors should be resources. Health, ammo, and materials, with much of their time spent gathering resources to achieve their objectives. A Traitor should never feel like their uplink can provide everything they'll need for every situation. Specialization and planning should be important if a traitor wants to complete all their objectives, and much of their time should be spent accounting for holes in their kit. 
 
 Do:
-- A traitor needs to prevent a department from functioning, so they scrounge up some materials to create a bomb that will level that department, then spend their TC budget on items to accomplish this unseen with a bit left over for insurance. 
+- A traitor needs to prevent a department from functioning, so they scrounge up some materials to create a bomb that will level that department, then spend their TC budget on items to accomplish this unseen, with a bit left over for insurance. 
 -  As one of their many objectives, a traitor has to kill the captain. They spend time finding armor, ammunition, and a disguise so they can kill the captain and escape into the shadows before security catches them.
 -  A traitor who needs to kill many people goes all in on weapons and armor, but finds themselves lacking on ammo and utility items, forcing them to pick their fights until they can acquire more resources.
 Dont: 
@@ -44,7 +44,7 @@ Anything that changes a traitor's identity or changes concrete station informati
 
 Tools that help a traitor forward their objectives stealthily. These are different from tools of deception in that they are intended to help prevent discovery while an agent is being proactive. These would include items that disrupt vision or communication, and tools or weapons that appear to be something completely mundane. 
 
-Unlike tools of deception, these tools are useful for a wide variety of approaches and are actively useful in completing objectives. As such, they should be designed with much clearer flaws and limitations so that they aren't oppressive, especially so for items which could potentially turn the tide in combat. Generally, these items should be easier to unmask compared to items of deception; the point of these items is to help you avoid getting caught after all.
+Unlike tools of deception, these tools are useful across a wide variety of approaches and actively help complete objectives. As such, they should be designed with clear flaws, limitations and/or tradeoffs, so they aren't oppressive, especially for items that could potentially turn the tide in combat. Generally, these items should be easier to unmask compared to items of deception; the point of these items is to help you avoid getting caught after all.
 
 Ideally, stealth items should be proactively used, not something that you keep on you, which provides a passive and permanent benefit. They're an investment a traitor is making, and they should be priced appropriately. While not as expensive as more offensive options, their TC cost should reflect the doors they open to completing objectives and acquiring resources while remaining undetected. 
 
@@ -64,7 +64,7 @@ These tools generally cover items that assist a traitor in hindering the station
 
 These items can be used alongside stealth, but shouldn't ever be stealth tools or exclusively useful for stealth. They should be obvious when seen, obviously syndicate contraband, but also quick and easy to use. Speed is often your best friend in both combat and stealth; a single second could mean the difference between getting caught and getting away! Ideally, these tools should have broad use cases so they're rarely a sunk-cost purchase, but not so broad that they become an "all-in-one" tool.
 
-These items should always be a worthwhile investment balanced out by the quantity of them. A Traitor should feel that they never have enough to get all the utility they may want such that they don't become too disruptive. An item that is so strong it's only balanced by a high cost should be broken down into smaller cheaper items with distinct uses.
+These items should always be a worthwhile investment, balanced by quantity and cost. A Traitor should feel that they never have enough to get all the utility they want, so as not to become too disruptive. An item so strong that it's only balanced by a high cost should be broken down into smaller, cheaper items with distinct uses to increase the choices available to traitors.
 
 Do:
 - You buy a station blackout to give you the cover of darkness to sneak into a place you shouldn't be sneaking into.
@@ -80,7 +80,7 @@ Tools that are useful for disabling, killing, or severely injuring crewmembers. 
 
 Weapons should be balanced with a "role" in mind, and no two weapons should feel identical in use and playstyle. For example, an SMG and a shotgun may both be loud weapons designed to kill, but they play distinctly differently due to different rates of fire, sizes, and ammunition available. Two guns could use the same ammo type, but one may be silent and have a lower rate of fire, making it a strong assassination weapon. 
 
-What's most key for all weapons is that none should ever be the best for all situations. A powerful gun that can deal a lot of sustained damage should never be stealthy, and always be large. A silenced gun may be great for single-target assassinations. Still, it doesn't have the DPS or magazine size to sustain itself in a firefight—Melee weapons trade reliability for range. Explosives are loud, obvious, expensive, clunky to use, and typically single use! 
+What's most key for all weapons is that none should ever be the best for all situations. A powerful gun that can deal a lot of sustained damage should never be stealthy, and always be large. A silenced gun may be great for single-target assassinations. Still, it doesn't have the DPS or magazine size to sustain itself in a firefight—Melee weapons trade reliability for range. Explosives are loud, obvious, expensive, clunky to use, and typically single-use! 
 
 Armor is incredibly useful, arguably more than guns. Guns can be acquired easily without an uplink if you know where to get them, so armor is often the more pressing purchase. Armor should always be visually obvious and distinct; one should be able to immediately tell that you're a traitor if you're wearing traitor armor. It's not a purchase you make if you're trying to do anything subtle. Armor should be bulky, expensive, obvious, and greatly extend your survivability. 
 
@@ -102,35 +102,35 @@ Dont:
 
 ### Tools of the Trade: Being Unique
 
-This covers job specific tools and as such is extremely nonspecific. Job specific tools should be strong and very unique. There is a risk being put forward in using an item that heavily narrows down the number of suspects and that risk should be rewarded. Normal balance suggestions for all other categories still apply but generally these items should be cheaper rather than stronger such that they don't become meta. 
+This covers job-specific tools and, as such, is extremely nonspecific. Job-specific tools should be strong and very unique. There is a risk being put forward in using an item that heavily narrows down the number of suspects, and that risk should be rewarded. Normal balance suggestions for all other categories still apply, but generally these items should be cheaper rather than stronger, such that they don't become meta. 
 
-In addition job specific items should justify themselves through flavor and playing into the strengths of the job they're specific to. These should if possible, play into the normal duties of a job without replacing those duties and especially shouldn't be beneficial to the station if used. 
+In addition, job-specific items should justify themselves through flavor and playing into the strengths of the job they're specific to. These should, if possible, play into the normal duties of a job without replacing those duties, and especially shouldn't be beneficial to the station if used. 
 
 Do:
 - The clown buys a banana peel that explodes.
-- The engineer can purchase faulty machine parts which cause machines that use them to break down.
+- The engineer can purchase faulty machine parts that cause machines which use them to break down.
 Dont:
-- The doctor gets access to medicine for cheaper.
-- The engineer can purchase insualted gloves, or a faster RCD. 
+- The doctor gets access to better or cheaper medicine.
+- The engineer can purchase insulated gloves, or a faster RCD. 
 
 ### Objectives
 
-All Traitor objectives must have a meaningful impact on the round. This can range from a temporary setback to evac having to be called. These objectives should also cause chaos and help further other objectives through their completion, sabatoging a machine may open up new opportunities in its wake. Objectives should have strong variety to prevent repetition and predictability, and have multiple viables approaches for completion. 
+All Traitor objectives must have a meaningful impact on the round. This can range from a temporary setback to round ending destruction. These objectives should also cause chaos and help further other objectives through their completion. Sabotaging a machine may open up new opportunities in its wake. Objectives should be diverse in scope and destruction to prevent repetition and predictability, and should always allow multiple viable approaches for completion. 
 
-Objectives should not be easily reversible, either because they become locked in when completed, are unable to be reverse due to permanently altering the round in some way, are so wide in scope that they're extremely difficult for the station to recover from, or because they fail due to inactivity from a traitor. The station should also never feel like a traitor doing traitor things is ignorable. We never want the reaction for an objective being completed to be an ambivalent shrug, someone needs to clean up their mess. 
+Objectives should not be easily reversible, either because they become locked in when completed, are unable to be reversed due to permanently altering the round in some way, are so broad in scope that they're extremely difficult for the station to recover from, or because they fail due to inactivity from a traitor. The station should also never feel like a traitor; doing traitor things is ignorable. We never want the reaction to an objective being completed to be an ambivalent shrug; someone needs to clean up their mess. 
 
-Recovery from objectives should be directly proportional to their rarity. A machine being broken is easy to recover from and therefore more common. Losing a department head is a big security and command headache and should be proprotionally less common. An entire department being rendered unable to operate should be appropriately rare. 
+Recovery from objectives should be directly proportional to their rarity. A machine being broken is easy to recover from and, therefore, more common. Losing a department head is a big security and command headache and should be proportionally less common. An entire department being rendered unable to operate should be appropriately rare. 
 
-No traitor should feel less impactful than another due to their objectives, a traitor with a single extremely rare objective should be as much of a nuissance as one who only has extremely common objectives, quantity should be used to make up the difference. 
+No traitor should feel less impactful than another due to their objectives. A traitor with a single extremely rare objective should be as much of a nuisance as one who only has extremely common objectives. Quantity should be used to make up the difference. 
 
-The impact of objectives being completed should naturally bring traitors into conflict with the station and therefore other traitors. For example, one traitor needs to prevent sci from completing their research, another traitor who is a scientist, wants to complete their research to help them with one of their objectives, lastly a third traitor needs to steal research from sci. These objectives naturally conflict and require either cooperation or competition to resolve such conflict.
+The completion of objectives should naturally bring traitors into conflict with the station and, by extension, with other traitors. For example, one traitor needs to prevent sci from completing their research; another, a scientist, wants to complete their research to help them with one of their objectives; and in addition, a third traitor needs to steal research from sci. These objectives naturally conflict and require either cooperation or competition to resolve such conflict.
 
 Do:
 - A traitor has to kill multiple people. They get a gun and some utility items to carry out a series of hit-and-run attacks, keeping the station on its toes for a while.
 - A traitor has to kill the captain, so they disguise themselves as the head of security and assassinate the captain stealthily, allowing them to continue acting antagonistically throughout the round.
 - A traitor has to sabotage a piece of key infrastructure, so they spend the majority of the round preparing the tools needed to disable it, then break in and kill anyone trying to stop them. This action forces evac to be called.
 - A traitor needs to keep science from completing their research, so they spend the majority of the round blowing up anomalies and sabotaging the science department.
-- A traitor needs to destroy a few high value assets, they plant bombs and remotely detonate them causing trouble for the crew that is reversible but their objective remains completed. 
+- A traitor needs to destroy a few high-value assets; they plant bombs and remotely detonate them, causing trouble for the crew that is reversible, but their objective remains completed. 
 Dont:
 - A traitor has a steal objective, this will put a target on their back the whole round, so they stealthily take the item on evac.
 - A traitor needs to steal the chief engineer's magboots, so they kill the chief engineer, then hide in space the whole shift.
@@ -139,26 +139,26 @@ Dont:
 
 ### Solo Antagonists
 
-Every Traitor is a solo antagonist. This doesn't explicitly forbid teamwork nor does it encourage betrayal, but all design must treat Traitors as solo antagonists. Items, objectives, or abilities which explicitly force teamwork or confrontation with other traitors should be avoided. Conflict and teamwork should be built naturally through the individual actions each Traitor makes.
+Every Traitor is a solo antagonist. This doesn't explicitly forbid teamwork nor does it encourage betrayal, but all design must treat Traitors as solo antagonists. Items, objectives, or abilities that explicitly force teamwork or confrontation with other traitors should be avoided. Conflict and teamwork should be built naturally through the individual actions each Traitor makes.
 
 No Traitor should ever be forced to rely on another Traitor.
 
 ## Roundflow & Player interaction
 
-Players should feel the impact of traitors as the round progresses. Ideally, the traitors gamemode is a slow burn, similar to survival. There are a couple of highlights here and there, but things begin to ramp up as the round progresses. Traitors with larger and more difficult objectives begin completing or attempting to complete them. Department heads should start going missing and require replacements, machines start breaking and requiring workarounds, and the station should struggle to maintain normal operations eventually forcing evac.
+Players should feel the impact of traitors as the round progresses. Ideally, the traitors gamemode is a slow burn, similar to survival. There are a couple of highlights here and there, but things begin to ramp up as the round progresses. Traitors with larger and more difficult objectives begin completing or attempting to complete them. Department heads should start going missing and requiring replacements; machines start breaking and requiring workarounds; and the station should struggle to maintain normal operations, eventually pushing the station to evac.
 
 Traitors should be felt but often unseen. Part of the traitor experience should be the worry about who is a traitor; as such, unmasking and catching all traitors should be a rare but possible outcome. Most rounds should end with all traitors completing some of their objectives, with a few completing them all. 
 
 A round where the majority of traitors completely redtext and nothing happens should be completely avoided if possible. On the other hand, a round where all traitors greentext and completely sweep the station and security department should be exceedingly rare.
 
-Rounds should ideally sit in a sweet spot, where both sides make small and large victories but neither is able to completely demolish the other. Traitors should feel like they're always just out of reach of security without security feeling oppressive. Security should feel like they are always on the backfoot when it comes to catching the traitors, catching a Traitor should feel like a major victory. The whole station should be in an uphill battle against constant sabotage and workflow interruptions that they're only just barely able to deal with. 
+Rounds should ideally sit in a sweet spot, where both sides make small and large victories but neither is able to completely demolish the other. Traitors should feel like they're always just out of reach of security without security feeling oppressive. Security should feel like they are always on the back foot when it comes to catching the traitors; catching a Traitor should feel like a major victory. The whole station should be in an uphill battle against constant sabotage and workflow interruptions that they're only just barely able to deal with. 
 
 A typical round of traitors should start with each traitor receiving their list of objectives. These objectives should encourage antagonistic activity throughout the round, either due to quantity or difficulty. 
 
-Higher quantity objectives should be easy to complete, hard to reverse, and have a tangible impact on the round but never be round-ending on their own. These could include killing a random crewmember or actively sabotaging some common machine. This allows even new traitors to have some tangible impact on the round, even if they are caught immediately and executed. 
+Higher quantity objectives should be easy to complete, hard to reverse, and have a tangible impact on the round, but never be round-ending on their own. These could include killing a random crewmember or actively sabotaging some common machine. This allows even new traitors to have some tangible impact on the round, even if they are caught immediately and executed. 
 
 A lower in quantity objective would be something that requires active effort to complete. These shouldn't be things you can wait until evac to do; for example, you may need to prevent a department from functioning normally lest they complete some objective, or you may need to prepare yourself to do one very difficult job that will draw a lot of attention once you start. In both scenarios, the Traitor should be encouraged to spend the round causing problems either to complete their objective or gather resources for their objective. 
 
 ## Administrative & Server Rule Impact
 
-The poor balance of Traitors is one of the main reasons for 2.9 existing. Balancing Traitors properly would allow further 2.9 loosening with the goal of eventual removal. A large goal of this document is to give a direction to balance in that makes Traitors more interesting, more impactful, and require less administrative action. 
+The poor balance of Traitors is one of the main reasons for 2.9's existence. Balancing Traitors properly would allow further 2.9 loosening with the goal of eventual removal. A primary goal of this document is to provide direction for balancing Traitors which makes them more interesting and impactful, while also reducing required administrative action. 
