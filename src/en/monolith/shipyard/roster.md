@@ -17,8 +17,8 @@ Largely economic vessels, accessible to anyone.
 * Medical (Medium):
 * Medical, Chemistry (Medium):
 
-* Salvage (Small): Notch
-* Salvage (Small):
+* Salvage (Small): DIS Notch
+* Salvage (Small): DIS Vaquita
 * Salvage (Medium):
 * Salvage, Wild (Medium):
 * Salvage, Wild (Large):
