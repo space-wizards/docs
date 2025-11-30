@@ -104,6 +104,7 @@ Robust Toolbox
 - [Automatic Client Zip (ACZ)](en/robust-toolbox/acz.md)
 - [Asset Packaging](en/robust-toolbox/asset-packaging.md)
 - [Publishing a new Robust Toolbox Version](en/robust-toolbox/publishing-robusttoolbox.md)
+- [Versioning & Compatibility](en/robust-toolbox/versioning-compatibility.md)
 
 Space Station 14
 ================
