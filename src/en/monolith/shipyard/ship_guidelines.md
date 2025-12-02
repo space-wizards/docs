@@ -154,6 +154,18 @@ If there are five different cargo ships, don’t make another cargo ship, unless
 * FTL drives are recommended for most ships, though be judicial in your use of more advanced variants (such as CTLA-25s, CTLA-50, etc)
 * Shields are in an interesting place - keep their effects in mind, and if you have one, make sure it has enough power! Power supply = shield durability, and they are mostly limited by APC capacity. Be careful.
 
+**Scrapyard Guidelines**
+
+*In addition to normal guidelines:*
+
+* Scrapyard ships can ignore QoL-related mapping guidelines (you can omit atmos, defib, etc).
+* Having design flaws is encouraged.
+* The ship should still be usable for some purpose, or be easily retrofittable for that. It should be something people would have reason to buy at least rarely, or to have fun with.
+* Ships should not require any extra repairs or gear to be safely usable, or come with any required gear, like a radsuit if the ship is entirely irradiated. EVA suits or hazards contained to specific rooms are exempt.
+* Ships should be scrappy in at least a somewhat realistic way. Your ship should look like something someone actually built, even if it was built out of scrap and long enough ago for it to have rusted.
+* Ships should still fit visual standards and look fitting for the server. Leeway is allowed, but not too much.
+* Ships can, and are encouraged to, have experimental nonstandard features (example: disposal chute item cannon).
+
 
 **Examples** (TBD)
 Frontier Image credits:
