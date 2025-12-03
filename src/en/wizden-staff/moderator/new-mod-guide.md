@@ -46,11 +46,12 @@ Moderators have access to a variety of commands to help them moderate the server
 
 As a moderator, you will have extra permission on discourse, but first to get those new permissions, you need to contact a head game admin or a head moderator to add you to the EN community moderator group on discourse. You will also need to contact PJB to get full moderator powers.
 
-Once you have full moderation powers, you will be able to see some new tabs, such as internal and ban appeal discussions. You should not access data of players information under any circumstances.
+Once you have full moderation powers, you will be able to view additional tabs, including internal and ban appeal discussions. You should not access players' information under any circumstances.
 
-You will also be able to moderate posts, such as locking, deleting, and moving posts, you should only do this when necessary, and always try to inform the original poster of why you are taking action on their post.
-
+You will also be able to moderate posts, such as locking, deleting, and moving them. You should only do this when necessary and always try to inform the original poster of why you are taking action on their post.
 
 # Asking for help
 
-Feel absolutely free to ask any questions in our [General Moderation Channel](https://discord.com/channels/310555209753690112/1027317842804219984), we will always answer your questions as best as we can. all moderators were new once, and we understand that it can be confusing at first. If you are ever unsure about taking action on a user, please ask for help in the general moderation channel before taking action.
+Feel absolutely free to ask any questions in our [General Moderation Channel](https://discord.com/channels/310555209753690112/1027317842804219984); we will always answer your questions to the best of our ability.
+
+All moderators were new once, and we understand that it can be confusing at first. If you are ever unsure about taking action on a user, please ask for help in the general moderation channel before taking action.
