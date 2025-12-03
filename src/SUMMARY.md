@@ -19,6 +19,7 @@ Monolith
 ----------------------
 
 - [Shipyard](en/monolith/shipyard.md)
+  - [Faction Ship Design](en/monolith/shipyard/faction_guidelines.md)
   - [Roster Guide](en/monolith/shipyard/roster_guide.md)
   - [Shipyard Roster](en/monolith/shipyard/roster.md)
   - [Ship Guidelines](en/monolith/shipyard/ship_guidelines.md)
