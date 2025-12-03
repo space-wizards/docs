@@ -356,6 +356,8 @@ Staff
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
   - [Triage Procedure](en/wizden-staff/maintainer/triage-procedure.md)
   - [Release Procedure](en/wizden-staff/release-procedure.md)
+- [Moderator](en/wizden-staff/moderator.md)
+  - [New Moderator Guide](en/wizden-staff/moderator/new-mod-guide.md)
 - [Space Wizards Role Hierarchy](en/wizden-staff/space-wizards-role-hierarchy.md)
 - [Space Wizards Maintainer List](en/wizden-staff/space-wizards-maintainer-list.md)
 - [Staff Policy](en/wizden-staff/staff-policy.md)
