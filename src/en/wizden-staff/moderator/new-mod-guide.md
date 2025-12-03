@@ -2,6 +2,13 @@
 
 This document will attempt to explain the basics of being a moderator for Space Station 14.
 
+# Getting started
+Welcome to the moderation team! As a moderator, you play a crucial role in maintaining a positive and welcoming environment for our community. This guide will help you get started with your new moderation powers and tooling.
+
+There are various command and things to learn, this guide will cover the basics, but feel free to ask any questions in the [General Moderation Channel](https://discord.com/channels/310555209753690112/1027317842804219984) if you need any help!
+
+Every moderator was new once, and we understand that it can be confusing at first.
+
 # Commands
 
 Moderators have access to a variety of commands to help them moderate the server, including:
