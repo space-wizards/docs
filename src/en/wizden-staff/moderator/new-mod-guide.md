@@ -41,6 +41,8 @@ Moderators have access to a variety of commands to help them moderate the server
 
 - `!tempban <member> <duration of tempban> <days of messages to be deleted> <reason>` Temporarily bans a user for a specified duration, deleting a specified number of days of their messages.
 
+- `!reason <caseid> <reason>`: Changes the reason for a case ID.
+
 
 # Discourse
 
