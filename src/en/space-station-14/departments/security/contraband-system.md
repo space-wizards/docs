@@ -53,9 +53,9 @@ In order to designate an object as contraband, assign one of the base contraband
 - Help security to solve conflicts like "I found it it maints, therefore it's legal" and "Not everything with syndicate mention in the name is illegal" using in-character means;
 - Be an easy way to determine if using this item as security or command will be in breach of the rules;
 - Help admins settle conflicts where items are being confiscated by security (lawfully or unlawfully);
-- Determine the faction (Syndicate, Wizard, etc.) this items comes from.
+- Being able to determine the faction (Syndicate, Wizard, etc.) this items comes from.
 ## Experience To Avoid
 - Starting OOC conflicts about legal status of an item;
 - Uncovering stealth items;
 - Blocking possibility of delegations and exceptions (like captain giving the sabre to HoS due to being a pacifist, or using syndicate contraband as a last resort against nukies).
-- Assigning the severity of contraband solely based on item's faction, instead of taking the item's functionality and potential danger into account.
+- Severity of contraband being assigned based solely on item's faction, instead of taking the item's functionality and potential danger into account.
