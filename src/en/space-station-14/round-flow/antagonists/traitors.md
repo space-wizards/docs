@@ -22,13 +22,23 @@ The greatest strength a Traitor has is their evasiveness. Traitors are ordinary 
 
 The main hindrance of traitors should be resources. Health, ammo, and materials, with much of their time spent gathering resources to achieve their objectives. A Traitor should never feel like their uplink can provide everything they'll need for every situation. Specialization and planning should be important if a traitor wants to complete all their objectives, and much of their time should be spent accounting for holes in their kit. 
 
+All items in the traitor uplink should be distinct. This applies both in comparison to other items in the uplink, and items from other antagonists. 
+
+No item should completely eclipse another item, even if it costs more. All items should also serve a Traitor's needs, no tool should exist in the uplink that serves no value to a Traitor trying to do their objectives.
+
+No item in the uplink should just be a direct copy of another non-syndicate antagonist's item either, Traitors shouldn't be buying spells, nor should they be getting changeling abilities or revolutionary flashes. Items which are similar to other antagonists tools are permitted but only if they fit in the traitors uplink and are able to distinguish themselves visually and/or mechanically.  
+
 Do:
 - A traitor needs to prevent a department from functioning, so they scrounge up some materials to create a bomb that will level that department, then spend their TC budget on items to accomplish this unseen, with a bit left over for insurance. 
 -  As one of their many objectives, a traitor has to kill the captain. They spend time finding armor, ammunition, and a disguise so they can kill the captain and escape into the shadows before security catches them.
 -  A traitor who needs to kill many people goes all in on weapons and armor, but finds themselves lacking on ammo and utility items, forcing them to pick their fights until they can acquire more resources.
+-  A traitor purchases a grenade launcher which fires projectiles that explode with idential strength and radius to the wizard's fireball.
 Dont: 
 - A traitor with one kill objective buys a gun with plenty of magazines and kills their target. They then spend the rest of the round doing nothing.
 - A traitor needs to disable a single machine in a department, so they buy a single brick of C4 to level it.
+- A traitor purchases a fireball scroll which lets them cast the wizard spell "Fireball".
+- A traitor puchases the super energy sword, an energy sword that costs twice as much and swings twice as fast!
+- A traitor purchases a macrobomb implant which lets them gib themselves whenever they want destroying all their items and blowing a hole in the station.
 
 Traitors, being a main-round antag, should be driving the round, and their objectives and tools should reflect that. Similarly to the ninja, traitors should be an evasive threat that's hard but possible to pin down, who causes lots of disruption when not dealt with. Unlike the ninja, the traitor should have a lot more freedom in their ability to accomplish this. Deception, Stealth, sabotage, Murder, and anything else a traitor can think of should be on the menu. 
 
