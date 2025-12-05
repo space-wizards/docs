@@ -366,7 +366,9 @@ After=network.target
 [Service]
 ExecStart=/path/to/SS14.Watchdog
 WorkingDirectory=/path/to
-Restart=always
+Restart=on-failure
+# This stops systemd from sending SIGTERM to watchdog and shutting it down if one of the servers OOMs.
+OOMPolicy=continue
 # This is used for git method to not fail instantly.
 Environment="DOTNET_CLI_HOME=/tmp"
 
