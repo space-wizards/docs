@@ -67,6 +67,7 @@ Do:
 Dont:
 - A suit with a rechargeable battery that makes you invisible while also providing armor.
 - A set of gloves that allows you to strip items quietly and are completely indistinguishable from normal gloves.
+- A remote controlled car that can grab objects off of tables, move under tables and moves slightly faster than running speed, and cannot be traced back to the controller.
 
 #### Tools of Sabotage: Bending the Station's Assets to Your Will
 
@@ -100,7 +101,11 @@ As such, these tools should be balanced cost-wise, where if you want all the too
 
 This covers "everything else," which completes a traitor's kit. Primarily items that extend a traitor's survivability. These would include: medicine, speed enhancers, or teleporters. Anything that keeps a traitor alive and out of cuffs without necessarily being made for violence would fall into this category.
 
-These items should be cheap and expendable since they extend a traitor's impact on the round. Items that last long amounts of time or provide an indefinite passive buff to a traitor shouldn't exist. Medicine runs out, batteries drain, and money doesn't grow on trees (at least not without some effort in making them grow).
+These items should be cheap and expendable since they extend a traitor's impact on the round. Items that last long amounts of time or provide an indefinite passive buff to a traitor shouldn't exist. Medicine runs out, batteries drain, and money doesn't grow on trees (at least not without some effort in making them grow). 
+
+Context should also be important when designing a utility item. No utility item should work for every scenario or have too broad of a usecase. This should be achieved by either breaking up items which serve too many roles into multiple cheaper items, or making the items expendable such that they don't last the whole round. Items shouldn't be so niche however that they're effectively never purchased or only exist to crowd the uplink. 
+
+Utility items are competing with what is available to the station, so their pricing should also take into context the difficulty and availability of substitution options when being designed.
 
 Do:
 - You buy an implant for a negligible amount of TC, which allows you to evade security in a pinch, but only a limited number of times.
@@ -109,6 +114,7 @@ Do:
 Dont: 
 - You buy an item that lets you inject effectively limitless medicine and drugs into your bloodstream instantly.
 - You spend a large chunk of your budget on a kit of stimulants, which are only enough to evade security once or twice.
+- A traitor needs to break into the bridge so they buy an assortment of 1 TC tools that together allow the antag to get into the bridge faster than just using tools.
 
 ### Tools of the Trade: Being Unique
 
