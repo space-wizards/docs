@@ -1,12 +1,15 @@
 # PR Review Procedure
 
 ## Abstract
-This documents lists the Maintainer procedure for reviewing and merging PRs to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) `master` branch (otherwise known as the Content repository).
+This documents outlines the Maintainer procedure for reviewing and merging PRs to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) `master` branch (otherwise known as the Content repository).
+
+Pull requests targeting the `staging` or `stable` branch are subject to the [Hotfix Procedure](hotfix-procedure.md).
 
 Any portion of this procedure may be waived and/or modified with written permission (_via Discord or Github_) from a Lead Maintainer, Project Manager or Wizard.
 
 ```admonish note
-Note that these procedures are ultimately flexible, however Maintainers that deviate from this policy are expected to provide concrete and valid reasoning when doing so. Getting one or more other maintainer(s) to agree with your deviation is advisable.
+Note that these procedures are ultimately flexible, however Maintainers that deviate from this policy are expected to provide concrete and valid reasoning when doing so.
+Getting one or more other maintainer(s) to agree with your deviation is advisable.
 
 Note that all pull requests that are scheduled for release to `stable` are reviewed during _Stable Review_ in maintainer meetings.
 ```
@@ -14,27 +17,27 @@ Note that all pull requests that are scheduled for release to `stable` are revie
 ## Reviewing Content Pull Requests
 
 ### Reviewing the PR's Body
-1. **All parts of the Pull Request Template must be filled out by the author.**
-   1. The _About_ section should explain what the pull request does, and only what it does.
-   2. The _Why/Balance_ section should justify the pull request's existence.
-      1. Small bugfixes do not need a lengthy justification.
-      2. If a pull request is balance-centric, the justification should be lengthy and properly explain why the change is needed.
-      3. Justifications that only explain what the pull request *does* or the *effects* that the changes have should be automatically closed.
-      4. Major content additions should align with the core design principles. Sufficiently large content additions might warrant a pull request to detail the broader purpose of the changes and how they fit into the current game.
-   3. The _Technical Details_ section should give a high-level overview of the changes.
-      1. This is more important during bugfixes or large refactors. It is not the job of maintainers to find out by themselves what the changes of a pull request are. In essence, someone who throws us slop to review and figure out if it works should not be entertained.
-   4. The PR must have _media_ when applicable.
-      1. Changes involving visuals, mechanics, or bugfixes should have media attached to demonstrate the changes to Maintainers and the community.
-      2. If media is absent, it is questionable whether the author has tested their fix.
-      3. Media is usually not required when the fix is intuitively obvious from reading the `diff` (inverted boolean logic for example).
-   5. The _Breaking Changes_ section must be filled out.
-      1. Breaking changes occur when the following is changed:
-         1. A public API was modified.
-         2. Code was moved to a different namespace, or a namespace was changed.
-         3. Prototype IDs were changed or deleted (even if the IDs were migrated).
-      2. Breaking changes _should_ include helpful advise on how to fix them if complicated. Simple redirections like "Use `x` namespace", "Use `Entity<T>` instead", "use `RefactoredSystem` helpers instead" are also welcome.
-   6. The _Changelog_ section should be filled out if applicable.
-      1. Poor quality changelogs should be pointed out and requested to be fixed.
+All parts of the Pull Request Template must be filled out by the author:
+1. The _About_ section should explain what the pull request does, and only what it does.
+2. The _Why/Balance_ section should justify the pull request's existence.
+   1. Small bugfixes do not need a lengthy justification.
+   2. If a pull request is balance-centric, the justification should be lengthy and properly explain why the change is needed.
+   3. Justifications that only explain what the pull request *does* or the *effects* that the changes have should be automatically closed.
+   4. Major content additions should align with the core design principles. Sufficiently large content additions might warrant a pull request to detail the broader purpose of the changes and how they fit into the current game.
+3. The _Technical Details_ section should give a high-level overview of the changes.
+   1. This is more important during bugfixes or large refactors. It is not the job of maintainers to find out by themselves what the changes of a pull request are. In essence, someone who throws us slop to review and figure out if it works should not be entertained.
+4. The PR must have _media_ when applicable.
+   1. Changes involving visuals, mechanics, or bugfixes should have media attached to demonstrate the changes to Maintainers and the community.
+   2. If media is absent, it is questionable whether the author has tested their fix.
+   3. Media is usually not required when the fix is intuitively obvious from reading the `diff` (inverted boolean logic for example).
+5. The _Breaking Changes_ section must be filled out.
+   1. Breaking changes occur when the following is changed:
+      1. A public API was modified.
+      2. Code was moved to a different namespace, or a namespace was changed.
+      3. Prototype IDs were changed or deleted (even if the IDs were migrated).
+   2. Breaking changes _should_ include helpful advise on how to fix them if complicated. Simple redirections like "Use `x` namespace", "Use `Entity<T>` instead", "use `RefactoredSystem` helpers instead" are also welcome.
+6. The _Changelog_ section should be filled out if applicable.
+   1. Poor quality changelogs should be pointed out and requested to be fixed.
 
 Any pull request that does not follow these guidelines should be closed with the guidelines referenced.
 
@@ -43,8 +46,12 @@ Maintainers are expected to follow the pull request body guidelines in order to 
 ```
 
 ### Reviewing the PR's Content
-The following are general guidelines to follow when reviewing PRs.
-These are especially important to follow for first-time contributors.
+All pull requests must adhere to the [code conventions](../../general-development/codebase-info/conventions.md).
+If it is obvious that the user has not read the conventions, close the PR.
+
+All PRs must be triaged, as per the [triage procedure](triage-procedure.md) guidelines.
+
+When leaving comments or requesting changes:
 - Use **constructive** language and avoid being overly negative.
 - Try not to be _overly_ vulgar or swear in a derogatory way.
 - Avoid comments that personally criticize the author. 
@@ -65,16 +72,13 @@ The number of reviews required are determined by the type of pull request being 
 
 ```admonish note
 Pull requests may be reviewed, approved, and merged by a single maintainer in specific circumstances. When a maintainer does so, the maintainer is expected to provide concrete and valid reasoning for doing so. For example, a maintainer that is known for reviewing and making prediction PRs can probably process a prediction PR by themselves.
-
-When in doubt, always defer to a second maintainer for a second approval.
 ```
 
 If the pull request does not line up with any category listed here, defer to two approvals for a pull request.
 
-Maintainers cannot self-approve pull requests that would only require one approval.
+A pull request created by a Maintainer has one approval by default.
+However, Maintainers cannot self-approve pull requests that would only require one approval to merge.
 For example, a maintainer cannot create a PR for a small bugfix and then instantly merge it after - it must be reviewed by another maintainer.
-
-Note that they can self-approve pull requests that require two approvals.
 
 - **One Approval:**
   - Light code cleanup
@@ -94,7 +98,7 @@ Note that they can self-approve pull requests that require two approvals.
   - Performance improvements
     - These should usually come with a custom BenchmarkDotNet benchmark to prove that the PR has a meaningful effect on performance.
   - Player-facing changes large in impact.
-    - Major features, minor tweaks, new content.
+    - Major features, new content.
 
 #### Exceptions
 There are some exceptions to the one-approval or two-approval system. They are listed below.
@@ -104,7 +108,7 @@ There are some exceptions to the one-approval or two-approval system. They are l
 2. **Sprite changes must be approved by an Art Lead, and only require one approval if the PR contains only sprite changes.**
    1. Art Lead approval is not required in the case of a sprite being minorly fixed up (for example, translation/rotation, removing stray pixels, etc.).
    2. Art Leads cannot self-approve sprite changes.
-3. **Changes targeting a Maintainer Workgroup's game area must be approved by a member from the workgroup.**
+3. **Changes targeting a [Maintainer Workgroups](maintainer-workgroup-policy.md)'s game area must be approved by a member from the workgroup.**
    1. Workgroup members can self-approve changes targeting their own workgroup.
 4. **Rule or server configuration changes require the approval, either written or on GitHub, of the Head Game Admin team.**
 
@@ -116,6 +120,7 @@ Pull requests can be closed in two ways:
 
 #### Other Reasons for Closing
 - As previously mentioned, the pull request body is not filled out to an acceptable level given the changes.
+- The author has obviously not read the 
 - The pull request's effects on the game are nil to none when thinking about the larger picture. Examples are:
   - Description changes that only make it "sound cooler" or "seem clearer" when in reality the name makes no difference.
   - Microbalancing, like small, finite adjustments of armor values, TC cost, etc. These changes should be rarely entertained.
@@ -124,9 +129,9 @@ Pull requests can be closed in two ways:
 - The pull request has sat merge conflicted for a long time (30d+).
   - It is encouraged to request the author if they are willing to update it if you would like to start reviewing the pull request before doing so.
 - The pull request is a draft even though it is not being put up for preliminary review.
+- The PR has been superseded by a different PR and thus no longer needs to be merged.
 - The PR author has been banned from the Wizard's Den GitHub and/or Discord or is otherwise unable to be communicated with.
 - The PR contains content which violates Wizard Den's rules and/or code of conduct.
-- The PR has been superseded by a different PR and thus no longer needs to be merged.
 
 ### Discussing PRs
 A maintainer may start a discussion if there is a disagreement between another maintainer on whether to merge or close a pull request, or for any other technical reason.
@@ -138,7 +143,7 @@ This will auto-create a topic on Discourse for the pull request calling maintain
 
 Once a conclusion is reached or regular discussion ceases, one of the following must occur:
 - If a definitive decision was reached (Approve/Close), then it should be acted upon by a maintainer.
-  - PRs targeting a workgroup's game area must reach a supermajority (66%) instead of a simple majority.
+  - PRs targeting a [Maintainer Workgroup's](maintainer-workgroup-policy.md) game area must reach a supermajority (66%) instead of a simple majority.
 - If a compromise within the scope of the PR is reached, then the PR should be approved once the compromise is implemented.
   Inability/refusal to implement the compromise should result in the closure of the PR.
 - If no definitive decision was reached, then the PR should be closed.
@@ -155,7 +160,7 @@ A pull request is ready to be merged if it fulfills the approval requirements as
 Next:
 1. Check one final time to ensure that the changelog is correct and the breaking changes section is accurate.
 2. Add the pull request to the merge queue.
-3. Post the breaking changes announcement in the `Breaking Changes` category in `Development` on Discourse.
+3. Post the breaking changes announcement in the [Breaking Changes](https://forum.spacestation14.com/c/development/breaking-changes/70) category in `Development` on Discourse.
 
 If the pull request gets kicked out of the merge queue due to failing tests, check if the test fail is related to the PR. If not, re-add the pull request to the merge queue.
 
