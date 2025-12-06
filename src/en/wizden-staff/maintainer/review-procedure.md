@@ -120,7 +120,7 @@ Pull requests can be closed in two ways:
 
 #### Other Reasons for Closing
 - As previously mentioned, the pull request body is not filled out to an acceptable level given the changes.
-- The author has obviously not read the 
+- The author has obviously not read the [code conventions](../../general-development/codebase-info/conventions.md).
 - The pull request's effects on the game are nil to none when thinking about the larger picture. Examples are:
   - Description changes that only make it "sound cooler" or "seem clearer" when in reality the name makes no difference.
   - Microbalancing, like small, finite adjustments of armor values, TC cost, etc. These changes should be rarely entertained.
