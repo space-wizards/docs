@@ -178,7 +178,7 @@ The intention behind this is to ensure that contributors do not waste time imple
 Maintainers have direct push access to the Docs repo and are encouraged to use it to update any information that may be outdated with up-to-date information, whether it be technical documentation, amending a design document, or just fixing up grammar.
 
 ### PR Reviews
-PRs that update instructional or reference documentation (including but not limited to setup guides, style guides, system documentation) only a single approval is needed before it can be merged.
+PRs that update instructional or reference documentation (including but not limited to setup guides, style guides, system documentation) require only a single approval is needed before it can be merged.
 Likewise, only a single maintainer needs to express concern to close it.
 
 Note that this does not apply to changes to internal procedure or other modifications which require voting or group deliberation according to relevant policy.
