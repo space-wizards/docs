@@ -8,7 +8,7 @@ Largely economic vessels, accessible to anyone.
 * Research (Medium):
 * Research, Wild (Large):
 
-* Cargo (Small):
+* Cargo (Small): DIS Pluto MK. II
 * Cargo (Small):
 * Cargo (Medium):
 * Cargo (Large):
