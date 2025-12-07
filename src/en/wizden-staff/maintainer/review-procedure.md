@@ -129,6 +129,18 @@ This invalidates all disagreements/`S: Concern` tags and allows the pull request
 If the discussion has a negative conclusion, the closure message for the PR should include a brief summary of the discussion.
 This should have information about the elements that need to be addressed if a subsequent PR were to be made.
 
+### Tagging a PR as Experimental
+An Experimental PR is any PR marked with the `Intent: Experimental` label.
+This label is assigned at a Maintainer's discretion and indicates the PR contains features or changes that are:
+1. Expected to get a lot of feedback from players.
+2. The Maintainer team is seeking a lot of feedback on from playtesting.
+
+While all PRs benefit from feedback and may be changed at a later time, Experimental PRs are intended to indicate to the community that feedback is especially appreciated.
+
+Adding the label to a PR will create a forum thread with the PR's name and number in the Feedback category of the forum. Once merged, any changelog entry for the PR will have an additional :test_tube: symbol to indicate its Experimental status.
+
+It is strongly recommended that a `FeedbackPopup` prototype for the thread is added to `Resources/Prototypes/FeedbackPopup/feedbackpopups.yml`.
+
 ### Merging PRs
 A pull request is ready to be merged if it fulfills the approval requirements associated with the PR, and all requested changes are resolved.
 
