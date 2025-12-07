@@ -16,40 +16,15 @@ Note that all pull requests that are scheduled for release to `stable` are revie
 
 ## Reviewing Content Pull Requests
 
-### Reviewing the PR's Body
-All parts of the Pull Request Template must be filled out by the author:
-1. The _About_ section should explain what the pull request does, and only what it does.
-2. The _Why/Balance_ section should justify the pull request's existence.
-   1. Small bugfixes do not need a lengthy justification.
-   2. If a pull request is balance-centric, the justification should be lengthy and properly explain why the change is needed.
-   3. Justifications that only explain what the pull request *does* or the *effects* that the changes have should be automatically closed.
-   4. Major content additions should align with the core design principles. Sufficiently large content additions might warrant a pull request to detail the broader purpose of the changes and how they fit into the current game.
-3. The _Technical Details_ section should give a high-level overview of the changes.
-   1. This is more important during bugfixes or large refactors. It is not the job of maintainers to find out by themselves what the changes of a pull request are. In essence, someone who throws us slop to review and figure out if it works should not be entertained.
-4. The PR must have _media_ when applicable.
-   1. Changes involving visuals, mechanics, or bugfixes should have media attached to demonstrate the changes to Maintainers and the community.
-   2. If media is absent, it is questionable whether the author has tested their fix.
-   3. Media is usually not required when the fix is intuitively obvious from reading the `diff` (inverted boolean logic for example).
-5. The _Breaking Changes_ section must be filled out.
-   1. Breaking changes occur when the following is changed:
-      1. A public API was modified.
-      2. Code was moved to a different namespace, or a namespace was changed.
-      3. Prototype IDs were changed or deleted (even if the IDs were migrated).
-   2. Breaking changes _should_ include helpful advise on how to fix them if complicated. Simple redirections like "Use `x` namespace", "Use `Entity<T>` instead", "use `RefactoredSystem` helpers instead" are also welcome.
-6. The _Changelog_ section should be filled out if applicable.
-   1. Poor quality changelogs should be pointed out and requested to be fixed.
-
-Any pull request that does not follow these guidelines should be closed with the guidelines referenced.
-
-```admonish note
-Maintainers are expected to follow the pull request body guidelines in order to demonstrate a good example of what pull requests should look like.
-```
-
-### Reviewing the PR's Content
+### Reviewing the PR
 All pull requests must adhere to the [code conventions](../../general-development/codebase-info/conventions.md).
-If it is obvious that the user has not read the conventions, close the PR.
+
+All parts of the Pull Request Template must be filled out by the author.
+
+If the author has obviously not read the conventions or PR guidelines, or the pull request template has not been filled out to a satisfactory level, close the PR.
 
 All PRs must be triaged, as per the [triage procedure](triage-procedure.md) guidelines.
+You should triage the pull request when reviewing it for the first time.
 
 When leaving comments or requesting changes:
 - Use **constructive** language and avoid being overly negative.
@@ -143,7 +118,7 @@ This will auto-create a topic on Discourse for the pull request calling maintain
 
 Once a conclusion is reached or regular discussion ceases, one of the following must occur:
 - If a definitive decision was reached (Approve/Close), then it should be acted upon by a maintainer.
-  - PRs targeting a [Maintainer Workgroup's](maintainer-workgroup-policy.md) game area must reach a supermajority (66%) instead of a simple majority.
+  - If a decision overrules an action made by a [Maintainer Workgroup](maintainer-workgroup-policy.md), the vote must be a supermajority (66%) in order to pass.
 - If a compromise within the scope of the PR is reached, then the PR should be approved once the compromise is implemented.
   Inability/refusal to implement the compromise should result in the closure of the PR.
 - If no definitive decision was reached, then the PR should be closed.
@@ -164,15 +139,9 @@ Next:
 
 If the pull request gets kicked out of the merge queue due to failing tests, check if the test fail is related to the PR. If not, re-add the pull request to the merge queue.
 
-## Docs Review Policy
-Design documents have a different review policy compared to the Content repository.
-
-Major game features usually follow the below dynamic:
-1. A contributor creates a preliminary design document demonstrating what they would like to add, offering a high-level overview on how it fits into the game.
-2. Maintainers discuss the document in an informal discussion. If most agree, the document is marked with `S: Doc Approved`, and the contributor can start work on the actual feature. As the feature is developed, the document is updated if necessary.
-3. Once the content-side implementation is ready to be merged, both the design document and the content pull request are merged in tandem.
-
-The intention behind this is to ensure that contributors do not waste time implementing a feature that may not fit well into Upstream's intended gameplay.
+## Reviewing Docs Pull Requests
+The Docs repo has a different review policy compared to the Content repository.
+Since the Docs repo can be directly pushed to by maintainers, is mostly text-based, can be easily reverted/changed, and does not impact forks, most docs pull requests can be processed by one maintainer.
 
 ### Pushing to the Docs Repo
 Maintainers have direct push access to the Docs repo and are encouraged to use it to update any information that may be outdated with up-to-date information, whether it be technical documentation, amending a design document, or just fixing up grammar.
@@ -182,3 +151,14 @@ PRs that update instructional or reference documentation (including but not limi
 Likewise, only a single maintainer needs to express concern to close it.
 
 Note that this does not apply to changes to internal procedure or other modifications which require voting or group deliberation according to relevant policy.
+
+#### Design Documents
+Major PRs that introduce or change a design document should seek either two maintainer approvals or more.
+If the addition is large enough, a maintainer can call a vote for the design document, however this should only be done when the scope of the pull request warrants it.
+
+Major game features usually follow the below dynamic:
+1. A contributor creates a preliminary design document demonstrating what they would like to add, offering a high-level overview on how it fits into the game.
+2. Maintainers discuss the document in an informal discussion. If most agree, the document is marked with `S: Doc Approved`, and the contributor can start work on the actual feature. As the feature is developed, the document is updated if necessary.
+3. Once the content-side implementation is ready to be merged, both the design document and the content pull request are merged in tandem.
+
+The intention behind this is to ensure that contributors do not waste time implementing a feature that may not fit well into Upstream's intended gameplay.
