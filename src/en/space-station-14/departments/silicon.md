@@ -18,7 +18,7 @@ The body of Silicons should be repairable and difficult to completely destroy. S
 The brain of a Silicon is where their consciousness is stored. It is also where the laws that the Silicon is programmed to follow are imprinted. The Silicon brain is usually a physical object, such as its positronic brain or a filled man-machine interface, but it can be entirely digital, such as in the case of artificial intelligences, allowing their consciousness to be digitally transferred between devices. Physical Silicon brains can be swapped into a different body if desired (although a brain will not necessarily be compatible with every Silicon body). This allows Silicon to adopt a new role on the station or provide them with a replacement body in instances where the original was destroyed.
 
 ### What is *not* a Silicon?
-Robots and personal AIs are *not* considered Silicons for the purposes of this design document. They are not bound by Silicon laws, have limited capabilities, and are generally reserved for ghost roles. As such, their design will fall under the purview of the Robotics Subdepartment design document. This decision may be revisited in the future if the roles of robots and personal AIs are expanded upon.
+Robots (for example the cargobot or medibot) and personal AIs are *not* considered Silicons for the purposes of this design document. They are not bound by Silicon laws, have limited capabilities, and are generally reserved for ghost roles. As such, their design will fall under the purview of the Robotics Subdepartment design document. This decision may be revisited in the future if the roles of robots and personal AIs are expanded upon.
 
 ## Design Pillars
 ### 1. Silicons are artificial constructs
@@ -84,6 +84,8 @@ All Silicons have access to an exclusive radio channel (‘binary’) that they 
 ## Undesired Gameplay
 - *Disposable machines.* Silicon players should not be viewed by other crew members as disposable machines. It should be difficult to permanently dispose of them, and the crew should be heavily disincentivized from doing so. Crew members should be seeking to repair a damaged or malfunctioning Silicon.
 - *Untrustworthy machines.* The existence of Silicons should not pose an intrinsic risk or concern to the station crew. Neither should crew members feel compelled to constantly monitor/punish Silicons for any perceived deviations from standard law sets. 
+- *Humanoid plus.* Silicons should never be a direct upgrade to playing a humanoid character. They should be a sidegrade, excelling in one specific area but being subpar in others.
+
 
 ## Intended Experience
 **Scenario A: A cyborg following their law set, obeying crew orders, and attempting to prevent harm to crew members**
