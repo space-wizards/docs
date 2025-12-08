@@ -1,0 +1,14 @@
+name: Test SUMMARY.md
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  test-summary:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Run SUMMARY.md link check
+      run: python tests/test_summary.py
