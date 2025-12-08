@@ -1,7 +1,6 @@
 [book]
 authors = ["Space Wizards Contributors"]
 language = "en"
-multilingual = false
 src = "src"
 title = "Space Wizards Development Wiki"
 description = "Tutorial & reference for all Space Wizards Federation projects, including the Robust Toolbox engine and its flagship open source game, Space Station 14."
@@ -18,6 +17,7 @@ assets_version = "3.1.0" # do not edit: managed by `mdbook-admonish install`
 before = ["mermaid","admonish","emojicodes"] # templates can include these so we run this first
 
 [preprocessor.embedify]
+scroll-to-top.enable = true
 
 [output.html]
 additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js'] #, 'scripts/nav-additions.js']
