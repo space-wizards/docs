@@ -2,7 +2,7 @@
 
 This is the `mdbook`-based developer documentation for the Monolith project, a ship-based fork of Space Station 14. This book covers topics relevant to both seasoned and beginner mappers, spriters, and contributors.
 
-The documentation is currently hosted at [https://monolith-station.github.io/docs/](https://monolith-station.github.io/docs/) using Github Pages.
+The documentation is currently hosted at [https://monolith-station.github.io/mono-docs/](https://monolith-station.github.io/mono-docs/) using Github Pages.
 
 This repository can be edited by anyone who would like to contribute to improving the documentation for Monolith development. The Monolith Book uses `mdbook` and the Markdown markup language for formatting, we recommend [Markdown Guide](https://www.markdownguide.org/) as a reference or guide for anyone contributing to this repository.
 
