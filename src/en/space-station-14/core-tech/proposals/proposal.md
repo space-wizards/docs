@@ -5,10 +5,10 @@
 | Ataman | Ataman | :x: No | TBD |
 
 ## Overview
-This is a proposal to add an animation state machine (ASM) system which can be used to implement all kinds of temporary or persistant animations to entities like blinking eyes and waddling. The system offers a framework consisting of timers, triggers and conditions that can be defined in YAML to run these animations at the appropriate times.
+This is a proposal to add an animation state machine (ASM) system which can be used to implement all kinds of temporary or persistant animations to entities like blinking eyes and waddling. The system would offer a framework consisting of timers, triggers and conditions that can be defined in YAML to run these animations at the appropriate times.
 
 ## Background
-Things like blinking eyes and clown shoe waddling has been implemented in the past by creating whole specialized systems for their sole task of running very simple animations under certain conditions. In almost every PR for these, one can find comments wishing for a more generalized animation system that could be used instead.
+Things like blinking eyes and clown shoe waddling have been implemented in the past by creating whole specialized systems for their sole task of running very simple animations under certain conditions. In almost every PR for these, one can find comments wishing for a more generalized animation system that could be used instead.
 
 ## Features to be added
 ### Animation State Machine
@@ -18,7 +18,7 @@ The ASM consists of a system and components (running client side as much as poss
 Added to a ASM's list of possible animations including their conditions, animation to play, etc. Each state defines exactly one animation to run after entering.
 
 ### Conditions, Triggers and Timers
-In order to define when these animations are supposed to run, we require hardcoded types for use in YAML. Incomplete examples list:
+In order to define when these animations are supposed to run, we require hardcoded types for use in YAML. Some examples include:
 
 #### Conditions
 These are checked and must return true for the specified animation state to run.
@@ -26,31 +26,31 @@ These are checked and must return true for the specified animation state to run.
 - ```MatchComponentPropertyValue```: Is true if the given component and datafield exists on an entity and has the specified value. (Example: Blinking requiring the ```MobStateComponent``` with ```CurrentState``` being ```MobState.Alive```.)
 
 #### Triggers
-Used to trigger state condition checks, examples:
+Used to trigger state condition checks, for example:
 - A wrapper around ```SubscribeLocalEvent<TComp, TEvent>()``` used for reacting to arbitrary events.
-- ```ComponentAdded```/```ComponentRemoved``` is obvious.
+- ```ComponentAdded```/```ComponentRemoved```.
 
-There is also an implicit trigger being run when entities become part of the client's rendering area.
+An implicit trigger is also executed when entities enter the client's rendering area. 
 
-The main reason for triggers is to keep the performance impact in check. Testing dozens of conditions of several entities every frame would certainly leave a mark.
+The main reason for triggers minimize performance impact. Testing many conditions of several entities every frame would have a large impact on performance.
 
 #### Timers
-Some animations might want to be played in fixed or random intervals.
+Allow animations to be played at fixed or random intervals
 - ```RandomTimeRangeTimer```: Fires at random intervals inside a defined range. (Examples: Blinking, Coughing)
 - ```TimeIntervalTimer```: Fires at fixed intervals. (Example: Blinking indicator light)
 
 ## Game Design Rationale
-Animations can be useful in adding flavor and immersion to the game in many ways, the above mentioned examples just being a few. They add can add immersion for everybody, even the smallest mice. However, animations are currently difficult to implement properly and require not only coding knowledge for the animation itself but for the system running said animation in the first place as well.
+Animations are great for adding flavor and immersion to the game in many ways, the above mentioned examples just being a few. They add immersion for everybody, even the smallest mice. However, animations are currently difficult to implement properly and require not only coding knowledge for the animation itself but for the system running said animation in the first place as well.
 
 ## Roundflow & Player interaction
-Considering this is a background system it does not affect roundflow and never requires a player to interact with it intentionally.
+This is a background system, it does not affect roundflow and never requires a player to interact with it.
 
 ## Administrative & Server Rule Impact (if applicable)
 N/A
 
 # Technical Considerations
 ## General
-Ideally, the whole system runs client side only. To account for triggers that depend on events which might happen outside a players rendering view; all state conditions are tested once an entity comes into view. If this should impact performance, a flag will be added to disable this trigger for animations where it's irrelevant.
+Ideally, the whole system should run client side. To account for triggers that depend on events which happen outside a player's rendering view; all state conditions are tested once an entity comes into view. If this should impact performance, a flag will be added to disable this trigger for animations where it's irrelevant.
 
 Performance impact heavily depends on how the concrete states will be implemented. Defining a handful of timers running at 0.1s seconds interval with badly chosen conditions could have a very noticeable performance impact. This issue can be migitated by implementing a hard coded minimum interval however.
 
