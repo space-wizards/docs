@@ -14,8 +14,7 @@ Things like blinking eyes and clown shoe waddling have been implemented in the p
 ### Animation State Machine
 The ASM consists of a system and components (running client side as much as possible) to trigger animations under certain conditions all defined in YAML. Since an entity might need to run multiple animations simultaneously, the component consists of a list of ASMs to run in parallel.
 
-### Animation States
-Added to a ASM's list of possible animations including their conditions, animation to play, etc. Each state defines exactly one animation to run after entering.
+Each ASM state consists of conditions, triggers and timers resulting in the execution of a singular animation. 
 
 ### Conditions, Triggers and Timers
 In order to define when these animations are supposed to run, we require hardcoded types for use in YAML. Some examples include:
@@ -52,12 +51,12 @@ N/A
 ## General
 Ideally, the whole system should run client side. To account for triggers that depend on events which happen outside a player's rendering view; all state conditions are tested once an entity comes into view. If this should impact performance, a flag will be added to disable this trigger for animations where it's irrelevant.
 
-Performance impact heavily depends on how the concrete states will be implemented. Defining a handful of timers running at 0.1s seconds interval with badly chosen conditions could have a very noticeable performance impact. This issue can be migitated by implementing a hard coded minimum interval however.
+Performance impact heavily depends on how the concrete states will be implemented. Defining a handful of timers running at 0.1s seconds interval with badly chosen conditions could have a  noticeable performance impact. This issue can be migitated by implementing a hard coded minimum interval however.
 
 This proposal ignores multi-state machines in favor of not adding even more complexity to an already complex implementation.
 
 ## Animations don't support YAML
-While YAML defineable animations would be preferable. This should doable using hardcoded animations. If animations ever start supporting YAML, this system can easily be upgraded to use those instead.
+While YAML defineable animations would be preferable, this should be doable using hardcoded animations. If animations ever support YAML, this system can easily be updated to use those instead.
 
 ## SpriteComponent changes/refactor, yes or no?
 While a refactor of SpriteComponent has some advantages like not adding another system and automatically upgrading all sprites with ASM availability; this proposal is using an independent system due to the following reasons:
@@ -66,8 +65,8 @@ While a refactor of SpriteComponent has some advantages like not adding another 
 - The component can be isolated to those entities that need it. (A piece of paper probably doesn't need animations).
 
 ## New Types
-- ```AnimationStateMachineComponent``` Component for holding all state machines of an entity and their state.
-- ```AnimationStateMachineSystem``` Client-side only system running the ASM's of all entities inside the players rendering view.
+- ```AnimationStateMachineComponent``` Component to hold all state machines of an entity and their state.
+- ```AnimationStateMachineSystem``` Client-side only system to execute the ASM's of all entities inside the players rendering view.
 - ```AnimationStateMachineState``` Abstract base type for ASM states.
 - ```AnimationStateMachineTrigger``` Abstract base type for triggers.
 - ```AnimationStateMachineTimer``` Abstract base type for timers.
