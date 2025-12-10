@@ -8,7 +8,7 @@
 This is a proposal to add an animation state machine (ASM) system which can be used to implement all kinds of temporary or persistant animations to entities like blinking eyes and waddling. The system offers a framework consisting of timers, triggers and conditions that can be defined in YAML to run these animations at the appropriate times.
 
 ## Background
-Thinks like blinking eyes and clown shoe waddling has been implemented in the past by creating whole specialized systems for their sole task of running very simple animations under certain conditions. In almost every PR for these, one can find comments wishing for a more generalized animation system that could be used instead.
+Things like blinking eyes and clown shoe waddling has been implemented in the past by creating whole specialized systems for their sole task of running very simple animations under certain conditions. In almost every PR for these, one can find comments wishing for a more generalized animation system that could be used instead.
 
 ## Features to be added
 ### Animation State Machine
