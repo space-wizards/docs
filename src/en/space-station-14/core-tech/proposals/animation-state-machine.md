@@ -21,10 +21,8 @@ In order to define when these animations are supposed to run, hardcoded types fo
 
 #### Conditions
 These will be checked and must return true for the specified animation state to run.
-- ```HasComponents```                     Is true if the entity contains all specified components.
-                                              (For example: Coughing requiring a ```LungComponent```).
-- ```MatchComponentPropertyValue```       Is true if the given component and datafield exists on an entity and has the specified value.
-                                              (For example: Blinking requiring the ```MobStateComponent``` with ```CurrentState``` being ```MobState.Alive```.)
+- ```HasComponents```                     Is true if the entity contains all specified components. (For example: Coughing requiring a ```LungComponent```).
+- ```MatchComponentPropertyValue```       Is true if the given component and datafield exists on an entity and has the specified value. (For example: Blinking requiring the ```MobStateComponent``` with ```CurrentState``` being ```MobState.Alive```.)
 
 #### Triggers
 Used to trigger state condition checks, for example:
