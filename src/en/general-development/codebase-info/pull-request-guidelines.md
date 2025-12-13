@@ -1,6 +1,13 @@
 # Pull Request Guidelines
 
-Thank you for contributing to Space Station 14. When submitting pull requests (PRs), please follow these guidelines to make your pull requests easier to review and merge. Pull requests that do not follow these guidelines may be closed at a maintainer's discretion.
+Thank you for contributing to Space Station 14. When submitting pull requests (PRs), please follow these guidelines to make your pull requests easier to review and merge.
+
+```admonish warning
+Pull requests that do not follow these guidelines may be closed at a maintainer's discretion.
+
+Ultimately, Maintainers decide what content gets merged into the Upstream repository.
+Your pull request may be reverted or closed for any reason.
+```
 
 ## Before You Begin
 
@@ -59,6 +66,30 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
 
     - Check for changes that you did not intend to commit.
     - Check for accidental whitespace additions or line end changes.
+
+### Filling out the PR Template
+You must fill out the Pull Request Template when submitting your pull request to GitHub.
+
+1. The _About_ section must explain only what the PR does.
+2. The _Why/Balance_ section must justify the changes in your PR.    
+   1. Small bugfixes do not need a lengthy justification.
+   2. If a pull request is balance-centric, the justification should properly explain **why** the change is needed.
+   3. Justifications that only explain what the pull request *does* or the *effects* that the changes have are not acceptable.
+   4. Major content additions should align with the core design principles. Sufficiently large content additions might warrant a design document to detail the broader purpose of the changes and how they fit into the current game.
+3. The _Technical Details_ section should give a high-level overview of the changes.
+    1. This is more important during bugfixes or large refactors. Providing an overview of your changes and the technical decisions you made helps us review the changes; otherwise, we have to determine why the change was made ourselves, which increases turnaround time dramatically.
+4. The PR must have _media_ when applicable.
+    1. Changes involving visuals, mechanics, or bugfixes should have media attached to demonstrate the changes to Maintainers and the community.
+    2. If media is absent, it is questionable whether you have tested your fix.
+    3. Media is usually not required when the fix is intuitively obvious from reading the code changes (inverted boolean logic for example).
+5. The _Breaking Changes_ section must be filled out if applicable.
+    1. Breaking changes occur when the following is changed:
+        1. A public API was modified. This includes YAML datafield name changes.
+        2. Code was moved to a different namespace, or a namespace was changed.
+        3. Prototype IDs were changed or deleted (even if the IDs were migrated).
+    2. Breaking changes _should_ include helpful advice on how to fix them if complicated. Simple redirections like "Use `x` namespace", "Use `Entity<T>` instead", "use `RefactoredSystem` helpers instead" are also welcome.
+6. The _Changelog_ section must be filled out if applicable.
+   1. See the Changelog section at the bottom of this document for more information on how to fill out a changelog.
 
 ## After Submitting
 
