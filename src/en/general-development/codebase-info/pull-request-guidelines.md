@@ -73,7 +73,7 @@ You must fill out the Pull Request Template when submitting your pull request to
 1. The _About_ section must explain only what the PR does.
 2. The _Why/Balance_ section must justify the changes in your PR.    
    1. Small bugfixes do not need a lengthy justification.
-   2. If a pull request is balance-centric, the justification should be lengthy and properly explain why the change is needed.
+   2. If a pull request is balance-centric, the justification should properly explain **why** the change is needed.
    3. Justifications that only explain what the pull request *does* or the *effects* that the changes have are not acceptable.
    4. Major content additions should align with the core design principles. Sufficiently large content additions might warrant a design document to detail the broader purpose of the changes and how they fit into the current game.
 3. The _Technical Details_ section should give a high-level overview of the changes.

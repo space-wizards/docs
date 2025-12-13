@@ -47,14 +47,19 @@ Pull requests must pass code review in order to be merged.
 The number of reviews required are determined by the type of pull request being reviewed.
 
 ```admonish note
-Pull requests may be reviewed, approved, and merged by a single maintainer in specific circumstances. When a maintainer does so, the maintainer is expected to provide concrete and valid reasoning for doing so. For example, a maintainer that is known for reviewing and making prediction PRs can probably process a prediction PR by themselves.
+Pull requests may be reviewed, approved, and merged by a single maintainer in specific circumstances.
+When a maintainer does so, the maintainer is expected to provide concrete and valid reasoning for doing so.
+For example, a maintainer that is known for reviewing and making prediction PRs can probably process a prediction PR by themselves.
 ```
-
-If the pull request does not line up with any category listed here, defer to two approvals for a pull request.
 
 A pull request created by a Maintainer has one approval by default.
 However, Maintainers cannot self-approve pull requests that would only require one approval to merge.
 For example, a maintainer cannot create a PR for a small bugfix and then instantly merge it after - it must be reviewed by another maintainer.
+
+#### Examples
+```admonish info
+If the pull request does not line up with any category listed here, defer to two approvals.
+```
 
 - **One Approval:**
   - Light code cleanup
@@ -163,14 +168,14 @@ Maintainers have direct push access to the Docs repo and are encouraged to use i
 PRs that update instructional or reference documentation (including but not limited to setup guides, style guides, system documentation) require only a single approval before it can be merged.
 Likewise, only a single maintainer needs to express concern to close it.
 
-Note that this does not apply to changes to internal procedure or other modifications which require voting or group deliberation according to relevant policy.
+Note that this does not apply to changes to internal procedure or other modifications that require voting or group deliberation according to relevant policy.
 
 #### Design Documents
-Major PRs that introduce or change a design document should seek either two maintainer approvals or more.
-If the addition is large enough, a maintainer can call a vote for the design document, however this should only be done when the scope of the pull request warrants it.
+Major PRs that introduce or change a design document should require at least two maintainer approvals.
+If the addition is large enough, a maintainer can call a vote on the design document; however, this should be done only when the scope of the pull request warrants it.
 
 Major game features usually follow the below dynamic:
-1. A contributor creates a preliminary design document demonstrating what they would like to add, offering a high-level overview on how it fits into the game.
+1. A contributor creates a preliminary design document demonstrating what they would like to add, offering a high-level overview of how it fits into the game.
 2. Maintainers discuss the document in an informal discussion. If most agree, the document is marked with `S: Doc Approved`, and the contributor can start work on the actual feature. As the feature is developed, the document is updated if necessary.
 3. Once the content-side implementation is ready to be merged, both the design document and the content pull request are merged in tandem.
 
