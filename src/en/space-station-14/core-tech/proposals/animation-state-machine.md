@@ -27,7 +27,9 @@ These will be checked and must return true for the specified animation state to 
 #### Triggers
 Used to trigger state condition checks, for example:
 - A wrapper around ```SubscribeLocalEvent<TComp, TEvent>()``` used for reacting to arbitrary events.
+- A wrapper around ```BaseTriggerOnXComponent```
 - ```ComponentAdded``` / ```ComponentRemoved```
+
 
 An implicit trigger will be executed when entities enter the client's rendering area. 
 
