@@ -32,8 +32,7 @@ to it. Currently, there are the following stylesheets:
 
 - `Nanotrasen` - The default stylesheet. Used for any standard player-facing
   Uis
-- `System` - Primarily used for admin and sandbox UIs
-- `Syndicate` - Used for any UIs affiliated with the syndicate
+- `System` - Primarily used for admin and sandbox UIs (currently not implemented)
 
 ### `StyleClass`
 
@@ -408,124 +407,13 @@ its simplest incarnation, a new stylesheet is just a new color palette!
 
 New stylesheets should be created with the intention of communicating a
 different context. For example, the non-diegetic context of the admin UIs being
-communicated with `SystemStylesheet`, or the sinister context of syndicate UIs
-being communicated with `SyndicateStylesheet`.
+communicated with `SystemStylesheet`.
 
 The colors for stylesheets are defined using the
 [OKLAB color space](https://bottosson.github.io/posts/oklab/), a perceptually
 uniform color space. When you choose new colors for your stylesheet, it may be
 helpful to use an [OKLCH Color Picker](https://oklch.com) and modify an existing
 color.
-
-## Applying a Stylesheet to your UI
-
-To apply a stylesheet to your UI, you just need to set the
-`FancyWindow.Stylesheet` to the name of the stylesheet. If you only want your UI
-to have one stylesheet this is enough. However, if you want your UI to have
-different stylesheets depending on context, there is a standard idiomatic way to
-achieve this.
-
-### Example: Syndicate Uplink UI
-
-The syndicate uplink UI actually uses a more general UI called `StoreMenu`, so
-we take a look at that. First, we need to make sure that `StoreMenu` is using
-`FancyWindow` and this won't work without it.
-
-<details>
-<summary>Example Code (click to expand)</summary>
-
-```xml
-<!-- StoreMenu.xaml-->
-<controls:FancyWindow
-    xmlns="https://spacestation14.io"
-    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
-    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-    Title="{Loc 'store-ui-default-title'}"
-    MinSize="512 512"
-    SetSize="512 512">
-
-    <!-- ... -->
-
-</controls:FancyWindow>
-```
-
-```cs
-// StoreMenu.xaml.cs
-public class StoreMenu : FancyWindow
-{
-    // ...
-}
-```
-
-</details>
-
-Now, it's important to understand a little bit about how UIs fit into ECS. Each
-UI window is created by an entity. These entities are defined in prototype files.
-In the case of `StoreMenu`, `Resources/Prototypes/Store/presets.yml`. To change
-the stylesheet we can add a `StylesheetComponent`, attaching a little data to
-tell us what stylesheet this UI should use.
-
-```yml
-# presets.yml
-- type: entity
-  id: StorePresetUplink
-  abstract: true
-  components:
-      - type: Store
-        # ...
-      - type: Stylesheet # add this component to the entity prototype!
-        stylesheet: Syndicate
-```
-
-Each of these entities also owns an instance of a `BoundUserInterface`. The
-purpose of the `BoundUserInterface` is to interface with the server and manage
-the lifecycle of the UI window. What's important to us is that the BUI
-initializes and opens the UI window based on the components in the entity.
-So, now that our entity has a `StylesheetComponent` attached to it, we can query
-it and apply the stylesheet:
-
-```cs
-// StoreMenuBoundUserInterface.cs
-public class StoreMenuBoundUserInterface : BoundUserInterface
-{
-    private StoreMenu _menu;
-
-    protected override void Open() {
-        base.Open();
-
-        _menu = this.CreateWindow<StoreMenu>();
-        if (EntMan.TryGetComponent<StylesheetComponent>(Owner, out var stylesheet))
-        {
-            _menu.Stylesheet = stylesheet.Stylesheet;
-        }
-
-        // ...
-    }
-}
-```
-
-Since this pattern is so common, there's a helper method on `FancyWindow` that
-does it for you! (This is why we needed to ensure `StoreMenu` extended
-`FancyWindow`)
-
-```cs
-// StoreMenuBoundUserInterface.cs
-public class StoreMenuBoundUserInterface : BoundUserInterface
-{
-    private StoreMenu _menu;
-
-    protected override void Open() {
-        base.Open();
-
-        _menu = this.CreateWindow<StoreMenu>();
-        _menu.ApplyStylesheetFrom(Owner);
-
-        // ...
-    }
-}
-```
-
-Congratulations! Now you've dynamically applied a stylesheet to your UI window.
 
 ## Writing C# for UI
 
