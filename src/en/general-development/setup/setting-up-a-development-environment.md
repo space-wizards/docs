@@ -3,7 +3,6 @@
 First you're gonna need some software:
 
 * [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
-* [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
 * [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0). Visual Studio also installs this if you're on Windows.
   * Apple Silicon (ARM64) Mac users: Some older codebases will only work with the x64 .NET and not the ARM64 one. You can either download x64 dotnet, or suggest your codebase to update their robust toolbox to at minimum 267.0.0 to add support (or just update it yourself).
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
@@ -61,11 +60,14 @@ If you're **unfamiliar with Git**, or just don't know how to proceed, follow the
 
 We have an automatic submodule updater so you don't have to worry about running `git submodule update --init --recursive` all the time. 
 
-Run `RUN_THIS.py` inside the repo you downloaded with Python. Preferably from a terminal too. This should take a few seconds so if it instantly stops then check if you are running Python 3.7+ otherwise keep reading.
+**Unique to Monolith:**
+Go into the Monolith/Scripts folder
 
-**If running `RUN_THIS.py` immediately opens and closes a window: do not worry.** This does not mean that it failed. The script closes automatically upon completion, so if you want to verify that it worked properly, check the submodule `/RobustToolbox/` and verify that all the files are there. If not try checking out the troubleshooting at the bottom of this page.
+For Windows, go into bat folder and use the updateEngine.bat script
 
-Note: If you have any issues when getting started with missing files it's recommended you run `git submodule update --init --recursive` by hand once in case something went wrong with python.
+For Linux, go into the sh folder and use the updateEngine.sh script
+
+Note: If you have any issues when getting started with missing files it's recommended you run `git submodule update --init --recursive` by hand once.
 
 If you *do* want to modify the engine directly however, or you want to update the submodule manually (the auto updating can be a pain), make a file called `DISABLE_SUBMODULE_AUTOUPDATE` inside the `BuildChecker/` directory. 
 
