@@ -10,7 +10,7 @@ A deparment vendor should have enough stock to supply two naked players with the
 
 ### Equipment Vendor
 
-Equipment vendors contain expendable equipment, spare tools, and optional tools. Gear they provide should be regularly useful and sought by players. They should not have gear that is easily available (such as in an autolathe), even if those items would be useful to the job. Nor should they have gear in excess for the purpose of distributing it to non-department players (such as an Engi-Vend with 8 crowbars).
+Equipment vendors contain spare tools, expendable equipment, and optional tools. The spare tools they hold should be identical to the tools provided in a locker. They should not have gear that is easily available (such as in an autolathe), even if those items would be useful to the job. Nor should they have gear in excess for the purpose of distributing it to non-department players (such as an Engi-Vend with 8 crowbars).
 
 Items in an equipment vendor should never be clothing. This includes all eyewear and gloves, even if such items are important tools for the job. They should instead be found in the department's respective clothing vendor. There are two exceptions: an item which can be worn but isn't clothing - such as a whistle - and clothing that is not worn by the player themselves - such as a medical gown to give to patients.
 
