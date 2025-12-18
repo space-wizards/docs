@@ -119,7 +119,7 @@ Check the `release/` folder for a packaged server for your custom codebase. You 
 
 This will not, of course, handle automatic restarts (in case of a crash) or updates like the watchdog would. This also won't list your server publicly on the hub as advertising defaults to off. If you wish to have your server listed on the hub please read `Bare Server Configuration` below.
 
-For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
+For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) (included in .NET 10 SDK).
 
 ### Setting Rules
 By default, the server ships with no rules. To set custom rules for your own server:
