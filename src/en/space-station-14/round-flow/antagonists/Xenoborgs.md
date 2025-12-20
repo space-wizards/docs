@@ -71,7 +71,7 @@ All xenoborgs also have a unique ID access, which is used to unlock them and the
 
 #### Collector xenobot
 This is a special "xenoborg" that costs less than the other xenoborgs to make and doesn't need a brain (it is a ghostrole when it is created)
-It can't attack anything, can't repair other xenoborgs and has very low hp. It's made exclusively for collecting materials. (It doesn't count for the total number of xenoborgs and therefore doesn't help them achive a win condition)
+It can't attack anything, can't repair other xenoborgs, and has very low hp. It's made exclusively for collecting materials. (It doesn't count for the total number of xenoborgs and therefore doesn't help them achieve a win condition)
 
 It can also help clean the mothership from all the giblets and assorted items left by people gibbed there.
 
