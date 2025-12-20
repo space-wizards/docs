@@ -76,7 +76,7 @@ It can't attack anything, can't repair other xenoborgs, and has very low hp. It'
 It can also help clean the mothership from all the giblets and assorted items left by people gibbed there.
 
 ### Mothership
-Is the shuttle the xenoborgs spawn in and is where the borging happens.
+The Mothership is the shuttle where the xenoborgs spawn and where borging happens.
 
 The borging is possible thanks to the mothership core, located in the center of the shuttle
 
