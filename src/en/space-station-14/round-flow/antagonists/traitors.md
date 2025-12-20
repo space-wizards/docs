@@ -2,7 +2,7 @@
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
-| Princess Cheeseballs | coder names here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
+| Princess Cheeseballs, Artistic Roomba, SlamBamActionMan | Princess Cheeseballs, Artistic Roomba, SlamBamActionMan | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
 
 ## Overview
 
