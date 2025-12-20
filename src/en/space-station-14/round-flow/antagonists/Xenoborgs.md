@@ -67,7 +67,7 @@ Xenoborgs come in four different castes
 
 All xenoborgs have a unique radio frequency which they can all use to communicate with each other.
 
-All xenoborgs also have a unique ID access, that is used to unlock them and the doors in the mothership.
+All xenoborgs also have a unique ID access, which is used to unlock them and the doors in the mothership.
 
 #### Collector xenobot
 This is a special "xenoborg" that costs less than the other xenoborgs to make and doesn't need a brain (it is a ghostrole when it is created)
