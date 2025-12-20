@@ -69,6 +69,12 @@ All xenoborgs have a unique radio frequency which they can all use to communicat
 
 All xenoborgs also have a unique ID access, that is used to unlock them and the doors in the mothership.
 
+#### Collector xenobot
+This is a special "xenoborg" that costs less than the other xenoborgs to make and doesn't need a brain (it is a ghostrole when is created)
+It can't attack anything, can't repair other xenoborgs and has very low hp. It's made exclusively for collecting materials. (It doesn't count for the total number of xenoborgs and therefore doesn't help them achive a win condition)
+
+It can also help clean the mothership from all the giblets and assorted items left by people gibbed there.
+
 ### Mothership
 Is the shuttle the xenoborgs spawn in and is where the borging happens.
 
