@@ -1,320 +1,141 @@
 ```admonish warning
-This design doc is currently actively being rewritten and should not be used as the basis for a PR. If you are interested in helping out contact Slartibartfast and ScarKy0 first, who are leading the changeling strike group.
-Also check the [changeling development tracker issue](https://github.com/space-wizards/space-station-14/issues/39439) where we will list current bugs and the next steps in the development.
+The changeling is currently in active development and this document will be updated along with it.
+If you want to help out see the [changeling development tracker issue](https://github.com/space-wizards/space-station-14/issues/39439) where we will list current bugs and the next steps in the development.
 ```
-# Changeling antagonist
+# Changeling
 
-| Designers            | Implemented | GitHub Links |
-|----------------------|-------------|--------------|
-| alzore_ (Discord)    | :x: No      | TBD          |
+| Designers | Coders | Implemented | GitHub Links |
+|---|---|---|---|
+| Slarticodefast| poklj<br/>ScarKy0<br/>Slarticodefast | :warning: Partially | [#34002](https://github.com/space-wizards/space-station-14/pull/34002) Devour and transform<br/>[#39439](https://github.com/space-wizards/space-station-14/issues/39439) Development overview|
+
+Based on the classis SS13 antagonist, see the [tg](https://wiki.tgstation13.org/Changeling) or [Goonstation](https://wiki.ss13.co/Changeling) wiki for reference.
+This design doc largely rewrites and supercedes the previously accepted design doc, which can be found [here](https://github.com/space-wizards/docs/pull/263).
+
+A previous [upstream PR](https://github.com/space-wizards/space-station-14/pull/30094) for the changeling was closed after it has been abandoned by the author and later been used as a basis for PRs on multiple SS14 downstreams. However, most of the code will need to be rewritten from scratch for upstream as it did not meet code quality standards.
 
 ## Overview
-A rare space creature with absolute control over its biology, mind over the flesh, or something like that. The changeling is the apex predator of all sentient life, feeding on their genomes and biomass to sustain its ever-shifting body. The station is the changeling's hunting ground, and the crew is its prey. It acts as a lone hunter, it doesn't collaborate with anyone, even other changelings, and it wouldn't hesitate to kill and feast on its own kind.
-The changeling is a roundstart opt-in role like traitor, it starts disguised as the player's regular character with the assumption that while off-station the changeling quietly captured and devoured them, posing as them to get onto the station to further its survival. Changelings always have a single objective. **survive** and make it to centcom. Its restraint status is irrelevant, it just needs to be alive.
 
-The goal of this version of the changeling is to create a terrifying roundstart antagonist, taking advantage of body horror elements to assimilate the crew into itself. The changeling will regularly round remove people to sustain its murder spree, and its own failure will round remove it as a result.
-
-## BIOMASS
-The changeling begins the round with around 150 biomass, this biomass depletes by 1 every 12 seconds or so. Biomass is a changeling's way of sustaining its body and abilities, without enough biomass, a changeling will wither and die. The only way to increase the amount of biomass a changeling has is to consume bodies. Consuming one person will grant the changeling 100 biomass, this means a changeling can survive for 20 minutes without using abilities for every person it devours. Rotting corpses cannot be devoured for biomass, and bloated corpses cannot be devoured for DNA.
-
-A single changeling without the use of eyeslugs should round-remove somewhere around 4 people purely to survive, even more if it uses abilities. A loud changeling that doesn't die might eat a quarter of the crew by the time the shuttle docks at centcomm.
-
-### HUNGER
-A changeling will always be able to see its biomass count in place of its hunger status on the right side of the screen, and as this number lowers various negative effects occur such as...
-- At 50 biomass, only popups visible to the changeling will occur.
-
-- at 25 biomass, outwardly visible symptoms but not dead giveaways will occur.
-
-- at 10 biomass or lower, there will be semi-dead giveaways that the changeling is a changeling, things like vomiting up blood or spasms. These can also be symptoms of deadly diseases or the eyeslug.
-
-- Once the changeling reaches 0 biomass, it falls to the ground and shows a big bold popup visible to everyone in the area, then turns into its true form after around 10 seconds.
-
-- A changeling with 0 or less biomass is considered "Starving" and cannot use recovery or transformation abilities, it takes constant damage that scales depending on how far into the negatives its biomass is.
-
-- If a starving changeling dies for any reason, it turns into dust after around 5 seconds.
-
-## ABILITIES
-The changeling starts with a few free abilities and can unlock more at the cost of biomass.
-
-**NAME | UNLOCK COST | USE COST | NEEDED FORM**
-
-### FREE ABILITIES
-The changeling, in its weakest state, is still able to do some pretty nasty stuff. These abilities are central to the changeling's functionality and it can never not have them.
-
-
-- **Transform | free | low | disguised**
-
-Opens a radial menu displaying all the people the changeling has devoured including the person it started the shift as, selecting one will display a small red popup to anyone nearby and begin a 5-second doafter. Once this concludes, the changeling will change its outward appearance and vocal cords to that of the selected victim. The trademark ability of the changeling.
-
-Intended to allow the changeling to hide among the crew and easily infiltrate departments.
-
-
-- **Devour | free | free | any**
-
-The changeling produces a loud and obvious sound, displays a big bold popup to anyone nearby, and after a 2-second windup, begins to deal rapid brute damage to a humanoid, the damage is capped at 350 of each type. If either the changeling or the humanoid moves, the damage stops. After 10 seconds of damage, the humanoid will be transformed into a husk devoid of any organs. This ability shreds any jumpsuit the body was wearing, all other clothing remains on the husk until removed. This ability cannot be used if the person is wearing an outerclothing piece with more than 10% resistance to any brute damage.
-If the changeling devours another changeling, it will gain all of the enemy changeling's biomass in addition to triple the normal amount it would gain, as well as all of the dead changeling's unlocked abilities and DNA.
-
-Intended to give the changeling a method of obtaining biomass while causing significant irreparable damage to the crew in the process and solidifying it as entirely *against* the crew.
-
-
-- **Stasis | free | low | any**
-
-The changeling enters a fake dead state and slowly recovers its wounds to eventually revive itself. If a changeling is rendered dead, it can activate this ability at any time to recover. A changeling's corpse in stasis will never rot, but it will display freshness amounts to the crew up to nearly rotting.
-
-Intended as a backup option for a changeling that is wounded from combat and can't go to med, or for a changeling the crew simply didn't take the time to dispose of to have another chance.
-
-
-- **Shed | free | free | disguised**
-
-The changeling initiates a 5-second doafter and displays a big bold popup visible to anyone nearby. Once the doafter concludes, the changeling enters its true form, dropping any clothing it was wearing except for its ID slot, which will be stored inside itself and not be outwardly visible, and the item in its right hand.
-
-Intended as a way for changelings to have a distinct combat form that alerts everyone instantly and triggers fight or flight responses in the crew.
-
-
-- **Mask | free | high | true**
-
-Replaces Shed while in true form. The changeling turns back into a normal humanoid using one of the DNAs it has access to. It will drop anything it had in its ID slot upon doing this, as it will not be wearing a jumpsuit.
-
-Intended as a way for changelings to hide amongst the crew after having either won a one-on-one fight or having succeeded in a massacre and wishing to remain hidden in the aftermath.
-
-
-### HIVEMIND
-The changeling can choose to integrate minds into itself instead of simply devouring them. This is useful for retaining personalities or quickly allowing minions to be controlled. All beings including the changeling that are within a hivemind can speak to each other using :h. Absorbed minds are forced to follow any orders given by the changeling, and griefing the changeling would be extremely rule-breaking.
-
-
-- **Hivemind | medium | free | any**
-
-Using this ability will show a radial menu which allows the changeling to use any of the abilities listed under this HIVEMIND section. Once hivemind is unlocked, all hivemind abilities are unlocked and do not need to be purchased separately.
-
-Intended as a way to keep a changeling's victims in the round, losing against a changeling remains enjoyable.
-
-
-- **Relinquish | free | free | disguised**
-
-Opens a radial menu displaying all minds currently in the changeling's hivemind, upon selecting one, that mind will be granted control over the changeling's body.
-
-Intended as a way for a changeling to disguise as someone while not drastically changing personalities, a changeling would give up control to the person they are pretending to be while giving them commands through the hivemind channel.
-
-
-- **Restrict | free | free | disguised**
-
-Toggles whether minds can use a changeling's abilities while in control of the changeling's body.
-
-Intended as a way to prevent salty players from causing too much damage to a changeling if they choose to grief.
-
-
-- **Retake | free | free | disguised**
-
-Instantly retakes control from a mind that has been granted control.
-
-Intended as a way for the changeling to remain as the master of its own body. This is instant in case a mind decides to grief, a changeling can act quickly to undo whatever the mind did.
-
-
-- **Purge | free | free | disguised**
-
-The changeling erases an absorbed mind from itself, kicking it out into the afterlife.
-
-Intended as a way to remove players who are bitter, incompetent, or malicious to the changeling from the hivemind channel.
-
-
-- **Emancipation | medium | free | any**
-
-Opens a radial menu allowing the changeling to select a mind that will instantly inhabit the next minion spawned. Using this ability again before a minion is spawned will cancel it. If a minion dies while under the control of a mind from the hivemind, the mind will be returned to the changeling with full knowledge of the events that occurred.
-
-Intended as a way to quickly summon minions and reward players for remaining in a changeling's hivemind, also gives players who died to a loud changeling something to look forward to.
-
-
-### STEALTH
-The changeling in a disguised state shouldn't be entirely under the radar. The crew would know there is SOMETHING among them, picking them off, hunting. The changeling's stealth abilities should allow it to remain out of sight while killing, and allow it to deceive the crew and make them feel safe, or throw them off the trail.
-
-- **Mimic | medium | low | disguised**
-
-Instantly opens the voice mask UI, allowing the changeling to modify its voice once. Using this ability again will revert the changeling's voice to the disguise currently in use.
-
-Intended as a way for the changeling to seed distrust, or manipulate people into actions that are favorable to it.
-
-
-- **Chameleon | medium | low | disguised**
-
-Creates fleshy clothing in the jumpsuit, shoes, head, glasses, mask, gloves, and backpack slot. This clothing can be modified just like chameleon clothing by any changeling wearing it. Cutting this clothing will yield fleshy strips rather than cloth, and if a moth eats it they will immediately know its true nature. If the changeling is already wearing something in any of those slots, no clothing will be made and the biomass cost will be reduced by 1 for each clothing not made.
-
-Intended as a way for the changeling to entirely change its disguise on the fly, while not being easily metagameable like tg flesh clothing is.
-
-
-- **Lesser | medium | medium | any**
-
-The changeling shrinks into a monkey or kobold, retaining any clothing that a monkey can wear and dropping anything else as well as freeing itself from cuffs. In this form, the changeling can ventcrawl but is only able to use the stasis, shed, transform, and stinger abilities.
-
-Intended as a way for a changeling to appear inconspicuous to an angry crew, or to escape a bad situation without fighting.
-
-
-- **Imprint | low | low | disguised**
-
-Opens a radial menu displaying all the people the changeling has devoured including the person it started the shift as. Selecting one will instantly and silently change the changeling's fingerprints to that DNA. Fingerprints are retained regardless of disguise.
-
-Intended as a way for a changeling to hide its tracks and throw people off the trail, while also leaving a chance for mistakes if a changeling never changes its prints after using the ability once.
-
-
-- **Mindshield | medium | low | disguised**
-
-The changeling instantly begins to appear mindshielded to anyone wearing a sechud. Using this ability again toggles the mindshield.
-
-Intended as a barrier for entry to infiltrating security/command. A changeling can always get a real mindshield, but then they wouldn't be able to easily disguise as a passenger or scientist when security comes knocking.
-
-
-### STINGERS
-The changeling's stinger can inject its prey with various chemicals to weaken or confuse them, with a mixture of effective stealth and combat uses. Other changelings are immune to these chemicals.
-
-
-- **Stinger | low | low | disguised**
-
-Transforms its currently active arm into a disguised stinger that cannot hold items. This stinger is not visible on examination, sprites, or in strip menus. Using the stinger inhand with Z opens a radial menu showing all chemicals the changeling has unlocked. Clicking on someone with the stinger inhand will inject them with 20u of the selected chemical.
-
-Intended as a way for a changeling to stealthily administer chemicals to victims, possibly injecting people with toxins in medbay, or pricking their target before they can realize what's going on.
-
-- **Tailsting | low | medium | any**
-
-The changeling grows a large tail with a sharp stinger at the end, giving them a third hand slot with the stinger as an item. The stinger is a weapon, dealing 8 pierce and 2 slash on hit with a 2-second cooldown between hits. Using the stinger inhand with Z opens a radial menu showing all chemicals the changeling has unlocked. Hitting someone with the stinger will inject them with 40u of the selected chemical at the same biomass cost as the chemical would normally be, this means the chemical will last for twice as long as usual. Someone hit with this stinger will receive a big bold popup that they have been stung by a changeling if it wasn't already obvious.
-
-Intended as a way for a changeling to use its stingers combatively, or to inject a lone target with a more potent dose of chemicals for an easier time subduing them.
-
-
-- **Gibberizol | low | low | stinger**
-
-A chemical that turns all speech of its victim into garbled nonsense for 100 seconds, but does not entirely prevent them from talking.
-
-Intended to be a cheaper option when taking down lone targets, or for causing confusion in a hectic scenario. Victims can still cry out over the radio and people can recognize the garbled text as being from a changeling, but nobody will know where the person is without suit coordinates or other info.
-
-
-- **Mute-agen | low | medium | stinger**
-
-A chemical that prevents targets from talking at all for 40 seconds. The target will feel a painful sting when this chemical is injected.
-
-Intended as a more risky, expensive option for taking down lone targets or causing difficulty in communication in a hectic scenario. Victims can fight back more plausibly as they will instantly be made aware they are under attack by a changeling, but they cannot alert the rest of the station easily.
-
-
-- **Impedrezol | medium | medium | stinger**
-
-A chemical that slows targets down by 20% for 20 seconds. This does not stun or freeze the target.
-
-Intended to be combined with Mute-agen or Gibberizol for an easier time subduing targets, or used in combat to drastically weaken a particular foe.
-
-
-- **Hallucinol | medium | medium | stinger**
-
-A chemical that will give a target the trip of their life, slow their movement by 10%, and entirely prevent them from metabolizing any other chemical for 20 seconds.
-
-Intended to cause a lot of confusion in people, and the people around them. Would cause hallucinations which may throw off someone's game in combat, and preventing chemicals from metabolizing might stop someone high on stimulants or omnizine from rushing the changeling easily.
-
-
-- **Chitizene | medium | high | stinger**
-
-A chemical that slowly morphs the target's arm into a dull changeling armblade that does 5 slash and 5 blunt damage for 8 minutes. The process takes 10 seconds, and the target will be aware of the transformation 5 seconds before it occurs.
-
-Intended to cause a lot of confusion, chaos, and to frame someone who is not the changeling. Also has uses with preventing gun wielding, since the armblade takes up one of the target's hands in combat.
-
-
-- **Licoxide | high | high | stinger**
-
-The target is injected with a chemical that causes them to be randomly shocked and stunned for 20 seconds. The target will feel a painful sting when this chemical is injected.
-
-Intended as a very potent offensive chemical, the high price makes it unviable for a stealthy changeling to cause general chaos with. Takes someone out of the fight without entirely preventing them from fleeing for the entire 40-second duration assuming the changeling used the tail stinger.
-
-
-### MINIONS
-The changeling can create all sorts of horrors from its ever-shifting mass of biological matter. These generally take the form of detached body parts. All of the changeling's minions except for the headcrab are ghost roles with a short raffle. Ghost role minions cannot verbally speak, but can silently communicate with the changeling that created it as if it were wearing a headset. The headcrab can speak to people.
-
-- **Eyeslug | high | low | any**
-
-Starts a ghost role raffle that lasts for 10 seconds, once it concludes one of the changeling's eyes will fall out as an eyeslug with the winning ghost in control. The eye will regrow instantly.
-
-Eyeslugs have 5 HP and move slower than a human. They can ventcrawl, move underneath doors, and are small (1x2) items that can be picked up. An eyeslug can interact with a stunned/critical humanoid to begin a 1-second doafter which will be cancelled if either move. Once concluded, the eyeslug will burrow into the victim's face and infect them with a disease. Infecting a humanoid kills the eyeslug.
-
-The disease given by eyeslugs will cause the humanoid to begin exhibiting outwardly visible symptoms identical to that of a hungry changeling, starting symptoms at 35 biomass, and progressing at half the rate a regular changeling would progress at. After 14 minutes of infection, the victim will begin taking slow damage, and the changeling will be made aware through their hivemind channel. The longer a victim is infected, the more biomass a changeling will gain from devouring them, but a dead victim will not progress their infection, and a rotting victim will immediately lose all bonus biomass and be cured. I do not currently know how an infection would be cured normally since we don't have surgery.
-- At 5 minutes infected, biomass will increase to 150
-- at 10 minutes infected, biomass will increase to 250
-- at 15 minutes infected, biomass will increase to 450, biomass does not increase past this point.
-
-Intended as a method for a more careful and calculated changeling to efficiently collect biomass without causing too much damage to the crew, which would attract a lot of attention to itself. Could also be used as scouts, or used to cause chaos by infecting random people and having them require medical to cure them. A person could also be infected, know they are infected, and fear the changeling's oncoming attack, driving up the terror already instilled.
-
-
-- **Handspider | low | medium | any**
-
-Starts a ghost role raffle that lasts for 10 seconds, once it concludes one of the changeling's hands will fall off as a handspider with the winning ghost in control. The hand will regrow instantly.
-
-Handspiders have 15 HP and move slower than a human. They have the ability to leap at people to stun them for 3 seconds if they connect, but cannot deal damage. The handspider cannot stun someone wearing a mask unless that mask is cosmetic, such as the clown mask, and The handspider will be stuck in place on top of their target for 2 seconds after a successful stun. A handspider can grasp a single item to rotate and operate it, but it cannot move while doing so. If someone picks up the item the handspider will be thrown off.
-
-Intended as a scout, or a partner for an eyeslug. A handspider could stun a victim while the eyeslug infects them, or it could simply assist the changeling in combat by stunning poor souls that dared to fight.
-
-
-- **Legworm | medium | high | disguised**
-
-Starts a ghost role raffle that lasts for 10 seconds, once it concludes one of the changeling's legs will fall off as a legworm with the winning ghost in control. The changeling's missing leg will regrow after 15 seconds, and during that time they are unable to move.
-
-Legworms have 50 HP and move noticeably slower than a human. They deal 16 blunt damage on M1 and can disarm on M2. Legworms heal 12 brute and 1 heat damage for every hit they land, that's only 4 of each brute damage type.
-
-Intended to either cause chaos and distraction while the changeling discreetly acts elsewhere or to assist the changeling in major fights.
-
-
-- **Chitinworm | medium | high | true**
-
-Replaces the legworm ability when in true form, and does not require a separate purchase.
-Starts a ghost role raffle that lasts for 10 seconds, once it concludes one of the changeling's legs will fall off as a chitinworm with the winning ghost in control. The changeling's missing leg will regrow after 15 seconds, and during that time they are slowed by 25%.
-
-Chitinworms have 30 HP and move noticeably slower than a human. They deal 9 blunt and 9 slash damage on M1 and wideswing on M2.
-
-Intended to be a high-cost method of turning the tides of a fight, the changeling can create multiple of these during a single encounter if it has the biomass to do so.
-
-
-- **Headcrab | medium | free | any**
-
-A changeling begins a 20-second invisible doafter that triggers red popups every 4 seconds for its duration. Once completed, the changeling's neck breaks and its head leaps off in the direction of the changeling's cursor.
-
-The headcrab has 20 HP and moves at the same speed as a human. It can ventcrawl and deals 10 slash damage on M1. It has the ability to leap at people to stun them for 5 seconds if it connects regardless of mask status, it will not be stuck in place after a successful stun. A headcrab can burrow into a dead/critical person after a 5-second doafter, and five minutes after burrowing the changeling will take control of that person. The changeling will have 50 biomass and no abilities after taking control of a person but still has access to all its DNA and hivemind. If the headcrab burrows into a changeling in stasis, it will be destroyed. The changeling that destroyed it will receive 30 biomass and all the regular benefits of devouring another changeling, except for its abilities since the headcrab has none.
-If a headcrab dies the changeling is fully dead, regardless of if its body is still intact. A dead headcrab can be picked up and is a medium item. Grinding it nets you 40u of chitizene, and selling it to cargo is worth 25,000 spesos.
-
-Intended as a last resort for a discovered changeling that's about to be gibbed/cremated but either cannot use rejuvenate or doesn't want to.
-
-
-### COMBAT
-Combat abilities are mostly only available to a changeling in its true form, with the exception of the arm blade as a method of fighting while still in disguise.
-
-- **Armblade | medium | medium | disguised**
-
-The changeling displays a big bold popup to anyone nearby and begins a 5-second doafter during which it is slowed by 50%. Once this concludes, the changeling's currently active arm will be replaced by an armblade. The armblade swings once a second, dealing 30 slash damage. Using this ability again triggers another popup and doafter, removing the armblade.
-
-Intended as a combat option in the disguised state for subduing victims or being caught off-guard.
-
-
-- **Rejuvenate | medium | 5/point of damage | true**
-
-The changeling displays a big bold popup to anyone nearby and begins a 4-second doafter. Once this concludes, the changeling will heal **ALL** damage dealt to it. If the changeling is critical or dead in its disguised form, it performs a 10-second invisible doafter with no popup, after which it will instantly enter its true form at full HP with the usual big bold popup and loud sound effect. If the changeling does not have enough biomass to use this ability, it will use biomass until it reaches -50, and if that is still not enough to revive it from a critical state, it will dramatically explode into a pile of gibs.
-
-Intended as a last resort for a loud changeling that has been utterly cornered and is about to be gibbed/cremated, or for an **extremely** successful changeling to become a one-man army by expending all their biomass in a single fight against the armed sec/cargo team.
-
-
-- **Shriek | high | medium | true**
-
-The changeling screeches loudly, causing any non-changeling in a 7-tile radius (blocked by walls) to instantly take 50 stamina damage.
-
-Intended to aid the changeling in a pursuit, or give it a way to combat multiple foes.
-
-
-- **Immunity | medium | high | true**
-
-The changeling doubles its passive biomass consumption to become entirely immune to poison, radiation, and cellular damage. Does not remove already existing damage.
-
-Intended as a method of fighting attacks such as foam bombs, hyposprays, and radioactive artifacts. Could also be used for things such as walking past the singularity. Not meant to be used at all times.
-
-
-- **Spacefaring | medium | high | true**
-
-The changeling loses 20% movement speed and doubles its biomass consumption to become immune to the pressure and cold of space.
-
-Intended as a way for a loud changeling (a disguised one can just use an EVA suit.) to survive a spacing either brought on by its own actions, random events, or by a desperate crew trying to kill it. Not meant to be used at all times.
-
-
-## REQUIRED CHANGES
-- Salvage corpses now spawn very bloated. They cannot be consumed by the changeling for food.
-- Add ventcrawling for mice, rats, etc.
-- Some implementation of virology for the eyeslug infection and for early starvation symptoms to not be metagamed.
+The changeling is a roundstart or midround antagonist based on the [1982 movie](https://en.wikipedia.org/wiki/The_Thing_(1982_film)) *The Thing*. A changeling is an extraterrestrial biological creature disguised as a humanoid species and is able shift its identity into that of the victims it devoured. Hiding among the crew to survive it will create paranoia and conflict among crew members as they struggle to find out who is real and who has been replaced.
+
+## Background
+
+The implementations and abilities of the changeling vastly differ among SS13 codebases or SS14 downstreams. Here is a short summary of some major forks:
+
+#### tg
+- Also known as *prototype* ling and heavily inspired by the [Prototype](https://en.wikipedia.org/wiki/Prototype_(video_game)) video game series.
+- Lots of combat focused abilities like armor, shields, multiple weapons, speed boosts, and shrieks that cause debuffs to nearby enemies.
+- Uses *chemicals*, a rapidly regenerating resource shown in an alert, to activate abilities. Some interactions like BZ gas or the *changeling sting* bartender drink are able to affect the chemical regeneration rate.
+- A fixed amount of ability points called *DNA* at roundstart that can be used in a store to purchase abilities. Devouring someone allows you to respec.
+- All changelings can communicate over a telepathic hivemind radio channel under an alias so they can coordinate.
+
+#### GoonStation
+- Thematically and visually much closer to *The Thing*.
+- The hivemind: Devoured players become part of the changeling when devoured and are able to communicate with the main player via telepathic chat. They will leave the hivemind and are allowed to remember it when their body is revived or borged.
+- Can summon minions that will be controlled by hiveminded players.
+- Abilities are purchased with DNA, which can be obtained by devouring other players.
+- The horror form, a transformation with improved combat abilities that is available after devouring 3 players. Continuously consumes DNA points to keep active (one devoured player gives you 5 seconds of this ability)
+- No chemicals, only the horror form uses DNA for upkeep. Otherwise abilities only rely on cooldowns.
+
+#### SS14 downstreams
+- Mostly based on the previous [upstream PR](https://github.com/space-wizards/space-station-14/pull/30094) and design doc and the prototype-style changeling.
+- Biomass, a hunger stat that slowly decreases, forcing the changeling to continuously devour other players, or it will show withdrawal symptoms outing them as a changeling and eventually die.
+- Biomass is also used to purchase abilities.
+
+Some comments from a previous maintainer discussion on why the prototype changeling is problematic:
+![image](https://hackmd.io/_uploads/ByQBJ6z7-e.png)
+
+![image](https://hackmd.io/_uploads/Sy4u16MQWg.png)
+
+![image](https://hackmd.io/_uploads/SkxYJaGXZg.png)
+
+
+## Features to be added
+
+### Objectives
+- **Survive and escape to CentCom**: Hide among the crew to avoid getting killed.
+- **Escape with identity**: In addition to escaping alive, the changeling must have transformed to the target person and wear an ID card with the target's name on it to succeed.
+- **Absorb DNA**: Absorb the DNA of a certain number of players. You just need to get DNA, the easiest way is using the DNA extraction sting. Alternatively this could require the changeling to kill and devour the target instead (not allowing the sting) so that the objective becomes more challenging and to increase the changeling's round impact as an antagonist.
+- **Assassinate/Maroon a person**: Kill some unlucky crewmember. This can be fulfilled via normal means or through some of your various abilities.
+- (Optional) **Absorb another Changeling**: You have to kill and then absorb another changeling. This is an objective in SS13, but may need some testing to see how traitor vs. traitor gameplay impacts the roundflow.
+
+### Abilities
+- **DNA Store** (innate): An intrinsic store allowing the changeling to purchase new abilities using *DNA points*. At round start only a small amount of DNA should be available and more can be obtained by devouring players, encouraging the player to kill without being noticed and allows them to grow and adapt as the station becomes aware of the changeling threat. Some basic abilities are innate and always available without needing a purchase.
+- **Devour** (innate): (Not to be confused with the Dragon's devour ability, which stores the victim in its stomach). Starts a DoAfter slowly devouring a dead humanoid. Once complete you absorb their identity and are able to transform into them. The amount of identities that can be stored is limited and at some point the player has to drop some stored identities to be able to absorb more.
+- **Transform** (innate): Select one of your devoured identities via a radial menu to transform into them, copying their appearance, traits and species-specific abilities. This creates a perfect copy similar to paradox clones that has the original's voice, DNA, fingerprints etc. making the changeling indistinguishable from the devoured player.
+- **Flesh Disguise**: A toggleable upgrade to the transformation ability, which allows you also make a copy of devoured humanoids' clothing items when transforming into them, allowing you to quickly switch between multiple identities without having to carry around all their equipment. The copied items are non-functional (for example helmet flashlights or magboot effects won't work) and are only visually identical. The copies will disappear with a popup if another player tries to strip them off you, meaning this ability comes with the drawback of being easier to identify as a changeling. If a changeling wants to prevent this from happening they will have to steal and wear the original's clothing instead.
+- **Regenerative Stasis** (innate): Fakes your death, and allows you to fully heal after a while. You cannot move while in stasis. The changeling can choose when they want to exit the stasis once the minimum time is over, allowing them to use it for surprise attacks. Being healed this way is highly visible to other players (via a popup and sound effect). This ability makes a changeling hard to kill unless gibbed or cremated. The cooldown should be large enough so that the crew is able to get rid of the changeling in time if they are aware of its nature and to prevent the changeling from repeatedly healing in offensive combat. While stasis is activated the changeling player should be unable to ghost from their body to prevent them from seeing OOC information.
+- **Arm Blade**: The changeling's main combat weapon, turning one of your hands into a blade made of flesh. However, it is visible on your body and a dead giveaway to onlookers that you are a changeling. Can also be used to pry open airlocks.
+- **Lesser Form**: Turn into a monkey, allowing you to vent crawl. Will also drop handcuffs if you transform. Should use the normal transformation radial menu instead of an extra action.
+- **Horror Form**: An advanced tranformation turning the changeling into a shambling abomination. Requires a certain number of devoured victims to be unlocked. Does not cost DNA to activate, but has a passive DNA cost while active and the changeling will transform back if they run out. The horror form has better combat stats similar to those of a space dragon and is intended as a last resort when threatened or exposed.
+- **Biodegrade**: Dissolves handcuffs or other restraining items, allowing the changeling to escape. This is obvious to nearby people (via sound and popup) and leaves a puddle of acid.
+- **Mimic voice**: An intrinsic voice mask, allowing you to change your voice at will and cause confusion among the crew.
+- **Last resort**: Gibs your current body and you become a head slug (similar to diona nymphs), which is able to vent crawl, allowing you to escape. The head slug is weak in combat, but if it finds a corpse it can take it over and turn back into a full changeling again.
+- **Apex Predator**: Allows you to mark a target and keep track of their location with an intrinsic pinpointer, allowing you to stalk them (this should use an overlay rather than an actual pinpointer or station map).
+- (optional, needs playtesting) **Tentacle**: Allows you to grab items or people from afar and pull them towards you. Will need to be tested to see how it affects combat.
+- **Stings**:
+  Stings are silent attacks that the victim does not notice until their effect sets in, allowing the changeling to stealthily attack a single target or cause confusion within a group of players without letting them know which one of them caused it. Most stings work similar to a hypospray by injecting a certain reagent.
+  - **Extract DNA Sting**: Steal someone's identity silently without having to devour them. Does not grant additional DNA points for store purchases though since this would be too easy. In SS13 you can Alt-click or use your middle mouse button to sting someone with your currently active sting.
+  - **Mute Sting**: Injects mute toxin. The victim won't notice until they try speaking.
+  - **Blind Sting**: Temporarily (partially) blinds the target or worsens its eye sight after a short moment. Should not be too overpowered as it basically makes you unable to fight.
+  - **Hallucination Sting**: Causes the target to hallucinate. Ideally this would be better hallucinations than just the seeing rainbows effect. Maybe use drunkenness as a placeholder?
+  - **Neurodepressant Sting**: Causes drowsiness and erratic movement.
+  - (optional, needs playtesting) **Transformation Sting**: Temporarily turns someone else into one of your stored identities. Should not be permanent because some players might not like not being able to play as their own character anymore.
+  - (optional, needs playtesting) **Madness Sting**: After some time, it temporarily turns the target into a mindless berserker who attacks everyone in sight (including you). Can be used for situations where you accuse someone else to be a changeling.
+
+### Chemicals
+Due to the large amount of separate abilities the changeling has they would be able to activate all of them in quick succession since cooldowns are only considered for each action individually. To prevent this from happening all changeling abilities require a shared resource called chemicals. These slowly refill over time and the current level is shown to the changeling player as an alert. Ability costs should be balanced such that the changeling cannot quickly use multiple strong offensive abilities while in combat. Abilities intended for fleeing and disguising on the other hand should be cheaper to encourage stealth gameplay.
+Some other game mechanics might be able cause buffs or debuffs to chemical regeneration speed, for example certain atmos gases or reagents.
+
+### Possible future additions
+- **Hive Mind and summoning eyespiders, handspiders, legworms**: This could potentially be playtested to see how it works on LRP. However, it might cause some player conflict if someone is unhappy that they have been killed by the changeling and might try to sabotage them as a result. The telepathic hivemind chat will require the chat refactor first.
+### Abilities that should not be added
+- **Regeneration abilities other than stasis**: Any sort of passive healing or quick healing that is viable during combat should be avoided as it encourages the changeling to actively seek out open fights with security and possibly killing large parts of the station. Additionally our medical system is not detailed enough yet to warrant different forms of healing (such as regrowing organs).
+- **Armor or shields**: Same reason as above, changeling abilities should be stealth focused.
+- **Shrieks or other offensive combat abilities that target multiple enemies**: Same reason as above, with the exception of abilities that are only available in the horror form.
+- **Stronger variants of the armblade**: The changeling should only seek out one on one combat and avoid facing multiple enemies at once.
+- **Adrenaline or other abilities granting stun resist or movement speed boosts**: Way too powerful when used in offensive combat as it has a much higher impact in SS14's fast-paced pixel movement combat than it did in SS13 tile movement.
+- **Bone shards and other throwing or gun-like weapons**: Ranged weapons encourage offensive combat rather than surprise attacks.
+- **Abilities that mirror traitor tools**: For example EMPs. The changeling should have its own identity as an antagonist and set itself apart from the rest, keeping the spirit of the original horror movie theme.
+- **Biomass**: We already have two stats to keep track of, chemicals and DNA, which is similarly used to buy new abilities after gaining points from devouring. Three separate systems would be too many mechanics at once. Additionally biomass acting as a hunger value is very problematic for gameplay - the changeling is encouraged to continously kill other players to stay alive themselves and to indiscriminately attack anyone when their hunger reaches a critical level. If it is known that changelings exists it also encourages security to just lock all players up and wait until they show withdrawal symptoms, outing them as a changeling.
+- **Husking**: In SS13 and SS14 downstreams devouring a player will completely round remove them by husking their body, which makes them unidentifyable and permanently unreviveable. This leads to changeling causing mass-round removal and is especially frustrating for any victims being devoured very early in the round. Even without husking a changeling will still be able to hide the devoured victim's body and take their ID card if they deem it necessary.
+
+### Identifying Changelings:
+Changelings expose themselves to the crew by using some of their non-stealth abilities (for example the arm blade) while being seen by others, or by someone hearing the changeling-specific audio effects. The changeling player should try to lure players into maintainance or other hidden areas to delay being revealed as long as possible and have more time to devour players before the crew can mobilize against them.
+
+Once the crew becomes aware of the changeling they will have to keep track of known devoured identities to know who they cannot trust.
+
+Additionally they will be able to use a blood test to identify changelings. Depending on the exact implementation this could be done by making changeling blood explode by either heating it up or centrifuging. The former would be widely available to everyone (once solutions can be heated up by welders instead of only with hot plates), where as the latter would provide a single point of failure that the changeling could sabotage. Which of these options is better for the round flow would need some playtesting.
+The blood test is intended to encourage the changeling to stay on the move, rapidly switching between multiple identities to escape, and to prevent the round from stalling. However it should not be too easy as that would lead to scenarios where the crew decides to immediately test everyone before the changeling has any chances to act. For the same reason the transformation ability should be made as perfect as possible to avoid easy antag-checking.
+
+Ideally the changeling game rule will be part of a dynamic game mode to prevent metagaming scenarios where the players identifying one changeling will inform them about the existence of multiple others at round start.
+
+## Game Design Rationale
+The changeling is strongly rooted in horror movie aesthetics and heavily leans into the classic space-horror trope. Sound effects, visual cues, and contextual popup messages are used to reinforce this unsettling feeling and signal danger to the nearby crew. With its biological abilities the changeling sets itself apart thematically from the other antagonists. 
+Using transformation and other deception abilities it will cause false accusations, paranoia, chaos and emergent story-telling. Other players are encouraged to work together socially to deduct the identity of the changelings hiding among them, and security and command roles gain importance as social authorities. Being part of the crew itself, the changeling poses a threat from within the station rather than from the outside.
+
+## Roundflow & Player interaction
+
+#### Intended roundflow
+- Hit and run tactics. Luring other players away or surprising someone in maintenance areas to kill and devour them without being noticed.
+- Abilities that can silently take out a single target, but are weak against multiple opponents.
+- The changeling spreads fear and paranoia among the crew as they struggle to find out who is real and who has been replaced by a changeling. The changeling should have abilities like mimicing voices that amplify this.
+- The changeling will be able to use its abilities to flee if caught and will then be able to tranform into someone else to get rid of their pursuers. They will then again hide among the crew and will have more chances to achieve their objectives.
+- The changeling is a long-form threat that escalates over time instead of peaking immediately. By gaining new abilities it will be able to adapt to the crew becoming increasingly aware of its existence.
+
+#### Non-intended roundflow
+- Round removing large parts of the crew.
+- The changeling singlehandedly taking on all of security in active combat.
+- Major station sabotage, causing a singoloose etc.
+
+#### Avoiding combat focus, encourage stealth gameplay
+The changeling should not be able to kill all of security or large parts of the crew. Such behaviour, commonly known as murderboning or mass round removal, is not much fun for anyone except the antagonist themselves, and effectively ends the round for many players. Abilities should be designed in such a way that they do not encourage the changeling player to seek fights with multiple enemies at once. Armor, simultaneous debuffs against multiple enemies, rapid health regeneration without stasis, speed boosts and similar highly effective combat abilities should not be added. Abilities should instead focus on escaping from combat, stealth, and surprise attacks on single enemies.
+The horror form is only intended as a last resort defense, unlocked later in the round and time limited to prevent the player from repeatedly using it.
+
+# Technical Considerations
+
+- Devouring someone creates a backup copy of the devoured entity using `CloningSystem`. The backup is stored on a separate paused map unreachable for players, but can be used for sprite previews in the transformation UI by giving the changeling player a PVS override.
+- Transforming also uses `CloningSystem` to apply the components from the backup to the changeling when they transform. This is generally handled via a component whitelist in the `CloningSettingsPrototype` and `CopyComp`, but more complex component that need to run specific API methods can use a `CloningEvent` subscription.
+- `CloningSystem` is also used for paradox clones and cloning pods, meaning if a species ability or trait is compatible with those it should work for changeling transformations as well. This should help avoiding code duplication, keep the code maintainable and reduce the required effort for forks to make their species compatible.
+- `CloningSystem` will be expanded to also allow adding or removing `HumanioidAppearanceComponent`, which will allow transforming into non-humanoids like monkeys for the lesser form ability. The use of `PolymorphSystem` should be avoided as it creates a new entity, transfers the player's mind and moves the old one to a paused map. However, since the player will have a new `EntityUid` this will come with a whole range of problems for any component that tracks the old uid, breaking features like objectives, station records, entities stored in containers, status effects and so on.
+- Interactions should be designed in such a way to minimize the amount of action icons needed as these can become messy to handle in large numbers, especially in combat situations. If possible radial menus or clickable alert icons should be used instead of having separate actions for toggleable or selectable abilities.
+- Chemicals should be using the [hunger/thirst refactor](https://github.com/space-wizards/space-station-14/pull/34166) which combines them into a common satiation system instead of implementing a lot of similar code.
