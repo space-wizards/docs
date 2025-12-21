@@ -42,12 +42,12 @@ The implementations and abilities of the changeling vastly differ among SS13 cod
 - Biomass is also used to purchase abilities.
 
 Some comments from a previous maintainer discussion on why the prototype changeling is problematic:
-![image](https://hackmd.io/_uploads/ByQBJ6z7-e.png)
 
-![image](https://hackmd.io/_uploads/Sy4u16MQWg.png)
+![image](../../../assets/images/changeling/changeling_discussion_1.png)
 
-![image](https://hackmd.io/_uploads/SkxYJaGXZg.png)
+![image](../../../assets/images/changeling/changeling_discussion_2.png)
 
+![image](../../../assets/images/changeling/changeling_discussion_3.png)
 
 ## Features to be added
 
