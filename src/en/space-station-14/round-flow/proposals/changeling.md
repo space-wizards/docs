@@ -41,13 +41,23 @@ The implementations and abilities of the changeling vastly differ among SS13 cod
 - Biomass, a hunger stat that slowly decreases, forcing the changeling to continuously devour other players, or it will show withdrawal symptoms outing them as a changeling and eventually die.
 - Biomass is also used to purchase abilities.
 
-Some comments from a previous maintainer discussion on why the prototype changeling is problematic:
+Some comments from a previous maintainer discussion that serve as a good summary on why the prototype changeling is problematic:
 
-![image](../../../assets/images/changeling/changeling_discussion_1.png)
+>That aside, these are also the types of lings that the maintainer team has previously agreed in the past to be outright counterproductive to the game's health; these are the brand of ling that're ultimately based off the game Prototype, which are rather infamous for being outright overpowered as a consequence of years worth of powercreep. The original horror themeing of lings is more or less completely lost (and certain things that lean heavily into that horror aspect, such as true form, are simply gone outside of Baycode (where antags rarely see the sun outside of admin events), and Goonstation (where lings instead go hard towards being modeled after The Thing; the complete opposite direction from where most SS13 servers went)), in favor of lings becoming incredibly combat-oriented (it's genuinely quite rare to see ling players actually use their stealth-oriented tools on servers that feature Prototype lings, as the tools they have for going loud are simply overpowering to the point where they don't have to care about stealth at all).
 
-![image](../../../assets/images/changeling/changeling_discussion_2.png)
+>This kind of nuance is the reason why antags, such as changelings, require a design doc (one that's not just a copy-paste or paraphrase of an SS13 server's wiki) in order to be merged; SS13 is simply not an ideal role model when it comes to design, and for things like changelings, there's a lot of room for genuine creativity that simply isn't seen on most SS13 servers. Ideally, an implementation of changelings should strive to be far more interesting from a design standpoint than what they're like on most SS13 servers today.
 
-![image](../../../assets/images/changeling/changeling_discussion_3.png)
+>>I dont see the issue with almost copying specific variations of antags from 13 if its balanced
+
+>Prototype lings simply aren't balanced; almost every ability they have is a straight upgrade of the tools available to traitors, with very few lacking traitor equivalents. They are, for all intents and purposes, just traitor++. It's incredibly common to see lings end up being capable of taking on the entire station solo, even on highpop servers.
+>
+>>'Be creative/Original' sounds like its just asking for an implementation of baystation or goon lings over TG, am i misunderstanding something?
+
+>The reason Bay and Goon's ling implementations are brought up is because they serve as examples of how changelings used to be across SS13. Most notably, how they used to lean heavily towards being a proper space horror, and in turn, quite a bit more interesting from a gameplay and design standpoint. However, that horror aspect is something that's been held back by a combination of SS13's tech debt, Byond's limitations at the time of design, and a general lack of further design iteration.
+
+>>im unsure wether you think goon lings should be something to strive for, (...) or if you think something else should be done altogether
+
+>Anything that ain't Prototype lings would be ideal (or at least, anything resembling their implementation across SS13). Goon lings would indeed make for a pretty good base for ling design, but the design of Goon lings come from a time when The Thing was more or less the only media inspiration for them. Since the original implementation of changelings, there's been a pretty wide variety of further thematically-appropriate media published that expand upon the core concepts, such as White Wolf's Changeling: The Lost (which leans even heavier towards horror, even for the titular changelings themselves), Prey 2017's typhon (which leans a bit more towards action, but without the one-man-army aspect), and more (if we rattled off every piece of scifi or horror media with shapeshifters, we'd be here all day).
 
 ## Features to be added
 
