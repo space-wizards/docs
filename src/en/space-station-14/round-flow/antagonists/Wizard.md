@@ -41,7 +41,7 @@ The Wizard is already added but the document is needed to help clarify certain r
 It's an extremely rare, high-chaos, high-impact, and highly disruptive lone antagonist. Its existence is a culmination of the chaotic and goofy nature of the game and has existed as an implementation in SS13 for over a decade.
 
 Their general goal is to "show off" their magical talent to the station.  They have spells and magical items that they can purchase to help them with these goals. Compared to other antagonists they're relatively powerful due to not only the rarity of the game mode, but also the nature of the Wizard being a glass cannon.
-Compared to Traitors, this allows Wizards to be given powerful spells and some with reality-warping effects (like animating tons of objects, changing walls into doors, making the floor lava, etc).
+Compared to Traitors, this allows Wizards to be given powerful spells and some with reality-warping effects (like animating tons of objects, changing walls into doors, making the floor lava, etc). See the Spells/Equipment section for a breakdown.
 
 ### SS13 History
 It's a port of the longstanding SS13 antagonist. Mainly it's based off of it's /tg/ server derivatives, but it's planned to be based off of multiple codebase implementations and a celebration of all things magic from SS13.
@@ -75,7 +75,8 @@ add the parameters that they want to do while cutting down on custom logic. Cust
 - Another example would be having an instant spell with the targeting parameter to target all in sight, and another targeting parameter to spawn something underneath the wizard.
 
 More reality-effecting spells will be also added to help vary up the Wizards gameplay and solidify it as an actual round-shifter.
-- ex). A spell that forces tile movement to all in sight.
+
+See the Spell/Equipment section for a better idea.
 
 ## Game Design Rationale
 
@@ -147,6 +148,42 @@ Most of this is based on vibes and themeatics. Does it make much sense for a Wiz
 - These can be a wide variety of execution and power.
   - Execution examples:
       - Projectile, touch, event, area-effecting.
+  - Categories:
+    - Offensive:
+      - Any spell that excels at damage, destruction, killing, or restraining.
+      - Generally spells you use to charge in
+      - Examples)
+        - Fireball (explosion)
+        - Rod Polymorph (piercing/knockdown)
+        - El Nath (instant gib) 
+    - Defensive:
+      - Any spell that's good at area control.
+      - Examples) 
+        - Force Wall (3x1 hallway control)
+        - Smoke (drops a smoke screen, which could cause people to cough & drop weapons)
+        - Trap Runes (summon trap runes to stun/slow down anyone who steps on them)
+    - Utility/Support:
+      - Any spell that can support the Wizard in some way
+      - Could help with escape, could be some sort of trickery, or maybe an ally)
+      - Examples)
+        - Jaunt (temporary ghost, limited movement through walls)
+        - Void's Applause (swaps you and another person)
+        - Knock (opens & unlocks all doors and locks in the area)
+        - Wizard Apprentice Scroll (can summon a wizard apprentice with preset spells)
+        - Recall (mark and recall an item)
+    - Equipment:
+      - Anything that's considered equipment.
+      - This could be wands/staves that have one of the above category-type spells on it.
+      - These would have relatively stronger effects on them than regular spells, since there's a risk of losing it.
+      - See the Wands, Staves, and Other Equipment sections below for a better breakdown.
+    - Event:
+      - Reality bending spells.
+      - Examples)
+        - A spell that forces tile movement to all in sight.
+        - Summon Ghosts (a spell that allows ghosts to be seen)
+        - Summon Guns/Magic (a spell that gives all living people guns or magical items, while also sowing chaos by making some crewmembers into antagonists)
+        - A spell that makes the floor into lava for a short period.
+      - See the Event section below for a better breakdown.
   - Power examples:
     - Summoning smoke which creates a thick smokescreen, and causing people to cough which forces item drop (themself included)
     - Shooting a fireball and blowing people up in an area of effect
@@ -184,6 +221,18 @@ Most of this is based on vibes and themeatics. Does it make much sense for a Wiz
   - A magical item that summons a Slaughter Demon
   - A hammer that pulls everyone and everything towards you
   - A hammer that stuns and also knocks people away
+
+#### Event Spells
+- These are intended to highly disrupt and chaos a specific type of chaos across the station.
+- Sometimes this may give players the chance to utilize equipment they may never usually get to use, such as rare guns or magic itself.
+  - In the instance where equipment/powers are given out, some players will need to be turned into antagonists.
+  - This is so it's not a huge net positive for the crew and a net negative for other antagonists
+  - Sometimes it's fun to have a nice power fantasy.
+  - Antagonists have the same amount of chance to get this equipment as much as the crew does, so it does even out.
+- Other times these kind of spells may have some sort of unique effect:
+  - Summon Ghosts - This could both help and hurt the wizard or other antagonists, or the ghosts can just mess with the crew and put them on a wild goose chase.
+  - Forcing Tile Movement (temporary) - The concept of being forced to move from one tile to the next like the days of old is hilarious, and gives players a small taste of what the predecessor to SS14 was like.
+- Any kind of server-wide or area-wide effect can really be applied here. It not only shows off how powerful the wizard can be (think max level), but it makes it uniquely interesting by causing these events in an instant.
 
 ### Wizcoin breakdown:
 
