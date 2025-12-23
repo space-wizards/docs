@@ -426,9 +426,8 @@ achieve this.
 
 ### Example: Syndicate Uplink UI
 
-The syndicate uplink UI actually uses a more general UI called `StoreMenu`, so
-we take a look at that. First, we need to make sure that `StoreMenu` is using
-`FancyWindow` and this won't work without it.
+The syndicate uplink UI uses `StoreMenu`, so lets take a look at that. First, 
+`StoreMenu` needs to be using `FancyWindow`:
 
 <details>
 <summary>Example Code (click to expand)</summary>
