@@ -155,7 +155,7 @@ walk through some examples of style rules:
 
 ```cs
 // you need this using statement to use the helper methods
-using static Content.Client.Stylesheets.Redux.StylesheetHelpers;
+using static Content.Client.Stylesheets.StylesheetHelpers;
 
 var rules =
 [
@@ -283,12 +283,12 @@ writing generic sheetlets:
 <summary>Example Code (click to expand)</summary>
 
 ```cs
-using Content.Client.Stylesheets.Redux.SheetletConfigs;
-using Content.Client.Stylesheets.Redux.Stylesheets;
+using Content.Client.Stylesheets.SheetletConfigs;
+using Content.Client.Stylesheets.Stylesheets;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 // you need to add this line manually to access the helper methods
-using static Content.Client.Stylesheets.Redux.StylesheetHelpers;
+using static Content.Client.Stylesheets.StylesheetHelpers;
 
 namespace Content.Client.Stylesheets.Sheetlets;
 
@@ -350,14 +350,14 @@ generic sheetlets:
 
 ```cs
 using Content.Client.Resources;
-using Content.Client.Stylesheets.Redux;
-using Content.Client.Stylesheets.Redux.SheetletConfigs;
-using Content.Client.Stylesheets.Redux.Stylesheets;
+using Content.Client.Stylesheets;
+using Content.Client.Stylesheets.SheetletConfigs;
+using Content.Client.Stylesheets.Stylesheets;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 // you need to add this line manually to access the helper methods
-using static Content.Client.Stylesheets.Redux.StylesheetHelpers;
+using static Content.Client.Stylesheets.StylesheetHelpers;
 
 namespace Content.Client.Paper.UI;
 
