@@ -10,7 +10,7 @@ If you wish to modify your server to add your own content or rules. You will nee
 ```
 
 1. (Windows Only) Download and install the [Latest Microsoft Visual C++ Redistributable version](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version). (Resolves "Unable to load DLL libsodium" and similar errors)
-2. Download and install the [.NET 9 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) located at the bottom left colum. Make sure you get the ``x64`` version if you are on Intel/AMD (Or downloading an Intel server to use on an Apple Silicon Mac) or the ``arm64`` on Snapdragon/Apple Silicon chips (M1,M2,M3 etc) for your operating system. On Linux it is suggested you use your distro's package manager (apt, dnf, pacman etc) to search and install dotnet.
+2. Download and install the [.NET 10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) located at the bottom left colum. Make sure you get the ``x64`` version if you are on Intel/AMD (Or downloading an Intel server to use on an Apple Silicon Mac) or the ``arm64`` on Snapdragon/Apple Silicon chips (M1,M2,M3 etc) for your operating system. On Linux it is suggested you use your distro's package manager (apt, dnf, pacman etc) to search and install dotnet.
 3. Download the latest **stable** version of the server from [our builds page](https://wizards.cdn.spacestation14.com/fork/wizards) or if you are looking for latest **testing/vulture** builds download from [this page](https://wizards.cdn.spacestation14.com/fork/wizards-testing/) for your operating system. If you are looking for another fork, ask that fork if they have a server builds page. Otherwise refer to the [Custom Code](#level-2-server-with-custom-code) section below.
 4. Extract the downloaded zip to a directory somewhere, you may use any Archive program such as 7Zip, Winrar or even the one built into your operating system.
 5. (Mac and Linux only) Run `chmod +x Robust.Server` [within a terminal inside the folder you extracted the server in.](#running-the-server-on-macos-or-linux) This only needs to be run once and again each time you download a new server update.
@@ -119,7 +119,7 @@ Check the `release/` folder for a packaged server for your custom codebase. You 
 
 This will not, of course, handle automatic restarts (in case of a crash) or updates like the watchdog would. This also won't list your server publicly on the hub as advertising defaults to off. If you wish to have your server listed on the hub please read `Bare Server Configuration` below.
 
-For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (included in .NET 8 SDK).
+For other services such as `SS14.Watchdog` you ALSO need the [ASP .NET Core 10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) (included in .NET 10 SDK).
 
 ### Setting Rules
 By default, the server ships with no rules. To set custom rules for your own server:
@@ -412,8 +412,8 @@ Type `./Robust.Server` then hit enter. If you see a bunch of stuff being printed
 ## Useful Links
 All of the important links on this page in one convenient place.
 * [Config Reference](../tips/config-file-reference.md)
-* [.NET 9 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 9 SDK)
-* [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (Also included in full .NET 9 SDK)
+* [.NET 10 Runtime](https://dotnet.microsoft.com/download) (Also included in full .NET 10 SDK)
+* [ASP.NET Core 10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) (Also included in full .NET 10 SDK)
 * [SS14.Watchdog](https://github.com/space-wizards/SS14.Watchdog/)
 * [Official Builds](https://central.spacestation14.io/builds/wizards/builds.html)
 * [Wizard's Den Infrastructure Reference](../../community/infrastructure-reference/wizards-den-infrastructure.md) (server specs)
