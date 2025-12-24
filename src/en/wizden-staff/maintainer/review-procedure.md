@@ -5,7 +5,7 @@ This document outlines the Maintainer procedure for reviewing and merging PRs to
 
 Pull requests targeting the `staging` or `stable` branch are subject to the [Hotfix Procedure](hotfix-procedure.md).
 
-Any portion of this procedure may be waived and/or modified with written permission (_via Discord or GitHub_) from a Lead Maintainer, Project Manager or Wizard.
+Any portion of this procedure may be waived for single PRs with written permission (_via Discord or GitHub_) from a Lead Maintainer, Project Manager or Wizard.
 
 ```admonish note
 Note that these procedures are ultimately flexible; however, Maintainers who deviate from this policy are expected to provide concrete and valid reasoning when doing so.
