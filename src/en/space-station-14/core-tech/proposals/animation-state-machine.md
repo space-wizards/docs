@@ -5,7 +5,7 @@
 | Ataman | Ataman | :x: No | TBD |
 
 ## Overview
-This is a proposal to add an animation state machine (ASM) system that can be used to implement all kinds of temporary or persistent animations to entities like blinking eyes and waddling. The system would offer a framework consisting of timers, triggers, and conditions that can be defined in YAML to run these animations at the appropriate times.
+This is a proposal to add a modular animation state machine (ASM) system that can be used to implement all kinds of temporary or persistent animations to entities like blinking eyes and waddling. The system would offer a framework consisting of timers, triggers, and conditions that can be defined in YAML to run these animations at the appropriate times.
 
 ## Background
 Things like blinking eyes and clown shoe waddling have been implemented in the past by creating specialized systems for their sole task of running simple animations under certain conditions. In almost every PR for these, one can find comments wishing for a more generalized animation system that could be used instead.
@@ -26,7 +26,8 @@ These will be checked and must return true for the specified animation state to 
 
 #### Triggers
 Used to trigger state condition checks, for example:
-- A wrapper around ```SubscribeLocalEvent<TComp, TEvent>()``` used for reacting to arbitrary events.
+- A small amount of periodically tested if-statements for stuff that doesn't have an event.
+- A wrapper around event subscriptions (```SubscribeLocalEvent<TComp, TEvent>()```).
 - A wrapper around ```BaseXOnTriggerComponent```
 - ```ComponentAdded``` / ```ComponentRemoved```
 
@@ -56,17 +57,21 @@ Performance impact will heavily depend on how states are implemented. Many timer
 
 This proposal ignores multi-state machines in favor of not adding more complexity to an already complex implementation.
 
-## Animations don't support YAML
-While YAML defineable animations would be preferable, this should be doable using hardcoded animations. If animations ever support YAML, this system can easily be updated to use those instead.
+## Decoupling visuals
+As already mentioned, previous implementations of certain visuals used strongly coupled components and systems for each of their unique behavior. This proposal aims to reduce that coupling down to a minimum and allow contributors to focus on the fun part, animating, while all the technical stuff gets hidden behind the ASM implementation.
 
-## SpriteComponent changes/refactor, yes or no?
-While a refactor of SpriteComponent has some advantages like not adding another system and automatically upgrading all sprites with ASM availability; this proposal is using an independent system due to the following reasons:
-- The ASM could be used for more than sprites, for example: sound cues for coughing.
-- An independent system can be added and removed more easily from the engine.
-- The ASM component can be isolated to those entities that need it. (A piece of paper probably doesn't need animations).
+Blinking eyes could be implemented by inheriting an abstract class which overrides an ```Enter```/```Reset``` method and then add it to YAML.
+
+Clown waddling could be implemented by inheriting another abstract method and overriding the ```GetNextAnimation``` and ```GetResetAnimation```.
+
+Using a proof-of-concept implementation on my fork; making mice do a cute little hop from time to time merely required 50 lines of C# code (including boiler-plate and comments) and 13 lines of YAML.
+
+## Animations don't support YAML
+While YAML defineable animations would be preferable, this is doable using hardcoded animations. If animations ever support YAML, the system can easily be updated to use those instead.
 
 ## New Types
-- ```AnimationStateMachineComponent```      Component to hold all state machines of an entity and their states.
+- ```AnimationStateMachinePrototype```      Prototype for defining state machines.
+- ```AnimationStateMachineComponent```      Component to hold all state machines of an entity.
 - ```AnimationStateMachineSystem```         Client-side only system to execute the ASM's of all entities inside the players rendering view.
 - ```AnimationStateMachineState```          Abstract base type for ASM states.
 - ```AnimationStateMachineTrigger```        Abstract base type for triggers.
