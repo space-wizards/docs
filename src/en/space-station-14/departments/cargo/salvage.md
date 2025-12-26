@@ -48,6 +48,28 @@ Salvagers should engage in enjoyable PvE that feels rewarding, fun to do in its 
 
 Salvagers should engage with space in meaningful and enjoyable ways. Space should not feel like it can be subsituted for another isolative medium.
 
+### Narrow Gameplay Definition
+At the start of the round, Salvagers should engage with a mechanic that places a random structure near the station that the Salvagers embark upon to retrieve materials and engage with low-level dangers. The structure should disappear after a predictable, consistent time period.
+
+The rewards from this should be minimal but enough to ensure a solid foundation to build off. Salvagers should be able to use this method later in the round if there is a major shortage of materials. The danger on these structures should be low to match. Salvagers should be able to use this method to begin upgrading their abilities and provide base-line benefits to the station.
+
+After engaging with the first method, Salvagers should be empowered to investigate static pre-made structures picked from a random list that float just past the ATS. These structures should be slightly more challenging than the first method, and thus be slightly more rewarding. While anyone should theoretically be able to enter these structures, their rewards should only be truly accessible to Salvagers and their tools.
+
+After engaging with the first and second method, Salvagers should have access to a large static structure that shifts from round-to-round. This structure should inherently take multiple excursions to fully explore, and the desired rewards should not be achievable without multiple excursions. Each excursion should greatly benefit from having multiple Salvagers engaging with it. This structure should be the most dangerous, and present the greatest rewards.
+
+Theoretically, high-skill Salvagers should be able to skip steps, while new Salvagers should be able to intuit the intended pathway without being told.
+
+Salvagers going further afield should not be unhealthy to the roundflow, as mechanics should be put in place to keep them connected to the station, activities on the station, and threats from station-originating antagonists even when they are on the third method.
+
+Salvagers should be able to choose to specialize for Mining or Scrapping, and another Salvager specializing in a different method should not lock the other method out. The choice to Mine or Scrap should be akin to a Scientist choosing Xenoarchaeology or Anomalies.
+
+#### Concepts for Downtime
+During the Stationside cycle, Salvagers should still have mechanics to engage with that feel enjoyable and like they are aiding their departmental responsibilities. These activities should be performed after or parallel to the processing of the rewards from the haul of the previous Spacefaring cycle.
+
+The stationside mechanics should either continue the progression of Salvagers or provide materials or do both.
+
+An example concept for this leans on the Shipbreaker side, where during downtime Salvagers can choose a freefloating Space structure that has no danger and no rewards, which gets dragged into an internal Shipbreaker yard. Salvagers can then begin the process of breaking this down into its constituent parts which will then be handed off to the relevant parties as per Salvage's Responsibilities. This activity should be performed on-station, and the salvagers should be no more isolated than a Chemist, Atmospheric Technician, or Scientist.
+
 ## Undesired Gameplay
 > Similar to "Desired Gamplay", but instead listing easy pitfalls and directions we *don't* want the game area to move in. This sets boundaries and helps achieve cohesion when designing new aspects of an area.
 
