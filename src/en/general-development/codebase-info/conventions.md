@@ -710,7 +710,7 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
 ```
 - Don't specify textures in abstract prototypes/parents.
 - You should declare the first prototype block in this order: `type` > `abstract` > `parent` > `id` > `categories` > `name` > `suffix` > `description` > `components.`
-- Use inline lists for categories and regular lists for everything else:
+- Use inline lists for empty overrides and regular lists for everything else:
   ```yaml
   - type: entity
     parent: # Regular list
