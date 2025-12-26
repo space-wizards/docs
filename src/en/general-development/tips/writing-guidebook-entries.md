@@ -166,15 +166,15 @@ Here's an example:
   description: What?
   abstract: true
   components:
-    - type: Sprite
-      netsync: false
-      sprite: Objects/Misc/stock_parts.rsi
-    - type: Item
-      size: 1
-    #this is the part you add
-    - type: GuideHelp 
-      guides:
-      - MachineUpgrading #this is the guide that is opened
+  - type: Sprite
+    netsync: false
+    sprite: Objects/Misc/stock_parts.rsi
+  - type: Item
+    size: 1
+  #this is the part you add
+  - type: GuideHelp
+    guides:
+    - MachineUpgrading #this is the guide that is opened
 ```
 
 ## Best Practices
