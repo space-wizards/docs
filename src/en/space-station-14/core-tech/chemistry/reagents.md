@@ -21,7 +21,8 @@ Their definition consists of:
 - type: reagent
   id: Lemonade
   name: lemonade
-  parent: BaseDrink
+  parent:
+  - BaseDrink
   desc: Drink using lemon juice, water, and a sweetener such as cane sugar or honey.
   physicalDesc: tart
   color: "#FFFF00"

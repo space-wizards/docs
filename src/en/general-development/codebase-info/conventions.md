@@ -713,12 +713,25 @@ You may use `PhysicsComponent` static body anchoring but *only* if you know what
 - Use inline lists for categories and regular lists for everything else:
   ```yaml
   - type: entity
-    parent: [ PartHuman, BaseHead ] # Inline list
-    id: Headhuman
+    parent: # Regular list
+    - ClothingHeadBase
+    - BaseSyndicateContraband
+    id: ClothingHeadHatCatEars
+    name: cat ears
+    description: "NYAH!"
+    categories: # Regular list
+    - DoNotMap
     components:
     - type: Tag
-      tags: # Regular list
-      - Head
+      tags: [] # Inline list for empty overrides
+    - type: Sprite
+      sprite: Clothing/Head/Hats/catears.rsi
+    - type: Clothing
+      sprite: Clothing/Head/Hats/catears.rsi
+    - type: AddAccentClothing
+      accent: OwOAccent
+    - type: StaticPrice
+      price: 15000
   ```
 - New components should not have an indent when added to the `components:` section.
   This
@@ -764,7 +777,8 @@ Please ensure you structure entities with components as follows for easier YAML 
 ```
 - type: entity
   abstract: true # remove this line if not abstract
-  parent: <nameofparent>
+  parent:
+  - <nameofparent>
   id:
   name:
   components:

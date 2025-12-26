@@ -162,7 +162,8 @@ Here's an example:
 - type: entity
   id: BaseStockPart
   name: stock part
-  parent: BaseItem
+  parent:
+  - BaseItem
   description: What?
   abstract: true
   components:

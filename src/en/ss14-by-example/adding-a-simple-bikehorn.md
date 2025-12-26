@@ -48,7 +48,8 @@ An example is shown below:
 
 ```yaml
 - type: entity
-  parent: BaseItem
+  parent:
+  - BaseItem
   id: Skub
   name: skub
   description: Skub is the fifth Chaos God.
@@ -95,7 +96,8 @@ Now let's fill out the prototype with a basic clown horn. Because we don't yet h
 ```yaml
 - type: entity
   name: clown horn
-  parent: BaseItem
+  parent:
+  - BaseItem
   id: ClownHorn
   description: It goes honk honk!
   components:
@@ -173,7 +175,8 @@ You must remove the `Component` part of the class suffix when using them in the 
 ```yaml
 - type: entity
   name: clown horn
-  parent: BaseItem
+  parent:
+  - BaseItem
   id: ClownHorn
   description: It goes honk honk!
   components:
@@ -207,7 +210,8 @@ All you need to do to create a field that can be modified in YAML is to add the 
 ```yaml
 - type: entity
   name: clown horn
-  parent: BaseItem
+  parent:
+  - BaseItem
   id: ClownHorn
   description: It goes honk honk!
   components:
