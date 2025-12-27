@@ -270,13 +270,29 @@ That being said, timestop and fireball is a classic combination for a reason, bu
 ### Friendly Wizards
 This will be the only definition and rules of what is considered a friendly wizard. A **friendly wizard** is a wizard who will either refuse to use spells on crew OR will help out the station against other threats without an iron-clad reason.
 
-An iron-clad reason would be something like Nukies relentlessly pursuiting the Wizard or a conversion antagonist attempting to convert the Wizard. In no other circumstances should a Wizard act friendly towards the crew.
+An iron-clad reason would be something like Nukies relentlessly pursuing the Wizard or a conversion antagonist attempting to convert the Wizard. In no other circumstances should a Wizard act friendly towards the crew.
 
 A Wizard forcibly taking over the station, whether it's through actual force or mind swapping, is not a friendly wizard.
 
 On the same coin, a wizard not killing a person every second is also not a friendly wizard. As long as a wizard is using their spells in some way that effects the station, they're not friendly.
 
 Like any friendly antag, an antag just joining up with the station with zero reason isn't fun for anyone. But an iron-clad reason as stated above helps make rounds more interesting and memorable.
+
+To fix this, Wizards can be given simple objectives to help guide them to antagonize the station:
+- Number of Spells Cast:
+  - A simple track of how many spells were cast could help. This would also include events triggered and wands fired.
+- Flavor Objectives:
+  - A collection of random flavor objectives could also help - like having a hostile takeover of a certain department (or disrupt that department)
+- Optional Challenge Buy:
+  - To give people more of a set of structured objectives, and an alternative way to end the round, an optional challenge buy can be introduced.
+  - This would give the wizard tasks to complete so they can get more wizcoins to become more powerful and eventually trigger some sort of end of round.
+- Objectives to avoid:
+  - Copying Traitor/Ninja objectives (Kill X, Sabotage Y)
+    - This would make Wizards feel like they need to take specific spells to complete those tasks, instead of supporting player creativity.
+  - Making the Challenge Buy the main mode:
+    - Turning all antags into a progressive power-scaling mode kills identity and makes them too samey.
+  - Flavor Objectives requiring certain spells
+    - Having objectives like "polymorph X crew" would also force the wizard to buy specific spells.
 
 ### Hiding in Ship/Space (Beginning of Round Stalling)
 
