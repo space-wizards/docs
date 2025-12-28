@@ -33,7 +33,7 @@ Used to trigger state condition checks, for example:
 
 An implicit trigger will be executed when entities enter the client's rendering area. 
 
-The main reason for triggers is to minimize performance impact, as testing many conditions of several entities every frame could have a large impact on performance.
+The main reason for triggers is to minimize performance impact, as testing many conditions of several entities every frame could have a large impact.
 
 #### Timers
 Allow animations to be played at fixed or random intervals
@@ -65,6 +65,9 @@ Blinking eyes could be implemented by inheriting an abstract class which overrid
 Clown waddling could be implemented by inheriting another abstract method and overriding the ```GetNextAnimation``` and ```GetResetAnimation```.
 
 Using a proof-of-concept implementation on my fork; making mice do a cute little hop from time to time merely required 50 lines of C# code (including boiler-plate and comments) and 13 lines of YAML.
+
+## Other benefits
+Animation tracks currently have no safeguards to prevent multiple animations editing the same property of a component simultaneously. This issue can be alleviated by adding validation methods inside the ASM. As a start, the ASM could keep track of any component properties currently in use on an entity and throw an error if another animation tries to use them.
 
 ## Animations don't support YAML
 While YAML defineable animations would be preferable, this is doable using hardcoded animations. If animations ever support YAML, the system can easily be updated to use those instead.
