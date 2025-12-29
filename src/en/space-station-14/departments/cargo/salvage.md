@@ -3,42 +3,42 @@
 ## Concept
 > 1-2 paragraphs acting as an abstract, condensing the information of the document into an easily readable format and setting expectations for what the other sections will contain. It should provide a brief overview of the game area, but avoid to include any information that isn't mentioned elsewhere in the document.  
 
-As Space Station 14 occurs in space, Salvage acts as one of the primary ways the setting can be solidified. By being a space-faring job that interacts with the ruins of space-faring structures and asteroids, along with the space-unique mechanics of the game, it solidifies why Space Station 14 is *Space* Station 14, and not some other isolated facility surrounded by an inhospitibal climate (such as underwater, or antarctica.)
+As Space Station 14 occurs in space, Salvage acts as one of the primary ways the setting can be solidified. By being a space-faring job that interacts with the ruins of space-faring structures and asteroids, along with the space-unique mechanics of the game, it solidifies why Space Station 14 is *Space* Station 14, and not some other isolated facility surrounded by an inhospitable climate (such as underwater, or Antarctica).
 
-**Salvage** is a subdepartment of Supply focused on material acquisition through scrapping abandoned ruined structures in space and mining mineral-rich asteroids. They also reclaim valuables for Cargo and abandoned technology for Science. In the process they have to contend with a variety of enemies ranging from Space Fauna (such as the humble Space Carp) to still-surviving automated defence systems, and as such are equipped to handle PvE situations with upgrading weapons and armor.
+**Salvage** is a subdepartment of Supply focused on material acquisition through scrapping abandoned, ruined structures in space and mining mineral-rich asteroids. They also reclaim valuables for Cargo and abandoned technology for Science. In the process, they have to contend with a variety of enemies ranging from Space Fauna (such as the humble Space Carp) to still-surviving automated defence systems, and as such are equipped to handle PvE situations with upgraded weapons and armor.
 
 ## Intended Experience
 Salvage's vibes and duties should embody the fantasies of things like *Hardspace Shipbreaker* and *Deep Rock Galactic*, as well as the platonic ideals of scrapyards, shipbreaking, and space mining.
 
-Salvage's gameplay should embody the feeling of a roguelike, offering round-to-round variety and inround progression. This will be done as a parallel incentive to the primary goal of Salvage - Material Acquisition.
+Salvage's gameplay should embody the feeling of a roguelike, offering round-to-round variety and in-round progression. This will be done as a parallel incentive to the primary goal of Salvage - Material Acquisition.
 
-Salvage should, IC, invoke feelings of camraderie and dependability between Salvagers as they are their only tethers to safety when out in the deep dark of space.
+Salvage should, IC, invoke feelings of camaraderie and dependability between Salvagers as they are their only tethers to safety when out in the deep dark of space.
 
-Salvagers should explore abandoned structures that provide entertaining combat challenges parallel to station-improving resources. These structures should invoke deeper connection to the setting and are good places to explore lore and the themes of SS14.
+Salvagers should explore abandoned structures that provide entertaining combat challenges parallel to station-improving resources. These structures should invoke a deeper connection to the setting and are good places to explore lore and the themes of SS14.
 
 In short:
-- Reclamation, camraderie, combat, tension, lore.
+- Reclamation, camaraderie, combat, tension, lore.
 
 ## Responsibilities
 > A collection of points regarding what the game area is responsible for in terms of gameplay, mechanics and/or station duties. This section should highlight what unique things the game area brings to the game and simulatione. If the game area is a resource provider to the station, this is highlighted here.
 
-Just like how Chemistry is the sole provider of advanced chemicals for Medical, Science the provider of upgrades, and Atmos the supplier of air, Salvage is the provider of Materials.
+Just like how Chemistry is the sole provider of advanced chemicals for Medical, Science is the provider of upgrades, and Atmos is the supplier of air, Salvage is the provider of Materials.
 
 Salvagers should, first and foremost, obtain materials and resources that are required by other departments.
-Salvage should be the sole provider of rarer materials such that if there is no salvager in a round someone steps up to perform their duties to obtain these materials.
+Salvage should be the sole provider of rarer materials, such that if there is no salvager in a round, someone steps up to perform their duties to obtain these materials.
 
 Salvage should reclaim items that improve the gameplay of other departments and ensure that these items are given to those departments.
 
-Salvage as a department is to the the primary department to engage with the PvE systems and mechanics of SS14, and should have tools that excel in that field without causing issues in PvP environments.
+Salvage as a department is the primary department to engage with the PvE systems and mechanics of SS14, and should have tools that excel in that field without causing issues in PvP environments.
 
 ## Desired Gameplay
 > A list of high-level concepts, explaining the *kind* of gameplay and mechanics we want to see in the game area's design. Each list entry should be a short sentence summarizing the design pillar with a more detailed (1-2 paragraph) description underneath. 
 
 > While the "Intended Experience" section focuses on how it *feels*, this section's entries should focus on what the player *does*. They should still be high-level, in that you are not providing instructions on specific gameplay mechanics; they are there to act as guides when creating new mechanics or interactions, serving as the measuring posts to make sure that what you are trying to do will fit in the boundaries of the game area.
 
-Salvagers should be eager to acquire Materials, and engaged in the mechanical process of acquiring Materials. Acquiring materials should feel like a joy, not a chore, and should accurately feel like Reclaiming, Salvaging, Mining, and Shipbreaking.
+Salvagers should be eager to acquire materials and engaged in the mechanical process of acquiring Materials. Acquiring materials should feel like a joy, not a chore, and should accurately feel like Reclaiming, Salvaging, Mining, and Shipbreaking.
 
-Salvagers should be engaging in a dolphin-like cycle of spacefaring > stationside > spacefaring > stationside, allowing them to Roleplay with the rest of the crew, mentally unwind from the previous PvE and prepare for the next PvE, and ensure their work is properly delivered to their destinations. This cycle should be hard-enforced by mechanics and not softly encouraged, and should not be avoidable by engaging with other elements of the Salvage gameplay. In turn, the downtime should not feel negative or opressive, and players should not find themselves wishing that they could avoid the downtime - the downtime itself should be a rewarding part of the gameplay and not an annoyance.
+Salvagers should be engaging in a dolphin-like cycle of spacefaring > stationside > spacefaring > stationside, allowing them to roleplay with the rest of the crew, mentally unwind from the previous PvE, and prepare for the next PvE, and ensure their work is properly delivered to their destinations. This cycle should be hard-enforced by mechanics and not softly encouraged, and should not be avoidable by engaging with other elements of the Salvage gameplay. In turn, the downtime should not feel negative or oppressive, and players should not find themselves wishing that they could avoid the downtime - the downtime itself should be a rewarding part of the gameplay and not an annoyance.
 
 Salvagers should be reachable even when spacefaring. Antagonists with targets on Salvagers should not feel discouraged by their target being a Salvager and should not be forced to wait for a Salvager to be stationside to engage with their objectives.
 
@@ -46,88 +46,88 @@ Salvagers should have both internal and external progression, and this progressi
 
 Salvagers should engage in enjoyable PvE that feels rewarding, fun to do in its own right, and also still incentivises acquiring Materials.
 
-Salvagers should engage with space in meaningful and enjoyable ways. Space should not feel like it can be subsituted for another isolative medium.
+Salvagers should engage with space in meaningful and enjoyable ways. Space should not feel like it can be substituted for another isolative medium.
 
 ### Narrow Gameplay Definition
 At the start of the round, Salvagers should engage with a mechanic that places a random structure near the station that the Salvagers embark upon to retrieve materials and engage with low-level dangers. The structure should disappear after a predictable, consistent time period.
 
-The rewards from this should be minimal but enough to ensure a solid foundation to build off. Salvagers should be able to use this method later in the round if there is a major shortage of materials. The danger on these structures should be low to match. Salvagers should be able to use this method to begin upgrading their abilities and provide base-line benefits to the station.
+The rewards from this should be minimal but enough to ensure a solid foundation to build off. Salvagers should be able to use this method later in the round if there is a major shortage of materials. The danger of these structures should be low to match. Salvagers should be able to use this method to begin upgrading their abilities and provide baseline benefits to the station.
 
-After engaging with the first method, Salvagers should be empowered to investigate static pre-made structures picked from a random list that float just past the ATS. These structures should be slightly more challenging than the first method, and thus be slightly more rewarding. While anyone should theoretically be able to enter these structures, their rewards should only be truly accessible to Salvagers and their tools.
+After engaging with the first method, Salvagers should be empowered to investigate static, pre-made structures selected at random from a list that float just past the ATS. These structures should be slightly more challenging than the first method, and thus be slightly more rewarding. While anyone should theoretically be able to enter these structures, their rewards should only be truly accessible to Salvagers and their tools.
 
-After engaging with the first and second method, Salvagers should have access to a large static structure that shifts from round-to-round. This structure should inherently take multiple excursions to fully explore, and the desired rewards should not be achievable without multiple excursions. Each excursion should greatly benefit from having multiple Salvagers engaging with it. This structure should be the most dangerous, and present the greatest rewards.
+After engaging with the first and second methods, Salvagers should have access to a large static structure that shifts from round to round. This structure should inherently take multiple excursions to fully explore, and the desired rewards should not be achievable without multiple excursions. Each excursion should greatly benefit from having multiple Salvagers engaging with it. This structure should be the most dangerous, and present the greatest rewards.
 
 Theoretically, high-skill Salvagers should be able to skip steps, while new Salvagers should be able to intuit the intended pathway without being told.
 
-Salvagers going further afield should not be unhealthy to the roundflow, as mechanics should be put in place to keep them connected to the station, activities on the station, and threats from station-originating antagonists even when they are on the third method.
+Salvagers going further afield should not be unhealthy to the roundflow, as mechanics should be put in place to keep them connected to the station, activities on the station, and threats from station-originating antagonists, even when they are on the third method.
 
-Salvagers should be able to choose to specialize for Mining or Scrapping, and another Salvager specializing in a different method should not lock the other method out. The choice to Mine or Scrap should be akin to a Scientist choosing Xenoarchaeology or Anomalies.
+Salvagers should be able to choose to specialize in Mining or Scrapping, and another Salvager specializing in a different method should not lock the other method out. The choice to Mine or Scrap should be akin to a Scientist choosing Xenoarchaeology or Anomalies.
 
 #### Concepts for Downtime
-During the Stationside cycle, Salvagers should still have mechanics to engage with that feel enjoyable and like they are aiding their departmental responsibilities. These activities should be performed after or parallel to the processing of the rewards from the haul of the previous Spacefaring cycle.
+During the Stationside cycle, Salvagers should still have mechanics to engage with that feel enjoyable and like they are aiding their departmental responsibilities. These activities should be performed after or in parallel with the processing of the rewards from the haul of the previous Spacefaring cycle.
 
-The stationside mechanics should either continue the progression of Salvagers or provide materials or do both.
+The stationside mechanics should either continue the progression of Salvagers or provide materials, or do both.
 
-An example concept for this leans on the Shipbreaker side, where during downtime Salvagers can choose a freefloating Space structure that has no danger and no rewards, which gets dragged into an internal Shipbreaker yard. Salvagers can then begin the process of breaking this down into its constituent parts which will then be handed off to the relevant parties as per Salvage's Responsibilities. This activity should be performed on-station, and the salvagers should be no more isolated than a Chemist, Atmospheric Technician, or Scientist.
+An example concept for this leans on the Shipbreaker side, where, during downtime, Salvagers can choose a free-floating Space structure that has no danger and no rewards, which gets dragged into an internal Shipbreaker yard. Salvagers can then begin the process of breaking this down into its constituent parts, which will then be handed off to the relevant parties as per Salvage's Responsibilities. This activity should be performed on-station, and the salvagers should be no more isolated than a Chemist, Atmospheric Technician, or Scientist.
 
 ## Undesired Gameplay
 > Similar to "Desired Gamplay", but instead listing easy pitfalls and directions we *don't* want the game area to move in. This sets boundaries and helps achieve cohesion when designing new aspects of an area.
 
 - Salvagers should not be mechanically able to spend the entire round in space.
 - Salvagers should not be unreachable and unlocatable when in space.
-- Salvage should not have an higher inherent risk of RR than other jobs even if they die in Space.
+- Salvage should not have a higher inherent risk of RR than other jobs, even if they die in Space.
 - Salvagers should not feel isolated from eachother.
 - Salvagers should not feel isolated from the rest of Supply.
 - Salvage weapons and armor should not thrive in PvP environments.
 - PvP weapons and armor should not be encouraged to be used when Salvaging.
 - Salvagers should not spend their rounds hunting powerful items & ignoring their job in the process
   - Any progression should feed into and from resource generation
-- There should be no confusion on if Salvage is or isn't staffed.
+- There should be no confusion on whether Salvage is or isn't staffed.
   - If a Salvager dies on their job, it should be a reasonable expectation that this information is discoverable.
-  - Salvages presence should be felt by the departments they are acquiring materials and items for.
+  - Salvage's presence should be felt by the departments for which they are acquiring materials and items.
   - Supply should be able to rely on Salvage for material generation.
 ### Current Flaws
-Due to a history of poor direction, low foresight, and subpar attempts at parity between ss14 and ss13, Salvage in its current state presents elements that are often unhealthy for the game.
+Due to a history of poor direction, low foresight, and subpar attempts at parity between ss14 and ss13, Salvage, in its current state, presents elements that are often unhealthy for the game.
 
-These elements are not intrinsic to the fantasy of Salvage, and most are not caused by the mechanics of the department. Instead, many elements are a result of active poor decision making and weak core gameplay elements.
+These elements are not intrinsic to the fantasy of Salvage, and most are not caused by the mechanics of the department. Instead, many elements are a result of active poor decision-making and weak core gameplay elements.
 
 #### Weak Core Gameplay Elements
 Salvagers are the primary department interfacing with the core gameplay mechanic of Space Travel. Unfortunately, Space Travel in its current form is not healthy.
 
-Anyone who touches space becomes practically invisible, causing it to be a powerful tool for antagonism for little invenstment, both in marooning people and outmaneuvering Security. This causes an issue for Salvage as it effectively disconnects them from the round and results in higher odds for Round Removal by engaging with the core gameplay loops when compared to other jobs in the game.
+Anyone who touches space becomes practically invisible, causing it to be a powerful tool for antagonism for little investment, both in marooning people and outmaneuvering Security. This causes an issue for Salvage as it effectively disconnects them from the round and results in higher odds for Round Removal by engaging with the core gameplay loops when compared to other jobs in the game.
 
-There is no reason to return to the station once you have left. Air tanks can be stored in backpacks and Air canisters can be dragged, resulting in the sole timer being practically ignorable even without considering the compressive nature of Liquid Internals.
+There is no reason to return to the station once you have left. Air tanks can be stored in backpacks, and Air canisters can be dragged, resulting in the sole timer being practically ignorable even without considering the compressive nature of Liquid Internals.
 
-Without a secondary, unavoidable timer that actively encourages anyone to spend time on station, Space will continue to be uneccesarily powerful. Without a means of tracking anyone in space (such as tracking elements on a mass scanner, or suit coordinates working offgrid), any job that can access space will always have an element of unhealthy gameplay.
+Without a secondary, unavoidable timer that actively encourages anyone to spend time on the station, Space will continue to be unnecessarily powerful. Without a means of tracking anyone in space (such as tracking elements on a mass scanner, or suit coordinates working off-grid), any job that can access space will always have an element of unhealthy gameplay.
 
-There are a handful of core elements that many Salvage elements are built on that have a weak technical foundation, such as Space Generation and Dungeon Code. The elements that use these are not inherently flawed or counter to a healthy Salvage department, and can themselves be brought in line. The amount of elements that use these shaky foundations is to such a degree that spending time interrogating the symptoms may not be the best use of development energy.
+There are a handful of core elements that many Salvage elements are built on that have a weak technical foundation, such as Space Generation and Dungeon Code. The elements that use these are not inherently flawed or counter to a healthy Salvage department, and can themselves be brought in line. The number of elements that use these shaky foundations is such that spending time interrogating the symptoms may not be the best use of development energy.
 
 For example:
 - Clipping occurs with the ATS, Magnet, and Ruins
 - Expeditions utilize Dungeon Code & Biome generation
 
 #### Misdirected Design
-The Salvage Job Board in its current implementation actively counters all commonly accepted duties of salvage by expecting Salvagers to sell material producing items (ore, scrap), and then expects Salvagers to purchase their rewards, the rewards which cost more than the monetary output of the tasks undergone to unlock them.
+The Salvage Job Board, in its current implementation, actively counters all commonly accepted duties of salvage by expecting Salvagers to sell material-producing items (ore, scrap), and then expects Salvagers to purchase their rewards, the rewards which cost more than the monetary output of the tasks undergone to unlock them.
 
 Theoretically, a Job Board is an effective way to promote the desired gameplay of salvage (Material Acquisition, PvE, etc.) while awarding effective incentives *and* allowing for round-to-round variety. This should be investigated and implemented.
 
-Cargo should not be allowed to purchase Rare Materials that Salvage should be expected to obtain. This disincentivises Salvagers from acquiring Materials, as often the rest of Supply simply undermines the effort Salvage has already undergone, creating a negative feedback loop inround and across rounds.
+Cargo should not be allowed to purchase Rare Materials that Salvage should be expected to obtain. This disincentivises Salvagers from acquiring Materials, as often the rest of the Supply simply undermines the effort Salvage has already undergone, creating a negative feedback loop in and across rounds.
 
 Ruins, Wrecks, and other Salvage dungeons should not provide PvP-intended weaponry and armor, or antagonistically-inclined tools. While certain types of items are inevitable to be mapped thematically, they should not be mapped in a manner which encourages Salvagers to ignore material acquisition in favour of "Gamer Loot".
 
-Salvage should not be encouraged to create a shuttle by the core gameplay loop of Salvage, as shuttles cost a lot of materials, present an opportunity cost where they could be spending that time gathering materials or interacting with the station, and once the shuttle is complete it promotes isolationism from Salvage. To that end, functioning shuttle parts should not be a part of the loot pool.
+Salvage should not be encouraged to create a shuttle by the core gameplay loop of Salvage, as shuttles cost a lot of materials, present an opportunity cost where they could be spending that time gathering materials or interacting with the station, and once the shuttle is complete, it promotes isolationism from Salvage. To that end, functioning shuttle parts should not be a part of the loot pool.
    - Salvage can still construct a shuttle if a map has a shuttle drydock, as maps often promote these spaces as a joint venture with Engineering, which encourages interdepartmental design. These drydocks also often have materials for the project.
 
-While planetary exploration is Really Cool, the current implementation of Expeditions promotes isolationism, requires a feature that costs a lot of materials, and rarely results in useful items returned to station.
+While planetary exploration is Really Cool, the current implementation of Expeditions promotes isolationism, requires a feature that costs a lot of materials, and rarely results in useful items returned to the station.
   - Expeditions can be retooled to meet the standards laid out by this document.
 
 ## Justifying Salvage's existence
-Salvage's continues existence Is justified. It serves as the primary arm for PvE and engaging with the Spacefaring mechanics.
+Salvage's continued existence is justified. It serves as the primary arm for PvE and engaging with the Spacefaring mechanics.
 
 There is a real, palpable desire for the fantasies that the Salvage job touches upon. Also, engaging with the core mechanics of Salvage and the fantasies found therein is highly rewarding to players because you are directly, materially, bettering the station and the experience of everyone else on it.
 
-Mechanically, Salvaging is a far mor interesting way of material acquisiton than purchasing. There is a clear path from work put in to materials that feels incredible sastisfying and rewarding. The round-to-round variance and number-go-up gameplay has many players coming back consistently.
+Mechanically, Salvaging is a far more interesting way of material acquisition than purchasing. There is a clear path from work put in to materials that feels incredible sastisfying and rewarding. The round-to-round variance and number-go-up gameplay have many players coming back consistently.
 
-When Salvage is done well, everyone benefits and everyone enjoys. It is worth the effort to improve Salvage and refine the gameplay.
+When Salvage is done well, everyone benefits, and everyone enjoys. It is worth the effort to improve Salvage and refine the gameplay.
 
-The flaws present in the current iteration of Salvage are solveable. The cultural perceptions and issues are remediable. The concept is, well, Salvageable.
+The flaws present in the current iteration of Salvage are solvable. The cultural perceptions and issues are remediable. The concept is, well, Salvageable.
