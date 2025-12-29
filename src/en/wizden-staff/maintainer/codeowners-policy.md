@@ -48,6 +48,7 @@ Maintainers with codeowner permissions have greater power over their area, howev
    2. Codeowners can process their own pull requests (selfmerging).
    3. The pull request must have tests that properly cover the changes.
    4. If the pull request targets performance improvements, the improvements must be demonstrated by a benchmark.
+   5. The pull request must be open for at least 3 days before merging.
 
 There is no restriction for regular maintainers processing pull requests that touch a scope claimed by a codeowner.
 However, it is recommended that maintainers doing so defer to the codeowner in question.
