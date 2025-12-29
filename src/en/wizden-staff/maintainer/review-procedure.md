@@ -95,9 +95,9 @@ There are some exceptions to the one-approval or two-approval system. They are l
 5. **Changes targeting a [codeowner](codeowners-policy.md)'s scope can be approved and processed by a single codeowner.**
    1. The changes must have tests that fully cover the changes that the pull request makes.
    2. If the changes are targeting performance improvements, the improvements in question must be demonstrated by a benchmark.
-   3. Codeowners can self-approve their own changes targeting the codeowner's scope, however the above requirements must be met before merging.
+   3. Codeowners can self-approve their own changes targeting the codeowner's scope; the above requirements must be met before merging.
    4. The pull request must be open for at least 3 days before it is merged by a single codeowner.
-   5. The fact that a scope is owned by a codeowner does not prevent other maintainers from processing a pull request via the normal review procedure, however it is recommended to defer to the codeowner.
+   5. The fact that a scope is owned by a codeowner does not prevent other maintainers from processing a pull request via the normal review procedure; it is recommended to defer to the codeowner.
 
 ### Closing PRs
 Pull requests can be closed in two ways:
