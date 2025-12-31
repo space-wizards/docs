@@ -71,8 +71,8 @@ Wreck resources can not directly be used as materials but need to be processed f
 - **Two-handed:** Requires two hands to pick up. 
 - **Large:** Big enough to require dragging and can't be held or put in containers.
 - **Fragile:** Easily broken if thrown around recklessly.
-- **Radioactive:** Emits radiation.
 - **Mounted:** Attached to a wall or integrated into some machinery that requires partial deconstruction.
+- **Radioactive:** Emits radiation.
 - **Electrically Unstable:** If destroyed or processed incorrectly, will emit an EMP pulse.
 - **Explosive:** If destroyed or processed incorrectly, will explode.
 - TODO: More!!
@@ -135,33 +135,77 @@ BreakSalv intends to provide the following experience:
 
 There are a few things that BreakSalv is intentionally trying to avoid:
 - Isolationism. While Salvage operates on the outside of the station, since the focus is on magnet wrecks and the shredders Salvagers do not have much reason to leave the station proper. At worst a Salvage team may occasionally need to leave the station grid to retrieve a wreck that has spawned further out, but this is only intended to be a temporary excursion lasting for the duration to get out there and towing it back. Salvage should be expected to be found in the Salvage Bay for the majority of the round. 
--  Easy sabotage/round removal features. BreakSalv doesn't intend to solve the strategy of just yeeting a dying body into space, but otherwise the equipment used for BreakSalv shouldn't be highly efficient antagonist/griefing strategies. The industrial shredders can damage things but aren't as useful as just stabbing someone with a Syndicate weapon, and the separation charges should be as easy to interupt as trying to disconnect a grid using an RCD. 
+- Easy sabotage/round removal features. BreakSalv doesn't intend to solve the strategy of just yeeting a dying body into space, but otherwise the equipment used for BreakSalv shouldn't be highly efficient antagonist/griefing strategies. The industrial shredders can damage things but aren't as useful as just stabbing someone with a Syndicate weapon, and the separation charges should be as easy to interupt as trying to disconnect a grid using an RCD. 
+- Overabundance of materials. All wrecks should follow guidelines for how many resources may be on them and what loot may be found such that a competent Salvage team can't make Cargo completely redundant. Similarly, Cargo itself shouldn't make Salvage's work redundant to the station. Said guidelines should be constructed through playtesting to find the sweetspots and aren't covered in this proposal.
+- Spawning in wrecks, grabbing loot and de-spawning them: That's not to say a wreck can't have a _little_ bit of "loot", i.e. equipment/cosmetics only benefitting Salvage. But the wrecks and the rewards should be balanced such that it's not desirabel to just spawn in a wreck and not actually work on it or shred it.
 
-Consider addressing:
-- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy?
-- What makes this feature enjoyable or rewarding for players?
-- Does it introduce meaningful choices, risk vs. reward, or new strategies?
-- How does it enhance player cooperation, competition, or emergent gameplay?
-- If the feature is a new antagonist, how does it fit into the corresponding [design pillars](../space-station-14/round-flow/antagonists.md)?
+### BreakSalv in detail
+
+This section addresses specific design choices with the various features BreakSalv aims to implement.
+
+#### Salvage in space
+
+Previous iterations of Salvage have had a problem with Salvage "fucking off into space" and not engaging with the station for the majority of the round. This has less been the fault of space itself and rather the Salvage mechanics that encouraged leaving the station; shuttle building and space debris encouraged hopping from debris to debris to gather resources, with the vrgoid asteroid being the epitome of encouraging Salvage to leave for extended durations and make "mini-stations" with medical capabilities and even their own lathes replacing the need for the station altogether. Expeditions disconnected Salvage from the station map entirely and fultons meant Salvagers didn't need to return to the station to hand over the materials. 
+
+BreakSalv locks Salvage to the station grid by making heavy use of the magnet and the industrial shredders. There is little to no reason to engage in gameplay away from the station and by being in so close proximity to the station there isn't a strong incentive to set up station-replacing equipment. This means that Salvage will always be accessible to react to station events and become easier to locate e.g. for antagonists. 
+
+Not only is working in space a unique gameplay mechanic that otherwise really only Engineering deals with, but it is aesthetically cool and leverages the open space afforded by it. Another benefit of this implementation is that it will be easier for other station crew to interact directly with Salvage; Paramedics will have an easier time accessing Salvagers in case of a lethal explosion, Engineers will more commonly see Salvage when traversing the outside of the station and Passengers will have an easier time joining in due to the openness of the Salvage Bay.
+
+#### The Salvage Magnet and Wrecks
+
+Wrecks provide variety to the round, both in the selection of available wrecks but also what contents they may provide. They are also excellent opportunities for environmental story-telling; all wrecks should have some sort of "lore" behind it that ties into its wreck type and what the wreck depicts. Wrecks should not be created through pure random generation but be hand-crafted grids by our talented mappers. Wrecks should ideally not have just a single way that they can play out to create emergent gameplay and Salvagers should feel they can make meaningful choices what wrecks they spawn in but also how they approach them.
+
+As mentioned in the previous section, the salvage magnet becomes part of what ties Salvagers to the station. Despite its unassuming appearance it is a critical part of ensuring that BreakSalv flows smoothly and a lot of care and consideration needs to be taken to ensure that its presentation and mechanics (such as delays) don't encourage bad or unfun gameplay. 
+
+A potentially contentious part is the Upgrade Magnet button. Forcing Salvagers to not engage with their primary gameplay loop may be seen as killing the momentum. However considering that it is optional and up to the Salvagers when it should be activated (in case Salvage just wants to do more wrecks right this moment) and that it only unlocks after Salvage has done some wrecks should hopefully place it at a point where Salvagers are looking for an excuse to take a break. Ideally it will be implemented such that Salvagers can go "We'll do one more wreck and then hit the bar while the magnet upgrades".
+
+#### Grappling Hooks
+
+pulling grids is fun idk what else to say weee pew pew i'm so strong
 
 ## Roundflow & Player interaction
 
-Consider addressing:
-- At what point in the round does the feature come into play? Does it happen every round? How does it affect the round pace?
-- How do you wish for players to interact with your feature and how should they not interact with it? How is this mechanically enforced?
-- Which department will interact with the feature? How does the feature fit into the [design document](../space-station-14/departments.md) for that department?
+As previously mentioned, Salvage will have some inherent progression through what is found on the wrecks, but may also be assisted by upgrades from Science in the form of useful equipment. There isn't as much of an endgoal for Salvage as there is an escalation of stakes to match the stronger equipment, with larger volumes of rarer materials and more challenging environments becoming available/feasible as the round progresses.
+
+Wrecks should ideally refrain from having certain items. This is primarily medical supplies, food and hard cash; Salvagers shouldn't be able to loot wrecks and set up their own medical facilities or sustain themselves completely on wreck food to prevent them becoming independent from Cargo, and finding large stacks of money invalidates the work Cargo Technicians put in with completing bounties. Salvage should however be able to supply Medical and Service with resources, and may be a core part of completing certain bounties for Cargo and providing items for Cargo Technicians to sell.
 
 ## Administrative & Server Rule Impact (if applicable)
 
-- Does this feature introduce any new rule enforcement challenges or additional workload for admins?
-- Could this feature increase the likelihood of griefing, rule-breaking, or player disputes?
-- How are the rules enforced mechanically by way the feature will be implemented?
+The only concern that I could consider is the risk of someone driving a shuttle intended to be used by the station (such as a Cargo shuttle) into the industrial shredders or antagonists/crew weaponizing the shredders to make them grind up the station itself or the shuttles of antagonists. While the shredders are only active when there is a magnet wreck active, there should still be some mechanical implementation made for the shredders to prevent them being used in this manner. 
 
 # Technical Considerations
 
-- Does the feature require new systems, UI elements, or refactors of existing ones? Give a short technical outline on how they will be implemented.
-- Are there any anticipated performance impacts?
-- For required UI elements, give a short description or a mockup of how they should look like (for example a radial menu, actions & alerts, navmaps, or other window types)
+## New features
+
+### Grid dragging
+
+Before writing this document I had a short sync with Slartibartfast who has experience with grid movement. He said it was likely feasible to implement something like a grappling hook pulling, though it depends on how well Box2D supports continuous forces being applied to the grid. A `DistanceJoint` on the hook may be sufficient however so signs point towards this not being a difficult thing to implement.
+
+The main issue likely encountered is that grid mass is currently not very accurate. This would cause problems when determining pull strength and also how the grids should pull towards each other if neither grid on either end of the grappling hook is anchored. If this becomes an issue, grid mass calculations would need a pass to ensure it's more accurate.
+
+There would need to be some sanity checks such that a Salvager can't just stand on the station and keep a moving shuttle in place with just a grappling hook and magboots.
+
+### Separation charges
+
+Splitting grids is already a thing that can be done with the RCD, but that operates on the principle of removing tiles entirely. There would need to be a solid system in place that not only deals with separation charges being capable of sitting on the edge between two tiles, but also that it can accurately split the grids in two. 
+
+In terms of testing BreakSalv, separation charges aren't necessary. They main reason they should be implemented is to give mappers freedom when designing the sizes of Salvage Bays and wrecks.
+
+## Modified features
+
+### Station map considerations
+
+Station maps would need to accommodate the new "shredder wall" concept. After briefly testing it seems that a width of 9 tiles (the width of a singularity containment field) is around the ideal size to deal with pulling in wrecks for shredding and most stations seem to have room to fit them with no problem (except possibly Reach, but even then there is room for a smaller version).
+
+Still, all maps would need to implement a new Salvage Bay to be able to support BreakSalv. 
+
+### Wreck map considerations
+
+Many if not all of the existing wreck maps would likely need to be redesigned to comply with the wreck type system and provide an engaging wreck for Salvage to process in the manner that BreakSalv requires. The magnet must also be able to properly track how much of a spawned grid remains, which includes if the grid is split off into multiple parts. This should be doable via a simple tracking component, hopefully.
+
+### Salvage Magnet
+
+The salvage magnet would require a partial re-design with its UI to support the new functionality. Most of what exists could probably be repurposed for BreakSalv however.
 
 ## Further Embodiments
 
