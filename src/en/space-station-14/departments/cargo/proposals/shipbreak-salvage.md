@@ -104,6 +104,8 @@ Each shredder acts as a conveyor belt that is only able to push items perpendicu
 
 Shredders do not have the safety mechanism of recyclers which means they deal contact damage, but the damage is low enough that it isn't an efficient method of murder. You wouldn't want to stand or walk through a shredder for a long duration but just touching it for a few seconds won't be lethal.
 
+Shredders are *only* able to shred wrecks attached to the linked salvage magnet. While realistically there shouldn't be a limit, this is an instance where moderation efforts need to be made as having them able to shred any grid would make major griefing and self-antagonism too easy to perform, and also allow crew to easily weaponize the shredder wall against shuttle-based antagonists (despite how awesome it sounds, we do not want crew to mount shredders to a Cargo shuttle to bulldoze the Xenoborg Mothership). There is the possibility to remove this limitation as an EMAG interaction for the salvage magnet however, though if that is to be implemented it should come with a station-wide announcement to alert crew to the impending danger.
+
 #### Separation Charges
 
 Some wrecks will simply be too large to fit into the Salvage Bay and the shredder wall. Salvage will be tasked to split these wrecks into smaller parts using a new tool called separation charges. These act similar to cables but are placed on the edges of tiles and when activated split the grid into two parts, similar to how an RCD can separate grids. This split is accompanied by a small spark (not an explosion!) and a small push force separating the grids. Large wrecks should be designed with this functionality and in some places have pre-defined ideal spots to place charges.
@@ -210,7 +212,7 @@ In terms of what resources Salvage should focus on, this document focuses primar
 
 ## Administrative & Server Rule Impact (if applicable)
 
-The only concern that I could consider is the risk of someone driving a shuttle intended to be used by the station (such as a Cargo shuttle) into the industrial shredders or antagonists/crew weaponizing the shredders to make them grind up the station itself or the shuttles of antagonists. While the shredders are only active when there is a magnet wreck active, there should still be some mechanical implementation made for the shredders to prevent them being used in this manner. 
+Due to the safety locks on the industrial shredders, the only moderation issue I could see is that an antagonist uses the shredders for DAGD-level destruction by mounting them on a shuttle and trying to bulldoze the station. It does require the EMAG which means it's limited to antagonists only so the risk for self-antag griefing is fairly minor. 
 
 # Technical Considerations
 
