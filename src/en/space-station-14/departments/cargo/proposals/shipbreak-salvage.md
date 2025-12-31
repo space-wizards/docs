@@ -6,7 +6,7 @@
 
 ## Overview
 
-Shipbreak Salvage (or BreakSalv) is a new primary gameplay loop intended to act as Salvage's main method  Salvage focusing on physically pulling in wrecks of old shuttles to the station with the goal to extract unique resources and large volumes of common materials. 
+Shipbreak Salvage (or BreakSalv) is a new primary gameplay loop for the Salvage Specialist job, focusing on pulling in shuttle wrecks to the station and manually disassembling them for valuable resources before sending the remaining structure into a huge industrial shredder for even more materials. It challenges Salvagers in how to deal with a variety of environments, types of hazards and ways to extract materials in an expedient manner, rewarding thorough work with a high resource yield for the station, tool upgrades and bragging rights. BreakSalv emphasizes EVA work on the outside of (but still on!) the station with a sci-fi industrial aesthetic unique to the department.
 
 ## Background
 
