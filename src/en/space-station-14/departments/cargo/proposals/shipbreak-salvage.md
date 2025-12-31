@@ -47,11 +47,12 @@ One of the key pieces of information listed in a magnet entry is the _wreck type
 Some examples of wreck types:
 
 - **Superheated:** Contains compartments with superheated plasma actively on fire. These must be vented into space before being accessed.
-- **Infested:** Contains a large number of space mobs that will attack the Salvagers.
+- **Infested:** Contains a large number of space mobs that will attack the Salvagers. These mobs are resistant to piercing damage, making ballistic weapons ineffective.
 - **Overgrown:** Kudzu covers the wreck, along with trees blocking pathways.
 - **Radioactive:** Contains a large number of radioactive objects that require quick removal.
 - **Defended:** Contains dangerous turrets (ballistic and/or laser) and mines that must be disposed of.
 - **Shadowy:** Covered in the visually obscuring shadow anomaly fog that has to be navigated or removed via flashes.
+- **Electrified:** Features electrical grilles and shocked airlocks that require either insulated gloves or strategic turning off of APCs.
 - **Fortified:** Contains powered access-locked and high-security airlocks with strong walls. These must be hacked or destroyed to reach the resources inside.
 - **Anchored:** Has a mini-station anchor inside of it that must be manually turned off before the wreck can be moved.
 - **Distant:** Spawns at a further distance away from the station than normal. Jetpack recommended.
@@ -205,6 +206,8 @@ Wrecks should ideally refrain from having certain items. This is primarily medic
 
 Salvage has had a tradition of getting "gamer loot" via wrecks, i.e. equipment that would be very strong in the hands of an antagonist (or worse, used to validhunt/shut down antagonists) when they return to the station. Some wrecks, especially those that become available after the magnet upgrade, may contain some stronger equipment and especially cosmetics, but to prevent undesirable gamer loot Syndicate equipment should be heavily restricted from the wrecks.
 
+In terms of what resources Salvage should focus on, this document focuses primarily cites rare materials as what Salvage can deliver uniquely to the station. With the content currently available this can negatively impact gameplay for other departments such as Science where _requiring_ Salvage to supply materials to enable core gameplay and rewards. The design of BreakSalv is such that new materials and equipment could be introduced as wreck resources to make poor/non-existent Salvage work less blocking for other roles and good results only enhance the station's gameplay. As this would involve a larger rework of the overall resource system in the game with supportive content and not impact BreakSalv's gameplay loop, it is left out of this design proposal.
+
 ## Administrative & Server Rule Impact (if applicable)
 
 The only concern that I could consider is the risk of someone driving a shuttle intended to be used by the station (such as a Cargo shuttle) into the industrial shredders or antagonists/crew weaponizing the shredders to make them grind up the station itself or the shuttles of antagonists. While the shredders are only active when there is a magnet wreck active, there should still be some mechanical implementation made for the shredders to prevent them being used in this manner. 
@@ -248,3 +251,4 @@ The salvage magnet would require a partial re-design with its UI to support the 
 There are a few ways that BreakSalv can be expanded upon. These are not necessarily part of the base implementation but may be worth exploring in the future:
 - A stationary "spear gun" turret stationed in the Salvage Bay that Salvagers manually control to hook into wrecks that are too far for their grappling hooks.
 - Industrial shredders being a Science research technology. I fear what the Passengers will do with this.
+- More elaborate wreck mechanics inspired by Hardspace: Shipbreaker. Examples would be reactors that start a timer before needing to be processed or else explodes, or heating/cooling pipes that could harm you if cut before being drained.
