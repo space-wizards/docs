@@ -227,6 +227,7 @@ Space Station 14
 		- [PR Guidelines](en/space-station-14/departments/cargo/guidelines.md)
 
 		- [Proposals]()
+  			- [Shipbreaker Salvage](en/space-station-14/departments/cargo/proposals/shipbreak-salvage.md)
 			- [Salvage Proposal](en/space-station-14/departments/cargo/proposals/salvage-proposal.md)
 			- [Mail Deliveries](en/space-station-14/departments/cargo/proposals/mail-delivery.md)
 
