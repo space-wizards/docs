@@ -39,7 +39,7 @@ The Avali have a naturally lower body temperature compared to other species. Thi
 
 #### Unique Bloodstream
 
-The Avali, like Vox and Arachnids, have anaerobic blood (blue blood). This means their blood is copper-based, not iron-based, requiring copper to replenish blood levels as opposed to iron. However, unique to Avali, they do not use saline to recover this. Instead, Avali are poisoned by saline and require ammonia as a replacement.
+The Avali, like Vox, have anaerobic blood (blue blood). However, unique to Avali, they do not use saline to recover this. Instead, Avali are poisoned by saline and require ammonia as a replacement.
 
 This creates a new interaction with the medbay on every shift, as chemists are now required to make ammonia to treat Avali patients. It also requires medical doctors and whoever decides to heal an Avali patient to consider this. This doesn't destroy the use of topicals, however, as blood packs will still heal an Avali's blood loss. Not only does this affect crew-sided gameplay, but it also affects antagonistic gameplay. For example, nuclear operatives will now have to take this into account when their corpsman creates medication. Instead of bringing only saline as a cure-all for blood loss, they will have to potentially make ammonia as well and decide who gets what injection.
 
