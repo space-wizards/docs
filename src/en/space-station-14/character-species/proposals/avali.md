@@ -23,11 +23,11 @@ The Avali stand out as a mostly unique species. While they do share similar "avi
 
 ### Core Visual Elements
 
-Avali are fuzzy, bipedal creatures. The main identifying features of Avali are their 4 giant ears, large feathered wings, and tails. Avali stand digitigrade and communicate with others using their unique squeaky voices. Like other species with tails, they protrude from their jumpsuits/hardsuits, making them easy to identify. The same can be said of their large, winged feathers, which make them hard to miss. Avali are normally small-statured, but the size of their wings and feathers makes them seem larger than they really are, like an animal with a puffy coat of fur.
+Avali are fuzzy, bipedal creatures. The main identifying features of Avali are their four giant ears, large feathered wings, and tails. Avali stand digitigrade and communicate with others using their unique squeaky voices. Like other species with tails, they protrude from their jumpsuits/hardsuits, making them easy to identify. The same can be said of their large, winged feathers, which make them hard to miss. Avali are normally small-statured, but the size of their wings and feathers makes them seem larger than they really are, like an animal with a puffy coat of fur.
 
 ### Naming Convention
 
-Avali have very simple naming conventions. Avali most commonly have singular "exotic" names. However any naming schematic can fit their species.
+Avali have straightforward naming conventions. Avali most commonly have singular "exotic" names. However, any naming scheme can be applied to their species.
 
 Some examples of Avali names include: Narodi, Kalomi, Eijuli, Eilan, and Maaka.
 
