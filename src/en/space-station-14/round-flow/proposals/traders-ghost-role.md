@@ -11,9 +11,9 @@
 
 Github links can include multiple PRs, if relevant.
 -->
-| Designers | Implemented | GitHub Links |
-|---|---|---|
-| DigitalThaumaturge | :x: No | TBD |
+| Designers | Coders | Implemented | GitHub Links |
+|---|---|---|---|
+| DigitalThaumaturge | DigitalThaumaturge | :x: No | TBD |
 
 ## Overview
 <!-- A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds". -->
