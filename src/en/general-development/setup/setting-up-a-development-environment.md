@@ -13,6 +13,15 @@ First you're gonna need some software:
     * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
 
+```admonish warning title="VScode/VsCodium and SLNX"
+Currently the C# Dev tools extension does not seem to fully support SLNX.
+
+You may follow this step by [Microsoft](https://devblogs.microsoft.com/dotnet/introducing-slnx-support-dotnet-cli/#c#-dev-kit) to be able to open an SLNX dotnet project.
+
+VSCodium seems to not have the ability at all. (https://github.com/muhammadsammy/free-vscode-csharp/issues/95) (Although the above may work in VSCodium as well.)
+
+```
+
 ~~~admonish info title="Windows and winget"
 Windows users are suggested to use winget for an easier install, just open a command prompt/powershell and enter the following:
 
