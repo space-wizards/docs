@@ -54,8 +54,9 @@ SS14 By Example
   - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
 - [Basic Networking and You](en/ss14-by-example/basic-networking-and-you.md)
 - [Fluent and Localization](en/ss14-by-example/fluent-and-localization.md)
+- [UI and You](en/ss14-by-example/ui-and-you.md)
+  - [UI Cookbook](en/ss14-by-example/ui-and-you/ui-cookbook.md)
 - [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
-
 
 Robust Toolbox
 ==============
@@ -87,6 +88,7 @@ Robust Toolbox
     - [Environments](en/robust-toolbox/toolshed/environments.md)
     - [Invocation contexts](en/robust-toolbox/toolshed/invocation-contexts.md)
 - [User Interface](en/robust-toolbox/user-interface.md)
+  - [Containers](en/robust-toolbox/user-interface/containers.md)
 - [IoC](en/robust-toolbox/ioc.md)
 - [Rendering]()
   - [Lighting and FoV](en/robust-toolbox/rendering/lighting-and-fov.md)
@@ -104,6 +106,7 @@ Robust Toolbox
 - [Automatic Client Zip (ACZ)](en/robust-toolbox/acz.md)
 - [Asset Packaging](en/robust-toolbox/asset-packaging.md)
 - [Publishing a new Robust Toolbox Version](en/robust-toolbox/publishing-robusttoolbox.md)
+- [Versioning & Compatibility](en/robust-toolbox/versioning-compatibility.md)
 
 Space Station 14
 ================
@@ -186,6 +189,7 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/round-flow/guidelines.md)
 	
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
+ 		- [Traitors](en/space-station-14/round-flow/antagonists/traitors.md)
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
 		- [Xenoborgs](en/space-station-14/round-flow/antagonists/Xenoborgs.md)
@@ -243,6 +247,8 @@ Space Station 14
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
 
 	- [Medical](en/space-station-14/departments/medical.md)
+ 		- [Medical Workgroup](en/space-station-14/departments/medical/medical-workgroup.md)
+ 		- [Chemistry](en/space-station-14/departments/medical/chemistry.md)
 		- [PR Guidelines](en/space-station-14/departments/medical/guidelines.md)
 
 		- [Proposals]()
@@ -269,6 +275,8 @@ Space Station 14
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
    		- [Librarian Gameplay](en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md)
       - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
+	- [Silicon](en/space-station-14/departments/silicon.md)
+		- [PR Guidelines](en/space-station-14/departments/silicon/guidelines.md)
 
 General Proposals
 ================
@@ -365,6 +373,15 @@ Maintainer Meetings
 
 ----------------------
 
+- [2026-01-03](en/maintainer-meetings/maintainer-meeting-2026-01-03.md)
+- [2025-12-20](en/maintainer-meetings/maintainer-meeting-2025-12-20.md)
+- [2025-12-06](en/maintainer-meetings/maintainer-meeting-2025-12-06.md)
+- [2025-11-22](en/maintainer-meetings/maintainer-meeting-2025-11-22.md)
+- [2025-11-08](en/maintainer-meetings/maintainer-meeting-2025-11-08.md)
+- [2025-10-25](en/maintainer-meetings/maintainer-meeting-2025-10-25.md)
+- [2025-10-11](en/maintainer-meetings/maintainer-meeting-2025-10-11.md)
+- [2025-09-27](en/maintainer-meetings/maintainer-meeting-2025-09-27.md)
+- [2025-09-13](en/maintainer-meetings/maintainer-meeting-2025-09-13.md)
 - [2025-08-30](en/maintainer-meetings/maintainer-meeting-2025-08-30.md)
 - [2025-08-16](en/maintainer-meetings/maintainer-meeting-2025-08-16.md)
 - [2025-08-02](en/maintainer-meetings/maintainer-meeting-2025-08-02.md)

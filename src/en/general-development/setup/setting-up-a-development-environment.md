@@ -4,14 +4,23 @@ First you're gonna need some software:
 
 * [Git](https://git-scm.com/) or one of the [many](https://www.sourcetreeapp.com/) [third-party](http://www.syntevo.com/smartgit/) [UIs](https://tortoisegit.org/) that make it easier to use. Make sure to let it install to your PATH like [this](../../assets/images/setup/git-path.png).
 * [Python 3.7 or higher](https://www.python.org/). Make sure to install it into your [PATH on Windows](../../assets/images/setup/python-path.png). Also make sure the 'py launcher' option is enabled when installing on Windows. You should get python from [python.org](https://www.python.org/). Versions installed from the windows store sometimes cause build issues.
-* [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0). Visual Studio also installs this if you're on Windows.
+* [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0). Visual Studio also installs this if you're on Windows.
   * Apple Silicon (ARM64) Mac users: Some older codebases will only work with the x64 .NET and not the ARM64 one. You can either download x64 dotnet, or suggest your codebase to update their robust toolbox to at minimum 267.0.0 to add support (or just update it yourself).
 * Preferably an IDE to make development not painful (all free options unless otherwise noted):
   * For **all platforms**, [Rider](https://www.jetbrains.com/rider/) is one of the best IDEs available, and many SS14 maintainers and contributors prefer it over Visual Studio. It used to be paid but now it's free for Non-Commercial use.
-  * For **Windows**, [Visual Studio 2022 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 8 SDK or something along those lines.
+  * For **Windows**, [Visual Studio 2026 **Community**](https://www.visualstudio.com/). For a minimal install (Jesus it's large) you're gonna want the .NET desktop development workload, the C# compiler, C# support, NuGet package manager, MSBuild and .NET 10 SDK or something along those lines.
   * For **all platforms**, [Visual Studio Code](https://code.visualstudio.com/) with the C# extension. Usually an inferior IDE experience than full blown IDEs like regular Visual Studio, but some experienced programmers enjoy the minimalism.
     * **Exclusive to VSCode/VSCodium**: you can install our community made [Robust YAML](https://marketplace.visualstudio.com/items?itemName=slava0135.robust-yaml) extension for better Robust Toolbox YAML experience on top of [YAML Language Support](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) extension.
   * For **all platforms**, [VSCodium](https://vscodium.com/) with the C# extension. Open source and without the bloat and tracking of VSCode.
+
+```admonish warning title="VScode/VsCodium and SLNX"
+Currently the C# Dev tools extension does not seem to fully support SLNX.
+
+You may follow this step by [Microsoft](https://devblogs.microsoft.com/dotnet/introducing-slnx-support-dotnet-cli/#c#-dev-kit) to be able to open an SLNX dotnet project.
+
+VSCodium seems to not have the ability at all. (https://github.com/muhammadsammy/free-vscode-csharp/issues/95) (Although the above may work in VSCodium as well.)
+
+```
 
 ~~~admonish info title="Windows and winget"
 Windows users are suggested to use winget for an easier install, just open a command prompt/powershell and enter the following:
@@ -27,7 +36,7 @@ And one of the following ide's:
 
 ``winget install JetBrains.Toolbox`` (replace with ``JetBrains.Rider`` if you don't want the whole toolbox app)
 
-``winget install Microsoft.VisualStudio.2022.Community`` (Visual Studio 2022)
+``winget install Microsoft.VisualStudio.Community`` (Visual Studio 2026)
 
 ``winget install Microsoft.VisualStudioCode`` (Visual Studio Code)
 
