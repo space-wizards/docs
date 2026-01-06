@@ -161,7 +161,7 @@ public sealed class PredictionExampleSystem : EntitySystem
 
 If we look at this in-game we notice the verb and examination text have are showing up with a visual delay and that the popup and sound are happenening with a delay to your actual mouse click.
 
-TODO: Upload gif
+![prediction-guide-unpredicted.gif](../assets/images/ss14-by-example/prediction-guide-unpredicted.gif)
 
 Now let's move the code to shared and network and predict it.
 
@@ -267,7 +267,7 @@ public sealed class PredictionExampleSystem : EntitySystem
 ```
 The result is much more responsive without the delay for the popup, audio or UI elements.
 
-TODO: Upload gif
+![prediction-guide-predicted.gif](../assets/images/ss14-by-example/prediction-guide-predicted.gif)
 
 ## Dependencies
 
@@ -511,7 +511,7 @@ To reduce the networking load on the server it will only network any entities wi
 
 If you want to see this in action you can fly around as an aghost while having the view zoomed out.
 
-TODO: Upload gif
+![prediction-guide-pvs.gif](../assets/images/ss14-by-example/prediction-guide-pvs.gif)
 
 Since the server holds the authoritative game state it always has full knowledge about all entities, but the client will be restricted on what information it has available, which has implications for prediction. The client won't be able to predict anything happening outside PVS range, and some code like atmos or power cannot be predicted as a result.
 
@@ -541,7 +541,8 @@ An example for this is [`SharedRevolutionarySystem`](https://github.com/space-wi
 If you use `RobustRandom` in shared code the server and client will roll different random results, causing mispredicts. Even worse, the client will also generate a different result for each prediction tick. This often happens for random spawning, randomized sprite colors, random locations or similar.
 
 Here is an example of a mispredict happening when gibbing someone, so that you know what to look out for. Note the organs jumping around wildly due to each prediction tick moving them to another random location.
-![mispredict_gibbing](https://hackmd.io/_uploads/rJwzSOBVWx.gif)
+
+![prediction-guide-mispredict.gif](../assets/images/ss14-by-example/prediction-guide-mispredict.gif)
 
 In the future Robust Toolbox will have methods for predicted randomness, but at the time of writing the [PR for RandomPredicted](https://github.com/space-wizards/RobustToolbox/pull/5849) was not merged yet.
 As a workaround you can use a new `System.Random` instance and set the seed to something the server and client agree on, for example a combination of an entity's `NetEntity` id and the current game tick (if you would only the game tick here then all randomness within the same game tick would yield the same result, so we need both).
