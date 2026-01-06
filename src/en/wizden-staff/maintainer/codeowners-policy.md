@@ -5,11 +5,8 @@ This permission allows them to process and merge pull requests on their own acco
 
 ## Goals
 The codeowners policy aims to achieve the following:
-1. **Increase velocity and turnaround time for pull requests that touch a system.**
-   1. Many abandoned/derelict systems have been adopted by a maintainer who now knows the system extensively. Oftentimes, work on a system is blocked by pull requests that would normally require another maintainer to re-learn the system in order to give a proper review. This results in work being stalled for months, as learning the system is often a great effort that is not feasible to exert. The codeowners policy allows maintainers who know the system extensively to process pull requests touching those systems without requiring another maintainer.
-2. **Pin a system's knowledge and maintenance burden onto a maintainer instead of the maintenance team at large.**
-   1. Seeking advice, reviews, and knowledge about a system can take a hot minute as the knowledge surrounding that system isn't held by all maintainers. By assigning a dedicated maintainer to handle a system, contributors can talk to said maintainer directly about needed work.
-      1. Note that the codeowners policy is no excuse for neglecting documentation.
+1. **Increase velocity and turnaround time for pull requests that touch a system when no maintainer is available for review.**
+   1. Many abandoned/derelict systems have been adopted by a maintainer who now knows the system extensively. Oftentimes, work on a system is blocked by pull requests that would normally require another maintainer to re-learn the system in order to give a proper review. This results in work being stalled for months, as learning the system is often a great effort that is not feasible to exert.
 
 ## Policy
 
@@ -23,6 +20,8 @@ Maintainers are granted codeowner permissions for their chosen system by a Lead 
 Lead Maintainers can also deny the permissions if they do not deem the maintainer to be fit for the system, or if the requested system is undefinable in scope.
 
 A maintainer can request codeowner permissions in any format, but it should ideally be in a space where it is documented and the active maintainer team knows about it (ex. a maintainer meeting).
+
+Maintainers should only be granted codeowner permissions if it has been persistently demonstrated that there is no other maintainer available to review the other maintainer's pull requests in a reasonable timeframe.
 
 ### Revocation
 Lead Maintainers may revoke codeowner permissions from a maintainer at any time.
