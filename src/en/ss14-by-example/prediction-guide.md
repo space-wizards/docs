@@ -1,6 +1,6 @@
 # Guide to Prediction
 
-Client-side prediction is a network programming technique used to hide the effects of networking latency. For an introductory explanation of the general concepts as they are used in most modern multiplayer games I can recommend watching these two videos:
+Client-side prediction is a network programming technique used to hide the effects of networking latency. For an introductory explanation of the general concepts as they are used in most modern multiplayer games I recommend watching these two videos:
 
 [How a Software Feature Changed Online Gaming Forever](https://www.youtube.com/watch?v=hibDAXaHhnY)
 
@@ -20,7 +20,7 @@ With prediction each client runs its own game simulation of the game according t
 
 During prediction the client will constantly time travel, reverting the game state repeatedly to the last known authoritative state sent by the server, and then reapplies the player's inputs, resimulating the game until the next server state comes in. This usually happens about 12 times per game tick.
 
-Once the authoritative server state is arrives at the client it will be applied to the client's simulation, overwriting and correcting any disagreements the client may have in their predicted simulation (for example someone else killed you while you tried to interact with something, but you did not know about that yet due to latency).
+Once the authoritative server state arrives at the client it will be applied to the client's simulation, overwriting and correcting any disagreements the client may have in their predicted simulation (for example someone else killed you while you tried to interact with something, but you did not know about that yet due to latency).
 
 Keep in mind that each client can only predict their own inputs and their results, as those of other players will still need to be networked to you first.
 
@@ -42,7 +42,7 @@ First try out everything to see if there are any visual glitches, flickering spr
 
 You can use the `sudo cvar net.fakelagmin 0.5` command to increase the fake lag in dev mode. If prediction works you won't notice the time delay from that. By default this already has a non-zero value, but increasing the lag makes any mispredicts much more visible.
 
-I also find it helpful to open a `ViewVariables` window for the relevant component on both the server and client, set them to refresh automatically be right-clicking on the refresh button and then compare the values of the datafields as you are interacting with the entity. You can use the `quickinspect` command to quickly open both a server and client window for a component of your choice for an entity without having to search through the component list.
+I also find it helpful to open a `ViewVariables` window for the relevant component on both the server and client, set them to refresh automatically by right-clicking on the refresh button and then compare the values of the datafields as you are interacting with the entity. You can use the `quickinspect` command to quickly open both a server and client window for a component of your choice for an entity without having to search through the component list.
 If everything works then the client's values will change instantly the moment you interact, and the server will update shortly after to the same values. If the client has to correct itself somehow or jumps between multiple values that is a misprediction.
 
 #### Help, my code on the client is running multiple times for some reason!
@@ -159,7 +159,7 @@ public sealed class PredictionExampleSystem : EntitySystem
 ```
 
 
-If we look at this in-game we notice the verb and examination text have are showing up with a visual delay and that the popup and sound are happenening with a delay to your actual mouse click.
+If we look at this in-game we notice the verb, examination text, popup and sound are happenening with a delay to our actual mouse click.
 
 ![prediction-guide-unpredicted.gif](../assets/images/ss14-by-example/prediction-guide-unpredicted.gif)
 
@@ -273,25 +273,25 @@ The result is much more responsive without the delay for the popup, audio or UI 
 
 Shared code can only call other shared code, whereas server-side code can use both server-side and shared code. This means if you want to predict an EntitySystem you will need predict all its dependencies first so that you can use them in Shared, which often turns prediction PRs into much larger tasks than initially expected.
 
-Some systems cannot be predicted, but you might still want to call some API methods that are only available on the server from Shared. To work around this you can add an empty virtual API method in the corresponding shared system and override it on the server. Here an example from [`SharedExplosionSystem`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Explosion/EntitySystems/SharedExplosionSystem.cs):
+Some systems cannot be predicted, but you might still want to call some API methods that are only available on the server from Shared. To work around this you can add an empty virtual API method in the corresponding shared system and override it on the server. Here's an example from [`SharedExplosionSystem`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Explosion/EntitySystems/SharedExplosionSystem.cs):
 ```C#
 // In Content.Shared/Explosion/EntitySystems/SharedExplosionSystem.cs
 // This method is empty and does nothing on the client.
 public virtual void TriggerExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true, float? totalIntensity = null, float? radius = null, EntityUid? user = null)
-    {
-    }
+{
+}
 
 // In Content.Server/Explosion/EntitySystems/ExplosionSystem.cs
 // This contains the actual code and only runs on the server, but can still be called from shared, since shared code runs on both the server and client.
 public override void TriggerExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true, float? totalIntensity = null, float? radius = null, EntityUid? user = null)
-    {
-        // Some code in here that creates the explosion
-    }
+{
+    // Some code in here that creates the explosion
+}
 ```
 
 ## PopupPredicted & PlayPredicted
 
-Using `SharedPopupSystem.PopupEntity` in predicted code will cause the popup to be shown multiple times during prediction. Instead you have to use `PopupPredicted`, which will predict the popup once for the client passed in via the `user` parameter and the server will network the popup to everyone else, excluding that client so that they won't show the popup twice.
+Using `SharedPopupSystem.PopupEntity` in predicted code will cause the popup to be shown multiple times during prediction. Instead you have to use `PopupPredicted`, which will predict the popup once for the client passed in via the `user` parameter and the server will network the popup to everyone else, excluding that client so that they won't see the popup twice.
 The other popup variants `PopopCursor` and `PopupCoordinates` will have to be replaced with their predicted variants respectively. `PopupClient` works like `PopupEntity` and shows the popup above the given entity, but only for a single client that predicts the interaction.
 
 The audio API works in exactly the same way `SharedAudioSystem.PlayEntity`. You will have to use `PlayPredicted` and pass in a user to prevent the client from playing a sound multiple times.
@@ -305,7 +305,7 @@ These APIs come with a few limitations:
 Ideally these two APIs will be reworked in the future to let the client automatically reconcile with the server state so that passing in the user is no longer needed and prediction is handled automatically.
 
 ## Predicted Entity Spawning and Deletion
-[`IEntityManager`](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/GameObjects/IEntityManager.cs) has a few methods for predicted entity spawnining and deletion. Inside `EntitySystem`s they also have shorthands, see [`EntitySystem.Proxy.cs`](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/GameObjects/EntitySystem.Proxy.cs).
+[`IEntityManager`](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/GameObjects/IEntityManager.cs) has a few methods for predicted entity spawning and deletion. Inside `EntitySystem`s they also have shorthands, see [`EntitySystem.Proxy.cs`](https://github.com/space-wizards/RobustToolbox/blob/master/Robust.Shared/GameObjects/EntitySystem.Proxy.cs).
 
 #### Spawning
 `Spawn`, `SpawnAttachedTo`, `SpawnAtPosition` can be used to spawn either client- or server-side entities. An example use case for client-side entities are the sprite previews in the spawn menu or guidebook, or for some visual effects. If you call these methods in shared code, both the client and server will spawn an entity separately, the server will network its entity to the client, which ends up with two different entities, one of them a duplicate that only exists for them and won't disappear. Instead you should use the `PredictedSpawnAttachedTo` and `PredictedSpawnAtPosition` (`Spawn` does not have a predicted equivalent). This will spawn both a separate client- and server-side entity, and the client-side one will be deleted when the server state comes in and the server-side entity replaces it.
@@ -338,7 +338,7 @@ A) The insertion of the entity into the container is predicted and the event is 
 
 B) The insertion of the entity into the container is not predicted (for example if another player caused it), meaning the event is first only raised locally on the server. The server then sends the new game state to the client, which applies it. While doing so the client will insert the entity into the client-side container, and `EntInsertedIntoContainerMessage` is raised once client-side.
 
-This is done that way to allow a client to update an UI even if they did not predict the event, for example the storage window of your backpack, your hand indicator or the damage overlay, but it also may cause problems during subscriptions as any changes done inside them are already networked separately within the same game state, meaning they will be applied multiple times, causing mispredicts.
+This is done that way to allow a client to update UIs even if they did not predict the event, for example the storage window of your backpack, your hand indicator or the damage overlay, but it also may cause problems during subscriptions as any changes done inside them are already networked separately within the same game state, meaning they will be applied multiple times, causing mispredicts.
 
 Let's look at an example from `GlueSystem`
 ```C#
