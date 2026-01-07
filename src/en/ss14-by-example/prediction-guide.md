@@ -10,7 +10,7 @@ In short, prediction allows your client to react to your inputs directly without
 
 For the upstream repository we require all new code to be predicted if it is possible (some systems like atmos and power cannot be predicted and are exceptions). A lot of old code is still unpredicted and cleaning that up is an ongoing effort, you can find an overview of the remaining systems [here](https://github.com/space-wizards/space-station-14/issues/40655).
 
-See [this guide](en/ss14-by-example/basic-networking-and-you.md) for basic information on how to network components, which will be required knowledge for this tutorial. 
+See [this guide](basic-networking-and-you.md) for basic information on how to network components, which will be required knowledge for this tutorial. 
 
 ## How does prediction work?
 
