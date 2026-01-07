@@ -177,7 +177,7 @@ Anything that is not inherent to the Wizard's mind, i.e. an item in the world. A
 
 - Similar to Wands, Staves can have a variety of effects but nothing as powerful as event-level. 
 - Staves are also limited by charges, but they are unique to wands by being self-recharging.
-  - Because of this, they should be considered weaker than Wands. This should be nforces them being combo pieces with other Spells or Equipment
+  - Because of this, they should be considered weaker than Wands. This should reinforce them being combo pieces with other Spells or Equipment
 - Can also be given to allies to help assist you.
 - Examples:
   - A staff that turns walls into doors.
