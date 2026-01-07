@@ -155,6 +155,7 @@ Space Station 14
 		
 	- [Proposals]()
 		- [Vulpkanin](en/space-station-14/character-species/proposals/vulpkanin.md)
+        - [Shrubs](en/space-station-14/character-species/proposals/shrub.md)
 
 - [Combat](en/space-station-14/combat.md)
 	- [PR Guidelines](en/space-station-14/combat/guidelines.md)
