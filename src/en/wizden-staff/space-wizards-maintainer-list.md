@@ -85,7 +85,7 @@ Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintain
 
 ## Current Codeowners
 
-The current codeowners exist. For the policy, see [here](maintainer/codeowners-policy.md).
+The current codeowners that exist. For the policy, see [here](maintainer/codeowners-policy.md).
 
 **ArtisticRoomba**
 - /Content.*/Atmos/**
