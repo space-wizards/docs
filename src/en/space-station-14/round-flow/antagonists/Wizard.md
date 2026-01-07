@@ -150,7 +150,7 @@ Examples:
 
 The motivation for disruptive event spells is that they throw the station into mass-chaos, an aspect where SS14 shines thanks to its immersive sim gameplay and the limited confined area being on a space station provides. Since highly disruptive spells are just that, it's key that they are designed in such a way to:
 - Not feel repetitive and lead to the same types of gameplay loops every time they are spawned.
-- In the instance where equipment/powers are given out, some players will are turned into antagonists.
+- In the instance where equipment/powers are given out, some players are turned into antagonists.
   - This is so it's not a huge net positive for the crew and a net negative for other antagonists, and to encourage chaos permitted under server rules.
 - Antagonists have the same amount of chance to get this equipment as much as the crew does, so it evens out.
 
