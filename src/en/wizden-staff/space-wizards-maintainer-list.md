@@ -82,3 +82,10 @@ Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintain
 - ScarKy0
 - chromiumboy
 - sowelipililimute
+
+## Current Codeowners
+
+The current codeowners exist. For the policy, see [here](maintainer/codeowners-policy.md).
+
+**ArtisticRoomba**
+- /Content.*/Atmos/**
