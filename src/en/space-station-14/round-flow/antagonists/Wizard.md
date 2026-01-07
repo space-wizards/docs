@@ -304,7 +304,7 @@ The Wizard game mode does not have a natural end state generally, as the antagon
 
 In part, a shuttle should be automatically called if a majority % of crew are dead regardless of game mode. The shuttle would be unrecallable so people cannot stall out the round.
 
-As stated earlier in this document, an optional buy-in to do objectives up to a round-end state coould also be implemented to give people who are less than creative some end goal to work towards while also getting bonuses along the way.
+As stated earlier in this document, an optional buy-in to do objectives up to a round-end state could also be implemented to give people who are less than creative some end goal to work towards while also getting bonuses along the way.
 
 ## Administrative & Server Rule Impact (if applicable)
 
