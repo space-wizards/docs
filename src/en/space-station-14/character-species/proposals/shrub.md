@@ -5,22 +5,24 @@
 | Thinbug   | :x: no        | nothin yet      |
 
 ## Overview
+
 Proposal for Shrubs as a playable roundstart species, being a humanoid creature/monster vibed species, with their unique traits showcasing this vibe while keeping them
 socially functional.
 
 They are eyeless and possess a spooky and powerful mouth that allows them to consume a large amount of things, naturally causing a small mess as they eat. 
 
 ## Background 
+
 They are an original species, driven by satisfying my (and hopefully more people) specific creature/alien self expression desires. Inspired by xenos and general 
 bioluminescent creatures.
 
 ## Design
 
 ### Core Visual Elements
-They do not have regular eyes and their hair is tentacle-like.
-Smooth soft fungal-like in texture bodies with shiny spots, eyeless heads and tentacle-like hair.
 
 While humanoid, they are meant to feel alien and a tad spooky. 
+
+Their heads lack any eyes, ears or nose, possessing instead bioluminescent lines of sensory organs that allow them to perceive the world close to them. Having tentacle-like hair and digitigrade legs, with mouths hiding a pletora of tendrils, tentacles and teeth capable of consuming most matter. Their voices and sounds are echoey and chippery, and their skin may have colorful bioluminescent splashes, a slow side-effect of their bodies chemical processes.
 
 ### Species Features
 
