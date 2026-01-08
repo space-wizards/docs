@@ -182,19 +182,13 @@ Space Station 14
 
 - [Roundflow](en/space-station-14/round-flow.md)
 	- [PR Guidelines](en/space-station-14/round-flow/guidelines.md)
+	- [Starting Equipment](en/space-station-14/round-flow/starting-equipment.md)
 	
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
 		- [Xenoborgs](en/space-station-14/round-flow/antagonists/Xenoborgs.md)
 		- [Pursuer](en/space-station-14/round-flow/antagonists/pursuer.md)
-
-	- [Starting Equipment](en/space-station-14/round-flow/starting-equipment.md)
-		- [Lathes](en/space-station-14/round-flow/starting-equipment/lathes.md)
-		- [Loadouts](en/space-station-14/round-flow/starting-equipment/loadouts.md)
-		- [Lockers](en/space-station-14/round-flow/starting-equipment/lockers.md)
-		- [Mapped](en/space-station-14/round-flow/starting-equipment/mapped.md)
-		- [Vendors](en/space-station-14/round-flow/starting-equipment/vendors.md)
 
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
