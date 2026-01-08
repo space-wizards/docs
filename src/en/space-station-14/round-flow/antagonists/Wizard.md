@@ -169,9 +169,9 @@ Anything that is not inherent to the Wizard's mind, i.e. an item in the world. A
 - Can be given to allies to help assist you.
 - Also meant to be used as combo pieces with other Spells or Equipment.
 - Examples:
-  - A wand of animation that turns inanimate objects into strong mobs hostile to your enemies.
-  - A wand that turns someone into a horrifying "cluwne" abomination and can only be reverted in death.
-  - Polymorphing your PAI or Wizard Apprentices
+  - A wand that turns tiles into ice.
+  - A wand that shoots lockers out to trap people in.
+  - A wand to polymorph your PAI or Wizard Apprentices
 
 #### Staves
 
@@ -181,7 +181,7 @@ Anything that is not inherent to the Wizard's mind, i.e. an item in the world. A
 - Can also be given to allies to help assist you.
 - Examples:
   - A staff that turns walls into doors.
-  - A staff that polymorphs someone into bread, which can be eaten to free them.
+  - A staff of animation that turns inanimate objects into mobs hostile to your enemies.
   - A staff that fires a random bolt of magic
 
 #### Other Equipment
