@@ -229,6 +229,7 @@ Space Station 14
 		- [Proposals]()
 			- [Salvage Proposal](en/space-station-14/departments/cargo/proposals/salvage-proposal.md)
 			- [Mail Deliveries](en/space-station-14/departments/cargo/proposals/mail-delivery.md)
+    	    - [Onsite Mining](en/space-station-14/departments/cargo/proposals/onsite-mining.md)
 
 	- [Command](en/space-station-14/departments/command.md)
 		- [PR Guidelines](en/space-station-14/departments/command/guidelines.md)
