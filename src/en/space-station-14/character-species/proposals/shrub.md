@@ -6,10 +6,10 @@
 
 ## Overview
 
-Proposal for Shrubs as a playable roundstart species, being a humanoid creature/monster vibed species, with their unique traits showcasing this vibe while keeping them
+Proposal for Shrubs as a playable roundstart species, being a humanoid creature/monster vibed species, with their unique traits showcasing this while keeping them
 socially functional.
 
-They are eyeless and possess a spooky and powerful mouth that allows them to consume a large amount of things, naturally causing a small mess as they eat. 
+They are eyeless and possess a spooky and powerful mouth that allows them to consume a wider spread of items, naturally causing a small mess as they eat and are capable of producing biomass flora.
 
 ## Background 
 
@@ -20,7 +20,7 @@ bioluminescent creatures.
 
 ### Core Visual Elements
 
-While humanoid, they are meant to feel alien and a tad spooky. 
+They are meant to feel alien and a tad spooky. 
 
 Their heads lack any eyes, ears or nose, possessing instead bioluminescent lines of sensory organs that allow them to perceive the world close to them. Having tentacle-like hair and digitigrade legs, with mouths hiding a pletora of tendrils, tentacles and teeth capable of consuming most matter. Their voices and sounds are echoey and chippery, and their skin may have colorful bioluminescent splashes, a slow side-effect of their bodies chemical processes.
 
