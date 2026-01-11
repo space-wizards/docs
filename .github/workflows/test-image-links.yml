@@ -1,0 +1,14 @@
+name: Test image links
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  test-summary:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Run imgage link check
+      run: python tests/test_image_links.py
