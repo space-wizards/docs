@@ -223,4 +223,4 @@ https://github.com/space-wizards/RobustToolbox/blob/025fa958549b4d63e4888a810f78
 
 ## Hamster
 
-![](https://i.imgur.com/VPl1P8B.png)
+![Hamster.png](src\en\assets\images\Hamster.png)
