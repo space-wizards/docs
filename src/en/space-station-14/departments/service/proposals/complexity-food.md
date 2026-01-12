@@ -69,26 +69,26 @@ Finally, nutrition of the dish is also determined by complexity.
 ## Features to be added
 
 - All base ingredients get a food group - some of them already exist via tags.
-- All food gets a complexity value based on the amount/complexity of ingredients and  This complexity value can be scanned by a tool called Nutritional Analyzer.
+- All food gets a complexity value based on the amount/complexity of ingredients; this complexity value can be scanned by a tool called Nutritional Analyzer.
 - By eating complex foods, you gain "Satiated" buff - this buff goes away when you become peckish, and its strength depends on the most nutritious dish you've ate.
 
 ## Game Design Rationale
 
 Q: How does the feature align with our Core Design Principles and game philosophy?
 
-A: It's seriously silly - while it's pretty much close to how cooking works in real life, it still allows for some flexing - for example, making a doomstack lattuce burger with 255 complexity. It doesn't break the balance, though. It is intuitive: healthy diet grants you benefits, feeding on snacks gets you by, but doesn't reward you. It encourages player agency - there are no wrong choices when it comes to cooking, as long as the meal is sufficiently complex. You also don't have any meta dishes.
+A: It's seriously silly - while it's pretty much close to how cooking works in real life, it still allows for "showing off" - for example, making a doomstack lattuce burger with 255 complexity. It doesn't break the balance, though. It is intuitive: healthy diet grants you benefits, feeding on snacks gets you by, but doesn't reward you. It encourages player agency - there are no wrong choices when it comes to cooking, as long as the meal is sufficiently complex. You also don't have any meta dishes.
 
 Q: What makes this feature enjoyable or rewarding for players?
 
-A: Satiated buff gives some nice bonuses for interacting with the chef. Chef is also rewarded for cooking complex dishes. Species' dietary restrictions introduce a challenge for the cook - making a complex dish that utilizes specific food groups and avoids others.
+A: Satiated buff gives some nice bonuses for interacting with the chef. Chef is also rewarded for cooking complex dishes. Species' dietary restrictions introduce a challenge for the cook - making a complex dish that utilizes specific food groups and avoids others. These limitations also force the chef to cook a variety of dishes instead of being a one-dish factory.
 
 Q: Does it introduce meaningful choices, risk vs. reward, or new strategies?
 
-A: While cooking is currently not exactly a risky profession, you can have meaningful choices - by making different dishes, you can achieve different micro-buffs in different ratios. While this system itself does not introduce any bonuses for making a very wide variety of complex dishes, this variety can easily be provided from other mechanics - allergies, species' dietary restrictions, specific requests from players, cargo bounties and so on.
+A: While cooking is currently not exactly a risky profession, you can have meaningful choices - by making different dishes, you can achieve different micro-buffs in different ratios. You also can't really stick to making the same food due to dietary restrictions - if desired, this variety can be increased using other mechanics - allergies, species' dietary restrictions, specific requests from players, cargo bounties and so on.
 
 Q: How does it enhance player cooperation, competition, or emergent gameplay?
 
-A: Since chef is encouraged to make complex dishes with different types of ingredients, this encourages chefs to cooperate more with botany. 
+A: Since chef is encouraged to make complex dishes with different types of ingredients, this encourages chefs to cooperate more with botany - different dishes need different ingredients.
 
 ## Roundflow & Player interaction
 
@@ -102,7 +102,7 @@ A: The intended behaviour is to encourage chef players to make different complex
 
 Q: Which department will interact with the feature? How does the feature fit into the design document for that department?
 
-A: This proposal is for service, chef role specifically. With some modifications, this system can also be applied to bartender. This also indirectly brings a small impact to the botany roundflow, since chef now asks for a wider variety of ingredients. Also, there is no design doc for service as of writing this.
+A: This proposal is for service, chef role specifically. With some modifications, this system can also be applied to bartender. This also indirectly brings a small impact to the botany roundflow, since chef now hsa interest in a wider variety of ingredients. There is no design doc for service as of writing this.
 
 ## Administrative & Server Rule Impact (if applicable)
 
@@ -118,7 +118,10 @@ A: I don't see how food influences rules in any capacity.
 
 Q: Does the feature require new systems, UI elements, or refactors of existing ones? Give a short technical outline on how they will be implemented.
 
-A: It requires changes to the food prototypes to remove nutriments/vitamins from foods, and then moving it to a complexity-based calculations in FoodSystem. Complexity and food groups will be stored in FoodComponent. Then, food solution is filled with nutriments and according vitamins based on complexity and food groups. Finally, satiation buff is granted from vitamins.
+A: Step 1: implement food groups and assign them to edible items. Food groups are stored as a list of IDs; then, they are "inherited" via cooking recipes by merging the lists of all ingredients into one - similar to what AlwaysPushInheritanceAttribute does, but specifically for recipes.
+Step 2: migrate tags like "Fruit" and such to food groups.
+Step 3: implement food complexity calculations - most likely, adding a partial to IngestionSystem. Food complexity (and nutriments) get added to the food item on entity creation.
+Step 4: finally, implement the food buffs.
 
 Q: Are there any anticipated performance impacts?
 
