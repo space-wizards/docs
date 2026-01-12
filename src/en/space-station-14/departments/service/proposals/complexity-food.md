@@ -2,7 +2,7 @@
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
-| Killerqu00 | Killerqu00 | :x: No | TBD |
+| murphyneko | murphyneko | :x: No | TBD |
 
 ## Overview
 
