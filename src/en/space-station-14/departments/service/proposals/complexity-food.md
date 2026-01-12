@@ -16,7 +16,8 @@ Simply slapping a specific "+10% damage for 10 minutes by eating a bacon burger"
 
 ### Note
 
-The following parts of the doc go in-depth about the mechanic. Some sort of TLDR can be found starting at "Features to be added" part.
+The following parts of the doc go in-depth about the mechanic. Most of it are examples - this system is (hopefully) made to be rather generic and tweakable; it is possible to simply change the calculation for the resulting food complexity/nutrient amount for the sake of balancing.
+Some sort of TLDR can be found starting at "Features to be added" part.
 
 ## Food Complexity and Food Groups
 
