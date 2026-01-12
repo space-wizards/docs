@@ -70,7 +70,7 @@ If you want more pointers on YAML, check [YAML Crash Course](../general-developm
 
 The entity prototype shown is "Skub", which looks like this in game:
 
-![skubexample.png](src/en/assets/images/ss14-by-example/skubexample.png)
+![skubexample.png](../../assets/images/skubexample.png)
 
 As you can see in the YAML, it has many components, including `EmitSoundOnUse` and `ItemCooldown`. It is up to the coders to determine what data components hold and how systems give them behavior.
 
