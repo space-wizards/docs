@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# This script checks if all documents in the repository are linked in the table of contents in SUMMARY.md so that they can be reached via the website.
+
 import re
 import sys
 from pathlib import Path
