@@ -169,7 +169,7 @@ You can use github-cli to start publish, [Myra's script](https://gist.github.com
 
 To do it manually, go to [github's web GUI](https://github.com/space-wizards/space-station-14/actions/workflows/publish.yml) and run the workflow with the stable branch:
 
-![runpublish.png](../assets/images/wizden-staff/runpublish.png)
+![](https://hedgedoc.spacestation14.com/uploads/ff1cdd6c-a2db-42c3-89e1-134bb6809673.jpg)
 
 ### 4. Monitor if Salamander and Lizard actually deploy the new release after their next restart
 
