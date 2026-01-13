@@ -218,3 +218,9 @@ A class implementing at least one of these type serializer interfaces is referre
 You can create a SerializationContext by implementing the ISerializationContext interface on a type. The type will the provide a SerializationProvider which it can use to register typeserializers on.
 Currently used by the MapContext during map loading:
 https://github.com/space-wizards/RobustToolbox/blob/025fa958549b4d63e4888a810f780c53e6fb89a9/Robust.Shared/Map/MapSerializationContext.cs#L17-L51
+
+---
+
+## Hamster
+
+![hamletheldatgunpoint.png](../assets/images/hamletheldatgunpoint.png)
