@@ -10,5 +10,5 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-    - name: Run imgage link check
+    - name: Run image link check
       run: python tests/test_image_links.py
