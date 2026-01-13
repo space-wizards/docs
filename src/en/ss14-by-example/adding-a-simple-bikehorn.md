@@ -118,7 +118,7 @@ It sure is beautiful, but we appear to have lied! The bike horn does not yet hon
 
 To make our component, we'll need to make a new class, let's call it ```PlaySoundOnUseComponent```. But wait a second....
 
-![](https://i.imgur.com/s9O13qH.png)
+![componentcreation.png](../assets/images/ss14-by-example/componentcreation.png)
 
 Where do we put it? To answer this question, we have to think broad. We have to think about the **client** and the **server**.  
 
