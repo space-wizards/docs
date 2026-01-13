@@ -2,60 +2,65 @@
 
 ## Overview
 
-This page provides an outline for what types of items and machines are expected to be available to players at the start of their shift. It's particularly concerned with tools needed for regular department jobs. Antagonists have different needs for starting equipment which are covered elsewhere in their respective design documents.
+This page provides an outline for what types of items and machines are expected to be available to players at the start of their shift. It's particularly concerned with regular department jobs. Antagonists have different needs for starting equipment, which are covered elsewhere in their respective design documents.
 
 This follows the discussion in [Maintainer Meeting (27 September 2025)](../../maintainer-meetings/maintainer-meeting-2025-09-27.md). PRs changing round start equipment are very common and represent a high workload due to subjective and unclear definitions. Round start equipment affects every round, so design standards need to be established for where players get what equipment.
 
-There's five main locations where crew obtain their equipment at the begining of the shift: 
+There are five main locations where crew obtain their equipment at the beginning of the shift: 
 	- [Loadouts](#Loadouts)
     - [Job Lockers](#Lockers)
 	- [Vending Machines](#Vending-Machines)
 	- [Lathes](#Lathes)
 	- [Mapped](#Mapped)
 	
-Of these only the loadout is unavailable for mid-round players receiving promotions or stealing gear. Therefore important items and essential job equipment should **not** be given in loadouts. This ensures these items are present in rounds regardless of player role selection. It also pushes players to visit their department / personal area at least once, connecting them to their department and to their coworkers before inevitably disappearing.
+Of these, only the loadout is unavailable for mid-round players receiving promotions or stealing gear. Therefore important items and essential job equipment should **not** be given in loadouts. This ensures these items are present in rounds regardless of player role selection. It also pushes players to visit their department / personal area at least once, connecting them to their department and to their coworkers before inevitably disappearing.
 
-In summary players spawn with clothing and RP props from loadouts, collect essential equipment from lockers they spawn next to, claim optional equipment in nearby vending machines, and find generic equipment in lathes and mapped.
+In summary: Players spawn with clothing and RP props from loadouts, collect essential equipment from lockers they spawn next to, claim optional equipment in nearby vending machines, and find generic items in lathes and mapped.
 
 ## Definitions
 
 ### Essential Equipment
 
-A role's esssential equipment are tools which have an often irreplaceable function, and can be recognized as thematically "belonging" to the role. A Research Director's stamp is essential equipment because it plays an irreplaceable RP function, and has the role's name on it. Epinephrine, a stun baton, the nuke disk, or a bike horn are examples of essential items. These are consequently the items least likely to be in the hands of a different role, and most likely for an antagonist to want to steal. Essential equipment is often department contraband.
+A role's essential equipment are tools which have a nearly irreplaceable function, and can be recognized as thematically "belonging" to the role. A Research Director's stamp is essential equipment because it plays a unique RP function, and has the role's name on it. Epinephrine, a stun baton, the nuke disk, or a bike horn are examples of essential items. These are consequently the items least likely to be in the hands of a different role, and most likely for an antagonist to want to steal. Essential equipment is often department contraband.
 
 Sometimes essential equipment is a set of several items at once, such a a toolbelt or a foolbox. Even if the contents of a toolbelt are generic, having a tool for every situation is essential engineering.
 
 ### Optional Equipment
 
-Optional equipment are items that serve an uncommon need to a role, but still recognizably belonging to that role. The CMO's beret is optional because it has the role's name on it, but doesn't do anything. A ballistic shield or inflatable walls are examples. Unique RP props like a stethoscope and clothing often fall in this category.
+Optional equipment are items that serve an uncommon need to a role, but still recognizably belong to that role. The CMO's beret is optional because it has the role's name on it, but doesn't do anything. A ballistic shield, a substation machine board, or a rolling pin are examples. Unique RP props like a stethoscope and clothing often fall in this category.
 
-### Generic Equipment
+### Generic Items
 
-Items that are widely available, easily crafted, or aren't strongly connected to a role's identity are generic. Hand labelers, flashlights, and many RP props are examples of generic equipment.
-
-### Expendable Equipment
-
-Rather self explanatory: Expendable equipment is finite. It's something you need either time or resources to replace. These can be essential like welding fuel, optional like grenades, and generic like steel.
+Items that are widely available, easily crafted, and aren't strongly connected to any role's identity. Hand labelers, flashlights, and water are generic.
 
 ## Locations
 
 ### Loadouts
 
-todo
+Loadouts are the items a player has on them when they first spawn. Nearly every station job allows players to customize these loadouts as part of character creation. The loadout is part of creating your unique space alien and so is focused primarily on cosmetics, mainly clothing. But it's also used to limit options as part of the crushing conformity of working under space capitalism.
 
-Loadouts are the items given to a player when they first spawn. Loadouts are different for each role, and loadouts for station jobs give players a selection of options for all of them. These items are never essential, and typically clothing.
+Every role should spawn wearing department-identifying colors and clothing, with your options existing between different kinds of uniform. At minimum players should spawn with a PDA, a backpack (or variant), a headset with their department's comms channel, and a jumpsuit. Optional categories can exist for any other kind of clothing, but gloves in a loadout **must not** disguise fingerprints to give more intentionality to someone choosing to hide them.
 
-Station role loadouts should spawn with department-identifying clothing. At minimum players should spawn with a PDA, a backpack (or variant), a headset with their department's coms channel, and a jumpsuit. Loadouts should **not** contain job-essential equipment that allows a player to do their job without ever visiting their department.
+Trinkets are the non-clothing items available in a loadout. These are RP props used to establish a unique character. They should not be used to shortcut finding readily available and common items (like cigarettes) or to give yourself an advantage with some special functionality. Trinkets should be scarce and say something about the personality of your character.
+
+Players should **not** spawn with job-essential equipment, nor any other tool. This includes essential clothing like armor and insulated gloves. Loadouts don't allow a player to do their job without ever visiting their department.
+
+#### Role Time Unlocks
+
+Also called prestige awards, these loadout options are earned from playing a certain amount of time. These items are used for bragging rights and as a reward for being dedicated to your favorite job.
+
+Care needs to be taken that the time asked for these unlocks is not excessive; We don't want to encourage players to hurt themselves by playing too much. Sixty (60) hours is the upper limit of an acceptable role time for a department.
 
 ### Lockers
 
-At round-start every role spawn near one (1) complete set of their role's essential equipment. Typically this is some sort of locked container (a locker) but might rarely be items scattered around their starting room. They spend a few moments sorting through and equipping these items, getting familiar with them, and preparing themselves for the shift ahead. Mid-round players - either through late joining or getting promoted - will seek out an unclaimed locker to get their gear due to the simplicity. Antagonists will similarly seek out these lockers, knowing that they will contain everything a person needs to do some specific job. The number of lockers that need to be mapped should be at or barely exceed the roundstart + latejoin capacity of the station (learner jobs included).
+At round-start every role spawns near one (1) complete set of their role's essential equipment. For most roles this gear is in a nearby locked container (a locker), but might rarely be items scattered around their starting room. Mid-round players - either through late joining or getting promoted - will seek out an unclaimed locker to quickly get all their needed items. Antagonists will similarly seek out these lockers, knowing that they will contain everything a person needs to do some specific job. The number of lockers that need to be mapped should be at or barely exceed the roundstart + latejoin capacity of the station (learner jobs included).
 
-A player should want most items found in their locker or have a clear picture of why they would want them. Optional equipment can be included with a chance to appear (as long as it's not selectable in a loadout), and generic equipment shouldn't appear unless it's **really** funny. Expendable items in a locker should have adequate availability outside of lockers to discourage raiding multiple lockers for loot and leaving the next player with a half full locker.
+A player should want most items found in their locker or have a clear picture of why they would want them. Optional equipment can be included with a chance to appear (as long as it's not selectable in a loadout), and generic equipment shouldn't appear unless it's **really** funny. Expendable items in a locker should have adequate availability outside of lockers to discourage sourcing them from multiple lockers, leaving the next player with part of their gear missing.
 
-Lockers for specialized jobs in a department (including department heads) should include any equipment present in a "lesser" locker, unless that job has better equipment equivalent to the "lesser" equipment. For example a toolbelt can be replaced by a toolbelt with more space, but a submachine gun can't be replaced by a shotgun. This is another measure meant to prevent players from raiding multiple lockers for gear. A player shouldn't want anything from a locker they have access to that wasn't provided in their own locker.
+Lockers for specialized jobs in a department (including department heads) should include any equipment present in a "lesser" locker, unless that job has an equivalent item.  For instance a toolbelt can be replaced by a toolbelt with more space, or a gun can be replaced by a cooler gun. This is also part of discouraging the raiding of secondary lockers as a source for your own gear. A player shouldn't need anything from a locker that they have access to which wasn't provided in their own locker.
 
 In addition to their own specialized gear, there are several items present in all command lockers.
+
  - A personal stamp.
  - A headset with encryption keys for their department and for command.
  - A door remote controlling their department's airlocks.
@@ -64,9 +69,9 @@ In addition to their own specialized gear, there are several items present in al
 
 ### Vending Machines
 
-Vending machines are the main source of optional and expendable equipment for departments, and are a common source of generic equipment in public spaces. They create resource competition that isn't difficult to resolve (a restock from Cargo is always available) and serve as a consistent, well-known location for sets of items. A player can trust that if they need snacks, a snack dispenser will be a strong choice.
+Vending machines are the main source of optional and expendable equipment for departments, and are a common source of generic equipment in public spaces. Vending machines are consistent, simple, and well-known locations for sets of items. Their limited stock creates resource scarcity, but their resources are never truly scarce with a restock from Cargo. 
 
-Each full department contains (at least) two (2) vending machines responsible for restocking players and providing extra supplies. The wardrobe (or "Drobe") consists of clothing while the second supplies non-clothing. Together they should supply at least two naked players with the neccesary gear to work the job (two complete sets of spare tools and uniforms).
+Each full department contains (at least) two (2) vending machines responsible for restocking players and providing extra supplies. The wardrobe (or "Drobe") consists of clothing, while the second supplies non-clothing. Together they should supply at least two naked players with the necessary gear to work the job (two complete sets of spare tools and uniforms).
 
 #### Department Tool Vendor
 
@@ -81,7 +86,7 @@ Department tool vendors contain (in order) two (2) full sets of essential equipm
 
 #### Department Clothing Vendor
 
-Department clothing vendors (typically called "Drobes") should spawn with two (2) sets of any essential clothing not present in a tool vendor and 2 sets of optional clothing. Stock should be split for items that are effectively identical (such as headset variants). Clothes should reflect the standard uniform and aesthetics of a department employee and include anything available in a loadout (excluding prestige rewards). Every item in a Drobe must be equippable. The order of clothing in a Drobe should have essential equipment listed first, followed by: `Head -> Eyes -> Mask -> Ears -> Back -> Belt -> InnerClothing -> OuterClothing -> Neck -> Gloves -> Feet`.
+Department clothing vendors (typically called "Drobes") should spawn with two (2) sets of any essential clothing not present in a tool vendor and two (2) sets of optional clothing. Stock should be split for items that are effectively identical (such as headset variants). Clothes should reflect the standard uniform and aesthetics of a department employee and include anything available in a loadout (excluding prestige rewards). Every item in a Drobe must be equippable. The order of clothing in a Drobe should have essential equipment listed first, followed by: `Head -> Eyes -> Mask -> Ears -> Back -> Belt -> InnerClothing -> OuterClothing -> Neck -> Gloves -> Feet`.
 
 #### Combined Vendors
 
@@ -91,30 +96,18 @@ Sometimes there's so little non-essential equipment for a role that even a combi
 
 ### Lathes
 
-Lathes serve as the primary source for generic equipment in a round. They provide a quick, expensive way to gear players with (large amounts of) common items and expendables. They supply an even more consistently and wider selection of items compared to vending machines, but with a high cost as tradeoff for the lack of scarcity. Later in a round lathes also serve as the reward vector for the science department's research.
+Lathes serve as the primary source for generic equipment in a round. They provide a quick, expensive way to gear players with (large amounts of) common items. They supply an even more consistently selection of more items compared to vending machines, but with a high cost as tradeoff for the lack of scarcity. Lathes also serve as the reward vector for the science department's research later in a round.
 
-Each lathe should be specialized with a clear theme for the items it has available. Autolathes are specialized in the most generic of items crew are expected to have in abundance, while department specific lathes are specialized in items for that department. Initial offerings from lathes should feel cheaper and lower quality than items available from other sources like cargo or vending machines. The more specialized equipment - including some essential equipment - should not be immediately available, and in some cases might never become available (requiring alternative sources).
-
-| Location | Round Start Lathe |
-| --- | --- |
-| Hydroponics | biogenerator |
-| Cargo | autolate, ore processor |
-| Engineering | autolathe |
-| HoP Office | uniform printer |
-| Medical | medical techfab |
-| Armory | security techfab |
-| Science | autolathe, protolathe, circuit imprinter, exosuit fabricator |
+Each lathe should be specialized with a clear theme for the items it has available. Autolathes are specialized in the most generic of items crew are expected to have in abundance, while department specific lathes are specialized in items for that department. Initial offerings from lathes should feel cheaper and lower quality than items available from other sources like cargo or vending machines. The more specialized equipment - including some essential equipment - should not be immediately available, and in some cases might never become available (requiring alternative sources like Cargo).
 
 ### Mapped
 
-Maps often contain gear scattered around a department for players to take. These are typically generic equipment like materials, but can be anything appropriate to the department. Well commented spawners should exist for standardized collections of equipment to guide mappers on what should be included, additionally enabling balancing through YAML.
+The items that start mapped for a department are their initial source for generic equipment like materials, though these items can be anything appropriate for the access they are locked behind. Specifics are established in ( link mapping doc here ).
 
 #### Armory
 
-The armory is a special location on maps which belongs to the security department. It's similar to a vending machine in how it's a primary source for much of the department's optional gear; Except instead of a cheery pre-recorded message, you have a very serious warden demanding paperwork for losing your service weapon.
-
-The station's supply of lethal weapons are held in the armory, as well as its combat grade protective gear and armor. There should be no more than one (1) `reflective vest` as part of an armory's stock.
+The armory is a special location on maps which belongs to the security department. Mapped inside is the station's supply of lethal weapons and protective armor. Similar to a vending machine, the armory is a primary source for much of the department's optional gear; Except instead of a machine you have a very serious warden demanding paperwork for losing your service weapon.
 
 #### Maintenance
 
-The scary unlit sections of a station, maintenance contains random generic items and (rarely) viable weapons. The random selection and spooky hallways cater to players seeking danger, uncertainty, and variety in their equipment.
+Maintenance contains the widest variety of items for players, but is stocked mostly randomly. The random selection and spooky hallways cater to players seeking danger, uncertainty, and variety in their equipment.
