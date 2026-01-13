@@ -154,6 +154,7 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/character-species/guidelines.md)
 		
 	- [Proposals]()
+		- [Avali](en/space-station-14/character-species/proposals/avali.md)
 		- [Vulpkanin](en/space-station-14/character-species/proposals/vulpkanin.md)
 
 - [Combat](en/space-station-14/combat.md)
