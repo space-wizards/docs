@@ -86,7 +86,7 @@ Normally, you would want to search through the codebase and ask some other coder
 
 **To start off**, let's make a simple clown horn prototype. I will make a new file called ```clown_horn.yml``` and add it to the ```Resources\Prototypes\Entities\Objects``` folder.
 
-![clownhornexample1.png](../assets/images/ss14-by-example/clownhornexample1)
+![clownhornexample1.png](../assets/images/ss14-by-example/clownhornexample1.png)
 
 Might want to organize that into the "Fun" folder later, but organization is up to you and your codebase!
 
@@ -110,7 +110,7 @@ One thing to note is that prototypes support parenting. In this case, `BaseItem`
 
 Now, let's compile and check out our item in game:
 
-![clownhornexample2.png](../assets/images/ss14-by-example/clownhornexample2)
+![clownhornexample2.png](../assets/images/ss14-by-example/clownhornexample2.png)
 
 It sure is beautiful, but we appear to have lied! The bike horn does not yet honk honk. To remedy this, we'll have to create a new component to hold the data, such as the sound to play, and an EntitySystem which handles actually playing the sound.
 
