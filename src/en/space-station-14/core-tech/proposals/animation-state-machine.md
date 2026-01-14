@@ -66,8 +66,11 @@ Clown waddling could be implemented by inheriting another abstract method and ov
 
 Using a proof-of-concept implementation on my fork; making mice do a cute little hop from time to time merely required 50 lines of C# code (including boiler-plate and comments) and 13 lines of YAML.
 
-## Other benefits
-Animation tracks currently have no safeguards to prevent multiple animations editing the same property of a component simultaneously. This issue can be alleviated by adding validation methods inside the ASM. As a start, the ASM could keep track of any component properties currently in use on an entity and throw an error if another animation tries to use them.
+## Animation conflicts
+At the time of writing animation tracks cannot handle multiple animations editing the same property of a component simultaneously. The result is undefined animation behaviour. Due to this the ASM comes with the following drawback: A condition called ```AnimationNotRunning``` is added to the ASM, which must be used to prevent certain states from entering while other legacy animations are playing.
+
+## AnimationStartedEvent engine addition
+The ASM PR would be accompanied by an engine PR adding ```AnimationStartedEvent```. Used to support the previously mentioned ```AnimationNotRunning``` condition as the ASM would have to check this condition on every frame otherwise.
 
 ## Animations don't support YAML
 While YAML defineable animations would be preferable, this is doable using hardcoded animations. If animations ever support YAML, the system can easily be updated to use those instead.
