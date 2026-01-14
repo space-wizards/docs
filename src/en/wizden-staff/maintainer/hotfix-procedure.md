@@ -49,7 +49,7 @@ If a fix was already merged into master, it may be possible to turn it into a ho
 - Create your empty working branch from the appropriate target branch, as above
 - Make sure that your local master branch is also up to date
 - Get the commit hash of the merged PR from the git log or GitHub
-   ![image](https://github.com/user-attachments/assets/7ef72e09-3f01-438d-bc8b-4b658b3225df)
+   ![commithash.png](../assets/images/wizden-staff/commit-hash.png)
 - Instead of coding your own changes on your branch, pick the existing commit from master
 ```shell
 git cherry-pick <commit hash>
