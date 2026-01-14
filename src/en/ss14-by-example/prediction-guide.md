@@ -16,7 +16,7 @@ See [this guide](basic-networking-and-you.md) for basic information on how to ne
 
 Without prediction any input from the client (like keyboard presses or mouse clicks) will be networked to the server, which then simulates the game according to all players' inputs and networks the resulting game state back to each client. The client will only see the results with a noticable delay depending on their ping, which makes the game feel unresponsive and will cause a visual delay for UI elements.
 
-With prediction each client runs its own game simulation of the game according to the local player's inputs and they will immediately see the results without having to wait for the server, hiding any latency. The server holds the authoritative game state, which is what all clients consider to be the "truth" in case they disagree on something.
+With prediction each client runs its own simulation of the game according to the local player's inputs and they will immediately see the results without having to wait for the server, hiding any latency. The server holds the authoritative game state, which is what all clients consider to be the "truth" in case they disagree on something.
 
 During prediction the client will constantly time travel, reverting the game state repeatedly to the last known authoritative state sent by the server, and then reapplies the player's inputs, resimulating the game until the next server state comes in. This usually happens about 12 times per game tick.
 
@@ -32,7 +32,7 @@ Follow these steps to make an existing unpredicted `EntitySystem` predicted:
 - `EntitySystem`s should either be a single non-abstract system in `Content.Shared`, or an abstract shared system with both the server and client inheriting from it if either of those rely on unique, non-shared code. Even if the client system is empty, make sure it exists or the code won't run on the client and will not be predicted.
 - To be able to make some code predicted, all its dependencies need to be made predicted first, since shared code cannot call server-side code in a predicted way.
 - Dirty the component every time its datafields are changed. This will tell the server to send all networked datafields in that component to the client so they get synced, and it will tell the client to reset that datafield to an earlier value during prediction.
-- For larger components with lots of networked datafields you should be using field deltas (use `DirtyField` for that) to reduce the network load. This will only dirty that datafield instead of the entire component.
+- For larger components with lots of networked datafields or in cases where some datafields are changed at very different rates than others you should be using field deltas (use `DirtyField` for that) to reduce the network load. This will only dirty that datafield instead of the entire component.
 - Use predicted API methods, for example `PopupPredicted`/`PopupClient`, `PlayPredicted` (for audio), `PredictedSpawnAtPosition`/`PredictedSpawnAttachedTo`, `PredictedDeleteEntity` and so on. If you don't use the right popup method, then you will see the popup show up about 10 times or not at all.
 - Make sure that randomness is predicted as explained further below.
 - Test everything in-game to see if it works as intended.
@@ -47,7 +47,7 @@ If everything works then the client's values will change instantly the moment yo
 
 #### Help, my code on the client is running multiple times for some reason!
 
-When setting breakpoints or printing to the console you will notice that the predicted code runs 10+ times on the client. This is perfectly normal and just prediction at work. The client rerolls the game state to a previous tick and reapplies the inputs until it receives an acknowledgement from the server. However, this needs special treatment for things like UI or audio to prevent it from flickering or playing multiple times. This is explained in further detail below.
+When setting breakpoints or printing to the console you will notice that the predicted code runs 10+ times on the client. This is perfectly normal and just prediction at work. The client rewinds the game state to a previous tick each time it reiceives a server state and reapplies the local player inputs while resimulating until it reaches the currently predicted game tick again. However, this needs special treatment for things like UI or audio to prevent it from flickering or playing multiple times. This is explained in further detail below.
 
 ## Prediction Code example
 Let's look at a simple unpredicted example component and predict it.
@@ -323,20 +323,20 @@ If you want to predict entity deletion use the equivalent `PredictedDeleteEntity
 ## IGameTiming.IsFirstTimePredicted
 This returns `true` the first time the code runs , and false in all the following prediction ticks while the client is waiting on the server. On the server this always returns `true` (the server does not predict anything, so it only needs to run the code once anyway). This is usually used internally in the form of a guard statement inside API methods for popups, audio and for some UI code to prevent it from running multiple times or flickering during prediction.
 
-This is not a magic bullet to resolve any mispredicts! It is only indended for audiovisual information shown to the player, and most API methods already have this included where needed. So if you have a mispredict make sure to fix it properly and check if you are using the correct predicted API method variants like `PlayPredicted` and that your components are dirtied whenever you change their datafields.
+This is not a magic bullet to resolve any mispredicts! It is only intended for audiovisual information shown to the player, and most API methods already have this included where needed. So if you have a mispredict make sure to fix it properly and check if you are using the correct predicted API method variants like `PlayPredicted` and that your components are dirtied whenever you change their datafields.
 
 `IsFirstTimePredicted` is currently [misused all across the codebase](https://github.com/space-wizards/space-station-14/issues/41116) to hide mispredicts, so don't trust existing code on this. This does not fix the underlying problem but rather disables prediction.
 
 ## IGameTiming.ApplyingState
-This returns `true` while the client either applies a game state networked from the server or rerolls its own game state to a previous one during prediction. This is commonly used in the form of a guard statement to allow server states to be applied properly and prevent code from running when it should not.
+This returns `true` while the client rewinds its own game state to that of of a received server state belonging to a previous game tick, so that any differences between them can be corrected. This is commonly used in the form of a guard statement to allow server states to be applied properly and prevent code from running when it should not.
 
 To understand why this is needed you have to know that some events are networked along with a components state and are always raised on both the server and client even if not predicted and they are only using `RaiseLocalEvent` and `SubscribeLocalEvent`.
 
 To give an example for container events like `EntInsertedIntoContainerMessage`, there are two scenarios:
 
-A) The insertion of the entity into the container is predicted and the event is raised locally on both the server and client. The server networks the new gamestate to the client, the client finds that there are no differences as the container change was already predicted and does not need to correct anything. While predicting the insertion the client will rapidly raise both `EntInsertedIntoContainerMessage` and `EntRemovedFromContainerMessage` as it reapplies a previous gamestate and repredicts the player input until the server state comes in.
+A) The insertion of the entity into the container is predicted and the event is raised locally on both the server and client. The server networks the new gamestate to the client, the client finds that there are no differences as the container change was already predicted and does not need to correct anything. While predicting the insertion the client will rapidly raise both `EntInsertedIntoContainerMessage` and `EntRemovedFromContainerMessage` as it rewinds and reapplies the player inputs until the server state that acknowledges them comes in.
 
-B) The insertion of the entity into the container is not predicted (for example if another player caused it), meaning the event is first only raised locally on the server. The server then sends the new game state to the client, which applies it. While doing so the client will insert the entity into the client-side container, and `EntInsertedIntoContainerMessage` is raised once client-side.
+B) The insertion of the entity into the container is not predicted (for example if another player caused it), meaning the event is first only raised the server with a local event. The server then sends the new game state to the client, which applies it. While doing so the client will insert the entity into the client-side container, and `EntInsertedIntoContainerMessage` is raised once client-side.
 
 This is done that way to allow a client to update UIs even if they did not predict the event, for example the storage window of your backpack, your hand indicator or the damage overlay, but it also may cause problems during subscriptions as any changes done inside them are already networked separately within the same game state, meaning they will be applied multiple times, causing mispredicts.
 
@@ -345,12 +345,12 @@ Let's look at an example from `GlueSystem`
 // GluedComponent will make an item temporarily unremovable if you pick it up.
 private void OnHandPickUp(Entity<GluedComponent> entity, ref GotEquippedHandEvent args)
 {
-    // When you predict picking up an item, due to the game state being repeatedly reset and your input being reapplied
+    // When your client predicts picking up an item, due to the game state being repeatedly reset and your input being reapplied
     // the item will be rapidly inserted and dropped from your hand (about 10 times each) during prediction. 
     // This will raise both GotEquippedHandEvent and GotUnequippedHandEvent in alternating order.
     // Similarly when you predict dropping a glued item prediction will reinsert the item into the hand when rerolling the state to a previous one.
     // So dropping the item would add UnremoveableComponent on the client without this guard statement,
-    // preventing the client from picking it up again, which would cause mistpredicts.
+    // preventing the client from picking it up again, which would cause mispredicts.
     // However, adding and removing the UnremovableComponent and setting the datafields is already applied with the same game state,
     // so we don't have to do anything in that case, fixing the problem.
     if (_timing.ApplyingState)
@@ -428,7 +428,7 @@ public sealed class UpdateLoopExampleSystem : EntitySystem
     }
 }
 ```
-This is bad for prediction, as dirtying the accumulator datafield every single tick would be expensive. So instead of accumulating frame time we use a time stamp indicating when the next update is supposed to happen and compare that with the current server time.
+This is bad for prediction, as dirtying the accumulator datafield every single tick would be expensive due to the network load if we repeatedly have to send game state updates from the server. So instead of accumulating frame time we use a time stamp indicating when the next update is supposed to happen and compare that with the current server time.
 
 ```C#
 /// <summary>
@@ -495,7 +495,7 @@ public sealed class UpdateLoopExampleSystem : EntitySystem
             comp.NextUpdate += UpdateInterval;
         
             // Dirty the component so that the client can reroll the NextUpdate datafield during predcition.
-            // Without this you will get mispedicts.
+            // Without this you will get mispredicts.
             Dirty(uid, comp);
         
             // Do stuff here.
@@ -513,29 +513,29 @@ If you want to see this in action you can fly around as an aghost while having t
 
 ![prediction-guide-pvs.gif](../assets/images/ss14-by-example/prediction-guide-pvs.gif)
 
-Since the server holds the authoritative game state it always has full knowledge about all entities, but the client will be restricted on what information it has available, which has implications for prediction. The client won't be able to predict anything happening outside PVS range, and some code like atmos or power cannot be predicted as a result.
+Since the server holds the authoritative game state, it always has full knowledge about all entities, but the client will be restricted on what information it has available, which has implications for prediction. The client won't be able to predict anything happening outside of PVS range, and some code like atmos or power cannot be predicted as a result.
 
 #### Nullspace
-Nullspace is an empty default map where entities are spawned if you don't specify any spawn location.
+Nullspace is an empty default map where entities are spawned if you don't specify any spawn location. It is commonly used for entities that represent "abstract" data - things that need to be tracked but don't really have a physical location.
 
-Examples for entities that live in nullspace are antagonist objectives and mind and mind role entities, which hold information about a player's antag status. Since they are on a different map than the player those entities are not networked to them. This ensures that cheaters are not able to read other player's antag status. A player receives a PVS override for their own mind entity, meaning their client can see it even though it's on another map. This makes it possible to predict interactions depending on your own mind (for example only ninjas can plant ninja spider charges), but not interactions that require information about other players' mind.
+Examples for entities that live in nullspace are antagonist objectives and mind and mind role entities, which hold information about a player's antag status. Since they are on a different map than the player those entities are not networked to them. This ensures that cheaters are not able to read other players' antag status. A player receives a PVS override for their own mind entity, meaning their client can see it even though it's on another map. This makes it possible to predict interactions that depend on your own mind (for example only ninjas can plant ninja spider charges), but not interactions that require information about other players' minds.
 
 #### PVS overrides
 If you want to network or predict something that is outside PVS range you will need a PVS override. Use these sparingly, as they add extra networking load.
 
 - `AddSessionOverride`: Makes a specific entity always visible to a given player until the override is removed again. An example use case is the wizard's recall ability, which teleports a far away entity that has been previously marked back into your hand.
-- `AddGlobalOverride`: Makes this entity always visible to all players, independent of PVS. An example is the singularity, which has this due to the large range of its distortion overlay effect where you would see it pop into PVS range without the override.
+- `AddGlobalOverride`: Makes this entity always visible to all players, independent of PVS. An example is the singularity, which has this due to the large range of its distortion overlay effect, where you would see it pop into PVS range without the override.
 - `AddViewSubscriber`: Allows a player to see all entities within PVS range of the given entity until unsubscribed. An example use case are cameras, which allow the player to watch far away locations through a second viewport.
 
 ## Session specific networking
 By default all clients will receive full information about all networked components and their datafields within PVS range. While they cannot read all this information without being an admin and using the ViewVariables window, some cheaters may still use this to obtain otherwise hidden information that is available on their client, for example antagonist status or if someone has contraband in their inventory. So be careful with the information you network for prediction purposes and if necessary use the following tools to restrict it to only those clients that need to know.
 
 #### SendOnlyToOwner
-All components have the `SendOnlyToOwner` bool, which will cause the component to only be networked to a player if they are attached to the entity the component is belonging to. This is useful for some traitor abilities or traits that only the user needs to know about. An example is `PacifiedComponent`, which makes you unable to attack others, but other players don't need to know about it for prediction purposes it since they cannot predict the keyboard input from the pacified player (the server needs to send it to them first).
+All components have the `SendOnlyToOwner` bool, which will cause the component to only be networked to a player if they are attached to the entity the component belongs to. This is useful for some traitor abilities or traits that only the user needs to know about. An example is `PacifiedComponent`, which makes you unable to attack others, but other players don't need to know about it for prediction purposes since they cannot predict the keyboard input from the pacified player (the server needs to send it to them first).
 
 #### SessionSpecific
 All components have the `SessionSpecific` bool, which will cause a `ComponentGetStateAttemptEvent` to be raised on the owning entity for each player the component is being networked to and allows you to cancel the networking in a subscription. Note that this comes with some performance overhead since it may raise a lot of events.
-An example for this is [`SharedRevolutionarySystem`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Revolutionary/SharedRevolutionarySystem.cs) which uses this to let only revolutionary players and admins know who else is a revolutionary is. However, the API for this is currently quite annoying to use and requires a lot of boilerplate code. Maybe in the future this could be simplified into a component whitelist to decide who can see a certain session specific component. 
+An example for this is [`SharedRevolutionarySystem`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Revolutionary/SharedRevolutionarySystem.cs) which uses this to let only revolutionary players and admins know who else is a revolutionary. However, the API for this is currently quite annoying to use and requires a lot of boilerplate code. Maybe in the future this could be simplified into a component whitelist to decide who can see a certain session specific component. 
 
 ## Predicted Randomness
 If you use `RobustRandom` in shared code the server and client will roll different random results, causing mispredicts. Even worse, the client will also generate a different result for each prediction tick. This often happens for random spawning, randomized sprite colors, random locations or similar.
@@ -544,7 +544,7 @@ Here is an example of a mispredict happening when gibbing someone, so that you k
 
 ![prediction-guide-mispredict.gif](../assets/images/ss14-by-example/prediction-guide-mispredict.gif)
 
-In the future Robust Toolbox will have methods for predicted randomness, but at the time of writing the [PR for RandomPredicted](https://github.com/space-wizards/RobustToolbox/pull/5849) was not merged yet.
+In the future Robust Toolbox will have methods for predicted randomness, but at the time of writing the [PR for RandomPredicted](https://github.com/space-wizards/RobustToolbox/pull/5849) has not been merged yet.
 As a workaround you can use a new `System.Random` instance and set the seed to something the server and client agree on, for example a combination of an entity's `NetEntity` id and the current game tick (if you would only the game tick here then all randomness within the same game tick would yield the same result, so we need both).
 
 ```C#
@@ -597,7 +597,7 @@ A good code example for predicting a BUI using component states can be found in 
 ## Things to watch out for
 #### Performance tips
 
-Dirtying and networking is expensive. Avoid dirtying entities every single tick from an update loop. Think about how to minimize the amount of data you have to send. For example in systems like [hunger](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Nutrition/EntitySystems/HungerSystem.cs) or [battery charge](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Power/EntitySystems/SharedBatterySystem.API.cs) do not network the new hunger or charge value repeatedly, but only send a value at a certain time stamp along with the current rate of change. That way the client can always infer the current value without requiring a new game state to be send.
+Dirtying and networking is expensive. Avoid dirtying entities every single tick from an update loop. Think about how to minimize the amount of data you have to send. For example in systems like [hunger](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Nutrition/EntitySystems/HungerSystem.cs) or [battery charge](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Power/EntitySystems/SharedBatterySystem.API.cs) do not network the new hunger or charge value repeatedly, but only send a value at a certain time stamp along with the current rate of change. That way the client can always infer the current value without requiring a new game state to be sent.
 
 When setting a datafield it is recommended to add a guard statement to check if the datafield has a new value before calling `Dirty` so that we only network it when actually necessary.
 
@@ -628,7 +628,7 @@ In most cases it is recommended to define events and components in `Content.Shar
 
 #### IRobustCloneable
 
-Prediction repeatedly resets any dirtied datafield back to a previous game state and resimulates the player input while waiting for the server state to come in. However, if your datafield is a [reference type](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types) it will only reset the reference to that datafield, not datafield's current state. This can lead to [mispredicts](https://github.com/space-wizards/space-station-14/pull/34838) and even [major graphical glitches](https://github.com/space-wizards/space-station-14/issues/38512) if not handled correctly. To fix this make sure to implement the `IRobustCloneable` interface when using autonetworking with any custom reference type you are networking and the source generator will make sure to create a deep copy of the datafield for each game state. A code example for this is the [`Solution`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Chemistry/Components/Solution.cs) class used in the [`SolutionComponent`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Chemistry/Components/SolutionComponent.cs).
+Prediction repeatedly resets any dirtied datafield back to a previous game state and resimulates the player input. However, if your datafield is a [reference type](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types) it will only reset the reference to that datafield, not the datafield's current value. This can lead to [mispredicts](https://github.com/space-wizards/space-station-14/pull/34838) and even [major graphical glitches](https://github.com/space-wizards/space-station-14/issues/38512) if not handled correctly. To fix this make sure to implement the `IRobustCloneable` interface when using autonetworking with any custom reference type you are networking and the source generator will make sure to create a deep copy of the datafield for each game state. A code example for this is the [`Solution`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Chemistry/Components/Solution.cs) class used in the [`SolutionComponent`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Chemistry/Components/SolutionComponent.cs).
 
 #### Conventions for shared systems and components
 EntitySystems should either be non-abstract and shared, for example:
@@ -661,7 +661,7 @@ public sealed class SomeSystem : SharedSomeSystem
     // ...
 }
 ```
-Don't forget the client-side system, even if it's empty. Otherwise the client won't be able to instanciate the system class and it will remain unpredicted.
+Don't forget the client-side system, even if it's empty. Otherwise the client won't be able to instantiate the system and it will remain unpredicted.
 
 Avoid shared abstract components. Some ancient code is still doing this, but nowadays we just instead put the entire component into `Content.Shared`, even if some datafields are only used on the server or client. This is minimally worse for performance, but makes the code much more readable, simplifies any API methods and makes it easier to use `TryComp` and `Resolve`.
 
@@ -685,3 +685,9 @@ private void OnEntRemoved(Entity<UdderComponent> entity, ref EntRemovedFromConta
 This makes sure that the cached reference to the solution entity is reset to null as is leaves PVS range and is detached into nullspace.
 
 See [this issue](https://github.com/space-wizards/space-station-14/issues/42218) for the current state of this problem.
+
+#### Only use NetworkedComponentAttribute for shared components
+Adding `[NetworkedComponent]` to a purely server- or client-side component (i.e. not in `Content.Shared`) does not make any sense since those cannot be networked in the first place.
+However at the time of writing RobustToolbox is not preventing you from doing so and instead of creating a warning or error it will just break silently. The sympoms include random other components no longer being networked to the client, which will cause a huge range of bugs, for example mispredicts and UIs not being populated. So this is something you should keep an eye on during reviews or when writing new code.
+
+See [this issue](https://github.com/space-wizards/RobustToolbox/issues/5194) for the current state of this problem.
