@@ -262,6 +262,7 @@ Space Station 14
 
 	- [Security](en/space-station-14/departments/security.md)
 		- [PR Guidelines](en/space-station-14/departments/security/guidelines.md)
+		- [Contraband System](en/space-station-14/departments/security/contraband-system.md)
 
 		- [Proposals]()
 			- [GenPop Prisoners](en/space-station-14/departments/security/proposals/genpop-prisoners.md)
