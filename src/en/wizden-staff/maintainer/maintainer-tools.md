@@ -19,9 +19,9 @@ git remote add Slarti https://github.com/slarticodefast/space-station-14
 git push Slarti <yourBranchName>:<theirBranchName>
 ```
 For this to work the author has to select this checkmark when opening the PR, which is done by default:\
-![allowedits.png](../assets/images/wizden-staff/allowedits.png)\
+![allowedits.png](../../assets/images/wizden-staff/maintainer/commithash.png)\
 You can see on the right sidebar if they did:\
-![allowedits2.png](../assets/images/wizden-staff/allowedits2.png)
+![allowedits2.png](../../assets/images/wizden-staff/maintainer/commithash.png)
 
 If a PR only needs minor changes or a merge conflict fixed it is often easier and faster if you do this for the author, rather than wait for them to be addressed. Authors are often happy to see their PR is merged and it saves some maintainer time, so doing this is recommended.
 ~~~
@@ -29,7 +29,7 @@ If a PR only needs minor changes or a merge conflict fixed it is often easier an
 ~~~admonish info "GitHub Squash Reminder User Script"
 Highly recommended is Myra's [GitHub Squash Reminder Userscript](https://github.com/VasilisThePikachu/GH-Squash-Reminder-Userscript/tree/master).\
 It gives you a visual warning when you selected the wrong merge option by accident.\
-![squashreminder.png](../assets/images/wizden-staff/squashreminder.png)
+![squashreminder.png](../../assets/images/wizden-staff/maintainer/squashreminder.png)
 ~~~
 
 ~~~admonish info "GitHub Trollface Remover User Script"
