@@ -72,7 +72,7 @@ In addition to their own specialized gear, there are several items present in al
 
 Vending machines are the main source of optional and expendable equipment for departments, and a common source of generic equipment in public spaces. Vending machines are consistent, simple, and well-known locations for sets of items. Their limited stock creates resource scarcity, but their resources are never truly scarce with a restock from Cargo.
 
-Each full department contains (at least) two (2) vending machines responsible for restocking players and providing extra supplies. The wardrobe (or "Drobe") consists of clothing, while the second supplies non-clothing. Together they should supply  exactly two naked players with all their necessary gear (two complete sets of essential equipment and uniforms).
+Each full department contains (at least) two (2) vending machines responsible for restocking players and providing extra supplies. The wardrobe (or "Drobe") consists of clothing, while the second supplies non-clothing. Together they should supply exactly two naked players with all their necessary gear (two complete sets of essential equipment and uniforms).
 
 #### Department Tool Vendor
 
