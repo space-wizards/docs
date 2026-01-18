@@ -31,7 +31,7 @@ Sloth
 
 From https://docs.spacestation14.io/en/maintainer-meetups/secret/2021-10-30-meetup
 (Also here now! https://github.com/space-wizards/space-station-14/issues/5542)
-![](https://i.imgur.com/vPY8qhP.png)
+![prgithubbot.png](../assets/images/maintainer-meetings/2021-11-27/prgithubbot.png)
 
 We need a knowledgebase, so contribs can find everything important at once.
 

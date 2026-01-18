@@ -33,7 +33,7 @@ Answer:
 
 
 ## Long term map maintenance tools | moony
-- [Discord message](https://discord.com/channels/310555209753690112/900426319433728030/966528422933323866)
+![entitychange.png](../assets/images/maintainer-meetings/2022-04-30/entitychange.png)
 - Fixing the mapping merge driver
     - Rewrite it atop the testing framework?
 - Automated YAML and entity migrations
@@ -44,7 +44,7 @@ Answer:
     - BYOND's map editor asks you for new paths (like entity prototype IDs) for missing things
     - tbh this goes for a lot of things about mapping rn
 - Entity UID consistency system on map is broken right now, needs fixing
-    - 1 entity getting changed -> ![](https://i.imgur.com/7htfQil.png) ungabunga change go brr SO TRUE BESTEI
+    - 1 entity getting changed -> ![entitychange.png](../assets/images/maintainer-meetings/2022-04-30/entitychange.png) ungabunga change go brr SO TRUE BESTEI
 - Migrations are like scripts more than like prototypes. Does it make sense to keep them in the prototypes folder?
     - For complex C# based ones it'd be necessary for them to remain compiled in?
 
@@ -85,7 +85,6 @@ Answer:
 ## Guidelines for balance discussions and code of conduct | moony
 - [Discord message](https://discord.com/channels/310555209753690112/900426319433728030/966843069515329586)
 - Emag nerf (18291 comments)
-- ![](https://i.imgur.com/Vv4d6Ht.gif)
 
 Results
 - GitHub discussions usually get bad.
@@ -355,7 +354,6 @@ Results:
         - books/ebooks in pda
             - ebooks preloaded on pda for selected job
             - when rich text gets merged
-                - ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
 - oldchat + ui refactor | Jezithyr
     - we did it
 - combat rework (needs to be bikeshedded)
