@@ -70,4 +70,4 @@ Should we have a test server that runs on the master branch (just like before)
 
 ## Other notes
 
-![PJB is not french](../assets/images/maintainer-meeting/2024-10-26-pjb-is-not-french.png)
+![pjb-is-not-french.png](../assets/images/maintainer-meetings/2024-10-12/pjb-is-not-french.png)
