@@ -62,7 +62,7 @@ This system allows the cooling or heating of the station's air to standard tempe
 
 Below is a visual flowchart of the gas mixing chamber, describing a potential solution to the problem:
 
-![image](https://github.com/user-attachments/assets/1f2c42a9-801b-48c6-bded-47537b7bac30)
+![turnstile.png](../../../../assets/images/space-station-14/departments/atmos/proposals/atmos-air-recirculation/stationatmoshvac.png)
 
 ### Moving Away from High-Pressure Infinite Gas
 Previously, air reserves were infinite and can be replaced at any time.
