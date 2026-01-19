@@ -104,12 +104,25 @@ For this design, it helps that diseases both have an incubation period where the
 
 ### Bioengineering
 
-MOSTLY TBD
-My only note here at present is that any antag who wants to engineer a horrible disease should be required to incubate it within their own body. That's the price for unleashing a plague upon the crew: You're the initial infected.
+For anyone who wants to dip their rubber-gloved arms into the dirty, grimy world of engineering their own viruses, thinking of a virus's genetic code as a mere string of letters is no longer sufficient. The code has to have meaning.
 
-This should naturally tend to reduce station-wiping diseases to the domain of DAGD antags, which is where it should be. And even the worst diseases shouldn't progress so rapidly that virology has no chance to catch them in time. Er, so to speak.
+Here's how that works:
 
-The same machine that creates treatments and vaccines can be used to do bioengineering, but that functionality is locked behind CMO's ID. CMO (or any antags who get their hands on CMO's ID) can use their ID to unlock it. The machine will keep a record of all bioengineering activity, including the IDs of the users, though this can be wiped by snipping the log wire or made to not record any new activity with an emag.
+A virus's genome is a series of alternating tags and modifiers. A tag will declare the 'field' being modified - mutation rate, or symptoms, or so forth. The modifier will then decode to a numeric or keyed value, which is added to the virus's base values for its fields. This code is interpreted linearly from the beginning of the string to the end.
+
+Of course, players won't see the tags and modifiers directly. They'll see an apparently-meaningless jumble of nucleotides: CAGAGTTAGACTAGA and so forth. It'll be up to them to figure out what means what.
+
+That task isn't as impossible as it sounds, though, because they'll have some tools to help them. But before those tools are of any use, they'll need to collect samples; nobody can sit around in a closed-off virology office and do all the work without interacting with anyone else. Once samples are acquired, the samples have to be sequenced in a gene sequencer, and then fed into the DDDE. (So far, this is identical to the process of developing a vaccine.)
+
+The sequenced DNA will have been chopped into shorter fragments, however, and won't represent a complete virus genome. The DDDE can parse each fragment and explain what it does, though incomplete fragments might not be parseable, or might be interpreted differently from the gene's representation in a virus's complete genome.
+
+For the sake of creating a vaccine, the virologist's only goal here will be to piece together fragments into a complete and accurate genome, or as close to one as they can get. Engineering gets more complicated - but it's essentially the same process, except instead of trying to match a particular genome, the virologist is trying to create a new one based on the fragments they've been able to find and whatever guesswork can fill in the gaps. It's unlikely that whatever exact mix of symptoms and severities they're hoping for will show up directly in the samples they take, so they'll have to figure out what they can do with the fragments they do have.
+
+To prevent players from gaming the system too heavily, the mappings between genes, and tags and modifiers should be randomized for each round. An experienced virologist should, nevertheless, be able to recognize some patterns - enough to offer a component of skill mastery, but not enough to allow bioengineering to devolve into copy-paste-this-genetic-code-to-make-superplague.
+
+Once the bioengineered virus's genome is complete, the vaccinator can be used to produce viral load - but it will only dispense this in the form of a vaccine, in which the viruses are dead and incapable of multiplying. To get around this, the virologist must disassemble the machine, revealing a vial with a small amount of viral load as one of its components. Once they have the live viral load, they'll want to increase its yield by incubating it in a host body, or else it'll be too weak to survive for long enough to do damage. Syndicate members can, for a token amount of TC, obtain an immuno-suppressant pill. Their easiest option will be to take the pill themself and use their own body as a bioreactor. They could also kidnap some hapless victim and force-feed them the pill, but their efforts will be wasted if the victim dies, or if the victim escapes and runs to medbay. Smaller animals, such as mice, monkeys and kobolds, can be used to incubate the virus without the help of immuno-surpressants, but the smaller they are, the less viral load they will produce, meaning the plague-engineer will need to accumulate several of them and keep them under control and alive until the virus has gained a foothold.
+
+Once the virus has incubated for long enough, the bioengineer can release their plague rats/victims/own sick self upon the station (if they're contagious) or else take the additional step of drawing blood and centrifuging it down to produce raw viral load in larger quantities.
 
 ### Zombies and Romerol
 
