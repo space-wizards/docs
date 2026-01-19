@@ -18,7 +18,9 @@
 - Julian
 - slambamactionman
 ```
-Notice: This meeting was recorded.
+Notice: This meeting was recorded:
+
+{% embed youtube id="4B80_pRZ_Mc" loading="lazy" %}
 
 # Review system
 

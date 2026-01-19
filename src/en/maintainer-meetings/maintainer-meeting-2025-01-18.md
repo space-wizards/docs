@@ -15,7 +15,7 @@
 - PJB
 ```
 
-This meeting was recorded.
+This meeting was recorded:
 
 {% embed youtube id="GVNGTo2osgo" loading="lazy" %}
 
