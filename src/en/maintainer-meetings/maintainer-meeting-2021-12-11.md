@@ -178,7 +178,8 @@ Silver
 - 1:1 component:system is ass
     - vera was right about atmospheresystem handling every pipe device
 
-![](https://i.imgur.com/4Y2QbhU.gif)
+![whenthe.gif](../assets/images/maintainer-meetings/2021-12-11/whenthe.gif)
+
 
 
 # GitHub issues, feature requests (Mini Impromptu) | Acruid

@@ -31,7 +31,7 @@ Sloth
 
 From https://docs.spacestation14.io/en/maintainer-meetups/secret/2021-10-30-meetup
 (Also here now! https://github.com/space-wizards/space-station-14/issues/5542)
-![](https://i.imgur.com/vPY8qhP.png)
+![prgithubbot.png](../assets/images/maintainer-meetings/2021-11-27/prgithubbot.png)
 
 We need a knowledgebase, so contribs can find everything important at once.
 
@@ -49,7 +49,8 @@ We need to:
 
 # Making Transform not required for entities | Vera
 - for serialization
-  ![](https://i.imgur.com/BY3W0oM.png)
+  ![forserialization.png](../assets/images/maintainer-meetings/2021-11-27/forserialization.png)
+
 - free VV, no extra work IT ALREADY WORKS!!!!
 - whats
 - simply support serializing entity systems instead
@@ -82,8 +83,7 @@ to sum it up: dont allow to send, notify admins, give them a popups
     - the roadmap is at worst 2 weeks out of date
 
 # ComponentProtoName attribute | Sloth
-![](https://i.imgur.com/kzYoNoF.png)  
-https://docs.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/static-abstract-interface-methods
+![componentprotoname.png](../assets/images/maintainer-meetings/2021-11-27/componentprotoname.png)
 
 # Stable/bleeding edge branches | Mirror
 - where is mirror, wake her up!!!!!
@@ -120,4 +120,3 @@ considering we get 20-40 pop pretty much constantly
 
 # Post-meeting ~~jstris~~ tetr.io! | Visne, Tomeno
 - when the hwehgneh the isss suss
-    - ![](https://cdn.discordapp.com/emojis/818484273995841547.png?size=32)

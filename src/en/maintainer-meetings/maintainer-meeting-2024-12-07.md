@@ -18,7 +18,7 @@ Notice: This meeting was recorded:
 {% embed youtube id="P0OLTfBTTVM" loading="lazy" %}
 
 # No topics?
-![image](https://i.imgflip.com/64sz4u.png?a481512)
+![notopics.png](../assets/images/maintainer-meetings/2024-12-07/notopics.png)
 
 ## Stable review
 Here the usual list of new features. Mapping changes, bugfixes, refactors and code cleanup are not included.

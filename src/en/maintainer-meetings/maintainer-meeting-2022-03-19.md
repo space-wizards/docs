@@ -162,7 +162,6 @@ RSIEdit
         - books/ebooks in pda
             - ebooks preloaded on pda for selected job
             - when rich text gets merged
-                - ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
 - oldchat + ui refactor | Jezithyr
     - we did it
 - explosion refactor | ElectroJR

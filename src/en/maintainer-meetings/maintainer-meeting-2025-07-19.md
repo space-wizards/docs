@@ -17,7 +17,7 @@ This meeting was recorded:
 I likely won't make it to the meeting, but I don't want to keep this topic waiting for another 2 weeks, so I'll just write some stuff here so that you can read it.
 
 We have an insane amount of error messages on the servers. I'm honestly surprised the game is still running.
-![](https://hedgedoc.spacestation14.com/uploads/88b2e2ad-af31-47c2-8a9d-5c2f29350e3f.png)
+![excessiveerrors.png](../assets/images/maintainer-meetings/2025-07-19/excessiveerrors.png)
 42000 in the last 24 hours. These aren't new, but a long-existing problem, that has been ignored too long and got slowly worse over time. This is hugely problematic since it drowns out actually important error messages, for example [admin logs were often failing to save to the database](https://github.com/space-wizards/space-station-14/issues/38744) for two and a half weeks before anyone noticed.
 
 First of all, every maintainer should know how to look at the error logs (I only found out recently):
