@@ -17,7 +17,8 @@ DOCS_DIRS = [
 
 # Configure allowed hosts (empty = only relative paths allowed)
 ALLOWED_HOSTS = [
-    # "example.com",
+	"spacestation14.com",
+    "hedgedoc.spacestation14.com",
 ]
 
 def main() -> int:
