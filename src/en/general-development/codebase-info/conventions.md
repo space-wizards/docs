@@ -780,8 +780,6 @@ Use `suffix` in prototypes, this it's a spawn-menu-only suffix that allows you t
 And results in this:
 ![entityprototypesuffixes2.png](../../assets/images/general-development/codebase-info/conventions/entityprototypesuffixes2.png)
 
-C:\Users\remfe\Documents\Repositories\docs\src\en\assets\images\general-development\codebase-info\conventions\entityprototypesuffixes1.png
-
 ## Localization
 Every player-facing string ever needs to be localized.
 
