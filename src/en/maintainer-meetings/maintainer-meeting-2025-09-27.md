@@ -96,7 +96,7 @@ I envision 3 new rulesets to be created. 2 of these are moved from legacy branch
     - - role: admin
     - - PJBot
     - This will ensure that any repository maintainer will be prompted to squash merge, but also ensure that they can overwrite it in cases that they need it!
-![](https://hedgedoc.spacestation14.com/uploads/6be8603b-f6ab-4174-8990-7781789ce516.png)
+![prompt.png](../assets/images/maintainer-meetings/2025-09-27/prompt.png)
 
 ##  Merge Queue Proposal (ArtisticRoomba)
 One of the issues with current test runs on GitHub is that tests will only run at the head of the branch that is to be merged into the main branch.

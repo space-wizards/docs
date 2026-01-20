@@ -15,13 +15,13 @@
 ```
 
 
-Notice: This meeting was recorded:
+Notice: This meeting was recorded.
 Notice 2: Myra is stupid and forgot to unmute her mic in OBS. Also the voice is double. Sorry!
 
 {% embed youtube id="APv7tDdkTg8" loading="lazy" %}
 
 # No topics?
-![image](https://i.imgflip.com/64sz4u.png?a481512)
+![notopics.png](../assets/images/maintainer-meetings/2024-12-07/notopics.png)
 
 ## Stable review
 Here the usual list of new features. Mapping changes, bugfixes, refactors and code cleanup are not included.

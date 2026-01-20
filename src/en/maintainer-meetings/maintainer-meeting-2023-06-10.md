@@ -40,7 +40,7 @@ Any decisions taken in these notes may no longer be applicable.
     - example: `foo_bar.baz`
 
 ## Obsolete freeze | PJB
-![](https://hackmd.io/_uploads/B17h1SMP2.png)
+![obsoletefreeze.png](../assets/images/maintainer-meetings/2023-06-10/obsoletefreeze.png)
 
 - Fucking fix the code reeee
 - **"Just don't obsolete anything that's on the tier of `.Owner` for now probably"**
@@ -77,7 +77,7 @@ Any decisions taken in these notes may no longer be applicable.
             - faction system
         - clock cult | keronshb
             - waiting for mind rework
-- EL BODY SYSTEM | jez (sloth?) ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
+- EL BODY SYSTEM | jez (sloth?)
     - some refactors were done by mirror, still some left
     - surgery died in the war of 1992
         - Mirror died in the war of 1993
