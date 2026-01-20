@@ -226,6 +226,7 @@ Space Station 14
 		- [PR Guidelines]()
 
 		- [Proposals]()
+			- [Telesalvage Proposal](en/space-station-14/departments/cargo/proposals/telesalvage-proposal.md)
 			- [Salvage Proposal](en/space-station-14/departments/cargo/proposals/salvage-proposal.md)
 			- [Mail Deliveries](en/space-station-14/departments/cargo/proposals/mail-delivery.md)
 
