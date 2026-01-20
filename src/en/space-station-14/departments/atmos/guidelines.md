@@ -25,7 +25,7 @@ This greatly assists maintainers in reviewing your code, and helps contributors 
 
 Generally, public-facing methods should have a proper summary, parameter documentation, caveats to consider, method return documentation if applicable, as well as an example if applicable. Extending this level of documentation to `private` members is appreciated.
 
-```C#
+```csharp
 /// <summary>
 /// Calculates the dimensionless fraction of gas required to equalize pressure between two gas mixtures.
 /// </summary>
@@ -77,7 +77,7 @@ Pseudo-LaTeX notation is preferred.
 
 While self-documenting variable named and single-line comments on each step is always desired, a general overview on the steps you took to reach your solution is preferred. 
 
-```C#
+```csharp
 public float FractionToEqualizePressure(GasMixture gasMixture1, GasMixture gasMixture2)
 {
     /*
@@ -116,9 +116,9 @@ It also greatly helps out future contributors trial out their own performance tw
 
 ### Do not hide potential numerical instability or noise
 When writing code for Atmospherics, do not ignore potential numerical instability, as this could hide bad edge-cases during testing or during gameplay.
-For example, if dividing a `HeatContainer` into $n$ parts, ensure that $n$ is a `uint` and use `ArgumentOutOfRangeException` helpers to throw if $n = 0$:
+For example, if dividing a `HeatContainer` into $ n $ parts, ensure that $ n $ is a `uint` and use `ArgumentOutOfRangeException` helpers to throw if $ n = 0 $:
 
-```C#
+```csharp
 public static HeatContainer[] Divide(this HeatContainer c, uint num)
 {
     ArgumentOutOfRangeException.ThrowIfZero(num);
@@ -150,7 +150,7 @@ This makes the logic inflexible, because if anyone wants to add another behavior
 
 For example, take the `Hotspot` system, which checks if a tile is allowed to start a gas fire on itself:
 
-```C#
+```csharp
 if ((tile.Hotspot.Temperature < Atmospherics.FireMinimumTemperatureToExist) ||
     (tile.Hotspot.Volume <= 1f) ||
     tile.Air == null ||
@@ -162,7 +162,7 @@ if ((tile.Hotspot.Temperature < Atmospherics.FireMinimumTemperatureToExist) ||
 
 Do not add more checks onto this system in order to make reagent fires possible like so:
 
-```C#
+```csharp
 if ((tile.Hotspot.Temperature < Atmospherics.FireMinimumTemperatureToExist) ||
     (tile.Hotspot.Volume <= 1f) ||
     tile.Air == null ||
@@ -184,7 +184,7 @@ Because of this, subsystems have to be mindful of how much time they've taken si
 
 This is commonly done via the simulation stopwatch in `AtmosphereSystem._simulationStopwatch`.
 Processing states will inspect this stopwatch every few seconds and yield if processing time exceeded the budget for the tick:
-```C#
+```csharp
 private bool ProcessHotspots(
     Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> ent)
 {
@@ -224,7 +224,7 @@ Object allocations put unnecessary pressure on the GC, especially if said object
 As such, reuse memory like arrays as much as possible.
 For example, `AtmosphereSystem.Monstermos` holds arrays for queueing tiles and computing pressure spreading:
 
-```C#
+```csharp
 public sealed partial class AtmosphereSystem
 {
     [Dependency] private readonly FirelockSystem _firelockSystem = default!;
