@@ -1,6 +1,6 @@
 # Setting up High Bandwith Transfer
 
-As of [Robust Toolbox Version 271.0.0](https://forum.spacestation14.com/t/engine-271-0-0-released/26088) the engine supports a high bandwith transfer mode using websockets.
+As of [Robust Toolbox Version 271.1.0](https://github.com/space-wizards/RobustToolbox/blob/40b10f0dccfe568ccd7dc3c6f6ee87a63bad97ee/RELEASE-NOTES.md#27110) the engine supports a high bandwith transfer mode using websockets.
 
 This feature is used in resource upload/download allowing game admins to upload bigger prototypes quicker while allowing players to also download them as fast. But can also be implemented to do anything else you may want via `ITransferManager` that requires sending and receiving big traffic.
 
@@ -9,7 +9,7 @@ While Lidgren (The main networking netcode) is the main fallback for the transfe
 A reverse proxy is highly recommended to be used here to allow you to encrypt the websocket traffic, but is not required. We will assume you know how to configure your web server with SSL/Know how to handle yourself if you do not wish to encrypt the data.
 
 ### Game server config
-The main [CVars](https://github.com/space-wizards/RobustToolbox/blob/ce96331ec4c61d397a26f959dfad8e6c592fd820/Robust.Shared/CVars.cs#L409-L442) are located here (Note this is a permalink, more CVars may exist by the time this documention was written).
+The main [CVars](https://github.com/space-wizards/RobustToolbox/blob/40b10f0dccfe568ccd7dc3c6f6ee87a63bad97ee/Robust.Shared/CVars.cs#L409-L448) are located here (Note this is a permalink, more CVars may exist by the time this documention was written).
 
 The main one to worry about is `transfer.http_endpoint`, this needs to point to the servers HTTP API (The thing with the `/status` and `/info` if you ever queried that). In most cases this will be the same value as `hub.server_url` but instead replacing `ss14://` with `http://` and `ss14s://` with `https://`.
 
