@@ -11,7 +11,7 @@ A reverse proxy is highly recommended to be used here to allow you to encrypt th
 ### Game server config
 The main [CVars](https://github.com/space-wizards/RobustToolbox/blob/ce96331ec4c61d397a26f959dfad8e6c592fd820/Robust.Shared/CVars.cs#L409-L442) are located here (Note this is a permalink, more CVars may exist by the time this documention was written).
 
-The main one to worry about is `transfer.http_endpoint`, this needs to point to the servers HTTP API (The thing with the `/status` and `/info` if you ever queried that). In most cases this will be the same value as `hub.server_url` but instead replacing `ss14://` with `http://` and `ss14s://` with `https`.
+The main one to worry about is `transfer.http_endpoint`, this needs to point to the servers HTTP API (The thing with the `/status` and `/info` if you ever queried that). In most cases this will be the same value as `hub.server_url` but instead replacing `ss14://` with `http://` and `ss14s://` with `https://`.
 
 ```admonish info "Straight to prod!!!"
 You can set these directly on a live server by editing the CVars via the `sudo cvar` command.
@@ -83,7 +83,7 @@ example.com {
     reverse_proxy localhost:1215 {
             # Yes this does technically mean that if a player stays connected on the server
             # for 12 hours in a single session they will get disconnected. 
-            # But honestly... they should get a life.
+            # But honestly... they should be getting a life and touching grass.
             stream_timeout 12h
             stream_close_delay 12h
     }
