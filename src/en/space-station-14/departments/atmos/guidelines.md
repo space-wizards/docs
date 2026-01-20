@@ -116,7 +116,7 @@ It also greatly helps out future contributors trial out their own performance tw
 
 ### Do not hide potential numerical instability or noise
 When writing code for Atmospherics, do not ignore potential numerical instability, as this could hide bad edge-cases during testing or during gameplay.
-For example, if dividing a `HeatContainer` into $ n $ parts, ensure that $ n $ is a `uint` and use `ArgumentOutOfRangeException` helpers to throw if $ n = 0 $:
+For example, if dividing a `HeatContainer` into \\( n \\) parts, ensure that \\( n \\) is a `uint` and use `ArgumentOutOfRangeException` helpers to throw if \\( n = 0 \\):
 
 ```csharp
 public static HeatContainer[] Divide(this HeatContainer c, uint num)
