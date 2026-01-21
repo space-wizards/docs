@@ -294,7 +294,7 @@ Server Hosting
 - [Setting up SS14.Admin](en/server-hosting/setting-up-ss14-admin.md)
 - [Setting up SS14.Changelog](en/server-hosting/setting-up-ss14-changelog.md)
 - [Setting up SS14.Watchdog](en/server-hosting/setting-up-ss14-watchdog.md)
-- [Setting up High Bandwith Transfer](en/server-hosting/setting-up-high-bandwith-transfer.md)
+- [Setting up High Bandwidth Transfer](en/server-hosting/setting-up-high-bandwidth-transfer.md)
 - [OAuth](en/server-hosting/oauth.md)
 - [Setting up Discord Integration](en/server-hosting/setting-up-discord-integration.md)
 - [Maintenance]()

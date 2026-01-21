@@ -1,15 +1,15 @@
-# Setting up High Bandwith Transfer
+# Setting up High Bandwidth Transfer
 
-As of [Robust Toolbox Version 271.1.0](https://github.com/space-wizards/RobustToolbox/blob/40b10f0dccfe568ccd7dc3c6f6ee87a63bad97ee/RELEASE-NOTES.md#27110) the engine supports a high bandwith transfer mode using websockets.
+As of [Robust Toolbox Version 271.1.0](https://github.com/space-wizards/RobustToolbox/blob/40b10f0dccfe568ccd7dc3c6f6ee87a63bad97ee/RELEASE-NOTES.md#27110) the engine supports a high bandwidth transfer mode using WebSockets.
 
 This feature is used in resource upload/download allowing game admins to upload bigger prototypes quicker while allowing players to also download them as fast. But can also be implemented to do anything else you may want via `ITransferManager` that requires sending and receiving big traffic.
 
-While Lidgren (The main networking netcode) is the main fallback for the transfer system. To get the full speed benefits, some additional options need to be configured on the server.
+While Lidgren (The main networking net code) is the main fallback for the transfer system. To get the full speed benefits, some additional options need to be configured on the server.
 
-A reverse proxy is highly recommended to be used here to allow you to encrypt the websocket traffic, but is not required. We will assume you know how to configure your web server with SSL/Know how to handle yourself if you do not wish to encrypt the data.
+A reverse proxy is highly recommended to be used here to allow you to encrypt the WebSocket traffic, but is not required. We will assume you know how to configure your web server with SSL/Know how to handle yourself if you do not wish to encrypt the data.
 
 ### Game server config
-The main [CVars](https://github.com/space-wizards/RobustToolbox/blob/40b10f0dccfe568ccd7dc3c6f6ee87a63bad97ee/Robust.Shared/CVars.cs#L409-L448) are located here (Note this is a permalink, more CVars may exist by the time this documention was written).
+The main [CVars](https://github.com/space-wizards/RobustToolbox/blob/40b10f0dccfe568ccd7dc3c6f6ee87a63bad97ee/Robust.Shared/CVars.cs#L409-L448) are located here (Note this is a permalink, more CVars may exist by the time this page was written).
 
 The main one to worry about is `transfer.http_endpoint`, this needs to point to the servers HTTP API (The thing with the `/status` and `/info` if you ever queried that). In most cases this will be the same value as `hub.server_url` but instead replacing `ss14://` with `http://` and `ss14s://` with `https://`.
 
@@ -35,7 +35,7 @@ http = true
 http_endpoint = "http://203.0.113.125:1212"
 ```
 
-If you are not using a reverse proxy... this should just work now! Try to (re)connect and see if you are sucessfully managing to connect!
+If you are not using a reverse proxy... this should just work now! Try to (re)connect and see if you are successfully managing to connect!
 
 If you are, keep reading.
 
@@ -49,7 +49,7 @@ If you are using something non standard look up how to reload its config in plac
 ```
 
 ### Nginx example
-Websockets in nginx require you to pass the `Upgrade` and `Connection` headers, we follow nginx's example config for websockets per their [documention](https://nginx.org/en/docs/http/websocket.html).
+WebSockets in nginx require you to pass the `Upgrade` and `Connection` headers, we follow nginx's example config for WebSockets per their [documentation](https://nginx.org/en/docs/http/websocket.html).
 
 ```
 http {
@@ -76,7 +76,7 @@ server {
 ### Caddy example
 Caddy should just automatically forward the right headers by just using the usual [`reverse_proxy` directive](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy).
 
-Although be careful, as reloading the config will close active websockets connections by default [(I am not sure why this is the default)](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#streaming) which will cause your players to get disconnected from the server, so we recommend setting `stream_timeout` and `stream_close_delay`.
+Although be careful, as reloading the config will close active WebSockets connections by default [(I am not sure why this is the default)](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy#streaming) which will cause your players to get disconnected from the server, so we recommend setting `stream_timeout` and `stream_close_delay`.
 
 ```
 example.com {
