@@ -357,6 +357,7 @@ Staff
   - [Triage Procedure](en/wizden-staff/maintainer/triage-procedure.md)
   - [Release Procedure](en/wizden-staff/release-procedure.md)
 - [Moderator](en/wizden-staff/moderator.md)
+  - [Moderation Policy](en/wizden-staff/moderator/moderator.md)
   - [New Moderator Guide](en/wizden-staff/moderator/new-mod-guide.md)
   - [Punishments](en/wizden-staff/moderator/punishments.md)
   - [Discord Appeals](en/wizden-staff/moderator/appeals.md)

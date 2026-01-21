@@ -18,7 +18,7 @@ Moderators have access to a variety of commands to help them moderate the server
 - `!unban <userID>`: Unbans a user from the server, This command should only be used if the person had an accepted ban appeal on the forums.
 
 
-- `!warn <userID> <reason> <points>`: Issues a warning to a user, this will send them a DM from the bot with the reason for the warning, if a user obtains five warnings, they get kicked from the discord, upon having 10 points, the user gets banned from the discord.
+- `!warn <userID> <reason> <points>`: Issues a warning to a user. This will send them a DM from the bot with the reason for the warning. If a user receives five warnings, they are kicked from Discord. Upon receiving 10 warnings, the user is banned from Discord.
 
 
 - `!kick <userID> <reason>`: Kicks a user from the server, the user may rejoin at any time.
@@ -46,7 +46,7 @@ Moderators have access to a variety of commands to help them moderate the server
 
 # Discourse
 
-As a moderator, you will have extra permission on discourse, but first to get those new permissions, you need to contact a head game admin or a head moderator to add you to the EN community moderator group on discourse. You will also need to contact PJB to get full moderator powers.
+As a moderator, you will have extra permission on discourse, but first to get those new permissions, you need to contact a head game admin or a head moderator to add you to the EN community moderator group on discourse. You will also need to contact PJB or a head game admin to get full moderator powers.
 
 Once you have full moderation powers, you will be able to view additional tabs, including internal and ban appeal discussions. You should not access players' information under any circumstances.
 
