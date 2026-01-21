@@ -12,7 +12,8 @@ Every moderator was new once, and we understand that it can be confusing at firs
 # Commands
 
 Moderators have access to a variety of commands to help them moderate the server, including:
--`!ban <userID> <reason>`: Bans a user from the server, will also send a message to them via DM from the bot, unless they do not accept DMs from non friends.
+
+- `!ban <userID> <reason>`: Bans a user from the server, will also send a message to them via DM from the bot, unless they do not accept DMs from non friends.
 
 
 - `!unban <userID>`: Unbans a user from the server. This command should only be used if the person has an accepted ban appeal on the forums.
