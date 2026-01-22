@@ -3,13 +3,11 @@
 This is the policy that all moderators are expected to follow when it comes to behavior and responsibilities.
 
 
-# Core Responsibilities
+## Core Responsibilities
 
 Outlines the responsibilities of a moderator.
 
-Examples:
-
-Enforcing community rules consistently
+- Enforcing community rules
 
 - Responding to reports made from community members
 
@@ -17,9 +15,9 @@ Enforcing community rules consistently
 
 - Stopping fights and de-escalating situations
 
-Representing the community in a professional manner
+- Representing the community in a professional manner
 
-# Code of Conduct
+## Code of Conduct
 
 This is the expected behavior of all moderators.
 
@@ -33,10 +31,10 @@ Examples:
 
 - Maintain professionalism, even during disagreements
 
-# Policy Violations
+## Policy Violations
 Members found in violation of this policy may face disciplinary action, and will be deferred to a Head Moderator.
 
-# Channel naming
+## Channel naming
 As a moderator, you have the ability to change the channel name of the general chat. There are some rules that follow that.
 
 - Always keep the world "general" in the channel name.
