@@ -2,6 +2,7 @@
 
 This is the policy that all moderators are expected to follow when it comes to behavior and responsibilities.
 
+This policy applies in addition to the [General Staff](../staff-policy.md) and [Conflict Resolution](../staff-conflict-resolution.md) Polices.
 
 ## Core Responsibilities
 
@@ -16,20 +17,6 @@ Outlines the responsibilities of a moderator.
 - Stopping fights and de-escalating situations
 
 - Representing the community in a professional manner
-
-## Code of Conduct
-
-This is the expected behavior of all moderators.
-
-Examples:
-
-- Treat all members with respect
-
-- Do not abuse moderation powers
-
-- Avoid arguments with community members.
-
-- Maintain professionalism, even during disagreements
 
 ## Policy Violations
 Members found in violation of this policy may face disciplinary action, and will be deferred to a Head Moderator.
