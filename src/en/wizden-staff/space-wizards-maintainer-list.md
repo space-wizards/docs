@@ -12,13 +12,21 @@ Lead Maintainers:
 - [VasilisThePikachu](https://github.com/VasilisThePikachu) - @vasilisiscool (322708417540259841)
 - [Simyon264](https://github.com/Simyon264) - @simyon (327840918482714626)
 
+UI Lead:
+- [sowelipililimute](https://github.com/sowelipililimute) - @janet (densetsu) (249987062084665344)
+
+
+Mapping Lead:
+- [ArtisticRoomba](https://github.com/ArtisticRoomba) - @artisticroomba (204036558448230400)
+- [Emisse](https://github.com/Emisse) - @emisse (109430489684705280)
+- [Spanky](https://github.com/spanky-spanky) - @spanky_spanky (194592576676954112)
+
 Both Engine and Content Maintainers:
 - [Mervill](https://github.com/Mervill) - @mervill (153632198845661184)
 - [ZoldorfTheWizard](https://github.com/ZoldorfTheWizard) - @zoldorf (140921734109855744)
 - [PJB3005](https://github.com/PJB3005) - @pjb (97089048065097728)
 - [ShadowCommander](https://github.com/ShadowCommander) - @shadowcommander (104693014407950336)
 - [DrSmugleaf](https://github.com/DrSmugleaf) - @drsmugleaf (109067752286715904)
-- [metalgearsloth](https://github.com/metalgearsloth) - @metalgearsloth (229052932476108800)
 - [Visne](https://github.com/Visne) - @visne (182723474257608705)
 - [keronshb](https://github.com/keronshb) - @keronshb (226429200553213952)
 - [AJCM-git](https://github.com/AJCM-git) - @ajcm_git (239467362380808192)
