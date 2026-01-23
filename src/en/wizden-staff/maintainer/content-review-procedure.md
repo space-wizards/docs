@@ -1,4 +1,4 @@
-# PR Review Procedure
+# Content PR Review Procedure
 
 ## Abstract
 This document outlines the Maintainer procedure for reviewing and merging PRs to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) `master` branch (otherwise known as the Content repository).
