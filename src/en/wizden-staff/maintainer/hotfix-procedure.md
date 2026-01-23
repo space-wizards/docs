@@ -4,7 +4,7 @@ Not following this procedure/policy will result in disciplinary action being tak
 ## Requirements
 - **Three Maintainers must *sign-off*** (Approval is required, reviewing is recommended but optional) on a hotfix PR for it to be merged.
 - The Hotfix procedure only applies to PRs being merged straight to "stable" or "staging". **When merging bugfixes to master, this procedure does NOT apply, use the normal PR procedure instead!**
-- All Hotfixes must adhere to the normal [PR Review Procedure](../maintainer/review-procedure.md) in addition to any requirements listed here.
+- All Hotfixes must adhere to the normal [PR Review Procedure](../maintainer/content-review-procedure.md) in addition to any requirements listed here.
 - Hotfixes must be given the "Hotfix" label during triage. They will also automatically receive a label indicating their branch.
 - Stable Hotfixes are for fixing bugs only, not for adding new content or minor balance adjustments. *If a balance issue is bad enough to majorly impact game quality, it should be considered a bug and is eligible for a hotfix. This is up to Maintainer judgment, but if you are unsure, it's recommended to create a discussion thread prefixed with "HOTFIX-PRNumber".
 - Hotfixes to Staging may include any changes that are deemed necessary for the upcoming release, but are otherwise still referred to as Hotfixes and follow these procedures.
