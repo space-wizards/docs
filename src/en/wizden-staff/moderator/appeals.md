@@ -1,6 +1,6 @@
 ﻿# Appeals
 
-Users who have been banned may appeal their ban on the forums. Appeals will be reviewed by the moderation team, and a decision will be made on whether to lift the ban or not.
+Users who have been banned may appeal their ban on the forums. Appeals will be reviewed by the moderation team, and a decision will be made on whether to lift the ban.
 
 Any member of the moderator group may handle a ban appeal, but appeals involving events that transpired in Russian channels should be handled by russian moderators.
 
@@ -12,10 +12,10 @@ This is the process for handling the appeal.
 
 1. Review the appeal, deny the appeal if it fits *any* of the following criteria:
     -   Appeal is clearly the output of an LLM such as ChatGPT,
-    -  or "Troll appeal" or very low effort appeal that does not address the ban,
-    -   or Appeal is made in bad faith, such as a user appealing multiple times for the same ban,
-    -  or The appeal is incomprehensible,
-    - or The appeal is for a different server other than WizDen,
+    - The appeal is a "troll appeal" or very low effort appeal that does not address the ban.
+    -   The Appeal is made in bad faith, such as a user appealing multiple times for the same ban.
+    -  The appeal is incomprehensible,
+    - The appeal is for a different server other than WizDen,
 2. Review the user's case history using `!listcases <userID>`
 3. Review the events that led to the ban, including any evidence provided by the user.
 4. At the moderator's discretion, they may hold a vote to get a team consensus.
@@ -24,6 +24,6 @@ This is the process for handling the appeal.
     - The decision on the appeal.
     - The reasoning for the decision.
     - The facts relied on for the outcome.
-    - If another appeal is made
+    - If another appeal is made.
     - If applicable, when the user can reappeal. 
 7. Implement the outcome

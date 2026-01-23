@@ -1,6 +1,6 @@
 ﻿# New Moderator Guide
 
-This document will attempt to explain the basics of being a moderator for Space Station 14.
+This document explains the basics of being a moderator on the official Space Station 14 Discord server.
 
 ## Getting started
 Welcome to the moderation team! As a moderator, you play a crucial role in maintaining a positive and welcoming environment for our community. This guide will help you get started with your new moderation powers and tooling.
@@ -13,16 +13,16 @@ Every moderator was new once, and we understand that it can be confusing at firs
 
 Moderators have access to a variety of commands to help them moderate the server, including:
 
-- `!ban <userID> <reason>`: Bans a user from the server, will also send a message to them via DM from the bot, unless they do not accept DMs from non friends.
+- `!ban <userID> <reason>`: Bans a user from the server. This command will also send a message to them via DM from the bot, unless they do not accept DMs from non-friends.
 
 
-- `!unban <userID>`: Unbans a user from the server. This command should only be used if the person has an accepted ban appeal on the forums.
+- `!unban <userID>`: Unbans a user from the server. This command should only be used if the person has an accepted ban appeal on the forums or if the ban was a mistake.
 
 
-- `!warn <userID> <reason> <points>`: Issues a warning to a user. This will send them a DM from the bot with the reason for the warning. If a user receives 5 warnings, they are kicked from Discord. Upon receiving 10 warnings, the user is banned from Discord.
+- `!warn <userID> <reason> <points>`: Issues a warning to a user. This will send them a DM from the bot with the reason for the warning. If a user receives five warnings, they are kicked from Discord. Upon receiving ten warnings, the user is banned from the Discord server.
 
 
-- `!kick <userID> <reason>`: Kicks a user from the server, the user may rejoin at any time.
+- `!kick <userID> <reason>`: Kicks a user from the server; the user may rejoin at any time.
 
 
 - `!mute <userID> <time> <reason>`: Gives the user the muted role, preventing them from sending messages in all channels.
@@ -31,7 +31,7 @@ Moderators have access to a variety of commands to help them moderate the server
 - `!unmute <userID>`: Removes the muted role from a user.
 
 
-- `!modnote <userID> <note>` !mnote also works for this command. Issue a note to that person's account. This is only visible to other moderators, and it is good for keeping track of special circumstances with users.
+- `!modnote <userID> <note>` !mnote also works for this command. Issue a note to that person's account. This is only visible to other moderators and is useful for tracking special circumstances with users.
 
 
 - `!listcases <userID>`: Lists all cases for a user, mutes, warns, notes, and bans. This is a very helpful command and should be used before taking any action on a user.

@@ -19,11 +19,11 @@ Outlines the responsibilities of a moderator.
 - Representing the community in a professional manner
 
 ## Policy Violations
-Members found in violation of this policy may face disciplinary action, and will be deferred to a Head Moderator.
+Members found in violation of this policy may face disciplinary action, and will be deferred to a head moderator.
 
 ## Channel naming
 As a moderator, you have the ability to change the channel name of the general chat. There are some rules that follow that.
 
-- Always keep the world "general" in the channel name.
+- Always keep the word "general" in the channel name.
 - Do not put names of community members in the channel name.
 - Keep it appropriate and respectful.
