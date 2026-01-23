@@ -13,13 +13,20 @@ Lead Maintainers:
 - [Simyon264](https://github.com/Simyon264) - @simyon (327840918482714626)
 
 UI Lead:
+- [Simyon264](https://github.com/Simyon264) - @simyon (327840918482714626)
 - [sowelipililimute](https://github.com/sowelipililimute) - @janet (densetsu) (249987062084665344)
+- [PJB3005](https://github.com/PJB3005) - @pjb (97089048065097728)
 
+Art Lead:
+- [brainfood1183](https://github.com/brainfood1183) - @brainfood. (286992402974113793)
+- [Emisse](https://github.com/Emisse) - @emisse (109430489684705280)
+- [PJB3005](https://github.com/PJB3005) - @pjb (97089048065097728)
+- [TiniestShark](https://github.com/TiniestShark) - @obscenelytinyshark (291332093395337216)
 
 Mapping Lead:
 - [ArtisticRoomba](https://github.com/ArtisticRoomba) - @artisticroomba (204036558448230400)
 - [Emisse](https://github.com/Emisse) - @emisse (109430489684705280)
-- [Spanky](https://github.com/spanky-spanky) - @spanky_spanky (194592576676954112)
+- [spanky-spanky](https://github.com/spanky-spanky) - @spanky_spanky (194592576676954112)
 
 Both Engine and Content Maintainers:
 - [Mervill](https://github.com/Mervill) - @mervill (153632198845661184)
@@ -60,6 +67,7 @@ Content Maintainers:
 - [Princess-Cheeseballs](https://github.com/Princess-Cheeseballs) - @princesscheeseballs (122847949205143553)
 - [sowelipililimute](https://github.com/sowelipililimute) - @janet (densetsu) (249987062084665344)
 - [iaada](https://github.com/iaada) - @aa.da (208069537310965760)
+- [spanky-spanky](https://github.com/spanky-spanky) - @spanky_spanky (194592576676954112)
 
 Engine maintainers:
 No one maintains only engine :p
