@@ -70,36 +70,34 @@ In addition to their own specialized gear, there are several items present in al
 
 ### Vending Machines
 
-Vending machines are the main source of optional and expendable equipment for departments, and a common source of generic equipment in public spaces. Vending machines are consistent, simple, and well-known locations for sets of items. Their limited stock creates resource scarcity, but their resources are never truly scarce with a restock from Cargo.
+Vending machines in SS14 are the most straightforward source of items in game. They have a mostly consistent stock, and their consistent location in maps makes them a well-known, first choice place for gear. This availability helps players to better plan out their activities, their thefts, and their jokes, with the limited amounts ensuring they never act as a gurantee and trivialize resource gathering. From a learning perspective there's a small hump on understanding how widespread vending machines are placed, but afterward act as an intuitive "starter pack" for important items. Overall they ensure a simple solution to putting certain items in the hands of players that fit certain themes.
 
-Each full department contains (at least) two (2) vending machines responsible for restocking players and providing extra supplies. The wardrobe (or "Drobe") consists of clothing, while the second supplies non-clothing. Together they should supply  exactly two naked players with all their necessary gear (two complete sets of essential equipment and uniforms).
+Every vending machine should have a clear identity that can be summarized in twoish words (its name). The items inside should never be exclusive and should trend towards core and introductory mechanics rather than deep and complex ones. Roleplay and "useless" items are encouraged when they fit the theme. The stock should supply no more than 4 (four) players, with less supply inside machines with more specific accesses, and more supply for items that are expendable. A full set of department vending machines should be capable of gearing exactly two naked players with all the essential equipment, and a uniform. It should _always_ be possible to restock a vending machine through cargo.
 
-#### Department Tool Vendor
+#### Tool Vendors
 
-Department tool vendors contain (in order) two (2) full sets of essential equipment, followed by additional expendable equipment, then optional equipment. They should never have generic equipment. Non-essential items should be stocked to supply roughly four (4) players. Clothing items typically belong in the wardrobe, but a few exceptions exist:
+Tool vending machines are one of the most common types, typcially themed to specific departments. They provide a variety of essential and optional tools for performing a role, acting as both an entry point for new hires and a shared stock of expendables for departments. The ordering of items goes: `Essential -> Expendable -> Optional -> Roleplay`.  Clothing items typically belong in the wardrobe, but a few exceptions exist:
 
  - Filled Container Clothing
   - - This typically means belts. While the belt itself is a clothing item, the items inside it are not and should not be available inside a wardrobe.
  - Worn items that aren't clothing
- - - Items like whistles or a backpack water tank. While they can be worn, they aren't "clothing" in a visual sense. They are more tool than garb.
+ - - Items like whistles or a backpack water tank. While they can be worn, they aren't "clothing" in an intuitive sense.
  - Clothing not worn by the player themselves
  - - These are things like a muzzle or a hospital gown. They're akin to tools in how they are used on others, rather than used for yourself.
 
-#### Department Clothing Vendor
+#### Clothing Vendors
 
-Department clothing vendors (typically called "Drobes") should spawn with two (2) sets of any essential clothing not present in a tool vendor and two (2) sets of optional clothing. Stock should be split for items that are effectively identical (such as headset or jumpsuit variants). Clothes should reflect the standard uniform and aesthetics of a department employee and include anything available in a loadout (excluding prestige rewards). Every item in a Drobe must be equippable. The order of clothing in a Drobe should have essential equipment listed first, followed by: `Head -> Eyes -> Mask -> Ears -> Back -> Belt -> InnerClothing -> OuterClothing -> Neck -> Gloves -> Feet`.
+Wardrobes (or "drobes") are another common vendor themed around clothing. They allow players the ability to quickly change their look to the drobe's theme, and can include function (and even powerful) clothing. Like any vending machine they should stick to their theme; Every item in a Drobe must be equippable and be intuitively thought of as clothes. The order of clothing in a Drobe should have essential role equipment listed first, followed by: `Head -> Eyes -> Mask -> Ears -> Back -> Belt -> InnerClothing -> OuterClothing -> Neck -> Gloves -> Feet`.
 
-#### Combined Vendors
+#### Other Vendors
 
-Certain individual roles on the station have a dedicated vending machine due to some specific nature of that role. Unlike other vendors these only need enough stock to supply one player of essential equipment and clothing. If they contain any non-clothing items, they should not use "Drobe" as part of their name.
-
-Sometimes there's so little non-essential equipment for a role that even a combined vending machine is overkill. In these cases (like with command), optional equipment is mapped near their spawn such as clothes in a dresser.
+Vending machines can come in many forms as long the the theme is strong and the purpose is clear. A specialized role could have a dedicated machine to provide its tools and clothes at once, or a soda machine could be used to address crew thirst. A marijuana vendor in maintenance could inspire a drug dealer, or skip the middle man and get your sick kicks from the tobacco vendor. Not every vending machine is guranteed to be mapped so consider themes that can be connected to a physical location such as a business, or enable an atypical job that encourage a player to interact with others in an interesting way. 
 
 #### Contraband Inventory
 
-In addition to their normal stock every vending machine can be hacked to reveal extra "contraband" items. While not necessarily illegal they are generally more dangerous, or in some cases outright useless. Items in this list should still thematically belong alongside other items in the vendor, but should also have a small contradiction; Cow tools _are_ tools but also obviously _not_ the kind of tools you expect in a tool vendor. Poisoned wine belongs in a booze machine, but also doesn't.
+In addition to their normal stock every vending machine can be hacked to reveal extra "contraband" items. While not necessarily illegal they are sometimes dangerous, but typically useless and jokes. Items in this list should still thematically belong alongside other items in the vendor, but should also contain a small contradiction. Cow tools _are_ tools but obviously not _useful_ tools. Poisoned wine belongs with booze, but also doesn't belong in a "safe" inventory.
 
-Vending machines are also capable of having a set of items accessed by using a cryptographic sequencer (EMAG) on them. Items in an emagged inventory should be explicitly themed around the Syndicate, and should not be particularly useful. Emag inventories are meant as fun easter eggs and not as a source of restocking your resources.
+Vending machines are also capable of having a set of items accessed by using a cryptographic sequencer (EMAG) on them. Items in an emagged inventory should be explicitly themed around the Syndicate and should not be particularly useful. Emag inventories are meant as low consequence disruption and anti-Nanotrasen roleplay, not as a source of restocking meaningful resources.
 
 ### Lathes
 
