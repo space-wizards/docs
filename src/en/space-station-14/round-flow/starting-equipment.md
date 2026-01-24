@@ -48,9 +48,7 @@ Players should **not** spawn with job-essential equipment. This includes essenti
 
 #### Role Time Unlocks
 
-Also called prestige awards, these loadout options are earned from playing a certain amount of time. These items are bragging rights and a reward for being dedicated to your favorite job. Role time unlocks are allowed to be an iconic job tool (like a golden plunger), but they should never be particularly powerful (like a silver RCD).
-
-Care needs to be taken that the time asked for these unlocks is not excessive; We don't want to encourage players to hurt themselves by playing too much. Sixty (60) hours is the upper limit of an acceptable role time, and five hundred (500) hours is the upper limit for overall playtime (but should not be used extensively).
+Under discussion.
 
 ### Lockers
 
