@@ -48,17 +48,21 @@ A new organ, 'Lymph Nodes,' will be responsible for metabolising antiserum.
 
 ### Diagnosis and Treatment
 
-The first step in diagnosis is simply observing and talking to patients to start to build a profile of the disease. Swab samples can be taken from patients and from objects and surfaces that are suspected of harboring diseases; the Disease Diagnoser Delta Extreme will take a swab sample and reveal if there is a disease present in the sample, and if so, whether it is viral or bacterial, but at this stage, that's the only thing it will reveal. Virologists will have to determine how severe the disease is the hard way.
+The first step in diagnosis is simply observing and talking to patients to start to build a profile of the disease. Swab samples can be taken from patients and from objects and surfaces that are suspected of harboring diseases; the Disease Diagnoser Delta Extreme will take a swab sample and reveal if there is a disease present in the sample, and if so, whether it is viral or bacterial.
 
 Bacterial diseases are straightforward: Chemistry will have three new reagents they can produce which serve as antibacterials. These will be roughly equivalent to each other - the main difference is that a bacterial infection can build up resistances to them, so for a particularly severe bacterial disease with a high mutation rate, it may be necessary to switch antibacterials. Antibacterials will attack the bacterial load in the patient's bloodstream just like antiserum.
 
 In the case of bacterial diseases, virologists might still be responsible for helping to track down the source of the disease and eliminate it, possibly with some janitorial assistance for those hard-to-clean surfaces.
 
-Viral diseases are more complicated. The virologists will need to piece together the virus's genetic sequence as best they can. The most effective way to do this will involve some legwork and detective skills: Tracking down contaminated individuals, objects, and surfaces, and taking lots and lots of swab samples. Each sample will have fragments of the virus's entire genome. These fragments will also be increasingly garbled based on how many steps they are removed from the original source. Virologists can also take blood samples, but these will have to have the person's own DNA factored out before they reveal anything about the virus. Blood samples have to be put in test tubes and centrifuged before they're useful.
+Viral diseases are more complicated. The virologists will need to piece together the virus's genetic sequence as best they can. The most effective way to do this will involve some legwork and detective skills: Tracking down contaminated individuals, objects, and surfaces, and taking lots and lots of swab samples. Each sample will have fragments of the virus's entire genome. To reveal these fragments, the sample must be run through a new machine: The gene sequencer. This will take a little while - maybe 30 seconds to a minute - to sequence the DNA from the sample, though multiple samples can be queued up and run in parallel. (The delay introduces downtime in the virology lab, incentivising virologists to go out into the station and gather more samples and information about the disease's spread.) The gene sequencer, when finished, will print its results out onto a slip of paper. The sequenced DNA, however, will take the form of a set of chopped-up, unordered segments of varying length and completeness. Older samples will have shorter segments, fewer segments, and a higher likelihood of having unreadable or incorrect nucleotides.
 
-Virologists don't need to figure out the whole genome of the virus before they can start to produce treatment, but the closer their sequence is to the correct sequence, the more effective it will be. If the treatment sequence is too far off, it will either be ineffective, or downright harmful. They can also produce vaccines based on shorter fragments of DNA. These won't help patients who are already infected, but will prompt uninfected patients to start producing antiserum. The effectiveness of the vaccine is based both on how well it matches the viral DNA, and how long a sequence it uses; a vaccine based on, say, "A" would match pretty much any virus, but would be basically useless.
+The paper slip from the sequencer is inserted into the DDDE, which will help the virologist organize the information they have and offer some information about what the fragments actually do within the virus (see below.)
 
-Virology equipment will be able to produce test treatments, but only slowly. When a test treatment is determined to be effective, it can be sent to Chemistry for mass-production.
+If the sample comes from a patient's blood, it will also have pieces of the patient's own DNA (the same code used by detectives) mixed in with the viral DNA. Virologists will have to sort out which fragments come from which source. Blood, incidentally, must be centrifuged and separated into components, one of which will contain the DNA sample.
+
+Virologists don't need to figure out the whole genome of the virus before they can start to produce treatment, but the closer their sequence is to the correct sequence, the more effective it will be. If the treatment sequence is too far off, it will either be ineffective, or downright harmful. They can also produce vaccines based on shorter fragments of DNA. The effectiveness of the vaccine is based both on how well it matches the viral DNA, and how long a sequence it uses; a vaccine based on, say, "A" would match pretty much any virus, but would be basically useless. Vaccines of course won't help patients who are already infected, but will prompt uninfected patients to start producing antiserum.
+
+Once the virologist has a promising sequence, they can take it to the vaccine generator, which will produce a small quantity of test vaccine. When a test treatment is determined to be effective, it can be sent to Chemistry for mass-production.
 
 In addition to the DDDE, petri dishes will be available. A petri dish can be swabbed, and any bacteria present on the swab will be loaded into the petri dish. Once enough time has passed, the petri dish will reveal the presence, amount, and number of different types of bacteria that have grown in it. Reagents can also be added to a petri dish to observe their effects on the bacteria - this is one way to check if bacteria have developed resistence to a given antibiotic. Petri dishes should be supplied to Virology, and possibly also Chemistry. 
 
@@ -76,7 +80,7 @@ Viruses, however, can cause more problems.
 
 First of all, as viruses mutate, they will drift from the original virus's genetic code, making treatment less effective. Second, as the code mutates, the disease's symptoms and stats will also change. At worst, this can introduce new, more harmful symptoms. For more serious diseases, virologists will have to act fast and continue gathering samples to stay ahead of mutations. Treatment based on the original genome will still tend to be most effective overall, since it will best match the widest range of possible mutations, but as a disease spreads, that initial genome will become less and less relevant.
 
-This also affects antiserum! A rapidly-mutating virus might overwhelm the victim's immune system to the point where the antiserum they've accumulated becomes useless.
+This also affects antiserum! A rapidly-mutating virus's genome might drift from what the victim's immune system is trying to fight to the point where the antiserum they've accumulated becomes useless.
 
 
 ### Virology as a Role
@@ -114,7 +118,7 @@ Of course, players won't see the tags and modifiers directly. They'll see an app
 
 That task isn't as impossible as it sounds, though, because they'll have some tools to help them. But before those tools are of any use, they'll need to collect samples; nobody can sit around in a closed-off virology office and do all the work without interacting with anyone else. Once samples are acquired, the samples have to be sequenced in a gene sequencer, and then fed into the DDDE. (So far, this is identical to the process of developing a vaccine.)
 
-The sequenced DNA will have been chopped into shorter fragments, however, and won't represent a complete virus genome. The DDDE can parse each fragment and explain what it does, though incomplete fragments might not be parseable, or might be interpreted differently from the gene's representation in a virus's complete genome.
+The sequenced DNA, as previously mentioned, will have been chopped into shorter fragments, and won't represent a complete virus genome. The DDDE can parse each fragment and explain what it does, though incomplete fragments might not be parseable, or might be interpreted differently from the gene's representation in a virus's complete genome.
 
 For the sake of creating a vaccine, the virologist's only goal here will be to piece together fragments into a complete and accurate genome, or as close to one as they can get. Engineering gets more complicated - but it's essentially the same process, except instead of trying to match a particular genome, the virologist is trying to create a new one based on the fragments they've been able to find and whatever guesswork can fill in the gaps. It's unlikely that whatever exact mix of symptoms and severities they're hoping for will show up directly in the samples they take, so they'll have to figure out what they can do with the fragments they do have.
 
@@ -179,9 +183,7 @@ Diseases start out small and weak, then escalate through spread and mutation. A 
 
 ## Administrative & Server Rule Impact
 
-There is some potential for griefing in the form of players deliberately trying to infect others. This is ameliorated in part by the fact that players potentially making bad decision about whether to get something looked at is deliberately part of the disease's challenge - a griefer and an irresponsible character don't look all that dissimilar in practice. Combined with the fact that disease sources are rare, unpredictable and invisible, I think the potential for serious griefing is low.
-
-This might change if bioengineering new diseases is added - but see the note above on that subject.
+There is some potential for griefing in the form of players deliberately trying to infect others. This is ameliorated in part by the fact that players potentially making bad decision about whether to get something looked at is deliberately part of the disease's challenge - a griefer and an irresponsible character don't look all that dissimilar in practice. Combined with the fact that disease sources are rare, unpredictable and invisible, and deliberate bioengineeering is difficult and slow, I think the potential for serious griefing is low.
 
 
 # Technical Considerations
