@@ -70,6 +70,12 @@ Petri dishes can break, spilling their bacterial load onto the ground. They will
 
 Viruses will not interact with petri dishes.
 
+### Recordkeeping
+
+The vaccinator machine will automatically log all created vaccines to the medical records computer's database - something a would-be bioengineer will have to keep in mind if they're trying to be underhanded. Virologists can then use the computer to associate vaccines with patients they've been used on, similar to how the criminal records computer can be used to set crewmembers to wanted and so forth.
+
+Virologists should also be well-equipped with labelers, on top of which, swabs and petri dishes can have paper applied to them as labels similarly to how crates and lockers can.
+
 ### Mutation
 
 Mutation rate is one of the things that can make a disease more dangerous.
