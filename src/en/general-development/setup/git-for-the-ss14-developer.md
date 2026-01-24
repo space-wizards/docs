@@ -8,6 +8,8 @@ Here are some more resources for learning about Git:
 - [Oh shit, Git?!](https://ohshitgit.com/), a list of solutions to common git problems. This one will come in handy.
 - [Learn Git Branching](https://learngitbranching.js.org/). This one is interactive, and very in-depth, but you **will have learned Git by the end of it**. Recommended for intermediate Git users.
 
+You may also always ask for help in the official [Wizard's Den discord](https://discord.spacestation14.io) or the [fork agnostic developer bus discord](https://discord.gg/X3YCdGHpgF)
+
 ## 1. Setting up Git itself
 
 ```admonish danger "DO NOT USE GITKRAKEN"
@@ -28,11 +30,15 @@ I won't have steps for these (I'm recommending these after I initially wrote thi
 - [Fork](https://git-fork.com/) -- fast and extremely ergonomic GUI, my personal favorite. "Non-free", but it's WinRAR-level non-free, so it's basically free. Has support for partial staging of
 - [Sublime Merge](https://www.sublimemerge.com/) -- very similar to Fork, looks and feels great and I've gotten a lot of recommendations for it, though I haven't used it much. Also has support for partial staging.
 
-Most IDEs have some form of Git integration aswell. [Jetbrains Rider](https://www.jetbrains.com/rider/)'s Git integration is really good (and I personally recommend Rider for everything SS14-development related). I don't recommend Visual Studio's Git integration, because it's.. not very good.
+Most IDEs have some form of Git integration as well. [JetBrains Rider](https://www.jetbrains.com/rider/)'s Git integration is really good (and I personally recommend Rider for everything SS14-development related). I don't recommend Visual Studio's Git integration, because it's.. not very good.
 
 While you're here, install `Python 3.7+` as well if you don't have it already. You can do that [here](https://www.python.org/) for Windows and Mac, and if you're on Linux you almost certainly have Python installed already. If you don't, figure it out yourself, dork!
 
 <hr>
+
+```admonish danger "Name and Email privacy"
+When [setting up your `user.name` and `user.email`](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity), know that these are publicly displayed on all commits that you create. If you want to keep your information private, you can set `user.name` to your username instead of your real name, and `user.email` to the one provided by GitHub when the [`Keep my email addresses private`](https://github.com/settings/emails#toggle_visibility) setting is checked in [GitHub Email Settings](https://github.com/settings/emails#primary_email_select_label).
+```
 
 Now that you have Git installed, I recommend you read up a bit on the basics of it first and get acquainted with whatever git client you're working with, whether its just command-line (Git Bash) or anything else.
 
@@ -58,7 +64,7 @@ Your remote repository doesn't automatically update with changes from the origin
 
 Navigate to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14) and click here:
 
-![](https://i.imgur.com/lAHNHdD.png)
+![forking.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/forking.png)
 
 From there, it'll ask you where to fork it and what to name it--just to your regular account, and name it whatever you please! I'd stick with `space-station-14` if you just want to help out with development, though.
 
@@ -75,7 +81,7 @@ Navigate to somewhere on your computer where you want to put the local repositor
 
 Right click to see TortoiseGit's context menu stuff:
 
-![](https://i.imgur.com/QGmrQmH.png)
+![tgcm.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgcm.png)
 
 </p>
 </details>
@@ -85,7 +91,7 @@ Right click to see TortoiseGit's context menu stuff:
 
 Open up SmartGit and navigate to the desired location, then:
 
-![](https://i.imgur.com/C3JBYR6.png)
+![sgclone.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgclone.png)
 
 </p>
 </details>
@@ -95,7 +101,7 @@ Open up SmartGit and navigate to the desired location, then:
 
 Right click:
 
-![](https://i.imgur.com/kIYnm16.png)
+![gbclone.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbclone.png)
 
 </p>
 </details>
@@ -107,8 +113,8 @@ Then, we'll enter the command for cloning **our** remote repository--not the `sp
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/3HzCnjm.png)
-![](https://i.imgur.com/a7vhKcC.png)
+![tgclone1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgclone1.png)
+![tgclone2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgclone2.png)
 
 
 </p>
@@ -117,7 +123,7 @@ Then, we'll enter the command for cloning **our** remote repository--not the `sp
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/YyJm5fx.png)
+![sgclone1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgclone1.png)
 
 
 </p>
@@ -126,12 +132,12 @@ Then, we'll enter the command for cloning **our** remote repository--not the `sp
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/Xn4AQLf.png)
+![gbclone1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbclone1.png)
 
 Then **c**hange **d**irectory using:
 ``cd space-station-14`` 
 
-(This may be diffrent if you cloned another fork, it's almost always being the same as the repository name)
+(This may be different if you cloned another fork, it's almost always being the same as the repository name)
 
 Every Git command will look something like this--`git` and then a keyword like `add`, `commit`, `pull`, etc.
 
@@ -169,8 +175,8 @@ One issue: we don't have a reference to the original `space-wizards/space-statio
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/yANaYWI.png)
-![](https://i.imgur.com/cjbhMEN.png)
+![tgremote1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgremote1.png)
+![tgremote2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgremote2.png)
 
 
 </p>
@@ -179,8 +185,8 @@ One issue: we don't have a reference to the original `space-wizards/space-statio
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/LXCpgVo.png)
-![](https://i.imgur.com/ZHIHPJC.png)
+![sgremote1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgremote1.png)
+![sgremote2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgremote2.png)
 
 
 </p>
@@ -189,7 +195,7 @@ One issue: we don't have a reference to the original `space-wizards/space-statio
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/00ETpii.png)
+![gbremote.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbremote.png)
 
 </p>
 </details>
@@ -201,6 +207,10 @@ All this does is add a new remote named `upstream` that points to the original `
 The convention is to call the remote pointing to the original repository `upstream` but you can technically call it whatever you like. I'll be referring to it as 'the upstream', though, and it's terminology Git guides use as well.
 
 **Addendum for fork/downstream developers:** If a downstream repository you wish to contribute to is set up as a direct fork (IE: GitHub shows a "forked from" label underneath the repo's name), then you'll additionally want to add that fork as a remote (but if the fork isn't set up that way, you can ignore this). You can do this in a way similar to how you've added the upstream as a remote (just use the fork's GitHub link as the remote URL), but be sure to substitute the remote name of `upstream` with any name you deem appropriate. Your own fork does not have to be a fork of the downstream's fork for this; all that matters is that the commit history in the individual branches you push to your own remote line up with the commit history of wherever you're intending to PR your changes to.
+
+```admonish warning title="Before working on your first PR to the space-wizards repo"
+Please make sure you read through the [Freezes & Restrictions](https://github.com/space-wizards/space-station-14/issues/8524) and ensure your idea does not fall into the freezes or if your PR requires some prerequisite before being made. 
+```
 
 ## 4. Branching & Commits
 
@@ -214,7 +224,7 @@ Commits have an author, timestamp, a message, and some code changes attached to 
 
 Commits are how history is built up--you can actually view the history of every single commit made to the SS14 repository from the beginning, which is pretty cool:
 
-![](https://i.imgur.com/HQDdw6h.png)
+![commitexample.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/commitexample.png)
 
 (done with `git log --reverse`)
 
@@ -228,7 +238,7 @@ Generally, branches are named for whatever you're going to be working on in them
 
 You can make as many branches as you like. When you create a branch, it 'branches out' (no shit, really?) from the current branch you're on and becomes its own independent thing you can add commits to. 
 
-![](https://i.imgur.com/ByMugxu.png=500x300)
+![branchexample.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/branchexample.png)
 
 In this diagram, each little node is a different commit, and each color is a different branch.
 
@@ -242,8 +252,8 @@ GitHub pull requests are really a 'merge request'--you're saying that you want t
 
 Pull requests show all this info very well:
 
-![](https://i.imgur.com/YAOWX5R.png)
-![](https://i.imgur.com/nWWy3J4.png)
+![pullrequestexample1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/pullrequestexample1.png)
+![pullrequestexample2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/pullrequestexample2.png)
 
 In this pull request, Swept started out by creating a new branch. Since he now had a fresh branch free of interference to work with, he started working on the feature and created commits to 'save his progress' whenever he felt it was necessary. These commits were added to the branch sequentially, and you can see the evolution of the branch as more code was written. We'll talk more about pull requests later.
 
@@ -260,8 +270,8 @@ Making branches is pretty easy. Let's make a new branch called `funny-feature`:
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/OGkblCk.png)
-![](https://i.imgur.com/ZPfzFcm.png)
+![tgbranch1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgbranch1.png)
+![tgbranch2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgbranch2.png)
 
 </p>
 </details>
@@ -269,8 +279,8 @@ Making branches is pretty easy. Let's make a new branch called `funny-feature`:
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/pK1oyfz.png)
-![](https://i.imgur.com/5MZ6Ocv.png)
+![sgbranch1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgbranch1.png)
+![sgbranch2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgbranch2.png)
 
 </p>
 </details>
@@ -278,7 +288,7 @@ Making branches is pretty easy. Let's make a new branch called `funny-feature`:
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/kOc9rfe.png)
+![gbbranch.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbbranch.png)
 
 You may notice that the bit in parentheses (master) changed to (funny-feature)! Incredible!
 
@@ -298,7 +308,7 @@ Checking out a branch:
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/UThKrCK.png)
+![tgco.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgco.png)
 
 </p>
 </details>
@@ -306,7 +316,7 @@ Checking out a branch:
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/fzC1pVm.png)
+![sgco.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgco.png)
 
 </p>
 </details>
@@ -314,7 +324,7 @@ Checking out a branch:
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/DqWEdY5.png)
+![gbco.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbco.png)
 
 </p>
 </details>
@@ -334,7 +344,7 @@ If you want to see what you've currently changed, and what's in the staging area
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/xmZKKWJ.png)
+![tgsacc.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgsacc.png)
 
 TortoiseGit also shows changed files/folders (a red icon in the bottom right) in the Windows Explorer which is really nice and why I have it installed in the first place.
 
@@ -344,7 +354,7 @@ TortoiseGit also shows changed files/folders (a red icon in the bottom right) in
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/ROsurs1.png)
+![sgsacc.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgsacc.png)
 
 This is assuming you installed SmartGit with the option that the main window shows diffs and status. If you didn't, I don't really know where it is.
 
@@ -354,7 +364,7 @@ This is assuming you installed SmartGit with the option that the main window sho
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/UeMjAHj.png)
+![gbsacc.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbsacc.png)
 
 </p>
 </details>
@@ -366,8 +376,8 @@ Now that you've verified that all of these changes look good, we'll add them to 
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/ltIASro.png)
-![](https://i.imgur.com/BIa9r6c.png)
+![tgstaging1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgstaging1.png)
+![tgstaging2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgstaging2.png)
 
 </p>
 </details>
@@ -375,8 +385,8 @@ Now that you've verified that all of these changes look good, we'll add them to 
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/RYUL7u3.png)
-![](https://i.imgur.com/Du7HqRV.png)
+![sgstaging1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgstaging1.png)
+![sgstaging2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgstaging2.png)
 
 </p>
 </details>
@@ -384,7 +394,7 @@ Now that you've verified that all of these changes look good, we'll add them to 
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/mpKk5L1.png)
+![gbstaging.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbstaging.png)
 
 </p>
 </details>
@@ -408,8 +418,8 @@ Pushing our branch to our remote repository (origin):
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/bWS5Kdk.png)
-![](https://i.imgur.com/Irv1e5k.png)
+![tgpushing1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgpushing1.png)
+![tgpushing2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgpushing2.png)
 
 Selecting 'push all branches' does what it says on the tin. Can be useful.
 
@@ -419,8 +429,8 @@ Selecting 'push all branches' does what it says on the tin. Can be useful.
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/s82VnNn.png)
-![](https://i.imgur.com/VP8PuCq.png)
+![sgpushing1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgpushing1.png)
+![sgpushing2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgpushing2.png)
 
 </p>
 </details>
@@ -428,7 +438,7 @@ Selecting 'push all branches' does what it says on the tin. Can be useful.
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/7FJqzkL.png)
+![gbpushing.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbpushing.png)
 
 </p>
 </details>
@@ -437,7 +447,7 @@ Selecting 'push all branches' does what it says on the tin. Can be useful.
 
 Now, the fun part. We'll go to GitHub now and make a pull request for our funny feature.
 
-![](https://i.imgur.com/YNmEMtG.png)
+![makingapullrequest.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/makingapullrequest.png)
 
 Add a description, a nice title, some screenshots, and hopefully it gets merged.
 
@@ -461,8 +471,8 @@ First, let's fetch from our `upstream` remote. It'll take a little bit to comple
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/3cWun8b.png)
-![](https://i.imgur.com/XGgXRY0.png)
+![tgsm1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgsm1.png)
+![tgsm2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgsm2.png)
 
 Make sure you select `upstream` and not origin!
 
@@ -472,13 +482,13 @@ Make sure you select `upstream` and not origin!
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/CNFFJJ8.png)
+![sgsm1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgsm1.png)
 
 I think smartgit fetches from all remotes when you click this?????
 
 If it doesn't and it just fetches from origin, go to the bottom left and do this:
 
-![](https://i.imgur.com/8rF0tz5.png)
+![sgsm2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgsm2.png)
 
 </p>
 </details>
@@ -486,7 +496,7 @@ If it doesn't and it just fetches from origin, go to the bottom left and do this
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/aJvW9PX.png)
+![gbsm.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbsm.png)
 
 Here nothing happened because I just fetched, but it'll take a while.
 
@@ -502,8 +512,8 @@ Check out the branch you want to merge to. Then,
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/8lUaEFt.png)
-![](https://i.imgur.com/7BvBPYY.png)
+![tgm1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgm1.png)
+![tgm2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgm2.png)
 
 </p>
 </details>
@@ -511,8 +521,8 @@ Check out the branch you want to merge to. Then,
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/n8cc2DN.png)
-![](https://i.imgur.com/aRSawAo.png)
+![sgm1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgm1.png)
+![sgm2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgm2.png)
 
 </p>
 </details>
@@ -520,7 +530,7 @@ Check out the branch you want to merge to. Then,
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/H2L8pOp.png)
+![gbm.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbm.png)
 
 You can also `git merge upstream/master [branch-to-merge-to]
 
@@ -540,8 +550,8 @@ First, checkout your `master` branch. We covered this earlier. Then,
 <details><summary>TortoiseGit</summary>
 <p>
 
-![](https://i.imgur.com/XMUt6cv.png)
-![](https://i.imgur.com/NHVlZ4W.png)
+![tgpm1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgpm1.png)
+![tgpm2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/tgpm2.png)
 
 </p>
 </details>
@@ -549,9 +559,9 @@ First, checkout your `master` branch. We covered this earlier. Then,
 <details><summary>SmartGit</summary>
 <p>
 
-![](https://i.imgur.com/ANqpcph.png)
-![](https://i.imgur.com/kvv058A.png)
-![](https://i.imgur.com/k0scDB8.png)
+![sgpm1.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgpm1.png)
+![sgpm2.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgpm2.png)
+![sgpm3.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/sgpm3.png)
 
 </p>
 </details>
@@ -559,7 +569,7 @@ First, checkout your `master` branch. We covered this earlier. Then,
 <details><summary>Git Bash</summary>
 <p>
 
-![](https://i.imgur.com/OfHut9Y.png)
+![gbpm.png](../../assets/images/general-development/setup/git-for-the-ss14-developer/gbpm.png)
 
 </p>
 </details>

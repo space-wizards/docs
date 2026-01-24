@@ -23,8 +23,13 @@ Any text written in the bounds of the tag will be displayed plainly on the guide
 To alleviate my oncoming death, consider using the (small) variety of markdown tags that are supported:
 - `#` creates a title
 - `##` creates a heading
+- `###` creates a sub-heading
 - `-` creates a list entry
-- `[color=hex][/color]` colors the text inside the tags with the specified hex color.
+- `\n` creates a line break
+- `[color=hex or name][/color]` colors the text inside the tags with a specified hex color or one of 145 [presets](https://github.com/space-wizards/RobustToolbox/blob/f49b01b1b766458f61a38506dd3e2fa7525f5e6b/Robust.Shared.Maths/Color.cs#L1749)
+- `[bold][/bold]` applies bold formatting
+- `[italic][/italic]` applies italic formatting
+- `[bolditalic][/bolditalic]` applies bold italic formatting (otherwise bold and italic override each other)
 
 ### Example
 Here is an example guidebook entry, `magboots.xml`
@@ -161,15 +166,15 @@ Here's an example:
   description: What?
   abstract: true
   components:
-    - type: Sprite
-      netsync: false
-      sprite: Objects/Misc/stock_parts.rsi
-    - type: Item
-      size: 1
-    #this is the part you add
-    - type: GuideHelp 
-      guides:
-      - MachineUpgrading #this is the guide that is opened
+  - type: Sprite
+    netsync: false
+    sprite: Objects/Misc/stock_parts.rsi
+  - type: Item
+    size: 1
+  #this is the part you add
+  - type: GuideHelp
+    guides:
+    - MachineUpgrading #this is the guide that is opened
 ```
 
 ## Best Practices

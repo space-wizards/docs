@@ -9,26 +9,26 @@ Power is no longer buffered to shit with big batteries that can keep the station
 ## High level
 
 ### How Equipment Responds to power shortages
-When the full amount of power is provided to a machine, it will operate as normal. When power is not available, the machine will completely turn off (should machines have power switches?) This unpowered state is the same state as an unachored consumer.
+When the full amount of power is provided to a machine, it will operate as normal. When power is not available, the machine will completely turn off (should machines have power switches?) This unpowered state is the same state as an unanchored consumer.
 
 When a brownout occurs, the machine will respond depending on it's consumer type. Each machine has a power draw, a brownout only occurs for a machine if the power available to it is less than the draw amount. This is an independent event for every machine on the network.
 
-* If the consumer is an analogue device like a motor/battery charger, it will reduce its speed (each machine will define what that means), but still operate as normal. Ususally these types of consumers will have no electronics on them.
+* If the consumer is an analogue device like a motor/battery charger, it will reduce its speed (each machine will define what that means), but still operate as normal. Usually these types of consumers will have no electronics on them.
 
 * If the consumer is a digital device (most machines/terminals on the station, anything you can network to) it will have a built-in feature where it goes into a power cycle. It will turn itself off for ~5 seconds and then check to see if it can turn itself back on, repeating until power is restored.
 
 * If the consumer is a incandescent light bulb, then it will reduce it's light range, basically dimming. This is a linear relationship with the power deficit, it does not flicker.
 
-* If the consumer is a flourescent lamp (most lighting in station, they use tubes) then it will flicker off/on with the frequency based on the deficit. When implementing this you probably want some randomness, and don't make it flicker too fast, this isn't a strobe.
+* If the consumer is a fluorescent lamp (most lighting in station, they use tubes) then it will flicker off/on with the frequency based on the deficit. When implementing this you probably want some randomness, and don't make it flicker too fast, this isn't a strobe.
 
 * Advanced machines like the particle accelerator/emitters could have reduced fire rate depending on input power (the idea being that they need to charge internal capacitors). Should probably should have some form of curve here so that 50% power results in 25% firing speed or similar. Or actually accumulate charge inside of themselves to fire (invisible built-in capacitors), which would respond more realistically to frequent fluctuations, and prevent power pulsing metagame (see ONI exploits).
 
-Some machines will have an internal battery entity that can store/provide power, which can mitagate these effects.
+Some machines will have an internal battery entity that can store/provide power, which can mitigate these effects.
 
 ### Power storage on the station
-Because of the size of the station and the number of high-power consumers on it, large power demand fluctuations are to be expected. Because most generators cannot respond quickly to this, power needs to be stored to provide consistant service to the rest of the station.
+Because of the size of the station and the number of high-power consumers on it, large power demand fluctuations are to be expected. Because most generators cannot respond quickly to this, power needs to be stored to provide consistent service to the rest of the station.
 
-The main storage device is the SMES. It is expected that engineering will have a group of these to buffer power into for the entire station. Other critical departments may have a single SMES nearby in maintnence, so that in the event of a power shortage they can still operate. Hallways and other low-priority areas will not have a dedicated SMES, so in the event of a power shortage they will turn off.
+The main storage device is the SMES. It is expected that engineering will have a group of these to buffer power into for the entire station. Other critical departments may have a single SMES nearby in maintenance, so that in the event of a power shortage they can still operate. Hallways and other low-priority areas will not have a dedicated SMES, so in the event of a power shortage they will turn off.
 
 We want to avoid the overuse of this, so that power fluctuations on the station have a realtime effect on lights and machines. A nice balance will have to be struck here.
 
@@ -56,7 +56,7 @@ Ideally the grid would self regulate to have lighting turn off (but nothing else
 
 I do propose swapping lighting and equipment though for spook vibes.
 
-My current idea is that APCs distribute power to all enabled channels evenly, so if there's only 50% of required grid power available, all channels will get 50% evenly instead of environ getting 100% and equipment like, 10%. APCs would still cut out channels based on their battery percentage, which I suppose could cause some funny osclillating behavior on low-power grids. Let's see how it works out. 
+My current idea is that APCs distribute power to all enabled channels evenly, so if there's only 50% of required grid power available, all channels will get 50% evenly instead of environ getting 100% and equipment like, 10%. APCs would still cut out channels based on their battery percentage, which I suppose could cause some funny oscillating behavior on low-power grids. Let's see how it works out. 
 
 ### Glossary for Swept
 
@@ -139,7 +139,7 @@ Supplies will be evaluated in order of their tree height, ascending. This means 
 This has two desirable properties:
 
 1. If you put a generator on a local APC network, it will actually take the load off the main station grid, instead of only being able to fill in brown/blackouts.
-2. It avoids upwards hierarchy walks as described below. It does not make these impossible, but it does make them basically nonexistant unless you actively go set up weird networks to trigger the behavior.
+2. It avoids upwards hierarchy walks as described below. It does not make these impossible, but it does make them basically nonexistent unless you actively go set up weird networks to trigger the behavior.
 
 ### Hierarchical power distribution
 
@@ -149,10 +149,10 @@ If operating under the assumption that power grids are a tree (not anything fanc
 
 When the power grid forms a polytree instead, we need a little bit more effort. First of all, the first tree walk is initiated by suppliers, and suppliers are iterated in the previously discussed order. It is done recursively, top-to-bottom. When a network's unmet demand gets inherited by its ancestor(s), a "reservation flag" is set on the network. If, while traversing the polytree downwards from another supplier, we come across a network that has this reservation flag set, we need to navigate the graph upwards. We navigate up the tree of reservation flags and immediately apply the met demand of supplies on the hierarchy, clearing the reservation flag along the way. Then set the reservation flag again to reserve for our own calculations. This probably requires more complex book keeping and a per-connection "power already sent" to keep track of the power that's been "immediately collapsed". Just clearing flags upwards and specifying "power already sent" on connections may be enough here.
 
-This upwards walk is a bit of a sore spot but luckily should not happen unless you actively set up wacky networks to create it. The worst case scenario, I suppose, is setting up two long lines of networks such that they take turns taking over eachother's reservation flag and causing exponential tree walking. Maybe have a check to avoid this?
+This upwards walk is a bit of a sore spot but luckily should not happen unless you actively set up wacky networks to create it. The worst case scenario, I suppose, is setting up two long lines of networks such that they take turns taking over each other's reservation flag and causing exponential tree walking. Maybe have a check to avoid this?
 
 This behavior would only happen on grids like this, which don't happen frequently on the real station:
-![](https://i.imgur.com/aOquNMN.png)
+![hierarchicalpowerdistribution1.png](../../../assets/images/space-station-14/departments/engineering/pow3r/hierarchicalpowerdistribution1.png)
 *X: battery, -: load, +: supply*
 
 The #2 supply is artificially "weighed down" with extra batteries to increase its tree height, so that it is processed after #1.
@@ -161,20 +161,20 @@ These tree traversals can keep current limiting of substations and such into acc
 
 This still isn't sufficient for full-DAG scenarios like this, however:
 
-![](https://i.imgur.com/sOHe7OY.png)
+![hierarchicalpowerdistribution2.png](../../../assets/images/space-station-14/departments/engineering/pow3r/hierarchicalpowerdistribution2.png)
 
 This case cannot be transparently handled: the previously discussed model would try to solve this by "collapsing" the power hierarchy to immediately calculate the unmet demand of the sub-network. But we can't do that yet because we're still *calculating* the demand of the network in the first place.
 
 First of all, this case is only really complicated when handling current-limited connections. When the path to such a "joiner" network is through a current-unlimited connection then obviously there is no problem since you can just have all the power go through the unlimited connection, and you won't have to evaluate the network the second time you encounter it.
 For current-limited connections, of course, it isn't that easy.
 
-![](https://i.imgur.com/vAjGd2J.png)
+![hierarchicalpowerdistribution3.png](../../../assets/images/space-station-14/departments/engineering/pow3r/hierarchicalpowerdistribution3.png)
 
 One idea I had is to evaluate the total current limit of the joiner network, so far. Then we can say "the first connection passed 2 kW we'll pass the remaining the subnet needs". Keep in mind that this would have to evaluate the total demand of the network up until the current limiting diode and then assign the ratio, not just a `min(min_of_current_limits, subnet.demand)`. This is a "collapse the network" but a different kind. We'd be collapsing the network for distribution inside the grid only, not actually walking up to the supply to instantly hand out power. I need to do more concrete thinkwork to figure this out.
 
 Basically uhhhhh if you encounter the network the second time, calculate "what is the max amount of demand that can be filled thanks to current limiting" and then take the *remaining* unmet demand for the network instead of the total. We can basically keep doing this. We *aren't* calculating power distribution here but *distribution ratios*. 
 
-The important distinction is that this grid collapse happens internally during the calculation of a single push. This means that the power grid will be internally consistent at the end and a "some nerd hooked a weighed-down supply into it randomely" and it has to collapse power distribution, it can just collapse it. The logic will be more complex however.
+The important distinction is that this grid collapse happens internally during the calculation of a single push. This means that the power grid will be internally consistent at the end and a "some nerd hooked a weighed-down supply into it randomly" and it has to collapse power distribution, it can just collapse it. The logic will be more complex however.
 
 ### Distribution priorities
 
@@ -193,6 +193,6 @@ This way a battery might supply 1 kW (base ramp tolerance) to its supplying netw
 
 The only edge case I can immediately see is that this means that weighted-down hierarchy situations (described above) will behave differently. If you have a scenario like this:
 
-![](https://i.imgur.com/3nhQZnv.png)
+![distributionpriorities.png](../../../assets/images/space-station-14/departments/engineering/pow3r/distributionpriorities.png)
 
 The order in which the supplies (batteries and plain supplies) are evaluated could be as described. In that case #1 will discharge instead of letting #4 take over. I'd say this edge case isn't worth the added complexity and overhead created by needing 4 power distribution passes.
