@@ -63,12 +63,15 @@ If the pull request does not line up with any category listed here, defer to two
 
 - **One Approval:**
   - Light code cleanup
-    - This can be something like cleaning up errors in a few files, fixing formatting, or documenting a large group of files.
+    - Cleaning up errors in a few files, fixing formatting, or documenting a large group of files.
   - Bugfixes small in scope
     - Small bugfixes that don't touch major hotpaths, or critical code paths (like Atmospherics, Reagents, Physics, Movement, HTN, etc.).
   - Player-facing changes small in impact
     - Guidebook changes or renames, description changes or renames.
-    - Small content additions that have little balancing impact, ex. new logic gates.
+    - Locale changes.
+    - Item additions to inventory fills.
+    - Container size tweaks.
+    - Loadout item tweaks, additions, or removals.
 - **Two Approvals:**
   - Heavy code cleanup
     - Large cleanup of warnings across the codebase or the refactoring of an entire system.
@@ -79,7 +82,8 @@ If the pull request does not line up with any category listed here, defer to two
   - Performance improvements
     - These should usually come with a custom BenchmarkDotNet benchmark to prove that the PR has a meaningful effect on performance.
   - Player-facing changes large in impact.
-    - Major features, new content.
+    - Major additions like new antagonists, medical systems, atmospherics processing states, etc.
+    - Wide balancing revamps (ex. the rebalancing of an entire antagonists' store).
 
 #### Exceptions
 There are some exceptions to the one-approval or two-approval system. They are listed below.
