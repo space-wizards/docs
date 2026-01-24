@@ -58,7 +58,7 @@ Once a new Maintainer has been accepted, they must be on-boarded. The pre-requis
 4. Update the Maintainer list on our [docs](/en/wizden-staff/space-wizards-maintainer-list.html)
 5. Add relevant workgroups on Discourse and Discord.
 
-### Addiontal Notes
+### Additional Notes
 
 - Read the [maintainer tools](/en/wizden-staff/maintainer/maintainer-tools.html) page to see some useful tools that can help you as a maintainer.
 - Read the [maintainer policy](/en/wizden-staff/maintainer/maintainer-policy.html) and [review procedure](/en/wizden-staff/maintainer/review-procedure.html) to see which rules you have to follow when merging PRs.

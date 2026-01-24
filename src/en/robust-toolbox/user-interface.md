@@ -1,5 +1,7 @@
 # User Interface
 
+{{ #template ../templates/outdated.md }}
+
 I can't be bothered to think of an elegant opening paragraph for this page. This is the UI tutorial.
 
 ```admonish info
@@ -141,26 +143,6 @@ There are other useful layout properties you can use to influence layout of an i
 * `MaxSize`/`MaxWidth`/`MaxHeight`: Allows you to limit the size of a control.
 * `SetSize`/`SetWidth`/`SetHeight`: Allows you to set a specific size for a control.
 * `Margin`: Allows you to set a margin of blank space around a control.
-
-## Layout Controls
-
-There are many controls whose sole purpose is to lay their children out in a certain way, and otherwise be invisible. This section will go over some of them.
-
-### `BoxContainer`
-
-`BoxContainer` is perhaps one of the simplest layout controls there is. It lays out its children sequentially in a certain `Orientation`, either vertically or horizontally. Controls do not overlap.
-
-### `GridContainer`
-
-`GridContainer` lays out its children in a configurable grid.
-
-### `ScrollContainer`
-
-TODO
-
-### `LayoutContainer`
-
-TODO
 
 ## Common Attributes
 These attributes are present on most layout controls.
