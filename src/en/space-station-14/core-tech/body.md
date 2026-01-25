@@ -3,6 +3,7 @@
 ```admonish warning "Warning"
 - BodySystem is still in its infancy, there are many behaviors which still do not exist.
 - If you are a downstream that relies on surgery, many behaviors will break if you move to the new BodySystem without easy replacement as of current writing.
+- Organ and BodySystem behavior is subject to change as it develops. Check breaking changes when you can!
 ```
 
 What is a spessman? A miserable little pile of Containers!
