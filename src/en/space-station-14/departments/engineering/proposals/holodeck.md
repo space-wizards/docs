@@ -1,8 +1,8 @@
 # The Holodeck or the Holography Laboratory
 
-| Designers | Implemented | GitHub Links |
-|---|---|---|
-| CptJeanLuc | :x: No | TBD |
+| Designers  | Implemented | GitHub Links |
+|------------|-------------|--------------|
+| CptJeanLuc | :x: No      | TBD          |
 
 ## Overview
 
@@ -34,7 +34,3 @@ Somehow allowing players to ask for items in local chat and have them spawn in t
 Either prevent construction within the holodeck, or make constructions made with any components having the HoloDeckEntityComponent also be marked with that component.
 
 How to make it non-euclidean is left as an exercise for the reader. (joke)
-
-## The rest?
-
-This is the beginning of the bike shedding.
