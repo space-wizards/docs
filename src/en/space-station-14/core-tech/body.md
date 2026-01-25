@@ -37,7 +37,7 @@ For example, the way a body is visualized is almost enitrely done through organs
 - Below we can see a body constructed of multiple organs with multiple markings
 - Each marking is attached to an organ rather than being attached to the body itself.
 ```
-<img width="335" height="274" alt="image" src="https://github.com/user-attachments/assets/42bde734-2dc8-4dd9-b27d-c1cbb48f071c" />
+![visualized body](../../assets/images/medical/peak-performance.png)
 
 Any organ which contributes to the body's sprite will have a VisualOrganComponent which provides data for that organ's sprite and visuals. Organs can also store markings which are handled by the VisualOrganMarkingsComponent which are self contained as well, handling sprites, layers and when to hide the markings in response to inventory items being equipped. 
 
