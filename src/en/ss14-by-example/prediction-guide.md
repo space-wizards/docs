@@ -18,9 +18,9 @@ Without prediction any input from the client (like keyboard presses or mouse cli
 
 With prediction each client runs its own simulation of the game according to the local player's inputs and they will immediately see the results without having to wait for the server, hiding any latency. The server holds the authoritative game state, which is what all clients consider to be the "truth" in case they disagree on something.
 
-During prediction the client will constantly time travel, reverting the game state repeatedly to the last known authoritative state sent by the server, and then reapplies the player's inputs, resimulating the game until the next server state comes in. This usually happens about 12 times per game tick.
+During prediction the client will repeatedly time travel. When the client receives a server state, due to latency that game state will belong to a game tick that lies in the past from the client's perspective. Therefore the client has to rewind its own game state to that point in the past, apply the information send by the server and resimulate the game from there while reapplying the player's inputs while doing so until it reaches the present game tick again. This will overwrite and correct any disagreements the client may have in their predicted simulation (for example someone else killed you while you tried to interact with something, but you did not know about that yet due to latency, so the interaction is canceled).
 
-Once the authoritative server state arrives at the client it will be applied to the client's simulation, overwriting and correcting any disagreements the client may have in their predicted simulation (for example someone else killed you while you tried to interact with something, but you did not know about that yet due to latency).
+To reduce the network load the server usually does not send the full game state, but only the changes between each game tick (unless the client is freshly connecting or has major lag spikes).
 
 Keep in mind that each client can only predict their own inputs and their results, as those of other players will still need to be networked to you first.
 
@@ -47,7 +47,7 @@ If everything works then the client's values will change instantly the moment yo
 
 #### Help, my code on the client is running multiple times for some reason!
 
-When setting breakpoints or printing to the console you will notice that the predicted code runs 10+ times on the client. This is perfectly normal and just prediction at work. The client rewinds the game state to a previous tick each time it reiceives a server state and reapplies the local player inputs while resimulating until it reaches the currently predicted game tick again. However, this needs special treatment for things like UI or audio to prevent it from flickering or playing multiple times. This is explained in further detail below.
+When setting breakpoints or printing to the console you will notice that the predicted code runs 10+ times on the client. This is perfectly normal and just prediction at work. The client rewinds the game state to a previous tick each time it receives a server state and has to resimulate the game from there. However, this needs special treatment for things like UI or audio to prevent it from flickering or playing multiple times. This is explained in further detail below.
 
 ## Prediction Code example
 Let's look at a simple unpredicted example component and predict it.
@@ -556,7 +556,7 @@ As a workaround you can use a new `System.Random` instance and set the seed to s
 bool result = _random.Prob(0.5f);
 
 // Instead use this:
-var seed SharedRandomExtensions.HashCodeCombine((int)_timing.CurTick.Value, GetNetEntity(uid).Id); // hash both integers together
+var seed = SharedRandomExtensions.HashCodeCombine((int)_timing.CurTick.Value, GetNetEntity(uid).Id); // hash both integers together
 var rand = new System.Random(seed);
 bool resultPredicted = rand.Prob(0.5f))
 
