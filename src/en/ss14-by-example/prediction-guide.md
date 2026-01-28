@@ -576,7 +576,7 @@ Can't resolve "Robust.Shared.GameObjects.MetaDataComponent" on entity 957132/n0D
 
 To prevent this from happening you have to set the datafield back to `null` if the entity is deleted somehow, however this is tricky to keep track of, requiring marker components and a lot of boilerplate code.
 
-At the time of writing the WizDen servers get more than 20000 of these errors each day and resolving them will require some engine changes introducing a `WeakEntityReference`, which references an entity that may or may not be deleted. Once the engine PR is merged the content repository will require some cleanup to get rid of these errors.
+At the time of writing the WizDen servers get more than 20000 of these errors each day and resolving them will require some engine changes introducing a `WeakEntityReference`, which references an entity that may or may not be deleted. Alternatively a relations system that will automatically set the referencing datafield back to `null` might be introduced. Once the engine PR is merged the content repository will require some cleanup to get rid of these errors.
 
 See [this issue](https://github.com/space-wizards/RobustToolbox/issues/6152) for more details.
 
@@ -618,7 +618,7 @@ public void SetExampleDataField(Entity<ExampleComponent?> ent, int newValue)
 }
 ```
 
-It is recommended to give your components access restrictions using `[Access(typeof(SomeSystem))]` so that only the corresponding system can set its datafields using setter API methods like the example above. This makes sure that other systems can only modify the component in ways that are intended and that they cannot forget to dirty the component.
+It is recommended to give your components access restrictions using `[Access(typeof(SomeSystem))]` so that only the corresponding system can set its datafields using setter API methods like the example above. This makes sure that other systems can only modify the component in ways that are intended and that they cannot forget to dirty the component and a good API makes future changes to a component have less breaking changes.
 
 #### Running predicted code from the server
 
@@ -688,6 +688,6 @@ See [this issue](https://github.com/space-wizards/space-station-14/issues/42218)
 
 #### Only use NetworkedComponentAttribute for shared components
 Adding `[NetworkedComponent]` to a purely server- or client-side component (i.e. not in `Content.Shared`) does not make any sense since those cannot be networked in the first place.
-However at the time of writing RobustToolbox is not preventing you from doing so and instead of creating a warning or error it will just break silently. The sympoms include random other components no longer being networked to the client, which will cause a huge range of bugs, for example mispredicts and UIs not being populated. So this is something you should keep an eye on during reviews or when writing new code.
+However at the time of writing RobustToolbox is not preventing you from doing so and instead of creating a warning or error it will just break silently. The symptoms include random other components no longer being networked to the client, which will cause a huge range of bugs, for example mispredicts and UIs not being populated. So this is something you should keep an eye on during reviews or when writing new code.
 
 See [this issue](https://github.com/space-wizards/RobustToolbox/issues/5194) for the current state of this problem.
