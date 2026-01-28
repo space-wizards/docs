@@ -52,7 +52,7 @@ When setting breakpoints or printing to the console you will notice that the pre
 ## Prediction Code example
 Let's look at a simple unpredicted example component and predict it.
 
-```C#
+```csharp
 // In Content.Server/PredictionExample/PredictionExampleComponent.cs
 
 using Robust.Shared.Audio;
@@ -81,7 +81,7 @@ public sealed partial class PredictionExampleComponent : Component
 }
 ```
 
-```C#
+```csharp
 // In Content.Server/PredictionExample/PredictionExampleSystem.cs
 
 using Content.Shared.Examine;
@@ -165,7 +165,7 @@ If we look at this in-game we notice the verb, examination text, popup and sound
 
 Now let's move the code to shared and network and predict it.
 
-```C#
+```csharp
 // In Content.Shared/PredictionExample/PredictionExampleComponent.cs
 
 using Robust.Shared.Audio;
@@ -194,7 +194,7 @@ public sealed partial class PredictionExampleComponent : Component
 }
 
 ```
-```C#
+```csharp
 // In Content.Shared/PredictionExample/PredictionExampleSystem.cs
 
 using Content.Shared.Examine;
@@ -274,7 +274,7 @@ The result is much more responsive without the delay for the popup, audio or UI 
 Shared code can only call other shared code, whereas server-side code can use both server-side and shared code. This means if you want to predict an EntitySystem you will need predict all its dependencies first so that you can use them in Shared, which often turns prediction PRs into much larger tasks than initially expected.
 
 Some systems cannot be predicted, but you might still want to call some API methods that are only available on the server from Shared. To work around this you can add an empty virtual API method in the corresponding shared system and override it on the server. Here's an example from [`SharedExplosionSystem`](https://github.com/space-wizards/space-station-14/blob/master/Content.Shared/Explosion/EntitySystems/SharedExplosionSystem.cs):
-```C#
+```csharp
 // In Content.Shared/Explosion/EntitySystems/SharedExplosionSystem.cs
 // This method is empty and does nothing on the client.
 public virtual void TriggerExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true, float? totalIntensity = null, float? radius = null, EntityUid? user = null)
@@ -341,7 +341,7 @@ B) The insertion of the entity into the container is not predicted (for example 
 This is done that way to allow a client to update UIs even if they did not predict the event, for example the storage window of your backpack, your hand indicator or the damage overlay, but it also may cause problems during subscriptions as any changes done inside them are already networked separately within the same game state, meaning they will be applied multiple times, causing mispredicts.
 
 Let's look at an example from `GlueSystem`
-```C#
+```csharp
 // GluedComponent will make an item temporarily unremovable if you pick it up.
 private void OnHandPickUp(Entity<GluedComponent> entity, ref GotEquippedHandEvent args)
 {
@@ -385,7 +385,7 @@ The most common ones are
 
 ## Predicted update loop example
 A lot of old code is accumulating frametime inside update loops to decide when to next run it.
-```C#
+```csharp
 /// <summary>
 /// Unpredicted example.
 /// </summary>
@@ -430,7 +430,7 @@ public sealed class UpdateLoopExampleSystem : EntitySystem
 ```
 This is bad for prediction, as dirtying the accumulator datafield every single tick would be expensive due to the network load if we repeatedly have to send game state updates from the server. So instead of accumulating frame time we use a time stamp indicating when the next update is supposed to happen and compare that with the current server time.
 
-```C#
+```csharp
 /// <summary>
 /// Predicted example.
 /// We need to network the component for this.
@@ -547,7 +547,7 @@ Here is an example of a mispredict happening when gibbing someone, so that you k
 In the future Robust Toolbox will have methods for predicted randomness, but at the time of writing the [PR for RandomPredicted](https://github.com/space-wizards/RobustToolbox/pull/5849) has not been merged yet.
 As a workaround you can use a new `System.Random` instance and set the seed to something the server and client agree on, for example a combination of an entity's `NetEntity` id and the current game tick (if you would only the game tick here then all randomness within the same game tick would yield the same result, so we need both).
 
-```C#
+```csharp
 // EntitySystem dependencies:
 // [Dependency] private readonly IGameTiming _timing = default!;
 // [Dependency] private readonly IRobustRandom _random = default!;
@@ -601,7 +601,7 @@ Dirtying and networking is expensive. Avoid dirtying entities every single tick 
 
 When setting a datafield it is recommended to add a guard statement to check if the datafield has a new value before calling `Dirty` so that we only network it when actually necessary.
 
-```C#
+```csharp
 // inside an EntitySystem
 
 public void SetExampleDataField(Entity<ExampleComponent?> ent, int newValue)
@@ -632,7 +632,7 @@ Prediction repeatedly resets any dirtied datafield back to a previous game state
 
 #### Conventions for shared systems and components
 EntitySystems should either be non-abstract and shared, for example:
-```C#
+```csharp
 // In Content.Shared/SomeNamespace/SomeSystem.cs
 public sealed class SomeSystem : EntitySystem
 {
@@ -642,7 +642,7 @@ public sealed class SomeSystem : EntitySystem
 ```
 or have a shared abstract system that is inherited on the server and client.
 
-```C#
+```csharp
 // In Content.Shared/SomeNamespace/SharedSomeSystem.cs
 public abstract class SharedSomeSystem : EntitySystem
 {
@@ -670,7 +670,7 @@ There is currently some weird behaviour with solution entities and PVS, which ma
 
 This debug assert happens if a predicted update loops calls `SharedSolutionContainerSystem.ResolveSolution`, and the entity containing the solution entity leaves PVS range. This should not be happening since entities are paused when moved outside PVS range, meaning the update loop should no longer run on the client, but for some reason this still causes the debug assert and needs a workaround until this is fixed properly in a way that does not need this boilerplate code.
 
-```C#
+```csharp
 private void OnEntRemoved(Entity<UdderComponent> entity, ref EntRemovedFromContainerMessage args)
 {
     // Make sure the removed entity was our contained solution
