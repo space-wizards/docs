@@ -1,7 +1,7 @@
 # Bitrunners
 
 ## Overview
-This proposal introduces an abstract idea of another “robust job that kills fauna”, but one that is strongly station-based and safer compared to salvagers.
+This proposal introduces an abstract idea of another “robust job that kills fauna”, but one that is strongly station-based and safer compared to salvagers. This job isn't replacement to them, but alternative as conception.
 
 ## Background
 Upstream currently has problems with salvage. Big problems. Originally introduced as "guys that catch funny space fish and mine plasma ore", salvagers were distanced from the crew more and more with almost every change to salvage.
@@ -33,7 +33,7 @@ Every zone can be filled with many variations of entities: carps, snakes, VGroid
 **Zone difficulty** and mob types will be visible before a bitrunner spawns a zone, so players won’t face goliaths at roundstart.
 
 ### Bitrunning points, progression
-**Bitrunning points** allow bitrunners to unlock more dangerous corrupted zone types in their console, and also to buy bitrunning-related stuff like cool clothing, new weapons, and maybe something for fauna petting.
+**Bitrunning points** allow bitrunners to unlock more dangerous corrupted zone types in their console, and also to buy bitrunning-related stuff like cool clothing, new weapons, and maybe even something for fauna petting.
 However, with every death (bitrunners can’t actually “die” from fauna because it’s kind of digital — they are just disconnected from the bitrunning vision), the bitrunner loses all their points.
 
 This is not the only way to progress, though. **Science** can also give bitrunners cool upgrades such as weapon modules, armor, corrupted-zone locators, etc.
