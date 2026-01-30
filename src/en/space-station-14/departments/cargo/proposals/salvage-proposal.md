@@ -1,5 +1,12 @@
 # Salvage
 
+```admonish warning "Retracted"
+This content was requested to be retracted by its authors due to the following:
+- Majority of authors no longer work on upstream
+- Majority of authors no longer believe salvage can work upstream
+- No current plants to implement this doc
+```
+
 | Designers                      | Implemented | GitHub Links |
 |--------------------------------|---|---|
 | EmoGarbage, Emisse, Mirrorcult | :warning: Partially | TBD |
