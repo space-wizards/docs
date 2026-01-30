@@ -41,11 +41,11 @@ Souls are now divided into 3 different grades: **Low-value**, **Medium-value**, 
  - **Low-value** souls will be that of 'normal' personnel (ie. Civillians, Department Staff)
  - **Medium-value** souls will be that of 'special' personnel (ie. Security Officers/Cadets, most of Command)
  - **High-value** souls will be that of 'unique' personnel (ie. Captain, Head of Security, Antagonists)</p>
-Your soul's essence will be dependent on it's grade, Low-value having the least base amount, and High-value having the most. Players may rise through the rankings via killing other player-controlled characters.
+Your soul's essence will be dependent on it's grade, Low-value having the least base amount, and High-value having the most. Players may also rise through the rankings via killing other player-controlled characters, excluding critters.
 
 ## Objectives
 
- - **Claim % souls**
+ - **Claim X souls**
  - **Survive**
 
 ## Abilities
@@ -56,41 +56,41 @@ Abilities aren't tiered, contrary to EmoGarbage404's proposal, but rather, will 
 
 Abilities under this category can be used by the Revenant whenever.
 
- - **Harvest** - Unlock Cost: Free - Use Cost: Free - Cooldown: None - Use Duration: Short - Reveal Time: Short - Harvests the soul of a deceased/slumbering (ie. asleep or SSD) crew member, dealing high cold damage if successful.
- - **Defile** - Unlock Cost: Low - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Defiles the surrounding area, ripping up floors, damaging windows, and opening most containers.
- - **Overload** - Unlock Cost: Medium - Use Cost: Medium - Cooldown: Average - Use Duration: Short - Overloads all nearby lights, causing light fixtures to pulse and flash-stun people as they break.
- - **Malfunction** - Unlock Cost: Very High - Use Cost: High - Cooldown: Long - Use Duration: Short - Ions every silicon in the vicinity, and has an added chance of granting other machines close-by sentience!
- - **Mistify** - Unlock Cost: Medium - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Enshrouds the Revenant in a shadowy mist that obscurs vision to everyone but the caster, similarly to the shadow anomaly's.
- - **Command** - Unlock Cost: High - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Gives the selected object the ability to be telekinetically controlled by the Revenant, an ability similar to that of a tether gun's, but slightly stronger.
+ - **Harvest** - Harvests the soul of a deceased/slumbering (ie. asleep or SSD) crew member, dealing high unholy damage if successful.
+ - **Defile** - Defiles the surrounding area, ripping up floors, damaging windows, and opening most containers.
+ - **Overload** - Overloads all nearby lights, causing light fixtures to pulse and flash-stun people as they break. (Short)
+ - **Malfunction** - Ions every silicon in the vicinity, and has an added chance of granting other machines close-by sentience! (Medium)
+ - **Mistify** - Enshrouds the Revenant in a shadowy mist that obscurs vision to everyone but the caster, similarly to the shadow anomaly's. (Instant)
+ - **Command** - Gives the selected object the ability to be telekinetically controlled by the Revenant, an ability similar to that of a tether gun's, but slightly stronger. (Instant)
 
 ### Metaphysical Abilities
 
-Abilities under this category can only be used when the Revenant is in it's metaphysical form.
+Abilities under this category can only be used when the Revenant is in its metaphysical form.
 
- - **Flicker** - Unlock Cost: Free - Use Cost: Very Low - Cooldown: Short - Use Duration: Short - Causes lights around the Revenant to flicker ominously, an ability innate to ghosts.
- - **Whisper** - Unlock Cost: Very Low - Use Cost: Very Low - Cooldown: Near-Instant - Use Duration: Instant - Sends an otherworldly message to the selected target, spooky!
- - **Slip** - Unlock Cost: Very Low - Use Cost: Very Low - Cooldown: Short - Use Duration: Instant - Makes the selected target slip. stun duration similar to that of normal soap.
- - **Hallucinate** - Unlock Cost: Low - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Makes the selected target start hearing things.
- - **Deafen** - Unlock Cost: Medium - Use Cost: Low - Cooldown: Average - Use Duration: Instant - Makes the selected target progressively more deaf until they can't hear anything but their own footsteps.
- - **Disorient** - Unlock Cost: Medium - Use Cost: Medium - Cooldown: Long - Use Duration: Instant - Makes the selected target's controls go haywire, so that they're either completely inverted, stuck in walking one direction, or inputting late.
- - **Mark** - Unlock Cost: High - Use Cost: Medium - Cooldown: Very Long - Use Duration: Short - Marks the targeted crew member with an effect that periodically drains them of their energy, making them experience drowsiness, an effect similar to that of being drunk, in which after a while they'll forcefully enter an asleep state.
- - **Possess** - Unlock Cost: Very High - Use Cost: High - Cooldown: Long - Use Duration: Medium - Reveal Time: Medium - The Revenant may possess recently deceased/slumbering personnel, upon entering their body, they will be brought back to the Poor state, and any kind of DoT will be immediately and completely halted (ie. poison, bleeding). If the Revenant uses any ability on the mortal plane they emit a dim purple haze around them. Possessed bodies will be frighteningly cold and upon examining them they will appear pale. If the possessed body dies the Revenant is kicked from it and will be unable to gather Soul Essence for a while.
+ - **Flicker** - Causes lights around the Revenant to flicker ominously, an ability innate to ghosts.
+ - **Whisper** - Sends an otherworldly message to the selected target, spooky!
+ - **Slip** - Makes the selected target slip. stun duration similar to that of normal soap.
+ - **Hallucinate** - Makes the selected target start hearing things. (ie. Hallucination Event but for one person)
+ - **Deafen** - Makes the selected target progressively more deaf until they can't hear anything but their own footsteps, dissipates after a while.
+ - **Disorient** - Makes the selected target's controls go haywire, so that they're either completely inverted, stuck in walking one direction, or inputting late.
+ - **Mark** - Marks the targeted crew member with an effect that periodically drains them of their energy, making them experience drowsiness, an effect similar to that of being drunk, in which after a while they'll forcefully enter an asleep state.
+ - **Possess** - The Revenant may possess recently deceased/slumbering personnel, upon entering their body, they will be brought back to the Poor state, and any kind of DoT will be immediately and completely halted (ie. poison, bleeding). If the Revenant uses any ability on the mortal plane they emit a dim purple haze around them. Possessed bodies will be frighteningly cold and upon examining them they will appear pale. If the possessed body dies the Revenant is kicked from it and will be unable to gather Soul Essence for a while.
 
 ### Post-possession Abilities
 
 Abilities under this category can only be used when the Revenant is possessing someone.
 
- - **Dispossess** - Unlock Cost: *Free (comes with Possess) - Use Cost: Free - Cooldown: None - Use Duration: Short - Allows the Revenant to leave the physical body at any point in time.
- - **Unshackle** - Unlock Cost: Medium - Use Cost: Medium - Cooldown: Average - Use Duration: Instant - Frees the Revenant of any binds.
- - **Adhere** - Unlock Cost: High - Use Cost: Free - Cooldown: Near-Instant - Use Duration: Toggleable - Grants the possessed body no-slip capabilities.
- - **Filch** - Unlock Cost: Very High - Use Cost: Free - Cooldown: Near-Instant - Use Duration: Toggleable - Makes it so that when stealing something from someone there's no visible action bar, similarly to thieving gloves.
+ - **Dispossess** - Allows the Revenant to leave the physical body at any point in time.
+ - **Unshackle** - Frees the Revenant of any binds.
+ - **Adhere** - Grants the possessed body no-slip capabilities. (Toggleable)
+ - **Filch** - Makes it so that when stealing something from someone there's no visible action bar, similarly to thieving gloves. (Toggleable)
 
 ### Ability Upgrades
 
 Items listed under this category are upgrades to existing abilities.
 
- - **Sleep Paralysis** - Unlock Cost: Very High - Affects: Harvest, Possess - Anyone the Revenant attempts to use Harvest/Possess on while in a slumbering state will be temporarily paralyzed as they wake up, a time in which the Revenant's abilities still take effect.
- - **Hyperload** - Unlock Cost: High - Affects: Overload - Overload's flashes now penetrate through sun glasses, welding masks, and any other kinds of flash protection.
- - **Mist Empowerment** - Unlock Cost: Medium - Affects: Mistify - Mistify's mist size now increases with each purchase. (every additional acquisition of this upgrade costs more than previously)
- - **Domain** - Unlock Cost: Very High - Affects: Mistify - Bodies within the Revenant's shadowy mist decompose considerably slower, as well as any Harvest or Possess used on said targets will have their Use Duration cut.
- - **Super Slip** - Unlock Cost: Medium - Affects: Slip - Slip's slips now stun for longer, duration similar to that of syndie soap.
+ - **Sleep Paralysis** - Affects: **Harvest/Possess** - Anyone the Revenant attempts to use Harvest/Possess on while in a slumbering state will be temporarily paralyzed as they wake up, a time in which the Revenant's abilities still take effect.
+ - **Hyperload** - Affects: **Overload** - Overload's flashes now penetrate through any and all kinds of flash protection (sun glasses, welding masks, etc.).
+ - **Mist Empowerment** - Affects: **Mistify** - Mistify's mist size now increases with each purchase. (every additional acquisition of this upgrade costs more than the previous one)
+ - **Domain** - Affects: **Mistify** - Bodies within the Revenant's shadowy mist decompose considerably slower, as well as any Harvest or Possess used on said targets will have their Use Duration cut.
+ - **Super Slip** - Affects: **Slip** - Slip's slips now stun for longer, duration similar to that of syndie soap.
