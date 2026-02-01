@@ -218,6 +218,7 @@ Space Station 14
 - [Departments](en/space-station-14/departments.md)
 	- [Atmos](en/space-station-14/departments/atmos.md)
 		- [PR Guidelines](en/space-station-14/departments/atmos/guidelines.md)
+        - [Design Choices](en/space-station-14/departments/atmos/atmos-design-choices.md)
 
 		- [Proposals]()
 			- [Atmos Rework](en/space-station-14/departments/atmos/proposals/atmos-rework.md)
