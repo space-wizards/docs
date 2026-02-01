@@ -48,7 +48,7 @@ cd SS14.Watchdog
 dotnet publish -c Release -r linux-x64 --no-self-contained
 ```
 
-The contents of `SS14.Watchdog/bin/Release/net9.0/linux-x64/publish` can then be copied to some other place. You will continue your work here.
+The contents of `SS14.Watchdog/bin/Release/net10.0/linux-x64/publish` can then be copied to some other place. You will continue your work here.
 
 
 ### 3. Run
