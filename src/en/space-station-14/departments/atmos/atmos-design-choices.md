@@ -69,3 +69,52 @@ Due to the time and difficulty involved in tuning setups to perfection, players 
 
 Instead, players should be made aware that these gas reactions exist and various parameters of a reaction (ex. reaction rate, concentration required, etc.)
 This makes setting up a reaction and tuning it easier, which is excellent when paired with unit-based devices enabling a wide variety of solutions to problems.
+
+### Implementation Details and Gameplay
+Atmospherics and its technical design should not create a situation where players rely on or need to be aware of an internal implementation detail.
+An implementation detail in this context is a programming decision or internal behavior that should be hidden from the player.
+
+Learning and taking advantage of implementation details often requires knowledge of how Atmospherics simulates the environment on a technical level.
+This is very hard for any new player to learn and should not be the intended way for mechanics to be communicated/learned in Atmospherics.
+
+Taking advantage of these implementation details often lead to unintended gameplay that is hard to balance when considering all players, ex. players producing tons of gases or bypassing certain mechanical restrictions.
+For this reason, circumstances where players can take advantage of an implementation detail should be removed.
+
+In the case where players were heavily reliant on the implementation detail to meaningfully progress or have fun in Atmospherics' gameloop, the behavior should be substituted with mechanics that make sense to the player and respect their expectations.
+
+#### Device Ordering
+Atmospherics does not process devices all at the same time, rather devices are queued for update and processed one at a time.
+This can lead to the following circumstance:
+
+Imagine a line of filters, like in a station recyclernet, all connected in series:
+```mermaid
+flowchart LR;
+    inlet(Net Input) -->
+    f1[Filter 1] -->
+    f2[FIlter 2] --> 
+    f3[Filter 3] -->
+    outlet(Net Output)
+```
+
+In this instance the filters are updated in order from F1 → F2 → F3.
+Now let's introduce \\( n \\) mols of gas in the inlet and process an atmostick.
+The following would occur:
+- Atmospherics would process the first filter first. This first filter will take the gas and deposit it in the inlet of the second filter.
+- Atmospherics then processes the second device, which is the second filter. The second filter then moves the gas to the third filter.
+- Atmospherics processes the third filter which moves the gas to the outlet.
+
+In this instance, we've just processed \\( n \\) mols of gas through three filters, all in one atmostick.
+
+Now imagine that the filters are updated "out of order" where F1 → F3 → F2.
+The following would occur:
+- Atmospherics processes filter 1 and moves gas from the inlet to filter 2.
+- Atmospherics now processes filter 3. Nothing happens because filter 3 has no work to do.
+- Atmospherics processes filter 2 which moves gas to filter 3. However, we've already updated filter 3 in this tick, so filter 3 cannot do anything until the next atmostick.
+
+In this instance, we did not process any gas at all, and have to wait a second atmostick in order to fully process \\( n \\) mols of gas.
+In more complex setups, this type of behavior can add up and impede the flow rate of a setup.
+
+This isn't fun for players at all, as a player not aware of this implementation detail is missing out on a high flow setup.
+Players attempting to recreate their setups might see different behavior from round-to-round, all because the device order didn't line up right.
+
+As such, update-order behavior should be improved to the point where players do not need to be aware of Atmospherics' processing order. This is a [very hard problem](https://en.wikipedia.org/wiki/Gas_networks_simulation) with multiple solutions due to the nature of accurately simulating a massive gas network with many sources and loads.
