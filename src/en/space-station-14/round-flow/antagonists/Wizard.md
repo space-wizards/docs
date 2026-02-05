@@ -92,7 +92,7 @@ And it's even funnier when the Wizard yoinks it right back with a different spel
 
 Or some magic may require robes, which means you'll be unprotected in terms of traditional armor, being the definition of a glass cannon. This is generally reserved for some of the most powerful spells.
 
-Most of this is based on vibes and themeatics. Does it make much sense for a Wizard to shoot lockers out of their hands? Might be a bit funny conceptually, but it makes more "sense" that some piece of equipment is doing it instead.
+Most of this is based on vibes and thematics. Does it make much sense for a Wizard to shoot lockers out of their hands? Might be a bit funny conceptually, but it makes more "sense" that some piece of equipment is doing it instead.
 
 ### Spells (Actions)
 
@@ -155,7 +155,7 @@ The motivation for disruptive event spells is that they throw the station into m
 - Antagonists have the same amount of chance to get this equipment as much as the crew does, so it evens out.
 
 Examples:
-- Summon Guns/Magic - Two spells with similar base functionality but way different flavors. Summom Guns gives every player one of the many guns in the game, possibly terrible, possibly overpowered. Summon Magic gives every player a random wand or staff. As some of the crew turn into antagonists with the explicit goal to cause chaos, the remaining non-antagonist crew will have to subdue the new antagonists with their new equipment, with all the collateral and misunderstanding that may happen as a result.
+- Summon Guns/Magic - Two spells with similar base functionality but way different flavors. Summon Guns gives every player one of the many guns in the game, possibly terrible, possibly overpowered. Summon Magic gives every player a random wand or staff. As some of the crew turn into antagonists with the explicit goal to cause chaos, the remaining non-antagonist crew will have to subdue the new antagonists with their new equipment, with all the collateral and misunderstanding that may happen as a result.
 
 ### Equipment Spells
 
@@ -171,7 +171,7 @@ Anything that is not inherent to the Wizard's mind, i.e. an item in the world. A
 - Examples:
   - A wand that turns tiles into ice.
   - A wand that shoots lockers out to trap people in.
-  - A wand to polymorph your PAI or Wizard Apprentices
+  - A wand to polymorph your PAI or Wizard Apprentices.
 
 #### Staves
 
@@ -361,4 +361,4 @@ Since Wizard's been out there for some time, there are likely some refactors tha
   - Wizard Rods need to be changed to not delete people and objects. Even setting gib to no gets bypassed by the deletion that Rods inheretly have and it's extremely easy to gib with enough brute damage so both things also need to be changed.
 - Cameras working off grid
   - Cameras need to work off grid so the Wizard can use its pondering orb effectively
-  - This would also open up oppertunities for other antags (Nukies, Listening Outpost, Abductors, Clock Cult, etc)
+  - This would also open up opportunities for other antags (Nukies, Listening Outpost, Abductors, Clock Cult, etc)
