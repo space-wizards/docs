@@ -545,7 +545,7 @@ Here is an example of a mispredict happening when gibbing someone, so that you k
 ![prediction-guide-mispredict.gif](../assets/images/ss14-by-example/prediction-guide-mispredict.gif)
 
 In the future Robust Toolbox will have methods for predicted randomness, but at the time of writing the [PR for RandomPredicted](https://github.com/space-wizards/RobustToolbox/pull/5849) has not been merged yet.
-As a workaround you can use a new `System.Random` instance and set the seed to something the server and client agree on, for example a combination of an entity's `NetEntity` id and the current game tick (if you would only the game tick here then all randomness within the same game tick would yield the same result, so we need both).
+As a workaround you can use a new `System.Random` instance and set the seed to something the server and client agree on, for example a combination of an entity's `NetEntity` id and the current game tick (if you would only use the game tick here then all randomness within the same game tick would yield the same result, so we need both). There is a helper method in `SharedRandomExtensions` that you can use for this.
 
 ```csharp
 // EntitySystem dependencies:
@@ -553,14 +553,16 @@ As a workaround you can use a new `System.Random` instance and set the seed to s
 // [Dependency] private readonly IRobustRandom _random = default!;
 
 // This will mispredict:
-bool result = _random.Prob(0.5f);
+bool randomBool = _random.Prob(0.5f);
+double randomDouble = _random.NextDouble();
 
 // Instead use this:
-var seed = SharedRandomExtensions.HashCodeCombine((int)_timing.CurTick.Value, GetNetEntity(uid).Id); // hash both integers together
-var rand = new System.Random(seed);
-bool resultPredicted = rand.Prob(0.5f))
+bool randomBoolPredicted = SharedRandomExtensions.PredictedProb(_timing, 0.5f, GetNetEntity(uid)); // Helper method that directly gives you a bool.
+var rand = SharedRandomExtensions.PredictedRandom(_timing, GetNetEntity(uid)); // Create a new System.Random instance that is the same on the server and client.
+double randomDoublePredicted = rand.NextDouble(); // Create some random number from it.
 
 // Same for any other method in IRobustRandom, since it is just a System.Random wrapper.
+// If you generate multiple random numbers in the same tick for the same entity then you can re-use the System.Random instance instead of instanciating a new one for each call.
 ```
 
 Be careful with this, since a cheater that knows the corresponding `NetEntity` id might in theory influence the result if they wait for the correct game tick to send the user input. So any game features that could give you a major advantage like random item spawning, telecrystal discounts in stores, antag or objective selection etc. should better stay unpredicted if the player is able to time them exactly.
