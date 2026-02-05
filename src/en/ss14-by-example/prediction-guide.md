@@ -562,7 +562,7 @@ var rand = SharedRandomExtensions.PredictedRandom(_timing, GetNetEntity(uid)); /
 double randomDoublePredicted = rand.NextDouble(); // Create some random number from it.
 
 // Same for any other method in IRobustRandom, since it is just a System.Random wrapper.
-// If you generate multiple random numbers in the same tick for the same entity then you can re-use the System.Random instance instead of instanciating a new one for each call.
+// If you generate multiple random numbers in the same tick for the same entity then you can re-use the System.Random instance instead of instantiating a new one for each call.
 ```
 
 Be careful with this, since a cheater that knows the corresponding `NetEntity` id might in theory influence the result if they wait for the correct game tick to send the user input. So any game features that could give you a major advantage like random item spawning, telecrystal discounts in stores, antag or objective selection etc. should better stay unpredicted if the player is able to time them exactly.
