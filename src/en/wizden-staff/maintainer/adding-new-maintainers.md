@@ -61,7 +61,7 @@ Once a new Maintainer has been accepted, they must be on-boarded. The pre-requis
 ### Additional Notes
 
 - Read the [maintainer tools](/en/wizden-staff/maintainer/maintainer-tools.html) page to see some useful tools that can help you as a maintainer.
-- Read the [maintainer policy](/en/wizden-staff/maintainer/maintainer-policy.html) and [review procedure](/en/wizden-staff/maintainer/review-procedure.html) to see which rules you have to follow when merging PRs.
+- Read the [maintainer policy](/en/wizden-staff/maintainer/maintainer-policy.html) and [review procedure](/en/wizden-staff/maintainer/content-review-procedure.html) to see which rules you have to follow when merging PRs.
 - Read the [doc page](/en/general-development/codebase-info/releases.html) on how our release model and maintainer meetings work. They happen every two weeks and the event schedule can be found on discord.
 - After being invited to the GitHub organization, go to the space-wizards org > People > Find yourself > and set your organization visibility to public. This allows people to more easily see you are a maintainer (you will have a “Member” attached to your comments) AND you get to flex the org on your github profile.
 - It is recommended to set up two-factor authentication for your Discord, SS14, and github accounts to ensure they cannot be compromised.
