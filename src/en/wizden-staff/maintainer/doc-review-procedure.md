@@ -13,7 +13,7 @@ Likewise, only a single maintainer needs to express concern to close it.
 Note that this does not apply to changes to internal procedure or other modifications that require voting or group deliberation according to relevant policy.
 
 #### Design Documents
-Major PRs that introduce or change a design document should require at least two maintainer approvals.
+Major PRs that introduce or change a design document should require at least two maintainer approvals. Unlike other doc PRs, design docs can only be approved by those with content maintainer permissions.
 If the addition is large enough, a maintainer can call a vote on the design document; however, this should be done only when the scope of the pull request warrants it.
 
 Major game features usually follow the following dynamic:
