@@ -196,6 +196,7 @@ Space Station 14
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
 		- [Xenoborgs](en/space-station-14/round-flow/antagonists/Xenoborgs.md)
 		- [Pursuer](en/space-station-14/round-flow/antagonists/pursuer.md)
+ 		- [Spider Queen](en/space-station-14/round-flow/antagonists/spider-queen.md)	
 
 	- [Proposals]()
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
