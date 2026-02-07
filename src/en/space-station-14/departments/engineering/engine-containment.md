@@ -1,12 +1,8 @@
 # Engine Containment Safeties
-```admonish warning "Attention: Legacy Documentation!"
-This document is ported from before the game-area reorganization and has not been reviewed or updated.
-It may not fit with the new design requirements.
-```
 
-| Designers | Implemented | GitHub Links |
-|---|---|---|
-| Flareguy, CptJeanLuc |:x: No | TBD |
+| Designers            | Implemented         | GitHub Links                                                 |
+|----------------------|---------------------|--------------------------------------------------------------|
+| Flareguy, CptJeanLuc | :warning: Partially | https://github.com/space-wizards/space-station-14/pull/39513 |
 
 ## Overview
 

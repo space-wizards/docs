@@ -241,9 +241,9 @@ Space Station 14
 		- [PR Guidelines]()
 		
 		- [Pow3r](en/space-station-14/departments/engineering/pow3r.md)
+        - [Engine Containment](en/space-station-14/departments/engineering/engine-containment.md)
 
 		- [Proposals]()
-			- [Engine Containment](en/space-station-14/departments/engineering/proposals/engine-containment.md)
 			- [Machine Upgrading Rework](en/space-station-14/departments/engineering/proposals/machine-upgrading-rework.md)
 			- [Power Generation Rework](en/space-station-14/departments/engineering/proposals/power-generation.md)
 			- [Signaller Rework](en/space-station-14/departments/engineering/proposals/signaller-rework.md)
