@@ -83,7 +83,7 @@ If the pull request does not line up with any category listed here, defer to two
     - These should usually come with a custom BenchmarkDotNet benchmark to prove that the PR has a meaningful effect on performance.
   - Player-facing changes large in impact.
     - Major additions like new antagonists, medical systems, atmospherics processing states, etc.
-    - Wide balancing revamps (ex. the rebalancing of an entire antagonists' store).
+    - Wide balancing revamps (ex. the rebalancing of an entire antagonist's store).
 
 #### Exceptions
 There are some exceptions to the one-approval or two-approval system. They are listed below.
