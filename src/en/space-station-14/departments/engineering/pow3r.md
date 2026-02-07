@@ -152,7 +152,7 @@ When the power grid forms a polytree instead, we need a little bit more effort. 
 This upwards walk is a bit of a sore spot but luckily should not happen unless you actively set up wacky networks to create it. The worst case scenario, I suppose, is setting up two long lines of networks such that they take turns taking over each other's reservation flag and causing exponential tree walking. Maybe have a check to avoid this?
 
 This behavior would only happen on grids like this, which don't happen frequently on the real station:
-![](https://i.imgur.com/aOquNMN.png)
+![hierarchicalpowerdistribution1.png](../../../assets/images/space-station-14/departments/engineering/pow3r/hierarchicalpowerdistribution1.png)
 *X: battery, -: load, +: supply*
 
 The #2 supply is artificially "weighed down" with extra batteries to increase its tree height, so that it is processed after #1.
@@ -161,14 +161,14 @@ These tree traversals can keep current limiting of substations and such into acc
 
 This still isn't sufficient for full-DAG scenarios like this, however:
 
-![](https://i.imgur.com/sOHe7OY.png)
+![hierarchicalpowerdistribution2.png](../../../assets/images/space-station-14/departments/engineering/pow3r/hierarchicalpowerdistribution2.png)
 
 This case cannot be transparently handled: the previously discussed model would try to solve this by "collapsing" the power hierarchy to immediately calculate the unmet demand of the sub-network. But we can't do that yet because we're still *calculating* the demand of the network in the first place.
 
 First of all, this case is only really complicated when handling current-limited connections. When the path to such a "joiner" network is through a current-unlimited connection then obviously there is no problem since you can just have all the power go through the unlimited connection, and you won't have to evaluate the network the second time you encounter it.
 For current-limited connections, of course, it isn't that easy.
 
-![](https://i.imgur.com/vAjGd2J.png)
+![hierarchicalpowerdistribution3.png](../../../assets/images/space-station-14/departments/engineering/pow3r/hierarchicalpowerdistribution3.png)
 
 One idea I had is to evaluate the total current limit of the joiner network, so far. Then we can say "the first connection passed 2 kW we'll pass the remaining the subnet needs". Keep in mind that this would have to evaluate the total demand of the network up until the current limiting diode and then assign the ratio, not just a `min(min_of_current_limits, subnet.demand)`. This is a "collapse the network" but a different kind. We'd be collapsing the network for distribution inside the grid only, not actually walking up to the supply to instantly hand out power. I need to do more concrete thinkwork to figure this out.
 
@@ -193,6 +193,6 @@ This way a battery might supply 1 kW (base ramp tolerance) to its supplying netw
 
 The only edge case I can immediately see is that this means that weighted-down hierarchy situations (described above) will behave differently. If you have a scenario like this:
 
-![](https://i.imgur.com/3nhQZnv.png)
+![distributionpriorities.png](../../../assets/images/space-station-14/departments/engineering/pow3r/distributionpriorities.png)
 
 The order in which the supplies (batteries and plain supplies) are evaluated could be as described. In that case #1 will discharge instead of letting #4 take over. I'd say this edge case isn't worth the added complexity and overhead created by needing 4 power distribution passes.

@@ -99,6 +99,11 @@ Since unlike a revert, a hotfix can't be finished in moments, we have to conside
 
 > All votes, whether for revert or hotfix, are RELEASE BLOCKERS. If some issue is minor enough that we could just release with it, then it might be better to just address it in the next release or hotfix it after release through the regular hotfix procedure.
 
+### Evaluate active Feedback Pop-Up 
+Feedback Pop-Ups is a feature that allows us to request players ingame to provide feedback for specific topics/PRs. As part of the meeting, go through the current active `FeedbackPopup` protoypes in `Resources/Prototypes/FeedbackPopup/feedbackpopups.yml` and evaluate which should be removed, remain on master, or provided to the stable servers. 
+
+*No action is required* to have a pop-up remain only on the testing server, as the `PopupOrigin` property being set to `wizden_master` ensures it does not show on the stable servers. If a pop-up should be made visible on the stable servers, change the property to `wizden_master wizden_stable`. 
+
 ## Right after the Meeting
 Votes are immediately started for blocked PRs. Open a Discourse thread for each vote in Internal/Maintainer. If multiple PRs are conceptually linked, and/or were contested "as one", they can be combined into one thread. Copy the summary about the situation from the meeting notes, for anyone who was not present at the Meeting. The recording might not yet be available for review before votes have to be cast.
 
@@ -164,7 +169,7 @@ You can use github-cli to start publish, [Myra's script](https://gist.github.com
 
 To do it manually, go to [github's web GUI](https://github.com/space-wizards/space-station-14/actions/workflows/publish.yml) and run the workflow with the stable branch:
 
-![](https://hedgedoc.spacestation14.com/uploads/ff1cdd6c-a2db-42c3-89e1-134bb6809673.jpg)
+![runpublish.png](../assets/images/wizden-staff/runpublish.png)
 
 ### 4. Monitor if Salamander and Lizard actually deploy the new release after their next restart
 

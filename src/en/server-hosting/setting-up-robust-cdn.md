@@ -85,7 +85,7 @@ sudo chmod -R u+w,g+w builds/ database/ manifest/
 
 ### Manual compilation
 
-If you hate containers, you can manually publish Robust.Cdn and deploy the files yourself. For this you will need Git and the .NET 9 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
+If you hate containers, you can manually publish Robust.Cdn and deploy the files yourself. For this you will need Git and the .NET 10 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
 
 Clone the git repo, then publish:
 
@@ -245,6 +245,75 @@ You should go over this config file in full to understand what you are setting u
 }
 ```
 
+## Example reverse proxy configs
+
+Robust.Cdn is a HTTP-based service, so you'll likely want to run it behind a reverse proxy of some kind. There are a few things to make sure of:
+
+* When using multi-request publishing, you should set the maximum client body size to fit the entire client download at once.
+* When using one-shot publishing, you should set the request timeout high enough (usually more than a minute or two).
+
+
+```admonish failure title="Do not put it behind Cloudflare"
+If you are using Cloudflare to manage your domain, you **must not** put Robust.Cdn behind Cloudflare's reverse proxy. Doing so is a violation of their [Terms of Service](https://www.cloudflare.com/service-specific-terms-application-services/#content-delivery-network-terms) and will likely result in your bandwidth getting severely throttled.
+```
+
+Here are some example configurations for your reverse proxy:
+
+### Nginx
+
+This example is intended to go into an existing `server` block of your configuration (TLS termination, server name, etc...)
+
+```nginx
+# gzip JSON responses.
+gzip on;
+gzip_types application/json;
+
+location / {
+    # Increased max body size for multi-request publishes. Not necessary for oneshot publishes.
+    client_max_body_size 512m;
+
+    # Do not buffer request bodies inside nginx, especially important for multi-request publishes.
+    proxy_request_buffering off;
+    # Disable buffering of outgoing responses.
+    proxy_buffering         off;
+    # Ensure request and response can be streamed via HTTP 1.1.
+    proxy_http_version      1.1;
+    # Increased read timeout to avoid timeouts on the publish API endpoint.
+    # Not strictly necessary for multi-request publishes, but cannot hurt.
+    proxy_read_timeout      120s;
+
+    # Boilerplate reverse proxy config.
+    proxy_set_header   Host $http_host;
+    proxy_set_header   X-Real-IP $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+
+    # Update port here.
+    proxy_pass         http://localhost:8080;
+}
+```
+
+### Caddy
+
+This is an example Caddyfile to go into an existing block for the domain with the CDN. If you are putting this in a path you can just put all these under the path.
+
+```
+# Increased max body size for multi-request publishes.
+request_body {
+    max_size 512MB
+}
+
+# Update port here.
+reverse_proxy localhost:8080 {
+    flush_interval -1
+}
+
+# Compress JSON responses.
+encode zstd gzip {
+    match header Content-Type application/json*
+}
+```
+
 ## Setting up publishing
 
 ### GitHub Actions
@@ -337,70 +406,6 @@ Robust.Cdn stores and expects build zips in the `FileDiskPath` directory (`/buil
 │   ├── 021d39be2876f991c5fd6e663760a921d29ac694
 │   │   ├── SS14.Client.zip
 │   │   ├── SS14.Server_linux-arm64.zip
-```
-
-## Example reverse proxy configs
-
-You likely want to run Robust.Cdn behind a reverse proxy of some kind. There are a few things to make sure of:
-
-* When using multi-request publishing, you should set the maximum client body size to fit the entire client download at once.
-* When using one-shot publishing, you should set the request timeout high enough (usually more than a minute or two).
-
-Here are some example configurations for your reverse proxy:
-
-### Nginx
-
-This example is intended to go into an existing `server` block of your configuration (TLS termination, server name, etc...)
-
-```nginx
-# gzip JSON responses.
-gzip on;
-gzip_types application/json;
-
-location / {
-    # Increased max body size for multi-request publishes. Not necessary for oneshot publishes.
-    client_max_body_size 512m;
-
-    # Do not buffer request bodies inside nginx, especially important for multi-request publishes.
-    proxy_request_buffering off;
-    # Disable buffering of outgoing responses.
-    proxy_buffering         off;
-    # Ensure request and response can be streamed via HTTP 1.1.
-    proxy_http_version      1.1;
-    # Increased read timeout to avoid timeouts on the publish API endpoint.
-    # Not strictly necessary for multi-request publishes, but cannot hurt.
-    proxy_read_timeout      120s;
-
-    # Boilerplate reverse proxy config.
-    proxy_set_header   Host $http_host;
-    proxy_set_header   X-Real-IP $remote_addr;
-    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header   X-Forwarded-Proto $scheme;
-
-    # Update port here.
-    proxy_pass         http://localhost:8080;
-}
-```
-
-### Caddy
-
-This is an example Caddyfile to go into an existing block for the domain with the CDN. If you are putting this in a path you can just put all these under the path.
-
-```
-# Increased max body size for multi-request publishes.
-request_body {
-    max_size 512MB
-}
-
-# Update port here.
-reverse_proxy localhost:8080 {
-    flush_interval -1
-}
-
-# Compress JSON responses.
-encode zstd gzip {
-    match header Content-Type application/json*
-}
 ```
 
 ## Troubleshooting

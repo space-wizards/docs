@@ -56,7 +56,7 @@ Silver
 [GitHub link](https://github.com/bors-ng/bors-ng)
 Helps avoid this:
 
-![](../assets/images/maintainer-meeting/2022-02-05-ci-fail.png)
+![ci-fail.png](../assets/images/maintainer-meetings/2022-02-05/ci-fail.png)
 - Usage: you write bors r+
 - Gives more overhead to merging PRs
 - We can use it when we are merging a lot of PRs at once, not for every PR

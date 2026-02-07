@@ -135,7 +135,7 @@ These proposals are for the long term future. Some of them require other proposa
 
     - There are some concerns about being able to run burn chambers and the TEG. The screenshot below demonstrates a TEG that is capable of powering an entire large-sized station (256.8 kW current output, the peak output is quite a bit higher) with a maximum pressure excursion of 1600 kPa. It shows that pipes that burst at reasonable pressures are entirely consistent with having burn chambers. This just needs to be set up correctly.
 
-      ![image](https://user-images.githubusercontent.com/3229565/274441724-712f4ebf-7440-4d81-879e-19aa29788822.png)
+      ![stationatmoshvac.png](../../../../assets/images/space-station-14/departments/atmos/proposals/atmos-rework/setup.png)
 
     - This addresses problem (1), the "set up and forget" issue by adding temperatures and pressures to monitor. It also allows the opportunity for sabatoge.
 
