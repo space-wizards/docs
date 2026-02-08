@@ -1,0 +1,72 @@
+# Revenant Remix
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| 0.anonymous (Discord) | :x: | TBD |
+
+## Foreward 
+
+I've been watching rev development and it seems like a trend of players to want to focus on Wraith (See https://wiki.ss13.co/Wraith, https://github.com/space-wizards/docs/pull/325, https://github.com/space-wizards/docs/pull/262, feedback therein). 
+I see this as basically a brand new antagonist and not what Revenant is based on (see https://wiki.tgstation13.org/Revenant). I see this as basically throwing the baby out with the bathwater completely replacing a current antag with one more threatening, so why not try and try and revitalize the current one and cement it having a notably different design philosophy and focus while a more Wraith-dedicated ghost is being worked on? 
+
+## Origins
+
+Revenant as it stands is basically a direct port of the SS13 TG station revenant antagonist, working essentially identically. In SS13 this role was essentially ghost+; you still have access to ghost chat but you can cause a little havoc and spread a little spacing. Your goal is to harvest bodies for essence to buy abilities and as a way to regain health, and the Chaplain and other crew basically try to stop you.
+However, your ability to directly harm crew was extremely muted, restricted specifically to the Blight spell (aoe stun damage and a slow toxin injection) and breaking windows, and ability use both cost health, revealed you, and stunned you for several seconds on use. Some other servers include abilities to animate objects, but again these were capstone abilities of a successful revenant and essentially the full extent of its power.
+Revenant was not an antag that would punch you in the face, take over your body, and explode your corpse. Revenant was more an opportunistic scavenger that could finish off an alone crewmate but would not be an active threat.
+
+## Background 
+
+Revenant's initial port to SS14 was a bit controversial as it was able to stack hundreds of HP and blight was extremely powerful. Revenant could basically spam knockout / poison medbay and feast and there was nothing anyone could do to counter it.
+As you might expect, this was swiftly nerfed. Revenant was capped at 150 essence from regen & Blight was removed. However, the antag was left to languish after this massive nerfs, and this has led to significant issues with the antag.
+
+The Revenant is currently, undeniably, unpopular. The most common source of a revenant is the coinflip between it and Dragon when Ninja calls in a threat, and the revenant is always considered the "lame" result. This and rev's natural spawn conditions force it to be very late into a round (around 50 minutes currently I believe) which, as a "snowball" antag, also completely cripples it.
+As noted by Warpedzone's document, revenant simply has no ability to actually drive a round. While a rev is difficult to kill and can recuperate safely, the antagonist simply cannot do anything to actively generate bodies to consume besides spend 45 seconds to break a reinforced window and gradually spread spacing. As you might expect by an ability completely countered by emergency EVA, this is not effective.
+A revenant currently is basically at the complete mercy of luck for having crew be crit or dead to harvest, and is completely shut down by a single crewmember paying attention in their general area. Malfunction and Overcharging lights are also extremely underwhelming, being basically incapable of emagging borgs without assistance and dealing zero damage often respectively. 
+Essentially, a revenant does nothing but waste an antagonist and, at most, slows down medical's ability to revive patients by adding another 200 damage onto each victim. Compared to the dragon, which is an active threat, the revenant naturally feels like a letdown.
+
+# Proposed Design Philosophy
+
+The Revenant is a minor solo antagonist with the aesthetic and physical build of a ghost. The goal of a Revenant is to consume the souls of the station's inhabitants, gaining life essence and unlocking powerful abilities to disrupt the crew and further the fall of the station.
+The Revenant has two states; intangible, and tangible. A revenant is typically intangible, which grants it invulnerability to damage, faster speed, and allows it to travel through walls to better explore the station. Upon using abilities a revenant will become tangible, which slows it down somewhat, makes it vulnerable to being harmed, and limits to to phasing through airlocks as a means of escaping the crew.
+The Revenant is capable of speaking and communicating with players, but does not have access to dead chat like its predecessor. 
+
+The following are tenants of the Revenant's design:
+
+## Spooky Ghost
+
+The Revenant is a ghost. Abilities and actions should fit this; a Revenant is not going to hurl a fireball at you or turn you into a cluwne, but instead threaten the crew through more subtle and supernatural means.
+In contrast to most antagonists that directly threaten the crew, the Revenant should instead be almost an environmental hazard and an existential threat to the station itself. A Revenant's presence will not be felt by carp corpses. bullet casings, or spacing as much as the station itself gradually becoming more and more dangerous and falling apart into gross disrepair, with only the most powerful revenants manifesting things obviously supernatural. 
+
+## Health is Fuel
+
+The Revenant's HP is its Essence. Essence is consumed to activate a Revenant's abilities. Essence can be regained passively over time and by harvesting souls, with living crew providing larger amounts of essence. 
+As abilities make a Revenant vulnerable, a Revenant has to balance stockpiling essence and burning it to activate abilities in quick succession, with a skillful Revenant being able to maximize the impact of its abilities while remaining safe and Revenants that are not so skillful either playing too safe and not having as great payoff or potentially going too far and meeting their end ignominiously to a random crewmate's crowbar.
+
+## Stolen Essence is Power
+
+A Revenant's goal is to amass essence. This stolen essesnce is used to purchase abilities, with stronger and more impactful abilities costing more essence. A Revenant will start relatively weak and snowball in power as more abilities are unlocked.
+In keeping with the Revenant's theming, abilities should ramp up over time and become more obviously supernatural with their increasing power. 
+Early abilities may be more foundational and environmental, such as chilling the air, a crewmate suddenly gaining the strange ability to commune with the Revenant across long distances, windows becoming more brittle, lights suddenly failing,  a crewmate slipping and falling, or a door acting strangely and opening or bolting shut seemingly without cause, with minor costs to use and leaving the Revenant visible for a moment. These CAN be dangerous to crew but should involve sizable setup, and be more environmental hazards. 
+Abilities with higher cost become more malign, such as a lathe freakishly malfunctioning and maiming the crewmate using it, a door closing and crushing those trying to walk through it, a lightbulb breaking explosively, crew feeling pushed or pulled around or crew strangely feeling dazed and sickened. These abilities should cause the Revenant to be vulnerable temporarily.
+Capstone abilities will fully tap into the supernatural, with walls leaking blood / screams of the damned / ghastly flora spreading / machines coming to life and harassing crew / things obviously being fucked, coming with a severe tax on the Revenant for using them and being limited to only a handful of uses at most.
+
+## The Buddy System
+
+Revenants take time to harvest souls from their victims, and are vulnerable to being disrupted. Crew should feel safer being alongside each other and more insulated against a revenant's more direct attacks if they have someone watching their back. However, this should not be a complete immunity.
+A Revenant should feel discouraged against camping very obviously crowded areas such as medbay and feel inconvenienced by the efforts of attentive crewmates, but not completely helpless if a security officer tries to watch over multiple corpses after a battle or a CMO puts bodies in bodybags and leaves them unattended while they move to create medicine. 
+
+## The Chaplain
+
+The Chaplain should represent the Revenant's nemesis, and a Revenant should be wary of and respect a Chaplain's presence in an area. The Chaplain should have tools that are extremely dangerous to a Revenant, but not represent a hard counter that completely foils a Revenant by simply existing. Similarly, a Revenant should not run rampant and unchecked if a Chaplain is not on the station; crew should be able to utilize chaplain tools against a Revenant with diminished effect.
+These tools may involve the Bible's raw power, area denial through use of salt or blessing an area, or potentially ways to reveal or track a Revenant. These may involve the use of residue left behind by a Revenant upon using abilities or other occult objects.
+
+## Objectives
+
+A Revenant is more similar to a Rat King than a Ninja or Dragon, and does not necessarily need objectives to accomplish its mission. However, potential objectives may be a total amount of essence stolen or unleashing a capstone ability upon the crew.
+
+## Revenant Abilities and Progression
+
+A Revenant does not level up / unlock career paths like the Wraith; access to abilities is strictly limited by essence, with the potential exception of Capstone abilities that may be require a minimum amount of harvested souls.
+Abilities have a 'soft' tiering system, where all are available at the start but will require varying amounts of stolen essence. This gives the Revenant a power curve over the course of a round, as more people die and are harvested and the Revenant gains a larger array of / more powerful abilities. 
+These abilities are purchasable in a store.
