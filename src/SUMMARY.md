@@ -278,6 +278,7 @@ Space Station 14
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
+   			- [Botany Rework](en/space-station-14/departments/service/proposals/botany-rework.md)
    		- [Librarian Gameplay](en/space-station-14/departments/service/proposals/theshued-librarian-gameplay.md)
       - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
 	- [Silicon](en/space-station-14/departments/silicon.md)
