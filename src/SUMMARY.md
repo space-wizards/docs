@@ -362,6 +362,7 @@ Staff
   - [Changing Maintainer Policy](en/wizden-staff/maintainer/changing-maintainer-policy.md)
   - [Useful Maintainer Tools](en/wizden-staff/maintainer/maintainer-tools.md)
   - [Maintainer Policy](en/wizden-staff/maintainer/maintainer-policy.md)
+  - [Revert Procedure](en/wizden-staff/maintainer/revert-procedure.md)
   - [Workgroup Policy](en/wizden-staff/maintainer/maintainer-workgroup-policy.md)
   - [Codeowners Policy](en/wizden-staff/maintainer/codeowners-policy.md)
   - [Content PR Review Procedure](en/wizden-staff/maintainer/content-review-procedure.md)
