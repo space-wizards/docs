@@ -1,20 +1,20 @@
-# Animation State Machine System
+# Animus System (Animation State Machine)
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
 | Ataman | Ataman | :x: No | TBD |
 
 ## Overview
-This is a proposal to add a modular animation state machine (ASM) system that can be used to implement all kinds of temporary or persistent animations to entities like blinking eyes and waddling. The system would offer a framework consisting of timers, triggers, and conditions that can be defined in YAML to run these animations at the appropriate times.
+This is a proposal to add a modular animation state machine (Animus) system that can be used to implement all kinds of temporary or persistent animations to entities like blinking eyes and waddling. The system would offer a framework consisting of timers, triggers, and conditions that can be defined in YAML to run these animations at the appropriate times.
 
 ## Background
 Things like blinking eyes and clown shoe waddling have been implemented in the past by creating specialized systems for their sole task of running simple animations under certain conditions. In almost every PR for these, one can find comments wishing for a more generalized animation system that could be used instead.
 
 ## Features to be added
-### Animation State Machine
-The ASM will consist of a system and components (primarily client-side) to trigger animations under certain conditions, all defined in YAML. Since an entity might need to run multiple animations simultaneously, the component will consist of a list of ASMs to run in parallel.
+### Animation State Machine (Animus)
+The Animus will consist of a system and components (primarily client-side) to trigger animations under certain conditions, all defined in YAML. Since an entity might need to run multiple animations simultaneously, the component will consist of a list of Animus (Animea, Anima, Animuses...?) to run in parallel.
 
-Each ASM state will contain conditions, triggers and/or timers resulting in the execution of a single animation. 
+Each Animus state will contain conditions, triggers and/or timers resulting in the execution of a single animation. 
 
 ### Conditions, Triggers, and Timers
 In order to define when these animations are supposed to run, hardcoded types for use in YAML are required, for example:
@@ -58,28 +58,25 @@ Performance impact will heavily depend on how states are implemented. Many timer
 This proposal ignores multi-state machines in favor of not adding more complexity to an already complex implementation.
 
 ## Decoupling visuals
-As already mentioned, previous implementations of certain visuals used strongly coupled components and systems for each of their unique behavior. This proposal aims to reduce that coupling down to a minimum and allow contributors to focus on the fun part, animating, while all the technical stuff gets hidden behind the ASM implementation.
+As already mentioned, previous implementations of certain visuals used strongly coupled components and systems for each of their unique behavior. This proposal aims to reduce that coupling down to a minimum and allow contributors to focus on the fun part, animating, while all the technical stuff gets hidden behind the Animus implementation.
 
 Blinking eyes could be implemented by inheriting an abstract class which overrides an ```Enter```/```Reset``` method and then add it to YAML.
 
 Clown waddling could be implemented by inheriting another abstract method and overriding the ```GetNextAnimation``` and ```GetResetAnimation```.
 
-Using a proof-of-concept implementation on my fork; making mice do a cute little hop from time to time merely required 50 lines of C# code (including boiler-plate and comments) and 13 lines of YAML.
+Allowing mice to do a cute little hop from time to time merely required 50 lines of C# code (including boiler-plate and comments) and 13 lines of YAML.
 
 ## Animation conflicts
-At the time of writing animation tracks cannot handle multiple animations editing the same property of a component simultaneously. The result is undefined animation behaviour. Due to this the ASM comes with the following drawback: A condition called ```AnimationNotRunning``` is added to the ASM, which must be used to prevent certain states from entering while other legacy animations are playing.
-
-## AnimationStartedEvent engine addition
-The ASM PR would be accompanied by an engine PR adding ```AnimationStartedEvent```. Used to support the previously mentioned ```AnimationNotRunning``` condition as the ASM would have to check this condition on every frame otherwise.
+At the time of writing animation tracks cannot handle multiple animations editing the same property of a component simultaneously. The result is undefined animation behaviour. Due to this the Animus comes with the following drawback: A condition called ```AnimationNotRunning``` is added to the Animus, which must be used to prevent certain states from entering while other legacy animations are playing.
 
 ## Animations don't support YAML
 While YAML defineable animations would be preferable, this is doable using hardcoded animations. If animations ever support YAML, the system can easily be updated to use those instead.
 
 ## New Types
-- ```AnimationStateMachinePrototype```      Prototype for defining state machines.
-- ```AnimationStateMachineComponent```      Component to hold all state machines of an entity.
-- ```AnimationStateMachineSystem```         Client-side only system to execute the ASM's of all entities inside the players rendering view.
-- ```AnimationStateMachineState```          Abstract base type for ASM states.
-- ```AnimationStateMachineTrigger```        Abstract base type for triggers.
-- ```AnimationStateMachineTimer```          Abstract base type for timers.
-- ```AnimationStateMachineCondition```      Abstract base type for conditions.
+- ```AnimusPrototype```      Prototype for defining state machines.
+- ```AnimusComponent```      Component to hold all state machines of an entity.
+- ```AnimusSystem```         Client-side only system to execute the Animus of all entities inside the players rendering view.
+- ```AnimusState```          Abstract base type for Animus states.
+- ```AnimusTrigger```        Abstract base type for triggers.
+- ```AnimusTimer```          Abstract base type for timers.
+- ```AnimusCondition```      Abstract base type for conditions.
