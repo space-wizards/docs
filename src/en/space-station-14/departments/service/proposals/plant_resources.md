@@ -1,30 +1,12 @@
-# Short, Properly Capitalized Title
-
-Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
+# Plant resource rework
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
 | Wolfkey-SomeoneElseTookMyUsername | Wolfkey-SomeoneElseTookMyUsername | :x: No | TBD |
 
-`Designers` should be the names that you, the authors of this document, use on GitHub and/or Discord. This is optional but strongly recommended, since:
-
-- This acknowledges credit where it is due
-- People who are confused about the written intent can use this information to contact the authors
-
-`Coders` should be the names of the contributors who plan on implementing this feature. To get a design doc approved you will need either
-- have the technical knowledge to be able to implement the proposed feature yourself.
-- have someone else who agreed to do this for you.
-- already have an existing implementation elsewhere that just needs to be ported.
-
-In either case you will have to write an outline on how you plan to implement this feature in the **Technical Considerations** section to show that is technically sound and feasible.
-
-`Implemented` is the status of the feature.
-
-Github links can include multiple PRs, if relevant.
-
 ## Overview
 
-A very short, maybe three sentence summary of what this proposal is about. A high level "overview" or "what this adds".
+A rework of the potency, nutrient, water, and environmental tolerance mechanics of botany. Instead of having a potency value that decides the amount of reagents a plant generates, it will instead be decided by the amount of, and type of nutrients in the plant. More powerful reagents require nutrients that are harder to obtain, or have other downsides to their use. Some reagents will also change the environmental requirements of the plant that contains them, such as a cryogenics related reagent causing a plant to require colder temperatures to survive.
 
 ## Background
 
@@ -51,12 +33,6 @@ Consider addressing:
 - At what point in the round does the feature come into play? Does it happen every round? How does it affect the round pace?
 - How do you wish for players to interact with your feature and how should they not interact with it? How is this mechanically enforced?
 - Which department will interact with the feature? How does the feature fit into the [design document](../space-station-14/departments.md) for that department?
-
-## Administrative & Server Rule Impact (if applicable)
-
-- Does this feature introduce any new rule enforcement challenges or additional workload for admins?
-- Could this feature increase the likelihood of griefing, rule-breaking, or player disputes?
-- How are the rules enforced mechanically by way the feature will be implemented?
 
 # Technical Considerations
 
