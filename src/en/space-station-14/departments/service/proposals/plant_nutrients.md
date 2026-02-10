@@ -1,4 +1,4 @@
-# Plant resource rework
+# Plant nutrient rework
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
