@@ -35,7 +35,7 @@ Some examples of Avali names include: Narodi, Kalomi, Eijuli, Eilan, and Maaka.
 
 #### Preference To Cold
 
-The Avali have a naturally lower body temperature compared to other species. This means they prefer colder environments, exhibit slight cold tolerance, and have a lower acceptable temperature range than other species. This, along with the fuzz on their bodies, makes them more susceptible to heat damage.
+Due to their origins, the Avali have a naturally lower body temperature compared to other species. In addition to their lower body temperature, Avali have razor sharp claws on their feet. This allows them to gain traction on slippery surfaces such as ice or meat flooring, but does not prevent them from slipping from other sources. 
 
 #### Unique Bloodstream
 
@@ -56,6 +56,16 @@ When treating Avali patients, medical staff should account for Avali's faster me
 Avali, like many bird-like creatures, have hollow bones. This makes them slightly more susceptible to brute damage. More specifically, piercing and blunt damage. It also means Avali tend to weigh less than other species. Similar to Dwarves, Avali will not shatter glass tables when vaulting onto them and can also be dragged more easily.
 
 Just like Dwarves, this creates a new antagonist and crew-sided interaction. Being easier to drag means Avali could be kidnapped more easily, or potentially saved by a passerby, due to their lighter weight.
+
+#### Feather Preening
+
+The Avali have a bountiful amount of feathers across their body. This comes to relevance in different scenarios through either combat, detective work, or just as a cosmetic.
+
+When struck in combat with a brute weapon, whether it be getting shot, stabbed, or bludgeoned, the Avali can lose a feather or two. It is not guaranteed, but it is highly likely that during a scuffle with another player, the Avali will emit an audible "squawk" in pain, indicating that they have dropped a feather on the ground. The color of the feather is dependent on the player themselves. These feathers can come into play during detective work, whether it be helping support/corroborate a story or it being used to frame someone else for a supposed "assault". These feathers leave DNA evidence when scanned, which can easily connect the feather to its owner. If not used in detective work, they can be worn as a cosmetic item, similar to the hair flower and other such cosmetics.
+
+When it comes to detective/security work, dropped feathers can either help confirm you are innocent or potentially serve as a piece of evidence and help prove you are guilty of a crime. If you are an antagonist that has recently gotten into a fight, it can be quite important to ensure you leave behind no evidence, lest you want security to use it against you.
+
+Avali players can also choose to preen themselves every few minutes, allowing them to pluck off a feather from their body for them to use. This helps to ensure that finding feathers isn't always a guaranteed connection in crimes and allows for some wiggle room with sec.
 
 # Technical Considerations
 
