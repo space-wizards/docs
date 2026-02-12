@@ -511,6 +511,24 @@ For things such as DoAfter, always use events instead of async.
 Async for any game simulation code should be avoided at all costs, as it's generally virulent, cannot be serialized (in the case of DoAfter, for example), and usually causes icky code.
 Events, on the other hand, tie in nicely with the rest of the game's architecture, and although they aren't as convenient to code, they are definitely way more lightweight.
 
+## Toolshed
+
+### Code structuring
+Toolshed commands should always be defined under a `Toolshed` subdirectory and namespace.
+
+### Naming
+- Always suffix toolshed command classes with `Command`.
+Example: `PlayerCommand`, `StationCommand`
+NOT: `PlayerCommands`, `PlayerToolshed` ...
+
+- Toolshed commands that have subcommands should always be singular form.
+Example: `station:list`
+NOT: `stations:list`
+
+- Toolshed commands should be all lowercase without underscores.
+Example: `station:largestgrid`
+NOT: `station:largest_grid`, `station:largestGrid`
+
 ## UI
 
 ### XAML and C#-defined UIs
