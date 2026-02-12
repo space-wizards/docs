@@ -12,12 +12,12 @@ If there are five different cargo ships, don’t make another cargo ship, unless
 **Fundamental Requirements**
 *Communications/Control*
 
-* Holopad (one with ship prefix, rogue ships use the ship antag prefix)
+* Holopad (one with ship prefix)
 * Fax machine (same prefix usage as above)
 * Station Records computer
 * Shuttle console
 * Engineering/Atmos
-* Functioning Atmospherics (Linked Air Alarms/Firelocks/Vents/Sensors, waste management)
+* Functioning Atmospherics (Linked Air Alarms/Firelocks/Vents, waste management)
     - Make sure source atmos cans are “Oxygen” and “Nitrogen” connected to a mixer (21% oxygen, 79% nitrogen), and are accessible for portable tank refilling
     - Also make sure pipe networks are colored! (View atmos network example for commands)
 * Functional Power generation/networking
@@ -41,7 +41,7 @@ If there are five different cargo ships, don’t make another cargo ship, unless
 
 *Meta*
 * Warp Point (for ghost spectator reasons)
-* Latejoin spawn point - Keep in a crew/habitable area!
+* Latejoin spawn point - Keep in a crew/habitable area! (Do not use job spawns)
 * RoofComponent on your grid (done via F7 objects menu, same way you add BecomesStation. Add the roof enabled/disabled markers to all tiles you want to not be affected by planet lighting (such as desert planet).)
 * BecomesStation component
 * Vacuum fix markers on all tiles that will be spaced! This includes diagonals.
@@ -58,7 +58,7 @@ If there are five different cargo ships, don’t make another cargo ship, unless
 * Crew monitoring console
 * Crew monitoring server (medium and above)
 * Medical techfab
-* Bank ATM (Withdraw, normal kind for large enough vessels)
+* Bank ATM (Withdraw only, normal atms may be given for capital size vessels)
 
 *Chemistry:*
 * Sink (one with water)
@@ -141,6 +141,8 @@ If there are five different cargo ships, don’t make another cargo ship, unless
     -  For the PDV: Ships should be moderately armed, and should embrace the vibe of “ancient design made more modern.” After all, the Dynasty has many ancient blueprints. To this end, vessels should feel practical but old - cramped miltech like the TSF, but with more rust/debris/decay and inconvenient layouts.
     -  Mercenary vessels are not as limited in style, but whatever theme you choose for your vessel, it should remain consistent across the hull and be coherent - it should still look good!
 * Remember to put tiling underneath your doors, and keep all floors under walls as plating (not lattice)!
+* Analyze other ships. To make sure your ship is up to standard you should see what works for other mappers (such as exterior reinforced plating and catwalks underneath guns and thrusters)
+
 
 *Identification, Cost, and other Yaml changes*
 * Ship naming nomenclature: (Author) (Name) (Type)-{1}
