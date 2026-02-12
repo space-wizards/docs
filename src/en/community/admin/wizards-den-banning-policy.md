@@ -355,21 +355,12 @@ Self requested bans may only be prematurely removed through a successful appeal 
 2. If the ban has expired you may, but are not required to, deny the appeal.
 3. If you are not an Appeals Team Member or under the supervision of an Appeals Team member you may only process the appeal if you intend to remove the ban, or reduce it in line with the appellants request.
 4. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban.
-5. Collect information
-	1. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
-	2. Ask the player questions that are important for the processing of the appeal.
-	3. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
-6. If Applicable, Run a vote
-	- Votes must run at least 24 hours unless the net vote criteria is met.
-	- Votes must not be closed if there is ongoing discussion unless the net vote criteria is met.
-	- Votes must be made in one of the designated internal appeals discussion channels.
-	- Votes should present as much relevant information as possible.
-	- Votes should indicate if the ban is within guidelines, preferably by presenting the guideline range for the ban.
-7. Post a response on the appeal which must be a summary of the following:
+5. If you do not intend to remove or reduce the ban in line with the appealants request, follow steps 5 & 6 of the appeals policy.
+6. Post a response on the appeal which must be a summary of the following:
 	- The outcome of the appeal.
 	If the outcome is not a removal or specific reduction requested by the appellant, this must also include:
 		- The facts relied on for the outcome.
 		- An opinion detailing why you, the appeals team or the admin team as a whole have decided upon the outcome.
 		- If applicable, when the player is able to reappeal.
-8 Implement the outcome
+7. Implement the outcome
 
