@@ -75,7 +75,7 @@ Because of this they are numb to all chemicals aside from Ethanol which acts as 
 This could potentially provide an interesting flavor when it comes to medicine, and if people intend to poison dwarves. 
 Flavorwise this should coincide with Twerg finding human food, drinks, and chemicals weak and or bland, preferring strongly flavored consumables 
 
-####Detritovore
+#### Detritovore
 
 Twerg are able to eat things such as rotten meat and other various pieces of trash and ingest reagents 
 like mold, vomit and vent crud with no issue because of being detritivores, while in real life this is limited 
