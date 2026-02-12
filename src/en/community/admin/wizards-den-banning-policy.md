@@ -344,3 +344,32 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
     - An opinion detailing why you, the appeals team or the admin team as a whole have decided upon the outcome.
     - If applicable, when the player is able to reappeal.
 10. Implement the outcome 
+
+## Self Requested Bans
+A player may request a ban for any reason, for any duration of time. Such bans are not considered a ban for further administrative actions, and are not subject to the typical rules regarding evasion. Self requested bans may only be requested through AHelp or admin messages on the forum. Requests through other channels should be met with instruction to send a request through the proper channels. At the request of the player, the ban may be ended before the requested time via a ban appeal. While admins are not required to honour ban requests, they should be honoured unless there are compelling reasons against placing a ban.
+
+## Self Requested Ban appeal procedure
+Self requested bans may only be prematurely removed through a successful appeal on the forums. Any other attempts (e.g. Discord) should be responded to by instructing the player to appeal on the forums.
+
+1. Check for ban evasion. If found deny the appeal
+2. If the ban has expired you may, but are not required to, deny the appeal.
+3. If you are not an Appeals Team Member or under the supervision of an Appeals Team member you may only process the appeal if you intend to remove the ban, or reduce it in line with the appellants request.
+4. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban.
+5. Collect information
+	1. Make a reasonable attempt to verify any claims made in the appeal by the player, or accept them to be true.
+	2. Ask the player questions that are important for the processing of the appeal.
+	3. Attempt to allow the player to respond to information which will be considered in the appeal that it would be unfair to not allow them the opportunity to address.
+6. If Applicable, Run a vote
+	- Votes must run at least 24 hours unless the net vote criteria is met.
+	- Votes must not be closed if there is ongoing discussion unless the net vote criteria is met.
+	- Votes must be made in one of the designated internal appeals discussion channels.
+	- Votes should present as much relevant information as possible.
+	- Votes should indicate if the ban is within guidelines, preferably by presenting the guideline range for the ban.
+7. Post a response on the appeal which must be a summary of the following:
+	- The outcome of the appeal.
+	If the outcome is not a removal or specific reduction requested by the appellant, this must also include:
+		- The facts relied on for the outcome.
+		- An opinion detailing why you, the appeals team or the admin team as a whole have decided upon the outcome.
+		- If applicable, when the player is able to reappeal.
+8 Implement the outcome
+
