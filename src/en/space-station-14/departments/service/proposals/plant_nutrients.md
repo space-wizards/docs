@@ -26,7 +26,12 @@ Some nutrients requirements can also be met more efficiently by gasses in the at
 
 Nutrients can be specific elements, like carbon or oxygen; or more vague categories, like flammable, cold, or clown-related.
 
-If a plant has nutrients added to it that it can't use to make reagents, it loses health. Some nutrients (radioactive, toxic, etc.) deal more damage this way than others, some might not deal any damage. (nitrogen, water, etc)
+Some reagents contain multiple types of nutrient, for example:
+- Blue blood containing high amounts of the "blood" and "water" nutrients, and small amounts of the "meat" and "copper" nutrients.
+- Banana honk containing the "nutrient", "clown", "water", "sugar", and "ethanol" nutrients.
+- Oil containing high amounts of the "flammable" nutrient, and smaller amounts of the "carbon" nutrient.
+
+If a plant has a large amount nutrients added to it that it can't use, it may lose health. Some nutrients (radioactive, toxic, etc.) deal more damage this way than others.
 
 Some nutrient types come with unwanted effects, even if the plant needs them to survive. For example, sugary nutrients increasing the amount of pests, or radioactive nutrients randomly mutating the plant.
 Nutrient requirements are not always from the reagents in a plant. Plants with special properties (steelcaps, death nettles, etc.) can have extra requirements not related to their reagents.
@@ -41,7 +46,7 @@ For example:
 
 ## Game Design Rationale
 
-The increased difficulty of making chemicals like omnizine encourages botanists to experiment and grow a variety of plants, instead of just mass producing omnizine, and whatever the chef asks for.
+The increased difficulty of making chemicals like omnizine encourages botanists to experiment and grow a variety of plants, instead of just mass producing one or two reagents.
 
 Carefully considering which plant you should grow based off of what nutrients you have access to is probably more fun than making a hyper-optimized omnizine or TDD plant, then not growing any other mutated plants.
 
@@ -62,12 +67,15 @@ Chefs can provide blood and uncooked animal protein from butchered animals.
 Atmos can fill the botany room with gasses to provide nutrients.
 
 Desired gameplay:
-- A plant requires blood to create a reagent that the botanist wants, so they ask the chef to butcher an animal and give them a bucket of it's blood.
-- The chef is out of monkey cubes, and the botanist does not have enough biomass to print one, so they go around the station asking people to donate blood to their plant.
-- Nobody is willing to donate blood, so they grow blood tomatoes to convert water, nutriment, and iron into blood.
+- A plant has iron as one of its nutrient requirements, so the botanist grows steelcaps and grinds them for iron.
+- A plant has blood as one of its nutrient requirements, so the botanist goes around the station and asks people to donate blood.
+- A plant requires low temperatures to survive, so the botanist builds a glass box, and uses a space heater to cool it down.
+- A plant requires incredibly high temperatures and pressures to survive, so the botanist asks an atmos tech to plant it in a burn chamber.
+- A plant contains a reagent that the botanist does not need, so they intentionally avoid meeting its nutrient requirements.
 
 Undesired gameplay:
 - A botanist creates a single plant containing all the reagents they need at the start of the shift, then spends the rest of the shift growing only that plant.
+- A botanist asks the chemist for mutagen at the start of the shift, then never interacts with another person for the rest of the shift.
 
 # Technical Considerations
 
