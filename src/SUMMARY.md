@@ -36,11 +36,9 @@ General Development
   - [Config File Reference](en/general-development/tips/config-file-reference.md)
   - [YAML Crash Course](en/general-development/tips/yaml-crash-course.md)
   - [Forking Tips](en/general-development/tips/forking.md)
-- [Feature Proposals](en/general-development/feature-proposals.md)
-  - [Feature Proposal Template](en/templates/proposal.md)
-  - [Expected Team Decorum & Usage](en/general-development/feature-proposals/expected-feature-proposal-decorum.md)
+- [Design Documents](en/general-development/design-documents.md)
+  - [Design Document Template](en/templates/proposal.md)
 - [Work Groups](en/general-development/work-groups.md)
-- [Game Area Design Documents](en/general-development/game-area-design-doc.md)
 - [Contributing Translations](en/general-development/contributing-translations.md)
 - [Github Moderation Guidelines](en/general-development/github-moderation-guidelines.md)
 
