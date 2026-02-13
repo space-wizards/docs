@@ -181,6 +181,7 @@ Space Station 14
 	- [Proposals]()
 	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
 	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md)
+      - [Verb-Centric Interactions](en/space-station-14/player-interaction/proposals/interactionrework.md)
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines]()
