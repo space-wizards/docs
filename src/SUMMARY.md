@@ -189,6 +189,7 @@ Space Station 14
 
 - [Roundflow](en/space-station-14/round-flow.md)
 	- [PR Guidelines]()
+	- [Starting Equipment](en/space-station-14/round-flow/starting-equipment.md)
 	
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
  		- [Traitors](en/space-station-14/round-flow/antagonists/traitors.md)
