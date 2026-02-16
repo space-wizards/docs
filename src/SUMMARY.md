@@ -199,6 +199,7 @@ Space Station 14
         - [The Wizard](en/space-station-14/round-flow/antagonists/Wizard.md)
 
 	- [Proposals]()
+		- [Traders](en/space-station-14/round-flow/proposals/traders-ghost-role.md)
 		- [Cleanup Crew Gamemode](en/space-station-14/round-flow/proposals/cleanup-crew-gamemode.md)
 		- [Game Director](en/space-station-14/round-flow/proposals/game-director.md)
 		- [Departmental Economy](en/space-station-14/round-flow/proposals/departmental-economy.md)
