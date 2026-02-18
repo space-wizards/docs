@@ -193,8 +193,8 @@ In order to create a life support system aboard your map you'll need to create a
 ### Standard Pipe Colors
 Prefer using standard pipe colors for your atmospherics layout so that players and other mappers can recognize them immediately.
 
-- Waste loop: #FF1212FF (red)
-- Distro loop: #0335FCFF (blue)
+- Waste loop: #990000FF (red)
+- Distro loop: #0055CCFF (blue)
 - Air: #03FCD3FF (cyan)
 - Mix: #947507FF (brownish)
 
