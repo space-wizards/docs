@@ -66,9 +66,9 @@ Having access to biomass secretions, the Diona can express themselves in many di
 
 Diona player characters are made up of a multitude of Nymph Diona. These are dog-sized slugs, individually no smarter or more inquisitive than a corgi. Connected through biomass, they form a sentient humanoid, Diona, smarter than the whole. As the personality of a Diona is made up of the individual Nymphs they make up, it's in the best interest of the Diona to remain whole.
 
-Diona Nymphs are NPCs created in one of the following ways:
+Diona Nymphs are NPCs, and follow the first Diona they find. They are created in one of the following ways:
 
-- A Diona creating a Seeding Nymph in a hydroponics bay (with some drawback and long cooldown), basically sacrificing a mature Nymph to create a very fragile plant that can be harvested a couple of times, which yields a Nymph as fruit.
+- A Diona creating a Seeding Nymph in a hydroponics bay (with an interaction, some drawback and long cooldown), basically sacrificing a mature Nymph to create a very fragile plant that can be harvested a couple of times, which yields a Nymph as fruit.
 - "Maints Nymphs", mapped in maps with overgrown areas or greenhouses.
 - a Diona gibbing themselves either while dead (expanded on further down in 'Unique Gibbing Bheavior')
 
