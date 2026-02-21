@@ -19,10 +19,9 @@ Pest killer is useless, as the only way for a plant to gain pests is by adding c
 
 The basic water, nutrient, and potency values on plants are removed.
 
-Reagents grown with plants now come with nutrient requirements, the more requirements are met, the more the plant makes.
-Nutrient requirements are met by adding the nutrient to the plant via pouring a reagent that contains the nutrient into the tray/soil.
-
-Some nutrients requirements can also be met more efficiently by gasses in the atmosphere.
+Reagents grown with plants now come with nutrient requirements, meeting more of the nutrient requirements increases the amount of reagent obtained by grinding the plant's produce.
+Nutrients are added to the plant via pouring a reagent that contains the nutrient into the tray/soil, or having a gas that contains the nutrient in the atmosphere.
+When the plant is harvested, nutrients are used up to fulfill the plant's nutrient requirements.
 
 Nutrients can be specific elements, like carbon or oxygen; or more vague categories, like flammable, cold, or clown-related.
 
@@ -34,7 +33,6 @@ Some reagents contain multiple types of nutrient, for example:
 If a plant has a large amount nutrients added to it that it can't use, it may lose health. Some nutrients (radioactive, toxic, etc.) deal more damage this way than others.
 
 Some nutrient types come with unwanted effects, even if the plant needs them to survive. For example, sugary nutrients increasing the amount of pests, or radioactive nutrients randomly mutating the plant.
-Nutrient requirements are not always from the reagents in a plant. Plants with special properties (steelcaps, death nettles, etc.) can have extra requirements not related to their reagents.
 
 Some reagents will also change the environmental tolerances, or other stats of the plant that makes them.
 
@@ -43,6 +41,8 @@ For example:
 - Temperature-stablizing reagents like leporazine could raise a plant's tolerance to both high and low temperatures.
 - Polypyrlium oligimers could lower the pressure requirement of a plant so much that it can survive in space, but no longer can survive earth-like air pressure.
 
+Plants may also have nutrient requirements for growth, which are used up as a plant matures, instead of when they are harvested.
+Plants whose produce can be used for purposes other than grinding (such as steelcaps and glasstle) may have extra nutrient requirements to be harvested.
 
 ## Game Design Rationale
 
@@ -77,4 +77,4 @@ Nutrient requirements and plant stat modifiers could be made a part of the SeedC
 
 The guidebook will have to be updated to tell players what plant nutrients reagents contain.
 
-The nutrient requirements of plants will have to be communicated to the players in some way. This could be done by expanding the examination text hydroponics trays, adding a menu for them, or adding plant analyzers.
+The nutrient requirements of plants and their reagents will have to be communicated to the players in some way. This could be done by expanding the examination text hydroponics trays, adding a menu for them, or adding plant analyzers.
