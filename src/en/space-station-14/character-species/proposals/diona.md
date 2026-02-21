@@ -78,7 +78,7 @@ The donation of a Nymph to help a Diona or delimbed Crew in need is vanishingly 
 > 
 > *Surgery and de-limbing, of course, imply the implementation of the new medical system beforehand.*
 
-Diona value every Nymph like humans and their kittens, with the loss of one Nymph being a great tragedy. To neglect or leave a Nymph without guidance is a taboo for Dionae. And inversely, a Nymph seeks the presence of more mature Dionae to be protected from threats and learn from. For this reason, a second version of Nymphs should be made which opens up a Familiar ghost role whose objective is to follow their seniors and learn from them. Note that they keep their familiar status even after fully forming with the related goals.
+Diona value every Nymph like humans and their kittens, with the loss of one Nymph being a great tragedy. To neglect or leave a Nymph without guidance is a taboo for Dionae. And inversely, a Nymph seeks the presence of more mature Dionae to be protected from threats and learn from. For this reason, a second version of Nymphs should be made which opens up a Familiar ghost role whose objective is to follow their seniors and learn from them until they become strong and wise enough to head out on their own. Note that nothing should stop these Nymphs from continuing to follow their senior even after reforming into a humanoid form.
 
 The intent behind the emphasis on Diona Nymphs is to make Diona a standout species beyond just turning to dust when exposed to fire and looking like a walking plant, and to also be a unique, unobtrusive feature that enriches each round for the player and the crew. *Currently, Diona Nymphs do exist, but provide nothing but evidence that a Diona had been gibbed some time ago.*
 
