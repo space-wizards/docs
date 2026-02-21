@@ -70,7 +70,7 @@ Diona Nymphs are NPCs created in one of the following ways:
 
 - A Diona creating a Seeding Nymph in a hydroponics bay (with some drawback and long cooldown), basically sacrificing a mature Nymph to create a very fragile plant that can be harvested a couple of times, which yields a Nymph as fruit.
 - "Maints Nymphs", mapped in maps with overgrown areas or greenhouses.
-- a Diona gibbing themselves either while dead / at will (expanded on further down)
+- a Diona gibbing themselves either while dead (expanded on further down in 'Unique Gibbing Bheavior')
 
 The donation of a Nymph to help a Diona or delimbed Crew in need is vanishingly rare, but in cases of great trust and need not unheard of.
 
@@ -129,7 +129,11 @@ Given time and care, the dead Nymph can be brought back to life by medical means
 
 #### Unique Gibbing Behavior
 
-With a lengthy cooldown and do-after, or by releasing a non-vital Nymph from a fully formed Diona through great effort. If a Diona gibs into Nymphs, one of them will be chosen for the Diona's player to inhabit and continue playing the game. They must then try to survive, observe, collect food, and live nymphs to merge with until they can reform. The Diona that is created by doing so is a whole new person, though some memories/skills can be retained.
+Dionae Nymphs instinctively band together for survival, but as a last resort they can break apart to carry on at least some part of the whole being. **THIS IS A LAST RESORT AND MEANS PERMANENTLY GIVING UP YOUR CHARACTER**
+
+While dead, Dionae can "gib" themselves, releasing a number of dead and alive Nymphs. One of them will be chosen for the Diona's player to inhabit and continue playing the game. They must then try to survive, observe, collect food, and live nymphs to merge with until they can reform. The Diona that is created by doing so is a new person, though some memories/skills/attachments are retained.
+
+> The New Life Rule is in effect on servers where it matters, meaning you should not be able to recall who exactly killed you after reforming from a voluntary gib, if the server cares about that.
 
 #### Atypical Biology
 
