@@ -66,7 +66,7 @@ Having access to biomass secretions, the Diona can express themselves in many di
 
 Diona player characters are made up of a multitude of Nymph Diona. These are dog-sized slugs, individually no smarter or more inquisitive than a corgi. Connected through biomass, they form a sentient humanoid, Diona, smarter than the whole. The Diona's personality is made up of its individual Nymphs. Nymphs that have been fused for a long time often need the Diona to remain whole to survive.
 
-Diona Nymphs are NPCs and follow the first Diona they find, as they rely on them for guidance and protection. They are created in one of the following ways:
+Diona Nymphs are NPCs and follow the last Diona that petted them, as they rely on larger Diona forms for guidance and protection. They are created in one of the following ways:
 
 - A Diona creating a Seeding Nymph in a hydroponics tray or similar (with an interaction, some drawback and long cooldown), basically sacrificing a mature Nymph to create a very fragile plant that can be harvested a couple of times, which yields a Nymph as fruit.
 - "Maints Nymphs", mapped on stations with overgrown areas or greenhouses.
@@ -78,7 +78,7 @@ The donation of a Nymph to help a Diona or delimbed Crew in need is vanishingly 
 > 
 > *Surgery and de-limbing, of course, imply the implementation of the new medical system beforehand.*
 
-Diona value their inner community most, with the loss of one Nymph being a tragedy.´To neglect or leave a Nymph without guidance is a taboo for Diona. 
+Diona value every Nymph like humans and their kittens, with the loss of one Nymph being a great tragedy. To neglect or leave a Nymph without guidance is a taboo for Dionae. And inversely, a Nymph seeks the presence of more mature Dionae to be protected from threats and learn from. For this reason, a second version of Nymphs should be made which opens up a Familiar ghost role whose objective is to follow their seniors and learn from them. Note that they keep their familiar status even after fully forming with the related goals.
 
 The intent behind the emphasis on Diona Nymphs is to make Diona a standout species beyond just turning to dust when exposed to fire and looking like a walking plant, and to also be a unique, unobtrusive feature that enriches each round for the player and the crew. *Currently, Diona Nymphs do exist, but provide nothing but evidence that a Diona had been gibbed some time ago.*
 
