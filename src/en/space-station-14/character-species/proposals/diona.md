@@ -134,6 +134,11 @@ With a lengthy cooldown and do-after, or by releasing a non-vital Nymph from a f
 #### Atypical Biology
 
 Dionae are often misrepresented as tree people. But what is true is that Dionae loves Robust Harvest. It has fascinating healing properties far exceeding those of regular nutrients, capable of mending most physical damage in a fraction of the time. Charred wounds remain unaffected, however.
-Care must be taken with Robust Harvest moderation, as an overdose can cause all stored biomass to be expelled from their stores, skin to harden into bark, and them to rapidly root into the flooring. In other words, they turn into immobile "trees", though they are still able to vocalize and interact with their environment in a limited fashion.
+Care must be taken with Robust Harvest moderation, as an overdose can cause all stored biomass to be expelled from their stores, skin to ossify into bark, and them to rapidly root into the flooring. In other words, they turn into immobile "trees", though they are still able to vocalize and interact with their environment in a limited fashion. 
+By having a helpful crewmate hack away at the excess bark, they can return mobility to Dionae, though one should have food and water nearby.
+
+> Ideally, this would mean they would not drop their equipped items on the floor.
+> 
+> Also, by "interact with their environment", imagine how a Xenoborg Core is able to hold and interact with objects in their nearby environment. If a player so chooses, they could choose to overdose on purpose for reasons like to avoid dying from environmental hazards, as they are encases in protective bark, or be silly and work a desk job with everything they need already nearby. Tree bartender anyone?
 
 Plant-B-Gone and similar chemicals are especially harmful to them, as they are quickly absorbed into their system and wreak havoc. Just as much as a Human does not like getting sprayed with acid, it is generally considered cruel to apply such chemicals to Dionae.
