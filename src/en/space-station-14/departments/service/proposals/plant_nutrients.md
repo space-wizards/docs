@@ -48,15 +48,9 @@ For example:
 
 The increased difficulty of making chemicals like omnizine encourages botanists to experiment and grow a variety of plants, instead of just mass producing one or two reagents.
 
-Carefully considering which plant you should grow based off of what nutrients you have access to is probably more fun than making a hyper-optimized omnizine or TDD plant, then not growing any other mutated plants.
+Carefully considering which plant you should grow based off of what nutrients you have access to is probably more fun than growing the same plants every shift.
 
 Botanists can choose to take risks by growing more difficult plants, and are rewarded with better chemicals.
-
-Consider addressing:
-- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy?
-- What makes this feature enjoyable or rewarding for players?
-- Does it introduce meaningful choices, risk vs. reward, or new strategies?
-- How does it enhance player cooperation, competition, or emergent gameplay?
 
 ## Roundflow & Player interaction
 
@@ -81,6 +75,6 @@ Undesired gameplay:
 
 Nutrient requirements and plant stat modifiers could be made a part of the SeedChemQuantity struct.
 
-- Does the feature require new systems, UI elements, or refactors of existing ones? Give a short technical outline on how they will be implemented.
-- Are there any anticipated performance impacts?
-- For required UI elements, give a short description or a mockup of how they should look like (for example a radial menu, actions & alerts, navmaps, or other window types)
+The guidebook will have to be updated to tell players what plant nutrients reagents contain.
+
+The nutrient requirements of plants will have to be communicated to the players in some way. This could be done by expanding the examination text hydroponics trays, adding a menu for them, or adding plant analyzers.
