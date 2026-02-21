@@ -1,7 +1,6 @@
 [book]
 authors = ["Space Wizards Contributors"]
 language = "en"
-multilingual = false
 src = "src"
 title = "Space Wizards Development Wiki"
 description = "Tutorial & reference for all Space Wizards Federation projects, including the Robust Toolbox engine and its flagship open source game, Space Station 14."
@@ -9,8 +8,8 @@ description = "Tutorial & reference for all Space Wizards Federation projects, i
 [preprocessor.mermaid]
 
 [preprocessor.admonish]
-assets_version = "3.0.1" # do not edit: managed by `mdbook-admonish install`
 command = "mdbook-admonish"
+assets_version = "3.1.0" # do not edit: managed by `mdbook-admonish install`
 
 [preprocessor.emojicodes]
 
@@ -18,9 +17,10 @@ command = "mdbook-admonish"
 before = ["mermaid","admonish","emojicodes"] # templates can include these so we run this first
 
 [preprocessor.embedify]
+scroll-to-top.enable = true
 
 [output.html]
-additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js', 'scripts/nav-additions.js']
+additional-js = ['scripts/mermaid.min.js', 'scripts/mermaid-init.js'] #, 'scripts/nav-additions.js']
 additional-css = ['theme/compiled/ss14.css']
 default-theme = "navy"
 preferred-dark-theme = "navy"
@@ -29,7 +29,7 @@ git-repository-url = "https://github.com/space-wizards/space-station-14"
 edit-url-template = "https://github.com/space-wizards/docs/blob/master/{path}"
 
 mathjax-support = true
-curly-quotes = true
+smart-punctuation = true
 no-section-label = true
 
 [output.html.print]
@@ -41,6 +41,14 @@ level = 1
 
 [output.html.playground]
 runnable = false # sorry we arent rustpilled :(
+
+[output.html.search]
+boost-title = 3
+
+# Disable search in meeting notes as this clutters the search for actual docs.
+# Meeting notes shouldn't be in the docs anyway.
+[output.html.search.chapter]
+"en/maintainer-meetings" = { enabled = false }
 
 [output.linkcheck]
 traverse-parent-directories = false
