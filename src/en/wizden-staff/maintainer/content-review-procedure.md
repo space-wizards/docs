@@ -125,25 +125,21 @@ Pull requests can be closed in two ways:
 - The PR contains content that violates Wizard Den's rules and/or code of conduct.
 
 ### Discussing PRs
-A maintainer may start a discussion if there is a disagreement between another maintainer on whether to merge or close a pull request, or for any other technical reason.
-It is highly recommended to defer to multiple maintainers informally in a public channel.
-For organization, it is best to call for a quick discussion in `#maint-quick-discussions`.
 
-If absolutely 100% necessary, a vote may be called by tagging a PR with `S: Undergoing Maintainer Discussion`.
-This will auto-create a topic on Discourse for the pull request calling maintainers to discuss and vote on whether to merge or close the pull request.
+If there is significant disagreement in the maintainer team about what to do with a PR, extended discussion is best held in a forum thread: tag the PR with `S: Undergoing Maintainer Discussion` and a bot will automatically create a cross-linked forum post.[^forum]
 
-Once a conclusion is reached or regular discussion ceases, one of the following must occur:
-- If a definitive decision was reached (Approve/Close), then it should be acted upon by the maintainer who opened the vote (however it can be handled by any maintainer).
-  - If a decision overrules an action made by a [Maintainer Workgroup](maintainer-workgroup-policy.md), the vote must be a supermajority (66%) to pass.
-- If a compromise within the scope of the PR is reached, then the PR should be approved once the compromise is implemented.
-  Inability/refusal to implement the compromise should result in the closure of the PR.
-- If no definitive decision was reached, then the PR should be closed.
+To achieve a final resolution, a deciding maintainer should do their best to weigh all discussion in the thread based on its own merits. While contributing maintainers are free to state their final opinion directly ("close" or "merge"), a simple "yes/no" vote count should not be the deciding factor for a pull request, and maintainers are encouraged to properly state their reasoning and engage with the discussion further.[^wikipedia]
 
-A positive conclusion should be indicated on the PR with the `S: Conceptual Approval` tag.
-This invalidates all disagreements/`S: Concern` tags and allows the pull request to be merged as long as it passes code review.
+If a maintainer feels that a discussion has run its course[^productivediscussion] and that a final resolution can be made. This should preferably be a maintainer with experience with the topic at hand (for example, in a relevant workgroup) but should not be a hard requirement, to avoid a resolution never being made entirely. They are expected to explain their decision based on the discussion presented in the thread so far, keeping the above guidelines in mind.
 
-If the discussion concludes negatively, the closure message for the PR should include a brief summary of the discussion.
-This should have information about the elements that need to be addressed if a subsequent PR were to be made.
+A positive conclusion should be indicated on the PR with the appropriate approval tag (`S: Conceptual Approval` for design, `S: Approved` for technical decisions).
+This invalidates all disagreements/`S: Concern` tags and allows the pull request to be merged as long as the "other side" (both design and technical review) are good.
+
+If a maintainer feels that the resolution produced by another maintainer is significantly incorrect, or did not account for the discussion properly, they should take this up with a higher authority (Lead Maintainers, Wizards, or in the future perhaps a Game Design lead). This should not be abused to endlessly keep a discussion going, and should not be used as a form of "maintainer shopping."
+
+[^forum]: Forum threads generally avoid more low-effort "drive-by" comments from random players/contributors, and are easier to moderate.
+[^wikipedia]: See also: [Wikipedia:Polling is not a substitute for discussion](https://en.wikipedia.org/wiki/Wikipedia:Polling_is_not_a_substitute_for_discussion)
+[^productivediscussion]: It is entirely possible for a discussion to still be ongoing but just be repeating itself with no more productive points being made. This would still be a valid scenario in which to just put a pin in it.
 
 ### Tagging a PR as Experimental
 An Experimental PR is any PR marked with the `Intent: Experimental` label.
