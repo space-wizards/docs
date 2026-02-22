@@ -60,8 +60,9 @@ A name with two components could be “Bergljót” which comes from the roots �
 These names are not tied to the character of a Twerg, but rather to their family, as Twerg are often named after their ancestors. 
 Along with that, related siblings will often share similar given names, usually keeping the first couple of letters similar or the same.
 
-Twerg Surnames are based on Patronymics and Matronymics, a name that simply means “Son of [Blank]” or “Daughter of [Blank]”. 
-So for example, the son of a Twerg named Hallbjǫrg’s Surname would be “Hallbjǫrgsson, or the daughter of a Twerg named “Sveinn” would be “Sveinsdóttir.”
+Twerg Surnames are based on Patronymics and Matronymics, a name that simply means “Son of [Blank]”, “Daughter of [Blank]”, or "Child of [Blank]." 
+So for example, the son of a Twerg named Hallbjǫrg’s Surname would be “Hallbjǫrgsson, the daughter of a Twerg named “Sveinn” would be “Sveinsdóttir.”, or the nonbinary child of a twerg named "Stígandr" would be "Stíganarbur", or they might just drop the suffix and just have the surname "Stíganar"
+
 
 This is somewhat of a simplification of what I could find regarding old Norse naming schemes,
 and it does omit certain aspects such as the importance of word order and certain grammatical rules when it comes to Patronymics or Matronymics,
