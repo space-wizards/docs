@@ -4,7 +4,7 @@ Not following this procedure/policy will result in disciplinary action being tak
 ## Requirements
 - **Three Maintainers must *sign-off*** (Approval is required, reviewing is recommended but optional) on a hotfix PR for it to be merged.
 - The Hotfix procedure only applies to PRs being merged straight to "stable" or "staging". **When merging bugfixes to master, this procedure does NOT apply, use the normal PR procedure instead!**
-- All Hotfixes must adhere to the normal [PR Review Procedure](../maintainer/review-procedure.md) in addition to any requirements listed here.
+- All Hotfixes must adhere to the normal [PR review procedure](../maintainer/content-review-procedure.md) in addition to any requirements listed here.
 - Hotfixes must be given the "Hotfix" label during triage. They will also automatically receive a label indicating their branch.
 - Stable Hotfixes are for fixing bugs only, not for adding new content or minor balance adjustments. *If a balance issue is bad enough to majorly impact game quality, it should be considered a bug and is eligible for a hotfix. This is up to Maintainer judgment, but if you are unsure, it's recommended to create a discussion thread prefixed with "HOTFIX-PRNumber".
 - Hotfixes to Staging may include any changes that are deemed necessary for the upcoming release, but are otherwise still referred to as Hotfixes and follow these procedures.
@@ -49,7 +49,7 @@ If a fix was already merged into master, it may be possible to turn it into a ho
 - Create your empty working branch from the appropriate target branch, as above
 - Make sure that your local master branch is also up to date
 - Get the commit hash of the merged PR from the git log or GitHub
-   ![image](https://github.com/user-attachments/assets/7ef72e09-3f01-438d-bc8b-4b658b3225df)
+   ![commithash.png](../../assets/images/wizden-staff/maintainer/commithash.png)
 - Instead of coding your own changes on your branch, pick the existing commit from master
 ```shell
 git cherry-pick <commit hash>
