@@ -351,7 +351,7 @@ A player may request a ban for any reason, for any duration of time. Such bans a
 ## Self Requested Ban appeal procedure
 Self requested bans may only be prematurely removed through a successful appeal on the forums. Any other attempts (e.g. Discord) should be responded to by instructing the player to appeal on the forums.
 
-1. Check for ban evasion. If found deny the appeal
+1. Check for ban evasion. If found, deny the appeal.
 2. If the ban has expired you may, but are not required to, deny the appeal.
 3. If you are not an Appeals Team Member or under the supervision of an Appeals Team member you may only process the appeal if you intend to remove the ban, or reduce it in line with the appellants request.
 4. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban.
