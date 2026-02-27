@@ -382,6 +382,8 @@ The most common ones are
 `GotUnequippedEvent`
 `GotUnequippedHandEvent`
 `DroppedEvent`
+`SolutionChangedEvent`
+`SolutionContainerChangedEvent`
 
 ## Predicted update loop example
 A lot of old code is accumulating frametime inside update loops to decide when to next run it.
