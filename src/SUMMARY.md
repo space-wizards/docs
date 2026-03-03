@@ -177,6 +177,7 @@ Space Station 14
 	- [PR Guidelines]()
 	
 	- [Cartridge loaders](en/space-station-14/player-interaction/cartridge-loaders.md)
+	- [Accent Guidelines](en/space-station-14/player-interaction/accent-guidelines.md)
 
 	- [Proposals]()
 	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
