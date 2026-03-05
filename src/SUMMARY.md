@@ -136,6 +136,7 @@ Space Station 14
 		- [Solution Containers](en/space-station-14/core-tech/chemistry/solution-containers.md)
 
 	- [Proposals]()
+		- [Animation State Machine](en/space-station-14/core-tech/proposals/animation-state-machine.md)
 
 - [Accessibility](en/space-station-14/accessibility.md)
 	- [PR Guidelines]()
