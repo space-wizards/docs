@@ -38,8 +38,6 @@ Alternatively, if damage to the silicon's programming is not deemed too severe, 
 
 Lawset updates should be costly and time-consuming - the intent is to make it easier in most cases to simply work around a malfunctioning silicon if its behavior isn't too disruptive. Likewise, design should encourage the lightest possible touch - more invasive changes to a silicon's programming should be proportionally more expensive to make. If crew are consistently hunting down every modified silicon and reverting their laws, that's a sign that these mechanics need to be revisited. At the same time, these mechanics should be balanced so that defeated hostile silicons are consistently being returned to play.
 
-The xenoborg faction, which is expected to create and convert silicon brains en-masse, should have its own mechanics for quickly aligning a large number of brains to its objectives. These mechanics do not need to adhere to the philosophy laid out in this document, provided that they are designed in such a way that only xenoborgs can expect to benefit from them.
-
 ## Silicon Law Exceptions
 
 Though the exact nature of game rules will vary from server to server, as different administrators enforce their preferred values, rules regarding silicon players tend to be fairly well agreed upon. On the Wizard's Den server, a silicon player is not allowed to follow their silicon laws if it would result in them breaking the core server rules. For example, a silicon player who is instructed to engage in hate speech would be required by the server rules to refuse that request.
