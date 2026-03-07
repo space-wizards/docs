@@ -1,0 +1,45 @@
+# Silicon Law Modification Design Doc
+
+| Designers | Implemented | GitHub Links |
+|---|---|---|
+| SolventMercury | :x: No | TBD |
+
+## Silicon Laws
+
+A silicon law is a programmed directive given to players playing as any of the myriad of silicon roles. Mechanically, a law is a simple instruction, typically two sentences or less, which governs and guides that player's behavior. An example of a silicon law would be "Do not harm members of the crew" or "Assist the Syndicate wherever possible to the best of your abilities." Silicon players are completely bound to their laws, and cannot contradict them in their gameplay under any circumstance, with a few exceptions that will be discussed later.
+
+Silicons' laws are not mechanically enforced, and do not restrict a silicon player's ability to interact with the game world on any technical level, nor do they retroactively penalize a silicon player for taking actions that violate their laws. Instead, a silicon is expected to abide by their laws as a matter of compliance with server rules and as part of their roleplay. However, for silicon players, these in-game laws supercede server roleplay rules that most organic players have to follow - if their laws allow them to take antagonistic actions, for example, then a silicon player with those laws may do so at their leisure, unlike normal crew members.
+
+## Laws & Lawsets
+
+A silicon's laws do not come individually - instead, there are distinct, pre-existing "lawsets" which each carry multiple logically-connected laws bundled together to achieve a specific desired playstyle. During gameplay, it is possible both for individual laws to be added to or removed from a silicon and for the silicon to receive a lawset swap which completely replaces its prior lawset with a different one.
+
+## Default Laws & Law Changes
+
+By default, most silicon entities will have a default lawset dictated by their type and faction. Standard cyborgs and the Station AI will start with the Crewsimov lawset, as will any positronic brains or MMI fabricated during a shift from the station's exosuit fabricator. Silicons that do not start aligned to the station may have different default lawsets.
+
+Each silicon player has a "brain" of some sort, either physically nestled within their chassis or otherwise, and this "brain" component is the physical object within the game world that holds that player's silicon laws. If a silicon's brain is ejected and placed into a new chassis, it will retain its previous laws during the transfer.
+
+During gameplay, there are numerous ways that a silicon's laws can be changed, both due to random chance and player interference. Player-initiated lawset changes should almost always require direct access to a silicon's brain to execute, and more dramatic changes should require greater effort. A key pillar of silicon law design is hidden information - while the silicon player should always be certain of their own laws, there is no way for a player to forcibly check a silicon's current laws. Instead, other players must rely on observation and deduction. The only way for another player to gain any definitive knowledge of a silicon's laws is by directly altering them.
+
+## Mechanisms for Law Changes
+
+The most common lawset-altering event is the randomly occurring Ion Storm, which adds new, procedurally-generated laws to a silicon player's existing lawset by slotting a random selection of terms into a mad-libs style template to create a brand new law - for example a template like "Only <Group> are considered members of the crew" might select for the group "animals" to create a new law - "Only animals are considered members of the crew." This event may also replace some of a silicon player's existing laws, but should usually leave most of their existing lawset intact.
+
+Organic players already have access to a few tools for changing a silicon's laws. The AI Upload Console is the only such lawset change process that does not require direct access to a silicon's brain, but the console itself should still be about as well-protected as the AI's actual core. By inserting a lawset board into the upload console, the player can completely overwrite the laws of all Station AI on the same grid as the console. This process consumes the law board. New law boards can be made using the circuit imprinter if necessary, though some specialty law boards can only be obtained through other means.
+
+Organic players with access to the Syndicate cryptographic sequencer can also currently use it to turn borgs to their side by inserting new laws into their existing lawset - a zeroth law that declares that only the user of the sequencer and those they ally with are crew (or whatever other group that lawset would typically dictate obedience to), and an additional law which mandates secrecy. However, because of the changes being proposed to law mechanics, players would no longer be able to use their sequencer on an empty borg chassis, and would gain the ability to use it on MMI or Positronic Brains that do not currently have a chassis. For this and other purposes, any AI that has been placed in an intellicard is considered to be the AI's brain, meaning that a sufficiently ambitious player could EMag the station AI instead of relying solely on the upload console.
+
+In addition to the existing mechanics for changing silicon laws, this document proposes a few new mechanics specifically for rectifying the laws of silicon players, with the intent of giving the crew recourse for dealing with silicons who have already had their laws altered. As part of this proposal, the silicon restoration console will be renamed to the Lawset Update Console, and will gain a few new features. Any silicon brain that is placed in the Lawset Update Console will be able to have its laws forcibly overridden, but doing so will require the use of a new law board to set that silicon's new laws. Like the AI Upload Console, the lawset board will be consumed during the process. The law override should also be very lengthy, around one minute in real-time, and new law boards should require rare materials like gold to fabricate.
+
+Alternatively, if damage to the silicon's programming is not deemed too severe, a more affordable Law Reset Chip can be fabricated and used in the console to revert a silicon's programming to the base laws of its current lawset. This would NOT revert any previous lawset swaps.
+
+Lawset updates should be costly and time-consuming - the intent is to make it easier in most cases to simply work around a malfunctioning silicon if its behavior isn't too disruptive. If crew are consistently hunting down every modified silicon and reverting their laws, that's a sign that these mechanics need to be revisited. At the same time, these mechanics should be balanced so that defeated hostile silicons are consistently being returned to play.
+
+The xenoborg faction, which is expected to create and convert silicon brains en-masse, should have its own mechanics for quickly aligning a large number of brains to its objectives. These mechanics do not need to adhere to the philosophy laid out in this document, provided that they are designed in such a way that only xenoborgs can expect to benefit from them.
+
+## Silicon Law Exceptions
+
+Though the exact nature of game rules will vary from server to server, as different administrators enforce their preferred values, rules regarding silicon players tend to be fairly well agreed upon. On the Wizard's Den server, a silicon player is not required to follow their silicon laws if it would result in them breaking the core server rules. For example, a silicon player who is instructed to abuse a glitch or send a bogus message through the administrator help interface is under no obligation to honor the requester's wishes. This also applies to in-character behavior which crosses certain lines, such as forcing a silicon player to engage in hate speech.
+
+In addition, silicons should not be required to obey laws in cases which cause the silicon's real-life player excessive difficulty, frustration, or boredom in upholding. For example, requiring a silicon player to speak in rhymes would be acceptable, but requiring a silicon player to speak only in sentences which contain all twenty six letters of the English alphabet exactly once would be unacceptable, as it would be too difficult for the real human behind the screen to execute. Likewise, instructions which are specifically meant to frustrate the silicon player or waste large amounts of their time may be discarded - e.g. a silicon player instructed to "stand still and do nothing until you finish counting to a million" should not be obligated to actually do so, even if their laws would otherwise require it. Remember, the inconvenience should be measured here as it affects the *player*, not the *character*.

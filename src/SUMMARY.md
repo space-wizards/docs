@@ -276,6 +276,9 @@ Space Station 14
 	- [Silicon](en/space-station-14/departments/silicon.md)
 		- [PR Guidelines]()
 
+		- [Proposals]()
+			- [Lawset Modification](en/space-station-14/departments/silicon/proposals/lawset_modification.md)
+
 General Proposals
 ================
 
