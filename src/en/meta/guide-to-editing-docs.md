@@ -32,7 +32,7 @@ If you just want to make a basic edit of a page, simply follow these steps--you 
 
 ## Building
 
-If you want to locally build the docs, the necessary dependencies are Rust and some binaries installed using `cargo`. It's recommended that you use `cargo install` or `cargo quickinstall`, as building can take a while.
+If you want to locally build the docs, you need to install Rust, then install the project dependencies using `cargo`. It's recommended that you use `cargo install` or `cargo quickinstall`, as building can take a while. Because the project doesn't use the latest versions of these crates, you need to specify the correct version number, for example: `cargo install mdbook@0.4.36`. You can find the versions currently in use from [the deploy script](https://github.com/WizAntonioD/ss14-docs/blob/master/.github/workflows/deploy.yml) and the versions you have installed with `cargo install --list`.
 
 From cargo, install:
 - `mdbook`
@@ -43,7 +43,7 @@ From cargo, install:
 - `mdbook-mermaid`
 - `mdbook-template`
 
-Run `mdbook serve` to build and locally host the documentation from the `book` directory at `localhost:3000`.
+Run `mdbook serve` to build and locally host the documentation at `localhost:3000`.
 
 ## Testing changes
 
