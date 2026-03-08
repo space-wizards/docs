@@ -3,8 +3,10 @@
 The Docs repo has a different review policy compared to the Content repository.
 Since the Docs repo can be pushed to directly by maintainers, is mostly text-based, can be easily reverted/changed, and does not affect forks, most docs pull requests can be handled by a single maintainer.
 
-### Pushing to the Docs Repo
-Maintainers have direct push access to the docs repository and are encouraged to use it to update any outdated information, whether it's technical documentation, amending a design document, or just fixing grammar.
+### Pushing to the Docs and Content Repositories
+Maintainers and docutainers have direct push access to the docs repository and are encouraged to use it to update any outdated information, whether it's technical documentation, amending a design document, or just fixing grammar. 
+
+Docutainers can also review and merge guidebook PRs on the content repository, but should not abuse this to merge non-guidebook-related pull requests.
 
 ### PR Reviews
 PRs that update instructional or reference documentation (including, but not limited to, setup guides, style guides, and system documentation) require only a single approval before they can be merged.
