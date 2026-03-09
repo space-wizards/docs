@@ -182,7 +182,7 @@ Space Station 14
 	- [Proposals]()
 	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
 	  - [Grid Inventory](en/space-station-14/player-interaction/proposals/grid-inventory.md)
-	  - [Personal AI](en/space-station-14/departments/silicon/personal-ai.md)
+	  - [Personal AI](en/space-station-14/player-interaction/proposals/personal-ai.md)
 
 - [Roleplay/Lore](en/space-station-14/roleplay-lore.md)
 	- [PR Guidelines]()
