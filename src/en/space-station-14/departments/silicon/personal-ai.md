@@ -12,7 +12,7 @@ Github links can include multiple PRs, if relevant.
 
 | Designers                                                                         | Implemented     | GitHub Links |
 |-----------------------------------------------------------------------------------|-----------------|--|
-| TODO! | :white_check_mark: Yes | TODO! |
+| Velken | :white_check_mark: Yes | [#42344](https://github.com/space-wizards/space-station-14/pull/42344) |
 
 ## Overview
 
@@ -31,17 +31,11 @@ Summarize any information that is needed to contextualize the proposed changes, 
 Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
 -->
 
-Personal AI devices are commonly found around the station. Their existance is of a silicon, they don't have laws, but are bound to help their owner.
+Personal AI devices are commonly found around the station. Their existance is of a companion to help their owner.
 
 Their general goal is to be an assistant, be it by helping remember something, yell for help or even using their abilities.
 
-### SS13 History
 
-TODO() //Someone fill this please
-
-### SS13 Issues
-
-TODO() //Someone fill this please
 
 ## Features to be added
 
@@ -50,8 +44,8 @@ TODO() //Someone fill this please
 Personal AIs need more abilities to be purchasable, as their current options is very limited.
 
 Some of the pAIs abilities are locked from the store if they don't have the valid corresponding access in the ID that is inserted with them in the PDA. And become unable to use said abilities while not having the required access.
-For example: a pAI in a medical staff's PDA, can spend memory to buy a crew monitor. But if they are taken out of the PDA and/or put in a non-medical PDA, that ability no longer becomes usable, but they do NOT get a refund for the spent memory.
-
+More ways to limit what conditions a pAI needs to meet to unlock more actions are always desired, as they create a roundflow of players going after those conditions to improve their companions.
+More variants for pAIs and customization of them are also a desired options.
 
 ## Game Design Rationale
 
@@ -63,63 +57,20 @@ Consider addressing:
 - How does it enhance player cooperation, competition, or emergent gameplay?
 - If the feature is a new antagonist, how does it fit into the corresponding [design pillars](../space-station-14/round-flow/antagonists.md)?
 -->
-While not completely unique, since they are a smaller version of AI, is that the pAIs have access to a lot of information, but their lack of autonomy, including talking in comms directly, locks them to being assistants.
-The lack of autonomy allows to give pAI some more powerful abilties, that would, otherwise, not be given to a crewmember.
-Using the example from before, the crew monitor does exist as a handheld item, but is limited to 1 per station, being a highly valuable item that is even a steal tagert. But a pAI could have the ability, since it needs to relay the information to someone be able to act on it, which leaves us to a total of two players being "used" as a resource to get the same result.
+Personal AIs have access to a lot of information, but have lack of autonomy, including talking in comms directly, this locks them to being assistants instead of independent actors.
+The lack of autonomy allows to give pAI some more powerful abilties, that would, otherwise, not be given to a crew member.
+However, there is a limit on how powerful those abilities should be, and it should never exceed to a point where one starts to get multiple pAIs to have several abilities at once, their memory store has limited funds specifically so that they must be careful with what they choose.
 
-### Memory modules breakdown:
+A pAI should always be able to:
+- Talk;
+- See its surroundings;
+- Know who their owner is;
 
-The pAI starts with 30 memory avaiable to buy modules, 
+A normal pAI should NEVER be able to:
+- Move on its own;
+- Harm their owner directly;
+- Talk in comms;
 
-#### Memory modules (Actions)
+The abilities a pAI buys in the store should be a choice of the pAI, but, their owners can give them instructions on what would best suit the needs. Once a pAI entity has bought an action, that cannot be undone for anything easier than getting a new pAI device, this is to prevent pAIs from just cycling their actions to have access to all available in their store.
 
-- These can be a wide variety of cost and power.
-  - Categories:
-    - Generic:
-      - Station Map
-	  - Music (basic midiplayer)
-	  - Mass Scanner
-      - T-Ray Scanner
-    - Medical:
-      - ~~Crew Monitor~~
-    - Engineering:
-	  - Atmospheric Alerts
-    - Service:
-      - Music+ (has a bunch of intrusment options)
-    - Cargo:
-      - Cargo Bounty (with printer, and if they have QM access, they can even skip)
-	- Syndicate:
-	  - TODO()
-	- Science:
-	  - Research and Development
-	- Security:
-	  - Criminal Records
-	  
-
-## Roundflow & Player interaction
-
-<!--
-Consider addressing:
-- At what point in the round does the feature come into play? Does it happen every round? How does it affect the round pace?
-- How do you wish for players to interact with your feature and how should they not interact with it? How is this mechanically enforced?
-- Which department will interact with the feature? How does the feature fit into the [design document](../space-station-14/departments.md) for that department?
--->
-
-
-### Syndicate pAIs
-
-TODO()
-
-### Current Issues
-
-TODO()
-
-# Technical Considerations
-
-<!--
-- Are there any anticipated performance impacts?
-- Does the feature require new systems, UI elements, or refactors of existing ones?
-- For required UI elements, give a short description or a mockup of how they should look like (for example a radial menu, actions & alerts, navmaps, or other window types)
--->
-
-TODO()
+There can variants for pAIs, one such example, is the syndicate pAI, which has access to talk in the syndicate channel, it is not a direct antagonist, but it is of antagonistic origin, and should be siding with its owner's side.
