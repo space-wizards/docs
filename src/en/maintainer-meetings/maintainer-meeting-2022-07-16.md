@@ -26,7 +26,7 @@ Any decisions taken in these notes may no longer be applicable.
 - Such as EntityUid\<ToolComponent\>
 - Wouldn't really mean anything short of just being implicit cast to/from EntityUid when relevant, just a type hint kinda thing
 - Vast majority would expect TransformComponent, would make more sense to explicitly say it doesn't require it
-- ![](https://i.imgur.com/KqbK5vi.png)
+- ![action.png](../assets/images/maintainer-meetings/2022-07-16/action.png)
     - ship it
 - Generic struct that contains the entity uid and component, keeps it in a field
 - **Conclusion: Ship it (When PJB Codes It)**
@@ -98,7 +98,6 @@ Any decisions taken in these notes may no longer be applicable.
         - books/ebooks in pda
             - ebooks preloaded on pda for selected job
             - when rich text gets merged
-                - ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
 - oldchat + ui refactor | Jezithyr, DrSmugleaf
     - we did it
     - lost in the canadian wilds

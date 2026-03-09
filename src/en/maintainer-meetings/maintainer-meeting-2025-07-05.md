@@ -129,7 +129,7 @@ Write your name here if you read this list fully.
           - `Slarti`: How about the blast door? It still is smoothed with the walls, where the airlocks are not.
               - Ask art leads
               - `Tiniest Shark` It should definitely not be smoothed like other entrances for consistency
-  ![](https://hedgedoc.spacestation14.com/uploads/1b1a0a85-395c-492f-a61e-32c4c2ff4a71.png)
+  ![iconsmoothing.png](../assets/images/maintainer-meetings/2025-07-05/iconsmoothing.png)
 
 - [38218](https://github.com/space-wizards/space-station-14/pull/38218) Scurrets
   - Wawa!

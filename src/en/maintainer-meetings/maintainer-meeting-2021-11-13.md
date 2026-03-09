@@ -44,8 +44,8 @@ In the future merge VV with a generic inspector in the engine
 # Admin Logs | DrSmugleaf
 Vibechecking smugs work :yay:
 - PJB are you happy:
-  ![](https://i.imgur.com/SfyctsB.png)
-  ![](https://i.imgur.com/xvBvZeW.png)
+  ![logentryupdate.png](../assets/images/maintainer-meetings/2021-11-13/logentryupdate.png)
+  ![logentryupdate.png](../assets/images/maintainer-meetings/2021-11-13/thatsprettybased.png)
 
 Make a log entry have multiple types
 Filter by these types (be able to do and)
@@ -95,12 +95,11 @@ Proposals:
 
 We need a vibe check on how examining works in SS13
 
-![](../assets/images/maintainer-meeting/2021-11-13-examine-1.png)
-![](../assets/images/maintainer-meeting/2021-11-13-examine-2.png)
+![2021-11-13-examine-1.png](../assets/images/maintainer-meetings/2021-11-13/2021-11-13-examine-1.png)
+![2021-11-13-examine-2.png](../assets/images/maintainer-meetings/2021-11-13/2021-11-13-examine-2.png)
 
 # Revert .NET 6 | PJB
 - It wasn't a joke...
-- ![](https://i.imgur.com/bMBsRbV.png)
 - This is terrible for admin logging.
 - If PJB fixes ef core issue with memory leaking it's fine.
 

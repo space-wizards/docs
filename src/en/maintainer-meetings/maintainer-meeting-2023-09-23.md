@@ -20,7 +20,6 @@ Any decisions taken in these notes may no longer be applicable.
 - mirrorcult
 - TheQuietOne
 - miku
-![miku](https://media.discordapp.net/attachments/813722892948733982/1155204273777422366/miku.png)
 - moony
 - Slava0135
 - ShadowCommander

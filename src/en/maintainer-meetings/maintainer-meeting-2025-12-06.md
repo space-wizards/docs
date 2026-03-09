@@ -28,7 +28,7 @@ This meeting was recorded:
 ## Errant had a thing
 
 - `Errant` DungeonSystem spams a lot of errors. Does anyone want to look into it?
-  - ![](https://hedgedoc.spacestation14.com/uploads/ebd89ed1-40d0-4c9d-bc65-a9974daf475c.png) 
+  - ![dungeonsystemerrors.png](../assets/images/maintainer-meetings/2025-12-06/dungeonsystemerrors.png)
 
 ## Silicon Workgroup doc vote hi (Scar)
 - https://forum.spacestation14.com/t/silicon-workgroup-document/25503

@@ -117,7 +117,7 @@ Any decisions taken in these notes may no longer be applicable.
             - we want a generic antag overlay system
             - loyalty implant
             - faction system
-- EL BODY SYSTEM | mirror ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
+- EL BODY SYSTEM | mirror
     - some refactors were done by mirror, still some left
     - surgery died in the war of 1992
         - Mirror died in the war of 1993
