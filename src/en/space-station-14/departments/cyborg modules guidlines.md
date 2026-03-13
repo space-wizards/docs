@@ -52,7 +52,7 @@ For hands:
 - ||Add more examples||
 
 ### Normal and Specialized modules
-Normal modules, often depicted as gay, fit in to any chasie as long as there is an empty slot ||is it true with syndi modules?||
+Normal modules, often depicted as gray, fit in to any chasie as long as there is an empty slot ||is it true with syndi modules?||
 Specialized modules are modules that are only designed to fit in to one type of borg chasie.   
 Overall normal modules should usually contain items that a passager could get without added acess and 
 specialized modules should contain items usually found in their chosen department.
