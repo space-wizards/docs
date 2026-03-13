@@ -17,7 +17,7 @@
 
 ||
 
-||Actualy start of the document:||
+||Actual start of the document:||
 
 # Cyborg modules guideline
 
@@ -26,11 +26,12 @@ It was created because of the lack of consistency and quality between borg modul
 Those guidelines are to help figuring out how to structure singular modules or structure whole specialized borg modules.  
 
 ## Cyborg modules
-Cybrog modules are an item that is designed to inserted in to a cyborg that grants them items or slots they can use.
-Most modules are already build into a borg when selecting a chasie or spawning in in casees of direlects, xenoborgs and
+Cyborg modules are an item that is designed to inserted in to a cyborg that grants them items or slots they can use.
+Most modules are already build into a borg when selecting a chassis or spawning in, in cases of direlects, xenoborgs and
 syndiborgs. Some modules have to be fabricated in exosuit fabricator usually located in robotics/science department, 
 fabricated in xenoborg core or bought through an uplink. Cyborgs drop all their modules on the floor when destroyed.
-Modules can be looked at, added or removed from a cyborg if their mentaince panel is open.
+Modules can be looked at or added from a cyborg if their maintenance panel is open, but not always remove them  
+Some modules provide items that are strictly better than humanoid counterpart and usually have infinite uses with regenerative delay
 
 ### Module slots
 Modules have slots compared to humanoid hands, but are much more restricted, but there are many more of them ||better wording needed||   
@@ -51,17 +52,16 @@ For hands:
 - If there are many items of similar usage and are interchangeable (like instruments)
 - ||Add more examples||
 
-### Normal and Specialized modules
-Normal modules, often depicted as gray, fit in to any chasie as long as there is an empty slot ||is it true with syndi modules?||
-Specialized modules are modules that are only designed to fit in to one type of borg chasie.   
-Overall normal modules should usually contain items that a passager could get without added acess and 
-specialized modules should contain items usually found in their chosen department.
+### Generic and Specialized modules
+Generic modules, often depicted as gray, fit in to any chassis as long as there is an empty slot ||is it true with syndi modules?||
+(tools, jet modules for space movement, module for carrying materials without an ability to use them)  
+Specialized modules are modules that are only designed to fit in to one type of borg chassis.
 
-Normal modules:
-- They should be universal and not specialized in to any department
+Generic modules:
+- should contain item/slots that aren't department locked and are of general use ||what is general use|| to cyborgs. (tools, jet modules for space movement)
 - ||add more examples||
 
-Specailized modules:
+Specialized modules:
 - Should fit the theme of the department in which they are specialized in
 - Should include the tools that department usually use ||maybe add examples||
 - ||add more examples||
@@ -69,11 +69,12 @@ Specailized modules:
 ### Upgrade modules
 Some research unlocks an upgraded version of modules. Those modules are only specialized and that is the only upgrade 
 to them.  
-Upgraded modules should do everything that previous module could or more. It can also contain items that can be better
-than a humanoid counterpart
+- Upgraded modules should do everything that its predecessor could do or more.
 
 ### Module slots and how to slice them
 Borg usually have all their items seperated in to groups which are then put in to modules.  
-Each module should contain 6 or less items, otherwise the slots are put on top of each other, exeption to this rule
-might be hand slots for storing things.  
-Each module should fallow a theme ||might want to rewrite this||
+- Each module should contain 6 or less items, otherwise the slots are put on top of each other, exception to this rule
+might be hand slots for storing things. ||might want to rewrite this||
+- Every module should have a theme it tries to achieve, and shouldn't try to fit several themes at once 
+(gardening module over a module that has both gardening tools and chemistry tools)
+
