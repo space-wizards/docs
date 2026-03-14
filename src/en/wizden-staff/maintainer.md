@@ -12,7 +12,7 @@ An SS14 maintainer maintains the content side of Space Station 14. This includes
 
 ### Documaintainer
 
-A documaintainer is an SS14 maintainer who only has maintainer powers for the docs repository. Within the docs repository, they have the same power and authority as an SS14 maintainer.
+A documaintainer is an SS14 maintainer who only has maintainer powers for the docs and content repositories. Within the docs repository, they have the same power and authority as an SS14 maintainer.
 
 ### Head Mapper
 
@@ -24,7 +24,7 @@ An art lead is an SS14 maintainer who has exclusive power over content PRs with 
 
 ### UI Lead
 
-A UI lead is an SS14 maintainer who has exclusive power over content PRs with UI changes and additions. These maintainers are expected to ensure the game retains usable, aesthetically pleasing UIs which fit the game's art style. 
+A UI lead is an SS14 maintainer who has exclusive power over content PRs with UI changes and additions. These maintainers are expected to ensure the game retains usable, aesthetically pleasing UIs that fit the game's art style. 
 
 ### Robust Toolbox Maintainer
 
