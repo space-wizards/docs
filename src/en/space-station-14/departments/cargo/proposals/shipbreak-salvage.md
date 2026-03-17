@@ -24,6 +24,10 @@ Accordingly, BreakSalv will not attempt to capture all aspects of previous Salva
 
 As the name suggests, Shipbreaker Salvage is also inspired by the game [Hardspace: Shipbreaker](https://store.steampowered.com/app/1161580/Hardspace_Shipbreaker/). It does not try to recreate the game's mechanics in SS14; instead, it aims to emulate the feeling of engagement and fulfilment that breaking apart a spaceship provides, much like the game does. The game provides a good aesthetic and emotional goalpost for what BreakSalv attempts to be (and it's a pretty good game!).
 
+## Motivations and Goals
+
+TBW
+
 ## Features to be added
 
 BreakSalv is the primary gameplay loop for the _Salvage Specialist_ job belonging to the Salvage subdepartment of the Cargo department. The goal is to produce resources for distribution to the rest of the station, including high volumes of basic raw materials (e.g. steel, glass, plastic), rare and unique materials (e.g. plasma, uranium), and certain equipment that may be costly or otherwise difficult to procure for departments. This is achieved by spawning in wrecks of old derelict shuttles, extracting rare materials from them by hand, and then shredding the remainder of the shuttle for basic materials.
