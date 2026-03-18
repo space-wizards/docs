@@ -24,13 +24,13 @@ Accordingly, BreakSalv will not attempt to capture all aspects of previous Salva
 
 As the name suggests, Shipbreaker Salvage is also inspired by the game [Hardspace: Shipbreaker](https://store.steampowered.com/app/1161580/Hardspace_Shipbreaker/). It does not try to recreate the game's mechanics in SS14; instead, it aims to emulate the feeling of engagement and fulfilment that breaking apart a spaceship provides, much like the game does. The game provides a good aesthetic and emotional goalpost for what BreakSalv attempts to be (and it's a pretty good game!).
 
-## Motivations and Goals
+### Motivation for Salvage
 
-TBW
+This Salvage design is grounded in using the unique opportunities provided by having a resource generator working on the outside of the station. Open space, and the environments that can be put in it, lends itself well to randomized elements that wouldn't be possible inside the static layout of a station. In addition, the inherent dangers of space suits a role defined by hazardous work, which should appeal to risk-seeking players that are either looking for a thrilling experience, or that wish to optimize their performance in spite of the dangers. This type of gameplay is currently only really offered via Security (which has a strong focus on PvP combat and unexpected bursts of danger) or Science (as part of artifact/anomaly research), leaving room for Salvage to fulfill a niche as a reliable source of PvE combat, environment navigation challenges and space movement mechanics, while being a primary resource generator.
 
 ## Features to be added
 
-BreakSalv is the primary gameplay loop for the _Salvage Specialist_ job belonging to the Salvage subdepartment of the Cargo department. The goal is to produce resources for distribution to the rest of the station, including high volumes of basic raw materials (e.g. steel, glass, plastic), rare and unique materials (e.g. plasma, uranium), and certain equipment that may be costly or otherwise difficult to procure for departments. This is achieved by spawning in wrecks of old derelict shuttles, extracting rare materials from them by hand, and then shredding the remainder of the shuttle for basic materials.
+BreakSalv is the primary gameplay loop for the _Salvage Specialist_ job belonging to the Salvage subdepartment of the Cargo department. The job's purpose on the station is to produce resources for distribution to the rest of the station, including high volumes of basic raw materials (e.g. steel, glass, plastic), rare and unique materials (e.g. plasma, uranium), and certain equipment that may be costly or otherwise difficult to procure for departments. This is achieved by spawning in wrecks of old derelict shuttles, extracting rare materials from them by hand, and then shredding the remainder of the shuttle for basic materials. These wrecks feature hazards that Salvagers must contend with; a proficient Salvage player has both the knowledge and execution to quickly and efficiently extract materials while navigating the dangers the wrecks bring.
 
 The work of a Salvager takes place in the _Salvage Bay_, a location exposed to space on the outside of the station, near the Cargo department. While most Salvage work occurs in the Salvage Bay due to the station-locked machinery there, they should have a small locker room in Cargo for suiting up, with easy access to the rest of the Cargo department to facilitate material transfers.
 
@@ -40,9 +40,9 @@ BreakSalv's gameplay loop consists of three primary parts: retrieval, extraction
 
 **Retrieval** is the process of spawning wrecks and transporting them to the station so their resources can be extracted.
 
-This part provides players with a good opportunity to engage with the game's space maneuvering mechanics, from basic space jumps to (improvised) jetpacks to grappling hooks. It's the primary way that Salvage engages with the *space* part of the space station. The role is positioned fairly unique in the game; while there are other jobs that work in space at times (primarily Engineering) they do not utilize movement through it as a core aspect of the job. Of course this relies on that the base mechanics themselves provide interesting gameplay, but considering how integral space is to the identity of the game, that should be a given.
+This part provides players with a good opportunity to engage with the game's space movement mechanics, from basic leaps to jetpacks (real or improvised) to grappling hooks. It's the primary way that Salvage engages with the *space* part of the space station. The role is positioned fairly unique in the game; while there are other jobs that work in space at times (primarily Engineering) they do not utilize movement through it as a core aspect of the job. Of course this relies on that the base mechanics themselves provide interesting gameplay, but considering how integral space is to the identity of the game, that should be a given.
 
-Wrecks are pre-made grids themed around being decommissioned shuttles, destroyed station sections or the like. To access wrecks, Salvage has a unique console in the Salvage Bay called the _Salvage Magnet_. 
+Wrecks are pre-made grids themed around being decommissioned shuttles, destroyed station sections or similar. To access wrecks, Salvage has a unique console in the Salvage Bay called the _Salvage Magnet_. 
 
 #### Salvage Magnet
 
