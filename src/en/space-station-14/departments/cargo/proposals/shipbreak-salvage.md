@@ -28,6 +28,19 @@ As the name suggests, Shipbreaker Salvage is also inspired by the game [Hardspac
 
 This Salvage design is grounded in using the unique opportunities provided by having a resource generator working on the outside of the station. Open space, and the environments that can be put in it, lends itself well to randomized elements that wouldn't be possible inside the static layout of a station. In addition, the inherent dangers of space suits a role defined by hazardous work, which should appeal to risk-seeking players that are either looking for a thrilling experience, or that wish to optimize their performance in spite of the dangers. This type of gameplay is currently only really offered via Security (which has a strong focus on PvP combat and unexpected bursts of danger) or Science (as part of artifact/anomaly research), leaving room for Salvage to fulfill a niche as a reliable source of PvE combat, environment navigation challenges and space movement mechanics, while being a primary resource generator.
 
+Salvage should aim to provide the following experience:
+- Hard work not for the faint of heart under a sci-fi megacorp industrial aesthetic. Salvagers should feel like they are cool by braving the dangers and efforts inherent to their job.
+- Visible results from their work. Seeing a huge pile of materials that can be delivered should make the Salvagers feel like they are contributing to the station.
+- Completionism and optimization. Salvagers will want to aim for high efficiency while working speedily, with experience allowing players to tackle more difficult scenarios while still keeping up a high pace. 
+- Moments of rest. Since all Salvage work requires constant manual effort, Salvagers shouldn't be pressured to work continuously. The game should naturally have breakpoints where Salvagers disengage from the resource-gathering loop to ensure they aren't constantly in "workmode". 
+
+Salvage should avoid the following:
+- Isolationism. While Salvage operates on the outside of the station, they should not by any means be unreachable to the rest of the station crew. There may be small moments where a Salvager and their team are positioned in an awkward location but this should be brief and temporary. In addition, Salvage should be encouraged to interact with station crew directly as part of its gameplay, either utilizing services (rather than being self-reliant) or through enabling aspects of their work.
+- Easy sabotage/round removal features. By working in space, Salvage has some inherent advantages to the job for antagonistic activities (e.g. EVA, tools, space movement). Tools and equipment must be evaluated in the context of antagonists/griefers getting their hands on them and be appropriately balanced. 
+- Overabundance of materials. All wrecks should follow guidelines for how many resources may be on them and what loot may be found, such that a competent Salvage team can't make Cargo completely redundant. Similarly, Cargo itself shouldn't make Salvage's work redundant to the station. Said guidelines should be constructed through playtesting to find the sweetspots and aren't covered in this proposal.
+- Single point of failure for core gameloops. While the lack of Salvage should be felt by the station, Cargo and other departments should not rely on the output of Salvage's work to the extent where their core gameloops are unable to progress in case Salvage is unable to perform. In the event that Salvagers are dead/missing, it should be possible for Cargo/other crew to take over performing Salvage work without too much difficulty.
+- Harvesting gamerloot. While Salvagers should be able to find fun and interesting things as part of their work, this should be achieved through properly interacting with the gameplay loop and ensuring the job is done well. Speeding through content to reach specific "loot" should be discouraged via mechanics, to prevent forgoing station-supporting gameplay for selfish rewards. 
+
 ## Features to be added
 
 BreakSalv is the primary gameplay loop for the _Salvage Specialist_ job belonging to the Salvage subdepartment of the Cargo department. The job's purpose on the station is to produce resources for distribution to the rest of the station, including high volumes of basic raw materials (e.g. steel, glass, plastic), rare and unique materials (e.g. plasma, uranium), and certain equipment that may be costly or otherwise difficult to procure for departments. This is achieved by spawning in wrecks of old derelict shuttles, extracting rare materials from them by hand, and then shredding the remainder of the shuttle for basic materials. These wrecks feature hazards that Salvagers must contend with; a proficient Salvage player has both the knowledge and execution to quickly and efficiently extract materials while navigating the dangers the wrecks bring.
@@ -70,7 +83,7 @@ Only one wreck may be active with the magnet at any given time. Once a wreck has
 
 Once a wreck has been spawned, it will be located somewhere in nearby space in proximity to the Salvage Bay. If the wreck is not within the player's viewing distance, Salvage may use a _Mass Scanner_ mapped in the Bay to locate it. Compared with previous iterations of Salvage, the wrecks are meant to spawn much closer to the station. Regardless, Salvage will want to move the wreck closer to the Salvage Bay, as it will make it easier to extract materials and is necessary to complete the later steps. This is known as _towing_.
 
-To tow the wreck, Salvage will have access to _grappling hooks_ and _magboots_. While grappling hooks on their own simply drag the user towards the hook, when combined with the grounding force of the magboots, Salvagers can pull grids towards each other (or, in the case of one with a station anchor, only the one without is pulled). Ideally, Salvage will be able to stand on the outer rim of the station and use their grappling hooks to drag the wreck into working distance; once it is, they can proceed to the next step.
+To tow the wreck, Salvage will have access to certain tools to drag grids. An example of this would be using _grappling hooks_ and _magboots_. While grappling hooks on their own simply drag the user towards the hook, when combined with the grounding force of the magboots, Salvagers could pull grids towards each other (or, in the case of one with a station anchor, only the one without is pulled). Ideally, Salvage would be able to stand on the outer rim of the station and use their grappling hooks to drag the wreck into working distance and proceed to the next step.
 
 ### Extraction
 
@@ -80,9 +93,9 @@ On the wrecks, there will be various resources Salvage will want to move off the
 
 #### Wreck Resources
 
-Wreck resources are scraps, technology gadgets, structures, and hazardous containers containing rare materials. Salvage will want to remove these from the wrecks before the shredding step takes place to ensure a high material yield and/or prevent damage to the Salvage Bay. No one wreck will contain all types of wreck resources, and ideally, wrecks should specialize in a specific resource that can be extracted (such as a radioactive wreck containing many radioactive wreck resources that provide uranium).
+Wreck resources are ship parts, technology gadgets and hazardous containers made up of rare materials. Salvage will want to remove these to ensure a high material yield and/or prevent damage to the Salvage Bay. No one wreck will contain all types of wreck resources, and wrecks could specialize in a specific resource to be extracted (such as a radioactive wreck type containing many radioactive wreck resources that provide uranium).
 
-Wreck resources cannot be used directly as materials; they must be processed first. The _recycler_ is a good option for this, as it is a station-mounted machine, and Salvage can easily have their own. As a rule, wreck resources should _not_ focus on steel or glass materials, since those are primarily obtained through the shredding step.  
+Wreck resources cannot be used directly as materials; they must be processed first. The _recycler_ is a good option for this, as it is a station-mounted machine, and Salvage can easily have their own. As a rule, wreck resources should _not_ focus on basic materials, since those are primarily obtained through the shredding step.  
 
 - **Two-handed:** Requires two hands to pick up. 
 - **Large:** Big enough to require dragging and can't be held or put in containers.
@@ -93,6 +106,8 @@ Wreck resources cannot be used directly as materials; they must be processed fir
 - **Explosive:** If destroyed or processed incorrectly, will explode.
 - **Pulsating:** Occasionally emits a gravity pulse that pushes away other objects around it.
 - **More!** The idea is that these wreck resource types can be expanded upon for more variety. 
+
+It's key that wreck resources can be easily identified as such; Salvagers shouldn't need to wonder if a resource should be recycled or if it can be left on the wreck as scrap. 
 
 ### Processing
 
@@ -160,20 +175,6 @@ Upgrades to the Salvager's arsenal could be:
 
 ## Game Design Rationale
 
-BreakSalv intends to position Salvage as a primary resource generator for the station by leveraging the unique game mechanics opportunities afforded by working outside the station. 
-
-BreakSalv intends to provide the following experience:
-- Hard work not for the faint of heart under a sci-fi megacorp industrial aesthetic. Salvagers should feel like they are cool by braving the dangers and efforts inherent to their job.
-- Visible results from their work. Seeing a huge pile of materials come out of the shredders should make the Salvagers feel like they are contributing to the station.
-- Completionism and optimization. Salvagers will want to hit 100% on the Wreck Percentage with high Shredder Efficiency and low Wreck Time, but may situationally forgo it for a faster, lower reward. Good Salvagers can brag about how fast they completed a wreck.
-- Moments of rest. Since all Salvage work requires constant manual effort, salvagers shouldn't be pressured to work continuously. Not having a time limit and forcing minor delays between wrecks (and a longer one for the Magnet Upgrade) are meant to encourage this.
-
-There are a few things that BreakSalv is intentionally trying to avoid:
-- Isolationism. While Salvage operates on the outside of the station, since the focus is on magnet wrecks and the shredders, Salvagers do not have much reason to leave the station proper. At worst, a Salvage team may occasionally need to leave the station grid to retrieve a wreck that has spawned further out, but this is only intended to be a temporary excursion lasting for the duration to get out there and tow it back. Salvage should be expected to be found in the Salvage Bay at a level similar to Botany and Xenoarch.
-- Easy sabotage/round removal features. BreakSalv doesn't intend to solve the strategy of just yeeting a dying body into space, but otherwise, the equipment used for BreakSalv shouldn't be highly efficient antagonist/griefing strategies. The industrial shredders can damage things, but aren't as fast as just stabbing someone with a Syndicate weapon, and the separation charges should be as easy to interrupt as trying to disconnect a grid using an RCD. 
-- Overabundance of materials. All wrecks should follow guidelines for how many resources may be on them and what loot may be found, such that a competent Salvage team can't make Cargo completely redundant. Similarly, Cargo itself shouldn't make Salvage's work redundant to the station. Said guidelines should be constructed through playtesting to find the sweetspots and aren't covered in this proposal.
-- Single point of failure for core gameloops. While the lack of Salvage should be felt by the station, Cargo and other departments should not rely on the output of Salvage's work to the extent where their core gameloops are unable to progress in case Salvage is unable to perform. BreakSalv does not inherently solve this issue as it is tied to current resource consumption balance, but does make it substantially easier for other players to take on the role of Salvage and for the Salvage gameloop to transfer into other types of materials.
-- Spawning in wrecks, grabbing loot, and de-spawning them: That's not to say a wreck can't have a _little_ bit of "loot", i.e., equipment/cosmetics only benefitting Salvage. But the wrecks should be balanced such that it's not desirable for Salvagers to just spawn one in and not actually work on or shred it, forgoing the station-supporting gameplay for selfish rewards. 
 
 ### BreakSalv in detail
 
