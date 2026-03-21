@@ -106,6 +106,17 @@ An important thing to note is that, while the list it generates is alphabeticall
 It has the following properties:
 - `Group`: The group that all the reagents will have. This should correspond to a value on the `group` field of `ReagentPrototype`.
 
+### ProtoTag
+ProtoTag is a richtext format that will take information about a (non-abstract) prototype directly from the code of the entity. This can be used to futureproof a guidebook page that might change later - since it will always be looking for data from the entity itself, you won't have to update any information in your guidebook.
+
+ProtoTag uses the format `[protodata="<id>" comp="<component>" member="<member>"/]`, where `id` is the id of your desired entity, `component` is the component you're looking at, and `member` is the specific field of that component. For example, if you want to pull info on how much power an RTG draws, you would do `[protodata="GeneratorRTG" comp="PowerSupplier" member="MaxSupply"/]`.
+
+```admonish warning
+In order for this system to work, it need to be able to access these member fields. Any component field you access must be marked with the `[GuidebookData]` attribute, and cannot be private.
+```
+
+You can supply an optional `format="<format>"` to format the data you pull using the `float.ToString()` method. [This page](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings) is a good resource for formatting strings.
+
 ## Creating Entries
 
 Now that you've created a file with all of your content, you need to make an entry for it to display in game. Entries are prototypes found in the `/Resources/Prototypes/Guidebook/` folder. Like before, try to group guides and their children together so that they can be easily found.
