@@ -113,7 +113,7 @@ Here's an example of a table made with XML:
 ```
 
 And here's what it looks like in game:
-![markup-example.png](../../assets/images/guidebook-table-example.png)
+![guidebook-table-example.png](../../assets/images/guidebook-table-example.png)
 
 ### CommandButton
 The `<CommandButton>` tag allows you to embed a button in a guidebook. Clicking the button will execute a command. This may seem useless, but there are many useful client-side commands, such as ones that open menus. 
