@@ -12,7 +12,7 @@ Github links can include multiple PRs, if relevant.
 
 | Designers                                                                         | Implemented     | GitHub Links |
 |-----------------------------------------------------------------------------------|-----------------|--|
-| Velken | :white_check_mark: Yes | [#42344](https://github.com/space-wizards/space-station-14/pull/42344) |
+| Velken | ❌ No | [#42344](https://github.com/space-wizards/space-station-14/pull/42344) |
 
 ## Overview
 
@@ -69,7 +69,7 @@ A pAI should always be able to:
 A normal pAI should NEVER be able to:
 - Move on its own;
 - Harm their owner directly;
-- Talk in comms;
+- Talk in crew comms;
 
 The abilities a pAI buys in the store should be a choice of the pAI, but, their owners can give them instructions on what would best suit the needs. Once a pAI entity has bought an action, that cannot be undone for anything easier than getting a new pAI device, this is to prevent pAIs from just cycling their actions to have access to all available in their store.
 
