@@ -2,7 +2,9 @@
 
 {{#template ../templates/wip.md}}
 
-Toolshed is one of the three primary built-in debug tools (alongside `scsi` and View Variables.) for RobustToolbox, functioning as the game's development console. To use Toolshed, open the debug console or use the debug console in `devwindow`.
+Toolshed is one of the three primary built-in debug tools (alongside `scsi` and View Variables.) for RobustToolbox, functioning as the game's development console. 
+
+Toolshed can be used through the debug console. The default key to open the debug console is `` ` ``. You can also use the devwindow by typing `/devwindow` in the in-game chat.
 
 ```admonish warning
 Toolshed is not yet available on the client, so you need to use the `>` prefix command on the client in order to run its commands server-side. Ommiting this will often result in an error stating that you lack permission to run the command even if this is not the case.
