@@ -2,6 +2,10 @@
 
 by mqole
 
+```admonish info
+This is an unofficial and incomplete guide. It will be updated and replaced with an official doc in the future.
+```
+
 All of these are guesstimates based on reverse-engineering nubody. if its wrong, its because I don't understand how nubody works.
 
 NOTE: when i say Species in an entity name (eg AppearanceSpecies, MobSpecies) i am expecting this to be replaced with the actual name of the species (eg AppearanceDwarf, MobDwarf).
