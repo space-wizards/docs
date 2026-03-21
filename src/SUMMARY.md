@@ -59,6 +59,7 @@ SS14 By Example
 - [UI and You](en/ss14-by-example/ui-and-you.md)
   - [UI Cookbook](en/ss14-by-example/ui-and-you/ui-cookbook.md)
 - [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
+- [Converting Oldbody to Nubody](en/ss14-by-example/converting-oldbody-to-nubody.md)
 
 Robust Toolbox
 ==============
@@ -283,6 +284,9 @@ Space Station 14
       - [Joker Roles](en/space-station-14/departments/service/proposals/joker_roles.md)
 	- [Silicon](en/space-station-14/departments/silicon.md)
 		- [PR Guidelines]()
+
+		- [Proposals]()
+			- [Lawset Modification](en/space-station-14/departments/silicon/proposals/lawset_modification.md)
 
 General Proposals
 ================
