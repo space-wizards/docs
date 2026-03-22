@@ -36,6 +36,10 @@ Good on its own and has a lot of resources for learning Git further. Explains th
 **[Learn Git Branching](https://learngitbranching.js.org/)**
 An interactive, gamified way of learning Git. Plays well with "Git for the SS14 Developer" so you can develop a more intuitive understanding of what it's talking about.
 
+### SS14
+**[Entity Systems, Components and Events](en/general-development/setup/howdoicode.md)**
+A guide on the arhitecture of the Engine that SS14 uses. Must know to implement features.
+
 ### Other
 
 **[CS50 | Harvard](https://cs50.harvard.edu/college/2021/spring/weeks/6/)**
