@@ -37,7 +37,7 @@ Good on its own and has a lot of resources for learning Git further. Explains th
 An interactive, gamified way of learning Git. Plays well with "Git for the SS14 Developer" so you can develop a more intuitive understanding of what it's talking about.
 
 ### SS14
-**[Entity Systems, Components and Events](src/en/robust-toolbox/ecs.md)**
+**[Entity Systems, Components and Events](../robust-toolbox/ecs.md)**
 A guide on the underlying architecture of SS14's game engine. A must-know if you want to work on the codebase.
 
 ### Other
