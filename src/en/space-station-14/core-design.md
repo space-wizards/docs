@@ -1,7 +1,7 @@
 # Core Game Design
 These documents contains the Spacestation 14's Core Game Design Princples and should be used to inform the design of any new designs or large balance changes.
 
-Questions around Core Game Design should be directed towards the design-discussion channel on the Official Spacestation 14 Discord (Prefered) or if you do not use Discord by making a thread on the Spacestation 14 Forums.
+Questions around Core Game Design should be directed towards the design-discussion channel on the Official Spacestation 14 Discord (Preferred) or if you do not use Discord by making a thread on the Spacestation 14 Forums.
 
 ## Caveats
 - These documents are living documents and will change overtime as the design of Spacestation 14 evolves.
