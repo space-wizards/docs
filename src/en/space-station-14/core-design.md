@@ -1,5 +1,5 @@
 # Core Game Design
-These documents contains the Spacestation 14's Core Game Design Princples and should be used to inform the design of any new designs or large balance changes.
+These documents contain the Spacestation 14's Core Game Design Princples and should be used to inform the design of any new designs or large balance changes.
 
 Questions around Core Game Design should be directed towards the design-discussion channel on the Official Spacestation 14 Discord (Preferred) or if you do not use Discord by making a thread on the Spacestation 14 Forums.
 
@@ -19,7 +19,7 @@ Wizard's Den aims to bring a vanilla Space Station 14 experience. This means a s
 Wizard's Den is the upstream for the majority of forks. As such, code and content should be stable and maintained. Automated tests should ensure systems remain functional, and outright broken, unplanned, or unmaintained content should be removed.
 
 ### Mechanics Over Rules
-Wizard's Den prioritizes mechanical design over rules design whenever and wherever possible. Admins shouldn't be required for the game to work, and as much as possible mechanics should prevent their involvement.
+Wizard's Den prioritizes mechanical-design over rules-design whenever and wherever possible. Admins shouldn't be required for the game to work, and as much as possible mechanics should prevent their involvement.
 
 # Spacestation 14
 Spacestation 14 is a game where disasters, enemies, and incompetence conspire to make each shift aboard the station a unique and hellish experience.
