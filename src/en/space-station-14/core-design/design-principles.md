@@ -1,5 +1,5 @@
-```admonish warning "Attention: WIP!"
-This doc is actively under development and is not fully complete. Things may change!
+```admonish warning "Attention: Outdated!"
+This doc has been deprecated by a general "Core Design" doc. This doc exists for archival purposes only!
 ```
 
 # Design Principles
