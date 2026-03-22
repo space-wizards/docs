@@ -15,6 +15,7 @@ This page may sometimes be out of date. For the up-to-date list of project manag
 
 | Discord Username | Discord User ID | GitHub Username |
 |---|---|---|
+| pjb | 97089048065097728 | [@PJB3005](https://github.com/PJB3005) |
 | zoldorf | 140921734109855744 | [@Zoldorf](https://github.com/ZoldorfTheWizard) |
 | drsmugleaf | 109067752286715904 | [@DrSmugleaf](https://github.com/DrSmugleaf) |
 | .admiralobvious | 359064049427677199 | [@Admiral-Obvious-001](https://github.com/Admiral-Obvious-001) |
