@@ -10,23 +10,21 @@ The PM team does not appeal bans or get involved in individual player/game dispu
 
 All Project Managers have the same level of authority and autonomy when it comes to addressing issues; however, some PMs prefer to or are more experienced in handling particular issues. In an emergency, any PM will be able to help you, but generally, a PM with the appropriate area will be able to address your issue faster and more accurately. *Although, if you message the wrong PM, don't worry, we all talk with each other, so they'll be able to help you or forward you along to someone who can, it's just faster to start with a PM from that area!*
 
-Here is a list of PMs and their responsibilities. Some responsibilities, such as Hub Administration and Sensitive Issue handling, are not listed publicly to prevent targeted harassment.
-This page may sometimes be out of date. For the most recent responsibilities, check Discord (If this page is out of date, ping @pjb on Discord or let a maintainer know).
+Here is a list of project managers.
+This page may sometimes be out of date. For the up-to-date list of project managers, check the [Space Station 14 forum's project manager group](https://forum.spacestation14.com/g/project-managers) or project manager list on the Space Station 14 Discord server (If this page is out of date, ping @pjb on Discord or let a maintainer know).
 
-| Responsibility | Description | Members |
+| Discord Username | Discord User ID | GitHub Username |
 |---|---|---|
-| Wizards | Highest level of staff in SS14. They are responsible for handling business-to-business, financial, and legal matters. If you think you need to ping a wizard, you don't; just talk to a PM instead. | PJB, Zoldorf, Bobda, DrSmugleaf |
-| Project Lead | The GOAT. The supreme nerd overlord. Also, someone who is very busy, and unless you need help with something very niche and specific, you're better off asking another PM/Maintainer. | PJB |
-| PM Team Lead | The ~~Queen~~ benevolent leader of the PM team. She manages internal disputes and helps the PM team stay on track! | DrSmugleaf |
-| Head Admins | The triumvirate in charge of the admin team. These are the people who *write the rules/policy for the admins* not the people to ask to appeal your ban. | AdmiralObvious, crazybrain, Reisama |
-| Infrastructure | Anything related to the infrastructure running Wizden servers and Hub/Robust accounts. Outages, connection problems, etc. | Zoldorf, PJB, ShadowCommander, DrSmugleaf |
-| Project Tech Direction | Technical direction when it comes to code/systems in SS14 and RobustToolbox. Specifically, code quality/performance and implementation specifics. | PJB, ElectroSR, ShadowCommander, DrSmugleaf, Keronshb, Sloth |
-| Project Maintenance | Overseeing the maintainer team and making sure that project guidelines are being properly enforced in PRs, along with helping to manage the number of open PRs | PJB, ElectroSR, ShadowCommander, DrSmugleaf, Keronshb, Sloth |
-| Engine Development | Works on developing Robust Toolbox | PJB, ElectroSR, ShadowCommander, DrSmugleaf, Keronshb, Sloth |
-| Content Development | Works on developing Content/Code for SS14 (Specifically WizardsDen servers/upstream) | PJB, ElectroSR, ShadowCommander, DrSmugleaf, Keronshb, Sloth |
-| Documentation | Overseeing the documentation repo and making sure that it is being kept up to date. Primarily focused on the non-ss14 sections of the docs, but also holding the maintainer work groups accountable for updating their sections. | ShadowCommander, DrSmugleaf, Keronshb |
-| Policy | Writes and maintains Wizden/Project-wide policy, such as the hub or general staff policies. | DrSmugleaf, Sloth |
-| Biz Dev | Handles anything related to business-level communication/planning in relation to Space Wizards Federation and SS14. This also includes acting as a point of contact for business entities or journalists. | PJB, Zoldorf, DrSmugleaf |
-| Game Administration | Handles higher-level game administration matters while working with the admin team. May also perform game administration on live servers. | PJB, Emisse, DrSmugleaf, nikthechampiongr, crazybrain |
-| General Administration | Handles general community administration matters such as the forums, Discord, or GitHub. | PJB, ShadowCommander, DrSmugleaf, Retequizzle, MushroomLavender |
-| Community Outreach | Handles communication and interaction with the general SS14 community. | Emisse, ElectroSR, ShadowCommander, Retequizzle, MushroomLavender |
+| zoldorf | 140921734109855744 | [@Zoldorf](https://github.com/ZoldorfTheWizard) |
+| .admiralobvious | 359064049427677199 | [@Admiral-Obvious-001](https://github.com/Admiral-Obvious-001) |
+| bhijn | 77867936647225344 | [@deathride58](https://github.com/deathride58) |
+| crazybrain. | 274930315984764938 | [@crazybrain](https://github.com/crazybrain23) |
+| electrosr | 348118974497816577 | [@ElectroJr](https://github.com/ElectroJr) |
+| emisse | 109430489684705280 | [@Emisse](https://github.com/Emisse) |
+| julian_g | 234313113766199297 | [@juliangiebel](https://github.com/juliangiebel) |
+| keronshb | 226429200553213952 | [@keronshb](https://github.com/keronshb) |
+| vasilisiscool | 322708417540259841 | [@VasilisThePikachu](https://github.com/VasilisThePikachu) |
+| reisama | 143154210228273152 | [@valquaint](https://github.com/valquaint) |
+| retequizzle | 235251104114278412 | [@retequizzle](https://github.com/retequizzle) |
+| shadowcommander | 104693014407950336 | [@ShadowCommander](https://github.com/ShadowCommander) |
+| simyon | 327840918482714626 | [@Simyon264](https://github.com/Simyon264) |
