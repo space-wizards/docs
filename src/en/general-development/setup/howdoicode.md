@@ -38,7 +38,7 @@ An interactive, gamified way of learning Git. Plays well with "Git for the SS14 
 
 ### SS14
 **[Entity Systems, Components and Events](en/general-development/setup/howdoicode.md)**
-A guide on the arhitecture of the Engine that SS14 uses. Must know to implement features.
+A guide on the underlying architecture of SS14's game engine. A must-know if you want to work on the codebase.
 
 ### Other
 
