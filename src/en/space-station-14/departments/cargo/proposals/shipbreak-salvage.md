@@ -1,4 +1,4 @@
-# Shipbreak Salvage Proposal v2
+# Shipbreaker Salvage Proposal
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
