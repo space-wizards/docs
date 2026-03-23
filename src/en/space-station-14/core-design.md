@@ -41,7 +41,7 @@ These pillars serve as the guiding concepts for designing SS14's features. When 
 
 ### Dynamic Environment
 - The gameworld should be malleable, allowing for the dynamics of a station to change throughout the round. Walls may get blown open by explosions, and areas of the station may be totally renovated by a dedicated passenger.
-- The station should avoid unique properties that cannot be replicated. Ambience should be made by machines rather than being coded to coordinates.
+- The station should avoid unique properties that cannot be replicated. Even abstract intangible player facing systems should still be tied to tangible objects whenever possible.
 
 ### Intuitive and Inter-Connected Simulation
 - Simulated systems should be complex enough to create engaging gameplay decisions while still being intuitive enough to learn without wiki-diving. 
