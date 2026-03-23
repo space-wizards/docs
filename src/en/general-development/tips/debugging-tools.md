@@ -30,11 +30,27 @@ Parameters the `vv` commands take:
 * Secondary debug console
 * UI tree view
 
-## Running Tests
+## YAML Linter
+
+YAML linter is a tool that attempts to serialize every prototype defined in a `.yml` file. It will collect information on any prototype it cannot serialize and provide the user with an output of those entities. This makes it incredibly useful for identifying where errors are occuring in your yaml.
+
+To run YAML linter, you can use the shell command `dotnet run --project Content.YAMLLinter` in your project folder. If you're using an IDE such as Rider or VSCode, you can also use the YAML linter preset to run your project.
+
+## Running Integration Tests
+
+Integration tests are extremely minimal simulations of what you need to run SS14 - just a server-client pair, no maps or lobbies or anything - and you can run game system code on these simulations in order to locate issues that can only be found through live game simulation. You can use this to make sure a bit of code works as intended by simulating its effects and comparing them against expected values, for example making sure that when you buckle someone to a chair, then that person can't move.
+
+To run integration tests, use the shell command `dotnet test` in your project folder. You can also use `dotnet test --filter` followed by the name of a specific test if you don't want to run every test at once. This is recommended as some tests can take a long time to run! IDEs such as Rider or VSCode may also have built-in ways to run tests without using the terminal.
+
+When you open a PR to the Wizard's Den repository on GitHub, integration tests will run on your PR automatically. If tests fail, you'll need to update your PR before it can get properly reviewed.
+
+```admonish note
+`Content.IntegrationTests` is the directory containing integration tests. It is not the same thing as the similarly-named `Content.Tests` folder. You should run the tests in both of these folders to debug your changes.
+```
 
 ### Server GC
 
-I recommend you enable [**server GC**](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/workstation-server-gc) to run SS14 tests, *especially* integration tests (it cuts integration test times in *half*). 
+It's recommended that you enable [**server GC**](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/workstation-server-gc) to run SS14 tests, *especially* integration tests (it cuts integration test times in *half*). 
 
 To enable this in various editors:
 
