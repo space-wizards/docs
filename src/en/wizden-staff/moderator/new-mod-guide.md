@@ -46,6 +46,8 @@ Moderators have access to a variety of commands to help them moderate the server
 - `!reason <caseid> <reason>`: Changes the reason for a case ID.
 
 
+- `!disableattachments <userID>` Restricts the ability for a user to send images in their messages, gives the user the "Attachments disabled" role on discord.
+
 ## Discourse
 
 As a moderator, you will have extra permissions on Discourse. First, to get those new permissions, contact a head game admin or a head moderator to add you to the EN community moderator group on Discourse. You will also need to contact PJB to get full moderator powers.
