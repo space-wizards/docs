@@ -35,6 +35,7 @@ Moderators have access to a variety of commands to help them moderate the server
 - `!tempban <member> <duration of tempban> <days of messages to be deleted> <reason>` Temporarily bans a user for a specified duration, deleting a specified number of days of their messages.
 
 
+- `!disableattachments <userID>` Restricts the ability for a user to send images in their messages, gives the user the "Attachments disabled" role on discord.
 # Discourse
 
 As a moderator, you will have extra permission on discourse, but first to get those new permissions, you need to contact a head game admin or a head moderator to add you to the EN community moderator group on discourse. You will also need to contact PJB to get full moderator powers.
