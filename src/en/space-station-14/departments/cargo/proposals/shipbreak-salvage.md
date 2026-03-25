@@ -153,7 +153,7 @@ While a wreck is being worked on, the magnet interface displays a "Magnet Evalua
 
 - **Wreck Percentage:** Percentage of how much of the spawned wreck grid has been processed; 0% means all grid tiles remain, 100% means no grid tiles remain.
 - **Processing Efficiency:** Percentage of valuable entities on the wreck that were processed correctly. This is calculated based on whether the smelters have processed any wreck resources.
-- **Wreck Time:** Time since magnet pull started.
+- **Wreck Timer:** Time since magnet pull started.
 
 After some time has passed (short enough not to feel restrictive, but long enough that Salvage can't just cycle wrecks), Salvagers may choose to despawn any remaining grids of their wreck using an "End Salvage Operation" button on the magnet. Once the button is pressed, the magnet interface returns to the wreck selection view, with a timer showing when the next selection of wrecks are available.
 
