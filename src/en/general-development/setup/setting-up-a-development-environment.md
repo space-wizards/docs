@@ -29,7 +29,7 @@ Required:
 ```
 winget install Git.Git
 winget install Python.Python.3.13
-winget install Microsoft.DotNet.SDK.9
+winget install Microsoft.DotNet.SDK.10
 ```
 
 And one of the following ide's:
