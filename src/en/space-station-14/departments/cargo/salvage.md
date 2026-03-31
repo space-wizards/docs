@@ -1,5 +1,7 @@
 # Salvage Department Design Document
 
+This document describes the design and purpose of the Salvage department, a subdepartment of Cargo.
+
 ## Concept
 
 Space Station 14 is an immersive sim built upon tropes of what life on a futuristic mega-corp research station would look like. A famous trope in this area is that of the [Asteroid Miner](https://tvtropes.org/pmwiki/pmwiki.php/Main/AsteroidMiners); an underpaid, expendable prospector sent out into the dangers of space to harvest whatever valuable resource is deemed necessary. The prospector is faced with harsh working conditions, manual labor and improvisational challenges, returning back to the safety of a station with the satisfaction of a job well done.
