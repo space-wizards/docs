@@ -88,12 +88,12 @@ And with that, your repo is now properly setup!
 2. Run the installer and choose `.net desktop development`, then install
 3. If the installer asks you for a development environment select `Visual C#`.
 4. Open Visual Studio
-5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.sln`
+5. Select `Open a project or solution`, then navigate to your cloned repository from above and open `SpaceStation14.slnx`
 
 ### JetBrains Rider
 1. Install Rider, we suggest using [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/) so it can also automaticly update in the future.
 2. Go through the setup.
-3. Press "Open" and select `SpaceStation14.sln`
+3. Press "Open" and select `SpaceStation14.slnx`
 4. If you plan to do engine development you must add Robust Toolbox to the Directory Mappings so that Riders VCS can detect changes to Robust.
    Open Riders settings and go to the Version Control section > Directory Mappings and press the plus (+) button. For Directory point it to the `RobustToolbox` folder in the project and Git as the VCS
 5. Choose the branch you want to use in the top left.
@@ -104,12 +104,12 @@ And with that, your repo is now properly setup!
 2. Run the installer or extract the zip file to a location of your choice and run the .exe once extracted.
 3. Once installed, navigate to the Extensions tab (part way down on the top left corner bar, looks like 4 tiles) and search for "C#". An extension by "Muhammad-Sammy" with over 70K downloads and a green / white logo is the one, install that. Extension ID `muhammad-sammy.csharp`.
 4. Select File > Open Folder, then navigate to your cloned repository from above and open this full folder.
-5. When asked to open a solution, select `SpaceStation14.sln`. Alternatively, set `dotnet.defaultSolution` setting to `SpaceStation14.sln` in your workspace settings.
+5. When asked to open a solution, select `SpaceStation14.slnx`. Alternatively, set `dotnet.defaultSolution` setting to `SpaceStation14.slnx` in your workspace settings.
 6. Now you can run and debug your game. Select the icon above "Extensions" from earlier for "Run and Debug" and from the dropdown next to the green play button you can select "Server/Client". This will run both the client and server, opening the game for you to debug. Relevant information will pop up in the debug along the bottom. Select the processes in the call stack on the left to change what you are debugging.
 
 ## 4. Starting SS14
 
-Now you can get on to compiling! Use your flavor of IDE to open the solution file `SpaceStation14.sln`, and build and run the required assemblies (both Content.Server and Content.Client). 
+Now you can get on to compiling! Use your flavor of IDE to open the solution file `SpaceStation14.slnx`, and build and run the required assemblies (both Content.Server and Content.Client). 
 Click Direct Connect in the client window to start testing.
 
 To compile without an IDE, run `dotnet build` in the Space Station 14 repo directory. Then, call the following commands to run the client and server.
@@ -264,7 +264,7 @@ Either:
 
 ## The client and server aren't available in Visual Studio to configure in Multiple startup projects
 
-This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .sln file.
+This may be because you opened the project as a folder rather than a solution. Make sure you open it as a solution and click the space station 14 .slnx file.
 
 ## The system cannot find the specified file RUN_THIS.py
 
