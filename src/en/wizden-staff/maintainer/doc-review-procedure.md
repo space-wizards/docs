@@ -3,14 +3,31 @@
 The Docs repo has a different review policy compared to the Content repository.
 Since the Docs repo can be pushed to directly by maintainers, is mostly text-based, can be easily reverted/changed, and does not affect forks, most docs pull requests can be handled by a single maintainer.
 
-### Pushing to the Docs Repo
-Maintainers have direct push access to the Docs repo and are encouraged to use it to update any outdated information, whether it's technical documentation, amending a design document, or just fixing grammar.
+### Pushing to the Docs and Content Repositories
+Maintainers and docutainers have direct push access to the docs repository and are encouraged to use it to update any outdated information, whether it's technical documentation, amending a design document, or just fixing grammar. 
+
+Docutainers can also review and merge guidebook PRs on the content repository, but should not abuse this to merge non-guidebook-related pull requests.
 
 ### PR Reviews
 PRs that update instructional or reference documentation (including, but not limited to, setup guides, style guides, and system documentation) require only a single approval before they can be merged.
 Likewise, only a single maintainer needs to express concern to close it.
 
-Note that this does not apply to changes to internal procedure or other modifications that require voting or group deliberation according to relevant policy.
+Note that this does not apply to changes to internal procedures or other modifications that require voting or group deliberation under relevant policy.
+
+When leaving comments or requesting changes:
+- Use **constructive** language and avoid being overly negative.
+- Try not to be _overly_ vulgar or swear in a derogatory way.
+- Avoid comments that personally criticize the author. 
+  - It's okay to critique ideas and decisions, but you shouldn't insult their character.
+- For people who may not be familiar with a part in their PR, try to be more thorough in your explanations.
+  - Explain your review to teach people unfamiliar with the subject.
+- When possible, direct people to either the [developer wiki](https://docs.spacestation14.com/index.html), `#docs` discord channel, or an alternate source for information.
+- Make an effort to be available after reviewing a PR. 
+  - You don't need to be constantly online, but if the author has questions, they should be able to get a response in a reasonable amount of time.
+- Be formal when closing PRs. 
+  - Discourage others from engaging in rude behavior and try not to upset the PR author. People can often be emotional after their PR is closed.
+- For relatively minor changes, opt to simply [complete them yourself](https://cli.github.com/manual/gh_pr_checkout) and push to the PR.
+- When requesting changes to a PR, keep them within the scope of the PR.
 
 #### Design Documents
 Major PRs that introduce or change a design document should require at least two maintainer approvals. Unlike other doc PRs, design docs can only be approved by those with content maintainer permissions.
