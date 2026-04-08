@@ -1,9 +1,14 @@
 # Short, Properly Capitalized Title
 
+```admonish warning
+This template isn't a fit-all.
+Feel free to seek inspiration from modern design documents that already exist in the repository if you'd like to see what you need to address in your document.
+```
+
 Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
 
-| Designers | Coders | Implemented | GitHub Links |
-|---|---|---|---|
+| Designers       | Coders           | Implemented                                                                             | GitHub Links    |
+|-----------------|------------------|-----------------------------------------------------------------------------------------|-----------------|
 | your names here | coder names here | :white_check_mark: Yes or :warning: Partially or :information_source: Open PR or :x: No | PR Links or TBD |
 
 `Designers` should be the names that you, the authors of this document, use on GitHub and/or Discord. This is optional but strongly recommended, since:
@@ -32,14 +37,14 @@ Summarize any information that is needed to contextualize the proposed changes, 
 
 Also link any relevant discussions on Discord, GitHub, or HackMD that are relevant to the proposal.
 
-## Features to be added
+## Features to be added (if applicable)
 
 Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement the feature from this design document. Exact numbers for game balance however are not necessary, as these can be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so.
 
 ## Game Design Rationale
 
 Consider addressing:
-- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy?
+- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosophy?
 - What makes this feature enjoyable or rewarding for players?
 - Does it introduce meaningful choices, risk vs. reward, or new strategies?
 - How does it enhance player cooperation, competition, or emergent gameplay?
@@ -58,7 +63,7 @@ Consider addressing:
 - Could this feature increase the likelihood of griefing, rule-breaking, or player disputes?
 - How are the rules enforced mechanically by way the feature will be implemented?
 
-# Technical Considerations
+## Technical Considerations (if applicable)
 
 - Does the feature require new systems, UI elements, or refactors of existing ones? Give a short technical outline on how they will be implemented.
 - Are there any anticipated performance impacts?
