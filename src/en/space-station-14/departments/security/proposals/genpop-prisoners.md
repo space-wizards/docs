@@ -6,7 +6,7 @@ It may not fit with the new design requirements.
 
 | Designers | Implemented | GitHub Links |
 |---|---|---|
-| ike709 | :x: No | TBD |
+| ike709 | :white_check_mark: Yes | TBD |
 
 with heavy inspiration from [AndrewMontagne & OracleStation 13](https://github.com/OracleStation/OracleStation/pull/419) 
 
