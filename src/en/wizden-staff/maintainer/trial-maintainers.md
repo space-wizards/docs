@@ -15,9 +15,10 @@ Mentors hold occasional peer reviews in a voice chat with their assigned trial m
 Additionally, an introductory onboarding session will be held shortly after the applicant has been accepted. 
 
 ## Trial maintainer-ship duration
-(The preliminary trial duration is 2 months. This may be adjusted later, after the first few trials have passed. After the trial period, the assigned mentor presents their opinion on the trial maintainer, and maintainers vote on whether the trial continues, ends, or is accepted as a full maintainer.
+The preliminary trial duration is 2 months. This may be adjusted later, after the first few trials have passed. After the trial period, the assigned mentor presents their opinion on the trial maintainer, and maintainers vote on whether the trial continues, ends, or is accepted as a full maintainer.
+Once the trail maintainer got proper merge permissions it's recommended for whoever is mentoring them to hold semi regular (bi-weekly for example) checkups on their maintainer actions.
 
 ## Limitations
 - No PII access (Grafana etc.)
 - No codermin in-game permissions
-- An additional maintainer approval is required for merging PRs until the mentoring maintainer decides they are fit to follow the normal PR review policy. 
+- An additional (second) maintainer approval is required for merging PRs until the mentoring maintainer decides they are fit to follow the normal PR review policy. 
