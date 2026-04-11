@@ -375,6 +375,7 @@ Staff
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
   - [Triage Procedure](en/wizden-staff/maintainer/triage-procedure.md)
   - [Release Procedure](en/wizden-staff/release-procedure.md)
+  - [Trial Maintainers & Mentoring](en/wizden-staff/maintainer/trial-maintainers.md)
 - [Moderator](en/wizden-staff/moderator.md)
   - [Moderation Policy](en/wizden-staff/moderator/moderation-policy.md)
   - [New Moderator Guide](en/wizden-staff/moderator/new-mod-guide.md)
