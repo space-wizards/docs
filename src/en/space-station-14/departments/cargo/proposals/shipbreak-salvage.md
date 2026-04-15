@@ -300,6 +300,8 @@ The solution for this would necessitate more gameplay mechanics that allow gener
 
 Questing provides the necessary motivation for Salvage to not constantly throw themselves at dangerous wrecks over and over. Working in space is always going to have a base level of tension to it higher than being inside the station, and with the challenges wrecks provide this is only pushed further. Safes allow Salvagers to take a break and gives them an excuse to socialize with the rest of the station without feeling like they are skipping out on work. It integrates crew interaction into Salvage's gameplay loop and allows it to feed back into the resource gathering via the license upgrades.
 
+Safes following the pattern of having an unlock condition and loot inside makes the main focus of their design on how to make the unlock condition interesting. By sharing the same object theme (being a safe) the design space scope is constrained, ensuring cohesion in both gameplay and player expectations.
+
 License upgrades being core to Salvage's progression, and therefore magnet chips being a key component, is critical to ensure Salvagers are the ones engaging with station interaction. Securing chips should be a strong motivator for Salvagers to make sure they are the ones doing the delivery of the safes (rather than pawning it off to a Cargo Technician) and pushes them into interactions with the crew. 
 
 #### Safes & Station collaboration
