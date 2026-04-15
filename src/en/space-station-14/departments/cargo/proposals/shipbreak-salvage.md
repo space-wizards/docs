@@ -80,7 +80,11 @@ The wrecks should clearly communicate their danger before being selected so that
 
 Only one wreck may be active with the magnet at any given time. Once a wreck has been selected, the interface changes to a new view as described in the [Magnet Evaluation](#magnet-evaluation) section.
 
-Wrecks have the possibility to be aligned with a faction in the game (e.g bloodcult, NanoTrasen, alien etc.). Visuals and contents on the wreck may change to reflect the faction's design. This ties into the [Questing](#questing) section and associated relics. 
+Wrecks have the possibility to be aligned with a faction in the game (e.g bloodcult, NanoTrasen, alien etc.). Visuals and contents on the wreck may change to reflect the faction's design. This ties into the [Questing](#questing) section and associated safes. 
+
+#### License Upgrades
+
+At the start of a round, Salvage only have access to fairly simple and small wrecks. Salvage are rewarded for doing their work properly with more complex wrecks through the Salvage Magnet's _license upgrades_. This is tracked on the Salvage Magnet. Through correct handling of wrecks and the resources that can be found on it, Salvage may unlock wrecks that are of larger size and have more wreck conditions, and consequently contain better loot. Safes (as described in the [Questing](#questing) section) are the primary way to gain license upgrades. 
 
 #### Towing
 
@@ -96,7 +100,7 @@ Other options such as towing ropes and harpoon turrets could serve a similar pur
 
 **Extraction** is the process of manually retrieving rare materials from wrecks.
 
-Wrecks will contain resources that Salvage wants to move to the station for manual processing. In its simplest form this may be a stack of material, but where the extraction process becomes more interesting are the unique _wreck resources_ and _relics_ that spawn. 
+Wrecks will contain resources that Salvage wants to move to the station for manual processing. In its simplest form this may be a stack of material, but where the extraction process becomes more interesting are the unique _wreck resources_ and _safes_ that spawn. 
 
 #### Wreck Resources
 
@@ -118,11 +122,9 @@ Wreck resources often come with some complexity to them to make moving them more
 
 It's key that wreck resources can be easily identified as such; Salvagers shouldn't need to wonder if a resource should be recycled or if it can be left on the wreck as scrap. 
 
-#### Relics
+#### Safes
 
-For the purposes of extraction, relics are unique wreck resources that are not recycled into materials. As they relate to Salvage's progression and on-station tasks, they are desirable to retrieve. Relics are described in more detail in the [Questing](#questing) section. 
-
-All relics will be notated when a wreck is pulled as objects of interest and contribute to wreck completion. 
+For the purposes of extraction, safes are unique wreck resources that are not recycled into materials. As they relate to Salvage's progression and on-station tasks, they are desirable to retrieve. Safes are described in more detail in the [Questing](#questing) section.
 
 ### Processing
 
@@ -158,51 +160,43 @@ While a wreck is being worked on, the magnet interface displays a view with the 
 
 After some time has passed (short enough not to feel restrictive, but long enough that Salvage can't just cycle wrecks), Salvagers may choose to despawn any remaining grids of their wreck. The magnet interface returns to the wreck selection view, with a timer showing when the next selection of wrecks are available.
 
-The wreck percentage and processing efficiency are used to evaluate how well the Salvage team is correctly dealing with the wrecks. A high processing efficiency means the Salvagers are extracting valuables and not just immediately smelting the wreck, and a high wreck percentage means the Salvagers aren't just despawning the wreck after looting it. These stats can be used to affect various parts of the work to encourage proper handling of the wrecks, such as introducing a delay on pulling in new wrecks if the percentage is too low. 
+The wreck percentage and processing efficiency are used to evaluate how well the Salvage team is correctly dealing with the wrecks. A high processing efficiency means the Salvagers are extracting valuables and not just immediately smelting the wreck, and a high wreck percentage means the Salvagers aren't just despawning the wreck after looting it. These stats can be used to affect various parts of the work to encourage proper handling of the wrecks, such as introducing a delay on pulling in new wrecks if the percentage is too low or lowering the license upgrade progress.
 
 Each wreck should be of one time use. Once Salvage has finished extracting from a wreck, the magnet cannot pull that wreck in a second time and players must choose from a new selection of wrecks. 
 
 ### Questing
 
-**Questing** is the final part of the BreakSalv gameplay loop, involving the _relics_ found on the wrecks. Between wreck pulls from the magnet, there will be downtime that Salvagers are encouraged to use for this. 
+**Questing** is the final part of the BreakSalv gameplay loop, involving the _safes_ found on the wrecks. Between wreck pulls from the magnet, there will be downtime that Salvagers are encouraged to use for this. 
 
-#### Relics
+#### Safes
 
-As mentioned in the [Extraction](#extraction) section, some items Salvage acquire are intended to be used during the Questing step. These are known as Relics.
+As mentioned in the [Extraction](#extraction) section, some items Salvage acquire are intended to be used during the Questing step. These are known as Safes.
 
-When salvage pulls a wreck, their magnet computer will notate all relics on their wreck to collect. These items are implied to be of high interest to Nanotrasen, hence why this wreck was selected for salvage to pick through. 
+Safes are impenetrable containers unable to be brute-forced into by normal means. They contain beneficial or interesting _safe loot_ for both Salvage and station crew. To retrieve them from the safe, it must be unlocked via an _unlock condition_.
 
-Relics are quirky artifacts, treasures and technologies redisovered by Salvage. They contain beneficial or interesting _effects_ that the crew want to make use of. To do so, they must be unlocked via an _unlock condition_.
+Unlock conditions require input or cooperation of other departments or crewmembers outside Salvage. They may be more or less detrimental and should require an investment of resources, attention and/or time. The potential benefit of the loot should be potent enough that the crewmember assisting would want to make the investment (even if it is not always guaranteed/risks having a dangerous loot!). The loot also needs to be specific enough to the job/individual such that Salvage does not feel the need to keep all the loot for themselves. 
 
-Unlock conditions require input or cooperation of other departments or crewmembers outside Salvage. They may be more or less detrimental and should require an investment of resources, attention and/or time. The potential benefit of the effect should be potent enough that the crewmember assisting would want to make the investment (even if it is not always guaranteed/risks having a negative effect!). The effect also needs to be specific enough to the job/individual such that Salvage does not feel the need to keep the relic for themselves. 
+The safes should be numerous enough that salvage is encouraged to split them up as a team, but not so numerous that one Salvager can't do all the work within a reasonable timeframe. In addition, Salvage should only need to unlock a majority of the safes they find rather than every single one, as there's no guarantees that all of the conditions will be completable due to factors outside of their control. 
 
-- **DO:** Salvage finds a lost coffer on a wreck that they need to deliver to a person on the station. This coffer is known to contain something valuable so there's incentive for the person to open it. Once it's delivered, the relic is marked as completed. 
-- **DO:** Salvage finds some kind of alien tablet that seems to be pourous and demands bicaridine. Salvage goes to the medical bay and gives it to chemistry, who splashes some bicaridine causing it to transform into another reagent entirely. Chemistry can use this device to perform limited chemical transmutation, and the relic is marked as completed.
-- **DO:** Salvage finds an encrypted tech disk that needs to be unencrypted by science and inserted into the R&D computer. This provides an option for Science to research an additional T3 technology for a greater cost. Once inserted, the relic is marked as completed.
-- **DON'T:** Salvage finds an alien artifact that needs to be hit for 300 damage to progress, so they beat it with crowbars in space until the relic completes.
-- **DON'T:** Salvage finds a locked data-tablet without any function requires Captain access to unlock it. The captain opens it without thought and the relic is marked as completed without any further interaction or benefit.
-- **DON'T:** Salvage finds a relic with an effect of instant full self-healing. Instead of going to Medical to help with its unlock, Salvagers brute-force unlocking it themselves, to save the trip and also keep the relic for themselves.
+In addition to the loot found in the safes, every safe also contains _magnet chips_. These can be inserted into the Salvage Magnet for a large increase in license upgrade progress.
 
-Keeping with Salvage's themes, these relics should range from mundane to outright bizzare or even dangerous, but they should never be so esoteric in their completion as to confuse the player. It should always be obvious where salvage needs to go in order to unlock a relic, and what needs to be done. 
+#### The implementation of Safes
 
-Unlock conditions should ideally not be able to be circumvented using purchases from the cargo request computer. The process of unlocking relics should also be intuitive to an experienced cargo technician, acting as an evolution of simple bounties and mail with far more possibilities and danger. 
+Safe design must follow these three rules:
 
-The relics should be numerous enough that salvage is encouraged to split them up as a team, but not so numerous that one salvager can't do all the work within a reasonable timeframe. In addition, salvage should only need to unlock a majority of the relics they find rather than every single one, as there's no guarantees that all of the conditions will be completable due to factors outside of their control. 
+1. Safe unlocking must not be reasonably achievable by Salvage on their own.
+2. The unlock condition must result in meaningful gameplay; preferably related to the core gameplay of the person/department intended to unlock it.
+3. The loot must benefit the person/department unlocking it, to discourage Salv from unlocking it on their own.
 
-#### The implementation of Relics
+Unlock conditions should ideally not be able to be circumvented using purchases from the cargo request computer. The process of unlocking safes should also be intuitive to an experienced Cargo Technician, acting as an evolution of simple bounties and mail with far more possibilities and danger. 
 
-Relics must follow the design pattern of having a _type_ and a _faction_. The type informs what kind of object the relic is (e.g. a coffer, a sacrificial dagger, an encrypted disk) and sets the unlock condition/effect associated with the relic. The faction gives the visual identity of the relic, and also provides a secondary effect to the unlock condition/effect.
+Keeping with Salvage's themes, these safes should range from mundane to outright bizzare or even dangerous, but they should never be so esoteric in their completion as to confuse the player. It should always be obvious where Salvage needs to go in order to unlock a safe, and what needs to be done. 
 
-- Relics of blood cult origin should be colored red and brown, and their unlock condition should involve the expenditure of blood in some way. 
-- Coffers should always require delivery to a specific individual on the station, but the unlock method and what is inside the coffer is dependent on the faction.
-- Relics of clock cult origin should be metallic and gold colored, their unlock condition should generally involve the bar or Engineering. Additional effect can result in construction of useful machines and devices (e.g a perpetual motion generator).
-- Sacrifical knives should always require a player to take massive amounts of damage to unlock spawning a helpful NPC, but the type of damage and the NPC being spawned is dependent on the faction.
+Safes also provide an opportunity to bring much of Salvage's unique content onto the station itself. For example, a boss or treasure that was once intended for the VGRoid or Lavaland may instead be accessed through a safe that is activated on station. 
 
-Relics also provide an opportunity to bring much of salvage's unique content onto the station itself. For example, a boss or treasure that was once intended for the VGRoid or Lavaland may instead be accessed through a relic that is activated on station. 
+### Salvage Progression
 
-### Salvage progression
-
-Salvage's equipment progression should primarily come from Science and what can be found/crafted from resources found on wrecks. As the better wrecks are only available through unlocking relics, this ties Salvage to the station and encourages crew interactivity as part of the core gameplay loop.
+Salvage's equipment progression should primarily come from Science and what can be found/crafted from resources found on wrecks. As the better wrecks are only available through unlocking safes, this ties Salvage to the station and encourages crew interactivity as part of the core gameplay loop.
 
 #### Salvage Specialist equipment
 
@@ -234,7 +228,7 @@ A large part of Salvage's appeal is the aesthetics. Salvage should feel like a t
 
 Aesthetically and tone wise, Salvage should lean more on the dark comedy and horror of the game's tone. Space is vast, endless, and full of threats both rational and irrational. The wrecks salvagers pull in should reflect this, enhancing the tone of the job and ensuring gameplay variety. 
 
-Wrecks should never feel completely mundane. There's a story to how this once functional ship, outpost or machine beyond understanding became a wreck. The environment in the wreck should reflect this, and ideally tie into whatever relic faction is contained within. 
+Wrecks should never feel completely mundane. There's a story to how this once functional ship, outpost or machine beyond understanding became a wreck. The environment in the wreck should reflect this, and ideally tie into whatever safe is contained within. 
 
 #### Mundane realities of fantasy star-systems 
 
@@ -256,7 +250,7 @@ BreakSalv locks Salvage to the station in four ways:
 - Industrial smelters are large machinery difficult to reposition.
 - The salvage magnet only works on-station, and wrecks are spawned close to the station.
 - Wreck conditions necessitates equipment Salvage have a hard time accessing themselves.
-- Relics require collaboration with station crew to unlock.
+- Safes require collaboration with station crew to unlock.
 
 This has major knock-on effects for Salvage's independence and accessability. There are no parts of Salvage's gameplay loop that require extended periods off the station. By being in so close proximity to the station, there isn't a strong incentive to set up station-replacing equipment. Salvage will always be available to react to station events and become easier to locate, e.g. for antagonists. 
 
@@ -296,29 +290,27 @@ Salvagers are punished in multiple ways when ignoring the wreck resources. Smelt
 
 #### Station resources
 
-This document primarily cites rare materials and specialized equipment in the form of relics as content Salvage can uniquely provide the station. With the content currently available, this can negatively impact gameplay for other departments (e.g., Science) where Salvage is _required_ to provide materials to enable core gameplay and rewards. 
+This document primarily cites rare materials and specialized equipment in the form of safes as content Salvage can uniquely provide the station. With the content currently available, this can negatively impact gameplay for other departments (e.g., Science) where Salvage is _required_ to provide materials to enable core gameplay and rewards. 
 
 BreakSalv's design is more accessible than previous iterations of Salvage and it should be easier for non-Salvage crew to assist in the work should there be heavy demand for a resource. However, this may not be sufficient to cover resource shortage, such as when the Salvage Bay is irrepairably damaged.
 
 The solution for this would necessitate more gameplay mechanics that allow generating the materials that are necessary for other departments, or a redesign of their consumption. Reworking the game's resource dependencies is considered out of scope for this document as it is not relevant to BreakSalv's core gameplay loop.
 
-### Questing & Relic Design Motivation
+### Questing & Safe Design Motivation
 
-Questing provides the necessary motivation for Salvage to not constantly throw themselves at dangerous wrecks over and over. Working in space is always going to have a base level of tension to it higher than being inside the station, and with the challenges wrecks provide this is only pushed further. Relics allow Salvagers to take a break and gives them an excuse to socialize with the rest of the station without feeling like they are skipping out on work. It integrates crew interaction into Salvage's gameplay loop and allows it to feed back into the resource gathering via the license upgrades.
+Questing provides the necessary motivation for Salvage to not constantly throw themselves at dangerous wrecks over and over. Working in space is always going to have a base level of tension to it higher than being inside the station, and with the challenges wrecks provide this is only pushed further. Safes allow Salvagers to take a break and gives them an excuse to socialize with the rest of the station without feeling like they are skipping out on work. It integrates crew interaction into Salvage's gameplay loop and allows it to feed back into the resource gathering via the license upgrades.
 
-The relic design pattern of having a type and a faction is necessary to limit the design complexity of new content. It would require excessive work to ensure there is a satisfying amount of variation were each relic given a unique and handcrafted effect. This design is not *as* economical as Science's artifacts (which mix up *any* trigger and effect), but it does provide useful design handrails when adding new relics. 
+License upgrades being core to Salvage's progression, and therefore magnet chips being a key component, is critical to ensure Salvagers are the ones engaging with station interaction. Securing chips should be a strong motivator for Salvagers to make sure they are the ones doing the delivery of the safes (rather than pawning it off to a Cargo Technician) and pushes them into interactions with the crew. 
 
-This type of design is useful in making players develop an understanding of the relic system. Once they discover a relic of a specific faction, they will understand the theme implications for any future relic of that faction they find. Similarly, if they find a relic of a specific type, they will now know how any faction variation works with the base unlock condition. 
+#### Safes & Station collaboration
 
-#### Relics & Station collaboration
+The unlock conditions, loot and magnet chips are how safes are motivated to be brought onto the station. As previously mentioned, unlock conditions should ideally not be solved by Salvage and instead involve other departments. 
 
-The unlock conditions and effects are how relics are motivated to be brought onto the station. As previously mentioned, unlock conditions should ideally not be solved by Salvage and instead involve other departments. 
+The easiest way to achieve collaboration is to make the unlock condition require some station-bound equipment. Salvage will generally not have access to certain things, such as Science's APEs or Engineering's Particle Accelerator. They would then be required to interact with the roles that do. However, this method of unlocking safes may result in uninteresting interactions if not designed properly.
 
-The easiest way to achieve collaboration is to make the unlock condition require some station-bound equipment. Salvage will generally not have access to certain things, such as Science's APEs or Engineering's Particle Accelerator. They would then be required to interact with the roles that do. However, this method of unlocking relics may result in uninteresting interactions if not designed properly.
+Another way to achieve collaboration is to have conditions that demand something beyond Salvage's capabilities. As examples, Salvage may have *some* medical or combat capabilities, but Medical and Security have core gameplay that make them more proficient. By having the unlock condition require more than Salvage could themselves handle, such as causing major injury to a player or an overwhelming combat scenario, they are pushed into asking the station for assistance. This should be the preferred way that safes are unlocked, though they do run a greater risk of expert Salvagers being able to complete the challenges themselves.
 
-Another way to achieve collaboration is to have conditions that demand something beyond Salvage's capabilities. As examples, Salvage may have some medical or combat capabilities, but Medical and Security have core gameplay that make them more proficient. By having the unlock condition require more than Salvage could themselves handle, such as causing major injury to a player or an overwhelming combat scenario, they are pushed into asking the station for assistance. This should be the preferred way that relics and unlocked, though they do run a greater risk of expert Salvagers being able to complete the challenges themselves.
-
-The greatest difficulty in this is ensuring that that the effect is unique and interesting, and that the unlock conditions truly do require crew interactions. This is something that can be explored further in playtesting to find the components that work well for this purpose.
+The greatest difficulty in this is ensuring that that the loot is unique and interesting, and that the unlock conditions truly do require crew interactions. A safe design has failed if crew are unwilling to help Salvagers, or if Salvagers don't feel the delivery is worth the effort.
 
 ## Administrative & Server Rule Impact (if applicable)
 
@@ -340,9 +332,9 @@ Splitting grids is already a thing that can be done with the RCD, but that opera
 
 The main motivation for why they should be implemented is to give mappers more freedom when designing the sizes of Salvage Bays and wrecks.
 
-#### Wreck Resources and Relics
+#### Wreck Resources and Safes
 
-There would be a fairly substantial amount of new sprites for both wreck resources and relics, as the whole point of them is to stand out from what currently exists in the game. There will likely be changes and additions to many different systems to support their behavior, though reusing assets and components where possible is greatly preferred.
+There would be a fairly substantial amount of new sprites for both wreck resources and safes, as the whole point of them is to stand out from what currently exists in the game. There will likely be changes and additions to many different systems to support their behavior, though reusing assets and components where possible is greatly preferred.
 
 ### Modified features
 
