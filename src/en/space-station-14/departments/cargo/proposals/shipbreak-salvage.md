@@ -176,6 +176,12 @@ Safes are impenetrable containers unable to be brute-forced into by normal means
 
 Unlock conditions require input or cooperation of other departments or crewmembers outside Salvage. They may be more or less detrimental and should require an investment of resources, attention and/or time. The potential benefit of the loot should be potent enough that the crewmember assisting would want to make the investment (even if it is not always guaranteed/risks having a dangerous loot!). The loot also needs to be specific enough to the job/individual such that Salvage does not feel the need to keep all the loot for themselves. 
 
+Some examples include:
+
+- Particle Accelerator safe: Can only be opened by Particle Accelerator rays from Engineering. Contains Engineering loot, such as RCD charges and plasteel.
+- Anamolous safe: Must be scanned by an anomaly scanner and opened via a specific APE particle. Contains Science loot, such as anomaly cores and artifacts.
+- Blood Drive safe: Is unlocked through interacting with it, which spills all of the person's blood. Contains Medical loot, such as statis bed parts and topicals. 
+
 The safes should be numerous enough that salvage is encouraged to split them up as a team, but not so numerous that one Salvager can't do all the work within a reasonable timeframe. In addition, Salvage should only need to unlock a majority of the safes they find rather than every single one, as there's no guarantees that all of the conditions will be completable due to factors outside of their control. 
 
 In addition to the loot found in the safes, every safe also contains _magnet chips_. These can be inserted into the Salvage Magnet for a large increase in license upgrade progress.
