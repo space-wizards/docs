@@ -17,7 +17,7 @@ Your pull request may be reverted or closed for any reason.
 
 - Large new features and comprehensive reworks to existing large features (ie antags or anything that could be considered a subdepartment unto itself), should first be [proposed and accepted in abstract](../feature-proposals.md) before you start working on actually implementing it.
 
-- Don't make make giant PRs containing several thousand lines of code. Instead split them up into smaller parts, especially for major new features like antagonists or game modes. Implementing them one step at a time makes them much easier to review. On the other hand if your PR is too large it is very likely that it will not receive any reviews because reviewing it all at once is simply not feasible or would take multiple days of maintainer time. If want to start working on a larger project and are unsure where to start, best to talk to a maintainer beforehand.
+- Don't make make giant PRs containing several thousand lines of code. Instead split them up into smaller parts, especially for major new features like antagonists or game modes. Implementing them one step at a time makes them much easier to review. On the other hand if your PR is too large it is very likely that it will not receive any reviews because reviewing it all at once is simply not feasible or would take multiple days of maintainer time. If you want to start working on a larger project and are unsure where to start, best to talk to a maintainer beforehand.
 
 - Read the [Freezes and Restrictions issue](https://github.com/space-wizards/space-station-14/issues/8524) and make sure your PR does not interfere with anything or requires special requirements.
   
