@@ -16,13 +16,13 @@ This page may sometimes be out of date. For the up-to-date list of project manag
 | Discord Username | Discord User ID | GitHub Username |
 |---|---|---|
 | pjb | 97089048065097728 | [@PJB3005](https://github.com/PJB3005) |
-| zoldorf | 140921734109855744 | [@Zoldorf](https://github.com/ZoldorfTheWizard) |
-| drsmugleaf | 109067752286715904 | [@DrSmugleaf](https://github.com/DrSmugleaf) |
 | .admiralobvious | 359064049427677199 | [@Admiral-Obvious-001](https://github.com/Admiral-Obvious-001) |
 | bhijn | 77867936647225344 | [@deathride58](https://github.com/deathride58) |
 | crazybrain. | 274930315984764938 | [@crazybrain](https://github.com/crazybrain23) |
+| drsmugleaf | 109067752286715904 | [@DrSmugleaf](https://github.com/DrSmugleaf) |
 | electrosr | 348118974497816577 | [@ElectroJr](https://github.com/ElectroJr) |
 | emisse | 109430489684705280 | [@Emisse](https://github.com/Emisse) |
+| geekyhobo | 214796544560463873 | [@Geekyhobo](https://github.com/Geekyhobo) |
 | julian_g | 234313113766199297 | [@juliangiebel](https://github.com/juliangiebel) |
 | keronshb | 226429200553213952 | [@keronshb](https://github.com/keronshb) |
 | vasilisiscool | 322708417540259841 | [@VasilisThePikachu](https://github.com/VasilisThePikachu) |
@@ -30,3 +30,4 @@ This page may sometimes be out of date. For the up-to-date list of project manag
 | retequizzle | 235251104114278412 | [@retequizzle](https://github.com/retequizzle) |
 | shadowcommander | 104693014407950336 | [@ShadowCommander](https://github.com/ShadowCommander) |
 | simyon | 327840918482714626 | [@Simyon264](https://github.com/Simyon264) |
+| zoldorf | 140921734109855744 | [@Zoldorf](https://github.com/ZoldorfTheWizard) |
