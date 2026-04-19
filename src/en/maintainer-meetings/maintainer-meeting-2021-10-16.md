@@ -52,7 +52,6 @@ Spawning the station rotated to better spot obvious rotation bugs
 - sure
 - this is terrible for map diff renderer
     - you know the emoji disintegrating gif where it has the funny loading icon? that
-      ![](https://i.imgur.com/s3it1jC.gif)
     - Deal with it
 
 
@@ -62,18 +61,18 @@ Spawning the station rotated to better spot obvious rotation bugs
 
 Windows:
 
-![](../assets/images/maintainer-meeting/2021-10-16-windows-confirm-prompt.png)
+![windows-confirm-prompt.png](../assets/images/maintainer-meetings/2021-10-16/windows-confirm-prompt.png)
 
 MacOS:
-![](https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/Art/dialog_simple_2x.png)
+![macosprompt.png](../assets/images/maintainer-meetings/2021-10-16/macosprompt.png)
 
 Ubuntu:
 
-![](https://i.stack.imgur.com/tj9Fm.png)
+![ubuntuprompt.png](../assets/images/maintainer-meetings/2021-10-16/ubuntuprompt.png)
 
 KDE:
 
-![](https://develop.kde.org/deploy/kdialog/yesnowarning.png)
+![yesno.png](../assets/images/maintainer-meetings/2021-10-16/yesno.png)
 
 - have a simplified way to create them
     - pjb hates em. "really does not like them" extreme hatred "input dialogs everywhere"
@@ -83,7 +82,7 @@ KDE:
     - just saw a blue vera gradient in pjb's krita recent files, d'aw.
 
 - solution: have "popups" that expand out of stuff like the examine window or:
-  ![](https://i.imgur.com/iT2WuEo.png)
+  ![popupexample.png](../assets/images/maintainer-meetings/2021-10-16/popupexample.png)
 
 
 #### This is already in, woo

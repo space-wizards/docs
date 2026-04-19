@@ -6,9 +6,9 @@
 
 Go to [Issues in Space Station 14](https://github.com/space-wizards/space-station-14/issues)
 - Choose 1 or more of the following labels in [Labels](https://github.com/space-wizards/space-station-14/labels)
-1. [Beginner Friendly](https://github.com/space-wizards/space-station-14/labels/Beginner%20Friendly)
-2. [Difficulty: 1 - Easy](https://github.com/space-wizards/space-station-14/labels/Difficulty%3A%201-Easy)
-3. [No C#](https://github.com/space-wizards/space-station-14/labels/No%20C%23) to work on issues that require no code. 
+1. [Beginner Friendly](https://github.com/space-wizards/space-station-14/labels/DB%3A%20Beginner%20Friendly)
+2. [Difficulty: 3 - Low](https://github.com/space-wizards/space-station-14/labels/D3%3A%20Low)
+3. [No C#](https://github.com/space-wizards/space-station-14/labels/Changes%3A%20No%20C%23) to work on issues that require no code. 
 
 After you have chosen an issue to fix, follow the steps here to start making and testing code changes on your own copy of the Space Station 14 code: 
 - [Setting up a Development Environment](https://docs.spacestation14.com/en/general-development/setup/setting-up-a-development-environment.html) 
@@ -42,17 +42,17 @@ This is important to know so you do not accidentally delete all of your code cha
 6. **Your copy => Local Github**. When your code is ready, make a commit to your Github repository from your non-master branch.
 7. **Space Station 14 Github => Local Github**. Sync Fork
 
-![image](https://github.com/alwinnocom/docs/assets/63136288/0823b607-d87c-4495-97b8-32f06b343b4e)
+![syncfork.png](../../assets/images/general-development/tips/beginner-faq/syncfork.png)
 
 - For your code to work, it must fit into the code in Space Station 14 Github.
 - You will have to keep your Local Github code up-to-date with the Space Station 14 Github.
 
 8. **Local Github => Your copy** Pull the updated code from your Local Github repository to your copy.
 
-![image](https://github.com/alwinnocom/docs/assets/63136288/725a5132-32d0-4e0c-9223-fb35186365da)
+![syncfork.png](../../assets/images/general-development/tips/beginner-faq/pullcode.png)
 
 You may need to merge changes if you are trying to change files that got changed from the update.
-![image](https://github.com/alwinnocom/docs/assets/63136288/d6602410-3751-410d-9dd9-48f4b289706a)
+![mergechanges.png](../../assets/images/general-development/tips/beginner-faq/mergechanges.png)
 
 
 9. **Your copy => Local Github**. Commit your changes.
@@ -82,7 +82,7 @@ You may need to merge changes if you are trying to change files that got changed
 Have you completed step 2.3 of [Git for the SS14 Developer](https://docs.spacestation14.com/en/general-development/setup/git-for-the-ss14-developer.html#23-submodule-woes)?
 
 Make sure you use the command `cd` to navigate to your space-station-14 repository before running `RUN_THIS.py`.
-![image](https://github.com/alwinnocom/docs/assets/63136288/1750eb6a-20e3-4d3c-9b4c-d7272787aaf2)
+![cdcommand.png](../../assets/images/general-development/tips/beginner-faq/cdcommand.png)
 
 
 
@@ -91,18 +91,18 @@ Make sure you use the command `cd` to navigate to your space-station-14 reposito
 ### I am looking for text that I saw in gameplay but I am not sure where to look.
 
 1. Lots of the in-game text can be found in XAML files & YML files. You can search through XAML files to find the parts of the user interface that you want to work on.
-![image](https://github.com/alwinnocom/docs/assets/63136288/2a4aef1b-2839-455d-a867-b9c457f9d3a2)
+![xamlandymlsearch.png](../../assets/images/general-development/tips/beginner-faq/xamlandymlsearch.png)
 2. If YML files are not showing up, you can find them on Github by going to the [Space Station 14 repository](https://github.com/space-wizards/space-station-14?search=1) & searching for .yml files.
 3. Use your code editor to search for the exact text (for text that is not based on Project Fluent). For example, Visual Studio lets you use Ctrl + Shift + F to find certain text in all of the files.
 
-![image](https://github.com/alwinnocom/docs/assets/63136288/cffa2910-3c9f-4f77-87bc-7f8a43b6895f)
+![codeeditor.png](../../assets/images/general-development/tips/beginner-faq/codeeditor.png)
 
 4. Not all text shows up exactly as written because Space Station 14 uses Project Fluent to make text that automatically translates to different languages.
 - [Project Fluent](https://docs.spacestation14.com/en/ss14-by-example/fluent-and-localization.html)
    - This means that some text shows up as `Loc.GetString("id-that-references-fluent-file")`
 
-![image](https://github.com/alwinnocom/docs/assets/63136288/f5090633-19f5-4ec5-b843-15754cafff69)
+![projectfluent.png](../../assets/images/general-development/tips/beginner-faq/projectfluent.png)
 
 5. If you want to find where a method is referenced throughout the code, you can click on the method name on Github to find where the method is referenced.
 
-![image](https://github.com/alwinnocom/docs/assets/63136288/deefd271-cf47-451d-8309-0435770d6990)
+![methodname.png](../../assets/images/general-development/tips/beginner-faq/methodname.png)

@@ -42,7 +42,7 @@ services:
 ```
 ### Manual compilation
 
-If you hate containers, you can manually publish SS14.Admin and deploy the files yourself. For this you will need Git and the .NET 9 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
+If you hate containers, you can manually publish SS14.Admin and deploy the files yourself. For this you will need Git and the .NET 10 SDK. The server that will run the build needs the matching ASP.NET Core Runtime installed, but does not need the SDK itself.
 
 Clone the git repo, then publish:
 

@@ -74,8 +74,13 @@ description
 ```
 
 ## latex
+Block LaTeX:
 
 \\[ \mu = \frac{1}{N} \sum_{i=0} x_i \\]
+
+Inline LaTeX:
+
+Silly Atmospherics maintainer, the derivation is written in \\( \LaTeX \\), so it must be true!
 
 ## mermaid
 

@@ -70,7 +70,7 @@ If you want more pointers on YAML, check [YAML Crash Course](../general-developm
 
 The entity prototype shown is "Skub", which looks like this in game:
 
-![](https://i.imgur.com/qOJ5OyB.png)
+![skubexample.png](../assets/images/ss14-by-example/skubexample.png)
 
 As you can see in the YAML, it has many components, including `EmitSoundOnUse` and `ItemCooldown`. It is up to the coders to determine what data components hold and how systems give them behavior.
 
@@ -86,7 +86,7 @@ Normally, you would want to search through the codebase and ask some other coder
 
 **To start off**, let's make a simple clown horn prototype. I will make a new file called ```clown_horn.yml``` and add it to the ```Resources\Prototypes\Entities\Objects``` folder.
 
-![](https://i.imgur.com/qR0QzqA.png)
+![clownhornexample1.png](../assets/images/ss14-by-example/clownhornexample1.png)
 
 Might want to organize that into the "Fun" folder later, but organization is up to you and your codebase!
 
@@ -110,7 +110,7 @@ One thing to note is that prototypes support parenting. In this case, `BaseItem`
 
 Now, let's compile and check out our item in game:
 
-![](https://i.imgur.com/dHigBbc.png)
+![clownhornexample2.png](../assets/images/ss14-by-example/clownhornexample2.png)
 
 It sure is beautiful, but we appear to have lied! The bike horn does not yet honk honk. To remedy this, we'll have to create a new component to hold the data, such as the sound to play, and an EntitySystem which handles actually playing the sound.
 
@@ -118,7 +118,7 @@ It sure is beautiful, but we appear to have lied! The bike horn does not yet hon
 
 To make our component, we'll need to make a new class, let's call it ```PlaySoundOnUseComponent```. But wait a second....
 
-![](https://i.imgur.com/s9O13qH.png)
+![componentcreation.png](../assets/images/ss14-by-example/componentcreation.png)
 
 Where do we put it? To answer this question, we have to think broad. We have to think about the **client** and the **server**.  
 

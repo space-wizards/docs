@@ -8,6 +8,10 @@ The Atmospherics simulation aims to simulate these challenges and the quasi-real
 
 ## Design Pillars
 
+```admonish info
+Elaborations and examples for these design principles are available in the [atmospherics design choices document](atmos/atmos-design-choices.md).
+```
+
 ### Emergence (Parts of a Whole)
 Atmospherics and its mechanics, tooling, and devices should perform small unit operations, or single tasks, with multiple devices coming together to form a larger system. Just like how all logic gates (and computers in general) are built off of the universal logic gates `NAND` and `NOR`, atmospheric systems are built via the combination of smaller devices.
 

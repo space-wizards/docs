@@ -121,5 +121,3 @@ This meeting was recorded:
 - [34251](https://github.com/space-wizards/space-station-14/pull/34251) Bended radiator
 
 ## Other notes:
-Sloggers
-![](https://cdn.discordapp.com/emojis/1328497168159608913.webp?size=128)
