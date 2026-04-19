@@ -12,7 +12,7 @@ An SS14 maintainer maintains the content side of Space Station 14. This includes
 
 ### Documaintainer
 
-A documaintainer is an SS14 maintainer who only has maintainer powers for the docs and content repositories. Within the docs repository, they have the same power and authority as an SS14 maintainer.
+A documaintainer is an SS14 maintainer with equal authority over the docs repository and some permissions in the content repository. While they handle changes to the docs repository and the SS14 guidebook, they do not handle design documents or non-guidebook changes.
 
 ### Head Mapper
 
