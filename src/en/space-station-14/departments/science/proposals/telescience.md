@@ -36,6 +36,8 @@ This proposal introduces Telescience, a new research method for the Science Depa
 - Anomalous Effects scale from Minor, to Moderate, to Major, to very rare Malefic effects, representing the impact the effect has on its surroundings. These effects may be Beneficial or Detrimental. They may occur at the teleportation Target or Source (the Teleframe Core).
 - These effects may be instantaneous, status effects, or semi-permenant.
 
+https://github.com/user-attachments/assets/3c4f7a60-a510-45e6-a973-5228c4e56ece
+
 ### Themes
 The Teleframe aims to replicate many of the tropes of Teleporters within fiction, while leaning on the inherent dangers shown in Transporter Malfunctions of *Star Trek* or the Perils of the Warp of *Warhammer*. The teleframe can be calibrated to take you anywhere in the same map if you know the coordinates, and anywhere else you can reach with a Teleport Beacon. Letting you extract those lost in the depths of space, beam down to entirely seperate planets, and warp to shuttles in the middle of FTL space.
 
@@ -60,6 +62,10 @@ The Teleframe Core is the structure responsible for teleportation, it is directe
 While Teleframes are intended to be most associated with Telescience, there is potential for other implementations, such as Syndicate Teleframes.
 
 Similarly, Teleframe Cores should not be limited to only being a structure, Console and Frame could theoretically be combined into a single item. Although such a device would need to be heavily restricted.
+
+<img width="256" height="256" alt="Sprite-0001" src="https://github.com/user-attachments/assets/b403a5f0-560a-44d2-aba0-a3005c53f643" />
+<img width="256" height="256" alt="Sprite-0002" src="https://github.com/user-attachments/assets/2607a698-e02e-4ad1-b1ac-b831734c5be0" />
+<img width="256" height="256" alt="Sprite-0006" src="https://github.com/user-attachments/assets/53fd9317-b63a-41b1-b496-88bd44e5e433" />
 
 ### Function
 Teleframe Cores have characteristics that determine how they function. Upgrades or Events may modify these characteristics:
@@ -106,6 +112,11 @@ The Teleframe Core then enters a state of recharging, and won't be able to be us
 
 ### Peripherals
 Peripheral items and structures support the use of the Teleframe but are not mandatory for its function.
+
+<img width="256" height="256" alt="Sprite-0003" src="https://github.com/user-attachments/assets/53bfce3c-75bf-4649-9b0d-7e1c02988341" />
+<img width="256" height="256" alt="Sprite-0005" src="https://github.com/user-attachments/assets/4b3b5ca0-0c22-4d33-b177-1bf0fd348a9d" />
+<img width="256" height="256" alt="Sprite-0004" src="https://github.com/user-attachments/assets/500229aa-7af2-4f1a-802e-f40a1087c089" />
+
 Chief amongst these is the Teleport Beacon. The Teleport Beacon can be created by the player at round-start, when linked to a Teleframe Console and then anchored it would be selectable as a target.  This has immediate uses:
 - A player could have a teleport beacon set up on the ATS to allow immediate extraction of purchased goods
 - A Teleport Beacon set up on a seperate map such as an expedition would allow traversal to and from to extract looted goods.
@@ -142,6 +153,9 @@ Reality Fractures can be created round-start in a dormant state that activate ov
 Destroying Reality Fractures results in them entering a supercritical meltdown, this meltdown is weaker the more times the Reality Fracture was scanned. Meltdowns result in a series of Anomalous Effects being produced, Supercritical Meltdown intensity is also affected by the Incident Multiplier of the Teleframe used, especially if the killing blow to the Reality Fracture happened to also cause a teleportation incident which can stack the effect even further, such stacking would be the only way to create potential Malefic anomalous effects or shards that can alter the flow of the entire shift. 
 
 To destroy a Reality Fracture with no effects, one can alternatively use an Anomaly Synchroniser. If anchored and activated directly on the location of the Reality Fracture, it will link to it and make it visible. Allowing it to be interacted with like a normal anomaly. When connected to an Anomaly vessel it will drain all Science Points out of the Reality Fracture, and upon running out it will disappear harmlessly.
+
+<img width="256" height="256" alt="Sprite-0007" src="https://github.com/user-attachments/assets/2db8a7b3-531f-4845-b519-042ad4e2e2fb" />
+<img width="256" height="256" alt="Sprite-0010" src="https://github.com/user-attachments/assets/f9a2facf-9799-4d52-826c-f9b6986a6f35" />
 
 ### Gaining Science
 Bluespace Depthcharges are the primary method of detecting and destroying Reality Fractures. These can be created by the Player round-start. A Bluespace Depthcharge has a large detection radius and a smaller scanning radius. When teleported it will report over radio the distance from itself to all Reality Fractures within its detection radius, and gain science from all Reality Fractures within its scanning radius. Each Reality Fracture would be provided a unique ID to keep track of it if multiple were detected.
