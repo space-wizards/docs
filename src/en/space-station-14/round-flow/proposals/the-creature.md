@@ -6,7 +6,7 @@
 
 ## Summary
 
-A stealth-based predator that hunts crew and department pets from maintenance tunnels. Fills a gap in the current Wizden midround roster — no existing upstream antag uses stealth/ambush as a primary mechanic. Existing midround threats (Dragon, Ninja, Lone Op, Wizard, Xenoborgs, Rat King, etc.) are either overt or large-scale; The Creature is intimate and personal.
+A stealth-based predator that hunts crew and department pets from maintenance tunnels. Fills a gap in the current Wizden midround roster — no existing upstream antag uses stealth/ambush as a primary mechanic.
 
 **Gameplay identity:** Hit-and-fade. Sting a target, drain blood, retreat before crew can respond. Punishes reckless play; rewards map knowledge and patience.
 
@@ -26,7 +26,8 @@ A stealth-based predator that hunts crew and department pets from maintenance tu
 | Objective | Description |
 |---|---|
 | **Eat 3 department pets** | Must consume Ian, Poly, Momo, or other map-assigned pets. Forces The Creature to leave deep maint and enter department areas. |
-| **Consume X units of blood** | Tracked via Drink Blood ability. Scales with player count at spawn time. Requires repeated engagement across the round. |
+| **Consume X units of blood** | Tracked via Drink Blood ability, which can be utilized in the future for vampire antag. Scales with player count at spawn time. Requires repeated engagement across the round. |
+| ** Kill x crew or specific crew** | Gives the creature a reason to fight other players, not just static NPCs. |
 | **Survive** | Standard survival objective. Reinforces the retreat-and-hide loop. Gives Security a valid win condition. |
 
 > **Pet edge case:** If a map has fewer than 3 pets, the objective count adjusts to match available pets. A fallback target (e.g. station mice) may be needed — TBD.
@@ -39,7 +40,7 @@ A stealth-based predator that hunts crew and department pets from maintenance tu
 |---|---|---|
 | **Passive Stealth** | Visibility float from fully invisible (at rest) to fully visible (active). Moving, attacking, and using abilities increase visibility; each tick it decays back toward invisible. | Core identity. Rewards patience, punishes recklessness. |
 | **Drink Blood** | Channeled action on an adjacent target. Drains blood, heals The Creature, and increments the blood objective counter. Requires standing still for the channel duration. | Sustain loop tied to objective. Creates a vulnerability window during use. |
-| **Sting** | Short-range attack that stuns the target for a set duration. Moderate cooldown. | Setup tool for Drink Blood. Creates the Sting → Drink → Retreat sequence. |
+| **Sting** | Short-range attack that stuns the target for a set duration. Moderate to long cooldown. | Setup tool for Drink Blood. Creates the Sting → Drink → Retreat sequence. |
 | **Attack** | Standard melee. No wide-swing. Applies a brief stagger. | Combat fallback if cornered. No wide-swing discourages open-hallway fighting. |
 | **Eat** | Action option. consumes valid animals - crew are blacklisted, similar to dragon | Completing eat pet objective |
 | **Speed** | Faster than standard crew. | Enables disengagement. The Creature should be able to choose to flee a bad fight. |
@@ -52,8 +53,10 @@ A stealth-based predator that hunts crew and department pets from maintenance tu
 
 Visibility is a float with a minimum (fully invisible) and maximum (fully visible). Thresholds determine visual state, uses existing steath and stealthOnMove component / systems.
 
-Actions that raise visibility: walking, attacking, using any ability.
+Actions that raise visibility: moving (already implemented). Possibly attacking (needs implementation) or other actions.
 Visibility decays passively each game tick while The Creature is not acting.
+
+Bonus - increased stealth recovery in darkness, if code complexity permits.
 
 All specific float values, thresholds, increment amounts, and decay rates are TBD pending playtesting.
 
@@ -122,8 +125,8 @@ Each upgrade has three ranks (+1, +2, +3). Purchasing rank 2 requires rank 1, an
 
 ## What This Is Not
 
-- **Not a murderboner.** Sustained combat breaks stealth; Security can coordinate to kill it.
-- **Not a major antag.** No station-wide threats, no infrastructure attacks, no explosives.
+- **Not a murderboner.** Sustained combat breaks stealth; Security can coordinate to kill it. Stealth takes time to regenerate, meaning prolonged or agressive fights are severely punished.
+- **Not a station destroying antag.** No station-wide threats, no infrastructure attacks, no explosives, no nuke interaction. Can still be a major threat if played well or ignored.
 - **Not a conversion antag.** Victims do not become allies or infected.
 - **Not an NPC.** Ghost role only — human unpredictability is the point.
 
@@ -133,5 +136,4 @@ Each upgrade has three ranks (+1, +2, +3). Purchasing rank 2 requires rank 1, an
 
 - **Spawn rate:** Suggest starting comparable to Space Ninja or Revenant and adjusting from playtesting.
 - **Appearance:** Visual design unspecified. requires new sprite(s) and sfx, stealth handled by existing code.
-- **Multi-antag interaction:** Should spawn weight be reduced when a major roundstart antag is already present? Likely yes.
-- **Partial completion:** Is 2/3 objectives a partial win, or all-or-nothing? Current lean: all-or-nothing, Survive included.
+- **Multi-antag interaction:** Should spawn weight be reduced when a major roundstart antag is already present?
