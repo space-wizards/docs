@@ -40,13 +40,13 @@ Nanites are incredibly lethal to organics and should never be consumed by non-Sy
 
 Inert nanites can be consumed by organics but will cause a small build-up of poison, so it is equally advisable that they are avoided by non-Synths.
 
-#### Multi-solution Bloodstream
+#### Multi-reagent Bloodstream
 
-Synths feature a capillary system, consisting of nodes and connecting tubes filled with a purple-colored solution (fullerene), that is used for transporting nanites through a Synth's body. It is due to this system, that Synths bleed a mix of both fullerene (or carbon-based blood) and nanites.
+Synths feature a capillary system, consisting of nodes and connecting tubes filled with a purple-colored reagent (fullerene), that is used for transporting nanites through a Synth's body. It is due to this system, that Synths bleed a mix of both fullerene (or carbon-based blood) and nanites.
 
-Synths do not recover lost blood passively as other species do and cannot take bloodpacks. Instead, Synths must consume material, or nutriment, in order for their body to create more fullerene solution. Nanites, however, are restored passively so long as the fullerene solution is high enough.
+Synths do not recover lost blood passively as other species do and cannot take bloodpacks. Instead, Synths must consume material, or nutriment, in order for their body to create more fullerene. Nanites, however, are restored passively so long as a Synth's fullerene threshold is high enough.
 
-As long as a Synth's nanite solution is not empty, they will passively heal small amounts of physical damage and restore lost blood. However, this comes at the cost of depleting a Synth's nanite solution, which can only be restored through consuming nanites as a reagent or, as mentioned above, passively so long as their fullerene solution is high enough.
+As long as a Synth's nanite supply is not empty, they will passively heal small amounts of physical damage and restore lost blood. However, this comes at the cost of depleting a Synth's nanite supply, which can only be restored through consuming nanites as a reagent or, as mentioned above, passively so long as their fullerene threshold is high enough.
 
 So to recap: food = fullerene, fullerene = nanites, nanites = passive healing/blood restoration
 
@@ -62,11 +62,11 @@ Currently, CCU's are also capable of speach and are essentially 1:1 with positro
 
 Similarly to Cyborgs, Synths require power for their bodies to function, but unlike Cyborgs, their batteries are internal and cannot be removed without surgery, meaning upgrades are not currently possible. Despite this, Synth batteries are better optimized and last longer without needing to be charged at a charging station.
 
-Potential future upgrades could include a small charge recovery from metabolizing exotic reagents such as plasma or uranium.
+Potential future upgrades could include a small charge recovery from metabolizing exotic reagents such as plasma or uranium, and a smaller recovery from nutriment (i.e. traditional food).
 
 #### Medical Treatment
 
-Synths metabolize medical reagents at roughly 50% effectiveness when alive, but continue to metabolize reagents even after death — albeit at a further reduced effectiveness (25%) — provided their nanite solution is not empty. Nanites metabolize at 100% effectiveness regardless of mob state, but inert nanites cannot be converted to active nanites if a Synth is dead, meaning inert nanites are functionally useless to dead Synths.
+Synths metabolize medical reagents at roughly 50% effectiveness when alive, but continue to metabolize reagents even after death — albeit at a further reduced effectiveness (25%) — provided they have nanites in their bloodstream. Nanites metabolize at 100% effectiveness regardless of mob state, but inert nanites cannot be converted to active nanites if a Synth is dead, meaning inert nanites are functionally useless to dead Synths.
 
 Topicals are half as effective on Synths and require a longer doafter, and as mentioned above, bloodpacks cannot be used on them at all.
 
@@ -74,4 +74,6 @@ Synths are unable to be injected due to the complexity of their capillary system
 
 #### Hungerless
 
-Synths do not require food as organic species do, as they do not starve, but they still must consume material or nutriment in order restore lost blood. Synths do require water, however, as their internal systems require consistent cooling.
+Synths do not require food as organic species do, as they do not starve, but they still must consume material or nutriment in order restore lost blood. Food may also be used to regain small amounts of charge. 
+
+Synths do require water, however, as their internal systems require consistent cooling. If starvation/dehydration damage exists, they could potentially overheat if dehydrated.
