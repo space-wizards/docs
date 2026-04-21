@@ -1,13 +1,12 @@
 # The Creature
 **Type:** Midround Solo Antagonist (Ghost Role)
-**Status:** Draft — values TBD pending playtesting
+**Status:** Draft
 
 ---
 
 ## Summary
 
-A stealth-based predator that hunts crew and department pets from maintenance tunnels. Fills a gap in the current Wizden midround roster — no existing upstream antag uses stealth/ambush as a primary mechanic.
-
+A stealth-based predator that hunts crew and department pets from maintenance tunnels. Fills a gap in the current Wizden midround roster, while the ninja does use stealth, its not used in the same way as this proposed antag.
 **Gameplay identity:** Hit-and-fade. Sting a target, drain blood, retreat before crew can respond. Punishes reckless play; rewards map knowledge and patience.
 
 ---
