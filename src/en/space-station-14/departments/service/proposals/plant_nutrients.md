@@ -21,7 +21,6 @@ If a botanist knows what they are doing, the potency of an unmutated plant will 
 Pest killer is useless, as the only way for a plant to gain pests is by adding chemicals to a plant that have no good reason to be added to plants.
 
 ## Features to be added
-
 ### Nutrient requirements
 
 The basic water, nutrient, and potency values on plants are removed.
@@ -75,7 +74,7 @@ Botanists can choose to take risks by growing more difficult plants, and are rew
 
 Due to most plant mutations not being objectively positive or negative, the mutation system can be changed to give botanists more freedom, without having as much of an effect on the department's balance.
 
-###Balance
+### Balance
 
 The most difficult nutrient requirements and environmental tolerances should not be required for botanists to do their job, instead, these should be extra goals for the most ambitious of botanists.
 
