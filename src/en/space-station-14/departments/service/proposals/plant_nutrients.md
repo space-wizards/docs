@@ -72,21 +72,28 @@ Botanists can choose to take risks by growing more difficult plants, and are rew
 Due to most plant mutations not being objectively positive or negative, the mutation system can be changed to give botanists more freedom, without having as much of an effect on the department's balance.
 
 ## Roundflow & Player interaction
+### Standard roundflow
 
-Encourages botanists to interact with other departments to get new nutrients.
+Botanists will generally begin rounds by planting basic medicinal and food plants.
+After requesting and/or being given access to new nutrients from chemistry, salvage, or atmospherics, they will begin planting & mutating new plants, choosing which ones to grow based off of which nutrients they have or lack access to.
+As the round progresses, and antagonist activity increases, botanists can choose to grow specific plants for the station based off of the current situation, such as growing ingredients for ambusol during a zombie outbreak, or growing burn medication after a traitor causes a plasma fire.
+In the most severe disasters, botanists may
 
-Cargo and salvage can provide raw materials to grind and use as nutrients, such as gold, uranium, plasma, and bananium.
-Chefs can provide blood and uncooked animal protein from butchered animals.
-Atmos can fill the botany room with gasses to provide nutrients.
+### Interdepartmental interactions
 
-Desired gameplay:
+Botanists may need to interact with many other departments to get access to the nutrients they desire:
+- Cargo and salvage can provide raw materials to grind and use as nutrients, such as gold, uranium, plasma, and bananium.
+- Chefs can provide blood and uncooked animal protein from butchered animals.
+- Atmospheric technicians can fill the botany room with gasses to provide nutrients.
+
+### Desired gameplay:
 - A plant has iron as one of its nutrient requirements, so the botanist grows steelcaps and grinds them for iron.
 - A plant has blood as one of its nutrient requirements, so the botanist goes around the station and asks people to donate blood.
 - A plant requires low temperatures to survive, so the botanist builds a glass box, and uses a space heater to cool it down.
 - A plant requires incredibly high temperatures and pressures to survive, so the botanist asks an atmos tech to plant it in a burn chamber.
 - A plant contains a reagent that the botanist does not need, so they intentionally avoid meeting its nutrient requirements.
 
-Undesired gameplay:
+### Undesired gameplay:
 - A botanist creates a single plant containing all the reagents they need at the start of the shift, then spends the rest of the shift growing only that plant.
 - A botanist asks the chemist for mutagen at the start of the shift, then never interacts with another person for the rest of the shift.
 - An optimal solution for botany is discovered, which can be reliably done every shift, and produces everything other departments need from botany.
