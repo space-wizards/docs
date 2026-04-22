@@ -21,15 +21,15 @@ This proposal introduces Telescience, a new research method for the Science Depa
 **The Teleframe**: A Round-Start and buildable set of structures centralised on a **Teleframe Core**, a structure which is capable of teleporting almost anything nearby it or its selected Target either to the Target (Sending) or from the Target to itself (Receiving).
 -  *Teleframe Consoles* are connected by the Player to a Teleframe Core via a multitool. This structure allows the Player to set a teleportation Target, either through directly inputting coordinates, or selecting a linked Teleport Beacon.
 -  *Teleport Beacons* are items that the Player can create and link to a Teleframe Console, when anchored it will be selectable by the Player from that Teleframe Console to act as a Teleportation Target, even if the beacon is on a seperate moving grid or another map entirely.
-- Teleframe Cores can have a random chance upon teleportation determined by their Incident Chance characteristic to cause **Teleportation Incidents**. Which cause Anomalous Effects on the surrounding environment.
+- Teleframe Cores can have a random chance upon teleportation determined by their Incident Chance characteristic to cause **Teleportation Incidents**. Which cause **Anomalous Effects** on the surrounding environment.
 -  *Teleframe Upgrades* are researchable structures that can be built by the Player directly adjacent to the Teleframe Core, modifying its base characteristics, or providing new special features.
 
-**Reality Fractures**: Anomaly-like entities that create minor but noticable Anomalous Effects on their surroundings. They are usually entirely invisible and make no sound unless pulsing. They can most easily be detected and destroyed using Bluespace Depthcharges.
+**Reality Fractures**: Anomaly-like entities that create minor but noticable **Anomalous Effects** on their surroundings. They are usually entirely invisible and make no sound unless pulsing. They can most easily be detected and destroyed using Bluespace Depthcharges.
 
 -  *Bluespace Depthcharges* are items the Player can create, that upon teleportation will detect Reality Fractures within a large radius and state the distance from themselves. Within a shorter radius, they will generate science and the cost of damaging the Reality Fracture.
 - If the exact location of the Reality Fracture is found, an Anomaly Synchroniser may be Anchored underneath it and activated, which will reveal the Reality Fracture, allowing it to be scanned and studied similar regular anomalies, however they will continually degrade in this state.
 - Destroyed Reality Fractures produce more potent Anomalous Effects upon their destruction. With intensity scaling with how efficiently it was destroyed, the fewer Depthcharges used, the more efficient.
-- Destroyed Reality Fractures drop **Anomalous Shards**, which are capable of replicating the Anomalous Effects of the the Reality Fracture, or that of Teleportation Incidents. These can also be scanned and catalogued for additional science.
+- Destroyed Reality Fractures drop *Anomalous Shards*, which are capable of replicating the Anomalous Effects of the the Reality Fracture, or that of Teleportation Incidents. These can also be scanned and catalogued for additional science.
 
 **Anomalous Effects**: The overall effects produced by Teleportation Incidents and Reality Fractures which are responsible for providing risk and additional reward of using the Teleframe.
 
@@ -48,24 +48,25 @@ Reality Fractures meanwhile represent places where the fabric is thin or damaged
 The discipline of Telescience therefore studies these Fractures and their effects, deliberately triggering them via Bluespace Depthcharges teleported from Nanotrasen's standard issue *Experimental Teleframe Core*, and observing the response on both sides of reality. Then, potentially finding use for the crystalisation of these Anomalous effects for the station at large beyond simply the knowledge those observations provide. Naturally however such experimentations will be far from safe.
 
 ## Background
-While Science provides benefit to the station in the form of their researched technologies and the ability to make new things, the tools with with they do research rarely themselves provide much benefit to the station.
+While Science provides benefit to the station in the form of their researched technologies and the ability to make new things, the tools with with they do research rarely themselves provide much benefit to the station in and of themselves beyond the points that act of research provides.
 
-Anomalies are almost always a direct threat to the station, with only Rock and Electric Anomalies capable of providing limited use. Some Artifact effects, such as generating materials, can provide benefit, however they are often limited in their ability to be exploited.
+Anomalies are almost always a direct threat to the station, with only Rock and Electric Anomalies capable of providing limited use. Some Artifact effects, such as generating materials can provide benefit, however they are often limited in their ability to be exploited.
 
 For the most part, they are tools whose primary purpose is to generate science points. Other effects are often secondary at best. Which can leave little room for skill expression beyond the ability to most efficiently generate points or make the most of what secondary benefits there are.
   
-The Teleframe is built inversely to this, an incredibly powerful mobility tool that also happens to be able to be used in scientific research. With that scientific research also producing Anomalous Shards capable of strange effects.
+The Teleframe is built inversely to this, an incredibly powerful mobility tool that also happens to be able to be used in scientific research. With that scientific research also producing Anomalous Effects and Shards capable of strange effects. These provide benefits entirely independently of any generated science.
 
 ## The Teleframe
-The Teleframe Core is the structure responsible for teleportation, it is directed by the Teleframe Console it is connected to.  A Teleframe Core may be connected to multiple Teleframe Consoles, but each Teleframe Console may only connect to one Teleframe Core.
+The *Teleframe Core* is the structure responsible for teleportation, it is directed by the *Teleframe Console* it is connected to.  A Teleframe Core may be connected to multiple Teleframe Consoles, but each Teleframe Console may only connect to one Teleframe Core.
 
 While Teleframes are intended to be most associated with Telescience, there is potential for other implementations, such as Syndicate Teleframes.
 
 Similarly, Teleframe Cores should not be limited to only being a structure, Console and Frame could theoretically be combined into a single item. Although such a device would need to be heavily restricted.
 
-<img width="256" height="256" alt="Sprite-0001" src="https://github.com/user-attachments/assets/b403a5f0-560a-44d2-aba0-a3005c53f643" />
-<img width="256" height="256" alt="Sprite-0002" src="https://github.com/user-attachments/assets/2607a698-e02e-4ad1-b1ac-b831734c5be0" />
-<img width="256" height="256" alt="Sprite-0006" src="https://github.com/user-attachments/assets/53fd9317-b63a-41b1-b496-88bd44e5e433" />
+<img width="224" height="224" alt="Sprite-Teleframe" src="https://github.com/user-attachments/assets/b403a5f0-560a-44d2-aba0-a3005c53f643" /> | <img width="224" height="224" alt="Sprite-Syndiframe" src="https://github.com/user-attachments/assets/2607a698-e02e-4ad1-b1ac-b831734c5be0" /> | <img width="224" height="224" alt="Sprite-Hyperframe" src="https://github.com/user-attachments/assets/53fd9317-b63a-41b1-b496-88bd44e5e433" /> | <img width="224" height="224" alt="Sprite-Console" src="https://github.com/user-attachments/assets/c5ae2e4d-59d7-41e7-99b3-145d1791f4ea" /> |
+| -- | -- | -- | -- |
+| Experimental Teleframe Core | CSTF-X Infiltrator Core | Centcomm Hyperframe Core | Teleframe Console |
+
 
 ### Function
 Teleframe Cores have characteristics that determine how they function. Upgrades or Events may modify these characteristics:
@@ -111,25 +112,30 @@ The Teleframe Core creates a distortion as it connects to the targeted location,
 The Teleframe Core then enters a state of recharging, and won't be able to be used again a period of time.
 
 ### Peripherals
-Peripheral items and structures support the use of the Teleframe but are not mandatory for its function.
+Peripheral items and structures support the use of the Teleframe but are not mandatory for its function. They provide additional tools that add depth to the way Telescience and Teleframes integrate with the rest of the station.
 
-<img width="256" height="256" alt="Sprite-0003" src="https://github.com/user-attachments/assets/53bfce3c-75bf-4649-9b0d-7e1c02988341" />
-<img width="256" height="256" alt="Sprite-0005" src="https://github.com/user-attachments/assets/4b3b5ca0-0c22-4d33-b177-1bf0fd348a9d" />
-<img width="256" height="256" alt="Sprite-0004" src="https://github.com/user-attachments/assets/500229aa-7af2-4f1a-802e-f40a1087c089" />
+| <img width="224" height="224" alt="Sprite-Beacon" src="https://github.com/user-attachments/assets/2773ee25-a9b9-40e9-9d59-c22d4d4a02da" /> | <img width="224" height="224" alt="Sprite-Destabiliser" src="https://github.com/user-attachments/assets/4b3b5ca0-0c22-4d33-b177-1bf0fd348a9d" /> | <img width="224" height="224" alt="Sprite-Condense" src="https://github.com/user-attachments/assets/7f226016-1914-48ed-bfab-96db6b02f961" /> | <img width="224" height="224" alt="Sprite-Handheld" src="https://github.com/user-attachments/assets/500229aa-7af2-4f1a-802e-f40a1087c089" /> |
+| -- | -- | -- | -- |
+| Teleport Beacon | Teleframe Destabiliser | CSTF-U Condenser Upgrade | Handheld Teleframe Console | 
 
-Chief amongst these is the Teleport Beacon. The Teleport Beacon can be created by the player at round-start, when linked to a Teleframe Console and then anchored it would be selectable as a target.  This has immediate uses:
+#### Teleport Beacons
+Chief amongst these is the Teleport Beacon. The Teleport Beacon can be created by the player at round-start, when linked to a Teleframe Console and then anchored it can selected as a target.  This has immediate uses:
 - A player could have a teleport beacon set up on the ATS to allow immediate extraction of purchased goods
 - A Teleport Beacon set up on a seperate map such as an expedition would allow traversal to and from to extract looted goods.
 - A Syndicate agent could set up a Teleport Beacon on the Evacuation shuttle, and have their stolen contraband teleported to them even after the shuttle has evacuated, bypassing an evac shuttle search.
 
-Upgrades
-Upgrades would represent special chips that unlock new functionality or improve the baseline characteristics of the Teleframe. For Teleframes, these would be inserted into Teleframe enhancement structures that could be built adjacent to the Teleframe Core. These upgrade chips could also be placed into other structures to improve their function, such as increasing the speed of a Lathe, or having it provide a small amount of science when an object was printed.
+#### Upgrades
+Upgrades represent special chips that unlock new functionality or improve the baseline characteristics of the Teleframe. For Teleframes, these can be inserted into a basic Teleframe enhancement structures that can be built by the Player adjacent to the Teleframe Core, allowing it to benefit from up to 8 of such structures. These upgrade chips can also be placed into other structures to improve their function, such as increasing the speed of a Lathe, or having it provide a small amount of science when an object is printed.
 
-Upgrades would be important to mechanically improving the process of Telescience, or using the Teleframe in general by increasing its recharge and charge times but making incidents more intense, making it less likely to experience incidents but increasing charge times, or increasing its chance of incidents in exchange for more science production.
+Upgrades would be important to mechanically improving the process of Telescience, or using the Teleframe in general by increasing its recharge and charge times but making incidents more intense, making it less likely to experience incidents but increasing charge times, or increasing its chance of incidents in exchange for more science production. This would also provide a sense of progression throughout the round, as the Player slowly builds up their Teleframe from its default configuration to their desired powerhouse.
 
-Research
+#### Research
 - Further Research in the Science department can unlock new Teleframe-related technology, from new modules to equipment.
-- The Handheld Teleframe Console would allow a user to access a teleframe remotely, with it possessing a built-in Teleport Beacon letting them target themselves on the move.
+- The Handheld Teleframe Console for example allows a user to access a linked Teleframe remotely, with it possessing a built-in Teleport Beacon letting them target themselves on the move.
+
+> Operator Bravo has been sent to infiltrate the station with a GPS. He locates security, and extrapolates his current coordinates to identify coordinates that should land directly inside the armoury. The team aboard the ship receive these coordinates, and use their purchased CSTF-X Infiltrator Teleframe to initiate teleportation, thanks to their CSTF-U Condenser Upgrade the teleportation is practically silent with very little distortion. They take the station by suprise using their own weapons against them. In the final seconds of the round, they use a Syndicate-brand Handheld Teleframe Console that came in the bundle to remotely trigger the the Teleframe still on their ship, extracting in style just before the nuke goes off.
+
+
 
 ## Telescience
 Telescience follows the theme of the Teleframe's ability for traversal and extraction. There are two ways to engage with Telescience.
@@ -154,8 +160,9 @@ Destroying Reality Fractures results in them entering a supercritical meltdown, 
 
 To destroy a Reality Fracture with no effects, one can alternatively use an Anomaly Synchroniser. If anchored and activated directly on the location of the Reality Fracture, it will link to it and make it visible. Allowing it to be interacted with like a normal anomaly. When connected to an Anomaly vessel it will drain all Science Points out of the Reality Fracture, and upon running out it will disappear harmlessly.
 
-<img width="256" height="256" alt="Sprite-0007" src="https://github.com/user-attachments/assets/2db8a7b3-531f-4845-b519-042ad4e2e2fb" />
-<img width="256" height="256" alt="Sprite-0010" src="https://github.com/user-attachments/assets/f9a2facf-9799-4d52-826c-f9b6986a6f35" />
+<img width="256" height="256" alt="Sprite-Fracture" src="https://github.com/user-attachments/assets/2db8a7b3-531f-4845-b519-042ad4e2e2fb" /> | <img width="256" height="256" alt="Sprite-Telecharge" src="https://github.com/user-attachments/assets/3960c9b6-74a9-4e21-bb43-aed4f0c673dc" /> |
+| -- | -- |
+| Reality Fracture | Bluespace Depthcharge |
 
 ### Gaining Science
 Bluespace Depthcharges are the primary method of detecting and destroying Reality Fractures. These can be created by the Player round-start. A Bluespace Depthcharge has a large detection radius and a smaller scanning radius. When teleported it will report over radio the distance from itself to all Reality Fractures within its detection radius, and gain science from all Reality Fractures within its scanning radius. Each Reality Fracture would be provided a unique ID to keep track of it if multiple were detected.
