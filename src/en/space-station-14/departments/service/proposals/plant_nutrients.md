@@ -55,7 +55,7 @@ For example:
 - Temperature-stablizing reagents like leporazine raising a plant's tolerance to both high and low temperatures.
 - Polypyrlium oligimers lowering the pressure requirement of a plant so much that it can survive in space, but no longer can survive earth-like air pressure.
 
-The environmental tolerances of a plant can also be temporarly modified by adding certain reagents to the plant.
+The environmental tolerances of a plant can also be temporarily modified by adding certain reagents to the plant.
 For example:
 - Ice and other cold reagents raising the high temperature tolerance, but lowering the low temperature tolerance of plants it's added to.
 - Bruisine and other brute healing reagents increasing the high and low pressure tolerances of plants it's added to.
@@ -64,7 +64,7 @@ For example:
 
 ## Game Design Rationale
 
-The productivity of botanists should generally be decided by intelligent decision making based off of the current state of the round, instead of constantly micromanagement of weeds, nutrients and harvesting.
+The productivity of botanists should generally be decided by intelligent decision making based off of the current state of the round, instead of the constant micromanagement of weeds, nutrients and harvesting.
 
 The increased difficulty of making chemicals like omnizine encourages botanists to experiment and grow a variety of plants, instead of just mass producing the most powerful/versatile reagents.
 
