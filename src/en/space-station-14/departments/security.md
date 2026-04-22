@@ -1,38 +1,39 @@
 # Security Department Design Document
 
 ## Concept
-The Security department is the primary counter-weight against the many chaotic PvP and PvE events that occur on the station, allowing the other departments to focus on their gameplay without (too much) interuption. Combat and "busting bad guys" should be the main draw to play Security, though not to the extent they oppress other roles from doing their goals. They also assist with player-enforced behaviors via Space Law, acting as an in-game way to ensure other players don't detract from the experience for each other.
 
-## Intended Experience
-- Rip-roaring combat; shooting guns and taking down bad guys.
-- A sense of empowerment; you keep the station safe, and have the tools to do so.
-- Processing and law; codes to follow, to ensure fair treatment.
-- Friction with crew; other crew should be treated fairly, or there will be consequences.
-- Good for intermediate to experienced players.
+In a single sentence, the security department's purpose is to be the "cops" in a station-wide game of cops and robbers. They are expected to get in fights, solve crimes, throw criminals in the slammer, and, when things get really bad, they have a fully-stocked armory with enough lead to let them face true threats head-on.
 
-## Responsibilities
-- Security protects the station & crew from hostilities, having the best equipment to do so.
-- Security contextually enforces Space Law, an in-game law system players agree on when playing the game (as well as the consequences for breaking it).
-- Security ensures secure storage of strong combat equipment and weapons.
+To elaborate, there are several distinct jobs that security performs:
+1. Controlling the flow of key items
+2. Enforcing Space Law and the will of command
+3. Defending the station from overt threats
+4. Invesigating crimes and rooting out their culprits
 
-## Desired Gameplay
-- Being called upon to deal with station threats.
-  - Other crew should be able to rely on Security for assistance against threats that disrupt their role's purpose; whether that be low-stakes disputes between players or round-ending threats. Security doesn't always need to be able to succeed in dealing with the threats, but should be considered a viable option.
-  - Security should also have options to discover threats on their own. These options should be subvertible and balanced to not be oppressive for antags, yet be reliable enough that a Security player feels it's useful. This kind of proactive work should be ideal for downtime between more reactive threats, when there's a lull in the action. 
-- Risk of friction when performing work.
-  - Security should need to rely on other departments and players to perform well; failing to have good relationships may cause other players to deny access, obscure information and/or assist antagonists. This reliance may temporarily distract other players from their role's purpose, causing a base amount of friction that must be overcome.
+### Controlling Contraband
 
-- Higher than normal crew combat capabilities, but needing to use resources/teamwork to effectively combat antagonists.
-  - As the station's protectors Security should be stronger than the average crewmember, with the possibility to become even stronger by utilizing resources or tools provided by other departments. A single Security role should still baseline be less powerful than a primary antagonist, with teamwork and skillful play bridging the gap.
-- Fairly enforcing Space Law, in favor of what's best for the round and player.
-  - Security should only enforce Space Law to the extent that it makes sense in context; being the enforcers, they are also expected to follow it. 
+The first of security's jobs is unglamorous and rarely sees active discussion, but it is important nonetheless. At its core, Space Station 14 is a game about player interactions, and one of the core principles that fosters those interactions is that nobody should have everything. Players will often need to ask each other for entry into another department, or for help with a task they cannot do themselves. These interactions, however, cease to exist if everyone can just break in and take whatever they want without consequence. Part of security's job is to restrict access to certain marked, job-specific items, e.g. the bartender's shotgun, atmos' hardsuits, radio keys, ID cards, and *especially* their own arsenal of weapons. This both ensures that the crew are not deprived of the tools they need to do their jobs and that *only* those roles have them by default. Even outside the context of antagonist gameplay, this is necessary to force interaction into the round and to prevent the experience from devolving into a wasteland of NRP powergaming.
 
-## Undesired Gameplay
-- Speedrunning to redtext antagonists to make each round a greenshift.
-  - While Security will be engaging with antags frequently and part of that work involves pre-emptively detecting antags, it becomes overall detrimental to the round if Security "defeats" antags too early. It becomes anti-climactic, unenjoyable for the antag, and detracts from the level of chaos in the round.
-- Militaristic behaviors and design.
-  - Security should lean more towards the "mall cop" archetype rather than being a military force. That doesn't mean they won't have access to military-grade equipment such as assault rifles, armor or bomb diffusal tools, they are in a futuristic sci-fi setting after all, just that the overall design shouldn't impose military levels of structure and rigor. 
-- Becoming a police state/unfairly enforcing space law. 
-  - Security has the tools to very forcefully oppress other departments and players; sometimes this force may be necessary to deal with unruly players or antagonists, but exercising it wantonly to the detriment of other players can cause great unenjoyment and should not be encouraged.
-- Always opting for lethal means.
-  - Lethality when dealing with threats is important as it can provide an innate definitive end to the threat, however the impact injuries and death can have on other players means Security should not be encouraged to always go for a lethal option.
+This job also applies to antagonist-specific items, like illegal weapons and burglary tools, which security is expected to confiscate during a typical round. Security is expected to store these illegal items securely and should have specific procedures for handling them. Having items confiscated should be a setback for antagonists, but should never be game-ending, and there should be ways to feasibly steal these items back from security after they've been taken. Security should be discouraged from outright removing illegal items from the round - e.g. by destroying them, selling them, or throwing them deep into space.
+
+### Upholding the Law
+
+The second job of security is to enforce Space Law and the will of command, in that order. A big part of security's job is to clamp down on troublemakers and to ensure that when a member of command makes an order, other players have to actually do what they're told. While this does tie closely into security's third and fourth jobs, this principle is more about maintaining a general level of decorum and order on the station.
+
+First and foremost, security players are bound to Space Law, and they themselves must adhere to it as a matter of compliance with the server rules. While there is a little wiggle-room for this, like using contraband items to defend themselves in life-or-death scenarios, security players should never be playing the role of the crooked cop. Space Law is both a foundation for security's roleplay and a carefully-crafted tool for limiting the department's authority to what is most conducive to engaging gameplay. Serious violations of Space Law by security *cannot* solely be handled in-character - as both the enforcers and arbiters of the law, an abuse of security's authority can be extremely difficult to rectify and often leads to an increase in administrative workload.
+
+The rest of the crew is *not* required to follow Space Law to play on the server - instead, the consequence for breaking the law is that if they're caught, security can choose to punish them for their crimes. Space Law lists out every crime that security has the authority to punish, ranging from vandalism to murder, and also lists the maximum sentence security is allowed to hand out for any given crime. The goal is, again, to facilitate a cops and robbers dynamic, complete with fugitives, detectives, and prison sentences.
+
+### Protecting the Innocent
+
+Lastly, security's most obvious job is to respond to overt threats and investigate unsolved crimes. Combat for security generally revolves around simple firearms and stun weapons, whereas investigation centers on the use of forensic tools and social deduction. Which of these tasks takes focus in a given round largely depends on what exact opposition security is facing - in a standard traitor round, for example, gameplay can often lean quite heavily on the investigative aspect of security's role, as a skilled traitor can often accomplish their objective without being caught in the act. On the other hand, a typical round against a team of Nuclear Operatives requires a much greater emphasis on combat. The exact mechanics of both combat and crime-solving are outside the immediate scope of this document.
+
+## Department Ethos
+
+Security should be designed like the jocks of the station - they should have a lot of raw muscle and resilience, but should be easy to outmaneuver, whether through evasion, deception, ambush, or sabotage. Any problem that can't be beaten, shot, or put in cuffs is one that security should struggle to solve. This is by design - with rounds often lasting in excess of one hour in real time, security needs to have real weak spots in order to ensure that their craftier opponents have openings to slip through the cracks and accomplish their objectives. Otherwise, if security is given too much information or too many tools, the sheer amount of time security has available to apprehend their opponents becomes oppressive to less combat-oriented antagonists and natural playstyles are disproportionately punished compared to ones which stall out the round. At the same time, security should almost always have the power to push back against open challenges to their authority - they shouldn't necessarily always win in direct confrontations, but any antagonists which can't match their arsenal should have to do something more clever than banging pans together outside their department if they want to succeed.
+
+Thematically, security players are meant to be, well, *security*. The department's primary mission is to make the station *secure* above all else - ideal security gameplay should resemble a mall cop making their rounds more than actual policework. In terms of gameplay, this means that security's concern should not be prosecuting everyone blindly for breaching the law or making as many arrests as possible. Arresting and punishing criminals should be a means to the end of keeping people safe and maintaining order on the station.
+
+In combat, one of security's most important design pillars is *escalation*. During a round, the station will have a specific alert level assigned to it, typically green, blue, or red, and both that station-wide alert level and a security player's immediate surroundings should dictate how forceful their tactics are. When initially alerted, security's first choice should be to use their least lethal tools, and security should NOT be carrying weapons like shotguns or automatic rifles on them at all unless the station is already on red alert. The goal is for security to have the flexibility to respond to station-ending threats without every petty thief and crowbar-swinging clown getting immediately ventilated by high-powered rifles.
+
+Related to escalation, security's expected standard of conduct differs for handling internal and external threats. When an external invader is discovered aboard the station, such as a loathesome Rat King or a stealthy Space Ninja, security is under no obligation to negotiate. These antagonists are not members of the crew and do not possess rights, and security is permitted to jump to lethal force immediately. However, when a member of the crew is suspected of wrongdoing, security is held to a much higher standard. If security cannot find sufficient evidence of misconduct, they have to let the suspect go. Security's standard of proof isn't as high as an actual court's, but they can never lock people up on just a hunch. Security's level of force should be based off of observed in-character behavior, NOT off of whether a particular character "is an antagonist" or not.
