@@ -6,7 +6,10 @@
 
 ## Overview
 
-A rework of the potency, nutrient, water, and environmental tolerance mechanics of botany. Instead of having a potency value that decides the amount of reagents a plant generates, it will instead be decided by the amount of, and type of nutrients in the plant. More powerful reagents require nutrients that are harder to obtain, or have other downsides to their use. Some reagents will also change the environmental requirements of the plant that contains them, such as a cryogenics related reagent causing a plant to require colder temperatures to survive.
+A rework of the potency, nutrient, water, and environmental tolerance mechanics of botany. Instead of having a potency value that decides the amount of reagents a plant generates, it will instead be decided by the amount of, and type of nutrients in the plant. 
+More powerful reagents require nutrients that are harder to obtain, or have other downsides to their use. Some reagents will also change the environmental requirements of the plant that contains them, such as a cryogenics related reagent causing a plant to require colder temperatures to survive.
+
+This is not a full rework of the botany department, so some issues with its current implementation will not be addressed here, due to being out of scope.
 
 ## Background
 
@@ -17,6 +20,8 @@ Pest killer is useless, as the only way for a plant to gain pests is by adding c
 
 ## Features to be added
 
+### Nutrient requirements
+
 The basic water, nutrient, and potency values on plants are removed.
 
 Reagents grown with plants now come with nutrient requirements, meeting more of the nutrient requirements increases the amount of reagent obtained by grinding the plant's produce.
@@ -26,31 +31,45 @@ When the plant is harvested, nutrients are used up to fulfill the plant's nutrie
 Nutrients can be specific elements, like carbon or oxygen; or more vague categories, like flammable, cold, or clown-related.
 
 Some reagents contain multiple types of nutrient, for example:
-- Blue blood containing high amounts of the "blood" and "water" nutrients, and small amounts of the "meat" and "copper" nutrients.
+- Blue blood containing large amounts of the "blood" and "water" nutrients, and small amounts of the "meat" and "copper" nutrients.
 - Banana honk containing the "nutrient", "clown", "water", "sugar", and "ethanol" nutrients.
-- Oil containing high amounts of the "flammable" nutrient, and smaller amounts of the "carbon" nutrient.
+- Oil containing large amounts of the "flammable" nutrient, and smaller amounts of the "carbon" nutrient.
 
-If a plant has a large amount nutrients added to it that it can't use, it may lose health. Some nutrients (radioactive, toxic, etc.) deal more damage this way than others.
+Some nutrients (radioactive, toxic, etc.) lower the health of plants that don't have them as nutrient requirements.
 
-Some nutrient types come with unwanted effects, even if the plant needs them to survive. For example, sugary nutrients increasing the amount of pests, or radioactive nutrients randomly mutating the plant.
+The reagents that contain a nutrient may also have extra unwanted effects on a plant, which may have to be worked around by the botanist.
+For example:
+ - Uranium, radium, and other reagents containing radioactive nutrients can randomly mutate plants they are added to.
+ - Sugar, syrup, apple juice, and other reagents containing sugar nutrients increase the amount of weeds and pests of plants they are added to.
+ - Honk, laughter, and other reagents containing clown nutrients causing "funny" mutations to the plants they are added to, such as screaming or being slippery.
 
-Some reagents will also change the environmental tolerances, or other stats of the plant that makes them.
+Plants whose produce can be used for purposes other than grinding (such as steelcaps and glasstle) may have extra nutrient requirements to be harvested.
+
+### Environmental tolerances
+
+Some reagents will change the environmental tolerances, or other stats of the plant that makes them.
 
 For example:
-- Flammable reagents like welding fuel and oil could lower a plant's tolerance to high temperatures.
-- Temperature-stablizing reagents like leporazine could raise a plant's tolerance to both high and low temperatures.
-- Polypyrlium oligimers could lower the pressure requirement of a plant so much that it can survive in space, but no longer can survive earth-like air pressure.
+- Flammable reagents like welding fuel and oil lowering a plant's tolerance to high temperatures.
+- Temperature-stablizing reagents like leporazine raising a plant's tolerance to both high and low temperatures.
+- Polypyrlium oligimers lowering the pressure requirement of a plant so much that it can survive in space, but no longer can survive earth-like air pressure.
 
-Plants may also have nutrient requirements for growth, which are used up as a plant matures, instead of when they are harvested.
-Plants whose produce can be used for purposes other than grinding (such as steelcaps and glasstle) may have extra nutrient requirements to be harvested.
+The environmental tolerances of a plant can also be temporarly modified by adding certain reagents to the plant.
+For example:
+- Ice and other cold reagents raising the high temperature tolerance, but lowering the low temperature tolerance of plants it's added to.
+- Bruisine and other brute healing reagents increasing the high and low pressure tolerances of plants it's added to.
+- Dylovene and other poison healing reagents increasing the resistance to toxic nutrients of plants it's added to.
+
 
 ## Game Design Rationale
 
-The increased difficulty of making chemicals like omnizine encourages botanists to experiment and grow a variety of plants, instead of just mass producing one or two reagents.
+The increased difficulty of making chemicals like omnizine encourages botanists to experiment and grow a variety of plants, instead of just mass producing the most powerful/versatile reagents.
 
-Carefully considering which plant you should grow based off of what nutrients you have access to is probably more fun than growing the same plants every shift.
+Which plants are grown can be carefully considered based off which chemicals the botanist has access to, and what the station needs.
 
-Botanists can choose to take risks by growing more difficult plants, and are rewarded with better chemicals.
+Botanists can choose to take risks by growing more difficult plants, and are rewarded with produce that contains more useful chemicals, or have other unique uses.
+
+Due to most plant mutations not being objectively positive or negative, the mutation system can be changed to give botanists more freedom, without having as much of an effect on the department's balance.
 
 ## Roundflow & Player interaction
 
@@ -70,11 +89,12 @@ Desired gameplay:
 Undesired gameplay:
 - A botanist creates a single plant containing all the reagents they need at the start of the shift, then spends the rest of the shift growing only that plant.
 - A botanist asks the chemist for mutagen at the start of the shift, then never interacts with another person for the rest of the shift.
+- An optimal solution for botany is discovered, which can be reliably done every shift, and produces everything other departments need from botany.
 
 # Technical Considerations
 
 Nutrient requirements and plant stat modifiers could be made a part of the SeedChemQuantity struct.
 
-The guidebook will have to be updated to tell players what plant nutrients reagents contain.
+The guidebook will have to be updated to tell players which plant nutrients reagents contain.
 
-The nutrient requirements of plants and their reagents will have to be communicated to the players in some way. This could be done by expanding the examination text hydroponics trays, adding a menu for them, or adding plant analyzers.
+The nutrient requirements of plants and their reagents will have to be communicated to the players in some way. This could be done by expanding the examination text of hydroponics trays, adding a menu for them, or adding plant analyzers.
