@@ -9,7 +9,7 @@
 A rework of the potency, nutrient, water, and environmental tolerance mechanics of botany. Instead of having a potency value that decides the amount of reagents a plant generates, it will instead be decided by the amount of, and type of nutrients in the plant. 
 More powerful reagents require nutrients that are harder to obtain, or have other downsides to their use. Some reagents will also change the environmental requirements of the plant that contains them, such as a cryogenics related reagent causing a plant to require colder temperatures to survive.
 
-This is not a full rework of the botany department, so some issues with its current implementation will not be addressed here, due to being out of scope.
+This is not a full rework of the botany department, so some issues with its current implementation, such as ones relating to the mutation system will not be addressed here, due to being out of scope.
 
 All examples listed here do not have to be implemented as they are described, they merely exist to help explain how the base mechanics can be used.
 
