@@ -48,7 +48,7 @@ Plants whose produce can be used for purposes other than grinding (such as steel
 
 ### Environmental tolerances
 
-Some reagents will change the environmental tolerances, or other stats of the plant that makes them.
+Some reagents will change the environmental tolerances, or other stats of the plant that contains them in their produce.
 
 For example:
 - Flammable reagents like welding fuel and oil lowering a plant's tolerance to high temperatures.
@@ -78,7 +78,7 @@ Due to most plant mutations not being objectively positive or negative, the muta
 
 The most difficult nutrient requirements and environmental tolerances should not be required for botanists to do their job, instead, these should be extra goals for the most ambitious of botanists.
 
-Most plants should be able to survive unsupervised long enough for a botanist to visit other departments to deliver plants, and request materials, reagents, and equipment.
+Most plants should be able to survive unsupervised long enough for a botanist to visit other departments to deliver produce, and request materials, reagents, and equipment.
 
 ## Roundflow & Player interaction
 ### Standard roundflow
