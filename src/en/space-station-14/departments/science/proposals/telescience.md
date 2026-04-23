@@ -29,7 +29,7 @@ Telescience introduces the following core concepts:
 -  *Bluespace Depthcharges* are items the Player can create, that upon teleportation will detect Reality Fractures within a large radius and state the distance from themselves. Within a shorter radius, they will generate science and the cost of damaging the Reality Fracture.
 - If the exact location of the Reality Fracture is found, an Anomaly Synchroniser may be Anchored underneath it and activated, which will reveal the Reality Fracture, allowing it to be scanned and studied similar regular anomalies, however they will continually degrade in this state.
 - Destroyed Reality Fractures produce more potent Anomalous Effects upon their destruction. With intensity scaling with how efficiently it was destroyed, the fewer Depthcharges used, the more efficient.
-- Destroyed Reality Fractures drop *Anomalous Shards*, which are capable of replicating the Anomalous Effects of the the Reality Fracture, or that of Teleportation Incidents. These can also be scanned and catalogued for additional science.
+- Destroyed Reality Fractures drop *Anomalous Shards*, which are capable of replicating the Anomalous Effects of the the Reality Fracture, or that of Teleportation Incidents.
 
 **Anomalous Effects**: The overall effects produced by Teleportation Incidents and Reality Fractures which are responsible for providing risk and additional reward of using the Teleframe.
 
@@ -119,8 +119,8 @@ Peripheral items and structures support the use of the Teleframe but are not man
 | Teleport Beacon | Teleframe Destabiliser | CSTF-U Condenser Upgrade | Handheld Teleframe Console | 
 
 #### Teleport Beacons
-Chief amongst these is the Teleport Beacon. The Teleport Beacon can be created by the player at round-start, when linked to a Teleframe Console and then anchored it can selected as a target.  This has immediate uses:
-- A player could have a teleport beacon set up on the ATS to allow immediate extraction of purchased goods
+Chief amongst these is the Teleport Beacon. The Teleport Beacon can be created by the Player at round-start, when linked to a Teleframe Console and then anchored it can selected as a target.  This has immediate uses:
+- A Player could have a teleport beacon set up on the ATS to allow immediate extraction of purchased goods
 - A Teleport Beacon set up on a seperate map such as an expedition would allow traversal to and from to extract looted goods.
 - A Syndicate agent could set up a Teleport Beacon on the Evacuation shuttle, and have their stolen contraband teleported to them even after the shuttle has evacuated, bypassing an evac shuttle search.
 
@@ -142,7 +142,7 @@ Telescience follows the theme of the Teleframe's ability for traversal and extra
 
 The first being through the gameplay perspective. Teleporting a Bluespace Depthcharge to a random location on the station and seeing if it detects anything, then triangulating the position through several further teleports to nearby locations, before finally hitting the exact location of the target. This method encourages a level of mechanical skill, and the satisfaction of sniping a Reality Fracture without ever having seen it purely from mathematically deducing its coordinates.
 
-The second method of Telescience is through the roleplay perspective. While Reality Fractures are invisible their pulses provide evidence of their existence, nearby players will notice oddities around them that have more in-world meaning than "Anomaly near bar". By interviewing the nearby crewmembers the scientist can deduce a nearby Reality Fracture may be present, and if they remain on-site or work with the affected crewmembers when a Depthcharge is teleported, they may be able to spot where the Reality Fracture is as it is revealed from a scan. Here, there is roleplay and cooperation to discover a Fracture based on its effects rather than purely gameplay deduction.
+The second method of Telescience is through the roleplay perspective. While Reality Fractures are invisible their pulses provide evidence of their existence, nearby Players will notice oddities around them that have more in-world meaning than "Anomaly near bar". By interviewing the nearby crewmembers the scientist can deduce a nearby Reality Fracture may be present, and if they remain on-site or work with the affected crewmembers when a Depthcharge is teleported, they may be able to spot where the Reality Fracture is as it is revealed from a scan. Here, there is roleplay and cooperation to discover a Fracture based on its effects rather than purely gameplay deduction.
 
 The Instability of a Teleframe should effect the amount of science the Bluespace Depthcharges sent provide, with higher science at higher instability. This acts as part of the incentive to weigh the risk of the dangers of Teleportation Incidents alongside the potentially beneficial effects. Scientists are actively encouraged to see how far they are willing to increase this instability to maximise how much science they get, until it inevitably comes back to bite them.
 
@@ -152,11 +152,11 @@ The Instability of a Teleframe should effect the amount of science the Bluespace
 Reality Fractures are the source of science points for Telescience. They function similarly to Anomalies, possessing periods of inactivity followed by pulses that create a variety of Anomalous Effects.
 
 Unlike Anomalies, Reality Fractures are silent and invisible, only producing, at most, a brief sound when pulsing.
-Additionally, there are not "Types" of Reality Fractures, instead each Reality Fracture has a randomly generated set of Minor to Moderate Anomalous Effects that it may activate on pulsing. Reality Fractures also typically remain stable indefinitely if not interacted with by the Player. 
+Additionally, there are not "Types" of Reality Fractures, instead each Reality Fracture has a randomly generated set of Minor to Moderate Anomalous Effects that it may activate on pulsing. Reality Fractures also typically remain stable for a period, and if not interacted with by the Player eventually dissapear. Interaction by the Player pauses degradation. 
 
-Reality Fractures can be created round-start in a dormant state that activate over time, as a side effect of generating anomalies or allowing them to go supercritical, as a rare result of Major Anomalous Effects, and other seperate events during the round. There should be a maximum number of Reality Fractures that can exist at any one time based on crew population.
+Reality Fractures can be created on round-start in a dormant state that activate over time, as a side effect of generating anomalies or allowing them to go supercritical, as a rare result of Major Anomalous Effects, and other seperate events during the round. There should be a maximum number of Reality Fractures that can exist at any one time based on crew population.
 
-Destroying Reality Fractures results in them entering a supercritical meltdown, this meltdown is weaker the more times the Reality Fracture was scanned. Meltdowns result in a series of Anomalous Effects being produced, Supercritical Meltdown intensity is also affected by the Incident Intensity Multiplier of the Teleframe used, especially if the killing blow to the Reality Fracture happened to also cause a Teleportation Tncident which can stack the effect even further, such stacking would be the only way to create potential Malefic anomalous effects or shards that can alter the flow of the entire shift. 
+Destroying Reality Fractures results in them entering a supercritical meltdown, this meltdown is weaker the more times the Reality Fracture was scanned. Meltdowns result in a series of Anomalous Effects being produced, Supercritical Meltdown intensity would be based on an innate per-fracture value that would also determine the intensity of its other effects, and then further affected by the Incident Intensity Multiplier of the Teleframe used, especially if the killing blow to the Reality Fracture happened to also cause a Teleportation Tncident which can stack the effect even further, such stacking would be the only way to create potential Malefic anomalous effects or shards that can alter the flow of the entire shift. To prevent such things happening to early, the innate intensity of fractures would start low, and ramp up as the shift progresses.
 
 To destroy a Reality Fracture with no effects, one can alternatively use an Anomaly Synchroniser. If anchored and activated directly on the location of the Reality Fracture, it will link to it and make it visible. Allowing it to be interacted with like a normal anomaly. When connected to an Anomaly vessel it will drain all Science Points out of the Reality Fracture, and upon running out it will disappear harmlessly.
 
@@ -172,50 +172,80 @@ The amount of science gained from scanning a Reality Fracture is inversely propo
 Bluespace Depthcharges do not immediately provide their science to a server, instead, they must be collected and returned to the Science Department, with the science points directly deposited in a server similar to a Research Disk. The Bluespace Depthcharge is not destroyed however, and can be continually reused.
 
 A skilled Scientist could use the coordinates of the teleport location, combined with multiple teleported Bluespace Depthcharge detection results to triangulate the position of a Reality Fracture, allowing a final Depthcharge to strike directly on the target for maximum science gain. Although proper communication, and a second member on the scene to immediately identify the potential location of the Reality Fracture would be more efficient if a rough location was already known.
+
+> John Scientist is "Sciencemaxxing" his Teleframe, equipping it with 8 Destabiliser upgrades at the disdain of his Research Director. It is quite late, as he directly strikes his 8th Reality Fracture of the shift and extracts enough science to finish off all the remaining research. His Teleframe however experiences a considerable Teleportation Incident, this massive disruption of reality manifests a portal to a cursed realm. Security only just arrives in time to watch it discourge half a dozen rotten animals that knaw away at their knees as they too rise to join the zombie hoarde. John Scientist might need to look for a new career if he survives the outbreak.
   
 ## Anomalous Effects
 Anomalous effects are the generic term for the various effects produced by Teleportation incidents, Reality Fractures pulses, Supercritical Meltdowns and other events. They are essentially the chaotic element of Telescience, similar to Artifact Effects. 
 
 Anomalous Effects have four categories:
 - Minor Effects: Mostly harmless, mildly beneficial, and very localised effects with short term or trivial impact on the shift.
-	These Effects can be caused commonly by Reality Fracture pulses or teleporter incidents, they are every-day affairs.
-	Spawn 5-10 of a random ore, give a brief burst of speed, create strange sounds, make the player vomit, create a flashbang effect, create a strong gravitational pull or push for a few seconds, Rust and Dirt the surrounding walls and tiles, create a spill of a common reagent, cause people to start bleeding slightly.
+	These Effects can be caused commonly by Reality Fracture pulses or teleporter incidents:
+	- Spawn 5-10 of a random ore,
+ 	- Give the Player a mostly harmless or mildly useful status effect
+    - Create strange sounds similar to hallucinations for everyone nearby
+    - Make nearby Players vomit
+    - Create a localised flash effect or smoke effect
+    - Create a strong gravitational pull or push for a few seconds, or embue a random Player with such an effect
+    - Rust and Dirt the surrounding walls and tiles
+    - Create a spill of a common reagent
+    - Cause people to start bleeding slightly.
 - Moderate Effects: Mildy harmful or reasonably beneficial, somewhat localised effects with short term or notable effect on the shift.
-	These effects are rarely caused by Reality Fracture pulses or teleporter incidents. 
-	Moderate effects: Heal surrounding players, spawn 1-3 stacks of 10 of a rare material such as gold, create a random selection of low value cargo crates, spawn a space carp, shatter nearby glass, create a small explosion of mild damage, scatter teleportation participants over a large area, create a spill of a poison or medical ingredient.
+	These effects are rarely caused by Reality Fracture pulses or teleporter incidents:
+  	- Heal surrounding Players
+  	- Spawn 1-3 stacks of 10 of a rare material such as gold
+  	- Create a random selection of low value cargo crates or items
+  	- Spawn a space carp or similar weak but obviously out of place mob
+  	- Shatter nearby glass
+  	- Create a small explosion of mild damage
+  	- Scatter teleportation participants over a large area
+  	- Create a spill of a poison or medical ingredient.
 - Major Effects: Considerably harmful or very useful, with long term or significant effect on the shift.
-	These effects are caused by Reality Fracture Supercritical Meltdowns, or rarely by Teleframes with high Incident Intensity Multipliers
-	Major effects: Spawn a small horde of valuable materials or money, spawn a high-value cargo crate, replace an organ with that of a different species, shoot lightning, spawn a goliath, give someone an anomalous infection, create a loud and unstable crystal item that will explode violently in 30 seconds. Create a spill of space lube. Cause several Moderate or Minor Anomalous Effects all at once.
+	These effects are caused by Reality Fracture Supercritical Meltdowns, or rarely by Teleframes with high Incident Intensity Multipliers:
+    - Spawn a small horde of valuable materials or money
+    - Spawn a high-value cargo crate
+    - Replace an organ with that of a different species
+    - Shoot lightning
+    - Spawn a Goliath or other other powerful (or several weaker) obviously out of place mobs
+    - Give someone an anomalous infection
+    - Create a loud and unstable crystal item that will explode violently in 30 seconds
+    - Create a spill of space lube
+    - Cause several Moderate or Minor Anomalous Effects all at once.
 - Malefic Effects: Existentially threatening or Round-altering effects that can change the entire dynamic of the shift. 
-	These effects are caused exclusively under worst-cased conditions of Supercritical Meltdowns from teleframes with high incident multipliers.
-	Immediately turn the nearest person into a Wizard, create a portal that after a few seconds calls forth several zombified monsters, creates a highly radioactive item that, after 2 minutes will spawn a singularity. Create an item that will repeated create lighning, after 2 minutes it spawns a Tesla ball. Spawn several new anomalies and reality fractures, after 5 minutes cause every anomaly and reality fracture on the station to supercrit. Repeatedly spawn major, moderate, and minor anomalous effects for a minute, integer overflow the station's cash reserves for one minute.
+	These effects are caused exclusively under worst-cased conditions of Supercritical Meltdowns from teleframes with high incident multipliers:
+	- Immediately turn the nearest person into a Wizard
+ 	- Create a portal that after a few seconds calls forth several zombified monsters
+  	- Creates a highly radioactive item that, after 2 minutes will spawn a singularity.
+  	- Create an item that will repeated create lighning, after 2 minutes it spawns a Tesla ball.
+  	- Spawn several new anomalies and reality fractures, after 5 minutes cause every anomaly and reality fracture on the station to supercrit.
+  	- Repeatedly spawn major, moderate, and minor anomalous effects for a minute
+  	- Integer overflow the station's cash reserves for one minute.
 
-To summarise, only Minor and Moderate effects should be able to occur without direct player input. Reality Fractures for example are not the same as anomalies, they are not designed to be immediately obvious in their effects. Instead tapping into the idea of "Space Madness", where strange effects occur without obvious source, and the crew can't be entirely why. If an anomalous effect produces a sea of dangerous monsters that leave several dead, there was a player that was at least somewhat responsible for it, even if it was simply that they got unlucky.
+To summarise, only Minor and Moderate effects should be able to occur without direct Player input. Reality Fractures for example are not the same as anomalies, they are not designed to be immediately obvious in their effects. Instead tapping into the idea of "Space Madness", where strange effects occur without obvious source, and the crew can't be entirely why. If an anomalous effect produces a sea of dangerous monsters that leave several dead, there was a Player that was at least somewhat responsible for it, even if it was simply that they got unlucky.
 
 ### Anomalous Shards
-Anomalous Shards are in effect the continuation of xenoarcheology's originally promised artifact shards. Each shard contains one or more anomalous effects that can be activated by using the shard. This effect has a cooldown before re-use and finite number of uses before going dormant. A dormant Anomalous Shard would need to be restored with Artifact Glue, then re-activated by activating an internal "trigger", the same as an artifact. At which point it would be able to be used again.
-
-Undesired Anomalous Shards can be ground down for Artifexium.
-
-In general, the more intense the shard's anomalous effect, the more likely it will have minor sub-effects. For example, a shard that can create silver ingots may also make everyone nearby vomit.
+Anomalous Shards are in effect the continuation of xenoarcheology's originally promised artifact shards. Each shard contains one or more anomalous effects that can be activated by using the shard. This effect has a cooldown before re-use and finite number of uses before going dormant. A dormant Anomalous Shard would need to be restored with Artifact Glue, then re-activated by activating an internal "trigger", the same as an artifact. At which point it would be able to be used again. The more intense the shard's anomalous effect, the more likely it will have minor sub-effects. For example, a shard that can create silver ingots may also make everyone nearby vomit. Undesired Anomalous Shards can be ground down for Artifexium, to fuel the others.
 
 Events may cause random mundane items to inherit the properties of an Anomalous Shard. The Chef's kitchen knife may suddenly gain the ability to turn meat into flesh creatures.
+This aspect could be further expanded to gain additional science from cataloguing these effects, however this is outside the scope of Telescience. Anomalous shards could be found by other means, such as through salvaging.
+
+> John Medical Intern is handed an Anomalous Shard discovered by the Science Team alongside a bottle of Artifact Glue and a Screwdriver. Every time he uses the shard, its pulse aids in the healing process of his patients, albiet blinding them temporarily. Whenever he runs out of charges, he just needs a splash of Artifact Glue to fix it up, then a Screwdriver to reactivate it. 
 
 ## Design Intentions Summary
 In conclusion, these are the primary Pillars and Intentions by which Telescience is intended to be implmented.
 
 Crew-side Teleframes for use in Telescience should embody the following:
-- Provide a powerful yet limited form of traversal. The player should not be able to teleport into a restricted area round start unhindered. They should however be able to use their tools and skills to teleport into these places with time spent preparing to do so. (Such as extrapolating coordinates to the captain's room from those nearby).
+- Provide a powerful yet limited form of traversal. The Player should not be able to teleport into a restricted area round start unhindered. They should however be able to use their tools and skills to teleport into these places with time spent preparing to do so. (Such as extrapolating coordinates to the captain's room from those nearby).
 - Should not allow for trivial disposing of bodies or teleporting people off into space.
-- Should be incredibly power hungry and expensive to create more of, to emphasise its own importance. The player should not be able to mass produce Teleframes.
-- Should not be safe, but should not be capable of considerable damage unless the player deliberately chooses to make it so such through increasing instability for a secondary reward.
+- Should be incredibly power hungry and expensive to create more of, to emphasise its own importance. The Player should not be able to mass produce Teleframes.
+- Should not be safe, but should not be capable of considerable damage unless the Player deliberately chooses to make it so such through increasing instability for a secondary reward.
 - Should provide time to react to teleportation occuring, with the ability to move out of the way if able. It should be possible to throw a grenade through via teleportation, but difficult to catch someone on the other end.
 
 Reality Fractures should embody the following:
 - Should not produce dangerous effects in their basic state, they are invisible and mostly undetectable until they pulse.
 - Should not purely be annoyances in their basic state, having a mix of positive and negative effects.
-- Should be capable of damage once engaged with by the player, but the intensity of this danger being determined that may potentially occur determined by the player through modifying their Teleframe's instability.
-- Should have sufficient reason for a player to want to risk incurring such dangers, providing the possibility of considerable reward for taking it.
+- Should be capable of damage once engaged with by the Player, but the intensity of this danger being determined that may potentially occur determined by the Player through modifying their Teleframe's instability.
+- Should have sufficient reason for a Player to want to risk incurring such dangers, providing the possibility of considerable reward for taking it.
 - Should replenish over time naturally, up to a capacity set by the crew population.
 
 
