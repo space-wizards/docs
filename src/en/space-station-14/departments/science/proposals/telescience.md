@@ -214,7 +214,7 @@ Anomalous Effects have four categories:
 	- Immediately turn the nearest person into a Wizard
  	- Create a portal that after a minute calls forth a large number of dangerous monsters, with a chance of them being zombified.
   	- Creates a highly radioactive item that, after 3 minutes will spawn a singularity. The item can be destroyed in a microwave, sold for a very high price, or thrown into space.
-  	- Create an item that will repeated create lighning, after 3 minutes it spawns a Tesla ball. The item can be destroyed in a micorwave, sold for a very high price, or thrown into space.
+  	- Create an item that will repeated create lightning, after 3 minutes it spawns a Tesla ball. The item can be destroyed in a microwave, sold for a very high price, or thrown into space.
   	- Spawn several new anomalies and reality fractures, after 5 minutes cause every anomaly and reality fracture on the station to supercrit.
   	- Repeatedly spawn major, moderate, and minor anomalous effects for a minute.
   	- Integer overflow the station's cash reserves for one minute.
