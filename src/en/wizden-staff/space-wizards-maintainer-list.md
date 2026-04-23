@@ -89,3 +89,9 @@ The current codeowners that exist. For the policy, see [here](maintainer/codeown
 
 **ArtisticRoomba**
 - /Content.*/Atmos/**
+
+**sowelipililimute**
+- `/Content.*/Humanoid/**`
+- `/Content.*/Body/**`
+- `/Resources/Prototypes/Body/**`
+- `/Content.Client/Lobby/UI/Humanoid*`
