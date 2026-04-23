@@ -177,11 +177,11 @@ Anomalous Effects have four categories:
 - Minor Effects: Mostly harmless, mildly beneficial, and very localised effects with short term or trivial impact on the shift.
 	These Effects can be caused commonly by Reality Fracture pulses or teleporter incidents:
 	- Spawn 5-10 of a random ore,
- 	- Give the Player a mostly harmless or mildly useful status effect
+ 	- Give nearby Player characters a mostly harmless or mildly useful status effect
     - Create strange sounds similar to hallucinations for everyone nearby
-    - Make nearby Players vomit
+    - Make nearby Player characters vomit
     - Create a localised flash effect or smoke effect
-    - Create a strong gravitational pull or push for a few seconds, or embue a random Player with such an effect
+    - Create a strong gravitational pull or push for a few seconds, or embue a random Player character with such an effect
     - Rust and Dirt the surrounding walls and tiles
     - Create a spill of a common reagent
     - Cause people to start bleeding slightly.
@@ -192,13 +192,16 @@ Anomalous Effects have four categories:
   	- Create a random selection of low value cargo crates or items
   	- Spawn a space carp or similar weak but obviously out of place mob
   	- Shatter nearby glass
+    - Disable comms in the vicinity, or reveal them to those without the appropriate keys.
   	- Create a small explosion of mild damage
   	- Scatter teleportation participants over a large area
   	- Create a spill of a poison or medical ingredient.
 - Major Effects: Considerably harmful or very useful, with long term or significant effect on the shift.
 	These effects are caused by Reality Fracture Supercritical Meltdowns, or rarely by Teleframes with high Incident Intensity Multipliers:
-    - Spawn a small horde of valuable materials or money
+    - Spawn a small hoard of valuable materials or money
     - Spawn a high-value cargo crate
+    - Revive someone from the dead
+    - Create a Paradox Clone of a nearby character
     - Replace an organ with that of a different species
     - Shoot lightning
     - Spawn a Goliath or other other powerful (or several weaker) obviously out of place mobs
@@ -209,12 +212,13 @@ Anomalous Effects have four categories:
 - Malefic Effects: Existentially threatening or Round-altering effects that can change the entire dynamic of the shift. They should be very limited in their ability to occur and should give time for the crew to prepare or potentially resolve it before it starts causing problems.
 	These effects are caused exclusively under worst-cased conditions of Supercritical Meltdowns from Teleframes with high incident multipliers:
 	- Immediately turn the nearest person into a Wizard
- 	- Create a portal that after a minute calls forth several zombified monsters.
+ 	- Create a portal that after a minute calls forth a large number of dangerous monsters, with a chance of them being zombified.
   	- Creates a highly radioactive item that, after 3 minutes will spawn a singularity. The item can be destroyed in a microwave, sold for a very high price, or thrown into space.
   	- Create an item that will repeated create lighning, after 3 minutes it spawns a Tesla ball. The item can be destroyed in a micorwave, sold for a very high price, or thrown into space.
   	- Spawn several new anomalies and reality fractures, after 5 minutes cause every anomaly and reality fracture on the station to supercrit.
   	- Repeatedly spawn major, moderate, and minor anomalous effects for a minute.
   	- Integer overflow the station's cash reserves for one minute.
+  	- Manifest the Throngler
 
 To summarise, only Minor and Moderate effects should be able to occur without direct Player input. Reality Fractures for example are not the same as anomalies, they are not designed to be immediately obvious in their effects. Instead tapping into the idea of "Space Madness", where strange effects occur without obvious source, and the crew can't be entirely why. If an anomalous effect produces a sea of dangerous monsters that leave several dead, there was a Player that was at least somewhat responsible for it, even if it was simply that they got unlucky.
 
@@ -243,6 +247,12 @@ Reality Fractures should embody the following:
 - Should have sufficient reason for a Player to want to risk incurring such dangers, providing the possibility of considerable reward for taking it.
 - Should replenish over time naturally, up to a capacity set by the crew population.
 
+Anomalous Effects should embody the following
+- Minor and Moderate effects should follow the idea of "Space Madness", usually not immediately obvious of being anomalous. Effects that subtly mess with players for example.
+- Major effects should only be caused under explicit player interaction. Players should be aware of the risks (or incompetent).
+- Malefic effects should only be caused by players who are very aware of the risks they are taking, and a health dose of randomness. If someone is deliberately fishing for such effects, it'll be rare enough for someone to notice and stop them.
+- Malefic effects should have ways to prevent them before they truly occur, or offer preparation time.
+- There should be a healthy mix of beneficial and detrimental effects.
 
 
 
