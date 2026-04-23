@@ -22,9 +22,9 @@ Telescience introduces the following core concepts:
 -  *Teleframe Consoles* are connected by the Player to a Teleframe Core via a multitool. This structure allows the Player to set a teleportation Target, either through directly inputting coordinates, or selecting a linked Teleport Beacon.
 -  *Teleport Beacons* are items that the Player can create and link to a Teleframe Console, when anchored it will be selectable by the Player from that Teleframe Console to act as a Teleportation Target, even if the beacon is on a seperate moving grid or another map entirely.
 - Teleframe Cores can have a random chance upon teleportation determined by their Incident Chance characteristic to cause **Teleportation Incidents**. Which cause **Anomalous Effects** on the surrounding environment.
--  *Teleframe Upgrades* are researchable structures that can be built by the Player directly adjacent to the Teleframe Core, modifying its base characteristics, or providing new special features.
+-  *Teleframe Upgrades* are researchable modules that can be set into structures built by the Player directly adjacent to the Teleframe Core, modifying its base characteristics, or providing new special features. They can also upgrade other structures to provide bonuses.
 
-**Reality Fractures**: Anomaly-like entities that create minor but noticable **Anomalous Effects** on their surroundings. They are usually entirely invisible and make no sound unless pulsing. They can most easily be detected and destroyed using Bluespace Depthcharges.
+**Reality Fractures**: Anomaly-like entities that create minor but noticable **Anomalous Effects** on their surroundings. They are usually entirely invisible and make no sound unless pulsing. They can most easily be detected and destroyed using *Bluespace Depthcharges*.
 
 -  *Bluespace Depthcharges* are items the Player can create, that upon teleportation will detect Reality Fractures within a large radius and state the distance from themselves. Within a shorter radius, they will generate science and the cost of damaging the Reality Fracture.
 - If the exact location of the Reality Fracture is found, an Anomaly Synchroniser may be Anchored underneath it and activated, which will reveal the Reality Fracture, allowing it to be scanned and studied similar regular anomalies, however they will continually degrade in this state.
@@ -33,35 +33,30 @@ Telescience introduces the following core concepts:
 
 **Anomalous Effects**: The overall effects produced by Teleportation Incidents and Reality Fractures which are responsible for providing risk and additional reward of using the Teleframe.
 
-- Anomalous Effects scale from Minor, to Moderate, to Major, to very rare Malefic effects, representing the impact the effect has on its surroundings. These effects may be Beneficial or Detrimental. They may occur at the teleportation Target or Source (the Teleframe Core).
-- These effects may be instantaneous, status effects, or semi-permenant.
+- Anomalous Effects scale from Minor, to Moderate, to Major, to very rare Malefic effects, representing the impact the effect has on its surroundings.
+- These effects may be Beneficial or Detrimental. They may occur at the teleportation Target or Source (the Teleframe Core).
+- These effects may be instantaneous, status effects, or semi-permenant alterations to a character or their surroundings.
 
 https://github.com/user-attachments/assets/3c4f7a60-a510-45e6-a973-5228c4e56ece
 
 ### Themes
-The Teleframe aims to replicate many of the tropes of Teleporters within fiction, while leaning on the inherent dangers shown in Transporter Malfunctions of *Star Trek* or the Perils of the Warp of *Warhammer*. The teleframe can be calibrated to take you anywhere in the same map if you know the coordinates, and anywhere else you can reach with a Teleport Beacon. Letting you extract those lost in the depths of space, beam down to entirely seperate planets, and warp to shuttles in the middle of FTL space.
+The Teleframe aims to replicate many of the tropes of Teleporters within fiction, while leaning on the inherent dangers shown in Transporter Malfunctions of *Star Trek* or the Perils of the Warp of *Warhammer*. The Teleframe can be calibrated to take you anywhere in the same map if you know the coordinates, and anywhere else you can reach with a Teleport Beacon. Letting you extract those lost in the depths of space, beam down to entirely seperate planets, and warp to shuttles in the middle of FTL space.
 
-In the Universe of *Space Station 14* the Teleframe is thematically designed around the idea of punching holes through the fabric of reality and into the underlying Bluespace, linking two points together to push or pull entities through it. Teleportation Incidents represent the unstable Bluespace energies flowing back out into reality, and either rationalising themselves into Anomalous Effects, or even simply pulling through thingss from entirely seperate points in the universe that may have been lost in space for eons.
+In the Universe of *Space Station 14* the Teleframe is thematically designed around the idea of punching holes through the fabric of reality and into the underlying Bluespace, linking two points together to push or pull entities through it. Teleportation Incidents represent the unstable Bluespace energies flowing back out into reality, and rationalising themselves in strange ways such as warping space, creating strong forces, or simply pulling through things from entirely seperate points in the universe that may have been lost in space for eons. All of these are classified under the term "Anomalous Effects".
 
 Reality Fractures meanwhile represent places where the fabric is thin or damaged, allowing these energies to seep through naturally. This leads to effects that some would brush off as simply "Space Madness". With it taking a more perceptive mind to realise there is something more to the strange disturbances.
 
-The discipline of Telescience therefore studies these Fractures and their effects, deliberately triggering them via Bluespace Depthcharges teleported from Nanotrasen's standard issue *Experimental Teleframe Core*, and observing the response on both sides of reality. Then, potentially finding use for the crystalisation of these Anomalous effects for the station at large beyond simply the knowledge those observations provide. Naturally however such experimentations will be far from safe.
+The discipline of Telescience therefore studies these Fractures and their Anomalous Effects, deliberately triggering them via Bluespace Depthcharges teleported from Nanotrasen's standard issue *Experimental Teleframe Core*, and observing the response on both sides of reality. Then, potentially finding use for the crystalisation of these Anomalous effects for the station at large beyond simply the knowledge those observations provide. Naturally however such experimentations will be far from safe.
 
 ## Background
-While Science provides benefit to the station in the form of their researched technologies and the ability to make new things, the tools with with they do research rarely themselves provide much benefit to the station in and of themselves beyond the points that act of research provides.
-
-Anomalies are almost always a direct threat to the station, with only Rock and Electric Anomalies capable of providing limited use. Some Artifact effects, such as generating materials can provide benefit, however they are often limited in their ability to be exploited.
+While the Science Department provides benefit to the station in the form of their researched technologies and the ability to make new things, the tools with which they do research rarely themselves provide much benefit to the station in and of themselves beyond the points that act of research provides. Anomalies for example are almost always a direct threat to the station, with only Rock and Electric Anomalies capable of providing limited use. Some Artifact effects, such as generating materials can provide benefit, however they are often limited in their ability to be exploited.
 
 For the most part, they are tools whose primary purpose is to generate science points. Other effects are often secondary at best. Which can leave little room for skill expression beyond the ability to most efficiently generate points or make the most of what secondary benefits there are.
   
 The Teleframe is built inversely to this, an incredibly powerful mobility tool that also happens to be able to be used in scientific research. With that scientific research also producing Anomalous Effects and Shards capable of strange effects. These provide benefits entirely independently of any generated science.
 
 ## The Teleframe
-The *Teleframe Core* is the structure responsible for teleportation, it is directed by the *Teleframe Console* it is connected to.  A Teleframe Core may be connected to multiple Teleframe Consoles, but each Teleframe Console may only connect to one Teleframe Core.
-
-While Teleframes are intended to be most associated with Telescience, there is potential for other implementations, such as Syndicate Teleframes.
-
-Similarly, Teleframe Cores should not be limited to only being a structure, Console and Frame could theoretically be combined into a single item. Although such a device would need to be heavily restricted.
+The *Teleframe Core* is the structure responsible for teleportation, it is directed by the *Teleframe Console* it is connected to.  A Teleframe Core may be connected to multiple Teleframe Consoles, but each Teleframe Console may only connect to one Teleframe Core. While Teleframes are intended to be most associated with Telescience, there is potential for other implementations, such as Syndicate Teleframes. Similarly, Teleframe Cores should not be limited to only being a structure, Console and Frame could theoretically be combined into a single item. Although such a device would need to be heavily restricted.
 
 <img width="224" height="224" alt="Sprite-Teleframe" src="https://github.com/user-attachments/assets/b403a5f0-560a-44d2-aba0-a3005c53f643" /> | <img width="224" height="224" alt="Sprite-Syndiframe" src="https://github.com/user-attachments/assets/2607a698-e02e-4ad1-b1ac-b831734c5be0" /> | <img width="224" height="224" alt="Sprite-Hyperframe" src="https://github.com/user-attachments/assets/53fd9317-b63a-41b1-b496-88bd44e5e433" /> | <img width="224" height="224" alt="Sprite-Console" src="https://github.com/user-attachments/assets/c5ae2e4d-59d7-41e7-99b3-145d1791f4ea" /> |
 | -- | -- | -- | -- |
@@ -146,7 +141,7 @@ The second method of Telescience is through the roleplay perspective. While Real
 
 The Instability of a Teleframe should effect the amount of science the Bluespace Depthcharges sent provide, with higher science at higher instability. This acts as part of the incentive to weigh the risk of the dangers of Teleportation Incidents alongside the potentially beneficial effects. Scientists are actively encouraged to see how far they are willing to increase this instability to maximise how much science they get, until it inevitably comes back to bite them.
 
->Jane Bartender has noticed the walls in the dining area are slowly rusting over, as filth spreads seemingly from nowhere. She calls over John Scientist to see if he can make heads or tails. John Scientist brings a GPS with him, and gets the coordinates near to where Jane heard a strange pulsing sound. Requesting a coworker load a depthcharge onto the teleframe and send it, they both observe as a Reality Fracture appears in Jane's room. Homing in on its exact position, they excise the Fracture from a safe distance with a direct hit, and watch as the Supercritical Meltdown fills the room with drunk mothroaches and ammonia.
+>Jane Bartender has noticed the walls in the dining area are slowly rusting over, as filth spreads seemingly from nowhere. She calls over John Scientist to see if he can make heads or tails. John Scientist brings a GPS with him, and gets the coordinates near to where Jane heard a strange pulsing sound. Requesting a coworker load a depthcharge onto the Teleframe and send it, they both observe as a Reality Fracture appears in Jane's room. Homing in on its exact position, they excise the Fracture from a safe distance with a direct hit, and watch as the Supercritical Meltdown fills the room with drunk mothroaches and ammonia.
 
 ### Reality Fractures
 Reality Fractures are the source of science points for Telescience. They function similarly to Anomalies, possessing periods of inactivity followed by pulses that create a variety of Anomalous Effects.
@@ -211,14 +206,14 @@ Anomalous Effects have four categories:
     - Create a loud and unstable crystal item that will explode violently in 30 seconds
     - Create a spill of space lube
     - Cause several Moderate or Minor Anomalous Effects all at once.
-- Malefic Effects: Existentially threatening or Round-altering effects that can change the entire dynamic of the shift. 
-	These effects are caused exclusively under worst-cased conditions of Supercritical Meltdowns from teleframes with high incident multipliers:
+- Malefic Effects: Existentially threatening or Round-altering effects that can change the entire dynamic of the shift. They should be very limited in their ability to occur and should give time for the crew to prepare or potentially resolve it before it starts causing problems.
+	These effects are caused exclusively under worst-cased conditions of Supercritical Meltdowns from Teleframes with high incident multipliers:
 	- Immediately turn the nearest person into a Wizard
- 	- Create a portal that after a few seconds calls forth several zombified monsters
-  	- Creates a highly radioactive item that, after 2 minutes will spawn a singularity.
-  	- Create an item that will repeated create lighning, after 2 minutes it spawns a Tesla ball.
+ 	- Create a portal that after a minute calls forth several zombified monsters.
+  	- Creates a highly radioactive item that, after 3 minutes will spawn a singularity. The item can be destroyed in a microwave, sold for a very high price, or thrown into space.
+  	- Create an item that will repeated create lighning, after 3 minutes it spawns a Tesla ball. The item can be destroyed in a micorwave, sold for a very high price, or thrown into space.
   	- Spawn several new anomalies and reality fractures, after 5 minutes cause every anomaly and reality fracture on the station to supercrit.
-  	- Repeatedly spawn major, moderate, and minor anomalous effects for a minute
+  	- Repeatedly spawn major, moderate, and minor anomalous effects for a minute.
   	- Integer overflow the station's cash reserves for one minute.
 
 To summarise, only Minor and Moderate effects should be able to occur without direct Player input. Reality Fractures for example are not the same as anomalies, they are not designed to be immediately obvious in their effects. Instead tapping into the idea of "Space Madness", where strange effects occur without obvious source, and the crew can't be entirely why. If an anomalous effect produces a sea of dangerous monsters that leave several dead, there was a Player that was at least somewhat responsible for it, even if it was simply that they got unlucky.
