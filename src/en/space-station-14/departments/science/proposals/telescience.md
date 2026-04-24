@@ -147,11 +147,11 @@ The Instability of a Teleframe should effect the amount of science the Bluespace
 Reality Fractures are the source of science points for Telescience. They function similarly to Anomalies, possessing periods of inactivity followed by pulses that create a variety of Anomalous Effects.
 
 Unlike Anomalies, Reality Fractures are silent and invisible, only producing, at most, a brief sound when pulsing.
-Additionally, there are not "Types" of Reality Fractures, instead each Reality Fracture has a randomly generated set of Minor to Moderate Anomalous Effects that it may activate on pulsing. Reality Fractures also typically remain stable for a period, and if not interacted with by the Player eventually dissapear. Interaction by the Player pauses degradation. 
+Additionally, there are not "Types" of Reality Fractures, instead each Reality Fracture has a randomly generated set of Minor to Moderate Anomalous Effects that it may activate on pulsing. The effects a Reality Fracture has are created from are linked to a randomly assigned "Intensity Budget" with each generated effect having an Intensity Cost associated with it. The minimum and maximum values of this budget slowly increase as the round progresses. This prevents more effects occur near the start of the round. Reality Fractures also typically remain stable for a period, and if not interacted with by the Player eventually dissapear. Interaction by the Player pauses degradation. 
 
 Reality Fractures can be created on round-start in a dormant state that activate over time, as a side effect of generating anomalies or allowing them to go supercritical, as a rare result of Major Anomalous Effects, and other seperate events during the round. There should be a maximum number of Reality Fractures that can exist at any one time based on crew population.
 
-Destroying Reality Fractures results in them entering a supercritical meltdown, this meltdown is weaker the more times the Reality Fracture was scanned. Meltdowns result in a series of Anomalous Effects being produced, Supercritical Meltdown intensity would be based on an innate per-fracture value that would also determine the intensity of its other effects, and then further affected by the Incident Intensity Multiplier of the Teleframe used, especially if the killing blow to the Reality Fracture happened to also cause a Teleportation Tncident which can stack the effect even further, such stacking would be the only way to create potential Malefic anomalous effects or shards that can alter the flow of the entire shift. To prevent such things happening to early, the innate intensity of fractures would start low, and ramp up as the shift progresses.
+Destroying Reality Fractures results in them entering a supercritical meltdown, the intensity of this meltdown is initially based upon the Reality Fracture's total Intensity Budget, but is reduced the more times the Reality Fracture was scanned. It would be further affected by the Incident Intensity Multiplier of the Teleframe used, especially if the killing blow to the Reality Fracture happened to also cause a Teleportation Tncident which can stack the effect even further. Once the meltdown occurs, a series of anomalous effects would be produced according to the resultant budget, prioritising expensive effects first. Incredibly high budgets resulting from late-round, highly unstable Teleframes undergoing incidents would be the only way to create potential Malefic anomalous effects or shards that can alter the flow of the entire shift.
 
 To destroy a Reality Fracture with no effects, one can alternatively use an Anomaly Synchroniser. If anchored and activated directly on the location of the Reality Fracture, it will link to it and make it visible. Allowing it to be interacted with like a normal anomaly. When connected to an Anomaly vessel it will drain all Science Points out of the Reality Fracture, and upon running out it will disappear harmlessly.
 
@@ -168,7 +168,7 @@ Bluespace Depthcharges do not immediately provide their science to a server, ins
 
 A skilled Scientist could use the coordinates of the teleport location, combined with multiple teleported Bluespace Depthcharge detection results to triangulate the position of a Reality Fracture, allowing a final Depthcharge to strike directly on the target for maximum science gain. Although proper communication, and a second member on the scene to immediately identify the potential location of the Reality Fracture would be more efficient if a rough location was already known.
 
-> John Scientist is "Sciencemaxxing" his Teleframe, equipping it with 8 Destabiliser upgrades at the disdain of his Research Director. It is quite late, as he directly strikes his 8th Reality Fracture of the shift and extracts enough science to finish off all the remaining research. His Teleframe however experiences a considerable Teleportation Incident, this massive disruption of reality manifests a portal to a cursed realm. Security only just arrives in time to watch it discourge half a dozen rotten animals that knaw away at their knees as they too rise to join the zombie hoarde. John Scientist might need to look for a new career if he survives the outbreak.
+> John Scientist is "Sciencemaxxing" his Teleframe, equipping it with 8 Destabiliser upgrades at the disdain of his Research Director. It is quite late, as he directly strikes his 8th Reality Fracture of the shift and extracts enough science to finish off all the remaining research. His Teleframe however experiences a considerable Teleportation Incident, this massive disruption of reality manifests a portal to a cursed realm. Security only just arrives in time to the telescience room to watch it discourge half a dozen rotten animals that knaw away at their knees as they too rise to join the zombie hoarde. John Scientist might need to look for a new career if he survives the outbreak.
   
 ## Anomalous Effects
 Anomalous effects are the generic term for the various effects produced by Teleportation incidents, Reality Fractures pulses, Supercritical Meltdowns and other events. They are essentially the chaotic element of Telescience, similar to Artifact Effects. 
@@ -246,6 +246,7 @@ Reality Fractures should embody the following:
 - Should be capable of damage once engaged with by the Player, but the intensity of this danger being determined that may potentially occur determined by the Player through modifying their Teleframe's instability.
 - Should have sufficient reason for a Player to want to risk incurring such dangers, providing the possibility of considerable reward for taking it.
 - Should replenish over time naturally, up to a capacity set by the crew population.
+- Should have the intensity of the effects they are created with slowly increase over the course of the shift.
 
 Anomalous Effects should embody the following
 - Minor and Moderate effects should follow the idea of "Space Madness", usually not immediately obvious of being anomalous. Effects that subtly mess with players for example.
@@ -253,7 +254,6 @@ Anomalous Effects should embody the following
 - Malefic effects should only be caused by players who are very aware of the risks they are taking, and a health dose of randomness. If someone is deliberately fishing for such effects, it'll be rare enough for someone to notice and stop them.
 - Malefic effects should have ways to prevent them before they truly occur, or offer preparation time.
 - There should be a healthy mix of beneficial and detrimental effects.
-
 
 
 
