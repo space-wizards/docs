@@ -211,14 +211,13 @@ Anomalous Effects have four categories:
     - Cause several Moderate or Minor Anomalous Effects all at once.
 - Malefic Effects: Existentially threatening or Round-altering effects that can change the entire dynamic of the shift. They should be very limited in their ability to occur and should give time for the crew to prepare or potentially resolve it before it starts causing problems.
 	These effects are caused exclusively under worst-cased conditions of Supercritical Meltdowns from Teleframes with high incident multipliers:
-	- Immediately turn the nearest person into a Wizard
+	- Create special anomalous shards containing wizard spells. 
  	- Create a portal that after a minute calls forth a large number of dangerous monsters, with a chance of them being zombified.
   	- Creates a highly radioactive item that, after 3 minutes will spawn a singularity. The item can be destroyed in a microwave, sold for a very high price, or thrown into space.
   	- Create an item that will repeated create lightning, after 3 minutes it spawns a Tesla ball. The item can be destroyed in a microwave, sold for a very high price, or thrown into space.
   	- Spawn several new anomalies and reality fractures, after 5 minutes cause every anomaly and reality fracture on the station to supercrit.
   	- Repeatedly spawn major, moderate, and minor anomalous effects for a minute.
   	- Integer overflow the station's cash reserves for one minute.
-  	- Manifest the Throngler
 
 To summarise, only Minor and Moderate effects should be able to occur without direct Player input. Reality Fractures for example are not the same as anomalies, they are not designed to be immediately obvious in their effects. Instead tapping into the idea of "Space Madness", where strange effects occur without obvious source, and the crew can't be entirely why. If an anomalous effect produces a sea of dangerous monsters that leave several dead, there was a Player that was at least somewhat responsible for it, even if it was simply that they got unlucky.
 
