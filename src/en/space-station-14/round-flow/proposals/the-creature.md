@@ -38,13 +38,14 @@ A stealth-based predator that hunts crew and department pets from maintenance tu
 | Ability | Description | Design Purpose |
 |---|---|---|
 | **Passive Stealth** | Visibility float from fully invisible (at rest) to fully visible (active). Moving, attacking, and using abilities increase visibility; each tick it decays back toward invisible. | Core identity. Rewards patience, punishes recklessness. |
-| **Drink Blood** | Channeled action on an adjacent target. Drains blood, heals The Creature, and increments the blood objective counter. Requires standing still for the channel duration. | Sustain loop tied to objective. Creates a vulnerability window during use. |
+| **Drink Blood** | Channeled action on an adjacent target. Drains blood, heals The Creature, and increments the blood objective counter. Requires standing still for the channel duration. | Sustain loop tied to objective. Creates a vulnerability window during use. heals |
 | **Sting** | Short-range attack that stuns the target for a set duration. Moderate to long cooldown. | Setup tool for Drink Blood. Creates the Sting → Drink → Retreat sequence. |
 | **Attack** | Standard melee. No wide-swing. Applies a brief stagger. | Combat fallback if cornered. No wide-swing discourages open-hallway fighting. |
 | **Eat** | Action option. consumes valid animals - crew are blacklisted, similar to dragon | Completing eat pet objective |
 | **Speed** | Faster than standard crew. | Enables disengagement. The Creature should be able to choose to flee a bad fight. |
 | **Door Pry** | Can force doors open at a significantly faster rate than crew with a crowbar. Produces a sound cue. | Allows station navigation without access cards. Sound cue is a discoverability breadcrumb. |
 | **Body Drag** | Can drag incapacitated or dead crew with reduced speed penalty. | Repositioning for safelu drinking blood. Evidence removal. Horror moment generator. |
+| **Darksight** | Has a client sided point light. | Navigating dark areas. |
 
 ---
 
@@ -61,7 +62,7 @@ All specific float values, thresholds, increment amounts, and decay rates are TB
 
 ---
 
-## Upgrade System (BONUS - NOT MVP)
+## Upgrade System (BONUS)
 
 Blood consumed via Drink Blood accumulates in a persistent pool. Between hunts, The Creature can spend blood from this pool to purchase upgrades from a radial menu (similar to the Ninja's UI). This creates a meaningful decision loop: spend blood on upgrades now, or bank it toward the blood objective.
 
@@ -71,20 +72,18 @@ Each upgrade has three ranks (+1, +2, +3). Purchasing rank 2 requires rank 1, an
 
 | Upgrade | +1 | +2 | +3 |
 |---|---|---|---|
-| **Predator's Strike** *(Attack damage)* | Minor damage increase | Moderate damage increase | High damage increase; attacks apply a brief slow |
-| **Quickness** *(Movement speed)* | Slight speed increase | Moderate speed increase | Near-sprint speed; visibility increase per tile is reduced |
-| **Shadow** *(Stealth — faster decay rate)* | Faster passive visibility decay | Significantly faster decay | Near-instant decay when standing still |
-| **Venom** *(Sting — stun duration)* | Slightly longer stun | Longer stun; small damage on sting | Long stun; sting injects minor bleed |
-| **Ravenous** *(Drink Blood — channel speed & heal)* | Faster channel | Faster channel; increased heal per tick | Fastest channel; overheal cap added |
+| **Predator's Strike** *(Attack damage)* | Minor damage increase | Moderate damage increase | High damage increase; |
+| **Quickness** *(Movement speed)* | Slight speed increase | Moderate speed increase | Moderate speed increase again |
+| **Shadow** *(Stealth — faster decay rate)* | Faster passive visibility decay | Significantly faster decay | Near-instant decay |
+| **Venom** *(Sting — stun duration)* | Longer stun | Longer stun | Longer stun |
+| **Ravenous** *(Drink Blood — channel speed & heal)* | Faster channel | Faster channel | Fastest channel |
 | **Pry Mastery** *(Door Pry speed)* | Faster pry | Significantly faster pry | Near-instant pry; no longer produces a sound cue |
 | **Iron Hide** *(Damage resistance)* | Minor resistance to all damage | Moderate resistance | High resistance; The Creature can drag bodies at full speed |
 
 ### Design Notes
 
-- The upgrade menu should only be accessible while The Creature is fully invisible (stationary and below threshold A), preventing mid-combat purchases.
-- Pry Mastery +3 removing the sound cue is a deliberate late-game power spike that rewards completing objectives — it should only be reachable if The Creature has been hunting actively.
 - No upgrade should push any single stat into "unkillable" territory. The intent is to broaden The Creature's options, not create a mandatory optimal path.
-- Consider whether upgrades should be visible to admins in the antag panel for post-round review.
+- Balance to be determined during playtesting - current values at 500 health, 300 blood, crit at 400.
 
 ---
 
