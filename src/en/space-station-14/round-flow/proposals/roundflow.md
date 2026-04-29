@@ -10,7 +10,6 @@ All gamemodes, like any good story, should follow a narrative structure and have
 
 All gamemodes follow a simple theme; You are working your ordinary shift on a space station, but something has gone terribly wrong. A laying out of the gamemodes structure gives it direction and context to those participating in its development. It also gives shifts a distinct atmosphere which can immerse and elevate the experience for those who are participating and spectating alike. Making for memorable and unique situations that are fun to recount and be told about!
 
-
 ## Emergent story telling
 
 The beats of the story for each gamemode should come naturally to the players as a result of mechanics associated with the gamemode. 
