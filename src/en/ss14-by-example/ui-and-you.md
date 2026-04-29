@@ -33,6 +33,7 @@ to it. Currently, there are the following stylesheets:
 - `Nanotrasen` - The default stylesheet. Used for any standard player-facing
   Uis
 - `System` - Primarily used for admin and sandbox UIs (currently not implemented)
+- `Syndicate` - Used for syndicate-themed or antagonist UIs
 
 ### `StyleClass`
 
@@ -154,7 +155,7 @@ walk through some examples of style rules:
 
 ```cs
 // you need this using statement to use the helper methods
-using static Content.Client.Stylesheets.Redux.StylesheetHelpers;
+using static Content.Client.Stylesheets.StylesheetHelpers;
 
 var rules =
 [
@@ -282,12 +283,12 @@ writing generic sheetlets:
 <summary>Example Code (click to expand)</summary>
 
 ```cs
-using Content.Client.Stylesheets.Redux.SheetletConfigs;
-using Content.Client.Stylesheets.Redux.Stylesheets;
+using Content.Client.Stylesheets.SheetletConfigs;
+using Content.Client.Stylesheets.Stylesheets;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 // you need to add this line manually to access the helper methods
-using static Content.Client.Stylesheets.Redux.StylesheetHelpers;
+using static Content.Client.Stylesheets.StylesheetHelpers;
 
 namespace Content.Client.Stylesheets.Sheetlets;
 
@@ -349,14 +350,14 @@ generic sheetlets:
 
 ```cs
 using Content.Client.Resources;
-using Content.Client.Stylesheets.Redux;
-using Content.Client.Stylesheets.Redux.SheetletConfigs;
-using Content.Client.Stylesheets.Redux.Stylesheets;
+using Content.Client.Stylesheets;
+using Content.Client.Stylesheets.SheetletConfigs;
+using Content.Client.Stylesheets.Stylesheets;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 // you need to add this line manually to access the helper methods
-using static Content.Client.Stylesheets.Redux.StylesheetHelpers;
+using static Content.Client.Stylesheets.StylesheetHelpers;
 
 namespace Content.Client.Paper.UI;
 
@@ -414,6 +415,115 @@ The colors for stylesheets are defined using the
 uniform color space. When you choose new colors for your stylesheet, it may be
 helpful to use an [OKLCH Color Picker](https://oklch.com) and modify an existing
 color.
+
+## Applying a Stylesheet to your UI
+
+To apply a stylesheet to your UI, you just need to set the
+`FancyWindow.Stylesheet` to the name of the stylesheet. If you only want your UI
+to have one stylesheet this is enough. However, if you want your UI to have
+different stylesheets depending on context, there is a standard idiomatic way to
+achieve this.
+
+### Example: Syndicate Uplink UI
+
+The syndicate uplink UI uses `StoreMenu`, so lets take a look at that. First, 
+`StoreMenu` needs to be using `FancyWindow`:
+
+<details>
+<summary>Example Code (click to expand)</summary>
+
+```xml
+<!-- StoreMenu.xaml-->
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    Title="{Loc 'store-ui-default-title'}"
+    MinSize="512 512"
+    SetSize="512 512">
+
+    <!-- ... -->
+
+</controls:FancyWindow>
+```
+
+```cs
+// StoreMenu.xaml.cs
+public class StoreMenu : FancyWindow
+{
+    // ...
+}
+```
+
+</details>
+
+Now, it's important to understand a little bit about how UIs fit into ECS. Each
+UI window is created by an entity. These entities are defined in prototype files.
+In the case of `StoreMenu`, `Resources/Prototypes/Store/presets.yml`. To change
+the stylesheet we can add a `StylesheetComponent`, attaching a little data to
+tell us what stylesheet this UI should use.
+
+```yml
+# presets.yml
+- type: entity
+  id: StorePresetUplink
+  abstract: true
+  components:
+      - type: Store
+        # ...
+      - type: Stylesheet # add this component to the entity prototype!
+        stylesheet: Syndicate
+```
+
+Each of these entities also owns an instance of a `BoundUserInterface`. The
+purpose of the `BoundUserInterface` is to interface with the server and manage
+the lifecycle of the UI window. What's important to us is that the BUI
+initializes and opens the UI window based on the components in the entity.
+So, now that our entity has a `StylesheetComponent` attached to it, we can query
+it and apply the stylesheet:
+
+```cs
+// StoreMenuBoundUserInterface.cs
+public class StoreMenuBoundUserInterface : BoundUserInterface
+{
+    private StoreMenu _menu;
+
+    protected override void Open() {
+        base.Open();
+
+        _menu = this.CreateWindow<StoreMenu>();
+        if (EntMan.TryGetComponent<StylesheetComponent>(Owner, out var stylesheet))
+        {
+            _menu.Stylesheet = stylesheet.Stylesheet;
+        }
+
+        // ...
+    }
+}
+```
+
+Since this pattern is so common, there's a helper method on `FancyWindow` that
+does it for you! (This is why we needed to ensure `StoreMenu` extended
+`FancyWindow`)
+
+```cs
+// StoreMenuBoundUserInterface.cs
+public class StoreMenuBoundUserInterface : BoundUserInterface
+{
+    private StoreMenu _menu;
+
+    protected override void Open() {
+        base.Open();
+
+        _menu = this.CreateWindow<StoreMenu>();
+        _menu.ApplyStylesheetFrom(Owner);
+
+        // ...
+    }
+}
+```
+
+Congratulations! Now you've dynamically applied a stylesheet to your UI window.
 
 ## Writing C# for UI
 
