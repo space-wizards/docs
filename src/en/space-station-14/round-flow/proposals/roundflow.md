@@ -1,9 +1,5 @@
 # Round flow
 
-| Designers                        |
-|----------------------------------|
-| ThatGuyUSA, Princess-Cheeseballs |
-
 ## Narrative structure
 
 All gamemodes, like any good story, should follow a narrative structure and have story beats.
