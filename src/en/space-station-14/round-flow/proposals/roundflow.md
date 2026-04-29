@@ -6,7 +6,7 @@ All gamemodes, like any good story, should follow a narrative structure and have
 
 For the crew all gamemodes start with a simple theme; You are working your ordinary shift on a space station, but something has gone terribly wrong.
 
-On the other hand are those who work against the crew; their stories start vastly different. But in some way, shape or form, end up being the foil to the station. In one shift the player might be one of 5 elite operatives sent to detonate a nuclear fission explosive aboard the station. In another, they could be patient zero of a zombie outbreak hellbent on spreading zombification at any cost.
+On the other hand are those who work against the crew; In one shift the player might be one of 5 elite operatives sent to raid the station with the goal of detonating a nuclear fission explosive aboard the station. In another, they could be hidden amongst the crew as patient zero of a zombie outbreak hellbent on spreading zombification at any cost.
 
 Despite both scenarios leading to the station's destruction, the atmosphere and energy of a round feel vastly different. Making for memorable and unique situations that are fun to recount and be told about!
 
@@ -18,9 +18,9 @@ The beats of the story for each gamemode should come naturally to the players as
 
 Those who are in charge of driving the story forwards should arrive to the same conclusions by being nudged a desired direction through the use of gamemode specific mechanics. Whether it is done through flavor text, skills,  afflictions, or equipment. The behavior should come as a byproduct of the mechanics. 
 
-As an example; for Initial Infected, the goal is to convert as many crew into zombies as possible, but you can only stave off the infection for so long before it begins to convert you. Before becoming a mindless shambling zombie you may leverage your allegiance with the undead to gain a unique combat advantage to help further the infection. Commanding a horde of zombies to be used as a walking meat shield as you hunt down any remaining uninfected people with your unimpaired mobility. Alternatively you may sabotage vital station infrastructure that makes the station uninhabitable to the uninfected while leaving the zombies unscathed.
+As an example; for Initial Infected, the goal is to convert as many crew into zombies as possible, but you can only stave off the infection for so long before it begins to convert you. Before becoming a zombie you may leverage your allegiance with the undead to gain a unique combat advantage to help further the infection. Commanding a horde of zombies to be used as a walking meat shield as you hunt down any remaining uninfected people with your unimpaired mobility. Alternatively you may sabotage vital station infrastructure that makes the station uninhabitable to the uninfected while leaving the zombies unscathed.
 
-As a corporate rival sent to sabotage the station, should you invest your limited resources obtaining a reusable but slow to charge auto-hacking tool? Or should you buy a cheaper, conspicuous one-time use remote explosive? Maybe do neither and spend your limited time in the shift making an alternative by leeching off the station's success.
+As a corporate rival sent to sabotage the station, should you invest your limited resources obtaining a reusable but slow-to-charge auto-hacking tool? Or should you buy a cheaper, conspicuous one-time use remote explosive? Maybe do neither and spend your limited time in the shift making an alternative by leeching off the station's success.
 
 ## Every story has its end
 
@@ -40,4 +40,4 @@ Freedom of approach is encouraged and often makes for memorable round experience
 
 Never have both sides be in a position where waiting is the best or only move.
 
-Those accomplishing their goals or looking to resolve conflict should never find themselves waiting as the best path forward to ending conflict. Inaction should be discouraged or punished whether it be done through imposed time limits or resource management.
+Those accomplishing their goals or looking to resolve conflict should never find themselves waiting as the best option to ending conflict. Inaction should be discouraged or punished whether it be done through imposed time limits or resource management.
