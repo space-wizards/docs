@@ -30,6 +30,8 @@ There should be no ambiguity for what players should be working towards, a clear
 
 Naturally, this means that opposing factions will conflict with each other and that goals are mutually exclusive. At times this may come at the expense of player enjoyment, which is why we must put an emphasis that the mechanics are responsible for the end result.
 
+Catastrophic incidents may force a round to end abruptly, leaving no one satisfied. While not a desired outcome it is one worth mentioning, if a gamemode aims to end a shift in this way it should have proper rising tension and climax as to avoid dissatisfaction. 
+
 ## Freedom, as a means to an end
 
 Those driving the round have freedom to do what they please, ultimately for the sake of reaching their conclusion / goal.
