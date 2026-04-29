@@ -1,8 +1,7 @@
 # Round flow
 
-| Designers                        | Coders                          | Implemented | GitHub Links  |
-|----------------------------------|---------------------------------|-------------|---------------|
-| ThatGuyUSA, Princess-Cheeseballs | All of our lovely contributors. | ✖️ No       | [Wizard's Den](https://github.com/space-wizards/space-station-14) |
+| Designers                        |
+| ThatGuyUSA, Princess-Cheeseballs |
 
 ## Narrative structure
 
