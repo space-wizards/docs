@@ -14,12 +14,6 @@ The species, in general, is focused on having a lot of interactions with the cre
 
 Gelaxi are just large snails, they themselves aren't very colorful, but they take great pride in customizing their shells which have many unique designs and color schemes. Shells should be fully customizable, before and during the round. You can affix objects to the shells (E.g papers or flashlights) and get them stamped or signed by various crew and command. They would also ideally have unique markings added depending on interactions that happen to them (E.g getting shot, lit on fire etc...). These shells are "living" art pieces, and ideally would change visually throughout the shift.
 
-<<<<<<< Updated upstream
-=======
-![Gelaxi](../../../assets/images/space-station-14/species/gelaxi-1.png)
-![Gelaxi](../../../assets/images/space-station-14/species/gelaxi-2.png)
-![Gelaxi in hardsuit](../../../assets/images/space-station-14/species/gelaxi-hardsuit.png)
->>>>>>> Stashed changes
 ### Major unique features:
 
 ### Shells
