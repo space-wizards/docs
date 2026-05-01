@@ -66,7 +66,7 @@ Under discussion.
 
 ### Lockers
 
-At round-start every role spawns near one (1) complete set of their role's essential equipment. For most roles this gear is in a nearby locked container (a locker), but for some roles additonal items might be placed around their starting room. Players can rely on finding a locker regardless of role in order to equip themselves to do that role whether you're an antagonist, getting promoted, or normal.
+At round-start every role spawns near one (1) complete set of their role's essential equipment. For most roles this gear is in a nearby locked container (a locker), but for some roles additional items might be placed around their starting room. Players can rely on finding a locker regardless of role in order to equip themselves to do that role whether you're an antagonist, getting promoted, or normal.
 
 Maps should have enough lockers to supply the roundstart + latejoin capacity of the station (learner jobs included). This allows any player who joined as that role to have their essential gear available (as long as no disasters get in the way). Secondarily this makes it very rare for important tools to be a point of failure. Not having the tool you need to do your job is a hopeless situation which doesn't feel fun.
 
@@ -84,13 +84,13 @@ In addition to their own specialized gear, there are several items present in al
 
 ### Vending Machines
 
-Vending machines in SS14 are the most straightforward source of items in game. They have a mostly consistent stock, and their consistent location in maps makes them a well-known, first choice place for gear. This availability helps players to better plan out their activities, their thefts, and their jokes, with the limited amounts ensuring they never act as a gurantee and trivialize resource gathering. Overall they serve as a simple solution to putting items in the hands of players.
+Vending machines in SS14 are the most straightforward source of items in game. They have a mostly consistent stock, and their consistent location in maps makes them a well-known, first choice place for gear. This availability helps players to better plan out their activities, their thefts, and their jokes, with the limited amounts ensuring they never act as a guarantee and trivialize resource gathering. Overall they serve as a simple solution to putting items in the hands of players.
 
 Every vending machine should have a clear identity that can be summarized in twoish words (its name). The items inside should never be exclusive and should trend towards core and introductory mechanics rather than deep and complex ones. Roleplay and "useless" items are encouraged when they fit the theme. The stock should supply no more than 4 (four) players, with less supply inside machines with more specific accesses, and more supply for items that are expendable. A full set of department vending machines should be capable of gearing exactly two naked players with all the essential equipment, and a uniform. It should _always_ be possible to restock a vending machine through cargo.
 
 #### Tool Vendors
 
-Tool vending machines are one of the most common types, typcially themed to specific departments. They provide a variety of essential and optional tools for performing a role, acting as both an entry point for new hires and a shared stock of expendables for departments. The ordering of items should go: `Essential -> Expendable -> Optional -> Roleplay`.  Clothing items typically belong in a wardrobe vendor, but a few exceptions exist:
+Tool vending machines are one of the most common types, typically themed to specific departments. They provide a variety of essential and optional tools for performing a role, acting as both an entry point for new hires and a shared stock of expendables for departments. The ordering of items should go: `Essential -> Expendable -> Optional -> Roleplay`.  Clothing items typically belong in a wardrobe vendor, but a few exceptions exist:
 
  - Filled Container Clothing
   - - This typically means belts. While the belt itself is a clothing item, the items inside it are not and should not be available inside a wardrobe.
@@ -101,11 +101,11 @@ Tool vending machines are one of the most common types, typcially themed to spec
 
 #### Clothing Vendors
 
-Wardrobes (or "drobes") are another common vendor themed around clothing. They allow players the ability to quickly change their look to the drobe's theme, and can include functional (and even powerful) clothing. Like any vending machine they should stick to their theme; Every item in a Drobe must be equippable and be intuitively thought of as clothes. The order of clothing in a Drobe should have essential role equipment listed first, followed by: `Head -> Eyes -> Mask -> Ears -> Back -> Belt -> InnerClothing -> OuterClothing -> Neck -> Gloves -> Feet`.
+Wardrobes (or "drobes") are another common vendor themed around clothing. They allow players the ability to quickly change their look to the drobe's theme, and can include functional (and even powerful) clothing. Like any vending machine they should stick to their theme; Every item in a Drobe must be equip-able and be intuitively thought of as clothes. The order of clothing in a Drobe should have essential role equipment listed first, followed by: `Head -> Eyes -> Mask -> Ears -> Back -> Belt -> InnerClothing -> OuterClothing -> Neck -> Gloves -> Feet`.
 
 #### Other Vendors
 
-Vending machines can come in many forms as long the the theme is strong and the purpose is clear. A specialized role could have a dedicated machine to provide its tools and clothes at once, or a snack machine could be used to feed crew. A marijuana vendor in maintenance could inspire a drug dealer, or skip the middle man and get your sick kicks from the tobacco vendor. Not every vending machine is guranteed to be mapped so consider themes that can be connected to a physical location such as a business, or enable an atypical job that encourage a player to interact with others in an interesting way. 
+Vending machines can come in many forms as long the the theme is strong and the purpose is clear. A specialized role could have a dedicated machine to provide its tools and clothes at once, or a snack machine could be used to feed crew. A marijuana vendor in maintenance could inspire a drug dealer, or skip the middle man and get your sick kicks from the tobacco vendor. Not every vending machine is guaranteed to be mapped so consider themes that can be connected to a physical location such as a business, or enable an atypical job that encourage a player to interact with others in an interesting way. 
 
 #### Contraband Inventory
 
@@ -121,7 +121,7 @@ Each lathe should be specialized with a clear theme for the items it has availab
 
 ### Mapped
 
-The items that start mapped for a department are their initial source for generic equipment. These are often materials, butcan be anything appropriate for the access they are locked behind. Specifics are established in ( link mapping doc here ).
+The items that start mapped for a department are their initial source for generic equipment. These are often materials, but can be anything appropriate for the access they are locked behind. Specifics are established in ( link mapping doc here ).
 
 #### Armory
 
