@@ -24,7 +24,7 @@ Gelaxis shells are of vital importance to them. Shells themselves come in multip
    - Different speed penalties.
    - Sound effects (Conch shell)
    - Reflect chance when being shot from the back, front would not reflect (Trust me, we can balance it :))
-   - Various doafter lengths for unequiping the shells.
+   - Various doafter lengths for unequipping the shells.
    - And more!
 
 Shells can be taken off without harm to the Gelaxis - in fact they *want* to do this! The longer a Gelaxi wears a shell, the slower they move in it, and longer it takes to open. This should take a long time (~50%+ of the shift). The only way to fix this is to swap their shell with another Gelaxi. Part of Gelaxis culture is to share shells so this is normal and expected of them. These downsides should be minor, you should be able to happily wear your shell without swapping it and not be affected in a large way.
@@ -39,7 +39,7 @@ Shells can be taken off without harm to the Gelaxis - in fact they *want* to do 
 
 ### Moisture / slime
 
-Gelaxis are slimey creature and need moisture to be comfortable (but not too moist)! They can get moisture in various ways, but most, if not all, should be primarily be from other crew. For example, crew should be able to spray them with fire extinguishers and slimes should be able to hug them to increase their moisture level. Gelaxis *should not* be able to do this to themselves easily. Their current moisture level effects various aspects about them (movement speed, shell open doafter length etc...). See the other sections for how moisture effects it.
+Gelaxis are slimey creature and need moisture to be comfortable (but not too moist)! They can get moisture in various ways, but most, if not all, should be primarily be from other crew. For example, crew should be able to spray them with fire extinguishers and slimes should be able to hug them to increase their moisture level. Gelaxis *should not* be able to do this to themselves easily. Their current moisture level effects various aspects about them (movement speed, shell open doafter length etc...). See the other sections for how moisture effects it. On the whole, their moisture level should not have massive downsides to not maintaining. Being too dry or too moist should not make the game extremely frustrating, at worst, it should be mildly annoying.
 
 #### Slimey hands
 
