@@ -75,7 +75,7 @@ When walking over reagents, Gelaxi will move faster. This only occurs if they ar
  - Gelaxi are heavily poisoned by salt, it dries them out and does poison damage. This is only by ingestion or by walking over it - splashing it on them will do nothing so players can't instantly kill them.
  - Any reagent that has salt as one of its precursors, will also poison them (slightly, not a lot!).
  - Gelaxi will occasionally drop slime puddles on the ground depending on how moist they are, these will *not* be reagent puddles, but markings like dirt and will be the same color as their skin. They are purely visual. The janitor will want to clean them up to make the station spotless, but it wont effect the crew in a harmful way.
- - Gelaxi talk slowly in a unique accent. This should be minor, and not very noticeable.
+ - Gelaxi talk slowly in a unique accent (doubling letters, adding ellipses after a sentence etc...). This should be minor, and not very noticeable.
  - No shoes
 
 ---
