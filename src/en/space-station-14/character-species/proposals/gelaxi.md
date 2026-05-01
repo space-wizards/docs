@@ -23,7 +23,7 @@ Gelaxis shells are of vital importance to them. Shells themselves come in multip
    - Unique storage grids (Spirals, cones, etc...)
    - Different speed penalties.
    - Sound effects (Conch shell)
-   - Reflect chance when being shot from the back (Trust me, we can balance it :))
+   - Reflect chance when being shot from the back, front would not reflect (Trust me, we can balance it :))
    - Various doafter lengths for unequiping the shells.
    - And more!
 
@@ -72,12 +72,13 @@ When walking over reagents, Gelaxi will move faster. This only occurs if they ar
 
 ### Minor uinque features
 
-- Gelaxi have very weak melee damage.
-- Gelaxi are heavily poisoned by salt, it dries them out and does poison damage. This is only by ingestion or by walking over it - splashing it on them will do nothing so players can't instantly kill them.
-- Any reagent that has salt as one of its precursors, will also poison them (slightly, not a lot!).
-- Gelaxi will occasionally drop slime puddles on the ground depending on how moist they are, these will *not* be reagent puddles, but markings like dirt and will be the same color as their skin. They are purely visual. The janitor will want to clean them up to make the station spotless, but it wont effect the crew in a harmful way.
-- Gelaxi talk slowly in a unique accent. This should be minor, and not very noticeable.
-- Gelaxi have a base slower movement speed than other species.
+ - Gelaxi have very weak melee damage.
+ - Gelaxi are heavily poisoned by salt, it dries them out and does poison damage. This is only by ingestion or by walking over it - splashing it on them will do nothing so players can't instantly kill them.
+ - Any reagent that has salt as one of its precursors, will also poison them (slightly, not a lot!).
+ - Gelaxi will occasionally drop slime puddles on the ground depending on how moist they are, these will *not* be reagent puddles, but markings like dirt and will be the same color as their skin. They are purely visual. The janitor will want to clean them up to make the station spotless, but it wont effect the crew in a harmful way.
+ - Gelaxi talk slowly in a unique accent. This should be minor, and not very noticeable.
+ - Gelaxi have a base slower movement speed than other species.
+ - No shoes
 
 ---
 
@@ -90,7 +91,6 @@ This is an optional subtheme that I think could add a lot to the species. Howeve
  - Gelaxi have an ability, and when activated, they turn into a small generator able to power parts of the station for short periods of time (~2-3 minutes)
  - Gelaxis vomit charges battery items when it comes into contact.
  - Strength of these abilities would be tied to their moisture level.
- - No shoes
 
 ---
 
