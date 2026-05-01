@@ -4,7 +4,7 @@
 
 ## Overview
 
-This is a proposal for the Gelaxi species. They are a gastropod species who wear shells and are slimey! They aren't particularly fast (in their talking, or walking!) and they take great pride in their shells and love to share, customize, and show them off. They are primarily inspired by FTL Slugs and Zoltans and, of course, Lady Cassandra but are quite distinct.
+This is a proposal for the Gelaxi species. They are a gastropod species who wear shells and are slimy! They aren't particularly fast (in their talking, or walking!) and they take great pride in their shells and love to share, customize, and show them off. They are primarily inspired by FTL's Slugs and Zoltans, in addition to Lady Cassandra from Doctor Who, but are quite distinct.
 
 ## Overarching theme
 
@@ -43,7 +43,7 @@ Gelaxis are slimey creature and need moisture to be comfortable (but not too moi
 
 #### Slimey hands
 
-Gelaxies have no fingerprints, their slimey hands do not have enough definition for them! However, when touching objects, doors or worn clothing, they do leave some slime. This slime will indicate the color of the Gelaxi that touched (The text color will match the Gelaxis color) and will last for a couple of minutes, the exact time depends on how moist they are.
+Gelaxi have no fingerprints, their slimey hands do not have enough definition for them! However, when touching objects, doors or worn clothing, they do leave some slime. This slime will indicate the color of the Gelaxi that touched (The text color will match the Gelaxis color) and will last for a couple of minutes, the exact time depends on how moist they are.
 
 ###### GAMEPLAY REASONING / IMPACT:
  - This makes detectives / securities interactions with them unique, if the crime happened recently, finding the suspect should be much easier, but if the crime happened long in the past, there will be no trace. Its incentives more complex plans by rewarding them with no evidence, and also disincentives run and gun tactics by allowing easy tracking by even non detective officers.
@@ -55,7 +55,6 @@ Gelaxies have no fingerprints, their slimey hands do not have enough definition 
 When picking up items, Gelaxi will have a percentage chance to instantly drop the item (as if it were lubed). This percentage increases the more moist they are! This chance shouldn't be too large as to be a large determent to gameplay.
 
 ###### GAMEPLAY REASONING / IMPACT:
- - Intresting and "lore" accurate ability
  - Punishes Gelaxi players for being too moist and not thinking about their moisture levels closely
  - This will probably make them slightly weaker against security specifically as after getting stunned, picking up your items would be harder.
 
@@ -70,7 +69,7 @@ When walking over reagents, Gelaxi will move faster. This only occurs if they ar
 
 ---
 
-### Minor uinque features
+### Minor unique features
 
  - Gelaxi have very weak melee damage.
  - Gelaxi are heavily poisoned by salt, it dries them out and does poison damage. This is only by ingestion or by walking over it - splashing it on them will do nothing so players can't instantly kill them.
@@ -96,7 +95,7 @@ This is an optional subtheme that I think could add a lot to the species. Howeve
 
 ### Clashes with other species
 
-To note, there are many abilities that "make sense" to give to Gelaxi. For example, its not a far stretch to allow them to eat trash like Vox, or suck up regents like Diona. This is a dangerous road to travel, and all abilities are carefully made to *not* tread on the unique aspects of other species.
+To note, there are many abilities that "make sense" to give to Gelaxi. For example, its not a far stretch to allow them to eat trash like Vox, or suck up reagents like Diona. This is a dangerous road to travel, and all abilities are carefully made to *not* tread on the unique aspects of other species.
 
 ### Note
 
