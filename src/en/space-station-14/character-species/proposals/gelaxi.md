@@ -18,7 +18,7 @@ Gelaxi are just large snails, they themselves aren't very colorful, but they tak
 
 ### Shells
 
-Gelaxis shells are of vital importance to them. Shells themselves come in multiple shapes (see the Visuals section for more information on this aspect), each shape has slightly unique abilities.
+Gelaxis shells are of vital importance to them. They replace the backpack slot and Gelaxis cannot wear normal backpacks. Shells themselves come in multiple shapes (see the Visuals section for more information on this aspect), each shape has slightly unique abilities.
  - Some of these could include:
    - Unique storage grids (Spirals, cones, etc...)
    - Different speed penalties.
@@ -76,7 +76,6 @@ When walking over reagents, Gelaxi will move faster. This only occurs if they ar
  - Any reagent that has salt as one of its precursors, will also poison them (slightly, not a lot!).
  - Gelaxi will occasionally drop slime puddles on the ground depending on how moist they are, these will *not* be reagent puddles, but markings like dirt and will be the same color as their skin. They are purely visual. The janitor will want to clean them up to make the station spotless, but it wont effect the crew in a harmful way.
  - Gelaxi talk slowly in a unique accent. This should be minor, and not very noticeable.
- - Gelaxi have a base slower movement speed than other species.
  - No shoes
 
 ---
