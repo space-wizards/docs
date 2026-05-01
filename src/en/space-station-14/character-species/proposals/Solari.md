@@ -57,7 +57,7 @@ gas.
 The Solari are constantly on fire and should have gameplay elements that reflect this. Solari would automatically light
 gas fires in the rooms their in, think walking lighters. Players could interact with them whilst holding a cigarette to
 light it. Their punches, instead of dealing brute would deal heat damage instead and could be used to cauterize their 
-wounds to prevent further bloodloss which is intended to be the main killer of Solari. Solari could use their bare hands
+wounds to prevent further blood oss which is intended to be the main killer of Solari. Solari could use their bare hands
 to do really terrible welds, think cow tools only really usable in desperate times. 
 
 ### Temperature changes
@@ -65,4 +65,9 @@ Solari are hot and their temperature resistances and weakness should be differen
 longer for them to reach a state of overheating, this could help them save other players during gas fires that they 
 themselves probably lit. On the opposite spectrum cold damage should be a brutal weakness to Solari. It should hurt like
 hell and Solari should avoid it at all costs.
+
+### Hardsuits
+Hardsuits/softsuits will prevent the solaris fire mechanics. This is to allow them to still be able to interact with 
+particularly hazardous departments without setting a gas fire or being too much of a problem. They will still need to 
+take off the suit to refuel, however.
 
