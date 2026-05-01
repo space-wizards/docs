@@ -14,34 +14,20 @@ a bit more difficult similarly to vox. Based on Novakids from starbound.
 
 ## Background
 
-Solari are based upon the idea of SS13s plasma people but
-on fire. They are a glowing sun with unique eyes that players can choose
-via the trait system. Visually they take inspiration from Minior from
-pokemon and flame princess from adventure time as well as the already
-mentioned Novakids from starbound.
+Solari are based upon the idea of SS13s plasma people but on fire. They heil from the suns of space and are a species of guardians that overlook and try to keep the peace among 
+galaxies. However, they've seen  the chaos around the galaxy and have decided to help, whether people like it or not.
 
 ## Features/Design
 
-The Solari are a humanoid species that uses neon lighting and glows.
-They have a core mechanic called Stoking. Instead of having hunger the
-Solari instead utilise their heat to break down flammable and
-biodegradable materials. For example, they could eat a stack of wood and
-this would \"stoke them\" keeping them lit ablaze throughout the shift.
-When the Solari can no longer stoke themselves they are put into a crit
-state similar to a borg, during this state the Solari can still speak
-and see around. Slowly overtime they will however die to cold damage
-until they are re-stoked. Due to the nature of the race there a variety
-of minor mechanics that will affect a given players playstyle.
-
+The Solari are humanoid and wear the standard clothing with no noticeable features. They are visually much brighter 
+slime people and their unique lack of a face makes them stand out. They should visbily look like they are actively 
+ablaze.
 ## Core Visual Elements
 
-Solari are a humanoid species that use neon lighting (Light interior, darker border.) with hair that stands at ends
-similar to the look of a flame. They have unique eyes that utilise
-symbols for example they could have a face with O or a face with an
-omega symbol. They lack a mouth as they have no physical need for it,
-they merely shove what they\'re consuming into themselves. Due to the
-nature of having no mouth they also lack a nose for scent. A visual is
-provided in the doc pr.
+Solari are humanoid species that have thick outlines and lighter insides, think glowsticks. They have a symbol instead 
+of their face, completely lacking most facial features in favor of it. They still have hair, however it is made of the 
+same stuff as their bodies and is mostly used for style. They passively light up the rooms they are in with the 
+same color as their body.
 
 ## Naming Convention
 
@@ -54,41 +40,29 @@ Luna Sol, Fred Frezon, Nancy Neutron etc.
 
 ## Features Of The Species
 
-### Stoking 
 
-Solari are constantly on fire thus needing fuel. 
-They already breathe in oxygen from the air however they need more aid than 
-just that. Food items and organic materials serve as excellent fuel
-sources. Keep up their stoke level is of key importance when playing a
-Solari, failure to do so will result in you pseudo critting and even
-dying. When you do run out of fuel the player will become a lifeless
-husk and begin to slowly take cold damage. The player can ask
-surrounding crew and use comms to get themselves back on their feet. If
-you take enough cold damage to crit the player will crit, and they will
-also accumulate oxygen loss alongside cold damage. Other players can also
-use water to decrease the stoke level on Solari.
 
-### Unique Bloodstream 
+### Blood is fuel.
+The Solari replenish blood differently to other races. Rather than using blood packs and saline, Solari instead use fuel. 
+When Solari eat they actively replenish their blood supply. Overtime this fuel will slowly deplenish, Solari can refuel
+by eating certain items. Food > Blood > Fuel. Solari will only begin to take blood loss damage when their fuel hits 0. 
+Instead of taking the oxygen damage it will instead be cold damage. Their blood/fuel would be composed of a mixture of 
+oxygen and plasma that can be put into a centrifuged to extract these chemicals. Splashing or soaking in water should 
+deminish some of the solaris fuel however they can still drink it as their core is hot enough to process the liquid as
+gas.
 
-Solari can not use normal blood instead they
-have blood that has been \"plasmafied\" there blood can be centrifuged
-for liquid plasma if worse comes to worst. Instead of saline medical
-doctors can seek to use liquid plasma to replenish their blood.
-
-### Weakness to cold and Buffs to heat resist
-
-Solari are literally on fire, a natural resistance to all heat damage
-makes sense. On the flipside they should take much more damage to cold.
 
 ### On Fire!
 
-The Solari are walking lighters. Crew can left-click them with flammable
-objects to light them, leak plasma near them to start a fire and so on.
-On the flipside anything that a Solari touches will burn. Pulling a
-welding tank for example would be fine but pressing the interact key?
-Kaboom.
+The Solari are constantly on fire and should have gameplay elements that reflect this. Solari would automatically light
+gas fires in the rooms their in, think walking lighters. Players could interact with them whilst holding a cigarette to
+light it. Their punches, instead of dealing brute would deal heat damage instead and could be used to cauterize their 
+wounds to prevent further bloodloss which is intended to be the main killer of Solari. Solari could use their bare hands
+to do really terrible welds, think cow tools only really usable in desperate times. 
 
-### Air 
+### Temperature changes
+Solari are hot and their temperature resistances and weakness should be different to normal humans. It'd take much 
+longer for them to reach a state of overheating, this could help them save other players during gas fires that they 
+themselves probably lit. On the opposite spectrum cold damage should be a brutal weakness to Solari. It should hurt like
+hell and Solari should avoid it at all costs.
 
-The Solari breathe oxygen at a rate of 2x due to their
-condition this means they crit faster too.
