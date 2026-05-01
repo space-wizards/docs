@@ -76,19 +76,22 @@ You must fill out the Pull Request Template when submitting your pull request to
    2. If a pull request is balance-centric, the justification should properly explain **why** the change is needed.
    3. Justifications that only explain what the pull request *does* or the *effects* that the changes have are not acceptable.
    4. Major content additions should align with the core design principles. Sufficiently large content additions might warrant a design document to detail the broader purpose of the changes and how they fit into the current game.
-3. The _Technical Details_ section should give a high-level overview of the changes.
+3. The _Test plan_ section should explain how to test the changes.
+    1. Write out how you tested the changes. Consider how someone else looking at this pull request can verify that it works as intended.
+    2. If you're fixing a bug, it's advisable to share the steps to reproduce it, how it was broken before, and how it's fixed with your pull request.
+4. The _Technical Details_ section should give a high-level overview of the changes.
     1. This is more important during bugfixes or large refactors. Providing an overview of your changes and the technical decisions you made helps us review the changes; otherwise, we have to determine why the change was made ourselves, which increases turnaround time dramatically.
-4. The PR must have _media_ when applicable.
+5. The PR must have _media_ when applicable.
     1. Changes involving visuals, mechanics, or bugfixes should have media attached to demonstrate the changes to Maintainers and the community.
     2. If media is absent, it is questionable whether you have tested your fix.
     3. Media is usually not required when the fix is intuitively obvious from reading the code changes (inverted boolean logic for example).
-5. The _Breaking Changes_ section must be filled out if applicable.
+6. The _Breaking Changes_ section must be filled out if applicable.
     1. Breaking changes occur when the following is changed:
         1. A public API was modified. This includes YAML datafield name changes.
         2. Code was moved to a different namespace, or a namespace was changed.
         3. Prototype IDs were changed or deleted (even if the IDs were migrated).
     2. Breaking changes _should_ include helpful advice on how to fix them if complicated. Simple redirections like "Use `x` namespace", "Use `Entity<T>` instead", "use `RefactoredSystem` helpers instead" are also welcome.
-6. The _Changelog_ section must be filled out if applicable.
+7. The _Changelog_ section must be filled out if applicable.
    1. See the Changelog section at the bottom of this document for more information on how to fill out a changelog.
 
 ## After Submitting
