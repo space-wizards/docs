@@ -6,49 +6,66 @@
 
 Heavy inspiration from EmoGarbage404's [Specter antagonist](https://github.com/space-wizards/docs/pull/262), as well as SS13's [Wraith antagonist](https://wiki.ss13.co/Wraith).
 
-[Holy Damage PR](https://github.com/space-wizards/space-station-14/pull/32755)
-
 ## Overview
 
-With this proposal we aim to add more self-sufficiency to the Revenant, as well as make it more fleshed out.</p>
-<p>Some existing abilities have been reworked to better fit with how this new Revenant plays out on top of having the shop expanded, and not all abilities reveal the Revenant now. The Revenant is now extra susceptible to holy damage as per SlamBamActionman's PR, as well as being able to possess harvest-prone players, taking over their body completely. Lastly, it can upgrade some of it's abilities in exchange of souls.</p>
-<p>Player souls are ranked differently.
+This proposal aims to solidify the Revenant as a support antagonist whilst still leaving it to be a threat of its own accord.</p>
+<p>Its gameplay loop has been reworked for this matter, making it much more of a singular threat in the long-run (akin to Space Dragons) instead of the current mid-round annoyance that it is, for a quick sum-up of what this document entails:
+
+ - The Revenant has a proper presence in-game from both a roleplaying and mechanical aspect. (flavour & "specialized" abilities, both active and passive)
+ - The Revenant has been given new vulnerabilities and thinks to look out for, consequentially making it so the crew also has things to counter the Revenant with. (eg. Salt) [SlamBamActionman's Holy Damage PR](https://github.com/space-wizards/space-station-14/pull/32755)
+ - The Revenant may possess players at a time.
+ - Player souls are ranked differently.
+
+I have also deemed it appropriate to rename "Stolen Essence" to "Soul Essence" so that it's more on theme.
 
 ## Background
 
-Currently, the Revenant is a mediocre mid-round antag ghost role, due to it's dependence on crew deaths, which are entirely beyond the Revenant's control, the present gameplay loop usually consists of the Revenant having to visit medbay at least once in order to attain Stolen Essence, or pray for major disasters, which isn't fun at all, and even after having unlocked all abilities, there's not much going for the Revenant besides being a mild and repetitive annoyance.</p>
-<p>What we bring you is a major re-design of the Revenant, which not only makes getting 'fun' abilities less of a grind, but tries to make it actually interact with the crew.
+As it stands, the Revenant is a very lacking antag ghost role, primarily due to the fact that it nigh completely relies on other antagonists and/or accidents to actually start progressing, and seeing as those are entirely beyond the Revenant's control it ends up offering a very stale (and undesirable) gameplay loop of:
 
-## MHP (Metaphysical Hitpoints)
+1. Visitting medbay to check for bodies (morgue or otherwise, though the latter would require the Revenant to have obtained the Defile ability, which, for being the Revenant's capstone of soul-sucking, it falls very flat (and is very varied)
+
+2. Sitting around and being a mild and repetitive annoyance.
+
+What we then bring you is a partial re-thinking of the Revenant both mechanically and aesthethically, which not only makes getting 'fun' abilities a more realizable dream, but also tries to mitigate current round-flow issues for the player themself (such as the aforementioned "Sitting around")
+
+## Metaphysical Hitpoints (MHP)
 
 The Revenant's HP will now be completely separate of the Soul Essence harvested.</p>
-<p>MHP does not passively regenerate, making the only way to get it back through Soul Essence conversion, the Revenant starts with below average HP, similarly to the existing version, however, there will be ways to upgrade the Revenant's MHP up to double its base amount.
+<p>MHP does not passively regenerate, making the only way to get it back through Soul Essence conversion, the Revenant starts with below average HP, similarly to the existing version.
+ 
+However, there will be ways to upgrade the Revenant's MHP using the harvested Soul Essence, unlimited, with scaling, or otherwise.
 
-### Vulnerabilities
+## Vulnerabilities
 
-The Revenant is intangible towards nearly all kinds of damage when metaphysical, the one exception being holy damage.</p>
-<p>When possessing someone, the Revenant will not be able to pick up the Bible, nor any container with one within, as they will burn similarly to how you do when touching a light fixture without insulated gloves.</p>
-<p>If the Revenant passes/steps through salt that is poured on the ground, they will be revealed for a short while.
+The Revenant is intangible towards nearly all kinds of damage when metaphysical, the singular exception being holy damage. This characteristic may be made use of by the crew by, for example:
+- Having the Chaplain bless certain things with their Holy Bible (take a spear, where, if thrown at the revenant even whilst they're metaphysical, will hurt and stick to them for a short while)</p>
+- Spiking anything and everything with Holy Water so as to have it running through as many players' bloodstreams as possible (hindering possessions, perhaps?)
+
+When possessing someone, the Revenant will not be able to pick up/pull the Bible, nor any container with one within, as they will burn similarly to how you do when touching a light fixture without gloves.
+
+The crew may pour salt on a tile, preventing the (metaphysical) Revenant from passing through (akin to the mime's invisible wall ability), or, if they are possessing someone as they pass, they could either be revealed for a short while (maybe an effect similar to anomaly infections' for a bit/a dim purple glow), get hurt from it (holy damage), or even get forcefully shunted from that person to their original form.
 
 ## Soul Essence
 
-(Stolen Essence has been renamed to Soul Essence as to not make it feel like the Revenant's a complete kleptomaniac)</p>
-<p>Soul Essence is the Revenant's universal currency, almost everything revolves around it's usage, you can obtain it solely via Harvesting.
+Soul Essence is the Revenant's universal currency, almost everything revolves around its usage and consumption (buying and using abilities, upgrading passives, healing, etc..), you can obtain it solely via Harvesting.
 
-### Soul ranking
+### Soul Ranking
 
-Souls are now divided into 3 different grades: **Low-value**, **Medium-value**, and **High-value.**
- - **Low-value** souls will be that of 'normal' personnel (ie. Civillians, Department Staff)
- - **Medium-value** souls will be that of 'special' personnel (ie. Security Officers/Cadets, most of Command)
- - **High-value** souls will be that of 'unique' personnel (ie. Captain, Head of Security, Antagonists)</p>
-Your soul's essence will be dependent on it's grade, Low-value having the least base amount, and High-value having the most. Players may also rise through the rankings via killing other player-controlled characters, excluding critters.
+Souls are now divided into 3 different grades: **low**, **medium**, and **high value**.
+ - **Low value** souls will be that of 'normal' personnel (ie. Civillians, Department Staff)
+ - **Medium value** souls will be that of 'special' personnel (ie. Security Officers/Cadets, most of Command)
+ - **High value** souls will be that of 'unique' personnel (ie. Captain, Head of Security, Antagonists)
+ 
+Your soul's essence will be dependent on its grade, low value having the least base amount, and high value having the most. Players may, however, rise through the rankings via killing other player-controlled (take a would-be low value tider killing 3 Nuclear Operatives), excluding critters.
 
 ## Objectives
 
- - **Claim X souls**
+I have decided to keep the Revenant's objectives moderately simple, since I think malleability is very helpful for an adaptable antagonist such as this.
+
+ - **Claim [X] (dependent on crew size) Souls** / **Claim [X] (also dependent on crew size) Soul Essence**
  - **Survive**
 
-## Abilities
+## Abilities - Everything below has not yet been updated as of 04/05/2025 (DD/MM/YY)
 
 Abilities aren't tiered, contrary to EmoGarbage404's proposal, but rather, will use the same shop format the current Revenant possesses.
 
