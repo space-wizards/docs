@@ -30,7 +30,7 @@ Entity systems implement behavior by defining *event handlers* or by implementin
 
 As an another example, consider the `EdibleComponent`. A programmer might make `IngestionSystem` to handle eating food. `IngestionSystem` listens to the `UseInHandEvent` - whenever `UseInHandEvent` is heard/triggered, `IngestionSystem` checks if there is a `EdibleComponent` in the object that was used. If there is, then it lowers the value of the nutrition inside the entity and plays a munching sound.
 
-That's the jist of ECS. If you're interested in learning more about it, then check out [Your mind on ECS](../robust-toolbox/ecs.md). The ECS approach really is powerful and allows us to avoid spaghetti code, despite the complexity of SS14.
+That's the gist of ECS. If you're interested in learning more about it, then check out [Your mind on ECS](../robust-toolbox/ecs.md). The ECS approach really is powerful and allows us to avoid spaghetti code, despite the complexity of SS14.
 
 ```admonish info
 You don't have to perfectly understand the ECS architecture at first. It can be daunting for both new programmers and those used to traditional OOP. However, the overall 'feel' and advantages of the architecture should become clear as you use it more.
