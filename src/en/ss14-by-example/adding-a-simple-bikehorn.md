@@ -1,18 +1,16 @@
 # Adding a Simple Bike Horn
 
-{{#template ../templates/outdated.md}}
+This tutorial goes over the **Entity Component System** pattern and several other key topics in the SS14 codebase by demonstrating how one would implement a clown horn from scratch. You can try copying the steps yourselves, or you can just read along.
 
-This tutorial goes over the **entity component system** system and several other key topics in the SS14 codebase by demonstrating how one would implement a clown horn from scratch. You can try copying the steps yourselves, or you can just read along.
+## Entities, Components, and Systems
 
-## Entities, components, and systems
-
-While Space Station 14 is written in C#, an object-oriented programming language, it uses a different data model to represent items in game. This data model is called the *entity component system* (ECS). (*Why do we do this? See [ECS](../robust-toolbox/ecs.md)*)
+While Space Station 14 is written in C#, an object-oriented programming language, it uses a different data model to represent items in game. This data model is called the *Entity Component System* (ECS). (*Why do we do this? See [ECS](../robust-toolbox/ecs.md)*)
 
 ### Entities
 
-Each item in game is represented by an *entity*. Players, bananas, stun batons, are all represented by entities. An entity is represented by an integer. No two entities share the same integer representation.
+Each object in-game is represented by an *entity*. Players, bananas, stun batons, audio sources, or even more abstract concepts like game rules or objectives are all represented by entities. An entity is represented by an integer. No two entities share the same integer representation.
 
-By themselves, entities only distinguish one item from another. Without any components, an entity has no behavior.
+By themselves, entities only distinguish one item from another. Without any components an entity has no behavior.
 
 ### Components
 
@@ -20,7 +18,7 @@ By themselves, entities only distinguish one item from another. Without any comp
 
 1. **Label specific entities as having specific behavior.** For example, in one particular game, the entity represented by the integer 37629 contains a `NukeComponent` and a `ActivatableUIComponent`. This means that this entity behaves like a nuke, and also has a user interface that can be raised by activating it.
 
-2. **Store data required to process its behavior.** For example, a `NukeComponent` may have a data field `Timer` that represents how much time is left until the nuke detonates.
+2. **Store data required to process its behavior.** For example, a `NukeComponent` may have a datafield `Timer` that represents how much time is left until the nuke detonates.
 
 Still, components do not contain any logic for processing this behavior. Behaviors are implemented in entity systems.
 
@@ -30,7 +28,7 @@ An *entity system* (often abbreviated to "system") contains logic that implement
 
 Entity systems implement behavior by defining *event handlers* or by implementing a per-tick *update* method.
 
-As an another example, consider the `FoodComponent`. A programmer might make `EatingSystem` to handle eating food. `EatingSystem` listens to the `OnUseInHand` event - whenever `OnUseInHand` is heard/triggered, `EatingSystem` checks if there is a `FoodComponent` in the object that was used. If there is, then it lowers the value of `nutritionLeft` and plays a munching sound.
+As an another example, consider the `EdibleComponent`. A programmer might make `IngestionSystem` to handle eating food. `IngestionSystem` listens to the `UseInHandEvent` - whenever `UseInHandEvent` is heard/triggered, `IngestionSystem` checks if there is a `EdibleComponent` in the object that was used. If there is, then it lowers the value of the nutrition inside the entity and plays a munching sound.
 
 That's the jist of ECS. If you're interested in learning more about it, then check out [Your mind on ECS](../robust-toolbox/ecs.md). The ECS approach really is powerful and allows us to avoid spaghetti code, despite the complexity of SS14.
 
@@ -64,7 +62,7 @@ An example is shown below:
     delay: 2.0
 ```
 
-This is written in **YAML**, a data language similar to JSON, and is located in the folder `Resources/Prototypes/Entities/Objects/Fun/skub.yml`. All prototypes must be in the `Resources/Prototypes` folder and should be organized into the proper folder. 
+This is written in **YAML**, a data language similar to JSON, and is located in the folder `Resources/Prototypes/Entities/Objects/Fun/skub.yml`. All prototypes must be in the `Resources/Prototypes` directory and should be organized into the proper subfolder. 
 
 If you want more pointers on YAML, check [YAML Crash Course](../general-development/tips/yaml-crash-course.md) and [Serialization](../robust-toolbox/serialization.md).
 
@@ -81,10 +79,10 @@ To spawn the items in game from a prototype, you can press **F5** to open the **
 Your goal is to make a **Clown Horn** that **honks** when you use it. This requires us to have a component on the entity with a sound to play and system that plays that sound after it's used in hand (clicked, or activated with Z).
 
 ```admonish info
-Normally, you would want to search through the codebase and ask some other coders to see whether a component/system that does this already exists. In this case, ```EmitSoundOnUse``` *does indeed exist* in the main SS14 codebase. But for the sake of this tutorial, we'll pretend it doesn't and try to implement it ourselves!
+Normally, you would want to search through the codebase and ask some other coders to see whether a component/system that does this already exists. In this case, `EmitSoundOnUse` *does indeed exist* in the main SS14 codebase. But for the sake of this tutorial, we'll pretend it doesn't and try to implement it ourselves!
 ```
 
-**To start off**, let's make a simple clown horn prototype. I will make a new file called ```clown_horn.yml``` and add it to the ```Resources\Prototypes\Entities\Objects``` folder.
+**To start off**, let's make a simple clown horn prototype. I will make a new file called `clown_horn.yml` and add it to the `Resources\Prototypes\Entities\Objects` folder.
 
 ![clownhornexample1.png](../assets/images/ss14-by-example/clownhornexample1.png)
 
@@ -104,7 +102,7 @@ Now let's fill out the prototype with a basic clown horn. Because we don't yet h
     state: icon
 ```
 
-Here we have a basic entity with a single component: `SpriteComponent`. Check out [the RSI spec](../specifications/robust-station-image.md) if you're unfamiliar with the RSI system, but the gist is that we have two fields for `SpriteComponent`: the RSI path relative to `Resources/Textures` (in this case the folder is named bikehorn.rsi) and the icon state.
+Here we have a basic entity with a single component: `SpriteComponent`. Check out [the RSI spec](../specifications/robust-station-image.md) if you're unfamiliar with the RSI system, but the gist is that we have two fields for `SpriteComponent`: the RSI path relative to `Resources/Textures` (in this case the folder is named `bikehorn.rsi`) and the icon state, which is the name of a .png file inside that folder.
 
 One thing to note is that prototypes support parenting. In this case, `BaseItem` is our parent and contains a variety of components that are universal to all items. Thus, our clown horn will have those components too: basic components like `Item`, `Pullable`, and `Physics`. Parents aren't required at all, but they're useful in certain cases, like here.
 
@@ -112,11 +110,11 @@ Now, let's compile and check out our item in game:
 
 ![clownhornexample2.png](../assets/images/ss14-by-example/clownhornexample2.png)
 
-It sure is beautiful, but we appear to have lied! The bike horn does not yet honk honk. To remedy this, we'll have to create a new component to hold the data, such as the sound to play, and an EntitySystem which handles actually playing the sound.
+It sure is beautiful, but we appear to have lied! The bike horn does not yet honk honk. To remedy this, we'll have to create a new component to hold the data, such as the sound to play, and an `EntitySystem` which handles actually playing the sound.
 
 ## Creating our component
 
-To make our component, we'll need to make a new class, let's call it ```PlaySoundOnUseComponent```. But wait a second....
+To make our component, we'll need to make a new class, let's call it `PlaySoundOnUseComponent`. But wait a second....
 
 ![componentcreation.png](../assets/images/ss14-by-example/componentcreation.png)
 
@@ -135,7 +133,7 @@ With that in mind, our logic for our clown horn should look like this:
 - Server receives this, checks if it makes sense, and sends "play honk" to all clients in range.
 - Client receives this and plays "honk".
 
-This sounds rather complicated to implement from scratch. Thankfully, we have some premade code that helps us! Namely, the event `UseInHandEvent` which is raised on the server when an item is used, and the function `SoundSystem.Play()` which plays a sound to clients in range.
+This sounds rather complicated to implement from scratch. Thankfully, we have some premade code that helps us! Namely, the event `UseInHandEvent` which is raised on the server when an item is used, and the function `SharedAudioSystem.PlayPvs()` which plays a sound to all clients in range.
 
 Those helpers can be thought of as handling **client click -> server** and **server -> client sound** for us. so all we need to do is have a component on the server which routes one into the other. 
 
@@ -145,7 +143,7 @@ Those helpers can be thought of as handling **client click -> server** and **ser
 In the Space Station 14 codebase, Components & EntitySystems alike (along with other classes) go inside folders directly under the `Content.Server`, `Content.Shared`, or `Content.Client` projects. There are folders for `Atmos`, `Botany`, `Research`, `Storage`, and a lot more. If a suitable folder doesn't exist, create one! Never put files directly into the top directory of the project.
 ```
 
-Under the `Content.Server` project, there's a folder called `Sound`. This folder contains an aptly named `Components` folder. That seems like a good place to put our new component (and in fact, this is where the real `EmitSoundOnTriggerComponent` is located). Let's call our version `PlaySoundOnUseComponent`. Note: if you just copy paste this code in, it may not work, as you'll need to import various classes. Your IDE can do this for you.
+Under the `Content.Server` project, there's a folder called `Sound`. That seems like a good place to put our new component. The existing `EmitSoundOnUseComponent` is located in `Content.Shared` instead for reasons we will come back to at a later point, but for now for simplicity we stick to only implementing this on the server. Let's call our version `PlaySoundOnUseComponent`.
 
 Now let's just make the most basic component possible:
 
@@ -164,7 +162,7 @@ All components must inherit from the `Component` class. If you want your compone
 
 In our prototype above, you might recall that we added `Sprite`, not `SpriteComponent` to the ClownHorn prototype. That's because component 'names' are autogenerated using the class name. In this case, our component's name is `PlaySoundOnUse`, which is generated by just removing `Component` from the class name.
 
-Now, let's go ahead and add PlaySoundOnUse to our prototype.
+Now, let's go ahead and add `PlaySoundOnUse` to our prototype.
 
 ```admonish info
 You must remove the `Component` part of the class suffix when using them in the prototype yaml. So `PlaySoundOnUseComponent` would be resolved as `PlaySoundOnUse` in the `components:` list in the yaml definition.
@@ -185,7 +183,7 @@ You must remove the `Component` part of the class suffix when using them in the 
 
 Well, this is boring; not only does our component not have any data, but it doesn't do anything either!
 
-Let's add some data to our component. As you may have noticed above, the `Sprite` component on our bike horn has two fields listed: `sprite`, and `state`. Whatever you put in these fields will be passed into the component when it's created, and then our EntitySystem can use that data to do something.
+Let's add some data to our component. As you may have noticed above, the `Sprite` component on our bike horn has two fields listed: `sprite`, and `state`. Whatever you put in these fields will be passed into the component when it's created, and then our `EntitySystem` can use that data to do something.
 
 In our case, we'll probably want a field called `sound` on our component, which stores a path to the sound to play when the entity is activated. It's pretty easy to do that:
 
@@ -202,7 +200,7 @@ public sealed partial class PlaySoundOnUseComponent : Component
 }
 ```
 
-All you need to do to create a field that can be modified in YAML is to add the `[DataField]` attribute, which holds the name of the field, and give it a default value, in this case `string.Empty`. Now, we can add our sound to our bike horn prototype:
+All you need to do to create a field that can be modified in YAML is to add the `[DataField]` attribute, and give it a default value, in this case `string.Empty`. Now, we can add our sound to our bike horn prototype:
 
 ```yaml
 - type: entity
@@ -220,30 +218,34 @@ All you need to do to create a field that can be modified in YAML is to add the 
 
 Now we're getting somewhere! One thing to note is that the path here is relative to the `Resources` directory (which `SoundSystem` always assumes), and we're also assuming that the `Resources/Audio/Items/bikehorn.ogg` file is real. If you check, it is! But if a sound isn't present that you need, you can always add it yourself somewhere in the `Audio` folder.
 
+Note that the name of the datafield was automatically converted from the PascalCase `Sound` when referenced in C# into the camelCase `sound` when defined in yaml.
+The `DataField` attribute can also manually assign a different name (you will see that a lot in old code), but nowadays we usually just use the automatically generated one.
 
 ## Creating our EntitySystem
 
-Let's finally add some flavor to our bike horn by.. making it actually honk. As said previously, we'll need an `EntitySystem` which hooks into the `UseInHandEvent` and calls some code from there. Let's create our EntitySystem `PlaySoundOnUseSystem` in the same `Content.Server/Sound` folder:
+Let's finally add some flavor to our bike horn by... making it actually honk. As said previously, we'll need an `EntitySystem` which hooks into the `UseInHandEvent` and calls some code from there. Let's create our EntitySystem `PlaySoundOnUseSystem` in the same `Content.Server/Sound` folder:
 
 ```csharp
 // Content.Server/Sound/PlaySoundOnUseSystem.cs
 
 namespace Content.Server.Sound;
-    
+
 public sealed class PlaySoundOnUseSystem : EntitySystem
 {
 
 }
 ```
 
-You'll notice that here, our system inherits from `EntitySystem`. This automatically registers it as a proper EntitySystem in the game and allows us to use some useful dependencies and override some methods to add behavior.
+You'll notice that here, our system inherits from `EntitySystem`. This automatically registers it as a proper `EntitySystem` in the game and allows us to use some useful dependencies and override some methods to add behavior.
 
-In order to subscribe to an event being raised, we'll need to override the system's `Initialize` method; this method is called when the EntitySystem is created.
+In order to subscribe to an event being raised, we'll need to override the system's `Initialize` method; this method is called when the `EntitySystem` is created when the game simulation is starting.
 
 In this method, we'll add a `SubscribeLocalEvent` call, and I'll explain the details after the fact.
 
 ```csharp
 // Content.Server/Sound/PlaySoundOnUseSystem.cs
+
+using Content.Shared.Interaction.Events;
 
 namespace Content.Server.Sound;
 
@@ -267,16 +269,22 @@ You've probably noticed that this code actually gives you an error, *because the
 - The event itself, which contains useful data like the entity who activated the item.
 
 If you're using an IDE, it might allow you to automatically create this method using *Alt+Enter*.
+We also added a namespace import so that the compiler knows where to find the `UseInHandEvent`. Your IDE will automatically add this line for you if you use the autocomplete function while typing the event name somewhere.
 
 Here's what our class will look like now, with our new method:
 
 ```csharp
+// Content.Server/Sound/PlaySoundOnUseSystem.cs
+
+using Content.Shared.Interaction.Events;
+using Robust.Shared.Audio.Systems;
+
 namespace Content.Server.Sound;
 
 public sealed class PlaySoundOnUseSystem : EntitySystem
 {
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    
+
     public override void Initialize()
     {
         SubscribeLocalEvent<PlaySoundOnUseComponent, UseInHandEvent>(OnUseInHand);
@@ -292,7 +300,7 @@ public sealed class PlaySoundOnUseSystem : EntitySystem
 
 We're almost there. Now, the method `OnUseInHand` will be called when we activate the item, and we can play our sound there.
 
-Also, we've added `[Dependency] private readonly SharedAudioSystem` to class. It will allow us to play audio in modern way (instead of using obsolete `SoundSystem.Play`) further.
+Also, we've added `[Dependency] private readonly SharedAudioSystem` to class. It will allow us to play audio by using a public method defined inside another `EntitySystem`, in this case the `SharedAudioSystem`.
 
 ```csharp
 private void OnUseInHand(Entity<PlaySoundOnUseComponent> ent, ref UseInHandEvent args)
@@ -305,7 +313,7 @@ The `PlayPvs` method is useful for playing sounds. It has two arguments:
 
 1. The sound to play.
 
-In this case, we just pass it our `sound` field on our `PlaySoundOnUseComponent`. 
+In this case, we just pass it our `Sound` field on our `PlaySoundOnUseComponent`. 
 
 2. The source entity 
 
@@ -319,14 +327,14 @@ Also, `PlayPvs` automaticly manages distance filtering, so you don't have to wor
 
 With that, this tutorial is finished! If you want to continue experimenting with your newfound clown horn, here are some ideas:
 
-- Try to implement clown horn using existing components. You can refer to skub.yml up this page
-- Add a delay to the clicking through adding ```ItemCooldown``` to your prototype, and raising the `RefreshItemCooldownEvent`.
+- Try to implement clown horn using existing components. You can refer to skub.yml up this page.
+- Add a cooldown to limit the rate the sound can be used by adding `UseDelayComponent` to your prototype.
 - Adjust the volume/variation of the sound played (see the `PlayPvs()` function's `audioParams` argumernt).
-- Make the sound play when the bike horn is stepped on as well
+- Make the sound play when the bike horn is stepped on as well.
     - This one is kind of hard and involves adding a lot of new data! Look at glass shards for an example.
-- Make the bike horn do damage on attack using MeleeWeaponComponent
-- Make the bike horn edible using FoodComponent and SolutionContainerComponent
-- Add support for playing a random sound from a SoundCollection or SoundSpecifier rather than a single sound (the real EmitSoundOnUse does this, if you need pointers) 
+- Make the bike horn do damage on attack using `MeleeWeaponComponent`.
+- Make the bike horn edible using `EdibleComponent` and `SolutionComponent`.
+- Add support for playing a random sound from a `SoundCollection` or `SoundSpecifier` rather than a single sound (the real EmitSoundOnUse does this, if you need pointers).
 - Dive into explosion code and give it a 5% chance to explode on each honk!
 
-The world's your donk packet, and you've got a sizzling hot fire ready to cook it!
+The world's your donk pocket, and you've got a sizzling hot fire ready to cook it!
