@@ -328,7 +328,7 @@ Also, `PlayPvs` automaticly manages distance filtering, so you don't have to wor
 With that, this tutorial is finished! If you want to continue experimenting with your newfound clown horn, here are some ideas:
 
 - Try to implement clown horn using existing components. You can refer to skub.yml up this page.
-- Add a cooldown to limit the rate the sound can be used by adding `UseDelayComponent` to your prototype.
+- Add a cooldown to limit the rate the sound can be played at by adding `UseDelayComponent` to your prototype.
 - Adjust the volume/variation of the sound played (see the `PlayPvs()` function's `audioParams` argumernt).
 - Make the sound play when the bike horn is stepped on as well.
     - This one is kind of hard and involves adding a lot of new data! Look at glass shards for an example.
