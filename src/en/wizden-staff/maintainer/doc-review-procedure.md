@@ -22,7 +22,7 @@ When leaving comments or requesting changes:
 - For people who may not be familiar with a part in their PR, try to be more thorough in your explanations.
   - Explain your review to teach people unfamiliar with the subject.
 - When possible, direct people to either the [developer wiki](https://docs.spacestation14.com/index.html), `#docs` discord channel, or an alternate source for information.
-- Make an effort to be available after reviewing a PR. 
+- Make time to respond to questions or comments from the PR author on your review comments, so that the author doesn't have to assume and make mistakes.
   - You don't need to be constantly online, but if the author has questions, they should be able to get a response in a reasonable amount of time.
 - Be formal when closing PRs. 
   - Discourage others from engaging in rude behavior and try not to upset the PR author. People can often be emotional after their PR is closed.
