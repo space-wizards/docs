@@ -27,7 +27,5 @@ This page may sometimes be out of date. For the up-to-date list of project manag
 | keronshb | 226429200553213952 | [@keronshb](https://github.com/keronshb) |
 | vasilisiscool | 322708417540259841 | [@VasilisThePikachu](https://github.com/VasilisThePikachu) |
 | reisama | 143154210228273152 | [@valquaint](https://github.com/valquaint) |
-| retequizzle | 235251104114278412 | [@retequizzle](https://github.com/retequizzle) |
 | shadowcommander | 104693014407950336 | [@ShadowCommander](https://github.com/ShadowCommander) |
 | simyon | 327840918482714626 | [@Simyon264](https://github.com/Simyon264) |
-| zoldorf | 140921734109855744 | [@Zoldorf](https://github.com/ZoldorfTheWizard) |
