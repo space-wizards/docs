@@ -25,6 +25,7 @@ When leaving comments or requesting changes:
 - Make time to respond to questions or comments from the PR author on your review comments, so that the author doesn't have to assume and make mistakes.
   - You don't need to be constantly online, but if the author has questions, they should be able to get a response in a reasonable amount of time.
 - Be formal when closing PRs. 
+  - Explain the reasoning behind doing so while providing constructive criticism about their pull request.
   - Discourage others from engaging in rude behavior and try not to upset the PR author. People can often be emotional after their PR is closed.
 - For relatively minor changes, opt to simply [complete them yourself](https://cli.github.com/manual/gh_pr_checkout) and push to the PR.
 - When requesting changes to a PR, keep them within the scope of the PR.
