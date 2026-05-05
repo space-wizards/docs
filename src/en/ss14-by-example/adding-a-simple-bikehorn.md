@@ -10,7 +10,7 @@ While Space Station 14 is written in C#, an object-oriented programming language
 
 Each object in-game is represented by an *entity*. Players, bananas, stun batons, audio sources, or even more abstract concepts like game rules or objectives are all represented by entities. An entity is represented by an integer. No two entities share the same integer representation.
 
-By themselves, entities only distinguish one item from another. Without any components an entity has no behavior.
+By themselves, entities only distinguish one item from another. Without any components, an entity has no behavior.
 
 ### Components
 
@@ -183,7 +183,7 @@ You must remove the `Component` part of the class suffix when using them in the 
 
 Well, this is boring; not only does our component not have any data, but it doesn't do anything either!
 
-Let's add some data to our component. As you may have noticed above, the `Sprite` component on our bike horn has two fields listed: `sprite`, and `state`. Whatever you put in these fields will be passed into the component when it's created, and then our `EntitySystem` can use that data to do something.
+Let's add some data to our component. As you may have noticed above, the `Sprite` component on our bike horn has two fields listed: `sprite` and `state`. Whatever you put in these fields will be passed into the component when it's created, and then our `EntitySystem` can use that data to do something.
 
 In our case, we'll probably want a field called `sound` on our component, which stores a path to the sound to play when the entity is activated. It's pretty easy to do that:
 
@@ -218,7 +218,7 @@ All you need to do to create a field that can be modified in YAML is to add the 
 
 Now we're getting somewhere! One thing to note is that the path here is relative to the `Resources` directory (which `SoundSystem` always assumes), and we're also assuming that the `Resources/Audio/Items/bikehorn.ogg` file is real. If you check, it is! But if a sound isn't present that you need, you can always add it yourself somewhere in the `Audio` folder.
 
-Note that the name of the datafield was automatically converted from the PascalCase `Sound` when referenced in C# into the camelCase `sound` when defined in yaml.
+Note that the name of the datafield was automatically converted from the PascalCase `Sound` when referenced in C# into the camelCase `sound` when defined in YAML.
 The `DataField` attribute can also manually assign a different name (you will see that a lot in old code), but nowadays we usually just use the automatically generated one.
 
 ## Creating our EntitySystem
