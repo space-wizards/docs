@@ -48,18 +48,20 @@ The crew could thus build a somewhat zombie-proof zone through things like elect
 
 As mentioned before, zombies should also have *some* way to locate survivors when only a few stragglers are left alive; we don’t want them to wander aimlessly trough the station’s halls; while this makes sense from an external point of view, playing as a zombie without someone to bite is extremely boring and thus this should be avoided.
 
+In general, zombies should get stronger and stronger the more the round advances, to prevent endless stalling by the crew. Mutations should be more common, stronger, zombies should do more damage or the infection could have a shorter incubation period.
+
 Crew members should look for armor & clothes such as riot armor, biologic suits, winter coats, etc: with enough protection, you should be virtually immune to basic bite infections. You should be able to defend yourself from one zombie with a baseball bat and proper clothing without always getting infected.
 
 There should be some ways for crew members to know if another is infected or not; be it trough description symptoms (such as the character looking feverish) or random coughing, having someone on your team suddenly display those symptoms should give pressure the crew and make it so the zombie virus isn’t just a sudden transformation into a mean green biting machine with little to no symptoms beyond damage.
 
 Once a certain percentage of station staff is infected, an evacuation shuttle should be automatically called and the round should devolve into a mad rush to secure evac, as both the crew and the infected horde need to make it to central command. This is where the round should climax, as every soul, living or not, on the station tries to make it on the shuttle.
 
-At this point, if the station’s too desperate, a CBURN squad could be automatically dispatched by centcomm to defend the evacuation shuttle. This would have two benefits: 
+At this point, a CBURN squad could be automatically dispatched by centcomm to defend the evacuation shuttle. This would have two benefits: 
 
- - It would provide interesting ghost roles for the many players who will get round-removed on zombie rounds (think of the poor zombified Pun Pun stuck in space, far from everyone).
+ - It would provide interesting ghost roles for the many players who will get round-removed on zombie rounds (think of the poor zombified Pun Pun stuck in space, far from everyone, or the numerous zombies killed with no chance of ever being revived).
  - The military trying to sort infected individuals from those still healthy would make for great RP occasions (trying to hide the symptoms of the zombie virus as a simple fever, etc).
 
-As for the nuclear operative’s romerol bundle, it simply needs to work like a real zombie game mode - it plays fairly well in the zombie apocalypse theme, since a frequent trope of this genra is biological warfare / semi-intentional medical disasters and nukies are pretty much doing exactly that.
+As for the nuclear operative’s romerol bundle, it simply needs to work like a real zombie game mode - it plays fairly well in the zombie apocalypse theme, since a frequent trope of this genra is biological warfare / semi-intentional medical disasters and nukies are pretty much doing exactly that. 
 
 ## Administrative & Server Rule Impact (if applicable)
 
