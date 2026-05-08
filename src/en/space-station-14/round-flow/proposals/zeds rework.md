@@ -19,8 +19,10 @@ We currently have zombies on Wizden, most downstreams have zombies and a lot of 
 At the beginning of a Zombies round, the infection will be spread to a few random patients zeroes. The infection should slowly spread, disrupting station activities, until the remaining survivors must go into hiding, build barricades and arm themselves: the station shouldn’t be able to easily ignore the zombie virus.
 
 Newly-infected zombies should still be entertained by the game; we don’t want them ghosting. We should thus introduce classic zombie games tropes such as:
- - Mutant zombies (fast, pouncer, brute, etc)
+ - Mutant zombies (fast, pouncer, brute, etc) each with their strengths and weaknesses (brute zombies are way stronger but can’t infect living individuals, fast zombies are extremely weak to brute, etc)
  - Survivor detection / pinpointer ability to detect remaining survivors
+
+One way to implement mutations would be trough giving different initial infected different strains of the virus; this would encourage all initial infected to infect the most individuals possible instead of having only one II turn and the other sabotage the station while quaffing dylovene.
 
 Zombies should also get new objectives to reflect their goals as an ever-expanding apocalyptic force, those mainly being zombies winning once Central Command becomes infected.
 
@@ -34,7 +36,7 @@ The zombie is the conversion antagonist by excellence; where Nuclear Operatives 
 
 While revolutionaries are simply replacing the station’s leadership, zombies represent the total collapse of any central organization as most become infected.
 
-A singular zombie should almost always be no match for an armed crew member in one-on-one combat; zombies should have their victory in combat through infecting crew members, and then having them eventually turn after the fight has concluded.
+A singular zombie should almost always be no match for an armed crew member in one-on-one combat; zombies should have their victory in combat through either horde power or via infecting crew members, and then having them eventually turn after the fight has concluded.
 
 The infection shouldn’t be easily curable, and existing cures should not be too potent: players shouldn’t be able to become fully immune trough medicine (looking at you, ambuzol+) alone, should need to either return to medbay to get cured. This should foster players trying to salvage better armor from the station (such as bio suit, coats, etc).
 
@@ -42,7 +44,22 @@ The infection shouldn’t be easily curable, and existing cures should not be to
 
 Zombies should slowly kick in until they eventually overtake the station. Survivor players should then be encouraged to hide, build bases or try to maintain safe zones while trying to equip or assemble a cure as fast as possible, playing a game of deadly hide-and-seek with those playing as the zombie horde. 
 
+The crew could thus build a somewhat zombie-proof zone through things like electrical fences, grids, barricades, etc. Of course, no area should ever be 100% safe from the horde. 
+
+As mentioned before, zombies should also have *some* way to locate survivors when only a few stragglers are left alive; we don’t want them to wander aimlessly trough the station’s halls; while this makes sense from an external point of view, playing as a zombie without someone to bite is extremely boring and thus this should be avoided.
+
+Crew members should look for armor & clothes such as riot armor, biologic suits, winter coats, etc: with enough protection, you should be virtually immune to basic bite infections. You should be able to defend yourself from one zombie with a baseball bat and proper clothing without always getting infected.
+
+There should be some ways for crew members to know if another is infected or not; be it trough description symptoms (such as the character looking feverish) or random coughing, having someone on your team suddenly display those symptoms should give pressure the crew and make it so the zombie virus isn’t just a sudden transformation into a mean green biting machine with little to no symptoms beyond damage.
+
 Once a certain percentage of station staff is infected, an evacuation shuttle should be automatically called and the round should devolve into a mad rush to secure evac, as both the crew and the infected horde need to make it to central command. This is where the round should climax, as every soul, living or not, on the station tries to make it on the shuttle.
+
+At this point, if the station’s too desperate, a CBURN squad could be automatically dispatched by centcomm to defend the evacuation shuttle. This would have two benefits: 
+
+ - It would provide interesting ghost roles for the many players who will get round-removed on zombie rounds (think of the poor zombified Pun Pun stuck in space, far from everyone).
+ - The military trying to sort infected individuals from those still healthy would make for great RP occasions (trying to hide the symptoms of the zombie virus as a simple fever, etc).
+
+As for the nuclear operative’s romerol bundle, it simply needs to work like a real zombie game mode - it plays fairly well in the zombie apocalypse theme, since a frequent trope of this genra is biological warfare / semi-intentional medical disasters and nukies are pretty much doing exactly that.
 
 ## Administrative & Server Rule Impact (if applicable)
 
