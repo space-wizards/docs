@@ -48,7 +48,7 @@ The crew could thus build a somewhat zombie-proof zone through things like elect
 
 As mentioned before, zombies should also have *some* way to locate survivors when only a few stragglers are left alive; we don’t want them to wander aimlessly trough the station’s halls; while this makes sense from an external point of view, playing as a zombie without someone to bite is extremely boring and thus this should be avoided.
 
-In general, zombies should get stronger and stronger the more the round advances, to prevent endless stalling by the crew. Mutations should be more common, stronger, zombies should do more damage or the infection could have a shorter incubation period.
+In general, zombies should get stronger and stronger the more the round advances, to prevent endless stalling by the crew. Mutations should be more common, stronger, zombies should do more damage or the infection could have a shorter incubation period. Of course, this should be balanced around the remaining number of cremwates vs the size of the infected horde. Think of it as rubber banding to constantly keep the round fun for both the zombies and the uninfected.
 
 Crew members should look for armor & clothes such as riot armor, biologic suits, winter coats, etc: with enough protection, you should be virtually immune to basic bite infections. You should be able to defend yourself from one zombie with a baseball bat and proper clothing without always getting infected.
 
