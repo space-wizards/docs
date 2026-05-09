@@ -37,6 +37,7 @@ Let's look at a few examples:
     - TagB
   - type: PointLight # make it glow
     color: green
+    energy: 10
 
 - type: entity
   abstract: true
@@ -113,16 +114,17 @@ Let's look at a few examples:
   
 
 To summarize the inheritance rules:
-  1. A DataField that is not set in YAML gets its default value from its C# definition. In C# all variables have a default value if not specified otherwise, for example `public bool SomeVariable;` will always be `false` (in other programming languages you may get random bits).
-  2. If you inherit from multiple parents, then components and their DataFields are inherited individually.
-  3. The order of inheritance matters: Each DataField will be taken from the first parent that has it set in YAML.
-  4. You can overwrite inherited DataFields by reassigning a new value in the child.
-  5. If a DataField is overwritten, then the whole instance of the variable is reassigned. This means data types like lists (for example for tags) won't get merged, but replaced. However, you can change this behaviour for individual DataFields using `AlwasPushInheritance`(see further below).
-  6. You cannot remove components that are inherited from a parent. You will have to make another abstract parent without that component instead to avoid copy pasting everything. 
+  1. A prototype can have one or multiple parents.
+  2. A DataField that is not set in YAML gets its default value from its C# definition. In C# all variables have a default value if not specified otherwise, for example `public bool SomeVariable;` will always be `false` (in other programming languages you may get random bits).
+  3. If you inherit from multiple parents, then components and their DataFields are inherited individually.
+  4. The order of inheritance matters: Each DataField will be taken from the first parent that has it set in YAML.
+  5. You can overwrite inherited DataFields by reassigning a new value in the child.
+  6. If a DataField is overwritten, then the whole instance of the variable is reassigned. This means data types like lists (for example for tags) won't get merged, but replaced. However, you can change this behaviour for individual DataFields using the `AlwasPushInheritance`attribute (see further below for a detailed explanation).
+  7. You cannot remove components that are inherited from a parent. You will have to make another abstract parent without that component instead to avoid copy pasting everything. 
 
 ```admonish warning
 Common Mistake:
-Rule 5 often gets overlooked for tags. If you add a new tag to an EntityPrototype make sure that
+Rule 6 often gets overlooked for tags. If you add a new tag to an EntityPrototype make sure that
 - the new list of tags for that entity contains all tags that were previously inherited.
 - any child prototypes that have their own tags explicitly list the new tag as well.
 ```
@@ -186,6 +188,9 @@ This will also exclude it from several integration tests, which may otherwise fa
 The above examples were all for `EntityPrototype`s, but they work the same for any other type of prototype. You can define your own prototype in C# and make it store DataFields. To make it inheritable in YAML you will have to implement the `IInheritingPrototype` interface. This requires a  DataField for the parents and a bool for being abstract.
 Example:
 ```csharp
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
+
 /// <summary>
 /// A simple inheritable prototype for testing purposes.
 /// </summary>
@@ -204,18 +209,18 @@ public sealed partial class InheritanceTestPrototype : IPrototype, IInheritingPr
     [NeverPushInheritance]
     [AbstractDataField]
     public bool Abstract { get; private set; }
-    
+
     /// <summary>
     /// A string you can set in YAML.
     /// </summary>
     [DataField]
-    public string Field1 = "Field1 default value"
+    public string Field1 = "Field1 default value";
 
     /// <summary>
     /// And a second one.
     /// </summary>
     [DataField]
-    public string Field2 = "Field2 default value"
+    public string Field2 = "Field2 default value";
 
     /// <summary>
     /// A datafield with different inheritance behaviour.
@@ -229,7 +234,7 @@ public sealed partial class InheritanceTestPrototype : IPrototype, IInheritingPr
     /// This one will never get inherited.
     /// </summary>
     [DataField]
-    public string NeverInheridedField = "default value"
+    public string NeverInheridedField = "default value";
 }
 ```
 
@@ -243,16 +248,46 @@ public sealed partial class InheritanceTestPrototype : IPrototype, IInheritingPr
   field2: bar
 
 - type: inheritanceTest
-  parents: [ Parent1, Parent2 ]
+  parent: [ Parent1, Parent2 ]
   id: Child
   # This will inherit both field1 being foo, and field2 being bar.
 ```
 
 ### AlwaysPushInheritance, NeverPushInheritance
 These two attributes can change the inheritance behaviour for a specific DataField. This works both for DataFields inside Components and inside custom Prototypes.
-`AlwaysPushInheritance` will make `List`s and `HashSet`s get merged instead of overwritten.
 
-`NeverPushInheritance` will make this DataField not get inherited at all.
+`AlwaysPushInheritance` will make `List`s, `HashSet`s and `Dictionaries` get merged instead of overwritten.
+```yml
+- type: inheritanceTest
+  id: Parent1
+  alwaysInheritedField:
+  - foo
 
-### The End!
-Congrats, you are now a YAML expert. Now go out there and make some PRs!
+- type: inheritanceTest
+  id: Parent2
+  alwaysInheritedField:
+  - bar
+
+- type: inheritanceTest
+  parent: [ Parent1, Parent2 ]
+  id: Child
+  alwaysInheritedField:
+  - weh
+```
+The `Child` prototype will have a `AlwaysInheritedField` DataField with a list containing all three strings `foo`, `bar` and `weh`. 
+This comes at the downside of not being able to remove any entries from that list in any inheritors. Ideally in the future we will add a more powerful YAML syntax to allow us to select the inheritance behaviour on a case by case basis (see some discussion [here](https://github.com/space-wizards/RobustToolbox/issues/5141), [here](https://github.com/space-wizards/space-station-14/issues/43326) and [here](https://forum.spacestation14.com/t/move-tags-to-rt-add-proper-entity-prototype-syntax/22759)).
+This also works recursively for any custom `DataDefinition`s, see for example the `Solution` DataField in the `SolutionComponent`.
+
+`NeverPushInheritance` will make a DataField not get inherited at all.
+```yml
+- type: inheritanceTest
+  id: Parent
+  neverInheridedField: weh
+
+- type: inheritanceTest
+  parent: Parent
+  id: Child
+  # neverInheritedField will be the C# default "default value" again
+```
+
+So it's recommended to always take a look at a component's or prototype's C# definition to see which attributes their DataFields have and which inheritance behaviour they will follow.
