@@ -59,6 +59,7 @@ SS14 By Example
 - [UI and You](en/ss14-by-example/ui-and-you.md)
   - [UI Cookbook](en/ss14-by-example/ui-and-you/ui-cookbook.md)
 - [UI Survival Guide](en/ss14-by-example/ui-survival-guide.md)
+- [Converting Oldbody to Nubody](en/ss14-by-example/converting-oldbody-to-nubody.md)
 
 Robust Toolbox
 ==============
@@ -177,6 +178,7 @@ Space Station 14
 	- [PR Guidelines]()
 	
 	- [Cartridge loaders](en/space-station-14/player-interaction/cartridge-loaders.md)
+	- [Accent Guidelines](en/space-station-14/player-interaction/accent-guidelines.md)
 
 	- [Proposals]()
 	  - [PDA Messaging](en/space-station-14/player-interaction/proposals/pda-messaging.md)
@@ -192,6 +194,7 @@ Space Station 14
 	
 	- [Antagonists](en/space-station-14/round-flow/antagonists.md)
  		- [Traitors](en/space-station-14/round-flow/antagonists/traitors.md)
+		- [Space Ninja](en/space-station-14/round-flow/antagonists/space-ninja.md)
 		- [Exterimator](en/space-station-14/round-flow/antagonists/exterminator.md)
 		- [Thief](en/space-station-14/round-flow/antagonists/thief.md)
 		- [Xenoborgs](en/space-station-14/round-flow/antagonists/Xenoborgs.md)
@@ -284,6 +287,9 @@ Space Station 14
 	- [Silicon](en/space-station-14/departments/silicon.md)
 		- [PR Guidelines]()
 
+		- [Proposals]()
+			- [Lawset Modification](en/space-station-14/departments/silicon/proposals/lawset_modification.md)
+
 General Proposals
 ================
 
@@ -371,6 +377,7 @@ Staff
   - [Hotfix Procedure](en/wizden-staff/maintainer/hotfix-procedure.md)
   - [Triage Procedure](en/wizden-staff/maintainer/triage-procedure.md)
   - [Release Procedure](en/wizden-staff/release-procedure.md)
+  - [Trial Maintainers & Mentoring](en/wizden-staff/maintainer/trial-maintainers.md)
 - [Moderator](en/wizden-staff/moderator.md)
   - [Moderation Policy](en/wizden-staff/moderator/moderation-policy.md)
   - [New Moderator Guide](en/wizden-staff/moderator/new-mod-guide.md)

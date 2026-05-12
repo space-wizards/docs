@@ -5,7 +5,7 @@ on:
   push:
 
 jobs:
-  test-summary:
+  test-image-links:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
