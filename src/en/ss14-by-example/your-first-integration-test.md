@@ -96,7 +96,7 @@ public async Task HugTest()
 
 ### Checking for components
 
-`InteractionTest` has a shorthand to get the server componet in the method `Comp<T>(NetEntity? target)`. There is similarly a shorthand for the `NetEntity`, `FromServer(EntityUid suid)`, resulting in: 
+`InteractionTest` has a helper method to get the server component: `Comp<T>(NetEntity? target)`. This also checks that the component exists on the entity, and fails the test if it doesn't.
 
 ```
 [Test]
@@ -128,8 +128,9 @@ public async Task HugTest()
 ### Simulation & Checking
 
 `InteractionTest` has many helper methods used for simulating interactions.
-With our testcase being simply clicking on the huggable entity, we can use of the basic `await Interact();` method to simulate hugging.
-Since the player entity spawns with one free hand, we should expect a basic interaction to result in the `InteractionPopupSystem.InteractHandEvent` event subscription triggering, and therefore `LastInteractTime` should be updated to the current time: 
+With our testcase being simply clicking on the huggable entity, we can use of the basic `await Interact();` method to simulate hugging. Since we spawned the `MobHuman` with `SpawnTarget` earlier, all we have to do is run the method!
+
+Since the player entity spawns with one free hand, we should expect a basic interaction to result in the `InteractionPopupSystem.InteractHandEvent` event subscription triggering, and therefore `LastInteractTime` should be updated to the current time. We assert that the previous `LastInteractTime` should not be equal to the new `LastInteractTime`. 
 
 ```
 [Test]
