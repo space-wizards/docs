@@ -149,7 +149,7 @@ public async Task HugTest()
 }
 ```
 
-If you run `HugTest()` test now, it should pass!
+If you run the `HugTest()` test now, it should pass!
 If any future changes accidentally makes another empty-handed action override hugging, this test will now be able to catch that. You made your first test!
 
 This tutorial only brushes the surface of how tests can be made.
