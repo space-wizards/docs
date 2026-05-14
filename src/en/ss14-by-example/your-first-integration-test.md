@@ -110,7 +110,7 @@ public async Task HugTest()
 ### Asserts
 
 What we want to do is *assert* that the property has the value we expect it to have, and if it doesn't the test should fail.
-The `Assert` class has several methods for this, but the most common is `Assert.That` which allows comparing values of properties. 
+The `Assert` class enables this, with the method [`Assert.That`](https://docs.nunit.org/articles/nunit/writing-tests/assertions/assertion-models/constraint.html) being the preferred method of evaluating property values. 
 
 `InteractionPopupComponent` has the property `LastInteractTime`, and while we can *assume* that it will always start at the default value, core to testing is never assuming if you can test it. We can check this with `Is.Default`.
 
@@ -154,3 +154,17 @@ If any future changes accidentally makes another empty-handed action override hu
 
 This tutorial only brushes the surface of how tests can be made.
 The test can expand to cover trying to hug with an item in the player's hand, hugging all different player species, checking that hugs don't come out faster than the cooldown and much more.
+
+## Extra Credit: How Do Tests Work Under The Hood?
+
+There is a lot going into the setup of integration testing that the test base classes do automatically when initialized.
+It can be good to understand this process since a lot can be modified and extended, and there are several helper methods that can save time and make your tests much better.
+
+`PoolManager` is a static core class that manages server-client simulation relationships, and is used for tests, benchmarks and map rendering.
+For tests specifically it allows for client-servers to be reused for multiple tests and for tests to be run in parallel, instead of constantly starting and shutting down such systems.
+
+It's unlikely you will access `PoolManager` yourself, but a key property that all integration tests make use of is the `TestPair` class.
+`TestPair` gives access to the Client and Server instances and therefore the ability to set CVars, resolve manager/system dependencies and map management.
+The test base classes all make use of this to create helper methods and properties.
+
+It is strongly recommended you check out `GameTest.Entities.cs`, `GameTest.Pair.cs` `InteractionTest.Helpers.cs`, `Pair/TestPair.Helpers.cs` and `Pool/TestPair.Helpers.cs` to see what helper methods are available!
