@@ -26,7 +26,7 @@ Upon turning, players lose basic abilities such as talking and operating machine
 
 Newly-infected zombies should still be entertained by the game; we don’t want them ghosting. We should thus introduce classic zombie games tropes such as:
  - Mutant zombies (fast, pouncer, brute, etc) each with their strengths and weaknesses (brute zombies are way stronger but can’t infect living individuals, fast zombies are extremely weak to brute, etc). Zombies should still work better in hordes, though. We don’t want a magic invincible berserker zombie that can run through crowds of survivors and murder & infect them all. Each mutation should be designed to either assist other zombies or to work well in hordes.
- - Survivor detection / pinpointer ability to detect remaining survivors when only a few are left. Stragglers hiding in lockers or in secluded areas should not be safe from the infected.
+ - Survivor detection / pinpointer ability to detect remaining survivors when only a few are left. Stragglers hiding in lockers or in secluded areas should not be safe from the infected. Having each and every (player-controlled) zombie suddenly home in on the remaining survivors would be absolutely terrifying.
 
 One way to implement mutations would be trough giving different initial infected different strains of the virus; this would encourage all initial infected to infect the most individuals possible instead of having only one II turn and the other sabotage the station while quaffing dylovene (initial infected should *not* be able to stay unturned for the whole shift, so if this is not enough, then the poison damage from the infection could massively ramp up trough time).
 
