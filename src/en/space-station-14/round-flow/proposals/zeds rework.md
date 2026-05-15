@@ -8,8 +8,6 @@
 
 The humble zombie is a round start antagonist focused on infecting the station, slowly but surely. The crew should struggle against the infected horde; it should be an experience of strained survival as the whole station collapses under the zombie apocalypse. Zombie antags should almost always cause evacuation away from a now-unlivable station.
 
-Braiiinnnnssss...
-
 ## Background
 
 We currently have zombies on Wizden, most downstreams have zombies and a lot of SS13 servers had some sort of implementation of zombies. This game mode has received mostly good player feedback and is rather well liked, but still lacks a design doc, and has some rough edges. This document seeks to describe how zombies should develop in the future: a zombie round should reverse the usual hunter-hunted relationship of antagonists and crew members as the last survivors desperately try to fend off the infected in the best zombie horror movie fashion.
