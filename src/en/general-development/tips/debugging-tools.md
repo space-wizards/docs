@@ -47,7 +47,11 @@ To run integration tests, use the shell command `dotnet test` in your project fo
 When you open a PR to the Wizard's Den repository on GitHub, integration tests will run on your PR automatically. If tests fail, you'll need to update your PR before it can get properly reviewed.
 
 ```admonish note
-`Content.IntegrationTests` is the directory containing integration tests. It is not the same thing as the similarly-named `Content.Tests` folder. You should run the tests in both of these folders to debug your changes.
+`Content.IntegrationTests` is the directory containing integration tests. It is not the same thing as the similarly-named `Content.Tests` folder. 
+
+Unit tests test a single "unit" without loading data from any other units, while integration tests check all units against each other. For example, a hypothetical unit test of `LocalizedDataset` might have a unit test which uses spoofed data to make sure that all the methods within that class work as expected alone, while an integration test may go through all the instances of that data type in the game (including resource loading, yaml parsing, prototype management, etc.) to make sure they work as expected together.
+
+Unit/integration tests are used widely in software development outside of SS14, so ask around if you want more information on the distinction!
 ```
 
 ### Server GC
