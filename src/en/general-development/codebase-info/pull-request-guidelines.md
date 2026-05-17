@@ -76,7 +76,7 @@ You must fill out the Pull Request Template when submitting your pull request to
    2. If a pull request is balance-centric, the justification should properly explain **why** the change is needed.
    3. Justifications that only explain what the pull request *does* or the *effects* that the changes have are not acceptable.
    4. Major content additions should align with the core design principles. Sufficiently large content additions might warrant a design document to detail the broader purpose of the changes and how they fit into the current game.
-3. The _Test plan_ section should explain how to test the changes.
+3. The _Test Plan_ section should explain how to test the changes.
     1. Write out how you tested the changes. Consider how someone else looking at this pull request can verify that it works as intended.
     2. If you're fixing a bug, it's advisable to share the steps to reproduce it, how it was broken before, and how it's fixed with your pull request.
 4. The _Technical Details_ section should give a high-level overview of the changes.
