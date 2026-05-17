@@ -90,18 +90,19 @@ preferring strongly flavored consumables, this resistance can also come from the
 similar to that of Horseshoe crabs.
 
 
+#### Spin Ball
+
+Twerg are able to roll up into a ball, with their sprite being temporarily replaced with a spinning ball of the Twerg's same color.
+In this state they are not able to hold items or drag things behind them and they will drop any held items upon activating this ability.
+While curled into a ball, Twerg receive a 10% speed boost and are subject to momentum similar to the rollerskate item. 
+Unlike the rollerskate item, when hitting a wall Twerg will not take any damage, and instead will just pop out of this state.
+
+
 #### Detritovore
 
 Twerg are able to eat things such as rotten meat and other various pieces of trash and ingest reagents like mold,
 vomit and vent crud with no issue because of being detritivores, while in real life this is limited to organic waste like dead leaves and carcasses, 
 it would be interesting roleplaywise to see Twerg play the role of a small clean-up crew aboard the station.
-
-
-
-#### Heat Resilience and damage resistances
-
-inspired by Isopods and certain, air breathing, tropical crabs Twerg take about 30% less heat damage, 
-however they are 20% weaker to cold damage
 
 
 #### Claws
