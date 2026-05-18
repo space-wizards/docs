@@ -29,8 +29,8 @@ In addition to the pre-existing mechanic, Twerg as a species will also be able t
 ## Background
 
 
-Twerg were originally my stand-in for a dwarf replacement, but as of now dwarves no longer exist in Wizden servers. 
-I still believe this species is unique enough to stand on its own, and fill a niche that does not currently exist in SS14. 
+Twerg were originally my stand-in for a dwarf replacement, and as of now dwarves are under still currently review, or otherwise being changed in Wizden servers. 
+I believe this species is unique enough to stand on its own, and fill a niche that does not currently exist in SS14 even though they were designed to be similar to dwarves. 
 They are based upon Norse folklore for dwarves, which sometimes describes them as maggotlike, or to literally be maggots given human form. 
 So from there I decided on Isopods, which while aren’t related to maggots or beetles, are an interesting species,
 and could be further expanded into representing more types of crustaceans like crabs or lobsters.
