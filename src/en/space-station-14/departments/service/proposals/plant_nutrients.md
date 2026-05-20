@@ -26,17 +26,27 @@ Pest killer is useless, as the only way for a plant to gain pests is by adding c
 The basic water, nutrient, and potency values on plants are removed.
 
 Reagents grown with plants now come with nutrient requirements, meeting more of the nutrient requirements increases the amount of reagent obtained by grinding the plant's produce.
-Nutrients are added to the plant via pouring a reagent that contains the nutrient into the tray/soil, or having a gas that contains the nutrient in the atmosphere.
-When the plant is harvested, nutrients are used up to fulfill the plant's nutrient requirements.
+
+Nutrient requirements come in two forms: mandatory, and optional.
+- Failing to meet any mandatory nutrient requirements causes the produce to only contain trace amounts (0.1u-0.01u) of the reagent.
+- Optional nutrient requirements cause more of the reagent to grow when fulfilled, but are not required to grow useful amounts of the reagent.
+
+Nutrients can be added to the plant via pouring a reagent that contains the nutrient into the tray/soil.
+Plants can also absorb certain nutrients from the environment, such as oxygen from the atmosphere, or radiation from a nearby source.
 
 Nutrients can be specific elements, like carbon or oxygen; or more vague categories, like flammable, cold, or clown-related.
+
+When the plant is harvested, nutrients are used up to fulfill the plant's nutrient requirements. 
+Plants with higher yield require more nutrients to meet their requirements.
+
+
 
 Some reagents contain multiple types of nutrient, for example:
 - Blue blood containing large amounts of the "blood" and "water" nutrients, and small amounts of the "meat" and "copper" nutrients.
 - Banana honk containing the "nutrient", "clown", "water", "sugar", and "ethanol" nutrients.
 - Oil containing large amounts of the "flammable" nutrient, and smaller amounts of the "carbon" nutrient.
 
-Some nutrients (radioactive, toxic, etc.) lower the health of plants that don't have them as nutrient requirements.
+Some nutrients (radiation, toxin, etc.) lower the health of plants that don't have them as nutrient requirements.
 
 The reagents that contain a nutrient may also have extra unwanted effects on a plant, which may have to be worked around by the botanist.
 For example:
@@ -79,6 +89,8 @@ Due to most plant mutations not being objectively positive or negative, the muta
 The most difficult nutrient requirements and environmental tolerances should not be required for botanists to do their job, instead, these should be extra goals for the most ambitious of botanists.
 
 Most plants should be able to survive unsupervised long enough for a botanist to visit other departments to deliver produce, and request materials, reagents, and equipment.
+
+Plants that have no use outside of eating and cooking should be easy to grow, possibly being able to survive until they are ready to harvest with no interaction from the botanist.
 
 ## Roundflow & Player interaction
 ### Standard roundflow
