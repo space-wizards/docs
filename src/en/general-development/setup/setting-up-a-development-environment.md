@@ -19,7 +19,6 @@ Currently the C# Dev tools extension does not seem to fully support SLNX.
 You may follow this step by [Microsoft](https://devblogs.microsoft.com/dotnet/introducing-slnx-support-dotnet-cli/#c#-dev-kit) to be able to open an SLNX dotnet project.
 
 VSCodium seems to not have the ability at all. (https://github.com/muhammadsammy/free-vscode-csharp/issues/95) (Although the above may work in VSCodium as well.)
-
 ```
 
 ~~~admonish info title="Windows and winget"
@@ -42,6 +41,13 @@ And one of the following ide's:
 
 ``winget install VSCodium.VSCodium`` (VSCodium)
 ~~~
+
+## Windows Path Variables
+When installing Python and Git, you may be presented with the option to include the application in "path".
+
+Unless you are intentionally against this for one reason or another and know what you are doing, you will want this option enabled.
+
+If you find you are having errors running RUN_THIS.py or git, see ["So you forgot the path variables"](./you-forgot-your-path-variables.md).
 
 ## Stuck?
 Are you stuck? Don't understand how to do a certain part? This video should help

@@ -19,6 +19,7 @@ General Development
 - [Setup](en/general-development/setup.md)
   - [How do I code?](en/general-development/setup/howdoicode.md)
   - [Setting up a Development Environment](en/general-development/setup/setting-up-a-development-environment.md)
+  - [You forgot your path variable](en/general-development/setup/you-forgot-your-path-variables.md)
   - [Git for the SS14 Developer](en/general-development/setup/git-for-the-ss14-developer.md)
   - [Server Hosting Tutorial](en/general-development/setup/server-hosting-tutorial.md)
 - [Codebase Info](en/general-development/codebase-info.md)
