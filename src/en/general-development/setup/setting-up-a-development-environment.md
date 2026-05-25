@@ -50,7 +50,7 @@ Unless you are intentionally against this for one reason or another and know wha
 If you find you are having errors running RUN_THIS.py or git, see ["So you forgot the path variables"](./you-forgot-your-path-variables.md).
 
 ## Stuck?
-Are you stuck? Don't understand how to do a certain part? This video should help
+Are you stuck or don't understand how to do a certain part? This video has step-by-step instructions on setting up a development environment.
 
 This video is intended to be followed *along with the guide* and may become out of date.
 

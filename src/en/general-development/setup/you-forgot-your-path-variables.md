@@ -1,4 +1,4 @@
-﻿# So, you forgot to add git to path.
+# So, you forgot to add git to path.
 
 If you've forgotten to add git and python to path during install, or weren't provided with the option to do so, you're in the right place.
 
@@ -14,11 +14,7 @@ The difference is left and right as it were.
 
 Some of the tools we use to make development easier don't assume or make exceptions if you *don't* have your path variables setup.
 
-.\RUN_THIS.py for instance. While you can invoke the script by directly pointing to a python executable, the script itself is going to
-
-call "git". It doesn't know where git is installed, so if git isn't in your path variable, the command will fail. This comes in the form
-
-of a FileNotFoundError. If that's what you're seeing, now you know why.
+.\RUN_THIS.py for instance. While you can invoke the script by directly pointing to a python executable, the script itself is going to call "git". It doesn't know where git is installed, so if git isn't in your path variable, the command will fail. This comes in the form of a FileNotFoundError. If that's what you're seeing, now you know why.
 
 # So, how do I fix it?
 
@@ -42,7 +38,7 @@ You have a choice here. If you want other users on your computer to have easy ac
 
 ![step-3](../../assets/images/general-development/setup/you-forgot-your-path-variables/step-3.png)
 
-- This next bits the hard part. You need to know where python and git are installed.
+- This next bit is the hard part. You need to know where python and git are installed.
 
 ~~~admonish info "Install Locations"
 If you didn't change where the applications are installed during setup, try checking where they go by defalut first.
@@ -63,7 +59,7 @@ For Git:
 
 ![step-5](../../assets/images/general-development/setup/you-forgot-your-path-variables/step-5.png)
 
-- Make certain you click OK on all three windows. Otherwise, your changes here won't save and you'll still be having problems.
+- Make certain you click OK on all three windows. Otherwise, your changes here won't save, and you'll still be having problems.
 
 - Close and restart your terminal application. Path changes don't take effect immediately. You have to restart any terminals using the path variable before changes will work.
  
@@ -73,10 +69,4 @@ For Git:
 
 # And done.
 
-That's all she wrote. If for some reason you're still getting a command not recognized error or RUN_THIS.py is throwing a FileNotFoundError,
-
-go back and ensure your changes to the path variable saved, spelling is correct, and you're pointing to the right directory. Any mistakes made here
-
-will mean you're not correctly pointing at the right location and as such commands will not work. If you're still having trouble, hit up [#howdoicode](https://discord.com/channels/310555209753690112/560845886263918612)
-
-on the official [Wizard's Den discord](https://discord.spacestation14.io).
+That's all she wrote. If, for some reason, you're still getting a command not recognized error or RUN_THIS.py is throwing a FileNotFoundError, go back and ensure your changes to the path variable are saved, spelling is correct, and you're pointing to the right directory. Any mistakes made here will mean you're not correctly pointing at the right location, and as such, commands will not work. If you're still having trouble, you can ask for help in the [official Space Station 14 Discord server's](https://discord.spacestation14.com) [#howdoicode](https://discord.com/channels/310555209753690112/560845886263918612) channel.
