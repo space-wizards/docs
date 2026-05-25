@@ -18,7 +18,7 @@ At the beginning of a Zombies round, the infection will be spread to a few rando
 
 The infection spreads through exchange of bodily fluids; of course, this means that infected individuals will pass on the infection through bites (as it should be and is in most zombie media). Due to how combat works in SS14, having a bite infect a player 100% of the time would feel rather bad: despite zombies infecting on bites, the crew should still be somewhat able (either through protection or luck) to fend of zombies using melee weapons.
 
-Once infected, players will be granted a relatively short grace period before displaying symptoms (we should maybe wait for some sort of virology before introducing visible symptoms) and eventually turning. It should be possible for crew members to tell infected-but-not-zombified-yet individuals from sane crew members. The infection should zombify fast enough as for it to be an actual danger during a round.
+Once infected, players will be granted a relatively short grace period before displaying symptoms (we should maybe wait for some sort of virology before introducing visible symptoms) and eventually turning. It should be possible for crew members to tell individuals infected with the virus apart from non-infected crew members. The infection should zombify fast enough as for it to be an actual danger during a round.
 
 Upon turning, players lose basic abilities such as talking and operating machinery. They pretty much get reduced to biting machines who must now roam the halls of the station to infect more individuals.
 
