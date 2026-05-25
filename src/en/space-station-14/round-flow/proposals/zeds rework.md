@@ -16,7 +16,7 @@ We currently have zombies on Wizden, most downstreams have zombies and a lot of 
 
 At the beginning of a Zombies round, the infection will be spread to a few random patients zeroes. It should then slowly spread, disrupting station activities, until the remaining survivors must go into hiding, build barricades and arm themselves: the station shouldn’t be able to easily ignore the zombie virus.
 
-The infection spreads through exchange of bodily fluids; of course, this means that infected individuals will pass on the infection through bites (as it should be and is in most zombie media). Due to how combat works in SS14, having a bite infect a player 100% of the time would feel rather bad: despite zombies infecting on bites, the crew should still be somewhat able (either trough protection or luck) to fend of zombies using melee weapons.
+The infection spreads through exchange of bodily fluids; of course, this means that infected individuals will pass on the infection through bites (as it should be and is in most zombie media). Due to how combat works in SS14, having a bite infect a player 100% of the time would feel rather bad: despite zombies infecting on bites, the crew should still be somewhat able (either through protection or luck) to fend of zombies using melee weapons.
 
 Once infected, players will be granted a relatively short grace period before displaying symptoms (we should maybe wait for some sort of virology before introducing visible symptoms) and eventually turning. It should be possible for crew members to tell infected-but-not-zombified-yet individuals from sane crew members. The infection should zombify fast enough as for it to be an actual danger during a round.
 
