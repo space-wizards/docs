@@ -33,28 +33,33 @@ fabricated in Xenoborg core or bought through an uplink. Cyborgs drop all their 
 Modules can be looked at or added from a cyborg if their maintenance panel is open, but not always remove them  
 Some modules provide items that are strictly better than humanoid counterpart and usually have infinite uses with regenerative delay
 
-### Module slots
-Modules have slots compared to humanoid hands, but are much more restricted, but there are many more of them ||better wording needed||   
+## Module slots
+Module slots are the primary way Cyborgs interact with their environment.
 
+Slots are the Cyborg equivalent of humanoid hands, but unlike hands, they are fixed loadouts that the Cyborg must cycle through to use. Since Cyborgs lack conventional equipment slots for additional inventories like humanoids, this is the main way they "store" items for them to use around their environment. 
 
-There are 2 types of slots in a module:
-- An embedded tool that and cannot be removed from the module.
+There are two types of slots in a module:
+- An embedded tool that cannot be removed from the module.
 - A whitelisted 'hand' slot in which only specific items can be picked up and dropped.
 
-Here are the things you should consider when deciding what slot to add.  
-For embedded tools:
-- Items that do not require deployment.
-- Items that are not consumable or have limited use.
-- Tools that 
+When making slots, a few precautions must be taken:
 
-For hands:
-- Cyborgs should never have unrestricted hand slots, as it undermines their restrictions ||specify why||
-- Item is removable on use (it is usually better to create a regenerating item or a tool that uses that item) ||might want to split this||
-- If there are many items of similar usage and are interchangeable (like instruments)
-- ||Add more examples||
+### For embedded slots:
+- Ensure the item is thematically related to the module it is a part of, filling a "gardening module" with a crowbar does not make sense as the crowbar has no gardening functionality.
+- Do not use items that require deployment to function, the point of the tool is that it integrated into the Cyborg, if it must be detachable, a whitelisted 'hand' is better suited for it.
+- Do not use items that are consumable or have limited use, if the item gets exhausted, the slot would be rendered useless for the remainder of the slot's installation.
+- If an existing exhaustable item is a perfect candidate for a slot, make a new self-sufficient or renewable variant for Cyborg exclusive use.
 
-### Generic and Specialized modules
-Generic modules, often depicted as gray, fit in to any chassis as long as there is an empty slot. ||is it true with Syndicate modules?||
+### For 'hands':
+- Ensure the 'hand' slots are restricted in what they can hold, if a hand lacks any restriction, it bypasses limitations that Cyborgs are designed around.
+- Do not use categories that are too broad, having a "medical" 'hand' is too vague and involves whitelisting many functionally unrelated items.
+- Use narrow item categories that have too many options to be embedded in a reasonable amount of slots, like instruments, topical medicine, and construction materials.
+- Never put Cyborg exclusive technology in a whitelisted 'hand', even if a superior version of it exists, Cyborg exclusive items are meant to stay in the modules.
+
+## Generic modules
+Generic modules are modules that can fit into any chassis, regardless of model.
+
+A generic module can be fit into any Cyborg and come in a variety of designs, 
 (tools, jet modules for space movement, module for carrying materials without an ability to use them)  
 Specialized modules are modules that are only designed to fit in to one type of Cyborg chassis.
 

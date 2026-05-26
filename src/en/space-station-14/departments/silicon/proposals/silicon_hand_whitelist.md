@@ -8,7 +8,7 @@
 
 Whitelisted 'hand' slots are the solution to future proofing Cyborg inventories.
 
-Essentially it is a traditional 'hand' you would find on a humanoid, that can only hold items of the corresponding tag or component that we tell it to.
+Essentially it is a traditional 'hand' that would be on a humanoid, that can only hold items of the corresponding tag or component that we tell it to.
 
 They must follow the [Cyborg module guidelines](https://github.com/space-wizards/docs/pull/615)* like any other module slot in order to maintain consistency amongst Cyborgs design choices.
 
@@ -28,7 +28,7 @@ Due to how Cyborgs navigate their inventory, swapping between larger lists of sl
 
 Whitelisted Cyborg 'hands' aim to generalize things a cyborg can hold utilizing Tags and Components, while still limiting their freedom.
 
-Instead of having one slot each for gauze, bruise packs, and ointment, you have 3 slots that can hold any topical medication. If someone wants to exclusively stack up on gauze and blood packs, they may do so as they please.
+Instead of having one slot each for gauze, bruise packs, and ointment, they can have 3 slots that can hold any topical medication. If someone wants to exclusively stack up on gauze and blood packs, they may do so as they please.
 
 This allows the Cyborg player to fill their inventory to better suit their needs, while maintaining the restrictions of whatever module the hand is part of.
 
