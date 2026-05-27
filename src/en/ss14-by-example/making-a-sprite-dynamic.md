@@ -69,7 +69,7 @@ Though, those sprite functions might be a little confusing at first.
 
 ### Addendum: Generic Visualizers
 
-Instead of adding many separate visualier systems & components, it is often possible to just make a visualier more general by adding an extra yaml data-field. To this end, there is a `GenericVisualizerSystem` & component, which replaces the older `GenericEnumVisualizer`. If all you need the visualizer to do is to set some sprite layer data based on simple appearance data entries, you very likely can, and should, just use the generic visualizer instead of creating your own custom one. However, if you need to do fancy things like use animations or have more complex logic, you will still need to create your own.
+Instead of adding many separate visualizer systems & components, it is often possible to just make a visualizer more general by adding an extra yaml data-field. To this end, there is a `GenericVisualizerSystem` & component, which replaces the older `GenericEnumVisualizer`. If all you need the visualizer to do is to set some sprite layer data based on simple appearance data entries, you very likely can, and should, just use the generic visualizer instead of creating your own custom one. However, if you need to do fancy things like use animations or have more complex logic, you will still need to create your own.
 
 For example, the functionality of the above cabinet visualizer simply sets a sprite layer states & visibility based on two appearance data entries. Instead of having this system & component, the same functionality could be achieved by using the generic visualizer:
 ```yaml

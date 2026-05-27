@@ -24,12 +24,12 @@ Both Engine and Content Maintainers:
 - [AJCM-git](https://github.com/AJCM-git) - @ajcm_git (239467362380808192)
 - [ElectroJr](https://github.com/ElectroJr) - @electrosr (348118974497816577)
 - [vulppine](https://github.com/vulppine) - @vulppine (102244617314914304)
+- [Tayrtahn](https://github.com/Tayrtahn) - @tayrtahn (147050540214386689)
 
 Content Maintainers:
 - [Partmedia](https://github.com/Partmedia) - @notafet (774744999379599360)
 - [Emisse](https://github.com/Emisse) - @emisse (109430489684705280)
 - [juliangiebel](https://github.com/juliangiebel) - @julian_g (234313113766199297)
-- [Tayrtahn](https://github.com/Tayrtahn) - @tayrtahn (147050540214386689)
 - [deathride58](https://github.com/deathride58) - @bhijn (77867936647225344)
 - [VasilisThePikachu](https://github.com/VasilisThePikachu) - @vasilisiscool (322708417540259841)
 - [ficcialfaint](https://github.com/ficcialfaint) - @ficcialfaint (481532274211422209)
@@ -45,12 +45,14 @@ Content Maintainers:
 - [beck-thompson](https://github.com/beck-thompson) - @orks_are_da_best (774424468117782578)
 - [ScarKy0](https://github.com/ScarKy0) - @ScarKy0 (249858047583846401)
 - [MilonPL](https://github.com/MilonPL) - @milonn (869364265453244467)
-- [EmoGarbage404](https://github.com/EmoGarbage404) - @emogarbage (500128901805244436)
 - [ArtisticRoomba](https://github.com/ArtisticRoomba) - @artisticroomba (204036558448230400)
 - [Fildrance](https://github.com/Fildrance) - @fildrance (206823676983771137)
 - [sowelipililimute](https://github.com/sowelipililimute) - @akesima (249987062084665344)
 - [Southbridge-fur](https://github.com/Southbridge-fur) - @southbridge (84761021129973760)
 - [Princess-Cheeseballs](https://github.com/Princess-Cheeseballs) - @princesscheeseballs (122847949205143553)
+- [sowelipililimute](https://github.com/sowelipililimute) - @janet (densetsu) (249987062084665344)
+- [iaada](https://github.com/iaada) - @aa.da (208069537310965760)
+- [aeshus](https://github.com/aeshus) - @aeshus (865364145330454538)
 
 Engine maintainers:
 No one maintains only engine :p
@@ -68,3 +70,23 @@ Workgroups as defined in the [Maintainer Workgroup Policy](./maintainer/maintain
 - SlamBamActionman
 - Keronshb
 - Southbridge-fur
+
+**Medical**
+- Princess-Cheeseballs
+- sowelipililimute
+
+**Science**
+- chromiumboy
+- Fildrance
+
+**Silicon**
+- ScarKy0
+- chromiumboy
+- sowelipililimute
+
+## Current Codeowners
+
+The current codeowners that exist. For the policy, see [here](maintainer/codeowners-policy.md).
+
+**ArtisticRoomba**
+- /Content.*/Atmos/**

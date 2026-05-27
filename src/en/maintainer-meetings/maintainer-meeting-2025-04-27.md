@@ -338,6 +338,6 @@ See discussion around https://discord.com/channels/310555209753690112/9004263194
 - [36925](https://github.com/space-wizards/space-station-14/issues/36925) The entire game world reloads if you snip a machine's manager wire
     - This was also happening to other things but I genuinely forgot what it was happening to (Roomba)
 - Please someone save me from the `GameRuleComponent` heisentest
-    - ![](https://hedgedoc.spacestation14.com/uploads/162a7d7c-27c5-49e4-b724-4ab71e9ec6db.png)
+    - ![gamerulecomponent.png](../assets/images/maintainer-meetings/2025-04-27/gamerulecomponent.png)
 - [36955](https://github.com/space-wizards/space-station-14/pull/36955) has been merged into master and needs to be cherry picked into staging/stable. Currently emags and some wizard staffs have infinite charges.
     - Hotfix to staging

@@ -73,16 +73,24 @@ Non-Maintainer Triagers **must not** tag a PR as `S: Derelict`. This tag is to b
 
 ### Closing Issues
 
-Any Triager **may** close Issues if they are no-longer relevant.
+#### Bug Reports
+
+Any triager **may** close bug report Issues if they are no longer relevant.
 
 When closing an issue, triage best practice involves adding a comment that contains one or more of the following:
 * a link to the PR that resolved it,
-* an in-game screenshot or video showing the issue is no longer relevant,
+* an in-game screenshot or video showing the issue is no longer relevant (if applicable),
 * a note why the issue should not be addressed due to being an intended mechanic (in this last case, mark the Issue with `Issue: Intended Feature`).
+
+#### Feature / Balance Requests
+
+GitHub Issues is not intended to be an idea-guys forum. Any triager **should** close feature/balance request issues that do not cite conceptual approval from a maintainer. It is fine if the approval is included in the issue description; the maintainer doesn't need to comment on the issue itself. If an issue cites approval, triagers **should** tag the issue with the `S: Conceptual Approval` label.
+
+This applies to feature/balance requests created by maintainers, which **must** have conceptual approval from another maintainer. If a maintainer-made request lacks approval, please request it before closing the issue.
 
 ### Never Closing PRs
 
-Non-Maintainer Triagers **must never** close Pull Requests. This is **always** a Maintainer responsibility.
+Non-maintainer triagers **must never** close pull requests. This is **always** a maintainer's responsibility.
 
 ## Other SS14 Github Label Categories
 
@@ -108,10 +116,10 @@ Some labels **should not** be used/removed by non-Maintainer Triagers, as they a
 | All Size tags                       | Applied automatically.*                                                                                                                             |
 | S: Approved                         | Only Maintainers can approve items. Applied automatically.                                                                                          |
 | S: Awaiting Changes                 | Applied automatically.                                                                                                                              |
-| S: Conceptual Approval              | Can only be applied by a Maintainer, following Review Procedure.                                                                                    |
-| S: Undergoing Maintainer Discussion | Maintainer Discussions are at Maintainers' discretion.                                                                                              |
+| S: Conceptual Approval              | Can only be applied by a maintainer on PRs, following Review Procedure. Exception for [Issues](#feature--balance-requests).                         |
+| S: Undergoing Maintainer Discussion | Maintainer Discussions are at the maintainers' discretion.                                                                                              |
 | S: Art Approval                     | Can only be applied by an Art Lead following their approval. If the Art Lead has forgotten to apply it, Triagers may apply this label.              |
-| S: Concern                          | Only applied by a Maintainer with concern about a particular PR.                                                                                    |
+| S: Concern                          | Only applied by a maintainer with concern about a particular PR.                                                                                    |
 | S: DO NOT MERGE                     | Only applied by a Maintainer to PRs when that must be blocked from merging due to integration problems, extreme controversy, or other good reasons. |
 
 \* May still be applied in certain cases, if the automatic labelling is not working/not implemented.

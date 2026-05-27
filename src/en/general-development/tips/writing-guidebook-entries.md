@@ -67,6 +67,54 @@ It has the following properties:
 - `HorizontalAlignment`: How the box will be placed horizontally on the page. Can be "Stretch", "Left", "Center", or "Right"
 - `VerticalAlignment`: How the box will be placed vertically on the page. Can be "Stretch", "Top", "Center", or "Bottom"
 
+### Table
+The `<Table>` tag can be used to create a table with a set amount of columns. You can construct a table by using this tag in conjunction with the `<Box>` and `<ColorBox`> tags.
+
+`<ColorBox>` is a variation of `<Box>` that sits on a `PanelContainer`. For guidebook purposes, that just means it can be used to denote individual cells of a table. You can use the `Color` property to give a `<ColorBox>` a hex code background.
+
+Tables have the following properties:
+- `Columns`: How many columns should be displayed.
+- `MinForcedColumWidth`: The absolute minimum width a column can be forced to. By default this is set to 50.
+
+Here's an example of a table made with XML:
+```xml
+<Table Columns="3">
+  <ColorBox Color="#994444">
+    <Box>
+      HEADER 1
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#449944">
+    <Box>
+      HEADER 2
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#444499">
+    <Box>
+      HEADER 3
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+      body 1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+      body 2 OASDKFA F ASDKF ASD FKASD LFKA SLFKA SL
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="2">
+      body 3 BUT IT GOES CRAZY AND OFF THE RAILS OH MY GOD ITS ASDF ASF ASDFASKD FNMXV EWOR QIWEORP SV
+    </Box>
+  </ColorBox>
+</Table>
+```
+
+And here's what it looks like in game:
+![guidebook-table-example.png](../../assets/images/guidebook-table-example.png)
+
 ### CommandButton
 The `<CommandButton>` tag allows you to embed a button in a guidebook. Clicking the button will execute a command. This may seem useless, but there are many useful client-side commands, such as ones that open menus. 
 
@@ -105,6 +153,17 @@ An important thing to note is that, while the list it generates is alphabeticall
 
 It has the following properties:
 - `Group`: The group that all the reagents will have. This should correspond to a value on the `group` field of `ReagentPrototype`.
+
+### ProtoTag
+ProtoTag is a richtext format that will take information about a (non-abstract) prototype directly from the code of the entity. This can be used to futureproof a guidebook page that might change later - since it will always be looking for data from the entity itself, you won't have to update any information in your guidebook.
+
+ProtoTag uses the format `[protodata="<id>" comp="<component>" member="<member>"/]`, where `id` is the id of your desired entity, `component` is the component you're looking at, and `member` is the specific field of that component. For example, if you want to pull info on how much power an RTG draws, you would do `[protodata="GeneratorRTG" comp="PowerSupplier" member="MaxSupply"/]`.
+
+```admonish warning
+In order for this system to work, it need to be able to access these member fields. Any component field you access must be marked with the `[GuidebookData]` attribute, and cannot be private.
+```
+
+You can supply an optional `format="<format>"` to format the data you pull using the `float.ToString()` method. [This page](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings) is a good resource for formatting strings.
 
 ## Creating Entries
 
@@ -166,15 +225,15 @@ Here's an example:
   description: What?
   abstract: true
   components:
-    - type: Sprite
-      netsync: false
-      sprite: Objects/Misc/stock_parts.rsi
-    - type: Item
-      size: 1
-    #this is the part you add
-    - type: GuideHelp 
-      guides:
-      - MachineUpgrading #this is the guide that is opened
+  - type: Sprite
+    netsync: false
+    sprite: Objects/Misc/stock_parts.rsi
+  - type: Item
+    size: 1
+  #this is the part you add
+  - type: GuideHelp
+    guides:
+    - MachineUpgrading #this is the guide that is opened
 ```
 
 ## Best Practices

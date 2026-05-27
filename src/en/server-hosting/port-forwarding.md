@@ -202,6 +202,14 @@ Do note tunneling services will cause everyone's IP to appear as coming from the
 The servers IP address might change unexpectedly depending on the service, which means your favorite server entry may stop working after a while.
 ```
 
+```admonish danger "Playit.gg is not gurunteed to be free anymore. And localtonet kinda sucks."
+As of 2026-05-26 I discovered that playit is restricting the use of tcp + udp for their tunnels for free users.
+
+I was instead gonna document localtonet, but they have a 1GB monthly data limit. Which with my napkin math will get quickly spent (Like about 1 hour worth of time with 10 players. Or like 5 hours with 2 players... per month.) so I decided not to because this is probably not gonna be enough for a lot of players to find enjoyable.
+
+I will be keeping the tutorial here just in case, but do note this method will probably no longer work (for free) unless you are willing to pay... and if you are willing to pay honestly just rent out a linux server and host the server there instead by that point.
+```
+
 Tunneling services tunnel player connections through their unrestricted network and back to your computer. It is essentially a "reverse VPN".
 
 If all you want is a simple server to play around with friends. This is by far the easiest option. It also hides your public IP.

@@ -478,6 +478,10 @@ There's an exception to this, however.
 You may use Method Events as long as they're wrapped by an Entity System Method.
 In the example above, this would mean that `DamageableSystem.ChangeDamage()` would internally raise the `ChangeDamageEvent`, which would then by handled by any subscriptors...
 
+```admonish info
+Ensure events are unsubscribed from when systems are shutdown. Proxy methods like `Subs.CVar()`or `SubscribeLocalEvent` already take care of it, note that you do not need to unsubscribed inside managers, as their lifetime ensures that when they shutdown, the rest of the client / server is also shutting down, making unsubscribing not necessary.
+```
+
 ### Event naming
 - Always suffix your events with `Event`.
   Example: `DamagedEvent`, `AnchorAttemptEvent`...
@@ -770,10 +774,11 @@ Please ensure you structure entities with components as follows for easier YAML 
 #### Entity Prototype suffixes
 
 Use `suffix` in prototypes, this it's a spawn-menu-only suffix that allows you to distinguish what prototypes are, without modifying the actual prototype name. You can use it like this:
-![](https://i.imgur.com/epkPR3Y.png)
+![entityprototypesuffixes1.png](../../assets/images/general-development/codebase-info/conventions/entityprototypesuffixes1.png)
+
 
 And results in this:
-![](https://i.imgur.com/JigMCuu.png)
+![entityprototypesuffixes2.png](../../assets/images/general-development/codebase-info/conventions/entityprototypesuffixes2.png)
 
 ## Localization
 Every player-facing string ever needs to be localized.

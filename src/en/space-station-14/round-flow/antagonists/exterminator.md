@@ -1,13 +1,15 @@
 # Exterminator
-```admonish warning "Attention: Legacy Documentation!"
-This document is ported from before the game-area reorganization and has not been reviewed or updated.
-It may not fit with the new design requirements.
+
+```admonish warning "Removed"
+This content was removed in [#26978](https://github.com/space-wizards/space-station-14/pull/26978) due to the following:
+- At the time, the YAML was hostile to the ongoing medical refactor work.
+- The actual implementation encourages taking on the entire station/murderboning which is antithetical to the proposed design of minimal crossfire.
+- The antagonist was heavily metagamed.
+- There were calls for a complete redesign.
 ```
-```admonish warning "Possible Removal"
-This content is being considered for removal, and may no longer be in-game in the future.
-```
-| Designers | Implemented | GitHub Links |
-|---|---|---|
+
+| Designers  | Implemented            | GitHub Links                                                 |
+|------------|------------------------|--------------------------------------------------------------|
 | deltanedas | :white_check_mark: Yes | https://github.com/space-wizards/space-station-14/pull/19946 |
 
 ## Abstract

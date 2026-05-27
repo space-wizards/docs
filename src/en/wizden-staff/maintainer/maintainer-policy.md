@@ -5,7 +5,7 @@ This policy applies in addition to the [General Staff](../staff-policy.md) and [
 
 **Breaking any of these rules will result in disiplinary action being taken**
 ## Reviews and Feedback
-- All maintainers must follow the [PR Review](../maintainer/review-procedure.md) and [Hotfix Procedures](../maintainer/hotfix-procedure.md) when they apply.
+- All maintainers must follow the [PR review](../maintainer/content-review-procedure.md) and [hotfix procedures](../maintainer/hotfix-procedure.md) when they apply.
 - Maintainers should try to the best of their ability, to keep PR authors informed on the status of their PRs.
 - Maintainers should keep public criticism of code *constructive* and avoid making comments in regards to the authors of the code. **Harsh but fair** citicism of code is *acceptable*, but criticism of its author is not.
 - Maintainers should try to perform code reviews *whenever possible*, getting content into the game is everyone's responsibility.

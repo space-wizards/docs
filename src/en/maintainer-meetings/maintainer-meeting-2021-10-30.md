@@ -48,8 +48,8 @@ yes:
 - Zalgo -->  s̸̡͆̕͠i̴̧̢̺̩̦͙̜͑͛͑͑̓̿̈͛̚ͅl̴̨̘͔̥̩͎̼̞͌̎̈́͂͜͠͠v̷̘̦̬̹̖͎͌̾e̶̩̻͔̦͗̅̀͂r̵̦̟̹̤͓̼͓̣̉̄̃̽̿̑̇͗̚
 - X Æ A-12
 - Spanish Ñ spanish Ñ is under no why live if ñ is not in I die this paul please save the spanish Ñ
-  ![](https://i.imgur.com/OC2eJiF.png) :thistbh: stolen from pjb's stream
-  ![](https://cdn.discordapp.com/emojis/833946663130759190.png?size=160)
+  ![letters.png](../assets/images/maintainer-meetings/2021-10-30/letters.png) :thistbh: stolen from pjb's stream
+  ![thistbh.png](../assets/images/maintainer-meetings/2021-10-30/thistbh.png)
   `If you mean could someone legally name their child "Bobbysystem 14", that depends. Some countries have laws about what names you can give your child. I'm not aware of any law in the United States against giving your child a number for a name.`
   Vera: "im not coding that"
 
@@ -83,7 +83,7 @@ Automatically tags PRs with:
 - Sprite Changes
 
 What default GitHub looks like (ass)
-![](https://i.imgur.com/uC4YUGA.png)
+![defaultgithub.png](../assets/images/maintainer-meetings/2021-10-30/defaultgithub.png)
 
 
 ## YAML Prototype Editor | DrSmugleaf
