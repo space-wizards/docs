@@ -289,7 +289,7 @@ Space Station 14
 		- [Proposals]()
 			- [Lawset Modification](en/space-station-14/departments/silicon/proposals/lawset_modification.md)
           	- [Cyborg Module Guidelines](en/space-station-14/departments/silicon/proposals/cyborg_modules_guidelines.md)
-            - [Cyborg Whitelisted 'Hands'](en/space-station-14/departments/silicon/proposals/silicon_hand_whitelist.md)
+            - [Whitelisted Cyborg 'hands'](en/space-station-14/departments/silicon/proposals/cyborg_hand_whitelist.md)
 
 General Proposals
 ================

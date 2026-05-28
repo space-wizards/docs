@@ -1,4 +1,4 @@
-# Cyborg Whitelisted 'Hands'
+# Whitelisted Cyborg 'hands'
 
 | Designers  | Implemented | GitHub Links                                                                                            |
 |------------|-------------|---------------------------------------------------------------------------------------------------------|
