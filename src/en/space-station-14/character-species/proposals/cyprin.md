@@ -44,7 +44,8 @@ The Resonance system is built to foster roleplay engagement in many ways:
 * **Shared Resonance Cultivating Shared Purpose:** Shared Resonances are made to encourage other Cyprins to interact and achieve a shared goal. Interacting with one another and various departments to achieve it. Such as "A Holy Place" where Cyprint must congregate three times per day in a specific area of the station, (or as close as they can legally get to it) and go as far as to attempt to create a suitable place for it. Something that would encourage the interaction with related departments to create such a thing.
 
 ### Visual Elements
-![CyprinConcept](https://github.com/user-attachments/assets/d3b70a29-c3eb-45df-bebe-724fc98c2049)
+![CyprinConcept](assets/images/space-station-14/character-species/proposals/cyprin/cyprinconcept.png)
+
 
 
 Cyprin are humanoids with distinct fishlike and could have vaguely draconic (space dragon) features in markings.
