@@ -1,40 +1,29 @@
-﻿||VERY WIP||  
-||I'm not sure how to write comments, so I might be just doing those lines||  
-||It currently contains the info I think should be put in to this doc, and later it shall be discussed with #silicon maintainers||  
-||TODO:||
-- Module clusters - how many slots should be in each module, how to split all the items/slots for a Cyborg for each module, how many modules slots Cyborg should have
-- Evil modules - Antagonist exclusive modules: Xenoborg, Syndicate Cyborg modules
-- what items can be whitelisted
-- when to use a hand slot and alternatively make it an item
-- unique Cyborg items and when you should add them/ make them
+﻿# Cyborg modules guideline
 
-||Ideas and drafts:||  
-||
-- If a slot allows for carrying a lot of diverse materials, it should be whitelisted (produce, materials, tiles, etc.)
-- If a slot holds unique Cyborg tooling (upgraded buckets, stronger versions of items that are not possible to acquire by crew) it should be an unremovable
-- A small amount of whitelisted hands for things like tools may be allowed, but only if having hand-per-tool would cause the amount of hands to be unreasonably big
-||
+This document has been created in hopes of explaining what a Cyborg module is, what their contents should be, and how they should be implemented in the context of the whole game. 
 
-||Actual start of the document:||
-
-# Cyborg modules guideline
-
-This document is about guidelines on how to create or modify Cyborg modules
-It was created because of the lack of consistency and quality between Cyborg modules
-Those guidelines are to help figuring out how to structure singular modules or structure whole specialized Cyborg modules.  
+It was written in response to a large influx of microbalance pull requests following the implementation of whitelisted Cyborg 'hands', leading to designs that would infringe on a Cyborg's desired limitations or inadvertently obsolete existing modules. 
 
 ## Cyborg modules
-Cyborg modules are an item that is designed to inserted in to a cyborg that grants them items or slots they can use.
-Most modules are already built into a Cyborg when selecting a chassis or spawning in, in cases of derelicts, Xenoborgs and
-Syndicate Cyborgs. Some modules have to be fabricated in exosuit fabricator usually located in robotics/science department, 
-fabricated in Xenoborg core or bought through an uplink. Cyborgs drop all their modules on the floor when destroyed.
-Modules can be looked at or added from a cyborg if their maintenance panel is open, but not always remove them  
-Some modules provide items that are strictly better than humanoid counterpart and usually have infinite uses with regenerative delay
+Cyborg modules are items that grant a variety of unique abilities to Cyborgs.
+
+A majority of modules are given to a Cyborg when they choose a model. The rest are obtained through fabrication at various workstations or purchased through Syndicate up-links. 
+
+To install a module into a Cyborg, it must be unlocked via an assigned access or damaged into a state beyond movement. After it has been unlocked, its maintenance panel can be opened with a screwdriver. In the case of forced maintenance, a prying tool may be used once the Cyborg has been damaged sufficiently.
+
+With the panel open, modules may be freely removed or added, as long as the chassis has space for the slotted module.
+- For embedded modules, they can not be removed through the maintenance panel.
+
+Upon a Cyborg's destruction, it will drop all their installed modules, allowing for a reinstallation into a new chassis, dependent on its model specifications.
+
+A Cyborg may only be installed with a limited amount of modules, this is to prevent a Cyborg from becoming an all-in-one solution.
 
 ## Module slots
 Module slots are the primary way Cyborgs interact with their environment.
 
 Slots are the Cyborg equivalent of humanoid hands, but unlike hands, they are an array of slots that the Cyborg must cycle through to use. Since Cyborgs lack conventional equipment slots for additional inventories like humanoids, this is the main way they "store" items for them to use around their environment. 
+
+A module should rarely ever be one slot, exceptions may apply for certain modules such as the martyr module, but to prevent modules from being too one-off in their scope, it should be avoided. A low slot count is fine, as long as the items in it are powerful enough to warrant it.
 
 There are two types of slots in a module:
 - An embedded tool that cannot be removed from the module.
@@ -80,6 +69,11 @@ Much like the rest of the station, Cyborgs can be improved in various ways such 
 - Upgraded modules should do everything that its predecessor could do and more.
 - If there is no way to improve a contents of a module, it may be given new equipment as long as it improves upon the theme in some form.
 - Upgraded modules are fabricated, and should come at a slightly premium price such as costing gold, bananium, a fair amount of common material or some other uncommon material.
+
+### Passive modules
+Passive modules are modules that grant Cyborgs passive abilities.
+
+As the name suggests, passive modules grants persistant abilities to a Cyborg for having them installed. Because of this persistence, passive abilities should be relatively tame in their capabilities.
 
 ### Module slot management
 Cyborgs have their equipment separated into reasonably-sized, themed, groups of items.

@@ -10,7 +10,7 @@ Whitelisted 'hand' slots are the solution to future proofing Cyborg inventories.
 
 Essentially it is a traditional 'hand' that would be on a humanoid, that can only hold items of the corresponding tag or component that we tell it to.
 
-They must follow the [Cyborg module guidelines](https://github.com/space-wizards/docs/pull/615)* like any other module slot in order to maintain consistency amongst Cyborgs design choices.
+They must follow the [Cyborg module guidelines](en/space-station-14/departments/silicon/proposals/cyborg_modules_guidelines.md)* like any other module slot in order to maintain consistency amongst Cyborgs design choices.
 
 \* At the time of writing, the Cyborg module guideline design document is incomplete.
 
