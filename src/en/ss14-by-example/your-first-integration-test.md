@@ -8,11 +8,11 @@ In this guide you will learn about integration testing and how to create an inte
 It can catch unintended behavior, bugs and even rare game-crashing errors when used properly!
 This is achieved through **integration tests**, which basically run short simulations of the game and make sure ingame values match what the test expects.
 
-An example would be changing a Cargo order to cost less.
-If you have an integration test that compares order costs to sell values, you'll be able to automatically catch if this change would result in an infinite money loop!
+An example would be changing a Cargo order to cost less. If this change would end up making the order cost less than it would to sell it, players could just repeatedly buy and resell the order to generate infinite money! 
+If you have an integration test that compares order costs to sell values, you'll be able to automatically catch if this change results in an infinite money loop!
 
 Integration tests are ran on all pull requests submitted to the SS14 repository and all tests must pass for a PR to be mergeable.
-You can also run tests locally in your IDE (useful if you fail a specific test when submitting a PR).
+You can also run tests locally in your IDE (useful if you fail a specific test when submitting a PR). Most IDEs have a dedicated "Tests" view that allows you to select tests to run and view results: [JetBrains Rider](https://www.jetbrains.com/help/rider/Reference_Windows_Unit_Tests.html); [Visual Studio](https://learn.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer?view=visualstudio); [VSCode](https://code.visualstudio.com/docs/debugtest/testing). 
 
 ### The structure of a test
 
@@ -74,8 +74,9 @@ public sealed class InteractionPopupTest : InteractionTest
 }
 ```
 With this, the test should now be visible in the Tests tab of your IDE!
-Exactly where the Tests tab is located depends on the IDE you use, but once found you should be able to see `InteractionPopupTest` among the other test folders.
-You can even run the test if you want, though since the test is empty it will just return a Success.
+Exactly where the Tests tab is located depends on the IDE you use, but once found you should be able to see `InteractionPopupTest` among the other test folders. If you can't see it, you may need to rebuild your solution first.
+
+You can even run the test if you want, though since the test is empty it will always return a Success.
 
 ### Spawning an entity
 Since `InteractionTest` handles spawning the player mob automatically, our first actual step in creating the test will be to spawn in the mob we will hug. We have two options here:
@@ -152,6 +153,25 @@ public async Task HugTest()
 
 If you run the `HugTest()` test now, it should pass!
 If any future changes accidentally makes another empty-handed action override hugging, this test will now be able to catch that. You made your first test!
+
+### Clean-up & Recycling
+
+To make integration tests run fast and efficiently, the testing system is set up to save time by reusing servers, clients and entity systems across multiple tests.
+Much of this is handled automatically under the hood. `GameTest` deletes the test map and any entities in it when a test has finished, but there may be instances where you will have to clean up manually.
+
+An example would be spawning entities in nullspace; since that is a different map to the one set up via `GameTest`, any such entities should be tracked and deleted at the end of the test to prevent accidentally leaking their behavior into the next test being run. There are some helper functions that assist with this, such as `GameTest.SSpawn` that spawns a server-side entity and adds it to an internal tracking list.
+
+Sometimes it might not be viable to do all the clean-up manually, such as when there are extensive round changes like running multiple game rules. In such cases a test can be marked as Dirty. This indicates to the underlying manager that the simulated server and client should be disposed of and restarted before the next test. Be aware that this makes testing take longer and should only be done if necessary!
+
+```
+// Simply add this override to the start of the test class to mark it as Dirty.
+public override PoolSettings PoolSettings => new PoolSettings
+{
+    Dirty = true
+};
+```
+
+Luckily, our test is simple enough that letting `GameTest` handle the map deletion and clean-up automatically should be sufficient.
 
 This tutorial only brushes the surface of how tests can be made.
 The test can expand to cover trying to hug with an item in the player's hand, hugging all different player species, checking that hugs don't come out faster than the cooldown and much more.
