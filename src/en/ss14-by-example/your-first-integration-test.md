@@ -4,9 +4,9 @@ In this guide you will learn about integration testing and how to create an inte
 
 ### What is integration testing?
 
-**Integration testing** is a useful tool to ensure that changes to one part of the game doesn't unexpectedly cause another part of the game to change too.
+**Integration testing** is a useful tool to ensure that changes to one part of the game don't unexpectedly cause another part of the game to change too.
 It can catch unintended behavior, bugs and even rare game-crashing errors when used properly!
-This is achieved through **integration tests**, which basically run short simulations of the game and makes sure ingame values match what the test expects.
+This is achieved through **integration tests**, which basically run short simulations of the game and make sure ingame values match what the test expects.
 
 An example would be changing a Cargo order to cost less.
 If you have an integration test that compares order costs to sell values, you'll be able to automatically catch if this change would result in an infinite money loop!
@@ -22,7 +22,7 @@ Tests generally follow this flow:
 - Define test-specific prototypes & settings.
 - Spawn entities and retrieve components/systems to test.
 - Assert default values (i.e. "are the starting values what I expect?").
-- Do the test scenario.
+- Run the test scenario.
 - Assert that values have changed (i.e. "did the test result in what I expected?").
 
 We will go through this flow in the tutorial below:
@@ -30,7 +30,8 @@ We will go through this flow in the tutorial below:
 ## Making your first test
 
 In this tutorial we are going to make a test to check that hugging works.
-Hugging is done via `InteractionPopupSystem` and `InteractionPopupComponent`, and when a hug is performed `InteractionPopupComponent.LastInteractTime` should get updated to a new value. 
+Hugging is done via `InteractionPopupSystem` using entities with a `InteractionPopupComponent`.
+When a hug is performed, the `LastInteractTime` datafield of the user's `InteractionPopupComponent` should get updated to a new value. 
 
 We decide our test will try to simulate a hug and then verify that it happened by checking if `LastInteractTime` updated.
 
@@ -73,7 +74,7 @@ public sealed class InteractionPopupTest : InteractionTest
 }
 ```
 With this, the test should now be visible in the Tests tab of your IDE!
-Exactly where the Tests tab is located depends on the IDE you use, but if once found you should be able to see `InteractionPopupTest` among the other test folders.
+Exactly where the Tests tab is located depends on the IDE you use, but once found you should be able to see `InteractionPopupTest` among the other test folders.
 You can even run the test if you want, though since the test is empty it will just return a Success.
 
 ### Spawning an entity
@@ -128,7 +129,7 @@ public async Task HugTest()
 ### Simulation & Checking
 
 `InteractionTest` has many helper methods used for simulating interactions.
-With our testcase being simply clicking on the huggable entity, we can use of the basic `await Interact();` method to simulate hugging. Since we spawned the `MobHuman` with `SpawnTarget` earlier, all we have to do is run the method!
+With our testcase being simply clicking on the huggable entity, we can use the basic `await Interact();` method to simulate hugging. Since we spawned the `MobHuman` with `SpawnTarget` earlier, all we have to do is run the method, which will use the `Target` as default!
 
 Since the player entity spawns with one free hand, we should expect a basic interaction to result in the `InteractionPopupSystem.InteractHandEvent` event subscription triggering, and therefore `LastInteractTime` should be updated to the current time. We assert that the previous `LastInteractTime` should not be equal to the new `LastInteractTime`. 
 
