@@ -89,10 +89,12 @@ We will choose the first one since the `MobHuman` prototype is a base mob that w
 `InteractionTest` has a built-in spawning method `SpawnTarget`, which spawns an entity one tile next to the player entity and sets it as the target for any future interactions of the player entity.
 
 ```
+private static readonly EntProtoId _humanPrototype = "MobHuman";
+
 [Test]
 public async Task HugTest()
 {
-    var urist = await SpawnTarget("MobHuman");
+    var urist = await SpawnTarget(_humanPrototype);
 }
 ```
 
@@ -101,10 +103,12 @@ public async Task HugTest()
 `InteractionTest` has a helper method to get the server component: `Comp<T>(NetEntity? target)`. This also checks that the component exists on the entity, and fails the test if it doesn't.
 
 ```
+private static readonly EntProtoId _humanPrototype = "MobHuman";
+
 [Test]
 public async Task HugTest()
 {
-    var urist = await SpawnTarget("MobHuman");
+    var urist = await SpawnTarget(_humanPrototype);
     var interactionPopupComp =  Comp<InteractionPopupComponent>(urist);
 }
 ```
@@ -117,10 +121,12 @@ The `Assert` class enables this, with the method [`Assert.That`](https://docs.nu
 `InteractionPopupComponent` has the property `LastInteractTime`, and while we can *assume* that it will always start at the default value, core to testing is never assuming if you can test it. We can check this with `Is.Default`.
 
 ```
+private static readonly EntProtoId _humanPrototype = "MobHuman";
+
 [Test]
 public async Task HugTest()
 {
-    var urist = await SpawnTarget("MobHuman");
+    var urist = await SpawnTarget(_humanPrototype);
     var interactionPopupComp =  Comp<InteractionPopupComponent>(urist);
 
     Assert.That(interactionPopupComp.LastInteractTime, Is.Default);
@@ -135,10 +141,12 @@ With our testcase being simply clicking on the huggable entity, we can use the b
 Since the player entity spawns with one free hand, we should expect a basic interaction to result in the `InteractionPopupSystem.InteractHandEvent` event subscription triggering, and therefore `LastInteractTime` should be updated to the current time. We assert that the previous `LastInteractTime` should not be equal to the new `LastInteractTime`. 
 
 ```
+private static readonly EntProtoId _humanPrototype = "MobHuman";
+
 [Test]
 public async Task HugTest()
 {
-    var urist = await SpawnTarget("MobHuman");
+    var urist = await SpawnTarget(_humanPrototype);
     var interactionPopupComp =  Comp<InteractionPopupComponent>(urist);
 
     Assert.That(interactionPopupComp.LastInteractTime, Is.Default);
@@ -157,9 +165,10 @@ If any future changes accidentally makes another empty-handed action override hu
 ### Clean-up & Recycling
 
 To make integration tests run fast and efficiently, the testing system is set up to save time by reusing servers, clients and entity systems across multiple tests.
-Much of this is handled automatically under the hood. `GameTest` deletes the test map and any entities in it when a test has finished, but there may be instances where you will have to clean up manually.
+Much of this is handled automatically under the hood. `TestPair`, a class used to facilitate the test simulation, deletes the test map and any entities in it when a test has finished. There may however be instances where you will have to clean up manually.
 
-An example would be spawning entities in nullspace; since that is a different map to the one set up via `GameTest`, any such entities should be tracked and deleted at the end of the test to prevent accidentally leaking their behavior into the next test being run. There are some helper functions that assist with this, such as `GameTest.SSpawn` that spawns a server-side entity and adds it to an internal tracking list.
+An example would be spawning entities in nullspace; since that is a different map to the one set up via `GameTest`, any such entities should be tracked and deleted at the end of the test to prevent accidentally leaking their behavior into the next test being run.
+There are some helper functions that assist with this, such as `GameTest.SSpawn` that spawns a server-side entity and adds it to an internal tracking list.
 
 Sometimes it might not be viable to do all the clean-up manually, such as when there are extensive round changes like running multiple game rules. In such cases a test can be marked as Dirty. This indicates to the underlying manager that the simulated server and client should be disposed of and restarted before the next test. Be aware that this makes testing take longer and should only be done if necessary!
 
@@ -171,7 +180,7 @@ public override PoolSettings PoolSettings => new PoolSettings
 };
 ```
 
-Luckily, our test is simple enough that letting `GameTest` handle the map deletion and clean-up automatically should be sufficient.
+Luckily, our test is simple enough that letting the test handle map deletion and clean-up automatically should be sufficient.
 
 This tutorial only brushes the surface of how tests can be made.
 The test can expand to cover trying to hug with an item in the player's hand, hugging all different player species, checking that hugs don't come out faster than the cooldown and much more.
