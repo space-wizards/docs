@@ -1,17 +1,17 @@
 # Your First Integration Test
 
-In this guide you will learn about integration testing and how to create an integration test.
+In this guide you will learn about SS14 integration testing and how to create an integration test.
 
 ### What is integration testing?
 
-**Integration testing** is a useful tool to ensure that changes to one part of the game don't unexpectedly cause another part of the game to change too.
+**Integration testing** is ensures that changes to one part of the game don't unexpectedly cause another part of the game to change too.
 It can catch unintended behavior, bugs and even rare game-crashing errors when used properly!
-This is achieved through **integration tests**, which basically run short simulations of the game and make sure ingame values match what the test expects.
+Integration testing is performed through the use of **integration tests**, which basically run short simulations of the game and make sure the end results of those simulations match what the test expects.
 
 An example would be changing a Cargo order to cost less. If this change would end up making the order cost less than it would to sell it, players could just repeatedly buy and resell the order to generate infinite money! 
-If you have an integration test that compares order costs to sell values, you'll be able to automatically catch if this change results in an infinite money loop!
+If you have an integration test that compares order costs to sell values, you'll be able to automatically catch if the change results in an infinite money loop!
 
-Integration tests are ran on all pull requests submitted to the SS14 repository and all tests must pass for a PR to be mergeable.
+Integration tests are automatically run on all pull requests submitted to the SS14 repository, and all tests must pass for a PR to be mergeable.
 You can also run tests locally in your IDE (useful if you fail a specific test when submitting a PR). Most IDEs have a dedicated "Tests" view that allows you to select tests to run and view results: [JetBrains Rider](https://www.jetbrains.com/help/rider/Reference_Windows_Unit_Tests.html); [Visual Studio](https://learn.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer?view=visualstudio); [VSCode](https://code.visualstudio.com/docs/debugtest/testing). 
 
 ### The structure of a test
@@ -24,8 +24,9 @@ Tests generally follow this flow:
 - Assert default values (i.e. "are the starting values what I expect?").
 - Run the test scenario.
 - Assert that values have changed (i.e. "did the test result in what I expected?").
+- Clean up the test environment if necessary.
 
-We will go through this flow in the tutorial below:
+We will go through this flow in the tutorial below.
 
 ## Making your first test
 
@@ -40,7 +41,7 @@ We decide our test will try to simulate a hug and then verify that it happened b
 Integration tests are created in a relevant area folder in `Content.IntegrationTests/Tests`, so we create a new folder `InteractionPopup` and a new C# script `InteractionPopupTest`.
 
 Our first decision will be to choose which base test class to use.
-These are used to handle boilerplate (e.g. setting up and disposing of finished tests) and enable specific functionalities (such as spawning a default player mob or a walkable grid).
+These are used to handle boilerplate code all tests should run (e.g. setting up and disposing of finished tests) and enable specific functionalities (such as spawning a default player mob or a walkable grid).
 Some choices include `GameTest`, `InteractionTest` and `MovementTest`.
 
 For our test, we will use `InteractionTest` as our base class.
@@ -183,7 +184,7 @@ public override PoolSettings PoolSettings => new PoolSettings
 Luckily, our test is simple enough that letting the test handle map deletion and clean-up automatically should be sufficient.
 
 This tutorial only brushes the surface of how tests can be made.
-The test can expand to cover trying to hug with an item in the player's hand, hugging all different player species, checking that hugs don't come out faster than the cooldown and much more.
+The test can expand to cover trying to hug with an item in the player's hand, hugging all different player species, checking that hugs don't come out faster than the cooldown and much more. It is recommended that you look at existing tests in the repository to get an idea of the different ways a test can be ran.
 
 ## Extra Credit: How Do Tests Work Under The Hood?
 
@@ -191,10 +192,10 @@ There is a lot going into the setup of integration testing that the test base cl
 It can be good to understand this process since a lot can be modified and extended, and there are several helper methods that can save time and make your tests much better.
 
 `PoolManager` is a static core class that manages server-client simulation relationships, and is used for tests, benchmarks and map rendering.
-For tests specifically it allows for client-servers to be reused for multiple tests and for tests to be run in parallel, instead of constantly starting and shutting down such systems.
+For tests specifically it allows for server-clients to be reused for multiple tests and for tests to be run in parallel, instead of constantly starting and shutting down such systems. This ends up becoming a massive time save over the course of several tests.
 
 It's unlikely you will access `PoolManager` yourself, but a key property that all integration tests make use of is the `TestPair` class.
-`TestPair` gives access to the Client and Server instances and therefore the ability to set CVars, resolve manager/system dependencies and map management.
+`TestPair` gives you access to the Client and Server instances and therefore the ability to set CVars, resolve manager/system dependencies and map management.
 The test base classes all make use of this to create helper methods and properties.
 
 It is strongly recommended you check out `GameTest.Entities.cs`, `GameTest.Pair.cs` `InteractionTest.Helpers.cs`, `Pair/TestPair.Helpers.cs` and `Pool/TestPair.Helpers.cs` to see what helper methods are available!
