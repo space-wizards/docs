@@ -12,6 +12,15 @@ The humble zombie is a round start antagonist focused on infecting the station, 
 
 We currently have zombies on Wizden, most downstreams have zombies and a lot of SS13 servers had some sort of implementation of zombies. This game mode has received mostly good player feedback and is rather well liked, but still lacks a design doc, and has some rough edges. This document seeks to describe how zombies should develop in the future: a zombie round should reverse the usual hunter-hunted relationship of antagonists and crew members as the last survivors desperately try to fend off the infected in the best zombie horror movie fashion.
 
+Here’s a (non-exhaustive) list of issues and complaints about the Zombies game mode:
+
+ - The Initial Infected’s competence at the game is the sole driver behind the results of an outbreak. This allows one extremely cheesy strategy : a robust II quaffs anti-poison meds and murders everyone without turning while the others IIs take care of the infecting.
+ - It often becomes a slow, boring round (especially as a zombie), since when only a few survivors are left it’s basically impossible to find them.
+ - As a crew member, the best strategy to ensure your survival is to space yourself and return to a pod when evacuation arrives - we don’t want players to intentionally withdraw themselves from the round.
+ - Infection protection is unreliable at best - even riot armors or the supposedly zombie-proof bio suits don’t even come close of 100% protection. A few bites from a zombie shouldn’t always spell certain death - especially when you are as prepared as you can be. Melee should be viable as a last resort against zombies; it currently isn’t.
+
+However, despite these issues, this game mode can still be valuable for the game as a whole. It provides a unique (and sometimes very enjoyable) experience of apocalypse survival which is exactly what this game is about: surviving the disastrous collapse of the universe’s unluckiest station.
+
 ## Features
 
 At the beginning of a Zombies round, the infection will be spread to a few random patients zeroes. It should then slowly spread, disrupting station activities, until the remaining survivors must go into hiding, build barricades and arm themselves: the station shouldn’t be able to easily ignore the zombie virus.
