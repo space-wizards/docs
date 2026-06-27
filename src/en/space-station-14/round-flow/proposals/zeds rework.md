@@ -37,7 +37,7 @@ Newly-infected zombies should still be entertained by the game; we don’t want 
 
 One way to implement mutations would be through giving different initial infected different strains of the virus; this would encourage all initial infected to infect the most individuals possible instead of having only one II turn and the other sabotage the station while quaffing dylovene (initial infected should *not* be able to stay unturned for the whole shift, so if this is not enough, then the poison damage from the infection could massively ramp up trough time).
 
-Another way for mutations to function would have them be completely random, and more common as the infection advances. Zombies could get a random mutation after a certain amount of time alive, with it being faster & less rare when more are infected.
+Another way for mutations to function would have them be completely random, and more common as the infection advances. Zombies could get a random mutation after a certain amount of time alive, with it being faster & less rare when more are infected, this would reward zombie players who don't ghost and stay active in the round.
 
 Zombies should also get new objectives to reflect their goals as an ever-expanding apocalyptic force, those mainly being zombies winning once Central Command becomes infected.
 
