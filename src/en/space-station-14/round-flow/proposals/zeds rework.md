@@ -29,7 +29,7 @@ The infection spreads through exchange of bodily fluids; of course, this means t
 
 Once infected, players will be granted a relatively short grace period before displaying symptoms (we should maybe wait for some sort of virology before introducing visible symptoms) and eventually turning. It should be possible for crew members to tell individuals infected with the virus apart from non-infected crew members. The infection should zombify fast enough as for it to be an actual danger during a round.
 
-Upon turning, players lose basic abilities such as talking and operating machinery (their hands become non-functional). They pretty much get reduced to biting machines who must now roam the halls of the station to infect more individuals.
+Upon turning, players lose basic abilities such as talking and operating machinery (their hands become non-functional, although if they had some they get a prying ability). They pretty much get reduced to biting machines who must now roam the halls of the station to infect more individuals.
 
 Newly-infected zombies should still be entertained by the game; we don’t want them ghosting. We should thus introduce classic zombie games tropes such as:
  - Mutant zombies (fast, pouncer, brute, etc) each with their strengths and weaknesses (brute zombies are way stronger but can’t infect living individuals, fast zombies are extremely weak to brute, etc). Zombies should still work better in hordes, though. We don’t want a magic invincible berserker zombie that can run through crowds of survivors and murder & infect them all. Each mutation should be designed to either assist other zombies or to work well in hordes.
