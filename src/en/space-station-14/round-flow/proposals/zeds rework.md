@@ -43,6 +43,8 @@ Zombies should also get new objectives to reflect their goals as an ever-expandi
 
 The zombie’s objectives should pressure the crew to try to maintain a safe zone (another zombie trope) around Evac, and make zombies try to confront the remaining survivors there.
 
+Zombies should be particularly robust, by being more resistant to non-burn source of damages, and by being able to heal out of crit and to come back to life when dead (having zombies automatically resurrect after some time would lessen the amount of RR that happens during zombies rounds).
+
 Finally, to mirror events such as the end of the game *Death Road to Canada*, military reinforcements (e.g. CBURN) should be dispatched to prevent the infected from reaching the rest of the world (Evac) and provide support to the struggling crew members who made it this far. These ghost roles will also provide entertainment for round-removed players.
 
 ## Game Design Rationale
@@ -89,6 +91,16 @@ At this point, a CBURN squad could be automatically dispatched by centcomm to de
 
  - It would provide interesting ghost roles for the many players who will get round-removed on zombie rounds (think of the poor zombified Pun Pun stuck in space, far from everyone, or the numerous zombies killed with no chance of ever being revived).
  - The military trying to sort infected individuals from those still healthy would make for great RP occasions (trying to hide the symptoms of the zombie virus as a simple fever, etc).
+
+### Playing against zombies
+
+In the beginning of an outbreak, whether the zombies succeed or not is up to the initial infected players, for it is their actions which directly determines how many players are infected. When the shift advances, non-II zombies far outnumber initial infecteds. Since the zombie horde cannot communicate within itself, it can be assumed that at this point control of the round flow will fall back solely to the survivors, because non-communicating zombies will not be able to draft up plans (Urist McBity is not able to decide between the zombie "blitzops" or "stealthops" equivalents because *it can't speak*). 
+
+After the initial effort of IIs, it will thus be the survivor’s strategy that will make each zombie round feel different. As explained before, survivors will probably center their gameplay around securing safe zones and producing a cure.
+
+In a situation where the zombies are getting wiped out or the round is getting stalled, the zombies should get artificially weakened / strengthened as to allow either the crew to win or to provide a more entertaining experience. For instance, currently, eliminating all zombies is extremely difficult since you will often have a few zombies either in space or hidden in maints, too afraid to go against the armed crew members; giving the zombies buffs in such a situation would ensure that they would make their way to the crew.
+
+A zombie shift where the game stalls can be terribly annoying; it should thus get altered as to either offer a satisfactory victory for survivors or as to let the horde proceed.
 
 ### In other game modes
 
