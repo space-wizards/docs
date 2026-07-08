@@ -241,7 +241,7 @@ Space Station 14
 		- [Proposals]()
 			- [XenoArch Redux (3MOArch)](en/space-station-14/departments/science/proposals/xenoarch-redux.md)
 			- [Xenobio](en/space-station-14/departments/science/proposals/xenobio.md)
-   			- [Anomalous Research](en/space-station-14/departments/science/anomalous-research-update.md)	
+   			- [Anomalous Research](en/space-station-14/departments/science/proposals/anomalous-research-update.md)	
 
 	- [Security](en/space-station-14/departments/security.md)
 		- [PR Guidelines](en/space-station-14/departments/security/guidelines.md)
