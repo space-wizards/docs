@@ -82,8 +82,9 @@ At this point, the botanist might want to consider producing *more* of their med
 
 - Increase yield, which is very likely to reduce potency.
 - Increase production rate instead, making the trees more frequently harvestable.
+- Plant more acid-spitting golden apple trees (dangerous, obviously).
 
-They try the latter, lowering the plant's production time and minorly damaging the seed in the process. This is fine, because they took measures to ensure the seed's health.
+They try the second option, lowering the plant's production time and minorly damaging the seed in the process. This is fine, because they took measures to ensure the seed's health.
 
 Now the botanist wants to maintain multiple trees of their medicinal apples, but there's just one problem - the golden apple trees' acid spit attacks would almost definitely render the place uninhabitable. The botanist considers their options:
 - Remove the acid spit trait from the golden apple trees, reducing its potency but increasing their own survival chances.
