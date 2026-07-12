@@ -23,13 +23,13 @@ Pest killer is useless, as the only way for a plant to gain pests is by adding c
 ## Features to be added
 ### Nutrient requirements
 
-The basic water, nutrition, and potency values on plants are removed.
+The current water, nutrition, toxin, and pest values on plants are replaced with new, YAML-defined nutrients.
 
 Reagents grown with plants now come with nutrient requirements, meeting more of the nutrient requirements increases the amount of reagent obtained by grinding the plant's produce.
 
 Nutrient requirements come in two forms: mandatory, and optional.
 - Failing to meet any mandatory nutrient requirements causes the produce to only contain trace amounts (0.1u-0.01u) of the reagent.
-- Optional nutrient requirements cause more of the reagent to grow when fulfilled, but are not required to grow useful amounts of the reagent.
+- Optional nutrient requirements cause more of the reagent to grow when fulfilled, but are not required to grow useful amounts of the reagent. These replace the old potency system.
 
 Nutrients can be added to the plant via pouring a reagent that contains the nutrient into the tray/soil.
 Plants can also absorb certain nutrients from the environment, such as oxygen from the atmosphere, or radiation from a nearby source.
