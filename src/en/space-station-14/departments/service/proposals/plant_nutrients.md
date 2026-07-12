@@ -23,7 +23,7 @@ Pest killer is useless, as the only way for a plant to gain pests is by adding c
 ## Features to be added
 ### Nutrient requirements
 
-The basic water, nutrient, and potency values on plants are removed.
+The basic water, nutrition, and potency values on plants are removed.
 
 Reagents grown with plants now come with nutrient requirements, meeting more of the nutrient requirements increases the amount of reagent obtained by grinding the plant's produce.
 
