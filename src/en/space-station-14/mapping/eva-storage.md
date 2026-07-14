@@ -18,7 +18,7 @@ The room should additionally contain the following basic amenities:
 - A gas tank dispenser containing oxygen and nitrogen tanks
 - A holopad
 
-EVA Storage should typically be located in close proximity to a "Command" area of the station for the sake of convenience (since it's Command responsibility to open the room to the crew when necessary). This may be near the bridge, though it could also be near another area of the station frequently occupied by a member of Command, such as the Head of Personnel's office.
+EVA Storage should typically be located in close proximity to a "Command" area of the station for the sake of convenience (since it's Command's responsibility to open the room to the crew when necessary). This may be near the bridge, though it could also be near another area of the station frequently occupied by a member of Command, such as the Head of Personnel's office.
 
 # Inventory
 
