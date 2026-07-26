@@ -28,7 +28,7 @@ The current water, nutrition, toxin, and pest values on plants are replaced with
 Reagents grown with plants now come with nutrient requirements, meeting more of the nutrient requirements increases the amount of reagent obtained by grinding the plant's produce.
 
 Nutrient requirements come in two forms: mandatory, and optional.
-- Failing to meet any mandatory nutrient requirements causes the produce to only contain trace amounts (0.1u-0.01u) of the reagent.
+- Failing to meet any mandatory nutrient requirements prevents the plant from being harvested, and slowly damages the plant if it would otherwise be able to be harvested.
 - Optional nutrient requirements cause more of the reagent to grow when fulfilled, but are not required to grow useful amounts of the reagent. These replace the old potency system.
 
 Nutrients can be added to the plant via pouring a reagent that contains the nutrient into the tray/soil.
@@ -112,7 +112,7 @@ Botanists may need to interact with many other departments to get access to the 
 - A plant has blood as one of its nutrient requirements, so the botanist goes around the station and asks people to donate blood.
 - A plant requires low temperatures to survive, so the botanist builds a glass box, and uses a space heater to cool it down.
 - A plant requires incredibly high temperatures and pressures to survive, so the botanist asks an atmos tech to plant it in a burn chamber.
-- A plant contains a reagent that the botanist does not need, so they intentionally avoid meeting its nutrient requirements.
+- A plant contains a reagent that the botanist does not need, so they intentionally avoid meeting its optional nutrient requirements.
 
 ### Undesired gameplay:
 - A botanist creates a single plant containing all the reagents they need at the start of the shift, then spends the rest of the shift growing only that plant.
