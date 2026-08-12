@@ -10,7 +10,7 @@ When changing these rules, please keep the following in mind:
 # Space Wizards Hub Rules
 This document specifies the rules that need to be followed when listing your community on our server hub[^hub]. We will try to be as transparent and reasonable as possible when enforcing these rules. If you are not sure whether something is allowed, or you think that something that is not allowed by the current rules should be allowed, feel free to contact us. We will clarify and possibly amend the rules.
 
-We may change these rules from time to time, for example to add clarifications. When we do, it will be announced on [the forum](https://forum.spacestation14.io/index.php?/forum/29-hub-administrative/).
+We may change these rules from time to time, for example to add clarifications. When we do, it will be announced on [the forum](https://forum.spacestation14.com/index.php?/forum/29-hub-administrative/).
 
 [^hub]: effectively, the server browser in the launcher.
 
@@ -54,7 +54,7 @@ The hub rules are primarily enforced in response to reports from the wider Space
 
 Before sending a report, it's strongly recommended to contact the owner of a given community regarding the violation. Most hub rule violations happen either on accident, or without the community owner's awareness. As such, simply speaking with a community's owner tends to be enough on it's own to make a report unnecessary to begin with, which helps save everyone's time. Coincidentally, this can also make it obvious whether a community owner is operating in bad faith, which can expedite hub rule enforcement if necessary.
 
-To report a hub rule violation, send an email to support@spacestation14.com (preferred as it can reach all PM's at once and easier to reply), or DM a Project Manager in the official Space Station 14 Discord server. Be concise, and include as much evidence as feasibly possible. Assume that absolutely nothing is known about a given community (as this is almost always the case). Evidence is usually valued over commentary. Translations for non-English evidence are greatly appreciated, but not required.
+To report a hub rule violation, send an email to support@spacestation14.com. Be concise, and include as much evidence as feasibly possible. Assume that absolutely nothing is known about a given community (as this is almost always the case). Evidence is usually valued over commentary. Translations for non-English evidence are greatly appreciated, but not required.
 
 Generally, responses and updates to reports are not guaranteed, beyond a confirmation that the report has been forwarded to be discussed internally. Please be patient, as while initial investigations regarding a report might be inconclusive, it's not unusual for the contents of a given report to end up being relevant for future investigations, even months later.
 
