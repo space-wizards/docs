@@ -20,6 +20,7 @@ Once the Throngler is spawned (event, lottery or admin), an announcement is made
 The Worthy gain an action to toggle a [waypointer](https://github.com/space-wizards/space-station-14/pull/42459) that targets the Throngler. The Worthy are Free Agents, but if they are holding the Thrognler, they become Solo Antagonist.
 Destroying the Throngler takes a somewhat long doAfter, and binding it takes a very very long doAfter. If it is bound, the player gets an action to summon it back (like the Ninja Katana).
 If there aren't enough alive players eligible for being The Chosen when the Throngler spawns, ghost roles are made, they spawn with Claymore swords.
+There are alternative ways to destroy the Throngler, such as: Throwing it into the singularity (Cast it into the Singularity! Destroy it!) or selling it (good luck not getting it stolen all the way to the ATS).
 
 ### Objectives
 - Claim the Throngler. Bind the Throngler to yourself, as its one true owner!
