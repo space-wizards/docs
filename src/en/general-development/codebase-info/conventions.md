@@ -686,11 +686,11 @@ public TimeSpan NextActivationTime;
 ## Naming
 
 ### Shared types
-Shared types should only be prefixed with `Shared` if and only if there are server and/or client inherited types with the same name.
+Types should only be prefixed with `Client` and `Server` if they are in the client / server assemblies.
 
 Example:
 - If `FooComponent` only exists in shared, it doesn't need a prefix.
-- If `BarComponent` exists in shared, server and client, the shared type should be prefixed with shared: `SharedBarComponent`.
+- If `BarComponent` exists in shared, server and client, the client / server types should be prefixed with: `ClientBarComponent` / `ServerBarComponent`.
 
 ## Physics
 
