@@ -17,7 +17,7 @@
 
 Notice: This meeting was recorded:
 
-{% embed youtube id="Vdj_dSOk4-8" loading="lazy" %}
+{% embed youtube id="8CcREpgDzRk" loading="lazy" %}
 
 ## Maintainer meeting topics
 

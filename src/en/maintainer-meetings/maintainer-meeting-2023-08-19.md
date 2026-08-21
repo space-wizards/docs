@@ -20,8 +20,6 @@ Any decisions taken in these notes may no longer be applicable.
 - Jezithyr
 - EmoGarbage
 
-![](https://hackmd.io/_uploads/SJ_QSYAhh.png) omg miku
-
 ## Namespace changes in content | metalgearsloth
 - https://github.com/space-wizards/space-station-14/pull/18869#issuecomment-1672388772
 - client and server end with s but shared doesn't so it was updated
@@ -59,7 +57,7 @@ Comments:
 
 ---
 
-- ![](https://hackmd.io/_uploads/SJOE9tR2h.png)
+- ![dataobject.png](../assets/images/maintainer-meetings/2023-08-19/dataobject.png)
 - **(Make it some base type other than object, figure out how to do automatic merging behavior)**
 - Idea is this data object would be copied
 
@@ -144,7 +142,7 @@ OH MY GOD WE HAVE 700 MERGED PRs LAST MONTH ALMOST TWICE OTHER CODEBASES.
             - faction system
         - clock cult | keronshb
             - waiting for mind rework
-- EL BODY SYSTEM | jez ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
+- EL BODY SYSTEM | jez
     - some refactors were done by mirror, still some left
     - surgery died in the war of 1992
         - Mirror died in the war of 1993

@@ -93,7 +93,7 @@ Results:
 
 ## Change XAML file naming scheme | PJB
 - `Foo.xaml`/`Foo.xaml.cs` -> `Foo.cs.xaml`/`Foo.cs`
-- ![](https://i.imgur.com/iCqMUdA.png)
+![changexamlfilenamingscheme.png](../assets/images/maintainer-meetings/2022-05-28/changexamlfilenamingscheme.png)
 
 Results:
 -  it's fine as is, the UI aspect is "made more important" by this
@@ -161,7 +161,7 @@ Results:
 - Don't assume the reader knows game mechanics/has ever played SS13
 
 ## Robust IDE Extension | Moony
-- ![](https://i.imgur.com/fF3vlMQ.png)
+- ![robustideextension.png](../assets/images/maintainer-meetings/2022-05-28/robustideextension.png)
 - Examples:
     - More complex templates for client/server component boilerplates
     - YAML language server
@@ -233,7 +233,6 @@ Results:
         - books/ebooks in pda
             - ebooks preloaded on pda for selected job
             - when rich text gets merged
-                - ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
 - oldchat + ui refactor | Jezithyr, DrSmugleaf
     - we did it
     - lost in the canadian wilds

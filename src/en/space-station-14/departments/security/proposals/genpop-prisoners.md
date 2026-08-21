@@ -27,7 +27,7 @@ The current experience for brigging criminals looks something like this (your mi
 
 Turnstiles are a key feature in the new brig experience that I'm about to propose. Turnstiles are effectively one-way airlocks, allowing travel only in one direction while still allowing mappers or engineers to set normal airlock access requirements to move through them. Here's what they look like on Oracle, including the mapper overlay to show which direction players can move.
 
-![turnstile](https://i.imgur.com/QStUhoA.png)
+![turnstile.png](../../../../assets/images/space-station-14/departments/security/proposals/genpop-prisoners/turnstile.png)
 
 In this example a player with the relevant access requirements can only move from the north side to the south side of the turnstile. Even ignoring the rest of this design document, turnstiles would still be useful for things such as putting an exit in medbay or being able to leave the disposals room in maintenance.
 
@@ -37,7 +37,7 @@ I propose that we completely nuke individual brig cells. All prisoners will now 
 
 Here's an example from OracleStation. Note the turnstiles, the prisoner processing room in the lower part, and the actual genpop prisoner area in the upper part (ignore the armory in the bottom left):
 
-![genpop](https://user-images.githubusercontent.com/202160/35178888-91bb7eb6-fd87-11e7-9040-15a6ef93602c.png)
+![genpop](../../../../assets/images/space-station-14/departments/security/proposals/genpop-prisoners/genpop.png)
 
 I highly recommend taking a look at the [OracleStation pull request](https://github.com/OracleStation/OracleStation/pull/419) as it has gifs for most of the things I'm about to describe with words.
 

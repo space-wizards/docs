@@ -181,7 +181,7 @@ If this overlay is supposed to be always active, add it to `PostInit()` in `Cont
 # Testing and Debugging
 
 ```admonish warning
-Test your shaders **both with and without compatibility mode**.
+Test your shaders **both with and without compatibility mode**. You can turn on compatibility mode by launching the client with the `--cvar display.compat=true` argument.
 ```
 
 ```admonish info

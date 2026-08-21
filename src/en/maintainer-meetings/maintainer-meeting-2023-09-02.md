@@ -72,7 +72,7 @@ Any decisions taken in these notes may no longer be applicable.
             - faction system
         - clock cult | keronshb
             - waiting for mind rework
-- EL BODY SYSTEM | jez ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
+- EL BODY SYSTEM | jez
     - some refactors were done by mirror, still some left
     - surgery died in the war of 1992
         - Mirror died in the war of 1993

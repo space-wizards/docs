@@ -156,7 +156,7 @@ EX:
     - id: PlushieLizard
     - id: PlushieNar
     - id: PlushieRatvar
-      
+
 - type: entity
   id: PlushSpawner
   components:

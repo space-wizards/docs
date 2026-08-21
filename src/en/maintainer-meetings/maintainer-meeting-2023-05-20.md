@@ -69,7 +69,7 @@ Edit with bonus questions:
             - loyalty implant
             - faction system
         - clock cult | keronshb
-- EL BODY SYSTEM | jez (sloth?) ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
+- EL BODY SYSTEM | jez (sloth?)
     - some refactors were done by mirror, still some left
     - surgery died in the war of 1992
         - Mirror died in the war of 1993

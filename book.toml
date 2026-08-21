@@ -123,3 +123,4 @@ warning-policy = "ignore" # false-positives like hell with absolute links & late
 "/en/engine/sprites-icons/index.html" = "/en/robust-toolbox/rendering/sprites-and-icons.html"
 "/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
 "/en/hosting/hub-rules/index.html" = "/en/community/space-wizards-hub-rules.html"
+"/en/server-hosting/setting-up-redbot.html" = "/en/server-hosting/setting-up-discord-integration.html"

@@ -21,7 +21,7 @@ jobs:
       - name: Build with mdBook
         run: mdbook build
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Built Site
           path: ./book/html

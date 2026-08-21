@@ -1,9 +1,14 @@
 book
+
+# Jetbrains (Rider, etc) project config folder
 .idea/
 
-# editor files
+# Editor files
 .*~
 *.swp
 
-# VSCodium files
+# VSCode and VSCodium project config folder
 .vscode/
+
+# Obsidian vault config folder
+.obsidian/

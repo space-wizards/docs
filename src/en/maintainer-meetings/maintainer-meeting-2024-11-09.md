@@ -20,7 +20,7 @@
 
 Notice: This meeting was recorded: 
 
-{% embed youtube id="fIMzlJB2oOY" loading="lazy" %}
+{% embed youtube id="souuW_2cY48" loading="lazy" %}
 
 ## Github organisation
 

@@ -1,6 +1,0 @@
-> explain entities comp Item
-entities: Returns all entities on the server.
-[none] -> IEnumerable<EntityUid>
-
-comp: Returns the given component from the input entities, discarding entities without that component.
-IEnumerable<EntityUid> -> IEnumerable<ItemComponent>

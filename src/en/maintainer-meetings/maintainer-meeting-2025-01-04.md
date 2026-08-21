@@ -1,6 +1,6 @@
-# Maintainer Meeting (04 January 2024)
+# Maintainer Meeting (4 January 2024)
 
-**Time:** 04 January 2024
+**Time:** 4 January 2024
 
 ```admonish info
 **Attendees:**
@@ -14,7 +14,7 @@
 
 Notice: This meeting was recorded:
 
-{% embed youtube id="RruPYxZ-Evs" loading="lazy" %}
+{% embed youtube id="qBUzOTlXT7c" loading="lazy" %}
 
 ## Client side toolshed commands
 

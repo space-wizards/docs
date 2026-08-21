@@ -1,6 +1,13 @@
 # Pull Request Guidelines
 
-Thank you for contributing to Space Station 14. When submitting pull requests (PRs), please follow these guidelines to make your pull requests easier to review and merge. Pull requests that do not follow these guidelines may be closed at a maintainer's discretion.
+Thank you for contributing to Space Station 14. When submitting pull requests (PRs), please follow these guidelines to make your pull requests easier to review and merge.
+
+```admonish warning
+Pull requests that do not follow these guidelines may be closed at a maintainer's discretion.
+
+Ultimately, Maintainers decide what content gets merged into the Upstream repository.
+Your pull request may be reverted or closed for any reason.
+```
 
 ## Before You Begin
 
@@ -50,10 +57,42 @@ Thank you for contributing to Space Station 14. When submitting pull requests (P
     - When you open a PR on github, you can select which branch it will target, and the master branch is always selected by default. For a hotfix you must select the stable branch manually.
     - If you are uncertain if your change should be a hotfix, open it targeting the master branch. Then, ask on the PR if it can be made a hotfix.
 
+- Decide if you are opening the PR as a **draft**.
+    - Draft PRs are only permitted if a portion of the PR requires review and/or approval in order for other segments of the same PR to be completed.
+    - Draft PRs should not be opened if the PR is simply incomplete and not ready to be reviewed.
+    - Failure to abide by this may result in the closure of your PR.
+
 - **Review your diff** using the code preview tab on GitHub.
 
     - Check for changes that you did not intend to commit.
     - Check for accidental whitespace additions or line end changes.
+
+### Filling out the PR Template
+You must fill out the Pull Request Template when submitting your pull request to GitHub.
+
+1. The _About_ section must explain only what the PR does.
+2. The _Why/Balance_ section must justify the changes in your PR.    
+   1. Small bugfixes do not need a lengthy justification.
+   2. If a pull request is balance-centric, the justification should properly explain **why** the change is needed.
+   3. Justifications that only explain what the pull request *does* or the *effects* that the changes have are not acceptable.
+   4. Major content additions should align with the core design principles. Sufficiently large content additions might warrant a design document to detail the broader purpose of the changes and how they fit into the current game.
+3. The _Test Plan_ section should explain how to test the changes.
+    1. Write out how you tested the changes. Consider how someone else looking at this pull request can verify that it works as intended.
+    2. If you're fixing a bug, it's advisable to share the steps to reproduce it, how it was broken before, and how it's fixed with your pull request.
+4. The _Technical Details_ section should give a high-level overview of the changes.
+    1. This is more important during bugfixes or large refactors. Providing an overview of your changes and the technical decisions you made helps us review the changes; otherwise, we have to determine why the change was made ourselves, which increases turnaround time dramatically.
+5. The PR must have _media_ when applicable.
+    1. Changes involving visuals, mechanics, or bugfixes should have media attached to demonstrate the changes to Maintainers and the community.
+    2. If media is absent, it is questionable whether you have tested your fix.
+    3. Media is usually not required when the fix is intuitively obvious from reading the code changes (inverted boolean logic for example).
+6. The _Breaking Changes_ section must be filled out if applicable.
+    1. Breaking changes occur when the following is changed:
+        1. A public API was modified. This includes YAML datafield name changes.
+        2. Code was moved to a different namespace, or a namespace was changed.
+        3. Prototype IDs were changed or deleted (even if the IDs were migrated).
+    2. Breaking changes _should_ include helpful advice on how to fix them if complicated. Simple redirections like "Use `x` namespace", "Use `Entity<T>` instead", "use `RefactoredSystem` helpers instead" are also welcome.
+7. The _Changelog_ section must be filled out if applicable.
+   1. See the Changelog section at the bottom of this document for more information on how to fill out a changelog.
 
 ## After Submitting
 
@@ -63,7 +102,9 @@ You are free to make changes to your PR after submitting, for example, if you ma
 
 # Reviews
 
-Reviews are an important part of the pull request process. Reviews help us obtain feedback from the community and maintain a high quality of code in the codebase. Since maintainers are volunteers, we ask for your patience. The review process for large changes can take up to several weeks.
+Reviews are an important part of the pull request process. Reviews help us obtain feedback from the community and maintain a high quality of code in the codebase. Since maintainers are volunteers, we ask for your patience. The review process for large changes can take up to several months.
+
+We appreciate and consider all player feedback. However, maintainers ultimately have the final say on which changes are merged into the repository. Keep in mind that even if a PR is merged, it may be reverted as part of the next maintainer meeting and may not end up in the next stable release. See our [release model](./releases.md) for more details.
 
 ## Getting Reviews
 
@@ -99,11 +140,69 @@ Each entry is either an `add`, `remove`, `tweak`, or `fix`. There can be multipl
 
 Maintainers may, at their discretion, add, modify, or remove a change log entry that you suggest.
 
+### Changelog Categories
+By default, all changelogs are placed in the main changelog.
+However, you can place them in other categories by prefixing your lists with category names.
+
+These categories serve to reduce clutter in the main changelog and to help players find relevant information.
+After all, admin tooling changes are not relevant to the average player.
+
+Note: The categories are case-insensitive,
+but if it is not alphabetical ending with a colon,
+it will fail parsing the category and will fall back to placing the changelogs in the previous category or the main changelog category.
+
+#### Map changelog
+Putting `MAPS:` in the changelog will place all changelogs below it into the map changelog category instead of the main changelog category.
+
+```
+:cl:
+MAPS:
+- add: Added fun!
+- remove: Removed fun!
+- tweak: Changed fun!
+- fix: Fixed fun!
+```
+
+When writing your mapping changelogs, always prefix your changes with the station you are modifying.
+For example:
+
+```
+:cl:
+MAPS:
+- add: On Meta, a new laser tag arena has been added to north-eastern maints.
+- remove: On Bagel, the evac security checkpoint's ID card terminal has been removed.
+- tweak: On Box, the AI core has been moved to the center of the station, underneath the Bridge.
+- fix: On Fland, the SMES array has been rewired to charge properly.
+```
+
+If you are modifying multiple stations in one PR (a migration deleting a prototype),
+you should prefix your changes with "on many stations."
+
+You can also use "on all stations" if the change applies to all stations.
+
+Note that PRs modifying many stations should generally be avoided and atomized into multiple PRs instead.
+
+For example:
+```
+:cl:
+MAPS:
+- remove: On many stations, the anomaly generator has been removed.
+- remove: On all stations, the cargo shuttle control terminal has been removed.
+```
+
+Changelogs for adding or removing a station can be done in a much more freeform way:
+```
+:cl:
+MAPS:
+- add: Added a new station, RA-12 Spire, a midpop engineering-focused tesla-centric station.
+- add: Added a new station, Gate, a highpop fractured station. 
+- remove: Core station has been removed.
+```
+
 #### Admin changelog
 
 Putting `ADMIN:` in the changelog will place all changelogs below it into the admin changelog category instead of the main changelog category.
 
-Note: The category is case-insensitive, but if it is not alphabetical ending with a colon, it will fail parsing the category and will fall back to placing the changelogs in the previous category or the main changelog category.
 
 ```
 :cl:
@@ -149,8 +248,6 @@ When writing your changelog entries, please follow these guidelines:
    - Not so good: "Adjusted pickaxe inhand sprites and added sprites for wielded pickaxes." You would see the changes when you decided to wield a pickaxe. Knowing that the pickaxes look different wouldn't change your traitor strategy.
   
    - Not so good: "Changed the plating sprite to be a little less blue." Same reason as above.
-
-   - Not so good: "Updated Security on Meta Station." Mapping changes often fill the changelog and shouldn't be included. 
 
 3. **Use the present, active voice.**
 
