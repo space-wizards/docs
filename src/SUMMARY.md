@@ -279,6 +279,7 @@ Space Station 14
 			- [Secdog Unit Ghost role](en/space-station-14/departments/security/proposals/SecDog.md)
 	- [Service](en/space-station-14/departments/service.md)
 		- [PR Guidelines](en/space-station-14/departments/service/guidelines.md)
+		- [Botany](en/space-station-14/departments/service/botany.md)
 
 		- [Proposals]()
 			- [Plant Genetics](en/space-station-14/departments/service/proposals/plant-genetics.md)
