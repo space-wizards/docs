@@ -1,8 +1,3 @@
----
-title: magnaliths
-
----
-
 | Designers | Implemented   | GitHub Links                                                                      |
 |---|---------------|-----------------------------------------------------------------------------------|
 | AugustSun, Coolsurf6  | :x: No | ----- |
@@ -24,7 +19,7 @@ These magnetic fields trap pressurized Nitrogen, required for functions also ser
 
 The congregation of Magnaliths to form more habitable environments results in natural, tribal-based societies, with the only hierarchy being ultimately determined by the strength of the magnetic field produced by each Magnalith. Even then, Magnaliths value stability and the long-term fostering of a singular,  cohesive culture. Should Magnalith tribes become adjacent to one another, the most common result is a "cultural osmosis", where tribes assimilate into a singular society.
 
-Magnaliths prefer to avoid conflict, both internal and external. In the extremely rare case of internal division, this results in the aggrieved parties separating from one another, distinguished by unique magnetic fields for each tribe within proximity. When in conflict with external societies, Magnalith tribes prefer outlast their foes, taking an extreme defensive posture and relying on their abnormally-resilient physiology to maintain their presence. However, because Magnalith tribes typically inhabit environments that are extremely hostile to most other species, external conflicts usually manifest as mining teams encroaching upon their inhabited areas.
+Magnaliths prefer to avoid conflict, both internal and external. In the extremely rare case of internal division, this results in the aggrieved parties separating from one another, distinguished by unique magnetic fields for each tribe within proximity. When in conflict with external societies, Magnalith tribes prefer to outlast their foes, taking an extreme defensive posture and relying on their abnormally-resilient physiology to maintain their presence. However, because Magnalith tribes typically inhabit environments that are extremely hostile to most other species, external conflicts usually manifest as mining teams encroaching upon their inhabited areas.
 
 Interplanetary migration for Magnalith societies originated as the result of natural phenomena, as well. Because Magnaliths inhabit planets with little to no magnetosphere or atmosphere, events like volcanic eruptions or celestial collisions (i.e. meteors) can dislodge dormant Magnalith tribes from their original planet, sending them on a journey through space. This method of migration is how Magnaliths were initially discovered by other societies, and is still utilized in more remotely-inhabited parts of space.
 
@@ -79,8 +74,11 @@ Similarly, the density of the Magnalith's mineral-based tissue translates to a s
 
 ###### GAMEPLAY REASONING / IMPACT:
  - **Respiration:** The adjustment of respiratory function results in the same amount of gas being breathed as other species across a similar timeframe, but does so in a more "peak-y" fashion. Nitrogen was chosen as the respiratory gas, as the higher volume per breath necessitates a more-available gas to not constantly be gasping for breath in lower-density environments.
+         **- Magnaliths breathe slower, but breathe more gas. They breathe Nitrogen.**
  - **Pressure:** Like many other aspects of Magnaliths, slower changes in body pressure mean that Magnaliths are able to tolerate lower-pressure or higher-pressure environments for a longer amount of time. However, this also means that when they cross the danger threshold for these environments, it takes longer for them to stabilize.
- - **Temperature:** Operating on the same basis as pressure, Magnaliths can manage hotter or colder temperatures for a longer time. If not managed properly, though, they will experience the dangers of these adverse environments for a longer time than other species.
+         **- Magnaliths experience pressure change at a slower rate than other species.**
+ - **Temperature:** Operating on the same basis as pressure, Magnaliths can manage hotter or colder temperatures for a longer time. If not managed properly, though, they will experience the dangers of these adverse environments for a longer time than other species. This also means that fire stacks affect magnaliths
+         **- Magnaliths experience temperature change at a slower rate than other species.**
 
 ---
 
@@ -102,17 +100,26 @@ Magnaliths are capable of consuming and digesting elements in their most basic f
 
 ###### GAMEPLAY REASONING / IMPACT:
  - As a higher-mass species, it makes sense for them to require volumetrically-dense sustenance in order to provide satiation; water in and of itself is also a relatively basic liquid, and naturally slakes thirst adequately as a result. Additionally, these materials are readily available across the station, even in their more basic forms (such as ores or logs).
+         **- Magnaliths primarily consume basic materials, such as metals, glass and ores.**
 
 ---
 
 ### Body Composition and Features
 
- - 
-
----
-
-### TODO
-- Resistant to blunt and slash damage
-- Slower fire stacking means less affected by heat overall
-- Resistant to slowdown effects due to mass
-- Affected by structural damage caused by weapons - weapons such as drills + baseball bats have increased damaged due to structure focus
+Magnaliths are commonly perceived as an amalgam of minerals, owing to the combination of a magnetic and biological bond. When Magnaliths are young, their bodies produce a smaller magnetic field, and thus, their dermis is more observable. This "skin", a flexible membrane with integrated ferric particles, is what initially bonds directly with the minerals that comprise their forms. 
+At the core of the Magnaliths are their organs, which also feature partially-ferric compositions. These function like the organs of any organic species (save for the eyes), and the motion of both their processes and the blood flowing through them is what produces their magnetic fields. As they grow in size and age, each Magnalith produces a larger field, eventually becoming strong enough to attract the minerals necessary to cover their entire core.
+Magnaliths allow these rocks and metals to bear the brunt of environmental hazards, and as such, it is common for them to continuously bond with rocks and minerals to restore integrity to their protective rock shells. If given enough time, Magnaliths will use a heat source to bond minerals, effectively "welding" the rocks together. Some Magnaliths, particularly ones that work in confined spaces, will remove any excessive protrusions to minimize their bulkiness.
+When a Magnalith is injured, it will attempt to find a place of safety, immediately followed by a period of dormancy to let the injury heal. During this recovery period, the bodily functions slow down, reducing the strength of their magnetic field; as a result, should a tribal Magnalith get injured at the outer portions of a tribe, they will "rotate out" with another healthy Magnalith, allowing for their magnetic fields to compensate for their own. In the process of healing, Magnaliths will replace any damaged minerals, or otherwise cover areas that may expose their cores.
+Regarding locomotion and manipulation of objects, Magnaliths will harness their magnetic fields to produce movement via their mineral compositions. When necessary, Magnaliths will deliberately assimilate smaller minerals to form pseudo-"hands", controlling every part with their magnetic field. However, these more indirect forces are less precise than the motor functions of organisms with muscles and nervous systems.
+###### GAMEPLAY REASONING / IMPACT:
+ - **Resistance to Blunt & Slash damage:** Magnaliths are an inherently durable species, owing to their dense exterior. This does mean that any further applications of damage resistances makes them highly survivable in combat scenarios, especially in close-quarters, but this advantage is offset by the fact that their durability is their only form of defense in most station-side engagements.
+         **- Magnaliths have a [30-50%] resistance to slash damage, and a [10-25%] resistance to blunt damage.**
+ - **Increased base health:** Going along the theme of being a more inherently durable species, an increase in health offers Magnalith players much more of a combat buffer than other species do. While they do not resist pierce damage, making them inherently more susceptible to get hit by gunfire, the increase in health allows them to bear the brunt of more damage without being immune to a focused assault.
+         **- Magnaliths have [125-150%] the health of a base human.**
+ - **Resistant to movement speed modifiers:** As said previously, Magnaliths are a high-mass species. In the sense of physics, this would require more force to move them faster, but also more force required to meaningfully slow them down. This keeps them in a much narrower band of minimum and maximum movement speeds than other species encounter.
+         **- Magnalith move speed is 20% slower than an average human. Movement speed modifiers are [70-90%] less effective.**
+         **- Magnaliths pull higher-mass objects faster than other species.**
+ - **Fire stacks slower:** The rocky composition of Magnaliths means that fire takes a much longer time to affect them. Because this also affects them via temperature change, though, being on fire for too long will put them over the heat tolerance threshold, making them take burn damage over a longer period of time than other species.
+         **- Fire stacks harm [30-50%] slower than normal.**
+ - **Partially affected by structural damage:** Their mineral-based composition makes them adjacent to artificial structural integrity, rather than the more organic foundations of other species. This makes them susceptible to tools and weaponry specifically designed to demolish the harder, but more brittle mineral formations that Magnaliths feature.
+         **- Magnaliths take [25-50%] of any structural damage a weapon causes**.
