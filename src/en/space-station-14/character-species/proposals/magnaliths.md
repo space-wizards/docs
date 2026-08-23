@@ -107,19 +107,35 @@ Magnaliths are capable of consuming and digesting elements in their most basic f
 ### Body Composition and Features
 
 Magnaliths are commonly perceived as an amalgam of minerals, owing to the combination of a magnetic and biological bond. When Magnaliths are young, their bodies produce a smaller magnetic field, and thus, their dermis is more observable. This "skin", a flexible membrane with integrated ferric particles, is what initially bonds directly with the minerals that comprise their forms. 
+
 At the core of the Magnaliths are their organs, which also feature partially-ferric compositions. These function like the organs of any organic species (save for the eyes), and the motion of both their processes and the blood flowing through them is what produces their magnetic fields. As they grow in size and age, each Magnalith produces a larger field, eventually becoming strong enough to attract the minerals necessary to cover their entire core.
+
 Magnaliths allow these rocks and metals to bear the brunt of environmental hazards, and as such, it is common for them to continuously bond with rocks and minerals to restore integrity to their protective rock shells. If given enough time, Magnaliths will use a heat source to bond minerals, effectively "welding" the rocks together. Some Magnaliths, particularly ones that work in confined spaces, will remove any excessive protrusions to minimize their bulkiness.
+
 When a Magnalith is injured, it will attempt to find a place of safety, immediately followed by a period of dormancy to let the injury heal. During this recovery period, the bodily functions slow down, reducing the strength of their magnetic field; as a result, should a tribal Magnalith get injured at the outer portions of a tribe, they will "rotate out" with another healthy Magnalith, allowing for their magnetic fields to compensate for their own. In the process of healing, Magnaliths will replace any damaged minerals, or otherwise cover areas that may expose their cores.
+
 Regarding locomotion and manipulation of objects, Magnaliths will harness their magnetic fields to produce movement via their mineral compositions. When necessary, Magnaliths will deliberately assimilate smaller minerals to form pseudo-"hands", controlling every part with their magnetic field. However, these more indirect forces are less precise than the motor functions of organisms with muscles and nervous systems.
+
 ###### GAMEPLAY REASONING / IMPACT:
+ 
  - **Resistance to Blunt & Slash damage:** Magnaliths are an inherently durable species, owing to their dense exterior. This does mean that any further applications of damage resistances makes them highly survivable in combat scenarios, especially in close-quarters, but this advantage is offset by the fact that their durability is their only form of defense in most station-side engagements.
-         **- Magnaliths have a [30-50%] resistance to slash damage, and a [10-25%] resistance to blunt damage.**
+
+   **- Magnaliths have a [30-50%] resistance to slash damage, and a [10-25%] resistance to blunt damage.**
+ 
  - **Increased base health:** Going along the theme of being a more inherently durable species, an increase in health offers Magnalith players much more of a combat buffer than other species do. While they do not resist pierce damage, making them inherently more susceptible to get hit by gunfire, the increase in health allows them to bear the brunt of more damage without being immune to a focused assault.
-         **- Magnaliths have [125-150%] the health of a base human.**
+
+   **- Magnaliths have [125-150%] the health of a base human.**
+ 
  - **Resistant to movement speed modifiers:** As said previously, Magnaliths are a high-mass species. In the sense of physics, this would require more force to move them faster, but also more force required to meaningfully slow them down. This keeps them in a much narrower band of minimum and maximum movement speeds than other species encounter.
-         **- Magnalith move speed is 20% slower than an average human. Movement speed modifiers are [70-90%] less effective.**
-         **- Magnaliths pull higher-mass objects faster than other species.**
+
+   **- Magnalith move speed is 20% slower than an average human. Movement speed modifiers are [70-90%] less effective.**
+
+   **- Magnaliths pull higher-mass objects faster than other species.**
+ 
  - **Fire stacks slower:** The rocky composition of Magnaliths means that fire takes a much longer time to affect them. Because this also affects them via temperature change, though, being on fire for too long will put them over the heat tolerance threshold, making them take burn damage over a longer period of time than other species.
-         **- Fire stacks harm [30-50%] slower than normal.**
+
+   **- Fire stacks harm [30-50%] slower than normal.**
+ 
  - **Partially affected by structural damage:** Their mineral-based composition makes them adjacent to artificial structural integrity, rather than the more organic foundations of other species. This makes them susceptible to tools and weaponry specifically designed to demolish the harder, but more brittle mineral formations that Magnaliths feature.
-         **- Magnaliths take [25-50%] of any structural damage a weapon causes**.
+
+   **- Magnaliths take [25-50%] of any structural damage a weapon causes**.
