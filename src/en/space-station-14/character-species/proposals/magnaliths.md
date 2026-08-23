@@ -73,12 +73,18 @@ Because Magnaliths can maintain their own internal and external pressures, they 
 Similarly, the density of the Magnalith's mineral-based tissue translates to a slower change in body temperature, allowing Magnaliths to operate in environments of extreme heat or cold. However, like pressure changes, excessive heat or cold effects will last longer for Magnaliths.
 
 ###### GAMEPLAY REASONING / IMPACT:
+ 
  - **Respiration:** The adjustment of respiratory function results in the same amount of gas being breathed as other species across a similar timeframe, but does so in a more "peak-y" fashion. Nitrogen was chosen as the respiratory gas, as the higher volume per breath necessitates a more-available gas to not constantly be gasping for breath in lower-density environments.
-         **- Magnaliths breathe slower, but breathe more gas. They breathe Nitrogen.**
+
+   **- Magnaliths breathe slower, but breathe more gas. They breathe Nitrogen.**
+ 
  - **Pressure:** Like many other aspects of Magnaliths, slower changes in body pressure mean that Magnaliths are able to tolerate lower-pressure or higher-pressure environments for a longer amount of time. However, this also means that when they cross the danger threshold for these environments, it takes longer for them to stabilize.
-         **- Magnaliths experience pressure change at a slower rate than other species.**
+
+   **- Magnaliths experience pressure change at a slower rate than other species.**
+ 
  - **Temperature:** Operating on the same basis as pressure, Magnaliths can manage hotter or colder temperatures for a longer time. If not managed properly, though, they will experience the dangers of these adverse environments for a longer time than other species. This also means that fire stacks affect magnaliths
-         **- Magnaliths experience temperature change at a slower rate than other species.**
+
+   **- Magnaliths experience temperature change at a slower rate than other species.**
 
 ---
 
