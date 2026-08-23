@@ -2,7 +2,7 @@
 
 This document clarifies guidelines for Github moderation in regards to the project's Code of Conduct. Github Moderators are expected to adhere to these guidelines as a baseline for actions taken on the Github repository, but may deviate if they believe it is in the best interest of the community. 
 
-Note: If you believe these guidelines were not followed or were deviated from without good reason, you are encouraged to to contact staff via [Discord](https://discord.ss14.io/) or [the forums](https://forum.spacestation14.com/), appeal your Github ban [on the forums](https://forum.spacestation14.com/c/ban-appeals/appeals-github/38), or make a [staff complaint](https://forum.spacestation14.com/t/staff-complaint-instructions-and-info/31). Incorrect enforcement of the [Code of Conduct](https://github.com/space-wizards/space-station-14/blob/master/CODE_OF_CONDUCT.md) will not result in disciplinary action for staff when done in good faith, and is reserved for extreme cases where good faith does not exist.
+Note: If you believe these guidelines were not followed or were deviated from without good reason, you are encouraged to to contact staff via [Discord](https://discord.spacestation14.io/) or [the forums](https://forum.spacestation14.com/), appeal your Github ban [on the forums](https://forum.spacestation14.com/c/ban-appeals/appeals-github/38), or make a [staff complaint](https://forum.spacestation14.com/t/staff-complaint-instructions-and-info/31). Incorrect enforcement of the [Code of Conduct](https://github.com/space-wizards/space-station-14/blob/master/CODE_OF_CONDUCT.md) will not result in disciplinary action for staff when done in good faith, and is reserved for extreme cases where good faith does not exist.
 
 ## Moderative Actions
 
