@@ -158,6 +158,7 @@ Space Station 14
 		
 	- [Proposals]()
 		- [Vulpkanin](en/space-station-14/character-species/proposals/vulpkanin.md)
+   		- [Magnaliths](en/space-station-14/character-species/proposals/magnaliths.md)
 
 - [Combat](en/space-station-14/combat.md)
 	- [PR Guidelines]()
