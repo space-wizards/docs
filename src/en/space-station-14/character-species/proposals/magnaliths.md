@@ -106,7 +106,8 @@ Magnaliths are capable of consuming and digesting elements in their most basic f
 
 ###### GAMEPLAY REASONING / IMPACT:
  - As a higher-mass species, it makes sense for them to require volumetrically-dense sustenance in order to provide satiation; water in and of itself is also a relatively basic liquid, and naturally slakes thirst adequately as a result. Additionally, these materials are readily available across the station, even in their more basic forms (such as ores or logs).
-         **- Magnaliths primarily consume basic materials, such as metals, glass and ores.**
+
+   **- Magnaliths primarily consume basic materials, such as metals, glass and ores.**
 
 ---
 
