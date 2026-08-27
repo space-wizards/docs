@@ -53,6 +53,7 @@ SS14 By Example
 - [Adding a Simple Bikehorn](en/ss14-by-example/adding-a-simple-bikehorn.md)
 - [Making a Sprite Dynamic](en/ss14-by-example/making-a-sprite-dynamic.md)
   - [Porting Appearance Visualizers](en/ss14-by-example/making-a-sprite-dynamic/porting-appearance-visualizers.md)
+- [YAML Inheritance Guide](en/ss14-by-example/yaml-inheritance-guide.md)
 - [Basic Networking and You](en/ss14-by-example/basic-networking-and-you.md)
 - [Guide to Prediction](en/ss14-by-example/prediction-guide.md)
 - [Fluent and Localization](en/ss14-by-example/fluent-and-localization.md)
