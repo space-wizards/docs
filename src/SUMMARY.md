@@ -210,6 +210,7 @@ Space Station 14
 		- [Turf War](en/space-station-14/round-flow/proposals/turf-war.md)
 		- [Changeling](en/space-station-14/round-flow/proposals/changeling.md)
 		- [Paradox Clone](en/space-station-14/round-flow/proposals/paradox-clone.md)
+  		- [The Creature](en/space-station-14/round-flow/proposals/the-creature.md)
 		- [Revolutionaries Rework](en/space-station-14/round-flow/proposals/revolutionaries-codeword-rework.md)
 		- [Tourists](en/space-station-14/round-flow/proposals/tourists.md)
 		- [Station Ecology](en/space-station-14/round-flow/proposals/station-ecosystem.md)
