@@ -2,7 +2,9 @@
 
 {{#template ../templates/wip.md}}
 
-Toolshed is one of the three primary built-in debug tools (alongside `scsi` and View Variables.) for RobustToolbox, functioning as the game's development console. To use Toolshed, open the debug console or use the debug console in `devwindow`.
+Toolshed is one of the three primary built-in debug tools (alongside `scsi` and View Variables.) for RobustToolbox, functioning as the game's development console. 
+
+Toolshed can be used through the debug console. The default key to open the debug console is `` ` ``. You can also use the devwindow by typing `/devwindow` in the in-game chat.
 
 ```admonish warning
 Toolshed is not yet available on the client, so you need to use the `>` prefix command on the client in order to run its commands server-side. Ommiting this will often result in an error stating that you lack permission to run the command even if this is not the case.
@@ -20,6 +22,7 @@ entities | with Item | count
 ```
 This is three commands, `entities`, `with`, and `count`. They together form a **command run**, a set of successive commands. In this case, the combined effect is to return the total number of entities that have the `ItemComponent`.
 
+Note that some Toolshed commands require that you have certain admin permissions, such as debug or mapping flags. These restricted commands are listed in `clientCommandPerms.yml`. To modify a user's admin permissions, you will need to use the in-game Admin Menu (default keybind `F7`), and use `Add Admin` to grant the desired flags to the user.
 
 ```admonish warning
 For convenience some of the examples used throughout the documentation may use types or commands that are specific to SS14 (e.g., ItemComponent), even though Toolshed is a part of RobustToolbox and not tied to SS14.
