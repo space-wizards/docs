@@ -30,11 +30,33 @@ Parameters the `vv` commands take:
 * Secondary debug console
 * UI tree view
 
-## Running Tests
+## YAML Linter
+
+YAML linter is a tool that attempts to serialize and validate every prototype defined in a `.yml` file, along with prototypes' member fields. It will collect information on any prototype it cannot serialize and provide the user with an output of those entities. This makes it incredibly useful for identifying where errors are occuring in your yaml, particularly typos and elusive inheritance issues.
+
+To run YAML linter, you can use the shell command `dotnet run --project Content.YAMLLinter` in your project folder. If you're using an IDE such as Rider or VSCode, you can also use the YAML linter preset to run your project.
+
+## Running Integration Tests
+
+Integration tests are extremely minimal simulations of a SS14 environment that are designed to run 'test' code in order to locate issues that can only be found through live game simulation. You can use integration tests to make sure a system works as intended by simulating its effects and comparing them against expected values, for example making sure that when you buckle someone to a chair, then that person can't move.
+
+To run integration tests, use the shell command `dotnet test` in your project folder. You can also use `dotnet test --filter` followed by the name of a specific test if you don't want to run every test at once. This is recommended as some tests can take a long time to run - see the section below about enabling server GC to make test runs more efficient! IDEs such as Rider or VSCode may also have built-in ways to run tests without using the terminal.
+
+![](../../assets/images/integration-test-example.png)
+
+When you open a PR to the Wizard's Den repository on GitHub, integration tests will run on your PR automatically. If tests fail, you'll need to update your PR before it can get properly reviewed.
+
+```admonish note
+`Content.IntegrationTests` is the directory containing integration tests. It is not the same thing as the similarly-named `Content.Tests` folder. 
+
+Unit tests test a single "unit" without loading data from any other units, while integration tests check all units against each other. For example, a hypothetical unit test of `LocalizedDataset` might have a unit test which uses spoofed data to make sure that all the methods within that class work as expected alone, while an integration test may go through all the instances of that data type in the game (including resource loading, yaml parsing, prototype management, etc.) to make sure they work as expected together.
+
+Unit/integration tests are used widely in software development outside of SS14, so ask around if you want more information on the distinction!
+```
 
 ### Server GC
 
-I recommend you enable [**server GC**](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/workstation-server-gc) to run SS14 tests, *especially* integration tests (it cuts integration test times in *half*). 
+It's recommended that you enable [**server GC**](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/workstation-server-gc) to run SS14 tests, *especially* integration tests (it cuts integration test times in *half*). 
 
 To enable this in various editors:
 
