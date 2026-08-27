@@ -1,6 +1,6 @@
 # Short, Properly Capitalized Title
 
-Your title should convey the basic jist of your proposed changes. It should be short because the text will be linked in the sidebar.
+Your title should convey the basic gist of your proposed changes. It should be short because the text will be linked in the sidebar.
 
 | Designers | Coders | Implemented | GitHub Links |
 |---|---|---|---|
