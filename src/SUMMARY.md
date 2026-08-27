@@ -213,6 +213,7 @@ Space Station 14
 		- [Revolutionaries Rework](en/space-station-14/round-flow/proposals/revolutionaries-codeword-rework.md)
 		- [Tourists](en/space-station-14/round-flow/proposals/tourists.md)
 		- [Station Ecology](en/space-station-14/round-flow/proposals/station-ecosystem.md)
+		- [Central Command Intern](en/space-station-14/round-flow/proposals/centcomm-intern.md)
 		
 - [User Interface](en/space-station-14/user-interface.md)
 	- [PR Guidelines]()
