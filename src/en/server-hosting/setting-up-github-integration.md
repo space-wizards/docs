@@ -15,8 +15,10 @@ https://docs.github.com/en/apps/creating-github-apps
 * Add any valid url for 'Homepage URL' - this is not used anywhere except for app description
 * Uncheck 'Active' checkbox under 'Webhook' section - you will not need it
 * Under 'Permissions' section in 'Repository permissions' allow issue read+write permissions (and metadata, which will be checked automatically)
+
 ![SS14 Status](../assets/images/github/permissions.png)
 * Ensure that 'Only on this account' installation option is checked
+
 ![SS14 Status](../assets/images/github/install.png)
 * Click Create GitHub App at the bottom of the page
 2. Under the "General" tab, get the app's **app ID** and also generate a **private key** (this will be a link in panel located at the top of window). This will download the private key to your computer.  
