@@ -686,11 +686,11 @@ public TimeSpan NextActivationTime;
 ## Naming
 
 ### Shared types
-Shared types should only be prefixed with `Shared` if and only if there are server and/or client inherited types with the same name.
+Types should only be prefixed with `Client` and `Server` if they are in the client / server assemblies.
 
 Example:
 - If `FooComponent` only exists in shared, it doesn't need a prefix.
-- If `BarComponent` exists in shared, server and client, the shared type should be prefixed with shared: `SharedBarComponent`.
+- If `BarComponent` exists in shared, server and client, the client / server types should be prefixed with: `ClientBarComponent` / `ServerBarComponent`.
 
 ## Physics
 
@@ -774,10 +774,11 @@ Please ensure you structure entities with components as follows for easier YAML 
 #### Entity Prototype suffixes
 
 Use `suffix` in prototypes, this it's a spawn-menu-only suffix that allows you to distinguish what prototypes are, without modifying the actual prototype name. You can use it like this:
-![](https://i.imgur.com/epkPR3Y.png)
+![entityprototypesuffixes1.png](../../assets/images/general-development/codebase-info/conventions/entityprototypesuffixes1.png)
+
 
 And results in this:
-![](https://i.imgur.com/JigMCuu.png)
+![entityprototypesuffixes2.png](../../assets/images/general-development/codebase-info/conventions/entityprototypesuffixes2.png)
 
 ## Localization
 Every player-facing string ever needs to be localized.

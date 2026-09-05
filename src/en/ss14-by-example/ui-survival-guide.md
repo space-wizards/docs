@@ -1,5 +1,7 @@
 # UI Survival Guide
 
+{{ #template ../templates/outdated.md }}
+
 ## Learning to walk before you run
 So you have choosen to take on the harsh wasteland that is coding UI and working with Stylesheets?
 

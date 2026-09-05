@@ -102,10 +102,10 @@ Allows a devices to send packets to other devices as long as the are the sender'
 
 ```yaml=
 components:
-    - type: DeviceNetworkComponent
-    ...
-    - type: WirelessNetworkConnection
-      range: <int>
+- type: DeviceNetworkComponent
+...
+- type: WirelessNetworkConnection
+  range: <int>
 ```
 
 **range**
@@ -126,9 +126,9 @@ Allows devices send packets to each other as long as they are drawing power from
   
 ```yaml=
 components:
-    - type: DeviceNetworkComponent
-    ...
-    - type: ApcNetworkConnection
+- type: DeviceNetworkComponent
+...
+- type: ApcNetworkConnection
 ```
 
 </details>
@@ -149,9 +149,9 @@ This means that every wired network connection that is connected to the same pow
   
 ```yaml=
 components:
-    - type: DeviceNetworkComponent
-    ...
-    - type: WiredNetworkComponent
+- type: DeviceNetworkComponent
+...
+- type: WiredNetworkComponent
 ```
 
 </details>
@@ -165,10 +165,10 @@ Allows devices that belong to the same station to send and receive packets to ea
   
 ```yaml=
 components:
-    - type: DeviceNetworkComponent
-    ...
-    - type: StationLimitedNetwork
-      allowNonStationPackets: <bool>
+- type: DeviceNetworkComponent
+...
+- type: StationLimitedNetwork
+  allowNonStationPackets: <bool>
 ```
 
 **allowNonStationPackets**
@@ -185,9 +185,9 @@ Prevents any packets from being received if the device doesn't have power.
   
 ```yaml=
 components:
-    - type: DeviceNetworkComponent
-    ...
-    - type: DeviceNetworkRequiresPower
+- type: DeviceNetworkComponent
+...
+- type: DeviceNetworkRequiresPower
 ```
 
 </details>

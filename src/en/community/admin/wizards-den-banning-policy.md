@@ -344,3 +344,25 @@ If a ban appeal is handled by the banning admin and the ban is not fully removed
     - An opinion detailing why you, the appeals team or the admin team as a whole have decided upon the outcome.
     - If applicable, when the player is able to reappeal.
 10. Implement the outcome 
+
+## Self Requested Bans
+A player may request a ban for any reason, for any duration of time. Such bans are not considered a ban for further administrative actions. Self-requested bans may only be requested through AHelp or admin messages on the forum. Requests through other channels should be met with instructions to submit them through the proper channels. At the player's request, the ban may be lifted before the requested time via a ban appeal. While admins are not required to honour ban requests, they should be honoured unless there are compelling reasons against placing a ban.
+
+
+
+## Self Requested Ban appeal procedure
+Self-requested bans may only be prematurely removed through a successful appeal on the forums. Any other attempts (e.g., Discord) should be responded to by instructing the player to appeal on the forums.
+
+1. Check for ban evasion. If found, deny the appeal.
+2. If the ban has expired you may, but are not required to, deny the appeal.
+3. If you are not an Appeals Team Member or under the supervision of an Appeals Team member you may only process the appeal if you intend to remove the ban, or reduce it in line with the appellants request.
+4. If you placed the ban, you are only allowed to process the appeal if you intend to remove or reduce the ban.
+5. If you do not intend to remove or reduce the ban in line with the appealants request, follow steps 5 & 6 of the appeals policy.
+6. Post a response on the appeal which must be a summary of the following:
+	- The outcome of the appeal.
+	If the outcome is not a removal or specific reduction requested by the appellant, this must also include:
+		- The facts relied on for the outcome.
+		- An opinion detailing why you, the appeals team or the admin team as a whole have decided upon the outcome.
+		- If applicable, when the player is able to reappeal.
+7. Implement the outcome
+

@@ -28,7 +28,7 @@ Any decisions taken in these notes may no longer be applicable.
     * What is contraband, specifically what is non-stealth contraband
         * This is info for the antag player (in the item status box), so people realize what they're buying is contraband.
         * **Silly stuff like syndicate balloon isn't really contraband: security can't assume you're a traitor.**
-        * ![](https://hackmd.io/_uploads/HJFTnRMjh.png)
+        * ![contraband.png](../assets/images/maintainer-meetings/2023-07-29/contraband.png)
         * **No explicit indication for obvious crap like emag, power sink, etc. Players should use their brain, but do have good descriptions for it.**
     * What are high value items, things that shouldn't be given away by heads
         * People don't realize you can't *just* give the hypospray away.
@@ -95,7 +95,7 @@ According to EmoGarbage: Used to just have magnet salvage. Pull shit in, mine it
             - faction system
         - clock cult | keronshb
             - waiting for mind rework
-- EL BODY SYSTEM | jez (sloth?) ![](https://cdn.discordapp.com/emojis/933790288860815380.webp =40x)
+- EL BODY SYSTEM | jez (sloth?)
     - some refactors were done by mirror, still some left
     - surgery died in the war of 1992
         - Mirror died in the war of 1993

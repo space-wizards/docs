@@ -140,8 +140,7 @@ ok epin merge
         - See [the FAQ for the full explanation](https://forum.spacestation14.io/index.php?/topic/48-information-faq/)
     - Is PJB a furry?
         - >looks at own avatar on discord
-            - ![](https://cdn.discordapp.com/emojis/913187937854832720.webp?size=96&quality=lossless)
-            - ![](https://c.tenor.com/hZSHM9mDoL4AAAAC/drake-morphin.gif)
+          - ![walterwhite.png](../assets/images/maintainer-meetings/2022-01-08/walterwhite.png)
 - We support species.
 - We support species at roundstart (when moony PRs it)
 - Review species case by case, same as everything else.

@@ -23,8 +23,7 @@ This meeting was recorded:
 
 ## New maintainer welcome
 Hi Milon
-![](https://hedgedoc.spacestation14.com/uploads/4e5c13e3-d383-4959-8b0a-23b56122d1b5.png)
-
+{% embed youtube id="APv7tDdkTg8" loading="lazy" %}
 ## Looking into crawling and antag balance (ScarKyo)
 We dont have enough info to talk about this, moving it to the next meeting.
 
