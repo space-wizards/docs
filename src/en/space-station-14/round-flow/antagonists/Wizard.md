@@ -208,7 +208,7 @@ It's important that the Wizard is not encouraged to just stay in their Den for t
 
 <!--
 Consider addressing:
-- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy?
+- How does the feature align with our [Gameplay Pillars](../space-station-14/core-design/gampleay-pillars.md) and game philosphy?
 - What makes this feature enjoyable or rewarding for players?
 - Does it introduce meaningful choices, risk vs. reward, or new strategies?
 - How does it enhance player cooperation, competition, or emergent gameplay?
