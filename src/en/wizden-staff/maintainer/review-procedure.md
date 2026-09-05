@@ -13,7 +13,7 @@ All PRs must adhere to the [code conventions](../../general-development/codebase
 All PRs must be triaged, as per the [triage procedure](triage-procedure.md) guidelines.
 Upon actioning on a PR (merging, closing, reviewing), if it is not triaged, the person actioning must triage the PR.
 
-All PRs must not conflict with [core design principles](../../space-station-14/core-design/design-principles.md). 
+All PRs must not conflict with [gamplay pillars](../../space-station-14/core-design/gampleay-pillars). 
 Additionally, the PR author should describe how the changes they made fit into the game.
 Sufficiently large feature PRs may also warrant a **Design Doc** detailing the broader scope and purpose of their changes.
 

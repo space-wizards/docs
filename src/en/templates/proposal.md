@@ -39,7 +39,7 @@ Give a description of what game mechanics you would like to add or change. This 
 ## Game Design Rationale
 
 Consider addressing:
-- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy?
+- How does the feature align with our [Gameplay Pillars](../space-station-14/core-design/gampleay-pillars) and game philosphy?
 - What makes this feature enjoyable or rewarding for players?
 - Does it introduce meaningful choices, risk vs. reward, or new strategies?
 - How does it enhance player cooperation, competition, or emergent gameplay?
