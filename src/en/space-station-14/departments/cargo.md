@@ -2,7 +2,7 @@
 
 ## Core Concept
 
-The Cargo department is one of the primary resource generators for the station and the main location for storing a lot of materials and items. Anyone can grab a parcel and deliver it, but what do you do when you have 30... 100? That is where the cargo department comes in, with a well coordinated cargo team and some well planned contraptions being able to deliver large numbers of materials and items and still have money left over afterwards.
+The Cargo department is one of the primary resource generators for the station and the main location for storing a lot of materials and items. Anyone can grab a parcel and deliver it, but what do you do when you have 30... 100? That is where the cargo department comes in, with a well coordinated cargo team and some well planned contraptions being able to deliver large numbers of materials and items and still have money left over afterwards for scurrets.
 
 ## Introduction
 
@@ -18,9 +18,11 @@ Despite the potential complexity, cargo is the most accessible department for ne
 
 Even the most inexperienced player should be able to contribute or help out in the department without needing a 30 minute explanation of the systems. There should be simple goals with clear paths to those goals; the path can get more complex for optimization, but there should always be a clear, potentially slower path.
 
+This goes for both deliveries and gaining money. Cargo doesn't require a very deep options to make money but instead should have a lot of flexible options. The depth should come for how they can be combined or how the players chose to use them.
+
 ### P2: Scale matters.
 
-No solution to cargo's problem should scale neatly. But there should be a solution at every scale.
+No solution to cargo's problem should scale neatly. But there should be a possible solution at every scale.
 
 As cargo is sometimes required for other departments to access sections of their content, there must be easy ways to achieve the minimum that departments need. This method should be one that does not scale well, and if you tried to use it to deliver more items it would be unwieldy.
 
@@ -32,7 +34,7 @@ These methods should not replace each other but have use cases in different area
 
 Other departments should not have ways to trivialize storage. Practical limits should encourage requesting things from cargo when they have things in storage, and potentially giving cargo spare resources if they have too much, to avoid needing to store it all. Other departments should not feel like storage is a chore, however, but instead that cargo enables them to make storage easier and have the materials they need on hand.
 
-Cargo should have the tools and space to store and organize large numbers of materials and items.
+Departments should be able to store materials they need for basic tasks but any very large constructions or specialized goals should require cargo's involvement. Cargo should have the tools and space to store and organize large numbers of materials and items.
 
 ### P4: Collaboration is an engine.
 
