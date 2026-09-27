@@ -18,7 +18,7 @@ Despite the potential complexity, cargo is the most accessible department for ne
 
 Even the most inexperienced player should be able to contribute or help out in the department without needing a 30 minute explanation of the systems. There should be simple goals with clear paths to those goals; the path can get more complex for optimization, but there should always be a clear, potentially slower path.
 
-This goes for both deliveries and gaining money. Cargo doesn't require a very deep options to make money but instead should have a lot of flexible options. The depth should come for how they can be combined or how the players chose to use them.
+This goes for both deliveries and gaining money. Cargo doesn't require very deep options to make money but instead should have a lot of flexible options. The depth should come form how they can be combined or how the players chose to use them.
 
 ### P2: Scale matters.
 
