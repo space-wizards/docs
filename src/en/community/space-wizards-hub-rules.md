@@ -10,7 +10,7 @@ When changing these rules, please keep the following in mind:
 # Space Wizards Hub Rules
 This document specifies the rules that need to be followed when listing your community on our server hub[^hub]. We will try to be as transparent and reasonable as possible when enforcing these rules. If you are not sure whether something is allowed, or you think that something that is not allowed by the current rules should be allowed, feel free to contact us. We will clarify and possibly amend the rules.
 
-We may change these rules from time to time, for example to add clarifications. When we do, it will be announced on [the forum](https://forum.spacestation14.io/index.php?/forum/29-hub-administrative/).
+We may change these rules from time to time, for example to add clarifications. When we do, it will be announced on [the forum](https://forum.spacestation14.com/index.php?/forum/29-hub-administrative/).
 
 [^hub]: effectively, the server browser in the launcher.
 
