@@ -188,6 +188,8 @@ Space Station 14
 	- [PR Guidelines]()
 		
 	- [Proposals]()
+	
+	- [Species Lore](en/space-station-14/roleplay-lore/species-lore.md)
 
 - [Roundflow](en/space-station-14/round-flow.md)
 	- [PR Guidelines]()
