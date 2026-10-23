@@ -57,11 +57,11 @@ Last meeting we mentioned freezing maps and UI and I think we said yes to the UI
 - Maps will be handled by ArtisticRoomba soon after this.
 - I will poke UI maints for their freeze.
 
-## Extending Offmed Playtest (Princess on behalf of Janet)
-Janet pushed some big changes to offmed on the 9th, and would like a bit more time to test them.
+## Extending Offmed Playtest (Princess on behalf of Anonymous)
+Anonymous pushed some big changes to offmed on the 9th, and would like a bit more time to test them.
 This is an official request to extend offmed testing by a week to the 19th rather than the 12th.
 - Slarti: We merged a ton of PRs recently and it would be good to see if there are any bugs without having them show up all at once with the release so that it's easier to figure out when it started happening. So I would prefer if we can either regularly merge master into the Offbrand branch or switch back and forth from time to time so we keep that testing server feedback for the master branch. But if it's only planned for one more week and not extended further it's probably fine.
-- Janet: i'm kinda burned out on the amount of time i'm spending observing and engaging in rounds combined with the maintenance burden of doing the nightly merges as well as any revisions to offmed that are needed from the tests, i'd prefer to have a 1 week period after 2 weeks of non-offmed
+- Anonymous: i'm kinda burned out on the amount of time i'm spending observing and engaging in rounds combined with the maintenance burden of doing the nightly merges as well as any revisions to offmed that are needed from the tests, i'd prefer to have a 1 week period after 2 weeks of non-offmed
     - Sure, by next stable release for 1 week as requested.
     - By that time we may have the feedback thingy.
 
