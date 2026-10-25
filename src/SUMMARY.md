@@ -233,10 +233,13 @@ Space Station 14
 	- [Cargo](en/space-station-14/departments/cargo.md)
 		- [PR Guidelines]()
 
+		- [Salvage](en/space-station-14/departments/cargo/salvage.md)
+
 		- [Proposals]()
 			- [Mail Deliveries](en/space-station-14/departments/cargo/proposals/mail-delivery.md)
 			- [Salvage Proposal](en/space-station-14/departments/cargo/proposals/salvage-proposal.md)
-   			- [Salvage Postmortem](en/space-station-14/departments/cargo/proposals/salvage-postmortem.md)	
+   			- [Salvage Postmortem](en/space-station-14/departments/cargo/proposals/salvage-postmortem.md)
+			- [Shipbreaker Salvage](en/space-station-14/departments/cargo/proposals/shipbreak-salvage.md)	
 
 	- [Command](en/space-station-14/departments/command.md)
 		- [PR Guidelines]()
