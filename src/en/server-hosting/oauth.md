@@ -4,7 +4,7 @@ The SS14 authentication hub implements OAuth2 and OpenID Connect. This allows yo
 
 ![log-in-with-ss14.png](../assets/images/hosting-log-in-with-ss14.png)
 
-This is used by the [official forum](https://forum.ss14.io), [official wiki](https://wiki.ss14.io) and SS14.Admin panel to make it easy for people to log into stuff with the same account everywhere. I am very pleased with how well it works.
+This is used by the [official forum](https://forum.spacestation14.com), [official wiki](https://wiki.spacestation14.io) and SS14.Admin panel to make it easy for people to log into stuff with the same account everywhere. I am very pleased with how well it works.
 
 OAuth apps are tied to an SS14 account and can be created [here](https://account.spacestation14.com/Identity/Account/Manage/Developer). 
 

@@ -7,7 +7,7 @@ This is the developer's wiki. If you are a player, you are looking for [the play
 ```admonish question "Technical Issues"
 If you are having difficulties with logging into the game or building it, please try the following resources:
 [🔊 Discord](https://discord.gg/ss14). This is the most active community of developers for Space Station 14. Ask a question on the General or Help channel.
-[📲 FAQ](https://spacestation14.io/about/faq/)
+[📲 FAQ](https://spacestation14.com/about/faq/)
 [🎮 Forums](https://forum.spacestation14.io/)
 ```
 

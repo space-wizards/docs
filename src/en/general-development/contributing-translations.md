@@ -16,4 +16,4 @@ If the language you want to translate to doesn't exist yet, also **just ask**. I
 
 ## Working Together
 
-Translation requires teamwork and coordination. If you wanna talk about translation stuff, the best place to do it is the `#translation` channel on our [Discord](https://discord.ss14.io).
+Translation requires teamwork and coordination. If you wanna talk about translation stuff, the best place to do it is the `#translation` channel on our [Discord](https://discord.spacestation14.io).
