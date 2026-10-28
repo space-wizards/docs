@@ -66,8 +66,10 @@ Go through the commit range list and note every feature/balance PR in the curren
 
 Notify maintainers in discord 'Release Review Thread' when PR list is up.
 
-```@Maintainers PR list is up, please go over the list and leave any notes you have. Reminder to please use the 'BLOCKER' keyword for PRs that you view as problematic and wish to revert or change before release. 
-Make sure to add yourself to the 'finished reviewing' section after looking at all of the items on the list.```
+```
+@Maintainers PR list is up, please go over the list and leave any notes you have. Reminder to please use the 'BLOCKER' keyword for PRs that you view as problematic and wish to revert or change before release. 
+Make sure to add yourself to the 'finished reviewing' section after looking at all of the items on the list.
+```
 
 ## Until the Meeting - Review PRs in list
 
