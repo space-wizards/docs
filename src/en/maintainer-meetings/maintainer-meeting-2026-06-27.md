@@ -58,7 +58,7 @@ Some of the downstream maintainers asked me to forward some PRs to be looked at.
 
 For reference here are our current development roles:
 
- ![](attachments/f98dc10d-dbc4-4f13-a6fe-84903a16ace5.png " =2242x401")
+ ((org chart was directly embedded here))
 
 ### Bots and Forums Relays
 
