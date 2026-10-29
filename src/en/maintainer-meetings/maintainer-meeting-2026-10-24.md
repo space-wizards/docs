@@ -4,7 +4,7 @@
 ## Maintainers In Attendance
 
 * Nem
-* SlamBamActionMan (NOT A REAL MAINT)
+* SlamBamActionMan (Restoration)
 * Ress (Infra)
 * Errant
 * Fildrance
