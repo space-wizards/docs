@@ -54,7 +54,6 @@ Seems to have reasonable support from the maintainer group.
   * **~~ACTION (NEM) Review and merge~~**
   * Merged
 
-    \
 * ~~Partial Revert vote Vending machine ghostroles~~
   * ~~PR open~~ [~~https://github.com/space-wizards/space-station-14/pull/46590~~](https://github.com/space-wizards/space-station-14/pull/46590) ~~needs one more code review~~
   * Merged
