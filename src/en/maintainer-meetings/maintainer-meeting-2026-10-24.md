@@ -64,7 +64,7 @@ Seems to have reasonable support from the maintainer group.
 
 * ~~FTL fix~~ 
   * ~~PR open~~ [~~https://github.com/space-wizards/space-station-14/pull/46577~~](https://github.com/space-wizards/space-station-14/pull/46577)
-  * It’s going straight to stable, so no longer considered a blocker for the release\n
+  * It’s going straight to stable, so no longer considered a blocker for the release
 
 # I read through the PR list:
 
