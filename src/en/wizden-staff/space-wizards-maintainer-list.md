@@ -40,7 +40,7 @@ This document shows all current Maintainers on the project. Along with their Git
 |[TheShuEd](https://github.com/TheShuEd) Ed                | @eshhhed            | 267327466060775425 |      |    X    |         |        |      |
 |[VasilisThePikachu](https://github.com/VasilisThePikachu) Myra | @vasilisiscool | 322708417540259841 |      |    X    |   X     |        |      |
 |[Visne](https://github.com/Visne)                         | @visne              | 182723474257608705 |      |    X    |   X     |   X    |      |
-|[Vulppine](https://github.com/vulppine) Flip              | @vulppine           | 102244617314914304 |      |    X    |         |   X    |      |
+|[Vulppine](https://github.com/vulppine) Flipp              | @vulppine           | 102244617314914304 |      |    X    |         |   X    |      |
 
 ## List of Workgroups
 
