@@ -61,8 +61,16 @@ Starting from this point, further merges into Staging should only happen if it's
 
 ### 3. Add the list of Feature Changes to the Outline doc
 
-Go through the commit range list and note every feature/balance PR in the current release. See the template for the format to be used.
+Create a formatted list of all merged PRs in the current release (See template).
+
 > You can use [this script](https://discord.com/channels/310555209753690112/909229454449078333/1350070411571757086) to generate the correctly formatted string for each PR, but you need to pick out the PRs from the full commit list manually
+
+Then check the entire list one by one, and decide for every PR whether they can be skipped from the maintainer team review. Many bugfixes, internal refactors with no player-facing effects, and tiny changes like just fixing a stray pixel or minor UI tweaks do not need further review from the team. 
+
+All other player facing changes, or bugfixes which can be argued to have notable gameplay-changing potential, must be raised. This is to ensure that every maintainer can have the chance to raise potential concerns, without having to track all ongoing merges on github. 
+
+Include all these relevant PRs in the appropriate section of the doc template
+
 
 Notify maintainers in discord 'Release Review Thread' when PR list is up.
 
