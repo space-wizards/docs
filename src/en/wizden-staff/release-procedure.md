@@ -6,7 +6,7 @@ We can always just deviate from the established times below, if necessary. But h
 This page describes how our release cycle functions. 
 In short, we use a month-based release cycle. The 'anchor' for the cycle start and end is the 'publish release' event, but for simplicity we will be using week numbers inside month, and consider first and last days of month as start and end. We are allowed to add code for the next release (in master branch), while we are stabilizing our current release ('staging' or later - 'stable' branch). Each cycle SHOULD lead to the creation of a new stable release.
 
-General scheme of release process timeline is presented on following diagram:
+General flow of release process timeline is presented on following picture:
 
 ![runpublish.png](../assets/images/wizden-staff/publish-timeline.png)
 
@@ -19,7 +19,7 @@ Before the process starts, a 'Release captain' should be chosen. It is a tempora
 
 The 'release captain' hat can be handed over for the rest of the duration of the release or just temporarily, in case the current 'captain' cannot fully operate due to any problems. Having someone who can properly dedicate time to the release coordination is of utmost importance.
 
-The 'release captain' should start by creating a new instance of the checklist (from the template: https://outline.spacestation14.com/settings/templates/release-check-list-Qacv6vN8XM) and should keep it up to date throughout the release process.
+The 'release captain' should start by creating a new instance of the checklist (from the template: https://outline.spacestation14.com/settings/templates/release-check-list-Qacv6vN8XM) and should keep it up to date throughout the release process. Checklist is a tool to make sure nothing is amiss and to keep the process transparent to other member of the team (everyone can see checklist current state), but it does not take precedence over Release procedure described in this document, not does it have to be mandatory for procedure to be completed successfully.
 
 
 ## Week 3 of cycle - Monday 20:00
