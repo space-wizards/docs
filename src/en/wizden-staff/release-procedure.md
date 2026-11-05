@@ -4,23 +4,40 @@ All times are in CEST/UTC+2
 We can always just deviate from the established times below, if necessary. But having a particular time written down would help us know when we should consider some part of the process to be overdue and start asking about it
 
 This page describes how our release cycle functions. 
-In short, we use a 4-week-based release cycle. The 'anchor' for the cycle start and end is the 'maintainer meeting' event. One release cycle does not technically (calendar-wise) 'end' with the 'maintainer meeting', it 'overlaps' with the start of the next cycle. We are allowed to add code for the next release (in master branch), while we are stabilizing our release ('staging' or later - 'stable' branch). Each cycle SHOULD lead to the creation of a new stable release.
+In short, we use a month-based release cycle. The 'anchor' for the cycle start and end is the 'publish release' event, but for simplicity we will be using week numbers inside month, and consider first and last days of month as start and end. We are allowed to add code for the next release (in master branch), while we are stabilizing our current release ('staging' or later - 'stable' branch). Each cycle SHOULD lead to the creation of a new stable release.
 
-## Week 3 of cycle - Saturday 20:00 - Staging cutoff
+General scheme of release process timeline is presented on following diagram:
 
-Weeks 1-3 of the release cycle contain no special events related to our new release; PRs are merged into master. Activities targeted at the previous release (stabilization/hotfixing/etc.) are described later in this document.
+![runpublish.png](../assets/images/wizden-staff/publish-timeline.png)
+
 
 ### 0. Coordinate
-Before the process starts, a 'Release captain' should be chosen. It is a temporary, informal role during this release, keeping track of and ensuring the execution of all important steps. When the person is chosen, announce it in the staff channel and tag @maintainers (can be done together with the staging cutoff announcement) to ensure no one else is already on it. It is the Producer role team's responsibility to arrange who will be the Release Captain.
+
+Weeks 1-2 of the release cycle contain no special events related to our new release; PRs are merged into master. Activities targeted at the previous release (stabilization/hotfixing/etc.) are described later in this document. Actual release activity starts at week 3 of the cycle.
+
+Before the process starts, a 'Release captain' should be chosen. It is a temporary, informal role during this release, keeping track of and ensuring the execution of all important steps. When the person is chosen, announce it in the staff channel and tag @maintainers (can be done together with the staging cutoff announcement) to ensure no one else is already on it. It is the Producer role team's responsibility to arrange who will be the Release Captain. It is recommended that Producers should agree on who will be 'Release captain' before week 3 monday, or at least before evening.
 
 The 'release captain' hat can be handed over for the rest of the duration of the release or just temporarily, in case the current 'captain' cannot fully operate due to any problems. Having someone who can properly dedicate time to the release coordination is of utmost importance.
 
 The 'release captain' should start by creating a new instance of the checklist (from the template: https://outline.spacestation14.com/settings/templates/release-check-list-Qacv6vN8XM) and should keep it up to date throughout the release process.
 
-### 1. Cut the staging branch
+
+## Week 3 of cycle - Monday 20:00
+
+'Release captain' announces that this week will have staging cutoff and asks Maintainers to not merge complex refactors and big/potentially problematic pull requests until staging cutoff with a message in the #maintainers Discord channel:
+
+```@Content Maintainer @Engine Maintainer Hello, crew. I will be coordinating this month release. Staging cutoff will be happneing this week on Thursday, if you have any problems or something requires extra coordination with cutoff - please contact me. Please don't merge any complex/big refactors/refactures that could bring instability for upcoming release for following days until cutoff is finished.```
+
+## Week 3 of cycle - Thursday 20:00 - Staging cutoff
+
 
 Announce the cutoff 1 hour before starting, with a message in the #maintainers Discord channel.
 ```@Content Maintainer @Engine Maintainer Hello, crew. I will be coordinating this release. Staging cutoff in 1 hour.```
+
+
+
+### 1. Cut the staging branch
+
 
 The cutoff can be postponed by the 'release captain' if there are any problems with a priority higher than P1.
 
@@ -50,17 +67,16 @@ Starting from this point, further merges into Staging should only happen if it's
 
 ### 2. Create the Outline doc and open the Release Review Thread
 
-1. Create the upcoming Maintainer Meeting doc from a template in [Outline](https://outline.spacestation14.com/settings/templates/yyyy-mm-dd-maintainer-meeting-mmNlS0WVxq) from the meeting doc template.
+1. Create the upcoming Maintainer Meeting doc from a template in [Outline](https://outline.spacestation14.com/settings/templates/yyyy-mm-dd-maintainer-meeting-mmNlS0WVxq), see details in secton below.
+2. In #maint-reviews, open the Release Review Thread titled `YYYY-MM-DD Release Review Thread` with the text printed by `ss14-prepstaging`.
+3. Drop in the link to the Outline doc.
+4. Ping `@Content Maintainer @Engine Maintainer`.
+
 > Manual setup:
 > * Title format: "YYYY-MM-DD Release Review Thread"
 > * List the current commit range: <`oldest commit hash`> - <`newest commit hash`>
 > * Link the current commit range: `https://github.com/space-wizards/space-station-14/compare/<oldest commit hash>...<newest commit hash>`
 > * link created outline Maintainer Meeting doc
-
-
-2. In #maint-reviews, open the Release Review Thread titled `YYYY-MM-DD Release Review Thread` with the text printed by `ss14-prepstaging`, 
-3. Drop in the link to the Outline doc
-4. Ping `@Content Maintainer @Engine Maintainer`.
 
 ### 3. Add the list of Feature Changes to the Outline doc
 
@@ -107,7 +123,7 @@ Blocker PRs, bugs and critical problems of other nature should be listed in Main
 
 These comments also serve as the best way for people who can't make it to the meeting to engage with the revert process in a fair way. If you can't show up but have a concern, leave a BLOCKER note along with your concern/reason/considerations; the meeting will not remove tags just because you are not there to argue for them. (Although if no one else seconds it before or during the meeting, then it will still not go to a vote)
 
-## Week 4 Saturday 20:00 - Maintainer Meeting
+## Week 3 Saturday 20:00 - Maintainer Meeting
 
 It would be nice if we all showed up on the clock, so we could start sooner. 
 
