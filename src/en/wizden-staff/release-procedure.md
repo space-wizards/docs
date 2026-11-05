@@ -96,7 +96,9 @@ If something is unfinished/broken/etc. enough that maintainers think it should n
 Using this unambiguous tag will help us have a smoother meeting and make the later vote/hotfix/revert process easier to decide.
 If you do not mark your comment with BLOCKER, we will still go over it during the meeting but it will be treated as a "non-binding" lesser concern/suggestion/idea/future feature, not something that demands a vote. (If you will be at the meeting, you will still be able to change this to a BLOCKER then)
 
-Two such objections are required for a PR to go **instantly** to a revert vote (should be done in the 'Release Review Thread' in Discord). If someone adds a second one at this stage, then we can see ahead of time that there will be a vote and can maybe even figure out/address any concerns before the meeting. This helps everyone involved, so if at all possible, review and log BLOCKERs early.
+Two such objections are required for a PR to go to a revert vote (see later in 'Feature Reviews, Revert votes' section).
+
+Blocker PRs, bugs and critical problems of other nature should be listed in Maintainer meeting document and be clearly visible.
 
 #### In Absentia
 
@@ -107,7 +109,9 @@ These comments also serve as the best way for people who can't make it to the me
 It would be nice if we all showed up on the clock, so we could start sooner. 
 
 Make sure to note maintainers with messages when appropriate
+
 ```@Content Maintainer @Engine Maintainer  meeting in 1 hour```
+
 ```@Maintainers Maintainer meeting is starting NOW!```
 
 Historically, meetings have started with the Topics section. That will not be detailed in this doc. At some point, the meeting will get to the feature reviews.
