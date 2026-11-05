@@ -175,30 +175,17 @@ git merge staging
 git push upstream stable
 ```
 
-### 2. Add tag to release
+### 2. Run Publish
 
-Add release version tag on commit that will be used for our new release.
+Go to [github's web GUI](https://github.com/space-wizards/space-station-14/actions/workflows/publish.yml) and run the workflow with the stable branch, don't forget to fill release version. For version tag use following algorithm:
 
-version in following script should be formed using following template
-```wizden-v{YEAR}.{START-MONTH}.{HOTFIX}```
-replace `START-MONTH` with two-digit month number in which release should have been published originally, and `HOTFIX` is zero-based number of publishes done for the sake of hotfixes.
+`wizards-{YEAR}.{START-MONTH}-v{HOTFIX}`
 
-example - previous release was supposed to be out on Sunday 2026-07-26 - that is start of new release cycle (the fact that it got out on 2026-07-27 does not matter - we use planned calendar dates), so next maintainers meeting and release is supposed to be in 4 weeks, 2026-08-23, so our version number for it will be `wizden-v2026.08.0` even if after A LOT of hotfixes it will be out on 2026-09-01. And any following small hotifxes, that will be released following it but without staging branch usage - will be called `wizden-v2026.08.1`, `wizden-v2026.08.2` etc.
+replace `START-MONTH` with two-digit month number in which release should have been published originally, and `HOTFIX` is one-based number of publishes done for the sake of hotfixes.
 
-
-```
-git checkout stable
-git pull upstream stable
-git tag <version>
-git push upstream <version>
-```
+example - previous release was supposed to be out on Sunday 2026-07-26 - that is start of new release cycle (the fact that it got out on 2026-07-27 does not matter - we use planned calendar dates), so next maintainers meeting and release is supposed to be in 4 weeks, 2026-08-23, so our version number for it will be `wizards-2026.08-v1` even if after A LOT of hotfixes it will be out on 2026-09-01. And any following small hotifxes, that will be released following it but without staging branch usage - will be called `wizards-2026.08-v2`, `wizards-v2026.08-v3` etc.
 
 
-### 3. Run Publish
-
-You can use github-cli to start publish, [Myra's script](https://gist.github.com/VasilisThePikachu/762b90187a5f9a0cca3249cc335cab31) already does this for you.
-
-To do it manually, go to [github's web GUI](https://github.com/space-wizards/space-station-14/actions/workflows/publish.yml) and run the workflow with the stable branch:
 
 ![runpublish.png](../assets/images/wizden-staff/runpublish.png)
 
@@ -208,7 +195,7 @@ Make sure that the publish workflow finishes green, and check the changelog Disc
 // TODO - need to add steps that will create a GitHub release record for the new release, ideally without any additional manual actions
 
 
-### 4. If there were any hotfixes on Staging that weren't already merged back, merge Stable into Master.
+### 3. If there were any hotfixes on Staging that weren't already merged back, merge Stable into Master.
 
 This needs to be done via a PR on GitHub (because the master branch is protected from pushing).
 You can merge this PR by yourself immediately, but **DO NOT SQUASH IT**.
@@ -216,11 +203,11 @@ You can merge this PR by yourself immediately, but **DO NOT SQUASH IT**.
 If there are merge conflicts at this step, note that you could publish stable before you get bogged down fixing the conflict for master, so the publish tests can run meanwhile.
 
 
-### 5. Monitor whether Salamander actually gets the new release after their next restart
+### 4. Monitor whether Salamander actually gets the new release after their next restart
 
 Specifically, these two servers sometimes restart for the patch but don't actually get it due to "funny network reasons". If this happens, any Maintainer can run ```!updateserver servername``` on Discord to restart them again.
 
-### 6. Announce that the release is out and all work on it is finished
+### 5. Announce that the release is out and all work on it is finished
 
 Notify maintainers that all work related to the release is finished.
 
