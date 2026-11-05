@@ -51,13 +51,16 @@ Starting from this point, further merges into Staging should only happen if it's
 ### 2. Create the Outline doc and open the Release Review Thread
 
 1. Create the upcoming Maintainer Meeting doc from a template in [Outline](https://outline.spacestation14.com/settings/templates/yyyy-mm-dd-maintainer-meeting-mmNlS0WVxq) from the meeting doc template.
-2. In #maint-reviews, open the Release Review Thread titled `YYYY-MM-DD Release Review Thread` with the text printed by `ss14-prepstaging`, drop in the link to the Outline doc, and ping all Maintainers. Review threads are currently on Discord, but may move to Discourse in the future.
-
 > Manual setup:
 > * Title format: "YYYY-MM-DD Release Review Thread"
 > * List the current commit range: <`oldest commit hash`> - <`newest commit hash`>
 > * Link the current commit range: `https://github.com/space-wizards/space-station-14/compare/<oldest commit hash>...<newest commit hash>`
 > * link created outline Maintainer Meeting doc
+
+
+2. In #maint-reviews, open the Release Review Thread titled `YYYY-MM-DD Release Review Thread` with the text printed by `ss14-prepstaging`, 
+3. Drop in the link to the Outline doc
+4. Ping `@Content Maintainer @Engine Maintainer`.
 
 ### 3. Add the list of Feature Changes to the Outline doc
 
