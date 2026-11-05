@@ -49,8 +49,8 @@ The first meeting will be freeform, but at the end of each meeting, the attendee
 - We should have some more discussion about this on discourse. We should not be making decisions on something like this when not all maintainers can attend. Give it a week for discussion.
     - Ask roomba if they are feeling to make the discourse thread
 
-## Markings/Species Freeze (Janet/ArtisticRoomba)
-Janet is requesting that markings and species be frozen for a few weeks. She needs it frozen because `HumanoidAppearance` and the markings system aren't suitable for the future plans with surgery, prosthetics, and general bodycode, so a refactor is in order.
+## Markings/Species Freeze (Anonymous/ArtisticRoomba)
+Anonymous is requesting that markings and species be frozen for a few weeks. They need it frozen because `HumanoidAppearance` and the markings system aren't suitable for the future plans with surgery, prosthetics, and general bodycode, so a refactor is in order.
 
 The scope is `Content.*.Humanoid`, `Content.*.Body`, and components/prototypes defined with their types. It will last until the refactoring efforts revolving around `HumanoidAppearance` are finished.
 

@@ -9,7 +9,7 @@
 - PJB
 - Orks
 - Slamn
-- Janet (Welcome)
+- Anonymous (Welcome)
 - Roomba
 - Shadowcommander
 - Slart

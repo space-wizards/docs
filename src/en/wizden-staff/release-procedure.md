@@ -67,7 +67,7 @@ Starting from this point, further merges into Staging should only happen if it's
 
 ### 2. Create the Outline doc and open the Release Review Thread
 
-1. Create the upcoming Maintainer Meeting doc from a template in [Outline](https://outline.spacestation14.com/settings/templates/yyyy-mm-dd-maintainer-meeting-mmNlS0WVxq), see details in secton below.
+1. Create the upcoming Maintainer Meeting doc from a template in [Outline](https://outline.spacestation14.com/doc/20xx-xx-xx-maintainer-meeting-template-Pb5bwE11Ma), see details in secton below.
 2. In #maint-reviews, open the Release Review Thread titled `YYYY-MM-DD Release Review Thread` with the text printed by `ss14-prepstaging`.
 3. Drop in the link to the Outline doc.
 4. Ping `@Content Maintainer @Engine Maintainer`.
@@ -191,7 +191,7 @@ If the fix is completed before the 'End Time', then the 'Release captain' can st
 
 > It is up to the 'Release captain' to decide whether problem fixes are worth the additional time until release, but as a general rule, it should be noted that complex/heavy fixes are undesirable (highly discouraged), as the 'staging' branch does not have any testing grounds.
 
-## The Release (timing depends on 'when it's ready'™)
+## The Release (timing depends on 'when it's ready'�)
 
 ### 1. Merge Staging into Stable
 

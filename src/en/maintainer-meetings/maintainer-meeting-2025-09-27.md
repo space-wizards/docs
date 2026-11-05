@@ -58,7 +58,7 @@ A notice to the Engi and Atmos workgroup that the Engineering design document is
 You can review the design document [here](https://github.com/space-wizards/docs/pull/519/files).
 
 ## Medical Workgroup Design Doc (Princess Cheeseballs)
-A notice that the Medical Design docs are also ready for preliminary review. I'd like for them to get a look over by Janet and anyone else interested in reading them as well.
+A notice that the Medical Design docs are also ready for preliminary review. I'd like for them to get a look over by Anonymous and anyone else interested in reading them as well.
 
 You can review the medical design docs [here](https://github.com/space-wizards/docs/pull/510)
 
