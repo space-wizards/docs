@@ -202,7 +202,7 @@ You can merge this PR by yourself immediately, but **DO NOT SQUASH IT**.
 If there are merge conflicts at this step, note that you could publish stable before you get bogged down fixing the conflict for master, so the publish tests can run meanwhile.
 
 
-### 4. Monitor whether Salamander actually gets the new release after their next restart
+### 4. (Recommended) Monitor whether Salamander actually gets the new release after their next restart
 
 Specifically, these two servers sometimes restart for the patch but don't actually get it due to "funny network reasons". If this happens, any Maintainer can run ```!updateserver servername``` on Discord to restart them again.
 
