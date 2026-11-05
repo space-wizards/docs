@@ -65,6 +65,9 @@ Create a formatted list of all merged PRs in the current release (See template).
 
 > You can use [this script](https://discord.com/channels/310555209753690112/909229454449078333/1350070411571757086) to generate the correctly formatted string for each PR, but you need to pick out the PRs from the full commit list manually
 
+> If you are not using the script, use this git command to get a raw list of all the merged PRs in this release: `git log --reverse --oneline b0387..71ac5` where you use the current oldest and newest commit hash you saved earlier.  
+Then format the resulting text via whatever text processing method you prefer. <br>
+Note that **the very first line of this list must be deleted**, as that is actually the last merge of the previous release cycle, and we already reviewed it then.
 Then check the entire list one by one, and decide for every PR whether they can be skipped from the maintainer team review. Many bugfixes, internal refactors with no player-facing effects, and tiny changes like just fixing a stray pixel or minor UI tweaks do not need further review from the team. 
 
 All other player facing changes, or bugfixes which can be argued to have notable gameplay-changing potential, must be raised. This is to ensure that every maintainer can have the chance to raise potential concerns, without having to track all ongoing merges on github. 
