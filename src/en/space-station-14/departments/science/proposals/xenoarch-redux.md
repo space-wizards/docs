@@ -84,12 +84,12 @@ All remaining nodes are simply locked and have no behavior.
 |Node activation| invoking effect of node. Can be done by manual interaction, usually is done upon unlocking node. **Manual activation invokes all active nodes in artifact.**|
 |Node unlocking| opening node for future activations. Can be done by executing list of triggers on the node (which is list of trigger on node and all chain of predecessors, connected to it by edges) |
 |Active node| Active are nodes which are both 'unlocked' and are last in chain of unlocked nodes, connected by edges (nodes with most depth). Only active nodes effects are invoked when artifact is activated.|
-|Budget range| Min and max values, between which acceptable range of budget lies. Both triggers and effects have budget range, each of them have own values|
-|Trigger budget|Score for how hard this trigger is. The harder trigger condition is, the greater trigger budget should be.|
-|Virtual budget|Proposed amount of score node could have, based on predecessor and depth. Can be used to pick trigger (should be withing its 'Budget range') which then decides 'actual budget' (by adding 'Trigger budget')|
-|Actual budget| Score-estimate of how 'valuable' this node is. Increases with depth and amount of predecessors. |
+|Intensity range| Min and max values, between which acceptable range of intensity lies. Both triggers and effects have intensity range, each of them have own values|
+|Trigger intensity|Score for how hard this trigger is. The harder trigger condition is, the greater trigger intensity should be.|
+|Potential intensity|Proposed amount of score node could have, based on predecessor and depth. Can be used to pick trigger (should be withing its 'Intensity range') which then decides 'actual intensity' (by adding triggers 'intensity')|
+|Actual intensity| Score-estimate of how 'valuable' this node is. Increases with depth and amount of predecessors. |
 |Aspect of effect| Separate part of node effect that, amount of which can be changed. Like range of teleportation can be increased or decreased.|
-|Placement in budget| Floating point value from -1 to 1. Amount of buff or debuff that node should receieve. Calculated using 'actual budget' of node and its effect 'budget range'. Exact amount certain aspect should get is determined by strategy.|
+|Placement in budget| Floating point value from -1 to 1. Amount of buff or debuff that node should receieve. Calculated using 'actual intensity' of node and its effect 'intensity range'. Exact amount certain aspect should get is determined by strategy.|
 |Meta-nodes| Node effects, which are doing nothing by themselves upon activation, but rather add modifiers to effect aspects of other nodes effects|
 
 ### Activation and Unlocking Nodes
@@ -210,23 +210,23 @@ flowchart TB
         direction TB
         subgraph P1[Preparation]
             direction LR
-            A1("Get current node virtual budget: (sum of direct predecessor actual budgets + 2000 * depth) ")
-            --> A2(Pick triggers from list of remaining ones, for which current virtual budget fits into range)
+            A1("Get current node potential intensity: (sum of direct predecessor actual intensity + 2000 * depth) ")
+            --> A2(Pick triggers from list of remaining ones, for which current potential intensity fits into range)
             --> A21{Do we have any triggers?}
             -- no --> EMPTY(Return no node)
             A21 -- yes --> A3("Roll trigger (with respect to weights but only between picked ones)")
             --> A4("Remove rolled trigger from pool")
-            --> A5("Get current node actual budget: (sum of direct predecessors + actual budget of picked trigger)")
-            --> A6(Pick effects from list, for which current actual budget fits into range)
+            --> A5("Get current node actual intensity: (sum of direct predecessors + actual intensity of picked trigger)")
+            --> A6(Pick effects from list, for which current actual intensity fits into range)
             --> A7{Do we have any effects?}
             -- no --> EMPTY
             A7 -- yes --> A8("Roll effect (with respect to weights but only between picked ones)")
         end
         P1 --> P2
-        subgraph P2[Apply actual budget to node]
+        subgraph P2[Apply actual intensity to node]
             direction LR
             B1(Spawn node entity and add it to container)
-            --> B2("Get point on scale of effect budget range, where node actual budget is placed - [actual budget placement]")
+            --> B2("Get point on scale of effect intensity range, where node actual intensity is placed - [actual intensity placement]")
             --> B3(Pick strategy for splitting bonus on effects)
             --> B4(Get bonus amount for each modifier that current node supports and save it)
             --> B5(Apply bonuses on node init - durability etc.)
@@ -243,28 +243,28 @@ For unlocking mechanic to work properly all triggers are made unique, which mean
 
 **remark: Almost all of budget things is internal game mechanics and is not for player to view.**
 
-For balance we introduce concept of 'node budget'. 
-- Each trigger on the list gets 'budget range' and 'budget' assigned, according to how hard it is to activate by default (w/o interference).
-- Each effect on the list gets 'budget range' it can match to. Some effects can scale (give more resources), giving them greater range, while others cannot.
+For balance we introduce concept of 'intensity'. 
+- Each trigger on the list gets 'intensity range' and 'intensity' assigned, according to how hard it is to activate by default (w/o interference).
+- Each effect on the list gets 'intensity range' it can match to. Some effects can scale (give more resources), giving them greater range, while others cannot.
 
 Trigger and effect rolling should look like following:
-  1. When trying roll trigger - our 'virtual budget' is sum of 'actual budget' for each node predecessor + (depth * 2000). For starting node that will be 0, so we only roll triggers which have 'Budget range' like '0-*' (things like using tools, feeding artifact, using water etc). 
-  When rolling between triggers we consider weights that were placed upon them in full weighted list (got from XenoArtifactComponent), but we roll only between picked by budget options. 
+  1. When trying roll trigger - our 'potential intensity' is sum of 'actual intensity' for each node predecessor + (depth * 2000). For starting node that will be 0, so we only roll triggers which have 'Intensity range' like '0-*' (things like using tools, feeding artifact, using water etc). 
+  When rolling between triggers we consider weights that were placed upon them in full weighted list (got from XenoArtifactComponent), but we roll only between picked by intensity options. 
   So even if we have very low weight option, but it is the only one we can roll upon, probability of picking  it will be 100%
-  2. After picking trigger we get trigger 'budget' from it - that, plus 'actual budget' of direct predecessors is current node's 'actual budget'
-  3. Then we roll for 'effect' that have this budget in its 'budget range', in same manner we rolled trigger
+  2. After picking trigger we get trigger 'intensity' from it - that, plus 'actual intensity' of direct predecessors is current node's 'actual intensity'
+  3. Then we roll for 'effect' that have this intensity in its 'intensity range', in same manner we rolled trigger
 
-Example of segment generation process (detailed version w/o how actual budget applies mods to xeno artifact effect aspects):
+Example of segment generation process (detailed version w/o how actual intensity applies mods to xeno artifact effect aspects):
 We rolled tree with 1 tier0 node, 1 tier2 node and 1 tier3 node. All tier0 nodes connect to tier1.
-1. roll tier0 node from triggers, 'virtual budget' is 0, 'trigger budget range' 0 - 4 000, we get 'trigger budget' 1 500, resulting 'actual budget' is 1 500
-2. roll effect from effects with with 1 500 - for example, budget range 1 000 - 6 000 fits nicely.
-4. calculate tier1 node virtual budget : 1 500 (1 node of tier0 are direct predessors) + 2 000 * 1 (its tier1 node) = 3 500
-5. roll trigger with 'virtual budget' of 3 500 - for example trigger with 'budget range' 2 000 - 10 000. We get 'trigger budget' 7 500 and get node 'actual budget' 1 500 (predessors sum) + 7 500 = 9 000
-6. roll effect with budget range that will include 9 000 - for example 10 000 - 15 000
-7. calculate tier2 node 'virtual budget' - 9 000 (tier1 direct predessor) + 2000 * 2 (its tier2 node) = 13 000. Roll trigger with 'budget range' that contain 13 000 (for example, trigger with range 10 000-> 30 000). Trigger budget 14 000 makes 'actual node budget' 9 000 + 14 000 = 23 000
-8. roll effect with budget range that will contain 23 000
+1. roll tier0 node from triggers, 'potential intensity' is 0, 'trigger intensity range' 0 - 4 000, we get 'trigger intensity' 1 500, resulting 'actual intensity' is 1 500
+2. roll effect from effects with with 1 500 - for example, intensity range 1 000 - 6 000 fits nicely.
+4. calculate tier1 node potential intensity : 1 500 (1 node of tier0 are direct predessors) + 2 000 * 1 (its tier1 node) = 3 500
+5. roll trigger with 'potential intensity' of 3 500 - for example trigger with 'intensity range' 2 000 - 10 000. We get 'trigger intensity' 7 500 and get node 'actual intensity' 1 500 (predessors sum) + 7 500 = 9 000
+6. roll effect with intensity range that will include 9 000 - for example 10 000 - 15 000
+7. calculate tier2 node 'potential intensity' - 9 000 (tier1 direct predessor) + 2000 * 2 (its tier2 node) = 13 000. Roll trigger with 'intensity range' that contain 13 000 (for example, trigger with range 10 000-> 30 000). Trigger intensity 14 000 makes 'actual node intensity' 9 000 + 14 000 = 23 000
+8. roll effect with intensity range that will contain 23 000
 
-### Placement in budget and effect modifiers
+### Placement in "budget" and effect modifiers
 
 As finishing touch for balancing and making related gameplay more deep, we must 
 
@@ -323,9 +323,9 @@ yaml:
 ```
   - type: XenoArtifactNodeBudget
     modifyBy:
-      enum.XenoArtifactEffectModifier.Power: "budgetDependant add -15,30"
-      enum.XenoArtifactEffectModifier.Range: "budgetDependant add -3,2,10"
-      enum.XenoArtifactEffectModifier.Duration: "budgetDependant multiply -5,15,20"
+      enum.XenoArtifactEffectModifier.Power: "intensityDependant add -15,30"
+      enum.XenoArtifactEffectModifier.Range: "intensityDependant add -3,2,10"
+      enum.XenoArtifactEffectModifier.Duration: "intensityDependant multiply -5,15,20"
 ```
 So it is Dictionary<Enum, ModifierProviderBase> where enum is artifact aspect, and value is class with simple signature of:
 ```
@@ -334,9 +334,9 @@ public float Modify(float originalValue)
 
 So it eats some value and returns it modified. Each modifier derived class have its own logic on how to modify value. Lets look at our previous example one more time:
 ```
-enum.XenoArtifactEffectModifier.Range: "budgetDependant add -3,0,10"
+enum.XenoArtifactEffectModifier.Range: "intensityDependant add -3,0,10"
 ```
-* 'budgetDependant add' means BudgetDependantAddEffectModifier, a short and more easy to read declaration of type
+* 'intensityDependant add' means intensityDependantAddEffectModifier, a short and more easy to read declaration of type
 * -3 means that at -1 'placement in budget' it will ADD -3 to 'originalValue' and return result, if method 'Modify' will be called.
 * 2 means it will add 2 on 0 'placement in budget' it will ADD 2 to 'originalValue' and return result. All points in-between are linerly extrapolated, which means that, for example,
 if we have -0.5 'placement in budget', we are going to have 2[central value] + ((-3-(-2))[max distance from center] *0.5[current distance]) = -0.5
@@ -344,7 +344,7 @@ if we have -0.5 'placement in budget', we are going to have 2[central value] + (
 * So if we will have 0.5 'placement in budget', we will get 2[central value] +((10-2)[max distance from center])*0.5 = 6
 
 Number in the middle (marker for 0 'placement in budget') is not mandatory, if skipped it will approximate between 2 provided numbers (min and max).
-On top of 'add' we can apply 'multiply' for cases when we need to multiply effectiveness in some way (for examply, if we want max power output an 1.0 'placement in budget' be x4 of default one, and x0.5 when at -1.0, we would use enum.XenoArtifactEffectModifier.Range: "budgetDependant multiply 0.5,4") and 'log' (it will multiply value by log of 'placement in budget' with provided base and minor modifications to make numbers scale in more neat way).
+On top of 'add' we can apply 'multiply' for cases when we need to multiply effectiveness in some way (for examply, if we want max power output an 1.0 'placement in budget' be x4 of default one, and x0.5 when at -1.0, we would use enum.XenoArtifactEffectModifier.Range: "intensityDependant multiply 0.5,4") and 'log' (it will multiply value by log of 'placement in budget' with provided base and minor modifications to make numbers scale in more neat way).
 
 Effect modifiers come into play in 2 major scenarios:
 1. Artifact **generation** enforces some aspects (currently - only durability) to be affected
