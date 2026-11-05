@@ -20,7 +20,7 @@ The 'release captain' should start by creating a new instance of the checklist (
 ### 1. Cut the staging branch
 
 Announce the cutoff 1 hour before starting, with a message in the #maintainers Discord channel.
-```@Maintainers Hello, crew. I will be coordinating this release. Staging cutoff in 1 hour.```
+```@Content Maintainer @Engine Maintainer Hello, crew. I will be coordinating this release. Staging cutoff in 1 hour.```
 
 The cutoff can be postponed by the 'release captain' if there are any problems with a priority higher than P1.
 
@@ -67,7 +67,7 @@ Go through the commit range list and note every feature/balance PR in the curren
 Notify maintainers in discord 'Release Review Thread' when PR list is up.
 
 ```
-@Maintainers PR list is up, please go over the list and leave any notes you have. Reminder to please use the 'BLOCKER' keyword for PRs that you view as problematic and wish to revert or change before release. 
+@Content Maintainer @Engine Maintainer PR list is up, please go over the list and leave any notes you have. Reminder to please use the 'BLOCKER' keyword for PRs that you view as problematic and wish to revert or change before release. 
 Make sure to add yourself to the 'finished reviewing' section after looking at all of the items on the list.
 ```
 
@@ -96,8 +96,7 @@ These comments also serve as the best way for people who can't make it to the me
 It would be nice if we all showed up on the clock, so we could start sooner. 
 
 Make sure to note maintainers with messages when appropriate
-```@Maintainers Maintainer meeting in 1 hour```
-```@Maintainers Maintainer meeting in 10 minutes```
+```@Content Maintainer @Engine Maintainer  meeting in 1 hour```
 ```@Maintainers Maintainer meeting is starting NOW!```
 
 Historically, meetings have started with the Topics section. That will not be detailed in this doc. At some point, the meeting will get to the feature reviews.
@@ -127,7 +126,7 @@ Polls will be kept open until the official release time (roughly 24 hours later)
 >Binary votes leave no requirement for interpretation when they finish, so we don't need to have the Maintainer team assembled for closing up the release. Whoever is there can enact the results, even if alone, with no special pressure or responsibility for making "the correct call", since it has already been determined by (the best available) consensus.
 
 Afterwards, link the threads in #ongoing-votes and ping all maintainers.
-``` @Maintainers: Votes for reverts/hotfixes are up. Please make sure to leave a vote; it will be closed in the next 24 hours.```
+``` @Content Maintainer @Engine Maintainer: Votes for reverts/hotfixes are up. Please make sure to leave a vote; it will be closed in the next 24 hours.```
 
 ## Week 4 - Sunday, before Release
 
@@ -211,6 +210,6 @@ Specifically, these two servers sometimes restart for the patch but don't actual
 
 Notify maintainers that all work related to the release is finished.
 
-``` @Maintainers Release '<version>' has been completed; it's out on the CDN. If you notice any critical problems, please share them and make sure to prioritize hotfixes or reverts over other kinds of work. ```
+``` @Content Maintainer @Engine Maintainer Release '<version>' has been completed; it's out on the CDN. If you notice any critical problems, please share them and make sure to prioritize hotfixes or reverts over other kinds of work. ```
 
 'Release captain' should orchestrate work on any urgent fixes/reverts that might surface once the new version is available to players. Pay extra attention to Admin and Downstream (#space-wizards-enclave Discord channel) feedback.
