@@ -77,6 +77,8 @@ This is usually as simple as just putting your entries at the start of the list,
 
 When modifying upstream code, it is recommended to leave a short comment explain *why* the change was made, so as to make upstream merges easier. An example of this would be `// FOOFORK: Changed Bar to 2 instead of 1 because everything breaks if it is 1.`
 
+For changing YML with minimal merge conflicts, including entity components, see [Partial Prototypes](../../robust-toolbox/partial-prototypes.md). The document also has a section for when you should and shouldn't use partial prototypes.
+
 ### Avoiding issues in shared enums.
 A big example of this is the AdminLog enum containing all the kinds of admin logs. Pick a recognizable decimal (or hexadecimal) prefix, positive or negative, for your values, and stick to that. Ideally, pick one randomly, so you don't have issues merging other fork's changes if you want to cherry pick.
 

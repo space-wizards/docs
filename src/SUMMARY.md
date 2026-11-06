@@ -98,6 +98,7 @@ Robust Toolbox
   - [Shaders](en/robust-toolbox/rendering/shaders.md)
   - [Sprites and Icons](en/robust-toolbox/rendering/sprites-and-icons.md)
 - [Serialization](en/robust-toolbox/serialization.md)
+- [Partial Prototypes](en/robust-toolbox/partial-prototypes.md)
 - [Sandboxing](en/robust-toolbox/sandboxing.md)
 - [Content Manifests](en/robust-toolbox/content-manifests.md)
 - [User Data Directory](en/robust-toolbox/user-data-directory.md)
