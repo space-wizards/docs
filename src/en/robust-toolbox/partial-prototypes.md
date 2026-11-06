@@ -128,8 +128,86 @@ boolean: true
 nullValue: null
 ```
 
+### Mixed sequences and values
+In cases where one is a sequence and another is a value, both are treated as a sequence.
+
+This means that they are combined, and the rules in [Sequences](#sequences) are followed.
+
+This applies most often to prototype `parent`, where sometimes it is defined as a value, and sometimes a sequence for multiple parents.
+
+If both are values:
+```yaml
+# Original YML file
+- type: entity
+  parent: MyEntityBase1
+  id: MyEntityOne
+
+# Partial YML, different file
+- type: entity 
+  parent: MyEntityBase2 # This will change the parent to be only MyEntityBase2
+  id: MyEntityOne
+```
+
+If both are sequences:
+```yaml
+# Original YML
+- type: entity
+  parent: [ MyEntityBase1 ]
+  id: MyEntityOne
+
+ # Partial YML, different file
+- type: entity
+  parent: [ MyEntityBase2 ] # This will change the parent to be [ MyEntityBase1, MyEntityBase2 ]. Keep in mind that as normal, parent changes are applied in reverse, so if both parents change a value, then MyEntityBase1's will be used. 
+  id: MyEntityOne
+```
+
+If one is a value and one is a sequence (does not matter which):
+```yaml
+# Original YML
+- type: entity
+  parent: MyEntityBase1
+  id: MyEntityOne
+
+# Partial YML, different file
+- type: entity
+  parent: [ MyEntityBase2 ] # This will change the parent to be [ MyEntityBase1, MyEntityBase2 ]. Keep in mind that as normal, parent changes are applied in reverse, so if both parents change a value, then MyEntityBase1's will be used. 
+  id: MyEntityOne
+```
+
+If the original is a value, and the partial is a sequence tagged with `!Clear`:
+```yaml
+# Original YML
+- type: entity
+  parent: [ MyEntityBase1 ] # Sequence in this case
+  id: MyEntityOne
+
+# Partial YML, different file
+- type: entity
+  parent: !Clear [ MyEntityBase2 ] # This will set the parent to be only [ MyEntityBase1 ], by clearing first and then adding MyEntityBase2 afterwards. 
+  id: MyEntityOne
+```
+
+If the original is a sequence, and the partial is a value tagged with `!Clear`:
+```yaml
+# Original YML
+- type: entity
+  parent: [ MyEntityBase1 ] # Sequence in this case
+  id: MyEntityOne
+
+# Partial YML, different file
+- type: entity
+  parent: !Clear MyEntityBase2 # This will set the parent to be only [ MyEntityBase1 ], by clearing first and then adding MyEntityBase2 afterwards. 
+  id: MyEntityOne
+```
+
+This is because partial prototypes do not currently have a way to check a field's type.
+
+For this reason, if you are modifying lists such as `parent` downstream in partials, it is recommended that you always make it a list for consistency, optionally using `!Clear` when needed. Otherwise, an upstream change could change your expected behaviour.
+
+Sequences can be defined both as comma-separated elements between square brackets (most often used in `parent`), and new-line separated lists starting with dashes.
+
 ### Special cases
-Partial prototypes have two special cases that behave differently than normal, entity `components`, and prototype `parent`.
+Partial prototypes have two special cases that behave differently than normal, entity `components`, and sequence-value pairs, most often found in prototype `parent`.
 
 Entity components are treated as a dictionary internally, even though they are defined as a list in YML.
 
@@ -158,52 +236,18 @@ Modify components:
     int: 1 # Changes the value of Int to 1 in MyComponent, additionally adding the component if it does not exist.
 ```
 
-Prototype `parent` is treated as all regular cases if both the original and partial `parent` are a sequence, or both are a value.
-
-If one is a value, and one a sequence, then both are treated as a sequence.
-
-If both are values:
-```yaml
-- type: entity # Original YML
-  parent: MyEntityBase1
-  id: MyEntityOne
-
-- type: entity # Different file, partial YML
-  parent: MyEntityBase2 # This will change the parent to be only MyEntityBase2
-  id: MyEntityOne
-```
-
-If both are sequences:
-```yaml
-- type: entity # Original YML
-  parent: [ MyEntityBase1 ]
-  id: MyEntityOne
-
-- type: entity # Different file, partial YML
-  parent: [ MyEntityBase2 ] # This will change the parent to be [ MyEntityBase1, MyEntityBase2 ]. Keep in mind that as normal, parent changes are applied in reverse, so if both parents change a value, then MyEntityBase1's will be used. 
-  id: MyEntityOne
-```
-
-If the original is a value or sequence, the partial is a sequence, and `!Clear` is used:
-```yaml
-- type: entity # Original YML
-  parent: [ MyEntityBase1 ] # Sequence in this case
-  id: MyEntityOne
-
-- type: entity # Different file, partial YML
-  parent: !Clear [ MyEntityBase2 ] # This will set the parent to be only [ MyEntityBase1 ], by clearing first and then adding MyEntityBase2 afterwards. 
-  id: MyEntityOne
-```
+For `parent`, see [Mixed sequences and values](#mixed-sequences-and-values)
 
 ## Partial prototype tags
 
 All operations that aren't a simple replacement or addition have a tag associated with them:
 
-- `!PartialOnly` is used on the prototype `type` field to make the prototype not be added as a regular prototype, if no original non partial one exists.
+- `!PartialOnly` is used on the prototype `type` field to make the prototype not be added as a regular prototype, if no original non-partial one exists. This can also be used outside explicitly-marked partial directories and files.
+- `!Partial:0` will make the prototype a partial prototype, even if it is defined outside the directories or files that are marked as partials in your codebase.
 - `!Clear` will clear a mapping or sequence, before optionally making additional changes to it.
 - `!Remove` will remove an element by value from a dictionary or list.
-- `!Index` inserts the element at a specific index on a list, instead of appending it to the end. This works the same as `IList.Insert` in C#, where normally it would be a `IList.Add` operation. Negative indexes will start from the end, where `Index:0` would be the end, the same as not specifying an index, and `Index:-1` would make the element become the second to last element in the list.
-- `!CombineIndex` will combine the data at a list's index. See [Cases where you should and shouldn't use partial prototypes](#cases-where-you-should-and-shouldnt-use-partial-prototypes) for an explanation on when you shouldn't use it.
+- `!Index:0` inserts the element at a specific index on a list, instead of appending it to the end. This works the same as `IList.Insert` in C#, where normally it would be a `IList.Add` operation. Negative indexes will start from the end, where `Index:0` would be the end, the same as not specifying an index, and `Index:-1` would make the element become the second to last element in the list.
+- `!CombineIndex:0` will combine the data at a list's index. See [Cases where you should and shouldn't use partial prototypes](#cases-where-you-should-and-shouldnt-use-partial-prototypes) for an explanation on when you shouldn't use it.
 - `!PartialModified` is used internally by the engine to support easily adding, removing, and modifying components. You should never use this yourself.
 
 ## Cases where you should and shouldn't use partial prototypes
@@ -213,6 +257,8 @@ Partial prototypes are specially useful when changing names, descriptions, addin
 They should not be used in cases where you need to modify specific indexes on a list, such as in reagent effects. This can technically be done by using `!CombineIndex`, however that will break if the upstream prototype list's ordering is ever changed, leading to bugs.
 
 Another difficult case is adding many elements to a list at different indexes. If you find yourself adding many elements to a list, all at different indexes, you may find it easier to use `!Clear` and then re-write the whole list. Keep in mind that any upstream changes to the list would then never be reflected in your fork, as it will be cleared completely before adding your elements. This can make you miss new important additions to that list in a future pull, such as pre-spawned items in a bag, or borg module tools.
+
+If you are modifying a prototype's parent, it is recommended that you always `!Clear` first, even if you are only setting a single parent value. See [Mixed sequences and values](#mixed-sequences-and-values) for more detail.
 
 ## Prototype variants
 
@@ -264,4 +310,7 @@ Yes. If you encounter any bugs with it though, report them in the [engine reposi
 Yes. The order in `/Resources/PartialPrototypes/partialPrototypes.yml` specifies the order in which these files are processed. See [Creating your first partial prototype](#creating-your-first-partial-prototype) for more information.
 
 ## My game gets stuck loading after adding partial prototypes
-Check that your partial prototypes do not result in an entity having the same parent defined twice, such as when `!Clear` is not used in `parent`.
+Check that your partial prototypes do not result in an entity having the same parent defined twice, such as when `!Clear` is not used in `parent`. See [Mixed sequences and values](#mixed-sequences-and-values) for more detail.
+
+## Can this remove prototypes?
+No, partial prototypes are only intended to make changes to existing YML that you could make in the same file, in a separate file. Commenting out whole prototypes can't be done by this system (yet?). See abstract prototypes for a way to mark existing prototypes abstract, even in bulk. To remove **components**, see [Special cases](#special-cases).
