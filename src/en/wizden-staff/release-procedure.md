@@ -1,15 +1,62 @@
-# Release Procedures (Proposal)
+# Release Procedures
 
 All times are in CEST/UTC+2
 We can always just deviate from the established times below, if necessary. But having a particular time written down would help us know when we should consider some part of the process to be overdue and start asking about it
 
-## Thursday 20:00 - Staging
+This page describes how our release cycle functions. 
+In short, we use a month-based release cycle. The 'anchor' for the cycle start and end is the 'publish release' event, but for simplicity we will be using week numbers inside month, and consider first and last days of month as start and end. We are allowed to add code for the next release (in master branch), while we are stabilizing our current release ('staging' or later - 'stable' branch). Each cycle SHOULD lead to the creation of a new stable release.
+
+General flow of release process timeline is presented on following picture:
+
+![runpublish.png](../assets/images/wizden-staff/publish-timeline.png)
+
 
 ### 0. Coordinate
-Before you start, probably make sure no one else is already on it. Lead Maintainers usually do the staging and there is *typically* no need for anyone not frequently taking part in the setup process to get involved.
 
-### 1. Update the staging branch
- Use the ```ss14-prepstaging``` function from [Myra's powershell script](https://gist.github.com/VasilisThePikachu/762b90187a5f9a0cca3249cc335cab31), which does most of it automatically (and also creates the Review Thread text for simplicity)
+Weeks 1-2 of the release cycle contain no special events related to our new release; PRs are merged into master. Activities targeted at the previous release (stabilization/hotfixing/etc.) are described later in this document. Actual release activity starts at week 3 of the cycle.
+
+Before the process starts, a 'Release captain' should be chosen. It is a temporary, informal role during this release, keeping track of and ensuring the execution of all important steps. When the person is chosen, announce it in the staff channel and tag @maintainers (can be done together with the staging cutoff announcement) to ensure no one else is already on it. It is the Producer role team's responsibility to arrange who will be the Release Captain. It is recommended that Producers should agree on who will be 'Release captain' before week 3 monday, or at least before evening.
+
+The 'release captain' hat can be handed over for the rest of the duration of the release or just temporarily, in case the current 'captain' cannot fully operate due to any problems. Having someone who can properly dedicate time to the release coordination is of utmost importance.
+
+The 'release captain' should start by creating a new instance of the checklist (from the template: https://outline.spacestation14.com/settings/templates/release-check-list-Qacv6vN8XM) and should keep it up to date throughout the release process. Checklist is a tool to make sure nothing is amiss and to keep the process transparent to other member of the team (everyone can see checklist current state), but it does not take precedence over Release procedure described in this document, not does it have to be mandatory for procedure to be completed successfully.
+
+
+## Week 3 of cycle - Monday 20:00
+
+'Release captain' announces that this week will have staging cutoff and asks Maintainers to not merge complex refactors and big/potentially problematic pull requests until staging cutoff with a message in the #maintainers Discord channel:
+
+```@Content Maintainer @Engine Maintainer Hello, crew. I will be coordinating this month release. Staging cutoff will be happneing this week on Thursday, if you have any problems or something requires extra coordination with cutoff - please contact me. Please don't merge any complex/big refactors/refactures that could bring instability for upcoming release for following days until cutoff is finished.```
+
+## Week 3 of cycle - Thursday 20:00 - Staging cutoff
+
+
+Announce the cutoff 1 hour before starting, with a message in the #maintainers Discord channel.
+```@Content Maintainer @Engine Maintainer Hello, crew. I will be coordinating this release. Staging cutoff in 1 hour.```
+
+
+
+### 1. Cut the staging branch
+
+
+The cutoff can be postponed by the 'release captain' if there are any problems with a priority higher than P1.
+
+Otherwise run [Rotate release milestone](https://github.com/space-wizards/space-station-14/actions/workflows/rotate-release-milestone.yml) with the title of the milestone to open (naming rule is in step 3). One run does the whole cutoff:
+
+Milestone naming rule:
+
+`wizards-{YEAR}.{START-MONTH}-v{HOTFIX}`
+
+replace `START-MONTH` with two-digit month number in which release should have been published originally, and `HOTFIX` is one-based number of publishes done for the sake of hotfixes.
+
+example - previous release was supposed to be out on Sunday 2026-07-26 - that is start of new release cycle (the fact that it got out on 2026-07-27 does not matter - we use planned calendar dates), so next maintainers meeting and release is supposed to be in 4 weeks, 2026-08-23, so our version number for it will be `wizards-2026.08-v1` even if after A LOT of hotfixes it will be out on 2026-09-01. And any following small hotifxes, that will be released following it but without staging branch usage - will be called `wizards-2026.08-v2`, `wizards-v2026.08-v3` etc.
+
+The `{YEAR}.{MONTH}` part has to stay in the title: our automation picks the newest open milestone by parsing the release date out of the title, so milestones without a `YYYY.MM` date in them are never used. The older `2026-09-26 Release` naming works too, as long as it contains the date.
+
+
+* it merges `master` into `staging` with a merge commit and pushes it - the **oldest** commit in the update is `staging` right before that merge, the **newest** is the `master` commit that was merged in;
+* it prints the commit range, the compare URL, the list of PRs merged into `master` in that range and a ready-to-paste Release Review Thread skeleton into the run summary (top of the run page)
+* it closes latest currently existing release milestone and opens new one (from name provided when launching workflow)
 
 >If you need to do it manually:
 >```
@@ -30,59 +77,79 @@ Before you start, probably make sure no one else is already on it. Lead Maintain
 >git merge master
 >git push upstream staging
 >```
+>Go to https://github.com/space-wizards/space-station-14/milestones and close the current milestone, then create new one.
 
-Further merges into Staging should only happen if it's REALLY necessary, to ensure that we have time to review proposed changes and don't break things in the last moment. The process for this follows the [Hotfix Procedure](https://docs.spacestation14.com/en/wizden-staff/maintainer/hotfix-procedure.html). Revert or other changes may also be the result of a Maintainer vote after the meeting, this will be detailed below.
+Starting from this point, further merges into Staging should only happen if it's REALLY necessary, to ensure that we have time to review proposed changes and don't break things at the last moment. The process for this follows the [Hotfix Procedure](https://docs.spacestation14.com/en/wizden-staff/maintainer/hotfix-procedure.html). Reverts or other changes may also be the result of a Maintainer vote after the meeting; this will be detailed below.
 
-### 2. Hedgedoc
-Copy [this template](https://outline.spacestation14.com/doc/20xx-xx-xx-maintainer-meeting-template-Pb5bwE11Ma) and create a new doc for the current release
+### 2. Create the Outline doc and open the Release Review Thread
 
-### 3. Make the new Release Review Thread in #maint-reviews
-Review threads are currently on Discord, but may move to Discourse in the future.
-
-If you used the script, it will automatically generate all the required text for you so you can just copy that and drop in the link to the new hedgedoc you made.
+1. Create the upcoming Maintainer Meeting doc from a template in [Outline](https://outline.spacestation14.com/doc/20xx-xx-xx-maintainer-meeting-template-Pb5bwE11Ma), see details in secton below.
+2. In #maint-reviews, open the Release Review Thread titled `YYYY-MM-DD Release Review Thread` with the skeleton from the cutoff workflow run summary: fill in the release date and the link to the Outline doc.
+3. Drop in the link to the Outline doc.
+4. Ping `@Content Maintainer @Engine Maintainer`.
 
 > Manual setup:
 > * Title format: "YYYY-MM-DD Release Review Thread"
 > * List the current commit range: <`oldest commit hash`> - <`newest commit hash`>
 > * Link the current commit range: `https://github.com/space-wizards/space-station-14/compare/<oldest commit hash>...<newest commit hash>`
-> * link the hedgedoc
+> * link created outline Maintainer Meeting doc
 
-Ping all Maintainers.
+### 3. Add the list of Feature Changes to the Outline doc
 
-### 4. Add the list of Feature Changes to hedgedoc
-Go through the commit range list and note every feature/balance PR in the current release. See the hedgedoc template for the format to be used.
-> You can use [this script](https://discord.com/channels/310555209753690112/909229454449078333/1350070411571757086) to generate the correctly formatted string for each PR, but you need to pick out the PRs from the full commit list manually
+Create a formatted list of all merged PRs in the current release (See template). You can get it from summary of "Rotate release milestone" workflow run that was used previously.
 
-If there are topically related PRs, reverts or hotfixes, it's nice to group those together. Otherwise the list can be in the order of the original commit list.
-Smaller mapping changes to existing maps, PRs that only fix bugs without larger implications, or refactors and cleanups with no user-facing effects do not need to be listed.
+> To do it yourself, you can use [this script](https://discord.com/channels/310555209753690112/909229454449078333/1350070411571757086) to generate the correctly formatted string for each PR, but you need to pick out the PRs from the full commit list manually
 
-This list should be double-checked for any feature change PRs that may be mistakenly left off. It's easy to miss something, and it's unreasonable to ask one person to spend excessive amounts of time double-checking it. It makes sense for at least one other person to check any remaining PRs if they should also be added. Anyone is free to review and add additional PRs to be listed but it's best do this right after the thread is opened, to reduce the possibility that late-added entries get skipped by early reviews. 
+> If you are not using the script, use this git command to get a raw list of all the merged PRs in this release: `git log --reverse --oneline b0387..71ac5` where `b0387` and `71ac5` are the oldest and newest commit hashes printed by the cutoff run summary.  
+Then format the resulting text via whatever text processing method you prefer. <br>
+Note that **the very first line of this list must be deleted**, as that is actually the last merge of the previous release cycle, and we already reviewed it then.
+Then check the entire list one by one, and decide for every PR whether they can be skipped from the maintainer team review. Many bugfixes, internal refactors with no player-facing effects, and tiny changes like just fixing a stray pixel or minor UI tweaks do not need further review from the team. 
 
-If you add new entries after people have already reviewed the list (as noted on hedgedoc), then mention the new PRs in the review thread.
+All other player facing changes, or bugfixes which can be argued to have notable gameplay-changing potential, must be raised. This is to ensure that every maintainer can have the chance to raise potential concerns, without having to track all ongoing merges on github. 
 
-## Until the Meeting - Reviews
+Include all these relevant PRs in the appropriate section of the doc template
 
-### 1. Maintainers add any proposed meeting topics to hedgedoc
+
+Notify maintainers in discord 'Release Review Thread' when PR list is up.
+
+```
+@Content Maintainer @Engine Maintainer PR list is up, please go over the list and leave any notes you have. Reminder to please use the 'BLOCKER' keyword for PRs that you view as problematic and wish to revert or change before release. 
+Make sure to add yourself to the 'finished reviewing' section after looking at all of the items on the list.
+
+@Community Team please take a look at our new milestone <put link to milestone here> and pick things for release notes!
+```
+
+## Until the Meeting - Review PRs in list
+
+### 1. Maintainers add topics that need discussion to the Outline doc
 
 ### 2. Maintainers review the feature changes 
 Add any concerns/comments you have directly to the doc, you can also respond to other notes. Once you finished reviewing, add yourself to the "finished reviewing" list in the doc.
 
-If something is unfinished/broken/etc enough that you think it should not be in the current release (in its current state), add a note starting with "BLOCK", followed by the concern or reasoning. You can further add what hotfix/conditions you think could salvage the PR in question for the current release, or if it should just be reverted outright.
+#### The BLOCKER tags
 
-#### The BLOCK tags
+If something is unfinished/broken/etc. enough that maintainers think it should not be in the current release (in its current state), add a note starting with "BLOCKER", followed by the concern or reasoning. You can further add what hotfix/conditions you think could salvage the PR in question for the current release, or if it should just be reverted outright.
 
 Using this unambiguous tag will help us have a smoother meeting and make the later vote/hotfix/revert process easier to decide.
-If you do not mark your comment with BLOCK, we will still go over it during the meeting but it will be treated as a "non-binding" lesser concern/suggestion/idea/future feature, not something that demands a vote. (If you will be at the meeting, you will still be able to change this to a BLOCK then)
+If you do not mark your comment with BLOCKER, we will still go over it during the meeting but it will be treated as a "non-binding" lesser concern/suggestion/idea/future feature, not something that demands a vote. (If you will be at the meeting, you will still be able to change this to a BLOCKER then)
 
-Two such objections are required for a PR to go to a revert vote, if someone adds a second one at this stage then we can see ahead of time that there will be a vote, and can maybe even figure out/address any concerns before the meeting. This helps everyone involved, so if at all possible, review and log BLOCKs early.
+Two such objections are required for a PR to go to a revert vote (see later in 'Feature Reviews, Revert votes' section).
+
+Blocker PRs, bugs and critical problems of other nature should be listed in Maintainer meeting document and be clearly visible.
 
 #### In Absentia
 
-These comments also serve as the best way for people who can't make it to the meeting to engage with the revert process in a fair way. If you can't show up but have a concern, leave a BLOCK note along with your concern/reason/considtions, the meeting will not remove BLOCKs just because you are not there to argue for them. (Although if no one else seconds it before or during the meeting, then it will still not go to a vote)
+These comments also serve as the best way for people who can't make it to the meeting to engage with the revert process in a fair way. If you can't show up but have a concern, leave a BLOCKER note along with your concern/reason/considerations; the meeting will not remove tags just because you are not there to argue for them. (Although if no one else seconds it before or during the meeting, then it will still not go to a vote)
 
-## Saturday 20:00 - Maintainer Meeting
+## Week 3 Saturday 20:00 - Maintainer Meeting
 
-It would be nice if we all showed up on the clock, so we could start sooner. Ping 10 minutes before the meeting.
+It would be nice if we all showed up on the clock, so we could start sooner. 
+
+Make sure to note maintainers with messages when appropriate
+
+```@Content Maintainer @Engine Maintainer  meeting in 1 hour```
+
+```@Maintainers Maintainer meeting is starting NOW!```
 
 Historically, meetings have started with the Topics section. That will not be detailed in this doc. At some point, the meeting will get to the feature reviews.
 
@@ -90,12 +157,12 @@ Historically, meetings have started with the Topics section. That will not be de
 Go through any PRs that have comments. See if any notes need to be edited to become BLOCKing, if anyone seconds them, or if anyone changes their mind in some other way.
 If at least two Maintainers have chosen to block a PR, there will be a vote after the meeting. Decide and document **now** what the vote options will be. The default option should be Revert, for simplicity. **Check the chat for any Maintainers not on voice trying to get a word in edgewise**. If the PR's author is present, consider consulting them.
 
-Agree now who will start all the votes, both so the votes don't get forgotten and to force the future-votemaker to double-check if sufficient details about the votes have been noted down. (It sucks trying to figure out missing details by yourself after the fact)
+Agree now on **who** will start all the votes ('Release captain' should do it), so the votes don't get forgotten and to force the future vote-maker to double-check whether sufficient details about the votes have been noted down. (It sucks trying to figure out missing details by yourself after the fact)
 
 ### Hotfix votes
-Optionally, some SIMPLE/straightforward change to the PR may be suggested. Such as tweaking numbers to something **specific** not just "it should do less damage", removing some specific, concrete part, or fixing a well-defined bug/issue. It should be discussed who will/might write this fix, not just hope that someone will start writing it afterwards. It does not need to be set in stone or a volunteer from the meeting, but we should have some idea at least.
+Optionally, some SIMPLE/straightforward changes to the PR may be suggested. Such as tweaking numbers to something **specific**, not just "it should do less damage", removing some specific, concrete part, or fixing a well-defined bug/issue. It should be discussed **who** will/might write this fix, not just hope that someone will start writing it afterward. It does not need to be set in stone or a volunteer from the meeting, but we should have some idea at least. The final deadline for the fix should be chosen right away, and actions should be planned if results are not reached by that deadline.
 
-Since unlike a revert, a hotfix can't be finished in moments, we have to consider the possibility that there will be a schedule slip. As such, for hotfixing to be considered an option, we will specify an acceptable delay. **If we are unwilling to risk such a delay for the feature, then we should simply vote for a revert instead**, and fix it by the next release. Recommended default delay is 24 hours after the original expected Release. (Note that the time chosen is the maximum, we might finish sooner. But we should be willing to accept the full length of the delay. Record the delay's end time in the meeting notes.
+Since unlike a revert, a hotfix can't be finished in moments, we have to consider the possibility that there will be a schedule slip. As such, for hotfixing to be considered an option, we will specify an acceptable delay. **If we are unwilling to risk such a delay for the feature, then we should simply vote for a revert instead**, and fix it by the next release. Recommended default delay is 24 hours after the original expected Release. (Note that the time chosen is the maximum, we might finish sooner. But we should be willing to accept the full length of the delay. Record the delay's 'End time' in the meeting notes.
 
 > All votes, whether for revert or hotfix, are RELEASE BLOCKERS. If some issue is minor enough that we could just release with it, then it might be better to just address it in the next release or hotfix it after release through the regular hotfix procedure.
 
@@ -105,20 +172,23 @@ Feedback Pop-Ups is a feature that allows us to request players ingame to provid
 *No action is required* to have a pop-up remain only on the testing server, as the `PopupOrigin` property being set to `wizden_master` ensures it does not show on the stable servers. If a pop-up should be made visible on the stable servers, change the property to `wizden_master wizden_stable`. 
 
 ## Right after the Meeting
-Votes are immediately started for blocked PRs. Open a Discourse thread for each vote in Internal/Maintainer. If multiple PRs are conceptually linked, and/or were contested "as one", they can be combined into one thread. Copy the summary about the situation from the meeting notes, for anyone who was not present at the Meeting. The recording might not yet be available for review before votes have to be cast.
+Votes are immediately started for blocked PRs. Open a Discourse thread for each vote in the Discord 'Release Review Thread'. If multiple PRs are conceptually linked, and/or were contested "as one", they can be combined into one thread. Copy the summary of the situation from the meeting notes for anyone who was not present at the Meeting. The recording might not yet be available for review before votes have to be cast.
 
-Polls will be kept open until the official release time (roughly 24 hours later), so that every Maintainer can get their chance to vote. They must have only 2 outcomes, plus Abstain: such as Keep/Revert/Abstain, or Keep/Hotfix/Abstain. Abstain votes will not have any effect on the outcome, they merely serve to indicate that someone has seen the vote but is not participating. 
+Polls will be kept open until the official release time (roughly 24 hours later), so that every Maintainer can get their chance to vote. They must have only 2 outcomes, plus Abstain: such as Keep/Revert/Abstain, or Keep/Hotfix/Abstain. Abstain votes will not have any effect on the outcome; they merely serve to indicate that someone has seen the vote but is not participating. 
 >Binary votes leave no requirement for interpretation when they finish, so we don't need to have the Maintainer team assembled for closing up the release. Whoever is there can enact the results, even if alone, with no special pressure or responsibility for making "the correct call", since it has already been determined by (the best available) consensus.
 
 Afterwards, link the threads in #ongoing-votes and ping all maintainers.
+``` @Content Maintainer @Engine Maintainer: Votes for reverts/hotfixes are up. Please make sure to leave a vote; it will be closed in the next 24 hours.```
 
-## Sunday, before Release
+## Week 4 - Sunday, before Release
 
 The proposed hotfix(es) can be prepared before release, but no one should feel forced to code just so we don't have a delay. If we are voting on a hotfix then we have already accepted a potential delay. It's also possible that the vote will decide to keep the PR, making the fix/change unnecessary.
 
-## 21:00 - The Official Release Time
+The release can be postponed, but the status of hotfixes should be kept up to date by the 'Release Captain'.
 
-The Maintainers present can begin. If necessary, coordinate in the Release Review Thread who's doing what. Close the votes and check the status of any other release blockers.
+## Week 4 - Sunday, 21:00 - The Official Release Time
+
+The 'Release captain' or Maintainers present can begin. If necessary, coordinate in the 'Release Review Thread' on who's doing what. Close the votes and check the status of any other release blockers.
 
 * If a vote's result is KEEP, the PR is no longer considered a blocker even if we want to later fix it.
 * If a vote's result is REVERT, create a PR to revert the feature from Staging. This does not require multiple maint approvals - it already has them from the vote. Since we are reverting a feature from master, before it ever hit stable, remove it from the changelog as well
@@ -133,13 +203,13 @@ If no blockers remain, go to The Release.
 ## Delay
 If the hotfixes could not be finished or tested in time, we enter a Delay. The expected maximum duration of the Delay has been agreed upon during the Maintainer meeting, and within this timeframe we should consider the delay acceptable enough not to be "concerned".
 
-If the fix gets completed before the End Time, then any Maintainers present can start the release immediately, but they are also free to just note it and leave someone else to do it later within the accepted Delay.
+If the fix is completed before the 'End Time', then the 'Release captain' can start the release immediately, but they are also free to just note it and leave someone else to do it later within the accepted Delay.
 
-Available Maintainers should reconvene at the End Time, to decide the continued fate of the blocking PR(s). At this point there will likely be Maintainer consensus established in some way, written decisions from the Lead Maintainers, or Lead Maintainers will be present, but if they aren't, then the Maintainers present decide whether to revert the PR in question or go into overtime waiting for the fix. There is no script for after going into overtime.
+'Release captain' should reconvene with Maintainers at the End Time, to decide the continued fate of the blocking PR(s). At this point, there will likely be Maintainer consensus established in some way, written decisions from the Lead Maintainers / Game Director, or Lead Maintainers will be present; but if they aren't, then the Maintainers present decide whether to revert the PR in question or go into overtime waiting for the fix. There is no script for after going into overtime.
 
-> Our level of priority for hitting release targets is currently in general unspecified
+> It is up to the 'Release captain' to decide whether problem fixes are worth the additional time until release, but as a general rule, it should be noted that complex/heavy fixes are undesirable (highly discouraged), as the 'staging' branch does not have any testing grounds.
 
-## The Release
+## The Release (timing depends on 'when it's ready'�)
 
 ### 1. Merge Staging into Stable
 
@@ -156,21 +226,36 @@ git merge staging
 git push upstream stable
 ```
 
-### 2. If there were any hotfixes on Staging that weren't already merged back, merge Stable into Master.
+### 2. Run Publish
 
-This needs to be done via PR on github (because the master branch is protected from pushing).
-You can merge this PR by yourself immediately, but **DO NOT SQUASH IT**.
+Go to [github's web GUI](https://github.com/space-wizards/space-station-14/actions/workflows/publish.yml) and run the workflow with the stable branch, don't forget to fill release version. For version tag use following algorithm:
 
-If there are merge conflicts at this step, note that you could publish stable before you get bogged down fixing the conflict for master so meanwhile the publish tests can run.
-
-### 3. Run Publish
-
-You can use github-cli to start publish, [Myra's script](https://gist.github.com/VasilisThePikachu/762b90187a5f9a0cca3249cc335cab31) already does this for you.
-
-To do it manually, go to [github's web GUI](https://github.com/space-wizards/space-station-14/actions/workflows/publish.yml) and run the workflow with the stable branch:
+For release tag use the release milestone name (the one created on step "Cut over the release milestone" described above).
 
 ![runpublish.png](../assets/images/wizden-staff/runpublish.png)
 
-### 4. Monitor if Salamander and Lizard actually deploy the new release after their next restart
 
-Specifically these two servers sometimes restart for the patch, but don't actually get it due to "funny network reasons". If this happens, any Maintainer can run ```!updateserver servername``` on Discord to restart them again.
+Make sure that the publish workflow finishes green, and check the changelog Discord channel to make sure new updates are published.
+
+// TODO - need to add steps that will create a GitHub release record for the new release, ideally without any additional manual actions
+
+
+### 3. If there were any hotfixes on Staging that weren't already merged back, merge Stable into Master.
+
+This needs to be done via a PR on GitHub (because the master branch is protected from pushing).
+You can merge this PR by yourself immediately, but **DO NOT SQUASH IT**.
+
+If there are merge conflicts at this step, note that you could publish stable before you get bogged down fixing the conflict for master, so the publish tests can run meanwhile.
+
+
+### 4. (Recommended) Monitor whether Salamander actually gets the new release after their next restart
+
+Specifically, these two servers sometimes restart for the patch but don't actually get it due to "funny network reasons". If this happens, any Maintainer can run ```!updateserver servername``` on Discord to restart them again.
+
+### 5. Announce that the release is out and all work on it is finished
+
+Notify maintainers that all work related to the release is finished.
+
+``` @Content Maintainer @Engine Maintainer Release '<version>' has been completed; it's out on the CDN. If you notice any critical problems, please share them and make sure to prioritize hotfixes or reverts over other kinds of work. ```
+
+'Release captain' should orchestrate work on any urgent fixes/reverts that might surface once the new version is available to players. Pay extra attention to Admin and Downstream (#space-wizards-enclave Discord channel) feedback.
