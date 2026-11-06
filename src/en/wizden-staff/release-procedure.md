@@ -41,7 +41,22 @@ Announce the cutoff 1 hour before starting, with a message in the #maintainers D
 
 The cutoff can be postponed by the 'release captain' if there are any problems with a priority higher than P1.
 
-Otherwise, run the `ss14-prepstaging` function from [Myra's PowerShell script](https://gist.github.com/VasilisThePikachu/762b90187a5f9a0cca3249cc335cab31). It does the whole cut for you: it fetches `upstream`, syncs your local `staging` with `upstream/staging` (**oldest** commit in the update), merges `upstream/master` into it and pushes the result (**newest** commit), then prints a ready-to-paste Release Review Thread skeleton (title, commit range, compare URL, and a placeholder for the Outline doc link).
+Otherwise run [Rotate release milestone](https://github.com/space-wizards/space-station-14/actions/workflows/rotate-release-milestone.yml) with the title of the milestone to open (naming rule is in step 3). One run does the whole cutoff:
+
+Milestone naming rule:
+
+`wizards-{YEAR}.{START-MONTH}-v{HOTFIX}`
+
+replace `START-MONTH` with two-digit month number in which release should have been published originally, and `HOTFIX` is one-based number of publishes done for the sake of hotfixes.
+
+example - previous release was supposed to be out on Sunday 2026-07-26 - that is start of new release cycle (the fact that it got out on 2026-07-27 does not matter - we use planned calendar dates), so next maintainers meeting and release is supposed to be in 4 weeks, 2026-08-23, so our version number for it will be `wizards-2026.08-v1` even if after A LOT of hotfixes it will be out on 2026-09-01. And any following small hotifxes, that will be released following it but without staging branch usage - will be called `wizards-2026.08-v2`, `wizards-v2026.08-v3` etc.
+
+The `{YEAR}.{MONTH}` part has to stay in the title: our automation picks the newest open milestone by parsing the release date out of the title, so milestones without a `YYYY.MM` date in them are never used. The older `2026-09-26 Release` naming works too, as long as it contains the date.
+
+
+* it merges `master` into `staging` with a merge commit and pushes it - the **oldest** commit in the update is `staging` right before that merge, the **newest** is the `master` commit that was merged in;
+* it prints the commit range, the compare URL, the list of PRs merged into `master` in that range and a ready-to-paste Release Review Thread skeleton into the run summary (top of the run page)
+* it closes latest currently existing release milestone and opens new one (from name provided when launching workflow)
 
 >If you need to do it manually:
 >```
@@ -62,13 +77,14 @@ Otherwise, run the `ss14-prepstaging` function from [Myra's PowerShell script](h
 >git merge master
 >git push upstream staging
 >```
+>Go to https://github.com/space-wizards/space-station-14/milestones and close the current milestone, then create new one.
 
 Starting from this point, further merges into Staging should only happen if it's REALLY necessary, to ensure that we have time to review proposed changes and don't break things at the last moment. The process for this follows the [Hotfix Procedure](https://docs.spacestation14.com/en/wizden-staff/maintainer/hotfix-procedure.html). Reverts or other changes may also be the result of a Maintainer vote after the meeting; this will be detailed below.
 
 ### 2. Create the Outline doc and open the Release Review Thread
 
 1. Create the upcoming Maintainer Meeting doc from a template in [Outline](https://outline.spacestation14.com/doc/20xx-xx-xx-maintainer-meeting-template-Pb5bwE11Ma), see details in secton below.
-2. In #maint-reviews, open the Release Review Thread titled `YYYY-MM-DD Release Review Thread` with the text printed by `ss14-prepstaging`.
+2. In #maint-reviews, open the Release Review Thread titled `YYYY-MM-DD Release Review Thread` with the skeleton from the cutoff workflow run summary: fill in the release date and the link to the Outline doc.
 3. Drop in the link to the Outline doc.
 4. Ping `@Content Maintainer @Engine Maintainer`.
 
@@ -80,11 +96,11 @@ Starting from this point, further merges into Staging should only happen if it's
 
 ### 3. Add the list of Feature Changes to the Outline doc
 
-Create a formatted list of all merged PRs in the current release (See template).
+Create a formatted list of all merged PRs in the current release (See template). You can get it from summary of "Rotate release milestone" workflow run that was used previously.
 
-> You can use [this script](https://discord.com/channels/310555209753690112/909229454449078333/1350070411571757086) to generate the correctly formatted string for each PR, but you need to pick out the PRs from the full commit list manually
+> To do it yourself, you can use [this script](https://discord.com/channels/310555209753690112/909229454449078333/1350070411571757086) to generate the correctly formatted string for each PR, but you need to pick out the PRs from the full commit list manually
 
-> If you are not using the script, use this git command to get a raw list of all the merged PRs in this release: `git log --reverse --oneline b0387..71ac5` where you use the current oldest and newest commit hash you saved earlier.  
+> If you are not using the script, use this git command to get a raw list of all the merged PRs in this release: `git log --reverse --oneline b0387..71ac5` where `b0387` and `71ac5` are the oldest and newest commit hashes printed by the cutoff run summary.  
 Then format the resulting text via whatever text processing method you prefer. <br>
 Note that **the very first line of this list must be deleted**, as that is actually the last merge of the previous release cycle, and we already reviewed it then.
 Then check the entire list one by one, and decide for every PR whether they can be skipped from the maintainer team review. Many bugfixes, internal refactors with no player-facing effects, and tiny changes like just fixing a stray pixel or minor UI tweaks do not need further review from the team. 
@@ -99,6 +115,8 @@ Notify maintainers in discord 'Release Review Thread' when PR list is up.
 ```
 @Content Maintainer @Engine Maintainer PR list is up, please go over the list and leave any notes you have. Reminder to please use the 'BLOCKER' keyword for PRs that you view as problematic and wish to revert or change before release. 
 Make sure to add yourself to the 'finished reviewing' section after looking at all of the items on the list.
+
+@Community Team please take a look at our new milestone <put link to milestone here> and pick things for release notes!
 ```
 
 ## Until the Meeting - Review PRs in list
@@ -212,13 +230,7 @@ git push upstream stable
 
 Go to [github's web GUI](https://github.com/space-wizards/space-station-14/actions/workflows/publish.yml) and run the workflow with the stable branch, don't forget to fill release version. For version tag use following algorithm:
 
-`wizards-{YEAR}.{START-MONTH}-v{HOTFIX}`
-
-replace `START-MONTH` with two-digit month number in which release should have been published originally, and `HOTFIX` is one-based number of publishes done for the sake of hotfixes.
-
-example - previous release was supposed to be out on Sunday 2026-07-26 - that is start of new release cycle (the fact that it got out on 2026-07-27 does not matter - we use planned calendar dates), so next maintainers meeting and release is supposed to be in 4 weeks, 2026-08-23, so our version number for it will be `wizards-2026.08-v1` even if after A LOT of hotfixes it will be out on 2026-09-01. And any following small hotifxes, that will be released following it but without staging branch usage - will be called `wizards-2026.08-v2`, `wizards-v2026.08-v3` etc.
-
-
+For release tag use the release milestone name (the one created on step "Cut over the release milestone" described above).
 
 ![runpublish.png](../assets/images/wizden-staff/runpublish.png)
 
