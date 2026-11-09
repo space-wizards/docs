@@ -314,3 +314,9 @@ Check that your partial prototypes do not result in an entity having the same pa
 
 ## Can this remove prototypes?
 No, partial prototypes are only intended to make changes to existing YML that you could make in the same file, in a separate file. Commenting out whole prototypes can't be done by this system (yet?). See abstract prototypes for a way to mark existing prototypes abstract, even in bulk. To remove **components**, see [Special cases](#special-cases).
+
+# Other Resources
+Other guides made by the community. If there's a contradiction between this doc and one linked below, check the engine comment in `IPrototypeManager.PartialDirectory` for up-to-date documentation, or ask either community for clarification.
+
+Keep in mind that any codebase conventions present in these community docs may not be applicable to WizDen code, or your fork's code.
+- [Starlight's partial prototypes doc](https://docs.starlight.network/s/d49865f5-b555-4803-b5d7-5c2fde54fbd9/doc/partial-prototypes-cT5r0wdfJ9)
