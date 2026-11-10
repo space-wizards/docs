@@ -11,7 +11,7 @@ This document shows all current Maintainers on the project. Along with their Git
 |:--                                                       |:--                  |:--                 |:--   |:--      |:--      |:--     |:--   |
 |[AJCM-git](https://github.com/AJCM-git) AJCM              | @ajcm_git           | 239467362380808192 |      |    X    |         |   X    |      |
 |[Aeshus](https://github.com/aeshus)                       | @aeshus             | 865364145330454538 |      |    X    |         |   X    |  X   |
-|[Axionyxx](https://github.com/Axionyxx)                   | @axionyx_           | 681203223318626473 |      |    X    |   X     |        |      |
+|[Axionyxx](https://github.com/Axionyxx)                   | @axionyx_           | 681203223318626473 |      |         |   X     |        |      |
 |[Beck-thompson](https://github.com/beck-thompson) Orks    | @orks_are_da_best   | 774424468117782578 |      |    X    |         |        |      |
 |[Brainfood1183](https://github.com/brainfood1183)         | @brainfood.         | 286992402974113793 |  X   |    X    |         |        |      |
 |[Chromiumboy](https://github.com/chromiumboy)             | @chromiumboy        | 395222876753625088 |      |    X    |         |        |      |
