@@ -40,7 +40,7 @@ The "Theme" of revolutionaries often has them using the tools of the station to 
 - Get a bunch of people to change jobs to try to fix these? Sorry HoP says no.
 - Raid the Armoury? Good luck
 
-The Revolution is more than any other antagonist prey to the whims of external circumstances. Random circumstance is interesting from a crew perspective, you don't know whether your shift will be a chill one or ten trillion dragons, lone ops, and ninjas will make it a battle for survival. It is less interesting as an antagonist to find our you are being limited by circumstances you have little control over. Revs are rare after all.
+The Revolution is more than any other antagonist prey to the whims of external circumstances. Random circumstance is interesting from a crew perspective, you don't know whether your shift will be a chill one or ten trillion dragons, lone ops, and ninjas will make it a battle for survival. It is less interesting as an antagonist to find out you are being limited by circumstances you have little control over. Revs are rare after all.
 
 Beyond this, whilst a makeshift revolution has its benefits, it is also limiting from a balance and gameplay perspective. It is difficult to inject any content into revs specifically because they have no vector to receive it. You're probably never going to have a makeshift cyborg converter, so as a revolutionary you have to hope a thief or syndicate agent is around to convert borgs to the revolution, who are very powerful allies.
 
@@ -134,4 +134,4 @@ This would effectively be performing jobs for the revolution's backers in exchan
 This would require considerably more work as it is in effect a form of "Progression Traitor" where a series of objectives are picked out and completed for rewards.
 
 ## Conclusion
-This is a basic set of additions to revolutionaries. Currently a basic form of Undercommon and The Black Market have already been created. This helps to justify I made them they way I did.
+This is a basic set of additions to revolutionaries. Currently a basic form of Undercommon and The Black Market have already been created. This helps to justify I made them the way I did.
