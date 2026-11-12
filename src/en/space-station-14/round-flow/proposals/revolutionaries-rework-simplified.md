@@ -68,7 +68,8 @@ So the theme of Revolutionaries per this document is: *A set of common men and w
 
 That was a lot of words. Let's do some actual proposing now to address these points.
 
-**Communications**: This one's conceptually simple enough. Revs should have some way to talk to each other covertly. Xenoborgs and Nuclear Operatives get it for free, Syndicate agents get it for 2TC at some codewords spamming in the Common channel. The captain gets all the crew channels round start for free, plus a spare.
+### Communications
+This one's conceptually simple enough. Revs should have some way to talk to each other covertly. Xenoborgs and Nuclear Operatives get it for free, Syndicate agents get it for 2TC at some codewords spamming in the Common channel. The captain gets all the crew channels round start for free, plus a spare.
 
 Naturally, revs are none of these antagonists. It doesn't really hit the right theme to just have a magic comms channel that always works. The Revolution is fundamentally internal, so their comms should be too. 
 
@@ -84,7 +85,8 @@ Undercommon is available immediately with no setup, all crewmembers who have a h
 
 Undercommon by design allows for mass dissemination of information, with proper two way this takes a load of the head revolutionary's back. Tasks can be better offloaded, people checked up on, and information about the state of the station better known.
 
-**Resilience and Variety** Slightly more complicated. As described in their sections, revs are vulnerable to the whims of the station. The proposed solution to this one is a way for them to acquire goods outside the station's normal ways, but still functioning within them, similar to how communications are linked to the station.
+### Resilience and Variety
+Slightly more complicated. As described in their sections, revs are vulnerable to the whims of the station. The proposed solution to this one is a way for them to acquire goods outside the station's normal ways, but still functioning within them, similar to how communications are linked to the station.
 
 *The Black Market* is a cargo account that fundamentally works very similarly to the existing ones. It has access to a cargo market of things that revolutionaries can buy. Unlike the regular civilian market however, the black market has more limited options, but, it also has some contraband and revolutionary specific items they can buy. This shop is not intended to work like a Syndicate Agent's uplink or Changelings DNA store. It should not be the primary way of progression. Instead, The Black Market is intended to be supplementary.
 
@@ -98,7 +100,7 @@ The Black Market also acts as the gameplay vector for adding fun tools to revs. 
 
 This store implementation is intended as providing Resilience and Variety to the Revolution.
 
-**Fragility**
+### Fragility
 Communications and the Store are both very useful tools for reducing the fragility of the Head Revolutionary. It's no longer as neccessary for them to run around as much and they have more tools at their disposals. However some more can be done.
 
 Here are two smaller, interconnected proposals:
@@ -120,7 +122,7 @@ Head Revolutionaries can communicate before choosing to best optimise their load
 
 Some additional starting equipment helps get revolutionaries off the ground.
 
-**More Variety**
+### More Variety
 The prior entries represent the baseline for improvements to Revolutionaries that are relatively simple to implement. If these were implemented and proved successful, there would be opportunity for more advanced game mechanics to build upon.
 
 One aspect that this proposal does not directly address is the arbitrary "preparing" that often happens during revolutions, where a revolutionary, not knowing what to do, basically just continues doing their job as normal with the potential of stockpiling whatever they think is useful in the hope someone else gives them direction.
