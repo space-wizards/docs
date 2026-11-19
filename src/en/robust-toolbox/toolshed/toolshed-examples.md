@@ -150,7 +150,7 @@ This command will turn all singulos on the server into player controlled ghost r
 
 Have you ever wanted a bee plushie grenade? You can have one with this simple command!
 ```
-> self spawn:on "GrenadeStinger" do "rename $ID \"bee plushie grenade\"" do "vvwrite /entity/$ID/ClusterGrenade/FillPrototype \"PlushieBee\""
+> self spawn:on "GrenadeStinger" do "rename $ID \"bee plushie grenade\"" do "vvwrite /entity/$ID/ProjectileGrenade/FillPrototype \"PlushieBee\""
 
 ```
 You can replace the `FillPrototype` of cluster grenades with any valid Prototype. Keep in mind that any explosives you spawn this way will be activated by default, so you might not want to use it to spawn thirty Holy Hand Grenades.
