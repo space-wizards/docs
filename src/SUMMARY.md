@@ -169,6 +169,8 @@ Space Station 14
 	- [PR Guidelines](en/space-station-14/mapping/guidelines.md)
 	
 	- [Dungeons](en/space-station-14/mapping/dungeons.md)
+
+	- [EVA Storage](en/space-station-14/mapping/eva-storage.md)
 	
 	- [Guides]()
 		- [General Guide](en/space-station-14/mapping/guides/general-guide.md)
