@@ -67,6 +67,9 @@ Robust Toolbox
 ----------------------
 
 - [ECS](en/robust-toolbox/ecs.md)
+- [Entity Relations](en/robust-toolbox/entity-relations/entity-relations.md)
+  - [Usage](en/robust-toolbox/entity-relations/usage.md)
+  - [Technical details](en/robust-toolbox/entity-relations/technical-details.md)
 - [Netcode]()
   - [Net Entities](en/robust-toolbox/netcode/net-entities.md)
   - [Connection Sequence](en/robust-toolbox/netcode/connection-sequence.md)
