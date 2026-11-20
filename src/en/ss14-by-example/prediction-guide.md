@@ -569,7 +569,7 @@ double randomDoublePredicted = rand.NextDouble(); // Create some random number f
 
 Be careful with this, since a cheater that knows the corresponding `NetEntity` id might in theory influence the result if they wait for the correct game tick to send the user input. So any game features that could give you a major advantage like random item spawning, telecrystal discounts in stores, antag or objective selection etc. should better stay unpredicted if the player is able to time them exactly.
 
-## WeakEntityReference
+## Entity Relations
 According to the convention used in our ECS an `EntityUid` should always refer to a valid, existing entity. If you have an autonetworked datafield of type `EntityUid` the source generator will convert it into a `NetEntity`, send it to the client, and convert it back into the corresponding `EntityUid` on the client (which will have a different id than that of the server). To get the `NetEntity` the server will have to read the entity's `MetaDataComponent`. However, if the entity is deleted somehow (for example when being eaten by the singularity, recycled, gibbed or used for crafting) the component will be deleted along with it. This results in an error when the server is trying to network a component containing an `EntityUid` referencing a deleted entity:
 ```
 Can't resolve "Robust.Shared.GameObjects.MetaDataComponent" on entity 957132/n0D!
@@ -578,11 +578,13 @@ Can't resolve "Robust.Shared.GameObjects.MetaDataComponent" on entity 957132/n0D
 ...
 ```
 
-To prevent this from happening you have to set the datafield back to `null` if the entity is deleted somehow, however this is tricky to keep track of, requiring marker components and a lot of boilerplate code.
+To prevent this from happening you have to set the datafield back to `null` if the entity is deleted. This can be done by using **entity relations** instead of a bare `EntityUid`.
 
-At the time of writing the WizDen servers get more than 20000 of these errors each day and resolving them will require some engine changes introducing a `WeakEntityReference`, which references an entity that may or may not be deleted. Alternatively a relations system that will automatically set the referencing datafield back to `null` might be introduced. Once the engine PR is merged the content repository will require some cleanup to get rid of these errors.
+You can read more about entity relations [here](../robust-toolbox/entity-relations.md).
 
-See [this issue](https://github.com/space-wizards/RobustToolbox/issues/6152) for more details.
+```admonish warning
+Currently most of the codebase wasn't ported to use Entity Relations yet. Remember to use the implementation example in the linked document above for reference when you implement them!
+```
 
 ## NetSync
 
