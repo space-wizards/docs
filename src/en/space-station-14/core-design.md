@@ -24,34 +24,63 @@ Wizard's Den prioritizes mechanical design over rules design whenever and wherev
 # Space Station 14
 Space Station 14 is a game where disasters, enemies, and incompetence conspire to make each shift aboard the station a unique and hellish experience.
 
-## Core Pillars
-These pillars serve as the guiding concepts for designing SS14's features. When creating features or adjusting balance, you should be actively thinking about how these concepts relate to your design or change.
+# Gameplay Pillars
 
-- These pillars and definitions are specific to Wizard's Den's vision of Space Station 14.
+Gameplay pillars represent the “core identity” of Space Station 14 and the vision for the experience of playing on Wizden/”Vanilla” servers. These pillars are the foundation for making features or mechanics, when creating a feature/mechanic, you are expected to be able to justify and/or defend the design with these pillars. 
 
-### Unpredictability and Chaos
-- No two rounds should play alike. The combination of antagonists, incompetence, and disasters should create situations where players have to deal with rapidly changing and escalating situations.
-- There should rarely be guarantees. Problems should arise, and solutions may not always be immediately available. Players should be forced to adapt to rapid changes in their environment.
-- Chaos should also be unpredictable. Some rounds may be slow, some may be blazingly fast; the variety of round flow is what keeps the game interesting.
+* *Designs that conflict with the core pillars will face much harsher scrutiny as they are unlikely to fit within the vision of the experience we are going for on Wizden servers.*
 
-### Darkly Comedic/Surrealist
-- The game's tone floats between a Surrealist Comedy and Dark Comedy, both defying expectations with absurd situations, such as the clown throwing acid pies at a mega-corporation's special forces team.
-- The game should be able to balance this tone, never becoming so absurd that it breaks immersion, but never being so serious or grim that it becomes depressing.
-- Mechanics should be designed with this tone in mind, silly mechanics shouldn't be so silly as to not be grounded, and grounded mechanics shouldn't be mundane, and all should play a part in a catastrophe.
+Caveat for the above: If a design doesn’t fit within Wizden but may be implemented in a modular way, we can still add/support the functionality for Community Servers without directly using it on Wizden Servers.
 
-### Dynamic Environment
-- The gameworld should be malleable, allowing for the dynamics of a station to change throughout the round. Walls may get blown open by explosions, and areas of the station may be totally renovated by a dedicated passenger.
-- The station should avoid unique properties that cannot be replicated. Even abstract intangible player facing systems should still be tied to tangible objects whenever possible.
+# Core Pillars:
 
-### Intuitive and Inter-Connected Simulation
-- Simulated systems should be complex enough to create engaging gameplay decisions while still being intuitive enough to learn without wiki-diving. 
-- Simulated systems should be interactive and reactive, not only with players but with each other.
-- Systems should interact with each other as much as feasible to create new emergent gameplay opportunities.
-- Systems should clearly communicate all necessary information a player needs to make actionable judgments. No player should require knowledge outside the game to interact with a mechanic; black boxes are bad.
-- Players should be able to find optimal strategies and discover emergent interactions solely with what information is available to them in-game.
+## Chaotic and Memorable *Storytelling*
 
-### Player Interaction/Agency
-- Mechanics and design should encourage players to interact with other players naturally. Players should feel like they have agency in these interactions.
-- Interactions should not be an afterthought when designing mechanics. Player interactions should be part of the design rather than an extra step added arbitrarily.
-- Players should never feel forced into a specific interaction or action. Avoid situations where players default to a specific choice because it is consistently better than other options.
-- A player genuinely interacting with a mechanic should not end up completely isolated from the rest of the game. No mechanics should run parallel or tangential to the rest of the game.
+* Chaos should serve a greater narrative: ***Chaos without stakes or reason is just noise.***
+* The priority is to enable players to experience engaging and memorable stories while playing, rather than creating a tightly-tuned competitive experience.
+
+
+* *Players should never feel forced into a specific interaction or action*. Avoid situations where players default to a specific choice because it is consistently better than other options.
+
+
+---
+
+## Be ~~whoever~~ ***whatever*** you want to be:
+
+* Encourage and enable player self-expression when it comes to characters and jobs.
+* Space station at it's core is a lot like a Tabletop-RPG, lean into that to create immersive mechanics that reward players for getting into character.
+
+
+---
+
+## Teamwork is *fun*:
+
+* Group gameplay and progression should be incentive over solo activities/rewards as much as possible. More cross-department/group interactions create more opportunities for roleplay, shenanigans, and memorable movements.
+
+
+* Antags, Objectives and Events should push players to work *together* to overcome the challenge as a group rather than put the fate of the station in the hands of a few individuals.
+* Inter-dependence should be a mutually beneficial two-way street without feeling like an annoying limitation.
+
+
+---
+
+## An unpredictable world of Interconnected systems 
+
+* Gameplay should be the result of emergent interactions between various gameplay systems rather than resulting from scripted outcomes.
+* Players should be given the freedom to approach problems from any angle and use element's of the game's simulation as puzzle pieces to create their solution.
+
+
+---
+
+## A richly detailed, immersive experience in the frontiers of space
+
+* The world should feel deep, interesting and most importantly: internally consistent. Understanding lore should not be a requirement, but players who take the time to do so should be rewarded with engaging storytelling.
+
+
+---
+
+## Surreal Dark Comedy
+
+* An indifferent, but not cruel universe. There is light present in the universe, players just happen to be on the fringes of civilization where government oversight and laws have become more *“open to interpretation”.*
+* The overall tone should be humorous and lighthearted, yet still convey a level of stakes and severity. Patently absurd and hilarious situations should still be taken seriously by the world and players.
+* What I like to call the "Sseth effect", basically the game should create situations that are patently absurd when explaining to friends.
