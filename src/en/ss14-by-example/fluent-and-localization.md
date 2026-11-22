@@ -73,6 +73,10 @@ The `humanoid-character-profile-summary` message is used in the lobby character 
 
 **name** and **age** are easy as they don't change the structure of the sentence. Name is assumed when you pass an `EntityUid` in as a parameter, and you can get grammatical gender using the `GENDER()` function. We pass the age in here manually.
 
+```admonish warning
+For `EntityUid` values, `Identity.Entity()` from `Content.Shared.IdentityManagement` should be used for fluent inputs.
+```
+
 However, with **gender** it gets tricky. In english a person's gender affects what pronouns are used in sentences that refer to them; We need 'He', 'She' or 'They' to be chosen appropriately.
 Thankfully Fluent supports '[selectors](https://www.projectfluent.org/fluent/guide/selectors.html)' which should look familiar to anyone who's ever used a `switch/case` or `match` statement in other programming languages. A variable is switched or matched against a series of branches and if a match is found that branch is executed.
 Fluent's selectors are no different, depending on the variable switched the sentence is changed to match the most appropriate branch.
