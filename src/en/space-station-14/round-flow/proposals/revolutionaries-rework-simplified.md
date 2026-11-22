@@ -100,6 +100,25 @@ The Black Market also acts as the gameplay vector for adding fun tools to revs. 
 
 This store implementation is intended as providing Resilience and Variety to the Revolution.
 
+A few items that might be in a black market:
+- Sheets of materials (Steel, Glass, Plastic, Wood)
+- Basic medical equipment
+- Research Point disks
+- Salvage Equipment like mining charges
+- Unmarked Spesos
+- Utility Syndicate Items such as Radio Jammers, Fake Mindshields, Gatfruit, Camera Bugs, Chemical Synthesis Kits
+- Ammo Fabricator Circuitboard
+- Basic Armour vests, helmets, and simple guns (Pistols/Laser Carbines)
+- Replacement Flashes/Other conversion methods.
+- Replacement Telepads and Digiboards
+
+A few unique items:
+- Revolutionary Access Configurator
+- Cyborg Conversion tool (not an EMAG, just does borgs)
+- Hireable mercenary
+- Injector to make someone a Head Revolutionary
+- Rapid Mindshield Extraction Device
+
 ### Fragility
 Communications and the Store are both very useful tools for reducing the fragility of the Head Revolutionary. It's no longer as neccessary for them to run around as much and they have more tools at their disposals. However some more can be done.
 
@@ -132,6 +151,17 @@ Whilst comms provide better guidance, it's unlikely to remove this behaviour. Th
 This would effectively be performing jobs for the revolution's backers in exchange for favours. Ranging from "Acquire thing" to "Kill person". The intention being for head revs to delegate these jobs to their underlings to provide them things they can do to help the revolution. The vaguely clueless intern in medical who's on their third ever shift probably doesn't know what to do during a revolution but if they were given the task to inject a security officer with a covert implant that made them blow up, they could probably figure that out and give the revolution some bonus favour.
 
 This would require considerably more work as it is in effect a form of "Progression Traitor" where a series of objectives are picked out and completed for rewards.
+
+### The Dramatic Finale
+This proposal primarily focuses on the general gameplay mechanics of the Revolutionary, but this is the end of the proposal, so here is a bit of extra spice. Ultimately each shift of Space Station 14 is the story of the station, and a good story has a good conclusion. Revs suffers a bit from currently being quite difficult to form that dramatic finale. Primarily as during the shift and until they hold a considerable advantage the revolutionary is encouraged to hide, and if they do take over the opposite occurs, and the final members of command and security are encouraged to hide.
+
+A shift that ends because the revs are waiting around whilst the last command member hides in space isn't a satisfying conclusion for anyone. How do we solve this? We can simply steal the same idea used in many other group conversion antagonists such as the blood and cosmic cults, by making the opposition come to you.
+
+Once the revolutionaries have killed or converted the majority of the currently existing command members, they gain access to a new option (or "Revolutionary Duty" if this has been implemented). The revolutionaries are able to purchase revolutionary flags at any point, and craft a large flagpole that uses a lot of technology and the station's nuclear bomb in order to make, and that must be placed in a prominent location (such as the bridge). Once the flagpole is placed, and flag placed upon it, any Head Revolutionary can if the prerequisite number of command members are dead or converted begin the Flag Raising processes. This immediately alerts the entire station of anti-corporate activity, and brands all those with mindshields remaining loyal to Nanotrasen as Enemies of the Revolution. Win or Lose, this effectively always marks the shift is going to end soon.
+
+Once this process has begun, the revolutionaries must defend the flag for some time, similar to the nuke. Whilst the enemies of the revolution mark a desperate offensive to try and take down the flag or kill the head revolutionaries. There may be room here to request in a small squad of ERT members to aid in security.
+
+Should they fail and the flag be allowed to be raised, the large bundles of technology shoved into the nuke at the base of the flagpole reveal their purpose, as a high-powered low-frequency pulse of energy is emitted, signalling to everyone within the local system the loss of the station, and causing a catastrophic malfunction in the machinery of any active mindshields, resulting in their user's head's exploding. After this happens the round ends in a Major Revolutionary Victory.
 
 ## Conclusion
 This is a basic set of additions to revolutionaries. Currently a basic form of Undercommon and The Black Market have already been created. This helps to justify I made them the way I did.
