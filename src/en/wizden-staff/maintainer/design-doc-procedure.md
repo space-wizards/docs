@@ -1,4 +1,15 @@
-# Design Doc Procedure
+# Docs PR Review Procedure
+
+### Pushing to the Docs Repo
+Maintainers have direct push access to the Docs repo and are encouraged to use it to update any outdated information, whether it's technical documentation, amending a design document, or just fixing grammar.
+
+### Non-Design Doc Reviews
+PRs that update instructional or reference documentation (including, but not limited to, setup guides, style guides, and system documentation) require only a single approval before they can be merged.
+Likewise, only a single maintainer needs to express concern to close it.
+
+Note that this does not apply to changes to internal procedure or other modifications that require voting or group deliberation according to relevant policy.
+
+## Design Docs Overview
 
 This is the procedure maintainers should use when reviewing and approving design documents. 
 
@@ -6,7 +17,7 @@ Note that this procedure is primarily intended for *gameplay* design documents. 
 
 **When making updates to this page, ensure you update the [Feature Proposals](../../general-development/feature-proposals.md) page to match and vice versa.**
 
-## Overview
+---
 
 The design doc procedure consists of 4 main points: 
 
