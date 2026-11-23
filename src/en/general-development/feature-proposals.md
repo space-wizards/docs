@@ -12,9 +12,9 @@ If you are considering adding or reworking some major component of the game it's
 
 5. When you are ready for your proposal to be reviewed, make a pull request.
 
-6. Your proposal is approved when a maintainer gives it the proposal approval label. This is a green light for you and your collaborators to work with the approving maintainer to implement it as a playtest (described below).
+6. Your proposal is approved when a maintainer gives it the `Proposal Doc Approval` label. This is a green light for you and your collaborators to work with the approving maintainer to implement it as a playtest (described below).
 
-7. If the playtest goes well, the maintainer will give feedback on any changes you need to make. At this point, you update your proposal with implementation details to help give an understanding of how the feature will be added. If the maintainer gives the implementation approval label, you're off to making proper PRs!
+7. If the playtest goes well, the maintainer will give feedback on any changes you need to make. At this point, you update your proposal with implementation details to help give an understanding of how the feature will be added. If the maintainer gives the `Implementation Doc Approval` label, you're off to making proper PRs!
 
 8. As you get your feature's code merged into the game, you update your document based on any design changes that happen during implementation. 
 
@@ -56,11 +56,11 @@ A good rule of thumb if the new feature or rework you have in mind would require
 
 A maintainer will have to review your document and determine if it is an idea worth testing. If there is an area specialist, such as a workgroup, the maintainer is expected to reach out to them for expert opinion. Not everything passes this bar! Sometimes an idea is not developed enough, or has overlap with an existing feature. Don't be discouraged if it happens, an idea can be good but simply not be the right fit for this game. 
 
-If the maintainer approves the proposal, they will assign a proposal approval label. You are then free to start working on the playtest implementation of your feature. If necessary, the maintainer can help set up a workgroup space for you on our Discord server so you can bring in any fellow developers and stay up to date with communications. 
+If the maintainer approves the proposal, they will assign the `Proposal Doc Approval` label. You are then free to start working on the playtest implementation of your feature. If necessary, the maintainer can help set up a workgroup space for you on our Discord server so you can bring in any fellow developers and stay up to date with communications. 
 
 ## How do I playtest?
 
-We ask that any proposal doc goes through a playtest. This can be done in three different ways:
+We ask that any feature proposal doc goes through a playtest. This can be done in three different ways:
 
 ### Prototype Upload
 
@@ -86,11 +86,11 @@ Don't worry if you receive feedback that some changes will need to be made for u
 
 ## What happens after the playtest?
 
-The maintainer will decide if the feature is viable to implement, if it needs further adjustments and playtests, or if it should be closed. If they approve, they will bring your design document to the maintainer team at large and ensure that the team as a whole approve of the design you've put forwards. This is either done through an internal forum post, or as a discussion during an upcoming maintainer meeting. If the rest of the maintainer body approves, the maintainer will assign a playtest approval label. At this point, you should update your proposal document into an **implementation document**.
+The maintainer will decide if the feature is viable to implement, if it needs further adjustments and playtests, or if it should be closed. If they approve, they will bring your design document to the maintainer team at large and ensure that the team as a whole approve of the design you've put forwards. This is either done through an internal forum post, or as a discussion during a maintainer meeting. If the rest of the maintainer body approves, the maintainer will assign the `Playtest Approval` label. At this point, you should update your proposal document into an **implementation document**.
 
 An implementation document is an evolution of your proposal document, with an added section that describes actual feature implementations. This is to help other developers understand what needs to be implemented, how it should look like, and the purpose of what is being implemented. Do not include hard numbers or detailed descriptions of your features; the goal is to give an overview of what needs to be implemented for the feature to be considered complete, not an exact recipe for what has to be implemented. 
 
-Once the maintainer approves of the implementation document, you are off to the races! Create actual pull requests to the repository, get them reviewed and merged, and enjoy building your feature into the game! Make sure you follow the [pull request guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html) and [best practices](https://docs.spacestation14.com/en/general-development/codebase-info/conventions.html). 
+Once the maintainer approves of the implementation document by giving the `Implementation Doc Approval` label, you are off to the races! Create actual pull requests to the repository, get them reviewed and merged, and enjoy building your feature into the game! Make sure you follow the [pull request guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html) and [best practices](https://docs.spacestation14.com/en/general-development/codebase-info/conventions.html). 
 
 ## What happens after implementation?
 
@@ -99,6 +99,6 @@ As you are implementing your feature, you will likely find that you'll have to m
 - What the feature is: the mechanics, the aesthetics, and the intended gameplay experience for players.
 Your document should naturally evolve into this as you update it throughout implementation. It's key we have reference documents because they inform future developers why your feature is the way it is, and how new features can be developed without disrupting your feature.
 
-Once your reference document is completed, notify the reviewing maintainer for a final approval; the maintainer will merge the design document into the docs repository under the relevant section, at which point your design document is considered fully complete.
+Once your reference document is completed, notify the reviewing maintainer for a final approval; the maintainer will merge the design document into the docs repository under the relevant section, at which point your design document is considered fully complete! Congratulations!
 
 ![designdocprocesstimeline.png](../assets/images/general-development/feature_proposals/designdocprocesstimeline.drawio.png)
