@@ -4,7 +4,7 @@ This is the procedure maintainers should use when reviewing and approving design
 
 Note that this procedure is primarily intended for *gameplay* design documents. Systems architecture, code convention and other features not interfacing with players do not need to follow the requirements for playtesting, and it is up to the reviewing maintainer to judge whether this procedure is suitable for any given document.
 
-**When making updates to this page, ensure you update the [Feature Proposals](../general-development/feature-proposals.md) page to match and vice versa.**
+**When making updates to this page, ensure you update the [Feature Proposals](../../general-development/feature-proposals.md) page to match and vice versa.**
 
 ## Overview
 
@@ -43,7 +43,7 @@ Being the reviewing maintainer does *not* confer taking upon the responsibility 
 
 A playtest is a necessary step to evaluate the actual viability of the feature. It's a way to get feedback on the idea, see how it works in practice, and for the contributor to adjust their design if necessary. Critically the playtest should require as little work as possible; make sure you inform the contributor(s) of this so that they don't spend time creating codebase-quality code or waste time polishing features that you may end up discarding.
 
-The ways to playtest a proposal doc are listed on the [Feature Proposals](../general-development/feature-proposals.md) page.
+The ways to playtest a proposal doc are listed on the [Feature Proposals](../../general-development/feature-proposals.md) page.
 
 As the reviewing maintainer, make sure you stay in contact with the contributor(s) to help arrange the playtest they are doing. The playtest is an opportunity for you to review the feature, and your approval is a requirement for the document to continue to the next stage. 
 
@@ -63,7 +63,7 @@ The reviewing maintainer has two options:
 
 ### Implementation doc approval
 
-Inform the contributor of the result and ask them to begin working on the **implementation doc**, as described on the [Feature Proposals](../general-development/feature-proposals.md) page. The document should be enough of a blueprint such that a new developer could take the concept and implement it themselves. Once the document reaches this standard, assign it the `Implementation Doc Approval` label. This indicates that actual pull requests can be submitted to the main repository for merging.
+Inform the contributor of the result and ask them to begin working on the **implementation doc**, as described on the [Feature Proposals](../../general-development/feature-proposals.md) page. The document should be enough of a blueprint such that a new developer could take the concept and implement it themselves. Once the document reaches this standard, assign it the `Implementation Doc Approval` label. This indicates that actual pull requests can be submitted to the main repository for merging.
 
 ### Reference doc approval
 
