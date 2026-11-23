@@ -17,7 +17,7 @@ The design doc procedure consists of 4 main points:
 
 The goal of this process is to have a low bar of entry to playtest new features and get an understanding of whether the proposed design is desirable, to not lock in designs before they are tested, and to ensure design documents aren't merged only to gather dust on the docs repository. 
 
-![designdocprocesstimeline.png](../assets/images/general-development/feature_proposals/designdocprocesstimeline.drawio.png)
+![designdocprocesstimeline.png](../../assets/images/general-development/feature_proposals/designdocprocesstimeline.drawio.png)
 
 ### Proposal Doc Submission
 
