@@ -68,4 +68,35 @@ Space Station 14 has a very efficient way to run the game, which is through [ent
 
 Prototype upload playtesting is best for features that are similar to existing features. This is because you are limited to the components that already exist, so you can't include completely new game code. Luckily we have a lot of components, so for many features it can get you 95% of the way there and be enough to playtest your idea. The benefit is that it's very easy to host a prototype upload playtest, making it by far the fastest option. 
 
-Once you have your prototype files ready, contact the reviewing maintainer to host a playtest. You will work together with an admin to upload the files to one of our game servers. Make sure your proposal includes any instructions
+Once you have your prototype files ready, contact the reviewing maintainer to host a playtest. You will work together with an admin to upload the files to one of our game servers. Make sure your proposal includes any instructions that players/admins need to know!
+
+### Experimental Branch
+
+If your feature requires actual code changes, the maintainer can set up an experimental branch for you on the `space-station-14` Github repository. You can then develop your playtest on your own repository and, when ready, submit it to the experimental branch. The maintainer can then create a game build and push it to one of our live game servers to test for a day.
+
+Playtesting with an experimental branch comes with some downsides. Unlike a Prototype Upload, it's more of a commitment for the game admins to run your playtest since switching to and from it requires a server restart, and you need to submit any changes to the experimental branch as pull requests. The benefit is that you are not bound by existing prototype components and can test with actual code changes.
+
+Your experimental branch does not need to, and should not have, the same code quality as we expect of real pull requests. Playtest code can be ugly code, as long as it works when testing! 
+
+### Downstream Playtest
+
+If your feature already exists on a downstream server, it might be eligible to be evaluated on that downstream instead of needing a separate playtest on the WizDen servers. The downstream server should not be too dissimilar to how the base game works, so make sure you verify with the reviewing maintainer that it's suitable for your feature. If it is, great! Arrange for the reviewing maintainer to observe your feature on the downstream for a few rounds, preferably in cooperation with the downstream's staff. 
+
+Don't worry if you receive feedback that some changes will need to be made for upstream. Upstream may have different design requirements on features and their implementation, but seeing a feature work well in a downstream is a strong sign that the feature has potential for upstream as well.
+
+## What happens after the playtest?
+
+The maintainer will decide if the feature is viable to implement, if it needs further adjustments and playtests, or if it should be closed. If they approve, they will bring your design document to the maintainer team at large and ensure that the team as a whole approve of the design you've put forwards. This is either done through an internal forum post, or as a discussion during an upcoming maintainer meeting. If the rest of the maintainer body approves, the maintainer will assign a playtest approval label. At this point, you should update your proposal document into an **implementation document**.
+
+An implementation document is an evolution of your proposal document, with an added section that describes actual feature implementations. This is to help other developers understand what needs to be implemented, how it should look like, and the purpose of what is being implemented. Do not include hard numbers or detailed descriptions of your features; the goal is to give an overview of what needs to be implemented for the feature to be considered complete, not an exact recipe for what has to be implemented. 
+
+Once the maintainer approves of the implementation document, you are off to the races! Create actual pull requests to the repository, get them reviewed and merged, and enjoy building your feature into the game! Make sure you follow the [pull request guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html) and [best practices](https://docs.spacestation14.com/en/general-development/codebase-info/conventions.html). 
+
+## What happens after implementation?
+
+As you are implementing your feature, you will likely find that you'll have to make some changes. That's the nature of game development. Make sure you update your design document accordingly during implementation. Once your feature is in the game and the design document accurately reflects the feature as it is in the game, your document should fulfill the purpose of being a **reference document**. This is a design document that:
+- Describes why the feature is good for the game: design motivations, how its mechanics create the intended experience, how it interfaces with other parts of the game.
+- What the feature is: the mechanics, the aesthetics, and the intended gameplay experience for players.
+Your document should naturally evolve into this as you update it throughout implementation. It's key we have reference documents because they inform future developers why your feature is the way it is, and how new features can be developed without disrupting your feature.
+
+Once your reference document is completed, notify the reviewing maintainer for a final approval; the maintainer will merge the design document into the docs repository under the relevant section, at which point your design document is considered fully complete.
