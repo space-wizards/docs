@@ -100,3 +100,5 @@ As you are implementing your feature, you will likely find that you'll have to m
 Your document should naturally evolve into this as you update it throughout implementation. It's key we have reference documents because they inform future developers why your feature is the way it is, and how new features can be developed without disrupting your feature.
 
 Once your reference document is completed, notify the reviewing maintainer for a final approval; the maintainer will merge the design document into the docs repository under the relevant section, at which point your design document is considered fully complete.
+
+![designdocprocesstimeline.png](../assets/images/general-development/feature_proposals/designdocprocesstimeline.drawio.png)
