@@ -52,11 +52,15 @@ It depends on the scale, and pervasiveness of whatever you're thinking of propos
 
 A good rule of thumb if the new feature or rework you have in mind would require adding or reworking a page of the guidebook or one of the feature docs on this site then it probably needs a design doc. Same if the proposal could be accurately described as 'reworking the entirety of X'.
 
-## What happens after I submit the proposal doc?
+## What happens after I submit the proposal?
 
 A maintainer will have to review your document and determine if it is an idea worth testing. If there is an area specialist, such as a workgroup, the maintainer is expected to reach out to them for expert opinion. Not everything passes this bar! Sometimes an idea is not developed enough, or has overlap with an existing feature. Don't be discouraged if it happens, an idea can be good but simply not be the right fit for this game. 
 
 If the maintainer approves the proposal, they will assign the `Proposal Doc Approval` label. You are then free to start working on the playtest implementation of your feature. If necessary, the maintainer can help set up a workgroup space for you on our Discord server so you can bring in any fellow developers and stay up to date with communications. 
+
+### What if the maintainer that reviewed the document becomes unvailable?
+
+Get in touch with the maintainer team. This is a process that relies on the reviewing maintainer finding potential in your work, so we will do our best to find someone in the team who can fill the absent maintainer's role, but if we can't do that it may mean that your proposal will not be able to continue, unless you can drum up renewed support.
 
 ## How do I playtest?
 
