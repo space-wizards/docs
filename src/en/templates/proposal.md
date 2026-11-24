@@ -49,7 +49,10 @@ A Cargo Technician should be encouraged to traverse the station to complete thei
 > Do: Encourage players to deliver items to and from Cargo manually. Variation in item sizes makes for different traversal challenges and opportunities. 
 
 > Do not: Cargo Technicians get fool-proof automated delivery systems, allowing them to get resources to another role's department without any traversal involved.
+```
 
+``` admonish "Proposal Document"
+Ideally, you will try to stay true to these design pillars throughout the feature's development. If you find one does not work out, do not be afraid to change it!
 ```
 
 ## Game Mechanics & Features
