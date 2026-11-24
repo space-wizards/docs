@@ -1,45 +1,28 @@
-```admonish warning "Attention: Placeholder!"
-This section is a placeholder, pending a design-doc being created by the related work-group
-```
-
 # Science
-THE SCIENCE TEAM
+Improving lives through the power of science!
 
 ## Concept
-Science is responsible for researching and prototyping new technologies that unlock benefits for the whole station. They perform experimentation on various strange phenomenon to find new discoveries that improve the station.
-- **Primary Goal**: Unlocking and providing technology(not necessarily as items) needed to upgrade the station and improve quality of life for other departments.
-- **Secondary Goal**: Utilizing in-house experiments & technology (i.e artifacts, xenobiology) to create benefits or risks to the station.
-
-## Player Story
-> A short (1-2 paragraph) story from the perspective of someone playing a role in this department. This is effectively a story of the ideal experience of a player interacting with these mechanics/systems. 
+The Science Department is a hub of technology and innovation. Nanotrasen scientists desire nothing more than to probe the boundless mysteries of the void (although, sometimes, the void pushes back). While some might grumble about the space-time anomaly being kept under observation in the kitchen, the improvements in quality of life that the Science Department brings to the station are generally seen to outweigh the occasional inconveniences that might arise during the process of scientific inquiry.
 
 ## Design Pillars
-> A group of simple high-level ideas that embody this department. These are usually expressed with singluar words or short phrases, but may also include a *short* one sentence explaination. Game pillars are what makes the *identity* of the department. 
+### 1. Research and development
+First and foremost, the focus of the Science Department (excluding specialized subdepartments, such as Robotics or Cybernetics) is the discovery of new technologies. All aspects of science-related gameplay should consequently tie back to scientific advancement within the current round.
 
-> Pillars are there to act as guides when creating new mechanics or interactions, they serve as the measuring posts to make sure that what you are trying to do will fit in the department gameplay. 
+### 2. Empowerment through technology
+The Science Department uses unlocked technologies to provide the station crew with new tools for doing their jobs and accomplishing their goals, as well as improving the general quality of life aboard the station.
 
-> To acheive this you want pillars that are concrete enough to get your concept across but broad enough that there is some room of interpretation and discussion.
+### 3. Elements of the unknown
+Science should never feel like a ‘solved problem’, nor should there be an optimal research method or technology path. There should always be a quality of randomness in scientific research that ensures each shift in the department plays differently from the last.
 
-### Pillar_1:
- > Breif Pillar Description
+### 4. Controlled chaos
+All scientific reserach should contain some form of inherent risk. While some of these might prove to be minor nuisances, others will constitute grave danger. However, while such dangers is a key part of the Science Department experience, there needs be an appropriate balance, so that events do not regularly escape the control of players.
 
- ### Pillar_2:
- > Breif Pillar Description
+## Desirable features
+- *Scientific research should never be dull*. Satisfying gameplay activities and puzzle solving, coupled with elements of randomness and a desire to see those research progress meters fill, should keep players engaged throughout the shift.
+- *Unlockable technologies should be engaging*. Research needs to offer meaningful choices and meaningful rewards. Low-effort technologies, such as ‘better power cells’ and ‘hydroponic tables’, need to be done away with. New tools should not simply be items that can already be found on the station but with slightly better numbers.,
+- *Gameplay with depth rather than complexity*. Understanding how to work with alien artefacts, containing anomalies, and dealing with God knows what else might happen on this station, is going to be largely unintuitive and difficult to communicate to players. This is pretty much unavoidable – the gameplay is not going to be anything like what players have experienced before. We will need in-game ways to introduce new players to the intricacies of conducting research. Writing 5 pages on the subject and dumping it onto a wiki or the guidebook should not be the way we deal with this problem (though detailed references should exist). We need to leverage informative tool tips and good UI design to guide the player through the process, at least to the point that with some experimentation, they can make progress on their own.
+- *Adverse effects on the crew should not be common*. While there should be an element of risk in scientific research, these risks should be clearly communicated to scientists, and there should be ways of mitigating them or reducing their severity. Scientific research should not be regularly negatively impacting the rest of the station crew. If the actions of the Science Department do result in major damage/disruptions to station operations, it should be the confluence of several unpredictable factors working in tandem (or nefarious sabotage at work). An artefact spawning a puddle of water and then later a pool of potassium is an interesting interaction. An artefact spawning a singularity due to a single roll on a table is not.
+- *The department is an experience multiplier*. The Science Department should make a round of SS14 more engaging (it adds ‘spice’). However, it should not be vital to progressing a shift. While the department should be the one best equipped for dealing with any alien or esoteric events that occur on the station, a round should not ground to a halt because such an incidence occurred and the department is understaffed or absent. Likewise, there shouldn't be any equipment necessary for basic station operations gated behind research. This extends to equipment that isn't strictly vital, but players might consider it such (e.g. cloning).
 
-## Objectives
-> What is this department's objective when it comes to the round? Do they have a unique failure condition? If so, what is it? How does this department's objectives interact with the rest of the station?
-
-## Progression
-> How does the *gameplay* of this department change over the course of a round? Are there unlocks? Are players collecting/spending resources? Is this progression tied/related to other departments? If so how?
-
-## Flow
-> How does the *experience* of the player change over the course of a round? Are players constantly running around putting out fires or are there breaks in the action? Do players need to wait on other departments as pre-requisites for their own gameplay, or is this department fairly self-sufficent?
-
-## Mechanics
-> What major mechanics does this department use and how are they connected to this department.
-
-### Mechanic_Placeholder1
-> Each mechanic should have its own subheading and should contain a *short high-level* overview of the mechanic and how it is used by this department. Each mechanic should also link their associated design document as the subheading.
-
-### Mechanic_Placeholder2 (Not Implemented Yet)
-> Mechanics that are unimplemented should be marked with (Not Implmented Yet) and should link the associated design proposal if it exists.
+## Interactions with Silicons
+The Science department is responsible for building, maintaining, and upgrading currently active Silicons. However, the department is not responsible for directing/managing the activities of the Silicons; all crew members have a role in this. That said, the Science Department will have tools available to them that will allow limited monitoring of Silicon activity, and the ability to disable them if required (for example, if a Silicon has malfunctioned, or has been deemed to have ‘gone rogue’).
