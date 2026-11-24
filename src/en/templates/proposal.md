@@ -30,6 +30,16 @@ Summarize any information that is needed to contextualize the proposed changes, 
 
 If there's been past iterations of the feature, make sure to include what did and did not work with those attempts, and how your feature is different. What lessons could be learned, and how are you addressing them?
 
+## Design Pillars
+
+Understanding how your feature fits into the game on a game design level is very important. Space Station 14's goal is to create specific types of gameplay and moments for players that make the game engaging, so your feature needs to show how its mechanics and aesthetics achieve those things. Explaining this also makes it easier for future developers to understand what impact your feature is trying to have, so that new changes or additions to the game preserve what makes your feature work. For this, it's recommended you establish a few "design pillars", i.e. the core design ideals that your feature is attempting to achieve. Try to motivate them based on our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosophy.
+
+Consider addressing:
+- What feeling should players have when they interact with this feature? Is it different for different roles?
+- What uniqueness does the feature bring to players? What makes it engaging for players? Why is it important? 
+- SS14 is a game that strongly encourages players to interact with each other. How does the feature enhance player cooperation, competition, or emergent gameplay?
+- How does the feature's design pillars align with the game's core design pillars? How do they strengthen the game in that regard?
+
 ## Game Mechanics & Features
 
 Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement a playtest from this design document. Exact numbers for game balance however are not desired, as these will be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so.
@@ -40,14 +50,12 @@ This section should be expanded upon as your proposal envolves into being an Imp
 
 ## Game Design Rationale
 
-Understanding how your feature fits into the game on a game design level is very important. Space Station 14's goal is to create specific types of gameplay and moments for players that make the game engaging, so your feature needs to show how its mechanics and aesthetics achieve those things. Explaining this also makes it easier for future developers to understand what impact your feature is trying to have, so that new changes or additions to the game preserve what makes your feature work. It can help to establish "design pillars", i.e. core design ideals that any mechanics for your feature should abide by. 
+With the mechanics described, this section should address how they relate to feature's design pillars and the game's [Core Design Principles](../space-station-14/core-design/design-principles.md). 
 
 Consider addressing:
-- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy? How does it fit our core design pillars?
+- What purpose do the different mechanics serve from a game design perspective? How do they align with the feature's design pillars?
 - How well does the feature gel with other features already in the game? Is it at odds with other mechanics? 
-- What feeling should players have when they interact with this feature? Is it different for different roles? What uniqueness does the feature bring to players? What makes this feature engaging for players?
 - Does it introduce meaningful choices, risk vs. reward, or new strategies?
-- SS14 is a game that strongly encourages players to interact with each other. How does it enhance player cooperation, competition, or emergent gameplay?
 - At what point in the round does the feature come into play? Does it happen every round? How does it affect the round pace?
 - How unique are the mechanics to this one feature? Can they be used elsewhere in the game, or are they specialized to just this single feature? How could they interact with other systems?
 - How do you wish for players to interact with your feature and how should they not interact with it? How is this mechanically enforced?
