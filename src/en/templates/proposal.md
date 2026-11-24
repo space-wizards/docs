@@ -40,7 +40,7 @@ This section should be expanded upon as your proposal envolves into being an Imp
 
 ## Game Design Rationale
 
-Understanding how your feature fits into the game on a game design level is very important. Space Station 14 is trying to achieve certain types of gameplay and moments for players that make the game engaging, so your feature needs to show how its mechanics and aesthetics achieve those things. Explaining this also makes it easier for future developers to understand what impact your feature is trying to have, so that new changes or additions to the game preserve what makes your feature work. It can help to establish "design pillars", i.e. core design ideals that any mechanics for your feature should abide by. 
+Understanding how your feature fits into the game on a game design level is very important. Space Station 14's goal is to create specific types of gameplay and moments for players that make the game engaging, so your feature needs to show how its mechanics and aesthetics achieve those things. Explaining this also makes it easier for future developers to understand what impact your feature is trying to have, so that new changes or additions to the game preserve what makes your feature work. It can help to establish "design pillars", i.e. core design ideals that any mechanics for your feature should abide by. 
 
 Consider addressing:
 - How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy? How does it fit our core design pillars?
