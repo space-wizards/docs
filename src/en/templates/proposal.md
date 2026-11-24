@@ -40,6 +40,18 @@ Consider addressing:
 - SS14 is a game that strongly encourages players to interact with each other. How does the feature enhance player cooperation, competition, or emergent gameplay?
 - How does the feature's design pillars align with the game's core design pillars? How do they strengthen the game in that regard?
 
+Example:
+
+``` admonish tips "Cargo Example"
+3. Traversal and transport across the station
+A Cargo Technician should be encouraged to traverse the station to complete their work duties. Doing so pushes them into encounters with other crew members across the station, exposing them to any events that are taking place. Such movement makes the station seem more alive and active overall, and it also becomes an incentive for other roles to do their jobs; intact hallways and safe environments make the delivery of resources easier, allowing other roles to get things via the Cargo department faster. This also works in favor of other roles interacting with Cargo, as they may be made to travel to the Cargo department for its services.
+
+> Do: Encourage players to deliver items to and from Cargo manually. Variation in item sizes makes for different traversal challenges and opportunities. 
+
+> Do not: Cargo Technicians get fool-proof automated delivery systems, allowing them to get resources to another role's department without any traversal involved.
+
+```
+
 ## Game Mechanics & Features
 
 Give a description of what game mechanics you would like to add or change. This should be a general overview, with enough details on critical design points that someone can directly implement a playtest from this design document. Exact numbers for game balance however are not desired, as these will be adjusted later either during development or after it has been implemented, but mention *what* will have to be balanced and what needs to be considered when doing so.
