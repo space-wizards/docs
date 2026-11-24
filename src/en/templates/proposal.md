@@ -26,7 +26,9 @@ A very short, maybe three sentence summary of what this proposal is about. A hig
 
 ## Background
 
-Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game, and other features motivating this feature.
+Summarize any information that is needed to contextualize the proposed changes, e.g. the current state of the game, and other features motivating this feature. 
+
+If there's been past iterations of the feature, make sure to include what did and did not work with those attempts, and how your feature is different. What lessons could be learned, and how are you addressing them?
 
 ## Game Mechanics & Features
 
@@ -38,8 +40,10 @@ This section should be expanded upon as your proposal envolves into being an Imp
 
 ## Game Design Rationale
 
+Understanding how your feature fits into the game on a game design level is very important. Space Station 14 is trying to achieve certain types of gameplay and moments for players that make the game engaging, so your feature needs to show how its mechanics and aesthetics achieve those things. Explaining this also makes it easier for future developers to understand what impact your feature is trying to have, so that new changes or additions to the game preserve what makes your feature work. It can help to establish "design pillars", i.e. core design ideals that any mechanics for your feature should abide by. 
+
 Consider addressing:
-- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy?
+- How does the feature align with our [Core Design Principles](../space-station-14/core-design/design-principles.md) and game philosphy? How does it fit our core design pillars?
 - How well does the feature gel with other features already in the game? Is it at odds with other mechanics? 
 - What feeling should players have when they interact with this feature? Is it different for different roles? What uniqueness does the feature bring to players? What makes this feature engaging for players?
 - Does it introduce meaningful choices, risk vs. reward, or new strategies?
