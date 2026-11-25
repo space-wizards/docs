@@ -38,7 +38,7 @@ To test the map:
 A [development environment](../../../general-development/setup/setting-up-a-development-environment.md) and [Git installation](../../../general-development/setup/git-for-the-ss14-developer.md) are strongly recommended, so that you can keep your local mapping server up to date and submit [pull requests](../../../general-development/codebase-info/pull-request-guidelines.md).
 
 ### Tools Build
-If you are using a development enviroment instead of just hosting a local server, make sure to use Tools instead of Debug/DebugOpt mode. This is because Debug adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
+If you are using a development environment instead of just hosting a local server, make sure to use Tools instead of Debug/DebugOpt mode. This is because Debug adds artificial lag (making mapping unpleasant) and crashes more (having more assertions enabled).
 Additionally be careful to not use Release, which disables development environment tooling and configuration and causes the game to act like a standard server instead of a development environment.
 
 If you have ``runclient-Tools.bat`` and ``runserver-Tools.bat`` you can run those.
@@ -54,6 +54,19 @@ If you are using an IDE, there will be some other way of setting the configurati
 
 ## Without Development Environment
 If you choose not to do this, you will need to download a [recent server build](https://central.spacestation14.io/builds/wizards/builds.html).
+
+# Terminology
+
+- **Entity** - An in-game object. Entities are game items like vending machines or chairs.
+- **[Grid](../../../robust-toolbox/transform/grids.md)** - Composed of linked tiles, a grids is a structure such as a station, shuttle or asteroid. Grids are placed on maps.
+- **Map** - Map, in this context, refers to an in-game region of empty space. Travel between maps requires an FTL jump. Each map that exists within the current game has a unique ID. Think of a map as a canvas to place a grid or grids on. A map is ***not*** the same as a mapfile.
+- **MapFile** - The representation of a map on disk. These YAML files contain all of the entities on a map and their locations. These files should never be edited directly. This is the map prototype.
+- **Prototype** - Two types of prototype are important to specify for maps. 
+  - The prototype of a map is a structure in `Resources/Maps` that defines by which it is called. This is the MapFile. 
+  - There is also a gamemap prototype in `Resources/Prototypes/Maps` that defines gameplay related station parameters like job slots and custom cargo shuttles.
+- **Shuttle** - Free flying grids such as escape pods and the cargo shuttle. These are spawned automatically near or docked to the station at roundstart.
+- **Station** - A grid can be promoted to a station using the BecomeStationComponent.
+- **Tile** - The building block of any grid. Tiles could be lattice, floors or asteroid rock. 
 
 # Workflow
 
@@ -83,7 +96,8 @@ Now to start creating maps follow the below steps:
 * While in mapping mode you shouldn't require any light. If for any reason everything is dark, run the `togglelight` command in console.
 * Use the admin menu (<kbd>F8</kbd>) to toggle other things like showing spawn points and subfloor. This can make it easier to see what you'redoing.
 * If you want to test the lighting on your map without leaving the editor, use the "mapinit" command. Do **save before doing this** as it will ruin your map if you save after running this command.
-* Use https://affectedarc07.github.io/SS13WebMap/ to see most SS13 maps online
+* Use https://map.spacestation14.com/ to view SS14 maps.
+* Use https://webmap.affectedarc07.co.uk/ to see most SS13 maps online
     - (https://game.ss13.moe/minimaps/images/maps/ for the /vg/ ones)
 * While testing your map, you might not want to be bothered to set up power each time. In that case, use: `> entities with Battery do "setbatterypercent $ID 100"`
 * Map auto-saving is enabled by default and goes to the server data directory every 10 minutes (cvar `mapping.autosave_interval`). You can turn it off with `toggleautosave [map id]` or change the `mapping.autosave` cvar.
@@ -96,7 +110,7 @@ To assign an entity to a slot, you can just open the entity placement window and
 A preset collection of mapping actions can be loaded to the toolbar by using the `mappingclientsidesetup` command. Note that as actions are unique to the currently controlled entity, if you use ghost or possession commands you will lose these actions and will have to re-run the command.
 
 ## Multi-Grid and Multi-Station Maps
-A station and a grid are not the same thing. For example, each asteroid is not it's own station, while a station may consist of multiple grids (e.g. escape shuttles). Most maps only have one grid, though you do still have to set up stations regardless. However, since you can use savemap and loadmap to save/load maps with multiple grids, there is support for overriding this behaviour.
+A station and a grid are not the same thing. For example, each asteroid is not its own station, while a station may consist of multiple grids (e.g. escape shuttles). Most maps only have one grid, though you do still have to set up stations regardless. However, since you can use savemap and loadmap to save/load maps with multiple grids, there is support for overriding this behaviour.
 
 To make a grid part of a station, give it a BecomesStationComponent with a unique ID string (only used for mapping purposes). For example, Saltern's grids have this component with the ID Saltern. You can edit these in VV, or in the map file directly.
 
@@ -113,7 +127,7 @@ After this, run the command `dotnet run --project Content.MapRenderer {your_map_
 Now that you've completed your map, you'll want to test it in game to ensure you can spawn correctly and there are no issues with doors, access, atmos, power etc etc. To do this:
 1. Copy your newly saved mapping file from "space-station-14/bin/Content.Server/data/" to "space-station-14/Resources/Maps/". You will also need to do this to submit your changes later.
 
-2. If this is a brand new map, head to "space-station-14/Resources/Prototypes/Maps" and create a .yml file for your map (known as a map prototype). As a guide, copy an existing one and change the name to match your new map, and edit the contents in a word editor like Notepad++ or your prefered method so that your new map has a unique ID and name. See section on multi-grid and multi-station for Station IDs (this is not the same as your map ID).
+2. If this is a brand new map, head to "space-station-14/Resources/Prototypes/Maps" and create a .yml file for your map (known as a map prototype). As a guide, copy an existing one and change the name to match your new map, and edit the contents in a word editor like Notepad++ or your preferred method so that your new map has a unique ID and name. See section on multi-grid and multi-station for Station IDs (this is not the same as your map ID).
     
 3. You can now relaunch the client and server. Once connected run the command `forcemap [ID]` where the ID is the one specified in the .yml file we mentioned just before. On Release, simply press F7 in Lobby to bring up the Admin Menu, and use `Round > Start Round` to skip waiting. If you are on Tools, run the `restartnow` command or F7 Admin Menu then `Round > Restart NOW` to restart the server on your map.
 
@@ -127,7 +141,7 @@ When submitting a PR, the associated branch will be tested using 'checks' to ens
 To prevent this simply enter the file PostMapInitTest.cs and add the IDs of any new maps to the list named GameMaps.
     
 To pull request:
-1. Create a branch on your cloned respository either through your Github client.
+1. Create a branch on your cloned repository either through your Github client.
 2. Add your map and map prototype files to your commit and update PostMapInitTest.cs where applicable. (Stage them)
 4. Commit these two changes to your branch then push them to origin.
 5. Head to the upstream SS14 repository and navigate to the pull requests tab. There should be a banner saying something like "recent changes on your branch, pull request?" Do this to open a pull request for your map. Alternatively you can open a pull request from your repository.
@@ -157,7 +171,7 @@ If your map is now complete, follow the attached checklist [here](https://hackmd
 - When placing tiles as mentioned you can hold ctrl and click to place a rectangle of tiles or shift and click for a line.
 - To remove tiles use the "Space" tile.
 - You do not need to place plating down first then tiles, you can just place any tile and it will pry up to show the below tile in game (usually plating).
-- Similary you can overwrite tiles by placing a new one in its place - no need to remove them first.
+- Similarly you can overwrite tiles by placing a new one in its place - no need to remove them first.
 - Be careful when placing new tiles that they are part of the correct grid - place them from on top of an existing tile if bulk placing or making sure it snaps to an existing tile. Run `lsgrid` in console periodically to check you haven't created more grids.
 
 ## Entity Spawner and Placement
@@ -176,7 +190,7 @@ If you're creating a new map from scratch instead of editing an existing map, th
 
 ### Mapping Atmospherics Components
 In order to create a life support system aboard your map you'll need to create a pipe network or two - one for **distributing** air, and one for pulling **waste** gasses out of the air. Use the following devices in your pipe networks (pipe net):
-* **Vents** - use these around your station to distrubute your fresh air.
+* **Vents** - use these around your station to distribute your fresh air.
 * **Scrubbers** - connect these to your waste pipe network around the station to scrub bad gasses out of the air.
 * **Passive Vents** - use these in your gas distribution tanks such as your air mix tank to connect INTO your distribution network. Also used to vent to space when placed behind a pump and valve
 * **Mixers** - Use these to mix gasses into a distribution mix. Make sure to pipe the primary side (the side port) and secondary side (bottom port) as you need for your mix in proportion to the UI. For an air distribution mix you need approximately 78% Nitrogen and 22% Oxygen. The output can then go into an air mix / storage tank or straight to distribution.
@@ -186,7 +200,7 @@ In order to create a life support system aboard your map you'll need to create a
 * **Atmos Markers** - If you're mapping gas storage tanks, be sure to use the "Atmos Fix (gas) Marker" in the entity spawner to set the tanks to the correct gas. This ensures when you run the fixgridatmos command it puts the correct gas in the tanks.
 * **Air Sensor** - Used to connect logic and sensing to other devices to trigger them. Used specifically for Air Alarms and Fire Alarms.
 * **Air Alarm** - Used with Air Sensors in order to detect harmful atmospheric conditions on areas and feed alerts to Engineering / Atmospherics. Use machine linking to connect air sensors in **adjacent** rooms to the air alarm, as well as vents and scrubbers in the **current room** to the air alarm. Also connect the firelocks between rooms to the air alarm so that it can trigger them to block off sections.
-* **Fire Alarm** - Used to trigger firelocks in the current area. Use machine linking to link it directly to firelocks in it's room or section.
+* **Fire Alarm** - Used to trigger firelocks in the current area. Use machine linking to link it directly to firelocks in its room or section.
 * **Gas Recycler** - Converts carbon dioxide to oxygen and nitrous oxide to nitrogen when the input gas is pressurized to 3 MPa and heated to at least 300 C.
 * **Gas Condenser** - Converts gasses into reagents. Probably more important to chemistry or science than atmospherics.
 
@@ -236,7 +250,7 @@ All maps need warp points so observers can get around quicker.
 
 Most maps now will use **Station Beacon**s instead of warp point as they already include the named warp point component on them. Place these in the relevant rooms of your station **instead** of warp points. This will allow them to populate station maps correctly.
 
-If you want to allow people to ghost warp to a location but don't want it to show up on a station map, or it's not suitable for a station beacon (planets, player griefing by moving the warp point, other reasons) then use the classic purple warp point marker. Place it, then right click, view variable, navigate to serverside components, search for the warp component, then alter the name in that component to reflect what you want in the warp menu.
+If you want to allow people to ghost warp to a location but don't want it to show up on a station map, or it's not suitable for a station beacon (planets, player griefing by moving the warp point, other reasons) then use the classic purple warp point marker. Place it, then right click, view variable, navigate to server side components, search for the warp component, then alter the name in that component to reflect what you want in the warp menu.
 
 ## Naming Doors and Editing Signs
 View variable (VV) is your friend. Right click an entity such as a door or sign and navigate to the server variables tab. In here you can edit the name and description of any entity on your map.
