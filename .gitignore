@@ -9,6 +9,9 @@ book
 
 # VSCode and VSCodium project config folder
 .vscode/
+!.vscode/*.code-profile
+!.vscode/launch.json
+!.vscode/task.json
 
 # Obsidian vault config folder
 .obsidian/
