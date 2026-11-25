@@ -89,6 +89,12 @@ Using the same console used to purchase departmental goods through cargo, player
 
 As for **siphoning**, the idea is that a console in the vault will have the ability to freely withdraw from departmental funds into real paper spesos--with some time delay and announcement for some heist action. Spesos can be inserted into any relevant departmental/cargo purchasing console.
 
+### Solid plasma production
+
+
+There was some talk about implementing SS13's PTL to allow engineers to make some money on the side with excess power. While PTL is a sound idea, it may be mechanically boring to just give them a "create-money-using-power" machine. My proposal is to create a similar power sink machine, but one that instead uses liquid plasma to create solid plasma. The solidifying machine should be able to be overclocked, speeding up the solidification time in return for much larger power usage. Solid plasma then can be sold for a large profit using cargo boxes, used in PACMAN as fuel, or otherwise be used on the stations as materials. Where would engineers get liquid plasma from? First of all, PACMAN would no longer burn plasma but instead liquefy it during power production, turning solid plasma into a kind of energy storage with about ~100% efficiency. Additionally, salvagers can find liquid plasma barrels on space debris as an early to mid-game source of liquid plasma. For a late-game source of liquid plasma, a fracking outpost on VGroid can be (re)built; after power is restored and the mining drill repaired, it would allow for a steady stream of liquid plasma ready for cargo to transport back to the station.
+![](../../../assets/images/plasma-flow-chart.png)
+
 ## Concluding
 
 With a holistic implementation of the systems laid out here I see a lot of benefits. Money is always fun for players to interface with--they like feeling like they're turning big profits or making shady deals or whatever, so integrating it with everybody is nice. Departmental players will have a lot more agency and should feel much less frustrated about certain things "requiring" cargo since the friction for receiving something from cargo is significantly lessened. Cargo players should feel a lot less stress while still retaining the fun parts of their job and a new dimension with having to manage incoming purchases that they weren't always made explicitly aware of. Design-wise, we can design around departments selling, purchasing, and making deals amongst themselves without feeling like we're sentencing players to endless hell with no options if cargo is incompetent or slow. I expect some fun roleplay and interactions to develop around transferring funds between departments, as well as departments begging HoP for more money to work on their pet projects.
@@ -101,6 +107,7 @@ flowchart TD
     B[Cargo techs notice the new purchase; prepare to go grab it from the trade station] --> C;
     C[Techs retrieve it from the trade station and deliver it to the department that ordered it] --> D[Player has the thing they wanted];
 ```
+
 
 For our purposes, much better!
 
@@ -118,5 +125,4 @@ This is mostly just stuff I thought about lightly but haven't fleshed out in my 
 - Speculative markets to engage in -- stocks, procedurally generated crypto shitcoins, etc. KEEP GAMBLING
 - Separate trade stations for different markets -- shady market that might have syndies, underground market that only takes crypto shitcoins for payment, food supplier that only sells in bulk, that kind of stuff
 - Loans that departments can take on -- can't pay up the loan in time, mercs get sent to break your departments kneecaps
-- Shamelessly steal PTL from goonstation -- its just really good and cool. [Look it up](https://wiki.ss13.co/Power_Transmission_Laser)
 - Custom vendors from Eris for departments to make extra money by selling stuff directly to other departments, making transferring even more frictionless
