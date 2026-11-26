@@ -123,7 +123,7 @@ Will teleport 5 randomly selected players to the entity you are currently contro
 
 ### THE BEES WILL CONTINUE UNTIL MORALE IMPROVES:
 ```
-> self rep 10 spawn:on "MobAngryBee" nearby 10 prototyped MobAngryBee select 1 tag:add "DoorBumpOpener" do "makeghostrole $ID \"Queen Bee\" \"Lead the bees!\"" do "rename $ID \"Queen Bee\"" nearby 10 protoyped MobAngryBee not with GhostRole do "makeghostrole $ID \"Angry Bee\" \"You are an angry bee and you want some pizza.\""
+> self rep 6 spawn:on "MobAngryBee" nearby 6 prototyped MobAngryBee select 1 tag:add "DoorBumpOpener" do "makeghostrole $ID \"Queen Bee\" \"Lead the bees!\"" do "rename $ID \"Queen Bee\"" nearby 6 prototyped MobAngryBee not with GhostRole do "makeghostrole $ID \"Angry Bee\" \"You are an angry bee and you want some pizza.\""
 ```
 This command can be split into multiple parts for easier understanding:
 
@@ -150,7 +150,7 @@ This command will turn all singulos on the server into player controlled ghost r
 
 Have you ever wanted a bee plushie grenade? You can have one with this simple command!
 ```
-> self spawn:on "GrenadeStinger" do "rename $ID \"bee plushie grenade\"" do "vvwrite /entity/$ID/ClusterGrenade/FillPrototype \"PlushieBee\""
+> self spawn:on "GrenadeStinger" do "rename $ID \"bee plushie grenade\"" do "vvwrite /entity/$ID/ProjectileGrenade/FillPrototype \"PlushieBee\""
 
 ```
 You can replace the `FillPrototype` of cluster grenades with any valid Prototype. Keep in mind that any explosives you spawn this way will be activated by default, so you might not want to use it to spawn thirty Holy Hand Grenades.
@@ -159,7 +159,7 @@ You can replace the `FillPrototype` of cluster grenades with any valid Prototype
 
 Salvage keeps powergaming? Put the station in debt with this one simple solution!
 ```
-> stations:get do "vvwrite /entity/$ID/StationBankAccount/Balance 1000"
+> stations:get bank:account Cargo bank:set -1000
 ```
 Make sure to replace the 1000 with the balance you want to set.
 
