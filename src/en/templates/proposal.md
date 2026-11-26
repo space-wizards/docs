@@ -39,6 +39,7 @@ Consider addressing:
 - What uniqueness does the feature bring to players? What makes it engaging for players? Why is it important? 
 - SS14 is a game that strongly encourages players to interact with each other. How does the feature enhance player cooperation, competition, or emergent gameplay?
 - How does the feature's design pillars align with the game's core design pillars? How do they strengthen the game in that regard?
+- What aesthetics does the feature have? How does the themes and visuals of the feature enforce the feelings the feature is intended to convey? 
 
 Example:
 
