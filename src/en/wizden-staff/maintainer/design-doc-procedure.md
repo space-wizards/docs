@@ -72,6 +72,28 @@ The reviewing maintainer has two options:
 - Bring up the design document on the next Maintainer meeting. This allows for active discussion during the call, and if consensus is reached during the meeting it is sufficient for team approval.
 - Create an internal thread on the maintainer forum, with a `Yes`/`No`/`Abstain` poll to run for a minimum of 3 days. Majority opinion decides if the design document receives team approval.
 
+#### How to run a playtest
+
+Playtests require different amounts of admin involvement depending on the scope of the playtest. Generally, prototype upload playtests that last a few rounds can be done with the permission of a single admin, while experimental branches or longer-duration playtests over several days should get head admin approval. Maintainers are not allowed to start playtests themselves so make sure to coordinate with an admin; this is so that an admin is able to deal with any ahelps that may be generated from the playtest, or if the server crashes. Do not forget to involve the contributor making the feature! They should have access to the same information and control over the playtest as you do as a maintainer. 
+
+Playtests may vary in how broadcasted they are. Admin policy is to inform players on a server that an event is being held at the start of a round. Optionally, a change to the server's Message Of The Day and a post in #admeme-announcements can be made. 
+
+When running a playtest, avoid interfering with the players when possible. Unless there is something going catastrophically wrong, players should be allowed to experiment with the feature. Failing to understand a key aspect is itself useful information that indicates something with the feature needs to change.
+
+Make sure to collect feedback! Ask players, in both OOC and directly in ahelps, especially those players who engaged directly with the feature. If you seek a wider consensus, you can run a poll at the end of the round; make sure to phrase it neutrally and don't put jokes in the options (a 1-5 scale tends to work well). 
+
+
+``` admonish tip "Experimental branches"
+Experimental branches can be created on the main repository Github, based on the master branch. When reviewing PRs for these branches, do not hold them to the same code quality standards as you would with regular PRs. Focus instead on the content and give deference to the contributor implementing the changes.
+
+To run an experimental branch, access the "Actions" tab on Github and run the "Publish testing" workflow targeting the experimental branch. This will generate a content package and update any Nightly servers the next time a round ends. Note that while Nightly servers update to the latest master branch daily, admins are able to manually set which content package a server should run on via the `.revertserver` Discord command.
+```
+
+``` admonish tip "Downstream playtesting"
+If a design document wishes to show its feature via downstream playtesting, take them up on the offer! Visit the server, observe the feature in action as a spectator, preferably with help from the server's admins so that you get a good understanding of how the feature works in the context of the playerbase and player sentiments towards it (maybe ask to playtest it yourself!). Make an evaluation for how it would work with upstream content. It is valid to reject a downstream playtest if you believe that the downstream codebase differs too heavily from upstream in regards to how it impacts the feature. 
+```
+
+
 ### Implementation doc approval
 
 Inform the contributor of the result and ask them to begin working on the **implementation doc**, as described on the [Feature Proposals](../../general-development/feature-proposals.md) page. The document should be enough of a blueprint such that a new developer could take the concept and implement it themselves. Once the document reaches this standard, assign it the `Implementation Doc Approval` label. This indicates that actual pull requests can be submitted to the main repository for merging.
@@ -81,3 +103,13 @@ Inform the contributor of the result and ask them to begin working on the **impl
 As the feature gets implemented, it is likely that the feature will receive some changes to make it work in the game proper. The design doc should be updated to reflect this. Once the feature is implemented fully, and the design document has been updated to accurately reflect the contents and motivations of the feature as it is in the game, the design document is considered a completed **reference doc**. The reference doc is used by future developers to understand why the feature was designed the way it was and how it is good for the game, allowing them to extend it further and/or add other features around it. 
 
 Once the reference doc has approval, you ensure it is placed in the correct folder in the docs repo, can be accessed through the sidebar via `src/SUMMARY.md`, and then you may merge it into the docs repository. This indicates the feature is completed.
+
+#### Updating reference documents
+
+There may be instances where a reference doc becomes outdated as further feature changes are made based on long-term player feedback. If there is a merged content PR that changes some aspect of a reference doc, it should be accompanied by a related docs update PR. This is contingent on the content PR making its change understanding that it is introducing a change to the reference doc (as opposed to going against the established design unknowingly). 
+
+If there is no content PR and someone wishes to change the design direction of a reference document, it should go through maintainer team approval similar to a design document being team approved. If the change is a complete rework, consider submitting it as a brand new proposal doc instead. 
+
+``` admonish warning "Legacy documents"
+Several documents on our repository do not conform to the process and functions outlined here. If a document approximates a reference document, it should be fine to leave as-is. However, if a document is outdated or not compatible with the game state, it should be either removed or updated to current standards.
+```
