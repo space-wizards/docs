@@ -46,6 +46,10 @@ If the proposal doc is approved, assign the `Proposal Doc Approval` label to the
 Proposal docs only need one approval to pass, or one disapproval to close, but ensure area specialists are consulted first if there are any. If you are critical of a proposal document that another maintainer is approving of, it's usually better to leave your feedback but let the work progress to the next stage.
 ```
 
+``` admonish warning "Multiple docs"
+Always check if there are multiple design docs submitted on the same topic. If there is, review them together! Choose which one you feel has the strongest potential and if applicable supplement your review with parts of the other documents. Only one design doc should progress, but that's just the nature of development.
+```
+
 ``` admonish warning "Don't overexert yourself!"
 Being the reviewing maintainer does *not* confer taking upon the responsibility to implement or design the feature. By all means help the contributor if you are engaged with the idea, but don't feel the need to actively work on it outside the scope as defined in this document.
 ```
