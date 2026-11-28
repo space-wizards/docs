@@ -8,7 +8,12 @@ While Space Station 14 is written in C#, an object-oriented programming language
 
 ### Entities
 
-Each object in-game is represented by an *entity*. Players, bananas, stun batons, audio sources, or even more abstract concepts like game rules or objectives are all represented by entities. An entity is represented by an integer. No two entities share the same integer representation.
+Each object in-game is represented by an *entity*. Players, bananas, stun batons, audio sources, or even more abstract concepts like game rules or objectives are all represented by entities. > Each entity upon creation is automatically assigned a unique integer identifier, and no two entities can share same. In code we usually reference game objects by id using EntityUid type, or wrappers like Entity<...> which include such id.
+
+| ℹ️ **Info** |
+| :--- |
+| With client-server approach comes networking problems, details about that are described on separate page (https://docs.spacestation14.com/en/robust-toolbox/netcode/net-entities.html?) and are more advanced topic.  |
+
 
 By themselves, entities only distinguish one item from another. Without any components, an entity has no behavior.
 
@@ -40,7 +45,7 @@ You don't have to perfectly understand the ECS architecture at first. It can be 
 
 SS14 uses a system we call **prototypes**. These are "entity presets", essentially. They are similar to *prefabs* in Unity, or a subtype of `/obj` or `/mob` in BYOND. 
 
-Entity prototypes define *which components are on the entity, and what data those components hold*. It also defines basic data like the entity's name, description, and prototype ID (used to spawn it). 
+Entity prototypes define which components are on the entity **upon initialization**, and what data those components hold at initialization time. It also defines basic data like the entity's name, description, and prototype ID (used to spawn it). 
 
 An example is shown below:
 
@@ -238,58 +243,22 @@ public sealed class PlaySoundOnUseSystem : EntitySystem
 
 You'll notice that here, our system inherits from `EntitySystem`. This automatically registers it as a proper `EntitySystem` in the game and allows us to use some useful dependencies and override some methods to add behavior.
 
-In order to subscribe to an event being raised, we'll need to override the system's `Initialize` method; this method is called when the `EntitySystem` is created when the game simulation is starting.
-
-In this method, we'll add a `SubscribeLocalEvent` call, and I'll explain the details after the fact.
-
-```csharp
-// Content.Server/Sound/PlaySoundOnUseSystem.cs
-
-using Content.Shared.Interaction.Events;
-
-namespace Content.Server.Sound;
-
-public sealed class PlaySoundOnUseSystem : EntitySystem
-{
-    public override void Initialize()
-    {
-        SubscribeLocalEvent<PlaySoundOnUseComponent, UseInHandEvent>(OnUseInHand);
-    }
-}
-```
-
-There's a lot going on in that method call! Basically, we're telling the game:
-
-*"Whenever a UseInHandEvent is raised on an entity that has the PlaySoundOnUse component, I want you to call my OnUseInHand method."*
-
-You've probably noticed that this code actually gives you an error, *because the method OnUseInHand doesn't exist yet*! Let's add that method. This is called an **event handler**, and event handlers require a specific set of arguments:
-
-- The UID (unique identifier) of the entity the event was raised on
-- The component that was specified in the subscription, so you can access its data and use that to change behavior
-- The event itself, which contains useful data like the entity who activated the item.
-
-If you're using an IDE, it might allow you to automatically create this method using *Alt+Enter*.
-We also added a namespace import so that the compiler knows where to find the `UseInHandEvent`. Your IDE will automatically add this line for you if you use the autocomplete function while typing the event name somewhere.
-
-Here's what our class will look like now, with our new method:
+In order to subscribe to an event being raised, we'll need place `SubscribeLocalEventAttribute` on method, which will be handling events, and such method should follow conventional signature.
 
 ```csharp
 // Content.Server/Sound/PlaySoundOnUseSystem.cs
 
 using Content.Shared.Interaction.Events;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Analyzers;
 
 namespace Content.Server.Sound;
 
-public sealed class PlaySoundOnUseSystem : EntitySystem
+public partial sealed class PlaySoundOnUseSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
-    public override void Initialize()
-    {
-        SubscribeLocalEvent<PlaySoundOnUseComponent, UseInHandEvent>(OnUseInHand);
-    }
-
+    [SubscribeLocalEvent]
     private void OnUseInHand(Entity<PlaySoundOnUseComponent> ent, ref UseInHandEvent args)
     {
 
@@ -297,6 +266,20 @@ public sealed class PlaySoundOnUseSystem : EntitySystem
 }
 
 ```
+
+There's a lot going on with this attribute! When you build project, automatic code-generation will pick all such methods and transform them into code that will be telling the game:
+
+*"Whenever a UseInHandEvent is raised on an entity that has the PlaySoundOnUse component, I want you to call my OnUseInHand method."*
+
+Method we created here - OnUseInHand - is called an **event handler**, and event handlers require a specific set of arguments:
+
+- Entity structure, containing UID (unique identifier) of the entity the event was raised, grouped with the component that entity **should have for event-handler to be called**
+- The event itself, which contains useful data like the entity who activated the item
+
+We also added a namespace import so that the compiler knows where to find the `UseInHandEvent`. Your IDE will automatically add this line for you if you use the autocomplete function while typing the event name somewhere.
+
+Here's what our class will look like now, with our new method:
+
 
 We're almost there. Now, the method `OnUseInHand` will be called when we activate the item, and we can play our sound there.
 
